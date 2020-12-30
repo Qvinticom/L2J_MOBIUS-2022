@@ -29,7 +29,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47602" name="Weapon Supply Box" type="EtcItem">
 		<!-- A weapon supply box that the Weapon Merchant Lector has asked you to take to the Administrative Offices -->
@@ -39,7 +38,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47603" name="Armor Supply Box" type="EtcItem">
 		<!-- An armor supply box that the Weapon Merchant Lector has asked you to take to the Administrative Offices -->
@@ -49,7 +47,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47604" name="Grocery Supply Box" type="EtcItem">
 		<!-- A grocery supply box that the Grocer Katerina has asked you to take to the Administrative Offices -->
@@ -59,7 +56,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47605" name="Accessory Supply Box" type="EtcItem">
 		<!-- An accessory supply box that the Accessory Merchant Trevor has asked you to take to the Administrative Offices -->
@@ -69,7 +65,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47606" name="Husk Distribution Report" type="EtcItem">
 		<!-- An Exploration Area 2 Husk Distribution Report that was misplaced in Area 2 by Nagel while retreating to Area 1. Collect and take to Celin who is in Area 2 for the meantime, instead of Nagel. -->
@@ -79,7 +74,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47607" name="King's Tonic" type="EtcItem">
 		<!-- A tonic that the Searchdog King takes for health. Due to the King's habit of hiding his possessions here and there, the tonic lies scattered throughout Exploration Area 4. The Husks sometimes unearth the tonic that the King has hidden, and carry them around. Collect the King's Tonic from the Husks, and take them to Sebion. -->
@@ -89,7 +83,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47608" name="Monkey Bait" additionalName="R" type="EtcItem">
 		<!-- Fishing Time: 75 sec. Fishing Standby Time: 15 sec. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, and Chef Monkey's Treasure Chest. Can be used by characters between Lv. 85-94. -->
@@ -122,11 +115,7 @@
 		<!-- Chef Monkey's Treasure Chest caught with Banana Bait. Use it to obtain various items. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47613" name="Angler's Bait (85)" type="EtcItem">
@@ -177,7 +166,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -255,7 +243,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13562" level="10" /> <!-- Shiny Elemental Shirt -->
 			<skill id="13563" level="5" /> <!-- Einhasad's Wrath -->
@@ -273,12 +260,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38857" min="1" max="1" chance="100" /> <!-- Ruby Lv. 3 -->
@@ -289,12 +272,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38929" min="1" max="1" chance="100" /> <!-- Sapphire Lv. 3 -->
@@ -317,12 +296,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38877" min="1" max="1" chance="100" /> <!-- Opal Lv. 3 -->
@@ -333,12 +308,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38872" min="1" max="1" chance="100" /> <!-- Obsidian Lv. 3 -->
@@ -349,12 +320,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38892" min="1" max="1" chance="100" /> <!-- Diamond Lv. 3 -->
@@ -365,12 +332,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38882" min="1" max="1" chance="100" /> <!-- Emerald Lv. 3 -->
@@ -381,12 +344,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38887" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 3 -->
@@ -397,12 +356,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38897" min="1" max="1" chance="100" /> <!-- Pearl Lv. 3 -->
@@ -449,12 +404,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38858" min="1" max="1" chance="100" /> <!-- Ruby Lv. 4 -->
@@ -465,12 +416,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38930" min="1" max="1" chance="100" /> <!-- Sapphire Lv. 3 -->
@@ -493,12 +440,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38878" min="1" max="1" chance="100" /> <!-- Opal Lv. 4 -->
@@ -509,12 +452,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38873" min="1" max="1" chance="100" /> <!-- Obsidian Lv. 4 -->
@@ -525,12 +464,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38893" min="1" max="1" chance="100" /> <!-- Diamond Lv. 4 -->
@@ -541,12 +476,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38883" min="1" max="1" chance="100" /> <!-- Emerald Lv. 4 -->
@@ -557,12 +488,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38888" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 4 -->
@@ -573,12 +500,8 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="38898" min="1" max="1" chance="100" /> <!-- Pearl Lv. 4 -->
@@ -627,7 +550,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47651" name="PvP Rune - 1min" additionalName="Test Item" type="EtcItem">
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
@@ -636,7 +558,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47652" name="PvP Rune - 10min" additionalName="Test Item" type="EtcItem">
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
@@ -645,7 +566,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47653" name="PVE Rune" additionalName="Test Item" type="EtcItem">
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
@@ -654,7 +574,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47654" name="PvE Rune - 1min" additionalName="Test Item" type="EtcItem">
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
@@ -663,7 +582,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47655" name="PvE Rune - 10min" additionalName="Test Item" type="EtcItem">
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
@@ -672,7 +590,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47656" name="Warrior's Earring" additionalName="30-day" type="Armor">
 		<!-- Earrings bought using the Mark of Battle. Earring bought using Mark of Battle. Max MP +49, Max CP +10%, P./ M. Def. +3%, Stun/ Mental Resistance and Stun/ Mental Success Rate +30%, Vampiric Rage +4%. These effects do not stack with identical earrings. -->
@@ -689,7 +606,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="mDef">174</stat>
 			<stat type="maxMp">49</stat>
@@ -786,7 +702,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47663" name="Freya's Art of Seduction" additionalName="Barrier" type="EtcItem">
 		<!-- Dimensional Item. For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, Damage Reduction +10%, All Attributes Defense +100. Buff remains in place after death. Cooldown is 5 min. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
@@ -795,10 +710,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -815,10 +727,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -835,10 +744,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -855,10 +761,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -885,7 +788,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47669" name="Intermediate Arena Loot" type="EtcItem">
@@ -898,7 +800,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47670" name="High-grade Arena Loot" type="EtcItem">
@@ -911,7 +812,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47671" name="PA Points Coupon (180)" type="EtcItem">
@@ -925,18 +825,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47672" name="Formal Wear Appearance Stone" type="EtcItem">
 		<!-- An Appearance Stone to change your appearance to Formal Wear. Can be used for Upper Armor and Full-body. All armor takes the appearance of Formal Wear. Effect can be removed using an appearance restoration scroll. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_commissionable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -951,13 +847,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -975,13 +867,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -999,10 +887,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1019,10 +904,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1044,7 +926,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="1" /> <!-- Red Cat's Eye -->
 		</skills>
@@ -1061,7 +942,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="2" /> <!-- Red Cat's Eye -->
 		</skills>
@@ -1078,7 +958,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="3" /> <!-- Red Cat's Eye -->
 		</skills>
@@ -1095,7 +974,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="4" /> <!-- Red Cat's Eye -->
 		</skills>
@@ -1124,7 +1002,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="1" /> <!-- Blue Cat's Eye -->
 		</skills>
@@ -1140,7 +1017,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="2" /> <!-- Blue Cat's Eye -->
 		</skills>
@@ -1156,7 +1032,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="3" /> <!-- Blue Cat's Eye -->
 		</skills>
@@ -1172,7 +1047,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="4" /> <!-- Blue Cat's Eye -->
 		</skills>

@@ -18,10 +18,8 @@
 	<item id="49783" name="Sibi Coin" type="EtcItem">
 		<!-- A coin paid for activity while disguised as a Balthus Knight. Event Manager Sibi will be able to exchange them for Sibi's Suspicious Supply Items. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.ev_balthus_coin" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="true" />
 	</item>
 	<item id="49784" name="Balthus Knight Mark" type="EtcItem">
 		<!-- Acquired XP/SP +10% for 1 hour. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on the same account. -->
@@ -55,7 +53,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">12</stat>

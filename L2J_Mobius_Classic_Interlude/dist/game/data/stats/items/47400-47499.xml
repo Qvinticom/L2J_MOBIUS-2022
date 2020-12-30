@@ -9,7 +9,6 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
 			<skill id="13962" level="1" /> <!-- Duo's Bracelet -->
@@ -31,7 +30,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
 			<skill id="13962" level="1" /> <!-- Duo's Bracelet -->
@@ -52,7 +50,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -81,7 +78,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -110,7 +106,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
@@ -137,7 +132,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47406" name="Scroll of Experience - Lv2 (Main Class)" type="EtcItem">
 		<!-- Use to gain 230 billion EXP and 550 million SP. Can be used by characters with Lv. 97 or above. -->
@@ -148,7 +142,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47407" name="Scroll of Experience (Dual Class)" type="EtcItem">
 		<!-- Use to gain 380 billion EXP and 910 million SP. Can be used by characters between Lv. 85-99. Can only be used in Dual Class state. -->
@@ -159,7 +152,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47408" name="+6 Helios Weapon Capsule Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Amazing Duo Event. Can be exchanged with a Helios Weapon (30-day) through the Fantasy Isle Keeper NPC. Will be deleted when the event ends. -->
@@ -169,7 +161,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47409" name="+6 Eternal Armor Set Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Amazing Duo Event. Can be exchanged with an Eternal Armor Set (30-day) through the Fantasy Isle Keeper NPC. Will be deleted when the event ends. -->
@@ -179,7 +170,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47410" name="Duo Growth Rune 30% - 30 days" type="EtcItem">
 		<!-- Increases XP and SP gained through hunting by 30% while having it in your inventory. -->
@@ -189,7 +179,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47411" name="Duo Growth Rune 30% - 30 day Box" type="EtcItem">
 		<!-- Double click the box to obtain Duo Growth Rune 30% - 30 days x1. Will be deleted when the event ends. -->
@@ -209,7 +198,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47413" name="Premium Account Points Coupon (200 points)" type="EtcItem">
 		<!-- Double click to obtain 200 Premium Account Points. -->
@@ -221,7 +209,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47414" name="Duo's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain one of the following: Duo Vital Compression Stone/Vitality Replenishing Star Candy/Premium Account Points (200 points). Will be deleted when the event ends. -->
@@ -232,7 +219,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47415" name="Duo - Freya's Wind Cube" type="EtcItem">
 		<!-- Vitality +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 30 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Will be deleted when the event ends. -->
@@ -242,9 +228,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
@@ -264,7 +247,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
@@ -310,7 +292,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 		<skills>
 			<skill id="13562" level="9" /> <!-- Shiny Elemental Shirt -->
@@ -336,7 +317,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 		<skills>
 			<skill id="13562" level="10" /> <!-- Shiny Elemental Shirt -->
@@ -362,7 +342,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47420" name="Energy of Longing" type="EtcItem">
@@ -448,13 +427,9 @@
 	<item id="47430" name="Freya's Bloody Rune" additionalName="2-hour" type="EtcItem">
 		<!-- When stored in the inventory, PvE Damage +15%. The remaining time decreases even when player is logged off. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -481,13 +456,9 @@
 	<item id="47432" name="Freya's Rune" additionalName="30-day" type="EtcItem">
 		<!-- Boosts STR/DEX/CON/INT/WIT/MEN by 1 and increases Paralysis/Mental Resistance by 10% when having it in your inventory. -->
 		<set name="icon" val="icon.bm_freya_rune" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -514,16 +485,12 @@
 	<item id="47434" name="Freya's Vital Rune" additionalName="30-min" type="EtcItem">
 		<!-- When stored in the inventory, Vitality XP Bonus +50% and Vitality Consumption -15%. The remaining time decreases even when player is logged off. -->
 		<set name="icon" val="icon.bm_freya_vital_rune" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="30" />
-		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
 		</skills>
@@ -540,7 +507,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47436" name="Mysterious Talisman - INT" additionalName="2-hour" type="Armor">
@@ -555,7 +521,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47437" name="Mysterious Talisman - DEX" additionalName="2-hour" type="Armor">
@@ -570,7 +535,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47438" name="Mysterious Talisman - WIT" additionalName="2-hour" type="Armor">
@@ -585,7 +549,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47439" name="Mysterious Talisman - CON" additionalName="2-hour" type="Armor">
@@ -600,7 +563,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47440" name="Mysterious Talisman - MEN" additionalName="2-hour" type="Armor">
@@ -615,7 +577,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47441" name="Mysterious Talisman - Attack Attribute" additionalName="2-hour" type="Armor">
@@ -630,7 +591,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47442" name="Mysterious Talisman - Attribute Defense" additionalName="2-hour" type="Armor">
@@ -645,7 +605,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="120" />
 	</item>
 	<item id="47443" name="Mysterious Talisman - STR 2 Hour Box" type="EtcItem">
@@ -852,13 +811,8 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -870,13 +824,7 @@
 		<!-- Double click to obtain Chaos Essence (Dual Class) 30-day. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ExtractableItems" />
 			<capsuled_items>

@@ -4,13 +4,9 @@
 		<!-- Augmenting stone for Adenian Underwear. More powerful than a standard Augmenting Stone, also has a higher chance of giving good bonuses. Can be used through a blacksmith in any town. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -18,13 +14,9 @@
 		<!-- Augmenting stone for Adenian Tattoo. Most powerful of all Augmenting Stones. Has a high chance of giving the best bonuses. Can be used through a blacksmith in any town. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -32,8 +24,6 @@
 		<!-- Augmenting stone for Adenian Underwear. Double-click the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -42,8 +32,6 @@
 		<!-- Augmenting stone for Adenian Underwear. More powerful than a standard Augmenting Stone, also has a higher chance of giving good bonuses. Double-click the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -52,8 +40,6 @@
 		<!-- Augmenting stone for Adenian Tattoo. Most powerful of all Augmenting Stones. Has a high chance of giving the best bonuses. Double-click the item or speak to a blacksmith to augment what you need. -->
 		<set name="icon" val="BranchSys3.icon1.g_life_dust_general_adenia" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -61,15 +47,11 @@
 	<item id="23805" name="Hero Coin" type="EtcItem">
 		<!-- Used for purchasing at the L2 Store. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23806" name="Transformation Potion: Uthanka" type="EtcItem">
@@ -82,13 +64,9 @@
 	<item id="23807" name="High-grade Maphr's Rune 30%" additionalName="30-day" type="EtcItem">
 		<!-- When in the inventory, Drop and Spoil rate +30%, amount of dropped Adena +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<skills>
@@ -98,13 +76,9 @@
 	<item id="23808" name="High-grade Maphr's Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- When in the inventory, Drop and Spoil rate +50%, amount of dropped Adena +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<skills>
@@ -114,13 +88,9 @@
 	<item id="23809" name="High-grade Maphr's Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<skills>
@@ -131,13 +101,9 @@
 		<!-- Double-click to obtain High-grade Maphr's Rune 30% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<skills>
@@ -148,13 +114,9 @@
 		<!-- Double-click to obtain High-grade Maphr's Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<skills>
@@ -165,13 +127,9 @@
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
@@ -184,26 +142,18 @@
 		<!-- Double-click to obtain Prestige Cube (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="23814" name="Chaos Essence Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain one Chaos Essence (30-day). The Chaos Essence cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ExtractableItems" />
@@ -215,13 +165,9 @@
 		<!-- Double-click to obtain one Chaos Essence (Dual Class, 30-day). The Chaos Essence cannot be used by Ertheia. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ExtractableItems" />
@@ -249,12 +195,9 @@
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
 	<item id="23819" name="Uthanka's Ring Pack" additionalName="7-day" type="EtcItem">
@@ -263,34 +206,27 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="10080" />
 	</item>
 	<item id="23820" name="Scroll of Escape - Uthanka's Tomb" type="EtcItem">
 		<!-- Return to Uthanka's Tomb. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23821" name="Agathion - Pirate Captain Uthanka" type="Armor">
 		<!-- A bracelet for summoning Agathion Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23822" name="Agathion - Pirate Captain Uthanka" additionalName="7-day" type="Armor">
 		<!-- A bracelet for summoning Agathion Pirate Captain Uthanka (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 	</item>
 	<item id="23823" name="Agathion - Uthanka Pack" additionalName="7-day" type="EtcItem">
@@ -299,7 +235,6 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="10080" />
 	</item>
 	<item id="23824" name="Uthanka's Blessed Scroll of Resurrection" type="EtcItem">
@@ -313,12 +248,9 @@
 		<!-- A wondrous dye that contains the Human power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Human race (Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +1%, active skill: Unbind). The active skill cannot be used along with the Unbind revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_human" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
@@ -326,12 +258,9 @@
 		<!-- A wondrous dye that contains the Elven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Elven race (Water Resistance +20, Critical Rate for standard attacks +10, M. Skill Critical Rate +10, active skill: Prevision). The active skill cannot be used along with the Prevision revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_elf" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
@@ -339,12 +268,9 @@
 		<!-- A wondrous dye that contains the Dark Elven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Dark Elven race (Wind Resistance +20, Critical Damage for standard attacks +1%, M. Skill Critical Damage +1%, active skill: Disparition). The active skill cannot be used along with the Disparition revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_darkelf" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
@@ -352,12 +278,9 @@
 		<!-- A wondrous dye that contains the Orc power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Orc race (Fire Resistance +20, Max HP/ MP/ CP +1%, active skill: Savage). The active skill cannot be used along with the Savage revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_orc" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
@@ -365,12 +288,9 @@
 		<!-- A wondrous dye that contains the Dwarven power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Dwarven race (Earth Resistance +20, Skill Cooldown -1%, active skill: Endurance). The active skill cannot be used along with the Endurance revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_dwarf" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
@@ -378,12 +298,9 @@
 		<!-- A wondrous dye that contains the Kamael power. Take it to the Dye Merchant in town to get a 7-day symbol that grants the power of the Kamael race (Dark Resistance +20, PvP Damage +1%, active skill: Soul Protection). The active skill cannot be used along with the Soul Protection revelation skill. Requirements: all classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_kamael" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
@@ -391,10 +308,7 @@
 		<!-- Double-click to obtain Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -402,10 +316,7 @@
 		<!-- Double-click to obtain Pa'agrio's Warm Breeze (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
@@ -422,7 +333,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="1" /> <!-- Talisman - Abundance -->
@@ -434,7 +345,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="2" /> <!-- Talisman - Abundance -->
@@ -446,7 +357,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="3" /> <!-- Talisman - Abundance -->
@@ -458,7 +369,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="4" /> <!-- Talisman - Abundance -->
@@ -470,7 +381,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="5" /> <!-- Talisman - Abundance -->
@@ -484,7 +395,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="6" /> <!-- Talisman - Abundance -->
@@ -498,7 +409,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="7" /> <!-- Talisman - Abundance -->
@@ -512,7 +423,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="8" /> <!-- Talisman - Abundance -->
@@ -524,8 +435,6 @@
 		<!-- Double-click to obtain one of the following items: Talisman of Abundance - War, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -553,8 +462,6 @@
 		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Tactics, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -582,8 +489,6 @@
 		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Morale, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -611,8 +516,6 @@
 		<!-- Double-click to obtain one of the following items: Talisman of Abundance - Physique, Blessed Scroll: Enchant R-grade Weapon/ Armor, Lucky Enchant Stone: R-grade Weapon/ Armor, Package: High-grade Maphr's Rune 100%, Scroll: Enchant R-grade Weapon/ Armor, Nevit's Rune Box (Dragon Rising) - 1-hour, Elcyum Powder, Divine Protection Elixir, Package: Pa'agrio's Warm Breeze (1-hour), Package: Nevit's Rune 100% (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -640,12 +543,9 @@
 		<!-- Take it to the town's Dye Merchant for a 1-day tattoo that increases your power (when HP > 90%, P. Def. +20%, Speed +33). All classes. Awakened only. Note!. Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
@@ -653,20 +553,15 @@
 		<!-- Take it to the town's Dye Merchant for a 1-day tattoo that increases your power (PvP Damage - +2%, Damage Reflection Resistance +2, effect increased for PvP kills, up to Lv. 5) All classes. Awakened only. Note!. Tattoo is effective only in PvP zones. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
 	<item id="23847" name="Tarot Card Coupon" type="EtcItem">
 		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -674,21 +569,15 @@
 	<item id="23848" name="Tarot Card Coupon" type="EtcItem">
 		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23849" name="Tarot Card Coupon" additionalName="Event" type="EtcItem">
 		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -696,26 +585,18 @@
 	<item id="23850" name="Tarot Card Coupon" additionalName="Event" type="EtcItem">
 		<!-- A coupon that can be traded for a Tarot Card in Eve's Lucky Store. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23851" name="Royal Training Camp Ticket" type="EtcItem">
 		<!-- Ticket for entering the Royal Training Camp. Talk to the manager to enter. You can stay up to 5 h. inside, and must leave when the time resets at 6:30 am. -->
 		<set name="icon" val="icon.ticket_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -724,8 +605,6 @@
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="1000" />
@@ -734,7 +613,7 @@
 		<!-- Transparent armor appearance stone. Makes armor invisible so that Adenian Underwear and Tattoos are visible. Your cloak also becomes invisible. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -745,8 +624,6 @@
 		<!-- Double-click to obtain Nevit's Rune (Dragon Rising, 3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -762,8 +639,6 @@
 		<!-- Double-click to obtain one of the following items: Dark Helios Enhancement Stone, Bloody Helios Enhancement Stone, Kaliel's Energy - Desire, Dark Eternal Enhancement Stone, Fire Crystal - Super, Water Crystal - Super, Earth Crystal - Super, Wind Crystal - Super, Dark Crystal - Super, Holy Crystal - Super, Kaliel's Energy - Fire, Blessed Giant's Lucky Enchant Stone: R-grade Weapon, Blessed Giant's Lucky Enchant Stone: R-grade Armor, Kaliel's Energy - Annihilation, Bloody Eternal Enhancement Stone, Top-grade R-grade Life Stone, Giant's Energy, Destructive Energy, R-grade Gemstone. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -800,8 +675,6 @@
 		<!-- Double-click to obtain one of the following items: R99-grade Scroll of Blessing, R95-grade Scroll of Blessing, R2-grade Scroll of Blessing, R1-grade Scroll of Blessing, Lv. 5 Legendary Dye Pack, Blessed Scroll: Enchant R-grade Weapon, Giant's Scroll: Enchant R-grade Weapon, Blessed Scroll: Enchant R-grade Armor, High-grade Lucky Enchant Stone: R-grade Weapon, High-grade Lucky Enchant Stone: R-grade Armor, Giant's Scroll: Enchant R-grade Armor, Life Stone: Hair Accessory, Scroll: Enchant Hair Accessory, Fire Stone (+150), Water Stone (+150), Earth Stone (+150), Wind Stone (+150), Dark Stone (+150), Holy Stone (+150). -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -838,8 +711,6 @@
 		<!-- Double-click to obtain one of the following items: Package: +7 Enhanced Power Shirt, Package: High-grade Maphr's Rune 100% (7-day), Package: R-grade Weapon Appearance/ Restoration Stone, Package: R-grade Armor Appearance/ Restoration Stone, Package: Hair Accessory Appearance/ Restoration Stone, Package: Superior Minion Coupon (1 pc.), Top-grade R-grade Life Stone, Package: Super Healthy Juice (CP)/ (HP), Letter Collector's Gift, Blessed Scroll: Enchant Power Shirt, Package: Feather of Blessing (1 pc.), Fire/ Water/ Earth/ Wind/ Dark/ Holy Stone (+60). -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -874,8 +745,6 @@
 		<!-- Double-click to obtain one of the following items: R-grade Talisman - Confusion Resistance (Passive), R-grade Talisman - Obstruction Resistance (Passive), R-grade Talisman - Stupor Resistance (Passive), R-grade Talisman - Lethal Strike Resistance, R-grade Talisman - Damage Reflection Resistance, Special Talisman - M. Def., Special Talisman - Ranged Attack Resistance, Special R-grade Talisman - Decrease MP Consumption, R-grade Talisman - Cancel Debuff (Active). -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -903,22 +772,16 @@
 		<!-- To change your clan name:. 1. Request through your own account. 2. Send a request with the title "Change Clan Name". 3. Your character must be the clan leader, with the Change Clan Name item in the inventory. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23860" name="Raid Boss' Soul Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, Bottle of Baium's Soul. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -979,26 +842,18 @@
 		<!-- Memento for Van Halter's users. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_tiger_grandma_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="23869" name="Angel Cat's Blessing Pack" type="EtcItem">
 		<!-- Double-click to obtain Angel Cat's Blessing (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1007,13 +862,9 @@
 		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, Atk. Spd. +5%, Casting Spd. +5%, Acquired SP/ XP +30%. Does not stack with event buffs such as the Letter Collector's Gift. -->
 		<set name="icon" val="icon.accessory_cat_the_cat_cap_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1021,39 +872,27 @@
 	<item id="23871" name="High-grade Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="60" />
 	</item>
 	<item id="23872" name="High-grade Maphr's Rune 100%" additionalName="5-hour" type="EtcItem">
 		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="300" />
 	</item>
 	<item id="23873" name="High-grade Maphr's Rune 100%" additionalName="7-day" type="EtcItem">
 		<!-- When in the inventory, Drop and Spoil rate +100%, amount of dropped Adena +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10080" />
 	</item>
@@ -1061,10 +900,7 @@
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="60" />
 		<set name="default_action" val="PEEL" />
@@ -1073,10 +909,7 @@
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="300" />
 		<set name="default_action" val="PEEL" />
@@ -1085,10 +918,7 @@
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="PEEL" />
@@ -1096,13 +926,9 @@
 	<item id="23877" name="Samurai Hair Accessory" type="Armor">
 		<!-- Samurai Hair Accessory. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_hair_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -1111,13 +937,9 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -1126,13 +948,9 @@
 	<item id="23879" name="Samurai Outfit" type="Armor">
 		<!-- Samurai s outfit. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_japan_general_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -1142,13 +960,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1156,13 +970,9 @@
 	<item id="23881" name="Anakim Outfit" type="Armor">
 		<!-- Anakim's look. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_anakim_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -1172,13 +982,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1186,65 +992,45 @@
 	<item id="23883" name="Vampire Top" type="Armor">
 		<!-- Vampiric wear. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_u_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23884" name="Vampire Pants" type="Armor">
 		<!-- Vampiric wear. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_l_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23885" name="Vampire Gloves" type="Armor">
 		<!-- Vampiric wear. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_g_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23886" name="Vampire Shoes" type="Armor">
 		<!-- Vampiric wear. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_b_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23887" name="Vampire Hair Accessory" type="Armor">
 		<!-- Vampiric wear in the form of a mask. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_hair_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -1254,13 +1040,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1271,13 +1053,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1288,13 +1066,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1305,13 +1079,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1322,13 +1092,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1339,11 +1105,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1364,11 +1126,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1387,11 +1145,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1411,11 +1165,7 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1435,11 +1185,7 @@
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1469,11 +1215,7 @@
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1517,11 +1259,7 @@
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

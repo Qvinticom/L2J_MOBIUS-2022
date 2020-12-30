@@ -866,50 +866,34 @@
 	<item id="36566" name="Friendship Cube Pack (Yum Yum)" additionalName="Event" type="EtcItem">
 		<!-- Lineage II L-together is even better with friends! When you open the cube, you can get 1 Friendship Cube (30-day), 1 Friendship Summon Cube (30-day), and 2 Yum Yum Candy Gift Boxes. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36567" name="Friendship Cube Pack (Nom Nom)" additionalName="Event" type="EtcItem">
 		<!-- Lineage II L-together is even better with friends! When you open the cube, you can get 1 Friendship Cube (30-day), 1 Friendship Summon Cube (30-day), and 2 Nom Nom Candy Gift Boxes. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36568" name="Friendship Cube (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Lineage II L-together is even better with friends! Double-click to obtain either a pass for entering an instance zone one additional time or an Unbind Scroll R/ R95/ R99 (weapon/ armor). Can be used only once a day. -->
 		<set name="icon" val="icon.etc_pink_crystal_cube_pc_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="36569" name="Yum Yum Candy Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Lineage II L2 Together is even better with friends! Double-click to obtain a Yum Yum Candy (30-day) that increases Acquired XP/ SP 15%. Cannot be exchanged once open. A Nom Nom Candy Gift Box is included in the gift coupon provided when you paid for your account. Can be exchanged and stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
@@ -917,12 +901,8 @@
 	<item id="36570" name="Nom Nom Candy Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Lineage II L2 Together is even better with friends! Double-click to obtain a Nom Nom Candy (30-day) that increases Acquired XP/ SP 15%. Cannot be exchanged once open. A Nom Nom Candy Gift Box is included in the gift coupon provided when you paid for your account. Can be exchanged and stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
@@ -930,14 +910,10 @@
 	<item id="36571" name="Yum Yum Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Have fun with your friends! increases additionally obtained XP/ SP by 15%. When this candy and a Nom Nom Candy are used together, both of their effects apply. When this candy is used with an identical candy, their effects apply only once. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
@@ -948,14 +924,10 @@
 	<item id="36572" name="Nom Nom Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Have fun with your friends! increases additionally obtained XP/ SP by 15%. When this candy and a Yum Yum Candy are used together, both of their effects apply. When this candy is used with an identical candy, their effects apply only once. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
@@ -966,14 +938,10 @@
 	<item id="36573" name="Friendship Summon Cube (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Lineage II L-together is even better with friends! If stored in the inventory, it enables you to use the skill of summoning a friend once every 30 min. -->
 		<set name="icon" val="icon.etc_pink_crystal_cube_pc_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
@@ -1074,13 +1042,9 @@
 	<item id="36580" name="Blessed Scroll: Modify Weapon (R-grade)" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i06" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
@@ -1095,13 +1059,9 @@
 	<item id="36581" name="Blessed Scroll: Modify Weapon (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i05" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
@@ -1116,13 +1076,9 @@
 	<item id="36582" name="Blessed Scroll: Modify Weapon (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
@@ -1137,13 +1093,9 @@
 	<item id="36583" name="Blessed Scroll: Modify Weapon (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i03" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
@@ -1158,13 +1110,9 @@
 	<item id="36584" name="Blessed Scroll: Modify Weapon (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
@@ -1179,13 +1127,9 @@
 	<item id="36585" name="Blessed Scroll: Modify Weapon (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
@@ -1206,7 +1150,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1221,7 +1165,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1237,7 +1181,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1253,7 +1197,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1268,7 +1212,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1283,7 +1227,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1293,13 +1237,9 @@
 	<item id="36592" name="Blessed Scroll: Modify Armor (R-grade)" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i06" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
@@ -1314,13 +1254,9 @@
 	<item id="36593" name="Blessed Scroll: Modify Armor (S-grade)" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i05" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
@@ -1335,13 +1271,9 @@
 	<item id="36594" name="Blessed Scroll: Modify Armor (A-grade)" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
@@ -1356,13 +1288,9 @@
 	<item id="36595" name="Blessed Scroll: Modify Armor (B-grade)" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i03" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
@@ -1377,13 +1305,9 @@
 	<item id="36596" name="Blessed Scroll: Modify Armor (C-grade)" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
@@ -1398,13 +1322,9 @@
 	<item id="36597" name="Blessed Scroll: Modify Armor (D-grade)" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="is_stackable" val="true" />
@@ -1420,13 +1340,11 @@
 		<!-- Restores the original appearance of R-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="icon.change_restore_i06" />
 		<set name="price" val="5000000" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1437,13 +1355,11 @@
 		<!-- Restores the original appearance of S-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
 		<set name="icon" val="icon.change_restore_i05" />
 		<set name="price" val="1000000" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>

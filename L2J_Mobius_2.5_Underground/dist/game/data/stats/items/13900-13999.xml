@@ -1003,11 +1003,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="8307" level="1" /> <!-- Boing Hammer's Mysterious Effect -->
 		</skills>
@@ -1039,11 +1035,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="8307" level="1" /> <!-- Boing Hammer's Mysterious Effect -->
 		</skills>
@@ -1075,11 +1067,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="8307" level="1" /> <!-- Boing Hammer's Mysterious Effect -->
 		</skills>
@@ -1111,11 +1099,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="8307" level="1" /> <!-- Boing Hammer's Mysterious Effect -->
 		</skills>
@@ -1435,8 +1419,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2832" level="1" /> <!-- Weapon Pack (S80-grade) -->
 		</skills>
@@ -1453,8 +1435,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2833" level="1" /> <!-- Armor Pack (S80-grade) -->
 		</skills>
@@ -1471,8 +1451,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2834" level="1" /> <!-- Weapon Pack (S-grade) -->
 		</skills>
@@ -1489,8 +1467,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2835" level="1" /> <!-- Armor Pack (S-grade) -->
 		</skills>
@@ -1507,8 +1483,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2836" level="1" /> <!-- Accessory Pack (S-grade) -->
 		</skills>

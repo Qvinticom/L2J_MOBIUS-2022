@@ -14,10 +14,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="86400" />
 	</item>
 	<item id="15401" name="Vitality Belt (Event)" additionalName="90-day" type="Armor">
@@ -34,10 +30,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="129600" />
 	</item>
 	<item id="15402" name="Vitality Belt (Event)" additionalName="Permanent" type="Armor">
@@ -52,10 +44,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15403" name="PA - Berserker Blade" additionalName="PA exclusive Weapon" type="Weapon">
@@ -77,10 +65,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="duration" val="180" />
 		<set name="time" val="21600" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="1" />
 		<skills>
 			<skill id="3010" level="4" /> <!-- Special Ability: Focus -->
@@ -107,10 +91,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15418" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 30-day -->
 		</capsuled_items>
@@ -128,10 +108,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15419" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 25-day -->
 		</capsuled_items>
@@ -149,10 +125,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15420" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 20-day -->
 		</capsuled_items>
@@ -170,10 +142,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15421" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 15-day -->
 		</capsuled_items>
@@ -191,10 +159,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="14400" />
 		<capsuled_items>
 			<item id="15422" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 10-day -->
@@ -213,10 +177,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="7200" />
 		<capsuled_items>
 			<item id="15423" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 5-day -->
@@ -235,10 +195,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
 		<capsuled_items>
 			<item id="15424" min="1" max="1" chance="100" /> <!-- 6th Anniversary Party Cube (Event) - 3-day -->
@@ -257,10 +213,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
@@ -280,10 +232,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="36000" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
@@ -303,10 +251,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
@@ -326,10 +270,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
@@ -349,10 +289,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="14400" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
@@ -372,10 +308,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="7200" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
@@ -395,10 +327,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
 		<capsuled_items>
 			<item id="15425" min="1" max="1" chance="100" /> <!-- Hero's Treasure Chest - Event -->
@@ -415,10 +343,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="9042" level="1" /> <!-- 6th Anniversary Cube -->
@@ -434,10 +358,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="36000" />
 		<skills>
 			<skill id="9043" level="1" /> <!-- 6th Anniversary Cube -->
@@ -453,10 +373,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<skills>
 			<skill id="9044" level="1" /> <!-- 6th Anniversary Cube -->
@@ -472,10 +388,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 		<skills>
 			<skill id="9045" level="1" /> <!-- 6th Anniversary Cube -->
@@ -491,10 +403,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="14400" />
 		<skills>
 			<skill id="9046" level="1" /> <!-- 6th Anniversary Cube -->
@@ -510,10 +418,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="7200" />
 		<skills>
 			<skill id="9047" level="1" /> <!-- 6th Anniversary Cube -->
@@ -529,10 +433,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
 		<skills>
 			<skill id="9048" level="1" /> <!-- 6th Anniversary Cube -->
@@ -548,10 +448,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
 			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
@@ -569,10 +465,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9040" level="1" /> <!-- PC Points -->
 		</skills>
@@ -588,10 +480,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9041" level="1" /> <!-- 6th Anniversary Cake -->
 		</skills>
@@ -610,10 +498,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="8361" level="1" /> <!-- 6th Anniversary Party Earring -->
@@ -637,10 +521,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="8360" level="1" /> <!-- Vitality Maintenance Effect -->
@@ -699,10 +579,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9063" level="1" /> <!-- Summon Scroll: Skooldie -->
 		</skills>
@@ -719,10 +595,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9064" level="1" /> <!-- Halloween Toy Box -->
 		</skills>
@@ -739,10 +611,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9065" level="1" /> <!-- Shiny Halloween Toy Box -->
 		</skills>
@@ -760,13 +628,9 @@
 		<set name="blessed" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
@@ -793,10 +657,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9066" level="1" /> <!-- Transformation Scroll Pack -->
 		</skills>
@@ -813,10 +673,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9067" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -848,10 +704,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9068" level="2" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -867,10 +719,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -887,12 +735,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="8370" level="1" /> <!-- Rotten Pumpkin Card -->
 			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
@@ -910,10 +754,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
@@ -933,10 +773,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
@@ -956,10 +792,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
@@ -979,10 +811,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
@@ -1002,10 +830,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
@@ -1024,10 +848,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1044,10 +864,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
@@ -1067,10 +883,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
@@ -1090,10 +902,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
@@ -1113,10 +921,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
@@ -1136,10 +940,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
 			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
@@ -1159,10 +959,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15449" min="1" max="1" chance="100" /> <!-- Shiny Alien Mask -->
 		</capsuled_items>
@@ -1179,10 +975,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15450" min="1" max="1" chance="100" /> <!-- Shiny Reanimated Corpse Mask -->
 		</capsuled_items>
@@ -1199,10 +991,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15451" min="1" max="1" chance="100" /> <!-- Shiny Shriek Mask -->
 		</capsuled_items>
@@ -1219,10 +1007,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15452" min="1" max="1" chance="100" /> <!-- Shiny Red Devil Mask -->
 		</capsuled_items>
@@ -1239,10 +1023,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15453" min="1" max="1" chance="100" /> <!-- Shiny Mummy Mask -->
 		</capsuled_items>
@@ -1259,10 +1039,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15461" min="1" max="1" chance="100" /> <!-- Halloween Nectar Pumpkin - Event -->
 		</capsuled_items>
@@ -1279,10 +1055,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15462" min="1" max="1" chance="100" /> <!-- Halloween King Pumpkin - Event -->
 		</capsuled_items>
@@ -1295,10 +1067,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9070" level="1" /> <!-- Halloween Pumpkin -->
@@ -1314,10 +1082,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15461" min="6" max="6" chance="100" /> <!-- Halloween Nectar Pumpkin - Event -->
 			<item id="15464" min="1" max="1" chance="100" /> <!-- Golden Jack O'Lantern Mask - 7-day -->
@@ -1334,10 +1098,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9072" level="1" /> <!-- Small Halloween Pumpkin -->
 		</skills>
@@ -1354,10 +1114,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="8377" level="1" /> <!-- Golden Jack O'Lantern Mask's Effect -->
@@ -1375,10 +1131,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15461" min="1" max="1" chance="100" /> <!-- Halloween Nectar Pumpkin - Event -->
 		</capsuled_items>
@@ -1395,10 +1147,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15462" min="1" max="1" chance="100" /> <!-- Halloween King Pumpkin - Event -->
 		</capsuled_items>
@@ -1411,10 +1159,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9071" level="1" /> <!-- Halloween Pumpkin (Event) -->
 		</skills>
@@ -1429,10 +1173,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="15461" min="6" max="6" chance="100" /> <!-- Halloween Nectar Pumpkin - Event -->
 			<item id="15464" min="1" max="1" chance="100" /> <!-- Golden Jack O'Lantern Mask - 7-day -->
@@ -1449,10 +1189,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9057" level="1" /> <!-- Frozen Core -->
 		</skills>
@@ -1469,10 +1205,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9058" level="1" /> <!-- Black Frozen Core -->
 		</skills>
@@ -1485,10 +1217,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15472" name="Sealed Divine Sword" type="EtcItem">
@@ -1500,10 +1228,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15473" name="Beast Handler's Whip" type="Armor">
@@ -1517,10 +1241,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="8364" level="1" /> <!-- Beast Training - Use Special Ability -->
 			<skill id="8362" level="1" /> <!-- Beast Training - Release -->
@@ -1538,10 +1258,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9049" level="1" /> <!-- Golden Spice -->
 		</skills>
@@ -1556,10 +1272,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9050" level="1" /> <!-- Crystal Spice -->
 		</skills>
@@ -1576,10 +1288,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9051" level="1" /> <!-- Blessed Golden Spice -->
 		</skills>
@@ -1596,10 +1304,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9052" level="1" /> <!-- Blessed Crystal Spice -->
 		</skills>
@@ -1616,10 +1320,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9053" level="1" /> <!-- Golden Spice (S-grade) -->
 		</skills>
@@ -1636,10 +1336,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9054" level="1" /> <!-- Crystal Spice (S-grade) -->
 		</skills>
@@ -1650,10 +1346,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15481" name="Old Crystal Spice" type="EtcItem">
@@ -1662,10 +1354,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15482" name="Golden Spice Crate" type="EtcItem">
@@ -1678,10 +1366,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9055" level="1" /> <!-- Golden Spice Capsule -->
 		</skills>
@@ -1696,10 +1380,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9056" level="1" /> <!-- Crystal Spice Capsule -->
 		</skills>
@@ -1731,10 +1411,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4" />
 		<skills>
 			<skill id="9059" level="1" /> <!-- Torch Light -->
@@ -1746,10 +1422,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15487" name="Maguen Plasma Collector" type="EtcItem">
@@ -1763,10 +1435,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9060" level="1" /> <!-- Maguen Plasma Collector -->
 		</skills>
@@ -1782,10 +1450,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1805,10 +1469,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -1826,10 +1486,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15491" name="Elite Maguen Collection Box" type="EtcItem">
@@ -1841,10 +1497,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15492" name="Sel Mahum Salmon Porridge" type="EtcItem">
@@ -1858,11 +1510,7 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9074" level="1" /> <!-- Salmon Porridge -->
 		</skills>
@@ -1877,10 +1525,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15494" name="Sticky Mushroom's Spores" type="EtcItem">
@@ -1893,10 +1537,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15495" name="Vitality Leaf" type="EtcItem">
@@ -1909,10 +1549,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15496" name="Seer Ugoros Pass" type="EtcItem">
@@ -1925,10 +1561,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15497" name="High-grade Lizard Scale" type="EtcItem">
@@ -1941,10 +1573,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15498" name="High-quality Lizardmen Scale" type="EtcItem">
@@ -1957,10 +1585,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15499" name="Vial of Tanta Blood" type="EtcItem">
@@ -1973,10 +1597,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 </list>

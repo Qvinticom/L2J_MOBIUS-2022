@@ -656,13 +656,9 @@
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
 		<set name="icon" val="icon.item_normal52" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1180,28 +1176,20 @@
 	<item id="19482" name="Ivory Tower Delivery" type="EtcItem">
 		<!-- Item to be delivered to the Magister Joan on the 3rd Floor of the Ivory Tower. To teleport to the Ivory Tower, visit the Gatekeeper in Gludio. Teleport to the Tower of Oren. Speak with the Gatekeeper in Oren and teleport to the Ivory Tower. At the Ivory Tower speak to the Gatekeeper and request to teleport to the 3rd floor. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="19483" name="Research Ingredient" type="EtcItem">
 		<!-- Items to be collected for the Ivory Tower mission. Collect them and bring them to the 3rd floor to magister Joan in the elven Mystic Guild. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
@@ -1209,13 +1197,9 @@
 		<!-- Insignia collected from the creatures in the Outlaw Forest. Collect enough and return to Captain Mouen in the Town of Oren. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1223,13 +1207,9 @@
 		<!-- Emblem collected from the creatures in the Outlaw Forest. Collect enough and return to Captain Mouen in the Town of Oren. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1237,13 +1217,9 @@
 		<!-- Element of Evil collected from the creatures in the Outlaw Forest. Collect enough and return to Captain Mouen in the Town of Oren. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1251,13 +1227,9 @@
 		<!-- Strange rock collected off a creature in the Forsaken Plains. Needed as proof that you have completed task assigned to you from Captain Kurtiz in the Town of Aden. -->
 		<set name="icon" val="icon.etc_black_freezing_core_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1265,13 +1237,9 @@
 		<!-- Item obtained from creatures in the Forsaken Plains. Collect enough and bring them to Magister Desmond in the Mystic Guide in the Town of Aden. -->
 		<set name="icon" val="icon.etc_freezing_core_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1279,13 +1247,9 @@
 		<!-- The ash left from the defeated creatures in the Valley of Saints. Collect enough of them and bring them to High Priest Agripel in the Town of Rune Einhasad Temple. -->
 		<set name="icon" val="icon.etc_powder_gray_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1293,13 +1257,9 @@
 		<!-- Buffalo Meat collected for the work request from Captain Vishotsky to replenish the food shortage in Schuttgart. -->
 		<set name="icon" val="icon.etc_meat_of_monstereye_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1307,13 +1267,9 @@
 		<!-- Ursus Meat collected for the work request from Captain Vishotsky to replenish the food shortage in Schuttgart. -->
 		<set name="icon" val="icon.etc_meat_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1321,41 +1277,29 @@
 		<!-- Yeti Meat collected for the work request from Captain Vishotsky to replenish the food shortage in Schuttgart. -->
 		<set name="icon" val="icon.etc_bodypart_liver_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="19493" name="Mysterious Letter" type="EtcItem">
 		<!-- Letter Armor Merchant Alisha in the Town of Rune needs you to deliver to Grand Magister Tifaren in the Mystic Guild of the Town of Rune. You have been warned not to read its contents. -->
 		<set name="icon" val="icon.item_normal20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="19494" name="Mysterious Letter" type="EtcItem">
 		<!-- Letter that Grand Magister Tifaren was intending to send to the Mysterious Wizard. She needs you to deliver it to the Mysterious Wizard in the Forest of the Dead. -->
 		<set name="icon" val="icon.item_normal20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
@@ -1363,13 +1307,9 @@
 		<!-- Item obtained from the creatures inhabiting the Blazing Swamp. Collect an enough and bring them to Priest Ross in Einhasad's Temple in the Town of Aden. -->
 		<set name="icon" val="icon.etc_powder_gray_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1377,13 +1317,9 @@
 		<!-- Blood Sample collected from the creatures defeated at the Wall of Argos. Collect enough and bring them to Magister Justin at the Mystic Guild in Goddard. -->
 		<set name="icon" val="icon.etc_dragons_blood_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1391,13 +1327,9 @@
 		<!-- Item needed to help Walderal start his new business. Collect enough and return to Warehouse Keeper Walderal in the Town of Aden. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1405,13 +1337,9 @@
 		<!-- Item obtained hunting Stakatos in the Swamp of Screams. After collecting enough return to Mercenary Supplier Abercrombie near the Swamp of Screams. -->
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1419,13 +1347,9 @@
 		<!-- Item obtained from the evil spirits of the Cemetery. Collect an adequate amount and bring them to Pamela Aprodia in the Goddard town warehouse. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>

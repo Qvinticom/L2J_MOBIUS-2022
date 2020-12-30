@@ -14,7 +14,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -29,7 +28,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -44,7 +42,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -59,7 +56,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -74,7 +70,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -89,7 +84,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -102,10 +96,9 @@
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
@@ -113,12 +106,9 @@
 	<item id="28408" name="Eva's Rune" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -135,7 +125,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -150,7 +139,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -166,7 +154,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
@@ -267,10 +254,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23873" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 7-day -->
@@ -282,10 +268,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28499" name="God's Soul Treasure Chest" type="EtcItem">
 		<!-- A chest containing a god's soul. Double-click to obtain various random items. -->
@@ -303,10 +288,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="37718" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Shiny Elemental Shirt -->
@@ -320,10 +304,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="46193" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Physical Reflect Shirt -->
@@ -337,10 +320,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="46194" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Magical Reflect Shirt -->
@@ -354,10 +336,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23240" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Pa'agrio's Shirt -->
@@ -371,10 +352,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23301" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Sayha's Shirt -->
@@ -388,10 +368,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23304" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Eva's Shirt -->
@@ -405,10 +384,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="23307" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Maphr's Shirt -->
@@ -520,9 +498,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28434" name="Mount - Fire Elk" type="Armor">
 		<!-- Allows to mount Elk. -->
@@ -537,10 +514,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27786" level="1" /> <!-- Ride Elk -->
@@ -576,9 +549,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="1" /> <!-- Sayha's Talisman Stage 1 -->
 		</skills>
@@ -593,9 +565,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="2" /> <!-- Sayha's Talisman Stage 2 -->
 		</skills>
@@ -610,9 +581,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="3" /> <!-- Sayha's Talisman Stage 3 -->
 		</skills>
@@ -627,9 +597,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="4" /> <!-- Sayha's Talisman Stage 4 -->
 		</skills>
@@ -644,9 +613,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="5" /> <!-- Sayha's Talisman Stage 5 -->
 			<skill id="27789" level="1" /> <!-- Sayha's Protection -->
@@ -662,9 +630,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="6" /> <!-- Sayha's Talisman Stage 6 -->
 			<skill id="27789" level="1" /> <!-- Sayha's Protection -->
@@ -681,9 +648,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="7" /> <!-- Sayha's Talisman Stage 7 -->
 			<skill id="27789" level="1" /> <!-- Sayha's Protection -->
@@ -701,9 +667,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="8" /> <!-- Sayha's Talisman Stage 8 -->
 			<skill id="27789" level="2" /> <!-- Sayha's Protection -->
@@ -722,9 +687,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="9" /> <!-- Sayha's Talisman Stage 9 -->
 			<skill id="27789" level="3" /> <!-- Sayha's Protection -->
@@ -743,9 +707,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="10" /> <!-- Sayha's Talisman Stage 10 -->
 			<skill id="27789" level="4" /> <!-- Sayha's Protection -->
@@ -856,9 +819,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18057" level="1" /> <!-- Dimensional Bracelet -->
@@ -887,10 +849,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28460" name="Heine Exclusive Bait (90-94)" type="EtcItem">
@@ -900,10 +861,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28461" name="Heine Exclusive Bait (95-98)" type="EtcItem">
@@ -913,10 +873,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28462" name="Heine Exclusive Bait (99+)" type="EtcItem">
@@ -926,10 +885,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28463" name="Heine Exclusive Bait Coupon" type="EtcItem">
@@ -994,9 +952,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28469" name="La Vie En Rose's Topaz Chest" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Topaz Lv. 5 (7-day) item. -->
@@ -1005,11 +962,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28470" name="Ultimate Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain La Vie En Rose's Jewelry Box. Low chance to obtain La Vie En Rose's Magnificent Brooch Jewel. -->
@@ -1021,9 +977,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27797" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
@@ -1041,10 +994,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="27786" level="1" /> <!-- Ride Elk -->
@@ -1063,10 +1012,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="27786" level="1" /> <!-- Ride Elk -->
@@ -1085,10 +1030,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="27786" level="1" /> <!-- Ride Elk -->
@@ -1102,10 +1043,9 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28475" name="Mount - Elk Pack (30-day)" type="EtcItem">
@@ -1116,10 +1056,9 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28476" name="Mount - Elk (Event) Pack (7-day)" type="EtcItem">
@@ -1130,10 +1069,9 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28477" name="Freya's Luxury Shopping Bag" type="EtcItem">
@@ -1173,7 +1111,6 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27832" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
@@ -1190,7 +1127,6 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27832" level="2" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
@@ -1207,7 +1143,6 @@
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="27832" level="3" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
@@ -1226,10 +1161,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="27837" level="1" /> <!-- Windy Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>

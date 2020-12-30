@@ -12,13 +12,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9199" level="1" /> <!-- Elixir: Drum Melody -->
 			<skill id="22213" level="1" /> <!-- Mysterious Scroll: Drum Melody -->
@@ -33,13 +29,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21202" min="1" max="1" chance="100" /> <!-- Magic Glasses - 30-day -->
 		</capsuled_items>
@@ -54,11 +46,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
 		<skills>
@@ -77,13 +65,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21206" min="1" max="1" chance="100" /> <!-- Queen Ant's Ring - 30-day -->
 		</capsuled_items>
@@ -97,13 +81,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21207" min="1" max="1" chance="100" /> <!-- Baium's Ring - 30-day -->
 		</capsuled_items>
@@ -117,13 +97,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21208" min="1" max="1" chance="100" /> <!-- Zaken's Earring - 30-day -->
 		</capsuled_items>
@@ -139,13 +115,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3562" level="1" /> <!-- Queen Ant's Ring -->
@@ -166,13 +138,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3561" level="1" /> <!-- Baium's Ring -->
@@ -194,12 +162,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3559" level="1" /> <!-- Zaken's Earring -->
@@ -218,13 +182,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21210" min="3" max="3" chance="100" /> <!-- MP Recovery Potion -->
 		</capsuled_items>
@@ -242,13 +202,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22214" level="1" /> <!-- MP Recovery Potion -->
 		</skills>
@@ -262,13 +218,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21212" min="10" max="10" chance="100" /> <!-- Vitality Recovering Potion -->
 		</capsuled_items>
@@ -286,12 +238,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22215" level="1" /> <!-- Vitality Recovering Potion -->
 		</skills>
@@ -305,13 +253,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21218" min="1" max="1" chance="100" /> <!-- Queen Ant's Ring - 180-day -->
 		</capsuled_items>
@@ -325,13 +269,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21219" min="1" max="1" chance="100" /> <!-- Baium's Ring - 180-day -->
 		</capsuled_items>
@@ -345,13 +285,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21220" min="1" max="1" chance="100" /> <!-- Zaken's Earring - 180-day -->
 		</capsuled_items>
@@ -365,13 +301,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21221" min="1" max="1" chance="100" /> <!-- Valakas' Necklace - 180-day -->
 		</capsuled_items>
@@ -385,13 +317,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21222" min="1" max="1" chance="100" /> <!-- Antharas' Earring - 180-day -->
 		</capsuled_items>
@@ -407,13 +335,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="115200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3562" level="1" /> <!-- Queen Ant's Ring -->
@@ -434,13 +358,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="115200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3561" level="1" /> <!-- Baium's Ring -->
@@ -462,12 +382,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="115200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3559" level="1" /> <!-- Zaken's Earring -->
@@ -488,13 +404,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="115200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3557" level="1" /> <!-- Valakas' Necklace -->
@@ -515,13 +427,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="time" val="115200" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
 		<skills>
 			<skill id="3558" level="1" /> <!-- Antharas' Earring -->
@@ -540,13 +448,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21224" min="5" max="5" chance="100" /> <!-- Transformation Scroll: Anakim -->
 		</capsuled_items>
@@ -562,13 +466,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22216" level="1" /> <!-- Transformation Scroll: Anakim -->
 		</skills>
@@ -582,13 +482,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21227" min="3" max="3" chance="100" /> <!-- Sweet Concentrated Fruit Cocktail -->
 		</capsuled_items>
@@ -602,13 +498,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21228" min="3" max="3" chance="100" /> <!-- Sweet Concentrated Fruit Cocktail - Event -->
 		</capsuled_items>
@@ -627,12 +519,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22330" level="1" /> <!-- Shield -->
 			<skill id="22331" level="1" /> <!-- Haste -->
@@ -661,12 +549,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22330" level="1" /> <!-- Shield -->
 			<skill id="22331" level="1" /> <!-- Haste -->
@@ -690,13 +574,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21231" min="3" max="3" chance="100" /> <!-- Fresh Concentrated Fruit Cocktail -->
 		</capsuled_items>
@@ -710,13 +590,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21232" min="3" max="3" chance="100" /> <!-- Fresh Concentrated Fruit Cocktail - Event -->
 		</capsuled_items>
@@ -735,12 +611,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22321" level="1" /> <!-- Acumen -->
 			<skill id="22322" level="1" /> <!-- Magic Barrier -->
@@ -767,12 +639,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22321" level="1" /> <!-- Acumen -->
 			<skill id="22322" level="1" /> <!-- Magic Barrier -->
@@ -794,13 +662,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21235" min="3" max="3" chance="100" /> <!-- Fresh Milk -->
 		</capsuled_items>
@@ -814,13 +678,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21236" min="3" max="3" chance="100" /> <!-- Fresh Milk - Event -->
 		</capsuled_items>
@@ -839,12 +699,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22341" level="1" /> <!-- Wind Walk -->
 			<skill id="22342" level="1" /> <!-- Haste -->
@@ -876,12 +732,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22341" level="1" /> <!-- Wind Walk -->
 			<skill id="22342" level="1" /> <!-- Haste -->
@@ -908,13 +760,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21239" min="3" max="3" chance="100" /> <!-- Super Healthy Juice (HP) -->
 		</capsuled_items>
@@ -928,13 +776,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21240" min="3" max="3" chance="100" /> <!-- Super Healthy Juice (HP) - Event -->
 		</capsuled_items>
@@ -950,12 +794,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="22217" level="1" /> <!-- Super Healthy Juice (HP) -->
 		</skills>
@@ -973,13 +814,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22218" level="1" /> <!-- Super Healthy Juice (HP) -->
 		</skills>
@@ -993,13 +830,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21243" min="5" max="5" chance="100" /> <!-- Super Healthy Juice (CP) -->
 		</capsuled_items>
@@ -1013,13 +846,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21244" min="5" max="5" chance="100" /> <!-- Super Healthy Juice (CP) - Event -->
 		</capsuled_items>
@@ -1035,12 +864,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="22219" level="1" /> <!-- Super Healthy Juice (CP) -->
 		</skills>
@@ -1058,13 +884,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22220" level="1" /> <!-- Super Healthy Juice (CP) -->
 		</skills>
@@ -1078,13 +900,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21247" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
@@ -1098,13 +916,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21248" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Potion - Event -->
 		</capsuled_items>
@@ -1121,12 +935,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="shared_reuse_group" val="106" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22221" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
@@ -1143,12 +953,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="shared_reuse_group" val="106" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22222" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
@@ -1162,13 +968,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21251" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) -->
 		</capsuled_items>
@@ -1182,13 +984,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="21252" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Potion (30-minute) - Event -->
 		</capsuled_items>
@@ -1205,12 +1003,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22223" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -1227,12 +1021,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22224" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -1244,14 +1034,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21255" min="5" max="5" chance="100" /> <!-- Gludio Homemade Cookie -->
@@ -1264,14 +1050,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21256" min="5" max="5" chance="100" /> <!-- Gludio Homemade Cookie - Event -->
@@ -1285,16 +1067,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22225" level="1" /> <!-- Gludio Homemade Cookie -->
 		</skills>
@@ -1307,16 +1085,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22226" level="1" /> <!-- Gludio Homemade Cookie -->
 		</skills>
@@ -1328,14 +1102,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21259" min="5" max="5" chance="100" /> <!-- Dion Homemade Cookie -->
@@ -1348,14 +1118,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21260" min="5" max="5" chance="100" /> <!-- Dion Homemade Cookie - Event -->
@@ -1369,16 +1135,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22227" level="1" /> <!-- Dion Homemade Cookie -->
 		</skills>
@@ -1391,16 +1153,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22228" level="1" /> <!-- Dion Homemade Cookie -->
 		</skills>
@@ -1412,14 +1170,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21263" min="3" max="3" chance="100" /> <!-- Aden Homemade Cookie -->
@@ -1432,14 +1186,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21264" min="3" max="3" chance="100" /> <!-- Aden Homemade Cookie - Event -->
@@ -1453,16 +1203,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22229" level="1" /> <!-- Aden Homemade Cookie -->
 		</skills>
@@ -1475,16 +1221,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22230" level="1" /> <!-- Aden Homemade Cookie -->
 		</skills>
@@ -1496,14 +1238,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21267" min="3" max="3" chance="100" /> <!-- Giran Homemade Cookie -->
@@ -1516,14 +1254,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21268" min="3" max="3" chance="100" /> <!-- Giran Homemade Cookie - Event -->
@@ -1537,16 +1271,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22231" level="1" /> <!-- Giran Homemade Cookie -->
 		</skills>
@@ -1559,16 +1289,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22232" level="1" /> <!-- Giran Homemade Cookie -->
 		</skills>
@@ -1580,14 +1306,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21271" min="3" max="3" chance="100" /> <!-- Rune Homemade Cookie -->
@@ -1600,14 +1322,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="21272" min="3" max="3" chance="100" /> <!-- Rune Homemade Cookie - Event -->
@@ -1621,16 +1339,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22233" level="1" /> <!-- Rune Homemade Cookie -->
 		</skills>
@@ -1643,16 +1357,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 		<skills>
 			<skill id="22234" level="1" /> <!-- Rune Homemade Cookie -->
 		</skills>
@@ -1664,14 +1374,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) -->
@@ -1684,14 +1390,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) (Event) -->
@@ -1705,16 +1407,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21276" name="Minion Coupon" additionalName="Event" type="EtcItem">
 		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
@@ -1724,16 +1422,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21277" name="Superior Minion Coupon Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Superior Minion coupons. -->
@@ -1742,14 +1436,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14065" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
@@ -1762,14 +1452,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hour -->
@@ -1783,16 +1469,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21280" name="Superior Minion Coupon" additionalName="Event" type="EtcItem">
 		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
@@ -1802,16 +1484,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21281" name="Feather of Blessing Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Feather of Blessing. -->
@@ -1820,14 +1498,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="10649" min="1" max="1" chance="100" /> <!-- Feather of Blessing -->
@@ -1840,14 +1514,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13300" min="1" max="1" chance="100" /> <!-- Feather of Blessing (Event) -->
@@ -1860,14 +1530,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book -->
@@ -1880,14 +1546,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13301" min="1" max="1" chance="100" /> <!-- My Teleport Book (Event) -->
@@ -1900,14 +1562,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13016" min="30" max="30" chance="100" /> <!-- My Teleport Scroll -->
@@ -1920,14 +1578,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13302" min="30" max="30" chance="100" /> <!-- My Teleport Scroll (Event) -->
@@ -1940,14 +1594,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13011" min="15" max="15" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
@@ -1960,14 +1610,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13298" min="15" max="15" chance="100" /> <!-- Extra Pass: Near Kamaloka (Event) -->
@@ -1980,14 +1626,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13010" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
@@ -2000,14 +1642,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13297" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) -->
@@ -2020,14 +1658,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13012" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
@@ -2040,14 +1674,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="13299" min="15" max="15" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) -->
@@ -2060,14 +1690,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14705" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
@@ -2080,14 +1706,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14705" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (A-grade) -->
@@ -2100,14 +1722,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14706" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
@@ -2120,14 +1738,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14706" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Weapon (S-grade) -->
@@ -2140,14 +1754,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14710" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
@@ -2160,14 +1770,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14710" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (A-grade) -->
@@ -2180,14 +1786,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="14711" min="1" max="1" chance="100" /> <!-- Lucky Enchant Stone: Armor (S-grade) -->

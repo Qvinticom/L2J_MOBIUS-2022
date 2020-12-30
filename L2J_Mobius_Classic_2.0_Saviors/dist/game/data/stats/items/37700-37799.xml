@@ -59,10 +59,6 @@
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<set name="price" val="88681000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -79,10 +75,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<set name="price" val="88681000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">150</stat>
 			<stat type="pAtkRange">40</stat>
@@ -92,15 +84,9 @@
 		<!-- Modifies the appearance of Valentine's Day 2013 weapon. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
 		<skills>
@@ -114,7 +100,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37725" name="NC Dinos Uniform" type="Armor">
@@ -126,20 +111,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
 	</item>
 	<item id="37726" name="NC Dinos Shortstop Cap" type="Armor">
 		<!-- NC Dinos Shortstop Cap -->
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
 		<set name="bodypart" val="hairall" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
 	</item>
 </list>

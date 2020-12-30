@@ -7,7 +7,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48701" name="Red Libra Entrance Pass - Altar of Shilen" type="EtcItem">
@@ -17,7 +17,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48702" name="Red Libra Entrance Pass - Fallen Emperor's Throne" type="EtcItem">
@@ -27,7 +27,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48703" name="Red Libra Entrance Pass - Fall of Etina" type="EtcItem">
@@ -37,7 +37,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48704" name="Fallen Emperor's Throne Entrance Pass" type="EtcItem">
@@ -81,7 +81,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -93,16 +93,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="39345" level="1" /> <!-- Chronicle Token -->
 		</skills>
@@ -114,7 +110,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -125,7 +121,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -136,7 +132,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -147,7 +143,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -158,8 +154,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48715" name="Libra Cube Stage 2" type="EtcItem">
@@ -169,8 +165,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48716" name="Libra Cube Stage 3" type="EtcItem">
@@ -180,8 +176,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48717" name="Libra Cube Stage 4" type="EtcItem">
@@ -191,8 +187,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48718" name="Libra Cube Stage 5" type="EtcItem">
@@ -202,8 +198,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48719" name="Libra Cube Stage 6" type="EtcItem">
@@ -213,8 +209,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48720" name="Libra Cube Stage 7" type="EtcItem">
@@ -224,8 +220,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48721" name="Libra Cube Stage 8" type="EtcItem">
@@ -235,8 +231,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48722" name="Libra Cube Stage 9" type="EtcItem">
@@ -246,8 +242,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48723" name="Libra Cube Stage 10" type="EtcItem">
@@ -257,8 +253,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48724" name="Libra Cube Stage 11" type="EtcItem">
@@ -268,8 +264,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48725" name="Libra Cube Stage 12" type="EtcItem">
@@ -279,8 +275,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48726" name="Libra Cube Stage 13" type="EtcItem">
@@ -290,8 +286,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48727" name="Libra Cube Stage 14" type="EtcItem">
@@ -301,8 +297,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48728" name="Libra Cube Stage 15" type="EtcItem">
@@ -312,8 +308,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48729" name="Libra Cube Stage 16" type="EtcItem">
@@ -323,8 +319,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48730" name="Libra Cube Stage 17" type="EtcItem">
@@ -334,8 +330,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48731" name="Libra Cube Stage 18" type="EtcItem">
@@ -345,8 +341,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48732" name="Libra Cube Stage 19" type="EtcItem">
@@ -356,8 +352,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48733" name="Libra Cube Stage 20" type="EtcItem">
@@ -367,8 +363,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48734" name="Libra Cube Stage 21" type="EtcItem">
@@ -378,8 +374,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48735" name="Red's Hidden Libra Cube Stage 1" type="EtcItem">
@@ -389,8 +385,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48736" name="Red's Hidden Libra Cube Stage 2" type="EtcItem">
@@ -400,8 +396,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48737" name="Red's Hidden Libra Cube Stage 3" type="EtcItem">
@@ -411,8 +407,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48738" name="Red's Hidden Libra Cube Stage 4" type="EtcItem">
@@ -422,8 +418,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48739" name="Red's Hidden Special Libra Cube Stage 5" type="EtcItem">
@@ -433,8 +429,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48740" name="Red's Hidden Libra Cube Stage 6" type="EtcItem">
@@ -444,8 +440,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48741" name="Red's Hidden Libra Cube Stage 7" type="EtcItem">
@@ -455,8 +451,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48742" name="Red's Hidden Libra Cube Stage 8" type="EtcItem">
@@ -466,8 +462,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48743" name="Red's Hidden Libra Cube Stage 9" type="EtcItem">
@@ -477,8 +473,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48744" name="Red's Hidden Special Libra Cube Stage 10" type="EtcItem">
@@ -488,8 +484,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48745" name="Red's Hidden Libra Cube Stage 11" type="EtcItem">
@@ -499,8 +495,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48746" name="Red's Hidden Libra Cube Stage 12" type="EtcItem">
@@ -510,8 +506,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48747" name="Red's Hidden Libra Cube Stage 13" type="EtcItem">
@@ -521,8 +517,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48748" name="Red's Hidden Libra Cube Stage 14" type="EtcItem">
@@ -532,8 +528,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48749" name="Red's Hidden Special Libra Cube Stage 15" type="EtcItem">
@@ -543,8 +539,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48750" name="Red's Hidden Libra Cube Stage 16" type="EtcItem">
@@ -554,8 +550,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48751" name="Red's Hidden Libra Cube Stage 17" type="EtcItem">
@@ -565,8 +561,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48752" name="Red's Hidden Libra Cube Stage 18" type="EtcItem">
@@ -576,8 +572,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48753" name="Red's Hidden Libra Cube Stage 19" type="EtcItem">
@@ -587,8 +583,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48754" name="Red's Hidden Special Libra Cube Stage 20" type="EtcItem">
@@ -598,8 +594,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48755" name="Shining Dragon Attribute Tonic (XP)" additionalName="Event" type="EtcItem">
@@ -611,7 +607,7 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -631,7 +627,7 @@
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
@@ -687,7 +683,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -695,14 +691,10 @@
 		<!-- Enables the Talisman of Battle - Cancel Hide skill. Cancels Hide buffs of nearby enemies. Can only be used in the Grand Olympiad. Available for 1 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
@@ -714,14 +706,10 @@
 		<!-- Enables the Talisman of Battle - Cancel Hide skill. Cancels Hide buffs of nearby enemies. Can only be used in the Grand Olympiad. Available for 3 d. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />

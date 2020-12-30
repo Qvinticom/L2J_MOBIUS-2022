@@ -12,7 +12,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="35104" level="1" /> <!-- Warrior's Circlet) -->
@@ -78,7 +77,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="35108" level="1" /> <!-- Wizard's Circlet -->
@@ -144,7 +142,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="35112" level="1" /> <!-- Knight's Circlet -->
@@ -206,7 +203,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
@@ -275,7 +271,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48218" name="Veteran Duo's Bracelet Chest" additionalName="Event" type="EtcItem">
 		<!-- Contains Veteran Duo's Bracelet. -->
@@ -288,7 +283,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48219" name="Returned Duo's Bracelet Chest" additionalName="Event" type="EtcItem">
 		<!-- Returned Duo's Bracelet -->
@@ -301,7 +295,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48220" name="Royal White Save Ticket (R99)" additionalName="Event" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
@@ -309,10 +302,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 </list>

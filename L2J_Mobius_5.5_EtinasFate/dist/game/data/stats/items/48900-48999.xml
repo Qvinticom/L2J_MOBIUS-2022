@@ -226,7 +226,6 @@
 		<set name="icon" val="icon.artifact_a_attribute_att_up" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<skills>
 			<skill id="35252" level="1" /> <!-- Artifact - Attack Attribute -->
@@ -237,7 +236,6 @@
 		<set name="icon" val="icon.artifact_a_attribute_def_up" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<skills>
 			<skill id="35253" level="1" /> <!-- Artifact - Defense Attribute -->

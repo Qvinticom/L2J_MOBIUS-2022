@@ -251,7 +251,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47131" name="Blackbird Clan Medal" type="EtcItem">
 		<!-- A medal obtained after helping the Blackbird Clan. Used to place Blackbird Clan experts or ornaments in the dwelling. -->
@@ -261,7 +260,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47132" name="Giant Trackers Medal" type="EtcItem">
 		<!-- A medal obtained after helping the Giant Trackers. Used to place Giant Trackers experts or ornaments in the dwelling. -->
@@ -271,7 +269,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47133" name="Mother Tree Guardians Medal" type="EtcItem">
 		<!-- A medal obtained after helping the Mother Tree Guardians. Used to place Mother Tree Guardians experts or ornaments in the dwelling. -->
@@ -281,7 +278,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47134" name="Unworldly Visitors Medal" type="EtcItem">
 		<!-- A medal obtained after helping the Unworldly Visitors. Used to place Unworldly Visitors experts or ornaments in the dwelling. -->
@@ -291,7 +287,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47135" name="Kingdom's Royal Guard Medal" type="EtcItem">
 		<!-- A medal obtained after helping the Kingdom's Royal Guard. Used to place Kingdom's Royal Guard experts or ornaments in the dwelling. -->
@@ -301,7 +296,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47136" name="Fish Chilli Stew" additionalName="WIT" type="EtcItem">
 		<!-- Use to enable WIT +3 and LUC +1 for 30 min. Effect does not stack with identical ones. Cooldown 5 min. -->
@@ -396,9 +390,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -419,9 +410,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -442,9 +430,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="weight" val="20" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -465,9 +450,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -488,9 +470,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -598,7 +577,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47159" name="Fairy Talisman" type="Armor">
 		<set name="icon" val="icon.etc_guardian_talisman" />
@@ -611,7 +589,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47160" name="Vanguard Talisman" type="Armor">
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
@@ -624,7 +601,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47161" name="Spirits Talisman" type="Armor">
 		<set name="icon" val="icon.etc_stranger_talisman" />
@@ -637,7 +613,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47162" name="Spicula Talisman" type="Armor">
 		<set name="icon" val="icon.etc_kamael_talisman" />
@@ -650,7 +625,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47163" name="Monsters only_Giant's Fortress Bow" type="Weapon">
 		<!-- Monster weapon. Bow type. -->
@@ -668,7 +642,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">92</stat>
@@ -691,7 +664,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">80</stat>
@@ -709,7 +681,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">80</stat>
@@ -727,7 +698,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">80</stat>
@@ -745,7 +715,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">80</stat>
@@ -763,7 +732,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">80</stat>
@@ -781,7 +749,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">80</stat>
@@ -797,7 +764,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="16696" level="1" /> <!-- Purge -->
@@ -811,7 +777,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47172" name="Blackbird Clan Basic Supply Box" additionalName="Hellbound" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Beleth's Magic Circle area. Double click to view the item. -->
@@ -821,9 +786,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18599" level="1" /> <!-- Basic Supply Box -->
@@ -837,9 +799,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18599" level="2" /> <!-- Intermediate Supply Box -->
@@ -853,9 +812,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18599" level="3" /> <!-- Advanced Supply Box -->
@@ -869,9 +825,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18600" level="1" /> <!-- Basic Supply Box -->
@@ -885,9 +838,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18600" level="2" /> <!-- Intermediate Supply Box -->
@@ -901,9 +851,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18600" level="3" /> <!-- Advanced Supply Box -->
@@ -917,9 +864,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="1" /> <!-- Basic Supply Box -->
@@ -933,9 +877,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="2" /> <!-- Intermediate Supply Box -->
@@ -949,9 +890,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="3" /> <!-- Advanced Supply Box -->
@@ -965,9 +903,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18602" level="1" /> <!-- Basic Supply Box -->
@@ -981,9 +916,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18602" level="2" /> <!-- Intermediate Supply Box -->
@@ -997,9 +929,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18602" level="3" /> <!-- Advanced Supply Box -->
@@ -1013,9 +942,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18603" level="1" /> <!-- Basic Supply Box (lower level) -->
@@ -1029,9 +955,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18603" level="2" /> <!-- Intermediate Supply Box (lower level) -->
@@ -1045,9 +968,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18603" level="3" /> <!-- Advanced Supply Box (lower level) -->
@@ -1061,7 +981,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47188" name="Memories of the Wind" type="EtcItem">
@@ -1072,7 +991,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47189" name="Energy Laden With the Day's Warmth" type="EtcItem">
@@ -1083,7 +1001,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47190" name="Energy Laden with the Night's Icy Air" type="EtcItem">
@@ -1094,7 +1011,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47191" name="Superion Map Piece" type="EtcItem">
@@ -1105,7 +1021,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47192" name="Crumbled Trace of Giants" type="EtcItem">
 		<!-- A trace from which the difference between a true giant and a restored giant can be known. Collect and take it to Histie. -->
@@ -1115,7 +1030,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47193" name="Stronghold Situation Report: Barton" type="EtcItem">
 		<!-- A Stronghold Situation Report prepared by Barton in Stronghold I. Take this to Logart Van Dyke. -->
@@ -1125,7 +1039,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47194" name="Stronghold Situation Report: Hayuk" type="EtcItem">
 		<!-- A Stronghold Situation Report prepared by Hayuk in Stronghold II. Take this to Logart Van Dyke. -->
@@ -1135,7 +1048,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47195" name="Stronghold Situation Report: Elise" type="EtcItem">
 		<!-- A Stronghold Situation Report prepared by Elise in Stronghold III. Take this to Logart Van Dyke. -->
@@ -1145,7 +1057,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47196" name="Stronghold Situation Report: Eliyah" type="EtcItem">
 		<!-- A Stronghold Situation Report prepared by Eliyah in Stronghold IV. Take this to Logart Van Dyke. -->
@@ -1155,7 +1066,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47197" name="Embryo Supplies" type="EtcItem">
 		<!-- Supply items obtained by opening the Atelia Supply Boxes at Atelia Fortress. Logart Van Dyke has asked you to collect them in order to cut off supplies to the Embryo. -->
@@ -1165,7 +1075,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47198" name="Buoyant Seed Sample" type="EtcItem">
 		<!-- A sample of Buoyant Seed. The Mother Tree Guardians need this sample. -->
@@ -1175,7 +1084,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47199" name="Fluttering Seed Sample" type="EtcItem">
 		<!-- A sample of Fluttering Seed. The Mother Tree Guardians need this sample. -->
@@ -1185,6 +1093,5 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 </list>

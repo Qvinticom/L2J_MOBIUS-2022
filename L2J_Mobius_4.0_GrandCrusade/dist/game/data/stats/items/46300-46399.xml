@@ -5,13 +5,9 @@
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
@@ -26,13 +22,9 @@
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
@@ -109,13 +101,9 @@
 		<!-- Send a signal to Adolph, who will use the Protection of Faith skill. The whistle disappears after 2 uses. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -124,13 +112,9 @@
 		<!-- Send a signal to Barton, who will use the Berserker skill. Using the Berserker skill will increase Barton's Debuff Resistance/Speed/P. Atk./P. Accuracy/P. Def./Atk. Spd./Critical Damage. Recovre 20% of HP when killing the opponent. Additionally, P. Atk. + 10% and Critical Rate + 100 when HP is below 60%. P. Atk. + 30% and Critical Rate + 300 when HP is below 30%. The whistle disappears after 2 uses. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -139,13 +123,9 @@
 		<!-- Send a signal to Hayuk, who will use the Phoenix Arrow skill. The whistle disappears after 2 uses. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -154,13 +134,9 @@
 		<!-- Send a signal to Elise, who will use the Celestial Party Protection skill. The whistle disappears after 2 uses. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -169,13 +145,9 @@
 		<!-- Send a signal to Eliyah, who will use the Shadow Hell skill. The whistle disappears after 2 uses. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -184,10 +156,7 @@
 		<!-- Key to get to Core in the Cruma Tower. Key to the System Control Room. -->
 		<set name="icon" val="icon.etc_dark_key_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -198,12 +167,8 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -227,12 +192,8 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -255,12 +216,8 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -283,12 +240,8 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -312,12 +265,8 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -344,12 +293,8 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -373,12 +318,8 @@
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -402,12 +343,8 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -430,12 +367,8 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -460,12 +393,8 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -757,12 +686,9 @@
 		<!-- Sigel Knight Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -772,12 +698,9 @@
 		<!-- Tyrr Warrior Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -787,12 +710,9 @@
 		<!-- Othell Rogue Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -802,12 +722,9 @@
 		<!-- Yul Archer Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -817,12 +734,9 @@
 		<!-- Feoh Wizard Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -832,12 +746,9 @@
 		<!-- Iss Enchanter Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -847,12 +758,9 @@
 		<!-- Wynn Summoner Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -862,12 +770,9 @@
 		<!-- Aeore Healer Transformation appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -877,13 +782,9 @@
 		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -905,13 +806,9 @@
 		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -933,13 +830,9 @@
 		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -961,13 +854,9 @@
 		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -989,13 +878,9 @@
 		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -1017,13 +902,9 @@
 		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -1045,13 +926,9 @@
 		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -1073,13 +950,9 @@
 		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -1101,13 +974,9 @@
 		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -1129,13 +998,9 @@
 		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -1157,13 +1022,9 @@
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -1187,7 +1048,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1202,7 +1062,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1217,7 +1076,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1232,7 +1090,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1247,7 +1104,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1262,7 +1118,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1277,7 +1132,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1292,7 +1146,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1307,7 +1160,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1322,7 +1174,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1337,7 +1188,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1352,7 +1202,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1365,12 +1214,8 @@
 		<!-- Wrapped Pack containing a Blessed Zodiac Agathion (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1384,14 +1229,10 @@
 		<!-- Christmas Card given by Santa Claus. Only given to people who have been good for a year. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46371" name="Ashen Certificate" type="EtcItem">
@@ -1399,14 +1240,10 @@
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46372" name="Revolutionaries' Strategic Map Piece" type="EtcItem">
@@ -1414,14 +1251,10 @@
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46373" name="Transport Goods" type="EtcItem">
@@ -1429,14 +1262,10 @@
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46374" name="Destroyed Mark Fragment" type="EtcItem">
@@ -1444,27 +1273,19 @@
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46375" name="Gludin Hero's Reward Box" type="EtcItem">
 		<!-- Reward box given in exchange for saving Gludin from danger. Double-click to use. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1476,14 +1297,10 @@
 		<!-- Coupon you can trade in for a Shadow Weapon. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46377" name="Frozen One-handed Sword" type="Weapon">
@@ -1493,12 +1310,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1520,12 +1333,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1548,12 +1357,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1575,12 +1380,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1603,12 +1404,8 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1634,12 +1431,8 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
@@ -1662,12 +1455,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
@@ -1690,12 +1479,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1717,12 +1502,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1744,12 +1525,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1771,12 +1548,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1798,12 +1571,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -1825,12 +1594,8 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1853,12 +1618,8 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1878,12 +1639,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="D" />
 		<set name="bodypart" val="lhand" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="200" />
 		<stats>
@@ -1896,12 +1653,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="D" />
 		<set name="bodypart" val="lhand" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="100" />
 		<stats>
@@ -1912,8 +1665,6 @@
 	</item>
 	<item id="46393" name="NPC Ashen Shadow Revolutionary Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">7</stat>
@@ -1921,8 +1672,6 @@
 	</item>
 	<item id="46394" name="NPC Ashen Shadow Revolutionary Mask" type="Armor">
 		<set name="icon" val="icon.etc_party_mask_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="46395" name="Shadow Ingot" type="EtcItem">

@@ -278,7 +278,7 @@
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -472,7 +472,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
 		<skills>
@@ -519,15 +518,11 @@
 		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="39527" level="1" /> <!-- Enchant Scroll: Blessed Bracelet -->

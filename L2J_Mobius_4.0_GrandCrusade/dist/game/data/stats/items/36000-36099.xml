@@ -4,10 +4,7 @@
 		<!-- For 1 hour, increases Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, Defense by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_defence_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -22,10 +19,7 @@
 		<!-- For 1 hour, M. Atk. + 40%, M. Critical Rate by100%, Casting Spd. by 8%, P. Atk. by 8%, Atk. Spd. by 8%. Speed by 8, M. Def. by 14%, and MP Recovery Rate by 20%. For 1 hour, decreases Magic Skill MP Consumption by 15%, Physical Skill MP Consumption by 5%, and Skill Cooldown by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_magic_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -40,10 +34,7 @@
 		<!-- For 1 hour, increases maximum CP by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_cp_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -57,12 +48,8 @@
 	<item id="36003" name="Heavenly P. Atk. Special Box" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Atk. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -76,12 +63,8 @@
 	<item id="36004" name="Heavenly P. Def. Special Box" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Def. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -95,12 +78,8 @@
 	<item id="36005" name="Heavenly Magic Special Box" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly Magic Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -114,12 +93,8 @@
 	<item id="36006" name="Heavenly CP Increase Special Box" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly CP Cookie s. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -133,11 +108,8 @@
 	<item id="36007" name="High-grade Lucky Enchant Stone Special Box" type="EtcItem">
 		<!-- Can get High-grade Lucky Enchant Stone: Weapon (R-grade) and High-grade Lucky Enchant Stone: Armor (R-grade). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -152,10 +124,7 @@
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -169,10 +138,7 @@
 		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
@@ -186,13 +152,9 @@
 		<!-- For 1 hour, increases Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, Casting Spd. by 8%, and Speed by 8. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_attack_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -207,13 +169,9 @@
 		<!-- For 1 hour, increases Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, Defense by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_defence_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -228,13 +186,9 @@
 		<!-- For 1 hour, M. Atk. + 40%, M. Critical Rate by100%, Casting Spd. by 8%, P. Atk. by 8%, Atk. Spd. by 8%. Speed by 8, M. Def. by 14%, and MP Recovery Rate by 20%. For 1 hour, decreases Magic Skill MP Consumption by 15%, Physical Skill MP Consumption by 5%, and Skill Cooldown by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_magic_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -249,13 +203,9 @@
 		<!-- For 1 hr., increases Max CP by 20%. Cooldown is 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_cp_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -269,12 +219,8 @@
 	<item id="36014" name="Heavenly P. Atk. Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Atk. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -288,12 +234,8 @@
 	<item id="36015" name="Heavenly P. Def. Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly P. Def. Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -307,12 +249,8 @@
 	<item id="36016" name="Heavenly Magic Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly Magic Cookies. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -326,12 +264,8 @@
 	<item id="36017" name="Heavenly CP Increase Special Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack that contains 10 Heavenly Cocktails/10 Heavenly CP Cookie s. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -345,12 +279,8 @@
 	<item id="36018" name="High-grade Lucky Enchant Stone Special Box" additionalName="Event" type="EtcItem">
 		<!-- Can get High-grade Lucky Enchant Stone: Weapon (R-grade) and High-grade Lucky Enchant Stone: Armor (R-grade). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -365,13 +295,9 @@
 		<!-- Enchant success rate + 20% for weapons (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -384,13 +310,9 @@
 		<!-- Enchant success rate + 30% for armor (R-grade). Only for items enchanted between + 3 and + 9. Not usable on items enchanted + 10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -402,13 +324,9 @@
 	<item id="36021" name="Returning Hero's Potion Pack" type="EtcItem">
 		<!-- Gift box that contains 30 Returning Hero's Health Potions, 1 Returning Hero's Vitality Replenishing Juice 3-unit Pack, and 6 Heavenly Cocktails. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -424,13 +342,9 @@
 		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no duration. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_hero_red_potion" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="500" />
@@ -448,13 +362,9 @@
 		<!-- Gift box that contains 1 Returning Hero's Shirt, 1 Returning Hero's Belt, and 1 Returning Hero's Wondrous Cubic. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -470,14 +380,10 @@
 	<item id="36024" name="Returning Hero's Wondrous Cubic" type="EtcItem">
 		<!-- Double-click to acquire one of the following: 30-minute Vitality Recovering Potion, 700 PC Coupon Points, 2 Heavenly Cocktails, Scroll of Escape Box: Village, and Blessed Scroll of Escape. (Can only be used once a-day) -->
 		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -490,13 +396,9 @@
 		<!-- Can resurrect right away if you die in Kartia's Labyrinth - Tainted Dimension Attacker. (XP Recovery Rate 50%) -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -504,26 +406,19 @@
 		<!-- Can resurrect right away if you die in Kartia's Labyrinth - Tainted Dimension Attacker. (XP Recovery Rate 100%) -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36027" name="Lump of Fur" type="EtcItem">
 		<!-- Clan Production Request A - Provide the leather machine with a Lump of Fur from Cute Buffalo. -->
 		<set name="icon" val="icon.etc_mane_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -534,13 +429,10 @@
 	<item id="36028" name="Fruit Charged with Water" type="EtcItem">
 		<!-- Clan Production Request B - Deliver a Fruit Charged with Water to Impatient Mahum Chef. -->
 		<set name="icon" val="icon.etc_codran_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -550,13 +442,10 @@
 	<item id="36029" name="Fruit Charged with Fire" type="EtcItem">
 		<!-- Clan Production Request B - Deliver a Fruit Charged with Fire to Impatient Mahum Chef. -->
 		<set name="icon" val="icon.etc_codran_i03" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -566,13 +455,10 @@
 	<item id="36030" name="Fruit Charged with Wind" type="EtcItem">
 		<!-- Clan Production Request B - Deliver a Fruit Charged with Wind to Impatient Mahum Chef. -->
 		<set name="icon" val="icon.etc_codran_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -583,12 +469,9 @@
 		<!-- Clan Handicraft Request A - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -610,12 +493,9 @@
 		<!-- Item used in clan requests. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -634,12 +514,9 @@
 		<!-- Clan Production Request A - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -661,12 +538,9 @@
 		<!-- Clan Production Request B - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
 		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -685,12 +559,9 @@
 		<!-- Alternative Clan Request A - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -712,12 +583,9 @@
 		<!-- Alternative Clan Request B - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -739,12 +607,9 @@
 	<item id="36037" name="Mysterious Incantation" type="EtcItem">
 		<!-- Item that can be used only in the Ceremony of Chaos Arena. Drags the selected target to your location. -->
 		<set name="icon" val="icon.etc_grankain_chain" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -758,12 +623,9 @@
 	<item id="36038" name="Mysterious Defense" type="EtcItem">
 		<!-- Item that can be used only in the Ceremony of Chaos Arena. Makes you invincible for 5 seconds. -->
 		<set name="icon" val="icon.etc_grankain_protect" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1075,13 +937,9 @@
 		<!-- Alliance made with blood! Cloak that is specifically designed for clans and symbolizes the honor of clans. Can be acquired through a clan request. Can be used only on clan members. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
@@ -1101,13 +959,9 @@
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="5000000" />
@@ -1127,13 +981,9 @@
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="15000000" />
@@ -1155,29 +1005,22 @@
 		<!-- Key that the Spiculas in Nornil's Cave have. Its use is not known. -->
 		<set name="icon" val="icon.etc_old_key_i02" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36055" name="Scroll: Stronghold Siege (10-second)" type="EtcItem">
 		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 10 seconds. -->
 		<set name="icon" val="icon.etc_doom_capture" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1191,12 +1034,9 @@
 	<item id="36056" name="Scroll: Stronghold Siege (20-second)" type="EtcItem">
 		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 20 seconds. -->
 		<set name="icon" val="icon.etc_doom_capture" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1210,12 +1050,9 @@
 	<item id="36057" name="Scroll: Stronghold Siege (30-second)" type="EtcItem">
 		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 30 seconds. -->
 		<set name="icon" val="icon.etc_doom_capture" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1229,12 +1066,9 @@
 	<item id="36058" name="Scroll: Stronghold Siege (40-second)" type="EtcItem">
 		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 40 seconds. -->
 		<set name="icon" val="icon.etc_doom_capture" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1248,12 +1082,9 @@
 	<item id="36059" name="Scroll: Stronghold Siege (50-second)" type="EtcItem">
 		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 50 seconds. -->
 		<set name="icon" val="icon.etc_doom_capture" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1268,13 +1099,9 @@
 		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="useSkillDisTime" val="10" />
@@ -1290,13 +1117,9 @@
 		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="useSkillDisTime" val="10" />
@@ -1311,13 +1134,9 @@
 		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="useSkillDisTime" val="10" />
@@ -1332,13 +1151,9 @@
 		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="useSkillDisTime" val="10" />
@@ -1353,13 +1168,9 @@
 		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="useSkillDisTime" val="10" />
@@ -1374,14 +1185,10 @@
 		<!-- Vaccine made by Verna. Can be used on Golem Generators that occasionally come out of Scout Golems in Nornil's Cave. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1394,14 +1201,10 @@
 		<!-- Water scooped from deep inside the Garden of Eva. Probably not the Clearest Water. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1409,14 +1212,10 @@
 	<item id="36067" name="Clearest Water" type="EtcItem">
 		<!-- The cleanest water received from the Lady of the Lake. Can be used on the Mother Tree at the center of Elven Village. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1428,14 +1227,10 @@
 	<item id="36068" name="Brightest Light" type="EtcItem">
 		<!-- The Brightest Light received from Nerupa in the Arms of Timiniel in Magmeld. Can be used in front of Shilen's Stone Statue towering at the center of Dark Elf Village. -->
 		<set name="icon" val="icon.tersi_specter_seed" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1447,14 +1242,10 @@
 	<item id="36069" name="Purest Soul" type="EtcItem">
 		<!-- The Purest Soul received from Enfeux in the Valley of Saints. Can be used in front of the Cave of Souls close to Kamael Village. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1466,14 +1257,10 @@
 	<item id="36070" name="Fiercest Flame" type="EtcItem">
 		<!-- The Fiercest Flame received from the Blacksmith of Flame Vulcan at the Forge of the Gods. Can be used in front of the Pa'agrio Temple in Orc Village. -->
 		<set name="icon" val="icon.etc_torch_on_i09" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1485,14 +1272,10 @@
 	<item id="36071" name="Fondest Heart" type="EtcItem">
 		<!-- Letter that shows the Fondest Heart of the Blacksmith of Flame Vulcan. Can be used in the Deserted Dwarven House. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1504,14 +1287,10 @@
 	<item id="36072" name="Mysterious Letter" type="EtcItem">
 		<!-- Mysterious Letter handed over by Subclass Master Raina of Talking Island Village. Double-click to check the content. -->
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1521,14 +1300,10 @@
 		<!-- Box that contains a vaccine for Virus Laido. Deliver it to Dwarves who are sealing Spicula Clone Generator Brand. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1537,14 +1312,10 @@
 		<!-- Fragments with information about Metusela Clone Generator Brand. When you collect them all, take them to Hesed of the Black Anvil Guild. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1554,14 +1325,10 @@
 		<!-- Fragments from which information about Metusela Clone Generator Brand has been erased. When you collect them all, take them to Hesed of the Black Anvil Guild. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1570,13 +1337,9 @@
 	<item id="36076" name="Verna's Red Gate Key" type="EtcItem">
 		<!-- Key for opening the Red Gate of Nornil Dungeon. -->
 		<set name="icon" val="icon.etc_old_key_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1585,13 +1348,9 @@
 		<!-- Mark of Penitence. Sins scattered in the world have been made into crumbs by the Sin Eater. -->
 		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1602,14 +1361,10 @@
 		<set name="icon" val="icon.etc_dualchange" />
 		<set name="weight" val="2" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1617,12 +1372,8 @@
 	<item id="36079" name="Yum Yum Candy" type="EtcItem">
 		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1634,12 +1385,8 @@
 	<item id="36080" name="Nom Nom Candy" type="EtcItem">
 		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Yum Yum Candy (limited to 1). Temporary event item. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -1651,13 +1398,9 @@
 	<item id="36081" name="Yummy Gift Box" type="EtcItem">
 		<!-- Special gift box for Valentine's Day that you can get once per account. Click to get 2 Yum Yum Candies or 2 Nom Nom Candies randomly. Temporary event item. -->
 		<set name="icon" val="icon.etc_candy_basket_i04_1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
@@ -1687,14 +1430,10 @@
 		<!-- Bracelet for summoning Agathion - Innocent Heejin (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
@@ -1716,14 +1455,10 @@
 		<!-- Bracelet for summoning Agathion - Dandy Hyuk (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
@@ -1745,14 +1480,10 @@
 		<!-- Bracelet for summoning Agathion - Powerful Sooro (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
@@ -1774,14 +1505,10 @@
 		<!-- Bracelet for summoning Agathion - Chic Jaebum (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
@@ -1803,14 +1530,10 @@
 		<!-- Bracelet for summoning Agathion - Cute Shinyoung (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
@@ -1832,13 +1555,9 @@
 		<!-- Box that contains 1 Agathion Summoning Bracelet - Innocent Heejin (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1853,13 +1572,9 @@
 		<!-- Box that contains 1 Agathion Summoning Bracelet - Dandy Hyuk (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1874,13 +1589,9 @@
 		<!-- Box that contains 1 Agathion Summoning Bracelet - Powerful Sooro (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1895,13 +1606,9 @@
 		<!-- Box that contains 1 Agathion Summoning Bracelet - Chic Jaebum (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1916,13 +1623,9 @@
 		<!-- Box that contains 1 Agathion Summoning Bracelet - Cute Shinyoung (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1937,13 +1640,9 @@
 		<!-- Double-click to obtain one of the following randomly: Vitality Replenishing Star Candy, Vitality Recovering Star Candy and Vitality Maintaining Star Candy. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1956,13 +1655,9 @@
 	<item id="36094" name="Vitality Replenishing Star Candy" type="EtcItem">
 		<!-- Replenishes a certain amount of vitality. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1976,13 +1671,9 @@
 		<!-- When used, vitality is recovered for 10 minutes. When vitality is recovered through hunting and XP is acquired, some of it is replenished. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1997,13 +1688,9 @@
 		<!-- Maintains vitality for 10 min. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
 		<set name="weight" val="36" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2018,14 +1705,10 @@
 		<!-- Bracelet for summoning Agathion - Innocent Heejin (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -2047,14 +1730,10 @@
 		<!-- Bracelet for summoning Agathion - Dandy Hyuk (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -2076,14 +1755,10 @@
 		<!-- Bracelet for summoning Agathion - Powerful Sooro (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />

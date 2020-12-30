@@ -107,13 +107,9 @@
 		<set name="crystal_count" val="9872" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -145,13 +141,9 @@
 		<set name="crystal_count" val="9872" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -184,13 +176,9 @@
 		<set name="crystal_count" val="9872" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -223,13 +211,9 @@
 		<set name="crystal_count" val="9872" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1191,13 +1175,9 @@
 	<item id="22882" name="Hair Accessory Restoration Stone" type="EtcItem">
 		<!-- Restores the original appearance of a modified hair accessory. Double-click to use. -->
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1213,11 +1193,8 @@
 		<!-- Replenishes 1 Vitality slot when used. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1231,11 +1208,8 @@
 		<!-- Replenishes 2 Vitality slots when used. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up_2" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1249,11 +1223,8 @@
 		<!-- Replenishes Vitality to maximum when used. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys3.lcon.g_scrl_vitality_point_up_3" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1267,8 +1238,6 @@
 		<!-- Ring acquired when you mourn for Pirate Captain Uthanka's spirit. Use it to turn into Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1285,13 +1254,9 @@
 		<!-- Can ride a unicorn when equipped. -->
 		<set name="icon" val="BranchSys3.lcon.g_pi_transformation_unicorn" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
@@ -1311,16 +1276,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="SoulShots" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9299" level="1" /> <!-- Player Commendation - Soulshot (R-grade) -->
 		</skills>
@@ -1334,16 +1295,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9306" level="1" /> <!-- Player Commendation - Blessed Spiritshot (R-grade) -->
 		</skills>
@@ -1352,13 +1309,9 @@
 		<!-- Pack containing 10,000 Mysterious Soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1372,13 +1325,9 @@
 		<!-- Pack containing 5,000 Mysterious Soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1392,13 +1341,9 @@
 		<!-- Wrapped Pack containing 10,000 Mysterious Blessed Spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1412,13 +1357,9 @@
 		<!-- Wrapped Pack containing 5,000 Mysterious Blessed Spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1439,16 +1380,12 @@
 	<item id="22895" name="Ancient Kartia's Labyrinth Chronicle" type="EtcItem">
 		<!-- Bring the Ancient Kartia's Labyrinth Chronicle to the Kartia Researcher to receive a reward. -->
 		<set name="icon" val="BranchSys3.lcon.g_record_of_cartia" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SHOW_HTML" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1456,13 +1393,9 @@
 		<!-- Item that allows you to acquire 1,200,000,000 XP and 360,000 SP. Cooldown is 2 days. Lv. 85 - 89. -->
 		<set name="icon" val="BranchSys3.lcon.g_scroll_of_cartia_85" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1476,13 +1409,9 @@
 		<!-- Item that allows you to acquire 1,675,000,000 XP and 500,000 SP. Cooldown is 2 days. Lv. 90 - 94. -->
 		<set name="icon" val="BranchSys3.lcon.g_scroll_of_cartia_90" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1496,13 +1425,9 @@
 		<!-- Item that allows you to acquire 2,425,000,000 XP and 700,000 SP. Cooldown is 2 days. Lv. 95 - 99. -->
 		<set name="icon" val="BranchSys3.lcon.g_scroll_of_cartia_95" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1516,11 +1441,8 @@
 		<!-- Decreases the number of vitality items that can be used per week by 1. For test. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i02" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />

@@ -4,13 +4,9 @@
 		<!-- Hourglass that increases acquired XP by an additional 50% for 1 hr. Available for all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -23,49 +19,33 @@
 	<item id="36401" name="Lucky Pouch" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 2 Scrolls: Midsummer Passion and 1 Vitality Replenishing Star Candy. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36402" name="Lucky Pouch (High-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 6 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 2 Feathers of Blessing, 2 Heavenly Cocktails, and 1 High-grade Lucky Enchant Stone: Armor (R-grade). -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36403" name="Lucky Pouch (Top-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 12 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 3 Feathers of Blessing, 2 Heavenly Cocktails, 2 units of Energy of Destruction, and a Rare Accessory Pack (Expiratory). If you are very lucky, you might get a Rare Accessory Pack (Permanent), a Weapon Pack (R99-grade), and an Unbind Scroll Pack additionally. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36404" name="Scroll: Midsummer Passion" additionalName="Event" type="EtcItem">
 		<!-- Increases acquired XP and SP by 30% for 1 hr. -->
 		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -76,13 +56,9 @@
 	<item id="36405" name="Rare Accessory Pack (Expiratory)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring for 14 days. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36406" name="Rare Accessory Pack (Permanent)" additionalName="Event" type="EtcItem">
@@ -112,13 +88,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
@@ -135,13 +107,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
@@ -158,13 +126,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
@@ -180,13 +144,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
 		<skills>
@@ -205,13 +165,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1000" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="price" val="5000000" />
 	</item>
 	<item id="36414" name="Dragon Claw" type="EtcItem">

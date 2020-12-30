@@ -32,7 +32,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -46,14 +45,10 @@
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="100" />
 		<stats>
@@ -88,18 +83,13 @@
 		<!-- Restores a certain amount of Vitality for all party members. -->
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45379" name="Monster Research" additionalName="Event" type="EtcItem">
 		<!-- A report on the monsters of Aden. Take these to L2B2 for rewards. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hour" type="Weapon">
@@ -108,13 +98,9 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="60" />
 		<stats>
@@ -131,13 +117,9 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="60" />
 		<stats>
@@ -153,13 +135,9 @@
 		<set name="icon" val="icon.accessory_magicial_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="45383" name="Maid Hairband" additionalName="15-day" type="Armor">
@@ -167,13 +145,9 @@
 		<set name="icon" val="icon.maid_hairband" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="45384" name="Laborer Hat" additionalName="15-day" type="Armor">
@@ -181,13 +155,9 @@
 		<set name="icon" val="icon.people_cap" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="45385" name="Ruthless Tribe Mask" additionalName="15-day" type="Armor">
@@ -195,25 +165,17 @@
 		<set name="icon" val="icon.crazy_driving_mask" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="45386" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -293,13 +255,10 @@
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>

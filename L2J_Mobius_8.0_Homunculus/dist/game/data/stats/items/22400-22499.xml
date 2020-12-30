@@ -4,13 +4,9 @@
 		<!-- A bracelet for summoning Agathion Valakas Lv. 7. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_valakas_01_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -24,13 +20,9 @@
 	<item id="22401" name="Root of Evolution" type="EtcItem">
 		<!-- Required for evolving Agathion Valakas. Double-click to summon the Evolution Deliverer. -->
 		<set name="icon" val="BranchSys3.icon.g_aga_valakas_lifespring" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -45,13 +37,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_r" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
@@ -65,13 +53,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_s" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
@@ -85,13 +69,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_a" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
@@ -105,13 +85,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_b" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
@@ -125,13 +101,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_c" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
@@ -145,13 +117,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
@@ -165,13 +133,9 @@
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_r" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
@@ -185,13 +149,9 @@
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_s" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
@@ -205,13 +165,9 @@
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_a" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
@@ -225,13 +181,9 @@
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_b" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
@@ -245,13 +197,9 @@
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_c" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
@@ -265,13 +213,9 @@
 		<set name="icon" val="BranchSys3.icon.g_bless_wp_processing_stone_d" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
@@ -285,13 +229,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_r" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
@@ -305,13 +245,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_s" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
@@ -325,13 +261,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_a" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
@@ -345,13 +277,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_b" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
@@ -365,13 +293,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_c" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
@@ -385,13 +309,9 @@
 		<set name="icon" val="BranchSys3.icon.g_wp_restore_stone_d" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
@@ -405,13 +325,9 @@
 		<set name="icon" val="BranchSys3.icon.g_particular_wp_processing_stone_prim" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
@@ -424,13 +340,9 @@
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_star" />
 		<set name="weight" val="20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -439,13 +351,9 @@
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_bead" />
 		<set name="weight" val="20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -454,13 +362,9 @@
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_band" />
 		<set name="weight" val="20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -469,13 +373,9 @@
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_tree_ribbon" />
 		<set name="weight" val="20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -483,13 +383,9 @@
 	<item id="22425" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +10%. For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used for weapons enchanted to +30 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -503,13 +399,9 @@
 	<item id="22426" name="Ancient Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +10%. For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). The enchanting is safe. Cannot be used for weapons enchanted to +15 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_wp_s_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -535,10 +427,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantScrolls" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22440" level="1" /> <!-- Divine Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -546,13 +434,9 @@
 	<item id="22428" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +10%. For R-grade armor and accessories. P. Def. +2. When enchanted to +4, P. Def. is greatly increased, HP is increased with each enchant value. The enchanting is safe up to +3. Cannot be used with equipment enchanted to +30 or higher. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_am_s_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -566,13 +450,9 @@
 	<item id="22429" name="Ancient Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +10%. If enchanting is failed, the enchant value remains the same. When R-grade armor or accessories are enchanted, P. Def. +2. When enchanted to +4 or higher, P. Def. is greatly increased. Can be safely enchanted up to +3. When enchanted to +4 or higher, HP is gradually increased with each enchant value. Cannot be used on armor above +16. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_am_s_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -598,10 +478,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantScrolls" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22443" level="1" /> <!-- Divine Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -609,13 +485,9 @@
 	<item id="22431" name="Radiant Fortuna Box" type="EtcItem">
 		<!-- Double-click to obtain Sacred Crystal: Enchant Weapon or High-grade Ancient Crystal: Enchant Weapon, with a certain chance. -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -628,13 +500,9 @@
 	<item id="22432" name="Radiant Fortuna Cube" type="EtcItem">
 		<!-- Double-click to obtain Sacred Crystal: Enchant Armor or High-grade Ancient Crystal: Enchant Armor, with a certain chance. -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_cube_r" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -653,15 +521,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="SoulShots" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9193" level="1" /> <!-- Soulshot (R-grade) -->
 		</skills>
@@ -675,15 +539,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="crystal_type" val="R" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="9195" level="1" /> <!-- Blessed Spiritshot (R-grade) -->
 		</skills>
@@ -691,11 +551,8 @@
 	<item id="22435" name="Scroll of Escape" type="EtcItem">
 		<!-- Magic scroll that teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -710,11 +567,8 @@
 	<item id="22436" name="Scroll of Escape - Castle" type="EtcItem">
 		<!-- Magic scroll that teleports you to your castle. If you do not have a castle, it teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -729,11 +583,8 @@
 	<item id="22437" name="Scroll of Escape - Clan Hall" type="EtcItem">
 		<!-- Magic scroll that teleports you to your clan hall. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -748,11 +599,8 @@
 	<item id="22438" name="Blessed Scroll of Escape" type="EtcItem">
 		<!-- Magic scroll that teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -767,11 +615,8 @@
 	<item id="22439" name="Blessed Scroll of Escape - Castle" type="EtcItem">
 		<!-- Magic scroll that teleports you to your castle. If you do not have a castle, it teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -786,11 +631,8 @@
 	<item id="22440" name="Blessed Scroll of Escape - Clan Hall" type="EtcItem">
 		<!-- Magic scroll that teleports you to your clan hall. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -805,11 +647,8 @@
 	<item id="22441" name="Blessed Scroll of Resurrection (Pet)" type="EtcItem">
 		<!-- Magic scroll that resurrects a dead pet and restores its XP completely. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_pet_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -826,11 +665,8 @@
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="B" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
@@ -845,11 +681,8 @@
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="A" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
@@ -864,11 +697,8 @@
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
@@ -882,13 +712,9 @@
 		<!-- Double-click to obtain 5 Vitality Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -902,13 +728,9 @@
 		<!-- Double-click to obtain 5 Vitality Maintaining Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -922,13 +744,9 @@
 		<!-- Double-click to obtain 5 Vitality Recovering Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -942,13 +760,9 @@
 		<!-- Double-click to obtain 5000 R-grade Soulshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="1000" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -962,13 +776,9 @@
 		<!-- Double-click to obtain 10,000 R-grade Soulshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="1000" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -982,13 +792,9 @@
 		<!-- Double-click to obtain 5000 Blessed R-grade Spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="1000" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1002,13 +808,9 @@
 		<!-- Double-click to obtain 10,000 Blessed R-grade Spiritshots. -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="1000" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1022,13 +824,9 @@
 		<!-- Double-click to obtain 10 Scrolls of Escape. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1043,13 +841,9 @@
 		<!-- Double-click to obtain 10 Scrolls of Escape: Castle. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1064,13 +858,9 @@
 		<!-- Double-click to obtain 10 Scrolls of Escape: Clan Hall. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1085,13 +875,9 @@
 		<!-- Double-click to obtain Improved Bronze Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1105,13 +891,9 @@
 		<!-- Double-click to obtain Improved Steel Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1125,13 +907,9 @@
 		<!-- Double-click to obtain 3 Blessed Scrolls of Resurrection: Pet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1145,13 +923,9 @@
 		<!-- Double-click to obtain 1 R-grade Weapon Appearance Stone and 1 R-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1166,13 +940,9 @@
 		<!-- Double-click to obtain 1 S-grade Weapon Appearance Stone and 1 S-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1187,13 +957,9 @@
 		<!-- Double-click to obtain 1 A-grade Weapon Appearance Stone and 1 A-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1208,13 +974,9 @@
 		<!-- Double-click to obtain 1 B-grade Weapon Appearance Stone and 1 B-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1229,13 +991,9 @@
 		<!-- Double-click to obtain 1 C-grade Weapon Appearance Stone and 1 C-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1250,13 +1008,9 @@
 		<!-- Double-click to obtain 1 D-grade Weapon Appearance Stone and 1 D-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1271,13 +1025,9 @@
 		<!-- Double-click to obtain 1 Blessed R-grade Weapon Appearance Stone and 1 R-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1292,13 +1042,9 @@
 		<!-- Double-click to obtain 1 Blessed S-grade Weapon Appearance Stone and 1 S-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1313,13 +1059,9 @@
 		<!-- Double-click to obtain 1 Blessed A-grade Weapon Appearance Stone and 1 A-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1334,13 +1076,9 @@
 		<!-- Double-click to obtain 1 Blessed B-grade Weapon Appearance Stone and 1 B-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1355,13 +1093,9 @@
 		<!-- Double-click to obtain 1 Blessed C-grade Weapon Appearance Stone and 1 C-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1376,13 +1110,9 @@
 		<!-- Double-click to obtain 1 Blessed D-grade Weapon Appearance Stone and 1 D-grade Weapon Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1397,13 +1127,9 @@
 		<!-- Double-click to obtain 5 Superior HP Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1417,13 +1143,9 @@
 		<!-- Double-click to obtain 5 Superior Quick HP Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1437,13 +1159,9 @@
 		<!-- Double-click to obtain 3 Adventurer's Song - Energy of Recovery. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1456,11 +1174,8 @@
 	<item id="22473" name="Talisman Box" type="EtcItem">
 		<!-- Double-click to obtain 1 red, black, orange, blue, yellow, grey, or silver talisman. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1474,13 +1189,9 @@
 		<!-- Double-click to obtain 3 heavenly cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1493,8 +1204,6 @@
 	<item id="22475" name="Santa Girl's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Santa Girl gave you this gift box in exchange for 100 red stockings. Contains a random reward, and a chance at getting a temporary or permanent Santa Girl's Cloak. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -1509,10 +1218,7 @@
 		<!-- Collect 100 of these and take them to Santa Girl to get Santa Girl's Gift Box. -->
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1522,12 +1228,9 @@
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -1549,12 +1252,9 @@
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -1577,12 +1277,9 @@
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -1603,12 +1300,9 @@
 		<!-- Warm and festive winter cloak to celebrate the holidays. You can keep it forever! -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -1630,11 +1324,8 @@
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1648,11 +1339,8 @@
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1666,11 +1354,8 @@
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1684,11 +1369,8 @@
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1702,11 +1384,8 @@
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1720,11 +1399,8 @@
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1738,11 +1414,8 @@
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1756,11 +1429,8 @@
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1774,11 +1444,8 @@
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1792,11 +1459,8 @@
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1810,11 +1474,8 @@
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1828,11 +1489,8 @@
 		<set name="icon" val="icon.etc_rbracelet_s_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -1845,13 +1503,9 @@
 		<!-- Double-click to obtain Nevit's Rune 100% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<set name="default_action" val="PEEL" />
@@ -1866,13 +1520,9 @@
 		<!-- Double-click to obtain Nevit's Rune 100% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<set name="default_action" val="PEEL" />
@@ -1887,13 +1537,9 @@
 		<!-- Double-click to obtain Nevit's Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<set name="default_action" val="PEEL" />
@@ -1908,13 +1554,9 @@
 		<!-- Double-click to obtain Nevit's Rune 200% (3-hour). Required level: 1-95. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<set name="default_action" val="PEEL" />
@@ -1929,13 +1571,9 @@
 		<!-- Double-click to obtain Nevit's Rune 200% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<set name="default_action" val="PEEL" />
@@ -1950,13 +1588,9 @@
 		<!-- Double-click to obtain Nevit's Rune 200% (7-day). Required level: 1-85. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<set name="default_action" val="PEEL" />
@@ -1971,13 +1605,9 @@
 		<!-- Double-click to obtain My Teleport Book. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

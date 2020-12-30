@@ -4,13 +4,7 @@
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -31,13 +25,7 @@
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -58,13 +46,7 @@
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -84,13 +66,7 @@
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -110,7 +86,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -124,7 +99,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -138,7 +112,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -152,7 +125,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -166,7 +138,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -180,7 +151,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -194,7 +164,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -208,7 +177,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -222,7 +190,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -236,7 +203,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -250,7 +216,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -264,7 +229,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -278,7 +242,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -292,7 +255,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -306,7 +268,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -320,7 +281,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -334,7 +294,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -348,7 +307,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -362,7 +320,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -376,7 +333,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -390,7 +346,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -404,7 +359,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -418,7 +372,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -432,7 +385,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -446,7 +398,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -460,7 +411,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +424,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -488,7 +437,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -502,7 +450,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -516,7 +463,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -530,7 +476,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -544,7 +489,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -558,7 +502,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -572,7 +515,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -586,7 +528,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -600,7 +541,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -614,7 +554,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -628,7 +567,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -642,7 +580,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -656,7 +593,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -670,7 +606,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -684,7 +619,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -698,7 +632,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -712,7 +645,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -726,7 +658,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -740,7 +671,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +684,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -768,7 +697,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -782,7 +710,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -796,7 +723,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -810,7 +736,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -824,7 +749,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -838,7 +762,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -852,7 +775,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -866,7 +788,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -882,12 +803,8 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -907,12 +824,8 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -930,12 +843,9 @@
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="38562" name="Legendary Bumjoon Bracelet" type="Armor">
@@ -943,12 +853,9 @@
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="38563" name="Legendary Junghyun Bracelet" type="Armor">
@@ -956,12 +863,9 @@
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="38564" name="Monster Weapon: Invisible Dagger" type="Weapon">
@@ -971,12 +875,8 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
@@ -994,12 +894,9 @@
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -1013,12 +910,9 @@
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -1032,12 +926,9 @@
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -1051,12 +942,9 @@
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -1070,12 +958,9 @@
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -1089,12 +974,9 @@
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -1135,22 +1017,16 @@
 	<item id="38575" name="Tiat's Charm" type="EtcItem">
 		<!-- Obtained by defeating Dragonkin, this is a special product of the Seed of Destruction. -->
 		<set name="icon" val="icon.etc_feather_black_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38576" name="Freed Soul Crystal" type="EtcItem">
 		<!-- A crystallization of souls that have conglomerated due to powerful magic, this is a special product of the Seed of Infinity. -->
 		<set name="icon" val="icon.freed_soul_essense_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1158,39 +1034,27 @@
 		<!-- Letter from Keucereus. Bring this to Sergeant Allenos at the Seed of Destruction. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="38578" name="Keucereus' Introduction - Seed of Infinity" type="EtcItem">
 		<!-- Letter from Keucereus. Bring this to Officer Tepios at the Seed of Infinity. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="38579" name="Tiat's Totem" type="EtcItem">
 		<!-- Obtained by hunting in the Seed of Destruction area. Bring these to Sergeant Allenos at the entrance. -->
 		<set name="icon" val="icon.etc_totem_necklace_black_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1198,13 +1062,9 @@
 		<!-- Obtained by hunting in the Seed of Infinity area. Bring these to Officer Tepios at the entrance. -->
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1212,10 +1072,7 @@
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly P. Atk. Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_buff_fighter_gd35_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1241,10 +1098,7 @@
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Magic Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_buff_mage_gd35_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1270,10 +1124,7 @@
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly P. Def. Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_buff_tank_gd35_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1298,10 +1149,7 @@
 	<item id="38584" name="Emperor's Dessert Set Pack (Attack Type)" type="EtcItem">
 		<!-- Double-click to obtain either Emperor's Dessert Set (Attack) x 10. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1314,10 +1162,7 @@
 	<item id="38585" name="Emperor's Dessert Set Pack (Magic Type)" type="EtcItem">
 		<!-- Double-click to obtain either Emperor's Dessert Set (Magic) x 10. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1330,10 +1175,7 @@
 	<item id="38586" name="Emperor's Dessert Set Pack (Defense Type)" type="EtcItem">
 		<!-- Double-click to obtain either Emperor's Dessert Set (Defense) x 10. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1403,13 +1245,9 @@
 		<!-- You've caught a friend like a true pro! A special gift is prepared for you. Now try catching some fish for a change! -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -1417,12 +1255,8 @@
 		<!-- The wifi on your head will prevent you from getting caught! Do try to be careful from now on. -->
 		<set name="icon" val="icon.wifi_event_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 	</item>
@@ -1433,13 +1267,9 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="B" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1370" />
@@ -1458,13 +1288,9 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="B" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1700" />
@@ -1484,13 +1310,9 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="A" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1330" />
@@ -1509,13 +1331,9 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="S" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1650" />
@@ -1535,13 +1353,9 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="S" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1520" />

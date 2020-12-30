@@ -4,7 +4,6 @@
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_commissionable" val="false" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -13,7 +12,6 @@
 		<set name="icon" val="icon.skill1802" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_commissionable" val="false" />
 		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">400.0</stat>
@@ -246,13 +244,9 @@
 		<!-- Adena? No, this is Adana. Receive the Abundant Blessing buff from Miss Patch when in possession of this Adana. Lv. 85 or above. Deleted after event. -->
 		<set name="icon" val="icon.fairy_adena_joke" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -260,38 +254,26 @@
 		<!-- Adena? No, this is Adana. Take it to Event Manager Miss Patch to exchange for a 30-day Armor Set (R-grade or above), or a Weapon (R-grade or above). Lv. 85 or above. Deleted after event. -->
 		<set name="icon" val="icon.fairy_adena_joke" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46624" name="Entrance Pass: Embryo Command Post" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 	</item>
 	<item id="46625" name="Entrance Pass: Nightmare Kamaloka" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
@@ -300,13 +282,9 @@
 		<!-- Feed for military dogs to accelerate growth. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -348,8 +326,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -368,13 +345,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">142.0</stat>
@@ -387,13 +360,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">107.0</stat>
@@ -406,13 +375,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">71.0</stat>
@@ -425,13 +390,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">161.0</stat>
@@ -444,13 +405,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">121.0</stat>
@@ -463,13 +420,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">80.0</stat>
@@ -482,13 +435,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">174.0</stat>
@@ -501,13 +450,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">130.0</stat>
@@ -520,13 +465,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">87.0</stat>
@@ -536,27 +477,19 @@
 	<item id="46639" name="Roa's Lost Item" additionalName="Event" type="EtcItem">
 		<!-- Roa's lost item. Exchange it for Assistant Roa's Gift when you are lucky enough to run into NPC Roa. Can only exchange 1 item per day. Deleted after event. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46640" name="Assistant Roa's Gift" additionalName="Event" type="EtcItem">
 		<!-- Gift box full of Roa's love. Double-click to get a random gift from Roa. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -568,13 +501,9 @@
 	<item id="46642" name="Proof of Red" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Proof given to those who carry out the missions given by the Red Libra merchants. Use with Elder Green to change a dual class or with Artisan Black to exchange for a weapon. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_memo" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46643" name="Rudi" additionalName="Event" type="EtcItem">
@@ -582,55 +511,38 @@
 		<set name="icon" val="icon.five_vairy_potion" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46644" name="Red Libra Supplies Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46645" name="Red Libra Supplies Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46646" name="Red Libra Supplies Lv. 3" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46647" name="Red Libra Supplies Lv. 4" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46648" name="Red Libra Talisman - Resurrection" additionalName="Event" type="Armor">
@@ -639,7 +551,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="46649" name="Red Libra Talisman - Restoration" additionalName="Event" type="Armor">
@@ -648,7 +559,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="46650" name="Red Libra Talisman - Purge" additionalName="Event" type="Armor">
@@ -657,7 +567,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="46651" name="Red Libra Talisman - Speed" additionalName="Event" type="Armor">
@@ -666,7 +575,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="46652" name="Red Libra Talisman - Resistance" additionalName="Event" type="Armor">
@@ -675,7 +583,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="46653" name="Elysium Shaper" additionalName="Event" type="Weapon">
@@ -691,7 +598,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">690.0</stat>
@@ -713,7 +619,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">770.0</stat>
@@ -735,7 +640,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
@@ -757,7 +661,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">770.0</stat>
@@ -780,7 +683,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
@@ -804,7 +706,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -830,7 +731,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1521.0</stat>
@@ -852,7 +752,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1286.0</stat>
@@ -874,7 +773,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
@@ -896,7 +794,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
@@ -919,7 +816,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">776.0</stat>
@@ -943,7 +839,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
@@ -966,7 +861,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">792.0</stat>
@@ -988,7 +882,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
@@ -1000,26 +893,18 @@
 	</item>
 	<item id="46667" name="Lv.5 Giant Dye Pack" type="EtcItem">
 		<set name="icon" val="icon.five_vairy_potion" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46668" name="La Vie En Rose's Radiant Brooch" type="Armor">
 		<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 		<skills>
 			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
@@ -1033,7 +918,6 @@
 		<!-- Main ingredient for making a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46670" name="Vital Stone" additionalName="Lv. 1" type="Armor">
@@ -1041,13 +925,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18568" level="1" /> <!-- Vital Stone -->
@@ -1058,13 +938,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18568" level="2" /> <!-- Vital Stone -->
@@ -1075,13 +951,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18568" level="3" /> <!-- Vital Stone -->
@@ -1093,13 +965,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18568" level="4" /> <!-- Vital Stone -->
@@ -1112,7 +980,6 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18568" level="5" /> <!-- Vital Stone -->
@@ -1124,13 +991,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18566" level="1" /> <!-- Garnet -->
@@ -1141,13 +1004,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18566" level="2" /> <!-- Garnet -->
@@ -1158,13 +1017,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18566" level="3" /> <!-- Garnet -->
@@ -1175,13 +1030,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18566" level="4" /> <!-- Garnet -->
@@ -1193,7 +1044,6 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18566" level="5" /> <!-- Garnet -->
@@ -1205,13 +1055,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18565" level="1" /> <!-- Tanzanite - Barrier -->
@@ -1222,13 +1068,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18565" level="2" /> <!-- Tanzanite - Barrier -->
@@ -1239,13 +1081,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18565" level="3" /> <!-- Tanzanite - Barrier -->
@@ -1256,13 +1094,9 @@
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18565" level="4" /> <!-- Tanzanite - Barrier -->
@@ -1274,7 +1108,6 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18565" level="5" /> <!-- Tanzanite - Barrier -->
@@ -1290,9 +1123,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="26476" min="1" max="1" chance="100" /> <!-- Vital Stone - Lv. 1 -->
 		</capsuled_items>
@@ -1307,9 +1137,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="26481" min="1" max="1" chance="100" /> <!-- Garnet - Lv. 1 -->
 		</capsuled_items>
@@ -1324,9 +1151,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="26486" min="1" max="1" chance="100" /> <!-- Tanzanite - Lv. 1 -->
 		</capsuled_items>
@@ -1341,9 +1165,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="26474" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</capsuled_items>
@@ -1358,9 +1179,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="18564" level="1" /> <!-- Shadai's Jewelry Box -->
 		</skills>
@@ -1369,31 +1187,22 @@
 		<!-- Double-click to get 1 of the following: La Vie En Rose's Vital Stone Chest, La Vie En Rose's Garnet Chest, or La Vie En Rose's Tanzanite Chest. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46691" name="Function Test Item" type="EtcItem">
 		<!-- Double-click to get 1 of the following: La Vie En Rose's Vital Stone Chest, La Vie En Rose's Garnet Chest, or La Vie En Rose's Tanzanite Chest. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46692" name="Entrance Pass: Embryo Command Post" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46693" name="Emperor Shunaiman's Shaper" additionalName="30-day" type="Weapon">
@@ -1413,7 +1222,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -1444,7 +1252,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -1474,7 +1281,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -1504,7 +1310,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -1535,7 +1340,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -1565,7 +1369,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
@@ -1598,7 +1401,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>

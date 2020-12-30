@@ -12,7 +12,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="28142" level="1" /> <!-- Sayha's Talisman Stage 1 -->
 		</skills>
@@ -282,9 +281,7 @@
 		<!-- Double-click to get a Talisman - Abundance (War, Tactics, Morale, or Physique.) -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="material" val="LEATHER" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />

@@ -1465,12 +1465,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SoulShots" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2039" level="1" /> <!-- Soulshot (No-grade) -->
 		</skills>
@@ -1487,12 +1483,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="SpiritShot" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2047" level="1" /> <!-- Spiritshot (No-grade) -->
 		</skills>

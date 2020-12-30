@@ -11,11 +11,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_freightable" val="true" />
 		<set name="time" val="20160" />
 	</item>
 	<item id="20901" name="Santa Hat Set" type="EtcItem">
@@ -30,10 +25,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20900" min="1" max="1" chance="100" /> <!-- Santa Hat - 14-day -->
 			<item id="14611" min="1" max="1" chance="100" /> <!-- Rudolph's Nose -->
@@ -53,10 +44,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20205" min="1" max="1" chance="100" /> <!-- Queen Ant's Ring (Event) - 7-day -->
 		</capsuled_items>
@@ -67,11 +54,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="22158" level="1" /> <!-- Rose Petal -->
@@ -129,10 +113,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -153,10 +133,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -177,10 +153,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -201,10 +173,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -225,10 +193,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -249,10 +213,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -272,10 +232,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20915" name="Enhanced Rose Necklace: Desheloph" additionalName="5-hour Summon Duration" type="EtcItem">
@@ -291,10 +247,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -316,10 +268,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -341,10 +289,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -366,10 +310,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -391,10 +331,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -416,10 +352,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -440,10 +372,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 	</item>
 	<item id="20922" name="Adventurer Hat" type="Armor">
@@ -453,7 +381,6 @@
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
@@ -469,10 +396,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22159" level="1" /> <!-- Vesper's Mighty Power -->
 		</skills>
@@ -487,10 +410,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22160" level="1" /> <!-- Vesper's Critical Damage -->
 		</skills>
@@ -505,10 +424,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22161" level="1" /> <!-- Invincible Vesper -->
 		</skills>
@@ -523,10 +438,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22162" level="1" /> <!-- Mt. Fuji Herb -->
 		</skills>
@@ -541,10 +452,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22163" level="1" /> <!-- Hawk Herb -->
 		</skills>
@@ -559,10 +466,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22164" level="1" /> <!-- Eggplant Herb -->
 		</skills>
@@ -580,13 +483,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20930" name="Vesper Royal Circlet" type="Armor">
 		<!-- Circlet with Versper's grace. Uses 2 hair accessory slots. -->
@@ -601,13 +500,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20931" name="Vesper Noble Mask" type="Armor">
 		<!-- Unique hair accessory with Noble Vesper's grace. Uses 2 hair accessory slots. -->
@@ -622,13 +517,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20932" name="Vesper Royal Crown" additionalName="30-day" type="Armor">
 		<!-- Crown with Versper's grace. Uses 2 hair accessory slots. -->
@@ -643,10 +534,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="20933" name="Vesper Royal Circlet" additionalName="30-day" type="Armor">
@@ -662,10 +549,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="20934" name="Vesper Noble Mask" additionalName="30-day" type="Armor">
@@ -681,10 +564,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="20935" name="Vesper Royal Crown" type="Armor">
@@ -697,12 +576,10 @@
 		<set name="weight" val="10" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20936" name="Vesper Royal Circlet" type="Armor">
 		<!-- Circlet with Versper's grace. Uses 2 hair accessory slots. -->
@@ -714,12 +591,10 @@
 		<set name="weight" val="10" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20937" name="Vesper Noble Mask" type="Armor">
 		<!-- Unique hair accessory with Noble Vesper's grace. Uses 2 hair accessory slots. -->
@@ -731,12 +606,10 @@
 		<set name="weight" val="10" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20938" name="Mount - Jet Bike" additionalName="7-day" type="Armor">
 		<!-- This item allows you to mount Jet Bike which is the core of Dwarven technology. -->
@@ -751,10 +624,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
@@ -774,10 +643,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
@@ -797,10 +662,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="21191" level="1" /> <!-- Release Agathion's Seal - Phoenix -->
@@ -822,10 +683,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="21191" level="1" /> <!-- Release Agathion's Seal - Phoenix -->
@@ -847,13 +704,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20943" name="Fox Mask" additionalName="Silent Move (7-day)" type="Armor">
 		<!-- Fox Mask This mask automatically covers your face during battle. Uses 2 hair accessory slots. Cooldown is 4 hours. -->
@@ -868,10 +721,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="21192" level="1" /> <!-- Silent Move -->
@@ -890,13 +739,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20945" name="Paiwan Hat" additionalName="Power of Guardian Deity (7-day)" type="Armor">
 		<!-- Traditional Paiwan Hat. When the Power of Guardian Deity, Critical Damage is increased by 35% for 10 min. Uses 2 hair accessory slots. Cooldown is 1 hour. -->
@@ -911,10 +756,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="21193" level="1" /> <!-- Power of Guardian Deity -->
@@ -934,10 +775,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20938" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - 7-day -->
 		</capsuled_items>
@@ -956,10 +793,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20939" min="1" max="1" chance="100" /> <!-- Mount - Jet Bike - 30-day -->
 		</capsuled_items>
@@ -978,10 +811,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20940" min="1" max="1" chance="100" /> <!-- Agathion - Phoenix - Nirvana Rebirth (7-day) -->
 		</capsuled_items>
@@ -1000,10 +829,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20941" min="1" max="1" chance="100" /> <!-- Agathion - Phoenix - Mountain Echoes (7-day) -->
 		</capsuled_items>
@@ -1022,10 +847,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20942" min="1" max="1" chance="100" /> <!-- Fox Mask -->
 		</capsuled_items>
@@ -1044,10 +865,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20943" min="1" max="1" chance="100" /> <!-- Fox Mask - Silent Move (7-day) -->
 		</capsuled_items>
@@ -1066,10 +883,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20944" min="1" max="1" chance="100" /> <!-- Paiwan Hat -->
 		</capsuled_items>
@@ -1088,10 +901,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20945" min="1" max="1" chance="100" /> <!-- Paiwan Hat - Power of Guardian Deity (7-day) -->
 		</capsuled_items>
@@ -1109,10 +918,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22165" level="1" /> <!-- Replenish Energy -->
 		</skills>
@@ -1130,10 +935,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22166" level="1" /> <!-- Replenish Energy -->
 		</skills>
@@ -1151,10 +952,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="21133" level="1" /> <!-- Release Agathion's Seal - Zombie -->
@@ -1177,10 +974,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20956" min="1" max="1" chance="100" /> <!-- Agathion - Zombie - Soul Stealth (7-day) -->
 		</capsuled_items>
@@ -1194,8 +987,6 @@
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="22167" level="1" /> <!-- April Fool's Day Vesper Weapon Gift -->
@@ -1215,10 +1006,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20929" min="1" max="1" chance="100" /> <!-- Vesper Royal Crown -->
 		</capsuled_items>
@@ -1237,10 +1024,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20930" min="1" max="1" chance="100" /> <!-- Vesper Royal Circlet -->
 		</capsuled_items>
@@ -1259,10 +1042,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20931" min="1" max="1" chance="100" /> <!-- Vesper Noble Mask -->
 		</capsuled_items>
@@ -1281,10 +1060,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20932" min="1" max="1" chance="100" /> <!-- Vesper Royal Crown - 30-day -->
 		</capsuled_items>
@@ -1303,10 +1078,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20933" min="1" max="1" chance="100" /> <!-- Vesper Royal Circlet - 30-day -->
 		</capsuled_items>
@@ -1325,10 +1096,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20934" min="1" max="1" chance="100" /> <!-- Vesper Noble Mask - 30-day -->
 		</capsuled_items>
@@ -1347,10 +1114,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20935" min="1" max="1" chance="100" /> <!-- Vesper Royal Crown -->
 		</capsuled_items>
@@ -1369,10 +1132,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20936" min="1" max="1" chance="100" /> <!-- Vesper Royal Circlet -->
 		</capsuled_items>
@@ -1391,10 +1150,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20937" min="1" max="1" chance="100" /> <!-- Vesper Noble Mask -->
 		</capsuled_items>
@@ -1411,10 +1166,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21142" level="1" /> <!-- Release Agathion's Seal - Guangong -->
@@ -1436,10 +1187,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20968" min="1" max="1" chance="100" /> <!-- Agathion - Guangong -->
 		</capsuled_items>
@@ -1458,10 +1205,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="21194" level="1" /> <!-- Release Agathion's Seal - Babayaga -->
 			<skill id="27779" level="1" /> <!-- Babayaga Teleport - Town of Aden -->
@@ -1488,12 +1231,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21195" level="1" /> <!-- Blessed Child Transformation Skill: Trejuo -->
@@ -1521,12 +1260,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21196" level="1" /> <!-- Blessed Child Transformation Skill: Sujin -->
@@ -1553,13 +1288,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="21200" level="1" /> <!-- Age of Three Kingdoms -->
 			<skill id="21197" level="1" /> <!-- Induk's Buff -->
@@ -1578,13 +1309,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="21200" level="1" /> <!-- Age of Three Kingdoms -->
 			<skill id="21198" level="1" /> <!-- Silence of Loyalty -->
@@ -1603,13 +1330,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="21200" level="1" /> <!-- Age of Three Kingdoms -->
 			<skill id="21199" level="1" /> <!-- Vitality of Courage -->
@@ -1622,13 +1345,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="20977" name="Mark of Affection" type="EtcItem">
@@ -1641,10 +1359,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20978" name="Zhongzi (B-grade)" type="EtcItem">
@@ -1661,10 +1375,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2517" level="1" /> <!-- Lucky Clover (B-grade) -->
 		</skills>
@@ -1683,10 +1393,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2518" level="1" /> <!-- Lucky Clover (A-grade) -->
 		</skills>
@@ -1705,10 +1411,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2519" level="1" /> <!-- Lucky Clover (S-grade) -->
 		</skills>
@@ -1726,13 +1428,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20982" name="Dragon Boat" additionalName="Haste (7-day)" type="Armor">
 		<!-- Hat shaped like a dragon boat. Uses 2 hair accessory slots. Cooldown is 1 hour. -->
@@ -1747,10 +1445,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="21201" level="1" /> <!-- Haste -->
@@ -1769,10 +1463,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21202" level="1" /> <!-- Release Agathion's Seal - Ball Trapping Gnosian -->
@@ -1795,10 +1485,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21203" level="1" /> <!-- Release Agathion's Seal - Ball Trapping Orodriel -->
@@ -1821,10 +1507,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21204" level="1" /> <!-- Release Agathion's Seal - Penalty Kick -->
@@ -1847,10 +1529,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21205" level="1" /> <!-- Release Agathion's Seal - Ball Trapping Gnosian -->
@@ -1873,10 +1551,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21206" level="1" /> <!-- Release Agathion's Seal - Ball Trapping Orodriel -->
@@ -1899,10 +1573,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21207" level="1" /> <!-- Release Agathion's Seal - Penalty Kick -->
@@ -1925,10 +1595,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21208" level="1" /> <!-- Release Agathion's Seal - Ball Trapping Gnosian -->
@@ -1951,10 +1617,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21209" level="1" /> <!-- Release Agathion's Seal - Ball Trapping Orodriel -->
@@ -1977,10 +1639,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21210" level="1" /> <!-- Release Agathion's Seal - Penalty Kick -->
@@ -2003,10 +1661,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22168" level="1" /> <!-- Thirst for Victory Quenching Juice -->
 		</skills>
@@ -2026,10 +1680,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22169" level="1" /> <!-- Soccer Ball of Cheering Release -->
 		</skills>
@@ -2048,10 +1698,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20970" min="1" max="1" chance="100" /> <!-- Agathion - Three-headed Dragon - Premium -->
 		</capsuled_items>
@@ -2070,10 +1716,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20973" min="1" max="1" chance="100" /> <!-- Opera Mask - Liu Bei - Buff of Virtue, Age of the Three Kingdoms -->
 		</capsuled_items>
@@ -2092,10 +1734,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20974" min="1" max="1" chance="100" /> <!-- Opera Mask - Guan Yu - Silence of Fidelity, Age of the Three Kingdoms -->
 		</capsuled_items>
@@ -2114,10 +1752,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20975" min="1" max="1" chance="100" /> <!-- Opera Mask - Zhang Fei - Vitality of Courage, Age of the Three Kingdoms -->
 		</capsuled_items>
@@ -2136,10 +1770,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20981" min="1" max="1" chance="100" /> <!-- Dragon Boat -->
 		</capsuled_items>
@@ -2158,10 +1788,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="20982" min="1" max="1" chance="100" /> <!-- Dragon Boat - Haste (7-day) -->
 		</capsuled_items>

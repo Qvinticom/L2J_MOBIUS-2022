@@ -330,13 +330,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="S" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -353,13 +349,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="S" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -374,13 +366,9 @@
 		<!-- Hair accessory that looks like Afro hair. -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -392,13 +380,9 @@
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
@@ -407,13 +391,9 @@
 		<!-- When opened, can acquire 1 Afro Hair Accessory. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -427,13 +407,9 @@
 		<!-- Open to acquire 1 Afro Hair Accessory (7-day). -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -534,10 +510,6 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="34844" name="Mysterious Herb" type="EtcItem">
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -546,10 +518,6 @@
 		</skills>
 	</item>
 	<item id="34845" name="Mysterious Herb" type="EtcItem">
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -562,7 +530,6 @@
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -599,13 +566,9 @@
 		<!-- When used, you can temporarily feel the Vitality recovery herb's effect for 2 hours. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -620,14 +583,10 @@
 		<!-- Circlet that has the power of Severe Earthquake. Increases earth defense by 60. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_earthquake_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="time" val="86400" />
 		<set name="immediate_effect" val="true" />
@@ -642,10 +601,6 @@
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="9404" level="1" /> <!-- Wondrous Herb of Power -->
@@ -657,10 +612,6 @@
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="9405" level="1" /> <!-- Wondrous Herb of Magic -->
@@ -698,13 +649,9 @@
 		<!-- Raina's Box exchanged for the XP Bottle. Small chance of acquiring an Scroll: XP. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -765,12 +712,9 @@
 		<set name="icon" val="icon.istina_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -784,12 +728,9 @@
 		<set name="icon" val="icon.octavis_bangel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
@@ -815,12 +756,9 @@
 		<!-- It says "You only get one lift" in angma language. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
@@ -835,13 +773,9 @@
 	<item id="34863" name="Contaminated Draco Egg" type="EtcItem">
 		<!-- Contaminated Draco Egg that the demon Triol created to plant Shilen's monsters. Double-click on it to purify the evil energy. -->
 		<set name="icon" val="icon.etc_ev_triol_egg" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -916,13 +850,9 @@
 		<!-- Bracelet distributed by Pa'agrio's servant Aslan in order to resurrect the purified Draco Eggs. When equipped, you can summon a Flame Spirit. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -938,13 +868,9 @@
 		<!-- Dimensional Item Pack. Contains a Mentee Certificate, a Mentoring Guidebook, and a Mentee Headphone. Only 1 per account. Cannot be shared once opened. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1120,13 +1046,9 @@
 	<item id="34879" name="Low-grade Magic Rune Clip (R-grade)" type="EtcItem">
 		<!-- Low-grade Magic Rune Clip that can improve the function of R-grade Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="20" />
@@ -1134,13 +1056,9 @@
 	<item id="34880" name="Mid-grade Magic Rune Clip (R-grade)" type="EtcItem">
 		<!-- Magic Rune Clip that can improve the function of R-grade Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="20" />
@@ -1148,13 +1066,9 @@
 	<item id="34881" name="High-grade Magic Rune Clip (R-grade)" type="EtcItem">
 		<!-- High-grade Magic Rune Clip that can improve the function of R-grade Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="20" />
@@ -1162,13 +1076,9 @@
 	<item id="34882" name="Top-grade Magic Rune Clip (R-grade)" type="EtcItem">
 		<!-- Top-grade Magic Rune Clip that can improve the function of R-grade Belt. -->
 		<set name="icon" val="icon.etc_rune_clip_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="20" />
@@ -1177,13 +1087,9 @@
 		<!-- Bottle containing Istina's Soul. Bring it to Rumiese to bestow Istina's Soul on Istina's Bracelet. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="weight" val="60" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1193,13 +1099,9 @@
 		<!-- Bottle containing Octavis' Soul. Can bestow Octavis' Soul on Octavis' Bracelet. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="weight" val="60" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1209,13 +1111,9 @@
 		<!-- Double-click on it to acquire the Circlet of Earthquake (60-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1228,27 +1126,19 @@
 	<item id="34886" name="Novella Prophecy" type="EtcItem">
 		<!-- Novella Prophecy. It contains a portion of the prophecy that was swallowed by the One Who Eats Prophecies. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="34887" name="Empty Hot Spring Water Bottle" type="EtcItem">
 		<!-- Empty bottle for holding hot spring water. Double-click on it while in the hot springs to fill it with hot spring water. -->
 		<set name="icon" val="icon.etc_hot_spring_glass_bottle_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -1260,26 +1150,18 @@
 	<item id="34888" name="Hot Springs Water Bottle" type="EtcItem">
 		<!-- Bottle for holding hot spring water. It contains hot spring water. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="34889" name="Durable Leather" type="EtcItem">
 		<!-- Durable Leather. Ingredient for making a weapon that purifies water. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1287,14 +1169,10 @@
 	<item id="34890" name="Trowel" type="EtcItem">
 		<!-- Trowel. Double-click on it to collect flame flowers from the Forge of the Gods. -->
 		<set name="icon" val="icon.etc_trowel_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -1306,13 +1184,9 @@
 	<item id="34891" name="Energy of Fire" type="EtcItem">
 		<!-- energy of fire. Ingredient for making a weapon that purifies water. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1320,13 +1194,9 @@
 	<item id="34892" name="Hard Fossil Containing Energy of Water" type="EtcItem">
 		<!-- Hard fossil containing Energy of Water. Ingredient for making a weapon that purifies water. -->
 		<set name="icon" val="icon.etc_hard_fossil_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -1334,13 +1204,9 @@
 	<item id="34893" name="Seed of Helping Herb" type="EtcItem">
 		<!-- Seed of Helping Herb. Double-click on it in a siege battle area to plant a Helping Herb. -->
 		<set name="icon" val="icon.etc_coda_seed_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -1351,26 +1217,18 @@
 	<item id="34894" name="Herb Remnants" type="EtcItem">
 		<!-- Herb Remnants. If you plant a Helping Herb in a siege battle area, you can obtain Herb Remnants. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="34895" name="Spellbook: Clan Flag" type="EtcItem">
 		<!-- Item needed to learn the Clan Flag Skill. When you use the Clan Flag Skill, 100 Clan Reputation are consumed. Can be used by Count or higher. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -1383,13 +1241,9 @@
 		<!-- When equipped, STR + 3, DEX + 1, CON + 1, P. Evasion + 1, and M. Evasion + 1. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hair2" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="4320" />
@@ -1403,13 +1257,9 @@
 		<!-- Increases INT + 3, WIT + 1, MEN + 1, Physical Attack Resistance + 1, and Mental Attack Resistance + 1. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -1422,13 +1272,9 @@
 	<item id="34898" name="Proof of Survival" type="EtcItem">
 		<!-- Someone who possesses the Proof of Survival can be suddenly challenged by the rare monster "Scaldisect of Hellfire." Always be prepared for the attack. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="30" />
 	</item>
@@ -1436,7 +1282,6 @@
 		<!-- Key that activates a device that allows you to go and meet Tauti through the temple. Must be used by a group leader in order to activate the device. -->
 		<set name="icon" val="icon.etc_dark_key_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />

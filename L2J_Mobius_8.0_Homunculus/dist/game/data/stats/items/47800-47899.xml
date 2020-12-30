@@ -9,7 +9,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47801" name="Red Libra Request - Crystal Prison (Baylor)" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Baylor in the Crystal Prison. -->
@@ -20,7 +19,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47802" name="Red Libra Request - Nightmare Kamaloka" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Dark Rider in Nightmare Kamaloka. -->
@@ -31,7 +29,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47803" name="Red Libra Request - Embryo Command Post" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Commander Burnstein in the Command Post. -->
@@ -42,7 +39,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47804" name="Faint Scroll: Enchant Elemental Shirt" type="EtcItem">
 		<!-- An Enchant Scroll for T-shirts. If enchanting fails the existing enchant value is maintained. May not be used on +7 T-shirts or higher. -->
@@ -80,7 +76,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="1" /> <!-- Skill -->
 		</skills>
@@ -97,7 +92,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="2" /> <!-- Skill -->
 		</skills>
@@ -114,7 +108,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="3" /> <!-- Skill -->
 		</skills>
@@ -131,7 +124,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="4" /> <!-- Skill -->
 		</skills>
@@ -148,7 +140,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13970" level="5" /> <!-- Skill -->
 		</skills>
@@ -165,7 +156,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13970" level="6" /> <!-- Skill -->
@@ -183,7 +173,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13970" level="7" /> <!-- Skill -->
@@ -201,7 +190,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13970" level="8" /> <!-- Skill -->
@@ -219,7 +207,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13970" level="9" /> <!-- Skill -->
@@ -237,7 +224,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13970" level="10" /> <!-- Skill -->
@@ -279,7 +265,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18097" level="1" /> <!-- Dimensional Bracelet -->
@@ -321,7 +306,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47823" name="Chuseok Gift Wrapping" additionalName="Event" type="EtcItem">
 		<!-- A wrapping cloth filled with Chuseok gift. When used, you can get 10 Sweet Songpyeons. -->
@@ -335,7 +319,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47824" name="Sweet Rice Cakes" additionalName="Event" type="EtcItem">
@@ -349,7 +332,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47825" name="Hanbok Outfit" additionalName="Event" type="EtcItem">
@@ -362,7 +344,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47826" name="Hanbok" type="Armor">
@@ -377,7 +358,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -391,7 +371,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
@@ -408,7 +387,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47829" name="Lionel Hunter Mission List - 4" type="EtcItem">
 		<!-- List of missions received from Lionel Hunter to new Exalted Power. "Each of the following people will receive a commission and bring a certificate - search for Commando Captain Sporcha the Hellbound Refugee Camp, Giant Tracker Leader Krenaht in the Giant's Cave, Fishermen's Guild Leader Santiago in Heine, and Hunters Guild President Arcturus in the Hunter's Village." -->
@@ -420,7 +398,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47830" name="Leona's Certificate" type="EtcItem">
 		<!-- The certificate received for completing Commando Captain Sporcha's mission from Fire Dragon Bride Leona Blackbird. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -432,7 +409,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47831" name="Kekropus' Certificate" type="EtcItem">
 		<!-- The certificate received for completing Giant Tracker Leader Krenaht's mission from Hierarch Kekropus. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -444,7 +420,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47832" name="Santiago's Certificate" type="EtcItem">
 		<!-- The certificate received for completing Fishermen's Guild Leader Santiago's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -456,7 +431,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47833" name="Arcturus' Certificate" type="EtcItem">
 		<!-- The certificate received for completing Hunter Guild Leader Arcturus's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -468,7 +442,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47834" name="Lionel Hunter Mission List - 5" type="EtcItem">
 		<!-- List of missions received from Lionel Hunter to new Exalted Power. "Each of the following people will receive a commission and bring a certificate - search for Master Cyphona and Quartermaster Dinford in the Blackbird Campsite, Owner Settlen in Underground Gainak's Mystic Tavern, and Admiral Keucereus in the Keucereus Alliance Base." -->
@@ -480,7 +453,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47835" name="Ferin's Certificate" type="EtcItem">
 		<!-- The certificate received for completing Master Cyphona's mission from Ferin. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -492,7 +464,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47836" name="Logart Van Dyke's Certificate" type="EtcItem">
 		<!-- The certificate received for completing Quartermaster Dinford's mission from Royal Guard Captain Logart Van Dyke. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -504,7 +475,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47837" name="Settlen's Certificate" type="EtcItem">
 		<!-- The certificate received for completing Mystic Tavern Owner Settlen's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -516,7 +486,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47838" name="Keucereus' Certificate" type="EtcItem">
 		<!-- The certificate received for completing Admiral Keucereus's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
@@ -528,7 +497,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47839" name="Proof of Qualification" type="EtcItem">
 		<!-- Proof obtained after killing the monsters spoken of by Commando Captain Sporcha in Hellbound. All you have to do is take it to Fire Dragon Bride Leona Blackbird in the Hellbound Refugee Camp. -->
@@ -540,7 +508,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47840" name="Blackbird Clan's Certification" type="EtcItem">
 		<!-- Proof of reaching Amity Level 6 with the Blackbird Clan. Take this with the other certifications to Kekropus, and you can receive Kekropus' Certification. -->
@@ -552,7 +519,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47841" name="Giant Trackers Certification" type="EtcItem">
 		<!-- Proof of reaching Amity Level 6 with the Giant Trackers. Take this with the other certifications to Kekropus, and you can receive Kekropus' Certification. -->
@@ -564,7 +530,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47842" name="Special Fish Stew" type="EtcItem">
 		<!-- A special fish stew of a special recipe commissioned by Fishermen's Guild Leader Santiago. The taste is excellent, but it has no other effect. -->
@@ -576,7 +541,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47843" name="Proof of Strength" type="EtcItem">
 		<!-- A proof for Eva's Knight Lionel Hunter from Heine who asked you to kill monsters. Bring it to Lionel Hunter. -->
@@ -588,7 +552,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47844" name="Mother Tree Guardian's Certification" type="EtcItem">
 		<!-- Proof of reaching Amity Level 6 with the Mother Tree Guardians. Take this with the other certifications to Logart Van Dyke in the Blackbird Campsite, and you can receive Logart Van Dyke' Certification. -->
@@ -600,7 +563,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47845" name="Unworldly Visitors' Certification" type="EtcItem">
 		<!-- Proof of reaching Amity Level 6 with the Unworldly Visitors. Take this with the other certifications to Logart Van Dyke in the Blackbird Campsite, and you can receive Logart Van Dyke' Certification. -->
@@ -612,7 +574,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47846" name="Kingdom's Royal Guard's Certification" type="EtcItem">
 		<!-- Proof of reaching Amity Level 6 with the Kingdom's Royal Guard. Take this with the other certifications to Logart Van Dyke in the Blackbird Campsite, and you can receive Logart Van Dyke' Certification. -->
@@ -624,7 +585,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47847" name="Story Book - Tauti" type="EtcItem">
 		<!-- A story book containing all the stories of Tauti in the Mystic Tavern -->
@@ -636,7 +596,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47848" name="Story Book - Kelbim" type="EtcItem">
 		<!-- A story book containing all the stories of Kelbim in the Mystic Tavern -->
@@ -648,7 +607,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47849" name="Story Book - Freya" type="EtcItem">
 		<!-- A story book containing all the stories of Freya in the Mystic Tavern -->
@@ -660,7 +618,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47850" name="Story Book - Kain van Halter" type="EtcItem">
 		<!-- A story book containing all the stories of Kain van Halter in the Mystic Tavern -->
@@ -672,7 +629,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47851" name="Sayha's Energy" type="EtcItem">
 		<!-- Required for upgrading Sayha's Talisman Lv. 8 or lower. In case of failure, Sayha's Talisman is not destroyed. However, Sayha's Energy is consumed in any case. -->
@@ -685,14 +641,9 @@
 		<!-- Required for learning Dignity of the Exalted Lv. 4. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -705,14 +656,9 @@
 		<!-- Required for learning Dignity of the Exalted Lv. 5. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -725,14 +671,9 @@
 		<!-- Required for learning Vitality of the Exalted Lv. 1. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -745,14 +686,9 @@
 		<!-- Required for learning Vitality of the Exalted Lv. 2. Used by main classes only. Required level: 105. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1286,7 +1222,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="mAtk">1</stat>
 			<stat type="pAtkSpd">379</stat>
@@ -1304,7 +1239,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47892" name="Ore with Giant's Energy" type="EtcItem">
 		<!-- Ore received after destroying the Giant's Cave Monsters. It seems to have Giant's Energy. If you collect this and bring it to Ishuma, you can get Ishuma's minerals. -->
@@ -1316,7 +1250,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47893" name="Shadai's Solution" type="EtcItem">
 		<!-- A solution with magic powers made by Shadai heating crystals in a laboratory. Take this and the Ishuma's minerals together to find the Blacksmith of Mammon. -->
@@ -1328,7 +1261,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47894" name="Ishuma's Minerals" type="EtcItem">
 		<!-- Minerals made by Ishuma's synthesis in the lab using the Giant's ore. Let's go to the Blacksmith of Mammon with this and Shadai's Solution. -->
@@ -1340,7 +1272,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47895" name="Shadow Ingot Fragment" type="EtcItem">
 		<!-- A sculpture created by the Blacksmith of Mammon during the study of the Shadow Ingot. It feels like it can be restored through compounding. You can exchange 10 Shadow Ingot Fragments for a Shadow ingot by visiting Neti in the Town of Gludio. Items made through compounding cannot be exchanged/ traded, so be careful when combining. -->
@@ -1358,7 +1289,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47897" name="NPC: Alfred von Hellmann" type="Weapon">
 		<!-- For NPC: Vampire -->
@@ -1374,7 +1304,6 @@
 		<set name="spiritshots" val="3" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">92</stat>
@@ -1400,7 +1329,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">198</stat>
 			<stat type="mAtk">83</stat>
@@ -1422,6 +1350,5 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 </list>

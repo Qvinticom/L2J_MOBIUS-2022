@@ -41,7 +41,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48305" name="Blessed Antharas' Earring - Shield" additionalName="30-day" type="Armor">
@@ -54,7 +54,7 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -76,7 +76,7 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -98,7 +98,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -120,7 +120,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -142,7 +142,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -164,7 +164,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -186,7 +186,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -208,7 +208,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -230,7 +230,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
@@ -352,7 +352,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -366,7 +366,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -380,7 +380,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -394,7 +394,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -408,7 +408,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -422,7 +422,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -436,7 +436,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -450,7 +450,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -464,7 +464,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -478,7 +478,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -492,7 +492,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -506,7 +506,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -520,7 +520,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -534,7 +534,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -548,7 +548,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -562,7 +562,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -576,7 +576,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -585,8 +585,7 @@
 	<item id="48343" name="Burnstein's Aufgabe Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Burnstein's Aufgabe Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -596,8 +595,7 @@
 	<item id="48344" name="Kelbim's Geffelen Shulter Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Kelbim's Geffelen Shulter appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -607,8 +605,7 @@
 	<item id="48345" name="Superion Core Shard Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Superion Core Shard appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -618,8 +615,7 @@
 	<item id="48346" name="Istina Reflect Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Istina's Reflector appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -629,8 +625,7 @@
 	<item id="48347" name="Taiga Kite Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Taiga Kite Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -640,8 +635,7 @@
 	<item id="48348" name="Tanta Tribe Skull Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Tanta Tribe Skull Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -651,8 +645,7 @@
 	<item id="48349" name="Rael Tribe Wrist Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Rael Tribe Wrist Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -662,8 +655,7 @@
 	<item id="48350" name="Kunda's Battle Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Kunda's Battle Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -673,8 +665,7 @@
 	<item id="48351" name="Freya's Ice Flower Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Freya's Ice Flower Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -684,8 +675,7 @@
 	<item id="48352" name="Deathmask Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Deathmask Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -695,8 +685,7 @@
 	<item id="48353" name="Berserker's Crusader Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Berserker's Crusader Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -706,8 +695,7 @@
 	<item id="48354" name="Makkum's Cartwheel Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Makkum's Cartwheel appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -717,8 +705,7 @@
 	<item id="48355" name="Fallen Angel Shulter Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Fallen Angel Shulter appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -728,8 +715,7 @@
 	<item id="48356" name="Silver Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Silver Scarab appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -739,8 +725,7 @@
 	<item id="48357" name="Vampire Fang Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Vampire Fang Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -750,8 +735,7 @@
 	<item id="48358" name="Ice Shard Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Ice Shard Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -761,8 +745,7 @@
 	<item id="48359" name="Angelus Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Angelus Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -776,7 +759,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -789,7 +772,7 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48362" name="Adventure Guild Completion Box" type="EtcItem">
@@ -799,7 +782,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -833,8 +816,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -844,8 +827,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -855,8 +838,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -869,7 +852,7 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48370" name="Request - Wasteland East" type="EtcItem">
@@ -881,7 +864,7 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48371" name="Request - Forest of the Dead" type="EtcItem">
@@ -893,7 +876,7 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48372" name="Request - Swamp of Screams" type="EtcItem">
@@ -905,7 +888,7 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48373" name="Request - Wasteland West" type="EtcItem">
@@ -914,8 +897,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48374" name="Request - Wasteland East" type="EtcItem">
@@ -924,8 +907,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48375" name="Request - Forest of the Dead" type="EtcItem">
@@ -934,8 +917,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48376" name="Request - Swamp of Screams" type="EtcItem">
@@ -944,8 +927,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48377" name="Traces of Evil Spirit" type="EtcItem">
@@ -954,8 +937,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -965,8 +948,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -976,8 +959,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -987,8 +970,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -998,8 +981,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1009,8 +992,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1020,8 +1003,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1031,7 +1014,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1041,7 +1024,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1051,7 +1034,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1063,7 +1046,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1122,7 +1105,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">25</stat>
@@ -1131,8 +1114,7 @@
 	<item id="48396" name="Burnstein's Pflicht Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Burnstein's Pflicht Shield appearance for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1148,9 +1130,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="4" /> <!-- Basic Supply Box -->
@@ -1165,9 +1144,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="5" /> <!-- Basic Supply Box -->
@@ -1182,9 +1158,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="6" /> <!-- Basic Supply Box -->

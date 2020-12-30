@@ -153,14 +153,10 @@
 	<item id="46525" name="Practice Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within, received from a blacksmith to get some practice with Soul Crystals. Double-click to summon a Soul and use the Practice Soul Crystal Stage 1 to absorb the Soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -168,14 +164,10 @@
 		<!-- A Soul Crystal received from a blacksmith for practice. Use this to bestow an effect on to the Practice Stormbringer you received from the blacksmith. -->
 		<set name="icon" val="icon.ensoul_big_old" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
@@ -183,13 +175,9 @@
 		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Lets you teleport to Town of Aden / Town of Rune / Talking Island Village / Town of Giran / Town of Goddard / Town of Schuttgart. (Cooldown 30 minutes). <Item Skill>. 1. Chase Down: Increases Speed by 66 for 15 seconds. <Item Skill>. 2. Sneak: Protected from preemptive attacks from monsters. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
 		<set name="is_destroyable" val="false" />
 	</item>
@@ -200,14 +188,10 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="2" />
 		<set name="damage_range" val="0;0;66;120" />
@@ -222,26 +206,18 @@
 		<!-- Scholar's hat showing knowledge. Gold tassel is attached. -->
 		<set name="icon" val="BranchSys2.icon.g_graduation_cap_gold" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46530" name="Top-grade Love Potion - Party" type="EtcItem">
 		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. of party members are increased. A strange power changes the appearance of your weapon. Does not stack with Battle Rhapsody Dance. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.love_potion_party" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -258,7 +234,6 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
-		<set name="is_commissionable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
 		<stats>
@@ -272,13 +247,9 @@
 	<item id="46533" name="Hansel's Weapon Crafting Potion" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a weapon to that of White Day for 1 hour. Deleted after event. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -287,13 +258,9 @@
 		<!-- Item imbued with Gretel's magic. Can summon a friend every 30 minutes. Target a party member and double-click to use the skill. Deleted after event. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
@@ -302,13 +269,9 @@
 		<!-- Double-click to get one of the following: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, or Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="CAPSULE" />
@@ -322,13 +285,9 @@
 	<item id="46536" name="Expertise Rune Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get one of the following: Expertise Rune Pack R, R95, or R99. Deleted after event. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
@@ -470,14 +429,10 @@
 	<item id="46552" name="Practice Soul Crystal" additionalName="Stage 2" type="EtcItem">
 		<!-- Item obtained from succeeding at the Soul Crystal practice. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
@@ -491,22 +446,14 @@
 		<!-- Mystic Tavern - Item that can only be used in Tauti's dungeon. Use it near the Sealed Tablet to reduce the defense of the tablet. Deleted 1 hour after acquisition. -->
 		<set name="icon" val="icon.etc_flower_i01" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 	</item>
 	<item id="46555" name="Altar of Earth Sealing Stone" type="EtcItem">
 		<!-- Mystic Tavern - Use it on the Altar of Earth in Kelbim's dungeon to seal the altar. -->
 		<set name="icon" val="icon.etc_black_freezing_core_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="weight" val="5" />
 	</item>
@@ -514,10 +461,6 @@
 		<!-- Mystic Tavern - Use it on the Altar of Wind in Kelbim's dungeon to seal the altar. -->
 		<set name="icon" val="icon.sealed_bluelycan_neckalce_gem" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="weight" val="5" />
 	</item>
@@ -525,49 +468,33 @@
 		<!-- Item obtained from defeating the monsters in Hellbound's Phantasmal Ridge. Collect these and take them to Leona Blackbird in the Refugee Village. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46558" name="Leona's Reward Box (High-grade)" type="EtcItem">
 		<!-- Reward box received from Leona Blackbird for helping her in Hellbound. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46559" name="Leona's Reward Box" type="EtcItem">
 		<!-- Reward box received from Leona Blackbird for helping her in Hellbound. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46560" name="Curtiz's Reward Box" type="EtcItem">
 		<!-- Reward box received from Captain Kurtiz for helping him with the monsters of the Nightmare Kamaloka. Double-click to open. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -578,31 +505,19 @@
 	<item id="46561" name="Blue Dynasty" type="EtcItem">
 		<!-- Blue Dynasty armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46562" name="Red Zubei" type="EtcItem">
 		<!-- Red Zubei armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46563" name="Epic Tale Pouch" additionalName="Not In Use" type="EtcItem">
 		<!-- Pouch received as reward for listening to Freya's story and enjoying your time at the epic tales pub. Double-click to use. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
@@ -610,12 +525,9 @@
 		<!-- Teleports you to the Mystic Tavern. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
@@ -623,48 +535,36 @@
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 1 or Mermoden's Soul Crystal Stage 1. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46566" name="Soul Crystal Coupon" additionalName="Stage 2" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 2 or Mermoden's Soul Crystal Stage 2. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46567" name="Soul Crystal Coupon" additionalName="Stage 3" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 3 or Mermoden's Soul Crystal Stage 3. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46568" name="Soul Crystal Coupon" additionalName="Stage 4" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 4 or Mermoden's Soul Crystal Stage 4. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46569" name="Soul Crystal Coupon" additionalName="Stage 5" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 5 or Mermoden's Soul Crystal Stage 5. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46570" name="Soul Crystal Coupon Pack" additionalName="Stage 5" type="EtcItem">
 		<!-- Double-click to get a Soul Crystal Coupon Stage 5. There's a chance that you might not get anything. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -675,7 +575,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
-		<set name="is_commissionable" val="false" />
 		<set name="spiritshots" val="2" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
@@ -891,20 +790,15 @@
 		<!-- Shards of a shattered Ice Crystal. The knights and monsters of the Labyrinth have turned violent because of the effect of the Ice Crystal, and Melissa's health has deteriorated. Collect these and take them to Sayan. -->
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46595" name="Blue Dynasty" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_commissionable" val="false" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -913,7 +807,6 @@
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_commissionable" val="false" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -922,7 +815,6 @@
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_commissionable" val="false" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -931,7 +823,6 @@
 		<set name="icon" val="icon.armor_t64_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_commissionable" val="false" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -940,7 +831,6 @@
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_commissionable" val="false" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>

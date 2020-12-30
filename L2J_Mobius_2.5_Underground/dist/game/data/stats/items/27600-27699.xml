@@ -4,26 +4,18 @@
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Seraph equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27601" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27602" name="Abundance Box" type="EtcItem">
@@ -36,13 +28,9 @@
 		<!-- Reward chest for completing daily missions. You can obtain one of various rewards. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -55,49 +43,27 @@
 		<!-- Double-click to obtain ingredients needed for Double Crystal Enhancement of R99 weapons. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27605" name="Blessed Amaranthine Pack (Physical)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Amaranthine Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, Shooter. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27606" name="Blessed Amaranthine Pack (Magical)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Amaranthine Buster, Caster, Retributer. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27607" name="Blessed Amaranthine Pack (Dual Weapons)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Amaranthine Dualsword, Dual Dagger, Dual Blunt. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27608" name="Card Pouch" additionalName="Event" type="EtcItem">
@@ -245,13 +211,9 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 		<skills>
 			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
@@ -276,13 +238,9 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
@@ -307,13 +265,9 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="40320" />
 		<skills>
 			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
@@ -342,7 +296,6 @@
 		<set name="icon" val="icon.etc_coins_blue_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27641" name="Heine Exclusive Bait (85-89)" type="EtcItem">
@@ -465,15 +418,9 @@
 	<item id="27660" name="Shadai's Jewelry Box" type="EtcItem">
 		<!-- Double-click to acquire 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -493,17 +440,10 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
 			<item id="38941" min="55" max="30" chance="100" /> <!-- La Vie En Rose's Jewelry Box -->
 			<item id="38943" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Noble Brooch Chest -->
@@ -515,18 +455,13 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
 			<item id="27593" min="5" max="5" chance="95" /> <!-- Daily Coin -->
 			<item id="27585" min="1" max="1" chance="5" /> <!-- Special Supply Box - Standard -->
@@ -611,10 +546,7 @@
 	<item id="27673" name="Freya's Scroll of Storm" type="EtcItem">
 		<!-- Vitality consumption + 150% and XP/SP + 150% when hunting. Does not disappear upon death. Duration 10 min. Cooldown 10 min. Only usable when 1 or more Vitality slot is full. -->
 		<set name="icon" val="icon.bm_freya_storm_scroll" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />

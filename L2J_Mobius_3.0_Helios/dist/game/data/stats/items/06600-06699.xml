@@ -375,10 +375,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -416,10 +413,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -456,10 +450,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -498,10 +489,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -541,10 +529,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -583,10 +568,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<cond msgId="1518">
 			<player isHero="true" />
@@ -626,10 +608,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -668,10 +647,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -712,10 +688,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -754,10 +727,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -795,10 +765,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -838,10 +805,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6624" name="Dummy - Quest Item 2" type="EtcItem">
@@ -854,10 +817,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6625" name="Dummy - Quest Item 3" type="EtcItem">
@@ -870,10 +829,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6626" name="Dummy - Quest Item 4" type="EtcItem">
@@ -886,10 +841,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6627" name="Dummy - Quest Item 5" type="EtcItem">
@@ -902,10 +853,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6628" name="Dummy - Quest Item 6" type="EtcItem">
@@ -918,10 +865,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6629" name="Dummy - Quest Item 7" type="EtcItem">
@@ -934,10 +877,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6630" name="Dummy - Quest Item 8" type="EtcItem">
@@ -950,10 +889,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6631" name="Dummy - Quest Item 9" type="EtcItem">
@@ -966,10 +901,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6632" name="Dummy - Quest Item 10" type="EtcItem">
@@ -982,10 +913,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6633" name="Dummy - General Item 1" type="EtcItem">
@@ -1111,13 +1038,7 @@
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="for_npc" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2033" level="1" /> <!-- Item - Beast Soul Shot -->
 		</skills>
@@ -1135,13 +1056,7 @@
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="for_npc" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2008" level="1" /> <!-- Item - Beast Spirit Shot -->
 		</skills>
@@ -1159,13 +1074,7 @@
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="for_npc" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2009" level="1" /> <!-- Item - Beast Blessed Spirit Shot -->
 		</skills>
@@ -1575,9 +1484,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>

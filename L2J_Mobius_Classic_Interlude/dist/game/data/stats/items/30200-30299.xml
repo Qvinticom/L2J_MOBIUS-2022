@@ -2524,13 +2524,9 @@
 		<!-- Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody Lv. 1, Pipe Organ Melody Lv. 1, Guitar Melody Lv. 1, Harp Melody Lv. 1, and Lute Melody Lv. 1 for 30 min. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<set name="reuse_delay" val="3000" />
@@ -2551,12 +2547,9 @@
 		<!-- Scroll that replenishes 1,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2571,13 +2564,9 @@
 		<!-- Can acquire 5,000 soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="500" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2590,13 +2579,9 @@
 		<!-- Can acquire 10,000 soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="500" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2609,13 +2594,9 @@
 		<!-- Can acquire 5,000 spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="500" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2628,13 +2609,9 @@
 		<!-- Can acquire 10,000 spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="500" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2647,13 +2624,9 @@
 		<!-- Can acquire 5,000 blessed spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="500" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2666,13 +2639,9 @@
 		<!-- Can acquire 10,000 blessed spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="500" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2684,13 +2653,9 @@
 	<item id="30282" name="Orichalcum Quiver" type="EtcItem">
 		<!-- Can acquire 10,000 Orichalcum Arrows. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2702,13 +2667,9 @@
 	<item id="30283" name="Orichalcum Bolt Container" type="EtcItem">
 		<!-- Can acquire 10,000 Orichalcum Bolts. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -2720,13 +2681,9 @@
 	<item id="30284" name="Requiem Weapon Pack" type="EtcItem">
 		<!-- Can acquire requiem weapons. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2750,13 +2707,9 @@
 	<item id="30285" name="Immortal Heavy Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal heavy armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2772,13 +2725,9 @@
 	<item id="30286" name="Immortal Light Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal light armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2793,13 +2742,9 @@
 	<item id="30287" name="Immortal Robe Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal robe armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2815,13 +2760,9 @@
 	<item id="30288" name="Apocalypse Weapon Pack" type="EtcItem">
 		<!-- Can acquire Apocalypse weapons. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2845,13 +2786,9 @@
 	<item id="30289" name="Twilight Heavy Armor Pack" type="EtcItem">
 		<!-- Can acquire Twilight heavy armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2867,13 +2804,9 @@
 	<item id="30290" name="Twilight Light Armor Pack" type="EtcItem">
 		<!-- Can acquire Twilight light armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2888,13 +2821,9 @@
 	<item id="30291" name="Twilight Robe Armor Pack" type="EtcItem">
 		<!-- Can acquire Twilight robe armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2910,13 +2839,9 @@
 	<item id="30292" name="Immortal Accessory Pack" type="EtcItem">
 		<!-- Can acquire immortal accessories. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2929,13 +2854,9 @@
 	<item id="30293" name="Twilight Accessory Pack" type="EtcItem">
 		<!-- Can acquire Twilight accessories. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -2948,42 +2869,30 @@
 	<item id="30294" name="Blood of the Guardian of the Altar" type="EtcItem">
 		<!-- It is the blood of Embryo's high level disciples Isadora and Maliss who protect Shilen's Altar inside the Seal of Shilen. Bring it to Lord of the Dusk Baro Negrado. -->
 		<set name="icon" val="icon.etc_dragons_blood_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="30295" name="Embryo's Imprinting" type="EtcItem">
 		<!-- Embryo's seal that has been imprinted in blood. Bring it to a worker of the Dusk in the Town of Aden and ask about it. -->
 		<set name="icon" val="icon.yogi_stick_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="30296" name="Ranger's Report" type="EtcItem">
 		<!-- The report of a ranger of the Dusk that was found in the Catacomb and the Necropolis. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />

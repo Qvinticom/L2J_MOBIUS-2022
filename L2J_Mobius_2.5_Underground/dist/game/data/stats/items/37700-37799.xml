@@ -7,13 +7,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -34,13 +30,9 @@
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -90,11 +82,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="17154" level="1" /> <!-- Love Potion -->
@@ -112,10 +100,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17156" level="1" /> <!-- Decadence -->
 			<skill id="17161" level="1" /> <!-- Chocolate Truffle -->
@@ -133,10 +117,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17157" level="1" /> <!-- Sugar Rush -->
 			<skill id="17162" level="1" /> <!-- Candy Heart -->
@@ -154,10 +134,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17158" level="1" /> <!-- Forever Alone -->
 			<skill id="17163" level="1" /> <!-- Comfort Cookie -->
@@ -175,10 +151,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17159" level="1" /> <!-- Transformation Skill -->
 		</skills>
@@ -195,10 +167,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17159" level="1" /> <!-- Transformation Skill -->
 		</skills>
@@ -215,10 +183,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17159" level="1" /> <!-- Transformation Skill -->
 		</skills>
@@ -235,10 +199,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17160" level="1" /> <!-- Summon Friend -->
 		</skills>
@@ -255,10 +215,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17160" level="1" /> <!-- Summon Friend -->
 		</skills>
@@ -275,10 +231,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17160" level="1" /> <!-- Summon Friend -->
 		</skills>
@@ -291,9 +243,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="1" /> <!-- Talisman - Lilith -->
@@ -307,9 +257,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="2" /> <!-- Talisman - Lilith -->
@@ -328,9 +276,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="3" /> <!-- Talisman - Lilith -->
@@ -341,13 +287,9 @@
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="weight" val="130" />
 		<skills>
@@ -376,7 +318,6 @@
 		<set name="icon" val="icon.shirt_special_box_i02" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="default_action" val="PEEL" />
@@ -391,7 +332,6 @@
 		<set name="icon" val="icon.shirt_special_box_i01" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="default_action" val="PEEL" />
@@ -406,7 +346,6 @@
 		<set name="icon" val="icon.shirt_special_box_i03" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="default_action" val="PEEL" />
@@ -421,7 +360,6 @@
 		<set name="icon" val="icon.shirt_special_box_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="default_action" val="PEEL" />
@@ -436,7 +374,6 @@
 		<set name="icon" val="icon.shirt_stone" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37724" name="Shilen's Energy" type="EtcItem">
@@ -460,13 +397,9 @@
 	<item id="37727" name="Dandy's Gift Box" type="EtcItem">
 		<!-- Double click to acquire a 7-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, and Ruler's Authority Belt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -483,13 +416,9 @@
 	<item id="37728" name="Dandy's Challenge Box" type="EtcItem">
 		<!-- Double click to acquire Dandy's Challenge Scroll and the NC Dinos Uniform. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -502,13 +431,9 @@
 	<item id="37729" name="Dandy's Scroll: Faith" type="EtcItem">
 		<!-- For 60 minutes, decreases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Dandy's Cheer and Dandy's Passion buffs are not applied at the same time. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -523,13 +448,9 @@
 	<item id="37730" name="Dandy's Scroll: Passion" type="EtcItem">
 		<!-- For 60 minutes, decreases all received damage by 10%. Dandy's Cheer and Dandy's Faith buffs are not applied at the same time. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -545,13 +466,9 @@
 	<item id="37731" name="Dandy's Scroll: Challenge" type="EtcItem">
 		<!-- For 60 minutes, increases acquired XP and SP by 30%. Energy of Glory, Midsummer Passion, and Emperor's Growth scrolls are not applied at the same time. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
@@ -569,13 +486,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
@@ -591,13 +504,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
@@ -613,13 +522,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
@@ -637,13 +542,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="13318" level="1" /> <!-- Earth Wyrm Heart Ring -->
@@ -660,13 +561,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="3559" level="2" /> <!-- Blessed Zaken's Earring -->
@@ -683,12 +580,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="waist" />
 		<set name="weight" val="440" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="15145" level="1" /> <!-- Ruler's Authority -->
@@ -870,90 +764,63 @@
 	<item id="37757" name="Certificate: 50 Olympiad Matches" type="EtcItem">
 		<!-- Document that proves participation in the Olympiad Match 50. Take this document to the Olympiad Manager to receive a whole reward. -->
 		<set name="icon" val="icon.mercenary_certification_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="37758" name="Indomitable Hero's Olympiad Treasure Chest" type="EtcItem">
 		<!-- Treasure box given to a warrior participating in the Olympiad Match 50 with an indomitable will. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37759" name="Faint Dimensional Energy - Stage 1" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage for even greater rewards. But, in order to raise to stage 2, the next period's defense must be successful. 15-day. -->
 		<set name="icon" val="icon.etc_magic_energy_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="37760" name="Faint Dimensional Energy - Stage 2" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 3, the next period's defense must be successful. 15-day. -->
 		<set name="icon" val="icon.etc_magic_energy_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="37761" name="Faint Dimensional Energy - Stage 3" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 4, the next period's defense must be successful. 15-day. -->
 		<set name="icon" val="icon.etc_magic_energy_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="37762" name="Faint Dimensional Energy - Stage 4" type="EtcItem">
 		<!-- Faint energy of dimensional strength. It is the highest stage for receiving rewards from Mermoden. -->
 		<set name="icon" val="icon.etc_magic_energy_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="37763" name="Exalted Cloak" type="Armor">
 		<!-- A cloak that symbolizes the Exalted status. STR/DEX/CON/INT/WIT/MEN/LUC/CHA +1. -->
 		<set name="icon" val="icon.cloak_noblesse2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="220" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -973,76 +840,53 @@
 		<!-- Restores 2000 CP. -->
 		<set name="icon" val="icon.etc_cp_potion_i01" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37765" name="Elikia's Letter" type="EtcItem">
 		<!-- Message sent from Elikia to Leona Blackbird. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="37766" name="Chaos Fragment" type="EtcItem">
 		<!-- Item obtained by defeating the evil creatures of Hellbound. -->
 		<set name="icon" val="icon.etc_stone_black_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37767" name="Vitality Replenishing Potion" type="EtcItem">
 		<!-- Potion that replenishes a certain amount of vitality points. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37768" name="Crane Activator" type="EtcItem">
 		<!-- Activates the Crane at the Desert Quarry. Place it inside for a chance at a reward. -->
 		<set name="icon" val="icon.etc_freezing_core_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37769" name="Dimensional Energy - Stage 5" type="EtcItem">
 		<!-- Energy of the dimensions. It is the highest stage for receiving rewards from Mermoden. -->
 		<set name="icon" val="icon.etc_magic_energy_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="37770" name="Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
 		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Requiem or Apocalypse equipment for Blessed equipment. -->
@@ -1210,13 +1054,9 @@
 		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="time" val="1440" />
 	</item>
@@ -1224,13 +1064,9 @@
 		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="time" val="1440" />
 	</item>
@@ -1238,13 +1074,9 @@
 		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 1-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="time" val="1440" />
 	</item>

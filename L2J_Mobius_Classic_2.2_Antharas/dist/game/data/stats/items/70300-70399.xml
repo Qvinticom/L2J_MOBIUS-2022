@@ -66,9 +66,6 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSoulShots" />
@@ -85,9 +82,6 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSoulShots" />
@@ -104,9 +98,6 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSoulShots" />
@@ -123,9 +114,6 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSoulShots" />
@@ -142,9 +130,6 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BlessedSoulShots" />
@@ -673,7 +658,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70358" name="First Mate Hat" type="Armor">
@@ -684,7 +668,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70359" name="Warrior's Helmet" type="Armor">
@@ -695,7 +678,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70360" name="Chapeau" type="Armor">
@@ -706,7 +688,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70361" name="Red Horn of Victory" type="Armor">
@@ -717,7 +698,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70362" name="Refined Black Skeleton Circlet" type="Armor">
@@ -728,7 +708,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70363" name="Refined Orange Skeleton Circlet" type="Armor">
@@ -739,7 +718,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70364" name="Refined Green Skeleton Circlet" type="Armor">
@@ -750,7 +728,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70365" name="Refined Brown Skeleton Circlet" type="Armor">
@@ -761,7 +738,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70366" name="Gold Skeleton Circlet" type="Armor">
@@ -772,7 +748,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70367" name="Silver Skeleton Circlet" type="Armor">
@@ -783,7 +758,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70368" name="Red Skeleton Circlet" type="Armor">
@@ -794,7 +768,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70369" name="Black Skeleton Circlet" type="Armor">
@@ -805,7 +778,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70370" name="Chick Gold Horn Cap" type="Armor">
@@ -816,7 +788,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70371" name="Chick Silver Horn Cap" type="Armor">
@@ -827,7 +798,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70372" name="Refined Brown Turban" type="Armor">
@@ -838,7 +808,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70373" name="Refined Yellow Turban" type="Armor">
@@ -849,7 +818,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70374" name="Mining Hat" type="Armor">
@@ -860,7 +828,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70375" name="Enhanced Mining Hat" type="Armor">
@@ -871,7 +838,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70376" name="Search Hat" type="Armor">
@@ -882,7 +848,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70377" name="Enhanced Search Hat" type="Armor">
@@ -893,7 +858,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70378" name="Circlet of Flames" type="Armor">
@@ -904,7 +868,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70379" name="Circlet of Ice" type="Armor">
@@ -915,7 +878,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70380" name="Circlet of Storm" type="Armor">
@@ -926,7 +888,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70381" name="Circlet of Earthquake" type="Armor">
@@ -937,7 +898,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70382" name="Circlet of Darkness" type="Armor">
@@ -948,7 +908,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70383" name="Circlet of Splendor" type="Armor">
@@ -959,7 +918,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70384" name="Refined Carnival Circlet" type="Armor">
@@ -970,7 +928,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70385" name="Refined Devil Horn" type="Armor">
@@ -981,7 +938,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70386" name="Refined Carnival Circlet" type="Armor">
@@ -992,7 +948,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70387" name="Demon Circlet" type="Armor">
@@ -1003,7 +958,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70388" name="Medieval Party Mask" type="Armor">
@@ -1014,7 +968,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70389" name="Black Half Mask" type="Armor">
@@ -1025,7 +978,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70390" name="Eva's Mark" type="Armor">
@@ -1036,7 +988,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="39025" level="1" /> <!-- Adventurer's Scroll of Escape -->
@@ -1050,7 +1001,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70392" name="Black Phantom Mask" type="Armor">
@@ -1061,7 +1011,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70393" name="Black Feather Mask" type="Armor">
@@ -1072,7 +1021,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70394" name="Goblin Circlet" type="Armor">
@@ -1083,7 +1031,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70395" name="Gold-rimmed Glasses" type="Armor">
@@ -1094,7 +1041,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70396" name="Refined Romantic Chapeau: Blue" type="Armor">
@@ -1105,7 +1051,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70397" name="Refined Romantic Chapeau: Gold" type="Armor">
@@ -1116,7 +1061,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70398" name="Refined Romantic Chapeau: Green" type="Armor">
@@ -1127,7 +1071,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70399" name="Refined Romantic Chapeau: Red" type="Armor">
@@ -1138,7 +1081,6 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 </list>

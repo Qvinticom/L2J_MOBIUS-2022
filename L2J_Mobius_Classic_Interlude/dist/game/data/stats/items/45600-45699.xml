@@ -6,10 +6,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13685" level="1" /> <!-- Special Resistance Earring - Paralyze -->
@@ -24,10 +21,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13686" level="1" /> <!-- Special Resistance Earring - Mental Attack -->
@@ -42,10 +36,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13687" level="1" /> <!-- Special Resistance Earring - Sleep -->
@@ -60,10 +51,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13688" level="1" /> <!-- Special Resistance Earring - Poison -->
@@ -78,10 +66,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13689" level="1" /> <!-- Special Resistance Earring - Knock Back/Knock Down -->
@@ -96,10 +81,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13690" level="1" /> <!-- Special Resistance Earring - Aerial Yoke -->
@@ -116,9 +98,6 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="75" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
@@ -137,9 +116,6 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="75" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
@@ -158,9 +134,6 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="75" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
@@ -179,9 +152,6 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="75" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
@@ -195,67 +165,47 @@
 	<item id="45610" name="Atelia Energy Crystal" type="EtcItem">
 		<!-- Artificial crystal created with Atelia. Take it to Merlot to get a Dimensional Coin. -->
 		<set name="icon" val="icon.etc_ertheia_astatine" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45611" name="Atelia Energy Crystal" type="EtcItem">
 		<!-- Artificial crystal created with Atelia. Take it to Merlot to get a Dimensional Coin. -->
 		<set name="icon" val="icon.etc_ertheia_astatine" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45612" name="Atelia Energy Crystal" type="EtcItem">
 		<!-- Artificial crystal created with Atelia. Take it to Merlot to get a Dimensional Coin. -->
 		<set name="icon" val="icon.etc_ertheia_astatine" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45613" name="Atelia Energy Crystal" type="EtcItem">
 		<!-- Artificial crystal created with Atelia. Take it to Merlot to get a Dimensional Coin. -->
 		<set name="icon" val="icon.etc_ertheia_astatine" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45614" name="Talisman - Battle: Attack (1-day)" type="Armor">
 		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./M. Atk./Skill Critical Rate/Skill Critical Damage + 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 	</item>
@@ -263,14 +213,10 @@
 		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./M. Atk./Skill Critical Rate/Skill Critical Damage + 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 	</item>
@@ -278,14 +224,10 @@
 		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./M. Atk./Skill Critical Rate/Skill Critical Damage + 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 	</item>
@@ -293,14 +235,10 @@
 		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./Casting Spd. + 20%, Speed + 60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 	</item>
@@ -308,14 +246,10 @@
 		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./Casting Spd. + 20%, Speed + 60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 	</item>
@@ -323,14 +257,10 @@
 		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./Casting Spd. + 20%, Speed + 60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 	</item>
@@ -338,14 +268,10 @@
 		<!-- Can use the Talisman - Battle: Support skill when equipped. Cancels hiding, invincible, and talisman buffs of those within sight. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 	</item>
@@ -353,14 +279,10 @@
 		<!-- Can use the Talisman - Battle: Support skill when equipped. Cancels hiding, invincible, and talisman buffs of those within sight. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 	</item>
@@ -368,14 +290,10 @@
 		<!-- Can use the Talisman - Battle: Support skill when equipped. Cancels hiding, invincible, and talisman buffs of those within sight. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 	</item>
@@ -383,264 +301,188 @@
 		<!-- Certificate received for finishing Elikia's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45624" name="Mysterious Butler's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing the Mysterious Butler's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45625" name="Galladucci's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Galladucci's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45626" name="Sir Eric Rodemai's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Sir Eric Rodemai's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45627" name="Lionel Hunter's Mission List - Part 1" type="EtcItem">
 		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Verdure Elder Elikia from Heine, the Mysterious Butler, Weapon Merchant Galladucci from Giran, and Sir Eric Rodemai from Aden." -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45628" name="Daichir's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Daichir's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45629" name="Olympiad Manager's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing the Olympiad Manager's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45630" name="Ishuma's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Ishuma's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45631" name="Sir Kristof Rodemai's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Sir Kristof Rodemai's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45632" name="Lionel Hunter's Mission List - Part 2" type="EtcItem">
 		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Head Priest of the Earth Daichir from Schuttgart, the Olympiad Manager, Maestro Ishuma from the Wharf of Gludio Airships, and Sir Kristof Rodemai from Giran." -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45633" name="Kaiena's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Kaiena's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45634" name="Merlot's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Merlot's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45635" name="Blacksmith of Mammon's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Blacksmith of Mammon's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_blue_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45636" name="Sir Gustav Athebaldt's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Sir Gustav Athebaldt's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45637" name="Lionel Hunter's Mission List - Part 3" type="EtcItem">
 		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Captain Kurtiz from Aden, Merlot from Hunters' Village, Blacksmith of Mammon, and Sir Gustav Athebaldt from Oren." -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45638" name="Obtain Exalted Status" type="EtcItem">
 		<!-- Get the Exalted status as reward. -->
 		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45639" name="Citrine Pendant Fragment" type="EtcItem">
 		<!-- Main ingredient to make a Citrine Pendant. -->
 		<set name="icon" val="icon.etc_gem_yellow_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45640" name="Citrine Pendant" type="EtcItem">
 		<!-- A precious pendant made of a golden crystal. Maestro Ishuma has requested this item in order to test your qualifications for Exalted. -->
 		<set name="icon" val="icon.accessary_blessed_earing_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="45641" name="Rodemai's Rune" additionalName="15-day" type="EtcItem">
 		<!-- Keep this in your inventory to gain XP/SP + 7% when hunting. -->
 		<set name="icon" val="icon.skill19226" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="21600" />
 		<skills>
@@ -653,13 +495,9 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -672,13 +510,9 @@
 		<!-- For Dwarves only. Recipe for a Citrine Pendant. Requires Create Item - Skill Lv. 14. The success rate is 10%. -->
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="weight" val="30" />
 		<set name="recipe_id" val="4298" /> <!-- mk_r_citrine_pendant -->
@@ -691,14 +525,10 @@
 		<set name="bodypart" val="hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
 		<skills>
@@ -712,14 +542,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -733,14 +559,10 @@
 	<item id="45646" name="Mysterious Egg" additionalName="Event" type="EtcItem">
 		<!-- An unidentified mysterious egg. Double-click to find out what it is. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.egg_white" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="45647" name="Returning Warrior's Bracelet" additionalName="Event" type="Armor">
@@ -748,13 +570,9 @@
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="commissionItemType" val="BRACELET" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
@@ -769,113 +587,77 @@
 		<!-- Talisman to summon Pippi. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45649" name="Kokko's Talisman" additionalName="Event" type="Armor">
 		<!-- Talisman to summon Kokko. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
 	<item id="45650" name="Pippi's Fortune Pocket - Stage 1" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 400000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45651" name="Pippi's Fortune Pocket - Stage 2" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 1600000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45652" name="Pippi's Fortune Pocket - Stage 3" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 6400000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45653" name="Dynasty Breastplate of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Breastplate Armor of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45654" name="Dynasty Leather Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Leather Armor of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45655" name="Dynasty Tunic of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Tunic of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45656" name="Dynasty Accessory of Fortune Set" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Accessory of Fortune Set. Expires after 30 days if not used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45657" name="Dynasty Breastplate of Fortune" additionalName="30-day" type="Armor">
@@ -884,13 +666,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="7570" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">226</stat>
@@ -902,13 +680,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="3210" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">141</stat>
@@ -919,13 +693,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="520" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -936,13 +706,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1090" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -953,13 +719,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">92</stat>
@@ -970,13 +732,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="sDef">321</stat>
@@ -990,13 +748,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="4180" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">170</stat>
@@ -1008,13 +762,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1370" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">106</stat>
@@ -1025,13 +775,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">92</stat>
@@ -1042,13 +788,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="520" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -1059,13 +801,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1090" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -1077,13 +815,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1780" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">113</stat>
@@ -1095,13 +829,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="860" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">71</stat>
@@ -1112,13 +842,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">92</stat>
@@ -1129,13 +855,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="520" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -1146,13 +868,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1090" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">61</stat>
@@ -1164,13 +882,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="930" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">15</stat>
@@ -1182,13 +896,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">79</stat>
@@ -1199,13 +909,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">106</stat>
@@ -1216,13 +922,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="mDef">60</stat>
@@ -1231,73 +933,49 @@
 	<item id="45677" name="Twilight Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a + 6 enchanted 30-day Twilight Attack Type Heavy set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a + 6 enchanted 30-day Twilight Defense Type Heavy set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a + 6 enchanted 30-day Twilight Assassin Type Light set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a + 6 enchanted 30-day Twilight Enchant Type Light set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a + 6 enchanted 30-day Twilight Magic Type Robe set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a + 6 enchanted 30-day Twilight Recovery Type Robe set. Deleted after event. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="45683" name="Twilight Helmet" additionalName="Attack Type / Heavy (30-day)" type="Armor">
@@ -1305,13 +983,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">128</stat>
@@ -1324,13 +998,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="7520" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">341</stat>
@@ -1342,13 +1012,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="3170" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">213</stat>
@@ -1359,13 +1025,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
@@ -1376,13 +1038,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
@@ -1394,13 +1052,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1130" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="sDef">466</stat>
@@ -1413,13 +1067,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">128</stat>
@@ -1432,13 +1082,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="7520" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">341</stat>
@@ -1450,13 +1096,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="3170" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">213</stat>
@@ -1467,13 +1109,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
@@ -1484,13 +1122,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
@@ -1502,13 +1136,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1130" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="sDef">466</stat>
@@ -1521,13 +1151,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">128</stat>
@@ -1540,13 +1166,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="4140" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">272</stat>
@@ -1560,13 +1182,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1320" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">170</stat>
@@ -1579,13 +1197,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>
@@ -1596,13 +1210,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<stats>
 			<stat type="pDef">85</stat>

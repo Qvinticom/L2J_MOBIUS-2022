@@ -169,9 +169,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="time" val="43200" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -216,7 +213,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47921" name="Greater Red Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Increases P. Critical Damage by 12%, P. Skill Critical Damage by 12%, and P. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
@@ -231,7 +227,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47922" name="Greater Blue Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Increases Magic Critical Damage by 12%, M. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
@@ -246,7 +241,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47923" name="Greater Tanzanite Lv. 1" additionalName="30-day" type="Armor">
 		<!-- When used, it creates a shield that absorbs 50,000 damage for 15 sec. and recovers 15% of maximum HP immediately after use. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
@@ -261,7 +255,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47924" name="Coin of Light" type="EtcItem">
 		<!-- A special coin obtained using Shiny Magic Bait. Can be used with the Dimensional Merchant. -->
@@ -272,7 +265,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47925" name="Red Libra Request - Altar of Shilen" type="EtcItem">
@@ -286,7 +278,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47926" name="Red Libra Request - Altar of Shilen" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Maliss and Isadora in the Altar of Shilen. -->
@@ -297,7 +288,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47927" name="Magic Fan - Blue" type="Weapon">
 		<!-- Use this magic fan to light a fire. -->
@@ -530,7 +520,6 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -542,7 +531,6 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>

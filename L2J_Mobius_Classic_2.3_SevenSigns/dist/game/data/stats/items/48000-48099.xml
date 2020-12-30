@@ -12,7 +12,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48017" name="Healer Costume" type="Armor">
 		<set name="icon" val="icon.healer_chest_change" />
@@ -67,9 +66,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48046" name="Agathion Enchant Scroll" type="EtcItem">

@@ -9,11 +9,7 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -33,11 +29,7 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<cond msgId="1518">
@@ -54,8 +46,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="0" />
 		<set name="is_stackable" val="false" />
-		<set name="is_tradable" val="true" />
-		<set name="is_sellable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -70,8 +60,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="0" />
 		<set name="is_stackable" val="false" />
-		<set name="is_tradable" val="true" />
-		<set name="is_sellable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -86,8 +74,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="0" />
 		<set name="is_stackable" val="false" />
-		<set name="is_tradable" val="true" />
-		<set name="is_sellable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -168,13 +154,9 @@
 		<!-- Double-click to obtain a Blessed Antharas Earring, Blessed Valakas Necklace, Tauti's Ring, Earth Wyrm Heart Ring, and Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
@@ -182,13 +164,9 @@
 		<!-- Double-click to obtain a Blessed Antharas Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
@@ -196,13 +174,9 @@
 		<!-- Double-click to obtain a Blessed Valakas Necklace (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
@@ -210,13 +184,9 @@
 		<!-- Double-click to obtain a Tauti's Ring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
@@ -224,13 +194,9 @@
 		<!-- Double-click to obtain an Earth Wyrm Heart Ring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
@@ -238,13 +204,9 @@
 		<!-- Double-click to obtain a Blessed Zaken's Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
@@ -253,10 +215,6 @@
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -269,10 +227,6 @@
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -305,13 +259,9 @@
 		<!-- Scroll given as a gift. Teleoprts you to the Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -319,23 +269,16 @@
 		<!-- Teleports you to Knight Captain Kargos, who is related to the Pagan Temple. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40226" name="Freya's Frozen Lamp" type="EtcItem">
 		<!-- Double-click to obtain a Freya's Frozen Scroll and a Freya's Recovery Potion. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
 		<set name="icon" val="icon.freya_lamp" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -343,10 +286,7 @@
 	<item id="40227" name="Freya's Frozen Scroll" type="EtcItem">
 		<!-- Vitality consumption +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration 10 min. Cooldown 9 min. Only usable when 1 or more Vitality slots are full. Cannot be used in the Olympiad. Cannot be stacked with Freya's Scroll of Storm and Maphr's Wind Scroll. -->
 		<set name="icon" val="icon.freya_scroll" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -360,10 +300,7 @@
 	<item id="40228" name="Freya's Wish Box" type="EtcItem">
 		<!-- Double-click to obtain a very rare item at a random rate. -->
 		<set name="icon" val="icon.freya_box_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -371,10 +308,7 @@
 	<item id="40229" name="Sirra's Wish Box" type="EtcItem">
 		<!-- Double-click for a chance to obtain one of the following items: Lucky Enchant Stone, High-grade Lucky Enchant Stone, Blessed Lucky Enchant Stone, Elemental Shirt Pack, Dark/Bloody Eternal Enhancement Stone, Blessed High-grade Lucky Enchant Stone, Freya's Lucky Enchant Stone, or a Dark/Bloody Helios Enhancement Stone. -->
 		<set name="icon" val="icon.freya_box_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -382,10 +316,7 @@
 	<item id="40230" name="Snowman's Wish Box" type="EtcItem">
 		<!-- Double-click for a chance to obtain one of the following items: Energy of Destruction, Giant's Energy, Kaliel's Energy, Elemental Shirt Pack, Sealed Talisman – Longing, Seven Signs' Energy, Talisman – Anakim, Talisman – Lilith, or Talisman – Seven Signs. -->
 		<set name="icon" val="icon.freya_box_i03" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -393,13 +324,9 @@
 	<item id="40231" name="Freya's Frozen Scroll" additionalName="Event" type="EtcItem">
 		<!-- Vitality consumption +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration 10 min. Cooldown 9 min. Only usable when 1 or more Vitality slots are full. Cannot be used in the Olympiad. Cannot be stacked with Freya's Scroll of Storm and Maphr's Wind Scroll. -->
 		<set name="icon" val="icon.freya_scroll" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -412,10 +339,7 @@
 	<item id="40232" name="Freya's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +20% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between +3 and +15. If enchanting fails, the enchant value will drop by 1. -->
 		<set name="icon" val="icon.freya_stone_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -428,10 +352,7 @@
 	<item id="40233" name="Freya's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +30% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between +3 and +15. If enchanting fails, the enchant value will drop by 1. -->
 		<set name="icon" val="icon.freya_stone_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -444,10 +365,7 @@
 	<item id="40234" name="Giant's Energy 3-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain 3 Giant's Energy. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -461,10 +379,7 @@
 	<item id="40235" name="Giant's Energy 20-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain 20 Giant's Energy. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -478,10 +393,7 @@
 	<item id="40236" name="Giant's Energy 100-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain 100 Giant's Energy. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -497,13 +409,9 @@
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="18133" level="1" /> <!-- Release Agathion's Seal - Freya -->
@@ -521,27 +429,19 @@
 	<item id="40238" name="Freya's Supply Box" type="EtcItem">
 		<!-- Double-click to obtain a Transformation Scroll: Anakim / Zaken / Kechi / Saber Tooth Tiger / Doll Blader. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_cube_box" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40239" name="Freya's Heart" type="EtcItem">
 		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P./M. Def. +5%, Atk./Casting Spd. +5%, Max HP/MP +5%. XP/SP acquisition +50% while hunting. Does not stack with Letter's Collector Gift or Art of Seduction buffs. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 	</item>
 	<item id="40240" name="Dark Assassin Suit" type="Armor">
@@ -558,23 +458,16 @@
 	<item id="40241" name="Freya's Frozen Lamp" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Freya's Frozen Scroll. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_lamp" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40242" name="Agathion - Freya Pack" type="EtcItem">
 		<!-- Double-click to obtain Agathion - Freya (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -585,14 +478,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -612,14 +501,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -639,14 +524,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -666,14 +547,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -693,14 +570,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -720,14 +593,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -747,14 +616,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -774,14 +639,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -801,14 +662,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -828,14 +685,10 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="28800" />
 		<set name="weight" val="220" />
 		<cond msgId="1518">
@@ -989,14 +842,10 @@
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -1010,14 +859,10 @@
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -1031,14 +876,10 @@
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -1053,14 +894,10 @@
 		<!-- Venir's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -1075,14 +912,10 @@
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -1102,14 +935,10 @@
 		<!-- Queen Navari's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -1132,14 +961,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item chance="100.0" id="40200" max="1" min="1" /> <!-- Sayha's Cloak -->
 			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
@@ -1157,14 +982,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item chance="100.0" id="40201" max="1" min="1" /> <!-- Sayha's Cloak -->
 			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
@@ -1179,13 +1000,8 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -1196,31 +1012,21 @@
 	<item id="40271" name="Orc's Normal Old Box" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40272" name="Orc's Luxury Old Box" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40273" name="Ertheia's Boost Scroll" type="EtcItem">
 		<!-- For 30 min., P./M. Atk. +30%, P./M. Critical Damage +15%, Speed +20. MP Consumption - 15%. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1229,7 +1035,6 @@
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="40275" name="Buff Helmet" additionalName="STR" type="Armor">
@@ -1333,28 +1138,20 @@
 	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
 		<!-- Go to Tiffany in town for a special gift. -->
 		<set name="icon" val="icon.nc_magazine" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 	</item>
 	<item id="40290" name="Lara's Key Card Pack" additionalName="Normal" type="EtcItem">
 		<!-- Double-click to obtain Lara's Key Card. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40291" name="Steel Demon's Staff - Magic Chaos" type="Weapon">
@@ -1366,13 +1163,9 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="990" />
 		<set name="soulshots" val="3" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="spiritshots" val="3" />
 		<stats>
 			<stat type="pAtk">152</stat>
@@ -1392,13 +1185,9 @@
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="960" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">170</stat>
@@ -1418,13 +1207,9 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="920" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">207</stat>
@@ -1444,13 +1229,9 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="910" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">274</stat>
@@ -1470,13 +1251,9 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">325</stat>
@@ -1508,12 +1285,8 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1533,12 +1306,8 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="D" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />

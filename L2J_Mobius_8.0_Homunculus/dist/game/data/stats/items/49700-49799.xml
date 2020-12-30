@@ -3,7 +3,6 @@
 	<item id="49783" name="Sibi's Coin" type="EtcItem">
 		<!-- Can be exchanged through the Festival Fairy for various items. -->
 		<set name="icon" val="icon.ev_balthus_coin" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -20,9 +19,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">12</stat>

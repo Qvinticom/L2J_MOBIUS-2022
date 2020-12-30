@@ -19,10 +19,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -58,10 +55,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -97,10 +91,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -137,10 +128,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -177,10 +165,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -217,10 +202,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -257,10 +239,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -299,10 +278,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -339,10 +315,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -378,10 +351,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -414,10 +384,6 @@
 		<set name="for_npc" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2033" level="1" /> <!-- Item - Beast Soul Shot -->
@@ -438,10 +404,6 @@
 		<set name="for_npc" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2008" level="1" /> <!-- Item - Beast Spirit Shot -->
@@ -462,10 +424,6 @@
 		<set name="for_npc" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2009" level="1" /> <!-- Item - Beast Blessed Spirit Shot -->

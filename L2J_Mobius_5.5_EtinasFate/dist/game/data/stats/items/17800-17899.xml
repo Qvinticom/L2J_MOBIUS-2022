@@ -193,26 +193,18 @@
 	<item id="17819" name="Lada's Letter" type="EtcItem">
 		<!-- Letter containing request from Magmeld delegation leader Lada. Go and find Lada in Hunter Village. -->
 		<set name="icon" val="icon.etc_permit_card_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17820" name="Trace of Decaying Darkness" type="EtcItem">
 		<!-- Stone with the energy of decaying darkness. Bring it to Jonah and the Mysterious Priest in Ancient Arcan. -->
 		<set name="icon" val="icon.etc_stone_black_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
@@ -220,13 +212,9 @@
 		<!-- Proof received by those who have completed the first class transfer. Can be exchanged for equipment. -->
 		<set name="icon" val="icon.item_normal52" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -235,13 +223,9 @@
 		<!-- Proof received by those who have completed the second class transfer. Can be exchanged for equipment. -->
 		<set name="icon" val="icon.item_normal52" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -265,7 +249,6 @@
 	<item id="17825" name="STR Dye" type="EtcItem">
 		<set name="icon" val="icon.etc_str_hena_i02" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -273,7 +256,6 @@
 	<item id="17826" name="DEX Dye" type="EtcItem">
 		<set name="icon" val="icon.etc_dex_hena_i02" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -281,7 +263,6 @@
 	<item id="17827" name="CON Dye" type="EtcItem">
 		<set name="icon" val="icon.etc_con_hena_i02" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -289,7 +270,6 @@
 	<item id="17828" name="INT Dye" type="EtcItem">
 		<set name="icon" val="icon.etc_int_hena_i02" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -297,7 +277,6 @@
 	<item id="17829" name="WIT Dye" type="EtcItem">
 		<set name="icon" val="icon.etc_wit_hena_i02" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -305,7 +284,6 @@
 	<item id="17830" name="MEN Dye" type="EtcItem">
 		<set name="icon" val="icon.etc_men_hena_i02" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -321,12 +299,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -358,12 +332,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -394,12 +364,8 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -430,12 +396,8 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -467,12 +429,8 @@
 		<set name="weight" val="1550" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -504,12 +462,8 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -542,12 +496,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -580,12 +530,8 @@
 		<set name="weight" val="1580" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="reuse_delay" val="1350" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -618,12 +564,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -655,12 +597,8 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -693,12 +631,8 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="3511000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -732,12 +666,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="4213200" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -768,12 +698,8 @@
 		<set name="weight" val="2050" />
 		<set name="price" val="4213200" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -805,12 +731,8 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="4213200" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -839,12 +761,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="14" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -862,12 +780,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="39" />
 		<set name="weight" val="7520" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -890,12 +804,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="24" />
 		<set name="weight" val="3170" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -913,12 +823,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="9" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -935,12 +841,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="9" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="feet" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -959,12 +861,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="10" />
 		<set name="weight" val="1130" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -983,12 +881,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="14" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1006,12 +900,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="39" />
 		<set name="weight" val="4140" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1036,12 +926,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="24" />
 		<set name="weight" val="1320" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1061,12 +947,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="9" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1084,12 +966,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="9" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1107,12 +985,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="14" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1130,12 +1004,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="39" />
 		<set name="weight" val="1750" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1160,12 +1030,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="24" />
 		<set name="weight" val="850" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1185,12 +1051,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="9" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1208,12 +1070,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="9" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1232,12 +1090,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="10" />
 		<set name="weight" val="920" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1255,12 +1109,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="10" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="477000" />
@@ -1276,12 +1126,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="7" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="358000" />
@@ -1297,12 +1143,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="5" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="238000" />
@@ -1321,12 +1163,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1358,12 +1196,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1394,12 +1228,8 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1430,12 +1260,8 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1467,12 +1293,8 @@
 		<set name="weight" val="1550" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1504,12 +1326,8 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1542,12 +1360,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -1580,12 +1394,8 @@
 		<set name="weight" val="1580" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="reuse_delay" val="1350" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -1618,12 +1428,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1655,12 +1461,8 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1693,12 +1495,8 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="8502000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1732,12 +1530,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="10202400" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1768,12 +1562,8 @@
 		<set name="weight" val="2050" />
 		<set name="price" val="10202400" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1805,12 +1595,8 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="10202400" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1839,12 +1625,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="35" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1862,12 +1644,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="94" />
 		<set name="weight" val="7520" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1890,12 +1668,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="59" />
 		<set name="weight" val="3170" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1913,12 +1687,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="23" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -1935,12 +1705,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="23" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="feet" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -1959,12 +1725,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="24" />
 		<set name="weight" val="1130" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1983,12 +1745,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="35" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -2006,12 +1764,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="94" />
 		<set name="weight" val="4140" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2036,12 +1790,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="59" />
 		<set name="weight" val="1320" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2061,12 +1811,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="23" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2084,12 +1830,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="23" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2107,12 +1849,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="35" />
 		<set name="weight" val="530" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -2130,12 +1868,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="94" />
 		<set name="weight" val="1750" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2160,12 +1894,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="59" />
 		<set name="weight" val="850" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2185,12 +1915,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="23" />
 		<set name="weight" val="510" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2208,12 +1934,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="23" />
 		<set name="weight" val="1070" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -2232,12 +1954,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="24" />
 		<set name="weight" val="920" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -2255,12 +1973,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="24" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1156000" />
@@ -2277,12 +1991,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="18" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="867000" />
@@ -2299,12 +2009,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="crystal_count" val="12" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="578000" />
@@ -2324,12 +2030,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="18340000" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />

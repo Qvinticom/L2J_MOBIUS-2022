@@ -464,27 +464,19 @@
 		<!-- Mysterious essence with the power of chaos. Take it to Hardin at the Reliquary of the Giants to change your specialized awakened class. Cannot be used by Ertheia. Can be used only by the main class. 30-day. -->
 		<set name="icon" val="icon.etc_water_of_silen_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="36950" name="Toma's Living Guide" type="EtcItem">
 		<!-- Lineage II Living Guide written by Master Toma with great efforts. -->
 		<set name="icon" val="icon.etc_letter_in_bottle_white_i00" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="Book" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 	</item>
@@ -492,13 +484,9 @@
 		<!-- Instrument to commemorate the 9th anniversary of Lineage II. You can play great music with it. -->
 		<set name="icon" val="icon.ev_9th_celebration_bonus_gift" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
@@ -516,9 +504,7 @@
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
@@ -529,98 +515,70 @@
 	<item id="36953" name="Support Box" type="EtcItem">
 		<!-- Box that helps new/dormant heroes. Double-click to receive an item appropriate for the PC's class/level. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36954" name="No-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a no-grade item and a D-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36955" name="D-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a D-grade item and a C-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36956" name="C-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a C-grade item and a B-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36957" name="B-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a B-grade item and an A-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36958" name="A-grade" type="EtcItem">
 		<!-- Double-click to receive a box with an A-grade item and an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36959" name="S-grade" type="EtcItem">
 		<!-- Double-click to receive an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -635,9 +593,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12875" level="3" /> <!-- Fire Stone -->
 		</skills>
@@ -653,9 +609,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12876" level="3" /> <!-- Water Stone -->
 		</skills>
@@ -671,9 +625,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12878" level="3" /> <!-- Earth Stone -->
 		</skills>
@@ -689,9 +641,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12877" level="3" /> <!-- Wind Stone -->
 		</skills>
@@ -707,9 +657,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12880" level="3" /> <!-- Dark Stone -->
 		</skills>
@@ -725,9 +673,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12879" level="3" /> <!-- Holy Stone -->
 		</skills>
@@ -743,9 +689,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12875" level="1" /> <!-- Fire Stone -->
 		</skills>
@@ -761,9 +705,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12876" level="1" /> <!-- Water Stone -->
 		</skills>
@@ -779,9 +721,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12878" level="1" /> <!-- Earth Stone -->
 		</skills>
@@ -797,9 +737,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12877" level="1" /> <!-- Wind Stone -->
 		</skills>
@@ -815,9 +753,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12880" level="1" /> <!-- Dark Stone -->
 		</skills>
@@ -833,9 +769,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12879" level="1" /> <!-- Holy Stone -->
 		</skills>
@@ -851,9 +785,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12875" level="2" /> <!-- Fire Crystal -->
 		</skills>
@@ -869,9 +801,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12876" level="2" /> <!-- Water Crystal -->
 		</skills>
@@ -887,9 +817,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12878" level="2" /> <!-- Earth Crystal -->
 		</skills>
@@ -905,9 +833,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12877" level="2" /> <!-- Wind Crystal -->
 		</skills>
@@ -923,9 +849,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12880" level="2" /> <!-- Dark Crystal -->
 		</skills>
@@ -941,9 +865,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12879" level="2" /> <!-- Holy Crystal -->
 		</skills>
@@ -1136,70 +1058,50 @@
 	<item id="36995" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (30-day) (Event). -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="36996" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (20-day) (Event). -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="28800" />
 	</item>
 	<item id="36997" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (10-day) (Event). -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="14400" />
 	</item>
 	<item id="36998" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (5-day) (Event). -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="7200" />
 	</item>
 	<item id="36999" name="9th Anniversary Cube (30-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
 		<set name="icon" val="icon.special_cube_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="43200" />
 	</item>

@@ -12,7 +12,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
@@ -384,9 +383,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="RING" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
 		<skills>
 			<skill id="39019" level="1" /> <!-- Scion Ring -->

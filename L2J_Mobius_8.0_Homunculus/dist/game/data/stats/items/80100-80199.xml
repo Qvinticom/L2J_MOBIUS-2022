@@ -518,9 +518,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="120" />
 		<skills>
 			<skill id="13959" level="2" /> <!-- Mammon's Talisman - Skill Power -->
@@ -536,9 +535,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="120" />
 		<skills>
 			<skill id="13960" level="2" /> <!-- Mammon's Talisman - Attribute Attack -->
@@ -554,9 +552,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="120" />
 		<skills>
 			<skill id="13961" level="2" /> <!-- Mammon's Talisman - Skill Cooldown -->
@@ -567,7 +564,6 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -582,7 +578,6 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -597,7 +592,6 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />

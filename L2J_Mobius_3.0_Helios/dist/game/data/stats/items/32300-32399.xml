@@ -210,13 +210,9 @@
 		<!-- Atk. Spd. + 2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_active" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="1" />
 		<set name="duration" val="60" />
@@ -230,13 +226,9 @@
 		<!-- P. Atk. + 2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pa_up_passive" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="1" />
 		<set name="duration" val="60" />
@@ -250,13 +242,9 @@
 		<!-- P. Def. + 3% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_passive" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="1" />
 		<set name="duration" val="60" />
@@ -270,13 +258,9 @@
 		<!-- Casting Spd. + 2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_active" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="1" />
 		<set name="duration" val="60" />
@@ -290,13 +274,9 @@
 		<!-- M. Def. + 3% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="1" />
 		<set name="duration" val="60" />
@@ -310,13 +290,9 @@
 		<!-- M. Atk. + 2% when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_ma_up_passive" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="1" />
 		<set name="duration" val="60" />
@@ -1318,7 +1294,6 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="D" />
 		<set name="weight" val="1280" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1333,7 +1308,6 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="D" />
 		<set name="weight" val="1280" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1348,7 +1322,6 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="D" />
 		<set name="weight" val="1280" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1363,7 +1336,6 @@
 		<set name="bodypart" val="feet" />
 		<set name="crystal_type" val="D" />
 		<set name="weight" val="1270" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1378,7 +1350,6 @@
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="D" />
 		<set name="weight" val="640" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="2930" />
@@ -1392,7 +1363,6 @@
 		<set name="bodypart" val="head" />
 		<set name="crystal_type" val="D" />
 		<set name="weight" val="640" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="2930" />
@@ -1407,7 +1377,6 @@
 		<set name="bodypart" val="lhand" />
 		<set name="crystal_type" val="D" />
 		<set name="weight" val="1340" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1426,7 +1395,6 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="750" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1452,7 +1420,6 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1030" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1478,7 +1445,6 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1010" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1504,7 +1470,6 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1420" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1529,7 +1494,6 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1400" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1554,7 +1518,6 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1420" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1583,7 +1546,6 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1400" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1612,7 +1574,6 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1980" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1637,7 +1598,6 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1980" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1663,7 +1623,6 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1980" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1689,7 +1648,6 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1770" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="8" />
 		<set name="spiritshots" val="2" />
 		<set name="reuse_delay" val="820" />
@@ -1716,7 +1674,6 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1740" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="9" />
 		<set name="spiritshots" val="3" />
 		<set name="reuse_delay" val="820" />
@@ -1743,7 +1700,6 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1770" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="2" />
 		<set name="reuse_delay" val="400" />
@@ -1770,7 +1726,6 @@
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1760" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="5" />
 		<set name="spiritshots" val="3" />
 		<set name="reuse_delay" val="400" />
@@ -1797,7 +1752,6 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1130" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1823,7 +1777,6 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1670" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1849,7 +1802,6 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1660" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />
@@ -1875,7 +1827,6 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1000" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
@@ -1901,7 +1852,6 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1000" />
-		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="true" />

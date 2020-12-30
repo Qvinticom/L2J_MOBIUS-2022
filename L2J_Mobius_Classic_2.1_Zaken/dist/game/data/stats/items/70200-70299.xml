@@ -444,7 +444,6 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="55329" level="1" /> <!-- Strawberry Juice -->
@@ -461,7 +460,6 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="55330" level="1" /> <!-- Mango Juice -->
@@ -478,7 +476,6 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
 			<skill id="55331" level="1" /> <!-- Cherry Juice -->
@@ -1159,7 +1156,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="70298" name="Talisman of Border +5" type="Armor">
 		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. Cannot be exchanged, dropped, or sold in a private store. <Note>. When combining with other Talismans, their enchantment is reset -->
@@ -1167,7 +1163,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="70299" name="Enchant Scroll of Border" type="EtcItem">
 		<!-- An Enchant Scroll enhancing the properties of Talisman of Border. The maximum level of enchantment is +10 -->

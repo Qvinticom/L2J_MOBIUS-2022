@@ -834,7 +834,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -853,7 +852,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -889,13 +887,10 @@
 		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Phantasmal Ridge's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18619" level="1" /> <!-- Basic Supply Box -->
@@ -905,13 +900,10 @@
 		<!-- An intermediate supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18619" level="2" /> <!-- Intermediate Supply Box -->
@@ -921,13 +913,10 @@
 		<!-- An advanced supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18619" level="3" /> <!-- Advanced Supply Box -->
@@ -937,13 +926,10 @@
 		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18620" level="1" /> <!-- Basic Supply Box -->
@@ -953,13 +939,10 @@
 		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18620" level="2" /> <!-- Basic Supply Box -->
@@ -969,13 +952,10 @@
 		<!-- An advanced supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18620" level="3" /> <!-- Basic Supply Box -->
@@ -989,9 +969,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18621" level="1" /> <!-- Supply Box -->
@@ -1082,10 +1059,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="13959" level="1" /> <!-- Mammon's Talisman - Skill Power -->
@@ -1101,10 +1074,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="13960" level="1" /> <!-- Mammon's Talisman - Attack Attribute -->
@@ -1120,10 +1089,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="13961" level="1" /> <!-- Mammon's Talisman - Skill Cooldown -->
@@ -1134,7 +1099,6 @@
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1149,7 +1113,6 @@
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1164,7 +1127,6 @@
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1206,10 +1168,7 @@
 	<item id="47382" name="Freya's Wind Scroll (High-grade)" additionalName="Temporary Name" type="EtcItem">
 		<!-- Vitality consumption +150%, XP/SP acquisition +150% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1285,7 +1244,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="reuse_delay" val="86400000" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -1322,7 +1280,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="34987" min="1" max="1" chance="25" /> <!-- Talisman - Hellfire -->
@@ -1339,7 +1296,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
@@ -1365,7 +1321,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
@@ -1393,7 +1348,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
@@ -1429,7 +1383,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
@@ -1448,7 +1401,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35569" min="2" max="2" chance="75" /> <!-- Bloody Eternal Enhancement Stone -->
@@ -1464,8 +1416,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="49783" min="1500" max="1500" chance="75" /> <!-- Sibis Coin Box -->

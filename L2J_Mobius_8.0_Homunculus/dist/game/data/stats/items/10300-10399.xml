@@ -75,9 +75,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
@@ -102,9 +99,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
@@ -129,9 +123,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
@@ -156,9 +147,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
@@ -260,10 +248,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="500" />
 	</item>
 	<item id="10316" name="Agathion - Little Angel" additionalName="Firework" type="Armor">
@@ -277,10 +261,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3423" level="1" /> <!-- Release Agathion's Seal - Little Angel -->
 			<skill id="5535" level="1" /> <!-- Little Angel Agathion Cute Trick -->
@@ -299,10 +279,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3423" level="1" /> <!-- Release Agathion's Seal - Little Angel -->
 			<skill id="5535" level="1" /> <!-- Little Angel Agathion Cute Trick -->
@@ -321,10 +297,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3423" level="1" /> <!-- Release Agathion's Seal - Little Angel -->
 			<skill id="5535" level="1" /> <!-- Little Angel Agathion Cute Trick -->
@@ -343,10 +315,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3423" level="1" /> <!-- Release Agathion's Seal - Little Angel -->
 			<skill id="5535" level="1" /> <!-- Little Angel Agathion Cute Trick -->
@@ -365,10 +333,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3423" level="1" /> <!-- Release Agathion's Seal - Little Angel -->
 			<skill id="5535" level="1" /> <!-- Little Angel Agathion Cute Trick -->
@@ -386,10 +350,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="500" />
 	</item>
 	<item id="10322" name="Agathion - Little Devil" additionalName="Firework" type="Armor">
@@ -403,10 +363,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3424" level="1" /> <!-- Release Agathion's Seal - Little Devil -->
 			<skill id="5536" level="1" /> <!-- Little Devil Agathion Cute Trick -->
@@ -425,10 +381,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3424" level="1" /> <!-- Release Agathion's Seal - Little Devil -->
 			<skill id="5536" level="1" /> <!-- Little Devil Agathion Cute Trick -->
@@ -447,10 +399,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3424" level="1" /> <!-- Release Agathion's Seal - Little Devil -->
 			<skill id="5536" level="1" /> <!-- Little Devil Agathion Cute Trick -->
@@ -469,10 +417,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3424" level="1" /> <!-- Release Agathion's Seal - Little Devil -->
 			<skill id="5536" level="1" /> <!-- Little Devil Agathion Cute Trick -->
@@ -491,10 +435,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3424" level="1" /> <!-- Release Agathion's Seal - Little Devil -->
 			<skill id="5536" level="1" /> <!-- Little Devil Agathion Cute Trick -->
@@ -510,11 +450,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10328" name="Stolen Cargo" type="EtcItem">
@@ -526,11 +462,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10329" name="Crystal of Hatred" type="EtcItem">
@@ -542,11 +474,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10330" name="Old Treasure Map" type="EtcItem">
@@ -558,11 +486,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10331" name="Sonin's Credentials" type="EtcItem">
@@ -574,11 +498,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10332" name="Pano's Credentials" type="EtcItem">
@@ -590,11 +510,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10333" name="Alex's Credentials" type="EtcItem">
@@ -606,11 +522,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10334" name="Badge: Temple Executor" type="EtcItem">
@@ -622,11 +534,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10335" name="Giants' Experimental Tool Fragment" type="EtcItem">
@@ -638,11 +546,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10336" name="Giants' Experimental Tool" type="EtcItem">
@@ -654,11 +558,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10337" name="Giants' Technology Report" type="EtcItem">
@@ -670,11 +570,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10338" name="Rouke's Report" type="EtcItem">
@@ -686,11 +582,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10339" name="Badge: Temple Missionary" type="EtcItem">
@@ -702,11 +594,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10340" name="Report Fragment" type="EtcItem">
@@ -718,11 +606,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10341" name="Temple Manifesto" type="EtcItem">
@@ -734,11 +618,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10342" name="Relics of the Dark Elf Trainee" type="EtcItem">
@@ -750,11 +630,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10343" name="Angus' Recommendation" type="EtcItem">
@@ -766,11 +642,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10344" name="Pupina's Recommendation" type="EtcItem">
@@ -782,11 +654,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10345" name="Document Chest Key Fragment" type="EtcItem">
@@ -798,11 +666,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10346" name="Document Chest" type="EtcItem">
@@ -814,11 +678,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10347" name="Dark Crystal" type="EtcItem">
@@ -830,11 +690,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10348" name="Dark Oxide" type="EtcItem">
@@ -846,11 +702,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10349" name="Cryptogram of the Goddess Sword" type="EtcItem">
@@ -862,11 +714,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10350" name="Predecessor's Report" type="EtcItem">
@@ -878,11 +726,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10351" name="Cryptogram of the Angel Search" type="EtcItem">
@@ -894,11 +738,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10352" name="Prophecy Fragment" type="EtcItem">
@@ -910,11 +750,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10353" name="Fallen Angel Blood" type="EtcItem">
@@ -926,11 +762,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10354" name="Sealed Prophecy - Path of the God" type="EtcItem">
@@ -942,11 +774,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10355" name="Prophecy - Path of the God" type="EtcItem">
@@ -958,11 +786,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10356" name="Empty Sound Crystal" type="EtcItem">
@@ -974,11 +798,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10357" name="Angel Medicine" type="EtcItem">
@@ -990,11 +810,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10358" name="Angel's Message" type="EtcItem">
@@ -1006,11 +822,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10359" name="Metallograph" type="EtcItem">
@@ -1022,11 +834,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10360" name="Broken Metal Pieces" type="EtcItem">
@@ -1038,11 +846,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10361" name="Nikola's Map" type="EtcItem">
@@ -1054,11 +858,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10362" name="Lorain's Certificate" type="EtcItem">
@@ -1070,11 +870,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10363" name="Metallograph" type="EtcItem">
@@ -1086,11 +882,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10364" name="Broken Metal Pieces" type="EtcItem">
@@ -1102,11 +894,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10365" name="Nikola's Map" type="EtcItem">
@@ -1118,11 +906,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10366" name="Metallograph - Research Report" type="EtcItem">
@@ -1134,11 +918,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10367" name="Leto Lizardman Accessory" type="EtcItem">
@@ -1150,11 +930,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10368" name="Metallograph" type="EtcItem">
@@ -1166,11 +942,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10369" name="Broken Metal Pieces" type="EtcItem">
@@ -1182,11 +954,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10370" name="Metallograph - Decipher Pattern" type="EtcItem">
@@ -1198,11 +966,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10371" name="Repaired Metallograph" type="EtcItem">
@@ -1214,11 +978,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10372" name="Red Stone" type="EtcItem">
@@ -1230,11 +990,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10373" name="Recipe: Icarus Sawsword (60%)" type="EtcItem">

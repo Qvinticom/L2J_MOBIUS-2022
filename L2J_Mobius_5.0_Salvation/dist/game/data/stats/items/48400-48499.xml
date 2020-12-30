@@ -94,8 +94,7 @@
 	<item id="48408" name="Blackish Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Blackish Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -105,8 +104,7 @@
 	<item id="48409" name="Scarlet Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Scarlett Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -116,8 +114,7 @@
 	<item id="48410" name="Gold Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Gold Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -215,7 +212,6 @@
 		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="440" />
-		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BELT" />
@@ -513,7 +509,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -531,7 +527,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -549,7 +545,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -566,7 +562,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -584,7 +580,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -602,7 +598,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -620,7 +616,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -638,7 +634,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -656,7 +652,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -674,7 +670,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -692,7 +688,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -710,7 +706,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -728,7 +724,7 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -746,7 +742,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
@@ -764,7 +760,7 @@
 		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />

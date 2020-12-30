@@ -745,7 +745,7 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
@@ -770,7 +770,7 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -786,7 +786,7 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -1001,9 +1001,6 @@
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1012,9 +1009,6 @@
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1023,9 +1017,6 @@
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1034,9 +1025,6 @@
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

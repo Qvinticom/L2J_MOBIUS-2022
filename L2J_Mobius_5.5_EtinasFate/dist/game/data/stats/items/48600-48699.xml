@@ -664,7 +664,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="37667" min="1" max="1" chance="100" /> <!-- Blessed Antharas' Earring - 30-day -->
@@ -832,11 +831,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
-		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantScrolls" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
 			<skill id="39247" level="1" /> <!-- Scroll: Enchant Angel Accessory -->
@@ -958,7 +954,6 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="48683" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Skill Power -->
@@ -973,7 +968,6 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="48684" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Attribute Attack -->
@@ -988,7 +982,6 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="48685" min="1" max="1" chance="100" /> <!-- Advanced Mammon's Talisman (30-day) - Skill Cooldown -->
@@ -1057,9 +1050,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="13959" level="2" /> <!-- Mammon's Talisman - Skill Power -->
@@ -1075,9 +1067,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="13960" level="2" /> <!-- Mammon's Talisman - Attribute Attack -->
@@ -1093,9 +1084,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="13961" level="2" /> <!-- Mammon's Talisman - Skill Cooldown -->

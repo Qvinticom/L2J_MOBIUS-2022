@@ -40,14 +40,10 @@
 	<item id="35702" name="Zahak's Petra" type="EtcItem">
 		<!-- Petra obtained after defeating Zahak in the Seed of Hellfire. You can find out about the quest by clicking on it. Quest start item. -->
 		<set name="icon" val="icon.etc_torch_on_i00" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -55,14 +51,10 @@
 	<item id="35703" name="Top Quality Petra" type="EtcItem">
 		<!-- Petra obtained after defeating Zahak in the Seed of Hellfire. It feels stronger than the Petra obtained from the Zofans. Bring it to Aku. -->
 		<set name="icon" val="icon.etc_torch_on_i00" />
-		<set name="is_depositable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -70,14 +62,10 @@
 	<item id="35704" name="Expedition Volunteer's Crystal Pouch" type="EtcItem">
 		<!-- Crystal pouch given to those who support the Antharas Expedition. Open the pouch to acquire a crystal. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -160,13 +148,9 @@
 	<item id="35709" name="Zofan's Supply Box" type="EtcItem">
 		<!-- Box obtaining after completing the Destroy the Machine Device mission on the 2nd floor of the Seed of Hellfire. Double-click to check for more information. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -207,11 +191,8 @@
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. P. Atk. +5% when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
@@ -228,11 +209,8 @@
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. M. Atk. +10% when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
@@ -249,11 +227,8 @@
 		<!-- Refined Romantic Chapeau containing the GM's sincerity. It uses 2 hair accessory slots. WIT +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
@@ -270,11 +245,8 @@
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. +5% and Critical Rate for standard attacks +50 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
@@ -291,11 +263,8 @@
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. M. Atk. +10% and INT +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
@@ -312,11 +281,8 @@
 		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. WIT +3 and MEN +3 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
@@ -334,13 +300,9 @@
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="duration" val="180" />
 		<set name="immediate_effect" val="true" />
@@ -351,13 +313,9 @@
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="duration" val="540" />
 		<set name="immediate_effect" val="true" />
@@ -395,13 +353,9 @@
 		<!-- Draco's Hat -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="isAppearanceable" val="true" />
@@ -412,13 +366,9 @@
 		<!-- Double-click to obtain an unidentified Specter weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -445,13 +395,9 @@
 		<!-- Pack containing Seraph armor in an Unidentified state. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -481,13 +427,9 @@
 		<!-- Double-click to obtain an unidentified Seraph accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -503,13 +445,9 @@
 		<!-- Box containing R-grade hardener. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -530,13 +468,9 @@
 		<!-- Box containing Seed Talisman ingredient. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -552,13 +486,9 @@
 		<!-- Double-click to obtain one of the following items: Specter Weapon Pack, Seraph Armor Pack, R-grade Enchantment Pack, Seed Talisman Box, adena, Soulshot, Blessed Spiritshot, SP Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -587,10 +517,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12875" level="3" /> <!-- Fire Stone -->
 		</skills>
@@ -606,10 +534,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12876" level="3" /> <!-- Water Stone -->
 		</skills>
@@ -625,10 +551,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12878" level="3" /> <!-- Earth Stone -->
 		</skills>
@@ -644,10 +568,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12877" level="3" /> <!-- Wind Stone -->
 		</skills>
@@ -663,10 +585,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12880" level="3" /> <!-- Dark Stone -->
 		</skills>
@@ -682,10 +602,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12879" level="3" /> <!-- Holy Stone -->
 		</skills>
@@ -701,10 +619,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12875" level="1" /> <!-- Fire Stone -->
 		</skills>
@@ -720,10 +636,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12876" level="1" /> <!-- Water Stone -->
 		</skills>
@@ -739,10 +653,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12878" level="1" /> <!-- Earth Stone -->
 		</skills>
@@ -758,10 +670,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12877" level="1" /> <!-- Wind Stone -->
 		</skills>
@@ -777,10 +687,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12880" level="1" /> <!-- Dark Stone -->
 		</skills>
@@ -796,10 +704,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="12879" level="1" /> <!-- Holy Stone -->
 		</skills>
@@ -880,7 +786,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -890,13 +795,9 @@
 		<!-- A cute Draco's Hat. 7-day. STR +2, DEX +2, CON +2. Can use the blessed resurrection skill (1 h. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="time" val="10080" />
 		<set name="immediate_effect" val="true" />
@@ -910,13 +811,9 @@
 		<!-- A cute Draco's Hat. 7-day. INT +2, WIT +2, MEN +2. Can use the blessed resurrection skill (1 h. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="time" val="10080" />
 		<set name="immediate_effect" val="true" />

@@ -5,13 +5,9 @@
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="27440" level="4" /> <!-- Cat's Eye -->
@@ -23,7 +19,6 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="27440" level="5" /> <!-- Cat's Eye -->
@@ -35,13 +30,9 @@
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="27442" level="1" /> <!-- Amethyst -->
@@ -52,13 +43,9 @@
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="27442" level="2" /> <!-- Amethyst -->
@@ -69,13 +56,9 @@
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="27442" level="3" /> <!-- Amethyst -->
@@ -86,13 +69,9 @@
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="27442" level="4" /> <!-- Amethyst -->
@@ -104,7 +83,6 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="27442" level="5" /> <!-- Amethyst -->
@@ -121,9 +99,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="26497" min="1" max="1" chance="100" /> <!-- Cat's Eye - Lv. 1 -->
 		</capsuled_items>
@@ -138,9 +113,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="26502" min="1" max="1" chance="100" /> <!-- Amethyst - Lv. 1 -->
 		</capsuled_items>
@@ -148,13 +120,9 @@
 	<item id="26509" name="Summon Scroll: Pomona" additionalName="Event" type="EtcItem">
 		<!-- Scroll for summoning Pomona once. For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -162,16 +130,10 @@
 	<item id="26510" name="Attendance Vitality Tonic" additionalName="Event" type="EtcItem">
 		<!-- Attendance Vitality Tonic. 1 out of 4 bars on the vitality gauge are replenished. Cooldown 60 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion3" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
@@ -185,7 +147,6 @@
 		<!-- Double-click to obtain 1 Anakim Outfit Appearance Stone (30-day) and 1 Agathion Charm - Anakim Holy Barrier (30-day). The Appearance Stone and bracelet cannot be dropped or exchanged. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="default_action" val="PEEL" />
@@ -199,7 +160,6 @@
 		<!-- Double-click to get 1 Mysterious Wind Scroll. The scroll cannot be dropped or exchanged. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
@@ -207,7 +167,6 @@
 		<!-- Double-click to get 1 of the following Lv. 5 Legendary Dyes: STR/ DEX/ CON/ INT/ WIT/ MEN (CHA). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -225,7 +184,6 @@
 		<!-- Double-click to get 1 of the following Lv. 5 Legendary Dyes: STR/ DEX/ CON/ INT/ WIT/ MEN (LUC). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -243,7 +201,6 @@
 		<!-- Double-click to get 1 of the following Lv. 3 Legendary Dyes: STR/ DEX/ CON/ INT/ WIT/ MEN (CHA). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -261,7 +218,6 @@
 		<!-- Double-click to get 1 of the following Lv. 3 Legendary Dyes: STR/ DEX/ CON/ INT/ WIT/ MEN (LUC). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -288,7 +244,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="26519" name="Pirate Crew Outfit" type="Armor">
@@ -298,14 +253,12 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="26520" name="Pirate Captain Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can use Pirate Captain skill after appearance modification. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -314,7 +267,6 @@
 		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Can use Pirate Crew skill after appearance modification. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />

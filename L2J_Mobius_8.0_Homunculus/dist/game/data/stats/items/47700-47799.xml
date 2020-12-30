@@ -22,9 +22,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="47677" min="1" max="1" chance="100" /> <!-- Red Cat's Eye Lv. 1 -->
 		</capsuled_items>
@@ -39,9 +36,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="47682" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye Lv. 1 -->
 		</capsuled_items>
@@ -56,9 +50,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="47679" min="1" max="1" chance="100" /> <!-- Red Cat's Eye Lv. 3 -->
 		</capsuled_items>
@@ -73,9 +64,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="47680" min="1" max="1" chance="100" /> <!-- Red Cat's Eye Lv. 4 -->
 		</capsuled_items>
@@ -90,9 +78,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="47684" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye Lv. 3 -->
 		</capsuled_items>
@@ -107,9 +92,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="47685" min="1" max="1" chance="100" /> <!-- Blue Cat's Eye Lv. 4 -->
 		</capsuled_items>
@@ -224,9 +206,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="28295" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
@@ -239,9 +218,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_clan_depositable" val="true" />
-		<set name="is_mailable" val="true" />
-		<set name="is_commissionable" val="false" />
 		<skills>
 			<skill id="28296" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
@@ -251,10 +227,9 @@
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47714" name="Rare Accessory Spirit Stone" type="EtcItem">
@@ -273,9 +248,8 @@
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -299,9 +273,8 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">92</stat>
@@ -318,10 +291,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47718" name="Defensive Battery Bolt" type="EtcItem">
 		<!-- A bolt specifically for use in defensive batteries, received as a prize for successfully defending Ishuma while the batteries were constructed. -->
@@ -329,10 +301,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47719" name="Defensive Battery Nut" type="EtcItem">
 		<!-- A nut specifically for use in defensive batteries, received as a prize for successfully defending Ishuma while the batteries were constructed. -->
@@ -340,10 +311,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47720" name="Defensive Battery Cannonball" type="EtcItem">
 		<!-- A cannonball for use in Keucereus defensive batteries. Only people who possess this cannonball are qualified to operate the Keucereus defensive batteries. -->
@@ -351,10 +321,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47721" name="Wounded Soldier Relief Goods" type="EtcItem">
 		<!-- Relief material taken from Embryo. It will be collected and used as a relief material for the military base defense group. -->
@@ -363,10 +332,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47722" name="Certification of War" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 2 defense. -->
@@ -374,10 +342,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47723" name="Victory's Badge" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 2 defense. -->
@@ -385,10 +352,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47724" name="Mark of Embryo" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 3 defense. -->
@@ -396,10 +362,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47725" name="Proof of Leadership" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 3 defense. -->
@@ -407,10 +372,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47726" name="Defense Battery Gunpowder" type="EtcItem">
 		<!-- The gunpowder used in the production of shells for the Keucereus Corps base. It is a necessary material to make shells. -->
@@ -419,10 +383,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47727" name="Temporary Bandage" type="EtcItem">
 		<!-- A popular bandage taken from the Embryo. This can be used in Gracia to heal injuries. -->
@@ -431,10 +394,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47728" name="Defense Battery drive system" type="EtcItem">
 		<!-- Needed to drive the Keucereus defense battery. Be careful while using this device to drive your defenses, as it will be the main target of the Embryo. -->
@@ -443,10 +405,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47729" name="Low-grade Keucereus Defense Supply Box" type="EtcItem">
 		<!-- Compensation for participation in the Keucereus Union Base defense. Double-click to acquire an item. -->
@@ -458,10 +419,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18732" level="1" /> <!-- Low-grade Keucereus Defense Supply Box -->
 		</skills>
@@ -476,10 +436,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18732" level="2" /> <!-- Low-grade Keucereus Defense Supply Box -->
 		</skills>
@@ -494,10 +453,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18732" level="3" /> <!-- Low-grade Keucereus Defense Supply Box -->
 		</skills>
@@ -512,10 +470,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18732" level="4" /> <!-- Low-grade Keucereus Defense Supply Box -->
 		</skills>
@@ -528,10 +485,9 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47734" name="Freya's Art of Seduction - Barrier" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk. +10%, M. Atk. +20%, P./ M. Def. +30%, Speed +20, Skill MP Consumption -15%. Additionally, received damage -10%, Attribute Resistance +100. The effect remains after death. Cooldown: 5 min. Does not stack with the Art of Seduction and Pa'agrio's Blessing effects. Cannot be used in the Olympiad. -->
@@ -540,13 +496,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -563,13 +515,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -587,10 +535,7 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -608,10 +553,7 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -632,9 +574,8 @@
 		<set name="weight" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -650,10 +591,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47740" name="Advanced Aria's Bracelet" additionalName="CON+4" type="Armor">
 		<!-- High-grade Aria's Bracelet. When equipped, unlocks 5 talisman slots. HP +531, CON +4. -->
@@ -667,9 +607,8 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13584" level="2" /> <!-- Advanced Aria's Bracelet CON -->
 		</skills>
@@ -685,9 +624,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13585" level="2" /> <!-- Advanced Aria's Bracelet MEN -->
 		</skills>
@@ -703,9 +641,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13586" level="2" /> <!-- Advanced Aria's Bracelet DEX -->
 		</skills>
@@ -721,9 +658,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13587" level="2" /> <!-- Advanced Aria's Bracelet WIT -->
 		</skills>
@@ -739,9 +675,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13588" level="2" /> <!-- Advanced Aria's Bracelet STR -->
 		</skills>
@@ -757,9 +692,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13589" level="2" /> <!-- Advanced Aria's Bracelet INT -->
 		</skills>
@@ -772,10 +706,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18738" level="1" /> <!-- +10 Blessed Helios Weapon -->
@@ -789,10 +722,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18740" level="1" /> <!-- +8 Blessed Eternal Armor -->
@@ -806,15 +738,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_mailable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
-		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="46395" min="1" max="1" chance="25" /> <!-- Shadow Ingot -->
 			<item id="35667" min="1" max="1" chance="25" /> <!-- Tauti's Fragment -->
@@ -827,10 +756,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="35567" min="2" max="2" chance="75" /> <!-- Dark Armor Enhancement Stone -->
@@ -844,15 +772,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_mailable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
-		<set name="is_commissionable" val="false" />
 		<!-- Dimmensional Bracelet (Couldn't find Zodiac Stage 5) -->
 		<capsuled_items>
 			<item id="39943" min="1" max="1" chance="2" /> <!-- Dimensional Bracelet Lv. 5 - Basic -->
@@ -914,10 +839,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47752" name="+8 Blessed Eternal Armor Light Capsule" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Light Set. -->
@@ -927,10 +850,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47753" name="+8 Blessed Eternal Armor Robe Capsule" additionalName="Event" type="EtcItem">
 		<!-- Freya's lucky draw gift. Double click to obtain a +8 Eternal Armor Robe Set. -->
@@ -940,10 +861,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47754" name="Dragon's Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -985,10 +904,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47759" name="Dragon's Gold Key" type="EtcItem">
@@ -997,10 +915,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47760" name="Dragon's Rare Accessory Pack" type="EtcItem">
@@ -1021,9 +938,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="0" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18651" level="1" /> <!-- +7 T-shirt Box (Shining/ Attack/ Magic) -->
 		</skills>
@@ -1039,10 +953,9 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
@@ -1060,10 +973,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47764" name="Red Libra Request - Altar of Evil" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Altar of Evil and Bloody Swampland. Characters of level 85 to level 95 can receive the request by double-clicking the item. Can be played once a day. -->
@@ -1074,9 +986,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47765" name="Red Libra Request - Fairy Settlement" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Fairy Settlement. Characters of level 85 to level 95 can receive the request by double-clicking the item. Can be played once a day. -->
@@ -1087,9 +998,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47766" name="Red Libra Request - Isle of Souls" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Isle of Souls. Characters of level 90 to level 99 can receive the request by double-clicking the item. Can be played once a day. -->
@@ -1100,9 +1010,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47767" name="Red Libra Request - Seal of Shilen" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shillien. Characters of level 90 to level 99 can receive the request by double-clicking the item. Can be played once a day. -->
@@ -1113,9 +1022,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47768" name="Red Libra Request - Monsters from Three Areas" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery. the Pagan Temple, and Blazing Swamp. Characters of level 95 to level 101 can receive the request by double-clicking the item. Can be played once a day. -->
@@ -1126,9 +1034,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47769" name="Red Libra Request - Raider's Crossroads" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Raider's Crossroads. Characters of level 95 to level 101 can receive the request by double-clicking the item. Can be played once a day. -->
@@ -1139,9 +1046,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47770" name="Red Libra Request - Hellbound" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Hellbound. Characters of level 97 to level 103 can receive the request by double-clicking the item. Can be played once a day. -->
@@ -1152,9 +1058,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47771" name="Red Libra Request - Enchanted Valley" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Enchanted Valley. Receive the request by double-clicking the item. Can be played once a day. -->
@@ -1165,9 +1070,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47772" name="Red Libra Request - Giant's Cave" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Giant's Cave. Receive the request by double-clicking the item. Can be played once a day. -->
@@ -1178,9 +1082,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47773" name="Red Libra Request - Garden of Spirits" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Garden of Spirits. Receive the request by double-clicking the item. Can be played once a day. -->
@@ -1191,9 +1094,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47774" name="Red Libra Request - Atelia Fortress" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Atelia Fortress. Receive the request by double-clicking the item. Can be played once a day. -->
@@ -1204,9 +1106,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47775" name="Red Libra Request - Superion" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Superion. Receive the request by double-clicking the item. Can be played once a day. -->
@@ -1217,9 +1118,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47776" name="Red Libra Request - Altar of Evil" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Altar of Evil and Bloody Swampland. -->
@@ -1227,10 +1127,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47777" name="Red Libra Request - Fairy Settlement" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Fairy Settlement. -->
@@ -1238,10 +1137,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47778" name="Red Libra Request - Isle of Souls" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Isle of Souls. -->
@@ -1249,10 +1147,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47779" name="Red Libra Request - Seal of Shilen" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Seal of Shillien. -->
@@ -1260,10 +1157,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47780" name="Red Libra Request - Monsters from Three Areas" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Cemetery. the Pagan Temple, and Blazing Swamp. -->
@@ -1271,10 +1167,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47781" name="Red Libra Request - Raider's Crossroads" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Raider's Crossroads. -->
@@ -1282,10 +1177,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47782" name="Red Libra Request - Hellbound" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Hellbound. -->
@@ -1293,10 +1187,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47783" name="Red Libra Request - Enchanted Valley" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Enchanted Valley. -->
@@ -1304,10 +1197,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47784" name="Red Libra Request - Giant's Cave" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Giant's Cave. -->
@@ -1315,10 +1207,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47785" name="Red Libra Request - Garden of Spirits" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Garden of Spirits. -->
@@ -1326,10 +1217,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47786" name="Red Libra Request - Atelia Fortress" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Atelia Fortress. -->
@@ -1337,10 +1227,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47787" name="Red Libra Request - Superion" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Superion. -->
@@ -1348,10 +1237,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="true" />
-		<set name="is_depositable" val="true" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47788" name="Pink's Style Potion - Kelbim Light Armor" type="EtcItem">
 		<!-- Changes the appearance into that of Kelbim (Light Armor) for 24 h. -->
@@ -1426,9 +1314,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47797" name="Red Libra Request - Crystal Prison (Baylor)" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Warden Baylor in the Crystal Prison. Characters of level 97 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
@@ -1439,9 +1326,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47798" name="Red Libra Request - Nightmare Kamaloka" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Betrayed Dark Rider in Nightmare Kamaloka. Characters of level 99 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
@@ -1452,9 +1338,8 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47799" name="Red Libra Request - Embryo Command Post" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate Commander Burnstein in the Embryo Command Post. Characters of level 100 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
@@ -1465,8 +1350,7 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 	</item>
 </list>

@@ -156,7 +156,6 @@
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="S80" />
 		<set name="weight" val="220" />
-		<set name="is_commissionable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="28671000" />
 		<cond>
@@ -206,13 +205,9 @@
 		<set name="crystal_count" val="6581" />
 		<set name="weight" val="1" />
 		<set name="soulshots" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -236,13 +231,9 @@
 		<!-- Restored petrified hand of Hermuncus. Bring it to Giant's Minion Hadel in Ye Sagira. -->
 		<set name="icon" val="icon.etc_broken_statue_arm_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -251,13 +242,9 @@
 		<!-- Restored petrified foot of Hermuncus. Bring it to the Giant's Minion Hadel in Ye Sagira. -->
 		<set name="icon" val="icon.etc_broken_statue_leg_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -266,13 +253,9 @@
 		<!-- Piece of the petrified hand of Hermuncus. -->
 		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -281,13 +264,9 @@
 		<!-- Piece of the petrified foot of Hermuncus. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -296,14 +275,10 @@
 		<!-- Contains mysterious powers that could change your fate. -->
 		<set name="icon" val="icon.destiny_stone" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
@@ -311,13 +286,9 @@
 		<!-- Highly polished shield that reflects all light. -->
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
 		<set name="weight" val="80" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -338,13 +309,9 @@
 	<item id="17725" name="Lada's Letter" type="EtcItem">
 		<!-- Letter containing request from Magmeld delegation leader Lada. Double-click to check its content. -->
 		<set name="icon" val="icon.etc_permit_card_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="handler" val="Bypass" />
@@ -354,12 +321,9 @@
 		<!-- Magic scroll that teleports you to Cruma Tower. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -373,12 +337,9 @@
 		<!-- Magic scroll that teleports you to the Tower of Insolence. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -391,78 +352,54 @@
 	<item id="17728" name="Mertes Core" type="EtcItem">
 		<!-- Core retrieved from Mertes rubble after defeating it. Bring it to Krasis member Linkes in Cruma Tower. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17729" name="Mertes Core" type="EtcItem">
 		<!-- Core retrieved from Mertes rubble after defeating it. Bring it to Krasis member Linkes in Cruma Tower. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17730" name="Earth Wyrm Body Fragment" type="EtcItem">
 		<!-- Item that proves you were successful in inflicting great damage on the Earth Wyrm's body. Bring it to Head Priest of the Earth Daichir in the Town of Schuttgart. -->
 		<set name="icon" val="icon.etc_bodypart_liver_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17731" name="Earth Wyrm Heart Fragment" type="EtcItem">
 		<!-- Item that proves you were successful in inflicting great damage on the Earth Wyrm's heart. Bring it to Head Priest of the Earth Daichir in the Town of Schuttgart. -->
 		<set name="icon" val="icon.etc_bodypart_heart_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17732" name="Earth Wyrm Tail Fragment" type="EtcItem">
 		<!-- Item that proves you were successful in inflicting great damage on the Earth Wyrm's fail. Bring it to Head Priest of the Earth Daichir in the Town of Schuttgart. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_green_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17733" name="Curse Residue" type="EtcItem">
 		<!-- Proof received after defeating the cursed ancient heroes inside Orbis Temple. Bring it to the messenger of the gods, Lydia. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -470,26 +407,18 @@
 	<item id="17734" name="Earth Wyrm Remains Fragment" type="EtcItem">
 		<!-- Fragment obtained from the Earth Wyrm's remains. Bring it to Priest Chichirin in the Town of Schuttgart. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17735" name="Teredor Egg Fragment" type="EtcItem">
 		<!-- Egg fragment obtained after breaking Teredor's Egg. Collect and bring them to the dwarf Filaur of the Grey Pillar in the Town of Schuttgart. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -498,13 +427,9 @@
 	<item id="17736" name="Loyal Servants' Blood" type="EtcItem">
 		<!-- Item obtained after defeating Vladimir's Warrior, Lazearth' Warrior, Kenneth Bastian, Beastian, Birestian, Heaven Palace Guard Warrior, and Heaven Palace Guard Knight. Bring it to dwarf Ende at the entrance to the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -512,13 +437,9 @@
 	<item id="17737" name="Truthful One's Blood" type="EtcItem">
 		<!-- Item obtained after defeating Destroyer Lazearth, Savage Ken, or Executioner Vladimir in the Tower of Insolence. Bring it to dwarf Ender at the entrance to the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_dragons_blood_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -526,13 +447,9 @@
 	<item id="17738" name="Hidden Jewel" type="EtcItem">
 		<!-- Jewel inside a bundle. -->
 		<set name="icon" val="icon.campaign_bundle_jewel" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -540,13 +457,9 @@
 		<!-- Adventurer's Mark. Give it to the adventure guildsman inside the instant dungeon. Can be acquired once per day. -->
 		<set name="icon" val="icon.voucher_lev_85" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -554,13 +467,9 @@
 		<!-- Adventurer's Mark. Give it to the adventure guildsman inside the instant dungeon. Can be acquired once per day. -->
 		<set name="icon" val="icon.voucher_lev_90" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -568,13 +477,9 @@
 		<!-- Adventurer's Mark. Give it to the adventure guildsman inside the instant dungeon. Can be acquired once per day. -->
 		<set name="icon" val="icon.voucher_lev_95" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -582,13 +487,9 @@
 		<!-- Adventurer's Mark. Give it to the adventure guildsman inside the instant dungeon. Can be acquired once per day. -->
 		<set name="icon" val="icon.voucher_lev_97" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -596,13 +497,9 @@
 		<!-- Seal received after completing an adventurer's mission. You can exchange it for items from the Adventure Guildsman inside the instant dungeon. -->
 		<set name="icon" val="icon.seal_lev_85" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -610,13 +507,9 @@
 		<!-- Seal received after completing an adventurer's mission. You can exchange it for items from the Adventure Guildsman inside the instant dungeon. -->
 		<set name="icon" val="icon.seal_lev_90" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -624,13 +517,9 @@
 		<!-- Seal received after completing an adventurer's mission. You can exchange it for items from the Adventure Guildsman inside the instant dungeon. -->
 		<set name="icon" val="icon.seal_lev_95" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -638,13 +527,9 @@
 		<!-- Seal received after completing an adventurer's mission. You can exchange it for items from the Adventure Guildsman inside the instant dungeon. -->
 		<set name="icon" val="icon.seal_lev_97" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -652,7 +537,6 @@
 		<!-- Stone with the energy of decaying darkness. Its use is unknown. Double-click. -->
 		<set name="icon" val="icon.etc_stone_black_i00" />
 		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="2" />
@@ -660,14 +544,10 @@
 	<item id="17748" name="Vanguard Soldier's Dog Tags" type="EtcItem">
 		<!-- Vanguard Soldier's Dog Tag. It Has the soldiers' ID numbers and names are written on the tags. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -675,14 +555,10 @@
 	<item id="17749" name="Vanguard Soldier's Dog Tags" type="EtcItem">
 		<!-- Vanguard Soldier's Dog Tag. It Has the soldiers' ID numbers and names are written on the tags. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -690,14 +566,10 @@
 	<item id="17750" name="Vanguard Soldier's Dog Tags" type="EtcItem">
 		<!-- Vanguard Soldier's Dog Tag. It Has the soldiers' ID numbers and names are written on the tags. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -705,14 +577,10 @@
 	<item id="17751" name="Vanguard Soldier's Dog Tags" type="EtcItem">
 		<!-- Vanguard Soldier's Dog Tag. It Has the soldiers' ID numbers and names are written on the tags. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -720,14 +588,10 @@
 	<item id="17752" name="Vanguard Soldier's Dog Tags" type="EtcItem">
 		<!-- Vanguard Soldier's Dog Tag. It Has the soldiers' ID numbers and names are written on the tags. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -735,14 +599,10 @@
 	<item id="17753" name="Vanguard Soldier's Dog Tags" type="EtcItem">
 		<!-- Vanguard Soldier's Dog Tag. It Has the soldiers' ID numbers and names are written on the tags. -->
 		<set name="icon" val="icon.vesper_necklace_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />

@@ -1583,10 +1583,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="16382" name="Sel Mahum Shoes String" type="EtcItem">
@@ -1599,10 +1595,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="16383" name="Holiday Cake Pack" type="EtcItem">
@@ -1619,10 +1611,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16391" min="1" max="1" chance="100" /> <!-- Holiday Cake Box -->
 		</capsuled_items>
@@ -1641,10 +1629,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16392" min="1" max="1" chance="100" /> <!-- Special Holiday Cake Box -->
 		</capsuled_items>
@@ -1662,10 +1646,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16395" min="1" max="1" chance="100" /> <!-- Teddy Boy Gift Box -->
 		</capsuled_items>
@@ -1683,10 +1663,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16396" min="1" max="1" chance="100" /> <!-- Teddy Girl Gift Box -->
 		</capsuled_items>
@@ -1705,10 +1681,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16393" min="1" max="1" chance="100" /> <!-- Holiday Cake Box (Event) -->
 		</capsuled_items>
@@ -1727,10 +1699,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16394" min="1" max="1" chance="100" /> <!-- Special Holiday Cake Box (Event) -->
 		</capsuled_items>
@@ -1748,10 +1716,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16397" min="1" max="1" chance="100" /> <!-- Teddy Boy Gift Box - Event -->
 		</capsuled_items>
@@ -1769,10 +1733,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16398" min="1" max="1" chance="100" /> <!-- Teddy Girl Gift Box - Event -->
 		</capsuled_items>
@@ -1788,10 +1748,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16403" min="1" max="1" chance="100" /> <!-- Holiday Cake -->
 			<item id="16404" min="1" max="1" chance="100" /> <!-- White Winter Wish Candle -->
@@ -1808,10 +1764,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16391" min="5" max="5" chance="100" /> <!-- Holiday Cake Box -->
 			<item id="16407" min="1" max="1" chance="100" /> <!-- Santa's Stockings - Event -->
@@ -1828,10 +1780,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16405" min="1" max="1" chance="100" /> <!-- Holiday Cake - Event -->
 			<item id="16406" min="1" max="1" chance="100" /> <!-- White Winter Wish Candle (Event) -->
@@ -1848,10 +1796,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16393" min="5" max="5" chance="100" /> <!-- Holiday Cake Box (Event) -->
 			<item id="16407" min="1" max="1" chance="100" /> <!-- Santa's Stockings - Event -->
@@ -1867,10 +1811,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16399" min="1" max="1" chance="100" /> <!-- Teddy Boy Summon Bracelet - Permanent -->
 			<item id="16404" min="3" max="3" chance="100" /> <!-- White Winter Wish Candle -->
@@ -1886,10 +1826,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16400" min="1" max="1" chance="100" /> <!-- Teddy Girl Summon Bracelet - Permanent -->
 			<item id="16404" min="3" max="3" chance="100" /> <!-- White Winter Wish Candle -->
@@ -1905,10 +1841,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16401" min="1" max="1" chance="100" /> <!-- Teddy Boy Summon Bracelet (Event) - Permanent -->
 			<item id="16406" min="3" max="3" chance="100" /> <!-- White Winter Wish Candle (Event) -->
@@ -1924,10 +1856,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="16402" min="1" max="1" chance="100" /> <!-- Teddy Girl Summon Bracelet (Event) - Permanent -->
 			<item id="16406" min="3" max="3" chance="100" /> <!-- White Winter Wish Candle (Event) -->
@@ -1944,10 +1872,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="8458" level="1" /> <!-- Bracelet Weight Gauge Add -->
 			<skill id="8259" level="1" /> <!-- Release Agathion's Seal - Teddy Boy -->

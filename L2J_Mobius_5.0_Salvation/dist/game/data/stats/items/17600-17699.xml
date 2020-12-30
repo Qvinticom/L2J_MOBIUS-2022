@@ -4,40 +4,28 @@
 		<!-- Tome containing the soul of an Ancient Giant hero. Can be used before the Ancient Giat statues in the Reliquary of the Giants found in the Ruins of Ye Sagira. -->
 		<set name="icon" val="icon.q10338_book_of_hades" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17601" name="Earth Wyrm Heart Fragment" type="EtcItem">
 		<!-- Cut heart of a dying Earth Wyrm's heart. It still moves and appears to contain tremendous life force. -->
 		<set name="icon" val="icon.earthworm_heart" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17602" name="Tissue Energy Crystal" type="EtcItem">
 		<!-- Crystal with concentrated tissue energy that can be obtained in the Seed of Annihilation. Bring it to Kirklan. -->
 		<set name="icon" val="icon.high_star_stone_piece_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -46,13 +34,9 @@
 		<!-- Can be crafted by all races. Quest-type recipe. Recipe for making a tonic needed by the tree that is by Timiniel's side. Requires level 1 of the create command item skill. Success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="weight" val="30" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 		<set name="immediate_effect" val="true" />
@@ -61,13 +45,9 @@
 	<item id="17604" name="Glimmer Crystal" type="EtcItem">
 		<!-- Can gather nearby wisps when used. -->
 		<set name="icon" val="icon.glimmer_crystal" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="10000" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -80,26 +60,18 @@
 	<item id="17605" name="10,000,000 Adena" type="EtcItem">
 		<!-- 10,000,000 Adena. Coins received after kissing a toad... -->
 		<set name="icon" val="icon.fairy_adena_joke" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17606" name="Stronghold Fragment" type="EtcItem">
 		<!-- Stronghold fragment piece for controlling the stronghold. -->
 		<set name="icon" val="icon.gd_square_fragment" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="60" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -125,13 +97,9 @@
 	<item id="17608" name="Energy Control Device" type="EtcItem">
 		<!-- You can control the amount of energy with this device. -->
 		<set name="icon" val="icon.etc_medicine_of_growth_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -161,13 +129,9 @@
 	<item id="17610" name="Tissue Energy Residue" type="EtcItem">
 		<!-- Tissue energy's residue. Bring it to Soldier Ty. -->
 		<set name="icon" val="icon.etc_bark_green_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -175,13 +139,9 @@
 	<item id="17611" name="Giant Cannonball" type="EtcItem">
 		<!-- Can fire the cannon inside the Prison of Darkness. -->
 		<set name="icon" val="icon.mde_big_bullet" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -189,13 +149,9 @@
 	<item id="17612" name="Memory Fragment" type="EtcItem">
 		<!-- Can experience the memories of Spezion, who is sealed inside the Prison of Darkness. -->
 		<set name="icon" val="icon.mde_memory_fragment" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -203,13 +159,9 @@
 	<item id="17613" name="Frightening Memory Fragment" type="EtcItem">
 		<!-- Can experience the memories of Spezion, who is sealed inside the Prison of Darkness. -->
 		<set name="icon" val="icon.mde_memory_fragment02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -217,27 +169,19 @@
 	<item id="17614" name="Pantheon's Book" type="EtcItem">
 		<!-- Can view the records of the heroes. -->
 		<set name="icon" val="icon.si_phanteon_book" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="17615" name="Belis' Mark" type="EtcItem">
 		<!-- Can use the Labyrinth of Belis. -->
 		<set name="icon" val="icon.bel_mark_clear" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -245,12 +189,8 @@
 	<item id="17616" name="Soul Candle" type="EtcItem">
 		<!-- Collect the soul candles. -->
 		<set name="icon" val="icon.darkelf_campaign_candle" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -258,14 +198,10 @@
 	<item id="17617" name="Jewel Box" type="EtcItem">
 		<!-- Used during the Searching for the Jewels campaign. Collect a lot. -->
 		<set name="icon" val="icon.darkelf_campaign_box" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -282,14 +218,10 @@
 		<!-- Summon a relic-finding detector inside Cruma Tower. -->
 		<set name="icon" val="icon.summon_object_finder" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="30000" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -303,13 +235,9 @@
 	<item id="17620" name="Insecticide" type="EtcItem">
 		<!-- It is effective when used on the eggs of the correct type insect. -->
 		<set name="icon" val="icon.bug_spray_a" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -322,13 +250,9 @@
 	<item id="17621" name="Insecticide" type="EtcItem">
 		<!-- It is effective when used on the eggs of the correct type insect. -->
 		<set name="icon" val="icon.bug_spray_b" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -341,13 +265,9 @@
 	<item id="17622" name="Insecticide" type="EtcItem">
 		<!-- It is effective when used on the eggs of the correct type insect. -->
 		<set name="icon" val="icon.bug_spray_c" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -381,13 +301,9 @@
 	<item id="17624" name="Token of Insolence Tower" type="EtcItem">
 		<!-- Token that can be exchanged for a Tower of Insolence item. -->
 		<set name="icon" val="icon.token_of_oman" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>

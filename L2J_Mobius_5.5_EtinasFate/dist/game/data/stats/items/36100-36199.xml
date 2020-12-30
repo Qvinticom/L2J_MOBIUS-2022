@@ -4,14 +4,10 @@
 		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -33,14 +29,10 @@
 		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -62,13 +54,9 @@
 		<!-- You can randomly acquire 1 Star Agathion Summoning Bracelet (7-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
@@ -81,13 +69,9 @@
 	<item id="36103" name="Transformation Scroll Pack" type="EtcItem">
 		<!-- You can get 1 Transformation Scroll: Zaken, Gordon, Ranku, and Kechi at a certain probability. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -99,13 +83,9 @@
 	<item id="36104" name="Bronze Key Guild Badge" type="EtcItem">
 		<!-- Badge that symbolizes the Bronze Key Guild. You can get it after completing a clan request. Take it to the Clan Request Manager in any village. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -113,13 +93,9 @@
 	<item id="36105" name="Black Anvil Guild Badge" type="EtcItem">
 		<!-- Badge that symbolizes the Black Anvil Guild. You can get it after completing a clan request. Take it to the Clan Request Manager in each village. -->
 		<set name="icon" val="icon.etc_badge_silver_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -127,13 +103,9 @@
 	<item id="36106" name="Golden Wheel Guild Badge" type="EtcItem">
 		<!-- Badge that symbolizes the Golden Wheel Guild. You can get it after completing a clan request. Take it to the Clan Request Manager in any village. -->
 		<set name="icon" val="icon.etc_badge_silver_i02" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
@@ -141,13 +113,9 @@
 	<item id="36107" name="Clan Quest" type="EtcItem">
 		<!-- Contains details about clan missions. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
@@ -159,13 +127,9 @@
 	<item id="36108" name="Clan Request - 7 Members" type="EtcItem">
 		<!-- Contains details about clan requests. If you get disconnected after summoning the Clan Request Manager, you cannot start any clan request. (Can be used only once a-day) -->
 		<set name="icon" val="icon.item_normal20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="1440" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -220,14 +184,10 @@
 		<!-- True Gold handed over by the Blacksmith of Flame Vulcan. It is said to be an ingredient for Mimir's Elixir. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -237,13 +197,10 @@
 		<!-- Pure Silver handed over by the Blacksmith of Flame Vulcan. It is said to be an ingredient for Mimir's Elixir. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -255,13 +212,10 @@
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="weight" val="50" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -320,13 +274,9 @@
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="220" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="10000000" />
@@ -348,13 +298,9 @@
 		<!-- STR +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hair2" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="4320" />
@@ -368,13 +314,9 @@
 		<!-- DEX +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hair2" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="4320" />
@@ -388,13 +330,9 @@
 		<!-- WIT +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hair2" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="4320" />
@@ -408,13 +346,9 @@
 		<!-- INT +1 effect. Can use a private warehouse. Limited-time Item (3-day). -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hair2" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="4320" />
@@ -428,13 +362,9 @@
 		<!-- STR +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -448,13 +378,9 @@
 		<!-- DEX +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -468,13 +394,9 @@
 		<!-- WIT +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -488,13 +410,9 @@
 		<!-- INT +2 effect. Can use a private warehouse. Limited-time Item (7-day). -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
@@ -507,13 +425,9 @@
 	<item id="36129" name="Clan Request - 14 Members" type="EtcItem">
 		<!-- Contains details about clan requests. If you get disconnected after summoning the Clan Request Manager, you cannot start any clan request. (Can be used only once a-day) -->
 		<set name="icon" val="icon.item_normal20" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="1440" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1180,14 +1094,10 @@
 	<item id="36176" name="2012 World Olympiad Hero's Accessory" additionalName="Sigel Knight" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Jowangshin. Mark of the strongest Sigel Knight in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1198,14 +1108,10 @@
 	<item id="36177" name="2012 World Olympiad Hero's Accessory" additionalName="Yul Archer" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, NangmanNalppi. Mark of the strongest Yul Archer in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1216,14 +1122,10 @@
 	<item id="36178" name="2012 World Olympiad Hero's Accessory" additionalName="Tyrr Warrior" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Gumsungs. Mark of the strongest Tyrr Warrior in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1234,14 +1136,10 @@
 	<item id="36179" name="2012 World Olympiad Hero's Accessory" additionalName="Othell Rogue" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Matdongsan. Mark of the strongest Othell Rogue in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1252,14 +1150,10 @@
 	<item id="36180" name="2012 World Olympiad Hero's Accessory" additionalName="Iss Enchanter" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Akinsihoo. Mark of the strongest Iss Enchanter in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1270,14 +1164,10 @@
 	<item id="36181" name="2012 World Olympiad Hero's Accessory" additionalName="Wynn Summoner" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Isisunarang. Mark of the strongest Wynn Summoner in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1288,14 +1178,10 @@
 	<item id="36182" name="2012 World Olympiad Hero's Accessory" additionalName="Aeore Healer" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Shinudambi. Mark of the strongest Aeore Healer in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1306,14 +1192,10 @@
 	<item id="36183" name="2012 World Olympiad Hero's Accessory" additionalName="Feoh Wizard" type="Armor">
 		<!-- Hair accessory of 2012 World Olympiad Winner, Chunhagun. Mark of the strongest Feoh Wizard in the entire server. STR/ MEN/ DEX/ WIT/ INT/ CON +5. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="EQUIP" />
@@ -1352,12 +1234,9 @@
 		<!-- Increases Speed by 7, STR by 1, and INT by 1. Can be used if the levels of main and dual classes are 87 or higher. -->
 		<set name="icon" val="icon.dual_shirt1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="underwear" />
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<set name="immediate_effect" val="true" />
@@ -1373,12 +1252,9 @@
 		<!-- Increases Speed by 7, STR by 1, INT by 1, CON by 1, and MEN by 1. Can be used if the levels of main and dual classes are 92 or higher. -->
 		<set name="icon" val="icon.dual_shirt2" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="underwear" />
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<set name="immediate_effect" val="true" />
@@ -1395,12 +1271,9 @@
 		<set name="icon" val="icon.dual_belt1" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="waist" />
 		<set name="commissionItemType" val="BELT" />
 		<set name="immediate_effect" val="true" />
@@ -1417,12 +1290,9 @@
 		<set name="icon" val="icon.dual_belt2" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="waist" />
 		<set name="commissionItemType" val="BELT" />
 		<set name="immediate_effect" val="true" />
@@ -1437,13 +1307,9 @@
 	<item id="36191" name="Kaliel's Wish" type="EtcItem">
 		<!-- Makes you eligible to receive a Kaliel's Blessing event reward token and 1st-place winner item for 1 hr. Can be used only by characters of Lv. 40 or higher who have done the 2nd class transfer. Buff gets deleted upon Subclass/ Dual Class change. Temporary event item. -->
 		<set name="icon" val="icon.etc_blessed_kalie_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="60000" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1458,14 +1324,10 @@
 		<!-- Double-click to receive 3 Kaliel's Wishes. Temporary event item. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
@@ -1479,13 +1341,9 @@
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -1513,13 +1371,9 @@
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -1546,13 +1400,9 @@
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -1579,13 +1429,9 @@
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -1613,13 +1459,9 @@
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -1647,13 +1489,9 @@
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -1681,13 +1519,9 @@
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />

@@ -496,9 +496,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -513,9 +510,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -591,9 +585,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -890,7 +882,6 @@
 		<set name="icon" val="icon.artifact_a_attribute_att_up" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<skills>
 			<skill id="35252" level="1" /> <!-- Artifact - Attack Attribute -->
@@ -901,7 +892,6 @@
 		<set name="icon" val="icon.artifact_a_attribute_def_up" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
-		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<skills>
 			<skill id="35253" level="1" /> <!-- Artifact - Defense Attribute -->

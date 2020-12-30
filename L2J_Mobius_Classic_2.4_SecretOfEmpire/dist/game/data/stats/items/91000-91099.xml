@@ -351,39 +351,30 @@
 	<item id="91039" name="Water Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Water Attribute. Can be used to create equipment with the power of Water Attribute. -->
 		<set name="icon" val="icon.elemental_star_water_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91040" name="Fire Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Fire Attribute. Can be used to create equipment with the power of Fire Attribute. -->
 		<set name="icon" val="icon.elemental_star_fire_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91041" name="Wind Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Wind Attribute. Can be used to create equipment with the power of Wind Attribute. -->
 		<set name="icon" val="icon.elemental_star_wind_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91042" name="Earth Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Earth Attribute. Can be used to create equipment with the power of Earth Attribute. -->
 		<set name="icon" val="icon.elemental_star_earth_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91043" name="Nebula’s Old Necklace" additionalName="Lv1" type="Armor">
 		<!-- MP +35, Water Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_water_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -404,7 +395,6 @@
 	<item id="91044" name="Nebula’s Old Necklace" additionalName="Lv2" type="Armor">
 		<!-- MP +37, Water Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_water_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -425,7 +415,6 @@
 	<item id="91045" name="Nebula’s Old Necklace" additionalName="Lv3" type="Armor">
 		<!-- MP +40, Water Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_water_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -446,7 +435,6 @@
 	<item id="91046" name="Ignis’ Old Necklace" additionalName="Lv1" type="Armor">
 		<!-- MP +35, Fire Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_fire_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -467,7 +455,6 @@
 	<item id="91047" name="Ignis’ Old Necklace" additionalName="Lv2" type="Armor">
 		<!-- MP +37, Fire Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_fire_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -488,7 +475,6 @@
 	<item id="91048" name="Ignis’ Old Necklace" additionalName="Lv3" type="Armor">
 		<!-- MP +40, Fire Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_fire_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -509,7 +495,6 @@
 	<item id="91049" name="Procella’s Old Necklace" additionalName="Lv1" type="Armor">
 		<!-- MP +35, Wind Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -531,7 +516,6 @@
 	<item id="91050" name="Procella’s Old Necklace" additionalName="Lv2" type="Armor">
 		<!-- MP +37, Wind Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -552,7 +536,6 @@
 	<item id="91051" name="Procella’s Old Necklace" additionalName="Lv3" type="Armor">
 		<!-- MP +40, Wind Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_wind_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -573,7 +556,6 @@
 	<item id="91052" name="Petram’s Old Necklace" additionalName="Lv1" type="Armor">
 		<!-- MP +35, Earth Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -594,7 +576,6 @@
 	<item id="91053" name="Petram’s Old Necklace" additionalName="Lv2" type="Armor">
 		<!-- MP +37, Earth Attack Defense +40, Acquired Attribute XP +6%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -615,7 +596,6 @@
 	<item id="91054" name="Petram’s Old Necklace" additionalName="Lv3" type="Armor">
 		<!-- MP +40, Earth Attack Defense +60, Acquired Attribute XP +10%. Cannot be enchanted using enchanting items. -->
 		<set name="icon" val="icon.elemental_necklace_earth_i00" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="default_action" val="EQUIP" />

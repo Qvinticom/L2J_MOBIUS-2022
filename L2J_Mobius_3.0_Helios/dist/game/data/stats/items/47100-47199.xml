@@ -191,8 +191,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="25" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<skills>
@@ -392,9 +390,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -415,9 +410,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -438,9 +430,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="weight" val="20" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -461,9 +450,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -484,9 +470,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -803,9 +786,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18599" level="1" /> <!-- Basic Supply Box -->
@@ -819,9 +799,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18599" level="2" /> <!-- Intermediate Supply Box -->
@@ -835,9 +812,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18599" level="3" /> <!-- Advanced Supply Box -->
@@ -851,9 +825,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18600" level="1" /> <!-- Basic Supply Box -->
@@ -867,9 +838,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18600" level="2" /> <!-- Intermediate Supply Box -->
@@ -883,9 +851,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18600" level="3" /> <!-- Advanced Supply Box -->
@@ -899,9 +864,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="1" /> <!-- Basic Supply Box -->
@@ -915,9 +877,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="2" /> <!-- Intermediate Supply Box -->
@@ -931,9 +890,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18601" level="3" /> <!-- Advanced Supply Box -->
@@ -947,9 +903,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18602" level="1" /> <!-- Basic Supply Box -->
@@ -963,9 +916,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18602" level="2" /> <!-- Intermediate Supply Box -->
@@ -979,9 +929,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18602" level="3" /> <!-- Advanced Supply Box -->
@@ -995,9 +942,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18603" level="1" /> <!-- Basic Supply Box (lower level) -->
@@ -1011,9 +955,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18603" level="2" /> <!-- Intermediate Supply Box (lower level) -->
@@ -1027,9 +968,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18603" level="3" /> <!-- Advanced Supply Box (lower level) -->
@@ -1043,7 +981,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47188" name="Memories of the Wind" type="EtcItem">
@@ -1054,7 +991,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47189" name="Energy Laden With the Day's Warmth" type="EtcItem">
@@ -1065,7 +1001,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47190" name="Energy Laden with the Night's Icy Air" type="EtcItem">
@@ -1076,7 +1011,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="47191" name="Superion Map Piece" type="EtcItem">

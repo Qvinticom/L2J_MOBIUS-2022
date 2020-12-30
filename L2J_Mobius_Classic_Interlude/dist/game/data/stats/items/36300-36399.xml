@@ -4,13 +4,9 @@
 		<!-- Transforms an R95-grade bound armor item into a standard item through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.cursed_free_r95_armor" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="crystal_type" val="R95" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -18,13 +14,9 @@
 		<!-- The Blacksmith of Mammon can exchange standard Immortal/Hell armor for Blessed equipment for you at a low probability. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1_armor" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="crystal_type" val="R" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -32,13 +24,9 @@
 		<!-- The Blacksmith of Mammon can exchange standard Seraph armor for Blessed equipment for you at a low probability. A small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95_armor" />
 		<set name="weight" val="2" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="crystal_type" val="R95" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -46,10 +34,7 @@
 		<!-- Dimensional Item. A ticket used at the beauty shop. You may purchase various hair styles and facial styles. -->
 		<set name="icon" val="icon.royal_beauty_item" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -277,13 +262,9 @@
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="weight" val="80" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="60" />
 		<set name="handler" val="ItemSkills" />
@@ -296,13 +277,9 @@
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -315,13 +292,9 @@
 	<item id="36329" name="Pa'agrio's Warm Breeze (1-hour)" type="EtcItem">
 		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -335,13 +308,9 @@
 		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -356,13 +325,9 @@
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="60" />
@@ -375,13 +340,9 @@
 		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -395,13 +356,9 @@
 		<!-- Chest of Glory awarded to the winner of the Ceremony of Chaos. Double-click to get a reward but there is a chance that you won't get anything. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36334" name="Adrenaline Energy Drink" additionalName="Event" type="EtcItem">
@@ -497,13 +454,9 @@
 		<!-- Bracelet received from Event Manager Cocoring. When you wear it, you can summon Jr. Cocoring Agathion. This Agathion can take away one of the three medals (the Medal of Glory, the Medal of Victory and the Medal of Friendship) from a monster every hour for 5 hours after being summoned. Your Vitality recovers when stay in a Peaceful Zone wearing this bracelet. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -752,7 +705,6 @@
 		<!-- You can get a Golden Chest (Reward) prepared by Amadeo Cadmus, the king of Aden. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36367" name="Luminous Golden Chest" additionalName="Event" type="EtcItem">
@@ -987,13 +939,9 @@
 		<!-- Mark of those who resurrected and returned with Travis. Take this to the Aden Vanguard Quartermaster at the border of the cemetery and the Seal of Shilen to get a reward. -->
 		<set name="icon" val="icon.item_normal89" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1001,13 +949,9 @@
 		<!-- Soul of those who resurrected and returned with Travis. Take this to the Aden Vanguard Quartermaster at the border of the cemetery and the Seal of Shilen to get a reward. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1015,14 +959,10 @@
 		<!-- Small reward received for killing those who resurrected and returned with Travis. Double-click to use it. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />	
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1048,9 +988,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_commissionable" val="false" />
+		<set name="is_commissionable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
@@ -1064,37 +1002,25 @@
 	<item id="36397" name="Chest of Glory" type="EtcItem">
 		<!-- Chest of Glory given by Cocoring to celebrate the winning of the glorious gold medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36398" name="Chest of Victory" type="EtcItem">
 		<!-- Chest of Victory given by Cocoring to celebrate the winning of the glorious silver medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36399" name="Chest of Friendship" type="EtcItem">
 		<!-- Chest of Friendship given by Cocoring to celebrate the winning of the glorious gold medal. Double-click to receive a Medal of Glory/Victory/Friendship at a certain probability. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>

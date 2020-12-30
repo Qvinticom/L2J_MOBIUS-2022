@@ -246,9 +246,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -263,9 +260,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -280,9 +274,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -487,7 +478,6 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_limit" val="5" />
 		<skills>
 			<skill id="35626" level="1" /> <!-- Enhanced La Vie En Rose's Brooch -->
@@ -511,7 +501,6 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<set name="is_commissionable" val="false" />
 		<set name="enchant_limit" val="10" />
 		<skills>
 			<skill id="35627" level="1" /> <!-- Top-grade La Vie En Rose's Brooch" -->
@@ -538,7 +527,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="EnchantScrolls" />

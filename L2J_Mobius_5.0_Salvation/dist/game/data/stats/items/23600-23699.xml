@@ -16,14 +16,10 @@
 	<item id="23601" name="PA - Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Gift given after accumulating 1-hr worth of PA Points. Double-click to use. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -36,12 +32,9 @@
 		<!-- Special armor used first by the Polish army between the 16th - 18th century. Equip on cloak slot. -->
 		<set name="icon" val="BranchSys3.icon1.g_agathion_hussar_pl" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="back" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -65,36 +58,26 @@
 	<item id="23603" name="Automatic Appearance: Emerald Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Emerald Weapons of corresponding types. Can be used on shields and sigils. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23604" name="Automatic Appearance: Japanese Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Japanese Weapons of corresponding types. Can be used on shields and sigils. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23605" name="SP Rune 50% Pack (1-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing SP Rune 50% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -109,10 +92,7 @@
 	<item id="23606" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -125,10 +105,7 @@
 	<item id="23607" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -141,10 +118,7 @@
 	<item id="23608" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -157,10 +131,7 @@
 	<item id="23609" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -173,10 +144,7 @@
 	<item id="23610" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -189,10 +157,7 @@
 	<item id="23611" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" type="EtcItem">
 		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. -->
 		<set name="icon" val="icon.etc_kalie_instantzone_re" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -206,13 +171,9 @@
 		<!-- Recovers HP by 50%. Only for Lv. 84 or below to use on themselves. Cooldown is 5 min. -->
 		<set name="icon" val="br_cashtex.item.br_cash_elixir_of_life_s_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="300000" />
@@ -230,13 +191,9 @@
 		<!-- Crown bestowed upon the winner of the tournament. The hero's name will be forever engraved in server history. -->
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
@@ -247,14 +204,10 @@
 		<!-- Maintains Vitality for 10 min. Cooldown is 30 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="shared_reuse_group" val="15" />
@@ -271,13 +224,9 @@
 		<set name="icon" val="BranchSys.icon.br_black_gem_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hair" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -291,13 +240,9 @@
 		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="hairall" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -310,8 +255,6 @@
 		<!-- Wrapped Pack containing Vitality Maintaining Potion with no weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
@@ -327,8 +270,6 @@
 		<!-- Wrapped Pack containing Black Gem Mask (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
@@ -344,8 +285,6 @@
 		<!-- Wrapped Pack containing Artisan's Goggles (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
@@ -360,14 +299,10 @@
 	<item id="23620" name="Dragon Vitality Replenishing Potion" additionalName="No Weekly Usage Limit" type="EtcItem">
 		<!-- Replenishes a certain amount of Vitality. Cooldown is 1 min. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -383,14 +318,10 @@
 		<!-- Stops Vitality consumption and bonuses for 30 min. Cooldown is 60 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys3.lcon.g_vitality_potion_stop" />
 		<set name="weight" val="36" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="reuse_delay" val="1800000" />
@@ -408,15 +339,11 @@
 		<!-- To change your character's name, follow these steps:. 1. Create a new character with the desired name on your Account. 2. Submit a ticket to Support with "Rename Character" in the title and indicate the new nickname. 3. The character with the item in the inventory will be renamed. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="Book" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -424,15 +351,11 @@
 		<!-- To change the gender of your character, follow these steps:. 1. Submit a ticket to our Support from this account. 2. Put "Change gender" in the ticket title. The gender of the character with this item in the inventory will be changed. Note: You cannot change the gender of a Kamael. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ChangeCharacterNameItem" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -440,13 +363,9 @@
 		<!-- Hat worn by mountain dwellers. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.icon1.g_hair_gorale_hat_pl" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="isAppearanceable" val="true" />
@@ -457,13 +376,9 @@
 		<!-- Fancy hat with feathers worn by Polish aristocrats in the 17th century. Requires 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.icon1.g_hair_fancy_hat_pl" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="isAppearanceable" val="true" />
@@ -474,13 +389,9 @@
 		<!-- Red and white hat worn by Polish fans at soccer games. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys3.icon1.g_hair_jester_hat_pl" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="isAppearanceable" val="true" />
@@ -490,8 +401,6 @@
 	<item id="23627" name="Chocolate Doughnut" type="EtcItem">
 		<!-- Famous Polish chocolate doughnut. Maintains vitality for 30 min. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys3.icon1.g_chocolate_doughnut_pl" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -505,8 +414,6 @@
 	<item id="23628" name="Piroscki" type="EtcItem">
 		<!-- Famous Polish dish. Restores vitality upon XP gain through hunting for 30 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys3.icon1.g_dumpling_pl" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
@@ -522,8 +429,6 @@
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -539,15 +444,11 @@
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="time" val="90" />
@@ -560,8 +461,6 @@
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -577,15 +476,11 @@
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
@@ -598,15 +493,11 @@
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
@@ -619,15 +510,11 @@
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="16" />
@@ -639,8 +526,6 @@
 	<item id="23635" name="flint" type="EtcItem">
 		<!-- Creates a campfire that lasts for 30 min. The warmth of the bonfire reduces the amount of MP consumption during skill use, and increases HP/ MP/ CP Recovery Rate. The closer you sit to the fire, the better the effect. All members. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -657,12 +542,9 @@
 		<!-- Cloak for Poland only. Elaborately embroidered. -->
 		<set name="icon" val="BranchSys3.icon1.g_pl_cape" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="back" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -689,13 +571,9 @@
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="equip_reuse_delay" val="7200" />
@@ -714,13 +592,9 @@
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="equip_reuse_delay" val="7200" />
@@ -739,13 +613,9 @@
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="neck" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="equip_reuse_delay" val="7200" />
@@ -764,13 +634,9 @@
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="bodypart" val="neck" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="equip_reuse_delay" val="7200" />
@@ -788,10 +654,7 @@
 		<!-- Double-click to obtain a random Star Agathion (7-day). -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="weight" val="100" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
@@ -804,10 +667,7 @@
 	<item id="23642" name="Vitality Replenishing Star Candy" type="EtcItem">
 		<!-- Replenishes an amount of Vitality. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -821,10 +681,7 @@
 		<!-- Replenishes Vitality for 10 min. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
 		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -839,10 +696,7 @@
 		<!-- Replenishes Vitality for 10 min. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
 		<set name="weight" val="36" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -857,10 +711,7 @@
 		<!-- Restores 50% of Max MP. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="5" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="is_freightable" val="true" />
@@ -876,10 +727,7 @@
 		<!-- Enchant success rate +20% for weapons (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
@@ -892,10 +740,7 @@
 		<!-- Enchant success rate +30% for armor (R-grade). Only for items enchanted between +3 and +9. Not usable on items enchanted +10 or above. -->
 		<set name="icon" val="icon.ench_am_potion_violet_i00" />
 		<set name="weight" val="120" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -907,8 +752,6 @@
 	<item id="23648" name="Knighthood's Fortune Box" type="EtcItem">
 		<!-- Wrapped Pack containing supplies used by knights, such as various XP Rune Packs, Vitailty Star Candies, firecrackers, etc. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -923,8 +766,6 @@
 	<item id="23649" name="Royal Guard's Fortune Box" type="EtcItem">
 		<!-- Wrapped Pack containing supplies used by royal guards, such as Blessed Scrolls, Unbind Scrolls, Enchant Scrolls, and Enchant Stones of various levels and types. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -942,8 +783,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -961,8 +800,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -980,8 +817,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -999,8 +834,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1018,8 +851,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1037,8 +868,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1056,8 +885,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1075,8 +902,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1094,8 +919,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1113,8 +936,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1132,8 +953,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1151,8 +970,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1170,8 +987,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1189,8 +1004,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1208,8 +1021,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1227,8 +1038,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1246,8 +1055,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1265,8 +1072,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1284,8 +1089,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1302,8 +1105,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1320,8 +1121,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1338,8 +1137,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1356,8 +1153,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1374,8 +1169,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1392,8 +1185,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1410,8 +1201,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1428,8 +1217,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1446,8 +1233,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1464,8 +1249,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1482,8 +1265,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1500,8 +1281,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1518,8 +1297,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1536,8 +1313,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1554,8 +1329,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1572,8 +1345,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1590,8 +1361,6 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1604,10 +1373,7 @@
 	<item id="23686" name="Dimension Traveler's Red Vitality Potion" type="EtcItem">
 		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores some Vitality. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -1615,10 +1381,7 @@
 	<item id="23687" name="Dimension Traveler's Blue Vitality Potion" type="EtcItem">
 		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Traveler's Red Vitality Potion. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -1626,10 +1389,7 @@
 	<item id="23688" name="Dimension Traveler's Gold Vitality Potion" type="EtcItem">
 		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Traveler's Blue Vitality Potion. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -1637,10 +1397,7 @@
 	<item id="23689" name="Dimension Protector's Red Vitality Potion" type="EtcItem">
 		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores some Vitality. -->
 		<set name="icon" val="icon.etc_hot_spring_sulfur_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -1648,10 +1405,7 @@
 	<item id="23690" name="Dimension Protector's Blue Vitality Potion" type="EtcItem">
 		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Protector's Red Vitality Potion. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -1659,10 +1413,7 @@
 	<item id="23691" name="Dimension Protector's Gold Vitality Potion" type="EtcItem">
 		<!-- Vitality Potion given as a reward from Aden Kingdom for clearing Kartia's Labyrinth. Restores more Vitality than the Dimension Protector's Blue Vitality Potion. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -1670,13 +1421,9 @@
 	<item id="23692" name="Ninja Top" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Top. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_u" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="chest" />
 		<set name="isAppearanceable" val="true" />
@@ -1686,13 +1433,9 @@
 	<item id="23693" name="Ninja Pants" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Pants. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_l" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="legs" />
 		<set name="isAppearanceable" val="true" />
@@ -1702,13 +1445,9 @@
 	<item id="23694" name="Ninja Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Gloves. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_g" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="gloves" />
 		<set name="isAppearanceable" val="true" />
@@ -1718,13 +1457,9 @@
 	<item id="23695" name="Ninja Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Ninja Shoes. Part of a costume. Modifying the full set creates a new skill. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_ninja_b" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="feet" />
 		<set name="isAppearanceable" val="true" />
@@ -1736,8 +1471,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1753,8 +1486,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1770,8 +1501,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1787,8 +1516,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
