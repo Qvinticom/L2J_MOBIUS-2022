@@ -444,6 +444,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="40120" level="1" /> <!-- Special Scroll of Escape: Orc Barracks -->
+		</skills>
 	</item>
 	<item id="93336" name="Scroll of Escape: Antharas' Lair Interior" type="EtcItem">
 		<!-- Magic scroll that teleports one to Antharas' Lair Interior. -->
