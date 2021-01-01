@@ -60,7 +60,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -82,7 +81,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -94,7 +92,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -106,7 +103,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -117,7 +113,6 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80312" name="Scroll of Escape - Dimensional Rift" type="EtcItem">
@@ -128,7 +123,6 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -140,7 +134,6 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -152,7 +145,6 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -298,7 +290,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
@@ -315,7 +306,6 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">40</stat>
@@ -328,7 +318,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80323" name="Minion's Symbol" type="EtcItem">
@@ -511,7 +500,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="damage_range" val="0;0;40;120" />
 		<stats>
@@ -538,7 +526,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="damage_range" val="0;0;40;120" />
 		<stats>
@@ -564,7 +551,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="damage_range" val="0;0;40;120" />
 		<stats>
@@ -590,7 +576,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
 		<skills>
@@ -619,7 +604,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="damage_range" val="0;0;32;120" />
 		<stats>
@@ -646,7 +630,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
@@ -676,7 +659,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="damage_range" val="0;0;10;0" />
 		<stats>
@@ -701,7 +683,6 @@
 		<set name="weight" val="1580" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
 		<stats>
@@ -728,7 +709,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -754,7 +734,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -782,7 +761,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -810,7 +788,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="damage_range" val="0;0;40;120" />
 		<stats>
@@ -834,7 +811,6 @@
 		<set name="weight" val="2050" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="damage_range" val="0;0;44;120" />
 		<stats>
@@ -859,7 +835,6 @@
 		<set name="weight" val="1740" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
 		<stats>
@@ -883,7 +858,6 @@
 		<set name="weight" val="530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">162</stat>
 		</stats>
@@ -900,7 +874,6 @@
 		<set name="weight" val="7520" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">433</stat>
 		</stats>
@@ -917,7 +890,6 @@
 		<set name="weight" val="3170" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">270</stat>
 		</stats>
@@ -933,7 +905,6 @@
 		<set name="weight" val="510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -949,7 +920,6 @@
 		<set name="weight" val="1070" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -965,7 +935,6 @@
 		<set name="weight" val="530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">162</stat>
 		</stats>
@@ -982,7 +951,6 @@
 		<set name="weight" val="4140" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">346</stat>
 			<stat type="rEvas">5</stat>
@@ -1000,7 +968,6 @@
 		<set name="weight" val="1320" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">216</stat>
 			<stat type="rEvas">3</stat>
@@ -1017,7 +984,6 @@
 		<set name="weight" val="510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1033,7 +999,6 @@
 		<set name="weight" val="1070" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1049,7 +1014,6 @@
 		<set name="weight" val="530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">162</stat>
 		</stats>
@@ -1066,7 +1030,6 @@
 		<set name="weight" val="1750" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">238</stat>
@@ -1085,7 +1048,6 @@
 		<set name="weight" val="850" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">148</stat>
@@ -1103,7 +1065,6 @@
 		<set name="weight" val="510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1119,7 +1080,6 @@
 		<set name="weight" val="1070" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1135,7 +1095,6 @@
 		<set name="weight" val="530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">162</stat>
 		</stats>
@@ -1152,7 +1111,6 @@
 		<set name="weight" val="7520" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">433</stat>
 		</stats>
@@ -1169,7 +1127,6 @@
 		<set name="weight" val="3170" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">270</stat>
 		</stats>
@@ -1185,7 +1142,6 @@
 		<set name="weight" val="510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1201,7 +1157,6 @@
 		<set name="weight" val="1070" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1217,7 +1172,6 @@
 		<set name="weight" val="530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">162</stat>
 		</stats>
@@ -1234,7 +1188,6 @@
 		<set name="weight" val="4140" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">346</stat>
 			<stat type="rEvas">5</stat>
@@ -1252,7 +1205,6 @@
 		<set name="weight" val="1320" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">216</stat>
 			<stat type="rEvas">3</stat>
@@ -1269,7 +1221,6 @@
 		<set name="weight" val="510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1285,7 +1236,6 @@
 		<set name="weight" val="1070" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1301,7 +1251,6 @@
 		<set name="weight" val="530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">162</stat>
 		</stats>
@@ -1318,7 +1267,6 @@
 		<set name="weight" val="1750" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">238</stat>
@@ -1337,7 +1285,6 @@
 		<set name="weight" val="850" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">148</stat>
@@ -1355,7 +1302,6 @@
 		<set name="weight" val="510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1371,7 +1317,6 @@
 		<set name="weight" val="1070" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>
@@ -1387,7 +1332,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="maxMp">62</stat>
@@ -1404,7 +1348,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">118</stat>
 			<stat type="maxMp">46</stat>
@@ -1421,7 +1364,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">118</stat>
 			<stat type="maxMp">46</stat>
@@ -1438,7 +1380,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -1455,7 +1396,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -1524,7 +1464,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1534,7 +1473,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1545,7 +1483,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1560,7 +1497,6 @@
 		<set name="weight" val="530" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">162</stat>
 		</stats>
@@ -1577,7 +1513,6 @@
 		<set name="weight" val="7520" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">433</stat>
 		</stats>
@@ -1594,7 +1529,6 @@
 		<set name="weight" val="3170" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">270</stat>
 		</stats>
@@ -1610,7 +1544,6 @@
 		<set name="weight" val="510" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">108</stat>
 		</stats>

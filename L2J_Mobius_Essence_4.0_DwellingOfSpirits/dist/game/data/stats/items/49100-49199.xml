@@ -186,7 +186,6 @@
 		<set name="weight" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 	</item>
 	<item id="49120" name="Halloween Suit" type="Armor">
 		<!-- If equipped, cannot wear armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Weapons and Magic Equipment will not be removed. Hair Accessory will not be removed, but will not display. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -209,7 +208,6 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 	</item>
 	<item id="49122" name="Ring of Macken (15-day)" type="Armor">
 		<!-- 15-day item. When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -221,7 +219,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">20</stat>
 		</stats>
@@ -248,7 +245,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">30</stat>
 			<stat type="maxMp">10</stat>
@@ -277,7 +273,6 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="maxMp">20</stat>
@@ -303,7 +298,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49129" name="11th Anniversary Coin" type="EtcItem">
@@ -324,7 +318,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49131" name="Magic Number Cube" type="EtcItem">
@@ -335,7 +328,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 	</item>
 	<item id="49132" name="Membership Card" additionalName="11th Sale" type="EtcItem">
 		<!-- A membership card for the Holiday Fair that was opened to celebrate the 1st Anniversary of Lineage II Classic in Europe. When in inventory, you can receive the 1st Anniversary Buff and coins from Market Mistress Vivianne. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Deleted after event. -->
@@ -344,7 +336,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 	</item>
 	<item id="49133" name="Venetian Fleece - Low Level" additionalName="15-day" type="EtcItem">
 		<!-- A 15-day item. When in inventory, your Acquired XP/ SP is increased by 22%. Can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
@@ -352,7 +343,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="49134" name="Dual Candle Sword (15-day)" type="Weapon">
@@ -369,7 +359,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">73</stat>
 			<stat type="mAtk">37</stat>
@@ -405,7 +394,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="time" val="21600" />
 	</item>
 	<item id="49137" name="Venetian Fleece Chest (Low Level)" type="EtcItem">
