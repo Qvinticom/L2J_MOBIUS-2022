@@ -94,7 +94,7 @@ public class VariationData implements IXmlReader
 							final Options opt = OptionData.getInstance().getOptions(optionId);
 							if (opt == null)
 							{
-								LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + optionId);
+								LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + optionId + " mineral " + mineralId);
 								return;
 							}
 							options.put(opt, optionChance);
@@ -109,7 +109,7 @@ public class VariationData implements IXmlReader
 								final Options op = OptionData.getInstance().getOptions(id);
 								if (op == null)
 								{
-									LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + id);
+									LOGGER.warning(getClass().getSimpleName() + ": Null option for id " + id + " mineral " + mineralId);
 									return;
 								}
 								options.put(op, optionChance);
