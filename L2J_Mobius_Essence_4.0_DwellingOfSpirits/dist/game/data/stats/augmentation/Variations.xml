@@ -621,7 +621,7 @@
 		<variation mineralId="93121">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33494" to="33546" chance="1.37" />
+					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
@@ -631,7 +631,7 @@
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33494" to="33546" chance="1.37" />
+					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="1">
@@ -644,38 +644,36 @@
 		<variation mineralId="93122">
 			<optionGroup weaponType="warrior" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33494" to="33546" chance="1.37" />
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="warrior" order="1">
 				<optionCategory chance="55.0">
-					<optionRange from="33494" to="33546" chance="1.37" />
+					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 				<optionCategory chance="35.0">
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 				<optionCategory chance="10.0">
 					<optionRange from="50161" to="50166" chance="1.37" />
-					<optionRange from="50174" to="80179" chance="1.37" />
+					<optionRange from="50174" to="50179" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
 			<optionGroup weaponType="mage" order="0">
 				<optionCategory chance="100.0">
-					<optionRange from="33494" to="33546" chance="1.37" />
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
 		<optionGroup weaponType="warrior" order="1">
 			<optionCategory chance="55.0">
-				<optionRange from="33494" to="33546" chance="1.37" />
+				<optionRange from="33547" to="33609" chance="1.37" />
 			</optionCategory>
 			<optionCategory chance="35.0">
 				<optionRange from="33547" to="33609" chance="1.37" />
 			</optionCategory>
 			<optionCategory chance="10.0">
 				<optionRange from="50161" to="50166" chance="1.37" />
-				<optionRange from="50174" to="80179" chance="1.37" />
+				<optionRange from="50174" to="50179" chance="1.37" />
 			</optionCategory>
 		</optionGroup>
 		</variation>
