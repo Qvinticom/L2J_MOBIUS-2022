@@ -2750,6 +2750,11 @@
 			<defence physical="193.333333333333" magical="93.2093209320932" />
 		</stats>
 		<status attackable="false" />
+		<ai clanHelpRange="300" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>CRENDION</clan>
+			</clanList>
+		</ai>
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4444" level="3" /> <!-- Greater Bow Resistance -->

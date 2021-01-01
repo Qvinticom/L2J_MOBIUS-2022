@@ -124,6 +124,11 @@
 			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<ai clanHelpRange="300" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>CORRUPT</clan>
+			</clanList>
+		</ai>
 		<skillList>
 			<skill id="4071" level="1" /> <!-- Bow Resistance -->
 			<skill id="4116" level="3" /> <!-- Magic Damage Resistance -->
