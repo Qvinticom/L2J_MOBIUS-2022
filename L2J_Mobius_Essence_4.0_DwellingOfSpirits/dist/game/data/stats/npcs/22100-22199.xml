@@ -1445,18 +1445,18 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22151" level="80" type="Monster" name="Tanta Lizardman" element="WATER">
+	<npc id="22151" level="76" type="Monster" name="Tanta Lizardman" element="WATER">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="8109" sp="3430" attributeExp="1040" />
+		<acquire exp="7777" sp="3224" attributeExp="684" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6659.53757225433" hpRegen="10.5" mp="2042.90429042904" mpRegen="3.6" />
+			<vitals hp="6289.01734104046" hpRegen="10.5" mp="1879.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="140" />
 			</speed>
-			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="208.284023668639" magical="96.8617571816353" />
+			<attack physical="358.963991284229" magical="100.965232790839" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="193.333333333333" magical="93.2093209320932" />
 		</stats>
 		<status attackable="false" />
 		<skillList>
@@ -1470,47 +1470,29 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="92" min="1" max="1" chance="0.0009" /> <!-- Spirit's Staff -->
-				<item id="2398" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Tunic -->
-				<item id="2403" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Stockings -->
-				<item id="57" min="409" max="956" chance="70" /> <!-- Adena -->
-				<item id="92996" min="1" max="1" chance="1.572" /> <!-- Old Resources -->
-				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
-				<item id="92997" min="1" max="1" chance="0.3" /> <!-- Unknown Resources -->
-				<item id="92909" min="1" max="1" chance="0.3" /> <!-- Material: Pack of Knickknacks -->
+				<item id="57" min="405" max="944" chance="70" /> <!-- Adena -->
+				<item id="92996" min="1" max="1" chance="2.653" /> <!-- Old Resources -->
+				<item id="92478" min="1" max="1" chance="0.75" /> <!-- Varnish -->
+				<item id="92909" min="1" max="1" chance="0.75" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="0.75" /> <!-- Unknown Resources -->
 				<item id="92910" min="1" max="1" chance="0.3" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.3" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.075" /> <!-- High-grade Resources -->
 				<item id="92911" min="1" max="1" chance="0.075" /> <!-- Material: Leather Scraps -->
-				<item id="92912" min="1" max="1" chance="0.03" /> <!-- Material: Plain Fabric -->
-				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92912" min="1" max="1" chance="0.075" /> <!-- Material: Plain Fabric -->
 				<item id="92995" min="1" max="1" chance="0.03" /> <!-- Thons -->
-				<item id="92999" min="1" max="1" chance="0.03" /> <!-- High-grade Resources -->
+				<item id="92913" min="1" max="1" chance="0.03" /> <!-- Material: Unknown Metal -->
+				<item id="92915" min="1" max="1" chance="0.0075" /> <!-- Material: Bag of Low-grade Stuff -->
 				<item id="92914" min="1" max="1" chance="0.0075" /> <!-- Material: Sack Shreds -->
-				<item id="92775" min="1" max="1" chance="0.0075" /> <!-- Blue Wolf Stocking Pattern -->
+				<item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
 				<item id="92916" min="1" max="1" chance="0.003" /> <!-- Material: Animal Spirit -->
-				<item id="92915" min="1" max="1" chance="0.003" /> <!-- Material: Bag of Low-grade Stuff -->
-				<item id="92791" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff Head -->
-				<item id="92773" min="1" max="1" chance="0.003" /> <!-- Blue Wolf Tunic Fabric -->
-				<item id="49427" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Shield Deflect Magic -->
-				<item id="3055" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Lightning Strike -->
-				<item id="4912" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Benediction -->
-				<item id="4915" min="1" max="1" chance="0.0009" /> <!-- Blueprint: Summon Wild Hog Cannon -->
-				<item id="5811" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Mass Slow -->
 				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
-				<item id="92988" min="1" max="1" chance="0.0009" /> <!-- Orcish Treasure -->
 				<item id="92919" min="1" max="1" chance="0.0009" /> <!-- Material: Blacksmith's High-grade Power -->
-				<item id="49568" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Sonic Move -->
-				<item id="49570" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Mass Curse Gloom -->
-				<item id="6350" min="1" max="1" chance="0.0009" /> <!-- Amulet: Pa'agrio's Honor -->
-				<item id="8388" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Attack Prowess -->
-				<item id="8389" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Defense Prowess -->
-				<item id="8890" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Summon Attractive Cubic -->
-				<item id="8891" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Aura Flash -->
-				<item id="49433" min="1" max="1" chance="0.0009" /> <!-- Amulet: Chant of Battle -->
 			</drop>
 			<spoil>
-				<item id="92996" min="1" max="1" chance="30.38" /> <!-- Old Resources -->
-				<item id="92997" min="1" max="1" chance="5.825" /> <!-- Unknown Resources -->
-				<item id="92998" min="1" max="1" chance="2.915" /> <!-- Shining Resources -->
+				<item id="92996" min="1" max="1" chance="29.41" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="5.758" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="2.939" /> <!-- Shining Resources -->
 				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
@@ -1751,7 +1733,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22156" level="83" type="Npc" name="Greg" title="Flag Sentry">
+	<npc id="22156" level="83" type="Monster" name="Greg" title="Flag Sentry">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="93332" />
@@ -1770,7 +1752,7 @@
 			<height normal="183.25" />
 		</collision>
 	</npc>
-	<npc id="22157" level="83" type="Npc" name="Gilatu" title="Tame">
+	<npc id="22157" level="83" type="Monster" name="Gilatu" title="Tame">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="410892" sp="0" />
@@ -1789,7 +1771,7 @@
 			<height normal="111" />
 		</collision>
 	</npc>
-	<npc id="22158" level="83" type="Npc" name="Ogre" title="Tame">
+	<npc id="22158" level="83" type="Monster" name="Ogre" title="Tame">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="410892" sp="0" />
@@ -1808,7 +1790,7 @@
 			<height normal="138" />
 		</collision>
 	</npc>
-	<npc id="22159" level="83" type="Npc" name="Jeras" title="Castle Wall Guard">
+	<npc id="22159" level="83" type="Monster" name="Jeras" title="Castle Wall Guard">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="410892" sp="0" />
@@ -1827,18 +1809,18 @@
 			<height normal="169" />
 		</collision>
 	</npc>
-	<npc id="22160" level="85" type="Npc" name="Tebot" title="Grand Warchief">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22160" level="80" type="Monster" name="Tebot" title="Grand Warchief">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1846,18 +1828,18 @@
 			<height normal="76.5" />
 		</collision>
 	</npc>
-	<npc id="22161" level="85" type="Npc" name="Tegaffe" title="Grand Warchief">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22161" level="80" type="Monster" name="Tegaffe" title="Grand Warchief">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1865,18 +1847,18 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="22162" level="85" type="Npc" name="Thesakar" title="Grand Warchief">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22162" level="80" type="Monster" name="Thesakar" title="Grand Warchief">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1884,18 +1866,18 @@
 			<height normal="70" />
 		</collision>
 	</npc>
-	<npc id="22163" level="85" type="Npc" name="Theor" title="Grand Warchief">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22163" level="80" type="Monster" name="Theor" title="Grand Warchief">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1903,18 +1885,18 @@
 			<height normal="83.25" />
 		</collision>
 	</npc>
-	<npc id="22164" level="85" type="Npc" name="Laokan" title="General">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22164" level="80" type="Monster" name="Laokan" title="General">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="42" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1922,19 +1904,19 @@
 			<height normal="56.25" />
 		</collision>
 	</npc>
-	<npc id="22165" level="85" type="Npc" name="Taklacan" title="General">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22165" level="80" type="Monster" name="Taklacan" title="General">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="38425" />
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1942,18 +1924,18 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="22166" level="85" type="Npc" name="Vulcan" title="General">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22166" level="80" type="Monster" name="Vulcan" title="General">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1961,19 +1943,19 @@
 			<height normal="44.25" />
 		</collision>
 	</npc>
-	<npc id="22167" level="85" type="Npc" name="Zakan" title="General">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22167" level="80" type="Monster" name="Zakan" title="General">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="38445" />
+		<acquire exp="381726" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="53282.6589595376" hpRegen="10.5" mp="2188.77887788779" mpRegen="3.6" />
 			<speed>
 				<walk ground="38" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -1981,19 +1963,19 @@
 			<height normal="41.25" />
 		</collision>
 	</npc>
-	<npc id="22168" level="85" type="Npc" name="Chiliarch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22168" level="77" type="Monster" name="Chiliarch">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="80" lhand="6919" />
+		<acquire exp="12378" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15962.4277456647" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="27" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2001,19 +1983,19 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="22169" level="85" type="Npc" name="Chiliarch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22169" level="77" type="Monster" name="Chiliarch">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6719" />
+		<acquire exp="12378" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15962.4277456647" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="24" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2021,19 +2003,19 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="22170" level="85" type="Npc" name="Chiliarch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22170" level="77" type="Monster" name="Chiliarch">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="79" lhand="6919" />
+		<acquire exp="12378" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15962.4277456647" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2041,19 +2023,19 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="22171" level="85" type="Npc" name="Chiliarch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22171" level="77" type="Monster" name="Chiliarch">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="127" />
+		<acquire exp="12378" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15962.4277456647" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2061,19 +2043,19 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="22172" level="85" type="Npc" name="Centurion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22172" level="77" type="Monster" name="Centurion">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="80" />
+		<acquire exp="12378" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15962.4277456647" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="33" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2081,19 +2063,19 @@
 			<height normal="28.8" />
 		</collision>
 	</npc>
-	<npc id="22173" level="85" type="Npc" name="Centurion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22173" level="77" type="Monster" name="Centurion">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="127" />
+		<acquire exp="12378" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15962.4277456647" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2101,19 +2083,19 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="22174" level="85" type="Npc" name="Centurion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22174" level="77" type="Monster" name="Centurion">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="79" lhand="6919" />
+		<acquire exp="12378" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="15962.4277456647" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2121,19 +2103,19 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="22175" level="85" type="Npc" name="Orc Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22175" level="77" type="Monster" name="Orc Soldier">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="123" />
+		<acquire exp="8841" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7981.50289017341" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2161,19 +2143,19 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="22177" level="85" type="Npc" name="Orc Prefect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22177" level="77" type="Monster" name="Orc Prefect">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="79" />
+		<acquire exp="8841" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7981.50289017341" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2221,19 +2203,19 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="22180" level="85" type="Npc" name="Orc Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22180" level="77" type="Monster" name="Orc Archer">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="13" />
+		<acquire exp="8841" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7981.50289017341" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2241,19 +2223,19 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="22181" level="85" type="Npc" name="Orc Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22181" level="77" type="Monster" name="Orc Archer">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="279" />
+		<acquire exp="8841" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7981.50289017341" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -2311,7 +2293,7 @@
 		<equipment rhand="15302" />
 		<acquire exp="76" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="54.9132947976879" hpRegen="2" mp="44.2244224422442" mpRegen="0.9" />
+			<vitals hp="59.9369085173502" hpRegen="2" mp="54.3390105433901" mpRegen="0.9" />
 			<speed>
 				<walk ground="50" />
 				<run ground="80" />
@@ -2332,7 +2314,7 @@
 		<sex>MALE</sex>
 		<acquire exp="91" sp="5" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="76.878612716763" hpRegen="2" mp="56.1056105610561" mpRegen="0.9" />
+			<vitals hp="83.9116719242902" hpRegen="2" mp="68.9375506893755" mpRegen="0.9" />
 			<speed>
 				<walk ground="50" />
 				<run ground="80" />
@@ -2354,7 +2336,7 @@
 		<equipment rhand="15302" />
 		<acquire exp="236" sp="14" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="237.57225433526" hpRegen="2.5" mp="121.452145214521" mpRegen="1.2" />
+			<vitals hp="259.305993690852" hpRegen="2.5" mp="149.229521492295" mpRegen="1.2" />
 			<speed>
 				<walk ground="45" />
 				<run ground="80" />
@@ -2377,7 +2359,7 @@
 		<equipment rhand="15302" />
 		<acquire exp="285" sp="15" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="272.254335260116" hpRegen="2.5" mp="135.313531353135" mpRegen="1.2" />
+			<vitals hp="297.160883280757" hpRegen="2.5" mp="166.261151662611" mpRegen="1.2" />
 			<speed>
 				<walk ground="45" />
 				<run ground="80" />
@@ -2413,221 +2395,401 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22189" level="85" type="Npc" name="Alligator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22189" level="70" type="Monster" name="Alligator" element="WATER">
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
+		<acquire exp="4430" sp="538" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3790.75144508671" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="42" />
 			<height normal="18.75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="236" max="553" chance="70" /> <!-- Adena -->
+				<item id="92789" min="1" max="1" chance="0.003" /> <!-- Great Sword Blade -->
+				<item id="92790" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe Head -->
+				<item id="92791" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff Head -->
+				<item id="92792" min="1" max="1" chance="0.003" /> <!-- Keshanberk Blade -->
+				<item id="92793" min="1" max="1" chance="0.003" /> <!-- Sword of Valhalla Blade -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22190" level="85" type="Npc" name="Crokian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22190" level="70" type="Monster" name="Crokian" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5128" />
+		<acquire exp="8860" sp="1075" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7063.5838150289" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="78" min="1" max="1" chance="0.0009" /> <!-- Great Sword -->
+				<item id="91" min="1" max="1" chance="0.0009" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.0009" /> <!-- Spirit's Staff -->
+				<item id="142" min="1" max="1" chance="0.0009" /> <!-- Keshanberk -->
+				<item id="148" min="1" max="1" chance="0.0009" /> <!-- Sword of Valhalla -->
+				<item id="229" min="1" max="1" chance="0.0009" /> <!-- Kris -->
+				<item id="57" min="474" max="1107" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22191" level="85" type="Npc" name="Nos">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22191" level="70" type="Monster" name="Nos" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5130" />
+		<acquire exp="8860" sp="1075" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7063.5838150289" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="26" />
 			<height normal="42" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="243" min="1" max="1" chance="0.0009" /> <!-- Twilight Knife -->
+				<item id="267" min="1" max="1" chance="0.0009" /> <!-- Arthro Nail -->
+				<item id="284" min="1" max="1" chance="0.0009" /> <!-- Dark Elven Longbow -->
+				<item id="300" min="1" max="1" chance="0.0009" /> <!-- Great Axe -->
+				<item id="91886" min="1" max="1" chance="0.0009" /> <!-- Innominate Victory -->
+				<item id="91901" min="1" max="1" chance="0.0009" /> <!-- Military Fleuret -->
+				<item id="57" min="474" max="1107" chance="70" /> <!-- Adena -->
+				<item id="92988" min="1" max="1" chance="0.0009" /> <!-- Orcish Treasure -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22192" level="85" type="Npc" name="Crokian Warrior" title="Savage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22192" level="70" type="Monster" name="Crokian Warrior" title="Savage" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5128" />
+		<acquire exp="17719" sp="1075" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14126.5895953757" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="61" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="947" max="2214" chance="70" /> <!-- Adena -->
+				<item id="92988" min="1" max="1" chance="0.0075" /> <!-- Orcish Treasure -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22193" level="85" type="Npc" name="Dailaon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22193" level="70" type="Monster" name="Dailaon" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5127" />
+		<acquire exp="8860" sp="1075" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3790.75144508671" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="474" max="1107" chance="70" /> <!-- Adena -->
+				<item id="92794" min="1" max="1" chance="0.003" /> <!-- Kris Edge -->
+				<item id="92795" min="1" max="1" chance="0.003" /> <!-- Twilight Knife Edge -->
+				<item id="92796" min="1" max="1" chance="0.003" /> <!-- Arthro Nail Blade -->
+				<item id="92797" min="1" max="1" chance="0.003" /> <!-- Dark Elven Longbow Shaft -->
+				<item id="92798" min="1" max="1" chance="0.003" /> <!-- Great Axe Head -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22194" level="85" type="Npc" name="Crokian Lad Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22194" level="80" type="Monster" name="Crokian Lad Warrior" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5128" />
+		<acquire exp="12650" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="2" /> <!-- Bow Resistance -->
+			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="36" />
 			<height normal="61" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="807" max="1886" chance="70" /> <!-- Adena -->
+				<item id="92799" min="1" max="1" chance="0.0075" /> <!-- Damascus Sword Blade -->
+				<item id="92800" min="1" max="1" chance="0.0075" /> <!-- Lance Blade -->
+				<item id="92801" min="1" max="1" chance="0.0075" /> <!-- Deadman's Glory Stone -->
+				<item id="92802" min="1" max="1" chance="0.0075" /> <!-- Art of Battle Axe Blade -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22195" level="85" type="Npc" name="Farhite Lad">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22195" level="80" type="Monster" name="Farhite Lad" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5131" />
+		<acquire exp="12650" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="15" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="2" /> <!-- Bow Resistance -->
+			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="48" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.0009" /> <!-- Damascus Sword -->
+				<item id="97" min="1" max="1" chance="0.0009" /> <!-- Lance -->
+				<item id="171" min="1" max="1" chance="0.0009" /> <!-- Deadman's Glory -->
+				<item id="175" min="1" max="1" chance="0.0009" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="0.0009" /> <!-- Staff of Evil Spirits -->
+				<item id="57" min="807" max="1886" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22196" level="85" type="Npc" name="Nos Lad">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22196" level="80" type="Monster" name="Nos Lad" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="128" />
+		<acquire exp="12650" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="2" /> <!-- Bow Resistance -->
+			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="52" />
 			<height normal="86" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="234" min="1" max="1" chance="0.0009" /> <!-- Demon's Dagger -->
+				<item id="268" min="1" max="1" chance="0.0009" /> <!-- Bellion Cestus -->
+				<item id="287" min="1" max="1" chance="0.0009" /> <!-- Bow of Peril -->
+				<item id="91885" min="1" max="1" chance="0.0009" /> <!-- Dismantler -->
+				<item id="91900" min="1" max="1" chance="0.0009" /> <!-- Colichemarde -->
+				<item id="57" min="807" max="1886" chance="70" /> <!-- Adena -->
+				<item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22197" level="85" type="Npc" name="Swamp Tribe" title="Savage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22197" level="80" type="Monster" name="Swamp Tribe" title="Savage" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<acquire exp="21794" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="2" /> <!-- Bow Resistance -->
+			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="60.7" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1615" max="3772" chance="70" /> <!-- Adena -->
+				<item id="92988" min="1" max="1" chance="0.03" /> <!-- Orcish Treasure -->
+				<item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22198" level="85" type="Npc" name="Swamp Alligator">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22198" level="80" type="Monster" name="Swamp Alligator" element="WATER">
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
+		<acquire exp="12735" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3690.75144508671" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="2" /> <!-- Bow Resistance -->
+			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="44.8" />
 			<height normal="20.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="403" max="942" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22199" level="85" type="Npc" name="Swamp Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22199" level="80" type="Monster" name="Swamp Warrior" element="WATER">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5127" />
+		<acquire exp="12650" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="2" /> <!-- Bow Resistance -->
+			<skill id="4116" level="4" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+			<skill id="48045" level="1" /> <!-- Monster of Water Element -->
+		</skillList>
 		<collision>
 			<radius normal="40" />
 			<height normal="58" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="807" max="1886" chance="70" /> <!-- Adena -->
+				<item id="92803" min="1" max="1" chance="0.0075" /> <!-- Staff of Evil Spirits Head -->
+				<item id="92804" min="1" max="1" chance="0.0075" /> <!-- Demon's Dagger Edge -->
+				<item id="92805" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus Edge -->
+				<item id="92806" min="1" max="1" chance="0.0075" /> <!-- Bow of Peril Shaft -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>

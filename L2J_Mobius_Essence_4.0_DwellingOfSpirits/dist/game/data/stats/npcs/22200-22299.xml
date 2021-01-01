@@ -652,7 +652,7 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22212" level="85" type="Npc" name="Knoriks' Knight" element="EARTH">
+	<npc id="22212" level="85" type="Monster" name="Knoriks' Knight" element="EARTH">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="1472" />
@@ -1975,330 +1975,542 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22257" level="85" type="Npc" name="Dire Witch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22257" level="80" type="Monster" name="Dire Witch" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="23718" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="13" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="14" />
 			<height normal="23" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1054" max="2463" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22258" level="85" type="Npc" name="Dire Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22258" level="80" type="Monster" name="Dire Soldier" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="19899" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="23.25" />
 			<height normal="35.25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="885" max="2067" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22259" level="85" type="Npc" name="Dire Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22259" level="80" type="Monster" name="Dire Guard" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="23718" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="20" />
 				<run ground="154" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="48" />
 			<height normal="37" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1054" max="2463" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22260" level="85" type="Npc" name="Dire Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22260" level="80" type="Monster" name="Dire Archer" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="94359" />
+		<acquire exp="23718" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="38.25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1054" max="2463" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22261" level="85" type="Npc" name="Dire Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22261" level="80" type="Monster" name="Dire Warrior" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="23718" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="51" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1054" max="2463" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22262" level="85" type="Npc" name="Dire Spearman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22262" level="80" type="Monster" name="Dire Spearman" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="23718" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="57" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="46.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1054" max="2463" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22263" level="85" type="Npc" name="Kastia's Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22263" level="80" type="Monster" name="Kastia's Soldier" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="34154" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="23.25" />
 			<height normal="35.25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1120" max="2616" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22264" level="85" type="Npc" name="Kastia's Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22264" level="80" type="Monster" name="Kastia's Warrior" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="28654" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="29" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="42" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="939" max="2194" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22265" level="85" type="Npc" name="Kastia's Mystic">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22265" level="80" type="Monster" name="Kastia's Mystic" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="34154" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1120" max="2616" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22266" level="85" type="Npc" name="Kastia's Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22266" level="80" type="Monster" name="Kastia's Captain" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="34154" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="30" />
 			<height normal="49.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1120" max="2616" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22267" level="85" type="Npc" name="Kastia's Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22267" level="80" type="Monster" name="Kastia's Archer" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="94359" />
+		<acquire exp="34154" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="22.5" />
 			<height normal="38.25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1120" max="2616" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22268" level="85" type="Npc" name="Kastia's Archmage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22268" level="80" type="Monster" name="Kastia's Archmage" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="34154" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="35" />
 			<height normal="33" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1120" max="2616" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.075" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.03" /> <!-- Enria -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22269" level="85" type="Npc" name="Kalix" title="Ruler of Garden">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22269" level="80" type="Monster" name="Kalix" title="Ruler of Garden" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="34052" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="22143.9306358382" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="43.2" />
 			<height normal="60.6" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1514" max="3537" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.03" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.0075" /> <!-- Enria -->
+				<item id="92974" min="1" max="1" chance="0.003" /> <!-- Stone of Purity -->
+				<item id="94136" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Shield -->
+				<item id="94135" min="1" max="1" chance="0.0009" /> <!-- Spellbook: Might -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22270" level="85" type="Npc" name="Kastia's Elite Captain" title="Ruler of Garden">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22270" level="80" type="Monster" name="Kastia's Elite Captain" title="Ruler of Garden" element="FIRE">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="49035" sp="3601" attributeExp="1040" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="22143.9306358382" hpRegen="10.5" mp="2169.63696369637" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+		</skillList>
 		<collision>
 			<radius normal="44" />
 			<height normal="49" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1607" max="3755" chance="70" /> <!-- Adena -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92994" min="1" max="1" chance="0.03" /> <!-- Asofe -->
+				<item id="92993" min="1" max="1" chance="0.0075" /> <!-- Enria -->
+				<item id="94136" min="1" max="1" chance="0.003" /> <!-- Spellbook: Shield -->
+				<item id="94135" min="1" max="1" chance="0.003" /> <!-- Spellbook: Might -->
+				<item id="92974" min="1" max="1" chance="0.003" /> <!-- Stone of Purity -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22271" level="85" type="Npc" name="Corrupted Fairy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22271" level="80" type="Monster" name="Corrupted Fairy">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="18925" sp="1991" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
 		<collision>
 			<radius normal="8.1" />
 			<height normal="40.2" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="342" max="799" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22272" level="85" type="Npc" name="Corrupted Fairy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22272" level="80" type="Monster" name="Corrupted Fairy">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="77984" sp="8218" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="22143.9306358382" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
 		<collision>
 			<radius normal="15" />
 			<height normal="28" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="410" max="959" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22273" level="85" type="Npc" name="Ruip" title="Corrupted Fairy Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22273" level="80" type="Monster" name="Ruip" title="Corrupted Fairy Captain">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="210471" sp="22189" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="38844.5086705202" hpRegen="10.5" mp="2042.90429042904" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skillList>
 		<collision>
 			<radius normal="19" />
 			<height normal="53" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="513" max="1198" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22274" level="85" type="Npc" name="Small Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

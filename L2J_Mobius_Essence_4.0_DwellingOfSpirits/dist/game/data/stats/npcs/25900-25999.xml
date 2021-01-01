@@ -389,6 +389,114 @@
 			</drop>
 		</dropLists>
 	</npc>
+	<npc id="25914" level="82" type="Monster" name="Atingo">
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="214.619883040936" magical="120.385041801683" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="93002" min="1" max="2" chance="61.5" /> <!-- Sayha's Blessing Pouch -->
+				<item id="948" min="1" max="1" chance="9.002" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25915" level="82" type="Monster" name="Atingo">
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="214.619883040936" magical="120.385041801683" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="93002" min="1" max="2" chance="58.76" /> <!-- Sayha's Blessing Pouch -->
+				<item id="948" min="1" max="1" chance="9.03" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25916" level="82" type="Monster" name="Atingo">
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="214.619883040936" magical="120.385041801683" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="93002" min="1" max="2" chance="59.72" /> <!-- Sayha's Blessing Pouch -->
+				<item id="948" min="1" max="1" chance="9.055" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25917" level="82" type="Monster" name="Atingo">
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="46454.3761638734" hpRegen="9.5" mp="3494.71114727421" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1147.53830572707" magical="397.790052226257" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="214.619883040936" magical="120.385041801683" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="93002" min="1" max="2" chance="59.03" /> <!-- Sayha's Blessing Pouch -->
+				<item id="948" min="1" max="1" chance="8.971" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+			</drop>
+		</dropLists>
+	</npc>
 	<npc id="25918" level="82" type="Monster" name="Wolf">
 		<race>BEAST</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -596,7 +704,6 @@
 	</npc>
 	<npc id="25925" level="85" type="Monster" name="Jisra">
 		<race>ETC</race>
-		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="704396.648044693" hpRegen="9.5" mp="5766.47681041497" mpRegen="3.3" />
 			<speed>
@@ -629,7 +736,6 @@
 	</npc>
 	<npc id="25926" level="85" type="Monster" name="Kuka">
 		<race>ETC</race>
-		<acquire exp="0" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="176099.627560521" hpRegen="9.5" mp="5766.47681041497" mpRegen="3.3" />
 			<speed>

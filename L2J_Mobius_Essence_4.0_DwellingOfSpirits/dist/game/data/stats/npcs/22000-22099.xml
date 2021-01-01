@@ -3143,24 +3143,34 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="22056" level="85" type="Npc" name="Pachycephalosaurus" title="Savage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22056" level="70" type="Monster" name="Pachycephalosaurus" title="Savage" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8860" sp="1075" attributeExp="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7063.5838150289" hpRegen="10.5" mp="1093.72937293729" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="330" max="771" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22057" level="75" type="Monster" name="Strider" title="Savage" element="EARTH">
 		<race>NONE</race>
@@ -3191,43 +3201,63 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="22058" level="85" type="Npc" name="Ornithomimus" title="Savage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22058" level="72" type="Monster" name="Ornithomimus" title="Savage" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="9382" sp="1325" attributeExp="34" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7339.88439306358" hpRegen="10.5" mp="1146.53465346535" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="424.97548218372" magical="97.8926873074313" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="183.229813664596" magical="95.115101572269" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="352" max="820" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22059" level="85" type="Npc" name="Pterosaur" title="Possessed Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="22059" level="80" type="Monster" name="Pterosaur" title="Possessed Berserker" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="10530" sp="1475" attributeExp="400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7981.50289017341" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="356" max="832" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22060" level="80" type="Monster" name="Water Guard" element="WATER">
 		<race>ELEMENTAL</race>

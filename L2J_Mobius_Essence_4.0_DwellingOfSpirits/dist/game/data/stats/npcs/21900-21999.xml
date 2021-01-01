@@ -1805,328 +1805,498 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="21961" level="85" type="Npc" name="Pachycephalosaurus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21961" level="65" type="Monster" name="Pachycephalosaurus" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="3828" sp="927" attributeExp="22" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3401.15606936416" hpRegen="10.5" mp="966.336633663366" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="367.275422872161" magical="80.8169973141629" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="163.636363636364" magical="87.008700870087" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="236" max="551" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21962" level="85" type="Npc" name="Wild Strider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21962" level="66" type="Monster" name="Wild Strider" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="3943" sp="1092" attributeExp="23" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3480.34682080925" hpRegen="10.5" mp="991.419141914192" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="398.38350988785" magical="88.2228587418453" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="162.58064516129" magical="92.835089960609" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="245" max="572" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21963" level="85" type="Npc" name="Elroki">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21963" level="71" type="Monster" name="Elroki" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="4563" sp="1264" attributeExp="32" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3865.89595375723" hpRegen="10.5" mp="1120.13201320132" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="402.149740548555" magical="95.8909801792651" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="185" magical="91.5841584158416" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="341" max="797" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21964" level="85" type="Npc" name="Pachycephalosaurus" title="Possessed Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21964" level="67" type="Monster" name="Pachycephalosaurus" title="Possessed Berserker" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8126" sp="885" attributeExp="25" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6633.52601156069" hpRegen="10.5" mp="1017.16171617162" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="407.709414381023" magical="89.8639684292209" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="164.102564102564" magical="93.5093509350935" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="254" max="594" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21966" level="85" type="Npc" name="Ornithomimus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21966" level="68" type="Monster" name="Ornithomimus" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="4181" sp="1182" attributeExp="26" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3637.57225433526" hpRegen="10.5" mp="1042.90429042904" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="375.838672666235" magical="93.1998192042514" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="179.617834394904" magical="88.7095078934645" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="265" max="617" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21967" level="85" type="Npc" name="Deinonychus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21967" level="73" type="Monster" name="Deinonychus" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="4823" sp="1362" attributeExp="36" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4010.98265895954" hpRegen="10.5" mp="1172.93729372937" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="377.508717019466" magical="95.7472890089901" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="178.395061728395" magical="97.7875565334311" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="352" max="821" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21968" level="85" type="Npc" name="Ornithomimus" title="Possessed Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21968" level="69" type="Monster" name="Ornithomimus" title="Possessed Berserker" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="8618" sp="1255" attributeExp="28" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6920.80924855491" hpRegen="10.5" mp="1068.64686468647" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="343.433016486661" magical="92.7657621073254" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="170.886075949367" magical="93.9967414462965" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="272" max="636" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21969" level="85" type="Npc" name="Deinonychus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21969" level="74" type="Monster" name="Deinonychus" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="9912" sp="1443" attributeExp="38" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7605.78034682081" hpRegen="10.5" mp="1199.3399339934" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="412.48459435983" magical="96.0667463911656" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="179.141104294479" magical="96.7826844034097" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="353" max="824" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21970" level="85" type="Npc" name="Velociraptor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21970" level="76" type="Monster" name="Velociraptor" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="5187" sp="757" attributeExp="342" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4218.49710982659" hpRegen="10.5" mp="1252.80528052805" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="358.963991284229" magical="100.965232790839" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="193.333333333333" magical="93.2093209320932" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="355" max="828" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21971" level="85" type="Npc" name="Velociraptor" title="Possessed Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21971" level="80" type="Monster" name="Velociraptor" title="Possessed Berserker" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="10374" sp="839" attributeExp="360" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7860.6936416185" hpRegen="10.5" mp="1252.80528052805" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="355" max="828" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21972" level="85" type="Npc" name="Pterosaur">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21972" level="77" type="Monster" name="Pterosaur" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="5265" sp="1367" attributeExp="385" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4283.23699421965" hpRegen="10.5" mp="1279.86798679868" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="458.617271160253" magical="103.496674065058" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="189.759036144578" magical="97.4193804922661" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="356" max="832" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21973" level="85" type="Npc" name="Ornithomimus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21973" level="78" type="Monster" name="Ornithomimus" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="5318" sp="1403" attributeExp="429" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4346.24277456647" hpRegen="10.5" mp="1306.93069306931" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="494.489153642308" magical="111.106220156071" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="199.40119760479" magical="98.0217782257268" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="357" max="834" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21974" level="85" type="Npc" name="Ornithomimus" title="Possessed Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21974" level="80" type="Monster" name="Ornithomimus" title="Possessed Berserker" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="10635" sp="1589" attributeExp="440" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8098.84393063584" hpRegen="10.5" mp="1306.93069306931" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="357" max="834" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21975" level="85" type="Npc" name="Deinonychus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21975" level="79" type="Monster" name="Deinonychus" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="5362" sp="2406" attributeExp="474" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4408.09248554913" hpRegen="10.5" mp="1334.65346534653" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="481.838398813936" magical="123.59371209624" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="211.904761904762" magical="104.903347477605" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="359" max="838" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21976" level="85" type="Npc" name="Deinonychus" title="Possessed Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21976" level="80" type="Monster" name="Deinonychus" title="Possessed Berserker" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="10723" sp="2467" attributeExp="480" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8214.45086705202" hpRegen="10.5" mp="1334.65346534653" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="359" max="838" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21977" level="85" type="Npc" name="Tyrannosaurus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21977" level="80" type="Monster" name="Tyrannosaurus" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="10816" sp="2696" attributeExp="520" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8323.69942196532" hpRegen="10.5" mp="1361.71617161716" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="359" max="839" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="21978" level="85" type="Npc" name="Tyrannosaurus" title="Possessed Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="21978" level="80" type="Monster" name="Tyrannosaurus" title="Possessed Berserker" element="EARTH">
+		<race>NONE</race>
 		<sex>FEMALE</sex>
+		<acquire exp="21632" sp="2696" attributeExp="520" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="16647.3988439306" hpRegen="10.5" mp="1361.71617161716" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="24" /> <!-- Unknown Creature -->
+			<skill id="48047" level="1" /> <!-- Monster of Earth Element -->
+		</skillList>
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="359" max="839" chance="70" /> <!-- Adena -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="21979" level="85" type="Npc" name="Velociraptor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2174,7 +2344,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="30" sp="1" />
+		<acquire exp="68" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="60.5214152700186" hpRegen="2" mp="39.8698128559805" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2196,14 +2366,17 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="18" min="1" max="1" chance="8.527" /> <!-- Leather Shield -->
-				<item id="41" min="1" max="1" chance="3.962" /> <!-- Cloth Cap -->
-				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="1788" min="1" max="1" chance="1.414" /> <!-- Recipe: Bow -->
+				<item id="18" min="1" max="1" chance="0.3" /> <!-- Leather Shield -->
+				<item id="41" min="1" max="1" chance="0.3" /> <!-- Cloth Cap -->
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="0.03" /> <!-- Material: Lump of Wood -->
+				<item id="1788" min="1" max="1" chance="0.003" /> <!-- Recipe: Bow -->
+				<item id="92909" min="1" max="1" chance="0.003" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.003" /> <!-- Material: Rags -->
 			</drop>
 			<spoil>
-				<item id="35" min="1" max="1" chance="16.9" /> <!-- Cloth Shoes -->
-				<item id="1787" min="1" max="1" chance="2.334" /> <!-- Recipe: Willow Staff -->
+				<item id="35" min="1" max="1" chance="0.75" /> <!-- Cloth Shoes -->
+				<item id="1787" min="1" max="1" chance="0.0075" /> <!-- Recipe: Willow Staff -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2215,7 +2388,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="89" sp="3" />
+		<acquire exp="76" sp="3" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="88.4543761638734" hpRegen="2" mp="54.5158665581774" mpRegen="0.9" />
 			<attack physical="10.24492" magical="6.99595" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2238,15 +2411,18 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="35" min="1" max="1" chance="3.848" /> <!-- Cloth Shoes -->
-				<item id="36" min="1" max="1" chance="3.104" /> <!-- Leather Sandals -->
-				<item id="48" min="1" max="1" chance="2.582" /> <!-- Short Gloves -->
-				<item id="1121" min="1" max="1" chance="1.896" /> <!-- Apprentice's Shoes -->
-				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
-				<item id="1060" min="1" max="1" chance="6.908" /> <!-- HP Replenishing Potion (Exchangeable) -->
+				<item id="1121" min="1" max="1" chance="0.75" /> <!-- Apprentice's Shoes -->
+				<item id="35" min="1" max="1" chance="0.3" /> <!-- Cloth Shoes -->
+				<item id="36" min="1" max="1" chance="0.3" /> <!-- Leather Sandals -->
+				<item id="48" min="1" max="1" chance="0.3" /> <!-- Short Gloves -->
+				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="0.075" /> <!-- HP Replenishing Potion (Exchangeable) -->
+				<item id="92908" min="1" max="1" chance="0.03" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.003" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.003" /> <!-- Material: Rags -->
 			</drop>
 			<spoil>
-				<item id="1121" min="1" max="3" chance="73.09" /> <!-- Apprentice's Shoes -->
+				<item id="1121" min="1" max="1" chance="10.21" /> <!-- Apprentice's Shoes -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -2305,7 +2481,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="147" sp="5" />
+		<acquire exp="91" sp="5" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="123.836126629423" hpRegen="2" mp="69.1619202603743" mpRegen="0.9" />
 			<attack physical="12.34006" magical="8.42666" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2326,20 +2502,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="4" min="1" max="1" chance="3.102" /> <!-- Club -->
-				<item id="7" min="1" max="1" chance="3.014" /> <!-- Apprentice's Rod -->
-				<item id="57" min="11" max="25" chance="70" /> <!-- Adena -->
-				<item id="1787" min="1" max="1" chance="3.429" /> <!-- Recipe: Willow Staff -->
+				<item id="4" min="1" max="1" chance="0.03" /> <!-- Club -->
+				<item id="7" min="1" max="1" chance="0.03" /> <!-- Apprentice's Rod -->
+				<item id="57" min="1" max="3" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="0.03" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.0075" /> <!-- Material: Pack of Knickknacks -->
+				<item id="1787" min="1" max="1" chance="0.003" /> <!-- Recipe: Willow Staff -->
+				<item id="92910" min="1" max="1" chance="0.003" /> <!-- Material: Rags -->
 			</drop>
 			<spoil>
-				<item id="1788" min="1" max="1" chance="8.35" /> <!-- Recipe: Bow -->
+				<item id="1788" min="1" max="1" chance="0.03" /> <!-- Recipe: Bow -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21985" level="16" type="Monster" name="Mountain Werewolf">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="472" sp="15" />
+		<acquire exp="259" sp="15" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="408.752327746741" hpRegen="2.5" mp="157.038242473556" mpRegen="1.2" />
 			<attack physical="32.16396" magical="21.96382" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2359,11 +2538,14 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="24" min="1" max="1" chance="0.3" /> <!-- Bone Breastplate -->
-				<item id="31" min="1" max="1" chance="0.3" /> <!-- Bone Gaiters -->
-				<item id="390" min="1" max="1" chance="0.3" /> <!-- Cotton Shirt -->
-				<item id="412" min="1" max="1" chance="0.3" /> <!-- Cotton Pants -->
-				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
+				<item id="24" min="1" max="1" chance="0.003" /> <!-- Bone Breastplate -->
+				<item id="31" min="1" max="1" chance="0.003" /> <!-- Bone Gaiters -->
+				<item id="390" min="1" max="1" chance="0.003" /> <!-- Cotton Shirt -->
+				<item id="412" min="1" max="1" chance="0.003" /> <!-- Cotton Pants -->
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="0.3" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.03" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.03" /> <!-- Material: Rags -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2405,7 +2587,7 @@
 	<npc id="21987" level="17" type="Monster" name="Muertos Fighter">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="500" sp="15" />
+		<acquire exp="285" sp="15" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="438.54748603352" hpRegen="2.5" mp="166.80227827502" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2425,10 +2607,16 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="176" min="1" max="1" chance="0.03" /> <!-- Apprentice's Staff -->
-				<item id="2501" min="1" max="1" chance="0.03" /> <!-- Bone Club -->
-				<item id="57" min="33" max="78" chance="70" /> <!-- Adena -->
+				<item id="176" min="1" max="1" chance="0.0009" /> <!-- Apprentice's Staff -->
+				<item id="2501" min="1" max="1" chance="0.0009" /> <!-- Bone Club -->
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="92908" min="1" max="1" chance="0.3" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.03" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.03" /> <!-- Material: Rags -->
 			</drop>
+			<spoil>
+				<item id="92588" min="1" max="1" chance="0.003" /> <!-- Forest Bow Shaft -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="21988" level="18" type="Monster" name="Muertos Captain">
@@ -2454,10 +2642,13 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="1104" min="1" max="1" chance="0.75" /> <!-- Stockings of Devotion -->
-				<item id="1101" min="1" max="1" chance="0.3" /> <!-- Tunic of Devotion -->
-				<item id="57" min="34" max="81" chance="70" /> <!-- Adena -->
-				<item id="1060" min="1" max="1" chance="12.39" /> <!-- HP Replenishing Potion (Exchangeable) -->
+				<item id="1104" min="1" max="1" chance="0.0075" /> <!-- Stockings of Devotion -->
+				<item id="1101" min="1" max="1" chance="0.003" /> <!-- Tunic of Devotion -->
+				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="0.3" /> <!-- HP Replenishing Potion (Exchangeable) -->
+				<item id="92908" min="1" max="1" chance="0.3" /> <!-- Material: Lump of Wood -->
+				<item id="92909" min="1" max="1" chance="0.03" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92910" min="1" max="1" chance="0.03" /> <!-- Material: Rags -->
 			</drop>
 		</dropLists>
 	</npc>

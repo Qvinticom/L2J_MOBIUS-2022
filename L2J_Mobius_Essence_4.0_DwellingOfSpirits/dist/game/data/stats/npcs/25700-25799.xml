@@ -489,6 +489,7 @@
 			<drop>
 				<item id="93003" min="1" max="3" chance="100" /> <!-- Sayha's Grace -->
 				<item id="93002" min="1" max="1" chance="50.17" /> <!-- Sayha's Blessing Pouch -->
+				<item id="91971" min="1" max="3" chance="49.33" /> <!-- Star Candy - Event -->
 				<item id="91038" min="1" max="3" chance="13.09" /> <!-- Earth Spirit Ore -->
 				<item id="91037" min="1" max="3" chance="13.03" /> <!-- Wind Spirit Ore -->
 				<item id="91035" min="1" max="3" chance="12.87" /> <!-- Water Spirit Ore -->
@@ -3027,10 +3028,10 @@
 	</npc>
 	<npc id="25796" level="66" type="Monster" name="Batur" title="Kelbar's Leader">
 		<!-- Source: www.l2wiki.com -->
-		<race>GIANT</race>
+		<race>HUMANOID</race>
 		<equipment rhand="75" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1149777.78" mp="684279" mpRegen="1222.2222222222" hpRegen="60000" />
+			<vitals hp="1878169.45996276" mp="618641.171684296" mpRegen="1222.2222222222" hpRegen="60000" />
 			<attack physical="31428.571428571" magical="5546.218487395" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2444.4444444444" magical="1419.3548387097" />
 			<attribute>
@@ -3049,8 +3050,8 @@
 			<height normal="47.0" />
 		</collision>
 		<skillList>
-			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="50028" level="3" /> <!-- Raid Boss (Lv. 66) -->
 			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
 			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
@@ -3059,7 +3060,6 @@
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
 			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
 			<skill id="5463" level="1" /> <!-- Water Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
