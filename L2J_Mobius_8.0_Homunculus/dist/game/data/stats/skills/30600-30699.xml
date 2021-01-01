@@ -2504,7 +2504,7 @@
 	<skill id="30667" toLevel="1" name="Novice Lockshard Destruction">
 		<!-- Inflicts earth damage on the target with $s1 power. For $s2, M. Def. -$s3, Attribute Resistance -$s4. -->
 		<icon>icon.skill11027</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>800</castRange>
@@ -2518,6 +2518,9 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<magicLevel>40</magicLevel>
 		<effectRange>1400</effectRange>
 		<magicCriticalRate>11</magicCriticalRate>

@@ -4081,6 +4081,10 @@
 					<value fromLevel="1" toLevel="2" fromSubLevel="3020" toSubLevel="3020">5631</value>
 				</power>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>20007</skillId> <!-- Blocked Invincibility -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11561" toLevel="9" name="Giant Root">

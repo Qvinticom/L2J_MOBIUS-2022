@@ -476,7 +476,9 @@
 					<value fromLevel="21" toLevel="27" fromSubLevel="1020" toSubLevel="1020">{base + (base / 100 * (8 + 0.1 * (subIndex - 19)))}</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="MagicalDefence" fromLevel="21" toLevel="27" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="21" toLevel="27" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
@@ -960,7 +962,9 @@
 				<rate>100</rate>
 				<max>10</max>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="HealOverTime">
 				<!-- Unconfirmed -->
 				<power>60</power>
@@ -1211,7 +1215,9 @@
 				<speed>400</speed>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30013" toLevel="1" name="Switch Places">

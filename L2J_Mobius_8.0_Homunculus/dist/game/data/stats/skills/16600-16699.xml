@@ -181,7 +181,9 @@
 				<speed>400</speed>
 				<distance>200</distance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16607" toLevel="1" name="Mimir">
@@ -276,7 +278,9 @@
 				<distance>200</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16612" toLevel="1" name="Emperor Helios' Authority">
@@ -376,7 +380,9 @@
 			<effect name="PhysicalAttack"> <!-- TODO -->
 				<power>34255</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16615" toLevel="1" name="Helios Plasma Wall">
@@ -434,7 +440,9 @@
 				<power>2000</power> <!-- TODO -->
 				<ticks>1</ticks>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16617" toLevel="1" name="Enuma Elish - Red Lightning Spear">
@@ -470,7 +478,9 @@
 				<distance>200</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16618" toLevel="1" name="Enuma Elish - Blue Lightning Spear">
@@ -506,7 +516,9 @@
 				<distance>200</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16619" toLevel="1" name="Stigma of Deterioration">
@@ -1168,7 +1180,9 @@
 			<effect name="MagicalAttack">
 				<power>15000</power> <!-- TODO -->
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16646" toLevel="1" name="Hyper Mega Telekinesis">
@@ -1337,7 +1351,9 @@
 				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16655" toLevel="1" name="Delta Plasma Ball">
@@ -1415,7 +1431,9 @@
 				<speed>600</speed>
 				<delay>650</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
@@ -1477,7 +1495,9 @@
 				<power>10000</power>
 				<criticalChance>5</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16662" toLevel="1" name="Royal Plasma Ball">
@@ -1715,7 +1735,9 @@
 			<effect name="MagicalAttack">
 				<power>15000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<PARALYZE>100</PARALYZE>
 			</effect>
@@ -1772,7 +1794,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16677" toLevel="1" name="Hyper Power">
@@ -1913,7 +1937,9 @@
 			<effect name="PhysicalAttack"> <!-- TODO -->
 				<power>100000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16684" toLevel="1" name="Multi Shot">
@@ -2014,7 +2040,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16689" toLevel="2" name="Blessing of the Blackbird Clan">

@@ -109,7 +109,9 @@
 			<effect name="FlyAway">
 				<radius>300</radius>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5005" toLevel="1" name="Frintezza Pose">
@@ -130,7 +132,9 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5006" toLevel="3" name="Frintezza Music">
@@ -418,7 +422,9 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5013" toLevel="1" name="Frintezza Energy Drain">
@@ -563,7 +569,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5017" toLevel="1" name="Demons">
@@ -3184,7 +3192,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5086" toLevel="1" name="Deadly Poison">

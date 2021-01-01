@@ -1380,7 +1380,9 @@
 			<effect name="PhysicalAttack">
 				<power>10000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15272" toLevel="1" name="Wind Breath">
@@ -1437,7 +1439,9 @@
 			<effect name="PhysicalAttack">
 				<power>10000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15274" toLevel="1" name="Mighty Wind Strike">

@@ -4629,7 +4629,10 @@
 		<affectRange>150</affectRange>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>50</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="10">30</value>
+			<value fromLevel="5" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -4681,12 +4684,6 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
 			</effect>
 		</effects>
-		<endEffects>
-			<effect name="CallSkill">
-				<skillId>6092</skillId> <!-- Lightning -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="30788" toLevel="9" name="Rush Impact">
 		<!-- Rushes forward to attack enemies at the front with $s1 power. Inflicts Stun for $s2 Requires an ancient sword, a two-handed sword, a blunt weapon, a spear, a fist weapon, dual blunt weapons, or dual swords. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->

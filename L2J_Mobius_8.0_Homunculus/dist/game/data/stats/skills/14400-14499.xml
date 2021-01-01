@@ -1034,7 +1034,9 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="TargetMe" />
 		</effects>
 	</skill>
@@ -1384,7 +1386,9 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="HealPercent">
 				<power>-20</power>
 			</effect>
@@ -1480,7 +1484,9 @@
 				<speed>1500</speed>
 				<delay>1500</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14466" toLevel="1" name="Weaken">
@@ -1546,7 +1552,9 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14468" toLevel="1" name="Axis Collapse">
@@ -1596,7 +1604,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<SLEEP>100</SLEEP>

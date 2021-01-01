@@ -197,6 +197,9 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>INVINCIBILITY_SPECIAL;BLOCK_INVINCIBILITY</slot>
 			</effect>
+			<effect name="DisableSkill">
+				<disable>11759;11758</disable>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="20008" toLevel="1" name="Clan Advent - Event">

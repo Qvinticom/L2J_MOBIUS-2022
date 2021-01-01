@@ -363,10 +363,10 @@
 			<value level="4">48</value>
 		</mpConsume>
 		<castRange>
-			<value level="1">500</value>
-			<value level="2">600</value>
-			<value level="3">700</value>
-			<value level="4">800</value>
+			<value level="1">300</value>
+			<value level="2">400</value>
+			<value level="3">500</value>
+			<value level="4">600</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + (10 * subIndex)}</value>
 		</castRange>
 		<effectRange>

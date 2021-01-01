@@ -3256,7 +3256,9 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11175" toLevel="6" name="Shadow Snare Zone">
@@ -3283,7 +3285,9 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11176" toLevel="7" name="Superior Mana of Spirit">
@@ -3432,7 +3436,9 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -3474,7 +3480,9 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -3516,7 +3524,9 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -3558,7 +3568,9 @@
 		</conditions>
 		<effects>
 			<effect name="AirBind" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="BlockControl" />
 			<effect name="DamOverTime">
 				<power>100</power>
@@ -3963,7 +3975,9 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11199" toLevel="1" name="Elemental Destruction: Fire">

@@ -1136,7 +1136,9 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4617" toLevel="1" name="Dispel Petrification">
@@ -4848,7 +4850,9 @@
 			<effect name="PhysicalAttack">
 				<power>534255</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4686" toLevel="1" name="Valakas Tail Stamp">
@@ -4877,7 +4881,9 @@
 			<effect name="PhysicalAttack">
 				<power>534255</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4687" toLevel="1" name="Valakas Tail Stamp">
@@ -4906,7 +4912,9 @@
 			<effect name="PhysicalAttack">
 				<power>534255</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4688" toLevel="2" name="Valakas Tail Rash">
@@ -4937,7 +4945,9 @@
 			<effect name="PhysicalAttack">
 				<power>534255</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4689" toLevel="3" name="Valakas Fear">

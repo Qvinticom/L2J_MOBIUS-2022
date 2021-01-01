@@ -1844,7 +1844,9 @@
 				<SHOCK>100</SHOCK>
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
@@ -1891,7 +1893,9 @@
 				<SHOCK>100</SHOCK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="9461" toLevel="1" name="Scroll of Escape: Guillotine Fortress">

@@ -276,7 +276,9 @@
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
 				<radius>600</radius>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15112" toLevel="1" name="Threat">
@@ -663,7 +665,9 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<AIRBIND>100</AIRBIND>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15123" toLevel="1" name="Sword Slash">
@@ -808,7 +812,9 @@
 				<DERANGEMENT>100</DERANGEMENT>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15126" toLevel="1" name="Tauti Final Attack">
@@ -853,7 +859,9 @@
 				<DERANGEMENT>100</DERANGEMENT>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15127" toLevel="1" name="Equip Weapon">
@@ -1550,7 +1558,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="HpRegen">
 				<amount>-100</amount>
 				<mode>PER</mode>
@@ -1640,7 +1650,9 @@
 			<effect name="FlyAway">
 				<radius>300</radius>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<KNOCKBACK>100</KNOCKBACK>
 				<SLEEP>100</SLEEP>
@@ -1681,7 +1693,9 @@
 			<effect name="FlyAway">
 				<radius>300</radius>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<KNOCKBACK>100</KNOCKBACK>
 				<SLEEP>100</SLEEP>
@@ -1754,7 +1768,9 @@
 			<effect name="PhysicalAttack">
 				<power>240000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="KnockBack">
 				<distance>100</distance>
 				<speed>400</speed>
@@ -1824,7 +1840,9 @@
 				<speed>600</speed>
 				<delay>650</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
@@ -1931,7 +1949,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15173" toLevel="1" name="Tauti Air Binding">

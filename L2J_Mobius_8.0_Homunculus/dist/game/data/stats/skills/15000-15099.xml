@@ -1076,7 +1076,9 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
@@ -1105,7 +1107,9 @@
 				<speed>600</speed>
 				<delay>600</delay>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
@@ -1137,7 +1141,9 @@
 			<effect name="PhysicalAttack">
 				<power>190000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="KnockBack">
 				<distance>100</distance>
 				<speed>400</speed>
@@ -1208,7 +1214,9 @@
 			<effect name="PhysicalAttack">
 				<power>170000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="KnockBack">
 				<distance>100</distance>
 				<speed>400</speed>
@@ -1248,7 +1256,9 @@
 			<effect name="PhysicalAttack">
 				<power>120000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="DamOverTime">
 				<power>250</power>
 				<ticks>5</ticks>
@@ -1439,7 +1449,9 @@
 				<SLEEP>100</SLEEP>
 				<SHOCK>100</SHOCK>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-20</amount>
 				<mode>PER</mode>
@@ -1483,7 +1495,9 @@
 				<SLEEP>100</SLEEP>
 				<SHOCK>100</SHOCK>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-30</amount>
 				<mode>PER</mode>
@@ -1616,7 +1630,9 @@
 				<SLEEP>100</SLEEP>
 				<SHOCK>100</SHOCK>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15048" toLevel="1" name="Tauti Leap Attack">
@@ -1755,7 +1771,9 @@
 				<percentage>50</percentage>
 			</effect>
 			<effect name="AirBind" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<KNOCKBACK>100</KNOCKBACK>
 				<KNOCKDOWN>100</KNOCKDOWN>
@@ -2201,7 +2219,9 @@
 			<effect name="PhysicalAttack">
 				<power>190000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="KnockBack">
 				<distance>100</distance>
 				<speed>400</speed>
@@ -2239,7 +2259,9 @@
 			<effect name="PhysicalAttack">
 				<power>190000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="KnockBack">
 				<distance>100</distance>
 				<speed>400</speed>

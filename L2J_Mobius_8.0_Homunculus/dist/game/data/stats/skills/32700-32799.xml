@@ -31,7 +31,9 @@
 				<power>500</power>
 				<ticks>5</ticks>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32701" toLevel="1" name="Surrender to Water">
@@ -261,7 +263,9 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32709" toLevel="1" name="Fafurion Water Spiral">
@@ -325,7 +329,9 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32712" toLevel="1" name="Fafurion Hydro Spiral">
@@ -386,7 +392,9 @@
 			<effect name="PhysicalAttack">
 				<power>500000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32714" toLevel="1" name="Fafurion Tail Strike">
@@ -413,7 +421,9 @@
 			<effect name="PhysicalAttack">
 				<power>500000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32715" toLevel="1" name="Fafurion Water Wave">
@@ -457,7 +467,9 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32716" toLevel="3" name="Fafurion Breath">
@@ -552,7 +564,9 @@
 			<effect name="PhysicalAttack">
 				<power>500000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32719" toLevel="1" name="Fafurion Summon Water Orb">
@@ -602,7 +616,9 @@
 				<distance>100</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32722" toLevel="1" name="Fafurion Tidal Wave">
@@ -654,7 +670,9 @@
 				<KNOCKBACK>100</KNOCKBACK>
 				<CHANGEBODY>100</CHANGEBODY>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32724" toLevel="1" name="Fafurion Fury">
@@ -771,7 +789,9 @@
 			<effect name="PhysicalAttack">
 				<power>500000</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32733" toLevel="1" name="Spine Attack">
@@ -851,7 +871,9 @@
 					<value level="2">600000</value>				
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32736" toLevel="2" name="Shield Bash">
@@ -889,7 +911,9 @@
 				<distance>100</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="32737" toLevel="2" name="Shield Dash">
@@ -1110,7 +1134,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;7002;18721;18722;28203</allowedSkills>
+			</effect>
 			<effect name="ManaDamOverTime">
 				<power>500</power>
 				<ticks>1</ticks>

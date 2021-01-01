@@ -819,18 +819,24 @@
 		<!-- Vitality Lv. is halted, and you cannot receive the Vitality bonus. -->
 		<icon>BranchSys3.lcon.g_vitality_potion_stop</icon>
 		<operateType>A2</operateType>
-		<abnormalType>VP_UP</abnormalType>
+		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<isMagic>2</isMagic>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<isMagic>4</isMagic>
+		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22567" toLevel="1" name="Japanese Sword Appearance Stone">
 		<operateType>A1</operateType>
