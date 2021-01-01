@@ -503,81 +503,113 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="22122" level="85" type="Npc" name="Special Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22122" level="45" type="Monster" name="Special Treasure Chest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="26822" sp="7509" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2279.76878612717" hpRegen="10.5" mp="496.369636963696" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="179.237245942268" magical="48.4143461526226" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="136.567164179104" magical="64.5288409437959" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="92912" min="1" max="1" chance="100" /> <!-- Material: Plain Fabric -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22123" level="85" type="Npc" name="Special Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22123" level="55" type="Monster" name="Special Treasure Chest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="44577" sp="12479" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3221.96531791908" hpRegen="10.5" mp="722.772277227723" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="274.380199324603" magical="71.4860425312335" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="169.444444444444" magical="77.007700770077" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="92913" min="1" max="1" chance="100" /> <!-- Material: Unknown Metal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22124" level="85" type="Npc" name="Special Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22124" level="65" type="Monster" name="Special Treasure Chest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="65074" sp="18219" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="4224.85549132948" hpRegen="10.5" mp="966.336633663366" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="367.275422872161" magical="80.8169973141629" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="163.636363636364" magical="87.008700870087" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="92913" min="1" max="1" chance="100" /> <!-- Material: Unknown Metal -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="22125" level="85" type="Npc" name="Special Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22125" level="75" type="Monster" name="Special Treasure Chest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="96773" sp="27090" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="5156.64739884393" hpRegen="10.5" mp="1225.74257425743" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="343.072556003544" magical="92.9903099408827" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="190.243902439024" magical="91.7652740883845" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="92913" min="1" max="1" chance="100" /> <!-- Material: Unknown Metal -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22126" level="85" type="Npc" name="Special Treasure Chest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1386,24 +1418,32 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22150" level="85" type="Npc" name="Special Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22150" level="80" type="Monster" name="Special Treasure Chest">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="125031" sp="35002" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="7381.50289017341" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="19" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="92914" min="1" max="1" chance="100" /> <!-- Material: Sack Shreds -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="22151" level="80" type="Monster" name="Tanta Lizardman" element="WATER">
 		<race>HUMANOID</race>

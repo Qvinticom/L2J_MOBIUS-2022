@@ -594,4 +594,69 @@
 			</drop>
 		</dropLists>
 	</npc>
+	<npc id="25925" level="85" type="Monster" name="Jisra">
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="704396.648044693" hpRegen="9.5" mp="5766.47681041497" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="9327.04039041932" magical="2885.11628279205" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="1210.919540229885" magical="868.885085528838" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+				<item id="730" min="1" max="1" chance="88.56" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
+				<item id="729" min="1" max="1" chance="10.004" /> <!-- Scroll: Enchant A-grade Weapon (Exchangeable) -->
+				<item id="91033" min="1" max="1" chance="0.3" /> <!-- Wind Spirit Evolution Stone -->
+				<item id="91032" min="1" max="1" chance="0.3" /> <!-- Fire Spirit Evolution Stone -->
+				<item id="92989" min="1" max="1" chance="0.3" /> <!-- Orc King's Treasure -->
+				<item id="91031" min="1" max="1" chance="0.3" /> <!-- Water Spirit Evolution Stone -->
+				<item id="91034" min="1" max="1" chance="0.3" /> <!-- Earth Spirit Evolution Stone -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="25926" level="85" type="Monster" name="Kuka">
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="176099.627560521" hpRegen="9.5" mp="5766.47681041497" mpRegen="3.3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="9327.04039041932" magical="2885.11628279205" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="1210.919540229885" magical="868.885085528838" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="93002" min="1" max="2" chance="100" /> <!-- Sayha's Blessing Pouch -->
+				<item id="948" min="1" max="2" chance="88.13" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
+				<item id="947" min="1" max="1" chance="10.005" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+				<item id="91033" min="1" max="1" chance="0.3" /> <!-- Wind Spirit Evolution Stone -->
+				<item id="91032" min="1" max="1" chance="0.3" /> <!-- Fire Spirit Evolution Stone -->
+				<item id="92989" min="1" max="1" chance="0.3" /> <!-- Orc King's Treasure -->
+				<item id="91031" min="1" max="1" chance="0.3" /> <!-- Water Spirit Evolution Stone -->
+				<item id="91034" min="1" max="1" chance="0.3" /> <!-- Earth Spirit Evolution Stone -->
+			</drop>
+		</dropLists>
+	</npc>
 </list>
