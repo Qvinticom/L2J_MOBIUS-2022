@@ -152,7 +152,7 @@ public class Hardin extends AbstractNpcAI
 				player.setBaseClass(player.getActiveClass());
 			}
 			// Adjustments
-			SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false);
+			SkillTreeData.getInstance().cleanSkillUponChangeClass(player);
 			for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))
 			{
 				player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);

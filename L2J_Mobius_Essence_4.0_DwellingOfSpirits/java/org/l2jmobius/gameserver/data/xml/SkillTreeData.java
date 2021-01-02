@@ -1460,7 +1460,7 @@ public class SkillTreeData implements IXmlReader
 		return result;
 	}
 	
-	public void cleanSkillUponChangeClass(PlayerInstance player, boolean checkPreviousClasses)
+	public void cleanSkillUponChangeClass(PlayerInstance player)
 	{
 		ClassId currentClass = player.getClassId();
 		for (Skill skill : player.getAllSkills())
@@ -1494,24 +1494,21 @@ public class SkillTreeData implements IXmlReader
 		}
 		
 		// Check previous classes as well, in case classes where skipped.
-		if (checkPreviousClasses)
+		while (currentClass.getParent() != null)
 		{
-			while (currentClass.getParent() != null)
+			final Set<Integer> removedList = _removeSkillCache.get(currentClass);
+			if (removedList != null)
 			{
-				final Set<Integer> removedList = _removeSkillCache.get(currentClass);
-				if (removedList != null)
+				for (Integer skillId : removedList)
 				{
-					for (Integer skillId : removedList)
+					final int currentLevel = player.getSkillLevel(skillId);
+					if (currentLevel > 0)
 					{
-						final int currentLevel = player.getSkillLevel(skillId);
-						if (currentLevel > 0)
-						{
-							player.removeSkill(SkillData.getInstance().getSkill(skillId, currentLevel));
-						}
+						player.removeSkill(SkillData.getInstance().getSkill(skillId, currentLevel));
 					}
 				}
-				currentClass = currentClass.getParent();
 			}
+			currentClass = currentClass.getParent();
 		}
 	}
 	

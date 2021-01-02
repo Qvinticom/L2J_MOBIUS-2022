@@ -105,7 +105,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 			
 			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
-				SkillTreeData.getInstance().cleanSkillUponChangeClass(player, false); // TODO: Move to skill learn method?
+				SkillTreeData.getInstance().cleanSkillUponChangeClass(player); // TODO: Move to skill learn method?
 				for (SkillLearn skill : SkillTreeData.getInstance().getRaceSkillTree(player.getRace()))
 				{
 					player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
