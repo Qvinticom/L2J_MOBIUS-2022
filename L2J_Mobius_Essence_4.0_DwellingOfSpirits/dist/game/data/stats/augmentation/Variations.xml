@@ -3,106 +3,57 @@
 	<variations>
 		<!-- Common Life Stone -->
 		<variation mineralId="90012">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="40000" to="40072" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="15095" to="15111" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="15112" to="15218" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="15219" to="15272" chance="10.0" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="40000" to="40072" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="15095" to="15111" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="15112" to="15218" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="15219" to="15272" chance="10.0" />
+				<optionCategory chance="10">
+					<optionRange from="15219" to="15272" chance="10" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Mid-grade Life Stone -->
 		<variation mineralId="90013">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="40073" to="40145" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="15807" to="15823" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="15824" to="15930" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="15931" to="15984" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="40073" to="40145" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="15807" to="15823" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="15824" to="15930" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="15931" to="15984" chance="1.85" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- High-grade Life Stone -->
 		<variation mineralId="90014">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="40146" to="40218" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="16163" to="16179" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="16180" to="16286" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="16287" to="16340" chance="1.73" />
-					<optionRange from="16377" to="16380" chance="1.72" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="40146" to="40218" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="16163" to="16179" chance="5.88" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="16180" to="16286" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="16287" to="16340" chance="1.73" />
 					<optionRange from="16377" to="16380" chance="1.72" />
 				</optionCategory>
@@ -110,36 +61,19 @@
 		</variation>
 		<!-- Top-grade Life Stone -->
 		<variation mineralId="90015">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="40146" to="40218" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="16163" to="16179" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="16180" to="16286" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="16287" to="16340" chance="1.73" />
-					<optionRange from="16377" to="16380" chance="1.72" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="40146" to="40218" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="16163" to="16179" chance="5.88" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="16180" to="16286" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="16287" to="16340" chance="1.73" />
 					<optionRange from="16377" to="16380" chance="1.72" />
 				</optionCategory>
@@ -147,176 +81,95 @@
 		</variation>
 		<!-- Life Stone Lv.1 - Weapons-->
 		<variation mineralId="94185">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="33929" to="33948" chance="1.37" />
 					<optionRange from="33969" to="33988" chance="1.37" />
 					<optionRange from="34009" to="34048" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34089" to="34108" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="34129" to="34144" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="34169" to="34188" chance="1.73" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="33929" to="33948" chance="1.37" />
-					<optionRange from="33969" to="33988" chance="1.37" />
-					<optionRange from="34009" to="34048" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34089" to="34108" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="34129" to="34144" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="34169" to="34188" chance="1.73" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.2 - Weapons-->
 		<variation mineralId="94186">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="33949" to="33968" chance="1.37" />
 					<optionRange from="33989" to="34008" chance="1.37" />
 					<optionRange from="34009" to="34088" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34109" to="34128" chance="5.89" />
 					<optionRange from="34149" to="34168" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="34189" to="34208" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="34209" to="34228" chance="1.73" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="33949" to="33968" chance="1.37" />
-					<optionRange from="33989" to="34008" chance="1.37" />
-					<optionRange from="34009" to="34088" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34109" to="34128" chance="5.89" />
-					<optionRange from="34149" to="34168" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="34189" to="34208" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="34209" to="34228" chance="1.73" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv. 1 - Hair Accessory -->
 		<variation mineralId="90856">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="33959" to="34088" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34089" to="34168" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="34169" to="34179" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="34180" to="34188" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="33959" to="34088" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34089" to="34168" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="34169" to="34179" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="34180" to="34188" chance="1.85" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv. 2 - Hair Accessory -->
 		<variation mineralId="90857">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="50102" to="50154" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="50188" to="50190" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="50191" to="50193" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="50194" to="50196" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="50102" to="50154" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="50188" to="50190" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="50191" to="50193" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="50194" to="50196" chance="1.85" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.1 - Armor-->
 		<variation mineralId="94187">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34229" to="34248" chance="1.37" />
 					<optionRange from="34269" to="34288" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="100.0">
-					<optionRange from="34389" to="34408" chance="5.89" />
-					<optionRange from="34429" to="34448" chance="5.89" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34229" to="34248" chance="1.37" />
-					<optionRange from="34269" to="34288" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="100.0">
+			<optionGroup order="1">
+				<optionCategory chance="100">
 					<optionRange from="34389" to="34408" chance="5.89" />
 					<optionRange from="34429" to="34448" chance="5.89" />
 				</optionCategory>
@@ -324,65 +177,35 @@
 		</variation>
 		<!-- Life Stone Lv. 2 - Armor -->
 		<variation mineralId="94188">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34249" to="34268" chance="1.37" />
 					<optionRange from="34289" to="34308" chance="1.37" />
 					<optionRange from="34329" to="34348" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34409" to="34428" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="34449" to="34468" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="34489" to="34508" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34249" to="34268" chance="1.37" />
-					<optionRange from="34289" to="34308" chance="1.37" />
-					<optionRange from="34329" to="34348" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34409" to="34428" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="34449" to="34468" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="34489" to="34508" chance="1.85" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.1 - Boots -->
 		<variation mineralId="94187">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34229" to="34248" chance="1.37" />
 					<optionRange from="34269" to="34288" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="100.0">
-					<optionRange from="34389" to="34408" chance="5.89" />
-					<optionRange from="34429" to="34448" chance="5.89" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34229" to="34248" chance="1.37" />
-					<optionRange from="34269" to="34288" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="100.0">
+			<optionGroup order="1">
+				<optionCategory chance="100">
 					<optionRange from="34389" to="34408" chance="5.89" />
 					<optionRange from="34429" to="34448" chance="5.89" />
 				</optionCategory>
@@ -390,65 +213,35 @@
 		</variation>
 		<!-- Life Stone Lv. 2 - Boots -->
 		<variation mineralId="94188">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34249" to="34268" chance="1.37" />
 					<optionRange from="34289" to="34308" chance="1.37" />
 					<optionRange from="34369" to="34388" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34409" to="34428" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="34449" to="34468" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="34529" to="34548" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34249" to="34268" chance="1.37" />
-					<optionRange from="34289" to="34308" chance="1.37" />
-					<optionRange from="34369" to="34388" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34409" to="34428" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="34449" to="34468" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="34529" to="34548" chance="1.85" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.1 - Gloves -->
 		<variation mineralId="94187">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34229" to="34248" chance="1.37" />
 					<optionRange from="34269" to="34288" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="100.0">
-					<optionRange from="34389" to="34408" chance="5.89" />
-					<optionRange from="34429" to="34448" chance="5.89" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34229" to="34248" chance="1.37" />
-					<optionRange from="34269" to="34288" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="100.0">
+			<optionGroup order="1">
+				<optionCategory chance="100">
 					<optionRange from="34389" to="34408" chance="5.89" />
 					<optionRange from="34429" to="34448" chance="5.89" />
 				</optionCategory>
@@ -456,65 +249,35 @@
 		</variation>
 		<!-- Life Stone Lv. 2 - Boots -->
 		<variation mineralId="94188">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34249" to="34268" chance="1.37" />
 					<optionRange from="34289" to="34308" chance="1.37" />
 					<optionRange from="34349" to="34368" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34409" to="34428" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="34449" to="34468" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="34509" to="34528" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34249" to="34268" chance="1.37" />
-					<optionRange from="34289" to="34308" chance="1.37" />
-					<optionRange from="34349" to="34368" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34409" to="34428" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="34449" to="34468" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="34509" to="34528" chance="1.85" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.1 - Helmet -->
 		<variation mineralId="94187">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34229" to="34248" chance="1.37" />
 					<optionRange from="34269" to="34288" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="100.0">
-					<optionRange from="34389" to="34408" chance="5.89" />
-					<optionRange from="34429" to="34448" chance="5.89" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34229" to="34248" chance="1.37" />
-					<optionRange from="34269" to="34288" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="100.0">
+			<optionGroup order="1">
+				<optionCategory chance="100">
 					<optionRange from="34389" to="34408" chance="5.89" />
 					<optionRange from="34429" to="34448" chance="5.89" />
 				</optionCategory>
@@ -522,65 +285,35 @@
 		</variation>
 		<!-- Life Stone Lv. 2 - Helmet -->
 		<variation mineralId="94188">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34249" to="34268" chance="1.37" />
 					<optionRange from="34289" to="34308" chance="1.37" />
 					<optionRange from="34309" to="34328" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34409" to="34428" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="34449" to="34468" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="34469" to="34488" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34249" to="34268" chance="1.37" />
-					<optionRange from="34289" to="34308" chance="1.37" />
-					<optionRange from="34309" to="34328" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34409" to="34428" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="34449" to="34468" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="34469" to="34488" chance="1.85" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.1 - Legs -->
 		<variation mineralId="94187">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34229" to="34248" chance="1.37" />
 					<optionRange from="34269" to="34288" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="100.0">
-					<optionRange from="34389" to="34408" chance="5.89" />
-					<optionRange from="34429" to="34448" chance="5.89" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34229" to="34248" chance="1.37" />
-					<optionRange from="34269" to="34288" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="100.0">
+			<optionGroup order="1">
+				<optionCategory chance="100">
 					<optionRange from="34389" to="34408" chance="5.89" />
 					<optionRange from="34429" to="34448" chance="5.89" />
 				</optionCategory>
@@ -588,126 +321,69 @@
 		</variation>
 		<!-- Life Stone Lv. 2 - Legs -->
 		<variation mineralId="94188">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="34249" to="34268" chance="1.37" />
 					<optionRange from="34289" to="34308" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="34409" to="34428" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="45.0">
-					<optionRange from="34449" to="34468" chance="0.94" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="34249" to="34268" chance="1.37" />
-					<optionRange from="34289" to="34308" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="34409" to="34428" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="45.0">
+				<optionCategory chance="45">
 					<optionRange from="34449" to="34468" chance="0.94" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.1 - Sigil/Shield -->
 		<variation mineralId="93121">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="100.0">
-					<optionRange from="33547" to="33609" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="33547" to="33609" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="100.0">
+			<optionGroup order="1">
+				<optionCategory chance="100">
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
 		</variation>
 		<!-- Life Stone Lv.2 - Sigil/Shield -->
 		<variation mineralId="93122">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="33547" to="33609" chance="1.37" />
 				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="50161" to="50166" chance="1.37" />
 					<optionRange from="50174" to="50179" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="33547" to="33609" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-		<optionGroup weaponType="warrior" order="1">
-			<optionCategory chance="55.0">
-				<optionRange from="33547" to="33609" chance="1.37" />
-			</optionCategory>
-			<optionCategory chance="35.0">
-				<optionRange from="33547" to="33609" chance="1.37" />
-			</optionCategory>
-			<optionCategory chance="10.0">
-				<optionRange from="50161" to="50166" chance="1.37" />
-				<optionRange from="50174" to="50179" chance="1.37" />
-			</optionCategory>
-		</optionGroup>
 		</variation>
 		<!-- Life Stone - Circlets -->
 		<variation mineralId="94303">
-			<optionGroup weaponType="warrior" order="0">
-				<optionCategory chance="100.0">
+			<optionGroup order="0">
+				<optionCategory chance="100">
 					<optionRange from="50102" to="50154" chance="1.37" />
 				</optionCategory>
 			</optionGroup>
-			<optionGroup weaponType="warrior" order="1">
-				<optionCategory chance="55.0">
+			<optionGroup order="1">
+				<optionCategory chance="55">
 					<optionRange from="50188" to="50190" chance="5.89" />
 				</optionCategory>
-				<optionCategory chance="35.0">
+				<optionCategory chance="35">
 					<optionRange from="50191" to="50193" chance="0.94" />
 				</optionCategory>
-				<optionCategory chance="10.0">
-					<optionRange from="50194" to="50196" chance="1.85" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="0">
-				<optionCategory chance="100.0">
-					<optionRange from="50102" to="50154" chance="1.37" />
-				</optionCategory>
-			</optionGroup>
-			<optionGroup weaponType="mage" order="1">
-				<optionCategory chance="55.0">
-					<optionRange from="50188" to="50190" chance="5.89" />
-				</optionCategory>
-				<optionCategory chance="35.0">
-					<optionRange from="50191" to="50193" chance="0.94" />
-				</optionCategory>
-				<optionCategory chance="10.0">
+				<optionCategory chance="10">
 					<optionRange from="50194" to="50196" chance="1.85" />
 				</optionCategory>
 			</optionGroup>

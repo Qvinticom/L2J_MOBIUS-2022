@@ -36,10 +36,9 @@ import org.l2jmobius.gameserver.model.options.OptionDataGroup;
 import org.l2jmobius.gameserver.model.options.Options;
 import org.l2jmobius.gameserver.model.options.Variation;
 import org.l2jmobius.gameserver.model.options.VariationFee;
-import org.l2jmobius.gameserver.model.options.VariationWeaponType;
 
 /**
- * @author Pere
+ * @author Pere, Mobius
  */
 public class VariationData implements IXmlReader
 {
@@ -79,8 +78,6 @@ public class VariationData implements IXmlReader
 				
 				forEach(variationNode, "optionGroup", groupNode ->
 				{
-					final String weaponTypeString = parseString(groupNode.getAttributes(), "weaponType").toUpperCase();
-					final VariationWeaponType weaponType = VariationWeaponType.valueOf(weaponTypeString);
 					final int order = parseInteger(groupNode.getAttributes(), "order");
 					final List<OptionDataCategory> sets = new ArrayList<>();
 					forEach(groupNode, "optionCategory", categoryNode ->
@@ -116,10 +113,33 @@ public class VariationData implements IXmlReader
 							}
 						});
 						
-						sets.add(new OptionDataCategory(options, chance));
+						// Support for specific item ids.
+						final List<Integer> itemIds = new ArrayList<>();
+						forEach(categoryNode, "item", optionNode ->
+						{
+							final int itemId = parseInteger(optionNode.getAttributes(), "id");
+							if (!itemIds.contains(itemId))
+							{
+								itemIds.add(itemId);
+							}
+						});
+						forEach(categoryNode, "items", optionNode ->
+						{
+							final int fromId = parseInteger(optionNode.getAttributes(), "from");
+							final int toId = parseInteger(optionNode.getAttributes(), "to");
+							for (int id = fromId; id <= toId; id++)
+							{
+								if (!itemIds.contains(id))
+								{
+									itemIds.add(id);
+								}
+							}
+						});
+						
+						sets.add(new OptionDataCategory(options, itemIds, chance));
 					});
 					
-					variation.setEffectGroup(weaponType, order, new OptionDataGroup(sets));
+					variation.setEffectGroup(order, new OptionDataGroup(sets));
 				});
 				
 				_variations.put(mineralId, variation);
@@ -174,8 +194,13 @@ public class VariationData implements IXmlReader
 				
 				for (int item : itemGroup)
 				{
-					final Map<Integer, VariationFee> fees = _fees.computeIfAbsent(item, k -> new HashMap<>());
+					Map<Integer, VariationFee> fees = _fees.get(item);
+					if (fees == null)
+					{
+						fees = new HashMap<>();
+					}
 					fees.putAll(feeByMinerals);
+					_fees.put(item, fees);
 				}
 			}));
 		});
@@ -199,14 +224,13 @@ public class VariationData implements IXmlReader
 	 */
 	public VariationInstance generateRandomVariation(Variation variation, ItemInstance targetItem)
 	{
-		final VariationWeaponType weaponType = ((targetItem.getWeaponItem() != null) && targetItem.getWeaponItem().isMagicWeapon()) ? VariationWeaponType.MAGE : VariationWeaponType.WARRIOR;
-		return generateRandomVariation(variation, weaponType);
+		return generateRandomVariation(variation, targetItem.getId());
 	}
 	
-	private VariationInstance generateRandomVariation(Variation variation, VariationWeaponType weaponType)
+	private VariationInstance generateRandomVariation(Variation variation, int targetItemId)
 	{
-		final Options option1 = variation.getRandomEffect(weaponType, 0);
-		final Options option2 = variation.getRandomEffect(weaponType, 1);
+		final Options option1 = variation.getRandomEffect(0, targetItemId);
+		final Options option2 = variation.getRandomEffect(1, targetItemId);
 		return ((option1 != null) && (option2 != null)) ? new VariationInstance(variation.getMineralId(), option1, option2) : null;
 	}
 	

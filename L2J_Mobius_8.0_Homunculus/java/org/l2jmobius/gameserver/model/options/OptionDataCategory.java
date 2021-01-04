@@ -16,21 +16,24 @@
  */
 package org.l2jmobius.gameserver.model.options;
 
+import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.commons.util.Rnd;
 
 /**
- * @author Pere
+ * @author Pere, Mobius
  */
 public class OptionDataCategory
 {
 	private final Map<Options, Double> _options;
+	private final List<Integer> _itemIds;
 	private final double _chance;
 	
-	public OptionDataCategory(Map<Options, Double> options, double chance)
+	public OptionDataCategory(Map<Options, Double> options, List<Integer> itemIds, double chance)
 	{
 		_options = options;
+		_itemIds = itemIds;
 		_chance = chance;
 	}
 	
@@ -53,6 +56,11 @@ public class OptionDataCategory
 		}
 		while (result == null);
 		return result;
+	}
+	
+	public List<Integer> getItemIds()
+	{
+		return _itemIds;
 	}
 	
 	public double getChance()

@@ -16,12 +16,13 @@
  */
 package org.l2jmobius.gameserver.model.options;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.l2jmobius.commons.util.Rnd;
 
 /**
- * @author Pere
+ * @author Pere, Mobius
  */
 public class OptionDataGroup
 {
@@ -32,25 +33,33 @@ public class OptionDataGroup
 		_categories = categories;
 	}
 	
-	Options getRandomEffect()
+	Options getRandomEffect(int itemId)
 	{
+		final List<OptionDataCategory> exclutions = new ArrayList<>();
 		Options result = null;
 		do
 		{
 			double random = Rnd.nextDouble() * 100.0;
 			for (OptionDataCategory category : _categories)
 			{
+				if (!category.getItemIds().isEmpty() && !category.getItemIds().contains(itemId))
+				{
+					if (!exclutions.contains(category))
+					{
+						exclutions.add(category);
+					}
+					continue;
+				}
 				if (category.getChance() >= random)
 				{
 					result = category.getRandomOptions();
 					break;
 				}
-				
 				random -= category.getChance();
 			}
 		}
-		while (result == null);
-		// Should never get there
+		while ((result == null) && (exclutions.size() < _categories.size()));
+		
 		return result;
 	}
 }

@@ -16,19 +16,17 @@
  */
 package org.l2jmobius.gameserver.model.options;
 
-import java.util.EnumMap;
-import java.util.Map;
 import java.util.logging.Logger;
 
 /**
- * @author Pere
+ * @author Pere, Mobius
  */
 public class Variation
 {
 	private static final Logger LOGGER = Logger.getLogger(Variation.class.getSimpleName());
 	
 	private final int _mineralId;
-	private final Map<VariationWeaponType, OptionDataGroup[]> _effects = new EnumMap<>(VariationWeaponType.class);
+	private final OptionDataGroup[] _effects = new OptionDataGroup[2];
 	
 	public Variation(int mineralId)
 	{
@@ -40,20 +38,18 @@ public class Variation
 		return _mineralId;
 	}
 	
-	public void setEffectGroup(VariationWeaponType type, int order, OptionDataGroup group)
+	public void setEffectGroup(int order, OptionDataGroup group)
 	{
-		final OptionDataGroup[] effects = _effects.computeIfAbsent(type, k -> new OptionDataGroup[2]);
-		effects[order] = group;
+		_effects[order] = group;
 	}
 	
-	public Options getRandomEffect(VariationWeaponType type, int order)
+	public Options getRandomEffect(int order, int targetItemId)
 	{
-		final OptionDataGroup[] effects = _effects.get(type);
-		if ((effects == null) || (effects[order] == null))
+		if ((_effects == null) || (_effects[order] == null))
 		{
-			LOGGER.warning("Null effect: " + type + ", " + order);
+			LOGGER.warning("Null effect: for mineral " + _mineralId + ", order " + order);
 			return null;
 		}
-		return effects[order].getRandomEffect();
+		return _effects[order].getRandomEffect(targetItemId);
 	}
 }
