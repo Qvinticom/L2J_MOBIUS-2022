@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemData.xsd">
 	<!-- Scrolls: Enchant Weapon -->
-	<enchant id="959" targetGrade="S" maxEnchant="16" />
-	<enchant id="729" targetGrade="A" maxEnchant="16" />
-	<enchant id="947" targetGrade="B" maxEnchant="16" />
+	<enchant id="959" targetGrade="S" maxEnchant="16" safeEnchant="4" />
+	<enchant id="729" targetGrade="A" maxEnchant="16" safeEnchant="4" />
+	<enchant id="947" targetGrade="B" maxEnchant="16" safeEnchant="4" />
 	<enchant id="93406" targetGrade="B" maxEnchant="16" safeEnchant="4" />
-	<enchant id="951" targetGrade="C" maxEnchant="16" />
+	<enchant id="951" targetGrade="C" maxEnchant="16" safeEnchant="4" />
 	<enchant id="93408" targetGrade="C" maxEnchant="16" safeEnchant="4" />
-	<enchant id="955" targetGrade="D" maxEnchant="16" />
+	<enchant id="955" targetGrade="D" maxEnchant="16" safeEnchant="4" />
 	<enchant id="93410" targetGrade="D" maxEnchant="16" safeEnchant="4" />
 
 	<!-- Scrolls: Enchant Armor -->
-	<enchant id="960" targetGrade="S" maxEnchant="16" />
-	<enchant id="730" targetGrade="A" maxEnchant="16" />
-	<enchant id="948" targetGrade="B" maxEnchant="16" />
+	<enchant id="960" targetGrade="S" maxEnchant="16" safeEnchant="4" />
+	<enchant id="730" targetGrade="A" maxEnchant="16" safeEnchant="4" />
+	<enchant id="948" targetGrade="B" maxEnchant="16" safeEnchant="4" />
 	<enchant id="93407" targetGrade="B" maxEnchant="16" safeEnchant="4" />
-	<enchant id="952" targetGrade="C" maxEnchant="16" />
+	<enchant id="952" targetGrade="C" maxEnchant="16" safeEnchant="4" />
 	<enchant id="93409" targetGrade="C" maxEnchant="16" safeEnchant="4" />
-	<enchant id="956" targetGrade="D" maxEnchant="16" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
+	<enchant id="956" targetGrade="D" maxEnchant="16" safeEnchant="4" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
 	<enchant id="93411" targetGrade="D" maxEnchant="16" safeEnchant="4" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
 
 	<!-- Blessed Scrolls: Enchant Weapon -->
