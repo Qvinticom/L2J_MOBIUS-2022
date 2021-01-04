@@ -34,6 +34,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.enums.PartyDistributionType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
@@ -895,6 +896,7 @@ public class Party extends AbstractPlayerGroup
 					}
 					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
 					PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
+					MagicLampData.getInstance().addLampExp(member, exp);
 				}
 			}
 			else

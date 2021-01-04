@@ -81,6 +81,8 @@ import org.l2jmobius.gameserver.network.clientpackets.limitshop.RequestPurchaseL
 import org.l2jmobius.gameserver.network.clientpackets.limitshop.RequestPurchaseLimitShopItemList;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import org.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
+import org.l2jmobius.gameserver.network.clientpackets.magiclamp.ExMagicLampGameInfo;
+import org.l2jmobius.gameserver.network.clientpackets.magiclamp.ExMagicLampGameStart;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.ConfirmMenteeAdd;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd;
 import org.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
@@ -491,8 +493,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_COSTUME_EXTRACT(0x16C, null, ConnectionState.IN_GAME),
 	EX_COSTUME_LOCK(0x16D, null, ConnectionState.IN_GAME),
 	EX_COSTUME_CHANGE_SHORTCUT(0x16E, null, ConnectionState.IN_GAME),
-	EX_MAGICLAMP_GAME_INFO(0x16F, null, ConnectionState.IN_GAME),
-	EX_MAGICLAMP_GAME_START(0x170, null, ConnectionState.IN_GAME),
+	EX_MAGICLAMP_GAME_INFO(0x16F, ExMagicLampGameInfo::new, ConnectionState.IN_GAME),
+	EX_MAGICLAMP_GAME_START(0x170, ExMagicLampGameStart::new, ConnectionState.IN_GAME),
 	EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME),
 	EX_PREMIUM_MANAGER_LINK_HTML(0x172, null, ConnectionState.IN_GAME),
 	EX_PREMIUM_MANAGER_PASS_CMD_TO_SERVER(0x173, null, ConnectionState.IN_GAME),

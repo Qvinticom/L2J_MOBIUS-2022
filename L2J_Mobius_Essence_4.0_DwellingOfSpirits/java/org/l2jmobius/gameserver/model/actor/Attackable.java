@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.EventDroplist;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.DropType;
 import org.l2jmobius.gameserver.enums.ElementalType;
@@ -530,6 +531,7 @@ public class Attackable extends Npc
 											attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
 										}
 										PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
+										MagicLampData.getInstance().addLampExp(attacker, exp);
 									}
 								}
 								

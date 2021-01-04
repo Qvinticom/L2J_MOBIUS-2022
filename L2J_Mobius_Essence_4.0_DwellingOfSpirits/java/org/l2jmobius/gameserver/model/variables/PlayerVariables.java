@@ -65,7 +65,10 @@ public class PlayerVariables extends AbstractVariables
 	public static final String HUNTING_ZONE_RESET_TIME = "HUNTING_ZONE_RESET_TIME_";
 	public static final String SAYHA_GRACE_SUPPORT_ENDTIME = "SAYHA_GRACE_SUPPORT_ENDTIME";
 	public static final String LIMITED_SAYHA_GRACE_ENDTIME = "LIMITED_SAYHA_GRACE_ENDTIME";
+	public static final String MAGIC_LAMP_EXP = "MAGIC_LAMP_EXP";
+	public static final String MAGIC_LAMP_COUNT = "MAGIC_LAMP_COUNT";
 	public static final String DEATH_POINT_COUNT = "DEATH_POINT_COUNT";
+	public static final String FAVORITE_TELEPORTS = "FAVORITE_TELEPORTS";
 	public static final String STAT_POINTS = "STAT_POINTS";
 	public static final String STAT_STR = "STAT_STR";
 	public static final String STAT_DEX = "STAT_DEX";
@@ -73,7 +76,6 @@ public class PlayerVariables extends AbstractVariables
 	public static final String STAT_INT = "STAT_INT";
 	public static final String STAT_WIT = "STAT_WIT";
 	public static final String STAT_MEN = "STAT_MEN";
-	public static final String FAVORITE_TELEPORTS = "FAVORITE_TELEPORTS";
 	
 	private final int _objectId;
 	

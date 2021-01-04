@@ -106,6 +106,7 @@ public class Config
 	private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
 	private static final String HEXID_FILE = "./config/hexid.txt";
 	private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
+	private static final String MAGIC_LAMP_FILE = "./config/MagicLamp.ini";
 	
 	// --------------------------------------------------
 	// Custom Config File Definitions
@@ -854,6 +855,14 @@ public class Config
 	public static int MAX_CONNECTION_PER_IP;
 	public static boolean ENABLE_CMD_LINE_LOGIN;
 	public static boolean ONLY_CMD_LINE_LOGIN;
+	
+	// Magic Lamp
+	public static boolean MAGIC_LAMP_ENABLE;
+	public static int MAGIC_LAMP_MAX_GAME_COUNT;
+	public static int MAGIC_LAMP_REWARD_COUNT;
+	public static int MAGIC_LAMP_GREATER_REWARD_COUNT;
+	public static int MAGIC_LAMP_MAX_LEVEL_EXP;
+	public static double MAGIC_LAMP_CHARGE_RATE;
 	
 	// GrandBoss Settings
 	
@@ -1874,6 +1883,15 @@ public class Config
 			TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
 			TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
 			TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
+			
+			// Load Training Camp config file (if exists)
+			final PropertiesParser magicLampSettings = new PropertiesParser(MAGIC_LAMP_FILE);
+			MAGIC_LAMP_ENABLE = magicLampSettings.getBoolean("MagicLampEnabled", false);
+			MAGIC_LAMP_MAX_GAME_COUNT = magicLampSettings.getInt("MagicLampMaxGames", 300);
+			MAGIC_LAMP_REWARD_COUNT = magicLampSettings.getInt("MagicLampRewardCount", 1);
+			MAGIC_LAMP_GREATER_REWARD_COUNT = magicLampSettings.getInt("MagicLampGreaterRewardCount", 10);
+			MAGIC_LAMP_MAX_LEVEL_EXP = magicLampSettings.getInt("MagicLampMaxLevelExp", 10000000);
+			MAGIC_LAMP_CHARGE_RATE = magicLampSettings.getDouble("MagicLampChargeRate", 0.1);
 			
 			// Load Training Camp config file (if exists)
 			final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);

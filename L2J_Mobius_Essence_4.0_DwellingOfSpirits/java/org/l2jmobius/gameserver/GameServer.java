@@ -81,6 +81,7 @@ import org.l2jmobius.gameserver.data.xml.ItemCrystallizationData;
 import org.l2jmobius.gameserver.data.xml.KarmaData;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
 import org.l2jmobius.gameserver.data.xml.LuckyGameData;
+import org.l2jmobius.gameserver.data.xml.MagicLampData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.data.xml.NpcNameLocalisationData;
@@ -283,6 +284,7 @@ public class GameServer
 		CommissionManager.getInstance();
 		LuckyGameData.getInstance();
 		AttendanceRewardData.getInstance();
+		MagicLampData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();

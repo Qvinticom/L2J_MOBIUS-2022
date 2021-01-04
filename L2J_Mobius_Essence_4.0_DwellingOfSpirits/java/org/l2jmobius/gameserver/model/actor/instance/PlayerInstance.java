@@ -1216,6 +1216,26 @@ public class PlayerInstance extends Playable
 		getVariables().set(PlayerVariables.HAIR_ACCESSORY_VARIABLE_NAME, enabled);
 	}
 	
+	public int getLampExp()
+	{
+		return getVariables().getInt(PlayerVariables.MAGIC_LAMP_EXP, 0);
+	}
+	
+	public int getLampCount()
+	{
+		return getVariables().getInt(PlayerVariables.MAGIC_LAMP_COUNT, 0);
+	}
+	
+	public void setLampExp(int exp)
+	{
+		getVariables().set(PlayerVariables.MAGIC_LAMP_EXP, exp);
+	}
+	
+	public void setLampCount(int count)
+	{
+		getVariables().set(PlayerVariables.MAGIC_LAMP_COUNT, count);
+	}
+	
 	/**
 	 * @return the base PlayerTemplate link to the PlayerInstance.
 	 */
