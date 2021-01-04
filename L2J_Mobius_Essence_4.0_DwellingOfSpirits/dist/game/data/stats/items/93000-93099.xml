@@ -58,6 +58,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40059" level="1" /> <!-- Sayha's Grace -->
+		</skills>
 	</item>
 	<item id="93004" name="A-grade Accessories" additionalName="Not Available" type="EtcItem">
 		<set name="icon" val="icon.accessory_group" />
@@ -1014,6 +1018,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40098" level="1" /> <!-- Sayha's Grace -->
+		</skills>
 	</item>
 	<item id="93068" name="Red Lantern" additionalName="1st Place" type="EtcItem">
 		<!-- XP +100,000,000, SP +2,700,000. Cannot be exchanged for the lit lantern. -->
