@@ -263,7 +263,10 @@ public class AutoUseTaskManager
 	
 	public void stopAutoUseTask(PlayerInstance player)
 	{
-		PLAYERS.remove(player);
+		if (player.getAutoUseSettings().isEmpty() || !player.isOnline() || player.isInOfflineMode())
+		{
+			PLAYERS.remove(player);
+		}
 	}
 	
 	public void addAutoSupplyItem(PlayerInstance player, int itemId)
