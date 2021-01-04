@@ -68,7 +68,7 @@ public class MagicLampData implements IXmlReader
 		}));
 	}
 	
-	public void addLampExp(final PlayerInstance player, final double exp)
+	public void addLampExp(PlayerInstance player, double exp)
 	{
 		if (Config.MAGIC_LAMP_ENABLE)
 		{
