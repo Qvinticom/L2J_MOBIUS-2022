@@ -1368,6 +1368,41 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="8868" min="1" max="1" chance="100" /> <!-- Ziggo's Jewel -->
+			<item id="81" min="1" max="1" chance="100" /> <!-- Dragon Slayer -->
+			<item id="151" min="1" max="1" chance="100" /> <!-- Sword Of Miracles -->
+			<item id="164" min="1" max="1" chance="100" /> <!-- Elysian -->
+			<item id="213" min="1" max="1" chance="100" /> <!-- Branch of the Mother Tree -->
+			<item id="236" min="1" max="1" chance="100" /> <!-- Soul Separator -->
+			<item id="270" min="1" max="1" chance="100" /> <!-- Dragon Grinder -->
+			<item id="289" min="1" max="1" chance="100" /> <!-- Soul Bow -->
+			<item id="305" min="1" max="1" chance="100" /> <!-- Tallum Glaive -->
+			<item id="2500" min="1" max="1" chance="100" /> <!-- Dark Legion's Edge -->
+			<item id="5706" min="1" max="1" chance="100" /> <!-- Damascus*Damascus -->
+			<item id="7895" min="1" max="1" chance="100" /> <!-- Flaming Dragon Skull -->
+			<item id="7902" min="1" max="1" chance="100" /> <!-- Doom Crusher -->
+			<item id="91888" min="1" max="1" chance="100" /> <!-- Undertaker -->
+			<item id="91903" min="1" max="1" chance="100" /> <!-- Lacerator -->
+			<item id="92939" min="1" max="1" chance="100" /> <!-- Soul Separator(Sealed) -->
+			<item id="92941" min="1" max="1" chance="100" /> <!-- Dragon Grinder(Sealed) -->
+			<item id="92943" min="1" max="1" chance="100" /> <!-- Soul Bow(Sealed) -->
+			<item id="92944" min="1" max="1" chance="100" /> <!-- Tallum Glaive(Sealed) -->
+			<item id="92945" min="1" max="1" chance="100" /> <!-- Dark Legion's Edge(Sealed) -->
+			<item id="92949" min="1" max="1" chance="100" /> <!-- Damascus*Damascus(Sealed)-->
+			<item id="92952" min="1" max="1" chance="100" /> <!-- Flaming Dragon Skull(Sealed) -->
+			<item id="92954" min="1" max="1" chance="100" /> <!-- Doom Crusher(Sealed) -->
+			<item id="92968" min="1" max="1" chance="100" /> <!-- Undertaker(Sealed) -->
+			<item id="92971" min="1" max="1" chance="100" /> <!-- Lacerator(Sealed) -->
+			<item id="93080" min="1" max="1" chance="100" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+			<item id="91031" min="1" max="1" chance="100" /> <!-- Water Spirit Evolution Stone -->
+			<item id="91032" min="1" max="1" chance="100" /> <!-- Fire Spirit Evolution Stone -->
+			<item id="91033" min="1" max="1" chance="100" /> <!-- Wind Spirit Evolution Stone -->
+			<item id="91034" min="1" max="1" chance="100" /> <!-- Earth Spirit Evolution Stone -->
+		</capsuled_items>
 	</item>
 	<item id="92990" name="Boss Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Baium's Thunder Breaker, Zaken's Blood Sword, Core's Plasmic Bow, Queen Ant's Stone Breaker, Orfen's Venom Sword. -->
