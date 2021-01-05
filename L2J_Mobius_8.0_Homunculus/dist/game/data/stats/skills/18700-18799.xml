@@ -724,6 +724,7 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<targetConditions>
 			<condition name="OpTargetPc" />
 		</targetConditions>
@@ -742,6 +743,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<effects>
 			<effect name="DebuffBlock" />
 			<effect name="DispelByCategory">
