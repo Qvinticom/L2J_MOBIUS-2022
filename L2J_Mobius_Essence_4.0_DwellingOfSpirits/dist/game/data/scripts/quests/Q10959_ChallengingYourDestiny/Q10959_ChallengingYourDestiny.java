@@ -54,8 +54,8 @@ public class Q10959_ChallengingYourDestiny extends Quest
 	// Items
 	private static final ItemHolder SOE_MATHORN = new ItemHolder(93319, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
-	private static final ItemHolder SPIRIT_ORE_REWARD = new ItemHolder(3031, 50);
-	private static final ItemHolder XP_GROWTH_SCROLL_REWARD = new ItemHolder(49674, 1);
+	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
+	private static final ItemHolder XP_GROWTH_SCROLL = new ItemHolder(49674, 1);
 	private static final ItemHolder HP_POTION_REWARD = new ItemHolder(91912, 50);
 	// Location
 	private static final Location TRAINING_GROUNDS = new Location(53076, 148674, -2432);
@@ -110,9 +110,9 @@ public class Q10959_ChallengingYourDestiny extends Quest
 				if (qs.isCond(2))
 				{
 					giveStoryBuffReward(npc, player); // ?
-					giveItems(player, SPIRIT_ORE_REWARD);
+					giveItems(player, SPIRIT_ORE);
 					giveItems(player, SOE_NOVICE);
-					giveItems(player, XP_GROWTH_SCROLL_REWARD);
+					giveItems(player, XP_GROWTH_SCROLL);
 					giveItems(player, HP_POTION_REWARD);
 					addExpAndSp(player, 600000, 13500);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))

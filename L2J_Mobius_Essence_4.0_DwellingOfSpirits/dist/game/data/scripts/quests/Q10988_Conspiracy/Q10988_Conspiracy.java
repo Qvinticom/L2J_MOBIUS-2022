@@ -40,8 +40,7 @@ import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeS
 
 /**
  * Conspiracy (10988)
- * @author RobikBobik
- * @Notee: Based on NA server September 2019
+ * @author RobikBobik, Mobius
  */
 public class Q10988_Conspiracy extends Quest
 {
@@ -57,22 +56,8 @@ public class Q10988_Conspiracy extends Quest
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
-	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50); // TODO: Finish Item
-	private static final ItemHolder RICE_CAKE_OF_FLAMING_FIGHTING_SPIRIT_EVENT = new ItemHolder(91840, 1);
-	// HELMET FOR ALL ARMORS
-	private static final ItemHolder MOON_HELMET = new ItemHolder(7850, 1);
-	// HEAVY
-	private static final ItemHolder MOON_ARMOR = new ItemHolder(7851, 1);
-	private static final ItemHolder MOON_GAUNTLETS = new ItemHolder(7852, 1);
-	private static final ItemHolder MOON_BOOTS = new ItemHolder(7853, 1);
-	// LIGHT
-	private static final ItemHolder MOON_SHELL = new ItemHolder(7854, 1);
-	private static final ItemHolder MOON_LEATHER_GLOVES = new ItemHolder(7855, 1);
-	private static final ItemHolder MOON_SHOES = new ItemHolder(7856, 1);
-	// ROBE
-	private static final ItemHolder MOON_CAPE = new ItemHolder(7857, 1);
-	private static final ItemHolder MOON_SILK = new ItemHolder(7858, 1);
-	private static final ItemHolder MOON_SANDALS = new ItemHolder(7859, 1);
+	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50);
+	private static final ItemHolder XP_GROWTH_SCROLL = new ItemHolder(49674, 1);
 	// Misc
 	private static final int MAX_LEVEL = 20;
 	private static final String KILL_COUNT_VAR = "KillCount";
@@ -112,21 +97,6 @@ public class Q10988_Conspiracy extends Quest
 				htmltext = event;
 				break;
 			}
-			case "30332-01.html":
-			{
-				htmltext = event;
-				break;
-			}
-			case "30332-02.html":
-			{
-				htmltext = event;
-				break;
-			}
-			case "30332-03.html":
-			{
-				htmltext = event;
-				break;
-			}
 			case "30332.html":
 			{
 				htmltext = event;
@@ -142,7 +112,7 @@ public class Q10988_Conspiracy extends Quest
 				htmltext = "30560.htm";
 				break;
 			}
-			case "HeavyArmor.html":
+			case "reward":
 			{
 				if (qs.isStarted())
 				{
@@ -150,64 +120,13 @@ public class Q10988_Conspiracy extends Quest
 					giveItems(player, SOE_NOVICE);
 					giveItems(player, SPIRIT_ORE);
 					giveItems(player, HP_POTS);
-					giveItems(player, RICE_CAKE_OF_FLAMING_FIGHTING_SPIRIT_EVENT);
-					giveItems(player, MOON_HELMET);
-					giveItems(player, MOON_ARMOR);
-					giveItems(player, MOON_GAUNTLETS);
-					giveItems(player, MOON_BOOTS);
+					giveItems(player, XP_GROWTH_SCROLL);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
 					}
 					qs.exitQuest(false, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "LightArmor.html":
-			{
-				if (qs.isStarted())
-				{
-					addExpAndSp(player, 600000, 13500);
-					giveItems(player, SOE_NOVICE);
-					giveItems(player, SPIRIT_ORE);
-					giveItems(player, HP_POTS);
-					giveItems(player, RICE_CAKE_OF_FLAMING_FIGHTING_SPIRIT_EVENT);
-					giveItems(player, MOON_HELMET);
-					giveItems(player, MOON_SHELL);
-					giveItems(player, MOON_LEATHER_GLOVES);
-					giveItems(player, MOON_SHOES);
-					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
-					{
-						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
-						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
-					}
-					qs.exitQuest(false, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "Robe.html":
-			{
-				if (qs.isStarted())
-				{
-					addExpAndSp(player, 600000, 13500);
-					giveItems(player, SOE_NOVICE);
-					giveItems(player, SPIRIT_ORE);
-					giveItems(player, HP_POTS);
-					giveItems(player, RICE_CAKE_OF_FLAMING_FIGHTING_SPIRIT_EVENT);
-					giveItems(player, MOON_HELMET);
-					giveItems(player, MOON_CAPE);
-					giveItems(player, MOON_SILK);
-					giveItems(player, MOON_SANDALS);
-					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
-					{
-						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
-						player.sendPacket(ExClassChangeSetAlarm.STATIC_PACKET);
-					}
-					qs.exitQuest(false, true);
-					htmltext = event;
 				}
 				break;
 			}

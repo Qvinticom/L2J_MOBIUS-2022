@@ -98,12 +98,101 @@ public class ExRequestClassChange implements IClientIncomingPacket
 				player.setBaseClass(player.getActiveClass());
 			}
 			
-			// Death Knight rewards.
-			if ((_classId == 197) || (_classId == 201) || (_classId == 205))
+			// Class change rewards.
+			if (!Config.DISABLE_TUTORIAL)
 			{
-				player.addItem("ExRequestClassChange", 93028, 1, player, true); // Aden Sword.
-				player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
-				player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+				switch (player.getClassId())
+				{
+					case KNIGHT:
+					case ELVEN_KNIGHT:
+					case PALUS_KNIGHT:
+					case DEATH_BLADE_HUMAN:
+					case DEATH_BLADE_ELF:
+					case DEATH_BLADE_DARK_ELF:
+					{
+						player.addItem("ExRequestClassChange", 93028, 1, player, true); // Aden Sword.
+						player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case WARRIOR:
+					{
+						player.addItem("ExRequestClassChange", 93028, 1, player, true); // Aden Sword.
+						player.addItem("ExRequestClassChange", 93034, 1, player, true); // Aden Spear.
+						player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case ROGUE:
+					case ELVEN_SCOUT:
+					case ASSASSIN:
+					{
+						player.addItem("ExRequestClassChange", 93029, 1, player, true); // Aden Dagger.
+						player.addItem("ExRequestClassChange", 93030, 1, player, true); // Aden Bow.
+						player.addItem("ExRequestClassChange", 1341, 2000, player, true); // Bone Arrow.
+						player.addItem("ExRequestClassChange", 93494, 1, player, true); // Moon Shell Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case WIZARD:
+					case CLERIC:
+					case ELVEN_WIZARD:
+					case ORACLE:
+					case DARK_WIZARD:
+					case SHILLIEN_ORACLE:
+					case ORC_SHAMAN:
+					{
+						player.addItem("ExRequestClassChange", 93033, 1, player, true); // Two-Handed Blunt Weapon of Aden.
+						player.addItem("ExRequestClassChange", 93495, 1, player, true); // Moon Cape Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case ORC_RAIDER:
+					{
+						player.addItem("ExRequestClassChange", 93032, 1, player, true); // Two-handed Sword of Aden.
+						player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
+						player.addItem("ExRequestClassChange", 93497, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case ORC_MONK:
+					{
+						player.addItem("ExRequestClassChange", 93035, 1, player, true); // Aden Fist.
+						player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
+						player.addItem("ExRequestClassChange", 93497, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case ARTISAN:
+					case SCAVENGER:
+					{
+						player.addItem("ExRequestClassChange", 93031, 1, player, true); // Aden Club.
+						player.addItem("ExRequestClassChange", 93034, 1, player, true); // Aden Spear.
+						player.addItem("ExRequestClassChange", 93493, 1, player, true); // Moon Armor Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case TROOPER:
+					{
+						player.addItem("ExRequestClassChange", 93037, 1, player, true); // Aden Ancient Sword.
+						player.addItem("ExRequestClassChange", 93494, 1, player, true); // Moon Shell Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case WARDER:
+					{
+						player.addItem("ExRequestClassChange", 93030, 1, player, true); // Aden Bow.
+						player.addItem("ExRequestClassChange", 1341, 2000, player, true); // Bone Arrow.
+						player.addItem("ExRequestClassChange", 93494, 1, player, true); // Moon Shell Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+					case SOUL_FINDER:
+					{
+						player.addItem("ExRequestClassChange", 93036, 1, player, true); // Aden Rapier.
+						player.addItem("ExRequestClassChange", 93494, 1, player, true); // Moon Shell Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
+				}
 			}
 			
 			// Elemental Spirits.
