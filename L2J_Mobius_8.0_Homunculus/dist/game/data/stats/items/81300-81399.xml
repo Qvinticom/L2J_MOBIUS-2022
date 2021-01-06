@@ -792,20 +792,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
-		<skills>
-			<skill id="13563" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchantment Effect: Atlas' Earring Lv. 1 -->
-			<skill id="13563" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchantment Effect: Atlas' Earring Lv. 2 -->
-			<skill id="13563" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchantment Effect: Atlas' Earring Lv. 3 -->
-			<skill id="13563" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchantment Effect: Atlas' Earring Lv. 4 -->
-			<skill id="13563" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchantment Effect: Atlas' Earring Lv. 5 -->
-			<skill id="13564" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchantment Effect: Atlas' Earring Lv. 6 -->
-			<skill id="13564" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchantment Effect: Atlas' Earring Lv. 7 -->
-			<skill id="13564" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchantment Effect: Atlas' Earring Lv. 8 -->
-			<skill id="13564" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchantment Effect: Atlas' Earring Lv. 9 -->
-			<skill id="13565" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchantment Effect: Atlas' Earring Lv. 10 -->
-			<skill id="13565" level="11" type="ON_ENCHANT" type_value="11" /> <!-- Enchantment Effect: Atlas' Earring Lv. 11 -->
-			<skill id="13565" level="12" type="ON_ENCHANT" type_value="12" /> <!-- Enchantment Effect: Atlas' Earring Lv. 12 -->
-		</skills>
+		<!-- Skills handled by enchantItemOptions -->
 		<stats>
 			<stat type="mDef">151</stat>
 		</stats>

@@ -982,9 +982,7 @@
 		<cond msgId="113" addName="1">
 			<player level="110" />
 		</cond>
-		<skills>
-			<skill id="39395" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
-		</skills>
+		<!-- Skill handled by enchantItemOptions -->
 	</item>
 	<item id="81696" name="Unique Artifact Book" additionalName="Lv. 3" type="Armor">
 		<!-- Unlocks 3 attack slots, 3 defense slots, 3 support slots and 12 balance slots. When equipping 3 sets of artifacts, damage +6%, received damage -7%, all basic stats +1. <Enchanting>. Use Blessed Scroll: Enchant Artifact Book. -->
@@ -999,9 +997,7 @@
 		<cond msgId="113" addName="1">
 			<player level="110" />
 		</cond>
-		<skills>
-			<skill id="39395" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
-		</skills>
+		<!-- Skill handled by enchantItemOptions -->
 	</item>
 	<item id="81697" name="Gold Save Ticket" type="EtcItem">
 		<!-- A ticket that enhances probability by +10% when using a Normal Weapon Enchant Scroll to enchant R-grade Weapons. When Enchant succeeds, it increases by 1-3. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
