@@ -1034,7 +1034,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<cond>
+			<player MinimumVitalityPoints="35000" />
+		</cond>
+		<skills>
+			<skill id="39489" level="1" /> <!-- PA Storm Scroll -->
+		</skills>
 	</item>
 	<item id="80747" name="PA Honey Dark Beer" type="EtcItem">
 		<!-- For PA. For 30 min., all basic stats +3, Vitality bonus +30%. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
