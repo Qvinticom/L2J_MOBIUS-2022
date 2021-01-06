@@ -130,7 +130,7 @@ public class AutoPlayTaskManager
 						continue TARGET;
 					}
 					// Check monster target.
-					if (player.getAutoPlaySettings().isRespectfulHunting() && (nearby.getTarget() != null) && (nearby.getTarget() != player))
+					if (player.getAutoPlaySettings().isRespectfulHunting() && (nearby.getTarget() != null) && (nearby.getTarget() != player && !player.getServitors().containsKey(nearby.getTarget().getObjectId())))
 					{
 						continue TARGET;
 					}
