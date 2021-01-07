@@ -76,7 +76,6 @@ public class ElementalSpirit
 			final UserInfo userInfo = new UserInfo(_owner);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
 			_owner.sendPacket(userInfo);
-			
 		}
 		_owner.sendPacket(new ExElementalSpiritGetExp(getType(), _data.getExperience()));
 	}

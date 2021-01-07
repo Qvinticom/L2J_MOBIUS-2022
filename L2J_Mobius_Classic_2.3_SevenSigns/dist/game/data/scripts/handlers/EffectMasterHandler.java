@@ -162,7 +162,6 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("GiveFame", GiveFame::new);
 		EffectHandler.getInstance().registerHandler("GiveRecommendation", GiveRecommendation::new);
 		EffectHandler.getInstance().registerHandler("GiveSp", GiveSp::new);
-		EffectHandler.getInstance().registerHandler("GiveSpiritExp", GiveSpiritExp::new);
 		EffectHandler.getInstance().registerHandler("GiveXp", GiveXp::new);
 		EffectHandler.getInstance().registerHandler("Grow", Grow::new);
 		EffectHandler.getInstance().registerHandler("HairAccessorySet", HairAccessorySet::new);

@@ -76,7 +76,6 @@ public class ElementalSpirit
 			final UserInfo userInfo = new UserInfo(_owner);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
 			_owner.sendPacket(userInfo);
-			
 		}
 		_owner.sendPacket(new ExElementalSpiritGetExp(getType(), _data.getExperience()));
 	}
@@ -101,7 +100,7 @@ public class ElementalSpirit
 	{
 		final int stage = _data.getStage();
 		final int level = _data.getLevel();
-		final int points = (stage > 3 ? ((stage - 2) * 20) : (stage - 1 ) * 10) + (stage > 2 ? (level * 2) : level * 1);
+		final int points = (stage > 3 ? ((stage - 2) * 20) : (stage - 1) * 10) + (stage > 2 ? (level * 2) : level * 1);
 		return max(points - _data.getAttackPoints() - _data.getDefensePoints() - _data.getCritDamagePoints() - _data.getCritRatePoints(), 0);
 	}
 	

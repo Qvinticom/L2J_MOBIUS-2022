@@ -319,26 +319,38 @@
 	<item id="91035" name="Water Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Water Attribute XP points. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 	<item id="91036" name="Fire Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Fire Attribute. Use it to acquire 9300 Fire Attribute XP points. -->
 		<set name="icon" val="icon.elemental_fire_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 	<item id="91037" name="Wind Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Wind Attribute XP points. -->
 		<set name="icon" val="icon.elemental_wind_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 	<item id="91038" name="Earth Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Earth Attribute. Use it to acquire 9300 Earth Attribute XP points. -->
 		<set name="icon" val="icon.elemental_earth_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 	<item id="91039" name="Water Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Water Attribute. Can be used to create equipment with the power of Water Attribute. -->

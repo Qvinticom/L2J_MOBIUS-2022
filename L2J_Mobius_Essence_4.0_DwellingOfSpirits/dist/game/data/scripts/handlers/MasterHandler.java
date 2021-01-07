@@ -185,6 +185,7 @@ import handlers.communityboard.HomepageBoard;
 import handlers.communityboard.MailBoard;
 import handlers.communityboard.MemoBoard;
 import handlers.communityboard.RegionBoard;
+import handlers.itemhandlers.AddSpiritExp;
 import handlers.itemhandlers.Appearance;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
@@ -534,6 +535,7 @@ public class MasterHandler
 		},
 		{
 			// Item Handlers
+			AddSpiritExp.class,
 			Appearance.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,

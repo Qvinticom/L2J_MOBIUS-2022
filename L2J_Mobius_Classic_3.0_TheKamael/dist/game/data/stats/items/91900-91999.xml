@@ -1323,10 +1323,13 @@
 	<item id="91999" name="Water Spirit Jewel Shard" type="EtcItem">
 		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Water Attribute XP points. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 </list>

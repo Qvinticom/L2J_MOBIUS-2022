@@ -3,29 +3,38 @@
 	<item id="92000" name="Fire Spirit Jewel Shard" type="EtcItem">
 		<!-- Rough Jewel with the power of Fire Attribute. Use it to acquire 9300 Fire Attribute XP points. -->
 		<set name="icon" val="icon.elemental_fire_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 	<item id="92001" name="Wind Spirit Ore Fragment" type="EtcItem">
 		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Wind Attribute XP points. -->
 		<set name="icon" val="icon.elemental_wind_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 	<item id="92002" name="Earth Spirit Jewel Shard" type="EtcItem">
 		<!-- Rough Jewel with the power of Earth Attribute. Use it to acquire 9300 Earth Attribute XP points. -->
 		<set name="icon" val="icon.elemental_earth_stone_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="AddSpiritExp" />
 	</item>
 	<item id="92003" name="Special Shots Pack" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (Event, required level: 1-75, 10 pcs.), 30 Soulshot Tickets (Event), 500 Spirit Ores. Can be used only once a day per account. -->
