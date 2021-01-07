@@ -13,7 +13,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="10" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -29,7 +29,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="weight" val="220" />
+		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -46,7 +46,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -112,7 +112,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -670,14 +670,13 @@
 		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90964" name="Sealed Doll of Border Box" type="EtcItem">
 		<!-- You can obtain one of the 30-days items: Sealed Doll of Border - Baium, Sealed Doll of Border - Orfen, Doll of Border - Queen Ant. Cannot be dropped or sold. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -685,7 +684,6 @@
 	<item id="90965" name="Raid Lucky Charm" additionalName="7-day" type="EtcItem">
 		<!-- A 7-day item. When in inventory, chance of dropping items -50%, chance of losing XP -50%. Cannot be used by chaotic characters. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_cross_of_einhasad_i00" />
-		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -705,7 +703,6 @@
 		<!-- Number of items to use. -->
 		<set name="icon" val="icon.etc_ore_cube_event_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -715,7 +712,6 @@
 		<!-- Double-click to obtain 1 random item: Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (Event) (3 pcs.), White Assassin Transformation Scroll (Event) (3 pcs.), Sayha's Storm (5 pcs.). Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -856,7 +852,7 @@
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
-		<set name="weight" val="1000" />
+		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -869,7 +865,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -881,7 +877,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -894,7 +890,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -906,7 +902,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -933,7 +928,7 @@
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -949,7 +944,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">78</stat>
@@ -996,7 +991,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="150" />
 		<skills>
 			<skill id="3558" level="12" /> <!-- Antharas' Earring -->
 		</skills>
@@ -1011,7 +1006,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">50</stat>
@@ -1023,7 +1018,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">16</stat>

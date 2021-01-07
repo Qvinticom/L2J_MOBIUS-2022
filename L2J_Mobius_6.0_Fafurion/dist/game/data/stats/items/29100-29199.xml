@@ -516,7 +516,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
-		<set name="weight" val="3320" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -570,7 +570,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="9200" />
+		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -589,7 +589,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="0" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27716" level="1" /> <!-- Zodiac Agathion Pack -->
@@ -612,7 +611,6 @@
 		<set name="is_stackable" val="true" />	
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="0" />
 		<skills>
 			<skill id="28171" level="1" /> <!-- High-grade Zodiac Agathion -->
 		</skills>
@@ -692,7 +690,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="4300" />
+		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29160" name="Shaggy Dog Hat" type="Armor">
@@ -703,7 +701,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="1480" />
+		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29161" name="High-grade Maphr's Rune Pack" additionalName="30-day" type="EtcItem">
@@ -901,7 +899,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="5350" />
+		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1095,7 +1093,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="1860" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

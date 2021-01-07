@@ -186,7 +186,6 @@
 		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -200,7 +199,6 @@
 		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -214,7 +212,6 @@
 		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -228,7 +225,6 @@
 		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -242,7 +238,6 @@
 		<!-- Reward for valor warriors. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -255,7 +250,7 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -272,7 +267,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -288,7 +283,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -304,7 +299,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -320,7 +315,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -336,7 +331,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -352,7 +347,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -368,7 +363,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -382,7 +377,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -396,7 +391,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -411,7 +406,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -869,7 +864,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="600" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -886,7 +881,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="10480" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -902,7 +897,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="600" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -918,7 +913,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="1200" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -932,7 +927,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="620" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -948,7 +943,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="5800" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -963,7 +958,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="600" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -977,7 +972,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="1210" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -992,7 +987,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="600" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1007,7 +1002,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CLOTH" />
-		<set name="weight" val="1980" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1019,7 +1014,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="960" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1034,7 +1029,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
-		<set name="weight" val="610" />
+		<set name="weight" val="5" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1046,7 +1041,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="120" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

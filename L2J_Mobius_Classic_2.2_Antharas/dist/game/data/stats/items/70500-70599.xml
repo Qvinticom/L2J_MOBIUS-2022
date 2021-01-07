@@ -212,7 +212,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -227,7 +226,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
+		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -250,7 +249,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -265,7 +263,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -280,7 +277,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -797,7 +793,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="DAMASCUS" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1350" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -823,7 +819,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1920" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -853,7 +849,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BONE" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1600" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -880,7 +876,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="CHRYSOLITE" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1570" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -907,7 +903,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="1" />
+		<set name="weight" val="930" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -935,7 +931,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="970" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -962,7 +958,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1390" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -989,7 +985,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1700" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="4" />
@@ -1018,7 +1014,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="2080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1044,7 +1040,7 @@
 		<set name="crystal_count" val="1746" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1930" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />

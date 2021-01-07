@@ -462,77 +462,66 @@
 		<!-- Spellbook needed to learn Dual Weapon Defense. Used by Gladiator. Required level: 41 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49424" name="Spellbook: Broad Sweep" type="EtcItem">
 		<!-- Spellbook needed to learn Broad Sweep. Used by Warlords. Required level: 51 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49425" name="Spellbook: Immortal Life" type="EtcItem">
 		<!-- Spellbook needed to learn Immortal Life. Used by Destroyers. Required level: 52 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49426" name="Spellbook: Break Duress" type="EtcItem">
 		<!-- Spellbook needed to learn Break Duress. Used by Tyrants. Required level: 52 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49427" name="Spellbook: Shield Deflect Magic" type="EtcItem">
 		<!-- Spellbook needed to learn Shield Deflect Magic. Used by Knights. Required level: 60 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49428" name="Spellbook: Aegis" type="EtcItem">
 		<!-- Spellbook needed to learn Aegis. Used by Eva's Templars, Shillien Knights. Required level: 52 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49429" name="Spellbook: Hide" type="EtcItem">
 		<!-- Spellbook needed to learn Hide. Profession: Rogue. Required level: 51 -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49430" name="Spellbook: Mystic Immunity" type="EtcItem">
 		<!-- Spellbook needed to learn Mystic Immunity. Used by Prophets. Required level: 51 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49431" name="Spellbook: Divine Power" type="EtcItem">
 		<!-- Spellbook needed to learn Divine Power. Used by Bishops. Required level: 51 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49432" name="Spellbook: Stigma of Shilen" type="EtcItem">
 		<!-- Spellbook needed to learn Stigma of Shilen. Used by Shillien Elders. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49433" name="Amulet: Chant of Movement" type="EtcItem">
 		<!-- Amulet required for the Chant of Movement spell. Used by Warcryers. Required level: 44 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49434" name="Sayha's Treasure Chest" type="EtcItem">
@@ -1106,7 +1095,6 @@
 		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1123,7 +1111,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1248,7 +1235,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1265,7 +1251,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1282,7 +1267,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1299,7 +1283,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1316,7 +1299,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1333,7 +1315,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />

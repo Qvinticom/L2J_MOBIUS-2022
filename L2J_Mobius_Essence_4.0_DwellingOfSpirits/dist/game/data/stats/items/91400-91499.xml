@@ -837,7 +837,6 @@
 		<!-- Scroll needed to learn the Detect Darkness skill. Available to Sagittarius, Moonlight Sentinel, Ghost Sentinel. Required level: 76. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113" addName="1">
 			<player level="76" />
@@ -847,7 +846,6 @@
 		<!-- Scroll needed to learn the Bind skill. Available to Archmage, Soultaker, Mystic Muse, Storm Screamer. Required level: 76. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113" addName="1">
 			<player level="76" />
@@ -857,7 +855,6 @@
 		<!-- Scroll needed to learn the Mass Chain Strike skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Required level: 78. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113" addName="1">
 			<player level="78" />
@@ -867,7 +864,6 @@
 		<!-- Scroll needed to learn the Critical Vulnerability Decrease skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Required level: 76. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113" addName="1">
 			<player level="76" />
@@ -877,7 +873,6 @@
 		<!-- Scroll needed to learn the Full Swing skill. Available to Titan. Required level: 76. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113" addName="1">
 			<player level="76" />
@@ -887,7 +882,6 @@
 		<!-- Scroll needed to learn the Seal of Blockade skill. Available to Dominator. Required level: 79. -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113" addName="1">
 			<player level="79" />
@@ -967,21 +961,18 @@
 		<!-- Scroll needed to learn the Critical Creation Lv. 3 skill. Available to Master. Level required: 84. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91495" name="Scroll: Master of Creation" additionalName="Lv. 2" type="EtcItem">
 		<!-- Scroll needed to learn the Master of Creation skill. Available to Master. Level required: 82. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91496" name="Scroll: Master of Creation" additionalName="Lv. 3" type="EtcItem">
 		<!-- Scroll needed to learn the Master of Creation skill. Available to Master. Level required: 84. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91497" name="Dual Weapon Crafting Stamp (S-grade)" type="EtcItem">

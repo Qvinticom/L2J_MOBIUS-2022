@@ -465,7 +465,7 @@
 		<!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. Cannot be dropped or sold. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="180" />
+		<set name="weight" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

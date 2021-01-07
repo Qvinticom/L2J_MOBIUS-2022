@@ -381,7 +381,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -665,7 +664,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -743,7 +741,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="2340" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -768,7 +766,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -795,7 +793,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="HORN" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1740" />
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="3" />
@@ -821,7 +819,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="1010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -846,7 +844,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1" />
+		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
@@ -1043,7 +1041,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -1057,7 +1055,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
-		<set name="weight" val="10" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -1071,7 +1069,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -1086,7 +1084,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="100" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -1102,7 +1100,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1119,7 +1117,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1136,7 +1134,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1148,7 +1146,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="50" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -1159,7 +1157,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1175,7 +1173,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

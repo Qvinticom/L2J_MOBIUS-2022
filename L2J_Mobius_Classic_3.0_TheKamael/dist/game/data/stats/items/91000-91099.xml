@@ -34,7 +34,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -50,7 +50,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -73,7 +73,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">50</stat>
@@ -212,7 +212,6 @@
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="120" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -255,7 +254,6 @@
 		<!-- For 20 min. Sayha Grace points +5000, Acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. Cannot be dropped. -->
 		<set name="icon" val="icon.bm_dragon_posion_brave" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="120" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

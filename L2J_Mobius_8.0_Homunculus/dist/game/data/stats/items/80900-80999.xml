@@ -162,7 +162,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -185,7 +184,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -208,7 +206,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -228,7 +225,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -241,7 +237,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -254,7 +249,6 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -898,7 +892,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1218,7 +1211,6 @@
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1233,7 +1225,6 @@
 		<set name="icon" val="icon.timezone_refill_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1248,7 +1239,6 @@
 		<set name="icon" val="icon.timezone_refill_3" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

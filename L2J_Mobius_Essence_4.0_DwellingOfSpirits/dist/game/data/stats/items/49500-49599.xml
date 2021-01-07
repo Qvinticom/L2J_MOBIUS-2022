@@ -390,7 +390,7 @@
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="180" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -721,7 +721,6 @@
 		<!-- Spellbook needed to learn Spirit Sharing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 44 -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49563" name="1,000,000,000 Adena" additionalName="Event" type="EtcItem">
@@ -780,28 +779,24 @@
 		<!-- A book required to learn the spell of Sonic Move. Used by Gladiators. Required level: 56 -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49569" name="Spellbook: Sand Bomb" type="EtcItem">
 		<!-- Spellbook needed to learn Sand Bomb. Used by Treasure Hunters, Plains Walkers, and Abyss Walkers. Required level: 55 -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49570" name="Spellbook: Mass Curse Gloom" type="EtcItem">
 		<!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49571" name="Spellbook: Clear Mind" type="EtcItem">
 		<!-- Spellbook needed to learn the spell Clear Mind. Used by Spellsingers, Spellhowlers and Sorcerers. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49573" name="Samurai Black Long Sword*Samurai Black Long Sword" additionalName="30-day" type="Weapon">

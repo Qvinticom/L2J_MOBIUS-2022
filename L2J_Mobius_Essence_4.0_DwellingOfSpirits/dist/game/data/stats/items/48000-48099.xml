@@ -7,7 +7,6 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -64,21 +63,18 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48046" name="Agathion Enchant Scroll" type="EtcItem">
 		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48047" name="Quality Agathion Enchant Scroll" type="EtcItem">
 		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Can not use for items with enchant level more than +8. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48048" name="Agathion - Virgo" type="Armor">
@@ -121,7 +117,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
+		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -132,7 +128,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
+		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -143,7 +139,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
+		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -154,7 +150,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="weight" val="10" />
+		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -165,7 +161,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
+		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -176,7 +172,7 @@
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
-		<set name="weight" val="150" />
+		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
