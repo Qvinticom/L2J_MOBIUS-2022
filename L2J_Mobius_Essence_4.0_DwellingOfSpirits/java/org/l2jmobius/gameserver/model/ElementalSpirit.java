@@ -130,7 +130,7 @@ public class ElementalSpirit
 	
 	public boolean canEvolve()
 	{
-		return (getStage() < 3) && (getLevel() == 10) && (getExperience() == getExperienceToNextLevel());
+		return (getStage() < 5) && (getLevel() == 10) && (getExperience() == getExperienceToNextLevel());
 	}
 	
 	public void upgrade()
