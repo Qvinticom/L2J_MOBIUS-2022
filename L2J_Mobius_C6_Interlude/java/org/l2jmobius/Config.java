@@ -972,6 +972,7 @@ public class Config
 	public static int HEURISTIC_WEIGHT;
 	public static int OBSTACLE_MULTIPLIER;
 	public static int MAX_ITERATIONS;
+	public static boolean CORRECT_PLAYER_Z;
 	public static boolean FALL_DAMAGE;
 	public static boolean ALLOW_WATER;
 	
@@ -2569,6 +2570,7 @@ public class Config
 		OBSTACLE_MULTIPLIER = geoengineConfig.getInt("ObstacleMultiplier", 10);
 		HEURISTIC_WEIGHT = geoengineConfig.getInt("HeuristicWeight", 20);
 		MAX_ITERATIONS = geoengineConfig.getInt("MaxIterations", 3500);
+		CORRECT_PLAYER_Z = geoengineConfig.getBoolean("CorrectPlayerZ", false);
 		FALL_DAMAGE = geoengineConfig.getBoolean("FallDamage", false);
 		ALLOW_WATER = geoengineConfig.getBoolean("AllowWater", false);
 	}

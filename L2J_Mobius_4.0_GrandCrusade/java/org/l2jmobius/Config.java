@@ -939,16 +939,10 @@ public class Config
 	// --------------------------------------------------
 	// GeoEngine
 	// --------------------------------------------------
-	
-	/** Geodata */
 	public static String GEODATA_PATH;
 	public static int COORD_SYNCHRONIZE;
-	
-	/** Path checking */
 	public static int PART_OF_CHARACTER_HEIGHT;
 	public static int MAX_OBSTACLE_HEIGHT;
-	
-	/** Path finding */
 	public static boolean PATHFINDING;
 	public static String PATHFIND_BUFFERS;
 	public static int BASE_WEIGHT;
@@ -956,6 +950,7 @@ public class Config
 	public static int HEURISTIC_WEIGHT;
 	public static int OBSTACLE_MULTIPLIER;
 	public static int MAX_ITERATIONS;
+	public static boolean CORRECT_PLAYER_Z;
 	
 	/** Attribute System */
 	public static int S_WEAPON_STONE;
@@ -2505,6 +2500,7 @@ public class Config
 			OBSTACLE_MULTIPLIER = GeoEngine.getInt("ObstacleMultiplier", 10);
 			HEURISTIC_WEIGHT = GeoEngine.getInt("HeuristicWeight", 20);
 			MAX_ITERATIONS = GeoEngine.getInt("MaxIterations", 3500);
+			CORRECT_PLAYER_Z = GeoEngine.getBoolean("CorrectPlayerZ", false);
 			
 			// Load AllowedPlayerRaces config file (if exists)
 			final PropertiesParser AllowedPlayerRaces = new PropertiesParser(CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE);
