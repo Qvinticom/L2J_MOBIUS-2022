@@ -683,6 +683,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="90863" name="Diamond Lv. 3" additionalName="30-day" type="Armor">
 		<!-- A 30-day item. ???. ???. +50. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -696,6 +697,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="90864" name="Pearl Lv. 3" additionalName="30-day" type="Armor">
 		<!-- A 30-day item. ???. ???. +28. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -709,6 +711,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="90865" name="Jade Lv. 3" additionalName="30-day" type="Armor">
 		<!-- A 30-day item. Casting Spd./ Atk. Spd. +4%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -721,13 +724,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="weight" val="5" />
 	</item>
 	<item id="90866" name="Master's Skill Book" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Take it to Luck Cat to receive all the skills corresponding to your level or class. Intended for Lv. 76-79. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
 		<set name="icon" val="icon.q10338_book_of_hades" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -985,6 +988,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="weight" val="100" />
 		<skills>
 			<skill id="51025" level="1" /> <!-- Expand Agathion Slots -->
 			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
@@ -1007,6 +1011,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
+		<set name="weight" val="100" />
 		<skills>
 			<skill id="51025" level="1" /> <!-- Expand Agathion Slots -->
 			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
@@ -1029,6 +1034,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="86400" />
+		<set name="weight" val="100" />
 		<skills>
 			<skill id="51025" level="2" /> <!-- Expand Agathion Slots -->
 			<skill id="55885" level="1" /> <!-- Agathion Bracelet Stats Increase -->

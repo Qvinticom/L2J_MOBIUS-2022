@@ -128,6 +128,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7611" name="Icy Air Bait" type="EtcItem">
 		<!-- Lure that was given out by O'Fulle. It contains the hidden power of icy air. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
@@ -141,6 +142,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7612" name="Earth Bait" type="EtcItem">
 		<!-- Lure that was given out by Willie. It contains the hidden power of earth. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
@@ -154,6 +156,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7613" name="Flaming Bait" type="EtcItem">
 		<!-- Lure that was given out by Linnaeus. It contains the hidden power of flames. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
@@ -167,6 +170,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7614" name="Chest Caught with Wind Bait" type="EtcItem">
 		<!-- Chest fished up with the Wind Bait. -->

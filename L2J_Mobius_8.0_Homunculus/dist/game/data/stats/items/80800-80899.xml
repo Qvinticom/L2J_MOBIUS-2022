@@ -163,6 +163,7 @@
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80816" name="GM's Buff Scroll" type="EtcItem">
 		<!-- When used, can receive the effects of 4 types of level 4 melodies, including Fantasia Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
@@ -267,7 +268,6 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -442,6 +442,8 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="35524" level="1" /> <!-- Kaliel's Bracelet -->
 			<skill id="35524" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Bracelet -->
@@ -504,6 +506,7 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
 		<skills>
 			<skill id="39527" level="1" /> <!-- Enchant Scroll: Blessed Bracelet -->
 		</skills>
@@ -662,9 +665,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80853" name="Undead Blood" type="EtcItem">
 		<!-- Item obtained as proof of having defeated the monsters in Altar of Evil at the request of Grocer Vollodos. Collect these and take them to Herphah in the Town of Aden. -->

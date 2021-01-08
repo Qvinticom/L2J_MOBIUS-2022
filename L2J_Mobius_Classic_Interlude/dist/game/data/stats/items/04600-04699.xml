@@ -829,6 +829,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4663" name="Broken Green Soul Crystal" type="EtcItem">
 		<!-- Green-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
@@ -841,6 +842,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4664" name="Broken Blue Soul Crystal" type="EtcItem">
 		<!-- Blue-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
@@ -853,6 +855,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4665" name="Pipette Knife" type="Weapon">
 		<!-- Instrument used to collect the blood of living creatures. Use it to cut Baium and obtain a blood sample. -->

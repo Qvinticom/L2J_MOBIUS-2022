@@ -227,6 +227,9 @@
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<capsuled_items>
 			<item id="48202" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Warrior's Circlet -->
 		</capsuled_items>
@@ -239,6 +242,9 @@
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<capsuled_items>
 			<item id="48205" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Wizard's Circlet -->
 		</capsuled_items>
@@ -251,6 +257,9 @@
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<capsuled_items>
 			<item id="48208" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Knight's Circlet -->
 		</capsuled_items>
@@ -843,7 +852,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="30" />
-		<set name="is_commissionable" val="true" />
+		<set name="weight" val="150" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="4" /> <!-- Talisman - Lilith -->
@@ -1256,5 +1265,6 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 </list>

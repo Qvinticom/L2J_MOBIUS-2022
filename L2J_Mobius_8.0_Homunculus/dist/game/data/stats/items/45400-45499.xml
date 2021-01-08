@@ -45,6 +45,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="45405" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -63,15 +64,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="45407" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45408" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -85,10 +87,10 @@
 	<item id="45409" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45410" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -96,14 +98,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45411" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45412" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -111,19 +114,21 @@
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45413" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45414" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45415" name="Dandy's Home Run Ball" type="EtcItem">
 		<!-- For 1 h., acquired XP/ SP +100%. Does not stack with the Fall of the Dragon, Nevit's Hourglass, or Nevit's Golden Hourglass. Changes the armor's appearance to that of Lineage II Baseball Uniform. The effect remains after death. -->
@@ -138,6 +143,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="18209" level="1" /> <!-- Dandy's Home Run Ball -->
 		</skills>
@@ -146,7 +153,6 @@
 		<!-- Enchant success rate +10% for R-grade weapons with a normal enchant scroll. Only for items enchanted between +3 and +6. When enchanting fails, the item does not crystallize, but the existing enchant value is decreased by 3. -->
 		<set name="icon" val="icon.blue_save_r" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -154,7 +160,6 @@
 		<!-- Enchant success rate +10% for R95-grade weapons with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r95" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -162,7 +167,6 @@
 		<!-- Enchant success rate +10% for R99-grade weapons with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r99" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -170,7 +174,6 @@
 		<!-- Enchant success rate +10% for R-grade weapons with a normal enchant scroll. Only for items enchanted between +7 and +11. When enchanting succeeds, enchant value is increased randomly by 1-3. When enchanting fails, the item does not crystallize, but the existing enchant value is decreased by 3. -->
 		<set name="icon" val="icon.red_save_r" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -178,7 +181,6 @@
 		<!-- Enchant success rate +10% for R95-grade weapons with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r95" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -186,7 +188,6 @@
 		<!-- Enchant success rate +10% for R99-grade weapons with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r99" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -194,7 +195,6 @@
 		<!-- Enchant success rate +10% for R-grade weapons with a normal enchant scroll. Only for items enchanted between +3 and +6. When enchanting fails, the item does not crystallize, but the existing enchant value is decreased by 3. -->
 		<set name="icon" val="icon.royal_blue_save_r" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -202,7 +202,6 @@
 		<!-- Enchant success rate +10% for R95-grade weapons with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r95" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -210,7 +209,6 @@
 		<!-- Enchant success rate +10% for R99-grade weapons with a normal enchant scroll. Only for items enchanted between +3 and +6. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r99" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -218,7 +216,6 @@
 		<!-- Enchant success rate +10% for R-grade weapons with a normal enchant scroll. Only for items enchanted between +7 and +11. When enchanting succeeds, enchant value is increased randomly by 1-3. When enchanting fails, the item does not crystallize, but the existing enchant value is decreased by 1. -->
 		<set name="icon" val="icon.royal_red_save_r" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -226,7 +223,6 @@
 		<!-- Enchant success rate +10% for R95-grade weapons with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r95" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -234,7 +230,6 @@
 		<!-- Enchant success rate +10% for R99-grade weapons with a normal enchant scroll. Only for items enchanted between +7 and +11. Randomly adds between +1 and +3 enchant value. A failed enchant drops the enchant value by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r99" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -834,6 +829,7 @@
 		<set name="weight" val="1000" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
 		<set name="price" val="240000000" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>

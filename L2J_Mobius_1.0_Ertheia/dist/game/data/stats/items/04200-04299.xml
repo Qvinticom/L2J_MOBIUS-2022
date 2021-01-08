@@ -457,6 +457,7 @@
 		<set name="reuse_delay" val="5000" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="RollingDice" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="4233" name="Knuckle Duster" type="Weapon">
 		<!-- Bestows one of the following functions, Rsk. Evasion, Rsk. Haste or Haste. -->

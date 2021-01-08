@@ -2276,6 +2276,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="12195" level="1" /> <!-- Check Item -->
 		</skills>

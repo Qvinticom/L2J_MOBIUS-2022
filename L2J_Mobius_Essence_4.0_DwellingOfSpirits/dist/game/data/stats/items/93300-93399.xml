@@ -9,8 +9,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">75</stat>
 		</stats>
@@ -28,9 +28,9 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50340" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Cloak: Cloak of Protection -->
 			<skill id="50340" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Cloak: Cloak of Protection -->
@@ -541,9 +541,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93343" name="High-grade Lit Purple Lantern" additionalName="2nd place" type="EtcItem">
 		<!-- Reward for achieving the 2nd place in the Big Magic Lamp event.\nXP +360,000,000, SP +9,720,000.\nCannot be transferred to higher-level characters. -->
@@ -552,9 +552,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93344" name="High-grade Lit Blue Lantern" additionalName="3rd place" type="EtcItem">
 		<!-- <Reward for achieving the 3rd place in the Big Magic Lamp event>\nXP +120,000,000, SP +3,240,00.\nCannot be transferred to higher-level characters. -->
@@ -563,9 +563,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93345" name="High-grade Lit Green Lantern" additionalName="4th place" type="EtcItem">
 		<!-- Reward for achieving the 4th place in the Big Magic Lamp event.\nXP +60,000,000, SP +1,620,000.\nCannot be transferred to higher-level characters. -->
@@ -574,9 +574,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93346" name="Deton's Request Lv. 1" type="EtcItem">
 		<!-- A request issued by Deton to eliminate monsters in the Plains of the Lizardmen, Dragon Valley and the Tower of Insolence. Characters of Lv. 70+ can receive the request by double-clicking the item. -->

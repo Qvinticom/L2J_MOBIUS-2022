@@ -1062,6 +1062,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="13767" name="Elite Mercenary Certificate" type="EtcItem">
 		<!-- Certificate showing your qualification as a mercenary. -->
@@ -1073,6 +1074,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="13768" name="Exalted Mercenary Certificate" type="EtcItem">
 		<!-- Certificate showing your qualification as a mercenary. -->
@@ -1569,6 +1571,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2371" level="1" /> <!-- Transformation Scroll: Onyx Beast -->
 		</skills>
@@ -1585,6 +1588,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2671" level="1" /> <!-- Transformation Scroll: Blue -->
 		</skills>
@@ -1601,6 +1605,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2670" level="1" /> <!-- Transformation Scroll: Red -->
 		</skills>

@@ -960,6 +960,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46283" name="Aden Vanguard Supply Box" type="EtcItem">
 		<!-- Reward received after incapacitating the Embryo Command Post in the Atelia Fortress. Double-click to use. -->
@@ -1014,6 +1015,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="46288" name="Holiday Blessing" type="EtcItem">
 		<!-- Double-click to get +10% XP/ SP for 2 hours, Vitality Consumption -20%. Additionaly, recovers 1 bar of Vitality and changes the appearance into that of Santa Claus. -->

@@ -443,9 +443,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91744" name="Insolence Crafting Pack" type="EtcItem">
 		<!-- Contains materials for crafting Talisman of Insolence. Double-click to obtain Energy of Insolence (10 pcs), 120 Talisman Crystals, 250 Elemental Stones. -->
@@ -468,9 +468,9 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91746" name="Rudolph Costume" type="Armor">
 		<!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
@@ -816,6 +816,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<cond msgId="1902">
 			<player levelRange="1;74" />
 		</cond>
@@ -830,9 +831,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<cond msgId="1902">
 			<player levelRange="1;74" />
 		</cond>
@@ -996,6 +997,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91792" name="Venir's Talisman Lv. 26" type="Armor">
 		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +8, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. The effect doesn't stack if two identical talismans are equipped. -->
@@ -1005,6 +1007,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91793" name="Lakfi-Lakfi's Lucky Box" additionalName="Event" type="EtcItem">
 		<!-- Golden Pig's chest filled with happiness for the new 2019 year. Double-click to obtain the Lakfi-Lakfi's Energy buff. No level requirements. Can be used once a day. -->

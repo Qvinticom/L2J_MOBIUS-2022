@@ -301,6 +301,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6319" name="Mimir's Elixir" type="EtcItem">
 		<!-- Legendary elixir said to bestow ultimate wisdom. Take it to Magister Ladd. -->
@@ -323,6 +324,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6321" name="True Gold" type="EtcItem">
 		<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
@@ -785,6 +787,7 @@
 		<set name="price" val="50000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="6351" name="Amulet: Ritual of Life" type="EtcItem">
 		<!-- The Amulet required for the Ritual of Life spell. Used by Overlords. Required level: 48 -->
@@ -794,6 +797,7 @@
 		<set name="price" val="50000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="6352" name="Spellbook: Prayer" type="EtcItem">
 		<!-- Spellbook needed to learn Prayer. Used by Bishops. Required level: 66 -->
@@ -945,6 +949,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6364" name="Forgotten Blade" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
@@ -1425,6 +1430,8 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="6395" name="Amulet: Chant of Predator" type="EtcItem">
 		<!-- Amulet required for the Chant of Predator spell. Used by Warcryers. Required level: 48 -->
@@ -1452,6 +1459,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="6398" name="Spellbook: Body of Avatar" type="EtcItem">
 		<!-- Spellbook needed to learn Body of Avatar. Used by Bishops. Required level: 48 -->
@@ -1461,6 +1469,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="6399" name="Rabbit Crest" type="EtcItem">
 		<!-- The crest indicating that its bearer's event collector is "rabbit." Without this badge, one cannot prove one's grade. -->

@@ -1428,6 +1428,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20567" min="1" max="1" chance="100" /> <!-- Eva's Circlet (Event) - 3-day -->
 		</capsuled_items>
@@ -1478,6 +1479,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20570" min="1" max="1" chance="100" /> <!-- Eva's Rune (Event) - 5-hour -->
 		</capsuled_items>
@@ -1492,6 +1494,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20571" min="1" max="1" chance="100" /> <!-- Eva's Rune (Event) - 3-day -->
 		</capsuled_items>
@@ -1546,6 +1549,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22103" level="1" /> <!-- Blessed Scroll of Escape (Event) -->
 		</skills>
@@ -1561,6 +1565,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22104" level="1" /> <!-- Blessed Scroll of Resurrection (Event) -->
 		</skills>
@@ -1576,6 +1581,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22095" level="1" /> <!-- Summon Fire Spirit -->
 		</skills>
@@ -1591,6 +1597,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22096" level="1" /> <!-- Summon Reckless Fire Spirit -->
 		</skills>

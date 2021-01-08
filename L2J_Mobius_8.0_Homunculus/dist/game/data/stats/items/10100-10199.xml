@@ -1034,6 +1034,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="10161" name="Cursed Blue Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Blue crystal cursed by the darkness. Level 14. Take it to Legendary Blacksmith Shadai in the Hellbound to process. -->
@@ -1046,6 +1047,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="10162" name="Cursed Green Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Green crystal cursed by the darkness. Level 14. Take it to Legendary Blacksmith Shadai in the Hellbound to process. -->
@@ -1058,6 +1060,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="10163" name="Wolf Collar" type="EtcItem">
 		<!-- Necklace used to summon wolves. It takes away some XP the Pet Master earns. -->

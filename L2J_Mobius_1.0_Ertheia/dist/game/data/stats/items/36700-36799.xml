@@ -173,6 +173,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="1420" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">68</stat>
@@ -192,6 +193,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36719" name="Augmentation Practice Gemstone (D-grade)" type="EtcItem">
 		<!-- Temporary practice gemstone for learning about augmentation. -->
@@ -204,6 +206,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36720" name="Practice StormBringer" type="Weapon">
 		<!-- Temporary practice weapon for learning about soul crystal enhancement. Very inefficient as a weapon. -->
@@ -219,6 +222,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="1420" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">68</stat>
@@ -238,6 +242,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="weight" val="20" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36722" name="Enhancement Practice Gemstone (C-grade)" type="EtcItem">
 		<!-- Temporary practice gemstone for learning about soul crystal enhancement. -->
@@ -250,6 +255,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36723" name="Practice StormBringer" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Critical by 86. -->
@@ -264,6 +270,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="1430" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">68</stat>
@@ -285,6 +292,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="500" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
@@ -298,6 +306,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="weight" val="20" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36726" name="Flutter's Magic Pin Leather Belt (Low-grade)" type="Armor">
 		<set name="icon" val="icon.armor_belt_i01" />

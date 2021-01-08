@@ -310,6 +310,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20018" name="Afro Hair" additionalName="Big Head, Firework" type="Armor">
 		<!-- Afro style hair. Uses 2 hair accessory slots. -->
@@ -324,6 +325,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21007" level="1" /> <!-- Mysterious Ability -->
 			<skill id="21006" level="1" /> <!-- Large Firecracker's Ability -->
@@ -342,6 +344,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21004" level="1" /> <!-- Wind Walk -->
 		</skills>
@@ -359,6 +362,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20021" name="Assassin's Bamboo Hat" type="Armor">
 		<!-- Wide-brimmed hat fashioned out of bamboo. Uses 2 hair accessory slots. -->
@@ -373,6 +377,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20022" name="Ruthless Tribe Mask" type="Armor">
 		<!-- Mask worn by a savage tribe. -->
@@ -387,6 +392,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20023" name="Ribbon Hairband" type="Armor">
 		<!-- Large ribbon hair accessory. Exclusive for female characters. -->
@@ -401,6 +407,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<cond msgId="1518">
 			<player sex="1" />
 		</cond>
@@ -418,6 +425,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<cond msgId="1518">
 			<player sex="0" />
 		</cond>
@@ -431,6 +439,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20026" name="Extra Pass: Kamaloka (Hall of the Abyss)" type="EtcItem">
 		<!-- Extra entrance pass that lets you enter Kamaloka (Hall of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Hall of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. -->
@@ -443,6 +452,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22019" level="1" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</skills>
@@ -458,6 +468,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22020" level="1" /> <!-- Extra Pass: Near Kamaloka -->
 		</skills>
@@ -473,6 +484,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22021" level="1" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</skills>
@@ -526,6 +538,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20032" name="Skull Hat" type="Armor">
 		<!-- Hat that looks like a skull. Uses 2 hair accessory slots. -->
@@ -540,6 +553,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20033" name="My Teleport Flag" type="EtcItem">
 		<!-- Dimensional Item. Item consumed when saving a new My Teleport location. Can be shared within an account through the Dimensional Merchant. -->
@@ -550,6 +564,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20034" name="Revita-Pop (Event)" type="EtcItem">
 		<!-- Tasty candy that replenishes your Vitality to a certain degree. Cooldown is 60 min. Vitality item with limited usage. -->
@@ -777,6 +792,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20017" min="1" max="1" chance="100" /> <!-- Afro Hair -->
 		</capsuled_items>
@@ -792,6 +808,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20018" min="1" max="1" chance="100" /> <!-- Afro Hair - Big Head, Firework -->
 		</capsuled_items>
@@ -807,6 +824,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20019" min="1" max="1" chance="100" /> <!-- Afro Hair - Wind Walk -->
 		</capsuled_items>
@@ -822,6 +840,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20020" min="1" max="1" chance="100" /> <!-- Uniform Hat -->
 		</capsuled_items>
@@ -837,6 +856,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20021" min="1" max="1" chance="100" /> <!-- Assassin's Bamboo Hat -->
 		</capsuled_items>
@@ -852,6 +872,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20022" min="1" max="1" chance="100" /> <!-- Ruthless Tribe Mask -->
 		</capsuled_items>
@@ -867,6 +888,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20023" min="1" max="1" chance="100" /> <!-- Ribbon Hairband -->
 		</capsuled_items>
@@ -882,6 +904,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20024" min="1" max="1" chance="100" /> <!-- Visor -->
 		</capsuled_items>
@@ -897,6 +920,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20025" min="1" max="1" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
@@ -912,6 +936,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20026" min="1" max="1" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
@@ -927,6 +952,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20027" min="1" max="1" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
@@ -942,6 +968,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20028" min="1" max="1" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
@@ -993,6 +1020,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20031" min="1" max="1" chance="100" /> <!-- Kat the Cat Hat -->
 		</capsuled_items>
@@ -1008,6 +1036,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20032" min="1" max="1" chance="100" /> <!-- Skull Hat -->
 		</capsuled_items>
@@ -1023,6 +1052,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20033" min="1" max="1" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>

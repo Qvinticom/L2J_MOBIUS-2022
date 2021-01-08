@@ -311,6 +311,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33821" name="Unbind Scroll (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- Transforms a C-grade bound item into a standard item through the Blacksmith of Mammon. -->
@@ -320,6 +321,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33822" name="Unbind Scroll (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- Transforms a B-grade bound item into a standard item through the Blacksmith of Mammon. -->
@@ -329,6 +331,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33823" name="Unbind Scroll (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- Transforms an A-grade bound item into a standard item through the Blacksmith of Mammon. -->
@@ -338,6 +341,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33824" name="Unbind Scroll (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Transforms an S-grade bound item into a standard item through the Blacksmith of Mammon. -->
@@ -347,6 +351,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33825" name="Unbind Scroll (S80-grade)" additionalName="Event" type="EtcItem">
 		<!-- Transforms an S80-grade bound item into a standard item through the Blacksmith of Mammon. -->
@@ -356,6 +361,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33826" name="Unbind Scroll (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- Converts a Bound item (R-grade) to Standard state through the Blacksmith of Mammon. -->
@@ -385,6 +391,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33829" name="Soul Crystal Change Stone (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- With this item you can change the Special Ability of an S-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need an S-grade weapon with a Special Ability and S-grade Gemstones. -->
@@ -394,6 +401,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33830" name="Soul Crystal Change Stone (S80-grade)" additionalName="Event" type="EtcItem">
 		<!-- With this item you can change the Special Ability of a S80-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need a S80-grade weapon with a Special Ability and S-grade Gemstones. -->
@@ -403,6 +411,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33831" name="Soul Crystal Change Stone (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- With this item you can change the Special Ability of an R-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need an R-grade weapon with a Special Ability and R-grade Gemstones. -->
@@ -412,6 +421,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33832" name="Soul Crystal Change Stone (R95-grade)" additionalName="Event" type="EtcItem">
 		<!-- With this item you can change the Special Ability of a R95-grade weapon when you visit the Blacksmith of Mammon. In order to use this item you will need a R95-grade weapon with a Special Ability and R-grade Gemstones. -->
@@ -421,6 +431,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="33833" name="Attribute Change Crystal (S-grade)" additionalName="Event" type="EtcItem">
 		<!-- Can change an S-grade weapon's attribute. -->

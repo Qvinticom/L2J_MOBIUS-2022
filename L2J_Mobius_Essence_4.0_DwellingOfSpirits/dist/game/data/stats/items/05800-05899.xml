@@ -177,6 +177,7 @@
 		<set name="price" val="200000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="5812" name="Spellbook: Servitor Empowerment" type="EtcItem">
 		<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52 -->
@@ -213,6 +214,7 @@
 		<set name="price" val="200000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
 		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 42 -->
@@ -222,6 +224,7 @@
 		<set name="price" val="50000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="5817" name="Chrono Campana" type="Weapon">
 		<!-- Chronicle III Souvenir! Cannot be dropped. -->

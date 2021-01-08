@@ -460,6 +460,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34034" name="Fortuna Map" type="EtcItem">
 		<!-- Map that reveals the resting place of the heroes who rebelled against the gods. Go and seek out Josephina's Companion Izael in the Ancient City Arcan. -->
@@ -470,6 +471,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34035" name="XP Rune I (Lv. 1-85) 100% (3-hr.)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 100%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->

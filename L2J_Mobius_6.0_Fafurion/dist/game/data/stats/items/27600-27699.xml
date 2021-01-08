@@ -49,21 +49,18 @@
 		<!-- Double-click to receive one of the following: Blessed Helios Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, Shooter. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27606" name="Blessed Helios Pack (Magical)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Helios Buster, Caster, Retributer. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27607" name="Blessed Helios Pack (Dual Weapons)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Helios Dual Sword, Dual Dagger, Dual Blunt. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27608" name="Card Pouch" additionalName="Event" type="EtcItem">
@@ -496,7 +493,6 @@
 	<item id="27660" name="Shadai's Jewelry Box" type="EtcItem">
 		<!-- Double-click to get 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_freightable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />

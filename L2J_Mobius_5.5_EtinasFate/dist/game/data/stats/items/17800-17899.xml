@@ -218,6 +218,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17822" name="Proof of Justice" type="EtcItem">
 		<!-- Proof received by those who have completed the second class transfer. Can be exchanged for equipment. -->
@@ -229,6 +230,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17823" name="Life Stone: Hair Accessory" additionalName="Warrior" type="EtcItem">
 		<!-- Life Stone that can augment a hair accessory. Can attach a fighter-type option. -->

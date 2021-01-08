@@ -489,6 +489,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91141" name="Venir's Talisman Lv. 20" type="Armor">
 		<!-- When equipped, CON, MEN +4, DEX, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -498,6 +499,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91142" name="Venir's Talisman Lv. 21" type="Armor">
 		<!-- When equipped, CON, MEN, DEX +4, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -507,6 +509,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91143" name="Venir's Talisman Lv. 22" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT +4, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -516,6 +519,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91144" name="Venir's Talisman Lv. 23" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR +4, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -525,6 +529,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91145" name="Venir's Talisman Lv. 24" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +4, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 16% of damage inflicted on the enemy as HP or 8% as MP. Beggins can bestow special abilities of Land Dragon Belt or Fire Dragon Belt to this talisman. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -534,6 +539,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
 	</item>
 	<item id="91146" name="Land Dragon Belt - Venir's Blessing Lv. 4" type="Armor">
 		<!-- CON +1, MEN +1, HP Recovery Bonus +2.31/ Max MP +1.54/ CP Recovery Bonus +3.07/ Max HP/ MP/ CP +15%, Iventory Slots +6, Weight Limit +7000, Healing Potions Effect +100 (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion), Incoming damage -6%. Applies effect Venir's Blessing Lv. 4. Cannot be dropped. -->
@@ -709,8 +715,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">12</stat>
 			<stat type="mAtk">12</stat>

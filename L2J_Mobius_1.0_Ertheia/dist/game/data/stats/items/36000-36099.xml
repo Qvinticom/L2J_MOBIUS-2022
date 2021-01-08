@@ -425,6 +425,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36028" name="Fruit Charged with Water" type="EtcItem">
 		<!-- Clan Production Request B - Deliver a Fruit Charged with Water to Impatient Mahum Chef. -->
@@ -1012,7 +1013,6 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_commissionable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1108,6 +1108,7 @@
 		<set name="useSkillDisTime" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9601" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" /> <!-- Sealing Agathion -->
@@ -1126,6 +1127,7 @@
 		<set name="useSkillDisTime" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9602" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1143,6 +1145,7 @@
 		<set name="useSkillDisTime" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9603" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1160,6 +1163,7 @@
 		<set name="useSkillDisTime" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9604" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1177,6 +1181,7 @@
 		<set name="useSkillDisTime" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9605" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1221,6 +1226,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9579" level="1" /> <!-- Clearest Water -->
 		</skills>
@@ -1236,6 +1242,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9580" level="1" /> <!-- Brightest Light -->
 		</skills>
@@ -1251,6 +1258,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9581" level="1" /> <!-- Purest Soul -->
 		</skills>
@@ -1266,6 +1274,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9582" level="1" /> <!-- Fiercest Flame -->
 		</skills>
@@ -1281,6 +1290,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="9583" level="1" /> <!-- Fondest Heart -->
 		</skills>
@@ -1296,6 +1306,7 @@
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Bypass" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36073" name="Vaccine Box" type="EtcItem">
 		<!-- Box that contains a vaccine for Virus Laido. Deliver it to Dwarves who are sealing Spicula Clone Generator Brand. -->
@@ -1344,6 +1355,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="36077" name="Crumbs of Penitence" type="EtcItem">
 		<!-- Mark of Penitence. Sins scattered in the world have been made into crumbs by the Sin Eater. -->

@@ -10,6 +10,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="weight" val="6" />
 	</item>
 	<item id="6918" name="Monster Only (Silence Shield)" type="Armor">
 		<set name="icon" val="icon.weapon_monster_i00" />
@@ -21,6 +22,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="weight" val="1380" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -37,6 +39,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="weight" val="1320" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>

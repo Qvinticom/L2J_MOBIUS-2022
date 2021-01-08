@@ -67,6 +67,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="weight" val="5" />
 		<skills>
 			<skill id="9081" level="1" /> <!-- Holiday Cake -->
 		</skills>
@@ -100,6 +101,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="weight" val="5" />
 		<skills>
 			<skill id="9083" level="1" /> <!-- Holiday Cake (Event) -->
 		</skills>

@@ -116,6 +116,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20707" name="Summon Scroll: Uldie (Event)" type="EtcItem">
 		<!-- For events. Use to summon Uldie, first sister of Halloween Children, to play Jack Game. Uldie can't be summoned with pet or if Halloween Mask is not equipped. You can't play Jack Game while morphed or in stance status so be cautious! -->
@@ -128,6 +129,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22105" level="1" /> <!-- Summon Scroll: Uldie (Event) -->
 		</skills>
@@ -143,6 +145,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22106" level="1" /> <!-- Summon Scroll: Belldandy (Event) -->
 		</skills>

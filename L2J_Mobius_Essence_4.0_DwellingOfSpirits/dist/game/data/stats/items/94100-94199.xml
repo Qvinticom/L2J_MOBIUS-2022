@@ -693,7 +693,6 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
@@ -817,8 +816,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="18" /> <!-- Venir Talisman -->
 		</skills>
@@ -832,8 +831,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="19" /> <!-- Venir Talisman -->
 		</skills>
@@ -847,8 +846,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="20" /> <!-- Venir Talisman -->
 		</skills>
@@ -862,8 +861,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="21" /> <!-- Venir Talisman -->
 		</skills>
@@ -877,8 +876,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="22" /> <!-- Venir Talisman -->
 		</skills>
@@ -892,8 +891,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="23" /> <!-- Venir Talisman -->
 		</skills>
@@ -907,8 +906,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="24" /> <!-- Venir Talisman -->
 		</skills>
@@ -922,8 +921,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18024" level="25" /> <!-- Venir Talisman -->
 		</skills>
@@ -933,6 +932,7 @@
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="94185" name="Life Stone Lv. 1 - Weapon" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->

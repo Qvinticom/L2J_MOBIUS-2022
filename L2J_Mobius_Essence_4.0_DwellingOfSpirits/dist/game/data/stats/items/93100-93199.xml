@@ -349,8 +349,8 @@
 		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93129" name="Agathion Nebula" type="Armor">
 		<!-- Increases all Critical Rate. When enchanted to +5 and higher, decreases Skill Cooldown.\n\nEquipping it in the main slot summons Agathion Nebula.\n\nNote!\nIf Agathion Scorpio or Agathion Capricorn are equipped, only Agathion Nebula will be active. -->
@@ -362,8 +362,8 @@
 		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93130" name="Agathion Procella" type="Armor">
 		<!-- Increases Atk. Spd./Casting Spd. When enchanted to +5 and higher, decreases Skill MP consumption.\n\nEquipping it in the main slot summons Agathion Procella.\n\nNote!\nIf equipped with Agathion Libra or Agathion Sagittarius, only Agathion Procella is active. -->
@@ -375,8 +375,8 @@
 		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93131" name="Agathion Petram" type="Armor">
 		<!-- Increases P./ M. Def. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate.\n\nEquipping it in the main slot summons Agathion Petram.\n\nNote!\nIf Agathion Taurus or Agathion Virgo are equipped, only Agathion Petram will be active. -->
@@ -388,8 +388,8 @@
 		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93132" name="Agathion Joy" type="Armor">
 		<!-- Increases the acquired XP/ SP bonus from Sayha's Grace. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP.\n\nEquipping it in the main slot summons Agathion Joy.\n\nNote!\nIf Agathion Gemini is equipped, only Agathion Joy will be active. -->
@@ -401,8 +401,8 @@
 		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93133" name="Scroll: Enchant Agathion" type="EtcItem">
 		<!-- Only for agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->

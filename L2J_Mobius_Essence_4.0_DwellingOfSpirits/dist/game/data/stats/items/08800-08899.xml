@@ -684,6 +684,7 @@
 		<set name="price" val="200000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8891" name="Spellbook: Aura Flash" type="EtcItem">
 		<!-- Spellbook needed to learn Aura Flash. Used by a Sorcerer, Spellsinger, and Spellhowler. Required level: 58 -->
@@ -693,5 +694,6 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

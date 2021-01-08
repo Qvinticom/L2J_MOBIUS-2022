@@ -567,6 +567,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1142" name="Rusted Bronze Sword" type="Weapon">
 		<!-- An old bronze sword also known as the Sword of Trial. Can be used for killing Venomous Spiders and Arachnid Trackers. -->
@@ -628,6 +629,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1146" name="Squire's Shirt" type="Armor">
 		<set name="icon" val="icon.armor_t01_u_i00" />

@@ -462,14 +462,12 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37535" name="Santa Hat" type="Armor">
 		<!-- Santa's Hat. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="bodypart" val="hairall" />
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />

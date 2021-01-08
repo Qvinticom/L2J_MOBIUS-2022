@@ -330,6 +330,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">107.0</stat>
 			<stat type="mAtk">68.0</stat>
@@ -979,7 +980,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
+		<set name="weight" val="5" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18568" level="5" /> <!-- Vital Stone -->
@@ -1044,7 +1045,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
+		<set name="weight" val="5" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18566" level="5" /> <!-- Garnet -->
@@ -1109,7 +1110,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
+		<set name="weight" val="5" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18565" level="5" /> <!-- Tanzanite - Barrier -->

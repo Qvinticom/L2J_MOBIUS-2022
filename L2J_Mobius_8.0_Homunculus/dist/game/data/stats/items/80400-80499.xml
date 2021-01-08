@@ -195,11 +195,11 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="39370" level="1" /> <!-- Gale Scroll -->
 		</skills>
@@ -212,9 +212,9 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80414" name="Expertise Rune - ALL (30-day) Box" type="EtcItem">
 		<!-- Double-click to obtain Growth Rune (30-day). -->
@@ -269,8 +269,8 @@
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80419" name="Artifact Box" type="EtcItem">
 		<!-- Double-click to obtain Attack/ Defense/ Support/ Balance Artifact Pack. -->
@@ -480,6 +480,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80436" name="Emperor's Special Cocktail - Magic" additionalName="4-hour" type="EtcItem">
 		<!-- For 4 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Wizard's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
@@ -488,6 +489,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80437" name="Emperor's Special Cocktail - Defense" additionalName="4-hour" type="EtcItem">
 		<!-- For 4 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Knight's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
@@ -496,6 +498,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80438" name="Emperor's Special Cocktail - Attack" additionalName="8-hour" type="EtcItem">
 		<!-- For 8 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Warrior's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
@@ -504,6 +507,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80439" name="Emperor's Special Cocktail - Magic" additionalName="8-hour" type="EtcItem">
 		<!-- For 8 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Wizard's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
@@ -512,6 +516,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80440" name="Emperor's Special Cocktail - Defense" additionalName="8-hour" type="EtcItem">
 		<!-- For 8 h., grants Lv. 5 Horn Melody/ Guitar Melody/ Pipe Organ Melody/ Drum Melody buffs, Lv. 2 Knight's Harmony, War Drum/ Marching Drum/ Soothing Drum effects, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. Emperor's Special Cocktail extends the duration of the last used item. -->
@@ -520,6 +525,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80441" name="Freya's Ice Rose" additionalName="4-hour" type="EtcItem">
 		<!-- For 4 h., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Atk. Rate/ Resistance +100, Damage +10%, P./ M. Skill Power +10%, Acquired XP/ SP +30%, and Received damage -10% and Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Cannot be stacked with Art of Seduction and Pa agrio s Blessing. Cannot be used in Olympiad. -->
@@ -1321,8 +1327,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 </list>

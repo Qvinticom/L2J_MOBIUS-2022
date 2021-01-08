@@ -12,20 +12,20 @@
 	<item id="45901" name="Kokko's Shiny Egg" type="EtcItem">
 		<!-- Kokko's shiny egg prepared by Maph. Double-click to find out what it is. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
 		<set name="icon" val="icon.egg_twinkle" />
-		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45902" name="Kokko's Golden Egg" type="EtcItem">
 		<!-- Kokko's golden egg prepared by Maph. Double-click to find out what it is. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
 		<set name="icon" val="icon.egg_gold" />
-		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45903" name="Apocalypse Weapon Pack Coupon" type="EtcItem">
 		<!-- Take it to Maphr's agent Yuna to get a box containing an Apocalypse weapon. -->

@@ -29,9 +29,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29503" name="Freya's Ice Flower Appearance Stone" type="EtcItem">
 		<!-- An appearance stone that gives a shield/ sigil Freya's Ice Flower Shield appearance. -->
@@ -40,9 +40,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29504" name="Freya's Fortune Stick" type="EtcItem">
 		<!-- Double-click Freya's Fortune Stick to obtain Freya's Frozen Scroll/ Freya's Recovery Potion x3 and Freya's Art of Seduction XP/ Barrier or Pa'agrio's Blessing XP/ Might. Additionally, you can randomly earn 1 Freya's/ Sirra's/ Snowman's Fortune Box. -->
@@ -83,9 +83,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29509" name="Expertise Rune - ALL (7-day) Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an Expertise Rune - ALL (7-day) Box. -->
@@ -117,9 +117,9 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29512" name="Angel Cat's Blessing" type="EtcItem">
 		<!-- For 60 min., P. Atk. +5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/ MP by 5%, and XP and SP acquired through hunting by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Letter Collector's Gift. -->
@@ -140,6 +140,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29514" name="Festival Ticket" type="EtcItem">
 		<!-- Ticket to participate in the Festival. -->
@@ -163,9 +164,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29517" name="Golden Mermaid Bait (95)" type="EtcItem">
 		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 95. -->
@@ -175,9 +176,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29518" name="Golden Mermaid Bait (99)" type="EtcItem">
 		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 99. -->
@@ -187,9 +188,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29519" name="Golden Mermaid Bait (105)" type="EtcItem">
 		<!-- Fishing Time: 45s Fishing Waiting Time: 15s Fishing Bait. Used to acquire Golden Treasure Chests. Can be used only above level 105. -->
@@ -199,9 +200,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29520" name="Special Golded Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Sayha's Talisman Lv.8 Pack, Radiant Circlet Upgrade Stone, Radiant Rind Upgrade Stone, T-shirt Chest (Sparkle/ Attack/ Magic) +7, Red Starlight Jar, Dark/Bloody Weapon Enhancement Stone, Royal Purple/ Royal Red/ Royal White Save Card (R99-grade), High-grade/ Mid/ Low Zodiac Agathion Box, Destruction Scroll: Enchant Elemental Shirt, Stabilized/ Ancient Zodiac Agathion Charm Book of Growth, Soul Crystal Box Lv.5-7, Dark/ Bloody Armor Enhancement Stone, Royal Purple/ Royal Red/ Royal White Save Card (R95-grade), Ultimate Fortune Jewelry Box, Elcyum, Tempest Stone, Shining Nevit's Gold Hourglass, Blessed Scroll: Enchant Weapon (R-grade), Gale Scroll, Giant's Scroll: Enchant Weapon (R-grade), Energy of Destruction Pack (20 pcs.), Elcyum Crystal, Gemstone (R-grade) (7 pcs.). -->
@@ -292,9 +293,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29528" name="Archaeologist's Box" type="EtcItem">
 		<!-- A suspicious vault secretly being traded in Mystic Tavern. Obtain a rare item. -->

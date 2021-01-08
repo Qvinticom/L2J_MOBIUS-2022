@@ -236,6 +236,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8389" name="Spellbook: Greater Shield" type="EtcItem">
 		<!-- Spellbook needed to learn Greater Shield. Used by Prophets. Required level: 58 -->
@@ -246,6 +247,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8397" name="Spellbook: Clarity" type="EtcItem">
 		<!-- Spellbook needed to learn Clarity. Used by Elven Elders. Required level: 58 -->
@@ -256,5 +258,6 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

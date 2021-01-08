@@ -1462,6 +1462,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22392" level="1" /> <!-- Cake of Happiness (Low-grade) -->
 		</skills>
@@ -1476,6 +1477,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22393" level="1" /> <!-- Cake of Happiness (Mid-grade) -->
 		</skills>
@@ -1490,6 +1492,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22394" level="1" /> <!-- Cake of Happiness (High-grade) -->
 		</skills>
@@ -1504,6 +1507,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22395" level="1" /> <!-- Cake of Happiness (Top-grade) -->
 		</skills>
@@ -1531,6 +1535,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="22297" name="Cake Ingredient: White Chocolate" additionalName="Event" type="EtcItem">
 		<!-- Ingredient for making a Valentine Cake. -->
@@ -1539,6 +1544,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="22298" name="Cake Ingredient: Fresh Cream" additionalName="Event" type="EtcItem">
 		<!-- Ingredient for making a Valentine Cake. -->
@@ -1547,6 +1553,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="22299" name="Miraculous Valentine Cake: Special Ingredient Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Miraculous Valentine Cake: Special Ingredient. -->

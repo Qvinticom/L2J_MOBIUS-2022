@@ -735,9 +735,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93269" name="Improved Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- For A-grade armor and accessories\nP. Def. +4 for armor\nM. Def. +2 for accessories\nWhen enchanted to +4 and higher, P. Def. +9, M. Def. +7, Max HP is increased with each enchant value\nThe enchanting is safe up to +4.\nEnchants the item randomly from +1 to +2 for an armor enchanted to +5 and lower. For an armor enchanted to +6 and higher, increases enchant value by +1. -->
@@ -746,9 +746,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93270" name="Cursed Scroll: Enchant A-grade Weapon" type="EtcItem">
 		<!-- For A-grade weapons enchanted to +1 and higher. When used, enchant value is decreased by 1. -->
@@ -757,9 +757,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93271" name="Cursed Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- For A-grade armor and accessories enchanted to +1 and higher. When used, enchant value is decreased by +1. -->
@@ -768,9 +768,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93272" name="Buff Expansion Book Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Buff Expansion Book Lv. 1/ Lv. 2/ Lv. 3/ Lv. 4. -->
@@ -1148,8 +1148,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">66</stat>
 		</stats>

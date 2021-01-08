@@ -392,6 +392,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3833" name="Herb of Vanor" type="EtcItem">
 		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
@@ -401,6 +402,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3834" name="Herb of Oel Mahum" type="EtcItem">
 		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
@@ -410,6 +412,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3835" name="Blood of Eva" type="EtcItem">
 		<!-- An ingredient for the antidote. Take all 4 antidote ingredients to the clan leader within the time limit. -->
@@ -419,6 +422,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3836" name="Athrea's Coin" type="EtcItem">
 		<!-- If you collect three Athrea's coins and take them to Witch Athrea, you will be able to obtain Blood of Eva. -->
@@ -428,6 +432,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3837" name="Symbol of Loyalty" type="EtcItem">
 		<!-- Certificate acquired in exchange for the life of a clan member. Take this to the clan leader. -->
@@ -437,6 +442,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3838" name="Recipe: Giant's Powerstone (25%)" type="EtcItem">
 		<!-- For Dwarves only. A quest recipe for Giant's Powerstone. Requires Create Item Lv. 2. The success rate is 25%. -->
@@ -452,6 +458,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3839" name="Mist Drake's Egg" type="EtcItem">
 		<!-- Egg of mist drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
@@ -462,6 +469,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3840" name="Blitz Wyrm Egg" type="EtcItem">
 		<!-- Egg of blitz Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
@@ -472,6 +480,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3841" name="Drake's Egg" type="EtcItem">
 		<!-- Egg of drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
@@ -482,6 +491,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3842" name="Thunder Wyrm Egg" type="EtcItem">
 		<!-- Egg of thunder Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
@@ -492,6 +502,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3843" name="Brooch of the Magpie" type="EtcItem">
 		<!-- This brooch that was left by a dying Dwarf to be delivered to Head Blacksmith Kusto, his younger brother in Town of Giran. -->
@@ -502,6 +513,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3844" name="Nebulite Crystals" type="EtcItem">
 		<!-- Soulshot of unknown identity. The clan leader must collect ten each of this and Giant's Powerstones and take it all to Balthazar. -->
@@ -512,6 +524,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3845" name="Giant's Broken Powerstone" type="EtcItem">
 		<!-- Giant's Powerstone. It is broken and useless. -->
@@ -532,6 +545,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3847" name="Imperial Key" type="EtcItem">
 		<!-- Key used when opening imperial coffer. Must have all six to open the coffer. -->
@@ -542,6 +556,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3848" name="Undead Ash" type="EtcItem">
 		<!-- Ash dust remaining after an undead of the Execution Grounds is destroyed. Collect this and take it to Mercenary Sophya. -->
@@ -994,6 +1009,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2060" level="1" /> <!-- Healing Medicine -->
 		</skills>

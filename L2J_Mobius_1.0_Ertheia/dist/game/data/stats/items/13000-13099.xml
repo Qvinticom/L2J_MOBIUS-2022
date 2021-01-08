@@ -206,6 +206,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="13014" name="Freight Chest's Seal" type="EtcItem">
 		<!-- Seal engraved on a freight chest. Take it to Gesto. -->
@@ -216,6 +217,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="13015" name="My Teleport Book" type="EtcItem">
 		<!-- Increases My Teleport locations by 3 slots, which can be used to save specific locations. My Teleport locations can be expanded up to 18 slots. -->
@@ -958,6 +960,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="13052" name="Spear of Silenos" type="Weapon">
 		<!-- Spear of Silenos obtained from the Internal Supporter. Can only be equipped in the Pailaka instant dungeon. -->
@@ -1313,6 +1316,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -1327,6 +1331,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -1341,6 +1346,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>

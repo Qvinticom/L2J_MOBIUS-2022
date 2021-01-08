@@ -29,6 +29,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21502" name="Kai the Cat Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like Kai the Cat. 7-day. Uses 2 hair accessory slots. -->
@@ -58,6 +59,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21504" name="Kai the Cat Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like Kai the Cat. 30-day. Uses 2 hair accessory slots. -->
@@ -215,6 +217,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21514" name="Feline Queen Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like Feline Queen. 7-day. Uses 2 hair accessory slots. -->
@@ -244,6 +247,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21516" name="Feline Queen Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like Feline Queen. 30-day. Uses 2 hair accessory slots. -->
@@ -401,6 +405,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21526" name="Feline King Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like Feline King. 7-day. Uses 2 hair accessory slots. -->
@@ -430,6 +435,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21528" name="Feline King Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like Feline King. 30-day. Uses 2 hair accessory slots. -->
@@ -584,6 +590,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<cond msgId="1518">
 			<player sex="0" />
 		</cond>
@@ -617,6 +624,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<cond msgId="1518">
 			<player sex="0" />
 		</cond>
@@ -779,6 +787,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21550" name="Refined Dapper Cap" additionalName="7-day (Event)" type="Armor">
 		<!-- Refined dapper's hat. 7-day. Uses 2 hair accessory slots. -->
@@ -808,6 +817,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21552" name="Refined Dapper Cap" additionalName="30-day (Event)" type="Armor">
 		<!-- Refined dapper's hat. 30-day. Uses 2 hair accessory slots. -->
@@ -961,6 +971,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21562" name="Valkyrie Circlet" additionalName="7-day (Event)" type="Armor">
 		<!-- Circlet covered with a valkyrie's strength. 7-day. Uses 2 hair accessory slots. -->
@@ -990,6 +1001,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21564" name="Valkyrie Circlet" additionalName="30-day (Event)" type="Armor">
 		<!-- Circlet covered with a valkyrie's strength. 30-day. Uses 2 hair accessory slots. -->
@@ -1145,6 +1157,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21574" name="Plastic Hair" additionalName="7-day (Event)" type="Armor">
 		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. 7-day. Uses 2 hair accessory slots. -->
@@ -1174,6 +1187,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21576" name="Plastic Hair" additionalName="30-day (Event)" type="Armor">
 		<!-- Plastic hair. Changes into an attractive pink wig for women and a handsome blue wig for men. 30-day. Uses 2 hair accessory slots. -->

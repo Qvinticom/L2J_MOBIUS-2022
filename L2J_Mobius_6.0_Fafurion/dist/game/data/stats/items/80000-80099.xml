@@ -1071,6 +1071,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80062" name="Emperor's Special Cocktail" additionalName="Magic" type="EtcItem">
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Wizard's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
@@ -1079,6 +1080,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80063" name="Emperor's Special Cocktail" additionalName="Defense" type="EtcItem">
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Knight's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
@@ -1087,6 +1089,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80064" name="Challenger's Scroll of Growth" type="EtcItem">
 		<!-- A scroll for challengers growth. Hunting Acquired XP/ SP +200%. Remains active after death. Duration 10 min. Cooldown 9 min. Only for characters Lv. 105 or below. Cannot be stacked with Freya s Wind Scroll or Freya s Storm Scroll. -->
@@ -1096,9 +1099,9 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80065" name="Entrance Pass: Shilen's Altar of the Emperor" type="EtcItem">
 		<!-- Dimensional item. Extra pass to a daily Instanced Zone Dungeon. Double-click to unbind the Altar of Shilen. Cannot be used if the Instanced Zone is not bound. Can be used only once a day outside of the instanced zone. -->

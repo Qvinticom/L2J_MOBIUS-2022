@@ -10,6 +10,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1501" name="Maraku Werewolf Totem" type="EtcItem">
 		<!-- Maraku Wolfmen Totem. Can be sold in any shop. -->
@@ -21,6 +22,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1502" name="Grandma's Pearl" type="EtcItem">
 		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
@@ -32,6 +34,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1503" name="Grandma's Mirror" type="EtcItem">
 		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
@@ -43,6 +46,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1504" name="Grandma's Necklace" type="EtcItem">
 		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
@@ -54,6 +58,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1505" name="Grandma's Hairpin" type="EtcItem">
 		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
@@ -65,6 +70,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1506" name="Necklace of Courage" type="Armor">
 		<!-- Necklace that is given to young Orcs who have proven their courage. -->
@@ -200,6 +206,7 @@
 		<set name="price" val="7461" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1515" name="Spellbook: Eva's Kiss" type="EtcItem">
 		<!-- Spellbook needed to learn Eva's Kiss. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20 -->
@@ -230,6 +237,7 @@
 		<set name="price" val="15048" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1518" name="Amulet: Chant of Flame" type="EtcItem">
 		<!-- Amulet required for the Chant of Flame spell. Used by Orc Shamans. Required level: 30 -->
@@ -240,6 +248,7 @@
 		<set name="price" val="26593" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1519" name="Amulet: Pa'agrio's Gift" type="EtcItem">
 		<!-- Amulet required for the Pa'agrio's Gift spell. Used by Orc Shamans. Required level: 30 -->
@@ -250,6 +259,7 @@
 		<set name="price" val="26593" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1520" name="Amulet: Pa'agrio's Blessing" type="EtcItem">
 		<!-- Amulet required for the Pa'agrio's Blessing spell. Used by Orc Shamans. Required level: 35 -->
@@ -270,6 +280,7 @@
 		<set name="price" val="7461" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1522" name="Amulet: Chant of Battle" type="EtcItem">
 		<!-- Amulet required for the Chant of Battle spell. Used by Orc Mystics. Required level: 14 -->
@@ -290,6 +301,7 @@
 		<set name="price" val="7461" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1524" name="Amulet: Soul Shield" type="EtcItem">
 		<!-- Amulet required for the Soul Shield spell. Used by Orc Mystics. Required level: 7 -->
@@ -360,6 +372,7 @@
 		<set name="price" val="43681" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1531" name="Amulet: Chill Flame" type="EtcItem">
 		<!-- Amulet required for the Chill Flame spell. Used by Orc Mystics. Required level: 7 -->
@@ -420,6 +433,7 @@
 		<set name="price" val="15048" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1537" name="Amulet: Seal of Poison" type="EtcItem">
 		<!-- Amulet required for the Seal of Poison spell. Used by Orc Shamans. Required level: 20 -->
@@ -463,6 +477,7 @@
 		<set name="for_npc" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -486,6 +501,7 @@
 		<set name="for_npc" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>

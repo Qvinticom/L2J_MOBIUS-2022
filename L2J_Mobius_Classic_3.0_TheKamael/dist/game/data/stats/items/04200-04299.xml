@@ -70,6 +70,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4206" name="Spellbook: Transfer Pain" type="EtcItem">
 		<!-- Spellbook needed to learn Transfer Pain. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
@@ -470,6 +471,7 @@
 		<set name="reuse_delay" val="5000" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="RollingDice" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="4233" name="Fist" type="Weapon">
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />

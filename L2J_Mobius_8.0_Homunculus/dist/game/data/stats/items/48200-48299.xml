@@ -332,6 +332,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="48218" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
@@ -344,6 +345,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="48219" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
@@ -356,6 +358,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="48220" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
@@ -388,8 +391,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48223" name="Lucky Gift Coupon" additionalName="3 Hours" type="EtcItem">
 		<!-- For 3 h., changes the appearance of your armor into that of the Hanbok, also allows you to take part in the Lucky Gift Draw. For characters of level 85 or higher. The effect is removed if you switch to a different class. -->
@@ -398,9 +401,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48224" name="Lucky Gift Coupon" additionalName="6 Hours" type="EtcItem">
 		<!-- For 6 h., changes the appearance of your armor into that of the Hanbok, also allows you to take part in the Lucky Gift Draw. For characters of level 85 or higher. The effect is removed if you switch to a different class. -->
@@ -409,9 +412,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48225" name="Holiday Lucky Scroll" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., Vitality bonus +30%. -->
@@ -1270,6 +1273,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="weight" val="10" />
 		<skills>
 			<skill id="22754" level="1" /> <!-- Scroll: Reputation -->
 		</skills>

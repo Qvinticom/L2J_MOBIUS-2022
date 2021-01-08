@@ -580,6 +580,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9150" level="1" /> <!-- Freesia Bouquet (Event) -->
 		</skills>
@@ -594,6 +595,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9151" level="1" /> <!-- Baby's Breath Bouquet (Event) -->
 		</skills>
@@ -608,6 +610,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9152" level="1" /> <!-- Pink Lady (Event) -->
 		</skills>
@@ -622,6 +625,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9153" level="1" /> <!-- June Bug (Event) -->
 		</skills>
@@ -636,6 +640,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9154" level="1" /> <!-- Soft Cheesecake (Event) -->
 		</skills>
@@ -650,6 +655,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9155" level="1" /> <!-- Freshly-Baked Baguette (Event) -->
 		</skills>
@@ -664,6 +670,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9156" level="1" /> <!-- Sweet Cream Bun (Event) -->
 		</skills>
@@ -679,6 +686,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9157" level="1" /> <!-- Valentine's Day Candy (Event) -->
 		</skills>
@@ -693,6 +701,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9158" level="1" /> <!-- Freya's Gift -->
 		</skills>
@@ -993,6 +1002,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9164" level="1" /> <!-- April Fools' Day Special Gift (Event) -->
 		</skills>
@@ -1067,6 +1077,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="14052" min="10" max="10" chance="100" /> <!-- Vesper Noble Enhancement Stone -->
 		</capsuled_items>
@@ -1080,6 +1091,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="959" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 		</capsuled_items>
@@ -1093,6 +1105,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="9627" min="1" max="1" chance="100" /> <!-- Lesser Giant's Codex - Mastery -->
 		</capsuled_items>
@@ -1486,6 +1499,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8292" level="1" /> <!-- Olympiad Warrior's Ring -->
 		</skills>
@@ -1544,6 +1559,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="14400" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8292" level="1" /> <!-- Olympiad Warrior's Ring -->
 		</skills>
@@ -1602,6 +1619,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8292" level="1" /> <!-- Olympiad Warrior's Ring -->
 		</skills>
@@ -1659,6 +1678,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8292" level="1" /> <!-- Olympiad Warrior's Ring -->
 		</skills>

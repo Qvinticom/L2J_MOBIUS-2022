@@ -282,6 +282,8 @@
 		<set name="price" val="10000" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="92314" name="Giran Seal" type="EtcItem">
 		<!-- Acquired XP/ SP +20% for 20 min. Can be traded for various items by the Dimensional Merchant. -->

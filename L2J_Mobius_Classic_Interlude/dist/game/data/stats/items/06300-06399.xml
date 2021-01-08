@@ -398,6 +398,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6319" name="Mimir's Elixir" type="EtcItem">
 		<!-- Legendary elixir said to bestow ultimate wisdom. Take it to Magister Ladd. -->
@@ -420,6 +421,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6321" name="True Gold" type="EtcItem">
 		<!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
@@ -1126,6 +1128,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6364" name="Forgotten Blade" type="Weapon">
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />

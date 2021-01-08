@@ -45,6 +45,9 @@
 		<set name="weight" val="1180" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -560,7 +563,8 @@
 		<set name="weight" val="181" />
 		<set name="mp_consume" val="1" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -656,8 +660,8 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="94373" name="Show Cloak BM" type="Armor">
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
@@ -668,8 +672,8 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="94374" name="Special Supply Pack" type="EtcItem">
 		<!-- Double-click to obtain various items. -->

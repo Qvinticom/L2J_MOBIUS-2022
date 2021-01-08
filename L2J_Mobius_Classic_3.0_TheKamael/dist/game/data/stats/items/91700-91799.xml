@@ -433,9 +433,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91744" name="Insolence Crafting Pack" type="EtcItem">
 		<!-- Contains materials for crafting Talisman of Insolence. Double-click to obtain Energy of Insolence (10 pcs), 120 Talisman Crystals, 250 Elemental Stones. -->
@@ -793,9 +793,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91777" name="Magic Fire" additionalName="Event" type="EtcItem">
 		<!-- Required level: 1-74. For 1 h., magic lantern recharge rate +100%. Cooldown: 1 min. -->
@@ -804,9 +804,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91778" name="Sayha's Storm Lv. 3" additionalName="1 hour" type="EtcItem">
 		<!-- Sayha's Grace points +100%, Acquired XP/ SP +200%. The effect remains after death. Duration: 1 h. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->

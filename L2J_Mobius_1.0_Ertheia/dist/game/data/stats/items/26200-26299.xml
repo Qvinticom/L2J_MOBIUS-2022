@@ -917,6 +917,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="26255" name="Halloween Outfit" type="Armor">
 		<!-- When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and accessories remain equipped. -->
@@ -937,6 +938,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">685</stat>
 			<stat type="mAtk">414</stat>
@@ -958,6 +960,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -978,6 +981,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -998,6 +1002,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1019,6 +1024,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1041,6 +1047,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1065,6 +1072,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">1481</stat>
 			<stat type="mAtk">414</stat>
@@ -1087,6 +1095,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="500" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">1333</stat>
 			<stat type="mAtk">414</stat>
@@ -1108,6 +1117,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1128,6 +1138,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1151,6 +1162,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">733</stat>
 			<stat type="mAtk">535</stat>
@@ -1172,6 +1184,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1193,6 +1206,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1217,6 +1231,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1234,6 +1249,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="1130" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="sDef">546</stat>
 			<stat type="rShld">20</stat>
@@ -1249,6 +1265,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="920" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -1290,6 +1307,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">685</stat>
 			<stat type="mAtk">414</stat>
@@ -1311,6 +1329,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1331,6 +1350,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1351,6 +1371,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1372,6 +1393,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1393,6 +1415,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1414,6 +1437,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">1481</stat>
 			<stat type="mAtk">414</stat>
@@ -1436,6 +1460,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="500" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">1333</stat>
 			<stat type="mAtk">414</stat>
@@ -1457,6 +1482,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1479,6 +1505,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1500,6 +1527,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">733</stat>
 			<stat type="mAtk">535</stat>
@@ -1521,6 +1549,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1541,6 +1570,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1562,6 +1592,7 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1579,6 +1610,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="1130" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="sDef">546</stat>
 			<stat type="rShld">20</stat>
@@ -1594,6 +1626,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lhand" />
 		<set name="weight" val="920" />
+		<set name="is_depositable" val="false" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>

@@ -99,6 +99,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17156" level="1" /> <!-- Decadence -->
 			<skill id="17161" level="1" /> <!-- Chocolate Truffle -->
@@ -115,6 +116,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17157" level="1" /> <!-- Sugar Rush -->
 			<skill id="17162" level="1" /> <!-- Candy Heart -->
@@ -131,6 +133,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17158" level="1" /> <!-- Forever Alone -->
 			<skill id="17163" level="1" /> <!-- Comfort Cookie -->
@@ -147,6 +150,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17159" level="1" /> <!-- Transformation Skill -->
 		</skills>
@@ -162,6 +166,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17159" level="1" /> <!-- Transformation Skill -->
 		</skills>
@@ -177,6 +182,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17159" level="1" /> <!-- Transformation Skill -->
 		</skills>
@@ -192,6 +198,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17160" level="1" /> <!-- Summon Friend -->
 		</skills>
@@ -207,6 +214,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17160" level="1" /> <!-- Summon Friend -->
 		</skills>
@@ -222,6 +230,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="17160" level="1" /> <!-- Summon Friend -->
 		</skills>
@@ -234,7 +243,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_commissionable" val="true" />
+		<set name="weight" val="150" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="1" /> <!-- Talisman - Lilith -->
@@ -248,7 +257,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_commissionable" val="true" />
+		<set name="weight" val="150" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="2" /> <!-- Talisman - Lilith -->
@@ -267,7 +276,7 @@
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_commissionable" val="true" />
+		<set name="weight" val="150" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="3" /> <!-- Talisman - Lilith -->
@@ -846,6 +855,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="37766" name="Chaos Fragment" type="EtcItem">
 		<!-- An item obtained by defeating monsters in the Beleth's Magic Circle area in Hellbound. -->
@@ -855,6 +865,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="37767" name="Vitality Replenishing Potion" type="EtcItem">
 		<!-- Potion that replenishes a certain amount of vitality points. -->

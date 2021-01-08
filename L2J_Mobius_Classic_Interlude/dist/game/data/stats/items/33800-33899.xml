@@ -16,6 +16,7 @@
 		<set name="handler" val="Book" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="33802" name="Mentee Certificate Pack" type="EtcItem">
 		<!-- Dimensional Item Pack. Contains a Mentee Certificate and a Mentoring Guidebook. Once the pack is opened, it cannot be shared among characters within an account through the Dimensional Merchant. -->

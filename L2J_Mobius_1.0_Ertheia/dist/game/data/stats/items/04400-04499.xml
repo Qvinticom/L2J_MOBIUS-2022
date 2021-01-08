@@ -10,6 +10,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4401" name="Green Dimensional Stone" type="EtcItem">
 		<!-- Activates a Dimensional Vortex. Allows you to move to the 1st to 3rd floor of the Tower of Insolence. -->
@@ -83,6 +84,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4408" name="Musical Score - Theme of Love" type="EtcItem">
 		<!-- Posthumously released musical score of Gillian. If you take it to Maestro Melody, you can have an echo crystal made. -->

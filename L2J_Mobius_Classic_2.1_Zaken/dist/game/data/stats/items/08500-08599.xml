@@ -56,6 +56,8 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<cond msgId="1518">
 			<player sex="1" />
 		</cond>
@@ -72,6 +74,8 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="2000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="8561" name="Piggy Hat" type="Armor">
 		<!-- Fun, pig-shaped hair accessory. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -85,6 +89,8 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="2000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="8562" name="Jester Hat" type="Armor">
 		<!-- Festive Jester Hat with a split top. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -98,6 +104,8 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="2000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="8563" name="Wizard Hat" type="Armor">
 		<!-- A Wizard Hat with a wide brim and bent tip. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -111,6 +119,8 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="8564" name="Dapper Cap" type="Armor">
 		<!-- Stylish Cap with a visor. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -124,6 +134,8 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="2000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="8569" name="Half Face Mask" type="Armor">
 		<!-- An accessory covering half of the wearer? face. -->
@@ -137,5 +149,6 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="price" val="500000" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

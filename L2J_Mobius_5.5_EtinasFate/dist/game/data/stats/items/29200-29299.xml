@@ -79,7 +79,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -95,7 +94,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -111,7 +109,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -149,6 +146,9 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27588" level="1" /> <!-- Adventurer's Shirt Effect -->
 		</skills>
@@ -163,9 +163,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="27602" level="1" /> <!-- Paulina Twilight Bracelet -->
 		</skills>
@@ -176,13 +176,13 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="28202" level="1" /> <!-- T-shirt Box -->
 		</skills>
@@ -194,11 +194,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item chance="100.0" id="26407" max="3" min="3" /> <!-- XP Rune IV (Lv. 1-99) 100% Pack (1-hr) -->
 			<item chance="100.0" id="40056" max="3" min="3" /> <!-- Mysterious Wind Scroll -->
@@ -220,11 +220,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item chance="100.0" id="26407" max="5" min="5" /> <!-- XP Rune IV (Lv. 1-99) 100% Pack -->
 			<item chance="100.0" id="40056" max="5" min="5" /> <!-- Mysterious Wind Scroll -->
@@ -247,11 +247,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item chance="100.0" id="28405" max="5" min="5" /> <!-- High-grade Maphr's Rune 100% Pack (1-hr) -->
 			<item chance="100.0" id="40056" max="10" min="10" /> <!-- Mysterious Wind Scroll -->
@@ -347,9 +347,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29227" name="Shattered Gourd Shard" type="EtcItem">
 		<!-- Crystal shard which came out of broken gourd. Take it to Puss the Cat to exchange it for a special item. -->

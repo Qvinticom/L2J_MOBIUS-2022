@@ -365,7 +365,6 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -646,9 +645,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48852" name="Freya's Secret Box" type="EtcItem">
 		<!-- Use it to receive one of Freya's gifts. -->
@@ -667,9 +666,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48854" name="1 Billion Adena Box" type="EtcItem">
 		<!-- A gift from Chorong's fortune draw. Use it to earn 1 billion Adena. -->
@@ -739,8 +738,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48860" name="Fallen Angel's Ring Box" type="EtcItem">
 		<!-- Double-click to obtain 1 Fallen Angel's Ring and 10 Scrolls: Enchant Fallen Angel Accessory. -->
@@ -914,6 +913,7 @@
 		<set name="price" val="800" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48876" name="Forgotten Spellbook Chapter 1" type="EtcItem">
 		<!-- A spellbook required to learn Forgotten Power Levels 6 to 10. You can exchange it through a Dimensional Merchant for Forgotten Spellbook Chapter 2 or Forgotten Spellbook Chapter 3. -->

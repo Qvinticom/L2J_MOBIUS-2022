@@ -979,6 +979,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
 		<capsuled_items>
 			<item id="27581" min="1" max="1" chance="100" /> <!-- XP Rune 100% - 1-hour -->
 		</capsuled_items>
@@ -995,6 +996,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
 		<capsuled_items>
 			<item id="27582" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
@@ -1011,6 +1013,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
 		<capsuled_items>
 			<item id="27583" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 1-hour -->
 		</capsuled_items>

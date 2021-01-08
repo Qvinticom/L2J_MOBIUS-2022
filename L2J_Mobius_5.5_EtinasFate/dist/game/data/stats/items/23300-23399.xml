@@ -172,6 +172,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22690" level="1" /> <!-- Elven Radler -->
 		</skills>
@@ -185,6 +186,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22691" level="1" /> <!-- Dion Pilsner -->
 		</skills>
@@ -198,6 +200,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22692" level="1" /> <!-- Dwarven Royal Blue Cocktail -->
 		</skills>
@@ -211,6 +214,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22693" level="1" /> <!-- Aden White Beer -->
 		</skills>
@@ -236,6 +240,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23315" name="Beer Ingredient: Hops" additionalName="Event" type="EtcItem">
 		<!-- Ingredient needed for crafting beer. -->
@@ -243,6 +248,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23316" name="Beer Ingredient: Yeast" additionalName="Event" type="EtcItem">
 		<!-- Ingredient needed for crafting beer. -->
@@ -250,6 +256,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23318" name="Beer Tankard" additionalName="Event" type="EtcItem">
 		<!-- Take this and the Aden White Beer to Queen of Hearts to obtain a Gran Kain's Delight. -->
@@ -449,6 +456,8 @@
 		<set name="shared_reuse_group" val="16" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22708" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
@@ -466,6 +475,8 @@
 		<set name="shared_reuse_group" val="16" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22709" level="1" /> <!-- XP Buff 50% (2-hour) -->
 		</skills>

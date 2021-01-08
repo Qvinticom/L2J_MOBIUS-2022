@@ -10,6 +10,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="28032" level="1" type="ON_EQUIP" /> <!-- Summon Leo Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -25,6 +27,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="28033" level="1" type="ON_EQUIP" /> <!-- Summon Gemini Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -40,6 +44,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="28034" level="1" type="ON_EQUIP" /> <!-- Summon Scorpio Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -55,6 +61,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="28035" level="1" type="ON_EQUIP" /> <!-- Summon Aquarius Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -70,6 +78,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="28036" level="1" type="ON_EQUIP" /> <!-- Summon Pisces Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -85,6 +95,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="28037" level="1" type="ON_EQUIP" /> <!-- Summon Sagittarius Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -100,6 +112,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="28038" level="1" type="ON_EQUIP" /> <!-- Summon Cancer Agathion -->
 			<skill id="28064" level="1" type="ON_UNEQUIP" /> <!-- Release Seal -->
@@ -642,9 +656,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29156" name="Lineage II Baseball Cap Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the Lineage II Baseball Cap. Can only be used on hair accessories that use 2 slots. -->
@@ -653,9 +667,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29157" name="Lineage II Baseball Uniform Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform for 30 days. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
@@ -664,10 +678,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29158" name="Lineage II Baseball Cap Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the Lineage II Baseball Cap for 30 days. Can only be used on hair accessories that use 2 slots. -->
@@ -676,10 +690,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29159" name="Jindo Dog Hat" type="Armor">
 		<!-- A Jindo dog hat. Uses 2 hair accessory slots. -->
@@ -712,10 +726,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29162" name="Light Imbued Treasure Chest" type="EtcItem">
 		<!-- A chest containing a starlight. Double-click to obtain one of the following items: Lindvior's Earring, Blessed Antharas' Earring, Seven Signs' Energy, Ring of Creation, Dark Helios/ Eternal Enhancement Stone, Mystic Soul Crystal, Mystic Soul Crystal Fragment, Bottle of Baium's Soul, Dragon Claw, Destruction Scroll: Enchant Elemental Shirt, Freya's Lucky Enchant Stone: Weapon/ Armor (R-grade), Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Source of the Emperor, Frenzied Tauti's Small Fragment, Insane Kelbim's Small Fragment, Life Stone Instilled with Giants' Power, Ancient Zodiac Agathion Charm Book of Growth, Low-grade/ Mid-grade/ High-grade Zodiac Agathion Pack, Red Starlight Jar, Agathion Evolution Stone, Starlight Jar, Superior Giant's Codex - Mastery/ Mastery Chapter 1, Superior Giant's Codex - Chapter 1, Ancient Book: Divine Inspiration (Beginner/ Intermediate), Freya's Bloody/ Dark Rune (2-hour) Box, Eva's Rune (3-day) Pack, Elcyum, Giant's Energy 100-unit Pack, Bottle Fragment of Baium's/ Antharas'/ Valakas' Soul x5, Giant's Energy x2, Gemstone (R-grade) x10. -->
@@ -805,10 +819,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29174" name="High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
@@ -828,10 +842,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="1440" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29176" name="High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
 		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
@@ -874,9 +888,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29180" name="Eva's Rune" additionalName="1-day" type="EtcItem">
 		<!-- Dimensional Item. Ancient charm endowed with mysterious symbols when held in your inventory. It grants the user Eva's Rune passive skill. The remaining time decreases even when logged out. -->
@@ -910,9 +924,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29183" name="Scroll: Enchant Mermaid Agathion" type="EtcItem">
 		<!-- Enchant Scroll exclusively for Mermaid Agathion. The scroll increases M. Def. and adds a Special Ability from +4. It can enhance Agathion safely to +3 and enhance up to +10. Unique Abilities level up gradually from +1. -->
@@ -956,9 +970,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29188" name="Fishing XP Box" additionalName="Lv. 95 - 98" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 95 to 98). There's a chance to obtain a Shining Fishing Box. -->
@@ -968,9 +982,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29189" name="Fishing XP Box" additionalName="Lv. 99 - 101" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 99 to 101). There's a chance to obtain a Shining Fishing Box. -->
@@ -980,9 +994,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29190" name="Fishing XP Box" additionalName="Lv. 102 - 104" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 102 to 104). There's a chance to obtain a Shining Fishing Box. -->
@@ -992,9 +1006,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29191" name="Fishing XP Box" additionalName="Lv. 105" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 105). There's a chance to obtain a Shining Fishing Box. -->
@@ -1004,9 +1018,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29192" name="Shining Fishing Box" type="EtcItem">
 		<!-- Shining Fishing Box. You can obtain one of the various items it contains. -->
@@ -1024,9 +1038,9 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29194" name="Fishing Scroll: XP" additionalName="Lv. 95 - 98" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 95 to 98 can use this. Cannot be used by Chaotic Characters. -->
@@ -1036,9 +1050,9 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29195" name="Fishing Scroll: XP" additionalName="Lv. 99 - 101" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 99 to 101 can use this. Cannot be used by Chaotic Characters. -->
@@ -1048,9 +1062,9 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29196" name="Fishing Scroll: XP" additionalName="Lv. 102 - 104" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 102 to 104 can use this. Cannot be used by Chaotic Characters. -->
@@ -1060,9 +1074,9 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29197" name="Fishing Scroll: XP" additionalName="Lv. 105" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters Lv. 105 or higher can use this. Cannot be used by Chaotic Characters. -->
@@ -1072,9 +1086,9 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29198" name="Ultimate Fortune Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one of the Lucky Jewel Boxes. -->

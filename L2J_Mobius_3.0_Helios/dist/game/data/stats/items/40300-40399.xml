@@ -38,6 +38,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="40304" name="Entrance Pass: Spezion (Epic)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's (Epic) dungeon. Usable once a day outside instances while on a cooldown. -->
@@ -49,6 +50,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="40305" name="Dual Expertise Rune (R99-grade)" additionalName="30-day" type="EtcItem">
 		<!-- While possessed, allows you to equip R99-grade items without penalties. 30-day. -->
@@ -118,7 +120,6 @@
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. Only for hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="immediate_effect" val="true" />
@@ -171,6 +172,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
@@ -185,6 +187,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
@@ -199,6 +202,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
@@ -213,6 +217,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
@@ -227,6 +232,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
@@ -241,6 +247,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
@@ -255,6 +262,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
@@ -269,6 +277,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
@@ -283,6 +292,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
@@ -297,6 +307,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
@@ -311,6 +322,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
@@ -325,6 +337,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
@@ -339,6 +352,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
@@ -353,6 +367,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>
@@ -367,6 +382,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="18048" level="1" /> <!-- Hair Accessory: LUC -->
 		</skills>
@@ -381,6 +397,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="18049" level="1" /> <!-- Hair Accessory: CHA -->
 		</skills>

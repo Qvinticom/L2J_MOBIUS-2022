@@ -258,6 +258,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -276,6 +279,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10800" />
+		<set name="weight" val="150" />
 		<skills>
 			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
 			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
@@ -789,6 +793,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -829,6 +834,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55273" level="1" /> <!-- Energy of Development -->
 		</skills>
@@ -842,6 +848,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55273" level="2" /> <!-- Energy of Development -->
 		</skills>
@@ -855,6 +862,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55273" level="3" /> <!-- Energy of Development -->
 		</skills>
@@ -868,6 +876,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55274" level="1" /> <!-- Energy of Speed -->
 		</skills>
@@ -881,6 +890,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55274" level="2" /> <!-- Energy of Speed -->
 		</skills>
@@ -894,6 +904,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55274" level="3" /> <!-- Energy of Speed -->
 		</skills>
@@ -907,6 +918,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55275" level="1" /> <!-- Energy of Accuracy -->
 		</skills>
@@ -920,6 +932,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55275" level="2" /> <!-- Energy of Accuracy -->
 		</skills>
@@ -933,6 +946,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="55275" level="3" /> <!-- Energy of Accuracy -->
 		</skills>

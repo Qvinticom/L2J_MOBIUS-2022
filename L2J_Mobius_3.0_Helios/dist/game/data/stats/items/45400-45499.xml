@@ -45,6 +45,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="45405" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -63,15 +64,16 @@
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="45407" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45408" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -85,10 +87,10 @@
 	<item id="45409" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45410" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -96,14 +98,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45411" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45412" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -111,19 +114,21 @@
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45413" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_depositable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45414" name="Auto Tooltip Check" additionalName="test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="45415" name="Dandy's Home Run Ball" type="EtcItem">
 		<!-- For 1 hr., XP/SP gain + 100%, and changes the appearance of your armor into that of a NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
@@ -137,6 +142,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="18209" level="1" /> <!-- Dandy's Home Run Ball -->
 		</skills>

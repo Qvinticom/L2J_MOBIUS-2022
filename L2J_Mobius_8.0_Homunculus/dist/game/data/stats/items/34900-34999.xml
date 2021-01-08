@@ -149,6 +149,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34910" name="Aku's Mark" type="EtcItem">
 		<!-- Mark received for helping Aku. It is need to enter the Tauti battle (limited). -->
@@ -160,6 +161,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34911" name="Ruler's Authority" additionalName="Not in Use" type="EtcItem">
 		<!-- A reward for the winner of the race held in the Mysterious Mansion. Max HP/ MP/ CP +500, Weight Limit +12,000, PvP damage +5%, Damage Reflection Resistance +5, 6 Attribute Resistance +10, Inventory Slots +1, Received PvP damage -6%. Increases HP/ MP Recovery Rate. Available only during the tournament. -->

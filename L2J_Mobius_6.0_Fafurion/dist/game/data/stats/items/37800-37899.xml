@@ -706,7 +706,7 @@
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
 		<!-- For 30 min., P. Atk. +10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_cave_page_i00" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1251,7 +1251,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />

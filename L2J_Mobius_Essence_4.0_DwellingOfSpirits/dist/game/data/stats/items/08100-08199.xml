@@ -1596,6 +1596,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8186" name="Artisan's Goggles" type="Armor">
 		<!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. -->
@@ -1609,6 +1610,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8187" name="Red Horn of Victory" type="Armor">
 		<!-- Hair Accessory for the Halloween Event -->
@@ -1621,6 +1623,9 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8188" name="Little Angel Wings" type="Armor">
 		<!-- A hair accessory shaped as a little white wing. -->
@@ -1634,6 +1639,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8189" name="Fairy Antennae" type="Armor">
 		<!-- A lovely hair accessory shaped as antennae with starlets. -->
@@ -1647,5 +1653,6 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

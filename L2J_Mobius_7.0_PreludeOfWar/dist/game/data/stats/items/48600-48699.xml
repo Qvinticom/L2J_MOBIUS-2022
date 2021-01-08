@@ -823,9 +823,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48671" name="Windstorm Box" type="EtcItem">
 		<!-- Use it to obtain a Dandy's Home Run Ball, Dandy's Golden Ball, Ruler's Authority (7-day), Nevit's Cloak of Light (30-day), Emperor's Rune Pack (2-hour), Bloody Weapon Enhancement Stone, or Dark Weapon Enhancement Stone. -->
@@ -845,9 +845,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48673" name="Fantastic Fishing Spot Entrance Pass Pack (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Use it to obtain a Fantastic Fishing Spot Entrance Pass that allows you to stay in the Fantastic Fishing Spot for 1 hour. You can earn greater XP by fishing in the Fantastic Fishing Spot than fishing in Aden. -->

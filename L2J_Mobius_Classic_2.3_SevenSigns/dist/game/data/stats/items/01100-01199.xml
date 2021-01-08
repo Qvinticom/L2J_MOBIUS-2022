@@ -523,6 +523,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1142" name="Rusted Bronze Sword" type="Weapon">
 		<!-- An old and rusty bronze sword called the 'Sword of Trial'. Use it to kill Giant Venomous Spiders and Arachnid Trackers. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
@@ -584,6 +585,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1146" name="Squire's Shirt" type="Armor">
 		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->

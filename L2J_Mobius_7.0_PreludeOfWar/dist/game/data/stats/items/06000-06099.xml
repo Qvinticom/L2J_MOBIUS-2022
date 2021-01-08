@@ -28,6 +28,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6003" name="Ancient Porcelain: Excellent" type="EtcItem">
 		<!-- Porcelain from the era of an ancient empire. Judged to be of the highest grade "excellent" porcelain. -->
@@ -39,6 +40,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6004" name="Ancient Porcelain: High Quality" type="EtcItem">
 		<!-- Porcelain from the era of an ancient empire. Judged to be of "high grade" porcelain. -->
@@ -50,6 +52,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6005" name="Ancient Porcelain: Low Quality" type="EtcItem">
 		<!-- Porcelain from the era of an ancient empire. Judged to be of "low grade" porcelain. -->
@@ -61,6 +64,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6006" name="Ancient Porcelain: Lowest Quality" type="EtcItem">
 		<!-- Porcelain from the era of an ancient empire. Judged to be of the "lowest grade" porcelain. -->
@@ -72,6 +76,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6007" name="Reagent Pouch" type="EtcItem">
 		<!-- Pouch that contains an alchemic reagent. Double-click to confirm contents. -->
@@ -83,6 +88,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2174" level="1" /> <!-- Ingredient Bag -->
 		</skills>
@@ -97,6 +103,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2174" level="2" /> <!-- Ingredient Bag -->
 		</skills>
@@ -111,6 +118,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2174" level="3" /> <!-- Ingredient Bag -->
 		</skills>
@@ -125,6 +133,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2175" level="1" /> <!-- Ingredient Box -->
 		</skills>
@@ -138,6 +147,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6012" name="Lava Stone" type="EtcItem">
 		<!-- Used to mix alchemic reagents. -->
@@ -148,6 +158,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6013" name="Moonstone Shard" type="EtcItem">
 		<!-- Used to mix alchemic reagents. -->
@@ -158,6 +169,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6014" name="Rotten Bone Piece" type="EtcItem">
 		<!-- Used to mix alchemic reagents. -->
@@ -168,6 +180,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6015" name="Demon's Blood" type="EtcItem">
 		<!-- Used to mix alchemic reagents. -->
@@ -178,6 +191,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6016" name="Infernium Ore" type="EtcItem">
 		<!-- Used to mix alchemic reagents. -->
@@ -206,6 +220,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6019" name="Quicksilver" type="EtcItem">
 		<!-- Used to mix alchemic reagents. -->
@@ -216,6 +231,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6020" name="Brimstone" type="EtcItem">
 		<!-- Used to mix alchemic reagents. -->
@@ -235,6 +251,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6022" name="Magma Dust" type="EtcItem">
 		<!-- Low-grade Reagent -->
@@ -245,6 +262,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6023" name="Moon Dust" type="EtcItem">
 		<!-- Low-grade Reagent -->
@@ -255,6 +273,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6024" name="Necroplasm" type="EtcItem">
 		<!-- Low-grade Reagent -->
@@ -265,6 +284,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6025" name="Demonplasm" type="EtcItem">
 		<!-- Low-grade Reagent -->
@@ -275,6 +295,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6026" name="Inferno Dust" type="EtcItem">
 		<!-- Low-grade Reagent -->
@@ -285,6 +306,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6027" name="Draconic Essence" type="EtcItem">
 		<!-- High-grade Reagent -->
@@ -295,6 +317,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6028" name="Fire Essence" type="EtcItem">
 		<!-- High-grade Reagent -->
@@ -305,6 +328,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6029" name="Lunargent" type="EtcItem">
 		<!-- High-grade Reagent -->
@@ -315,6 +339,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6030" name="Midnight Oil" type="EtcItem">
 		<!-- High-grade Reagent -->
@@ -325,6 +350,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6031" name="Demonic Essence" type="EtcItem">
 		<!-- High-grade Reagent -->
@@ -335,6 +361,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6032" name="Abyss Oil" type="EtcItem">
 		<!-- High-grade Reagent -->
@@ -345,6 +372,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6033" name="Hellfire Oil" type="EtcItem">
 		<!-- Highest Grade Reagent -->
@@ -355,6 +383,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6034" name="Nightmare Oil" type="EtcItem">
 		<!-- Highest Grade Reagent -->
@@ -365,6 +394,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="6035" name="Magic Haste Potion" type="EtcItem">
 		<!-- Casting Spd. is raised. -->

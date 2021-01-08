@@ -53,8 +53,8 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -67,8 +67,8 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -81,8 +81,8 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="200" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -90,7 +90,6 @@
 	<item id="48408" name="Blackish Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Blackish Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -100,7 +99,6 @@
 	<item id="48409" name="Scarlet Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Scarlet Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -110,7 +108,6 @@
 	<item id="48410" name="Gold Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Gold Scarab appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
-		<set name="is_commissionable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -140,6 +137,8 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -158,6 +157,8 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -715,6 +716,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
+		<set name="weight" val="150" />
 		<skills>
 			<skill id="35180" level="1" /> <!-- Fortress Talisman - Max MP -->
 		</skills>
@@ -732,6 +734,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="useSkillDisTime" val="6" />
+		<set name="weight" val="150" />
 		<skills>
 			<skill id="35181" level="1" /> <!-- Fortress Talisman - Movement Speed -->
 		</skills>
@@ -1170,9 +1173,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48491" name="Dragon Shirt" type="Armor">
 		<!-- A Dragon Shirt. <Upgrade Condition>. Can be upgraded to Dragon Leather Shirt when enhanced to +5. Level 85 or higher. -->

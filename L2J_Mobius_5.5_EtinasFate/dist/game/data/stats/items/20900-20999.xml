@@ -80,6 +80,7 @@
 		<set name="price" val="500" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20906" name="One Blue Rose Bud" type="EtcItem">
 		<!-- One fragrant blue rose bud. -->
@@ -90,6 +91,7 @@
 		<set name="price" val="500" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20907" name="One White Rose Bud" type="EtcItem">
 		<!-- One fragrant white rose bud. -->
@@ -100,6 +102,7 @@
 		<set name="price" val="500" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20908" name="Desheloph Rose Necklace (Event)" additionalName="3-hr. Summon Duration" type="EtcItem">
 		<!-- Summons the Rose Spirit Desheloph. -->
@@ -385,6 +388,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20923" name="Vesper Slasher" type="EtcItem">
 		<!-- 2010 April Fools' Day Vesper Super Power Herb -->

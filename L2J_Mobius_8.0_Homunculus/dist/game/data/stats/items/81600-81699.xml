@@ -518,9 +518,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="81642" name="Anniversary Happy Wishes Gift" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Anniversary Agathion Charm: Guardian Angel Chuchu, Lilly's Special Anniversary Transformation Candy, Freya's Ice Rose (60 pcs.), Glowing Dragon's Attribute Potion (60 pcs.), Emperor's Special Cocktail (30 pcs.), Anniversary Cake (30 pcs.). -->
@@ -576,6 +576,7 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="23336" level="1" /> <!-- Agathion Chuchu's Cute Trick -->
 			<skill id="35657" level="1" type="ON_EQUIP" /> <!-- Summon Agathion Guardian Angel Chuchu -->
@@ -593,9 +594,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="81648" name="Blessed Exalted Light Armor Set Box" additionalName="Light armor" type="EtcItem">
 		<!-- A box containing Exalted light armor set blessed by Lionel Hunter. Double-click to obtain Blessed Exalted Light Armor Set and 5 types of Blessed Exalted Accessories, Blessed Exalted Circlet, Blessed Exalted Seed Bracelet, Exalted Spirit Stone, Exalted Soul Crystal, Exalted Talisman of Longing, Exalted Sayha's Talisman, Support Box. Before it opened, can be transferred within the account. -->
@@ -605,9 +606,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="81649" name="Blessed Exalted Robe Set Box" additionalName="Robe" type="EtcItem">
 		<!-- A box containing Exalted robe set blessed by Lionel Hunter. Double-click to obtain Blessed Exalted Robe Set and 5 types of Blessed Exalted Accessories, Blessed Exalted Circlet, Blessed Exalted Seed Bracelet, Exalted Spirit Stone, Exalted Soul Crystal, Exalted Talisman of Longing, Exalted Sayha's Talisman, Support Box. Before it opened, can be transferred within the account. -->
@@ -617,9 +618,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="81650" name="Blessed Exalted Support Box" type="EtcItem">
 		<!-- Double-click to obtain 300 pcs. of each following items: Freya's Ice Rose, Glowing Dragon's Attribute Potion, Shining Nevit's Gold Hourglass, Honey Dark Beer, also 150 Emperor's Special Cocktails. Before it opened, can be transferred within the account. -->
@@ -629,9 +630,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="81651" name="Maphr's Wind Scroll" type="EtcItem">
 		<!-- For 10 min., Vitality Consumption during hunting +30%, amount of dropped adena +30%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. Does not stack with the Freya's Frozen Scroll, Freya's Scroll of Storm, Maphr's Scroll of Storm effects. -->

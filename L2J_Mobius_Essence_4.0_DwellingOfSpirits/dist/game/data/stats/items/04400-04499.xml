@@ -9,6 +9,8 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4404" name="Green Dimensional Stone - Shard" type="EtcItem">
 		<!-- Broken shard of the green Dimensional Stone. Collect these and take them to Researcher Kaplan. -->
@@ -331,6 +333,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4446" name="Dye of STR (STR + 1 DEX - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -342,6 +345,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4447" name="Dye of CON (Con + 1 Str - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -353,6 +357,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4448" name="Dye of CON (Con + 1 DEX - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -364,6 +369,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4449" name="Dye of DEX (Dex + 1 Str - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -375,6 +381,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4450" name="Dye of DEX (Dex + 1 CON - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -386,6 +393,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4451" name="Dye of INT (Int + 1 Men - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards. -->
@@ -397,6 +405,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4452" name="Dye of INT (Int + 1 Wit - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards. -->
@@ -408,6 +417,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4453" name="Dye of MEN (Men + 1 Int - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards. -->
@@ -419,6 +429,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4454" name="Dye of MEN (Men + 1 Wit - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers. -->
@@ -430,6 +441,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4455" name="Dye of WIT (Wit + 1 Int - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards. -->
@@ -441,6 +453,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4456" name="Dye of WIT (Wit + 1 Men - 3)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers. -->
@@ -452,6 +465,7 @@
 		<set name="price" val="5100" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4457" name="Dye of STR (STR + 1 CON - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -463,6 +477,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4458" name="Dye of STR (STR + 1 DEX - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -474,6 +489,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4459" name="Dye of CON (Con + 1 Str - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -485,6 +501,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4460" name="Dye of CON (Con + 1 DEX - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -496,6 +513,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4461" name="Dye of DEX (Dex + 1 Str - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -507,6 +525,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4462" name="Dye of DEX (Dex + 1 CON - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -518,6 +537,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4463" name="Dye of INT (Int + 1 Men - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards. -->
@@ -529,6 +549,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4464" name="Dye of INT (Int + 1 Wit - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards. -->
@@ -540,6 +561,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4465" name="Dye of MEN (Men + 1 Int - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards. -->
@@ -551,6 +573,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4466" name="Dye of MEN (Men + 1 Wit - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers. -->
@@ -562,6 +585,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4467" name="Dye of WIT (Wit + 1 Int - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards. -->
@@ -573,6 +597,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4468" name="Dye of WIT (Wit + 1 Men - 2)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers. -->
@@ -584,6 +609,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4469" name="Dye of STR (STR + 1 CON - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -595,6 +621,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4470" name="Dye of STR (STR + 1 DEX - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -606,6 +633,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4471" name="Dye of CON (Con + 1 Str - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -617,6 +645,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4472" name="Dye of CON (Con + 1 DEX - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -628,6 +657,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4473" name="Dye of DEX (Dex + 1 Str - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -639,6 +669,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4474" name="Dye of DEX (Dex + 1 CON - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All classes. -->
@@ -650,6 +681,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4475" name="Dye of INT (Int + 1 Men - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards. -->
@@ -661,6 +693,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4476" name="Dye of INT (Int + 1 Wit - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards. -->
@@ -672,6 +705,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4477" name="Dye of MEN (Men + 1 Int - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards. -->
@@ -683,6 +717,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4478" name="Dye of MEN (Men + 1 Wit - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers. -->
@@ -694,6 +729,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4479" name="Dye of WIT (Wit + 1 Int - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards. -->
@@ -705,6 +741,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4480" name="Dye of WIT (Wit + 1 Men - 1)" additionalName="1st Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers. -->
@@ -716,6 +753,7 @@
 		<set name="price" val="35000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4481" name="Greater Dye of STR (STR + 1 CON - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -727,6 +765,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4482" name="Greater Dye of STR (STR + 1 DEX - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -738,6 +777,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4483" name="Greater Dye of CON(Con + 1 Str - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -749,6 +789,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4484" name="Greater Dye of CON(Con + 1 DEX - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -760,6 +801,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4485" name="Greater Dye of DEX (Dex + 1 Str - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -771,6 +813,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4486" name="Greater Dye of DEX (Dex + 1 CON - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -782,6 +825,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4487" name="Greater Dye of INT (Int + 1 Men - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
@@ -793,6 +837,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4488" name="Greater Dye of INT (Int + 1 Wit - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
@@ -804,6 +849,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4489" name="Greater Dye of MEN (Men + 1 Int - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
@@ -815,6 +861,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4490" name="Greater Dye of MEN (Men + 1 Wit - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
@@ -826,6 +873,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4491" name="Greater Dye of WIT (Wit + 1 Int - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
@@ -837,6 +885,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4492" name="Greater Dye of WIT (Wit + 1 Men - 3)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
@@ -848,6 +897,7 @@
 		<set name="price" val="12000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4493" name="Greater Dye of STR (STR + 1 CON - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -859,6 +909,7 @@
 		<set name="price" val="21000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4494" name="Greater Dye of STR (STR + 1 DEX - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -870,6 +921,7 @@
 		<set name="price" val="21000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4495" name="Greater Dye of CON (Con + 1 Str - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -881,6 +933,7 @@
 		<set name="price" val="21000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4496" name="Greater Dye of CON (Con + 1 DEX - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -892,6 +945,7 @@
 		<set name="price" val="21000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4497" name="Greater Dye of DEX (Dex + 1 Str - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -903,6 +957,7 @@
 		<set name="price" val="21000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4498" name="Greater Dye of DEX (Dex + 1 CON - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
@@ -914,6 +969,7 @@
 		<set name="price" val="21000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4499" name="Greater Dye of INT (Int + 1 Men - 2)" additionalName="2nd Class Transfer" type="EtcItem">
 		<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
@@ -925,5 +981,6 @@
 		<set name="price" val="21000" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

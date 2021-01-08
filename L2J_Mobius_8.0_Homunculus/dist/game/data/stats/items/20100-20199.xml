@@ -29,6 +29,7 @@
 		<set name="weight" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20075" min="1" max="1" chance="100" /> <!-- Santa's Gift - Joy - 4-hour -->
 			<item id="20076" min="1" max="1" chance="100" /> <!-- Santa's Gift - Enjoyment - 4-hour -->
@@ -44,6 +45,7 @@
 		<set name="weight" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20075" min="1" max="1" chance="100" /> <!-- Santa's Gift - Joy - 4-hour -->
 			<item id="20076" min="1" max="1" chance="100" /> <!-- Santa's Gift - Enjoyment - 4-hour -->
@@ -2489,6 +2491,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20027" min="5" max="5" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
@@ -2504,6 +2507,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20027" min="10" max="10" chance="100" /> <!-- Extra Pass: Near Kamaloka -->
 		</capsuled_items>
@@ -2519,6 +2523,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20025" min="5" max="5" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
@@ -2534,6 +2539,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20025" min="10" max="10" chance="100" /> <!-- My Teleport Scroll -->
 		</capsuled_items>
@@ -2549,6 +2555,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20033" min="5" max="5" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
@@ -2564,6 +2571,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20033" min="10" max="10" chance="100" /> <!-- My Teleport Flag -->
 		</capsuled_items>
@@ -2579,6 +2587,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20026" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
@@ -2594,6 +2603,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20028" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
@@ -2609,6 +2619,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20026" min="10" max="10" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</capsuled_items>
@@ -2624,6 +2635,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="20028" min="10" max="10" chance="100" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</capsuled_items>
@@ -2680,6 +2692,7 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20193" name="Valentine White Chocolate" type="EtcItem">
 		<!-- Ingredient for making a Valentine Cake. -->
@@ -2688,6 +2701,7 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20194" name="Valentine Fresh Cream" type="EtcItem">
 		<!-- Ingredient for making a Valentine Cake. -->
@@ -2696,6 +2710,7 @@
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20195" name="Simple Valentine Cake" type="EtcItem">
 		<!-- Basic Valentine Cake. With a little more care, you might be able to make a Velvety Valentine Cake. Double-click to see what happens. -->
@@ -2707,6 +2722,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22023" level="1" /> <!-- Simple Valentine Cake -->
 		</skills>
@@ -2721,6 +2737,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22024" level="1" /> <!-- Velvety Valentine Cake -->
 		</skills>
@@ -2735,6 +2752,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22025" level="1" /> <!-- Delicious Valentine Cake -->
 		</skills>
@@ -2749,6 +2767,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22026" level="1" /> <!-- Decadent Valentine Cake -->
 		</skills>

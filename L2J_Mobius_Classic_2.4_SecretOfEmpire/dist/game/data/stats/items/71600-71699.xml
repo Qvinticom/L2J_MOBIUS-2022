@@ -777,9 +777,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71687" name="Transformation Sealbook: Random Appearance" additionalName="Not Available" type="EtcItem">
 		<!-- Double-click to obtain one random Standard/ High-grade/ Rare/ Legendary appearance. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -818,9 +818,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71691" name="Dragon Pendant - Attack" additionalName="Lv. 1" type="Armor">
 		<!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 12 mln Adena. -->

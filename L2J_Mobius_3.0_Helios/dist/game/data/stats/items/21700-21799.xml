@@ -1094,6 +1094,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="21751" name="Rune Jewelry Box - Crystal" type="EtcItem">
 		<!-- Jewelry box containing the precious treasure of Rune. When used, you can obtain 15 Crystals of Life with a certain chance. -->
@@ -1230,6 +1231,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21760" name="Illumination - Pink" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1239,6 +1241,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21761" name="Illumination - Rose Pink" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1248,6 +1251,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21762" name="Illumination - Orange" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1257,6 +1261,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21763" name="Illumination - Mint Green" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1266,6 +1271,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21764" name="Illumination - Green" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1275,6 +1281,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21765" name="Illumination - Sky Blue" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1284,6 +1291,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21766" name="Illumination - Blue" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1293,6 +1301,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21767" name="Illumination - Purple" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1302,6 +1311,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21768" name="Illumination - White" type="EtcItem">
 		<!-- Brightly burning illumination. -->
@@ -1311,6 +1321,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21769" name="Unrefined Ore" type="EtcItem">
 		<!-- Ore before augmenting. Absolutely necessary for the craftsman to make a jewel. It should still fetch a certain price at the shop. -->

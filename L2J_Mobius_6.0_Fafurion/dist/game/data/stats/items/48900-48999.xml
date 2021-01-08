@@ -124,9 +124,9 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48914" name="Raging Billow Scroll" type="EtcItem">
 		<!-- A scroll to hunt with the force of a raging billow. When used, attack attribute +100, all Attribute Resistance +100, and Acquired XP/ SP +100% for 30 min. Buffs persist after death. Cooldown 5 min. Only for characters below Lv. 108. Cannot be used in the Olympiad. Cannot be stacked with Dragon's Attribute Potion or Glowing Dragon's Attribute Potion. -->
@@ -136,9 +136,9 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48915" name="Instanced Dungeon Master Key" type="EtcItem">
 		<!-- When stored in the inventory, it enables you to enter a daily instanced dungeon regardless of its level limit.. <Daily Instanced Dungeons>. Kartia's Labyrinth (Party) 85/ 90/ 95, The Emperor s Baylor, Nightmare Kamaloka, Embryo Command Post, Altar of Shilen, The Fallen Emperor s Throne, and Krofin s Nest. -->
@@ -612,6 +612,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
 			<player level="100" />
 		</cond>
@@ -627,6 +628,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
 			<player level="105" />
 		</cond>
@@ -642,6 +644,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
 			<player level="110" />
 		</cond>

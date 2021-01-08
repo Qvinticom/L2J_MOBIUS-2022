@@ -7,6 +7,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="30301" name="Superior Giant's Codex Manuscript'" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for skill enchantment after Awakening. -->
@@ -1057,6 +1058,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="20" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>

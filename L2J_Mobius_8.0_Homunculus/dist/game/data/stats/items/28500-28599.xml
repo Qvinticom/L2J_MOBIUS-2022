@@ -4,6 +4,7 @@
 		<!-- Contains Frintezza's feelings. Activates a buff and changes the appearance of your weapon. -->
 		<set name="icon" val="BranchSys2.icon.g_illumination_skyblue" />
 		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28501" name="Noble Compassion Chocolate" type="EtcItem">
 		<!-- Double-click to apply 'Compassion' effect to all party members. Acquired XP/ SP +10%, STR +2, INT +2, Attribute Resistance +20. Can be stacked with 'Devotion' and 'Longing' effects. -->
@@ -15,6 +16,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28502" name="Noble Devotion Candy" type="EtcItem">
 		<!-- Double-click to apply 'Devotion' effect to all party members. Acquired XP/ SP +10%, STR +2, INT +2, DEX +2, WIT +2. Can be stacked with 'Compassion' and 'Longing' effects. -->
@@ -26,6 +28,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28503" name="Noble Longing Cookie" type="EtcItem">
 		<!-- Double-click to apply 'Longing' effect to all party members. Acquired XP/ SP +10%, STR +2, INT +2, CON +2, MEN +2. Can be stacked with 'Compassion' and 'Devotion' effects. -->
@@ -45,6 +48,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="27848" level="1" /> <!-- Longing -->
 		</skills>
@@ -59,6 +63,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28505" name="Frintezza's Transformation Candy" type="EtcItem">
 		<!-- Contains Frintezza's limitless power. For 60 min., randomly transform in to Snow Kung/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Heavy Tow/ Sleepy Tow. -->
@@ -70,6 +75,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28506" name="Frintezza's Transformation Cookie" type="EtcItem">
 		<!-- Contains Frintezza's limitless power. For 60 min., randomly transform in to Snow Kung/ Scarecrow Jack/ Tin Golem/ Makeshift Bat/ Lady Tow/ Heavy Tow/ Sleepy Tow. -->
@@ -81,6 +87,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28507" name="Frintezza's Friend Summon Chocolate" type="EtcItem">
 		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 min. -->
@@ -92,6 +99,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28508" name="Frintezza's Friend Summon Candy" type="EtcItem">
 		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 min. -->
@@ -103,6 +111,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28509" name="Frintezza's Friend Summon Cookie" type="EtcItem">
 		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 min. -->
@@ -114,6 +123,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28510" name="Red Noblesse Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Red Noblesse Garment. Used with upper or full-body armor. -->
@@ -122,7 +132,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -135,7 +144,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -148,7 +156,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -162,7 +169,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -355,7 +361,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -894,7 +899,6 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
@@ -933,7 +937,6 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
@@ -972,7 +975,6 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />
@@ -1011,7 +1013,6 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="true" />

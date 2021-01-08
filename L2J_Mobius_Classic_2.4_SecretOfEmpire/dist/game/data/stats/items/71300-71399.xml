@@ -145,9 +145,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71314" name="VIP Gain Scroll - 800" type="EtcItem">
 		<!-- Allows to regain 800 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
@@ -226,8 +226,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">12</stat>
 			<stat type="mAtk">12</stat>
@@ -246,9 +246,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71322" name="CHRONICLE PACK" type="EtcItem">
 		<!-- Double-click to obtain XP Rune - 50% (30-day), 30 1st Class Buff Scrolls, 30 XP/ SP Scrolls, 300 Major Healing Potions, Black Gem Mask, Ring of Heir, Agathion Bracelet - Lv. 1 (180-day), Agathion Saerom, Cheer Stamen. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -259,9 +259,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71323" name="Uniform Hat" type="Armor">
 		<!-- A very fancy hat. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -352,9 +352,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71333" name="Halloween Feeling" additionalName="Lv. 1" type="EtcItem">
 		<!-- Halloween buff. Cannot be used diring Halloween buff from Rico. If you get another Halloween buff from Rico, current buff will disappear. For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Will be deleted after the event. -->
@@ -363,9 +363,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71334" name="Halloween Feeling" additionalName="Lv. 2" type="EtcItem">
 		<!-- Halloween buff. Cannot be used diring Halloween buff from Rico. If you get another Halloween buff from Rico, current buff will disappear. For 20 min., Acquired XP/ SP +20%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Will be deleted after the event. -->
@@ -374,9 +374,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71335" name="Halloween Feeling" additionalName="Lv. 3" type="EtcItem">
 		<!-- Halloween buff. Cannot be used diring Halloween buff from Rico. If you get another Halloween buff from Rico, current buff will disappear. For 20 min., Acquired XP/ SP +30%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Will be deleted after the event. -->
@@ -385,9 +385,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71336" name="Newbie Gift" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items: Hero's Shining Heavy Armor/ Light Armor/ Robe Set Boxes (30-day), Hero's Shining Dual Sword/ Staff/ Bow/ Dagger/ Spear (30-day), Expertise Rune (C-grade) (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day). Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
@@ -417,9 +417,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71339" name="Magic Trumpet" additionalName="30-day" type="EtcItem">
 		<!-- 30-day item. When in inventory, World Chat Points +20 (renewed at 7:00 a.m.). Intended for Lv. 40 and higher characters. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -447,9 +447,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71342" name="Party Member Teleport Scroll" type="EtcItem">
 		<!-- When used, teleports to selected party member. Not available in chaotic state. Cannot be exchanged, dropped or sold. Can be shared within account via Dimensional Merchant. -->
@@ -459,9 +459,9 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71343" name="Agathion - Antharas" type="Armor">
 		<!-- Enables to summon Agathion Antharas when equipped. -->
@@ -485,8 +485,8 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="pDef">50</stat>
@@ -502,8 +502,8 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="pDef">50</stat>
@@ -519,8 +519,8 @@
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="pDef">50</stat>
@@ -534,9 +534,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71348" name="Emerald" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, CON +1. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->

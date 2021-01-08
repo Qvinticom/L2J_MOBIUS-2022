@@ -119,6 +119,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -170,6 +171,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -221,6 +223,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -234,6 +237,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5916" name="Spellbook Page" type="EtcItem">
 		<!-- Torn piece of paper that seems to have been ripped out of a spellbook. If you Double-click it, you can examine it closely. -->
@@ -246,6 +250,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2171" level="1" /> <!-- Spellbook Paper -->
 		</skills>
@@ -483,6 +488,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2172" level="1" /> <!-- Scroll of Giants -->
 		</skills>
@@ -577,6 +583,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2173" level="1" /> <!-- Book of Giants -->
 		</skills>
@@ -591,6 +598,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5957" name="30-year-old Wine" type="EtcItem">
 		<!-- Gift from Harlan as a token of gratitude. It is aged 30 years. High quality wine. -->
@@ -602,6 +610,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5958" name="60-year-old Wine" type="EtcItem">
 		<!-- Gift from Harlan as a token of gratitude. It is aged 60 years. Excellent quality wine. -->
@@ -613,6 +622,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5959" name="Ritron's Dessert Recipe" type="EtcItem">
 		<!-- Secret recipe for making dessert by using ritron fruit as its ingredient. It can to sold at a store. -->
@@ -623,6 +633,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="40000" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5960" name="Ritron Jelly" type="EtcItem">
 		<!-- Delicious jelly made from ritron fruit. It can be sold at a store. -->
@@ -633,6 +644,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="920" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5961" name="Kail's Silver Basilisk" type="EtcItem">
 		<!-- Royal-grade Coin -->
@@ -643,6 +655,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5962" name="Kail's Gold Golem" type="EtcItem">
 		<!-- Royal-grade Coin -->
@@ -653,6 +666,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5963" name="Kail's Blood Dragon" type="EtcItem">
 		<!-- Royal-grade Coin -->
@@ -663,6 +677,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5964" name="Warehouse Keeper's Medal" type="EtcItem">
 		<!-- Medal that is issued by the Iron Gate Guild to Warehouse Keepers according to their productivity. If you collect them, you can use them to play bingo. -->
@@ -673,6 +688,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5965" name="Blank Scroll" type="EtcItem">
 		<!-- Spellbook that does not contain any magical power. Perhaps it can be helpful if you deal with Mammon's Trader? -->
@@ -683,6 +699,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5966" name="Ancient Red Papyrus" type="EtcItem">
 		<!-- Papyrus scroll found in the Tower of Insolence. If you Double-click it, you can read its contents. -->
@@ -695,6 +712,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2176" level="1" /> <!-- Ancient Papyrus -->
 		</skills>
@@ -710,6 +728,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2176" level="2" /> <!-- Ancient Papyrus -->
 		</skills>
@@ -725,6 +744,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2176" level="3" /> <!-- Ancient Papyrus -->
 		</skills>
@@ -740,6 +760,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2176" level="4" /> <!-- Ancient Papyrus -->
 		</skills>

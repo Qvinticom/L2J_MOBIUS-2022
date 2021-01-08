@@ -17,6 +17,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="1405" level="1" /> <!-- Divine Inspiration -->
 		</skills>
@@ -31,6 +32,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="1405" level="2" /> <!-- Divine Inspiration -->
 		</skills>
@@ -45,6 +47,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="1405" level="3" /> <!-- Divine Inspiration -->
 		</skills>
@@ -59,6 +62,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="1405" level="4" /> <!-- Divine Inspiration -->
 		</skills>

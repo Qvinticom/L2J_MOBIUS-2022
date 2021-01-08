@@ -477,6 +477,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">18</stat>
 		</stats>
@@ -489,6 +490,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">13</stat>
 		</stats>
@@ -501,6 +503,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="mDef">10</stat>
 		</stats>
@@ -513,6 +516,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1410" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -530,6 +534,7 @@
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">13</stat>
 			<stat type="mAtk">10</stat>
@@ -551,6 +556,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">12</stat>
 			<stat type="mAtk">14</stat>
@@ -573,6 +579,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">14</stat>
 			<stat type="mAtk">15</stat>
@@ -594,6 +601,7 @@
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">17</stat>
 			<stat type="mAtk">11</stat>
@@ -656,6 +664,7 @@
 		<set name="weight" val="1130" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">12</stat>
 			<stat type="mAtk">11</stat>
@@ -677,6 +686,7 @@
 		<set name="weight" val="1450" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">15</stat>
 			<stat type="mAtk">12</stat>
@@ -718,6 +728,7 @@
 		<set name="weight" val="1450" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">14</stat>
 			<stat type="mAtk">11</stat>
@@ -738,6 +749,7 @@
 		<set name="weight" val="1860" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">14</stat>
 			<stat type="mAtk">11</stat>
@@ -1128,6 +1140,9 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="32001" level="1" /> <!-- Rice Cake of Fighting Spirit Event -->
 		</skills>
@@ -1219,7 +1234,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1239,7 +1253,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1259,7 +1272,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1279,7 +1291,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1299,7 +1310,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1319,7 +1329,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1339,7 +1348,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1359,7 +1367,6 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />

@@ -157,9 +157,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71816" name="Chronicle Chest" type="EtcItem">
 		<!-- Double-click to obtain an enchanted rare accessory or crafting supply (30-day). -->
@@ -168,9 +168,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71817" name="15th Anniversary Gift Box" type="EtcItem">
 		<!-- Double-click to obtain one of the items: Manuscript Chest, Dragon Dye Box or Rice Cake of Fighting Spirit. -->
@@ -188,6 +188,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71819" name="Forbidden Limit Chests Special Pack" type="EtcItem">
 		<!-- Double-click to acquire 30 La Vie En Rose's Enchant Scrolls and an Enchant Scroll of Forbidden Limit. -->
@@ -276,9 +278,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71829" name="XP and SP Rune Pack 50% (1-hour)" type="EtcItem">
 		<!-- Double-click to obtain XP and SP Rune 50% (1-hour). -->
@@ -324,9 +326,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71834" name="Starter Pack (Lv. 40-51)" type="EtcItem">
 		<!-- Double-click to obtain various useful items. For Lv. 40 to 51 characters. -->
@@ -336,9 +338,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71835" name="Starter Pack (Lv. 52-61)" type="EtcItem">
 		<!-- Double-click to obtain various useful items. For Lv. 52 to 60 characters. -->
@@ -348,9 +350,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71836" name="?p?e" additionalName="30 days" type="Weapon">
 		<!-- Available for 30 days. -->

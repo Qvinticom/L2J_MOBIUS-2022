@@ -586,6 +586,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21285" level="1" /> <!-- Scroll of Escape: Uthanka's Tomb -->
 		</skills>
@@ -599,6 +600,7 @@
 		<set name="equip_reuse_delay" val="10" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21325" level="1" /> <!-- Release Agathion's Seal - Uthanka -->
 			<skill id="23542" level="1" /> <!-- Uthanka Agathion Cute Trick -->

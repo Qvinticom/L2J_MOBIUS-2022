@@ -505,6 +505,9 @@
 		<set name="price" val="400" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3032" name="Recipe: Spiritshot (D-grade)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for the Spiritshot D-grade. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
@@ -597,6 +600,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="handler" val="Recipes" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3039" name="Spellbook: Summon Storm Cubic" type="EtcItem">
 		<!-- Spellbook needed to learn Summon Storm Cubic. Used by Temple Knights and Warlocks. Required level: 40 -->
@@ -627,6 +631,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3042" name="Spellbook: Life Scavenge" type="EtcItem">
 		<!-- Spellbook needed to learn Life Scavenge. Used by Dark Avengers. Required level: 40 -->
@@ -657,6 +662,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3045" name="Spellbook: Summon Life Cubic" type="EtcItem">
 		<!-- Spellbook needed to learn Summon Life Cubic. Used by Temple Knights. Required level: 42 -->
@@ -667,6 +673,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3046" name="Spellbook: Sacrifice" type="EtcItem">
 		<!-- Spellbook needed to learn Sacrifice. Used by Paladins. Required level: 50 -->
@@ -677,6 +684,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3047" name="Spellbook: Iron Will" type="EtcItem">
 		<!-- Spellbook needed to learn Iron Will. Used by Paladins and Dark Avengers. Required level: 43 -->
@@ -687,6 +695,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3048" name="Spellbook: Reflect Damage" type="EtcItem">
 		<!-- Spellbook needed to learn Reflect Damage. Used by Dark Avengers. Required level: 40 -->
@@ -717,6 +726,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3051" name="Spellbook: Spirit Barrier" type="EtcItem">
 		<!-- Spellbook needed to learn Spirit Barrier. Used by Temple Knights, Swordsingers, Plainswalkers, and Silver Rangers. Required level: 40 -->
@@ -727,6 +737,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3052" name="Spellbook: Hamstring" type="EtcItem">
 		<!-- Spellbook needed to learn Hamstring. Used by Dark Avengers. Required level: 43 -->
@@ -737,6 +748,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3053" name="Spellbook: Blessing of Holy" type="EtcItem">
 		<!-- Spellbook needed to learn Blessing of Holy. Used by Paladins. Required level: 40 -->
@@ -767,6 +779,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3056" name="Spellbook: Summon Dark Panther" type="EtcItem">
 		<!-- Spellbook needed to learn Summon Dark Panther. Used by Dark Avengers. Required level: 40 -->
@@ -847,6 +860,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3064" name="Spellbook: Silence" type="EtcItem">
 		<!-- Spellbook needed to learn Silence. Used by Necromancers and Spellhowlers. Required level: 40 -->
@@ -857,6 +871,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3065" name="Spellbook: Death Spike" type="EtcItem">
 		<!-- Spellbook needed to learn Death Spike. Used by Necromancers, Spellhowlers, and Phantom Summoners. Required level: 44 -->
@@ -877,6 +892,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3067" name="Spellbook: Vampiric Claw" type="EtcItem">
 		<!-- Spellbook needed to learn Vampiric Claw. Used by Necromancers and Spellhowlers. Required level: 40 -->
@@ -937,6 +953,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3073" name="Spellbook: Might of Heaven" type="EtcItem">
 		<!-- Spellbook needed to learn Might of Heaven. Used by Bishops and Elven Elders. Required level: 40 -->
@@ -1007,6 +1024,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3080" name="Spellbook: Sleeping Cloud" type="EtcItem">
 		<!-- Spellbook needed to learn Sleeping Cloud. Used by Sorcerers and Spellsingers. Required level: 44 -->
@@ -1017,6 +1035,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3081" name="Spellbook: Aura Flare" type="EtcItem">
 		<!-- Spellbook needed to learn Aura Flare. Used by Sorcerers and Spellsingers. Required level: 40 -->
@@ -1107,6 +1126,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3090" name="Spellbook: Hurricane" type="EtcItem">
 		<!-- Spellbook needed to learn Hurricane. Used by Spellhowlers. Required level: 40 -->
@@ -1207,5 +1227,6 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

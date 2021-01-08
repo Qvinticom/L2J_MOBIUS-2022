@@ -159,6 +159,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46526" name="Practice Soul Crystal" additionalName="Stage 1" type="EtcItem">
 		<!-- A Soul Crystal received from a blacksmith for practice. Use this to bestow an effect on to the Practice StormBringer you received from the blacksmith. -->
@@ -435,6 +436,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46553" name="Mystic Soul Crystal" type="EtcItem">
 		<!-- Crystal fragment containing the soul of one of the progatonists of the stories told in the Mystic Tavern. Since it contains the soul of a legend within the stories, it can bestow a special Soul Crystal effect to weapons. -->
@@ -506,11 +508,13 @@
 		<!-- Blue Dynasty armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46562" name="Red Zubei" type="EtcItem">
 		<!-- Red Zubei armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46563" name="Epic Tale Pouch" additionalName="Not in Use" type="EtcItem">
 		<!-- Pouch received as reward for listening to Freya's story and enjoying your time at the epic tales pub. Double-click to use. -->
@@ -536,30 +540,35 @@
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46566" name="Soul Crystal Coupon" additionalName="Stage 2" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 2 or Mermoden's Soul Crystal Stage 2. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46567" name="Soul Crystal Coupon" additionalName="Stage 3" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 3 or Mermoden's Soul Crystal Stage 3. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46568" name="Soul Crystal Coupon" additionalName="Stage 4" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 4 or Mermoden's Soul Crystal Stage 4. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46569" name="Soul Crystal Coupon" additionalName="Stage 5" type="EtcItem">
 		<!-- Exchange it through the blacksmiths of each village for either a Kain's Soul Crystal Stage 5 or Mermoden's Soul Crystal Stage 5. -->
 		<set name="icon" val="icon.etc_roll_of_paper_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46570" name="Soul Crystal Coupon Pack" additionalName="Stage 5" type="EtcItem">
 		<!-- Double-click to get a Soul Crystal Coupon Stage 5. There's a chance that you might not get anything. -->
@@ -568,6 +577,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="46571" name="For NPC_Left Hand Meat Plate" type="Weapon">
 		<!-- For NPC. -->

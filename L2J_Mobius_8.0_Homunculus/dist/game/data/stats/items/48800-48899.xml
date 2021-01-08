@@ -373,7 +373,6 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -696,9 +695,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48852" name="Freya's Secret Box" type="EtcItem">
 		<!-- Use it to receive one of Freya's gifts. -->
@@ -717,9 +716,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48854" name="1 Billion Adena Box" type="EtcItem">
 		<!-- Festival Fairy's gift. Double-click to obtain 1 billion adena. -->
@@ -796,8 +795,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48860" name="Fallen Angel's Ring Box" type="EtcItem">
 		<!-- Double-click to obtain Fallen Angel's Ring and Scroll: Enchant Fallen Angel Accessory (10 pcs.). -->
@@ -971,6 +970,7 @@
 		<set name="price" val="800" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48876" name="Forgotten Spellbook Chapter 1" type="EtcItem">
 		<!-- A spellbook for learning the Forgotten Power skills Lv. 6-10. Can be exchanged for Forgotten Spellbook Chapter 2 or Forgotten Spellbook Chapter 3 through the Game Assistant. -->

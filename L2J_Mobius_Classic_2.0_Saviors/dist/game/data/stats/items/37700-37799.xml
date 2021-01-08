@@ -99,6 +99,9 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="3" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="37725" name="NC Dinos Uniform" type="Armor">
 		<!-- NC Dinos Uniform. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->

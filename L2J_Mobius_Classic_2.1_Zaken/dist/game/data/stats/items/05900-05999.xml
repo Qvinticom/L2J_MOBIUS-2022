@@ -58,6 +58,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2171" level="1" /> <!-- Spellbook Paper -->
 		</skills>
@@ -70,6 +71,7 @@
 		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5918" name="Kranvel's Spellbook: Chapter of Water" type="EtcItem">
 		<!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
@@ -79,6 +81,7 @@
 		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5919" name="Kranvel's Spellbook: Chapter of Wind" type="EtcItem">
 		<!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
@@ -88,6 +91,7 @@
 		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5920" name="Kranvel's Spellbook: Chapter of Earth" type="EtcItem">
 		<!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
@@ -97,6 +101,7 @@
 		<set name="price" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5921" name="Worthless Piece of Paper" type="EtcItem">
 		<!-- Paper piece that has useless scribbles written on it. -->
@@ -294,6 +299,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2172" level="1" /> <!-- Scroll of Giants -->
 		</skills>
@@ -387,6 +393,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2173" level="1" /> <!-- Book of Giants -->
 		</skills>
@@ -401,6 +408,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5957" name="30-year-old Wine" type="EtcItem">
 		<!-- Gift from Harlan as a token of gratitude. It is aged 30 years. High quality wine. -->
@@ -412,6 +420,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5958" name="60-year-old Wine" type="EtcItem">
 		<!-- Gift from Harlan as a token of gratitude. It is aged 60 years. Excellent quality wine. -->
@@ -423,6 +432,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5959" name="Ritron's Dessert Recipe" type="EtcItem">
 		<!-- Secret recipe for making dessert by using ritron fruit as its ingredient. It can to sold at a store. -->
@@ -433,6 +443,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="40000" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5960" name="Ritron Jelly" type="EtcItem">
 		<!-- Delicious jelly made from ritron fruit. It can be sold at a store. -->
@@ -443,6 +454,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="920" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5961" name="Kail's Silver Basilisk" type="EtcItem">
 		<!-- Royal-grade Coin -->
@@ -453,6 +465,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5962" name="Kail's Gold Golem" type="EtcItem">
 		<!-- Royal-grade Coin -->
@@ -463,6 +476,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5963" name="Kail's Blood Dragon" type="EtcItem">
 		<!-- Royal-grade Coin -->
@@ -473,6 +487,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5964" name="Warehouse Keeper's Medal" type="EtcItem">
 		<!-- Medal that is issued by the Iron Gate Guild to Warehouse Keepers according to their productivity. If you collect them, you can use them to play bingo. -->
@@ -483,6 +498,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="5971" name="Joke Book of Ancient Times" type="EtcItem">
 		<!-- Collection of jokes of Galfredo Romer, a Royal Clown. -->

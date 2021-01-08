@@ -6,9 +6,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29401" name="Ultimate Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 3 jewels. -->
@@ -58,9 +58,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29405" name="Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain 1 of the Lv. 3 La Vie En Rose's Jewelry Boxes. -->
@@ -260,9 +260,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29429" name="Dragon's Leather Pouch" type="EtcItem">
 		<!-- Double-click to obtain a Santa Girl's Gift. Can be used only once a day. Will be deleted after the event. -->
@@ -310,11 +310,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="29432" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% Pack -->
 		</capsuled_items>
@@ -327,10 +327,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="29435" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% Pack -->
 		</capsuled_items>
@@ -356,10 +356,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="29437" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 300% Pack -->
 		</capsuled_items>
@@ -738,9 +738,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29469" name="Shiny Gem's Energy" type="EtcItem">
 		<!-- Combine with a Lv. 5 gem to obtain a Greater gem. It can be used on any Lv. 5 gem, regardless of type. -->

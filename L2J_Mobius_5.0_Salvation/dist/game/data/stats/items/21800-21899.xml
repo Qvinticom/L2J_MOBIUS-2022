@@ -1186,6 +1186,8 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="SoulShots" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2039" level="1" /> <!-- Soulshot (No-grade) -->
 		</skills>
@@ -1202,6 +1204,8 @@
 		<set name="handler" val="SoulShots" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2150" level="1" /> <!-- Soulshot (D-grade) -->
 		</skills>
@@ -1218,6 +1222,8 @@
 		<set name="handler" val="SoulShots" />
 		<set name="crystal_type" val="C" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2151" level="1" /> <!-- Soulshot (C-grade) -->
 		</skills>
@@ -1234,6 +1240,8 @@
 		<set name="handler" val="SoulShots" />
 		<set name="crystal_type" val="B" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2152" level="1" /> <!-- Soulshot (B-grade) -->
 		</skills>
@@ -1250,6 +1258,8 @@
 		<set name="handler" val="SoulShots" />
 		<set name="crystal_type" val="A" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
@@ -1266,6 +1276,8 @@
 		<set name="handler" val="SoulShots" />
 		<set name="crystal_type" val="S" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
 		</skills>
@@ -1281,6 +1293,8 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2061" level="1" /> <!-- Blessed Spiritshot (No-grade) -->
 		</skills>
@@ -1297,6 +1311,8 @@
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2160" level="1" /> <!-- Blessed Spiritshot (D-grade) -->
 		</skills>
@@ -1313,6 +1329,8 @@
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="crystal_type" val="C" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2161" level="1" /> <!-- Blessed Spiritshot (C-grade) -->
 		</skills>
@@ -1329,6 +1347,8 @@
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="crystal_type" val="B" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2162" level="1" /> <!-- Blessed Spiritshot (B-grade) -->
 		</skills>
@@ -1345,6 +1365,8 @@
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="crystal_type" val="A" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
 		</skills>
@@ -1361,6 +1383,8 @@
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="crystal_type" val="S" />
 		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
@@ -2000,6 +2024,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -2021,6 +2046,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -2042,6 +2068,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -2063,6 +2090,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -2082,6 +2110,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="12010, 12001" />
 		</cond>

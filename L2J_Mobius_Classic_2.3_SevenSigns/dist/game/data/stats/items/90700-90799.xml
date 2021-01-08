@@ -413,7 +413,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -431,6 +430,8 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90731" name="Hanbok" type="Armor">
 		<!-- Changes armor appearance to that of a Hanbok. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. Head Enlargement and Moon Fireworks can be used. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -441,6 +442,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90732" name="+8 Armor Set Coupon (B-grade)" type="EtcItem">
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
@@ -687,6 +691,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="90757" name="Map with a Mark" type="EtcItem">
 		<!-- This Map marks the place on the Devil's Isle where treasures are hidden. -->

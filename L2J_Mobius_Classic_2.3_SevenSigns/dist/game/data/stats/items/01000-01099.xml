@@ -742,6 +742,9 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="for_npc" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2031" level="1" /> <!-- Healing Potion -->
 		</skills>

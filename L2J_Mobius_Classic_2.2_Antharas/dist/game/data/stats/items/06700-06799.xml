@@ -14,6 +14,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="weight" val="1080" />
 		<stats>
 			<stat type="pAtk">11</stat>
 			<stat type="mAtk">12</stat>
@@ -41,6 +42,10 @@
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">141</stat>
 			<stat type="mAtk">104</stat>

@@ -1416,6 +1416,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17576" name="Closed Underground Training Ground Key" type="EtcItem">
 		<!-- Key that opens the doors to the Closed Underground Compound. -->
@@ -1444,6 +1445,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17579" name="Old Maze Map" type="EtcItem">
 		<!-- Old map that was made during the era of the giants. Bring it to Sebion in front of the Labyrinth of Belis. -->
@@ -1462,6 +1464,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17581" name="Key to the Labyrinth of Belis" type="EtcItem">
 		<!-- Key that lets you enter the Labyrinth of Belis. -->
@@ -1501,6 +1504,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17585" name="Sakum's Sketch B" type="EtcItem">
 		<!-- A Hastily drawn face of Sakum. -->
@@ -1511,6 +1515,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17586" name="Suspicious Fragment" type="EtcItem">
 		<!-- Dropped Sakum's scale. -->
@@ -1616,6 +1621,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1000" /> <!-- mk_q466_supplement_potion -->
 		<set name="handler" val="Recipes" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17597" name="Fairy Wing" type="EtcItem">
 		<!-- Wing fallen from a reckless fairy. It is an ingredient for the Timiniel's Tonic. -->
@@ -1627,6 +1633,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17598" name="Cocoon Fragment" type="EtcItem">
 		<!-- Cocoon fragment from the Fairy Settlement. It is an ingredient for the Timiniel's Tonic. -->
@@ -1638,6 +1645,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17599" name="Kimerian's Breath" type="EtcItem">
 		<!-- Bottle containing Kimerian's Breath, which was being held by a fairy whose metamorphosis was blocked. It is an ingredient for the Timiniel's Tonic. -->
@@ -1649,5 +1657,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 </list>

@@ -1211,6 +1211,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34766" name="Succubus Essence" type="EtcItem">
 		<!-- Essence obtained after eliminating a Bloody Succubus from the Shrine of Loyalty. Bring it to the Elmorean scholar Gerkenshtein in the Shrine of Loyalty. -->
@@ -1222,6 +1223,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34767" name="Gerkenshtein's Report" type="EtcItem">
 		<!-- Investigation report from the Elmorean scholar Gerkenshtein to Captain Andrei in the Town of Goddard. Double-click on it for more information. -->
@@ -1234,6 +1236,7 @@
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34768" name="Dimensional Fragment" type="EtcItem">
 		<!-- Fragment piece obtained after eliminating the evil creatures that suddenly appeared in the Shrine of Loyalty. Bring it to Goddard Vanguard Sirik in the Shrine of Loyalty. -->
@@ -1245,6 +1248,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34769" name="Relics of the Empire" type="EtcItem">
 		<!-- Ancient relics that are being collected by the monsters that have appeared in the Imperial Tomb. Bring them to Vice Hierarch Zenya in the Imperial Tomb. -->
@@ -1256,6 +1260,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="34770" name="Pa'agrio's Shirt" additionalName="Event" type="Armor">
 		<!-- Magic shirt filled with the power of Pa'agrio, the god of fire. Can be enchanted to + 10 using Scroll: Enchant Elemental Shirt. When enchanted above + 7, can remove abnormal conditions and use the ultimate invincibility skill for a certain amount of time. -->
@@ -1559,7 +1564,6 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2329" level="1" /> <!-- Fire Stone -->
 		</skills>
@@ -1576,7 +1580,6 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2330" level="1" /> <!-- Water Stone -->
 		</skills>
@@ -1593,7 +1596,6 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2332" level="1" /> <!-- Earth Stone -->
 		</skills>
@@ -1610,7 +1612,6 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2331" level="1" /> <!-- Wind Stone -->
 		</skills>
@@ -1627,7 +1628,6 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2334" level="1" /> <!-- Dark Stone -->
 		</skills>
@@ -1644,7 +1644,6 @@
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="2333" level="1" /> <!-- Holy Stone -->
 		</skills>

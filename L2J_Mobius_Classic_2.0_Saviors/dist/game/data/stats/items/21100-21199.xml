@@ -10,6 +10,8 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="21163" name="Wedding Bouquet" type="Weapon">
 		<!-- A Wedding Bouquet composed of lovely flowers, intended for female characters only. -->
@@ -24,6 +26,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -44,6 +48,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="55417" level="1" /> <!-- Release Agathion - One-eyed Bat Drove -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->

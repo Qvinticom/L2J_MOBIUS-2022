@@ -75,8 +75,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48008" name="Freya's Ice Crystal" type="EtcItem">
 		<!-- Take it along with a Freya's Wind Scroll to Freya in Schuttgart Castle to receive a present of destiny from Freya. -->
@@ -84,9 +84,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48009" name="Freya's Heart-pounding Shopping Bag" type="EtcItem">
 		<!-- Double-click Freya's Heart-pounding Shopping Bag to obtain 1 Freya's Wind Scroll. There is also a chance to additionally obtain one a Freya, Sirra, or Snowman Winter Card. -->

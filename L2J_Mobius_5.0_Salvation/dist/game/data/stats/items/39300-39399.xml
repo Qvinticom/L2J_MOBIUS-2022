@@ -311,7 +311,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
@@ -333,7 +332,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="17850" level="1" /> <!-- Twilight Crafting Pack -->
 		</skills>
@@ -347,7 +345,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="17851" level="1" /> <!-- Twilight Completion Pack -->
 		</skills>
@@ -399,7 +396,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />

@@ -1641,6 +1641,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17376" name="Trace of Kimerian's Cavern" type="EtcItem">
 		<!-- Makes possible to determine Kimerian's exact location. Bring it to Noeti Mimilead in Ancient City Arcan. -->
@@ -1649,6 +1650,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17377" name="Mark of Friendship" type="EtcItem">
 		<!-- It is the proof of a fairy's friendship. Collect and bring them back to Noeti Mimirede in Ancient City Arcan. -->
@@ -1659,6 +1661,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17378" name="Fairy's Leaf Flute" type="EtcItem">
 		<!-- During the battle where you chase Kimerian, you can use it to send a signal and call your fairy friends. -->
@@ -1672,6 +1675,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17379" name="Letter containing secret information" type="EtcItem">
 		<!-- A letter that contains secret information. Bring it to the fairy in the Arms of Timiniel. -->
@@ -1681,6 +1685,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="17380" name="Agathion - Fairy" type="Armor">
 		<!-- Summons Agathion Fairy. -->

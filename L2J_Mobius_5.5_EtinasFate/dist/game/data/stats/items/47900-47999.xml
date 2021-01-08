@@ -257,7 +257,6 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -296,7 +295,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_freightable" val="true" />
@@ -478,7 +476,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_freightable" val="true" />
@@ -566,9 +563,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18829" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -595,9 +592,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18830" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -624,9 +621,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18831" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -653,9 +650,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18832" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -683,9 +680,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;32;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18833" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -713,9 +710,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18834" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -744,9 +741,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18835" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -774,9 +771,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18836" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -804,9 +801,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18837" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -833,9 +830,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18838" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -863,9 +860,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18839" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -893,9 +890,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18840" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -922,9 +919,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18841" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -952,9 +949,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18842" level="1" /> <!-- Special Ability The Challenger's Weapon -->
 		</skills>
@@ -982,9 +979,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18843" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1012,9 +1009,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18844" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1042,9 +1039,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18845" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1072,9 +1069,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18846" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1103,9 +1100,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;32;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18847" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1134,9 +1131,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18848" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1166,9 +1163,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18849" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1197,9 +1194,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18850" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1228,9 +1225,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18851" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1258,9 +1255,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18852" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1289,9 +1286,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18853" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1320,9 +1317,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18854" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1350,9 +1347,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18855" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1381,9 +1378,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 			<skill id="18856" level="1" /> <!-- Special Ability The Challenger's Enhanced Weapon -->
@@ -1404,9 +1401,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47982" name="Challenger's Weapon Exchange Ticket" type="EtcItem">
 		<!-- It can be used to exchange a Challenger weapon to another type of choice through a Dimensional Merchant found in every town. -->
@@ -1414,9 +1411,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47983" name="Brooch Spirit Stone" type="EtcItem">
 		<!-- Spirit Stone: Accessory for La Vie En Rose's Brooch. Can only be used to augment an enhanced Glorious Brooch. -->
@@ -1469,9 +1466,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47987" name="Challenger's Weapon Enhancement Ticket" type="EtcItem">
 		<!-- It can be used to enhance a Challenger weapon through a Dimensional Merchant found in every town. -->
@@ -1479,9 +1476,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47988" name="Master's Lucky Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a jewelry box containing Ruby, Sapphire, Topaz, Opal, Diamond, Emerald, Tanzanite, Red Cat's Eye, Blue Cat's Eye, or Obsidian. -->
@@ -1497,9 +1494,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47990" name="La Vie En Rose's Glorious Brooch" additionalName="Rare" type="Armor">
 		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. All stats +1. Can be augmented. -->

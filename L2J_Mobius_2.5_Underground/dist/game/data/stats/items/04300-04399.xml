@@ -609,6 +609,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4351" name="Ancient Goddess Statue: Prototype" type="EtcItem">
 		<!-- Statue created by Berona, an ancient sculptor. - Prototype -->
@@ -620,6 +621,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4352" name="Ancient Goddess Statue: Original" type="EtcItem">
 		<!-- Statue created by Berona, a sculptor in ancient times. - Original -->
@@ -631,6 +633,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4353" name="Ancient Goddess Statue: Replica" type="EtcItem">
 		<!-- Replicated statues that have been created by present day sculptors who imitated Berona's works. -->
@@ -642,6 +645,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4354" name="Ancient Goddess Statue: Forgery" type="EtcItem">
 		<!-- Forgeries that have been created in imitation of the ancient sculptor Berona's works. -->
@@ -653,6 +657,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4355" name="Blue Eva" type="EtcItem">
 		<!-- Special Coin -->
@@ -743,6 +748,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4365" name="Ectoplasm Liqueur" type="EtcItem">
 		<!-- Exotic tasting liqueur made from ectoplasm. Very popular among connoisseurs. -->
@@ -753,6 +759,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="200" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4366" name="Prince's Trophy" type="EtcItem">
 		<!-- The winning trophy that Prince Malcom won in a dance competition. You can sell it at a store or keep it as a souvenir. -->
@@ -1044,6 +1051,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4395" name="Hanellin's Red Flower" type="EtcItem">
 		<!-- Mark of Hanellin. Along with your companions each carrying a white flower and yellow flower respectively, go to Town of Aden to see her. -->
@@ -1054,6 +1062,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4396" name="Hanellin's Yellow Flower" type="EtcItem">
 		<!-- Mark of Hanellin. Along with your companions each carrying a white flower and red flower respectively, go to Town of Aden to see her. -->
@@ -1064,6 +1073,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4397" name="Book of Saint" type="EtcItem">
 		<!-- The book of Saint Solina. Take it along with the blood of a Saint and the bough of a Saint to Magister Hanellin. -->
@@ -1075,6 +1085,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4398" name="Blood of Saint" type="EtcItem">
 		<!-- The blood of Saint Solina, hardened into a dark-colored substance contained in a glass bottle. Take it, along with the Book of Saint and the Bough of Saint to Magister Hanellin. -->
@@ -1086,6 +1097,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4399" name="Bough of Saint" type="EtcItem">
 		<!-- The Scepter of Saint Solina. It appears to be just a dead dry tree branch. Take it along with the book of a Saint and the blood of a Saint and take it to Magister Hanellin. -->
@@ -1097,5 +1109,6 @@
 		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 </list>

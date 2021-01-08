@@ -11,6 +11,9 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9140" name="Cupid’s Bow" type="Weapon">
 		<!-- Sends a heart of love and allows using the Forgiveness active skill. Warning: If you use this bow against a monster, it will flag you for PvP. -->
@@ -27,6 +30,9 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3261" level="1" /> <!-- Forgiveness -->
 		</skills>

@@ -207,9 +207,9 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92019" name="Siege Support Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following rare items: Talisman of Baium, Dragon Pendant Lv. 4, Dragon Pendant Lv. 3, an armor set (A-grade), Majestic Necklace, Majestic Earring, Majestic Ring. -->
@@ -353,6 +353,8 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="5400000" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="50912" level="5" /> <!-- Talisman Bracelet Lv. 5 -->
 		</skills>
@@ -368,6 +370,8 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="5400000" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="50912" level="6" /> <!-- Talisman Bracelet Lv. 6 -->
 		</skills>
@@ -471,8 +475,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50194" level="4" />
 		</skills>
@@ -487,8 +491,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50194" level="5" />
 		</skills>
@@ -503,8 +507,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50194" level="6" />
 		</skills>
@@ -519,8 +523,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50194" level="7" />
 		</skills>
@@ -535,8 +539,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50194" level="8" />
 		</skills>
@@ -551,8 +555,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50194" level="9" />
 		</skills>
@@ -567,8 +571,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50194" level="10" />
 		</skills>
@@ -631,8 +635,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50195" level="4" />
 			<skill id="50196" level="4" />
@@ -648,8 +652,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50195" level="6" />
 			<skill id="50196" level="6" />
@@ -665,8 +669,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50195" level="7" />
 			<skill id="50196" level="7" />
@@ -682,8 +686,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50195" level="8" />
 			<skill id="50196" level="8" />
@@ -699,8 +703,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92054" name="Opal" additionalName="Lv. 9 (NOT USED)" type="Armor">
 		<!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +28%. Grants invulnerability for debuffs for 20 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -712,8 +716,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92055" name="Opal" additionalName="Lv. 10 (NOT USED)" type="Armor">
 		<!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +30%. Grants invulnerability for debuffs for 25 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -725,8 +729,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92056" name="Coral" additionalName="Lv. 1" type="Armor">
 		<!-- Atk. Spd./ Casting Spd. +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -783,8 +787,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50197" level="4" />
 		</skills>
@@ -799,8 +803,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50197" level="6" />
 		</skills>
@@ -815,8 +819,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50197" level="7" />
 		</skills>
@@ -831,8 +835,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50197" level="8" />
 		</skills>
@@ -847,8 +851,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92064" name="Coral" additionalName="Lv. 9 (NOT USED)" type="Armor">
 		<!-- Atk. Spd./ Casting Spd. +18%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -860,8 +864,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92065" name="Coral" additionalName="Lv. 10 (NOT USED)" type="Armor">
 		<!-- Atk. Spd./ Casting Spd. +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -873,8 +877,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92066" name="Onyx" additionalName="Lv. 1" type="Armor">
 		<!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -931,8 +935,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50204" level="4" />
 		</skills>
@@ -947,8 +951,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50204" level="6" />
 		</skills>
@@ -963,8 +967,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50204" level="7" />
 		</skills>
@@ -979,8 +983,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50204" level="8" />
 		</skills>
@@ -995,8 +999,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92074" name="Onyx" additionalName="Lv. 9 (Not Used)" type="Armor">
 		<!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -1008,8 +1012,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92075" name="Onyx" additionalName="Lv. 10 (Not Used)" type="Armor">
 		<!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +21%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -1021,8 +1025,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92076" name="Spinel" additionalName="Lv. 1" type="Armor">
 		<!-- P. Def. +20, M. Def. +10, CON +1. With a certain chance, MP +12 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -1082,8 +1086,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50206" level="4" />
 			<skill id="50205" level="4" />
@@ -1099,8 +1103,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50206" level="6" />
 			<skill id="50205" level="6" />
@@ -1116,8 +1120,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50206" level="7" />
 			<skill id="50205" level="7" />
@@ -1133,8 +1137,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50206" level="8" />
 			<skill id="50205" level="8" />
@@ -1150,8 +1154,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92084" name="Spinel" additionalName="Lv. 9 (Not Used)" type="Armor">
 		<!-- P. Def. +250, M. Def. +160, CON/ MEN/ DEX/ WIT +2, STR/ INT +1, Received P./ M. Critical Damage -16%. With a certain chance, MP +90 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -1163,8 +1167,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92085" name="Spinel" additionalName="Lv. 10 (Not Used)" type="Armor">
 		<!-- P. Def. +300, M. Def. +200, CON/ MEN/ DEX/ WIT/ STR/ INT +2, Received P./ M. Critical Damage -20%. With a certain chance, MP +100 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -1176,8 +1180,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92086" name="Zircon" additionalName="Lv. 1" type="Armor">
 		<!-- P./ M. Critical Damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -1234,8 +1238,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50207" level="4" />
 		</skills>
@@ -1250,8 +1254,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50207" level="6" />
 		</skills>
@@ -1266,8 +1270,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50207" level="7" />
 		</skills>
@@ -1282,8 +1286,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50207" level="8" />
 		</skills>
@@ -1298,8 +1302,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92094" name="Zircon" additionalName="Lv. 9 (Not Used)" type="Armor">
 		<!-- When equipped, P./ M. Critical Damage +19%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -1311,8 +1315,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92095" name="Zircon" additionalName="Lv. 10 (Not Used)" type="Armor">
 		<!-- When equipped, P./ M. Critical Damage +20%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
@@ -1324,8 +1328,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="92096" name="Moonstone" additionalName="Lv. 1" type="Armor">
 		<!-- When Sayha's Grace is active, Acquired XP/ SP +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -1382,8 +1386,8 @@
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="50208" level="4" />
 		</skills>

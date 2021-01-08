@@ -54,6 +54,10 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="26306" name="Offering Test Recipe 1" type="EtcItem">
 		<!-- For Dwarves only. rare_condition 100000000, rare_announce 1 -->
@@ -361,7 +365,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21477" level="1" /> <!-- Power of Abundance - Lv. 1 -->
 			<skill id="21364" level="9" /> <!-- Talisman - Abundance -->
@@ -374,7 +377,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21477" level="2" /> <!-- Power of Abundance - Lv. 1 -->
 			<skill id="21364" level="10" /> <!-- Talisman - Abundance -->
@@ -387,7 +389,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21477" level="3" /> <!-- Power of Abundance - Lv. 1 -->
 			<skill id="21364" level="11" /> <!-- Talisman - Abundance -->
@@ -400,7 +401,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21477" level="4" /> <!-- Power of Abundance - Lv. 1 -->
 			<skill id="21364" level="12" /> <!-- Talisman - Abundance -->

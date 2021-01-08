@@ -852,6 +852,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="8766" name="Spirit Bead" type="EtcItem">
 		<!-- Beads collected by Blacksmith Wilbert of Town of Aden. You can play the game if you bring him more than 50. -->
@@ -861,6 +862,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="8767" name="Tyrannosaurus Claw" type="EtcItem">
 		<!-- This claw can be obtained by defeating a Tyrannosaurus. -->

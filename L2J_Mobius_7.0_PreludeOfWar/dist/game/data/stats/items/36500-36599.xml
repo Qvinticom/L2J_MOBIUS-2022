@@ -13,6 +13,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -42,6 +43,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -73,6 +75,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -104,6 +107,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8890" level="1" /> <!-- Dignity -->
 			<skill id="8903" level="1" /> <!-- Dragon Wizard -->
@@ -134,6 +138,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -166,6 +171,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -197,6 +203,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -229,6 +236,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -259,6 +267,7 @@
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -289,6 +298,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -319,6 +329,7 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -349,6 +360,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -379,6 +391,7 @@
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -1150,7 +1163,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1165,7 +1177,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1181,7 +1192,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1197,7 +1207,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1212,7 +1221,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1227,7 +1235,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1344,7 +1351,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>
@@ -1359,7 +1365,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<skills>

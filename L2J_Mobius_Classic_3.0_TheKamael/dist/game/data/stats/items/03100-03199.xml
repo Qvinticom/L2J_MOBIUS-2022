@@ -19,6 +19,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3102" name="Spellbook: Blessed Shield" type="EtcItem">
 		<!-- Spellbook needed to learn Blessed Shield. Used by Prophets and Elven Elders. Required level: 40 -->
@@ -99,6 +100,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3110" name="Amulet: Seal of Scourge" type="EtcItem">
 		<!-- Amulet required for the Seal of Scourge spell. Used by Overlords. Required level: 40 -->
@@ -119,6 +121,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3112" name="Amulet: Pa'agrio's Vision" type="EtcItem">
 		<!-- Amulet required for the Pa'agrio's Vision spell. Used by Overlords. Required level: 44 -->
@@ -169,6 +172,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3117" name="Amulet: Chant of Evasion" type="EtcItem">
 		<!-- Amulet required for the Chant of Evasion spell. Used by Warcryers. Required level: 40 -->
@@ -189,6 +193,7 @@
 		<set name="price" val="100000" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3119" name="Mark of Guildsman" type="EtcItem">
 		<!-- Mark given to those who have passed the Trial of the Guildsman. Class transfer related item. -->

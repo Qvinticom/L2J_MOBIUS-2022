@@ -566,6 +566,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="weight" val="10" />
 		<capsuled_items>
 			<item id="80124" min="1" max="1" chance="100" /> <!-- Advanced Mammon s Talisman - Skill Power -->
 		</capsuled_items>
@@ -580,6 +581,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="weight" val="10" />
 		<capsuled_items>
 			<item id="80125" min="1" max="1" chance="100" /> <!-- Advanced Mammon s Talisman - Attribute Attack -->
 		</capsuled_items>
@@ -594,6 +596,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="weight" val="10" />
 		<capsuled_items>
 			<item id="80126" min="1" max="1" chance="100" /> <!-- Advanced Mammon s Talisman - Skill Cooldown -->
 		</capsuled_items>

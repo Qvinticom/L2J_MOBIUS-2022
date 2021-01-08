@@ -978,6 +978,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1063" /> <!-- mk_R95_dagger -->
 		<set name="handler" val="Recipes" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="19379" name="Recipe: Unidentified Specter Cutter (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for making a Specter Cutter. Requires level 13 of the create item skill. Success rate is 60%. In case of the success, the obtained item can be bound, normal, or blessed. -->
@@ -991,6 +993,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1064" /> <!-- mk_R95_onehand_sword -->
 		<set name="handler" val="Recipes" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="19380" name="Recipe: Unidentified Specter Slasher (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for making a Specter Slasher. Requires level 13 of the create item skill. Success rate is 60%. In case of the success, the obtained item can be bound, normal, or blessed. -->
@@ -1004,6 +1008,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1065" /> <!-- mk_R95_twohand_sword -->
 		<set name="handler" val="Recipes" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="19381" name="Recipe: Unidentified Specter Avenger (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for making a Specter Avenger. Requires level 13 of the create item skill. Success rate is 60%. In case of the success, the obtained item can be bound, normal, or blessed. -->

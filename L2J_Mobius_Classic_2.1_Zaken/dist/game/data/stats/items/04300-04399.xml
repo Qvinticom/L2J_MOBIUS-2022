@@ -345,6 +345,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4351" name="Ancient Goddess Statue: Prototype" type="EtcItem">
 		<!-- Statue created by Berona, an ancient sculptor. - Prototype -->
@@ -356,6 +357,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4352" name="Ancient Goddess Statue: Original" type="EtcItem">
 		<!-- Statue created by Berona, a sculptor in ancient times. - Original -->
@@ -367,6 +369,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4353" name="Ancient Goddess Statue: Replica" type="EtcItem">
 		<!-- Replicated statues that have been created by present day sculptors who imitated Berona's works. -->
@@ -378,6 +381,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4354" name="Ancient Goddess Statue: Forgery" type="EtcItem">
 		<!-- Forgeries that have been created in imitation of the ancient sculptor Berona's works. -->
@@ -389,6 +393,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4355" name="Blue Eva" type="EtcItem">
 		<!-- Special Coin -->
@@ -479,6 +484,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4365" name="Ectoplasm Liqueur" type="EtcItem">
 		<!-- Exotic tasting liqueur made from ectoplasm. Very popular among connoisseurs. -->
@@ -489,6 +495,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="200" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4366" name="Prince's Trophy" type="EtcItem">
 		<!-- The winning trophy that Prince Malcom won in a dance competition. You can sell it at a store or keep it as a souvenir. -->
@@ -779,5 +786,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_depositable" val="false" />
 	</item>
 </list>

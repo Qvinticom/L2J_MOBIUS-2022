@@ -715,6 +715,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="13850" name="Bloody Axe Black Epaulette" type="EtcItem">
 		<!-- Epaulette once worn by the Bloody Axe Aide. -->
@@ -765,6 +766,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2615" level="1" /> <!-- Shards of Broken Darkness -->
 		</skills>
@@ -794,6 +796,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2839" level="1" /> <!-- Sacred Light Fragment -->
 		</skills>

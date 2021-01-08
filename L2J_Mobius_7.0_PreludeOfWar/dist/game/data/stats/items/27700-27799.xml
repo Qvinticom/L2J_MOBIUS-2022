@@ -1741,6 +1741,7 @@
 	<item id="27799" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type/ Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="weight" val="530" />
 		
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />

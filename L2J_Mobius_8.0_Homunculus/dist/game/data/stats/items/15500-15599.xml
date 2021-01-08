@@ -447,6 +447,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="15537" name="Strongbox of Promise" type="EtcItem">
 		<!-- Small safe obtained by defeating the monks in the Monastery of Silence. You can find out about the quest by clicking on it. Quest start item. -->
@@ -504,6 +505,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -519,6 +521,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -534,6 +537,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -885,6 +889,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>

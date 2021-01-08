@@ -57,7 +57,6 @@
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
@@ -143,7 +142,6 @@
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90017" name="Weapons Ingredient Box (A-grade)" type="EtcItem">
 		<!-- Double-click to obtain one of A-grade Weapon Ingredients. -->
@@ -484,6 +482,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90047" name="Scroll: Touch of Life" type="EtcItem">
 		<!-- Scroll needed to learn the Touch of Life skill. Available to Phoenix Knight, and Eva's Templar. Level required to obtain the scroll: 78 -->
@@ -491,6 +490,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90048" name="Scroll: Touch of Death" type="EtcItem">
 		<!-- Scroll needed to learn the Touch of Death skill. Available to Hell Knight and Shillien Templar. Level required to obtain the scroll: 78 -->
@@ -498,6 +498,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90049" name="Scroll: Shield of Faith" type="EtcItem">
 		<!-- Scroll needed to learn the Shield of Faith skill. Available to Phoenix Knight, Hell Knight, Eva's Templar, and Shillien Templar. Level required to obtain the scroll: 79 -->
@@ -505,6 +506,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90050" name="Scroll: Shield of Sacrifice" type="EtcItem">
 		<!-- Scroll needed to learn the Shield of Sacrifice skill. Available to Phoenix Knight. Level required to obtain the scroll: 80 -->
@@ -512,6 +514,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90051" name="Scroll: Insane Crusher" type="EtcItem">
 		<!-- Scroll needed to learn the Insane Crusher skill. Available to Hell Knight. Level required to obtain the scroll: 80 -->
@@ -519,6 +522,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90052" name="Scroll: Eva’s Protection" type="EtcItem">
 		<!-- Scroll needed to learn the Eva? Protection skill. Available to Eva's Templar. Level required to obtain the scroll: 80 -->
@@ -526,6 +530,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90053" name="Scroll: Mass Lightning Strike" type="EtcItem">
 		<!-- Scroll needed to learn the Mass Lightning Strike skill. Available to Shillien Templar. Level required to obtain the scroll: 80 -->
@@ -533,6 +538,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90054" name="Scroll: Clear Movements" type="EtcItem">
 		<!-- Scroll needed to learn the Clear Movements skill. Available to Adventurer, Wind Rider, and Ghost Hunter. Level required to obtain the scroll: 77 -->
@@ -540,6 +546,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90055" name="Scroll: Critical Wound" type="EtcItem">
 		<!-- Scroll needed to learn the Critical Wound skill. Available to Adventurer, Wind Rider, and Ghost Hunter. Level required to obtain the scroll: 77 -->
@@ -547,6 +554,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90056" name="Scroll: Focus Power" type="EtcItem">
 		<!-- Scroll needed to learn the Focus Power skill. Available to Adventurer and Ghost Hunter. Level required to obtain the scroll: 78 -->
@@ -554,6 +562,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90057" name="Scroll: Focus Chance" type="EtcItem">
 		<!-- Scroll needed to learn the Focus Chance skill. Available to Adventurer and Wind Rider. Level required to obtain the scroll: 78 -->
@@ -561,6 +570,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90058" name="Scroll: Focus Death" type="EtcItem">
 		<!-- Scroll needed to learn the Focus Death skill. Available to Wind Rider and Ghost Hunter. Level required to obtain the scroll: 78 -->
@@ -568,6 +578,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90059" name="Scroll: Mirage" type="EtcItem">
 		<!-- Scroll needed to learn the Mirage skill. Available to Adventurer. Level required to obtain the scroll: 79 -->
@@ -575,6 +586,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90060" name="Scroll: Evasion" type="EtcItem">
 		<!-- Scroll needed to learn the Evasion skill. Available to Wind Rider. Level required to obtain the scroll: 79 -->
@@ -582,6 +594,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90061" name="Scroll: Counterattack" type="EtcItem">
 		<!-- Scroll needed to learn the Counterattack skill. Available to Ghost Hunter. Level required to obtain the scroll: 79 -->
@@ -589,6 +602,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90062" name="Scroll: Real Target" type="EtcItem">
 		<!-- Scroll needed to learn the Real Target skill. Available to Sagittarius, Moonlight Sentinel, and Ghost Sentinel. Level required to obtain the scroll: 78 -->
@@ -596,6 +610,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90063" name="Scroll: Death Sting" type="EtcItem">
 		<!-- Scroll needed to learn the Death Sting skill. Available to Sagittarius, Moonlight Sentinel, and Ghost Sentinel. Level required to obtain the scroll: 79 -->
@@ -603,6 +618,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90064" name="Scroll: Flame Hawk" type="EtcItem">
 		<!-- Scroll needed to learn the Flame Hawk skill. Available to Sagittarius. Level required to obtain the scroll: 80 -->
@@ -610,6 +626,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90065" name="Scroll: Arrow Rain" type="EtcItem">
 		<!-- Scroll needed to learn the Arrow Rain skill. Available to Moonlight Sentinel. Level required to obtain the scroll: 80 -->
@@ -617,6 +634,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90066" name="Scroll: Ghost Piercing" type="EtcItem">
 		<!-- Scroll needed to learn the Ghost Piercing skill. Available to Ghost Sentinel. Level required to obtain the scroll: 80 -->
@@ -624,6 +642,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90067" name="Scroll: Sonic Barrier" type="EtcItem">
 		<!-- Scroll needed to learn the Sonic Barrier skill. Available to Duelist. Level required to obtain the scroll: 77 -->
@@ -631,6 +650,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90068" name="Scroll: Indestructible Sound" type="EtcItem">
 		<!-- Scroll needed to learn the Indestructible Sound skill. Available to Duelist. Level required to obtain the scroll: 78 -->
@@ -638,6 +658,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90069" name="Scroll: Maximum Sonic Focus" type="EtcItem">
 		<!-- Scroll needed to learn the Maximum Sonic Focus skill. Available to Duelist. Level required to obtain the scroll: 80 -->
@@ -645,6 +666,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90070" name="Scroll: Force Barrier" type="EtcItem">
 		<!-- Scroll needed to learn the Force Barrier skill. Available to Grand Khavatari. Level required to obtain the scroll: 77 -->
@@ -652,6 +674,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90071" name="Scroll: Rush" type="EtcItem">
 		<!-- Scroll needed to learn the Rush skill. Available to Grand Khavatari. Level required to obtain the scroll: 78 -->
@@ -659,6 +682,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90072" name="Scroll: Maximum Force Focus" type="EtcItem">
 		<!-- Scroll needed to learn the Maximum Force Focus skill. Available to Grand Khavatari. Level required to obtain the scroll: 80 -->
@@ -666,6 +690,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90073" name="Scroll: Destroyer’s Roar" type="EtcItem">
 		<!-- Scroll needed to learn the Destroyer? Roar skill. Available to Titan. Level required to obtain the scroll: 77 -->
@@ -673,6 +698,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90074" name="Scroll: Over the Body" type="EtcItem">
 		<!-- Scroll needed to learn the Over the Body skill. Available to Titan. Level required to obtain the scroll: 78 -->
@@ -680,6 +706,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90075" name="Scroll: Demolition Impact" type="EtcItem">
 		<!-- Scroll needed to learn the Demolition Impact skill. Available to Titan. Level required to obtain the scroll: 80 -->
@@ -687,6 +714,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90076" name="Scroll: Stun Blast" type="EtcItem">
 		<!-- Scroll needed to learn the Stun Blast skill. Available to Dreadnought. Level required to obtain the scroll: 77 -->
@@ -694,6 +722,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90077" name="Scroll: Spear Howl" type="EtcItem">
 		<!-- Scroll needed to learn the Spear Howl skill. Available to Dreadnought. Level required to obtain the scroll: 80 -->
@@ -701,6 +730,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90078" name="Scroll: Armor Crush" type="EtcItem">
 		<!-- Scroll needed to learn the Armor Crush skill. Available to Maestro, Fortune Seeker and Titan. Level required to obtain the scroll: 77 -->
@@ -708,6 +738,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90079" name="Scroll: Spoil Crush" type="EtcItem">
 		<!-- Scroll needed to learn the Spoil Crush skill. Available to Fortune Seeker. Level required to obtain the scroll: 77 -->
@@ -715,6 +746,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90080" name="Scroll: Final Secret" type="EtcItem">
 		<!-- Scroll needed to learn the Final Secret skill. Available to Duelist, Dreadnought, Titan, Grand Khavatari, Maestro, and Fortune Seeker. Level required to obtain the scroll: 79 -->
@@ -722,6 +754,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90081" name="Scroll: Arcane Power" type="EtcItem">
 		<!-- Scroll needed to learn the Arcane Power skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 77 -->
@@ -729,6 +762,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90082" name="Scroll: Fire Vortex Buster" type="EtcItem">
 		<!-- Scroll needed to learn the Fire Vortex Buster. Available to Archmage. Level required to obtain the scroll: 78 -->
@@ -736,6 +770,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90083" name="Scroll: Ice Vortex Crusher" type="EtcItem">
 		<!-- Scroll needed to learn the Ice Vortex Cruster. Available to Mystic Muse. Level required to obtain the scroll: 78 -->
@@ -743,6 +778,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90084" name="Scroll: Wind Vortex Slug" type="EtcItem">
 		<!-- Scroll needed to learn the Wind Vortex Slug skill. Available to Storm Screamer. Level required to obtain the scroll: 78 -->
@@ -750,6 +786,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90085" name="Scroll: Arcane Chaos" type="EtcItem">
 		<!-- Scroll needed to learn the Arcane Chaos skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 79 -->
@@ -757,6 +794,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90086" name="Scroll: Arcane Shield" type="EtcItem">
 		<!-- Scroll needed to learn the Arcane Shield skill. Available to Archmage, Mystic Muse, and Storm Screamer. Level required to obtain the scroll: 80 -->
@@ -764,6 +802,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90087" name="Scroll: Curse of Doom" type="EtcItem">
 		<!-- Scroll needed to learn the Curse of Doom skill. Available to Souleater. Level required to obtain the scroll: 77 -->
@@ -771,6 +810,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90088" name="Scroll: Curse of Abyss" type="EtcItem">
 		<!-- Scroll needed to learn the Curse of Abyss skill. Available to Souleater. Level required to obtain the scroll: 78 -->
@@ -778,6 +818,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90089" name="Scroll: Vampiric Mist" type="EtcItem">
 		<!-- Scroll needed to learn the Vampiric Mist skill. Available to Souleater. Level required to obtain the scroll: 80 -->
@@ -785,6 +826,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90090" name="Scroll: Song of Renewal" type="EtcItem">
 		<!-- Scroll needed to learn the Song of Renewal skill. Available to Sword Muse. Level required to obtain the scroll: 77 -->
@@ -792,6 +834,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90091" name="Scroll: Champion Song" type="EtcItem">
 		<!-- Scroll needed to learn the Champion Song skill. Available to Sword Muse. Level required to obtain the scroll: 78 -->
@@ -799,6 +842,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90092" name="Scroll: Song of Silence" type="EtcItem">
 		<!-- Scroll needed to learn the Song of Silence skill. Available to Sword Muse. Level required to obtain the scroll: 79 -->
@@ -806,6 +850,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90093" name="Scroll: Song of Purification" type="EtcItem">
 		<!-- Scroll needed to learn the Song of Purification skill. Available to Sword Muse. Level required to obtain the scroll: 80 -->
@@ -813,6 +858,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90094" name="Scroll: Dance of Shadows" type="EtcItem">
 		<!-- Scroll needed to learn the Dance of Shadows skill. Available to Spectral Dancer. Level required to obtain the scroll: 77 -->
@@ -820,6 +866,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90095" name="Scroll: Dance of Siren" type="EtcItem">
 		<!-- Scroll needed to learn the Dance of Siren skill. Available to Spectral Dancer. Level required to obtain the scroll: 78 -->
@@ -827,6 +874,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90096" name="Scroll: Dance of Medusa" type="EtcItem">
 		<!-- Scroll needed to learn the Dance of Medusa skill. Available to Spectral Dancer. Level required to obtain the scroll: 79 -->
@@ -834,6 +882,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90097" name="Scroll: Dance of Berserker" type="EtcItem">
 		<!-- Scroll needed to learn the Dance of Berserker skill. Available to Spectral Dancer. Level required to obtain the scroll: 80 -->
@@ -841,6 +890,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90098" name="Scroll: Prophecy of Fire" type="EtcItem">
 		<!-- Scroll needed to learn the Prophecy of Fire skill. Available to Hierophant. Level required to obtain the scroll: 76 -->
@@ -848,6 +898,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90099" name="Scroll: Block Shield" type="EtcItem">
 		<!-- Scroll needed to learn the Block Shield skill. Available to Hierophant. Level required to obtain the scroll: 77 -->
@@ -855,5 +906,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

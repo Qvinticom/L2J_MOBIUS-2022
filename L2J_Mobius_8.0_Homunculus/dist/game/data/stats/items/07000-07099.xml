@@ -1096,6 +1096,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7076" name="Mysterious Cloth" type="EtcItem">
 		<!-- Premium fabric used in the making of Formal Wear -->
@@ -1105,6 +1106,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7077" name="Jewel Box" type="EtcItem">
 		<!-- Contains the jewels which will adorn the Formal Wear -->
@@ -1114,6 +1116,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7078" name="Sewing Kit" type="EtcItem">
 		<!-- Contains the tools necessary to sew (create) Formal Wear -->
@@ -1123,6 +1126,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="is_depositable" val="false" />
 	</item>
 	<item id="7079" name="Dimensional Fragment" type="EtcItem">
 		<!-- Jewel that diffuses the dimension's energy. Required to survive in the Dimensional Rift. -->

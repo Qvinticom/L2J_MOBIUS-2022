@@ -239,6 +239,7 @@
 		<set name="price" val="1000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="GEMSTONE" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="2131" name="Gemstone (C-grade)" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
@@ -248,6 +249,7 @@
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="GEMSTONE" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="2132" name="Gemstone (B-grade)" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_green_i00" />
@@ -257,6 +259,7 @@
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="GEMSTONE" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="2133" name="Gemstone (A-grade)" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_red_i00" />
@@ -266,6 +269,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="GEMSTONE" />
+		<set name="is_sellable" val="false" />
 	</item>
 	<item id="2134" name="Gemstone (S-grade)" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_silver_i00" />

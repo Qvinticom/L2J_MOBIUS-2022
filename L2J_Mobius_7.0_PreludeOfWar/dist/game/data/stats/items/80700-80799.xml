@@ -1241,6 +1241,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />
 		<cond>
 			<player symbolsealpoints="7800" />
 		</cond>
@@ -1256,6 +1257,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="39486" level="1" /> <!-- Elite Monster Reward Box -->
 		</skills>
@@ -1344,9 +1346,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80770" name="Brilliant Scroll: Enchant Elemental Shirt x2 Pack" type="EtcItem">
 		<!-- Use it to obtain 2 Brilliant Scroll: Enchant Elemental Shirt. -->
@@ -1356,9 +1358,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80771" name="PA Event Box" type="EtcItem">
 		<!-- Box received when logging in from a PA. Use it to obtain various items including Dark Armor Enhancement Stones and Bloody Armor Enhancement Stones. -->

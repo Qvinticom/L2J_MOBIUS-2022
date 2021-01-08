@@ -157,9 +157,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71816" name="Chronicle Chest" type="EtcItem">
 		<!-- Double-click to obtain an enchanted rare accessory or crafting supply (30-day). -->
@@ -168,9 +168,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71817" name="15th Anniversary Gift Box" type="EtcItem">
 		<!-- Double-click to obtain one of the items: Manuscript Chest, Dragon Dye Box or Rice Cake of Fighting Spirit. -->
@@ -533,8 +533,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">12</stat>
 			<stat type="mAtk">12</stat>

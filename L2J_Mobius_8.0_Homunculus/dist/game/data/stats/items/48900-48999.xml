@@ -124,9 +124,9 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48914" name="Raging Billow Scroll" type="EtcItem">
 		<!-- Scroll for easier hunting. For 30 min., Attribute Attack +100, Attribute Resistance +100, Acquired XP/ SP +100%. The effect remains after death. Cooldown: 5 min. Required level: 1-107. Cannot be used in the Olympiad. Does not stack with Dragon's Attribute Potion or Glowing Dragon's Attribute Potion. -->
@@ -136,9 +136,9 @@
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48915" name="Instanced Dungeon Master Key" type="EtcItem">
 		<!-- When in inventory, allows to enter a daily instance zone regardless of its level restrictions. <Instance zones>. Kartia's Labyrinth Lv. 85/ 90/ 95 (Party), Emperor's Labyrinth, Nightmare Kamaloka, Embryo Command Post, Altar of Shillien, Fallen Emperor's Throne, Krofin's Nest. -->
@@ -616,6 +616,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
 			<player level="100" />
 		</cond>
@@ -631,6 +632,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_sellable" val="false" />
+		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
 			<player level="105" />
 		</cond>
@@ -648,6 +650,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
+		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
 			<player level="110" />
 		</cond>

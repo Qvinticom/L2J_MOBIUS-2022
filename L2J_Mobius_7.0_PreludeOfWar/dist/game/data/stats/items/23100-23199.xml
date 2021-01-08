@@ -1239,6 +1239,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23166" name="Cream for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Cream for Summer Slushie sought by Herina. Tastes smooth. You need 10 each of chocolate/ cream/ ice/ biscuits to make 1 Sweet Summer Slushie. -->
@@ -1246,6 +1247,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23167" name="Ice for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Ice for Summer Slushie sought by Herina. Seems finely shaven. You need 10 each of chocolate/ cream/ ice/ biscuits to make 1 Sweet Summer Slushie. -->
@@ -1253,6 +1255,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23168" name="Biscuits for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Basket containing biscuits for Summer Slushie sought by Herina. Includes assorted biscuits, fruits, candy, and the like. You need 10 each of chocolate/ cream/ ice/ biscuits to make 1 Sweet Summer Slushie. -->
@@ -1260,6 +1263,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23169" name="Sweet Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Summer Slushie made by Herina. Use it to change into a Beach Swimsuit. For 1 h., Atk. Spd. +5%, Casting Spd. +5%, Speed +5, and Max HP/ MP +5%. Cooldown is 1 h. -->
@@ -1271,6 +1275,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22631" level="1" /> <!-- Sweet Summer Slushie -->
 		</skills>

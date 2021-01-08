@@ -29,9 +29,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29503" name="Freya's Ice Flower Appearance Stone" type="EtcItem">
 		<!-- An appearance stone that gives a shield/ sigil Freya's Ice Flower Shield appearance. -->
@@ -40,9 +40,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29504" name="Freya's Fortune Stick" type="EtcItem">
 		<!-- Double-click Freya's Fortune Stick to obtain Freya's Frozen Scroll/ Freya's Recovery Potion x3 and Freya's Art of Seduction XP/ Barrier or Pa'agrio's Blessing XP/ Might. Additionally, you can randomly earn 1 Freya's/ Sirra's/ Snowman's Fortune Box. -->
@@ -83,9 +83,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29509" name="Expertise Rune - ALL (7-day) Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an Expertise Rune - ALL (7-day) Box. -->
@@ -117,9 +117,9 @@
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29514" name="Festival Ticket" type="EtcItem">
 		<!-- Ticket to participate in the Festival. -->

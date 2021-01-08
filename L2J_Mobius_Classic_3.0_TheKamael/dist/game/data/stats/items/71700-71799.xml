@@ -895,9 +895,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71769" name="Weapon Coupon (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- You can exchange the coupon for a B-grade weapon via Dimensional Merchant. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
@@ -905,9 +905,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71770" name="Newbie Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Samurai Black Long Sword (30-day), 5000 Mysterious Soulshots (No-grade), 15 Special Hero's Fruits. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
@@ -917,9 +917,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71771" name="Hero's Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 10 Dandy's Home Run Balls, 10 Hero's XP/ SP Scroll, Newbie Amulet (30-day). Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
@@ -929,9 +929,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71772" name="Equipment Package" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 2 Weapon Coupons (B-grade), a box with a temporary warrior armor set, temporary rare accessory Lv. 1. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
@@ -941,9 +941,9 @@
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71773" name="Newbie Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Acquired XP/ SP (hunting) +50%. Required level: 1-39. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
@@ -990,9 +990,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71778" name="Sealed Samurai Long Sword Pack" additionalName="4" type="EtcItem">
 		<!-- Double-click to obtain Sealed Samurai Long Sword enchanted to +4. -->

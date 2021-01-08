@@ -915,6 +915,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22189" level="1" /> <!-- Flower Shower -->
 		</skills>
@@ -929,6 +930,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22186" level="1" /> <!-- Echo Crystal - Theme of Celebration -->
 		</skills>
@@ -942,6 +944,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">1</stat>
 		</stats>
@@ -955,6 +958,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">1</stat>
 		</stats>
@@ -969,6 +973,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_freightable" val="true" />
 		<capsuled_items>
 			<item id="21164" min="1" max="1" chance="100" /> <!-- Honeymoon Ticket - 7-day -->
 			<item id="21156" min="1" max="1" chance="100" /> <!-- Big Wedding Cake -->
@@ -1170,6 +1175,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22191" level="1" /> <!-- Transformation Scroll: Onyx Beast -->
 		</skills>
@@ -1185,6 +1191,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22192" level="1" /> <!-- Transformation Scroll: Doom Wraith -->
 		</skills>
@@ -1200,6 +1207,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22193" level="1" /> <!-- Transformation Scroll: Grail Apostle -->
 		</skills>
@@ -1215,6 +1223,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22194" level="1" /> <!-- Transformation Scroll: Unicorn -->
 		</skills>
@@ -1230,6 +1239,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22195" level="1" /> <!-- Transformation Scroll: Lilim Knight -->
 		</skills>
@@ -1245,6 +1255,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22196" level="1" /> <!-- Transformation Scroll: Golem Guardian -->
 		</skills>
@@ -1260,6 +1271,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22197" level="1" /> <!-- Transformation Scroll: Inferno Drake -->
 		</skills>
@@ -1275,6 +1287,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22198" level="1" /> <!-- Transformation Scroll: Dragon Bomber -->
 		</skills>
@@ -1290,6 +1303,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22199" level="1" /> <!-- Transformation Scroll: Heretic -->
 		</skills>
@@ -1305,6 +1319,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22200" level="1" /> <!-- Transformation Scroll: Veil Master -->
 		</skills>
@@ -1320,6 +1335,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22201" level="1" /> <!-- Transformation Scroll: Saber Tooth Tiger -->
 		</skills>
@@ -1335,6 +1351,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22202" level="1" /> <!-- Transformation Scroll: Oel Mahum -->
 		</skills>
@@ -1350,6 +1367,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22203" level="1" /> <!-- Transformation Scroll: Doll Blader -->
 		</skills>
@@ -1365,6 +1383,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22204" level="1" /> <!-- Transformation Scroll: Zaken -->
 		</skills>
@@ -1380,6 +1399,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22205" level="1" /> <!-- Transformation Scroll: Anakim -->
 		</skills>
@@ -1395,6 +1415,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22206" level="1" /> <!-- Transformation Scroll: Venom -->
 		</skills>
@@ -1410,6 +1431,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22207" level="1" /> <!-- Transformation Scroll: Gordon -->
 		</skills>
@@ -1425,6 +1447,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22208" level="1" /> <!-- Transformation Scroll: Ranku -->
 		</skills>
@@ -1440,6 +1463,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22209" level="1" /> <!-- Transformation Scroll: Kechi -->
 		</skills>
@@ -1455,6 +1479,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="22210" level="1" /> <!-- Transformation Scroll: Demon Prince -->
 		</skills>

@@ -46,8 +46,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91207" name="Wind's Blessing Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Sayha's Silver Light Blessing/ Sayha's Golden Light Blessing. Cannot be dropped or sold in the grocery store. -->
@@ -308,9 +308,9 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91237" name="Santa Girl's Magic Box" type="EtcItem">
 		<!-- Allows to receive Santa Girl's Gift Blessing. (Can be used only once per day.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Will be deleted after event. -->
@@ -374,8 +374,8 @@
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">78</stat>
 		</stats>

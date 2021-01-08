@@ -647,6 +647,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9725" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 85 Solo -->
 		</skills>
@@ -659,6 +660,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9726" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 90 Solo -->
 		</skills>
@@ -671,6 +673,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9727" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 95 Solo -->
 		</skills>
@@ -683,6 +686,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9728" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 85 Party -->
 		</skills>
@@ -1264,6 +1268,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9729" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 90 Party -->
 		</skills>
@@ -1276,6 +1281,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="9730" level="1" /> <!-- Extra Pass: Kartia's Labyrinth Lv. 95 Party -->
 		</skills>

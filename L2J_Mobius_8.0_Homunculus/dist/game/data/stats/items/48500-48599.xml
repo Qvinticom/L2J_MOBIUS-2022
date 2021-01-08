@@ -217,6 +217,8 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="48521" name="Red Libra's Adena Gift Box" additionalName="Event" type="EtcItem">
 		<!-- A gift box earned for healing the Exhausted Elysium Buffalo. Double-click to obtain 5 billion adena. -->
@@ -1143,6 +1145,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="weight" val="120" />
 		<skills>
 			<skill id="39234" level="1" /> <!-- Book of Growth: Guard Agathion -->
 		</skills>
@@ -1157,6 +1160,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="weight" val="120" />
 		<skills>
 			<skill id="39235" level="1" /> <!-- Ancient Book of Growth: Guard Agathion -->
 		</skills>

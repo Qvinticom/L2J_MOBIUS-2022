@@ -750,6 +750,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91473" name="Sealed Agathion Capricorn +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Capricorn. Cannot be dropped or sold. -->
@@ -759,6 +760,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91474" name="Sealed Agathion Libra +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Libra. Cannot be dropped or sold. -->
@@ -768,6 +770,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91475" name="Sealed Agathion Taurus +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Taurus. Cannot be dropped or sold. -->
@@ -777,6 +780,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91476" name="Sealed Agathion Leo +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Leo. Cannot be dropped or sold. -->
@@ -786,6 +790,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91477" name="Sealed Agathion Gemini +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Gemini. Cannot be dropped or sold. -->
@@ -795,6 +800,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91478" name="Sealed Agathion Scorpio +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Scorpio. Cannot be dropped or sold. -->
@@ -804,6 +810,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91479" name="Sealed Agathion Aquarius +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Aquarius. Cannot be dropped or sold. -->
@@ -813,6 +820,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91480" name="Sealed Agathion Sagittarius +5" type="EtcItem">
 		<!-- Double-click to obtain a +5 Agathion Sagittarius. Cannot be dropped or sold. -->
@@ -822,6 +830,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91481" name="Soul Crystal" type="EtcItem">
 		<!-- A crystal filled with the soul power of mighty warriors. Take it to Magic Books Trader Lorenzo in Aden to learn certification skills. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -829,9 +838,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91482" name="Scroll - Detect Darkness" type="EtcItem">
 		<!-- Scroll needed to learn the Detect Darkness skill. Available to Sagittarius, Moonlight Sentinel, Ghost Sentinel. Required level: 76. -->

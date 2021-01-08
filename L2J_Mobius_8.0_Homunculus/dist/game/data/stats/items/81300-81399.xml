@@ -810,6 +810,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="is_tradable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="39617" level="1" /> <!-- Scroll: Enchant Atlas' Earring -->
 		</skills>
@@ -821,6 +822,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="81353" name="Night Goblin's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain a random item. -->
@@ -1051,6 +1053,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="81369" name="Full Moon's Chuseok Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: +8 Attack/ Defense/ Support/ Balance Artifact, Brooch Spirit Stone, High-grade/ Top-grade Spirit Stone, R-grade Crystal, Honey Rice Cakes. -->

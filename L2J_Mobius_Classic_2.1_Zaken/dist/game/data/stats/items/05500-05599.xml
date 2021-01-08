@@ -773,6 +773,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2167" level="1" /> <!-- SP Scroll -->
 		</skills>
@@ -789,6 +790,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2167" level="2" /> <!-- SP Scroll -->
 		</skills>
@@ -805,6 +807,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="2167" level="3" /> <!-- SP Scroll -->
 		</skills>

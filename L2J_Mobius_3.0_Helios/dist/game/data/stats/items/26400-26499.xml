@@ -324,7 +324,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27426" level="1" /> <!-- Shadow Shaper +1 ~+9 -->
@@ -337,7 +336,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27427" level="1" /> <!-- Shadow Cutter +1 ~+9 -->
@@ -350,7 +348,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27428" level="1" /> <!-- Shadow Slasher +1 ~+9 -->
@@ -363,7 +360,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27429" level="1" /> <!-- Shadow Fighter +1 ~+9 -->
@@ -376,7 +372,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27430" level="1" /> <!-- Shadow Stormer +1 ~+9 -->
@@ -389,7 +384,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27431" level="1" /> <!-- Shadow Thrower +1 ~+9 -->
@@ -402,7 +396,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27432" level="1" /> <!-- Shadow Shooter +1 ~+9 -->
@@ -415,7 +408,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27433" level="1" /> <!-- Shadow Buster +1 ~+9 -->
@@ -428,7 +420,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27434" level="1" /> <!-- Shadow Retributer +1 ~+9 -->
@@ -441,7 +432,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_commissionable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27435" level="1" /> <!-- Shadow Dualsword +1 ~+9 -->
@@ -454,7 +444,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="1" /> <!-- Talisman - Abundance -->
@@ -467,7 +457,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="2" /> <!-- Talisman - Abundance -->
@@ -480,7 +470,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="3" /> <!-- Talisman - Abundance -->
@@ -493,7 +483,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="4" /> <!-- Talisman - Abundance -->
@@ -506,7 +496,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="5" /> <!-- Talisman - Abundance -->
@@ -521,7 +511,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="6" /> <!-- Talisman - Abundance -->
@@ -536,7 +526,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="7" /> <!-- Talisman - Abundance -->
@@ -551,7 +541,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="21364" level="8" /> <!-- Talisman - Abundance -->
@@ -566,7 +556,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21364" level="9" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="1" /> <!-- Power of Abundance - Lv. 1 -->
@@ -579,7 +568,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21364" level="10" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="2" /> <!-- Power of Abundance - Lv. 1 -->
@@ -592,7 +580,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21364" level="11" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="3" /> <!-- Power of Abundance - Lv. 1 -->
@@ -605,7 +592,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_commissionable" val="true" />
 		<skills>
 			<skill id="21364" level="12" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="4" /> <!-- Power of Abundance - Lv. 1 -->

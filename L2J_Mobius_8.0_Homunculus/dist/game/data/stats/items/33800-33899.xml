@@ -16,6 +16,7 @@
 		<set name="handler" val="Book" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
 	</item>
 	<item id="33802" name="Mentee Certificate Pack" type="EtcItem">
 		<!-- 1 per account. Double-click to obtain Mentee Certificate and Mentoring Guidebook. Once the pack is open, its contents cannot be transferred to other characters within the account. -->

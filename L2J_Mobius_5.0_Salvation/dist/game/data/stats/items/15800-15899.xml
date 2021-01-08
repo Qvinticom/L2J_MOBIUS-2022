@@ -375,6 +375,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -390,6 +391,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -405,6 +407,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="is_questitem" val="true" />
+		<set name="is_depositable" val="false" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -1505,6 +1508,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1542,6 +1546,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1579,6 +1584,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
+		<set name="is_depositable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>

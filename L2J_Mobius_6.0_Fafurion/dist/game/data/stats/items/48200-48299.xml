@@ -321,6 +321,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="48218" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
@@ -333,6 +334,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="48219" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
@@ -345,6 +347,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="48220" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
@@ -377,8 +380,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48223" name="Lucky Gift Coupon" additionalName="3 Hours" type="EtcItem">
 		<!-- Use it to change into the Hanbok appearance for 3 hours and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. -->
@@ -387,9 +390,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48224" name="Lucky Gift Coupon" additionalName="6 Hours" type="EtcItem">
 		<!-- Use it to change into the Hanbok appearance for 6 hours and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. -->
@@ -398,9 +401,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48225" name="Holiday Lucky Scroll" additionalName="Event" type="EtcItem">
 		<!-- When used, Acquired XP/ SP +30%, Vitality Bonus +30%, and P. Atk./ P. Def./ M. Atk./ M. Def. +15% for 30 min. Will be deleted after the event. -->
@@ -1258,6 +1261,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="weight" val="10" />
 		<skills>
 			<skill id="22754" level="1" /> <!-- Scroll: Reputation -->
 		</skills>

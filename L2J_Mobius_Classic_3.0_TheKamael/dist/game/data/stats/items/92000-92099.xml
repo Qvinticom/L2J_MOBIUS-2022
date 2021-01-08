@@ -344,6 +344,8 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="5400000" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="50912" level="5" /> <!-- Talisman Bracelet Lv. 5 -->
 		</skills>
@@ -359,6 +361,8 @@
 		<set name="material" val="SILVER" />
 		<set name="price" val="5400000" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="50912" level="6" /> <!-- Talisman Bracelet Lv. 6 -->
 		</skills>

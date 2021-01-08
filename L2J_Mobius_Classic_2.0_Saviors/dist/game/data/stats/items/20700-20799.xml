@@ -20,6 +20,8 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20793" name="Sweet Cheese Hat" type="Armor">
 		<!-- A hat shaped like a mouth-watering piece of cheese. On closer examination, you can see a purple mouse on top of it. -->
@@ -31,5 +33,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 </list>

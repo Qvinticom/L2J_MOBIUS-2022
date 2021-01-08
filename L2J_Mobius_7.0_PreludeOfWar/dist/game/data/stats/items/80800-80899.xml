@@ -163,6 +163,7 @@
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80816" name="GM's Buff Scroll" type="EtcItem">
 		<!-- When used, can receive the effects of 4 types of level 4 melodies, including Fantasia Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
@@ -187,6 +188,7 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="39514" level="1" /> <!-- Fantasia Harmony - Emperor's Special Cocktail-->
 			<skill id="39517" level="1" /> <!-- Fantasia Melody - Emperor's Special Cocktail -->
@@ -214,6 +216,7 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="39514" level="2" /> <!-- Fantasia Harmony - Emperor's Special Cocktail-->
 			<skill id="39517" level="2" /> <!-- Fantasia Melody - Emperor's Special Cocktail -->
@@ -241,6 +244,7 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="39514" level="3" /> <!-- Fantasia Harmony - Emperor's Special Cocktail-->
 			<skill id="39517" level="3" /> <!-- Fantasia Melody - Emperor's Special Cocktail -->
@@ -437,6 +441,8 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<skills>
 			<skill id="35524" level="1" /> <!-- Kaliel's Bracelet -->
 			<skill id="35524" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Bracelet +1 -->
@@ -505,6 +511,8 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="is_sellable" val="false" />
+		<set name="weight" val="10" />
 		<skills>
 			<skill id="39527" level="1" /> <!-- Enchant Scroll: Blessed Bracelet -->
 		</skills>

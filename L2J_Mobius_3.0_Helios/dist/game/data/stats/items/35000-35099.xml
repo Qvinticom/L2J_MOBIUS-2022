@@ -14,6 +14,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="8880" level="1" /> <!-- Tauti's Special Ability: Two-handed Axe -->
 			<skill id="9459" level="1" /> <!-- Tauti's Wrath -->
@@ -43,6 +44,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="8880" level="1" /> <!-- Tauti's Special Ability: Two-handed Axe -->
 			<skill id="9459" level="1" /> <!-- Tauti's Wrath -->

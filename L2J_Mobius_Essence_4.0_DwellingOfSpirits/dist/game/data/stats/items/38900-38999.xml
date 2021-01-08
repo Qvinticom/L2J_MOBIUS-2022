@@ -9,6 +9,9 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="17111" level="1" /> <!-- Squash Seed -->
 		</skills>
@@ -22,6 +25,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="17112" level="1" /> <!-- Large Squash Seed -->
 		</skills>
