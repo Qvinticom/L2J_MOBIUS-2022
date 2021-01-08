@@ -52,7 +52,7 @@ public class PacketEncoder extends MessageToByteEncoder<IOutgoingPacket>
 			{
 				if (out.writerIndex() > _maxPacketSize)
 				{
-					throw new IllegalStateException("Packet (" + packet + ") size (" + out.writerIndex() + ") is bigger than the limit (" + _maxPacketSize + ")");
+					throw new IllegalStateException("Packet (" + packet + ") size (" + out.writerIndex() + ") is bigger than the expected client limit (" + _maxPacketSize + ")");
 				}
 			}
 			else
