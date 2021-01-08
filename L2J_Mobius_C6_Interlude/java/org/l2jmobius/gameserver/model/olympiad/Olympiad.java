@@ -58,7 +58,7 @@ public class Olympiad
 	
 	private static Map<Integer, StatSet> NOBLES;
 	private static Map<Integer, StatSet> NOBLES_RANK;
-	private static List<StatSet> HEROS_TO_BE;
+	protected static List<StatSet> HEROS_TO_BE;
 	private static List<PlayerInstance> _nonClassBasedRegisters;
 	private static Map<Integer, List<PlayerInstance>> _classBasedRegisters;
 	public static List<Spawn> OLY_MANAGERS = new ArrayList<>();

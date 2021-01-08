@@ -61,7 +61,7 @@ public class Olympiad extends ListenersContainer
 	protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
 	
 	private static final Map<Integer, StatSet> NOBLES = new ConcurrentHashMap<>();
-	private static List<StatSet> HEROS_TO_BE;
+	protected static List<StatSet> HEROS_TO_BE;
 	private static Map<Integer, Integer> NOBLES_RANK = new HashMap<>();
 	private static List<PlayerInstance> _nonClassBasedRegisters;
 	private static Map<Integer, List<PlayerInstance>> _classBasedRegisters;

@@ -43,7 +43,7 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class RequestRestartPoint extends GameClientPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(RequestRestartPoint.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(RequestRestartPoint.class.getName());
 	
 	protected int _requestedPointType;
 	protected boolean _continuation;

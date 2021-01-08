@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  */
 public class HeavenlyRiftManager
 {
-	private static final ZoneType ZONE = ZoneManager.getInstance().getZoneByName("heavenly_rift");
+	protected static final ZoneType ZONE = ZoneManager.getInstance().getZoneByName("heavenly_rift");
 	
 	public static ZoneType getZone()
 	{

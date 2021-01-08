@@ -32,7 +32,7 @@ public class WarehouseCacheManager
 	protected final Map<PlayerInstance, Long> _cachedWh;
 	protected final long _cacheTime;
 	
-	private WarehouseCacheManager()
+	protected WarehouseCacheManager()
 	{
 		_cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000; // 60*1000 = 60000
 		_cachedWh = new ConcurrentHashMap<>();

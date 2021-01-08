@@ -29,7 +29,7 @@ public class QuestManager
 	private static Map<String, Quest> _quests = new HashMap<>();
 	private static int _questCount = 0;
 	
-	private QuestManager()
+	protected QuestManager()
 	{
 	}
 	

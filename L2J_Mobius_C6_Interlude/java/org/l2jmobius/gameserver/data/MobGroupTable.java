@@ -32,7 +32,7 @@ public class MobGroupTable
 	public static final int FOLLOW_RANGE = 300;
 	public static final int RANDOM_RANGE = 300;
 	
-	private MobGroupTable()
+	protected MobGroupTable()
 	{
 		_groupMap = new HashMap<>();
 	}

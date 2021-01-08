@@ -36,7 +36,7 @@ public class TeleportLocationTable
 	
 	private final Map<Integer, TeleportLocation> _teleports = new HashMap<>();
 	
-	private TeleportLocationTable()
+	protected TeleportLocationTable()
 	{
 		load();
 	}

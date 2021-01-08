@@ -44,7 +44,7 @@ public class ItemsOnGroundManager
 	static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	protected List<ItemInstance> _items = new ArrayList<>();
 	
-	private ItemsOnGroundManager()
+	protected ItemsOnGroundManager()
 	{
 		// If SaveDroppedItem is false, may want to delete all items previously stored to avoid add old items on reactivate
 		if (!Config.SAVE_DROPPED_ITEM)

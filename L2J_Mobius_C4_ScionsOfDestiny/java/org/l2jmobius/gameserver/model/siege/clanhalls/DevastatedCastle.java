@@ -77,7 +77,7 @@ public class DevastatedCastle
 		public long _damage;
 	}
 	
-	private DevastatedCastle()
+	protected DevastatedCastle()
 	{
 		if (Config.DEVASTATED_DAY == 1)
 		{

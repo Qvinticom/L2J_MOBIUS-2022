@@ -203,6 +203,10 @@ public class SiegeFlagInstance extends Npc
 	
 	private class ScheduleTalkTask implements Runnable
 	{
+		public ScheduleTalkTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

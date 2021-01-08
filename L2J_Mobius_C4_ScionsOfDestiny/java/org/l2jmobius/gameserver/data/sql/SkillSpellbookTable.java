@@ -35,7 +35,7 @@ public class SkillSpellbookTable
 	
 	private static Map<Integer, Integer> skillSpellbooks;
 	
-	private SkillSpellbookTable()
+	protected SkillSpellbookTable()
 	{
 		skillSpellbooks = new HashMap<>();
 		try (Connection con = DatabaseFactory.getConnection())

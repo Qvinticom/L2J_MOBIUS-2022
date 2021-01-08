@@ -49,7 +49,7 @@ public class NpcTable
 	private final Map<Integer, NpcTemplate> _npcs = new HashMap<>();
 	private boolean _initialized = false;
 	
-	private NpcTable()
+	protected NpcTable()
 	{
 		load();
 	}

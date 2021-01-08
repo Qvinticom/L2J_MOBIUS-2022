@@ -47,7 +47,7 @@ public class CrestCache
 	private int _loadedFiles;
 	private long _bytesBuffLen;
 	
-	private CrestCache()
+	protected CrestCache()
 	{
 		convertOldPedgeFiles();
 		reload();

@@ -49,7 +49,7 @@ public class RebirthManager
 	
 	private final HashMap<Integer, Integer> _playersRebirthInfo = new HashMap<>();
 	
-	private RebirthManager()
+	protected RebirthManager()
 	{
 		// Do Nothing ^_-
 	}

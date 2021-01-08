@@ -45,6 +45,10 @@ public class DocumentItem extends DocumentBase
 	
 	private class DocumentItemDataHolder
 	{
+		public DocumentItemDataHolder()
+		{
+		}
+		
 		public int id;
 		public Enum<?> type;
 		public StatSet set;

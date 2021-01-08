@@ -32,7 +32,7 @@ public class PetDataTable
 	
 	private static Map<Integer, Map<Integer, PetData>> _petTable = new HashMap<>();
 	
-	private PetDataTable()
+	protected PetDataTable()
 	{
 		load();
 	}

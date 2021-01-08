@@ -67,7 +67,7 @@ public class AugmentationData
 	private static Map<Integer, List<augmentationSkill>> _purpleSkills = null;
 	private static Map<Integer, List<augmentationSkill>> _redSkills = null;
 	
-	private AugmentationData()
+	protected AugmentationData()
 	{
 		load();
 	}

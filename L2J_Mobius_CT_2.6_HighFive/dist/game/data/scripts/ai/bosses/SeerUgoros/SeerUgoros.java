@@ -63,14 +63,14 @@ public class SeerUgoros extends AbstractNpcAI
 	private static final byte FIGHTING = 1;
 	private static final byte DEAD = 2;
 	// Misc
-	private static byte _state = DEAD;
-	private static boolean _weedAttack = false;
+	protected static byte _state = DEAD;
+	protected static boolean _weedAttack = false;
 	private static boolean _weedKilledByPlayer = false;
 	private static boolean _killedOneWeed = false;
-	private static Attackable _weed = null;
-	private static Attackable _ugoros = null;
-	private static PlayerInstance _attacker = null;
-	private static ScheduledFuture<?> _thinkTask = null;
+	protected static Attackable _weed = null;
+	protected static Attackable _ugoros = null;
+	protected static PlayerInstance _attacker = null;
+	protected static ScheduledFuture<?> _thinkTask = null;
 	
 	private SeerUgoros()
 	{
@@ -300,6 +300,10 @@ public class SeerUgoros extends AbstractNpcAI
 	
 	private class ThinkTask implements Runnable
 	{
+		public ThinkTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -346,7 +350,7 @@ public class SeerUgoros extends AbstractNpcAI
 		}
 	}
 	
-	private void changeAttackTarget(Creature attacker)
+	protected void changeAttackTarget(Creature attacker)
 	{
 		_ugoros.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		_ugoros.clearAggroList();

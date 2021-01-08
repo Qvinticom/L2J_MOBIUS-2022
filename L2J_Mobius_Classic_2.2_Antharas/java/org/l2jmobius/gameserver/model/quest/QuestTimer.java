@@ -24,12 +24,12 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class QuestTimer
 {
-	private final String _name;
-	private final Quest _quest;
-	private final Npc _npc;
-	private final PlayerInstance _player;
-	private final boolean _isRepeating;
-	private ScheduledFuture<?> _scheduler;
+	protected final String _name;
+	protected final Quest _quest;
+	protected final Npc _npc;
+	protected final PlayerInstance _player;
+	protected final boolean _isRepeating;
+	protected ScheduledFuture<?> _scheduler;
 	
 	public QuestTimer(Quest quest, String name, long time, Npc npc, PlayerInstance player, boolean repeating)
 	{

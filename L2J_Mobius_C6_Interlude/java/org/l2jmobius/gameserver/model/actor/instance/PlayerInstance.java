@@ -15939,6 +15939,10 @@ public class PlayerInstance extends Playable
 	{
 		private DoorInstance _target = null;
 		
+		public GatesRequest()
+		{
+		}
+		
 		public void setTarget(DoorInstance door)
 		{
 			_target = door;

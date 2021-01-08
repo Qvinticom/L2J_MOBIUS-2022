@@ -64,15 +64,15 @@ public class Q386_StolenDignity extends Quest
 		DROP_CHANCES.put(21114, 23);
 		DROP_CHANCES.put(21116, 25);
 	}
-	private static final Map<Integer, Bingo> BINGOS = new HashMap<>();
+	protected static final Map<Integer, Bingo> BINGOS = new HashMap<>();
 	// @formatter:off
-	private static final int[][] REWARDS_WIN =
+	protected static final int[][] REWARDS_WIN =
 	{
 		{5529, 10}, {5532, 10}, {5533, 10}, {5534, 10}, {5535, 10}, {5536, 10}, {5537, 10}, {5538, 10}, {5539, 10}, {5541, 10}, {5542, 10},
 		{5543, 10}, {5544, 10}, {5545, 10}, {5546, 10}, {5547, 10}, {5548, 10}, {8331, 10}, {8341, 10}, {8342, 10}, {8346, 10}, {8349, 10},
 		{8712, 10}, {8713, 10}, {8714, 10}, {8715, 10}, {8716, 10}, {8717, 10}, {8718, 10}, {8719, 10}, {8720, 10}, {8721, 10}, {8722, 10}
 	};
-	private static final int[][] REWARDS_LOSE =
+	protected static final int[][] REWARDS_LOSE =
 	{
 		{5529, 4}, {5532, 4}, {5533, 4}, {5534, 4}, {5535, 4}, {5536, 4}, {5537, 4}, {5538, 4}, {5539, 4}, {5541, 4}, {5542, 4},
 		{5543, 4}, {5544, 4}, {5545, 4}, {5546, 4}, {5547, 4}, {5548, 4}, {8331, 4}, {8341, 4}, {8342, 4}, {8346, 4}, {8349, 4},

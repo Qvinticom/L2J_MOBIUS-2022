@@ -77,7 +77,7 @@ public class World
 	/** The _world regions. */
 	private WorldRegion[][] _worldRegions;
 	
-	private World()
+	protected World()
 	{
 		initRegions();
 	}

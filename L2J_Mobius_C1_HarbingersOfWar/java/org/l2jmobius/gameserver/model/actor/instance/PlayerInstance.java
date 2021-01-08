@@ -98,7 +98,7 @@ public class PlayerInstance extends Creature
 	private int _pvpKills;
 	private int _pkKills;
 	private int _pvpFlag = 0;
-	private long _lastPvpTime;
+	protected long _lastPvpTime;
 	private ScheduledFuture<?> _pvpTask;
 	private int _maxLoad;
 	private int _race;
@@ -413,7 +413,7 @@ public class PlayerInstance extends Creature
 		return _pvpFlag;
 	}
 	
-	private void stopPvPFlag()
+	protected void stopPvPFlag()
 	{
 		if (_pvpTask != null)
 		{

@@ -168,7 +168,7 @@ public class TaskManager
 		}
 	}
 	
-	private TaskManager()
+	protected TaskManager()
 	{
 		initializate();
 		startAllTasks();

@@ -39,7 +39,7 @@ public class VoicedCommandHandler
 	
 	private final Map<String, IVoicedCommandHandler> _datatable;
 	
-	private VoicedCommandHandler()
+	protected VoicedCommandHandler()
 	{
 		_datatable = new HashMap<>();
 		if (Config.BANKING_SYSTEM_ENABLED)

@@ -53,6 +53,10 @@ public class HeartInfinityDefence extends AbstractNpcAI
 {
 	private class HIDWorld extends InstanceWorld
 	{
+		public HIDWorld()
+		{
+		}
+		
 		public List<Npc> npcList = new ArrayList<>();
 		public List<Npc> deadTumors = new ArrayList<>();
 		protected Npc deadTumor;

@@ -49,6 +49,10 @@ public class DocumentItem extends DocumentBase implements IXmlReader
 	
 	private class DocumentItemDataHolder
 	{
+		public DocumentItemDataHolder()
+		{
+		}
+		
 		int id;
 		String type;
 		StatSet set;

@@ -40,7 +40,7 @@ public class ArmorSetData implements IXmlReader
 	
 	private ArmorSet[] _armorSets;
 	
-	private ArmorSetData()
+	protected ArmorSetData()
 	{
 		load();
 	}

@@ -63,7 +63,7 @@ public class SkillHandler
 	
 	private final Map<SkillType, ISkillHandler> _datatable;
 	
-	private SkillHandler()
+	protected SkillHandler()
 	{
 		_datatable = new HashMap<>();
 		registerSkillHandler(new BalanceLife());

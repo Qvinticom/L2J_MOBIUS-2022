@@ -50,7 +50,7 @@ public class HelperBuffTable
 	/**
 	 * Create and Load the Newbie Helper Buff list from SQL Table helper_buff_list
 	 */
-	private HelperBuffTable()
+	protected HelperBuffTable()
 	{
 		load();
 	}

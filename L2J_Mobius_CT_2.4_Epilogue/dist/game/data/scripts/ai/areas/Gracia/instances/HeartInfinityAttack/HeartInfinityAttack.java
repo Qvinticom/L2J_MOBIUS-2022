@@ -65,6 +65,10 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		public long startTime = 0;
 		protected ScheduledFuture<?> timerTask;
 		
+		public HIAWorld()
+		{
+		}
+		
 		public synchronized void addTumorCount(int value)
 		{
 			tumorCount += value;

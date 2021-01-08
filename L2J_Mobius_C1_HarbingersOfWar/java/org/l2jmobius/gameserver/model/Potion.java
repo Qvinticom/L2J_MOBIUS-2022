@@ -27,12 +27,12 @@ public class Potion extends WorldObject
 	Creature _target;
 	private ScheduledFuture<?> _potionhpRegTask;
 	private ScheduledFuture<?> _potionmpRegTask;
-	private int _seconds;
-	private double _effect;
-	private int _duration;
 	private int _potion;
-	private final Object _mpLock;
-	private final Object _hpLock;
+	protected int _seconds;
+	protected double _effect;
+	protected int _duration;
+	protected final Object _mpLock;
+	protected final Object _hpLock;
 	
 	public Potion()
 	{

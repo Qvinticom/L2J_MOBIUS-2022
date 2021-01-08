@@ -194,6 +194,10 @@ public class ClanHall
 		
 		private class FunctionTask implements Runnable
 		{
+			public FunctionTask()
+			{
+			}
+			
 			@Override
 			public void run()
 			{

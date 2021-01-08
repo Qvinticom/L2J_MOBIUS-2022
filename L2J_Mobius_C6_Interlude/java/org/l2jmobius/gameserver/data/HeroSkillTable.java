@@ -33,7 +33,7 @@ public class HeroSkillTable
 	};
 	private static Skill[] HERO_SKILLS;
 	
-	private HeroSkillTable()
+	protected HeroSkillTable()
 	{
 		HERO_SKILLS = new Skill[5];
 		HERO_SKILLS[0] = SkillTable.getInstance().getSkill(395, 1);

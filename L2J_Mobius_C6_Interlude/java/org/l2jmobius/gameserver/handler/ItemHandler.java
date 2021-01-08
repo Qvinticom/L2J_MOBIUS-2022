@@ -79,7 +79,7 @@ public class ItemHandler
 		return _datatable.size();
 	}
 	
-	private ItemHandler()
+	protected ItemHandler()
 	{
 		_datatable = new HashMap<>();
 		registerItemHandler(new BeastSoulShot());

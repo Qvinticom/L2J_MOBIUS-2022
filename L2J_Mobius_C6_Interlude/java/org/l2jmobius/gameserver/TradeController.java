@@ -68,7 +68,7 @@ public class TradeController
 		}
 	}
 	
-	private TradeController()
+	protected TradeController()
 	{
 		boolean limitedItem = false;
 		_lists = new HashMap<>();

@@ -47,7 +47,7 @@ public class ClanHallManager
 		return _loaded;
 	}
 	
-	private ClanHallManager()
+	protected ClanHallManager()
 	{
 		load();
 	}

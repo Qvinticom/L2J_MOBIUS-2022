@@ -57,7 +57,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	protected boolean _finalStage = false;
 	protected ScheduledFuture<?> _midTimer;
 	
-	private WildBeastFarmSiege()
+	protected WildBeastFarmSiege()
 	{
 		LOGGER.info("SiegeManager of Wild Beasts Farm");
 		final long siegeDate = restoreSiegeDate(63);

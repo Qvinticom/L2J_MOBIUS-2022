@@ -42,7 +42,7 @@ public class ExperienceData
 	
 	private final Map<Integer, Long> _expTable = new HashMap<>();
 	
-	private ExperienceData()
+	protected ExperienceData()
 	{
 		load();
 	}

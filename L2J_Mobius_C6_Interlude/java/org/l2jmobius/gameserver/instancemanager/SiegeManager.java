@@ -68,7 +68,7 @@ public class SiegeManager
 	private boolean _teleportToSiege = false;
 	private boolean _teleportToSiegeTown = false;
 	
-	private SiegeManager()
+	protected SiegeManager()
 	{
 		load();
 	}

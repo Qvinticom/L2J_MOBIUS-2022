@@ -31,7 +31,7 @@ public class PartyMatchRoomList
 	private int _maxid = 1;
 	private final Map<Integer, PartyMatchRoom> _rooms;
 	
-	private PartyMatchRoomList()
+	protected PartyMatchRoomList()
 	{
 		_rooms = new HashMap<>();
 	}

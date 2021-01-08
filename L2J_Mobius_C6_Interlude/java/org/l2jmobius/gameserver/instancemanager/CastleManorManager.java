@@ -168,7 +168,7 @@ public class CastleManorManager
 		}
 	}
 	
-	private CastleManorManager()
+	protected CastleManorManager()
 	{
 		load(); // load data from database
 		init(); // schedule all manor related events

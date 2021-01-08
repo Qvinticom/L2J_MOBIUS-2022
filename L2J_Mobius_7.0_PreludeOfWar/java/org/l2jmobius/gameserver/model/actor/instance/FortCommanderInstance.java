@@ -155,6 +155,10 @@ public class FortCommanderInstance extends DefenderInstance
 	
 	private class ScheduleTalkTask implements Runnable
 	{
+		public ScheduleTalkTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

@@ -215,7 +215,7 @@ public class PetitionManager
 		}
 	}
 	
-	private PetitionManager()
+	protected PetitionManager()
 	{
 		_pendingPetitions = new HashMap<>();
 		_completedPetitions = new HashMap<>();

@@ -42,7 +42,7 @@ public class UserCommandHandler
 	
 	private final Map<Integer, IUserCommandHandler> _datatable;
 	
-	private UserCommandHandler()
+	protected UserCommandHandler()
 	{
 		_datatable = new HashMap<>();
 		registerUserCommandHandler(new ChannelDelete());

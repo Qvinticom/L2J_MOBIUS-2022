@@ -49,7 +49,7 @@ public class EventDroplist
 	/**
 	 * Constructor of EventDroplist.
 	 */
-	private EventDroplist()
+	protected EventDroplist()
 	{
 		_allNpcDateDrops = new ArrayList<>();
 	}

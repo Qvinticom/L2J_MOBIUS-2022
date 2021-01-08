@@ -43,8 +43,8 @@ public class Attackable extends NpcInstance
 {
 	// private int _moveRadius;
 	private boolean _active;
-	private ScheduledFuture<?> _currentAiTask;
-	private ScheduledFuture<?> _currentAIAttackTask;
+	protected ScheduledFuture<?> _currentAiTask;
+	protected ScheduledFuture<?> _currentAIAttackTask;
 	private final Map<WorldObject, Integer> _aggroList = new HashMap<>();
 	private Weapon _dummyWeapon;
 	private boolean _sweepActive;

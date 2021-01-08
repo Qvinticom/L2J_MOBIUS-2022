@@ -74,6 +74,9 @@ public class EventMethodNotification
 	
 	private void invoke(Object instance) throws Exception
 	{
+		// Java 1.8
+		// final boolean wasAccessible = _method.isAccessible();
+		// Java 10
 		final boolean wasAccessible = _method.canAccess(instance);
 		if (!wasAccessible)
 		{

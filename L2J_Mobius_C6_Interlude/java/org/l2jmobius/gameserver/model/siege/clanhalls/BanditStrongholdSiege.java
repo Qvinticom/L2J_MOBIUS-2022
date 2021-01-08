@@ -60,7 +60,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 	protected boolean _finalStage = false;
 	protected ScheduledFuture<?> _midTimer;
 	
-	private BanditStrongholdSiege()
+	protected BanditStrongholdSiege()
 	{
 		LOGGER.info("SiegeManager of Bandits Stronghold");
 		final long siegeDate = restoreSiegeDate(35);

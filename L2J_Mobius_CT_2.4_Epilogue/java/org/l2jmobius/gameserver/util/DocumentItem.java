@@ -40,6 +40,10 @@ public class DocumentItem extends DocumentBase
 	
 	private class DocumentItemDataHolder
 	{
+		public DocumentItemDataHolder()
+		{
+		}
+		
 		int id;
 		String type;
 		StatSet set;

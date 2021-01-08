@@ -36,7 +36,7 @@ public class SkillTable
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private final boolean _initialized = true;
 	
-	private SkillTable()
+	protected SkillTable()
 	{
 		hashFiles("data/stats/skills", _skillFiles);
 		

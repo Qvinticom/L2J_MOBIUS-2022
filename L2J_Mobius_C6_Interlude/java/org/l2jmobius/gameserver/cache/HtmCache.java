@@ -39,7 +39,7 @@ public class HtmCache
 	private int _loadedFiles;
 	private long _bytesBuffLen;
 	
-	private HtmCache()
+	protected HtmCache()
 	{
 		_cache = new HashMap<>();
 		reload();

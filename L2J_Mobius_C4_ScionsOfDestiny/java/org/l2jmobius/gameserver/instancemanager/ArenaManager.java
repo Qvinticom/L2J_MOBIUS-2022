@@ -26,7 +26,7 @@ public class ArenaManager
 {
 	private List<ArenaZone> _arenas;
 	
-	private ArenaManager()
+	protected ArenaManager()
 	{
 	}
 	

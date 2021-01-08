@@ -41,9 +41,9 @@ import org.l2jmobius.util.Locator;
  */
 public class SystemPanel extends JPanel
 {
-	private static final Logger LOGGER = Logger.getLogger(SystemPanel.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(SystemPanel.class.getName());
 	
-	private static final long START_TIME = System.currentTimeMillis();
+	protected static final long START_TIME = System.currentTimeMillis();
 	
 	public SystemPanel()
 	{

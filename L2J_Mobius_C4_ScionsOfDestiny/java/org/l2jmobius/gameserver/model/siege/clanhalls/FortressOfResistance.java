@@ -62,7 +62,7 @@ public class FortressOfResistance
 		public long _damage;
 	}
 	
-	private FortressOfResistance()
+	protected FortressOfResistance()
 	{
 		if (Config.PARTISAN_DAY == 1)
 		{

@@ -47,6 +47,10 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 {
 	private class HSAWorld extends InstanceWorld
 	{
+		public HSAWorld()
+		{
+		}
+		
 		public Map<Npc, Boolean> npcList = new HashMap<>();
 		public Npc klodekus = null;
 		public Npc klanikus = null;

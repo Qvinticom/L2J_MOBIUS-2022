@@ -25,7 +25,7 @@ public class NobleSkillTable
 {
 	private static Skill[] _nobleSkills;
 	
-	private NobleSkillTable()
+	protected NobleSkillTable()
 	{
 		_nobleSkills = new Skill[8];
 		_nobleSkills[0] = SkillTable.getInstance().getSkill(1323, 1);

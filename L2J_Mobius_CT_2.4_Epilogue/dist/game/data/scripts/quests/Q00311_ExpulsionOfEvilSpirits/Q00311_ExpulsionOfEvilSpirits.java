@@ -75,12 +75,12 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 	private static final int SOUL_CORE_COUNT = 10;
 	private static final int RAGNA_ORCS_KILLS_COUNT = 100;
 	private static final int RAGNA_ORCS_AMULET_COUNT = 10;
-	private static final ZoneType ALTARZONE = ZoneManager.getInstance().getZoneById(20201);
-	private static long respawnTime = 0;
-	private static Npc _altar;
+	protected static final ZoneType ALTARZONE = ZoneManager.getInstance().getZoneById(20201);
+	protected static Npc _altar;
 	private static Npc _varangka;
 	private static Npc _varangkaMinion1;
 	private static Npc _varangkaMinion2;
+	private static long respawnTime = 0;
 	
 	public Q00311_ExpulsionOfEvilSpirits()
 	{

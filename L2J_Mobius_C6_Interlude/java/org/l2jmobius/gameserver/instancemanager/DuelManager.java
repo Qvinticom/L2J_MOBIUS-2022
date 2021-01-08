@@ -32,7 +32,7 @@ public class DuelManager
 	private final List<Duel> _duels;
 	private int _currentDuelId = 0x90;
 	
-	private DuelManager()
+	protected DuelManager()
 	{
 		LOGGER.info("Initializing DuelManager");
 		_duels = new ArrayList<>();

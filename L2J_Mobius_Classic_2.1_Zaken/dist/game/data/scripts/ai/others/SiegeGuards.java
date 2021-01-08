@@ -65,8 +65,8 @@ public class SiegeGuards extends AbstractNpcAI
 	};
 	//@formatter:on
 	@SuppressWarnings("unchecked")
-	private static final List<Npc>[] RESIDENCE_GUARD_MAP = new CopyOnWriteArrayList[122];
-	private static final boolean[] RESIDENCE_WORKING = new boolean[122];
+	protected static final List<Npc>[] RESIDENCE_GUARD_MAP = new CopyOnWriteArrayList[122];
+	protected static final boolean[] RESIDENCE_WORKING = new boolean[122];
 	
 	public SiegeGuards()
 	{

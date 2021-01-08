@@ -57,9 +57,9 @@ public abstract class Creature extends WorldObject
 	private ScheduledFuture<?> _attackTask;
 	private ScheduledFuture<?> _hitTask;
 	private ScheduledFuture<?> _regenTask;
-	private final Object _mpLock = new Object();
+	protected final Object _mpLock = new Object();
 	private boolean _mpRegenActive;
-	private final Object _hpLock = new Object();
+	protected final Object _hpLock = new Object();
 	private boolean _hpRegenActive;
 	private int _moveOffset;
 	private float _effectiveSpeed;
@@ -67,7 +67,7 @@ public abstract class Creature extends WorldObject
 	private double _xAddition;
 	private double _yAddition;
 	private long _timeToTarget;
-	private ScheduledFuture<?> _moveTask;
+	protected ScheduledFuture<?> _moveTask;
 	private String _name;
 	private int _level = 1;
 	private int _maxHp;
@@ -1074,7 +1074,7 @@ public abstract class Creature extends WorldObject
 		// }
 	}
 	
-	private void onAttackTimer()
+	protected void onAttackTimer()
 	{
 		_attackTask = null;
 		final Creature target = (Creature) _attackTarget;

@@ -35,7 +35,7 @@ public class DecayTaskManager
 	
 	protected Map<Creature, Long> _decayTasks = new ConcurrentHashMap<>();
 	
-	private DecayTaskManager()
+	protected DecayTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(new DecayScheduler(), 10000, 5000);
 	}

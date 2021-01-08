@@ -1404,6 +1404,10 @@ public class TerritoryWarManager implements Siegable
 	
 	private class closeTerritoryChannelTask implements Runnable
 	{
+		public closeTerritoryChannelTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

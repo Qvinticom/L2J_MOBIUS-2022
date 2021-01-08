@@ -60,7 +60,7 @@ public class DimensionalRiftManager
 	private static final short DIMENSIONAL_FRAGMENT_ITEM_ID = 7079;
 	private static final int MAX_PARTY_PER_AREA = 3;
 	
-	private DimensionalRiftManager()
+	protected DimensionalRiftManager()
 	{
 		loadRooms();
 		loadSpawns();

@@ -71,6 +71,10 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 	
 	private static class SODSpawn
 	{
+		public SODSpawn()
+		{
+		}
+		
 		boolean isZone = false;
 		boolean isNeededNextFlag = false;
 		int npcId;

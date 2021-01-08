@@ -79,6 +79,10 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		private int currentMonitorizedDamage = 0;
 		private int zoneStage = 0;
 		
+		public zoneInfo()
+		{
+		}
+		
 		void setZoneStage(int a)
 		{
 			zoneStage = a;

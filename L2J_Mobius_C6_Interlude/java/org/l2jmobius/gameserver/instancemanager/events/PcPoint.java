@@ -32,7 +32,7 @@ public class PcPoint implements Runnable
 {
 	Logger LOGGER = Logger.getLogger(PcPoint.class.getName());
 	
-	private PcPoint()
+	protected PcPoint()
 	{
 		LOGGER.info("PcBang point event started.");
 	}

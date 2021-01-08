@@ -28,7 +28,7 @@ public class PartyMatchWaitingList
 {
 	private final List<PlayerInstance> _members;
 	
-	private PartyMatchWaitingList()
+	protected PartyMatchWaitingList()
 	{
 		_members = new ArrayList<>();
 	}

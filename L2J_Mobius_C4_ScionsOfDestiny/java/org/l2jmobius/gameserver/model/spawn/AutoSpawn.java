@@ -60,7 +60,7 @@ public class AutoSpawn
 	
 	protected boolean _activeState = true;
 	
-	private AutoSpawn()
+	protected AutoSpawn()
 	{
 		_registeredSpawns = new HashMap<>();
 		_runningSpawns = new HashMap<>();

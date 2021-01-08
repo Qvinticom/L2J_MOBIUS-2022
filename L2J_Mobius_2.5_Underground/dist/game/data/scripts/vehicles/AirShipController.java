@@ -47,6 +47,10 @@ public abstract class AirShipController extends AbstractNpcAI
 	
 	private final class DecayTask implements Runnable
 	{
+		public DecayTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -59,6 +63,10 @@ public abstract class AirShipController extends AbstractNpcAI
 	
 	private final class DepartTask implements Runnable
 	{
+		public DepartTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

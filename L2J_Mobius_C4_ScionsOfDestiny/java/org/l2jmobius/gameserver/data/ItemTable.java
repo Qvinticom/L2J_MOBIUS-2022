@@ -73,7 +73,7 @@ public class ItemTable
 		_crystalTypes.put("none", Item.CRYSTAL_NONE);
 	}
 	
-	private ItemTable()
+	protected ItemTable()
 	{
 		hashFiles("data/stats/items", _itemFiles);
 		_etcItems = new HashMap<>();

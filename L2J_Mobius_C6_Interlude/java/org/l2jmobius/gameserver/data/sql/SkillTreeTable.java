@@ -54,7 +54,7 @@ public class SkillTreeTable
 	private final List<PledgeSkillLearn> _pledgeSkillTrees = new ArrayList<>();
 	private final List<EnchantSkillLearn> _enchantSkillTrees = new ArrayList<>();
 	
-	private SkillTreeTable()
+	protected SkillTreeTable()
 	{
 		load();
 	}

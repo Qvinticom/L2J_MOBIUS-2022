@@ -36,7 +36,7 @@ import org.l2jmobius.gameserver.model.holders.MinionHolder;
  */
 public class MinionList
 {
-	private final MonsterInstance _master;
+	protected final MonsterInstance _master;
 	private final List<MonsterInstance> _spawnedMinions = new CopyOnWriteArrayList<>();
 	private final List<ScheduledFuture<?>> _respawnTasks = new CopyOnWriteArrayList<>();
 	

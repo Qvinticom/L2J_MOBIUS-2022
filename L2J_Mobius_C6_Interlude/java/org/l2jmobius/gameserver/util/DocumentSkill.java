@@ -39,6 +39,10 @@ public class DocumentSkill extends DocumentBase
 	
 	private class DocumentSkillDataHolder
 	{
+		public DocumentSkillDataHolder()
+		{
+		}
+		
 		public int id;
 		public String name;
 		public StatSet[] sets;

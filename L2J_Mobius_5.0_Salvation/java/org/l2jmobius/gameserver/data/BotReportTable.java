@@ -56,7 +56,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class BotReportTable
 {
 	// Zoey76: TODO: Split XML parsing from SQL operations, use IGameXmlReader instead of SAXParser.
-	private static final Logger LOGGER = Logger.getLogger(BotReportTable.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(BotReportTable.class.getName());
 	
 	private static final int COLUMN_BOT_ID = 1;
 	private static final int COLUMN_REPORTER_ID = 2;
@@ -609,6 +609,10 @@ public class BotReportTable
 	
 	private class ResetPointTask implements Runnable
 	{
+		public ResetPointTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

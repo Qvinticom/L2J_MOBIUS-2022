@@ -60,7 +60,7 @@ class OlympiadManager implements Runnable
 		new OlympiadStadium(-114413, -213241, -3331)
 	};
 	
-	private OlympiadManager()
+	protected OlympiadManager()
 	{
 		_olympiadInstances = new HashMap<>();
 	}

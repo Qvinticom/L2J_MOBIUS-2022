@@ -33,9 +33,9 @@ public class Spawn
 	private final Npc _template;
 	private int _id;
 	private String _location;
+	protected int _scheduledCount;
 	private int _maximumCount;
 	private int _currentCount;
-	private int _scheduledCount;
 	private int _npcid;
 	private int _locx;
 	private int _locy;

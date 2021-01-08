@@ -39,7 +39,7 @@ public class ExEnterWorld implements IClientOutgoingPacket
 		_epochInSeconds = (int) now.getEpochSecond();
 		ZoneRules rules = ZoneId.systemDefault().getRules();
 		_zoneIdOffsetSeconds = rules.getStandardOffset(now).getTotalSeconds();
-		_daylight = (int) rules.getDaylightSavings(now).toSeconds();
+		_daylight = (int) (rules.getDaylightSavings(now).toMillis() / 1000);
 	}
 	
 	@Override

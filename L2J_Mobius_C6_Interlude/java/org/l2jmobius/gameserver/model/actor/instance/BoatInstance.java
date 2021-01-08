@@ -47,11 +47,11 @@ public class BoatInstance extends Creature
 	public VehicleDeparture vd = null;
 	private int lastx = -1;
 	private int lasty = -1;
-	private int cycle = 0;
-	private int runstate = 0;
-	private BoatPathHolder pathA;
-	private BoatPathHolder pathB;
-	private boolean needOnVehicleCheckLocation = false;
+	protected int cycle = 0;
+	protected int runstate = 0;
+	protected BoatPathHolder pathA;
+	protected BoatPathHolder pathB;
+	protected boolean needOnVehicleCheckLocation = false;
 	private final Set<PlayerInstance> passengers = ConcurrentHashMap.newKeySet();
 	
 	public BoatInstance(int objectId, CreatureTemplate template)
@@ -181,7 +181,7 @@ public class BoatInstance extends Creature
 		ThreadPool.schedule(bc, 300000);
 	}
 	
-	private void begin()
+	protected void begin()
 	{
 		if (cycle == 1)
 		{
@@ -251,7 +251,7 @@ public class BoatInstance extends Creature
 		}
 	}
 	
-	private void say(int id)
+	protected void say(int id)
 	{
 		final Collection<PlayerInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 		CreatureSay sm;

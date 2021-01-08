@@ -64,7 +64,7 @@ public class MultisellData
 		return null;
 	}
 	
-	private MultisellData()
+	protected MultisellData()
 	{
 		parseData();
 	}

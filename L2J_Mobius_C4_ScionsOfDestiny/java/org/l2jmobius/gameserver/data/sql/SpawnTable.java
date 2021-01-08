@@ -44,7 +44,7 @@ public class SpawnTable
 	private int _customSpawnCount;
 	private int _highestId;
 	
-	private SpawnTable()
+	protected SpawnTable()
 	{
 		if (!Config.ALT_DEV_NO_SPAWNS)
 		{

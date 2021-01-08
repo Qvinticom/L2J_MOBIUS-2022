@@ -56,7 +56,7 @@ public class ClanTable
 	
 	private final Map<Integer, Clan> _clans = new HashMap<>();
 	
-	private ClanTable()
+	protected ClanTable()
 	{
 		load();
 	}

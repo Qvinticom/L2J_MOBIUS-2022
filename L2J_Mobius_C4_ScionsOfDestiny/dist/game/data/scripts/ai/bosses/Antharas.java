@@ -576,6 +576,10 @@ public class Antharas extends Quest
 	// Do spawn Behemoth or Bomber.
 	private class MobsSpawn implements Runnable
 	{
+		public MobsSpawn()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

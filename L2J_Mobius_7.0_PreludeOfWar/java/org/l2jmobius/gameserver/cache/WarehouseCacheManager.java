@@ -29,8 +29,8 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
  */
 public class WarehouseCacheManager
 {
-	private static final Map<PlayerInstance, Long> CACHED_WH = new ConcurrentHashMap<>();
-	private static final long CACHE_TIME = Config.WAREHOUSE_CACHE_TIME * 60000;
+	protected static final Map<PlayerInstance, Long> CACHED_WH = new ConcurrentHashMap<>();
+	protected static final long CACHE_TIME = Config.WAREHOUSE_CACHE_TIME * 60000;
 	
 	protected WarehouseCacheManager()
 	{
@@ -49,6 +49,10 @@ public class WarehouseCacheManager
 	
 	private class CacheScheduler implements Runnable
 	{
+		public CacheScheduler()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

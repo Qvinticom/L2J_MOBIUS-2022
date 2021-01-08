@@ -83,11 +83,11 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	private ConnectionState _state;
 	private String _accountName;
 	private SessionKey _sessionId;
-	private PlayerInstance _player;
 	private ScheduledFuture<?> _cleanupTask = null;
 	private volatile boolean _isDetached = false;
 	private boolean _isAuthedGG;
 	private int _protocolVersion;
+	protected PlayerInstance _player;
 	
 	public GameClient(MMOConnection<GameClient> con)
 	{

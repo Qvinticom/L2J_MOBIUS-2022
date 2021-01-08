@@ -96,7 +96,7 @@ public class AdminCommandHandler
 	
 	private final Map<String, IAdminCommandHandler> _datatable;
 	
-	private AdminCommandHandler()
+	protected AdminCommandHandler()
 	{
 		_datatable = new HashMap<>();
 		registerAdminCommandHandler(new AdminAdmin());

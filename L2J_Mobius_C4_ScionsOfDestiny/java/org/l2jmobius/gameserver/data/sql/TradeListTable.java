@@ -59,7 +59,7 @@ public class TradeListTable
 		}
 	}
 	
-	private TradeListTable()
+	protected TradeListTable()
 	{
 		load();
 	}
