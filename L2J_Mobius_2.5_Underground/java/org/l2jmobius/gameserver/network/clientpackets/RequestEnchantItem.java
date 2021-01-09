@@ -325,8 +325,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							{
 								item.setEnchantLevel(item.getEnchantLevel() - 1);
 							}
-							else
-							// blessed enchant - clear enchant value
+							else // blessed enchant - clear enchant value
 							{
 								client.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);
 								item.setEnchantLevel(0);
@@ -359,13 +358,6 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						else
 						{
 							// enchant failed, destroy item
-							final int crystalId = item.getItem().getCrystalItemId();
-							int count = item.getCrystalCount() - ((item.getItem().getCrystalCount() + 1) / 2);
-							if (count < 1)
-							{
-								count = 1;
-							}
-							
 							if (player.getInventory().destroyItem("Enchant", item, player, null) == null)
 							{
 								// unable to destroy item, cheater ?
@@ -398,8 +390,16 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							}
 							
 							World.getInstance().removeObject(item);
+							
+							int count = 0;
+							if (item.getItem().isCrystallizable())
+							{
+								count = Math.max(0, item.getCrystalCount() - ((item.getItem().getCrystalCount() + 1) / 2));
+							}
+							
 							ItemInstance crystals = null;
-							if (crystalId != 0)
+							final int crystalId = item.getItem().getCrystalItemId();
+							if (count > 0)
 							{
 								crystals = player.getInventory().addItem("Enchant", crystalId, count, player, item);
 								
@@ -414,7 +414,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 								iu.addItem(crystals);
 							}
 							
-							if (crystalId == 0)
+							if ((crystalId == 0) || (count == 0))
 							{
 								client.sendPacket(new EnchantResult(EnchantResult.NO_CRYSTAL, 0, 0));
 							}
