@@ -839,7 +839,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 				}
 				
 				// bonus drop rate effect
-				rateChance *= killer.getStat().getValue(Stat.BONUS_DROP_RATE, 1);
+				rateChance *= killer.getStat().getMul(Stat.BONUS_DROP_RATE, 1);
 				
 				// calculate if item will drop
 				if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance))
@@ -889,10 +889,10 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					}
 					
 					// bonus drop amount effect
-					rateAmount *= killer.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
+					rateAmount *= killer.getStat().getMul(Stat.BONUS_DROP_AMOUNT, 1);
 					if (itemId == Inventory.ADENA_ID)
 					{
-						rateAmount *= killer.getStat().getValue(Stat.BONUS_DROP_ADENA, 1);
+						rateAmount *= killer.getStat().getMul(Stat.BONUS_DROP_ADENA, 1);
 					}
 					
 					// finally
@@ -919,7 +919,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 					rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
 				}
 				// bonus drop rate effect
-				rateChance *= killer.getStat().getValue(Stat.BONUS_SPOIL_RATE, 1);
+				rateChance *= killer.getStat().getMul(Stat.BONUS_SPOIL_RATE, 1);
 				
 				// calculate if item will be rewarded
 				if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance))

@@ -472,7 +472,7 @@ public class PlayerStat extends PlayableStat
 	
 	public double getVitalityExpBonus()
 	{
-		final double bonus = (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1;
+		final double bonus = (getVitalityPoints() > 0) ? getMul(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1;
 		if ((bonus == 1) && (getActiveChar().getLimitedSayhaGraceEndTime() > System.currentTimeMillis()))
 		{
 			return getLimitedSayhaGraceExpBonus();
@@ -559,7 +559,7 @@ public class PlayerStat extends PlayableStat
 			
 			if (points < 0) // vitality consumed
 			{
-				double consumeRate = getValue(Stat.VITALITY_CONSUME_RATE, 1);
+				double consumeRate = getMul(Stat.VITALITY_CONSUME_RATE, 1);
 				if (consumeRate <= 0)
 				{
 					return;

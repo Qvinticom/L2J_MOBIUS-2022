@@ -169,10 +169,10 @@ public class DropSearchBoard implements IParseBoardHandler
 				final int start = (page - 1) * 14;
 				final int end = Math.min(list.size() - 1, start + 14);
 				final StringBuilder builder = new StringBuilder();
-				final double dropAmountAdenaEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_ADENA, 1);
-				final double dropAmountEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
-				final double dropRateEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_RATE, 1);
-				final double spoilRateEffectBonus = player.getStat().getValue(Stat.BONUS_SPOIL_RATE, 1);
+				final double dropAmountAdenaEffectBonus = player.getStat().getMul(Stat.BONUS_DROP_ADENA, 1);
+				final double dropAmountEffectBonus = player.getStat().getMul(Stat.BONUS_DROP_AMOUNT, 1);
+				final double dropRateEffectBonus = player.getStat().getMul(Stat.BONUS_DROP_RATE, 1);
+				final double spoilRateEffectBonus = player.getStat().getMul(Stat.BONUS_SPOIL_RATE, 1);
 				for (int index = start; index <= end; index++)
 				{
 					final CBDropHolder cbDropHolder = list.get(index);

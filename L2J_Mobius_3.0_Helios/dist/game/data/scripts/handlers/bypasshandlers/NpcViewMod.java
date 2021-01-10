@@ -386,10 +386,10 @@ public class NpcViewMod implements IBypassHandler
 		final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
 		int leftHeight = 0;
 		int rightHeight = 0;
-		final double dropAmountAdenaEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_ADENA, 1);
-		final double dropAmountEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_AMOUNT, 1);
-		final double dropRateEffectBonus = player.getStat().getValue(Stat.BONUS_DROP_RATE, 1);
-		final double spoilRateEffectBonus = player.getStat().getValue(Stat.BONUS_SPOIL_RATE, 1);
+		final double dropAmountAdenaEffectBonus = player.getStat().getMul(Stat.BONUS_DROP_ADENA, 1);
+		final double dropAmountEffectBonus = player.getStat().getMul(Stat.BONUS_DROP_AMOUNT, 1);
+		final double dropRateEffectBonus = player.getStat().getMul(Stat.BONUS_DROP_RATE, 1);
+		final double spoilRateEffectBonus = player.getStat().getMul(Stat.BONUS_SPOIL_RATE, 1);
 		final StringBuilder leftSb = new StringBuilder();
 		final StringBuilder rightSb = new StringBuilder();
 		String limitReachedMsg = "";

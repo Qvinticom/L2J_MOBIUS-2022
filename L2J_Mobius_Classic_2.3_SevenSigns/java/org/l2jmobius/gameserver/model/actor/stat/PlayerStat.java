@@ -474,7 +474,7 @@ public class PlayerStat extends PlayableStat
 	
 	public double getVitalityExpBonus()
 	{
-		return (getVitalityPoints() > 0) ? getValue(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
+		return (getVitalityPoints() > 0) ? getMul(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
 	}
 	
 	public void setVitalityPoints(int value)
@@ -550,7 +550,7 @@ public class PlayerStat extends PlayableStat
 			
 			if (points < 0) // vitality consumed
 			{
-				double consumeRate = getValue(Stat.VITALITY_CONSUME_RATE, 1);
+				double consumeRate = getMul(Stat.VITALITY_CONSUME_RATE, 1);
 				if (consumeRate <= 0)
 				{
 					return;

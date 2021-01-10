@@ -674,7 +674,7 @@ public class Attackable extends Npc
 				double hateValue = (damage * 100) / (getLevel() + 7);
 				if (skill == null)
 				{
-					hateValue *= attacker.getStat().getValue(Stat.HATE_ATTACK, 1);
+					hateValue *= attacker.getStat().getMul(Stat.HATE_ATTACK, 1);
 				}
 				
 				addDamageHate(attacker, damage, (int) hateValue);

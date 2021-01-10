@@ -64,7 +64,7 @@ public class RealDamage extends AbstractEffect
 		}
 		
 		// Calculate resistance.
-		final double damage = _power - (_power * (Math.min(effected.getStat().getValue(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
+		final double damage = _power - (_power * (Math.min(effected.getStat().getMul(Stat.REAL_DAMAGE_RESIST, 1), 1.8) - 1));
 		
 		// Do damage.
 		if (damage > 0)

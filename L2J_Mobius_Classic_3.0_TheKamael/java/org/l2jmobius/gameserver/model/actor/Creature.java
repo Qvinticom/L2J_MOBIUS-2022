@@ -4416,8 +4416,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		double damage = damageValue;
 		if (target.isImmobilized())
 		{
-			damage *= _stat.getValue(Stat.IMMOBILE_DAMAGE_BONUS, 1);
-			damage /= target.getStat().getValue(Stat.IMMOBILE_DAMAGE_RESIST, 1);
+			damage *= _stat.getMul(Stat.IMMOBILE_DAMAGE_BONUS, 1);
+			damage /= target.getStat().getMul(Stat.IMMOBILE_DAMAGE_RESIST, 1);
 		}
 		
 		if (!reflect && !isDOT)
@@ -4425,7 +4425,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			// RearDamage effect bonus.
 			if (isBehind(target))
 			{
-				damage *= _stat.getValue(Stat.REAR_DAMAGE_RATE, 1);
+				damage *= _stat.getMul(Stat.REAR_DAMAGE_RATE, 1);
 			}
 			
 			// Counterattacks happen before damage received.

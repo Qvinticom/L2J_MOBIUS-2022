@@ -313,8 +313,8 @@ public class Fishing
 				{
 					final FishingData fishingData = FishingData.getInstance();
 					final double lvlModifier = (Math.pow(_player.getLevel(), 2.2) * fishingCatchData.getMultiplier());
-					final long xp = (long) (Rnd.get(fishingData.getExpRateMin(), fishingData.getExpRateMax()) * lvlModifier * _player.getStat().getValue(Stat.FISHING_EXP_SP_BONUS, 1));
-					final long sp = (long) (Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier * _player.getStat().getValue(Stat.FISHING_EXP_SP_BONUS, 1));
+					final long xp = (long) (Rnd.get(fishingData.getExpRateMin(), fishingData.getExpRateMax()) * lvlModifier * _player.getStat().getMul(Stat.FISHING_EXP_SP_BONUS, 1));
+					final long sp = (long) (Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier * _player.getStat().getMul(Stat.FISHING_EXP_SP_BONUS, 1));
 					_player.addExpAndSp(xp, sp, true);
 					_player.getInventory().addItem("Fishing Reward", fishingCatchData.getItemId(), 1, _player, null);
 					final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
