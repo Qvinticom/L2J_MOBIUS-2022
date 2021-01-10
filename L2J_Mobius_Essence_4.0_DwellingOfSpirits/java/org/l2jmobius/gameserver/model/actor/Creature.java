@@ -4427,7 +4427,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (target.isImmobilized())
 		{
 			damage *= _stat.getMul(Stat.IMMOBILE_DAMAGE_BONUS, 1);
-			damage /= target.getStat().getMul(Stat.IMMOBILE_DAMAGE_RESIST, 1);
+			damage *= Math.max(0.22, target.getStat().getMul(Stat.IMMOBILE_DAMAGE_RESIST, 1));
 		}
 		
 		if (!reflect && !isDOT)
