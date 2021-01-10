@@ -15,6 +15,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">333</stat>
 			<stat type="mAtk">151</stat>
@@ -39,6 +40,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">333</stat>
 			<stat type="mAtk">151</stat>
@@ -62,6 +64,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">405</stat>
 			<stat type="mAtk">151</stat>
@@ -85,6 +88,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">405</stat>
 			<stat type="mAtk">151</stat>
@@ -109,6 +113,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">405</stat>
 			<stat type="mAtk">151</stat>
@@ -133,6 +138,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -160,6 +166,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">361</stat>
 			<stat type="mAtk">151</stat>
@@ -184,6 +191,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">302</stat>
 			<stat type="mAtk">151</stat>
@@ -208,6 +216,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">401</stat>
 			<stat type="mAtk">151</stat>
@@ -223,6 +232,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45810" name="Returning Warrior's Blessed Spiritshot Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing 1 Blessed Spiritshot (Grade C~R). Will be deleted once the event ends. -->
@@ -230,6 +240,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45811" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 16 Vitality Replenishing Star Candies.\r. -->
@@ -331,6 +342,7 @@
 		<set name="handler" val="ChangeAttributeCrystal" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45818" name="PA Points Coupon (360 Points)" type="EtcItem">
 		<!-- When double-clicked, 360 PA Points can be acquired. -->
@@ -340,6 +352,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45819" name="PA Points Coupon (720 Points)" type="EtcItem">
 		<!-- When double-clicked, 720 PA Points can be acquired. -->
@@ -349,6 +362,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45820" name="Observation Report" type="EtcItem">
 		<!-- Research results received from Cardinal Seresin at the Town of Oren. It talks about the anomaly in the Dark Elf region after the appearance of Shilen and the epidemic. Double-click to read the details. -->
@@ -359,6 +373,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45821" name="Unstable Spirit's Energy" type="EtcItem">
 		<!-- Unstable energy obtained from defeating the mutated spirits in the Garden of Spirits. Take it to Master Cyphona. -->
@@ -370,6 +385,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45822" name="Unbalanced Energy" type="EtcItem">
 		<!-- Energy obtained from defeating El Floato in the Garden of Spirits. Take it to Magister Belas. -->
@@ -381,6 +397,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45823" name="Apocalypse Shaper - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +82.3. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. No Soul Crystal option. -->
@@ -397,6 +414,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">441</stat>
 			<stat type="mAtk">219</stat>
@@ -421,6 +439,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">504</stat>
 			<stat type="mAtk">219</stat>
@@ -444,6 +463,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">613</stat>
 			<stat type="mAtk">219</stat>
@@ -467,6 +487,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">504</stat>
 			<stat type="mAtk">219</stat>
@@ -491,6 +512,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">613</stat>
 			<stat type="mAtk">219</stat>
@@ -516,6 +538,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -544,6 +567,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">992</stat>
 			<stat type="mAtk">219</stat>
@@ -569,6 +593,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">894</stat>
 			<stat type="mAtk">219</stat>
@@ -594,6 +619,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">403</stat>
 			<stat type="mAtk">293</stat>
@@ -618,6 +644,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">403</stat>
 			<stat type="mAtk">293</stat>
@@ -643,6 +670,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">491</stat>
 			<stat type="mAtk">322</stat>
@@ -668,6 +696,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">613</stat>
 			<stat type="mAtk">219</stat>
@@ -692,6 +721,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">504</stat>
 			<stat type="mAtk">219</stat>
@@ -716,6 +746,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">613</stat>
 			<stat type="mAtk">219</stat>
@@ -735,6 +766,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45838" name="Angry Energy" type="EtcItem">
 		<!-- Item obtained from defeating Harpe in the Garden of Spirits. You can feel the spirit's anger. Take it to Magister Belas. -->
@@ -746,6 +778,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45839" name="Isabella's Evil Thoughts" type="EtcItem">
 		<!-- Item obtained from defeating Isabella in the Garden of Spirits. Take it to Ferin. -->
@@ -757,6 +790,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45840" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -767,6 +801,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45841" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -777,6 +812,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45842" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
@@ -787,6 +823,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45843" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
@@ -797,6 +834,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45844" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
@@ -807,6 +845,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45845" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
@@ -817,6 +856,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45846" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
@@ -827,6 +867,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45847" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
@@ -837,6 +878,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45848" name="Mark of Trust (High-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
@@ -847,6 +889,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45849" name="Mutated Spirit's Soul" type="EtcItem">
 		<!-- A mutated spirit's soul obtained from defeating the mutated spirits in the Garden of Spirits. It's proof that you've put them to rest in peace. Take it to Master Cyphona. -->
@@ -858,6 +901,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45850" name="Detector" type="EtcItem">
 		<!-- Item obtained from defeating the Embryo in the Dimensional Raid. It's the item that Merlot requested. Take it to Merlot to receive the certificate for finishing the mission. -->
@@ -868,6 +912,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45851" name="Specter Shaper - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +82.1. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. No Soul Crystal option. -->
@@ -884,6 +929,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">511</stat>
 			<stat type="mAtk">254</stat>
@@ -908,6 +954,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">584</stat>
 			<stat type="mAtk">254</stat>
@@ -931,6 +978,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">711</stat>
 			<stat type="mAtk">254</stat>
@@ -954,6 +1002,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">584</stat>
 			<stat type="mAtk">254</stat>
@@ -978,6 +1027,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">711</stat>
 			<stat type="mAtk">254</stat>
@@ -1003,6 +1053,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1031,6 +1082,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1151</stat>
 			<stat type="mAtk">254</stat>
@@ -1056,6 +1108,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1036</stat>
 			<stat type="mAtk">254</stat>
@@ -1081,6 +1134,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">467</stat>
 			<stat type="mAtk">339</stat>
@@ -1105,6 +1159,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">467</stat>
 			<stat type="mAtk">339</stat>
@@ -1130,6 +1185,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">569</stat>
 			<stat type="mAtk">373</stat>
@@ -1155,6 +1211,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">711</stat>
 			<stat type="mAtk">254</stat>
@@ -1179,6 +1236,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">584</stat>
 			<stat type="mAtk">254</stat>
@@ -1203,6 +1261,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">711</stat>
 			<stat type="mAtk">254</stat>
@@ -1222,6 +1281,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45866" name="Golden Festival Coin" additionalName="Event" type="EtcItem">
 		<!-- A golden festival coin that can be obtained from Kableon's game in the Talkity Talk Talk Troupe Festival. Take it to Nostra Gibbs to exchange for a Lucky Tarot Card. Will be deleted once the event ends. -->
@@ -1229,6 +1289,7 @@
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45867" name="Summon Scroll: Kableon" additionalName="Event" type="EtcItem">
 		<!-- Summon Kableon to get a star rating. If you get 5 stars, you'll receive a Golden Festival Coin. It can only be used in a Peaceful Zone. Will be deleted once the event ends. -->
@@ -1239,18 +1300,21 @@
 		<set name="is_destroyable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45868" name="Regular Lucky Tarot Card" additionalName="Event" type="EtcItem">
 		<!-- An item needed to play the Regular Lucky Game. It looks like a tarot card. Play a Regular Lucky Game through Nostra Gibbs. Will be deleted once the event ends. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45869" name="Premium Lucky Tarot Card" additionalName="Event" type="EtcItem">
 		<!-- An item needed to play the Premium Lucky Game. It looks like a tarot card. Play a Premium Lucky Game through Nostra Gibbs. Will be deleted once the event ends. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45870" name="Spellbook: Favor of the Exalted" additionalName="Lv. 2" type="EtcItem">
 		<!-- Needed to learn active skill, Favor of the Exalted Lv. 2, used to buff a target with 10% Bonus XP and SP. Can be obtained if main class is over level 99. -->
@@ -1262,7 +1326,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="18351" level="2" /> <!-- Favor of the Exalted -->
@@ -1277,6 +1341,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45872" name="Proof of Battle" type="EtcItem">
 		<!-- Item received as proof of having participated in the Olympiad or the Ceremony of Chaos. Take it to the Mysterious Butler to receive the certificate for finishing the mission. -->
@@ -1287,6 +1352,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45873" name="Proof of Battle" type="EtcItem">
 		<!-- Item received as proof of having participated in the Olympiad or the Ceremony of Chaos. Take it to the Olympiad Manager to receive the certificate for finishing the mission. -->
@@ -1297,6 +1363,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45874" name="Kokko's Friend Summon Scroll" additionalName="Event" type="EtcItem">
 		<!-- Item containing the magic of Kokko. Can summon a friend once every 30 minutes. Target a party member an double-click to activate the skill. -->
@@ -1307,6 +1374,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45875" name="Kokko's Fishing Rod Support Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a Normal Fishing Rod. -->
@@ -1316,6 +1384,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45876" name="Kokko's Fishing Shot Support Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a Fishing Shot. Will be deleted once the event ends. -->
@@ -1325,6 +1394,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45877" name="Kokko's Bait Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get bait to fish. Will be deleted once the event ends. -->
@@ -1334,6 +1404,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45878" name="Mysterious Aid Pack" additionalName="Event" type="EtcItem">
 		<!-- A mysterious box with an unidentified item along with Tomas' Support Box. Double-click to find out what it is. Will be deleted once the event ends. -->
@@ -1343,6 +1414,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45879" name="Helios Shaper - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +81.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. No Soul Crystal option. -->
@@ -1359,6 +1431,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">558</stat>
 			<stat type="mAtk">278</stat>
@@ -1383,6 +1456,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">638</stat>
 			<stat type="mAtk">278</stat>
@@ -1406,6 +1480,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">777</stat>
 			<stat type="mAtk">278</stat>
@@ -1429,6 +1504,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">638</stat>
 			<stat type="mAtk">278</stat>
@@ -1453,6 +1529,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">777</stat>
 			<stat type="mAtk">278</stat>
@@ -1478,6 +1555,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1506,6 +1584,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1257</stat>
 			<stat type="mAtk">278</stat>
@@ -1531,6 +1610,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1132</stat>
 			<stat type="mAtk">278</stat>
@@ -1556,6 +1636,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">511</stat>
 			<stat type="mAtk">371</stat>
@@ -1580,6 +1661,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">511</stat>
 			<stat type="mAtk">371</stat>
@@ -1605,6 +1687,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">622</stat>
 			<stat type="mAtk">408</stat>
@@ -1630,6 +1713,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">777</stat>
 			<stat type="mAtk">278</stat>
@@ -1653,6 +1737,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">638</stat>
 			<stat type="mAtk">278</stat>
@@ -1677,6 +1762,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">777</stat>
 			<stat type="mAtk">278</stat>
@@ -1693,6 +1779,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45894" name="Filled Necklace (Valakas Energy)" additionalName="30-day" type="Armor">
 		<!-- MP +62, Sleep Resistance +40%, Sleep Atk. Rate +40%, HP +445, Skill Cooldown decreases, P./ M. Atk. Increases, Wild Magic Effect, Damage Reflect Effect, and Fire Resistance increases. -->
@@ -1705,6 +1792,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="3557" level="1" /> <!-- Valakas' Necklace -->
 		</skills>
@@ -1723,6 +1811,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="3604" level="1" /> <!-- Frintezza's Necklace -->
 		</skills>
@@ -1741,6 +1830,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="3558" level="1" /> <!-- Antharas' Earring -->
 		</skills>
@@ -1759,6 +1849,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="3559" level="1" /> <!-- Zaken's Earring -->
 		</skills>
@@ -1777,6 +1868,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="3561" level="1" /> <!-- Baium's Ring -->
 		</skills>
@@ -1795,6 +1887,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="3562" level="1" /> <!-- Queen Ant's Ring -->
 		</skills>

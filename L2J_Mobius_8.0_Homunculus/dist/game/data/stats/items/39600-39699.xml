@@ -6,6 +6,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="weight" val="30" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39601" name="Soul Bottle" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -13,6 +14,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="weight" val="30" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39602" name="Dimensional Antharas Shaper" type="Weapon">
 		<!-- A top-grade dragon weapon. <Item skill>. PvP damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, Critical Rate for standard attacks +500, damage to dragons +300%. <Active skills>. 1. Protection: For 2 min., Speed +100, grants immunity to debuffs. Consumes 1 Dragon Blood. Cooldown: 10 min. 2. Antharas' Breath: Nearby enemies' Atk. Spd./ Casting Spd./ Speed -90%, slowly paralyzes them for 10 sec. Consumes 1 Dragon Blood. Cooldown: 5 min. 3. Antharas' Lash: Drains nearby enemies' CP. Consumes 1 Dragon Blood. Cooldown: 5 min. Cannot be used in the Olympiad or the Ceremony of Chaos. The item's appearance cannot be modified. Cannot be crystallized, enchanted, or assigned an attribute. -->
@@ -28,6 +30,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -57,6 +60,7 @@
 		<set name="weight" val="1740" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -85,6 +89,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -114,6 +119,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -142,6 +148,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -170,6 +177,7 @@
 		<set name="weight" val="2010" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -200,6 +208,7 @@
 		<set name="weight" val="1550" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -229,6 +238,7 @@
 		<set name="weight" val="1740" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -258,6 +268,7 @@
 		<set name="weight" val="1740" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -287,6 +298,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -316,6 +328,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -346,6 +359,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -375,6 +389,7 @@
 		<set name="weight" val="1740" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -404,6 +419,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -434,6 +450,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -463,6 +480,7 @@
 		<set name="weight" val="1080" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -493,6 +511,7 @@
 		<set name="weight" val="1080" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -524,6 +543,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -554,6 +574,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -584,6 +605,7 @@
 		<set name="weight" val="1740" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -613,6 +635,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -642,6 +665,7 @@
 		<set name="weight" val="1520" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -671,6 +695,7 @@
 		<set name="weight" val="1580" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -701,6 +726,7 @@
 		<set name="weight" val="2050" />
 		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8899" level="1" /> <!-- Lindvior's Wingbeat -->
 			<skill id="8898" level="1" /> <!-- Lindvior's Breath -->
@@ -725,6 +751,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<cond msgId="1902">
 			<player levelRange="1;84" />
 		</cond>
@@ -741,6 +768,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<cond msgId="1902">
 			<player levelRange="1;84" />
 		</cond>
@@ -757,6 +785,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<cond msgId="1902">
 			<player levelRange="1;84" />
 		</cond>
@@ -774,6 +803,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<cond msgId="1902">
 			<player levelRange="85;107" />
 		</cond>
@@ -789,6 +819,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<cond msgId="1902">
 			<player levelRange="85;107" />
 		</cond>
@@ -806,6 +837,7 @@
 		<set name="price" val="1000000" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="1" /> <!-- Venir Talisman - Lv1 -->
 		</skills>
@@ -818,6 +850,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="2" /> <!-- Venir Talisman - Lv2 -->
 		</skills>
@@ -830,6 +863,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="3" /> <!-- Venir Talisman - Lv3 -->
 		</skills>
@@ -842,6 +876,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="4" /> <!-- Venir Talisman - Lv4 -->
 		</skills>
@@ -854,6 +889,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="5" /> <!-- Venir Talisman - Lv5 -->
 		</skills>
@@ -866,6 +902,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="6" /> <!-- Venir Talisman - Lv6 -->
 		</skills>
@@ -878,6 +915,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="7" /> <!-- Venir Talisman - Lv7 -->
 		</skills>
@@ -890,6 +928,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="8" /> <!-- Venir Talisman - Lv8 -->
 		</skills>
@@ -902,6 +941,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="9" /> <!-- Venir Talisman - Lv9 -->
 		</skills>
@@ -914,6 +954,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="10" /> <!-- Venir Talisman - Lv10 -->
 		</skills>
@@ -926,6 +967,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="11" /> <!-- Venir Talisman - Lv11 -->
 		</skills>
@@ -938,6 +980,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="12" /> <!-- Venir Talisman - Lv12 -->
 		</skills>
@@ -950,6 +993,7 @@
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="13" /> <!-- Venir Talisman - Lv13 -->
 		</skills>
@@ -961,6 +1005,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="14" /> <!-- Venir Talisman - Lv14 -->
 		</skills>
@@ -972,6 +1017,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="15" /> <!-- Venir Talisman - Lv15 -->
 		</skills>
@@ -983,6 +1029,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="16" /> <!-- Venir Talisman - Lv16 -->
 		</skills>
@@ -994,6 +1041,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="17" /> <!-- Venir Talisman - Lv17 -->
 		</skills>
@@ -1005,6 +1053,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="18" /> <!-- Venir Talisman - Lv18 -->
 		</skills>
@@ -1016,6 +1065,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="19" /> <!-- Venir Talisman - Lv19 -->
 		</skills>
@@ -1027,6 +1077,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="20" /> <!-- Venir Talisman - Lv20 -->
 		</skills>
@@ -1038,6 +1089,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="21" /> <!-- Venir Talisman - Lv21 -->
 		</skills>
@@ -1049,6 +1101,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="22" /> <!-- Venir Talisman - Lv22 -->
 		</skills>
@@ -1060,6 +1113,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="23" /> <!-- Venir Talisman - Lv23 -->
 		</skills>
@@ -1071,6 +1125,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18024" level="24" /> <!-- Venir Talisman - Lv24 -->
 		</skills>
@@ -1079,155 +1134,181 @@
 		<!-- You can bestow LUC +3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, Rocket Gun Hat, Buff Helmet, Santa's Hat, Blue Dynasty Circlet. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39659" name="CHA Pendant" type="EtcItem">
 		<!-- You can bestow CHA +3 when one of the following are equipped: Rabbit Ears, Raccoon Ears, Cat Ears, Lady's Hairpin, Party Mask, Monocle, Maiden's Hairpin, Forget-me-not Hairpin, Daisy Hairpin, Little Angel Wings, Fairy Antennae, Artisan's Goggles, Arrow-pierced Apple, Chapeau, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, Refined Devil Horn, Red Horns, Rocket Gun Hat, Buff Helmet, Santa's Hat, Blue Dynasty Circlet. -->
 		<set name="icon" val="icon.etc_hairacc_pandent_i00" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39660" name="Rabbit Ears" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39661" name="Rabbit Ears" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39662" name="Raccoon Ears" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39663" name="Raccoon Ears" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39664" name="Cat Ears" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39665" name="Cat Ears" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39666" name="Romantic Chapeau" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39667" name="Romantic Chapeau" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39668" name="Angel Circlet" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39669" name="Angel Circlet" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39670" name="Demon Circlet" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39671" name="Demon Circlet" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39672" name="Pirate's Eyepatch" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39673" name="Pirate's Eyepatch" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39674" name="Outlaw's Eyepatch" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39675" name="Outlaw's Eyepatch" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39676" name="Eyepatch" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_one_eye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39677" name="Eyepatch" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_one_eye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39678" name="Party Hat" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39679" name="Party Hat" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39680" name="Refined Angel Ring" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39681" name="Refined Angel Ring" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39682" name="Refined Devil Horn" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39683" name="Refined Devil Horn" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39684" name="Red Horns" additionalName="LUC (Event)" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1235,6 +1316,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39685" name="Red Horns" additionalName="CHA (Event)" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1242,6 +1324,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39686" name="9th Anniversary Rocket Gun Hat: Chain Fireworks" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1249,6 +1332,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39687" name="9th Anniversary Rocket Gun Hat: Chain Fireworks" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1256,6 +1340,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39688" name="Lady's Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1263,6 +1348,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39689" name="Lady's Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1270,6 +1356,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39690" name="Party Mask" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1277,6 +1364,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39691" name="Party Mask" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1284,6 +1372,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39692" name="Monocle" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1291,6 +1380,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39693" name="Monocle" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1298,6 +1388,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39694" name="Maiden's Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1305,6 +1396,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39695" name="Maiden's Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1312,6 +1404,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39696" name="Forget-me-not Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1319,6 +1412,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39697" name="Forget-me-not Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1326,6 +1420,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39698" name="Daisy Hairpin" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -1333,6 +1428,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39699" name="Daisy Hairpin" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -1340,5 +1436,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 </list>

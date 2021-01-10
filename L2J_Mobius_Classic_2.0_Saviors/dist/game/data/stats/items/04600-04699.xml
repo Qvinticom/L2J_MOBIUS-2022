@@ -777,7 +777,6 @@
 		<!-- Red-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="CRYSTAL" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="handler" val="ItemSkills" />
@@ -787,7 +786,6 @@
 		<!-- Green-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="CRYSTAL" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="handler" val="ItemSkills" />
@@ -797,7 +795,6 @@
 		<!-- Blue-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="CRYSTAL" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<set name="handler" val="ItemSkills" />
@@ -810,7 +807,6 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
@@ -832,7 +828,6 @@
 	<item id="4666" name="Reiria's Soul Orb" type="EtcItem">
 		<!-- Sphere containing Reiria's Soul. Take it to Maestro Reorin. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -843,7 +838,6 @@
 	<item id="4667" name="Kernon's Infernium Scepter" type="EtcItem">
 		<!-- Scepter made of infernium that was recovered from the demon Kernon. Take it to Maestro Reorin. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -854,7 +848,6 @@
 	<item id="4668" name="Golkonda's Infernium Scepter" type="EtcItem">
 		<!-- Scepter made of infernium that was recovered from Golkonda, the Longhorn General. Take it to Maestro Reorin. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -865,7 +858,6 @@
 	<item id="4669" name="Hallate's Infernium Scepter" type="EtcItem">
 		<!-- Scepter made of infernium that was recovered from the Death Lord Hallate. Take it to Maestro Reorin. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -876,7 +868,6 @@
 	<item id="4670" name="Maestro Reorin's Hammer" type="EtcItem">
 		<!-- Hammer used by a blacksmith. It is made by processing an adamantite nugget of high purity. Take it to Maestro Reorin. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -887,7 +878,6 @@
 	<item id="4671" name="Maestro Reorin's Mold" type="EtcItem">
 		<!-- Mold used by Dwarven Artisans to manufacture top grade equipment. Take it to Maestro Reorin. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -898,7 +888,6 @@
 	<item id="4672" name="Infernium Varnish" type="EtcItem">
 		<!-- Varnish used when manufacturing an infernium weapon. Take it to Maestro Reorin. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -909,7 +898,6 @@
 	<item id="4673" name="Red Pipette Knife" type="EtcItem">
 		<!-- Pipette knife that holds Baium's blood. Bring it to Magister Casper at Hardin's Academy. -->
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

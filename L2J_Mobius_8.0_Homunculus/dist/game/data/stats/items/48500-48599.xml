@@ -4,7 +4,7 @@
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -12,7 +12,7 @@
 		<!-- Double-click the box to obtain a very rare item at random. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -38,7 +38,7 @@
 		<!-- Double-click to obtain one of the following items: +10 Bloody Eternal Heavy/ Light/ Robe set. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -49,7 +49,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -60,7 +60,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -71,7 +71,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -82,7 +82,7 @@
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -93,7 +93,7 @@
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -104,7 +104,7 @@
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -144,7 +144,7 @@
 		<!-- When used, recovers 5000 HP. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -154,7 +154,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -163,7 +163,7 @@
 	<item id="48515" name="Red Libra Request - Shadow of the Mother Tree" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in the Shadow of the Mother Tree. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -204,7 +204,7 @@
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -224,7 +224,7 @@
 		<!-- A gift box earned for healing the Exhausted Elysium Buffalo. Double-click to obtain 5 billion adena. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -232,7 +232,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Scroll of Blessing - R95/R99. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -240,7 +240,7 @@
 		<!-- A gift box for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Blessed Antharas' Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring, Lindvior's Earring. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -248,7 +248,7 @@
 		<!-- A gift box for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Baium's Soul Ring, Tauti's Ring, Queen Ant's Soul Ring, Mimir's Soul Ring, Forgotten Ring of Core, Earth Wyrm's Heart Ring. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -256,7 +256,7 @@
 		<!-- A reward for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Blessed Valakas' Necklace, Angel's Necklace, Harnak's Deformed Necklace. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -264,7 +264,7 @@
 		<!-- A gift for restoring the Exhausted Elysium Buffalo. Double-click to obtain one of the following items: Energy of Longing, Seven Signs' Energy, Sealed Talisman of Longing/ Insanity/ Seven Signs. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -272,7 +272,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one White Human Knight Suit or White Assassin Suit Appearance Stone. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -280,7 +280,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to randomly obtain one Healer/Chevalier/Kat the Cat/Barbarian Wolf/Valkyrie Outfit Appearance Stone. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -288,7 +288,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 8. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -296,7 +296,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain a box containing 3 Top-grade Spirit Stones and 3 Life Stones Instilled with Giants' Power. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -304,7 +304,7 @@
 		<!-- A gift box earned for restoring Exhausted Elysium Buffalos. Double-click to obtain 10 Lv. 5 Legendary Dyes: STR, DEX, CON, INT, WIT, MEN. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -312,14 +312,14 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain one Top-grade/Superior Seed Bracelet. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48533" name="Trace of Evil" type="EtcItem">
 		<!-- The item that Corzet asked you to gather after defeating demons in the Silent Valley. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -331,7 +331,7 @@
 	<item id="48534" name="Dust of Destroyed Demon" type="EtcItem">
 		<!-- The item that Corzet asked you to gather as evidence of defeating demons in the Silent Valley. -->
 		<set name="icon" val="icon.etc_powder_black_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -354,7 +354,7 @@
 	<item id="48536" name="Soul Quartz" type="EtcItem">
 		<!-- A crystal containing the power of a special soul, which is made by imbuing Clan Shards with the power of magic. Used to summon a Raid Monster through a Soul Summon Stone. -->
 		<set name="icon" val="icon.etc_shinecryst_red_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -368,7 +368,7 @@
 		<set name="etcitem_type" val="LURE" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="price" val="4000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -378,7 +378,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="bodypart" val="lhand" />
 		<set name="price" val="25000" />
 		<set name="is_stackable" val="true" />
@@ -389,7 +389,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="bodypart" val="lhand" />
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
@@ -449,6 +449,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="39212" level="1" /> <!-- Braised Fish -->
 		</skills>
@@ -463,7 +464,7 @@
 	<item id="48545" name="Leona Blackbird's Message" type="EtcItem">
 		<!-- A message from Leona Blackbird, seeking the help of warriors in defeating Etis van Etina and restoring peace. -->
 		<set name="icon" val="icon.etc_blackbire_message_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -474,7 +475,7 @@
 	<item id="48546" name="Token of Etina" type="EtcItem">
 		<!-- A token Etis van Etina gives to those assigned with important missions. Only those carrying out an important mission for Etis van Etina possess it. Take the token to Devianne for further investigation. -->
 		<set name="icon" val="icon.etc_etina_sign_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -485,7 +486,7 @@
 	<item id="48547" name="Atelia in Extraction" type="EtcItem">
 		<!-- Dark Atelia that demons were extracting. It is not fully extracted yet. Gather and take this Dark Atelia to Devianne at the entrance of the Atelia Refinery. -->
 		<set name="icon" val="icon.etc_astatine_extraction_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -496,7 +497,7 @@
 	<item id="48548" name="Origin of Giants" type="EtcItem">
 		<!-- An item you found near the destroyed throne after defeating Helios. It is a part of the life and power source of the Giants. If you gather many, you can use some of the Giants' power. Gather and take them to Leona Blackbird. -->
 		<set name="icon" val="icon.etc_giant_source_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -507,7 +508,7 @@
 	<item id="48549" name="Fragment of Condensed Energy" type="EtcItem">
 		<!-- A fragment of Condensed Energy you can obtain by defeating demons in charge of the key process of refining the Dimensional Energy. Gather these fragments and take them to Devianne at the Atelia Refinery. -->
 		<set name="icon" val="icon.etc_condensed_energy_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -519,7 +520,7 @@
 	<item id="48550" name="Crystal of Condensed Energy" type="EtcItem">
 		<!-- A crystal of Condensed Energy you can obtain by defeating Dark Atelia Guardians including Atelia Guardian Harke, Atelia Guardian Ergalion and Atelia Guardian Spira. Take it to Devianne to receive an additional reward. -->
 		<set name="icon" val="icon.etc_condensed_energy_02" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1122,7 +1123,7 @@
 	<item id="48568" name="Guard Agathion Fragment" type="EtcItem">
 		<!-- A fragment containing the power of Guardians who inherited the angels' power. Can be exchanged for a Guard Agathion Charm or Scroll of Growth through a Merchant of Mammon. -->
 		<set name="icon" val="icon.guard_ag_piece_1" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1131,7 +1132,7 @@
 		<!-- A material item required to infuse the Guard Agathion's Breath. -->
 		<set name="icon" val="icon.star_pomander" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="4500000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1268,7 +1269,7 @@
 	<item id="48578" name="Demon Slayer's Proof" type="EtcItem">
 		<!-- Evidence that proves you have defeated demons and prevented Atelia refinement. Take these to Leona Blackbird. -->
 		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1383,7 +1384,7 @@
 	<item id="48585" name="Savior's Wish" type="EtcItem">
 		<!-- The embodiment of the wish of the saviors who saved Aden from Etis van Etina. Can be obtained from the Blackbird Clan for completing the 'Savior's Path - Hall of Etina' quest or purchased at a set price. Can be used through Elikia in Gludio. -->
 		<set name="icon" val="icon.episode_token" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1393,7 +1394,7 @@
 		<!-- Take several of these to Elikia in Gludio to get Scroll: Enchant Savior's Mask. -->
 		<set name="icon" val="icon.episode_scroll_token" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1415,77 +1416,77 @@
 	<item id="48589" name="Energy of Topaz" type="EtcItem">
 		<!-- Has a chance to produce a Greater Topaz if combined with a level 5 Topaz. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48590" name="Energy of Ruby" type="EtcItem">
 		<!-- Has a chance to produce a Greater Ruby if combined with a level 5 Ruby. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48591" name="Energy of Obsidian" type="EtcItem">
 		<!-- Has a chance to produce a Greater Obsidian if combined with a level 5 Obsidian. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48592" name="Energy of Opal" type="EtcItem">
 		<!-- Has a chance to produce a Greater Opal if combined with a level 5 Opal. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48593" name="Energy of Emerald" type="EtcItem">
 		<!-- Has a chance to produce a Greater Emerald if combined with a level 5 Emerald. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48594" name="Energy of Aquamarine" type="EtcItem">
 		<!-- Has a chance to produce a Greater Aquamarine if combined with a level 5 Aquamarine. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48595" name="Energy of Diamond" type="EtcItem">
 		<!-- Has a chance to produce a Greater Diamond if combined with a level 5 Diamond. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48596" name="Energy of Pearl" type="EtcItem">
 		<!-- Has a chance to produce a Greater Pearl if combined with a level 5 Pearl. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48597" name="Energy of Sapphire" type="EtcItem">
 		<!-- Has a chance to produce a Greater Sapphire if combined with a level 5 Sapphire. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48598" name="Energy of Vital Stone" type="EtcItem">
 		<!-- Has a chance to produce a Greater Vital Stone if combined with a level 5 Vital Stone. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48599" name="Energy of Garnet" type="EtcItem">
 		<!-- Has a chance to produce a Greater Garnet if combined with a level 5 Garnet. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

@@ -8,6 +8,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47502" name="Superior Giant's Codex Chapter 1 - Fragment" type="EtcItem">
 		<!-- A single page from the Superior Giant's Codex Chapter 1. Collect 10 and take them to Lias in the Dimensional Rift to exchange for the Superior Giant's Codex Chapter 1. -->
@@ -17,6 +18,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47503" name="High-grade Spirit Stone" type="EtcItem">
 		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters with Lv. 95 or above. -->
@@ -26,6 +28,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47504" name="Lias Supply Items" type="EtcItem">
 		<!-- Supplies given by Lias to agents having completed "Dimensional Rift - 100-day Subjugation Operation". -->
@@ -36,6 +39,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="47503" min="1" max="1" chance="100" /> <!-- High-grade Spirit Stone -->
 			<item id="47501" min="1" max="1" chance="100" /> <!-- Rune Stone Fragment -->
@@ -155,6 +159,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47512" name="Attacker's Soul" type="EtcItem">
 		<!-- The soul of the Attacker that attempts to attack through the Dimensional Rift. Collect these and take them to the Dimensional Researcher Lias. -->
@@ -165,6 +170,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47513" name="Request - Altar of Evil" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland and the Altar of Evil. The request can be accepted by characters between Lv. 85-93. Double-click to receive the request -->
@@ -175,6 +181,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47514" name="Request - Gludio Territory" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gludio Territory. The request can be accepted by characters between Lv. 85-93. Double-click to receive the request -->
@@ -185,6 +192,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47515" name="Request - Turek Orc Campsite" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Turek Orc Campsite. The request can be accepted by characters between Lv. 87-97. Double-click to receive the request -->
@@ -195,6 +203,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47516" name="Request - Elven Forest" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Elven Forest and the Shadow of the Mother Tree. The request can be accepted by characters between Lv. 88-98. Double-click to receive the request -->
@@ -205,6 +214,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47517" name="Request - Fairy Settlement" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Fairy Settlement. The request can be accepted by characters between Lv. 88-98. Double-click to receive the request -->
@@ -215,6 +225,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47518" name="Request - Garden of Beasts" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Beasts. The request can be accepted by characters between Lv. 89-99. Double-click to receive the request -->
@@ -225,6 +236,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47519" name="Request - North of the Town of Giran" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gorgon Flower Garden and the Breka's Stronghold. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
@@ -235,6 +247,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47520" name="Request - Cruma Marshlands" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
@@ -245,6 +258,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47521" name="Request - The Fields" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
@@ -255,6 +269,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47522" name="Request - The Immortal Plateau" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Immortal Plateau. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -265,6 +280,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47523" name="Request - Isle of Souls" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Isle of Souls. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -275,6 +291,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47524" name="Request - Cemetery" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shilen and the Cemetery. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -285,6 +302,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47525" name="Request - Valley of Saints" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Valley of Saints. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -295,6 +313,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47526" name="Request - Southern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the southern region of Isle of Prayer. The request can be accepted by characters between Lv. 96-106. Double-click to receive the request -->
@@ -305,6 +324,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47527" name="Request - Northern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the northern region of Isle of Prayer. The request can be accepted by characters between Lv. 96-106. Double-click to receive the request -->
@@ -315,6 +335,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47528" name="Request - Garden of Spirits" type="EtcItem">
 		<!-- A request issued by the Hunter Guild to eliminate Giant Monsters near the Garden of Spirits. Characters of level 100 or higher can receive the request by double-clicking the item. -->
@@ -325,6 +346,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47529" name="Request - Atelia Fortress" type="EtcItem">
 		<!-- A request issued by the Hunter Guild to eliminate Giant Monsters near the Atelia Fortress. Characters of level 100 or higher can receive the request by double-clicking the item. -->
@@ -335,6 +357,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47530" name="Request - Altar of Evil" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland and the Altar of Evil. -->
@@ -345,6 +368,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47531" name="Request - Gludio Territory" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gludio Territory. -->
@@ -355,6 +379,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47532" name="Request - Turek Orc Campsite" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Turek Orc Campsite. -->
@@ -365,6 +390,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47533" name="Request - Elven Forest" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Elven Forest and the Shadow of the Mother Tree. -->
@@ -375,6 +401,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47534" name="Request - Fairy Settlement" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Fairy Settlement. -->
@@ -385,6 +412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47535" name="Request - Garden of Beasts" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Beasts. -->
@@ -395,6 +423,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47536" name="Request - North of the Town of Giran" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gorgon Flower Garden and the Breka's Stronghold. -->
@@ -405,6 +434,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47537" name="Request - Cruma Marshlands" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Cruma Marshlands. -->
@@ -415,6 +445,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47538" name="Request - The Fields" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. -->
@@ -425,6 +456,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47539" name="Request - The Immortal Plateau" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Immortal Plateau. -->
@@ -435,6 +467,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47540" name="Request - Isle of Souls" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Isle of Souls. -->
@@ -445,6 +478,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47541" name="Request - Cemetery" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shilen and the Cemetery. -->
@@ -455,6 +489,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47542" name="Request - Valley of Saints" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Valley of Saints. -->
@@ -465,6 +500,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47543" name="Request - Southern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the southern region of Isle of Prayer. -->
@@ -475,6 +511,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47544" name="Request - Northern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the northern region of Isle of Prayer. -->
@@ -485,6 +522,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47545" name="Request - Garden of Spirits" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Spirits. -->
@@ -495,6 +533,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47546" name="Request - Atelia Fortress" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Atelia Fortress. -->
@@ -505,6 +544,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47547" name="Corroded Bait" type="EtcItem">
 		<!-- This Normal Bait cannot be used any more. You can sell it to NPC Shop. -->
@@ -517,6 +557,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47548" name="Bait" additionalName="R99" type="EtcItem">
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Fishing bait available from level 99. Fishing with this bait has a low chance of yielding a Reddish Box. -->
@@ -529,6 +570,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47549" name="PA Bait" type="EtcItem">
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PAs. -->
@@ -541,24 +583,28 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47550" name="Ugly Fish" type="EtcItem">
 		<!-- Can be exchanged for a Fish Dish item through a Fishing Guild Member. -->
 		<set name="icon" val="icon.etc_angler_i01" />
 		<set name="price" val="5000" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47551" name="Nimble Fish" type="EtcItem">
 		<!-- Can be exchanged for a Fish Dish or Appearance Stone item through a Fishing Guild Member. -->
 		<set name="icon" val="icon.etc_tuna_i01" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47552" name="Powerful Fish" type="EtcItem">
 		<!-- Can be exchanged for a Hair Accessory or other items through a Fishing Guild member. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47553" name="Bluish Box" type="EtcItem">
 		<!-- Double click to obtain the item. -->
@@ -571,6 +617,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="45494" min="1" max="1" chance="100" /> <!-- Sturdy Fishing Rod -->
 			<item id="38154" min="50" max="50" chance="100" /> <!-- Fishing Shot -->
@@ -590,6 +637,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39720" min="1" max="1" chance="27" /> <!-- Maphr's Luck Potion -->
 			<item id="45494" min="1" max="1" chance="3" /> <!-- Sturdy Fishing Rod -->
@@ -606,6 +654,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47556" name="Stardust" type="EtcItem">
 		<!-- Ingredient needed to exchange Elementary Seed Bracelet. -->
@@ -613,6 +662,7 @@
 		<set name="weight" val="1" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47557" name="Master Fishing Rod" additionalName="Stage 1" type="Weapon">
 		<!-- Fishing time reduced by: 10 seconds. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
@@ -727,6 +777,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47563" name="Zodiac Agathion Pack" type="EtcItem">
 		<!-- Double click to obtain one of the twelve Agathions Stage 1. -->
@@ -735,6 +786,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47564" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -745,6 +797,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47565" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -755,6 +808,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47566" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -765,6 +819,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47567" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -775,6 +830,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47568" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -785,6 +841,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47569" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -795,6 +852,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47570" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -805,6 +863,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47571" name="Basic Supply Box" additionalName="Fishing Guild" type="EtcItem">
 		<!-- A supply box given by Santiago, head of the Fishing Guild, for your hard work in reviving the Fishing Guild. Double click to obtain the item. -->
@@ -818,6 +877,7 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="weight" val="10" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47551" min="5" max="5" chance="100" /> <!-- Nimble Fish -->
 			<item id="47562" min="2" max="2" chance="100" /> <!-- Santiago's Reel Fragment -->
@@ -836,6 +896,7 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="weight" val="10" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47551" min="5" max="5" chance="100" /> <!-- Nimble Fish -->
 			<item id="47552" min="1" max="1" chance="100" /> <!-- Powerful Fish -->
@@ -851,6 +912,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47574" name="PA Treasure Chest" type="EtcItem">
 		<!-- Double click to obtain the item. -->
@@ -861,24 +923,28 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47575" name="Royal White Save Ticket (R)" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47576" name="Royal White Save Ticket (R95)" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47577" name="Royal White Save Ticket (R99)" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47578" name="Gran Kain's Miraculous Medicine" type="EtcItem">
 		<!-- Legendary Miraculous Medicine said to have been concocted using a secret passed on by Gran Kain. Use to recover 7000 HP -->
@@ -890,6 +956,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="18670" level="1" /> <!-- Gran Kain's Miraculous Medicine -->
 		</skills>
@@ -899,6 +966,7 @@
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47580" name="Practice Fishing Rod" additionalName="1-hr." type="Weapon">
 		<!-- A shoddy fishing rod that has been given to you for practice. It's fine for practice, though. -->
@@ -929,6 +997,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47582" name="Transformation Scroll: Lady Tow" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into Lady Tow for 10 min. Cannot be used in the Olympiad. -->
@@ -936,6 +1005,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47583" name="Transformation Scroll: Angry Tow" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into Angry tow for 10 min. Cannot be used in the Olympiad. -->
@@ -943,6 +1013,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47584" name="Transformation Scroll: Sleepy Tow" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into Sleepy Tow for 10 min. Cannot be used in the Olympiad. -->
@@ -950,6 +1021,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47585" name="Transformation Scroll: Pig" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into a pig for 10 min. Cannot be used in the Olympiad. -->
@@ -957,6 +1029,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47586" name="Transformation Scroll: Rabbit" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into a rabbit for 10 min. Cannot be used in the Olympiad. -->
@@ -964,6 +1037,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47587" name="Transformation Scroll: Queen Ant" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into a Queen Ant for 10 min. Cannot be used in the Olympiad. -->
@@ -971,6 +1045,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47588" name="Transformation Scroll: Orfen" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into Orfen for 10 min. Cannot be used in the Olympiad. -->
@@ -978,6 +1053,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47589" name="Transformation Scroll: Anakim" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into Anakim for 10 min. Cannot be used in the Olympiad. -->
@@ -985,6 +1061,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47590" name="Transformation Scroll: Lilith" type="EtcItem">
 		<!-- No special abilities, but allows you to transform into Lilith for 10 min. Cannot be used in the Olympiad. -->
@@ -992,6 +1069,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47591" name="Cat Fighter Appearance Stone - Ertheia Only" type="EtcItem">
 		<!-- An appearance stone that changes the appearance of your fist weapons into that of a Cat Fighter. <Caution> Items whose appearance has been changed can be equipped on by Ertheia. Remember this when extracting appearances. -->
@@ -1001,6 +1079,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18683" level="1" /> <!-- Cat Fighter Appearance Stone - Ertheia Only -->
 		</skills>
@@ -1013,6 +1092,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18684" level="1" /> <!-- Warm Bear Paws Appearance Stone -->
 		</skills>
@@ -1025,6 +1105,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18685" level="1" /> <!-- Boxing Glove Appearance Stone -->
 		</skills>
@@ -1037,6 +1118,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18686" level="1" /> <!-- Cupid's Arrow Appearance Stone -->
 		</skills>
@@ -1049,6 +1131,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18687" level="1" /> <!-- Wedding Bouquet Appearance Stone -->
 		</skills>
@@ -1061,6 +1144,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18688" level="1" /> <!-- Pig Lollipop Appearance Stone -->
 		</skills>

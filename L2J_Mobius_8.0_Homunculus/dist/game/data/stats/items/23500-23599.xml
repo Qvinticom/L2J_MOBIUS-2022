@@ -12,6 +12,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22778" level="1" /> <!-- Military Top Appearance Stone -->
 		</skills>
@@ -28,6 +29,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22779" level="1" /> <!-- Military Pants Appearance Stone -->
 		</skills>
@@ -44,6 +46,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22780" level="1" /> <!-- Military Gloves Appearance Stone -->
 		</skills>
@@ -60,6 +63,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22781" level="1" /> <!-- Military Shoes Appearance Stone -->
 		</skills>
@@ -76,6 +80,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22782" level="1" /> <!-- Military Hair Accessory Appearance Stone -->
 		</skills>
@@ -92,6 +97,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22788" level="1" /> <!-- Maid Appearance Stone -->
 		</skills>
@@ -108,6 +114,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22789" level="1" /> <!-- Maid Hair Accessory Appearance Stone -->
 		</skills>
@@ -124,6 +131,7 @@
 		<set name="time" val="180" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21349" level="1" /> <!-- Memory Shot -->
 		</skills>
@@ -140,6 +148,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22792" level="1" /> <!-- Automatic Appearance Stone: Emerald Weapon -->
 		</skills>
@@ -156,6 +165,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22793" level="1" /> <!-- Automatic Appearance Stone: Japanese Weapon -->
 		</skills>
@@ -166,6 +176,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23533" name="Contender's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Item provided by a Contender as a reward for your victory. Has a chance of obtaining one of many event items. -->
@@ -176,6 +187,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22452" level="1" /> <!-- Santa Girl's Gift Box -->
 		</skills>
@@ -189,6 +201,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22807" level="1" /> <!-- Monster Weapon Appearance Stone Pack -->
 		</skills>
@@ -203,6 +216,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22808" level="1" /> <!-- Hellblade Appearance Stone -->
 		</skills>
@@ -217,6 +231,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22809" level="1" /> <!-- Claw of Destruction Appearance Stone -->
 		</skills>
@@ -231,6 +246,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22823" level="1" /> <!-- Butcher Blades Appearance Stone -->
 		</skills>
@@ -245,6 +261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22824" level="1" /> <!-- Blades of Delusion Appearance Stone -->
 		</skills>
@@ -259,6 +276,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22825" level="1" /> <!-- Blood Brother Appearance Stone -->
 		</skills>
@@ -273,6 +291,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22826" level="1" /> <!-- Mardil's Fan Appearance Stone -->
 		</skills>
@@ -287,6 +306,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="23542" min="1" max="1" chance="100" /> <!-- Vesper Noble Light Armor Top Appearance Stone - Event -->
 			<item id="23543" min="1" max="1" chance="100" /> <!-- Vesper Noble Light Armor Pants Appearance Stone - Event -->
@@ -305,6 +325,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22795" level="1" /> <!-- Vesper Noble Top Appearance Stone -->
 		</skills>
@@ -320,6 +341,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22796" level="1" /> <!-- Vesper Noble Pants Appearance Stone -->
 		</skills>
@@ -335,6 +357,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22797" level="1" /> <!-- Vesper Noble Gloves Appearance Stone -->
 		</skills>
@@ -350,6 +373,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22798" level="1" /> <!-- Vesper Noble Shoes Appearance Stone -->
 		</skills>
@@ -365,6 +389,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22799" level="1" /> <!-- Vesper Noble Top Appearance Stone -->
 		</skills>
@@ -380,6 +405,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22800" level="1" /> <!-- Vesper Noble Pants Appearance Stone -->
 		</skills>
@@ -395,6 +421,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22801" level="1" /> <!-- Vesper Noble Gloves Appearance Stone -->
 		</skills>
@@ -410,6 +437,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22802" level="1" /> <!-- Vesper Noble Shoes Appearance Stone -->
 		</skills>
@@ -424,6 +452,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="23552" min="500" max="500" chance="100" /> <!-- Mysterious R-grade Soulshot - Event -->
 		</capsuled_items>
@@ -438,6 +467,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="23553" min="500" max="500" chance="100" /> <!-- Mysterious R-grade Spiritshot - Event -->
 		</capsuled_items>
@@ -455,6 +485,7 @@
 		<set name="handler" val="SoulShots" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9193" level="1" /> <!-- Soulshot (R-grade) -->
 		</skills>
@@ -472,6 +503,7 @@
 		<set name="handler" val="BlessedSpiritShot" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9195" level="1" /> <!-- Blessed Spiritshot (R-grade) -->
 		</skills>
@@ -488,6 +520,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="useSkillDisTime" val="1" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="3489" level="1" /> <!-- Yellow Talisman - M. Atk. -->
 		</skills>
@@ -503,6 +536,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23556" name="Ninja Gloves" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja gloves. Used in costumes. Gives you active skills. -->
@@ -515,6 +549,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23557" name="Ninja Shoes" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja shoes. Used in costumes. Gives you active skills. -->
@@ -527,6 +562,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23558" name="Ninja Hair Accessory" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja hair accessory in the form of a mask. Used in costumes. Gives you active skills. -->
@@ -539,6 +575,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23559" name="Ninja Top" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja top. Used in costumes. Gives you passive skills. -->
@@ -551,6 +588,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23560" name="Ninja Pants" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja pants. Used in costumes. Gives you passive skills. -->
@@ -563,6 +601,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23561" name="Ninja Gloves" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja gloves. Used in costumes. Gives you passive skills. -->
@@ -575,6 +614,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23562" name="Ninja Shoes" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja shoes. Used in costumes. Gives you passive skills. -->
@@ -587,6 +627,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23563" name="Ninja Hair Accessory" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja hair accessory in the form of a mask. Used in costumes. Gives you passive skills. -->
@@ -599,6 +640,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23564" name="Ninja Top Appearance Stone" additionalName="Modified Set Test" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Ninja Top. All armor types. Gives you active skills upon modification. -->
@@ -612,6 +654,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22810" level="1" /> <!-- Ninja Top Appearance Stone -->
 		</skills>
@@ -628,6 +671,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22811" level="1" /> <!-- Ninja Pants Appearance Stone -->
 		</skills>
@@ -644,6 +688,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22812" level="1" /> <!-- Ninja Gloves Appearance Stone -->
 		</skills>
@@ -660,6 +705,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22813" level="1" /> <!-- Ninja Shoes Appearance Stone -->
 		</skills>
@@ -676,6 +722,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22814" level="1" /> <!-- Ninja Hair Accessory Appearance Stone -->
 		</skills>
@@ -692,6 +739,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22815" level="1" /> <!-- Ninja Top Appearance Stone -->
 		</skills>
@@ -708,6 +756,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22816" level="1" /> <!-- Ninja Pants Appearance Stone -->
 		</skills>
@@ -724,6 +773,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22817" level="1" /> <!-- Ninja Gloves Appearance Stone -->
 		</skills>
@@ -740,6 +790,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22818" level="1" /> <!-- Ninja Shoes Appearance Stone -->
 		</skills>
@@ -756,6 +807,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22819" level="1" /> <!-- Ninja Hair Accessory Appearance Stone -->
 		</skills>
@@ -771,6 +823,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21352" level="1" /> <!-- Release Agathion's Seal - Hussar -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -785,6 +838,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22803" level="1" /> <!-- Fantasy Top Appearance Stone Pack -->
 		</skills>
@@ -798,6 +852,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22804" level="1" /> <!-- Fantasy Pants Appearance Stone Pack -->
 		</skills>
@@ -811,6 +866,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22805" level="1" /> <!-- Fantasy Gloves Appearance Stone Pack -->
 		</skills>
@@ -824,6 +880,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22806" level="1" /> <!-- Fantasy Shoes Appearance Stone Pack -->
 		</skills>
@@ -838,6 +895,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22794" level="1" /> <!-- Shining Accessory Pack -->
 		</skills>
@@ -852,6 +910,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="Appearance" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="23581" min="1" max="1" chance="100" /> <!-- Vorpal Light Armor Top Appearance Stone - Event -->
 			<item id="23582" min="1" max="1" chance="100" /> <!-- Vorpal Light Armor Pants Appearance Stone - Event -->
@@ -870,6 +929,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22827" level="1" /> <!-- Vorpal Top Appearance Stone -->
 		</skills>
@@ -885,6 +945,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22828" level="1" /> <!-- Vorpal Pants Appearance Stone -->
 		</skills>
@@ -900,6 +961,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22829" level="1" /> <!-- Vorpal Gloves Appearance Stone -->
 		</skills>
@@ -915,6 +977,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22830" level="1" /> <!-- Vorpal Shoes Appearance Stone -->
 		</skills>
@@ -930,6 +993,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22831" level="1" /> <!-- Vorpal Top Appearance Stone -->
 		</skills>
@@ -945,6 +1009,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22832" level="1" /> <!-- Vorpal Pants Appearance Stone -->
 		</skills>
@@ -960,6 +1025,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22833" level="1" /> <!-- Vorpal Gloves Appearance Stone -->
 		</skills>
@@ -975,6 +1041,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22834" level="1" /> <!-- Vorpal Shoes Appearance Stone -->
 		</skills>
@@ -988,6 +1055,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22835" level="1" /> <!-- Monster Weapon Appearance Stone Pack -->
 		</skills>
@@ -1002,6 +1070,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22836" level="1" /> <!-- Hellblade Appearance Stone -->
 		</skills>
@@ -1016,6 +1085,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22837" level="1" /> <!-- Claw of Destruction Appearance Stone -->
 		</skills>
@@ -1030,6 +1100,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22838" level="1" /> <!-- Butcher Blades Appearance Stone -->
 		</skills>
@@ -1044,6 +1115,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22839" level="1" /> <!-- Blades of Delusion Appearance Stone -->
 		</skills>
@@ -1058,6 +1130,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22840" level="1" /> <!-- Blood Brother Appearance Stone -->
 		</skills>
@@ -1072,6 +1145,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22841" level="1" /> <!-- Mardil's Fan Appearance Stone -->
 		</skills>
@@ -1088,6 +1162,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9187" level="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -1104,6 +1179,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9196" level="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -1117,6 +1193,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9207" level="1" /> <!-- Lucky Clover (R-grade) -->
 		</skills>

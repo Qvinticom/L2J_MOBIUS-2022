@@ -123,7 +123,7 @@
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -168,7 +168,7 @@
 		<!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick Healing Potion, Warrior's Major Healing Potion. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -234,7 +234,7 @@
 		<!-- Double-click to get 2 Special Pirate Fruit. With a bit of luck you may receive Pirate King's Treasure Chest. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -256,7 +256,7 @@
 		<!-- Double-click on the chest to get one of Pirates' treasures. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -301,7 +301,7 @@
 		<!-- Double-click to get one of the following: Refined Romantic Chapeau, Pirate King Hat, Circlet of Devil. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -309,7 +309,7 @@
 		<!-- Double-click to receive one of the following items: Queen Ant's Ring (15-day), Orfen's Earring (15-day), Ring of Core (15-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -332,7 +332,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -340,7 +340,7 @@
 		<!-- Instantly restores character's HP. Can't be used at full HP. -->
 		<set name="icon" val="icon.etc_bm_hero_red_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -387,7 +387,7 @@
 		<!-- Magic potion that quickly restores HP. Instant cooldown. Cannot be used when HP is full. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="180" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -411,7 +411,7 @@
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -423,7 +423,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -469,7 +469,7 @@
 		<!-- Double-click the chest to receive one of the Spellbooks, used after the 2nd Class Transfer. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -640,7 +640,7 @@
 	<item id="49555" name="Mold" type="EtcItem">
 		<!-- Goods delivered by Trader Damion in Gludio. Take them to Amora near Fellmere Lake. -->
 		<set name="icon" val="icon.etc_mold_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -651,7 +651,7 @@
 	<item id="49556" name="Amora's Receipt" type="EtcItem">
 		<!-- A receipt received from Amora. Take it to Trader Damion in Gludio. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -662,7 +662,7 @@
 	<item id="49557" name="Armor Trade Contract" type="EtcItem">
 		<!-- A contract, found on Turek Orc Commander. There's a Dwarven seal on it. Take it to the Moon Knight Jones. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -673,7 +673,7 @@
 	<item id="49558" name="Turek Orc Order" type="EtcItem">
 		<!-- An order to attack, found on Turek Orc Commander. Take it to the Moon Knight Jones. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -684,7 +684,7 @@
 	<item id="49559" name="Rolento's Bag" type="EtcItem">
 		<!-- This is the Equipment, which Trader Rolento has to deliver to Hierarch Ol Mahum. Take it to Hierarch Ol Mahum Gudzu. -->
 		<set name="icon" val="icon.pouch_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -695,7 +695,7 @@
 	<item id="49560" name="Iron Scale Guild Certificate" type="EtcItem">
 		<!-- A certificate insuring your membership in the Iron Scale Guild -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -705,7 +705,7 @@
 	<item id="49561" name="Turek Orc Invader Head" type="EtcItem">
 		<!-- Cut Turek Orc Invader Head. Collect 10 items and bring them to Hierarch Ol Mahum Gudzu. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -742,7 +742,7 @@
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -999,7 +999,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1095,7 +1095,7 @@
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1105,7 +1105,7 @@
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1191,7 +1191,7 @@
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1204,7 +1204,7 @@
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

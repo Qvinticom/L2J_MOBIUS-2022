@@ -3,14 +3,14 @@
 	<item id="45473" name="Blue Mackerel" type="EtcItem">
 		<!-- You can exchange it for various items through the Fishermen's Guild. -->
 		<set name="icon" val="icon.fish_normal_i04" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45481" name="Fresh Blue Mackerel" type="EtcItem">
 		<!-- You can exchange it for various items through the Fishermen's Guild. -->
 		<set name="icon" val="icon.fish_normal_i12" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -18,7 +18,7 @@
 		<!-- Double-click to receive an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>

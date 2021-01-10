@@ -176,7 +176,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="FINE_STEEL" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -312,7 +312,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -443,6 +443,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36514" name="Elcyum Crystal" type="EtcItem">
 		<!-- Rare mineral discovered in the deepest part of the Spine Mine area. Take 10 Elcyum Crystals to a Merchant of Mammon to receive Elcyum. -->
@@ -452,6 +453,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36515" name="Elcyum" type="EtcItem">
 		<!-- Rare mineral discovered in the deepest part of the Spine Mine area. Use the item to receive various abilities including item enchantment/ augmentation. -->
@@ -461,6 +463,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36516" name="Worn Leather" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -470,6 +473,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36517" name="Leather" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -479,6 +483,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36518" name="Durable Leather" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -488,6 +493,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36519" name="Quality Leather" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -497,6 +503,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36520" name="Exquisite Leather" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -505,6 +512,7 @@
 		<set name="price" val="3061008" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36521" name="Iron Ore" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -514,6 +522,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36522" name="Silver" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -523,6 +532,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36523" name="Adamantite" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -532,6 +542,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36524" name="Orichalcum" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -541,6 +552,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36525" name="Durandil" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -550,6 +562,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36526" name="Fiber" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -559,6 +572,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36527" name="Synthetic Fiber" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -568,6 +582,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36528" name="Metallic Fiber" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -577,6 +592,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36529" name="Quality Fiber" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -586,6 +602,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36530" name="Exquisite Fiber" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -594,6 +611,7 @@
 		<set name="price" val="2794824" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36531" name="Thread" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -603,6 +621,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36532" name="Thin Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -612,6 +631,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36533" name="Synthetic Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -621,6 +641,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36534" name="Durable Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -630,6 +651,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36535" name="Quality Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -639,6 +661,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36536" name="Worn Leather Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -648,6 +671,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36537" name="Leather Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -656,6 +680,7 @@
 		<set name="price" val="18296" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36538" name="Durable Leather Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -665,6 +690,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36539" name="Quality Leather Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -674,6 +700,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36540" name="Exquisite Leather Braid" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -682,6 +709,7 @@
 		<set name="price" val="12243984" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36541" name="Steel Wire" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -691,6 +719,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36542" name="Silver Wire" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -700,6 +729,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36543" name="Adamantite Wire" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -709,6 +739,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36544" name="Orichalcum Wire" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -718,6 +749,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36545" name="Durandil Wire" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -726,6 +758,7 @@
 		<set name="price" val="17168208" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36546" name="Weapon Fragment (Low-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -735,6 +768,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36547" name="Weapon Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -744,6 +778,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36548" name="Weapon Fragment (Mid-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -753,6 +788,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36549" name="Weapon Fragment (High-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -762,6 +798,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36550" name="Weapon Fragment (Top-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -771,6 +808,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36551" name="Armor Fragment (Low-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -780,6 +818,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36552" name="Armor Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -789,6 +828,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36553" name="Armor Fragment (Mid-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -798,6 +838,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36554" name="Armor Fragment (High-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -807,6 +848,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36555" name="Armor Fragment (Top-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -815,6 +857,7 @@
 		<set name="price" val="13574868" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36556" name="Accessory Gem (Low-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -824,6 +867,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36557" name="Accessory Gem" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -833,6 +877,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36558" name="Accessory Gem (Mid-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -842,6 +887,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36559" name="Accessory Gem (High-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -851,6 +897,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36560" name="Accessory Gem (Top-grade)" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -860,6 +907,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36561" name="Cokes" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -869,6 +917,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36562" name="Greater Cokes" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -878,6 +927,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36563" name="Synthetic Cokes" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -887,6 +937,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36564" name="Greater Synthetic Cokes" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -896,6 +947,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36565" name="Exquisite Synthetic Cokes" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -904,6 +956,7 @@
 		<set name="price" val="16369692" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36566" name="Friendship Cube Pack (Yum Yum)" additionalName="Event" type="EtcItem">
 		<!-- Lineage II is even better with friends! Friendship Cube (30-day), Friendship Summon Cube (30-day), two Yum Yum Candy Gift Boxes. -->
@@ -912,6 +965,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36567" name="Friendship Cube Pack (Nom Nom)" additionalName="Event" type="EtcItem">
 		<!-- Lineage II is even better with friends! Friendship Cube (30-day), Friendship Summon Cube (30-day) and two Nom Nom Candy Gift Boxes. -->
@@ -920,6 +974,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36568" name="Friendship Cube (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Lineage II is even better with friends! Double-click to obtain either a pass for entering an instance zone one additional time or an Unbind Scroll R/ R95/ R99 (weapon/ armor). Can be used only once a day. -->
@@ -930,6 +985,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="36569" name="Yum Yum Candy Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Lineage II for everyone! Double-click to obtain a Yum Yum Candy (30-day) that grants acquired XP/ SP +15%. Cannot be exchanged once open. A Nom Nom Candy Gift Box is included in the gift coupon provided when you paid for your account. -->
@@ -939,6 +995,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36570" name="Nom Nom Candy Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Lineage II for everyone! Double-click to obtain a Nom Nom Candy (30-day) that grants acquired XP/ SP +15%. Cannot be exchanged once open. A Yum Yum Candy Gift Box is included in the gift coupon provided when you paid for your account. -->
@@ -948,6 +1005,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36571" name="Yum Yum Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Have fun with your friends! Acquired XP/ SP +15%. The effect stacks with the effect of Nom Nom Candy. The effect does not stack if a candy of the same type is used. -->
@@ -959,6 +1017,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9834" level="1" /> <!-- Yum Yum Candy -->
 		</skills>
@@ -973,6 +1032,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9835" level="1" /> <!-- Nom Nom Candy -->
 		</skills>
@@ -987,6 +1047,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="9836" level="1" /> <!-- Friendship Cube -->
 		</skills>
@@ -1002,6 +1063,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22419" level="1" /> <!-- Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -1017,6 +1079,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22420" level="1" /> <!-- Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -1032,6 +1095,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22421" level="1" /> <!-- Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -1047,6 +1111,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22422" level="1" /> <!-- Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -1062,6 +1127,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22423" level="1" /> <!-- Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -1077,6 +1143,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22424" level="1" /> <!-- Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -1094,6 +1161,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22425" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -1111,6 +1179,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22426" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -1128,6 +1197,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22427" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -1145,6 +1215,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22428" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -1162,6 +1233,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22429" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -1179,6 +1251,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22430" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -1194,6 +1267,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22538" level="1" /> <!-- Armor Appearance Stone (R-grade) -->
 		</skills>
@@ -1208,6 +1282,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22539" level="1" /> <!-- Armor Appearance Stone (S-grade) -->
 		</skills>
@@ -1223,6 +1298,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22540" level="1" /> <!-- Armor Appearance Stone (A-grade) -->
 		</skills>
@@ -1238,6 +1314,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22541" level="1" /> <!-- Armor Appearance Stone (B-grade) -->
 		</skills>
@@ -1252,6 +1329,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22542" level="1" /> <!-- Armor Appearance Stone (C-grade) -->
 		</skills>
@@ -1266,6 +1344,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22543" level="1" /> <!-- Armor Appearance Stone (D-grade) -->
 		</skills>
@@ -1283,6 +1362,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22544" level="1" /> <!-- Blessed Armor Appearance Stone (R-grade) -->
 		</skills>
@@ -1300,6 +1380,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22545" level="1" /> <!-- Blessed Armor Appearance Stone (S-grade) -->
 		</skills>
@@ -1317,6 +1398,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22546" level="1" /> <!-- Blessed Armor Appearance Stone (A-grade) -->
 		</skills>
@@ -1334,6 +1416,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22547" level="1" /> <!-- Blessed Armor Appearance Stone (B-grade) -->
 		</skills>
@@ -1351,6 +1434,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22548" level="1" /> <!-- Blessed Armor Appearance Stone (C-grade) -->
 		</skills>
@@ -1368,6 +1452,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22549" level="1" /> <!-- Blessed Armor Appearance Stone (D-grade) -->
 		</skills>
@@ -1382,6 +1467,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22556" level="1" /> <!-- Equipment Restoration Stone (R-grade) -->
 		</skills>
@@ -1396,6 +1482,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22557" level="1" /> <!-- Equipment Restoration Stone (S-grade) -->
 		</skills>

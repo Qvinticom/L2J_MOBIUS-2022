@@ -3,14 +3,14 @@
 	<item id="28600" name="Spirit Stone - Elmore" type="EtcItem">
 		<!-- Legendary Spirit Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28601" name="Spirit Stone - Ferios" type="EtcItem">
 		<!-- Legendary Spirit Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -18,7 +18,7 @@
 		<!-- Double-click to obtain 1 Spirit Stone - Elmoreden/Aden/Elmore/Ferios randomly. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -42,7 +42,7 @@
 		<!-- Double-click to obtain a +10 Elmoreden Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -57,7 +57,7 @@
 		<!-- Double-click to obtain a +10 Aden Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -72,7 +72,7 @@
 		<!-- Double-click to obtain a +10 Elmore Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -87,7 +87,7 @@
 		<!-- Double-click to obtain a +10 Ferios Cloak - Legendary. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

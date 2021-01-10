@@ -9,6 +9,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37665" name="Refined Romantic Chapeau: Yellow" additionalName="33-day" type="Armor">
 		<!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +50%. Cooldown: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases Acquired XP/ SP by 5% for 20 minutes. Cooldown: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
@@ -19,6 +20,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37688" name="Valentine Dagger" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine Dagger form. -->
@@ -31,6 +33,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">685</stat>
 			<stat type="mAtk">414</stat>
@@ -51,6 +54,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -94,6 +98,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -114,6 +119,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -135,6 +141,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -159,6 +166,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1481</stat>
 			<stat type="mAtk">414</stat>
@@ -277,6 +285,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>

@@ -14,7 +14,7 @@
 		<!-- Double-click to obtain 1 of the Lv. 3 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -28,7 +28,7 @@
 		<!-- Double-click to obtain 1 of the Lv. 4 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -42,7 +42,7 @@
 		<!-- Double-click to obtain 1 of the Lv. 5 jewels. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -88,7 +88,7 @@
 		<!-- Double-click to receive a random item. -->
 		<set name="icon" val="icon.sayha2017_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -97,7 +97,7 @@
 		<set name="icon" val="icon.fishing_cube_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -106,7 +106,7 @@
 		<set name="icon" val="icon.fishing_cube_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -115,7 +115,7 @@
 		<set name="icon" val="icon.fishing_cube_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -124,7 +124,7 @@
 		<set name="icon" val="icon.fishing_cube_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -133,14 +133,14 @@
 		<set name="icon" val="icon.fishing_cube_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29413" name="Mysterious Magic Bait Coupon" type="EtcItem">
 		<!-- Can be exchanged through the Fisher Peeves in Heine for a Mysterious Magic Bait. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -205,7 +205,7 @@
 		<!-- Double-click the box to randomly obtain one of various items. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -213,7 +213,7 @@
 		<!-- Double-click to obtain a very rare item at a random rate. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -257,7 +257,7 @@
 		<!-- Dragon Enchantment Box. Double-click to botain 1 random item. -->
 		<set name="icon" val="BranchSys.Icon.Br_santa_gift_click_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -381,7 +381,7 @@
 		<!-- Supply items prepared by Sibi. Use to obtain an item. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -395,6 +395,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18568" level="7" />
 			<skill id="27439" level="4" />
@@ -408,6 +409,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18568" level="8" />
 			<skill id="27439" level="4" />
@@ -421,6 +423,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18568" level="9" />
 			<skill id="27439" level="4" />
@@ -434,6 +437,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18568" level="10" />
 			<skill id="27439" level="5" />
@@ -447,6 +451,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="7" />
 			<skill id="18567" level="2" />
@@ -460,6 +465,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="8" />
 			<skill id="18567" level="2" />
@@ -473,6 +479,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="9" />
 			<skill id="18567" level="2" />
@@ -486,6 +493,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="10" />
 			<skill id="18567" level="2" />
@@ -499,6 +507,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="7" />
 			<skill id="18567" level="2" />
@@ -512,6 +521,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="8" />
 			<skill id="18567" level="2" />
@@ -525,6 +535,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="9" />
 			<skill id="18567" level="2" />
@@ -538,6 +549,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="10" />
 			<skill id="18567" level="2" />
@@ -551,6 +563,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18565" level="7" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
@@ -563,6 +576,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18565" level="8" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
@@ -575,6 +589,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18565" level="9" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
@@ -587,6 +602,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18565" level="10" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
@@ -599,6 +615,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27440" level="7" /> <!-- Cat's Eye -->
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
@@ -612,6 +629,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27440" level="8" /> <!-- Cat's Eye -->
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
@@ -625,6 +643,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27440" level="9" /> <!-- Cat's Eye -->
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
@@ -638,6 +657,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27440" level="10" /> <!-- Cat's Eye -->
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
@@ -651,6 +671,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27442" level="7" /> <!-- Amethyst -->
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
@@ -664,6 +685,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27442" level="8" /> <!-- Amethyst -->
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
@@ -677,6 +699,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27442" level="9" /> <!-- Amethyst -->
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
@@ -690,6 +713,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27442" level="10" /> <!-- Amethyst -->
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
@@ -698,7 +722,7 @@
 	<item id="29463" name="Jewel Energy Fragment" type="EtcItem">
 		<!-- Take it to Shadai to exchange for Jewel Energy. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_jewel_energy_piece" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -706,21 +730,21 @@
 		<!-- Double-click to obtain 1 of the La Vie En Rose's Jewelry Box and for a chance to obtain 1 Jewel Energy Fragment. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29465" name="Cat's Eye's Energy" type="EtcItem">
 		<!-- Combine with a Lv. 5 Cat's Eye to obtian a Greater Cat's Eye. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29466" name="Amethyst's Energy" type="EtcItem">
 		<!-- Combine with a Lv. 5 Amethyst to obtian a Greater Amethyst. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -728,7 +752,7 @@
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -745,7 +769,7 @@
 	<item id="29469" name="Shiny Gem's Energy" type="EtcItem">
 		<!-- Combine with a Lv. 5 gem to obtain a Greater gem. It can be used on any Lv. 5 gem, regardless of type. -->
 		<set name="icon" val="icon.bm_blessed_jewel" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -754,7 +778,7 @@
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -769,7 +793,7 @@
 		<set name="icon" val="icon.bm_jewelbox_blue_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -784,7 +808,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -799,7 +823,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -814,7 +838,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -829,7 +853,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -844,7 +868,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -859,7 +883,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_dagger" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -870,7 +894,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_onehand_sword" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -881,7 +905,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_twohand_sword" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -892,7 +916,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_onehand_blunt" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -903,7 +927,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_fist" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -914,7 +938,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_spear" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -925,7 +949,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_bow" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -936,7 +960,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -947,7 +971,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -958,7 +982,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -969,7 +993,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -980,7 +1004,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -991,7 +1015,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1002,7 +1026,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1013,7 +1037,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1024,7 +1048,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1035,7 +1059,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1044,7 +1068,7 @@
 	<item id="29494" name="Paulina's Helios Weapon Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Exchange for a Paulina's Helios Weapon (30-day) through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1054,7 +1078,7 @@
 	<item id="29495" name="Paulina's Helios Armor Set Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Exchange for a Paulina's Helios Armor Set (30-day) through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

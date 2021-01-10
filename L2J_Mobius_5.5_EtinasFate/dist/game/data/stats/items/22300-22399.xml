@@ -570,7 +570,7 @@
 	<item id="22331" name="7th Anniversary Box" type="EtcItem">
 		<!-- Gift commemorating the 7th anniversary. Upon use, can receive various items such as Vitality maintaining potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -591,7 +591,7 @@
 	<item id="22332" name="7th Anniversary Bonus Gift Box" type="EtcItem">
 		<!-- Bonus gift given to commemorate the 7th anniversary. Upon use, can receive various items such as rocket gun hats. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -612,7 +612,7 @@
 	<item id="22333" name="Hero's Treasure Chest" type="EtcItem">
 		<!-- Contains a 90-day equipment set pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -654,7 +654,7 @@
 	<item id="22336" name="Pathfinder's Reward - Relief" type="EtcItem">
 		<!-- Gift for adventurers with an especially high contribution level in discovering the cause of the plague. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -686,7 +686,7 @@
 	<item id="22338" name="Extra Pass: Rim Kamaloka Pack" type="EtcItem">
 		<!-- Double-click to obtain an extra entrance pass that lets you enter Rim Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
@@ -815,7 +815,7 @@
 	<item id="22346" name="Enchanting Tool Box" type="EtcItem">
 		<!-- Box containing enchanting items. Double-click for a chance to receive an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -843,6 +843,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22349" name="Adventurer's Song - Eva's Protection" type="EtcItem">
 		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 1 hr. upon use. Can only be used by characters level 1 - 84. -->
@@ -858,6 +859,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22410" level="1" /> <!-- Adventurer's Song - Eva's Protection -->
 		</skills>
@@ -876,6 +878,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22411" level="1" /> <!-- Adventurer's Song - Eva's Protection -->
 		</skills>
@@ -889,6 +892,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="22352" name="Auction House Fee 100% Voucher" type="EtcItem">
 		<!-- Provides a 100% fee discount when using the auction house system. Must be in the inventory to be used. -->
@@ -899,6 +903,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="22353" name="Auction House Extension Voucher (15-day)" type="EtcItem">
 		<!-- When using the auction house system, you can register an item for 15 days but only pay for 7 days. Must be in the inventory to be used. -->
@@ -909,6 +914,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="22354" name="Auction House Extension Voucher (30-day)" type="EtcItem">
 		<!-- When using the auction house system, you can register an item for 30 days but only pay for 7 days. Must be in the inventory to be used. -->
@@ -919,6 +925,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="22355" name="Mount - Tame Princess Ant" additionalName="7-day" type="Armor">
 		<!-- Can mount a tame princess ant when equipped. 7-day. -->
@@ -932,6 +939,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21270" level="1" /> <!-- Ride Tame Princess Ant -->
@@ -949,6 +957,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21270" level="1" /> <!-- Ride Tame Princess Ant -->
@@ -966,6 +975,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22355" min="1" max="1" chance="100" /> <!-- Mount - Tame Princess Ant - 7-day -->
 		</capsuled_items>
@@ -982,6 +992,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22356" min="1" max="1" chance="100" /> <!-- Mount - Tame Princess Ant -->
 		</capsuled_items>
@@ -999,6 +1010,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22412" level="1" /> <!-- Weapon Conversion - One-handed Emerald Weapon -->
 		</skills>
@@ -1016,6 +1028,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22413" level="1" /> <!-- Weapon Conversion - Dual Emerald Weapons -->
 		</skills>
@@ -1036,6 +1049,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="590" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
@@ -1059,6 +1073,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1180" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
@@ -1078,6 +1093,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21271" level="1" /> <!-- Ride Black Bear -->
@@ -1095,6 +1111,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21271" level="1" /> <!-- Ride Black Bear -->
@@ -1116,6 +1133,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="accCombat">4.75</stat>
@@ -1141,6 +1159,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="450" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="accCombat">4.75</stat>
@@ -1161,6 +1180,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22368" name="Black Bear Hat" type="Armor">
 		<!-- Powerful-looking Black Bear Hat. Uses 2 hair accessory slots. -->
@@ -1176,6 +1196,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22369" name="Mount - Black Bear Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain a Mount - Black Bear (7-day). -->
@@ -1189,6 +1210,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22363" min="1" max="1" chance="100" /> <!-- Mount - Black Bear - 7-day -->
 		</capsuled_items>
@@ -1205,6 +1227,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22364" min="1" max="1" chance="100" /> <!-- Mount - Black Bear -->
 		</capsuled_items>
@@ -1221,6 +1244,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22365" min="1" max="1" chance="100" /> <!-- Black Bear Claw - 7-day -->
 		</capsuled_items>
@@ -1237,6 +1261,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22366" min="1" max="1" chance="100" /> <!-- Black Bear Claw -->
 		</capsuled_items>
@@ -1253,6 +1278,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22367" min="1" max="1" chance="100" /> <!-- Black Bear Hat - 7-day -->
 		</capsuled_items>
@@ -1269,6 +1295,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22368" min="1" max="1" chance="100" /> <!-- Black Bear Hat -->
 		</capsuled_items>
@@ -1285,6 +1312,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22376" name="Brilliant Beach Sun Cap" type="Armor">
 		<!-- Brilliant Beach Sun Cap that provides perfect protection from the sun. Uses 2 hair accessory slots. -->
@@ -1300,6 +1328,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22377" name="Stylish Straw Hat" additionalName="7-day" type="Armor">
 		<!-- Hat made of straw. 7-day. Uses 2 hair accessory slots. -->
@@ -1313,6 +1342,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22378" name="Stylish Straw Hat" type="Armor">
 		<!-- Hat made of straw. Uses 3 hair accessory slots. -->
@@ -1328,6 +1358,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22379" name="Brilliant Beach Sun Cap Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain a Brilliant Beach Sun Cap (7-day). -->
@@ -1341,6 +1372,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22375" min="1" max="1" chance="100" /> <!-- Brilliant Beach Sun Cap - 7-day -->
 		</capsuled_items>
@@ -1357,6 +1389,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22376" min="1" max="1" chance="100" /> <!-- Brilliant Beach Sun Cap -->
 		</capsuled_items>
@@ -1373,6 +1406,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22377" min="1" max="1" chance="100" /> <!-- Stylish Straw Hat - 7-day -->
 		</capsuled_items>
@@ -1389,6 +1423,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22378" min="1" max="1" chance="100" /> <!-- Stylish Straw Hat -->
 		</capsuled_items>
@@ -1405,6 +1440,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21272" level="1" /> <!-- Ride Halloween Witch's Broomstick -->
@@ -1422,6 +1458,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21272" level="1" /> <!-- Ride Halloween Witch's Broomstick -->
@@ -1433,7 +1470,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
+		<set name="material" val="PAPER" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -1460,6 +1497,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22416" level="1" /> <!-- Halloween Special Cookie -->
 		</skills>
@@ -1480,6 +1518,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1508,6 +1547,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="2040" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1532,6 +1572,7 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -1549,6 +1590,7 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -1565,6 +1607,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22392" name="Halloween Pumpkin Hat" additionalName="Event" type="Armor">
 		<!-- Scary pumpkin hat. It is a Halloween event reward item. Uses 2 hair accessory slots. -->
@@ -1580,6 +1623,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22393" name="Halloween Gift Box" additionalName="Event" type="EtcItem">
 		<!-- It is a Halloween event reward item. Has a chance of obtaining one of the Halloween series items. -->
@@ -1591,6 +1635,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22414" level="1" /> <!-- Halloween Gift Box -->
 		</skills>
@@ -1605,6 +1650,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="23346" level="1" /> <!-- Valakas Agathion Cute Trick -->
 			<skill id="21273" level="1" /> <!-- Release Agathion's Seal - Valakas -->
@@ -1622,6 +1668,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="23346" level="2" /> <!-- Valakas Agathion Cute Trick -->
 			<skill id="23347" level="2" /> <!-- Valakas Agathion Special Skill: Valakas' Blessing -->
@@ -1640,6 +1687,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="23346" level="3" /> <!-- Valakas Agathion Cute Trick -->
 			<skill id="23347" level="3" /> <!-- Valakas Agathion Special Skill: Valakas' Blessing -->
@@ -1658,6 +1706,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="23346" level="4" /> <!-- Valakas Agathion Cute Trick -->
 			<skill id="23347" level="4" /> <!-- Valakas Agathion Special Skill: Valakas' Blessing -->
@@ -1676,6 +1725,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="23346" level="5" /> <!-- Valakas Agathion Cute Trick -->
 			<skill id="23347" level="5" /> <!-- Valakas Agathion Special Skill: Valakas' Blessing -->
@@ -1694,6 +1744,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="23346" level="6" /> <!-- Valakas Agathion Cute Trick -->
 			<skill id="23347" level="6" /> <!-- Valakas Agathion Special Skill: Valakas' Blessing -->

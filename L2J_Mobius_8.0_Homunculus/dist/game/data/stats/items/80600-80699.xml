@@ -26,7 +26,7 @@
 		<!-- When used, increases Acquired XP/ SP by 30%, Acquired XP/ SP in Vitality state by 30%, and P. Atk./ P. Def./ M. Atk./ M. Def. by 15% for 30 min. -->
 		<set name="icon" val="icon.ev_15th_cake" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -47,7 +47,7 @@
 		<!-- Starts a fireworks display for 10 sec. The fireworks generates a magic number between 1 and 6, and using the item again during the fireworks adds further 1-6 to the first magic number generated. When the fireworks are over, you receive Anniversary Coin. -->
 		<set name="icon" val="icon.ev_15th_firework" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -105,7 +105,7 @@
 		<!-- Double-click to obtain a Lv. 3 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -115,7 +115,7 @@
 		<!-- Double-click to obtain a Lv. 1 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -136,6 +136,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="39350" level="1" /> <!-- Freya's Ice Rose -->
 		</skills>
@@ -144,7 +145,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Lindvior's Earring, Ramona's Fancy Earring, Helios' Majestic Earring, Orfen's Soul Earring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -154,7 +155,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Ring of Creation, Tauti's Ring, Earth Wyrm's Heart Ring, Baium's Soul Ring, Forgotten Ring of Core, Mimir's Soul Ring, Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -164,7 +165,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Harnak's Transformed Necklace, Frintezza's Soul Necklace. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -174,7 +175,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 8. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -184,7 +185,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a random +7 Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -194,7 +195,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a Lv. 5 jewel. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -204,7 +205,7 @@
 		<!-- Double-click to obtain one of the Dark/ Bloody Weapon Enhancement Stone. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -214,7 +215,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Talisman of Seven Signs, Seven Signs' Energy, Sealed Talisman of Insanity, Sealed Talisman of Longing, Energy of Longing. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -224,7 +225,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Lindvior's Earring, Blessed Valakas' Necklace, Blessed Antharas' Earring, Tauti's Ring, Frintezza's Necklace, Earth Wyrm's Heart Ring, Ring of Creation, Baium's Soul Ring, Harnak's Transformed Necklace, Orfen's Soul Earring, Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -234,7 +235,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 7. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -244,7 +245,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a random +3 Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -254,7 +255,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Superior Seed Bracelet Lv. 1, Top-grade Seed Bracelet. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -264,7 +265,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain one of the following items: Sealed Talisman of Insanity, Sealed Talisman of Longing, Energy of Longing. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -274,7 +275,7 @@
 		<!-- A reward for eating Anniversary Cake. Double-click to obtain a random +5 Zodiac Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -284,7 +285,7 @@
 		<!-- Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 1. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -326,7 +327,7 @@
 		<!-- Double-click to obtain Blessed Scroll: Enchant Circlet (1-3 pcs.). -->
 		<set name="icon" val="icon.bm_aden_renewal_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -338,7 +339,7 @@
 		<!-- Double-click to obtain one of the special items. -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -435,7 +436,7 @@
 	<item id="80636" name="Artifact Crystal" type="EtcItem">
 		<!-- Artifact crafting material. Take them to Alexandria at the Town of Giran Luxury Shop to craft artifacts. -->
 		<set name="icon" val="icon.bm_artifact_stone" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -576,6 +577,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80648" name="Artifact - P. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases P. Skill Critical Damage. Can be equipped in an attack artifact slot. When enchanted, increases P. Skill Critical Damage bonus. Only an attack artifact can be used as a material for upgrade. -->
@@ -584,6 +586,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80649" name="Artifact - M. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases M. Skill Critical Damage. Can be equipped in an attack artifact slot. When enchanted, increases M. Skill Critical Damage bonus. Only an attack artifact can be used as a material for upgrade. -->
@@ -592,6 +595,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80650" name="Artifact - Bow Resistance" additionalName="Protection" type="Armor">
 		<!-- An artifact that increases Bow/ Crossbow Resistance. Can be equipped in a defense artifact slot. When enchanted, increases Bow/ Crossbow Resistance bonus. Only a defense artifact can be used as a material for upgrade. -->
@@ -600,6 +604,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80651" name="Artifact - Dagger Resistance" additionalName="Protection" type="Armor">
 		<!-- An artifact that increases Dagger/ Dual Daggers Resistance. Can be equipped in a defense artifact slot. When enchanted, increases Dagger/ Dual Daggers Resistance bonus. Only a defense artifact can be used as a material for upgrade. -->
@@ -608,6 +613,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80652" name="Artifact - Sword Resistance" additionalName="Protection" type="Armor">
 		<!-- An artifact that increases One-handed/ Two-handed/ Dual/ Magic Sword Resistance. Can be equipped in a defense artifact slot. When enchanted, increases One-handed/ Two-handed/ Dual/ Magic Sword Resistance bonus. Only a defense artifact can be used as a material for upgrade. -->
@@ -616,6 +622,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80653" name="Artifact - Vitality Bonus" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Vitality bonus. Can be equipped in a support artifact slot. When enchanted, increases Vitality bonus. Only a support artifact can be used as a material for upgrade. -->
@@ -624,6 +631,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80654" name="Artifact - Vitality Consumption Rate Reduction" additionalName="Support" type="Armor">
 		<!-- An artifact that decreases Vitality Consumption. Can be equipped in a support artifact slot. When enchanted, increases Vitality Consumption bonus. Only a support artifact can be used as a material for upgrade. -->
@@ -632,6 +640,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80655" name="Artifact - Skill MP Consumption Reduction" additionalName="Support" type="Armor">
 		<!-- An artifact that decreases Skill MP Consumption. Can be equipped in a support artifact slot. When enchanted, increases Skill MP Consumption bonus. Only a support artifact can be used as a material for upgrade. -->
@@ -640,6 +649,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80656" name="Artifact - P. Def." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Def. Can be equipped in a balance artifact slot. When enchanted, increases P. Def. bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -648,6 +658,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80657" name="Artifact - M. Def." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Def. Can be equipped in a balance artifact slot. When enchanted, increases M. Def. bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -656,6 +667,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80658" name="Artifact - Normal Attack Critical Damage" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Critical Damage for standard attacks. Can be equipped in a balance artifact slot. When enchanted, increases Critical Damage for standard attacks. Only a balance artifact can be used as a material for upgrade. -->
@@ -664,6 +676,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80659" name="Artifact - P. Skill Critical Damage" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Skill Critical Damage. Can be equipped in a balance artifact slot. When enchanted, increases P. Skill Critical Damage bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -672,6 +685,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80660" name="Artifact - M. Skill Critical Damage" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Skill Critical Damage. Can be equipped in a balance artifact slot. When enchanted, increases M. Skill Critical Damage bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -680,6 +694,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80661" name="Artifact - Atk. Spd." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Atk. Spd. Can be equipped in a balance artifact slot. When enchanted, increases Atk. Spd. bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -688,6 +703,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80662" name="Artifact - Casting Spd." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Casting Spd. Can be equipped in a balance artifact slot. When enchanted, increases Casting Spd. bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -696,6 +712,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80663" name="Dragon Claw Box (Advanced)" type="EtcItem">
 		<!-- Double-click to obtain Antharas', Valakas', Lindvior's or Fafurion's high-grade weapon. -->
@@ -801,6 +818,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="39213" level="1" /> <!-- Royal Fish Soup -->
 		</skills>

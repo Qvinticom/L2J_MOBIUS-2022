@@ -11,6 +11,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9570" level="1" /> <!-- Heavenly P. Def. Cookie -->
 		</skills>
@@ -26,6 +27,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9571" level="1" /> <!-- Heavenly Magic Cookie -->
 		</skills>
@@ -41,6 +43,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9572" level="1" /> <!-- Heavenly CP Cookie -->
 		</skills>
@@ -55,6 +58,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="35999" min="10" max="10" chance="100" /> <!-- Heavenly P. Atk. Cookie -->
@@ -70,6 +74,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36000" min="10" max="10" chance="100" /> <!-- Heavenly P. Def. Cookie -->
@@ -85,6 +90,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36001" min="10" max="10" chance="100" /> <!-- Heavenly Magic Cookie -->
@@ -100,6 +106,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36002" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie -->
@@ -115,6 +122,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36008" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 			<item id="36009" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
@@ -130,6 +138,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9573" level="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -144,6 +153,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9574" level="1" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -161,6 +171,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9660" level="1" /> <!-- Heavenly P. Atk. Cookie (Event) -->
 		</skills>
@@ -178,6 +189,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9661" level="1" /> <!-- Heavenly P. Def. Cookie (Event) -->
 		</skills>
@@ -195,6 +207,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9662" level="1" /> <!-- Heavenly Magic Cookie (Event) -->
 		</skills>
@@ -212,6 +225,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9663" level="1" /> <!-- Heavenly CP Cookie (Event) -->
 		</skills>
@@ -226,6 +240,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36010" min="10" max="10" chance="100" /> <!-- Heavenly P. Atk. Cookie - Event -->
@@ -241,6 +256,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36011" min="10" max="10" chance="100" /> <!-- Heavenly P. Def. Cookie - Event -->
@@ -256,6 +272,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36012" min="10" max="10" chance="100" /> <!-- Heavenly Magic Cookie - Event -->
@@ -271,6 +288,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34082" min="10" max="10" chance="100" /> <!-- Heavenly Cocktail -->
 			<item id="36013" min="10" max="10" chance="100" /> <!-- Heavenly CP Cookie - Event -->
@@ -286,6 +304,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36019" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) - Event -->
 			<item id="36020" min="1" max="1" chance="100" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) - Event -->
@@ -302,6 +321,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9573" level="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -317,6 +337,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9574" level="1" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -332,6 +353,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36022" min="30" max="30" chance="100" /> <!-- Returning Hero's Health Potion -->
 			<item id="34082" min="6" max="6" chance="100" /> <!-- Heavenly Cocktail -->
@@ -354,6 +376,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9575" level="1" /> <!-- Returning Hero's Health Potion -->
 		</skills>
@@ -371,6 +394,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="33509" min="1" max="1" chance="100" /> <!-- Returning Hero's Shirt -->
 			<item id="33510" min="1" max="1" chance="100" /> <!-- Returning Hero's Belt -->
@@ -388,6 +412,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="9576" level="1" /> <!-- Returning Hero's Wondrous Cubic -->
 		</skills>
@@ -401,6 +426,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36026" name="High-grade Feather of Blessing - Kartia's Labyrinth" type="EtcItem">
 		<!-- Can resurrect right away if you die in Kartia's Labyrinth - Tainted Dimension Attacker. (XP Recovery Rate 100%) -->
@@ -411,6 +437,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36027" name="Lump of Fur" type="EtcItem">
 		<!-- Clan Production Request A - Provide the leather machine with a Lump of Fur from Cute Buffalo. -->
@@ -426,6 +453,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36028" name="Fruit Charged with Water" type="EtcItem">
 		<!-- Clan Production Request B - Deliver a Fruit Charged with Water to Impatient Mahum Chef. -->
@@ -439,6 +467,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36029" name="Fruit Charged with Fire" type="EtcItem">
 		<!-- Clan Production Request B - Deliver a Fruit Charged with Fire to Impatient Mahum Chef. -->
@@ -452,6 +481,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36030" name="Fruit Charged with Wind" type="EtcItem">
 		<!-- Clan Production Request B - Deliver a Fruit Charged with Wind to Impatient Mahum Chef. -->
@@ -465,6 +495,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36031" name="Multi Hammer - 1" type="Weapon">
 		<!-- Clan Handicraft Request A - When equipped, it provides you with a skill to repair or destroy a certain robot. -->
@@ -479,6 +510,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="9586" level="1" /> <!-- Repair Stone-gathering Robot -->
 		</skills>
@@ -503,6 +535,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">10</stat>
 			<stat type="pAtkSpd">379</stat>
@@ -524,6 +557,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="9659" level="1" /> <!-- Repair Energy Supplier -->
 		</skills>
@@ -548,6 +582,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">10</stat>
 			<stat type="pAtkSpd">379</stat>
@@ -569,6 +604,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="9591" level="1" /> <!-- Repair Toad Robot -->
 		</skills>
@@ -593,6 +629,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="9689" level="1" /> <!-- Activate Summon Device -->
 			<skill id="9593" level="1" /> <!-- Repair Robot of Repairs -->
@@ -617,6 +654,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="9594" level="1" /> <!-- Mysterious Incantation -->
 		</skills>
@@ -633,6 +671,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="9595" level="1" /> <!-- Mysterious Defense -->
 		</skills>
@@ -653,6 +692,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
@@ -676,6 +716,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
@@ -699,6 +740,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="accCombat">8</stat>
@@ -723,6 +765,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="accCombat">8</stat>
@@ -747,6 +790,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="accCombat">8</stat>
@@ -771,6 +815,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="accCombat">8</stat>
@@ -795,6 +840,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="rCrit">12</stat>
@@ -819,6 +865,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="accCombat">8</stat>
@@ -843,6 +890,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -870,6 +918,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3411" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
@@ -897,6 +946,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="8298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
@@ -926,6 +976,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="rCrit">12</stat>
@@ -944,6 +995,7 @@
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -966,6 +1018,7 @@
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="5000000" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -988,6 +1041,7 @@
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="15000000" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -1015,6 +1069,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36055" name="Scroll: Stronghold Siege (10-second)" type="EtcItem">
 		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 10 seconds. -->
@@ -1028,6 +1083,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9596" level="1" /> <!-- Stronghold Siege (10-second) -->
 		</skills>
@@ -1044,6 +1100,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9597" level="1" /> <!-- Stronghold Siege (20-second) -->
 		</skills>
@@ -1060,6 +1117,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9598" level="1" /> <!-- Stronghold Siege (30-second) -->
 		</skills>
@@ -1076,6 +1134,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9599" level="1" /> <!-- Stronghold Siege (40-second) -->
 		</skills>
@@ -1092,6 +1151,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9600" level="1" /> <!-- Stronghold Siege (50-second) -->
 		</skills>
@@ -1109,6 +1169,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9601" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" /> <!-- Sealing Agathion -->
@@ -1128,6 +1189,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9602" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1146,6 +1208,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9603" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1164,6 +1227,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9604" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1182,6 +1246,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9605" level="1" /> <!-- Release Agathion's Seal - Sin Eater -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
@@ -1199,6 +1264,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="9584" level="1" /> <!-- Verna's Vaccine -->
 		</skills>
@@ -1214,6 +1280,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="36067" name="Clearest Water" type="EtcItem">
 		<!-- The cleanest water received from the Lady of the Lake. Can be used on the Mother Tree at the center of Elven Village. -->
@@ -1227,6 +1294,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="9579" level="1" /> <!-- Clearest Water -->
 		</skills>
@@ -1243,6 +1311,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="9580" level="1" /> <!-- Brightest Light -->
 		</skills>
@@ -1259,6 +1328,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="9581" level="1" /> <!-- Purest Soul -->
 		</skills>
@@ -1275,6 +1345,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="9582" level="1" /> <!-- Fiercest Flame -->
 		</skills>
@@ -1291,6 +1362,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="9583" level="1" /> <!-- Fondest Heart -->
 		</skills>
@@ -1307,6 +1379,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Bypass" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="36073" name="Vaccine Box" type="EtcItem">
 		<!-- Box that contains a vaccine for Virus Laido. Deliver it to Dwarves who are sealing Spicula Clone Generator Brand. -->
@@ -1319,6 +1392,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="36074" name="Yin's Trace" type="EtcItem">
 		<!-- Fragments with information about Metusela Clone Generator Brand. When you collect them all, take them to Hesed of the Black Anvil Guild. -->
@@ -1332,6 +1406,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="36075" name="Yin's Enigmatic Trace" type="EtcItem">
 		<!-- Fragments from which information about Metusela Clone Generator Brand has been erased. When you collect them all, take them to Hesed of the Black Anvil Guild. -->
@@ -1345,6 +1420,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="36076" name="Verna's Red Gate Key" type="EtcItem">
 		<!-- Key for opening the Red Gate of Nornil Dungeon. -->
@@ -1356,6 +1432,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36077" name="Crumbs of Penitence" type="EtcItem">
 		<!-- Mark of Penitence. Sins scattered in the world have been made into crumbs by the Sin Eater. -->
@@ -1368,6 +1445,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36078" name="Certificate - Dual Class" type="EtcItem">
 		<!-- Spellbook that contains the concentrated power of a dual class. It is said that if you take it to Trandon in Talking Island Village, you can get the power in this spellbook. -->
@@ -1381,6 +1459,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="36079" name="Yum Yum Candy" type="EtcItem">
 		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
@@ -1391,6 +1470,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9618" level="1" /> <!-- Yum Yum Candy -->
 		</skills>
@@ -1404,6 +1484,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9619" level="1" /> <!-- Nom Nom Candy -->
 		</skills>
@@ -1420,6 +1501,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9620" level="1" /> <!-- Yummy Gift Box -->
 		</skills>
@@ -1435,6 +1517,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9617" level="1" /> <!-- Scroll of Escape: Isle of Souls - Dystopia -->
 		</skills>
@@ -1452,6 +1535,7 @@
 		<set name="time" val="43200" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9407" level="1" /> <!-- Release Agathion's Seal - Jang Heejin -->
 			<skill id="9412" level="1" /> <!-- Agathion Cute Trick - Jang Heejin -->
@@ -1477,6 +1561,7 @@
 		<set name="time" val="43200" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9408" level="1" /> <!-- Release Agathion's Seal - Jang Hyuk -->
 			<skill id="9413" level="1" /> <!-- Agathion Cute Trick - Jang Hyuk -->
@@ -1502,6 +1587,7 @@
 		<set name="time" val="43200" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9409" level="1" /> <!-- Release Agathion's Seal - Kim Sooro -->
 			<skill id="9414" level="1" /> <!-- Agathion Cute Trick - Kim Sooro -->
@@ -1527,6 +1613,7 @@
 		<set name="time" val="43200" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9410" level="1" /> <!-- Release Agathion's Seal - Park Jaebum -->
 			<skill id="9415" level="1" /> <!-- Agathion Cute Trick - Park Jaebum -->
@@ -1552,6 +1639,7 @@
 		<set name="time" val="43200" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9411" level="1" /> <!-- Release Agathion's Seal - Kim Shinyoung -->
 			<skill id="9416" level="1" /> <!-- Agathion Cute Trick - Kim Shinyoung -->
@@ -1577,6 +1665,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36083" min="1" max="1" chance="100" /> <!-- Star Agathion - Innocent Heejin -->
 		</capsuled_items>
@@ -1594,6 +1683,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36084" min="1" max="1" chance="100" /> <!-- Star Agathion - Dandy Hyuk -->
 		</capsuled_items>
@@ -1611,6 +1701,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36085" min="1" max="1" chance="100" /> <!-- Star Agathion - Powerful Sooro -->
 		</capsuled_items>
@@ -1628,6 +1719,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36086" min="1" max="1" chance="100" /> <!-- Star Agathion - Chic Jaebum -->
 		</capsuled_items>
@@ -1645,6 +1737,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36087" min="1" max="1" chance="100" /> <!-- Star Agathion - Cute Shinyoung -->
 		</capsuled_items>
@@ -1661,6 +1754,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="9628" level="1" /> <!-- Star Agathion's Gift Box -->
 		</skills>
@@ -1676,6 +1770,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9629" level="1" /> <!-- Vitality Replenishing Star Candy -->
 		</skills>
@@ -1693,6 +1788,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9630" level="1" /> <!-- Vitality Recovering Star Candy -->
 		</skills>
@@ -1710,6 +1806,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9631" level="1" /> <!-- Vitality Maintaining Star Candy -->
 		</skills>
@@ -1727,6 +1824,7 @@
 		<set name="time" val="10080" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9407" level="1" /> <!-- Release Agathion's Seal - Jang Heejin -->
 			<skill id="9412" level="1" /> <!-- Agathion Cute Trick - Jang Heejin -->
@@ -1752,6 +1850,7 @@
 		<set name="time" val="10080" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9408" level="1" /> <!-- Release Agathion's Seal - Jang Hyuk -->
 			<skill id="9413" level="1" /> <!-- Agathion Cute Trick - Jang Hyuk -->
@@ -1777,6 +1876,7 @@
 		<set name="time" val="10080" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9409" level="1" /> <!-- Release Agathion's Seal - Kim Sooro -->
 			<skill id="9414" level="1" /> <!-- Agathion Cute Trick - Kim Sooro -->

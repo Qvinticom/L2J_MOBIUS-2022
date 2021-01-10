@@ -36,7 +36,7 @@
 		<!-- A material for making a Bloodstained Zariche weapon. -->
 		<set name="icon" val="icon.zariche_blood" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
@@ -45,7 +45,7 @@
 		<!-- A material for making a Bloodstained Akamanah weapon. -->
 		<set name="icon" val="icon.aka_manaf_blood" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
@@ -269,7 +269,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -280,7 +280,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -291,7 +291,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -300,7 +300,7 @@
 	<item id="80917" name="Red Libra Request - Ivory Tower Crater" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Ivory Tower Crater. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -310,7 +310,7 @@
 	<item id="80918" name="Red Libra Request - Breka's Stronghold" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Breka's Stronghold. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -320,7 +320,7 @@
 	<item id="80919" name="Red Libra Request - Isle of Prayer" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Isle of Prayer. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -331,7 +331,7 @@
 		<!-- Water of Vitality containing the strength of the emperor. Recovers 1 of the 4 Vitality bars. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -349,7 +349,7 @@
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Atk. and P./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attribute Attack/ Resistance +100, damage +10%, P./ M. Skill Power +10%, acquired XP/ SP +30%, received damage -10%, Skill MP Consumption -15%. The effect remains after death. Cooldown: 5 min. Does not stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -360,7 +360,7 @@
 		<!-- A candy emanating Caring Rok's passion. Endows with passion and vitality. Recovers 1 of 4 vitality bars. Cannot be used in the Olympiad. No usage limit. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -384,7 +384,7 @@
 		<!-- When used, Confusion Resistance +5%, Received PvP Damage -3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -392,7 +392,7 @@
 		<!-- When used, Infection Resistance +5%, Received PvP Damage -3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -491,6 +491,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="80932" min="4" max="4" chance="100" /> <!-- Greater Zodiac Agathion's Book of Growth -->
 		</capsuled_items>
@@ -836,7 +837,7 @@
 		<set name="icon" val="icon.accessory_heaven_talisman" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
@@ -854,6 +855,7 @@
 		<set name="reuse_delay" val="30" />
 		<set name="weight" val="150" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13569" level="4" /> <!-- Talisman - Lilith -->
 		</skills>
@@ -914,7 +916,7 @@
 		<!-- A compound material for upgrading Talisman of Protection Lv. 9 or lower. In case of failure, Talisman of Protection is not destroyed, but its upgrade level is reset to a certain value. However, Energy of Protection is consumed in any case. -->
 		<set name="icon" val="icon.defend_talisman_energy" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -990,84 +992,84 @@
 	<item id="80972" name="Corroded Requiem Dual Sword Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_estia_i00_piece" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80973" name="Corroded Requiem Dual Dagger Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_aspeda_i00_piece" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80974" name="Corroded Requiem Dual Blunt Weapon Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.weapon_batista_i00_piece" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80975" name="Corroded Apocalypse Dual Sword Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80976" name="Corroded Apocalypse Dual Dagger Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80977" name="Corroded Apocalypse Dual Blunt Weapon Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80978" name="Corroded Specter Dual Sword Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80979" name="Corroded Specter Dual Dagger Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80980" name="Corroded Specter Dual Blunt Weapon Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80981" name="Corroded Helios Dual Sword Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80982" name="Corroded Helios Dual Dagger Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_shaper_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80983" name="Corroded Helios Dual Blunt Weapon Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_avenger_piece_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1077,7 +1079,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1323" />
@@ -1089,7 +1091,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1324" />
@@ -1101,7 +1103,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1325" />
@@ -1113,7 +1115,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1326" />
@@ -1125,7 +1127,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1327" />
@@ -1137,7 +1139,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1328" />
@@ -1149,7 +1151,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1329" />
@@ -1161,7 +1163,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1330" />
@@ -1173,7 +1175,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1331" />
@@ -1185,7 +1187,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1332" />
@@ -1197,7 +1199,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1333" />
@@ -1209,7 +1211,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1334" />

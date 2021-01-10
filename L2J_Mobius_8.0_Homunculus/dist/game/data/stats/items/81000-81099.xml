@@ -127,7 +127,7 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -136,7 +136,7 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -145,7 +145,7 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -154,7 +154,7 @@
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -171,7 +171,7 @@
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="reuse_delay" val="3600000" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -199,7 +199,7 @@
 		<!-- For 30 min., Acquired XP/ SP +100%. Does not stack with the Fall of the Dragon or Dandy's Home Run Ball effects. Cooldown: 5 min. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -543,7 +543,7 @@
 		<!-- Double click to recover a certain amount of Vitality. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -575,315 +575,315 @@
 	<item id="81055" name="Legendary Dye Lv. 1 (P. Atk.)" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81056" name="Legendary Dye Lv. 2 (P. Atk.)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81057" name="Legendary Dye Lv. 3 (P. Atk.)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81058" name="Legendary Dye Lv. 4 (P. Atk.)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81059" name="Legendary Dye Lv. 5 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Atk. +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81060" name="Legendary Dye Lv. 6 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Atk. +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81061" name="Legendary Dye Lv. 7 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Atk. +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81062" name="Legendary Dye Lv. 8 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Atk. +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81063" name="Legendary Dye Lv. 9 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Atk. +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81064" name="Legendary Dye Lv. 10 (P. Atk.)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, P. Atk. +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81065" name="Legendary Dye Lv. 1 (Standard Attack Critical Damage)" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81066" name="Legendary Dye Lv. 2 (Standard Attack Critical Damage)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81067" name="Legendary Dye Lv. 3 (Standard Attack Critical Damage)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81068" name="Legendary Dye Lv. 4 (Standard Attack Critical Damage)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81069" name="Legendary Dye Lv. 5 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, Critical Damage for standard attacks +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81070" name="Legendary Dye Lv. 6 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +6, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, Critical Damage for standard attacks +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81071" name="Legendary Dye Lv. 7 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +7, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, Critical Damage for standard attacks +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81072" name="Legendary Dye Lv. 8 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +8, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, Critical Damage for standard attacks +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81073" name="Legendary Dye Lv. 9 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +9, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, Critical Damage for standard attacks +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81074" name="Legendary Dye Lv. 10 (Standard Attack Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +10, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, Critical Damage for standard attacks +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81075" name="Legendary Dye Lv. 1 (P. Skill Critical Damage)" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81076" name="Legendary Dye Lv. 2 (P. Skill Critical Damage)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81077" name="Legendary Dye Lv. 3 (P. Skill Critical Damage)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81078" name="Legendary Dye Lv. 4 (P. Skill Critical Damage)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81079" name="Legendary Dye Lv. 5 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Critical Damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81080" name="Legendary Dye Lv. 6 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Critical Damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81081" name="Legendary Dye Lv. 7 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Critical Damage +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81082" name="Legendary Dye Lv. 8 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Critical Damage +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81083" name="Legendary Dye Lv. 9 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Critical Damage +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81084" name="Legendary Dye Lv. 10 (P. Skill Critical Damage)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, P. Skill Critical Damage +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81085" name="Legendary Dye Lv. 1 (P. Skill Power)" additionalName="STR +3, DEX +3" type="EtcItem">
 		<!-- STR +3, DEX +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81086" name="Legendary Dye Lv. 2 (P. Skill Power)" additionalName="STR +3, DEX +3, CHA +1" type="EtcItem">
 		<!-- STR +3, DEX +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81087" name="Legendary Dye Lv. 3 (P. Skill Power)" additionalName="STR +4, DEX +4, CHA +2" type="EtcItem">
 		<!-- STR +4, DEX +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81088" name="Legendary Dye Lv. 4 (P. Skill Power)" additionalName="STR +4, DEX +5, CHA +3" type="EtcItem">
 		<!-- STR +4, DEX +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81089" name="Legendary Dye Lv. 5 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +4" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Power +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81090" name="Legendary Dye Lv. 6 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Power +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81091" name="Legendary Dye Lv. 7 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, P. Skill Power +2%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81092" name="Legendary Dye Lv. 8 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Power +3%, damage +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81093" name="Legendary Dye Lv. 9 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -2%, P. Skill Power +4%, damage +2%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81094" name="Legendary Dye Lv. 10 (P. Skill Power)" additionalName="STR +5, DEX +5, CHA +5" type="EtcItem">
 		<!-- STR +5, DEX +5, CHA +5. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -3%, P. Skill Power +5%, damage +3%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_holy" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81095" name="Legendary Dye Lv. 1 (M. Atk.)" additionalName="INT +3, WIT +3" type="EtcItem">
 		<!-- INT +3, WIT +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81096" name="Legendary Dye Lv. 2 (M. Atk.)" additionalName="INT +3, WIT +3, CHA +1" type="EtcItem">
 		<!-- INT +3, WIT +3, CHA +1. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81097" name="Legendary Dye Lv. 3 (M. Atk.)" additionalName="INT +4, WIT +4, CHA +2" type="EtcItem">
 		<!-- INT +4, WIT +4, CHA +2. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81098" name="Legendary Dye Lv. 4 (M. Atk.)" additionalName="INT +4, WIT +5, CHA +3" type="EtcItem">
 		<!-- INT +4, WIT +5, CHA +3. Take it to the Dye Merchant in town to get a symbol that boosts your abilities. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81099" name="Legendary Dye Lv. 5 (M. Atk.)" additionalName="INT +5, WIT +5, CHA +4" type="EtcItem">
 		<!-- INT +5, WIT +5, CHA +4. Take it to the Dye Merchant in town to get a symbol that boosts your abilities: Received Damage -1%, M. Atk. +1%. Effects of two identical symbols do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_fire" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

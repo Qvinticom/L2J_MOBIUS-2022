@@ -10,6 +10,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="34901" name="Proof of Alliance" type="EtcItem">
 		<!-- Can be exchanged for Marks of Battle with Mulia in the Town of Rune. -->
@@ -20,6 +21,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="34902" name="Proof of Aspiration" type="EtcItem">
 		<!-- Can be exchanged for Marks of Battle with Mulia in the Town of Rune. -->
@@ -30,6 +32,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="34903" name="Mysterious Shadow" type="EtcItem">
 		<!-- Item that can only be used in the Ceremony of Chaos Arena. Upon use, becomes hidden and decreases Speed by 30%. -->
@@ -43,6 +46,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 		<cond addName="1" msgId="113">
 			<player instanceId="224,225,226,227" />
 		</cond>
@@ -62,6 +66,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 		<cond addName="1" msgId="113">
 			<player instanceId="224,225,226,227" />
 		</cond>
@@ -79,6 +84,7 @@
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="handler" val="SummonItems" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="LEATHER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -96,6 +102,7 @@
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="handler" val="SummonItems" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="LEATHER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -113,6 +120,7 @@
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="handler" val="SummonItems" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="LEATHER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -132,6 +140,7 @@
 		<set name="weight" val="10" />
 		<set name="handler" val="SummonItems" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="material" val="LEATHER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -150,6 +159,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="34910" name="Aku's Mark" type="EtcItem">
 		<!-- Mark received for helping Aku. It is need to enter the Tauti battle (limited). -->
@@ -162,6 +172,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="34911" name="Ruler's Authority" additionalName="Not in Use" type="EtcItem">
 		<!-- A reward for the winner of the race held in the Mysterious Mansion. Max HP/ MP/ CP +500, Weight Limit +12,000, PvP damage +5%, Damage Reflection Resistance +5, 6 Attribute Resistance +10, Inventory Slots +1, Received PvP damage -6%. Increases HP/ MP Recovery Rate. Available only during the tournament. -->
@@ -172,6 +183,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="34912" name="Summoning Stone" type="EtcItem">
 		<!-- Summoning Stone that can be used during the Noblesse quest. Double-click on it to summon the Water Spirit Lanya. -->
@@ -183,6 +195,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="9445" level="1" /> <!-- Summoning Stone -->
 		</skills>
@@ -199,6 +212,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="34914" name="Transport Goods - Aden" type="EtcItem">
 		<!-- A box stolen from the Captain of the Revolutionaries. Double-click to obtain Transport Goods. -->
@@ -211,6 +225,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9465" level="1" /> <!-- Bundle -->
 		</skills>
@@ -226,6 +241,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9465" level="1" /> <!-- Bundle -->
 		</skills>
@@ -240,6 +256,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34917" name="Greater Transport Box" type="EtcItem">
 		<!-- Box for the supply shipment. Take it to the revolutionaries to get a reward. -->
@@ -251,6 +268,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34918" name="Treasure Chest of the King of Aden" type="EtcItem">
 		<!-- Precious treasure chest being delivered to the King of Aden. Double-click on it to obtain a reward. -->
@@ -263,6 +281,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9464" level="1" /> <!-- Treasure Chest of the King of Aden -->
 		</skills>
@@ -277,6 +296,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34920" name="Treasure Chest of the King of Rune" type="EtcItem">
 		<!-- Precious treasure chest being delivered to the King of Rune. Double-click on it to obtain a reward. -->
@@ -289,6 +309,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9466" level="1" /> <!-- Treasure Chest of the King of Rune -->
 		</skills>
@@ -310,6 +331,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1520" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="19020" level="1" /> <!-- Revolution Eruption -->
 			<skill id="19021" level="1" /> <!-- Revolution Strike -->
@@ -342,6 +364,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1520" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="19023" level="1" /> <!-- Revolution Multi-Shot -->
 			<skill id="19024" level="1" /> <!-- Revolution Tornado Shot -->
@@ -375,6 +398,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1080" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="19026" level="1" /> <!-- Revolution Blast -->
 			<skill id="19027" level="1" /> <!-- Revolution Destruction -->
@@ -408,6 +432,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1080" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="19029" level="1" /> <!-- Revolution Self CP Recovery -->
 			<skill id="19030" level="1" /> <!-- Revolution CP Recovery -->
@@ -430,7 +455,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -463,7 +488,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -502,6 +527,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9417" level="1" /> <!-- Dimension Keeper's Blue Box -->
 		</skills>
@@ -518,6 +544,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9418" level="1" /> <!-- Dimension Keeper's Red Box -->
 		</skills>
@@ -534,6 +561,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9419" level="1" /> <!-- Dimension Keeper's Golden Box -->
 		</skills>
@@ -550,6 +578,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9420" level="1" /> <!-- Dimension Traveler's Blue Box -->
 		</skills>
@@ -566,6 +595,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9421" level="1" /> <!-- Dimension Traveler's Red Box -->
 		</skills>
@@ -582,6 +612,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9422" level="1" /> <!-- Dimension Traveler's Golden Box -->
 		</skills>
@@ -597,6 +628,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9423" level="1" /> <!-- Campaign Reward Pouch -->
 		</skills>
@@ -612,6 +644,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9424" level="1" /> <!-- Campaign Reward Pouch -->
 		</skills>
@@ -629,6 +662,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9407" level="1" /> <!-- Release Agathion's Seal - Jang Heejin -->
 			<skill id="9412" level="1" /> <!-- Agathion Cute Trick - Jang Heejin -->
@@ -658,6 +692,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9408" level="1" /> <!-- Release Agathion's Seal - Jang Hyuk -->
 			<skill id="9413" level="1" /> <!-- Agathion Cute Trick - Jang Hyuk -->
@@ -687,6 +722,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9409" level="1" /> <!-- Release Agathion's Seal - Kim Sooro -->
 			<skill id="9414" level="1" /> <!-- Agathion Cute Trick - Kim Sooro -->
@@ -716,6 +752,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9410" level="1" /> <!-- Release Agathion's Seal - Park Jaebum -->
 			<skill id="9415" level="1" /> <!-- Agathion Cute Trick - Park Jaebum -->
@@ -745,6 +782,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="9411" level="1" /> <!-- Release Agathion's Seal - Kim Shinyoung -->
 			<skill id="9416" level="1" /> <!-- Agathion Cute Trick - Kim Shinyoung -->
@@ -773,6 +811,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9234" level="1" /> <!-- Scroll: Enchant Hair Accessory -->
 		</skills>
@@ -786,6 +825,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="34942" name="Lv. 2 Giant Dye Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the Giant's Dyes Lv. 2: STR/ DEX/ CON/ INT/ WIT/ MEN. -->
@@ -798,6 +838,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9425" level="1" /> <!-- Lv. 2 Giant Dye Pack -->
 		</skills>
@@ -813,6 +854,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9426" level="1" /> <!-- Lv. 2 Legendary Dye Pack -->
 		</skills>
@@ -828,6 +870,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9427" level="1" /> <!-- Lv. 2 Ancient Dye Pack -->
 		</skills>
@@ -843,6 +886,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9428" level="1" /> <!-- Lv. 3 Giant Dye Pack -->
 		</skills>
@@ -858,6 +902,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9429" level="1" /> <!-- Lv. 3 Legendary Dye Pack -->
 		</skills>
@@ -873,6 +918,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9430" level="1" /> <!-- Lv. 3 Ancient Dye Pack -->
 		</skills>
@@ -888,6 +934,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9437" level="1" /> <!-- Scroll of Escape Pack: Village -->
 		</skills>
@@ -902,6 +949,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9438" level="1" /> <!-- Letter Collector's Gift (9th Anniversary) -->
 		</skills>
@@ -917,6 +965,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9431" level="1" /> <!-- Lv. 4 Giant Dye Pack -->
 		</skills>
@@ -932,6 +981,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9432" level="1" /> <!-- Lv. 4 Legendary Dye Pack -->
 		</skills>
@@ -947,6 +997,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9433" level="1" /> <!-- Lv. 4 Ancient Dye Pack -->
 		</skills>
@@ -962,6 +1013,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9434" level="1" /> <!-- Lv. 5 Giant Dye Pack -->
 		</skills>
@@ -977,6 +1029,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9435" level="1" /> <!-- Lv. 5 Legendary Dye Pack -->
 		</skills>
@@ -991,6 +1044,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9436" level="1" /> <!-- Lv. 5 Ancient Dye Pack -->
 		</skills>
@@ -1002,6 +1056,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34957" name="Kbaldir's Letter" type="EtcItem">
 		<!-- Letter sent by Kbaldir at the Keucereus Alliance Base to the Seed of Hellfire. Bring it to Sizrak in the Seed of Hellfire. -->
@@ -1015,6 +1070,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34958" name="Unstable Petra" type="EtcItem">
 		<!-- Life energy of the Zofans that contain energy of fire. But it is unstable. Bring it to Aku. -->
@@ -1027,6 +1083,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34959" name="Petra" type="EtcItem">
 		<!-- Life energy of the Zofans that contain energy of fire. Bring it to Aku. -->
@@ -1039,6 +1096,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34960" name="Tauti's Shard" type="EtcItem">
 		<!-- Tauti's small shard. Bring it to Fergason. -->
@@ -1051,6 +1109,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34961" name="Helping Seed" type="EtcItem">
 		<!-- Helping Herb. Double-click on it in a siege area to plant a Tree of Helping. -->
@@ -1064,6 +1123,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9444" level="1" /> <!-- Helping Seed -->
 		</skills>
@@ -1078,6 +1138,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34963" name="Mysterious Seed" type="EtcItem">
 		<!-- Mysterious plant seed that is need to make the flower bloom. -->
@@ -1088,6 +1149,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34964" name="White Chrysanthemum" type="EtcItem">
 		<!-- White chrysanthemum. Legend says that this flower blooms like a field of white snow when a pure soul receives salvation from the gods. -->
@@ -1099,6 +1161,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34965" name="Daylily" type="EtcItem">
 		<!-- Yellow flower called a "Daylily." It symbolizes the alleviation of sorrow and grief. -->
@@ -1110,6 +1173,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34966" name="Peony" type="EtcItem">
 		<!-- Red flower called a "Peony." It once represented wealth and honor. -->
@@ -1121,6 +1185,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34967" name="Petunia" type="EtcItem">
 		<!-- Pink flower called a "Petunia." It symbolizes a calm heart. -->
@@ -1132,6 +1197,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34968" name="Pansy" type="EtcItem">
 		<!-- Purple flower called Pansy. It symbolizes thoughts and care about special person. -->
@@ -1143,6 +1209,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34969" name="Iris" type="EtcItem">
 		<!-- Blue flower called Iris. It symbolizes the bringing of good news. -->
@@ -1154,6 +1221,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34970" name="Kuon" type="EtcItem">
 		<!-- Black flower called a "Kuon." It is sometimes misunderstood as the flower of death because of its color. It actually symbolizes paying tribute to the dead. -->
@@ -1165,6 +1233,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34971" name="Deadman's Flesh" type="EtcItem">
 		<!-- Chunk of dead flesh obtained after defeating the undead monsters in the Guillotine Fortress. Collect them and bring them to Warden Roderik of the Guillotine Fortress. -->
@@ -1176,6 +1245,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34972" name="Harlan's Orders" type="EtcItem">
 		<!-- Orders sent from Guard Harlan in the Town of Dion to Watchman Endrigo of the Guillotine Fortress. Double-click on it for more information. -->
@@ -1187,6 +1257,7 @@
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34973" name="Endrigo's Report" type="EtcItem">
 		<!-- Investigative document that Watchman Endrigo of the Guillotine Fortress asks to be delivered to his comrade Warden Roderik. Double-click on it for more information. -->
@@ -1198,6 +1269,7 @@
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34974" name="Mandragora Stem" type="EtcItem">
 		<!-- Mandragora Stem obtained after defeating the mandragoras in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
@@ -1209,6 +1281,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34975" name="Mandragora Root" type="EtcItem">
 		<!-- Mandragora Stem obtained after defeating the mandragoras in the Guillotine Fortress. Bring to the Dark Elf Dadphyna in the Guillotine Fortress. -->
@@ -1220,6 +1293,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34976" name="Disabled Petra" type="EtcItem">
 		<!-- Disabled Petra obtained through hunting in the Seed of Hellfire. Take it to Sizrak in the area. -->
@@ -1233,6 +1307,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34977" name="Saw-toothed Wheel of Hellfire" type="EtcItem">
 		<!-- Item collected in the Seed of Hellfire. Contains energy of the Seed of Hellfire. If you take them to Special Product Broker Kirklan at the Kucereus clan outpost, you can exchange them for useful items. -->
@@ -1245,6 +1320,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34978" name="Scroll of Escape - Hot Springs" type="EtcItem">
 		<!-- Scroll of Escape to the Hot Springs area. Can only be used in the Soul Testing quest. Can move to the special hot springs area for the quest mission. Cannot be received again. -->
@@ -1260,6 +1336,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1281,6 +1358,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1302,6 +1380,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1323,6 +1402,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1344,6 +1424,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1360,6 +1441,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34984" name="Talisman - Infinity" type="Armor">
 		<!-- Max HP/ MP/ CP +100, P./ M. Accuracy +1, P./ M. Evasion +1, Vampiric Rage effect +2%, Atk. Spd./ Casting Spd. +10. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. <Enhancing>. Can be upgraded to Talisman of Destruction through Seed Talisman Manager. -->
@@ -1371,6 +1453,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13390" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Infinity -->
 			<skill id="13384" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Infinity -->
@@ -1387,6 +1470,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13391" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Destruction -->
 			<skill id="13385" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Destruction -->
@@ -1403,6 +1487,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13392" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Annihilation -->
 			<skill id="13386" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Annihilation -->
@@ -1419,6 +1504,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13393" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Hellfire -->
 			<skill id="13387" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Hellfire -->
@@ -1435,6 +1521,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13394" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Desire -->
 			<skill id="13388" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Desire -->
@@ -1451,6 +1538,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13395" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Longing -->
 			<skill id="13389" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Longing -->
@@ -1466,6 +1554,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="34991" name="Corroded Armor Fragment" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -1476,6 +1565,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="34992" name="Corroded Accessory Gem" type="EtcItem">
 		<!-- Not in use anymore. Can be sold to any trader. -->
@@ -1486,6 +1576,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="34993" name="Greater Cokes" type="EtcItem">
 		<!-- Used as an ingredient to make A-grade or S-grade items. -->
@@ -1496,6 +1587,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="34994" name="Gemstone" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -1505,6 +1597,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="34995" name="Hair Accessory Exchange Certificate" type="EtcItem">
 		<!-- Certificate that can be exchanged with the Aden Reconstruction Society Member or Leader for Rabbit Ears, Raccoon Ears, Cat Ears, Romantic Chapeau, Angel Circlet, Demon Circlet, Pirate's Eyepatch, Outlaw's Eyepatch, Eyepatch, Party Hat, Refined Angel Ring, or Refined Devil Horns. -->
@@ -1513,6 +1606,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34996" name="Cloak of Radiant Light" type="Armor">
 		<!-- A cloak that symbolizes glory and light. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, LUC +4 CHA +4, Received damage -15%. Enables Blessed teleportation to the castle. Cannot be used by chaotic characters. Available only to Clan Leader. Cannot be used in the Olympiad and on the dimensional servers. -->
@@ -1520,7 +1614,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -1557,7 +1651,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="CLOAK" />
@@ -1602,6 +1696,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8878" level="1" /> <!-- Tauti's Special Ability: One-handed Axe -->
 			<skill id="9459" level="1" /> <!-- Tauti's Wrath -->
@@ -1631,6 +1726,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8879" level="1" /> <!-- Tauti's Special Ability: Axe -->
 			<skill id="9459" level="1" /> <!-- Tauti's Wrath -->

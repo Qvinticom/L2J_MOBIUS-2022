@@ -56,7 +56,7 @@
 		<!-- A specialty traded by the Red Libra Merchants. Restores 1/ 2 of a Vitality Gauge bar. Cooldown is 1 min. Cannot be used in Olympiad. No weekly usage limit. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -73,7 +73,7 @@
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -102,7 +102,7 @@
 		<!-- Double-click to earn a specialty item of the Red Libra Merchants. -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -112,7 +112,7 @@
 		<!-- Double-click to receive supply items prepared by the Red Libra Merchants. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -122,7 +122,7 @@
 		<!-- Double-click to receive a gift from the Red Libra Merchants. -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -132,7 +132,7 @@
 		<!-- Double-click to earn one of the Enchant Scroll items prepared by the Red Libra Merchants. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -580,7 +580,7 @@
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -589,7 +589,7 @@
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -597,7 +597,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain one of the level 5 Gems. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -605,7 +605,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain one of the Dark/ Bloody Helios Enhancement Stones. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -613,7 +613,7 @@
 		<!-- A gift box earned for restoring the Exhausted Elysium Buffalo the most. Double-click to obtain one of the R99 Royal Purple, Royal Red, Royal White, or Royal Blue Save Tickets. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -658,7 +658,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48766" name="Panda Outfit" type="Armor">
@@ -666,7 +666,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="maxMp">120</stat>
@@ -680,6 +680,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17701" level="7" />
 		</skills>
@@ -692,6 +693,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17701" level="8" />
 		</skills>
@@ -704,6 +706,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17701" level="9" />
 		</skills>
@@ -716,6 +719,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17701" level="10" />
 		</skills>
@@ -728,6 +732,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18715" level="1" /> <!-- Greater Ruby -->
 			<skill id="18716" level="1" /> <!-- Greater Ruby -->
@@ -742,6 +747,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18715" level="1" /> <!-- Greater Ruby -->
 			<skill id="18716" level="1" /> <!-- Greater Ruby -->
@@ -756,6 +762,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18715" level="1" /> <!-- Greater Ruby -->
 			<skill id="18716" level="1" /> <!-- Greater Ruby -->
@@ -770,6 +777,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18715" level="1" /> <!-- Greater Ruby -->
 			<skill id="18716" level="1" /> <!-- Greater Ruby -->
@@ -784,6 +792,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
 			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
@@ -798,6 +807,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
 			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
@@ -812,6 +822,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
 			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
@@ -826,6 +837,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
 			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
@@ -840,6 +852,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17704" level="7" />
 		</skills>
@@ -852,6 +865,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17704" level="8" />
 		</skills>
@@ -864,6 +878,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17704" level="9" />
 		</skills>
@@ -876,6 +891,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17704" level="10" />
 		</skills>
@@ -888,6 +904,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17705" level="7" />
 		</skills>
@@ -900,6 +917,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17705" level="8" />
 		</skills>
@@ -912,6 +930,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17705" level="9" />
 		</skills>
@@ -924,6 +943,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17705" level="10" />
 		</skills>
@@ -936,6 +956,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17825" level="7" />
 		</skills>
@@ -948,6 +969,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17825" level="8" />
 		</skills>
@@ -960,6 +982,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17825" level="9" />
 		</skills>
@@ -972,6 +995,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17825" level="10" />
 		</skills>
@@ -984,6 +1008,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17823" level="7" />
 		</skills>
@@ -996,6 +1021,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17823" level="8" />
 		</skills>
@@ -1008,6 +1034,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17823" level="9" />
 		</skills>
@@ -1020,6 +1047,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17823" level="10" />
 		</skills>
@@ -1032,6 +1060,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17708" level="7" />
 		</skills>
@@ -1044,6 +1073,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17708" level="8" />
 		</skills>
@@ -1056,6 +1086,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17708" level="9" />
 		</skills>
@@ -1068,6 +1099,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17708" level="10" />
 		</skills>
@@ -1080,6 +1112,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17709" level="7" />
 		</skills>

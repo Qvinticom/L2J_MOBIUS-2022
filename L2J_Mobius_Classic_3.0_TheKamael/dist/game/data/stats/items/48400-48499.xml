@@ -7,6 +7,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="48401" name="Item Unseal Scroll" additionalName="15-minute" type="EtcItem">
 		<!-- Use to unseal a sealed item. -->
@@ -15,6 +16,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="48411" name="Item Unseal Scroll (15-min) Box" additionalName="15-minute" type="EtcItem">
 		<!-- Double-click to obtain 10 Item Unseal Scrolls (15-min). -->
@@ -26,5 +28,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

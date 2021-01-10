@@ -9,6 +9,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39501" name="Scroll of Escape: Fortuna" type="EtcItem">
 		<!-- Teleports you to someone who can let you into Fortuna. -->
@@ -19,6 +20,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39502" name="Scroll of Escape: Isle of Souls" type="EtcItem">
 		<!-- Teleports you to Isle of Souls. -->
@@ -29,6 +31,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39503" name="Scroll of Escape: Nornil's Cave" type="EtcItem">
 		<!-- Teleports you to Nornil's Cave. -->
@@ -39,6 +42,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39504" name="Scroll of Escape: Seal of Shilen" type="EtcItem">
 		<!-- Teleports you to Seal of Shilen. -->
@@ -49,6 +53,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39505" name="Scroll of Escape: The Cemetery" type="EtcItem">
 		<!-- Teleports you to The Cemetery. -->
@@ -59,6 +64,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39506" name="Scroll of Escape: Guillotine Fortress" type="EtcItem">
 		<!-- Teleports you to Guillotine Fortress. -->
@@ -69,6 +75,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39507" name="Scroll of Escape: Orbis Temple" type="EtcItem">
 		<!-- Teleports you to the entrance of Orbis Temple. -->
@@ -79,6 +86,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39508" name="Mark of Gratitude" type="EtcItem">
 		<!-- Obtained by killing Mahum's demonic spirit. Take this to Refugee Leo. -->
@@ -90,6 +98,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39509" name="Barrier Enforcer Key" type="EtcItem">
 		<!-- A key to activating the Barrier Enforcer in the Sea of Spores. -->
@@ -101,6 +110,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39510" name="Akum's Memory Fragment" type="EtcItem">
 		<!-- Try using this at the Forsaken Plains for a clue hidden in Akum's memories. -->
@@ -112,6 +122,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39511" name="Normal Fragment" type="EtcItem">
 		<!-- Obtained by killing the cursed giant Akum. -->
@@ -123,6 +134,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39512" name="Shine Stone Fragment" type="EtcItem">
 		<!-- A strangely familiar stone you gained through the Life Energy Repository in the Fields of Massacre. -->
@@ -134,6 +146,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39513" name="Scroll of Escape: Heine" type="EtcItem">
 		<!-- Teleports you to Heine. -->
@@ -144,6 +157,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39514" name="Scroll of Escape: Valley of Saints" type="EtcItem">
 		<!-- Teleports you to Valley of Saints. -->
@@ -157,6 +171,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -176,6 +191,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -195,6 +211,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -214,6 +231,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -231,6 +249,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39519" name="Gereth's Recommendation" type="EtcItem">
 		<!-- Written by Gereth so that you may be trained on administrative grounds. -->
@@ -242,6 +261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39520" name="Apprentice Support Box" type="EtcItem">
 		<!-- Something you need to give to Grakon of the warehouse. It contains many things Ertheia would need. -->
@@ -253,6 +273,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39521" name="Grakon's Note" type="EtcItem">
 		<!-- A note Grakon has asked you to give Evna the weapon merchant. He claims it contains the name of an item she needs to pick up. -->
@@ -264,6 +285,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39522" name="Weapon Supply Box" type="EtcItem">
 		<!-- Something Evna the weapon merchant has asked you to deliver to Sivanthe the forest patrol. -->
@@ -275,6 +297,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39523" name="Armor Supply Box" type="EtcItem">
 		<!-- Something Denya the armor merchant has asked you to deliver to Sivanthe the forest patrol. -->
@@ -286,6 +309,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39524" name="Grocery Supply Box" type="EtcItem">
 		<!-- Something Pelu the grocer has asked you to deliver to Sivanthe the forest patrol. -->
@@ -297,6 +321,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39525" name="Accessory Supply Box" type="EtcItem">
 		<!-- Something Ceri the accessory merchant has asked you to deliver to Sivanthe the forest patrol. -->
@@ -308,6 +333,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39526" name="Unnamed Relics" type="EtcItem">
 		<!-- A box of relics left behind by those who were killed by monsters when Faeron was invaded. -->
@@ -319,6 +345,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39527" name="Empty Honey Jar" type="EtcItem">
 		<!-- An empty jar for you to put the honey of the honeybees in the Whispering Woods. -->
@@ -330,6 +357,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39528" name="Sweet Honey" type="EtcItem">
 		<!-- Sweet honey from the honeybees of the Whispering Woods. Works great on colds. Bring them all to Leira the forest patrol. -->
@@ -341,6 +369,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39529" name="Nutritious Meat" type="EtcItem">
 		<!-- Savory meat from Kiku in the Whispering Woods. Good nutrition is important when sick! Take this to Leira the forest patrol. -->
@@ -352,6 +381,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39530" name="Peculiar Mushroom Spore" type="EtcItem">
 		<!-- Peculiar Muhroom Spore from Evolved Growlers. Take them to Milone the forest patrol and see if they're poisonous. -->
@@ -363,6 +393,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39531" name="Leafie Leaf" type="EtcItem">
 		<!-- Leaf from the Leafies of the Whispering Woods. Take it to Maestro Dolkin. -->
@@ -374,6 +405,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39532" name="Treant Leaf" type="EtcItem">
 		<!-- Leaf from the Treants of the Whispering Woods. Looks really stiff. Take this to Maestro Dolkin. -->
@@ -385,6 +417,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39533" name="Secret Ingredient" type="EtcItem">
 		<!-- Leaf from Karaphon at the deepest reaches of the Whispering Woods. Looks like a fish scale. Take this to Maestro Dolkin. -->
@@ -396,6 +429,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39534" name="Dolkin's Report" type="EtcItem">
 		<!-- A report from Maestro Dolkin, who is conducting research in the Whispering Woods. Take this to Karla at the administrative grounds. -->
@@ -407,6 +441,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39535" name="Wind Spirit Realm's Relic" type="EtcItem">
 		<!-- Seems to be something from the Wind Spirit Realm. -->
@@ -418,6 +453,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39536" name="Navari's Mark" type="EtcItem">
 		<!-- Mark given by Queen Navari herself. She says a man named Kain has an identical item. -->
@@ -429,6 +465,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39537" name="Prophecy Machine Fragment" type="EtcItem">
 		<!-- Part of a machine used by ancient Ertheia to record prophecies. Double-click to look closer. -->
@@ -439,6 +476,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39538" name="Kain's Prophecy Machine Fragment" type="EtcItem">
 		<!-- Part of a machine used by ancient Ertheia to record prophecies, carried by Kain Van Halter. -->
@@ -450,6 +488,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39539" name="Ertheia Prophecy Machine" type="EtcItem">
 		<!-- Machine used by ancient Ertheia to record prophecies. Not all prophecies have been restoreds. Double-click to look closer. -->
@@ -460,6 +499,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39540" name="Ertheia Prophecy Machine" type="EtcItem">
 		<!-- Machine used by ancient Ertheia to record prophecies, its contents have been partially restored by Ivory Tower's Arkenias. Double-click to look closer. -->
@@ -471,6 +511,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="handler" val="Book" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39541" name="Ertheia Prophecy Machine" type="EtcItem">
 		<!-- Machine used by ancient Ertheia to record prophecies, its contents have been restored by Lich King Icarus, a necromancer in Hardin's Academy. Double-click to look closer. -->
@@ -481,6 +522,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39542" name="Atelia" type="EtcItem">
 		<!-- A rare gem only found in the Wind Spirit Realm. It emits powerful energy. -->
@@ -492,6 +534,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39543" name="Atelia" type="EtcItem">
 		<!-- A rare gem only found in the Wind Spirit Realm. It emits a strangely powerful energy. -->
@@ -503,6 +546,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39544" name="Crude Philopher's Stone" type="EtcItem">
 		<!-- Given by Arkenias. Gather up ingredients around Ivory Tower and create a Restoration Regeant. -->
@@ -514,6 +558,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39545" name="Crystal Eye" type="EtcItem">
 		<!-- Ingredient for Restoration Reagent. -->
@@ -525,6 +570,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39546" name="Broken Stone of Purity" type="EtcItem">
 		<!-- Ingredient for Restoration Reagent. -->
@@ -536,6 +582,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39547" name="Miracle Drug of Enchantment" type="EtcItem">
 		<!-- Ingredient for Restoration Reagent. -->
@@ -547,6 +594,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39548" name="Empty Regeant Flask" type="EtcItem">
 		<!-- Empty Flask for Restoration Reagent. -->
@@ -558,6 +606,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39549" name="Restoration Regeant" type="EtcItem">
 		<!-- A regeant that can restore the records of the Ertheia's magic device that were erased with magic. -->
@@ -569,6 +618,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39550" name="Athrea's Belongings" type="EtcItem">
 		<!-- Something out of Athrea's box. Take these all to her. -->
@@ -580,6 +630,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39551" name="White Rose" type="EtcItem">
 		<!-- A white rose given by Lich King Icarus. Stain it red with Eva's blood. -->
@@ -591,6 +642,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39552" name="Crimson Rose" type="EtcItem">
 		<!-- A white rose that has been stained red with Eva's blood. Take it to Lich King Icarus. -->
@@ -602,6 +654,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39553" name="Minstrel's Scroll of Escape: Talking Island" type="EtcItem">
 		<!-- A scroll given as a gift. Takes you to Talking Island. -->
@@ -613,6 +666,7 @@
 		<set name="weight" val="30" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17944" level="1" /> <!-- Scroll of Escape: Talking Island Village -->
 		</skills>
@@ -627,6 +681,7 @@
 		<set name="weight" val="30" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17945" level="1" /> <!-- Escape - Hunter's Village Teleport -->
 		</skills>
@@ -641,6 +696,7 @@
 		<set name="weight" val="30" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17946" level="1" /> <!-- Scroll of Escape: Magmeld -->
 		</skills>
@@ -655,6 +711,7 @@
 		<set name="weight" val="30" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17947" level="1" /> <!-- Scroll of Escape: Town of Rune -->
 		</skills>
@@ -668,6 +725,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17948" level="1" /> <!-- Scroll of Escape: Town of Aden -->
 		</skills>
@@ -676,11 +734,13 @@
 		<!-- Not in Use -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39559" name="High-grade Tallisman Ingredient Box" type="EtcItem">
 		<!-- Not in Use -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39560" name="Low-grade Wind Dye Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Lv. 1 - 3 CHA/ LUC Dye. -->
@@ -691,6 +751,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="39386" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy LUC Dye - LUC +1 -->
 			<item id="39381" min="1" max="1" chance="30" /> <!-- Lv. 1 Windy CHA Dye - CHA +1 -->
@@ -710,6 +771,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="39389" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy LUC Dye - LUC +4 -->
 			<item id="39384" min="1" max="1" chance="50" /> <!-- Lv. 4 Windy CHA Dye - CHA +4 -->
@@ -726,6 +788,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="39390" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy LUC Dye - LUC +5 -->
 			<item id="39385" min="1" max="1" chance="50" /> <!-- Lv. 5 Windy CHA Dye - CHA +5 -->
@@ -742,6 +805,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="39564" min="1" max="1" chance="25" /> <!-- Talisman- Wind Pack - P. Skill Critical Damage -->
 			<item id="39565" min="1" max="1" chance="25" /> <!-- Talisman- Wind Pack - M. Skill Critical Damage -->
@@ -759,6 +823,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39568" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage - Passive -->
 		</capsuled_items>
@@ -773,6 +838,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39569" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
 		</capsuled_items>
@@ -787,6 +853,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39570" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
 		</capsuled_items>
@@ -801,6 +868,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39571" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance - Active -->
 		</capsuled_items>
@@ -815,6 +883,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="duration" val="10800" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="17973" level="1" /> <!-- Talisman - Wind: P. Critical Damage -->
 		</skills>
@@ -829,6 +898,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="duration" val="10800" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="17974" level="1" /> <!-- Talisman - Wind: M. Critical Damage -->
 		</skills>
@@ -843,6 +913,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="duration" val="10800" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="17975" level="1" /> <!-- Talisman - Wind: Defense -->
 		</skills>
@@ -857,6 +928,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="duration" val="10800" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="17976" level="1" /> <!-- Talisman - Wind: Debuff Resistance -->
 		</skills>
@@ -872,6 +944,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8864" level="7" /> <!-- Talisman - Insanity -->
 			<skill id="17978" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Infinity -->
@@ -887,6 +960,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17980" level="1" /> <!-- Unseal Talisman - Insanity -->
 		</skills>
@@ -1137,6 +1211,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="39589" name="Nom Nom Candy Box" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Yum Yum Candy Box. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
@@ -1146,6 +1221,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="39590" name="Yum Yum Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- XP/ SP Gain +15%. Stacks with Nom Nom Candy, but not with another Yum Yum Candy. -->
@@ -1155,6 +1231,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39591" name="Nom Nom Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- XP/ SP Gain +15%. Stacks with Yum Yum Candy, but not with another Nom Nom Candy. -->
@@ -1164,6 +1241,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39592" name="Tempest Stone" type="EtcItem">
 		<!-- Precious material gained by dissecting the material world's elements. Used for the greatest of alchemical feats, this can also be double-clicked to gain either a Low/ Mid/ High-grade Windy Dye Pack or Talisman - Wind. -->
@@ -1173,7 +1251,7 @@
 		<set name="commissionItemType" val="GEMSTONE" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
@@ -1257,6 +1335,7 @@
 		<set name="icon" val="icon.etc_water_crystal_1_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39598" name="Dimensional Teleport Orb" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -1264,6 +1343,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="weight" val="30" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39599" name="Empty Soul Bottle" type="EtcItem">
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
@@ -1271,5 +1351,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="weight" val="30" />
+		<set name="material" val="PAPER" />
 	</item>
 </list>

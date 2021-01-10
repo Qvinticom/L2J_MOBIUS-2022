@@ -4,7 +4,7 @@
 		<!-- Material to craft Artifacts. Can craft Artifact - Received Damage Reduction When Immobilized, Artifact - P. Skill Power, Artifact - M. Skill Power through Alexandria in Giran Town Luxury Shop. -->
 		<set name="icon" val="icon.bm_artifact_peice" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -94,70 +94,70 @@
 	<item id="80005" name="Letter - V" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_v_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80006" name="Letter - I" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_i_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80007" name="Letter - C" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_c_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80008" name="Letter - T" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_t_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80009" name="Letter - O" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_o_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80010" name="Letter - R" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_r_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80011" name="Letter - Y" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_y_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80012" name="Letter - K" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_k_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80013" name="Letter - E" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_e_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80014" name="Letter - A" additionalName="Event" type="EtcItem">
 		<!-- Gather letters to complete Victory Korea or Korea, and take them to Event NPC Lineage II to get a reward. -->
 		<set name="icon" val="icon.etc_alphabet_a_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1068,7 +1068,7 @@
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Warrior's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_p" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1077,7 +1077,7 @@
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Wizard's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_m" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1086,7 +1086,7 @@
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/ Knight's Harmony Lv. 2/ War Drum, Marching Drum, Soothing Drum/ Elemental Resistance, Resistance Debuff, and Mental Attack Resistance effects for 60 min.. <Note> The Emperor s Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />

@@ -10,6 +10,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="23346" level="7" /> <!-- Valakas Agathion Cute Trick -->
 			<skill id="23347" level="7" /> <!-- Valakas Agathion Special Skill: Valakas' Blessing -->
@@ -28,6 +29,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="22418" level="1" /> <!-- Root of Evolution -->
 		</skills>
@@ -44,6 +46,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22419" level="1" /> <!-- Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -60,6 +63,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22420" level="1" /> <!-- Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -76,6 +80,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22421" level="1" /> <!-- Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -92,6 +97,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22422" level="1" /> <!-- Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -108,6 +114,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22423" level="1" /> <!-- Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -124,6 +131,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22424" level="1" /> <!-- Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -140,6 +148,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22425" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -156,6 +165,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22426" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -172,6 +182,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22427" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -188,6 +199,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22428" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -204,6 +216,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22429" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -220,6 +233,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22430" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -236,6 +250,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22431" level="1" /> <!-- Weapon Restoration Stone (R-grade) -->
 		</skills>
@@ -252,6 +267,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22432" level="1" /> <!-- Weapon Restoration Stone (S-grade) -->
 		</skills>
@@ -268,6 +284,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22433" level="1" /> <!-- Weapon Restoration Stone (A-grade) -->
 		</skills>
@@ -284,6 +301,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22434" level="1" /> <!-- Weapon Restoration Stone (B-grade) -->
 		</skills>
@@ -300,6 +318,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22435" level="1" /> <!-- Weapon Restoration Stone (C-grade) -->
 		</skills>
@@ -316,6 +335,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22436" level="1" /> <!-- Weapon Restoration Stone (D-grade) -->
 		</skills>
@@ -332,6 +352,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22437" level="1" /> <!-- (Test) Emerald Sword Modification Stone -->
 		</skills>
@@ -346,6 +367,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22422" name="Holiday Tree - Globe Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
@@ -357,6 +379,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22423" name="Holiday Tree - Garland Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
@@ -368,6 +391,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22424" name="Holiday Tree - Bow Ornament" additionalName="Event" type="EtcItem">
 		<!-- Essential ornament for a Holiday Tree. Bring it to Santa Girl to help her decorate the Holiday Trees. -->
@@ -379,6 +403,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22425" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +10%. For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fists, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus is greatly increased (more so in case of blessed weapons). Cannot be used for weapons enchanted to +30 or higher. -->
@@ -392,6 +417,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22438" level="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -408,6 +434,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22439" level="1" /> <!-- Ancient Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -443,6 +470,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22441" level="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -459,6 +487,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22442" level="1" /> <!-- Ancient Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -493,6 +522,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22444" level="1" /> <!-- Radiant Fortuna Box -->
 		</skills>
@@ -508,6 +538,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22445" level="1" /> <!-- Radiant Fortuna Cube -->
 		</skills>
@@ -560,6 +591,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22466" level="1" /> <!-- Scroll of Escape -->
 		</skills>
@@ -576,6 +608,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22467" level="1" /> <!-- Scroll of Escape: Castle -->
 		</skills>
@@ -592,6 +625,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22468" level="1" /> <!-- Scroll of Escape: Clan Hall -->
 		</skills>
@@ -608,6 +642,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22469" level="1" /> <!-- Blessed Scroll of Escape -->
 		</skills>
@@ -624,6 +659,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22470" level="1" /> <!-- Blessed Scroll of Escape: Castle -->
 		</skills>
@@ -640,6 +676,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22471" level="1" /> <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skills>
@@ -656,6 +693,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22472" level="1" /> <!-- Blessed Scroll of Resurrection (Pet) -->
 		</skills>
@@ -672,6 +710,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
@@ -688,6 +727,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
@@ -704,6 +744,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
@@ -720,6 +761,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="21247" min="5" max="5" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
@@ -736,6 +778,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="21251" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
@@ -752,6 +795,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="21212" min="5" max="5" chance="100" /> <!-- Vitality Recovering Potion -->
 		</capsuled_items>
@@ -768,6 +812,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22448" level="5" /> <!-- Soulshot Medium Pack (R-grade) -->
 		</skills>
@@ -784,6 +829,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22449" level="10" /> <!-- Soulshot Large Pack (R-grade) -->
 		</skills>
@@ -800,6 +846,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22450" level="5" /> <!-- Blessed Spiritshot Medium Pack (R-grade) -->
 		</skills>
@@ -816,6 +863,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22451" level="10" /> <!-- Blessed Spiritshot Large Pack (R-grade) -->
 		</skills>
@@ -832,6 +880,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22435" min="10" max="10" chance="100" /> <!-- Scroll of Escape -->
 			<item id="22438" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape -->
@@ -849,6 +898,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22436" min="10" max="10" chance="100" /> <!-- Scroll of Escape: Castle -->
 			<item id="22439" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape: Castle -->
@@ -866,6 +916,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22437" min="10" max="10" chance="100" /> <!-- Scroll of Escape: Clan Hall -->
 			<item id="22440" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape: Clan Hall -->
@@ -883,6 +934,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22442" min="1" max="1" chance="100" /> <!-- Improved Bronze Bracelet -->
 		</capsuled_items>
@@ -899,6 +951,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22443" min="1" max="1" chance="100" /> <!-- Improved Steel Bracelet -->
 		</capsuled_items>
@@ -915,6 +968,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22441" min="3" max="3" chance="100" /> <!-- Blessed Scroll of Resurrection (Pet) -->
 		</capsuled_items>
@@ -931,6 +985,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22402" min="1" max="1" chance="100" /> <!-- R-grade Weapon Appearance Stone -->
 			<item id="22414" min="1" max="1" chance="100" /> <!-- R-grade Weapon Restoration Stone -->
@@ -948,6 +1003,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22403" min="1" max="1" chance="100" /> <!-- S-grade Weapon Appearance Stone -->
 			<item id="22415" min="1" max="1" chance="100" /> <!-- S-grade Weapon Restoration Stone -->
@@ -965,6 +1021,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22404" min="1" max="1" chance="100" /> <!-- A-grade Weapon Appearance Stone -->
 			<item id="22416" min="1" max="1" chance="100" /> <!-- A-grade Weapon Restoration Stone -->
@@ -982,6 +1039,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22405" min="1" max="1" chance="100" /> <!-- B-grade Weapon Appearance Stone -->
 			<item id="22417" min="1" max="1" chance="100" /> <!-- B-grade Weapon Restoration Stone -->
@@ -999,6 +1057,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22406" min="1" max="1" chance="100" /> <!-- C-grade Weapon Appearance Stone -->
 			<item id="22418" min="1" max="1" chance="100" /> <!-- C-grade Weapon Restoration Stone -->
@@ -1016,6 +1075,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22407" min="1" max="1" chance="100" /> <!-- D-grade Weapon Appearance Stone -->
 			<item id="22419" min="1" max="1" chance="100" /> <!-- D-grade Weapon Restoration Stone -->
@@ -1033,6 +1093,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22408" min="1" max="1" chance="100" /> <!-- Blessed R-grade Weapon Appearance Stone -->
 			<item id="22414" min="1" max="1" chance="100" /> <!-- R-grade Weapon Restoration Stone -->
@@ -1050,6 +1111,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22409" min="1" max="1" chance="100" /> <!-- Blessed S-grade Weapon Appearance Stone -->
 			<item id="22415" min="1" max="1" chance="100" /> <!-- S-grade Weapon Restoration Stone -->
@@ -1067,6 +1129,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22410" min="1" max="1" chance="100" /> <!-- Blessed A-grade Weapon Appearance Stone -->
 			<item id="22416" min="1" max="1" chance="100" /> <!-- A-grade Weapon Restoration Stone -->
@@ -1084,6 +1147,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22411" min="1" max="1" chance="100" /> <!-- Blessed B-grade Weapon Appearance Stone -->
 			<item id="22417" min="1" max="1" chance="100" /> <!-- B-grade Weapon Restoration Stone -->
@@ -1101,6 +1165,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22412" min="1" max="1" chance="100" /> <!-- Blessed C-grade Weapon Appearance Stone -->
 			<item id="22418" min="1" max="1" chance="100" /> <!-- C-grade Weapon Restoration Stone -->
@@ -1118,6 +1183,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22413" min="1" max="1" chance="100" /> <!-- Blessed D-grade Weapon Appearance Stone -->
 			<item id="22419" min="1" max="1" chance="100" /> <!-- D-grade Weapon Restoration Stone -->
@@ -1135,6 +1201,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="21039" min="5" max="5" chance="100" /> <!-- Superior HP Replenishing Potion -->
 		</capsuled_items>
@@ -1151,6 +1218,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="21040" min="5" max="5" chance="100" /> <!-- Superior Quick HP Replenishing Potion -->
 		</capsuled_items>
@@ -1167,6 +1235,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22348" min="3" max="3" chance="100" /> <!-- Adventurer's Song - Energy of Recovery -->
 		</capsuled_items>
@@ -1181,6 +1250,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22453" level="1" /> <!-- Talisman Pack -->
 		</skills>
@@ -1197,6 +1267,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="34620" min="3" max="3" chance="100" /> <!-- Heavenly Cocktail -->
 		</capsuled_items>
@@ -1210,6 +1281,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22452" level="1" /> <!-- Santa Girl's Gift Box -->
 		</skills>
@@ -1222,6 +1294,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="22477" name="Santa Girl's Cloak" additionalName="1-day (Event)" type="Armor">
 		<!-- Warm and festive winter cloak to celebrate the holidays. Expires after 1 day. -->
@@ -1236,6 +1309,7 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
+		<set name="material" val="CLOTH" />
 		<cond>
 				<player level="80" />
 		</cond>
@@ -1261,6 +1335,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="material" val="CLOTH" />
 		<cond>
 				<player level="80" />
 		</cond>
@@ -1285,6 +1360,7 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="CLOTH" />
 		<cond>
 				<player level="80" />
 		</cond>
@@ -1308,6 +1384,7 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
 		<cond>
 				<player level="80" />
 		</cond>
@@ -1330,6 +1407,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
@@ -1345,6 +1423,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="21600" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
@@ -1360,6 +1439,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
@@ -1375,6 +1455,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3323" level="1" /> <!-- Bronze Bracelet -->
 		</skills>
@@ -1390,6 +1471,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
@@ -1405,6 +1487,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="21600" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
@@ -1420,6 +1503,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
@@ -1435,6 +1519,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
 		</skills>
@@ -1450,6 +1535,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
@@ -1465,6 +1551,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="21600" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
@@ -1480,6 +1567,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
@@ -1495,6 +1583,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3325" level="1" /> <!-- Mithril Bracelet -->
 		</skills>
@@ -1512,6 +1601,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34035" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (3-hour) -->
 		</capsuled_items>
@@ -1529,6 +1619,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34036" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (5-hour) -->
 		</capsuled_items>
@@ -1546,6 +1637,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34037" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% (7-hour) -->
 		</capsuled_items>
@@ -1563,6 +1655,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34038" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (3-hour) -->
 		</capsuled_items>
@@ -1580,6 +1673,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34039" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (5-hour) -->
 		</capsuled_items>
@@ -1597,6 +1691,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="34040" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% (7-hour) -->
 		</capsuled_items>
@@ -1613,6 +1708,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="13015" min="1" max="1" chance="100" /> <!-- My Teleport Book Lv. 1 -->
 		</capsuled_items>

@@ -13,6 +13,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22556" level="1" /> <!-- Equipment Restoration Stone (R-grade) -->
 		</skills>
@@ -30,6 +31,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22557" level="1" /> <!-- Equipment Restoration Stone (S-grade) -->
 		</skills>
@@ -47,6 +49,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22558" level="1" /> <!-- Equipment Restoration Stone (A-grade) -->
 		</skills>
@@ -64,6 +67,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22559" level="1" /> <!-- Equipment Restoration Stone (B-grade) -->
 		</skills>
@@ -81,6 +85,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22560" level="1" /> <!-- Equipment Restoration Stone (C-grade) -->
 		</skills>
@@ -98,6 +103,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22561" level="1" /> <!-- Equipment Restoration Stone (D-grade) -->
 		</skills>
@@ -115,6 +121,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22562" level="1" /> <!-- (Test) Formal Wear Appearance Stone -->
 		</skills>
@@ -132,6 +139,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22563" level="1" /> <!-- (Test) Immortal Top Appearance Stone -->
 		</skills>
@@ -149,6 +157,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22564" level="1" /> <!-- Hair Accessory Appearance Stone -->
 		</skills>
@@ -166,6 +175,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_HAIRACC" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22565" level="1" /> <!-- Blessed Hair Accessory Appearance Stone -->
 		</skills>
@@ -186,6 +196,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22566" level="1" /> <!-- Vitality Suspending Potion -->
 		</skills>
@@ -207,6 +218,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -233,6 +245,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">80</stat>
 			<stat type="mAtk">54</stat>
@@ -260,6 +273,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="209" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -286,6 +300,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="152" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -313,6 +328,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -344,6 +360,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">191</stat>
 			<stat type="mAtk">54</stat>
@@ -372,6 +389,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">117</stat>
 			<stat type="mAtk">54</stat>
@@ -399,6 +417,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -426,6 +445,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -453,6 +473,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -480,6 +501,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">152</stat>
 			<stat type="mAtk">122</stat>
@@ -507,6 +529,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="247" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">51</stat>
@@ -533,6 +556,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">51</stat>
@@ -561,6 +585,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">186</stat>
@@ -585,6 +610,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">25</stat>
 			<stat type="sDef">216</stat>
@@ -605,6 +631,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="sDef">47</stat>
 			<stat type="rShld">20</stat>
@@ -624,6 +651,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22567" level="1" /> <!-- Japanese Sword Appearance Stone -->
 		</skills>
@@ -641,6 +669,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22568" level="1" /> <!-- Japanese Dagger Appearance Stone -->
 		</skills>
@@ -658,6 +687,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22569" level="1" /> <!-- Japanese Long Sword Appearance Stone -->
 		</skills>
@@ -675,6 +705,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22570" level="1" /> <!-- Japanese Fist Weapon Appearance Stone -->
 		</skills>
@@ -692,6 +723,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22571" level="1" /> <!-- Japanese Great Spear Appearance Stone -->
 		</skills>
@@ -709,6 +741,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22572" level="1" /> <!-- Japanese Bow Appearance Stone -->
 		</skills>
@@ -726,6 +759,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22573" level="1" /> <!-- Japanese Crossbow Appearance Stone -->
 		</skills>
@@ -743,6 +777,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22574" level="1" /> <!-- Japanese Blunt Appearance Stone -->
 		</skills>
@@ -760,6 +795,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22575" level="1" /> <!-- Japanese Giant Blunt Appearance Stone -->
 		</skills>
@@ -777,6 +813,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22576" level="1" /> <!-- Japanese Magic Blunt Appearance Stone -->
 		</skills>
@@ -794,6 +831,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22577" level="1" /> <!-- Japanese Giant Magic Blunt Appearance Stone -->
 		</skills>
@@ -811,6 +849,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22578" level="1" /> <!-- Japanese Dualsword Appearance Stone -->
 		</skills>
@@ -828,6 +867,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22579" level="1" /> <!-- Japanese Double Dagger Appearance Stone -->
 		</skills>
@@ -845,6 +885,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22580" level="1" /> <!-- Japanese Double Blunt Appearance Stone -->
 		</skills>
@@ -862,6 +903,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22581" level="1" /> <!-- Japanese Shield Appearance Stone -->
 		</skills>
@@ -879,6 +921,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22582" level="1" /> <!-- Japanese Sigil Appearance Stone -->
 		</skills>
@@ -894,6 +937,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22583" level="1" /> <!-- Transformation Scroll: Fairweather Borna -->
 		</skills>
@@ -911,6 +955,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22710" min="1" max="1" chance="100" /> <!-- Vitality Suspending Potion -->
 		</capsuled_items>
@@ -928,6 +973,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22584" level="1" /> <!-- Scroll: Increase Vitality -->
 		</skills>
@@ -945,6 +991,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22745" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality -->
 		</capsuled_items>
@@ -962,6 +1009,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22584" level="2" /> <!-- Scroll: Increase Vitality -->
 		</skills>
@@ -979,6 +1027,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22747" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality (High-grade) -->
 		</capsuled_items>
@@ -996,6 +1045,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22584" level="3" /> <!-- Scroll: Increase Vitality -->
 		</skills>
@@ -1013,6 +1063,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22749" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality (Top-grade) -->
 		</capsuled_items>
@@ -1026,6 +1077,7 @@
 		<set name="time" val="180" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="1" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1039,6 +1091,7 @@
 		<set name="time" val="300" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="1" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1052,6 +1105,7 @@
 		<set name="time" val="10080" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="1" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1065,6 +1119,7 @@
 		<set name="time" val="180" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1078,6 +1133,7 @@
 		<set name="time" val="300" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1091,6 +1147,7 @@
 		<set name="time" val="10080" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1104,6 +1161,7 @@
 		<set name="time" val="180" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1117,6 +1175,7 @@
 		<set name="time" val="300" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1130,6 +1189,7 @@
 		<set name="time" val="10080" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1143,6 +1203,7 @@
 		<set name="time" val="180" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1156,6 +1217,7 @@
 		<set name="time" val="300" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1169,6 +1231,7 @@
 		<set name="time" val="10080" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1186,6 +1249,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22751" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (3-hour) -->
 		</capsuled_items>
@@ -1203,6 +1267,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22752" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (5-hour) -->
 		</capsuled_items>
@@ -1220,6 +1285,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22753" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (7-day) -->
 		</capsuled_items>
@@ -1237,6 +1303,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22754" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (3-hour) -->
 		</capsuled_items>
@@ -1254,6 +1321,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22755" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (5-hour) -->
 		</capsuled_items>
@@ -1271,6 +1339,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22756" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (7-day) -->
 		</capsuled_items>
@@ -1288,6 +1357,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22757" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (3-hour) -->
 		</capsuled_items>
@@ -1305,6 +1375,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22758" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (5-hour) -->
 		</capsuled_items>
@@ -1322,6 +1393,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22759" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (7-day) -->
 		</capsuled_items>
@@ -1339,6 +1411,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22760" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (3-hour) -->
 		</capsuled_items>
@@ -1356,6 +1429,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22761" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (5-hour) -->
 		</capsuled_items>
@@ -1373,6 +1447,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22762" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (7-day) -->
 		</capsuled_items>
@@ -1395,6 +1470,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 		</skills>
@@ -1426,6 +1502,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 			<skill id="3568" level="2" /> <!-- Special Ability: HP Drain -->
@@ -1458,6 +1535,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 			<skill id="3569" level="4" /> <!-- Special Ability: HP Regeneration -->
@@ -1490,6 +1568,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1522,6 +1601,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3653" level="1" /> <!-- PvP Weapon - Attack Rate -->
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
@@ -1555,6 +1635,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3653" level="1" /> <!-- PvP Weapon - Attack Rate -->
 			<skill id="3568" level="2" /> <!-- Special Ability: HP Drain -->
@@ -1589,6 +1670,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3653" level="1" /> <!-- PvP Weapon - Attack Rate -->
 			<skill id="3569" level="4" /> <!-- Special Ability: HP Regeneration -->
@@ -1623,6 +1705,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3653" level="1" /> <!-- PvP Weapon - Attack Rate -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1657,6 +1740,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
 			<skill id="21293" level="1" /> <!-- Two-handed Weapon of Vampiric Rage -->
@@ -1689,6 +1773,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21293" level="1" /> <!-- Two-handed Weapon of Vampiric Rage -->
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
@@ -1722,6 +1807,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21293" level="1" /> <!-- Two-handed Weapon of Vampiric Rage -->
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
@@ -1755,6 +1841,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21293" level="1" /> <!-- Two-handed Weapon of Vampiric Rage -->
 			<skill id="21279" level="1" /> <!-- Drake Lord's Authority -->
@@ -1788,6 +1875,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3552" level="3" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3653" level="1" /> <!-- PvP Weapon - Attack Rate -->
@@ -1822,6 +1910,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21293" level="1" /> <!-- Two-handed Weapon of Vampiric Rage -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1857,6 +1946,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21293" level="1" /> <!-- Two-handed Weapon of Vampiric Rage -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1892,6 +1982,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21293" level="1" /> <!-- Two-handed Weapon of Vampiric Rage -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1927,6 +2018,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 		</skills>
@@ -1958,6 +2050,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3577" level="2" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
@@ -1991,6 +2084,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 			<skill id="3575" level="4" /> <!-- Special Ability: Empower -->
@@ -2023,6 +2117,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 			<skill id="3576" level="4" /> <!-- Special Ability: MP Regeneration -->
@@ -2055,6 +2150,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3655" level="1" /> <!-- PvP Weapon - Rapid Fire -->
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
@@ -2088,6 +2184,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="3" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3654" level="1" /> <!-- PvP Weapon - Casting -->
@@ -2122,6 +2219,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3654" level="1" /> <!-- PvP Weapon - Casting -->
 			<skill id="3575" level="4" /> <!-- Special Ability: Empower -->
@@ -2156,6 +2254,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3654" level="1" /> <!-- PvP Weapon - Casting -->
 			<skill id="3576" level="4" /> <!-- Special Ability: MP Regeneration -->
@@ -2190,6 +2289,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
 			<skill id="3893" level="1" /> <!-- Blunt Weapon of Mana Regeneration -->

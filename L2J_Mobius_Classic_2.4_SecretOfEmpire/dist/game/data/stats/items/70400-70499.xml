@@ -484,7 +484,7 @@
 		<!-- For 20 min. Max HP/ MP +5%, XP/ SP +30%. Provides Mental Attack/Paralysis Resistance. <Attention> Cannot be stacked with Life Control Tower's and Angel Cat's Blessing. -->
 		<set name="icon" val="icon.general_energy_condense_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -494,7 +494,7 @@
 		<set name="icon" val="icon.bm_ensoulbox_PvE" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -507,7 +507,7 @@
 		<set name="icon" val="icon.bm_ensoulbox_PvP" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -520,7 +520,7 @@
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -535,7 +535,7 @@
 		<set name="icon" val="BranchIcon.Icon.g_bm_antaras_pocket_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1295,7 +1295,7 @@
 	<item id="70495" name="NoItemName" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Topaz. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1303,7 +1303,7 @@
 	<item id="70496" name="NoItemName" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Topaz. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1311,7 +1311,7 @@
 	<item id="70497" name="NoItemName" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Topaz. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1319,7 +1319,7 @@
 	<item id="70498" name="NoItemName" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Garnet. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1327,7 +1327,7 @@
 	<item id="70499" name="NoItemName" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Garnet. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

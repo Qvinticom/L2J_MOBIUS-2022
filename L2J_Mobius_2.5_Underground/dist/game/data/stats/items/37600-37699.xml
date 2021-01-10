@@ -5,36 +5,42 @@
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37601" name="Armor Coupon (R-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37602" name="Armor Coupon (R95-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R95-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37603" name="Armor Coupon (R99-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R99-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37604" name="Armor Coupon (S-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (S-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37605" name="Armor Coupon (A-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (A-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37606" name="Promise Cube Pack" additionalName="Event" type="EtcItem">
 		<!-- Double click to acquire a Promise Cube (100-day). Cannot be used in the Olympiad. -->
@@ -45,6 +51,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37607" name="Treasure Chest" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a hair accessory pack, pendant pack, enchant scroll pack, attribute stone pack, or ingredient pack. -->
@@ -58,6 +65,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="37608" min="1" max="1" chance="10" /> <!-- Hair Accessory Pack - Western Winds -->
 			<item id="37609" min="1" max="1" chance="5" /> <!-- Pendant Pack - Western Winds -->
@@ -77,6 +85,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="34631" min="1" max="1" chance="8.33" /> <!-- Eyepatch -->
 			<item id="34630" min="1" max="1" chance="8.33" /> <!-- Outlaw's Eyepatch -->
@@ -103,6 +112,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="35903" min="1" max="1" chance="7.14" /> <!-- CON Pendant -->
 			<item id="35904" min="1" max="1" chance="7.14" /> <!-- MEN Pendant -->
@@ -131,6 +141,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19448" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			<item id="6578" min="1" max="1" chance="12" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
@@ -153,6 +164,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="9555" min="1" max="1" chance="6" /> <!-- Wind Crystal -->
 			<item id="9553" min="1" max="1" chance="6" /> <!-- Water Crystal -->
@@ -179,6 +191,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="36557" min="1" max="1" chance="13" /> <!-- Accessory Gem -->
 			<item id="36558" min="1" max="1" chance="7" /> <!-- Accessory Gem (Mid-grade) -->
@@ -207,6 +220,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="37623" min="1" max="1" chance="4.05" /> <!-- Soul Bottle Pack - Western Winds -->
 			<item id="37619" min="1" max="1" chance="6" /> <!-- PK Pack - Western Winds -->
@@ -232,6 +246,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="33861" min="1" max="1" chance="20" /> <!-- Lucky Enchant Stone: Armor (R-grade) - Event -->
 			<item id="33860" min="1" max="1" chance="46" /> <!-- Lucky Enchant Stone: Armor (S-grade) - Event -->
@@ -250,6 +265,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="36390" min="1" max="1" chance="20" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
 			<item id="36386" min="1" max="1" chance="46" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
@@ -268,6 +284,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19448" min="1" max="1" chance="10" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			<item id="6578" min="1" max="1" chance="24" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
@@ -286,6 +303,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19444" min="1" max="1" chance="50" /> <!-- Unbind Scroll (R-grade) -->
 			<item id="19445" min="1" max="1" chance="30" /> <!-- Unbind Scroll (R95-grade) -->
@@ -303,6 +321,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="9555" min="1" max="1" chance="10.6" /> <!-- Wind Crystal -->
 			<item id="9553" min="1" max="1" chance="10.6" /> <!-- Water Crystal -->
@@ -335,6 +354,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="35753" min="1" max="1" chance="15" /> <!-- Scroll: PK (High-grade) -->
 			<item id="35754" min="1" max="1" chance="10" /> <!-- Scroll: PK (Top-grade) -->
@@ -353,6 +373,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="35756" min="1" max="1" chance="15" /> <!-- Scroll: Reputation (High-grade) -->
 			<item id="35757" min="1" max="1" chance="10" /> <!-- Scroll: Reputation (Top-grade) -->
@@ -371,6 +392,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="34616" min="3000" max="3000" chance="50" /> <!-- Mysterious Blessed Spiritshot (R-grade) - Event -->
 			<item id="34609" min="10000" max="10000" chance="50" /> <!-- Mysterious Soulshot (R-grade) - Event -->
@@ -387,6 +409,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="36184" min="1" max="1" chance="85" /> <!-- Kaliel's Energy - Annihilation -->
 			<item id="36185" min="1" max="1" chance="10" /> <!-- Kaliel's Energy - Hellfire -->
@@ -404,6 +427,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19465" min="1" max="1" chance="50" /> <!-- Bottle of Antharas' Soul -->
 			<item id="19466" min="1" max="1" chance="50" /> <!-- Bottle of Valakas' Soul -->
@@ -420,6 +444,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="18571" min="1" max="1" chance="54" /> <!-- Top-grade Life Stone (R95-grade) -->
 			<item id="18576" min="1" max="1" chance="34" /> <!-- Top-grade Life Stone (R99-grade) -->
@@ -431,6 +456,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37626" name="Mysterious Blessed Spiritshot Pack (R-grade)" type="EtcItem">
 		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 10,000 rounds of Mysterious Blessed Spiritshots. Can be used with R-grade weapons. -->
@@ -442,6 +468,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37627" name="Mysterious Soulshot Pack (R-grade)" type="EtcItem">
 		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 20,000 rounds of Mysterious Blessed Soulshots. Can be used with R-grade weapons. -->
@@ -453,6 +480,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37628" name="Cupid's Arrow" type="Weapon">
 		<!-- Throws a love-filled heart. Can use the active skill "Heart Shot.". Warning: When using on a monster, you can receive another player's attack. -->
@@ -469,6 +497,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="900" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -490,6 +519,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -515,6 +545,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13547" level="1" /> <!-- Mysterious Shaper -->
 		</skills>
@@ -544,6 +575,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13548" level="1" /> <!-- Mysterious Cutter -->
 		</skills>
@@ -572,6 +604,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13549" level="1" /> <!-- Mysterious Slasher -->
 		</skills>
@@ -600,6 +633,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13550" level="1" /> <!-- Mysterious Avenger -->
 		</skills>
@@ -629,6 +663,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13551" level="1" /> <!-- Mysterious Fighter -->
 		</skills>
@@ -658,6 +693,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13552" level="1" /> <!-- Mysterious Stormer -->
@@ -688,6 +724,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13553" level="1" /> <!-- Mysterious Thrower -->
 		</skills>
@@ -717,6 +754,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13554" level="1" /> <!-- Mysterious Shooter -->
 		</skills>
@@ -746,6 +784,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13555" level="1" /> <!-- Mysterious Buster -->
 		</skills>
@@ -773,6 +812,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13556" level="1" /> <!-- Mysterious Caster -->
 		</skills>
@@ -802,6 +842,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13557" level="1" /> <!-- Mysterious Retributer -->
 		</skills>
@@ -832,6 +873,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13558" level="1" /> <!-- Mysterious Dualsword -->
 		</skills>
@@ -859,6 +901,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13559" level="1" /> <!-- Mysterious Dual Dagger -->
 		</skills>
@@ -888,6 +931,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13560" level="1" /> <!-- Mysterious Dual Blunt -->
 		</skills>
@@ -917,6 +961,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13547" level="1" /> <!-- Mysterious Shaper -->
 		</skills>
@@ -946,6 +991,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13548" level="1" /> <!-- Mysterious Cutter -->
 		</skills>
@@ -974,6 +1020,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13549" level="1" /> <!-- Mysterious Slasher -->
 		</skills>
@@ -1002,6 +1049,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13550" level="1" /> <!-- Mysterious Avenger -->
 		</skills>
@@ -1031,6 +1079,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13551" level="1" /> <!-- Mysterious Fighter -->
 		</skills>
@@ -1060,6 +1109,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13552" level="1" /> <!-- Mysterious Stormer -->
@@ -1090,6 +1140,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13553" level="1" /> <!-- Mysterious Thrower -->
 		</skills>
@@ -1119,6 +1170,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13554" level="1" /> <!-- Mysterious Shooter -->
 		</skills>
@@ -1148,6 +1200,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13555" level="1" /> <!-- Mysterious Buster -->
 		</skills>
@@ -1176,6 +1229,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13556" level="1" /> <!-- Mysterious Caster -->
 		</skills>
@@ -1205,6 +1259,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13557" level="1" /> <!-- Mysterious Retributer -->
 		</skills>
@@ -1235,6 +1290,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13558" level="1" /> <!-- Mysterious Dualsword -->
 		</skills>
@@ -1263,6 +1319,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13559" level="1" /> <!-- Mysterious Dual Dagger -->
 		</skills>
@@ -1292,6 +1349,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13560" level="1" /> <!-- Mysterious Dual Blunt -->
 		</skills>
@@ -1314,6 +1372,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" type="EtcItem">
 		<!-- Mysterious juice that momentarily replenishes 30,000 HP and CP. Cannot be used in the Olympiad or Ceremony of Chaos. -->
@@ -1351,6 +1410,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -1370,6 +1430,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37662" name="Refined Romantic Chapeau: Gold" type="Armor">
 		<!-- Refined gold romantic chapeau. Uses 2 hair accessory slots. -->
@@ -1380,6 +1441,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37663" name="Refined Romantic Chapeau: Green" type="Armor">
 		<!-- Refined green romantic chapeau. Uses 2 hair accessory slots. -->
@@ -1390,6 +1452,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37664" name="Refined Romantic Chapeau: Red" type="Armor">
 		<!-- Refined red romantic chapeau. Uses 2 hair accessory slots. -->
@@ -1400,6 +1463,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37665" name="Refined Romantic Chapeau: Yellow" type="Armor">
 		<!-- Refined yellow romantic chapeau. Uses 2 hair accessory slots. -->
@@ -1410,6 +1474,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37666" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
@@ -1419,6 +1484,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37667" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
 		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
@@ -1431,6 +1497,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
 			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
@@ -1450,6 +1517,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
 			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
@@ -1469,6 +1537,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
 		</skills>
@@ -1489,6 +1558,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13317" level="1" /> <!-- Earth Wyrm Heart Ring -->
 			<skill id="13318" level="1" /> <!-- Earth Wyrm Heart Ring -->
@@ -1510,6 +1580,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="17153" level="1" /> <!-- Heavenly Recovery Potion -->
 		</skills>
@@ -1522,6 +1593,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="37673" name="Mysterious Friend Summon Bracelet Pack (30-day)" type="EtcItem">
 		<!-- Double click to obtain 1 Mysterious Friend Summon Bracelet (30-day). -->
@@ -1532,6 +1604,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37674" name="Scroll: Modify Demonic Sword Zariche" type="EtcItem">
 		<!-- Scroll that modifies the appearance of a two-handed sword to that of the Demonic Sword Zariche. 30-day. -->
@@ -1543,6 +1616,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17164" level="1" /> <!-- Demonic Sword Zariche Appearance Stone -->
 		</skills>
@@ -1557,6 +1631,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17165" level="1" /> <!-- Blood Sword Akamanah Appearance Stone -->
 		</skills>
@@ -1568,6 +1643,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37677" name="GM's Buff Scroll" additionalName="P. Def." type="EtcItem">
 		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Guardian's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
@@ -1579,6 +1655,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37678" name="GM's Buff Scroll" additionalName="P. Atk." type="EtcItem">
 		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Berserker's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
@@ -1590,6 +1667,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37679" name="GM's Buff Scroll" additionalName="M. Atk." type="EtcItem">
 		<!-- When used, can receive the effects of 6 types of level 4 melodies, including Magician's Harmony, and 3 types of sonatas, for 60 minutes. Cannot be used in the Olympiad or Ceremony of Chaos. Cooldown is 2 minutes. -->
@@ -1601,6 +1679,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37680" name="Transformation Scroll: Makeshift Bat" type="EtcItem">
 		<!-- Can change into the appearance of a Tow for 30 minutes. Please note that a Tow is extremely cute. -->
@@ -1610,6 +1689,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37681" name="Theamo's Talisman" additionalName="Not in Use" type="Armor">
 		<!-- Test Item -->
@@ -1618,6 +1698,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
 		<!-- Test Item -->
@@ -1626,6 +1707,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37683" name="Demonic Sword Zariche" additionalName="Appearance Modification" type="Weapon">
 		<!-- Demonic Sword Zariche skin. -->
@@ -1640,6 +1722,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">10</stat>
 			<stat type="mAtk">10</stat>
@@ -1662,6 +1745,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">10</stat>
 			<stat type="mAtk">10</stat>
@@ -1679,6 +1763,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37686" name="Transformation Scroll: Angry Tow" type="EtcItem">
 		<!-- Can change into the appearance of a Angry Tow for 30 minutes. Please note that a Tow is extremely cute. -->
@@ -1688,6 +1773,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37687" name="Transformation Scroll: Sleepy Tow" type="EtcItem">
 		<!-- Can change into the appearance of a Sleepy Tow for 30 minutes. Please note that a Tow is extremely cute. -->
@@ -1697,6 +1783,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37688" name="Valentine Dagger" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
@@ -1710,6 +1797,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">685</stat>
 			<stat type="mAtk">414</stat>
@@ -1732,6 +1820,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1753,6 +1842,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1774,6 +1864,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1796,6 +1887,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>
@@ -1819,6 +1911,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1844,6 +1937,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1481</stat>
 			<stat type="mAtk">414</stat>
@@ -1866,6 +1960,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1333</stat>
 			<stat type="mAtk">414</stat>
@@ -1888,6 +1983,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1909,6 +2005,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1931,6 +2028,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">733</stat>
 			<stat type="mAtk">535</stat>
@@ -1953,6 +2051,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">916</stat>
 			<stat type="mAtk">414</stat>

@@ -15,6 +15,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="477" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -42,6 +43,7 @@
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="597" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -69,6 +71,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="670" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pAtk">130</stat>
 			<stat type="mAtk">61</stat>
@@ -92,6 +95,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="497" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">130</stat>
 			<stat type="mAtk">61</stat>
@@ -116,6 +120,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="300" />
+		<set name="material" val="ORIHARUKON" />
 		<stats>
 			<stat type="pAtk">140</stat>
 			<stat type="mAtk">122</stat>
@@ -139,6 +144,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="540" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">140</stat>
 			<stat type="mAtk">122</stat>
@@ -163,6 +169,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="747" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">197</stat>
 			<stat type="mAtk">86</stat>
@@ -186,6 +193,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="450" />
+		<set name="material" val="ORIHARUKON" />
 		<stats>
 			<stat type="pAtk">155</stat>
 			<stat type="mAtk">132</stat>
@@ -209,6 +217,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="647" />
+		<set name="material" val="DAMASCUS" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -236,6 +245,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="247" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">122</stat>
 			<stat type="mAtk">122</stat>
@@ -260,6 +270,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="573" />
+		<set name="material" val="ORIHARUKON" />
 		<stats>
 			<stat type="pAtk">397</stat>
 			<stat type="mAtk">100</stat>
@@ -284,6 +295,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="643" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -311,6 +323,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="457" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -338,6 +351,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="567" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -365,6 +379,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="643" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">213</stat>
 			<stat type="mAtk">91</stat>
@@ -388,6 +403,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="473" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">213</stat>
 			<stat type="mAtk">91</stat>
@@ -412,6 +428,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="277" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">143</stat>
@@ -435,6 +452,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="517" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">143</stat>
@@ -459,6 +477,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="693" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>
@@ -482,6 +501,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="280" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">186</stat>
 			<stat type="mAtk">152</stat>
@@ -505,6 +525,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="633" />
+		<set name="material" val="ORIHARUKON" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -532,6 +553,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="320" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">186</stat>
 			<stat type="mAtk">107</stat>
@@ -556,6 +578,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="557" />
+		<set name="material" val="DAMASCUS" />
 		<stats>
 			<stat type="pAtk">440</stat>
 			<stat type="mAtk">107</stat>
@@ -580,6 +603,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="443" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -607,6 +631,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="557" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -634,6 +659,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="633" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -661,6 +687,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="633" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>
@@ -684,6 +711,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="457" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>
@@ -708,6 +736,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="433" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">281</stat>
 			<stat type="mAtk">132</stat>
@@ -731,6 +760,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="523" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">281</stat>
 			<stat type="mAtk">132</stat>
@@ -755,6 +785,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="693" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">342</stat>
 			<stat type="mAtk">132</stat>
@@ -778,6 +809,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="433" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">225</stat>
 			<stat type="mAtk">175</stat>
@@ -802,6 +834,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="600" />
+		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -829,6 +862,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="317" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">246</stat>
 			<stat type="mAtk">132</stat>
@@ -853,6 +887,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="600" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -880,6 +915,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="433" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -907,6 +943,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="533" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -934,6 +971,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="460" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">342</stat>
 			<stat type="mAtk">132</stat>
@@ -957,6 +995,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="450" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">342</stat>
 			<stat type="mAtk">132</stat>
@@ -981,6 +1020,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">267</stat>
 			<stat type="mAtk">202</stat>
@@ -1004,6 +1044,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="580" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">333</stat>
 			<stat type="mAtk">151</stat>
@@ -1028,6 +1069,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">405</stat>
 			<stat type="mAtk">151</stat>
@@ -1051,6 +1093,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="670" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1078,6 +1121,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">291</stat>
 			<stat type="mAtk">151</stat>
@@ -1102,6 +1146,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="530" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1129,6 +1174,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="600" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1156,6 +1202,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="430" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1183,6 +1230,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="580" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">405</stat>
 			<stat type="mAtk">151</stat>
@@ -1206,6 +1254,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="520" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">405</stat>
 			<stat type="mAtk">151</stat>
@@ -1230,6 +1279,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">654</stat>
 			<stat type="mAtk">151</stat>
@@ -1248,6 +1298,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="38751" name="Lara's Business Card" type="EtcItem">
 		<!-- Prizes will be given out to players that collect 6 or more of Lara's business cards, depending on how many you have. Keep them just in case. -->
@@ -1258,18 +1309,21 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="38752" name="Lara's Gift" type="EtcItem">
 		<!-- A gift from team leader Lara! Seems a bit hastily thrown together, but hey, it's a gift. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38753" name="Lara's Secret Gift" type="EtcItem">
 		<!-- A gift from team leader Lara! A tremendous gift awaits if you're lucky. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38754" name="Shiny Elemental Shirt + 8 Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive a Shiny Elemental Shirt + 8. -->
@@ -1277,6 +1331,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="38755" name="Shiny Elemental Shirt + 7 Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive a Shiny Elemental Shirt + 7. -->
@@ -1284,6 +1339,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="38756" name="Chaos Essence Pack" type="EtcItem">
 		<!-- Double-click to obtain a Chaos Essence (30-day). -->
@@ -1292,6 +1348,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 			<capsuled_items>
 			<item id="36949" min="1" max="1" chance="100" /> <!-- Chaos Essence -->
 		</capsuled_items>
@@ -1305,6 +1362,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17691" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -1318,6 +1376,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17692" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -1331,6 +1390,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17693" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (S-grade) -->
 		</skills>
@@ -1344,6 +1404,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17694" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (S-grade) -->
 		</skills>
@@ -1356,6 +1417,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="35562" min="3" max="3" chance="100" /> <!-- Energy of Destruction -->
 		</capsuled_items>
@@ -1368,6 +1430,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="35562" min="20" max="20" chance="100" /> <!-- Energy of Destruction -->
 		</capsuled_items>
@@ -1380,6 +1443,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="35562" min="100" max="100" chance="100" /> <!-- Energy of Destruction -->
 		</capsuled_items>
@@ -1389,6 +1453,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="38765" name="Lara's Key Card Pack" additionalName="Luxury" type="EtcItem">
 		<!-- Double-click to obtain Lara's Key Card and Lara's Gift. Temporary event item. -->
@@ -1398,6 +1463,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="38766" name="La Vie En Rose's Brooch" type="Armor">
 		<!-- Activates 2 jewel slots when equipped. -->
@@ -1408,6 +1474,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13656" level="1" /> <!-- La Vie En Rose's Brooch -->
 		</skills>
@@ -1424,6 +1491,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13657" level="1" /> <!-- La Vie En Rose's Noble Brooch -->
 		</skills>
@@ -1440,6 +1508,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13658" level="1" /> <!-- La Vie En Rose's Brilliant Brooch -->
 			<skill id="13661" level="1" /> <!-- La Vie En Rose's Brilliant Brooch -->
@@ -1454,6 +1523,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="38770" name="Test: Jewel Lv.2" additionalName="1" type="Armor">
 		<!-- Test Jewel -->
@@ -1461,6 +1531,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="38771" name="Test: Jewel Lv.1" additionalName="2" type="Armor">
 		<!-- Test Jewel -->
@@ -1468,6 +1539,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="38772" name="Test: Jewel Lv.2" additionalName="2" type="Armor">
 		<!-- Test Jewel -->
@@ -1475,6 +1547,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="38773" name="Test: Jewel Lv.1" additionalName="3" type="Armor">
 		<!-- Test Jewel -->
@@ -1482,6 +1555,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="38774" name="Test: Jewel Lv.2" additionalName="3" type="Armor">
 		<!-- Test Jewel -->
@@ -1489,6 +1563,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="38775" name="Sealed Antharas Shaper Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used. <Passive: Dandy's Strength>. PvP damage + 5%, Max HP + 15%, Atk. Spd. + 15%. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
@@ -1503,6 +1578,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17742" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1528,6 +1604,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17743" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1552,6 +1629,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17744" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1577,6 +1655,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17745" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1601,6 +1680,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17746" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1625,6 +1705,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="17747" level="1" /> <!-- Dandy's Strength -->
@@ -1651,6 +1732,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17748" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1676,6 +1758,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="17749" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1701,6 +1784,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="17750" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1726,6 +1810,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17751" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1750,6 +1835,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17752" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1775,6 +1861,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17753" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1799,6 +1886,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17754" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1823,6 +1911,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17755" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1848,6 +1937,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17756" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1872,6 +1962,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="17757" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1897,6 +1988,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="17758" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1923,6 +2015,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17759" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1948,6 +2041,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17760" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1973,6 +2067,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17761" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -1997,6 +2092,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17762" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -2021,6 +2117,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17763" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -2045,6 +2142,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17764" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -2070,6 +2168,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17765" level="1" /> <!-- Dandy's Strength -->
 		</skills>
@@ -2096,6 +2195,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
 		<set name="time" val="60" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="17766" level="1" /> <!-- Assisting Strength -->
 		</skills>

@@ -13,6 +13,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="3600" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13835" level="1" /> <!-- Christmas Talisman - M. Def -->
 		</skills>
@@ -30,6 +31,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="3600" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13836" level="1" /> <!-- Christmas Talisman - Attribute Resistance -->
 		</skills>
@@ -40,6 +42,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46303" name="Christmas Talisman Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: M. Skill Critical Damage (1-hour). -->
@@ -47,6 +50,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46304" name="Christmas Talisman Pack" additionalName="Ultimate Defense" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: Ultimate Defense (1-hour). -->
@@ -54,6 +58,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46305" name="Christmas Talisman Pack" additionalName="Debuff Resistance" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: Debuff Resistance (1-hour). -->
@@ -61,6 +66,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46306" name="Christmas Talisman Pack" additionalName="P. Atk." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: P. Atk. (1-hour). -->
@@ -68,6 +74,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46307" name="Christmas Talisman Pack" additionalName="M. Atk." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: M. Atk. (1-hour). -->
@@ -75,6 +82,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46308" name="Christmas Talisman Pack" additionalName="P. Def." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: P. Def. (1-hour). -->
@@ -82,6 +90,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46309" name="Christmas Talisman Pack" additionalName="M. Def." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: M. Def. (1-hour). -->
@@ -89,6 +98,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46310" name="Christmas Talisman Pack" additionalName="Attribute Resistance" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: Attribute Resistance (1-hour). -->
@@ -96,6 +106,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46311" name="Emergency Whistle - Adolph" type="EtcItem">
 		<!-- Send a signal to Adolph, who will use the Protection of Faith skill. The whistle disappears after 2 uses. -->
@@ -107,6 +118,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46312" name="Emergency Whistle - Barton" type="EtcItem">
 		<!-- Send a signal to Barton, who will use the Berserker skill. Using the Berserker skill will increase Barton's Debuff Resistance/ Speed/ P. Atk./ P. Accuracy/ P. Def./ Atk. Spd./ Critical Damage. Recovre 20% of HP when killing the opponent. Additionally, P. Atk. +10% and Critical Rate +100 when HP is below 60%. P. Atk. +30% and Critical Rate +300 when HP is below 30%. The whistle disappears after 2 uses. -->
@@ -118,6 +130,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46313" name="Emergency Whistle - Hayuk" type="EtcItem">
 		<!-- Send a signal to Hayuk, who will use the Phoenix Arrow skill. The whistle disappears after 2 uses. -->
@@ -129,6 +142,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46314" name="Emergency Whistle - Elise" type="EtcItem">
 		<!-- Send a signal to Elise, who will use the Celestial Party Protection skill. The whistle disappears after 2 uses. -->
@@ -140,6 +154,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46315" name="Emergency Whistle - Eliyah" type="EtcItem">
 		<!-- Send a signal to Eliyah, who will use the Shadow Hell skill. The whistle disappears after 2 uses. -->
@@ -151,6 +166,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46316" name="System Control Room Key" type="EtcItem">
 		<!-- Key to get to Core in the Cruma Tower. Key to the System Control Room. -->
@@ -160,6 +176,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46317" name="Shadow Shaper" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
@@ -176,6 +193,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">443</stat>
 			<stat type="mAtk">176</stat>
@@ -201,6 +219,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">526</stat>
 			<stat type="mAtk">176</stat>
@@ -225,6 +244,7 @@
 		<set name="weight" val="1740" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">646</stat>
 			<stat type="mAtk">176</stat>
@@ -249,6 +269,7 @@
 		<set name="weight" val="1550" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">646</stat>
 			<stat type="mAtk">176</stat>
@@ -274,6 +295,7 @@
 		<set name="weight" val="2010" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -302,6 +324,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1031</stat>
 			<stat type="mAtk">176</stat>
@@ -327,6 +350,7 @@
 		<set name="weight" val="1580" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1012</stat>
 			<stat type="mAtk">176</stat>
@@ -352,6 +376,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">394</stat>
 			<stat type="mAtk">272</stat>
@@ -376,6 +401,7 @@
 		<set name="weight" val="1080" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">486</stat>
 			<stat type="mAtk">310</stat>
@@ -402,6 +428,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">646</stat>
 			<stat type="mAtk">176</stat>
@@ -423,6 +450,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13842" level="12" /> <!-- Shadow Shaper -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -449,6 +477,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13837" level="12" /> <!-- Shadow Cutter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -474,6 +503,7 @@
 		<set name="weight" val="1740" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13838" level="12" /> <!-- Shadow Slasher -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -499,6 +529,7 @@
 		<set name="weight" val="1550" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13839" level="12" /> <!-- Shadow Fighter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -525,6 +556,7 @@
 		<set name="weight" val="2010" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13840" level="12" /> <!-- Shadow Stormer -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -551,6 +583,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13843" level="12" /> <!-- Shadow Thrower -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -577,6 +610,7 @@
 		<set name="weight" val="1580" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13844" level="12" /> <!-- Shadow Shooter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -603,6 +637,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13845" level="12" /> <!-- Shadow Buster -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -628,6 +663,7 @@
 		<set name="weight" val="1080" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13846" level="12" /> <!-- Shadow Retributer -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -655,6 +691,7 @@
 		<set name="weight" val="1520" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13841" level="12" /> <!-- Shadow Dualsword -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
@@ -678,6 +715,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18502" level="1" /> <!-- Scroll: Enchant Shadow Weapon -->
 		</skills>
@@ -690,6 +728,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -702,6 +741,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -714,6 +754,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -726,6 +767,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -738,6 +780,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -750,6 +793,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -762,6 +806,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -774,6 +819,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -789,6 +835,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -813,6 +860,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17611" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -837,6 +885,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17612" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -861,6 +910,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17613" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -885,6 +935,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17614" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -909,6 +960,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17615" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -933,6 +985,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17616" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -957,6 +1010,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17617" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -981,6 +1035,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17618" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1005,6 +1060,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17620" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1029,6 +1085,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17621" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1052,6 +1109,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46346" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Virgo - 30-day -->
 		</capsuled_items>
@@ -1066,6 +1124,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46347" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Capricorn - 30-day -->
 		</capsuled_items>
@@ -1080,6 +1139,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46348" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Libra - 30-day -->
 		</capsuled_items>
@@ -1094,6 +1154,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46349" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aries - 30-day -->
 		</capsuled_items>
@@ -1108,6 +1169,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46350" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Taurus - 30-day -->
 		</capsuled_items>
@@ -1122,6 +1184,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46351" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Leo - 30-day -->
 		</capsuled_items>
@@ -1136,6 +1199,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46352" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Gemini - 30-day -->
 		</capsuled_items>
@@ -1150,6 +1214,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46353" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Scorpio - 30-day -->
 		</capsuled_items>
@@ -1164,6 +1229,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46354" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aquarius - 30-day -->
 		</capsuled_items>
@@ -1178,6 +1244,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces - 30-day -->
 		</capsuled_items>
@@ -1192,6 +1259,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46355" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Sagittarius - 30-day -->
 		</capsuled_items>
@@ -1206,6 +1274,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46356" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Cancer - 30-day -->
 		</capsuled_items>
@@ -1221,6 +1290,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18503" level="1" /> <!-- Blessed Zodiac Agathion Pack -->
 		</skills>
@@ -1234,6 +1304,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46371" name="Ashen Certificate" type="EtcItem">
 		<!-- Certificate of the Revolutionaries that Refugee Neti has requested. -->
@@ -1245,6 +1316,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46372" name="Revolutionaries' Strategic Map Piece" type="EtcItem">
 		<!-- Part of the map that shows the strategy of the Ashen Shadow Revolutionaries. If you've collected them all, take them to Sir Klaus Vasper. -->
@@ -1256,6 +1328,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46373" name="Transport Goods" type="EtcItem">
 		<!-- Goods that Blacksmith Kluto has requested from you. If you've collected them all, take them to Blacksmith Kluto. -->
@@ -1267,6 +1340,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46374" name="Destroyed Mark Fragment" type="EtcItem">
 		<!-- Proof that you've completed that Yuyuria has requested from you. If you've collected them all, take them to Wanderer Yuyuria. -->
@@ -1278,6 +1352,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46375" name="Gludin Hero's Reward Box" type="EtcItem">
 		<!-- Reward box given in exchange for saving Gludin from danger. Double-click to use. -->
@@ -1289,6 +1364,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18496" level="1" /> <!-- Gludin Hero's Reward Box -->
 		</skills>
@@ -1302,6 +1378,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46377" name="Frozen One-handed Sword" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sword_i00" />
@@ -1317,6 +1394,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -1340,6 +1418,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">80</stat>
 			<stat type="mAtk">54</stat>
@@ -1364,6 +1443,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="209" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -1387,6 +1467,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="152" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -1411,6 +1492,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1438,6 +1520,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">191</stat>
 			<stat type="mAtk">54</stat>
@@ -1462,6 +1545,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">117</stat>
 			<stat type="mAtk">54</stat>
@@ -1486,6 +1570,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -1509,6 +1594,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -1532,6 +1618,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -1555,6 +1642,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">152</stat>
 			<stat type="mAtk">122</stat>
@@ -1578,6 +1666,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="247" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">51</stat>
@@ -1601,6 +1690,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">181</stat>
@@ -1625,6 +1715,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">186</stat>
@@ -1643,6 +1734,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -1657,6 +1749,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="sDef">47</stat>
 			<stat type="rShld">20</stat>
@@ -1666,6 +1759,7 @@
 	<item id="46393" name="NPC Ashen Shadow Revolutionary Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -1673,16 +1767,19 @@
 	<item id="46394" name="NPC Ashen Shadow Revolutionary Mask" type="Armor">
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="46395" name="Shadow Ingot" type="EtcItem">
 		<!-- Item needed to craft a Shadow Weapon. Take a +10 Shadow Weapon and 10 Shadow Ingots to Neti in Gludio to get an improved Shadow weapon. -->
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46396" name="NPC Sigel Knight Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -1691,6 +1788,7 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -1699,6 +1797,7 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -1707,6 +1806,7 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>

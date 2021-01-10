@@ -20,6 +20,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">64</stat>
 			<stat type="mAtk">32</stat>
@@ -50,6 +51,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">64</stat>
 			<stat type="mAtk">32</stat>
@@ -79,6 +81,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">400</stat>
 			<stat type="mAtk">99</stat>
@@ -108,6 +111,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="3008" level="6" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -140,6 +144,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">400</stat>
 			<stat type="mAtk">99</stat>
@@ -170,6 +175,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">400</stat>
 			<stat type="mAtk">99</stat>
@@ -199,6 +205,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -228,6 +235,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7055" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">95</stat>
 		</stats>
@@ -248,6 +256,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="4880" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -268,6 +277,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="15040" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">111</stat>
 		</stats>
@@ -286,6 +296,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="15040" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">111</stat>
 		</stats>
@@ -309,6 +320,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">96</stat>
 			<stat type="mAtk">47</stat>
@@ -338,6 +350,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">96</stat>
 			<stat type="mAtk">47</stat>
@@ -366,6 +379,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">51</stat>
 			<stat type="mAtk">52</stat>
@@ -394,6 +408,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">63</stat>
 			<stat type="mAtk">63</stat>
@@ -422,6 +437,7 @@
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">169</stat>
 			<stat type="mAtk">76</stat>
@@ -450,6 +466,7 @@
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3030" level="3" /> <!-- Special Ability: Rsk. Evasion -->
 		</skills>
@@ -481,6 +498,7 @@
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3034" level="3" /> <!-- Special Ability: Rsk. Haste -->
 		</skills>
@@ -512,6 +530,7 @@
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3037" level="3" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -544,6 +563,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">221</stat>
 			<stat type="mAtk">91</stat>
@@ -573,6 +593,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3009" level="5" /> <!-- Special Ability: Evasion -->
 		</skills>
@@ -605,6 +626,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3021" level="5" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
@@ -638,6 +660,7 @@
 		<set name="reduced_soulshot" val="19,1" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">221</stat>
 			<stat type="mAtk">91</stat>
@@ -661,6 +684,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="50250" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -678,6 +702,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="33500" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">40</stat>
 		</stats>
@@ -695,6 +720,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="67000" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">80</stat>
 		</stats>
@@ -718,6 +744,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -750,6 +777,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -782,6 +810,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -814,6 +843,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -843,6 +873,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="9400" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">70</stat>
 		</stats>
@@ -861,6 +892,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="9400" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">70</stat>
 		</stats>
@@ -879,6 +911,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="5640" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -895,6 +928,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="5640" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -913,6 +947,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3950" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="sDef">154</stat>
 			<stat type="rShld">20</stat>
@@ -931,6 +966,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3950" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="sDef">154</stat>
 			<stat type="rShld">20</stat>
@@ -952,6 +988,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3760" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">29</stat>
 		</stats>
@@ -969,6 +1006,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3760" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">29</stat>
 		</stats>
@@ -989,6 +1027,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="17150" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1008,6 +1047,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="4855" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">32</stat>
 		</stats>
@@ -1027,6 +1067,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="5720" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">33</stat>
 		</stats>
@@ -1047,6 +1088,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="10725" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">59</stat>
 		</stats>
@@ -1070,6 +1112,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pAtk">130</stat>
 			<stat type="mAtk">61</stat>
@@ -1097,6 +1140,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3023" level="1" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -1127,6 +1171,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3010" level="1" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1157,6 +1202,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 		</skills>
@@ -1185,6 +1231,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="2410" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">58</stat>
 		</stats>
@@ -1205,6 +1252,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1505" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">36</stat>
 		</stats>
@@ -1223,6 +1271,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="20630" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">58</stat>
 		</stats>
@@ -1243,6 +1292,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="89400" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">239</stat>
 		</stats>
@@ -1261,6 +1311,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="14440" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="sDef">203</stat>
 			<stat type="rShld">20</stat>
@@ -1282,6 +1333,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="13755" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">39</stat>
 		</stats>
@@ -1301,6 +1353,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="13755" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">39</stat>
 		</stats>
@@ -1320,6 +1373,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1280" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">22</stat>
 		</stats>
@@ -1338,6 +1392,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="123750" />
+		<set name="material" val="ORIHARUKON" />
 		<stats>
 			<stat type="pDef">166</stat>
 		</stats>
@@ -1356,6 +1411,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="58015" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">52</stat>
 		</stats>
@@ -1372,6 +1428,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="46415" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">66</stat>
 		</stats>
@@ -1390,6 +1447,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="92850" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">83</stat>
 		</stats>
@@ -1408,6 +1466,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="30940" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -1426,6 +1485,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="30940" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -1444,6 +1504,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="30940" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -1462,6 +1523,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="30940" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -1480,6 +1542,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="30940" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -1498,6 +1561,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="30940" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -1517,6 +1581,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="150850" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">202</stat>
 		</stats>
@@ -1535,6 +1600,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="77355" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">104</stat>
 		</stats>
@@ -1558,6 +1624,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1589,6 +1656,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3016" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
@@ -1621,6 +1689,7 @@
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1652,6 +1721,7 @@
 		<set name="damage_range" val="0;0;66;180" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1684,6 +1754,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">281</stat>
 			<stat type="mAtk">132</stat>
@@ -1712,6 +1783,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3564" level="1" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1743,6 +1815,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1774,6 +1847,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3566" level="1" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1804,6 +1878,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">231</stat>
 			<stat type="mAtk">107</stat>
@@ -1832,6 +1907,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3068" level="2" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1863,6 +1939,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3067" level="1" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -1894,6 +1971,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3050" level="1" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1926,6 +2004,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -1954,6 +2033,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="1044" level="2" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
 		</skills>
@@ -1985,6 +2065,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="1035" level="3" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
 		</skills>
@@ -2016,6 +2097,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="1201" level="21" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
 		</skills>
@@ -2048,6 +2130,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -2080,6 +2163,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -2108,6 +2192,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="3031" level="3" /> <!-- Special Ability: Rsk. Evasion -->
 		</skills>
@@ -2139,6 +2224,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1168" level="6" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Poison -->
 		</skills>
@@ -2170,6 +2256,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1164" level="9" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
 		</skills>
@@ -2202,6 +2289,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">141</stat>
 			<stat type="mAtk">114</stat>
@@ -2230,6 +2318,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -2261,6 +2350,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1164" level="9" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
 		</skills>
@@ -2292,6 +2382,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="3" />
+		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1222" level="5" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Chaos -->
 		</skills>
@@ -2324,6 +2415,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">45</stat>
 			<stat type="mAtk">32</stat>
@@ -2352,6 +2444,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>
@@ -2380,6 +2473,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2411,6 +2505,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3068" level="2" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -2442,6 +2537,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3059" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
@@ -2474,6 +2570,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ORIHARUKON" />
 		<stats>
 			<stat type="pAtk">155</stat>
 			<stat type="mAtk">132</stat>
@@ -2501,6 +2598,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ORIHARUKON" />
 		<skills>
 			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -2531,6 +2629,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ORIHARUKON" />
 		<skills>
 			<skill id="3077" level="6" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -2561,6 +2660,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="ORIHARUKON" />
 		<skills>
 			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->
 		</skills>

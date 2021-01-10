@@ -55,6 +55,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9281" level="1" /> <!-- Drum Melody - Heavenly Cocktail -->
 			<skill id="9282" level="1" /> <!-- Lute Melody - Heavenly Cocktail -->
@@ -82,6 +83,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9281" level="1" /> <!-- Drum Melody - Heavenly Cocktail -->
 			<skill id="9282" level="1" /> <!-- Lute Melody - Heavenly Cocktail -->
@@ -108,6 +110,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9281" level="1" /> <!-- Drum Melody - Heavenly Cocktail -->
 			<skill id="9282" level="1" /> <!-- Lute Melody - Heavenly Cocktail -->
@@ -129,6 +132,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47406" name="Scroll of Experience - Lv. 2 (Main Class)" type="EtcItem">
 		<!-- Use to gain 230 billion EXP and 550 million SP. Can be used by main class of Lv. 85 or above. -->
@@ -138,6 +142,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47407" name="Scroll of Experience (Dual Class)" type="EtcItem">
 		<!-- Use to gain 380 billion EXP and 910 million SP. Can be used by dual class Lv. 85 or above. -->
@@ -147,6 +152,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47408" name="+6 Helios Weapon Capsule Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Can be exchanged for +6 Helios weapon (30-day) through the Game Assistant. -->
@@ -155,6 +161,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47409" name="+6 Eternal Armor Set Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Can be exchanged for +6 Eternal armor set (30-day) through the Game Assistant. -->
@@ -163,6 +170,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47410" name="Duo Growth Rune 30% - 30 days" type="EtcItem">
 		<!-- When in inventory, acquired XP/ SP +30%. -->
@@ -171,6 +179,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47411" name="Duo Growth Rune 30% - 30 day Box" type="EtcItem">
 		<!-- Double-click the box to obtain Duo Growth Rune 30% - 30 days x1. -->
@@ -180,6 +189,7 @@
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47412" name="Duo Vital Compression Stone" type="EtcItem">
 		<!-- Acquired XP +20%. Cannot be used together with Dandy's Home Run Ball/ Fall of the Dragon Buff/ Nevit's Hourglass. -->
@@ -189,6 +199,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47413" name="PA Points Coupon (200 points)" type="EtcItem">
 		<!-- Double-click to obtain 200 PA Points. -->
@@ -199,6 +210,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47414" name="Duo's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain one of the following: Duo Vital Compression Stone/ Vitality Replenishing Star Candy/ PA Points (200 points). -->
@@ -208,6 +220,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47415" name="Freya's Wind Cube" type="EtcItem">
 		<!-- For 10 min., acquired XP/ SP +100%, Vitality Consumption +100%. The effect remains after death. Cooldown: 30 min. Can be used only when 1 or more Vitality bar is full. Cannot be used in the Olympiad. -->
@@ -220,6 +233,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<cond>
 			<player MinimumVitalityPoints="35000" />
 		</cond>
@@ -238,6 +252,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="35567" min="1" max="1" chance="5.5" /> <!-- Dark Armor Enhancement Stone -->
 			<item id="27598" min="1" max="1" chance="2.5" /> <!-- Scroll of Blessing: R99-grade Weapon -->
@@ -333,12 +348,14 @@
 		<set name="icon" val="icon.longing_talisman_energy" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47421" name="Freya's Ice Crystal" type="EtcItem">
 		<!-- Take to the Freya at Town of Schuttgart to exchange for special items. -->
 		<set name="icon" val="icon.bm_freya_crystal" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47422" name="Freya's Luxury Shopping Bag" type="EtcItem">
 		<!-- Double-click the luxury shopping bag to obtain Freya's Wind Scroll x1, Freya's Art of Seduction x1, Freya's Recovery Potion x1. In addition, there is the chance that you will obtain 1x Freya/ Sirra/ Snowman Gift Box. -->
@@ -346,6 +363,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47423" name="Freya's Gift Box" type="EtcItem">
 		<!-- Double-click the chest to receive 1 random rare item, such as a rare accessory. -->
@@ -353,6 +371,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47424" name="Sirra's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain an item for enchanting equipment. -->
@@ -360,6 +379,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47425" name="Snow Man's Gift Box" type="EtcItem">
 		<!-- Double-click the chest to receive 1 random item relating to the growth and enchantment of your character. -->
@@ -367,6 +387,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47426" name="Freya's Fated Support Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following rare items: Freya's Scroll of Storm, Freya's Bloody Rune (2 hr). -->
@@ -374,6 +395,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47427" name="Black Freya's Kindness" type="EtcItem">
 		<!-- Double-click to obtain one of the following: Dark/ White Assassin Suit, Red/ White Noblesse Garment, Pirate Red/ Crew Garment, Cowboy Purple Outfit Appearance Stone. -->
@@ -381,6 +403,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47428" name="Freya's Scroll of Storm" type="EtcItem">
 		<!-- For 10 min., Vitality Consumption +150%, acquired XP/ SP +150%. The effect remains after death. Cooldown: 9 min. Can be used only when 1 or more Vitality bars is full. Cannot be used in the Olympiad. The effect does not stack with those of Freya's Frozen Scroll, Maphr's Wind Scroll, Dandy's Scroll: Challenge, Emperor's Growth Scroll, Scroll: Midsummer Passion, Vital Wind, Wind of Bard. -->
@@ -390,6 +413,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18646" level="2" /> <!-- Freya's Scroll of Storm -->
 		</skills>
@@ -404,6 +428,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47430" min="1" max="1" chance="100" /> <!-- Freya's Bloody Rune - 2-hour -->
 		</capsuled_items>
@@ -419,6 +444,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18647" level="1" /> <!-- Freya's Bloody Rune -->
 		</skills>
@@ -433,6 +459,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47432" min="1" max="1" chance="100" /> <!-- Freya's Rune - 30-day -->
 		</capsuled_items>
@@ -448,6 +475,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18648" level="1" /> <!-- Freya's Rune -->
 		</skills>
@@ -462,6 +490,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47434" min="1" max="1" chance="100" /> <!-- Freya's Vital Rune - 30-min -->
 		</capsuled_items>
@@ -477,6 +506,7 @@
 		<set name="time" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
 		</skills>
@@ -592,6 +622,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47444" name="Mysterious Talisman - INT 2 Hour Box" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - INT (2-hour). -->
@@ -600,6 +631,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47445" name="Mysterious Talisman - DEX 2 Hour Box" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - DEX (2-hour). -->
@@ -608,6 +640,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47446" name="Mysterious Talisman - WIT 2 Hour Box" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - WIT (2-hour). -->
@@ -616,6 +649,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47447" name="Mysterious Talisman - CON 2 Hour Box" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - CON (2-hour). -->
@@ -624,6 +658,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47448" name="Mysterious Talisman - MEN 2 Hour Box" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - MEN (2-hour). -->
@@ -632,6 +667,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47449" name="Mysterious Talisman - Attack Attribute 2 Hour Box" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - Attribute Attack (2-hour). -->
@@ -640,6 +676,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47450" name="Mysterious Talisman - Attribute Resistance Attribute 2 Hour Box" type="EtcItem">
 		<!-- Double-click to obtain Mysterious Talisman - Attribute Resistance (2-hour). -->
@@ -648,6 +685,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47451" name="+8 T-shirt Box (Shiny/ Attack/ Magic)" type="EtcItem">
 		<!-- Double-click to obtain one of the following +8 shirts: Shiny Elemental/ Physical Reflect/ Magical Reflect. -->
@@ -658,6 +696,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="37718" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Shiny Elemental Shirt -->
 			<item id="46193" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Physical Reflect Shirt -->
@@ -673,6 +712,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="37718" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Shiny Elemental Shirt -->
 			<item id="46193" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Physical Reflect Shirt -->
@@ -685,6 +725,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47454" name="Lilith Soul Crystal Box (Stage 5-8)" type="EtcItem">
 		<!-- Double-click to obtain Lilith' Soul Crystal Lv. 5-8. -->
@@ -692,6 +733,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47455" name="Anakim Soul Crystal Box (Stage 5-8)" type="EtcItem">
 		<!-- Double-click to obtain Anakim's Soul Crystal Lv. 5-8. -->
@@ -699,6 +741,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47456" name="Level 4 Box of Gems" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry of Lv. 4. -->
@@ -709,6 +752,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="38853" min="1" max="1" chance="6.25" /> <!-- Topaz Lv. 4 -->
 			<item id="38858" min="1" max="1" chance="6.25" /> <!-- Ruby Lv. 4 -->
@@ -737,6 +781,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="38854" min="1" max="1" chance="6.25" /> <!-- Topaz Lv. 5 -->
 			<item id="38859" min="1" max="1" chance="6.25" /> <!-- Ruby Lv. 5 -->
@@ -766,6 +811,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="46317" min="1" max="1" chance="10" /> <!-- Shadow Shaper -->
 			<item id="46318" min="1" max="1" chance="10" /> <!-- Shadow Cutter -->
@@ -789,6 +835,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="34998" min="1" max="1" chance="33.33" /> <!-- Tauti's One-handed Axe -->
 			<item id="34999" min="1" max="1" chance="33.33" /> <!-- Tauti's Two-handed Axe -->
@@ -805,6 +852,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="46060" min="1" max="1" chance="25" /> <!-- Kelbim Dagger -->
 			<item id="46061" min="1" max="1" chance="25" /> <!-- Kelbim Dual Daggers -->
@@ -821,6 +869,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47462" name="Pirate Shipmate Garment Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Pirate Shipmate Garment. Used with upper or full-body armor. -->
@@ -831,6 +880,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47463" name="Cowboy-Purple Garment Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of Cowboy-Purple Garment. Used with upper or full-body armor. -->
@@ -841,6 +891,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47464" name="Appearance Stone: White Assassin Suit" type="EtcItem">
 		<!-- Changes the appearance of the entire armor to that of White Assassin Suit. Used with upper or full-body armor. -->
@@ -851,6 +902,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="18558" level="1" /> <!-- White Assassin Appearance Stone -->
 		</skills>
@@ -862,6 +914,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 			<capsuled_items>
 			<item id="37494" min="1" max="1" chance="100" /> <!-- Chaos Essence (Dual Class) -->
 		</capsuled_items>
@@ -1420,11 +1473,13 @@
 		<set name="icon" val="icon.rare_acc_smith_solvent" />
 		<set name="price" val="5000000" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47494" name="Silenite" type="EtcItem">
 		<!-- A precious ore in which the strong power of monsters is condensed. Denign needs this material to make rare accessories. -->
 		<set name="icon" val="icon.rare_acc_smith_piece" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 </list>

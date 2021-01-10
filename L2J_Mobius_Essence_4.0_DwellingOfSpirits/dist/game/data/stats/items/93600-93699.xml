@@ -126,7 +126,7 @@
 		<set name="icon" val="icon.etc_chaser_stone" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -137,7 +137,7 @@
 		<set name="icon" val="icon.etc_golden_spice_blessed_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -147,7 +147,7 @@
 	<item id="93613" name="Blue Mackerel" type="EtcItem">
 		<!-- Can be exchanged for various items in the Fishermen's Guild. -->
 		<set name="icon" val="icon.fish_normal_i04" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -155,7 +155,7 @@
 	<item id="93614" name="Fresh Blue Mackerel" type="EtcItem">
 		<!-- Can be exchanged for various items in the Fishermen's Guild. -->
 		<set name="icon" val="icon.fish_normal_i12" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -165,7 +165,7 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -175,7 +175,7 @@
 		<!-- Double-click to obtain some SP. Can be exchanged for SP Scroll through a Fishing Guildsman. -->
 		<set name="icon" val="icon.fish_huge_i15" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -184,7 +184,7 @@
 		<!-- Recharges SP by 100,000. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -195,7 +195,7 @@
 		<!-- Double-click to recover 2000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -204,7 +204,7 @@
 		<!-- Magic scroll that teleports one to Gludin Harbor. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -215,7 +215,7 @@
 		<!-- For 20 min., with a certain chance absorbs 8% of the inflicted damage inflicted as HP. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -225,7 +225,7 @@
 		<!-- For 20 min., M. Atk. +75%. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -235,7 +235,7 @@
 		<!-- For 20 min., P. Atk. +4%. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -245,7 +245,7 @@
 		<!-- For 20 min., P. Def. +5%. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -255,7 +255,7 @@
 		<!-- For 20 min., M. Critical Rate +10%. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -265,7 +265,7 @@
 		<!-- For 20 min., P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8, Casting Spd. +8, Speed +8. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -275,7 +275,7 @@
 		<!-- For 20 min., overweight limit +9000. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -285,7 +285,7 @@
 		<!-- Acquired XP/ SP during hunting +30% for 20 min. -->
 		<set name="icon" val="icon.ev_invasion_buff_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -295,7 +295,7 @@
 		<!-- Double-click to obtain 1000 L-Coins. -->
 		<set name="icon" val="icon.bm_lcoin_box_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -309,7 +309,7 @@
 		<!-- Double-click to obtain 8000 L-Coins. -->
 		<set name="icon" val="icon.bm_lcoin_box_i03" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -323,7 +323,7 @@
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -332,21 +332,21 @@
 	<item id="93631" name="Spellbook: Hellfire" type="EtcItem">
 		<!-- A spellbook for learning the Hellfire skill.\n\n<Class>\nDeath Knight (all races)\n\n<Skill effect>\nSticks the sword into the ground and summons a flame burning nearby enemies and decreasing their P./ M. Def. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93632" name="Spellbook: Upgraded Deadly Pull" type="EtcItem">
 		<!-- A spellbook for learning the Upgraded Deadly Pull skill.\n\n<Class>\nDeath Knight (all races)\n\n<Skill effect>\nChanges the effect of Deadly Pull, allowing to attack several targets simultaneously. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93633" name="Spellbook: Drain Magic Energy" type="EtcItem">
 		<!-- A spellbook for learning the Drain Magic Energy skill.\n\n<Class>\nDeath Messenger (all races)\n\n<Skill effect>\nWith a certain chance, recovers MP in a battle. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -354,7 +354,7 @@
 		<!-- Double-click to obtain one of the following items: XP Growth Scroll (3 pcs.), Sayha's Cookie (10 pcs.), Dandy's Golden Ball (3 pcs.), Soulshot Ticket (30 pcs.), Combat Scroll (5 pcs.). -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -362,7 +362,7 @@
 	<item id="93635" name="Failed Enchantment Recovery" type="EtcItem">
 		<!-- Recovers one crystallized item when enchanting is failed. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -372,7 +372,7 @@
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -383,7 +383,7 @@
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -394,7 +394,7 @@
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -578,7 +578,7 @@
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -589,7 +589,7 @@
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -600,7 +600,7 @@
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -611,7 +611,7 @@
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -622,7 +622,7 @@
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -633,7 +633,7 @@
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -644,7 +644,7 @@
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -655,7 +655,7 @@
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -666,7 +666,7 @@
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -677,7 +677,7 @@
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -688,7 +688,7 @@
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -699,7 +699,7 @@
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1032,7 +1032,7 @@
 		<set name="icon" val="icon.bm_lcoin_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1043,7 +1043,7 @@
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1053,7 +1053,7 @@
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1067,7 +1067,7 @@
 		<set name="icon" val="icon.dimension_bracelet_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1076,7 +1076,7 @@
 	<item id="93680" name="Agathion Spirit Coupon" type="EtcItem">
 		<!-- Can be exchanged for Package: Agathion Spirit through Ayril. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1084,7 +1084,7 @@
 	<item id="93681" name="Mark of Maestro" type="EtcItem">
 		<!-- Can be exchanged for a buff and various items through Ayril. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1093,7 +1093,7 @@
 	<item id="93682" name="Special Mark of Maestro" type="EtcItem">
 		<!-- Can be exchanged for various items through Ayril. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1104,7 +1104,7 @@
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1115,7 +1115,7 @@
 		<set name="icon" val="icon.freya_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1125,7 +1125,7 @@
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1141,7 +1141,7 @@
 		<set name="icon" val="icon.bm_challenger_wp_ench_ticket" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1151,7 +1151,7 @@
 		<!-- Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal.\n\nNote!\nCannot be obtain if your character is dead. -->
 		<set name="icon" val="BranchSys2.icon.g_illumination_yellow" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1161,7 +1161,7 @@
 		<!-- Instantly recovers 200 HP. -->
 		<set name="icon" val="icon.ev_honey_songpyeon_00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1171,7 +1171,7 @@
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="icon.ev_bean_songpyeon_00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1181,7 +1181,7 @@
 		<!-- Acquired XP/ SP +20% for 20 min.\n\nNote!\nWhen used with Einhasad's Blessing Scroll, Einhasad's Protection, Dandy's Home Run Ball, Dandy's Golden Ball, the most powerful effect is active. -->
 		<set name="icon" val="icon.ev_sesame_songpyeon_00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1191,7 +1191,7 @@
 		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P. Critical Rate/ M. Skill Critical Rate +30, Atk./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1202,7 +1202,7 @@
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1211,7 +1211,7 @@
 	<item id="93693" name="Honey (Event)" type="EtcItem">
 		<!-- Can be exchanged for candies through the Game Assistant. -->
 		<set name="icon" val="icon.ev_honey_00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1220,7 +1220,7 @@
 	<item id="93694" name="Beans (Event)" type="EtcItem">
 		<!-- Can be exchanged for candies through the Game Assistant. -->
 		<set name="icon" val="icon.ev_bean_00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1229,7 +1229,7 @@
 	<item id="93695" name="Sesame (Event)" type="EtcItem">
 		<!-- Can be exchanged for candies through the Game Assistant. -->
 		<set name="icon" val="icon.ev_sesame_00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1239,7 +1239,7 @@
 		<!-- Congratulations on Chuseok. When you open the letter, you will see an explosion of fireworks, also there will be writings over your character�s head. -->
 		<set name="icon" val="icon.ev_2018_xmas_letter" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1250,7 +1250,7 @@
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1261,7 +1261,7 @@
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1272,7 +1272,7 @@
 		<set name="icon" val="icon.etc_chaser_stone" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

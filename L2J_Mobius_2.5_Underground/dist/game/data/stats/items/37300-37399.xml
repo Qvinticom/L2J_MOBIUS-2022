@@ -16,6 +16,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -45,6 +46,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -73,6 +75,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="670" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13109" level="1" /> <!-- Special Ability: Damage Up -->
@@ -102,6 +105,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="580" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -129,6 +133,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -156,6 +161,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="520" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -184,6 +190,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="580" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="6" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -212,6 +219,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -241,6 +249,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="680" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="1" /> <!-- Special Ability: Damage Up -->
 		</skills>
@@ -271,6 +280,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="time" val="43200" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="1" /> <!-- Special Ability: Damage Up -->
 		</skills>
@@ -301,6 +311,7 @@
 		<set name="reuse_delay" val="1350" />
 		<set name="time" val="43200" />
 		<set name="weight" val="530" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -329,6 +340,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="580" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -358,6 +370,7 @@
 		<set name="time" val="43200" />
 		<set name="weight" val="360" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -383,6 +396,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36950" min="1" max="1" chance="100" /> <!-- Toma's Living Guide -->
 			<item id="36021" min="1" max="1" chance="100" /> <!-- Returning Hero's Potion Pack -->
@@ -399,6 +413,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="FatedSupportBox" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37315" name="Fated Support Box: Fighter (C-grade)" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for fighter-type characters. Can be used by characters Lv. 40 - 84. -->
@@ -411,6 +426,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37243" min="1" max="1" chance="100" /> <!-- Steel Yaksa Mace (60-day) -->
 			<item id="37244" min="1" max="1" chance="100" /> <!-- Steel Saber*Sword of Revolution (60-day) -->
@@ -437,6 +453,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37224" min="2" max="2" chance="100" /> <!-- Steel Moonstone Earring (60-day) -->
 			<item id="37226" min="2" max="2" chance="100" /> <!-- Steel Aquastone Ring (60-day) -->
@@ -463,6 +480,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37224" min="2" max="2" chance="100" /> <!-- Steel Moonstone Earring (60-day) -->
 			<item id="37226" min="2" max="2" chance="100" /> <!-- Steel Aquastone Ring (60-day) -->
@@ -492,6 +510,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37224" min="2" max="2" chance="100" /> <!-- Steel Moonstone Earring (60-day) -->
 			<item id="37226" min="2" max="2" chance="100" /> <!-- Steel Aquastone Ring (60-day) -->
@@ -521,6 +540,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37224" min="2" max="2" chance="100" /> <!-- Steel Moonstone Earring (60-day) -->
 			<item id="37226" min="2" max="2" chance="100" /> <!-- Steel Aquastone Ring (60-day) -->
@@ -550,6 +570,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37224" min="2" max="2" chance="100" /> <!-- Steel Moonstone Earring (60-day) -->
 			<item id="37226" min="2" max="2" chance="100" /> <!-- Steel Aquastone Ring (60-day) -->
@@ -583,6 +604,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37224" min="2" max="2" chance="100" /> <!-- Steel Moonstone Earring (60-day) -->
 			<item id="37226" min="2" max="2" chance="100" /> <!-- Steel Aquastone Ring (60-day) -->
@@ -615,6 +637,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37227" min="2" max="2" chance="100" /> <!-- Steel Adamantite Earring (60-day) -->
 			<item id="37229" min="2" max="2" chance="100" /> <!-- Steel Adamantite Ring (60-day) -->
@@ -644,6 +667,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37227" min="2" max="2" chance="100" /> <!-- Steel Adamantite Earring (60-day) -->
 			<item id="37229" min="2" max="2" chance="100" /> <!-- Steel Adamantite Ring (60-day) -->
@@ -671,6 +695,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37227" min="2" max="2" chance="100" /> <!-- Steel Adamantite Earring (60-day) -->
 			<item id="37229" min="2" max="2" chance="100" /> <!-- Steel Adamantite Ring (60-day) -->
@@ -700,6 +725,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37227" min="2" max="2" chance="100" /> <!-- Steel Adamantite Earring (60-day) -->
 			<item id="37229" min="2" max="2" chance="100" /> <!-- Steel Adamantite Ring (60-day) -->
@@ -728,6 +754,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37227" min="2" max="2" chance="100" /> <!-- Steel Adamantite Earring (60-day) -->
 			<item id="37229" min="2" max="2" chance="100" /> <!-- Steel Adamantite Ring (60-day) -->
@@ -756,6 +783,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37227" min="2" max="2" chance="100" /> <!-- Steel Adamantite Earring (60-day) -->
 			<item id="37229" min="2" max="2" chance="100" /> <!-- Steel Adamantite Ring (60-day) -->
@@ -788,6 +816,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37227" min="2" max="2" chance="100" /> <!-- Steel Adamantite Earring (60-day) -->
 			<item id="37229" min="2" max="2" chance="100" /> <!-- Steel Adamantite Ring (60-day) -->
@@ -821,6 +850,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37230" min="2" max="2" chance="100" /> <!-- Steel Phoenix Earring (60-day) -->
 			<item id="37232" min="2" max="2" chance="100" /> <!-- Steel Phoenix Ring (60-day) -->
@@ -850,6 +880,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37230" min="2" max="2" chance="100" /> <!-- Steel Phoenix Earring (60-day) -->
 			<item id="37232" min="2" max="2" chance="100" /> <!-- Steel Phoenix Ring (60-day) -->
@@ -877,6 +908,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37230" min="2" max="2" chance="100" /> <!-- Steel Phoenix Earring (60-day) -->
 			<item id="37232" min="2" max="2" chance="100" /> <!-- Steel Phoenix Ring (60-day) -->
@@ -906,6 +938,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37230" min="2" max="2" chance="100" /> <!-- Steel Phoenix Earring (60-day) -->
 			<item id="37232" min="2" max="2" chance="100" /> <!-- Steel Phoenix Ring (60-day) -->
@@ -935,6 +968,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37230" min="2" max="2" chance="100" /> <!-- Steel Phoenix Earring (60-day) -->
 			<item id="37232" min="2" max="2" chance="100" /> <!-- Steel Phoenix Ring (60-day) -->
@@ -964,6 +998,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37230" min="2" max="2" chance="100" /> <!-- Steel Phoenix Earring (60-day) -->
 			<item id="37232" min="2" max="2" chance="100" /> <!-- Steel Phoenix Ring (60-day) -->
@@ -998,6 +1033,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37230" min="2" max="2" chance="100" /> <!-- Steel Phoenix Earring (60-day) -->
 			<item id="37232" min="2" max="2" chance="100" /> <!-- Steel Phoenix Ring (60-day) -->
@@ -1031,6 +1067,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37233" min="2" max="2" chance="100" /> <!-- Steel Tateossian Earring (60-day) -->
 			<item id="37235" min="2" max="2" chance="100" /> <!-- Steel Tateossian Ring (60-day) -->
@@ -1061,6 +1098,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37233" min="2" max="2" chance="100" /> <!-- Steel Tateossian Earring (60-day) -->
 			<item id="37235" min="2" max="2" chance="100" /> <!-- Steel Tateossian Ring (60-day) -->
@@ -1088,6 +1126,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37233" min="2" max="2" chance="100" /> <!-- Steel Tateossian Earring (60-day) -->
 			<item id="37235" min="2" max="2" chance="100" /> <!-- Steel Tateossian Ring (60-day) -->
@@ -1118,6 +1157,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37233" min="2" max="2" chance="100" /> <!-- Steel Tateossian Earring (60-day) -->
 			<item id="37235" min="2" max="2" chance="100" /> <!-- Steel Tateossian Ring (60-day) -->
@@ -1146,6 +1186,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37233" min="2" max="2" chance="100" /> <!-- Steel Tateossian Earring (60-day) -->
 			<item id="37235" min="2" max="2" chance="100" /> <!-- Steel Tateossian Ring (60-day) -->
@@ -1174,6 +1215,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37233" min="2" max="2" chance="100" /> <!-- Steel Tateossian Earring (60-day) -->
 			<item id="37235" min="2" max="2" chance="100" /> <!-- Steel Tateossian Ring (60-day) -->
@@ -1208,6 +1250,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37233" min="2" max="2" chance="100" /> <!-- Steel Tateossian Earring (60-day) -->
 			<item id="37235" min="2" max="2" chance="100" /> <!-- Steel Tateossian Ring (60-day) -->
@@ -1242,6 +1285,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37236" min="2" max="2" chance="100" /> <!-- Steel Dynasty Earring (60-day) -->
 			<item id="37238" min="2" max="2" chance="100" /> <!-- Steel Dynasty Ring (60-day) -->
@@ -1272,6 +1316,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37236" min="2" max="2" chance="100" /> <!-- Steel Dynasty Earring (60-day) -->
 			<item id="37238" min="2" max="2" chance="100" /> <!-- Steel Dynasty Ring (60-day) -->
@@ -1300,6 +1345,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37236" min="2" max="2" chance="100" /> <!-- Steel Dynasty Earring (60-day) -->
 			<item id="37238" min="2" max="2" chance="100" /> <!-- Steel Dynasty Ring (60-day) -->
@@ -1330,6 +1376,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37236" min="2" max="2" chance="100" /> <!-- Steel Dynasty Earring (60-day) -->
 			<item id="37238" min="2" max="2" chance="100" /> <!-- Steel Dynasty Ring (60-day) -->
@@ -1359,6 +1406,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37236" min="2" max="2" chance="100" /> <!-- Steel Dynasty Earring (60-day) -->
 			<item id="37238" min="2" max="2" chance="100" /> <!-- Steel Dynasty Ring (60-day) -->
@@ -1388,6 +1436,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37236" min="2" max="2" chance="100" /> <!-- Steel Dynasty Earring (60-day) -->
 			<item id="37238" min="2" max="2" chance="100" /> <!-- Steel Dynasty Ring (60-day) -->
@@ -1423,6 +1472,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37236" min="2" max="2" chance="100" /> <!-- Steel Dynasty Earring (60-day) -->
 			<item id="37238" min="2" max="2" chance="100" /> <!-- Steel Dynasty Ring (60-day) -->
@@ -1458,6 +1508,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1488,6 +1539,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1525,6 +1577,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1552,6 +1605,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1579,6 +1633,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1608,6 +1663,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1643,6 +1699,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1673,6 +1730,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37239" min="2" max="2" chance="100" /> <!-- Steel Immortal Earring (30-day) -->
 			<item id="37241" min="2" max="2" chance="100" /> <!-- Steel Immortal Ring (30-day) -->
@@ -1710,6 +1768,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37359" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 2 Vitality Replenishing Star Candies. -->
@@ -1718,6 +1777,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37360" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 3 Vitality Replenishing Star Candies. -->
@@ -1726,6 +1786,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37361" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 4 Vitality Replenishing Star Candies. -->
@@ -1734,6 +1795,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37362" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 5 Vitality Replenishing Star Candies. -->
@@ -1742,6 +1804,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37363" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 6 Vitality Replenishing Star Candies. -->
@@ -1750,6 +1813,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37364" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 6 Vitality Replenishing Star Candies. -->
@@ -1758,6 +1822,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37365" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 7 Vitality Replenishing Star Candies. -->
@@ -1766,6 +1831,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37366" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 7 Vitality Replenishing Star Candies. -->
@@ -1774,6 +1840,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37367" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 8 Vitality Replenishing Star Candies. -->
@@ -1782,6 +1849,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37368" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 10 Vitality Replenishing Star Candies. -->
@@ -1790,6 +1858,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37369" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 12 Vitality Replenishing Star Candies. -->
@@ -1798,6 +1867,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37370" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 13 Vitality Replenishing Star Candies. -->
@@ -1806,6 +1876,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37371" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 14 Vitality Replenishing Star Candies. -->
@@ -1814,6 +1885,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37372" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 15 Vitality Replenishing Star Candies. -->
@@ -1822,6 +1894,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37373" name="Chaos Fragment" type="EtcItem">
 		<!-- Used to receive the power of chaos. Use it to change your dual class through 'Hardin' at the Reliquary of the Giants. -->
@@ -1832,6 +1905,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37374" name="Chaos Pomander" type="EtcItem">
 		<!-- Use it to learn the revelation skill through the 'Monk of Chaos' at the Reliquary of the Giants. -->
@@ -1842,6 +1916,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37375" name="Chaos Pomander (Dual Class)" type="EtcItem">
 		<!-- Use it to learn the revelation skill through the 'Monk of Chaos' at the Reliquary of the Giants. (dual class only) -->
@@ -1852,6 +1927,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37376" name="Steel Draconic Bow (60-day)" type="Weapon">
 		<!-- Draconic Bow with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60 days. -->
@@ -1868,6 +1944,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="time" val="86400" />
 		<set name="weight" val="550" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">581</stat>
 			<stat type="mAtk">132</stat>
@@ -1893,6 +1970,7 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="time" val="86400" />
 		<set name="weight" val="510" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">654</stat>
 			<stat type="mAtk">151</stat>
@@ -1912,6 +1990,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37379" name="Blessed Scroll: Modify Weapon (R-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -1926,6 +2005,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22425" level="1" /> <!-- Blessed Weapon Appearance Stone (R-grade) -->
 		</skills>
@@ -1943,6 +2023,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22426" level="1" /> <!-- Blessed Weapon Appearance Stone (S-grade) -->
 		</skills>
@@ -1960,6 +2041,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22427" level="1" /> <!-- Blessed Weapon Appearance Stone (A-grade) -->
 		</skills>
@@ -1977,6 +2059,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22428" level="1" /> <!-- Blessed Weapon Appearance Stone (B-grade) -->
 		</skills>
@@ -1994,6 +2077,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22429" level="1" /> <!-- Blessed Weapon Appearance Stone (C-grade) -->
 		</skills>
@@ -2011,6 +2095,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22430" level="1" /> <!-- Blessed Weapon Appearance Stone (D-grade) -->
 		</skills>
@@ -2028,6 +2113,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22544" level="1" /> <!-- Blessed Armor Appearance Stone (R-grade) -->
 		</skills>
@@ -2045,6 +2131,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22545" level="1" /> <!-- Blessed Armor Appearance Stone (S-grade) -->
 		</skills>
@@ -2062,6 +2149,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22546" level="1" /> <!-- Blessed Armor Appearance Stone (A-grade) -->
 		</skills>
@@ -2079,6 +2167,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22547" level="1" /> <!-- Blessed Armor Appearance Stone (B-grade) -->
 		</skills>
@@ -2096,6 +2185,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22548" level="1" /> <!-- Blessed Armor Appearance Stone (C-grade) -->
 		</skills>
@@ -2113,6 +2203,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22549" level="1" /> <!-- Blessed Armor Appearance Stone (D-grade) -->
 		</skills>
@@ -2128,6 +2219,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="9997" level="1" /> <!-- Steel Door Guild Reward Box (Low-grade) -->
 		</skills>
@@ -2143,6 +2235,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="9998" level="1" /> <!-- Steel Door Guild Reward Box (Mid-grade) -->
 		</skills>
@@ -2158,6 +2251,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="9999" level="1" /> <!-- Steel Door Guild Reward Box (High-grade) -->
 		</skills>
@@ -2173,6 +2267,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="10000" level="1" /> <!-- Steel Door Guild Reward Box (Top-grade) -->
 		</skills>
@@ -2187,6 +2282,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17000" level="1" /> <!-- Scroll: 10,000,000 SP -->
 		</skills>
@@ -2199,6 +2295,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37422" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: Crossbow -->
 			<item id="37418" min="1" max="1" chance="6.25" /> <!-- Emerald Weapon Appearance Stone: Two-handed Sword -->
@@ -2226,6 +2323,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37398" name="Black Anvil Guild's Dimensional Chest" type="EtcItem">
 		<!-- Chest given by the Black Anvil Guild to the clan who obtains a dimensional castle. -->
@@ -2234,6 +2332,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37399" name="Dimensional Castle Lord's Support Box" type="EtcItem">
 		<!-- Box given by the Dimensional Castle Lord to thank the receiver. -->
@@ -2242,5 +2341,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

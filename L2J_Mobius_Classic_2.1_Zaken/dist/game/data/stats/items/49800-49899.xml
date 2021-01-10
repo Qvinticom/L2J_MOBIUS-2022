@@ -5,7 +5,7 @@
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -505,7 +505,7 @@
 		<!-- Sayha Grace points +35,000 (1 slot). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -515,7 +515,7 @@
 		<!-- Sayha Grace points +70,000 (2 slots). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_sayha_silver_blessed" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -525,7 +525,7 @@
 		<!-- Sayha Grace points +105,000 (3 slots). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_sayha_gold_blessed" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -535,7 +535,7 @@
 		<!-- Double-click to get Fire Dragon Pendant +10. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -549,7 +549,7 @@
 		<!-- Double-click to get Land Dragon Pendant +10. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_pendant_pvp_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -618,7 +618,7 @@
 		<!-- Double-click to randomly receive one rare accessory or one rare item. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_sayha_gold_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -628,7 +628,7 @@
 		<!-- Double-click to get one of Ready Product (C/B/A-grade) Boxes, one of various Enchantment Scrolls, or one Sayha's Golden Light Blessing. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -638,7 +638,7 @@
 		<!-- Double-click to randomly receive one of Talismans of Insolence, one of the enchantment items, or one of the supply types. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -648,7 +648,7 @@
 		<!-- Double-click to receive Sayha's Blessing Box and Sayha's Gust. If you are lucky, you can also get one of the following items: Golden, Silver, or Average Gift. Cannot be dropped or sold in the grocery store. -->
 		<set name="icon" val="icon.bm_sayha_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -678,7 +678,7 @@
 	<item id="49861" name="Life Stone - Tester" additionalName="Tester" type="EtcItem">
 		<!-- Tester -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -687,7 +687,7 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -696,259 +696,259 @@
 	<item id="49863" name="Best Dye of STR (STR +1 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49864" name="Best Dye of STR (STR + 1 DEX - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49865" name="Best Dye of CON (CON + 1 STR - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49866" name="Best Dye of CON (CON + 1 DEX - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49867" name="Best Dye of DEX (DEX + 1 STR - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49868" name="Best Dye of DEX (DEX + 1 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49869" name="Best Dye of INT (INT + 1 MEN - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49870" name="Best Dye of INT (INT + 1 WIT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 1st class transfer, before 2nd class transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49871" name="Best Dye of MEN (MEN + 1 INT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49872" name="Best Dye of MEN (MEN + 1 WIT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49873" name="Best Dye of WIT (WIT + 1 INT - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49874" name="Greater Dye of WIT (Wit + 1 Men - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49875" name="Best Dye of STR (STR + 1 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49876" name="Best Dye of STR (STR + 1 DEX - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49877" name="Best Dye of CON (CON + 1 STR - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49878" name="Best Dye of CON (CON + 1 DEX - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49879" name="Best Dye of DEX (DEX + 1 STR - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49880" name="Best Dye of DEX (DEX + 1 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49881" name="Best Dye of INT (INT + 1 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49882" name="Best Dye of INT (INT + 1 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 1st class transfer, before 2nd class transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49883" name="Best Dye of MEN (MEN + 1 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49884" name="Best Dye of MEN (MEN + 1 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49885" name="Best Dye of WIT (WIT + 1 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49886" name="Best Dye of WIT (WIT + 1 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49887" name="Best Dye of STR (STR + 1 CON - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49888" name="Best Dye of STR (STR + 1 DEX - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_str" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49889" name="Best Dye of CON (CON + 1 STR - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49890" name="Best Dye of CON (CON + 1 DEX - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_con" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49891" name="Best Dye of DEX (DEX + 1 STR - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49892" name="Best Dye of DEX (DEX + 1 CON - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_dex" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49893" name="Best Dye of INT (INT + 1 MEN - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49894" name="Best Dye of INT (INT + 1 WIT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 1st class transfer, before 2nd class transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49895" name="Best Dye of MEN (MEN + 1 INT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49896" name="Best Dye of MEN (MEN + 1 WIT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49897" name="Best Dye of WIT (WIT + 1 INT - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49898" name="Best Dye of WIT (WIT + 1 MEN - 1)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv1_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="49899" name="Best Dye of STR (STR + 2 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv2_1_dye_str" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>

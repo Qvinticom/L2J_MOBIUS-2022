@@ -9,6 +9,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="26301" name="3rd Anniversary Agathion" additionalName="14-day" type="Armor">
 		<!-- Item for the 3rd anniversary of Lineage 2. Bracelet that can summon Agathion - Nepal Snow. -->
@@ -19,6 +20,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="26302" name="6th Anniversary Hat" type="Armor">
 		<!-- Hair accessory for the 6th anniversary of Lineage 2. Uses 2 hair accessory slots. -->
@@ -29,6 +31,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="26303" name="6th Anniversary Agathion" additionalName="14-day" type="Armor">
 		<!-- Item for the 6th anniversary of Lineage 2. Bracelet that can summon Agathion - Nepal Snow. -->
@@ -39,6 +42,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="26304" name="Campfire Flint" type="EtcItem">
 		<!-- You can start a campfire by using this flint. For 10 min. for you and your party members: Skill Cooldown -10%, PvE Damage +10%, Vampiric Rage effect 5%. It will be effective only when the fire is started at a certain distance away from the village. Cannot be stacked with the Christmas Tree effect. Can be stacked with the Warmth of Kotatsu effect. -->
@@ -47,6 +51,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26305" name="Kotatsu" type="EtcItem">
 		<!-- For 10 min. for you and your party members: Speed +20, Skill MP Consumption -20%, received PvE Damage -10%. It will be effective only when summoned at a certain distance away from the village. Can be stacked with the Campfire's Warmth effect. -->
@@ -54,6 +59,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26306" name="Offering Test Recipe 1" type="EtcItem">
 		<!-- For Dwarves only. rare_condition 100000000, rare_announce 1 -->
@@ -62,6 +68,7 @@
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="RECIPE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26307" name="Offering Test Recipe 2" type="EtcItem">
 		<!-- For Dwarves only. rare_condition 100000000, rare_announce 0 -->
@@ -70,6 +77,7 @@
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="RECIPE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26308" name="Offering Test Recipe 3" type="EtcItem">
 		<!-- For Dwarves only. rare_condition 100000000 -->
@@ -78,6 +86,7 @@
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="RECIPE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26309" name="Offering Test Recipe 4" type="EtcItem">
 		<!-- For Dwarves only. rare_announce 1 -->
@@ -86,6 +95,7 @@
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="RECIPE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26310" name="Offering Test Recipe 5" type="EtcItem">
 		<!-- For Dwarves only. rare_announce 0 -->
@@ -94,6 +104,7 @@
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="RECIPE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26311" name="Offering Test Ingredient 1" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Quest item. -->
@@ -103,6 +114,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26312" name="Offering Test Ingredient 2" type="Weapon">
 		<!-- Weapon worth 1000 Adena. Shadow item. -->
@@ -117,6 +129,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="bodypart" val="lrhand" />
 		<set name="price" val="1000" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">78</stat>
 			<stat type="mAtk">39</stat>
@@ -133,6 +146,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="price" val="1000" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26314" name="Offering Test Ingredient 4" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Premium item. -->
@@ -140,12 +154,14 @@
 		<set name="price" val="1000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26315" name="Offering Test Ingredient 5" type="EtcItem">
 		<!-- Price is 0, but can be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26316" name="Offering Test Ingredient 6" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Cannot be sold in the shop. -->
@@ -154,6 +170,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26317" name="Offering Test Ingredient 7" type="EtcItem">
 		<!-- Stackable item worth 1000. Must be used as an offering. -->
@@ -161,6 +178,7 @@
 		<set name="price" val="1000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26318" name="Dragon Scales" type="EtcItem">
 		<!-- Main ingredient to create Dragon Claws (Fragments). -->
@@ -168,6 +186,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26319" name="Venir's Talisman Stage 1 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Venir's Talismans Stage 1. -->
@@ -177,6 +196,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39634" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
 		</capsuled_items>
@@ -189,6 +209,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39635" min="10" max="10" chance="100" /> <!-- Venir's Talisman Lv. 2 -->
 		</capsuled_items>
@@ -201,6 +222,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39636" min="8" max="8" chance="100" /> <!-- Venir's Talisman Lv. 3 -->
 		</capsuled_items>
@@ -213,6 +235,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39637" min="6" max="6" chance="100" /> <!-- Venir's Talisman Lv. 4 -->
 		</capsuled_items>
@@ -225,6 +248,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39638" min="4" max="4" chance="100" /> <!-- Venir's Talisman Lv. 5 -->
 		</capsuled_items>
@@ -237,6 +261,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="39639" min="2" max="2" chance="100" /> <!-- Venir's Talisman Lv. 6 -->
 		</capsuled_items>
@@ -249,6 +274,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -260,6 +286,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="26327" name="Lineage II Baseball Cap" type="Armor">
 		<!-- Lineage II baseball cap. -->
@@ -267,6 +294,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26328" name="School Uniform A" type="Armor">
 		<!-- School Uniform A. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -276,6 +304,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="26329" name="School Uniform Hair A" type="Armor">
 		<!-- School Uniform A hair accessory. -->
@@ -284,6 +313,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26330" name="School Uniform B" type="Armor">
 		<!-- School Uniform B. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -293,6 +323,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="26331" name="School Uniform Hair B" type="Armor">
 		<!-- School Uniform B hair accessory. -->
@@ -301,6 +332,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26332" name="Lineage II Baseball Uniform Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
@@ -311,6 +343,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26333" name="Lineage II Baseball Cap Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the Lineage II Baseball Cap. Can only be used on hair accessories that use 2 slots. -->
@@ -321,6 +354,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26334" name="School Uniform A Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the School Uniform A. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform A. Appearance is restored through the use of a Restoration Stone. -->
@@ -329,6 +363,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26335" name="School Uniform Hair A Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the School Uniform Hair A. Can only be used on hair accessories that use 2 slots. -->
@@ -337,6 +372,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26336" name="School Uniform B Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the School Uniform B. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform B. Appearance is restored through the use of a Restoration Stone. -->
@@ -345,6 +381,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26337" name="School Uniform Hair B Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the School Uniform Hair B. Can only be used on hair accessories that use 2 slots. -->
@@ -353,6 +390,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26338" name="Talisman - Abundance Lv. 1 (High-grade)" type="Armor">
 		<!-- Max HP/ MP/ CP +510, P. Def. +971, M. Def. +552, P. Evasion/ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +15%, Received P. Critical Damage -15%, PVP Damage -15% when equipped. Can use the Power of Abundance skill. (P. Atk. +15%, M. Atk. +15%, Skill Power +15%, Skill Critical Rate +15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
@@ -361,6 +399,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21477" level="1" /> <!-- Power of Abundance -->
 			<skill id="21364" level="9" /> <!-- Talisman - Abundance -->
@@ -373,6 +412,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21477" level="2" /> <!-- Power of Abundance -->
 			<skill id="21364" level="10" /> <!-- Talisman - Abundance -->
@@ -385,6 +425,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21477" level="3" /> <!-- Power of Abundance -->
 			<skill id="21364" level="11" /> <!-- Talisman - Abundance -->
@@ -397,6 +438,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21477" level="4" /> <!-- Power of Abundance -->
 			<skill id="21364" level="12" /> <!-- Talisman - Abundance -->
@@ -408,7 +450,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5000" />
@@ -420,7 +462,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5001" />
@@ -432,7 +474,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5002" />
@@ -444,7 +486,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5003" />
@@ -460,12 +502,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26347" name="Kaliel's Token" type="EtcItem">
 		<!-- Kaliel's Token. Give it to Jolie (Event Manager) to receive a Gift Box or Soul Box. Deleted after event. -->
 		<set name="icon" val="BranchIcon.Icon.event_upgradegold" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26348" name="Kaliel's Soul Pouch" type="EtcItem">
 		<!-- Double-click to receive various items with Kaliel's Blessing that are helpful for obtaining XP and hunting. Temporary event item. -->
@@ -474,6 +518,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26349" name="Kaliel's Gift Box Pouch" type="EtcItem">
 		<!-- Double-click to receive various valuable items with Kaliel's Blessing. Temporary event item. -->
@@ -482,6 +527,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26350" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. +4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. +5 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
@@ -493,6 +539,7 @@
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- When enchanted, P. Def. +1 for armor and accessories (A-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
@@ -504,6 +551,7 @@
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26352" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. +5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. +6 for two-handed swords/ blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. P. Atk./ M. Atk. Increase doubles starting at +4. -->
@@ -515,6 +563,7 @@
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26353" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- P. Def. +1 for armor and accessories (S-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
@@ -526,6 +575,7 @@
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26354" name="Gem" type="EtcItem">
 		<!-- Used as an ingredient to purchase items from the in-game shop. -->
@@ -534,6 +584,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="26355" name="Pirate Captain Outfit" type="Armor">
 		<!-- Pirate captain's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -543,6 +594,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="26356" name="Pirate Crew Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -552,6 +604,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="26357" name="Pirate Captain Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->
@@ -562,6 +615,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26358" name="Pirate Crew Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
@@ -572,6 +626,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26359" name="Automatic Appearance Stone: Tears Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types for 30 days. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
@@ -584,6 +639,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26360" name="Automatic Appearance Stone: Tears Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
@@ -596,6 +652,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26361" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Metal Suit for 30 days. Can be used only on hair accessories that take up 2 slots. -->
@@ -607,6 +664,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26362" name="Metal Suit Top Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Metal Suit for 30 days. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
@@ -619,6 +677,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26363" name="Metal Suit Pants Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of pants into that of a Metal Suit for 30 days. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
@@ -631,6 +690,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26364" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves into that of a Metal Suit fpr 30 days. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
@@ -643,6 +703,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26365" name="Metal Suit Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of shoes into that of a Metal Suit for 30 days. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
@@ -655,6 +716,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26366" name="Ninja Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit for 30 days. Can be used only on hair accessories that take up 2 slots. Gives you active skills upon modification. -->
@@ -667,6 +729,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26367" name="Ninja Top Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -679,6 +742,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26368" name="Ninja Pants Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -691,6 +755,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26369" name="Ninja Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -703,6 +768,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26370" name="Ninja Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -715,6 +781,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26371" name="Tribal Warrior Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of a Tribal Warrior outfit for 30 days. Can only be used on hair accessories that use 2 slots. -->
@@ -727,6 +794,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26372" name="Tribal Warrior Top Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -739,6 +807,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26373" name="Tribal Warrior Pants Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -751,6 +820,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26374" name="Tribal Warrior Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -763,6 +833,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26375" name="Tribal Warrior Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -775,6 +846,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26376" name="Military Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Military look for 30 days. Can be used only on hair accessories that take up 2 slots. -->
@@ -787,6 +859,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26377" name="Military Top Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -799,6 +872,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26378" name="Military Pants Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -811,6 +885,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26379" name="Military Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -823,6 +898,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26380" name="Military Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
@@ -835,6 +911,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26381" name="Samurai Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit for 30 days. Only for 2-slot hair accessories. Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
@@ -847,6 +924,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26382" name="Samurai Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Samurai for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
@@ -860,6 +938,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26383" name="Vampire Top Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. -->
@@ -873,6 +952,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26384" name="Vampire Pants Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. -->
@@ -886,6 +966,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26385" name="Vampire Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
@@ -899,6 +980,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26386" name="Vampire Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
@@ -912,6 +994,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26387" name="Vampire Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Vampire Outfit for 30 days. Only for 2-slot hair accessories. -->
@@ -924,6 +1007,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26388" name="Anakim Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of Anakim Outfit for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
@@ -937,6 +1021,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26389" name="Agathion - Anakim" additionalName="30-day" type="Armor">
 		<!-- Equip to summon the Anakim Agathion. 30-day. -->
@@ -947,6 +1032,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="26390" name="Mysterious Quick Healing Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that greatly restores HP for 15 seconds. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
@@ -955,6 +1041,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Rune of Feather (7-day). -->
@@ -985,6 +1072,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26049" level="1" /> <!-- Rune of Feather -->
 		</skills>
@@ -997,6 +1085,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26394" name="Transformation Scroll: Rose (M)" type="EtcItem">
 		<!-- Inflicts warrior-type attack. Transforms into a Rose (M) for 30 min. -->
@@ -1006,6 +1095,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26395" name="Sealed Shadow Shaper" type="EtcItem">
 		<!-- Double-click to get a Shadow Shaper. Cannot be exchanged or dropped once open. -->
@@ -1013,6 +1103,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26396" name="Sealed Shadow Cutter" type="EtcItem">
 		<!-- Double-click to get a Shadow Cutter. Cannot be exchanged or dropped once open. -->
@@ -1020,6 +1111,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26397" name="Sealed Shadow Slasher" type="EtcItem">
 		<!-- Double-click to get a Shadow Slasher. Cannot be exchanged or dropped once open. -->
@@ -1027,6 +1119,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26398" name="Sealed Shadow Fighter" type="EtcItem">
 		<!-- Double-click to get a Shadow Fighter. Cannot be exchanged or dropped once open. -->
@@ -1034,6 +1127,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26399" name="Sealed Shadow Stormer" type="EtcItem">
 		<!-- Double-click to get a Shadow Stormer. Cannot be exchanged or dropped once open. -->
@@ -1041,5 +1135,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

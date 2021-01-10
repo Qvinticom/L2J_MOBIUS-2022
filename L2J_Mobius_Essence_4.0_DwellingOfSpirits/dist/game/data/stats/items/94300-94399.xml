@@ -7,7 +7,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1200" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -23,8 +23,8 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="107" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="BONE" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1180" />
 		<set name="price" val="3355000" />
 		<set name="commissionItemType" val="SHIELD" />
@@ -40,8 +40,8 @@
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="BONE" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1180" />
 		<set name="price" val="3355000" />
 		<set name="enchant_enabled" val="1" />
@@ -57,7 +57,7 @@
 	<item id="94303" name="Life Stone - Circlet" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -71,6 +71,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94305" name="Scroll: Enchant Stats (Exchangeable)" type="EtcItem">
 		<!-- Applies a buff when used.\n\n<Buff effect>\nAll stats +1\n\nDuration: 20 min.\nCooldown: 1 min. -->
@@ -78,6 +79,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94306" name="Scroll: Enchant Stats" type="EtcItem">
 		<!-- Applies a buff when used.\n\n<Buff effect>\nAll stats +1\n\nDuration: 20 min.\nCooldown: 1 min. -->
@@ -87,6 +89,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94307" name="Gemstone Essence Lv. 4 - Amber" type="EtcItem">
 		<!-- Compound it with Amber Lv. 3 to get Amber Lv. 4. There is a 100% chance of success. -->
@@ -95,6 +98,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94308" name="Gemstone Essence Lv. 4 - Opal" type="EtcItem">
 		<!-- Compound it with Opal Lv. 3 to get Opal Lv. 4. There is a 100% chance of success. -->
@@ -103,6 +107,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94309" name="Gemstone Essence Lv. 4 - Coral" type="EtcItem">
 		<!-- Compound it with Coral Lv. 3 to get Coral Lv. 4. There is a 100% chance of success. -->
@@ -111,6 +116,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94310" name="Gemstone Essence Lv. 4 - Onyx" type="EtcItem">
 		<!-- Compound it with Onyx Lv. 3 to get Onyx Lv. 4. There is a 100% chance of success. -->
@@ -119,6 +125,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94311" name="Gemstone Essence Lv. 4 - Spinel" type="EtcItem">
 		<!-- Compound it with Spinel Lv. 3 to get Spinel Lv. 4. There is a 100% chance of success. -->
@@ -127,6 +134,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94312" name="Gemstone Essence Lv. 4 - Zircon" type="EtcItem">
 		<!-- Compound it with Zircon Lv. 3 to get Zircon Lv. 4. There is a 100% chance of success. -->
@@ -135,6 +143,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94313" name="Gemstone Essence Lv. 4 - Moonstone" type="EtcItem">
 		<!-- Compound it with Moonstone Lv. 3 to get Moonstone Lv. 4. There is a 100% chance of success. -->
@@ -143,6 +152,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94314" name="Elixir" type="EtcItem">
 		<!-- A bottle containing mystery liquid.\n\n<Effect>\nStat Points +1\nOnly for characters of level 76 and higher.\nUp to 5 elixirs can be used. -->
@@ -152,6 +162,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94315" name="Package: Sigil of Inevitability" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -162,6 +173,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94316" name="Package: Sigil of Inevitability" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -172,6 +184,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94317" name="Package: Shield of Vengeance" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -182,6 +195,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94318" name="Package: Shield of Vengeance" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -192,67 +206,77 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94319" name="Spellbook: Sword Symphony" type="EtcItem">
 		<!-- A spellbook for learning the Sword Symphony skill.\n\n<Classes>\nSwordsinger\n\n<Skill effect>\n1) Increases the attack range.\n2) There is a certain chance to decrease received damage.\n3) Increases Speed and Skill Evasion after a critical attack or successful evasion. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94320" name="Spellbook: Intoxicating Dance" type="EtcItem">
 		<!-- A spellbook for learning the Intoxicating Dance skill.\n\n<Classes>\nBladedancer\n\n<Skill effect>\n1) Inflicts a debuff increasing received damage and decreasing Speed (stacks up to 5 times) after an attack.\n2) Increases P. Atk and P. Skill Critical Damage after an attack. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94321" name="Spellbook: Wild Beat" type="EtcItem">
 		<!-- A spellbook for learning the Wild Beat skill.\n\n<Class>\nSword Muse\n\n<Skill effect>\nForces the enemy to move towards you. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94322" name="Spellbook: Crazy Waltz" type="EtcItem">
 		<!-- A spellbook for learning the Crazy Waltz skill.\n\n<Classes>\nSpectral Dancer\n\n<Skill effect>\nA mesmerizing dance making enemies sleep and dance on the spot. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94323" name="Spellbook: Frantic Pace" type="EtcItem">
 		<!-- A spellbook for learning the Frantic Pace skill.\n\n<Classes>\nSword Muse\nSpectral Dancer\n\n<Skill effect>\nSharpens character's senses and allows to make a powerful blow.\nDeals additional damage to enemy affected by Hold. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94324" name="Spellbook: Song of Earth" type="EtcItem">
 		<!-- A spellbook for learning the Song of Earth Lv. 2 skill.\n\n<Class>\nSwordsinger\n\n<Skill effect>\nFor the caster:\nP. Def. +500\nM. Def. +500\n\nFor nearby allies:\nP. Def. +200\nM. Def. +200\n -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94325" name="Spellbook: The Song of the Hunter" type="EtcItem">
 		<!-- A spellbook for learning the Hunter's Song Lv. 2 skill.\n\n<Class>\nSwordsinger\n\n<Skill effect>\nFor the caster:\nAll Critical Rate +150\nFor nearby allies:\nAll Critical Rate +60\n -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94326" name="Spellbook: Warrior's Dance" type="EtcItem">
 		<!-- A spellbook for learning the Warrior's Dance Lv. 2 skill.\n\n<Class>\nBladedancer\n\n<Skill effect>\nFor the caster:\nP. Atk. +600\nM. Atk. +600\n\nFor nearby allies:\nP. Atk. +250\nM. Atk. +250\n -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94327" name="Spellbook: Dance of Fire" type="EtcItem">
 		<!-- A spellbook for learning the Dance of Fire Lv. 2 skill.\n\n<Class>\nBladedancer\n\n<Skill effect>\nFor the caster:\nP. Critical Damage +40%\nP. Skill Critical Damage +10%\nM. Skill Critical Damage +10%\n\nFor nearby allies:\nP. Skill Critical Damage +4%\nM. Skill Critical Damage +4%\n -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94328" name="Elixir Powder" type="EtcItem">
 		<!-- Powder imbued with power of immortality.\nMaterial to make Elixir. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -267,6 +291,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94330" name="Iron Gate Guild Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -277,6 +302,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94331" name="Package: Sayha's Blessing (30 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -287,6 +313,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94332" name="Package: Special HP Recovery Potion (100 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -297,6 +324,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94333" name="Package: A-grade Gemstone (20 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -307,6 +335,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94334" name="Package: Life Stone Lv. 2 - Weapon (2 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -317,6 +346,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94335" name="Package: Life Stone Lv. 2 - Armor (2 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -327,6 +357,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94336" name="Package: Life Stone - Circlet (2 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -337,6 +368,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94337" name="Package: Giran Seal (200 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -347,6 +379,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94338" name="Package: Scroll: Boost Defense (15 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -357,6 +390,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94339" name="Package: Charging Stone of Random Crafting - 1 charge (5 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -367,6 +401,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94340" name="Pack of Seals" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -377,6 +412,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94341" name="Special Buff Scroll" type="EtcItem">
 		<!-- Lasts for 24 hours.\n\nAll stats +1\n\nThe buff is leveling up every hour, also various items are granted.\n\n<Rewards>\nLv. 1-8: Sayha's Cookie (2 pcs.)\nLv. 9-15: Sayha's Storm Lv. 3 (2 pcs.)\nLv. 16-20: Soulshot Ticket (10 pcs.)\nLv. 21-23: Spirit Ore (100 pcs.)\nLv. 24: Charging Stone of Random Craft (2 pcs.)\n\nNote!\nThe effect does not remain after death. Items cannot be obtained after death. -->
@@ -386,6 +422,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94342" name="Special Box of Seals" type="EtcItem">
 		<!-- Double-click to obtain various items. -->
@@ -396,6 +433,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94343" name="Ancient Adena" type="EtcItem">
 		<!-- Ancient coins of old kingdoms. Can be used in the L-Coin Store to create items or be exchanged for various items through the Game Assistant. -->
@@ -403,6 +441,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94344" name="Ancient Adena Pack (10,000 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -412,6 +451,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94345" name="+4 Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -422,6 +462,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94346" name="+5 Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -432,6 +473,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94347" name="+6 Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -442,6 +484,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94348" name="+7 Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -452,6 +495,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94349" name="+4 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -462,6 +506,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94350" name="+5 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -472,6 +517,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94351" name="+6 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -482,6 +528,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94352" name="+7 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -492,6 +539,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94353" name="+4 Talisman of Authority Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -502,6 +550,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94354" name="+5 Talisman of Authority Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -512,6 +561,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94355" name="+6 Talisman of Authority Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -522,6 +572,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94356" name="+7 Talisman of Authority Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -532,6 +583,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="94357" name="Package: Stun Gauntlets" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -542,6 +594,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94358" name="Package: Stun Gauntlets" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -552,14 +605,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94359" name="For Monster Only (Crossbow)" type="Weapon">
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R99" />
-		<set name="material" val="BRONZE" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="181" />
 		<set name="mp_consume" val="1" />
 		<set name="is_dropable" val="false" />
@@ -582,66 +636,77 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94361" name="Master's Book: Empower" type="EtcItem">
 		<!-- A spellbook for learning Empower Lv. 4.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases M. Atk. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94362" name="Master's Book: Magic Barrier" type="EtcItem">
 		<!-- A spellbook for learning Magic Barrier Lv. 3.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases M. Def. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94363" name="Master's Book: Focus" type="EtcItem">
 		<!-- A spellbook for learning the Focus Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Critical Rate. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94364" name="Master's Book: Death Whisper" type="EtcItem">
 		<!-- A spellbook for learning the Death Whisper Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Critical Damage. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94365" name="Master's Book: Wind Walk" type="EtcItem">
 		<!-- A spellbook for learning the Wind Walk Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Speed. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94366" name="Master's Book: Berserker Spirit" type="EtcItem">
 		<!-- A spellbook for learning the Berserker Spirit Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P./ M. Atk., Atk. Spd., Casting Spd. and Speed.\nDecreases Max HP/ MP. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94367" name="Master's Book: Clarity" type="EtcItem">
 		<!-- A spellbook for learning the Clarity Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Skill MP consumption. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94368" name="Master's Book: Wild Magic" type="EtcItem">
 		<!-- A spellbook for learning the Wild Magic Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases M. Skill Critical Rate. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94369" name="Master's Book: Haste" type="EtcItem">
 		<!-- A spellbook for learning the Haste Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Atk. Spd. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94370" name="Master's Book: Acumen" type="EtcItem">
 		<!-- A spellbook for learning the Acumen Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Casting Spd. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94371" name="Elixir Powder Box" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -650,6 +715,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94372" name="Death Knight’s Cloak BM" type="Armor">
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
@@ -684,6 +750,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94375" name="Daily Cube: Supply - 30 charges" type="EtcItem">
 		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nSupply Pack\n\nCan be used only once a day.\nCan be used up to 30 times.\nSpecial Supply Pack is granted after the 30th use. -->
@@ -692,6 +759,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94376" name="Daily Kit: Seals" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -702,12 +770,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94377" name="Supply Pouch" type="EtcItem">
 		<!-- Double-click to obtain the following item:\n 10 Soulshot Ticket and 200 Spirit Ore -->
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -725,6 +794,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94379" name="Supply Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -735,6 +805,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94380" name="Scroll: Boost Attack" type="EtcItem">
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -780,6 +851,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94383" name="Scroll: Enchant Rare Accessories" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1 -->
@@ -787,6 +859,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94384" name="Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1 -->
@@ -796,6 +869,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94385" name="Improved Scroll: Enchant Rare Accessories" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1\nThe enchanting is random from +1 to +2.\nFor rare accessories enchanted to +2 or lower. -->
@@ -803,6 +877,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1\nThe enchanting is random from +1 to +2.\nFor rare accessories enchanted to +2 or lower. -->
@@ -812,6 +887,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94387" name="Package: +1 Queen Ant's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -822,6 +898,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94388" name="Package: +2 Queen Ant's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -832,6 +909,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94389" name="Package: + 3 Queen Ant's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -842,6 +920,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94390" name="Package: + +4 Queen Ant's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -852,6 +931,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94391" name="Package: + +5 Queen Ant's Ring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -862,6 +942,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94392" name="Package: +1 Orfen's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -872,6 +953,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94393" name="Package: +2 Orfen's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -882,6 +964,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94394" name="Package: +3 Orfen's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -892,6 +975,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94395" name="Package: +4 Orfen's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -902,6 +986,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94396" name="Package: +5 Orfen's Earring" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -912,6 +997,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94397" name="Package: +1 Ring of Core" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -922,6 +1008,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94398" name="Package: +2 Ring of Core" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -932,6 +1019,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94399" name="Package: +3 Ring of Core" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -942,5 +1030,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

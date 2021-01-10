@@ -20,7 +20,7 @@
 		<!-- Coin with the luck of the 2019 Golden Pig. Exchange for various items through Chorong in each village. -->
 		<set name="icon" val="icon.etc_pig_adena_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -48,7 +48,7 @@
 		<!-- When used, XP/SP Gain +30%, XP/SP Gain while in Vitality Mode +30%, P./M. Atk. +7000, P./M. Def. +6000, Max HP +1700, Max MP +775, Max CP +1180, Speed +15 for 30 minutes. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -59,7 +59,7 @@
 		<!-- Vitality Tonic prepared by Lucky Pig to celebrate the year of the Golden Pig. 1 out of 4 bars on the vitality gauge are replenished. Cannot be used in the Olympiad. The 5 uses per week limit does not apply. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -69,7 +69,7 @@
 		<!-- Special Vitality Tonic prepared by Lucky Pig to celebrate the year of the Golden Pig. All bars on the vitality gauge are replenished. Cannot be used in the Olympiad. The 5 uses per week limit does not apply -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -180,7 +180,7 @@
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 60 min. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -208,7 +208,7 @@
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 4 hours. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -236,7 +236,7 @@
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 8 hours. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -264,7 +264,7 @@
 		<!-- PC-exclusive Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5/Fantasia Harmony Lv. 2/War Drum, Marching Drum, Soothing Drum/Elemental Resistance, Fantasia Melody, Resistance Debuff, and Mental Attack Resistance effects for 60 min. <Caution> The Emperor's Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="reuse_delay" val="3600000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -293,7 +293,7 @@
 		<!-- Item that can be used only at the Ceremony of Chaos Arena. For 7 minutes, provides the effects of Horn Melody, Guitar Melody, Pipe Organ Melody, Lute Melody, Harp Melody, Drum Melody, and Fantasia Harmony Lv. 1. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -304,7 +304,7 @@
 		<!-- For 30 minutes, provides the effect of Fantasia Harmony. Can be used only by characters above level 85. Cooldown is 2 min. -->
 		<set name="icon" val="icon.etc_super_potion_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -405,7 +405,7 @@
 		<!-- Grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Elemental Resistance, Fantasia Melody, Attribute Resistance, and Mental Attack Resistance effects for 60 min. Note! The Emperor's Special Cocktail applies the duration of the last used item. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -415,7 +415,7 @@
 		<!-- Medium Vitality Tonic prepared to celebrate the year of the Golden Pig. 2 out of 4 bars on the vitality gauge are replenished. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -443,6 +443,7 @@
 		<set name="enchant_limit" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35524" level="1" /> <!-- Kaliel's Bracelet -->
 			<skill id="35524" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Bracelet +1 -->
@@ -461,6 +462,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35525" level="1" /> <!-- Kaliel's Greater Bracelet -->
 			<skill id="35525" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Greater Bracelet +1 -->
@@ -479,6 +481,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="enchant_enabled" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35526" level="1" /> <!-- Kaliel's Top Grade Bracelet -->
 			<skill id="35526" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Top-grade Bracelet +1 -->
@@ -520,7 +523,7 @@
 	<item id="80839" name="Crystal of Dawn" type="EtcItem">
 		<!-- A crystal infused with spirits that shines faintly. The crystal's special power can be used to upgrade an accessory. -->
 		<set name="icon" val="icon.accessary_upgrade_crystal" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="80840" name="PC Cafe New Year Event Box" type="EtcItem">
@@ -545,7 +548,7 @@
 		<!-- All basic stats +3, XP/SP Gain in Vitality mode +30% for 30 minutes. Buff persists through death. Cooldown is 5 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -624,6 +627,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="crystal_type" val="EVENT" />
 		<stats>
 			<stat type="pAtk">11</stat>
 			<stat type="mAtk">12</stat>
@@ -650,7 +654,7 @@
 		<!-- Double-click to obtain one +10 Enchanted Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -661,7 +665,7 @@
 		<!-- When used, increases Hunting XP/SP gain by 100% for 30 min. Cannot stack with the Fall of the Dragon or Dandy's Home Run Ball. Cannot stack with the effect of Agathion - XP Bottle. Cooldown is 5 min. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

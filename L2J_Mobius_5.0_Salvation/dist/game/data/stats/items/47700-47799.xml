@@ -8,6 +8,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18714" level="6" /> <!-- Blue Cat's Eye -->
 		</skills>
@@ -105,6 +106,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47703" min="1" max="1" chance="3.57142" /> <!-- Red Cat's Eye Lv. 3 Jewelry Box -->
 			<item id="47704" min="1" max="1" chance="3.57142" /> <!-- Red Cat's Eye Lv. 4 Jewelry Box -->
@@ -145,6 +147,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47709" min="1" max="1" chance="7.14285" /> <!-- Red Cat's Eye Fortune Box -->
 			<item id="47710" min="1" max="1" chance="7.14285" /> <!-- Blue Cat's Eye Fortune Box -->
@@ -171,6 +174,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47677" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 1 -->
 			<item id="47678" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 2 -->
@@ -188,6 +192,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47682" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 1 -->
 			<item id="47683" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 2 -->
@@ -201,7 +206,7 @@
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -218,6 +223,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="28296" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
@@ -230,11 +236,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47714" name="Rare Accessory Spirit Stone" type="EtcItem">
 		<!-- Ordinary Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 46 or above when augmenting Rare items. -->
 		<set name="icon" val="icon.renewal_mineral_rareacc" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
@@ -250,7 +257,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 			<capsuled_items>
@@ -284,7 +291,7 @@
 	<item id="47717" name="Assassin's Remnant" type="EtcItem">
 		<!-- Signs of Embryo assassins entering to interfere with the production of defensive batteries. After Ishuma finishes building the defensive batteries, prove that she was protected by taking it to her. -->
 		<set name="icon" val="icon.etc_blood_gragon" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -294,7 +301,7 @@
 	<item id="47718" name="Defensive Battery Bolt" type="EtcItem">
 		<!-- A bolt specifically for use in defensive batteries, received as a prize for successfully defending Ishuma while the batteries were constructed. -->
 		<set name="icon" val="icon.etc_blacksmiths_frame_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -304,7 +311,7 @@
 	<item id="47719" name="Defensive Battery Nut" type="EtcItem">
 		<!-- A nut specifically for use in defensive batteries, received as a prize for successfully defending Ishuma while the batteries were constructed. -->
 		<set name="icon" val="icon.etc_artisans_frame_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -314,7 +321,7 @@
 	<item id="47720" name="Defensive Battery Cannonball" type="EtcItem">
 		<!-- A cannonball for use in Keucereus defensive batteries. Only people who possess this cannonball are qualified to operate the Keucereus defensive batteries. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -325,7 +332,7 @@
 		<!-- Relief material taken from Embryo. It will be collected and used as a relief material for the military base defense group. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -335,7 +342,7 @@
 	<item id="47722" name="Certification of War" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 2 defense. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -345,7 +352,7 @@
 	<item id="47723" name="Victory's Badge" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 2 defense. -->
 		<set name="icon" val="icon.etc_badge_silver_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -355,7 +362,7 @@
 	<item id="47724" name="Mark of Embryo" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 3 defense. -->
 		<set name="icon" val="icon.etc_Symbol_of_dawn_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -365,7 +372,7 @@
 	<item id="47725" name="Proof of Leadership" type="EtcItem">
 		<!-- Obtained by defeating the Embryo attacking the Keucereus Corps base. It is evidence of the successful Stage 3 defense. -->
 		<set name="icon" val="icon.etc_Symbol_of_dusk_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -376,7 +383,7 @@
 		<!-- The gunpowder used in the production of shells for the Keucereus Corps base. It is a necessary material to make shells. -->
 		<set name="icon" val="icon.etc_powder_of_life_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -387,7 +394,7 @@
 		<!-- A popular bandage taken from the Embryo. This can be used in Gracia to heal injuries. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -398,7 +405,7 @@
 		<!-- Needed to drive the Keucereus defense battery. Be careful while using this device to drive your defenses, as it will be the main target of the Embryo. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -411,7 +418,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -427,7 +434,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -443,7 +450,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -459,7 +466,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -473,7 +480,7 @@
 		<!-- A commemorative gift for defeating Isberg, the guardian guarding the fortress of Mesia. Double-click to acquire an item. Will be deleted on June 22, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -495,6 +502,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="18741" level="1" /> <!-- Art of Seduction -->
 		</skills>
@@ -514,6 +522,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="18742" level="1" /> <!-- Art of Seduction -->
 		</skills>
@@ -533,6 +542,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18727" level="1" /> <!-- Pa'agrio's Blessing - Might -->
 		</skills>
@@ -552,6 +562,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18728" level="1" /> <!-- Pa'agrio's Blessing - EXP -->
 		</skills>
@@ -580,7 +591,7 @@
 	<item id="47739" name="Hunter's Amulet" type="EtcItem">
 		<!-- Can be purchased with Raid Points from Black Cat NPC in Hunter's Village by members of Hunter's Guild Faction - Level 2 and above. Can be exchanged with a Faction NPC when upgrading a Faction Talisman. The Hunter's Amulet adds an alternative upgrade path which keeps the current Faction Talisman stage even if the exchange fails. -->
 		<set name="icon" val="icon.etc_mark_red_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -693,7 +704,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -708,7 +719,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -722,7 +733,7 @@
 		<!-- Top-grade Balthus Knights' Supply Box. When used, a Shadow Ingot/ Tauti's Fragment/ Kelbim's Atelia Fragment can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="PEEL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -746,6 +757,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="35567" min="2" max="2" chance="75" /> <!-- Dark Eternal Enhancement Stone -->
 		</capsuled_items>
@@ -754,7 +766,7 @@
 		<!-- Top-grade Balthus Knights' Supply Items. When used, a Stage 5 Zodiac Agathion bracelet can be obtained. To be deleted after the event ends. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -821,7 +833,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -832,7 +844,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -843,7 +855,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -853,7 +865,7 @@
 		<!-- Double click to receive a random item. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -861,7 +873,7 @@
 		<!-- Double-click to get one of a rare items, out of Bloody/ Dark Enhancement Stone or Enhancement Protection Stone, at random. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -907,7 +919,7 @@
 		<!-- Double click this to obtain one of Blessed Antharas' Earring, Antharas' Earring, Blessed Valakas' Necklace, Valakas' Necklace, Lindvior's Earring. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -952,7 +964,7 @@
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -963,7 +975,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -974,7 +986,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -985,7 +997,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -996,7 +1008,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1007,7 +1019,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1018,7 +1030,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1029,7 +1041,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1040,7 +1052,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1051,7 +1063,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1062,7 +1074,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1073,7 +1085,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1084,7 +1096,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1093,7 +1105,7 @@
 	<item id="47776" name="Red Libra Request - Altar of Evil" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Evil and Bloody Swampland. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1103,7 +1115,7 @@
 	<item id="47777" name="Red Libra Request - Fairy Settlement" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Fairy Settlement. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1113,7 +1125,7 @@
 	<item id="47778" name="Red Libra Request - Isle of Souls" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Isle of Souls. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1123,7 +1135,7 @@
 	<item id="47779" name="Red Libra Request - Seal of Shilen" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Seal of Shilen. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1133,7 +1145,7 @@
 	<item id="47780" name="Red Libra Request - Monsters from Three Areas" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Cemetery, Pagan Temple, and Blazing Swamp. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1143,7 +1155,7 @@
 	<item id="47781" name="Red Libra Request - Raider's Crossroads" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Raider's Crossroads. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1153,7 +1165,7 @@
 	<item id="47782" name="Red Libra Request - Hellbound" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in Hellbound. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1163,7 +1175,7 @@
 	<item id="47783" name="Red Libra Request - Enchanted Valley" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Enchanted Valley. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1173,7 +1185,7 @@
 	<item id="47784" name="Red Libra Request - Giant's Cave" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Giant's Cave. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1183,7 +1195,7 @@
 	<item id="47785" name="Red Libra Request - Garden of Spirits" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Garden of Spirits. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1193,7 +1205,7 @@
 	<item id="47786" name="Red Libra Request - Atelia Fortress" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Atelia Fortress. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1203,7 +1215,7 @@
 	<item id="47787" name="Red Libra Request - Superion" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in Superion. Will be deleted after the event. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1279,7 +1291,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1290,7 +1302,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1301,7 +1313,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1312,7 +1324,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

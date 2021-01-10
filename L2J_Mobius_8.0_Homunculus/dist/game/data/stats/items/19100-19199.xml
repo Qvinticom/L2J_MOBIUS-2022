@@ -19,6 +19,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="13293" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
@@ -52,6 +53,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="13293" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
@@ -85,6 +87,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
 			<skill id="13293" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
@@ -118,6 +121,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
@@ -151,6 +155,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -185,6 +190,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
@@ -217,6 +223,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
@@ -248,6 +255,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -280,6 +288,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
@@ -311,6 +320,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="9" /> <!-- Special Ability: Empower -->
 			<skill id="13300" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
@@ -343,6 +353,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="13300" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
@@ -375,6 +386,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -408,6 +420,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3576" level="9" /> <!-- Special Ability: MP Regeneration -->
 			<skill id="13305" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
@@ -441,6 +454,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="13305" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
@@ -474,6 +488,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="9" /> <!-- Special Ability: Empower -->
 			<skill id="13305" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
@@ -507,6 +522,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="13278" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
@@ -538,6 +554,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="13278" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
@@ -569,6 +586,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="13278" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
@@ -600,6 +618,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="13288" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
@@ -632,6 +651,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="13288" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
@@ -664,6 +684,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
 			<skill id="13288" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
@@ -696,6 +717,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="13273" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
@@ -728,6 +750,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
 			<skill id="13273" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
@@ -760,6 +783,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="13273" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
@@ -792,6 +816,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -825,6 +850,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3567" level="10" /> <!-- Special Ability: Focus -->
@@ -858,6 +884,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
@@ -891,6 +918,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
@@ -923,6 +951,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -955,6 +984,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -987,6 +1017,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
@@ -1019,6 +1050,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1051,6 +1083,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
@@ -1083,6 +1116,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="9" /> <!-- Special Ability: Critical Damage -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1116,6 +1150,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="9" /> <!-- Special Ability: Critical Damage -->
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
@@ -1149,6 +1184,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1182,6 +1218,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3565" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
@@ -1215,6 +1252,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1248,6 +1286,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3565" level="10" /> <!-- Special Ability: Focus -->
@@ -1281,6 +1320,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3568" level="2" /> <!-- Special Ability: HP Drain -->
@@ -1315,6 +1355,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
@@ -1349,6 +1390,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
@@ -1384,6 +1426,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
@@ -1418,6 +1461,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
@@ -1452,6 +1496,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
@@ -1486,6 +1531,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1521,6 +1567,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1556,6 +1603,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
@@ -1589,6 +1637,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1622,6 +1671,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1655,6 +1705,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -1687,6 +1738,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="9" /> <!-- Special Ability: Empower -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -1720,6 +1772,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1754,6 +1807,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1788,6 +1842,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3576" level="9" /> <!-- Special Ability: MP Regeneration -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -1822,6 +1877,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="3575" level="9" /> <!-- Special Ability: Empower -->
@@ -1856,6 +1912,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="9" /> <!-- Special Ability: Empower -->
 			<skill id="3576" level="9" /> <!-- Special Ability: MP Regeneration -->
@@ -1890,6 +1947,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
@@ -1922,6 +1980,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1954,6 +2013,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1986,6 +2046,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="3567" level="10" /> <!-- Special Ability: Focus -->
@@ -2019,6 +2080,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
@@ -2052,6 +2114,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
@@ -2085,6 +2148,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
@@ -2118,6 +2182,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3573" level="8" /> <!-- Special Ability: Guidance -->
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
@@ -2151,6 +2216,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13062" level="5" /> <!-- Special Ability: Damage Up -->
 			<skill id="3566" level="10" /> <!-- Special Ability: Focus -->
@@ -2214,6 +2280,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19170" name="Unidentified Requiem Cutter Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Cutter. -->
@@ -2224,6 +2291,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19171" name="Unidentified Requiem Slasher Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Slasher. -->
@@ -2234,6 +2302,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19172" name="Unidentified Requiem Avenger Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Avenger. -->
@@ -2244,6 +2313,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19173" name="Unidentified Requiem Fighter Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Fighter. -->
@@ -2254,6 +2324,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19174" name="Unidentified Requiem Stormer Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Stormer. -->
@@ -2264,6 +2335,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19175" name="Unidentified Requiem Thrower Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Thrower. -->
@@ -2274,6 +2346,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19176" name="Unidentified Requiem Shooter Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Shooter. -->
@@ -2284,6 +2357,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19177" name="Unidentified Requiem Buster Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Buster. -->
@@ -2294,6 +2368,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19178" name="Unidentified Requiem Caster Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Caster. -->
@@ -2304,6 +2379,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19179" name="Unidentified Requiem Retributer Fragment" type="EtcItem">
 		<!-- Key material for making Unidentified Requiem Retributer. -->
@@ -2314,6 +2390,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19183" name="Unidentified Immortal Helmet Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Helmet. -->
@@ -2324,6 +2401,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19184" name="Unidentified Immortal Breastplate Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Breastplate. -->
@@ -2334,6 +2412,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19185" name="Unidentified Immortal Gaiter Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Gaiters. -->
@@ -2344,6 +2423,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19186" name="Unidentified Immortal Gauntlet Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Gauntlets. -->
@@ -2354,6 +2434,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19187" name="Unidentified Immortal Boot Ingredients" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Boots. -->
@@ -2364,6 +2445,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19188" name="Unidentified Immortal Shield Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Shield. -->
@@ -2374,6 +2456,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19189" name="Unidentified Immortal Leather Helmet Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Leather Helmet. -->
@@ -2384,6 +2467,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19190" name="Unidentified Immortal Leather Armor Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Leather Armor. -->
@@ -2394,6 +2478,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19191" name="Unidentified Immortal Leather Legging Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Leather Leggings. -->
@@ -2404,6 +2489,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19192" name="Unidentified Immortal Leather Glove Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Leather Gloves. -->
@@ -2414,6 +2500,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19193" name="Unidentified Immortal Leather Boot Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Leather Boots. -->
@@ -2424,6 +2511,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19194" name="Unidentified Immortal Circlet Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Circlet. -->
@@ -2434,6 +2522,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19195" name="Unidentified Immortal Tunic Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Tunic. -->
@@ -2444,6 +2533,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19196" name="Unidentified Immortal Stocking Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Stockings. -->
@@ -2454,6 +2544,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19197" name="Unidentified Immortal Glove Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Gloves. -->
@@ -2464,6 +2555,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19198" name="Unidentified Immortal Shoe Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Shoes. -->
@@ -2474,6 +2566,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="19199" name="Unidentified Immortal Sigil Ingredient" type="EtcItem">
 		<!-- Key material for making Unidentified Immortal Sigil. -->
@@ -2484,5 +2577,6 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 </list>

@@ -5,30 +5,35 @@
 		<set name="icon" val="icon.weapon_shadow_bow" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26401" name="Sealed Shadow Shooter" type="EtcItem">
 		<!-- Double-click to get a Shadow Shooter. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26402" name="Sealed Shadow Buster" type="EtcItem">
 		<!-- Double-click to get a Shadow Buster. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26403" name="Sealed Shadow Retributer" type="EtcItem">
 		<!-- Double-click to get a Shadow Retributer. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26404" name="Sealed Shadow Dualsword" type="EtcItem">
 		<!-- Double-click to get a Shadow Dualsword. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26405" name="Alien's Ingredient Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get an Energy of Destruction or one of the ingredients. -->
@@ -36,12 +41,14 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26406" name="XP Rune IV (Lv. 1-99) 100% Pack (1-hr)" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (1-hr). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26407" name="XP Rune IV (Lv. 1-99) 100% Pack (1-hr)" type="EtcItem">
 		<!-- Wrapped Pack containing 1 XP Rune IV (Lv. 1-99) 100% (1-hr). -->
@@ -54,6 +61,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item chance="100.0" id="26408" max="1" min="1" /> <!-- XP Rune IV (Lv. 1-99) 100% (1-hr) -->
 		</capsuled_items>
@@ -65,6 +73,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
 		</skills>
@@ -74,6 +83,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26410" name="XP Rune IV (Lv. 1-99) 100% Pack (1-day)" type="EtcItem">
 		<!-- Wrapped Pack containing 1 XP Rune IV (Lv. 1-99) 100% (1-day). -->
@@ -83,6 +93,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26411" name="XP Rune IV (Lv. 1-99) 100%" additionalName="1-day" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 1-day. -->
@@ -92,6 +103,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
 		</skills>
@@ -101,6 +113,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26413" name="XP Rune IV (Lv. 1-99) 100% Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing 1 XP Rune IV (Lv. 1-99) 100% (7-day). -->
@@ -110,6 +123,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26414" name="XP Rune IV (Lv. 1-99) 100%" additionalName="7-day" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 7-day. -->
@@ -119,6 +133,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
 		</skills>
@@ -128,6 +143,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26416" name="XP Rune IV (Lv. 1-99) 100% Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing 1 XP Rune IV (Lv. 1-99) 100% (30-day). -->
@@ -137,6 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26417" name="XP Rune IV (Lv. 1-99) 100%" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in inventory, increases XP and SP acquired through hunting by 100%. The effect only applies to characters Lv. 99 or below. 30-day. -->
@@ -146,6 +163,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
 		</skills>
@@ -156,7 +174,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5004" />
@@ -168,7 +186,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5005" />
@@ -180,7 +198,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5006" />
@@ -192,7 +210,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5007" />
@@ -204,6 +222,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26423" name="Vintage Casket" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Seven Signs' Energy, Freya's Lucky Enchant Stone: Armor/Weapon (R-grade), Windy Lucky Enchant Stone: Armor/Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Blessed Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Blessed High-grade Lucky Enchant Stone: Armor/Weapon (R-grade), Lesser Giant's Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Bottle of Antharas/Valakas/Queen Ant/Orfen/Baium's Soul, Blessed Scroll: Enchant Armor/Weapon (R-grade), High-grade Lucky Enchant Stone: Weapon/Armor (R-grade), Giant's Scroll: Enchant Armor (R-grade), Scroll: Enchant Weapon Pack (R-grade), Scroll: Enchant Armor (R-grade) x3, Wondrous Casket (Journey's Prelude). -->
@@ -211,6 +230,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26424" name="Shabby Casket" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Talisman - Annihilation Crafting Pack, Hellfire/Desire/Longing/Insanity Talisman Upgrade Pack, XP Rune III 100% Pack (30-day), Prestige Rune 100% Pack (30-day), Pa'agrio's Warm Breeze (1-hour) Pack, Ghost Potion, Emperor's Growth Scroll x2, Feather of Blessing Pack x3, Letter Collector's Gift x2, Gemstone (R-grade) x10, Heavenly Recovery Potion x30, Life Stone Instilled with Giants' Power, Immortal Scroll, Immortal Scroll - Chapter 1, Elcyum Powder, Wondrous Casket (Journey's Prelude), Vintage Casket (Journey's Prelude). -->
@@ -218,6 +238,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26425" name="Talisman - Annihilation Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Energy of Destruction that allows one to craft up to a Talisman - Annihilation. -->
@@ -227,6 +248,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26426" name="Talisman - Hellfire Upgrade Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Energy of Destruction and Kaliel's Energy that allows one to upgrade a Talisman - Annihilation up to a Talisman - Hellfire. -->
@@ -236,6 +258,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26427" name="Talisman - Desire Upgrade Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Energy of Destruction and Kaliel's Energy that allows one to upgrade a Talisman - Hellfire up to a Talisman - Desire. -->
@@ -245,6 +268,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26428" name="Talisman - Longing Upgrade Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Energy of Destruction and Kaliel's Energy that allows one to upgrade a Talisman - Desire up to a Talisman - Longing. -->
@@ -254,6 +278,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26429" name="Talisman - Insanity Upgrade Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Energy of Destruction and Kaliel's Energy that allows one to upgrade a Talisman - Longing up to a Talisman - Insanity. -->
@@ -263,6 +288,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26430" name="Immortal Scroll" type="EtcItem">
 		<!-- Enchants a skill +1~+10 to the next grade with a success rate of 100% without consuming extra materials. -->
@@ -270,6 +296,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26431" name="Immortal Scroll Chapter 1" type="EtcItem">
 		<!-- Enchants a skill between +11~+20 to the next grade with a success rate of 100% without consuming extra materials. -->
@@ -277,6 +304,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26432" name="Immortal Scroll Chapter 2" type="EtcItem">
 		<!-- Enchants a skill between +21~+30 to the next grade with a success rate of 100% without consuming extra materials. -->
@@ -284,6 +312,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26433" name="Star Bottle For Testing" additionalName="Test" type="EtcItem">
 		<!-- For testing. -->
@@ -293,6 +322,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26434" name="Test Card - Talisman" type="Armor">
 		<set name="icon" val="icon.card2_event_giyotine" />
@@ -302,6 +332,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="26435" name="Test Card - Bracelet" type="Armor">
 		<set name="icon" val="icon.card2_event_giyotine" />
@@ -309,6 +340,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="price" val="3556000" />
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="26436" name="Test Card - Rune" type="EtcItem">
 		<set name="icon" val="icon.card2_event_giyotine" />
@@ -316,6 +348,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="CARD_EVENT" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26437" name="Shadow Shaper Box" type="EtcItem">
 		<!-- Double-click to get a +1 ~ +9 Shadow Shaper. -->
@@ -325,6 +358,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27426" level="1" /> <!-- Shadow Shaper +1 ~+9 -->
 		</skills>
@@ -337,6 +371,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27427" level="1" /> <!-- Shadow Cutter +1 ~+9 -->
 		</skills>
@@ -349,6 +384,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27428" level="1" /> <!-- Shadow Slasher +1 ~+9 -->
 		</skills>
@@ -361,6 +397,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27429" level="1" /> <!-- Shadow Fighter +1 ~+9 -->
 		</skills>
@@ -373,6 +410,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27430" level="1" /> <!-- Shadow Stormer +1 ~+9 -->
 		</skills>
@@ -385,6 +423,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27431" level="1" /> <!-- Shadow Thrower +1 ~+9 -->
 		</skills>
@@ -397,6 +436,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27432" level="1" /> <!-- Shadow Shooter +1 ~+9 -->
 		</skills>
@@ -409,6 +449,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27433" level="1" /> <!-- Shadow Buster +1 ~+9 -->
 		</skills>
@@ -421,6 +462,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27434" level="1" /> <!-- Shadow Retributer +1 ~+9 -->
 		</skills>
@@ -433,6 +475,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27435" level="1" /> <!-- Shadow Dualsword +1 ~+9 -->
 		</skills>
@@ -446,6 +489,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="1" /> <!-- Talisman - Abundance -->
 		</skills>
@@ -459,6 +503,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="2" /> <!-- Talisman - Abundance -->
 		</skills>
@@ -472,6 +517,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="3" /> <!-- Talisman - Abundance -->
 		</skills>
@@ -485,6 +531,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="4" /> <!-- Talisman - Abundance -->
 		</skills>
@@ -498,6 +545,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="5" /> <!-- Talisman - Abundance -->
 			<skill id="21365" level="1" type="ON_EQUIP" /> <!-- Talisman - Hunter -->
@@ -513,6 +561,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="6" /> <!-- Talisman - Abundance -->
 			<skill id="21370" level="1" type="ON_EQUIP" /> <!-- Talisman - Slaughterer -->
@@ -528,6 +577,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="7" /> <!-- Talisman - Abundance -->
 			<skill id="21371" level="1" type="ON_EQUIP" /> <!-- Talisman - Conquerer -->
@@ -543,6 +593,7 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="8" /> <!-- Talisman - Abundance -->
 			<skill id="21372" level="1" type="ON_EQUIP" /> <!-- Talisman - Outlaw -->
@@ -556,6 +607,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="9" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="1" /> <!-- Power of Abundance -->
@@ -568,6 +620,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="10" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="2" /> <!-- Power of Abundance -->
@@ -580,6 +633,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="11" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="3" /> <!-- Power of Abundance -->
@@ -592,6 +646,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="21364" level="12" /> <!-- Talisman - Abundance -->
 			<skill id="21477" level="4" /> <!-- Power of Abundance -->
@@ -603,7 +658,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5008" />
@@ -615,7 +670,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5009" />
@@ -627,7 +682,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5010" />
@@ -639,7 +694,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5011" />
@@ -651,7 +706,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5012" />
@@ -663,7 +718,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5013" />
@@ -675,7 +730,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5014" />
@@ -687,7 +742,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5015" />
@@ -698,6 +753,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26468" name="Lindvior's Earring" additionalName="3-day" type="Armor">
 		<!-- MP +59, Petrification and Resistance to it +50%, Knock Back/Knock Down and Resistance to it +40%, Pulling and Resistance to it +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./M. Abnormal Status Reflection +10%. Reflect damage magic back to the attacker with the probability of 10%. Speed +5, DEX +3, and WIT +3. Increases Wind/Dark Resistance. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. When two identical earrings are equipped, only one effect is applied. -->
@@ -711,6 +767,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
@@ -731,6 +788,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
@@ -751,6 +809,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
@@ -771,6 +830,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
@@ -789,6 +849,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="time" val="4320" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26473" name="Lindvior's Earring Random Box" type="EtcItem">
 		<!-- Get 1 of the following: Lindvior's Earring (3-day, 7-day, 15-day, or 30-day). -->
@@ -797,6 +858,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="4320" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26474" name="La Vie En Rose's Radiant Brooch" type="Armor">
 		<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. -->
@@ -807,6 +869,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 			<skill id="13924" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
@@ -820,6 +883,7 @@
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="26476" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 3%. Effect does not stack with additional jewels of the same type. -->
@@ -830,6 +894,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="1" /> <!-- Vital Stone -->
 		</skills>
@@ -843,6 +908,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="2" /> <!-- Vital Stone -->
 		</skills>
@@ -856,6 +922,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="3" /> <!-- Vital Stone -->
 			<skill id="27439" level="1" /> <!-- Vital Stone - Vital Wind -->
@@ -870,6 +937,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="4" /> <!-- Vital Stone -->
 			<skill id="27439" level="2" /> <!-- Vital Stone - Vital Wind -->
@@ -882,6 +950,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="5" /> <!-- Vital Stone -->
 			<skill id="27439" level="3" /> <!-- Vital Stone - Vital Wind -->
@@ -896,6 +965,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="1" /> <!-- Garnet -->
 		</skills>
@@ -909,6 +979,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="2" /> <!-- Garnet -->
 		</skills>
@@ -922,6 +993,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="3" /> <!-- Garnet -->
 		</skills>
@@ -935,6 +1007,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="4" /> <!-- Garnet -->
 		</skills>
@@ -946,6 +1019,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="5" /> <!-- Garnet -->
 			<skill id="18567" level="1" /> <!-- Garnet - Purge -->
@@ -960,6 +1034,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="1" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -973,6 +1048,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="2" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -986,6 +1062,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="3" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -999,6 +1076,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="4" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -1010,6 +1088,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="5" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -1075,12 +1154,14 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="26496" name="Shiny Gemstone Fragment" type="EtcItem">
 		<!-- Main ingredient for making a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="26497" name="Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- Damage Reflect Resistance +10%. Effect does not stack with additional jewels of the same type. -->
@@ -1091,6 +1172,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27440" level="1" /> <!-- Cat's Eye -->
 		</skills>
@@ -1104,6 +1186,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27440" level="2" /> <!-- Cat's Eye -->
 		</skills>
@@ -1117,6 +1200,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27440" level="3" /> <!-- Cat's Eye -->
 		</skills>

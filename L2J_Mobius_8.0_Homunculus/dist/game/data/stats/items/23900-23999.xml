@@ -9,6 +9,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21388" level="1" /> <!-- Release Agathion's Seal - Anakim -->
 		</skills>
@@ -22,6 +23,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23902" name="Mysterious Holy Resistance Dye" additionalName="Holy Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (Holy Resistance +120 when fighting normal monsters). All classes. -->
@@ -32,6 +34,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23903" name="Mysterious Fire Resistance Dye" additionalName="Fire Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (Water Resistance +120 when fighting normal monsters). All classes. -->
@@ -42,6 +45,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23904" name="Mysterious Water Resistance Dye" additionalName="Water Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (Water Resistance +120 when fighting normal monsters). All classes. -->
@@ -52,6 +56,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23905" name="Mysterious Wind Resistance Dye" additionalName="Wind Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (Wind Resistance +120 when fighting normal monsters). All classes. -->
@@ -62,6 +67,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23906" name="Mysterious Earth Resistance Dye" additionalName="Earth Resistance, 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (Wind Resistance +120 when fighting normal monsters). All classes. -->
@@ -72,6 +78,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23907" name="Mysterious Abnormal State Resistance Dye" additionalName="Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 7-day" type="EtcItem">
 		<!-- Take to Dye Merchant in town to get a 7-day symbol that boosts your abilities (Obstruction/ Infection/ Stupor/ Confusion Resistance +20, Buff Cancel Resistance +20, P./ M. Debuff Reflection Rate +5%). For all classes. -->
@@ -82,6 +89,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23908" name="Mysterious Invincibility Boost Dye" additionalName="Invincibility Duration Increase, 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (duration of immunity to basic attacks and skills +50%). All classes. -->
@@ -92,6 +100,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23909" name="Mysterious World Boss Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (Wind Resistance +120 when fighting normal monsters). All classes. -->
@@ -102,6 +111,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23910" name="Mysterious Antharas Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (P./ M. Def. +20% when fighting Antharas). All classes. -->
@@ -112,6 +122,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23911" name="Mysterious Valakas Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (P./ M. Def.+20% when fighting Valakas). All classes. -->
@@ -122,6 +133,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23912" name="Mysterious Lindvior Defense Dye" additionalName="P. Def., M. Def., 7-day" type="EtcItem">
 		<!-- Bring this to the village Dye Merchant to imprint a 7-day magic symbol that boosts stats (P./ M. Def. +20% when fighting Lindvior). All classes. -->
@@ -132,6 +144,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23913" name="Tears One-handed Sword" type="Weapon">
 		<!-- Russia's weapon crafting contest finalist. One-handed sword type. Base appearance of Weapon Appearance Stone. -->
@@ -146,6 +159,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -168,6 +182,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">80</stat>
 			<stat type="mAtk">54</stat>
@@ -191,6 +206,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="209" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -213,6 +229,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="152" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -237,6 +254,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -263,6 +281,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">191</stat>
 			<stat type="mAtk">54</stat>
@@ -286,6 +305,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">117</stat>
 			<stat type="mAtk">54</stat>
@@ -309,6 +329,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -331,6 +352,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -353,6 +375,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -375,6 +398,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">152</stat>
 			<stat type="mAtk">122</stat>
@@ -397,6 +421,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="247" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">51</stat>
@@ -421,6 +446,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">181</stat>
@@ -444,6 +470,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">186</stat>
@@ -463,6 +490,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -478,6 +506,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="sDef">47</stat>
 			<stat type="rShld">20</stat>
@@ -497,6 +526,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23930" name="Tears Dagger Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Tears Dagger. 7-day. -->
@@ -511,6 +541,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23931" name="Tears Two-handed Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Tears Two-handed Sword. 7-day. -->
@@ -525,6 +556,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23932" name="Tears Fist Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Tears Fist Weapon. 7-day. -->
@@ -539,6 +571,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23933" name="Tears Spear Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Tears Spear. 7-day. -->
@@ -553,6 +586,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23934" name="Tears Bow Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Tears Bow. 7-day. -->
@@ -567,6 +601,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23935" name="Tears Crossbow Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Tears Crossbow. 7-day. -->
@@ -581,6 +616,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23936" name="Tears One-handed Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of a Tears One-handed Blunt Weapon. 7-day. -->
@@ -595,6 +631,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23937" name="Tears Magic Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of a Tears Magic Sword. 7-day. -->
@@ -609,6 +646,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23938" name="Tears One-handed Staff Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of a Tears One-handed Staff. 7-day. -->
@@ -623,6 +661,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23939" name="Tears Two-handed Staff Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of a Tears Two-handed Staff. 7-day. -->
@@ -637,6 +676,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23940" name="Tears Dual Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of Tears Dual Swords. 7-day. -->
@@ -651,6 +691,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23941" name="Tears Dual Dagger Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of dual daggers to that of Tears Dual Daggers. 7-day. -->
@@ -665,6 +706,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23942" name="Tears Dual Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapons to that of Tears Dual Blunt Weapon. 7-day. -->
@@ -679,6 +721,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23943" name="Tears Shield Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Tears Shield. 7-day. -->
@@ -693,6 +736,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23944" name="Tears Sigil Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Tears Sigil. 7-day. -->
@@ -707,6 +751,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23945" name="High-grade Maphr's Rune 100% Pack" additionalName="3-hour" type="EtcItem">
 		<!-- Double-click to obtain High-grade Maphr's Rune 100% (3-hour). -->
@@ -715,6 +760,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="time" val="180" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23946" name="XP Rune II (Lv. 1-95) 100% Pack (1-hour)" type="EtcItem">
 		<!-- Double-click to obtain Nevit's Rune 100% (1-hour). Required level: 1-95. -->
@@ -722,6 +768,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="23947" name="Kamaloka Secret Chest Key" type="EtcItem">
 		<!-- Key to opening treasure chests in the Infernal and Lunatic Kamaloka. Use 5 to open a Secret Chest, and 2 to open a normal Chest. -->
@@ -729,6 +776,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23948" name="Kamaloka Chest Key" type="EtcItem">
 		<!-- Key to opening treasure chests in the Infernal and Lunatic Kamaloka. Use 5 to open a Secret Chest, and 2 to open a normal Chest. -->
@@ -736,6 +784,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23949" name="Returning Hero's Wondrous Cubic" type="EtcItem">
 		<!-- Double-click to obtain either a Vitality Replenishing Potion (30-min.), Feather of Blessing, Heavenly Cocktail x 2, Scroll of Escape Pack: Village, or MP Recovery Potion. Once a day. -->
@@ -745,6 +794,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23950" name="Returning Hero's Gold Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Returning Hero's Mark x 250, a Returning Hero's Potion Pack, and a Returning Hero's Support Box. -->
@@ -756,6 +806,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23951" name="Returning Hero's Support Box" type="EtcItem">
 		<!-- Double-click to obtain Rerturning Hero's Shirt, Returning Hero's Belt, and a Returning Hero's Wondrous Cubic. -->
@@ -767,6 +818,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23952" name="Extra Pass: Infernal/ Lunatic Kamaloka" type="EtcItem">
 		<!-- Entry Pass to Infernal and Lunatic Kamaloka. Use to reset cooldown and enter the dungeon up to 5 times within the cooldown. -->
@@ -777,6 +829,7 @@
 		<set name="time" val="1440" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23953" name="2014 World Olympiad Hero's Accessory" type="Armor">
 		<!-- Hair Accessory worn by the hero of the 2014 World Olympiad. Equip for a boost of +5 on all stats. -->
@@ -791,6 +844,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="26110" level="1" /> <!-- All Stats + 5. -->
 		</skills>
@@ -808,6 +862,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="26111" level="1" /> <!-- All Stats + 2. -->
 		</skills>
@@ -820,6 +875,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23956" name="Kamaloka Chest" type="EtcItem">
 		<!-- Identical to the Kamaloka Chest found in Infernal and Lunatic Kamaloka. Has a chance of obtaining either a Blessed Scroll: Enchant R-grade Weapon/ Armor, High-grade R/ R95/ R99-grade Life Stone, Scroll: Enchant R-grade Weapon/ Armor, an Attribute Stone, or Blessed Scroll of Resurrection. -->
@@ -829,6 +885,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23957" name="Illusion 1" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -836,6 +893,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23958" name="Illusion 2" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -843,6 +901,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23959" name="Illusion 3" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -850,6 +909,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23960" name="Illusion 4" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -857,6 +917,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23961" name="Illusion 5" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -864,6 +925,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23962" name="Illusion 6" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -871,6 +933,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23963" name="Illusion 7" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -878,6 +941,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23964" name="Illusion 8" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -885,6 +949,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23965" name="Illusion 9" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -892,6 +957,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23966" name="Illusion 10" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -899,6 +965,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23967" name="Illusion 11" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -906,6 +973,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23968" name="Illusion 12" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -913,6 +981,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23969" name="Illusion 13" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -920,6 +989,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23970" name="Illusion 14" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -927,6 +997,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23971" name="Illusion 15" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -934,6 +1005,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23972" name="Illusion 16" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -941,6 +1013,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23973" name="Illusion 17" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -948,6 +1021,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23974" name="Illusion 18" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -955,6 +1029,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23975" name="Illusion 19" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -962,6 +1037,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23976" name="Illusion 20" type="EtcItem">
 		<set name="is_depositable" val="false" />
@@ -969,6 +1045,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23977" name="Agathion - Pegasus Pack" type="EtcItem">
 		<!-- Double-click to obtain Agathion Pegasus. -->
@@ -977,7 +1054,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
@@ -991,6 +1068,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="23979" name="Vampire Top Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Vampire Outfit. No change in stats. All armor types. Can be stored in the clan warehouse. -->
@@ -1001,6 +1079,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="26082" level="1" /> <!-- Vampiric Style Appearance Stone -->
 		</skills>
@@ -1014,6 +1093,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="26083" level="1" /> <!-- Vampiric Style Appearance Stone -->
 		</skills>
@@ -1027,6 +1107,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="26084" level="1" /> <!-- Vampiric Style Appearance Stone -->
 		</skills>
@@ -1040,6 +1121,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="26085" level="1" /> <!-- Vampiric Style Appearance Stone -->
 		</skills>
@@ -1053,6 +1135,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="26086" level="1" /> <!-- Vampiric Style Appearance Stone -->
 		</skills>
@@ -1065,6 +1148,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23985" name="Extra Pass: Ancient Kartia's Labyrinth" additionalName="PA Event" type="EtcItem">
 		<!-- Obtained for PA points. Resets the cooldown to Ancient Kartia's Labyrinth. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
@@ -1074,6 +1158,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23986" name="Rune of Bountiful Growth Pack" type="EtcItem">
 		<!-- Double-click to obtain Growth Rune (30-day). -->
@@ -1086,6 +1171,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23987" name="Rune of Bountiful Growth (30-day)" type="EtcItem">
 		<!-- When in inventory, Acquired XP/ SP +20%. Can be stacked with all XP/ SP bonus effects with the exception of Emperor's Rune. -->
@@ -1096,6 +1182,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23988" name="Wondrous Wind Scroll" type="EtcItem">
 		<!-- For 60 min., Max HP/ MP/ CP +30%, P./ M. Def. +30%, P. Atk. +10%, M. Atk. +20%, Wind Atk./ Resistance +20. Skill Cooldown -10%. Cannot be used in the Olympiad. Does not stack with Art of Seduction. The effect remains after death. -->
@@ -1106,6 +1193,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="23989" name="Agathion - Virgo" additionalName="Stage 1" type="Armor">
 		<!-- A bracelet for summoning Agathion Virgo. <Active skills>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. Cooldown: 37 min. 30 sec. 2. Attribute Enchant: Attribute Resistance +5. -->
@@ -1118,6 +1206,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1137,6 +1226,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1156,6 +1246,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1176,6 +1267,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1196,6 +1288,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1216,6 +1309,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1236,6 +1330,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1256,6 +1351,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1276,6 +1372,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1296,6 +1393,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
@@ -1316,6 +1414,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17610" level="1" /> <!-- Release Agathion's Seal - Virgo -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->

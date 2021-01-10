@@ -4,7 +4,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -12,7 +12,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -20,7 +20,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -28,7 +28,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -36,7 +36,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -44,7 +44,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -52,7 +52,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -60,7 +60,7 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. <Enchanting>. Compound with Shillien's Soul. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -68,14 +68,14 @@
 		<!-- A special Soul Crystal with Shillien's Soul. Can bestow crystal effect to weapons. The higher level is, the more powerful crystal effect is activated. <Using>. Visit a town blacksmith to imbue your equipment with a crystal effect. -->
 		<set name="icon" val="icon.bm_ensoul_stone_shilen" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48909" name="Shilen's Soul" type="EtcItem">
 		<!-- A crystal that contains Shillien's soul. Required for upgrading Shillien's Soul Crystal through compounding. In case of failure, the Soul Crystal is destroyed. -->
 		<set name="icon" val="icon.bm_soul_of_shilen" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -85,7 +85,7 @@
 		<set name="icon" val="icon.bm_ensoul_stone_shilen_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -97,7 +97,7 @@
 	<item id="48911" name="Scattered Soul Fragment" type="EtcItem">
 		<!-- Soul fragments that have been rendered useless from a strong clash of powers. Can be sold in any shop. -->
 		<set name="icon" val="icon.ensoul_sommon" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="price" val="3000000" />
 		<set name="is_stackable" val="true" />
@@ -112,6 +112,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="39369" level="1" /> <!-- Gran Kain's Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -143,7 +144,7 @@
 	<item id="48915" name="Instanced Dungeon Master Key" type="EtcItem">
 		<!-- When in inventory, allows to enter a daily instance zone regardless of its level restrictions. <Instance zones>. Kartia's Labyrinth Lv. 85/ 90/ 95 (Party), Emperor's Labyrinth, Nightmare Kamaloka, Embryo Command Post, Altar of Shillien, Fallen Emperor's Throne, Krofin's Nest. -->
 		<set name="icon" val="icon.etc_old_key_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -312,7 +313,7 @@
 		<!-- A mysterious item filled with the love and energy of Frederick the Destroyer. Recovers Vitality in a peace zone. Double-click to transform into a Snow Man, Scarecrow Jack, Tin Golem, Tow, Lure Tow, Heavy Tow, Warm Tow, White Dog, Pink Dog, or Golden Dog. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -386,7 +387,7 @@
 	<item id="48933" name="Lucien's Mark" type="EtcItem">
 		<!-- An item containing Lucien s power. Can be exchanged for special items through Meirin from the Golden Compass Explorers. -->
 		<set name="icon" val="icon.gc_symbol_of_lucien" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -421,7 +422,7 @@
 		<!-- A token of gratitude from a mentee who has grown thanks to his mentor s aid. Recharges a certain amount of Vitality. Can be used only 5 times per week. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -441,7 +442,7 @@
 		<!-- A blessing that the Dimensional Wizard grants to the winner of a dimensional siege. For 60 min, XP and SP gain +15%. Cooldown: 60 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.tersi_specter_seed" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -453,7 +454,7 @@
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -506,7 +507,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -517,7 +518,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -526,7 +527,7 @@
 	<item id="48945" name="Red Libra Request - Sea of Spores" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Sea of Spores. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -536,7 +537,7 @@
 	<item id="48946" name="Red Libra Request - Krofin's Nest" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Krofin's Nest. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -564,7 +565,7 @@
 		<!-- Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 5. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -614,7 +615,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifactbook" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
@@ -630,7 +631,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifactbook" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
@@ -646,7 +647,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifactbook" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="enchant_limit" val="5" />
@@ -666,6 +667,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48958" name="Artifact - M. Atk." additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases M. Atk. Can be equipped in an attack artifact slot. When enchanted, increases M. Atk. bonus. Only an attack artifact can be used as a material for upgrade. -->
@@ -675,6 +677,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48959" name="Artifact - Atk. Spd." additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases Atk. Spd. Can be equipped in an attack artifact slot. When enchanted, increases Atk. Spd. bonus. Only an attack artifact can be used as a material for upgrade. -->
@@ -684,6 +687,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48960" name="Artifact - Casting Spd." additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases Casting Spd. Can be equipped in an attack artifact slot. When enchanted, increases Casting Spd. bonus. Only an attack artifact can be used as a material for upgrade. -->
@@ -693,6 +697,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48961" name="Artifact - P. Def." additionalName="Protection" type="Armor">
 		<!-- An artifact that increases P. Def. Can be equipped in a defense artifact slot. When enchanted, increases P. Def. bonus. Only a defense artifact can be used as a material for upgrade. -->
@@ -702,6 +707,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48962" name="Artifact - M. Def." additionalName="Protection" type="Armor">
 		<!-- An artifact that increases M. Def. Can be equipped in a defense artifact slot. When enchanted, increases M. Def. bonus. Only a defense artifact can be used as a material for upgrade. -->
@@ -711,6 +717,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48963" name="Artifact - Max HP" additionalName="Protection" type="Armor">
 		<!-- An artifact that increases Max HP. Can be equipped in a defense artifact slot. When enchanted, increases Max HP bonus. Only a defense artifact can be used as a material for upgrade. -->
@@ -720,6 +727,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48964" name="Artifact - Max MP" additionalName="Protection" type="Armor">
 		<!-- An artifact that increases Max MP. Can be equipped in a defense artifact slot. When enchanted, increases Max MP bonus. Only a defense artifact can be used as a material for upgrade. -->
@@ -729,6 +737,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48965" name="Artifact - XP" additionalName="Support" type="Armor">
 		<!-- An artifact that increases acquired XP/ SP. Can be equipped in a support artifact slot. When enchanted, increases acquired XP/ SP bonus. Only a support artifact can be used as a material for upgrade. -->
@@ -738,6 +747,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48966" name="Artifact Vampiric Rage" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Vampiric Rage effect. Can be equipped in a support artifact slot. When enchanted, increases Vampiric Rage effect bonus. Only a support artifact can be used as a material for upgrade. -->
@@ -747,6 +757,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48967" name="Artifact - Speed" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Speed. Can be equipped in a support artifact slot. When enchanted, increases Speed bonus. Only a support artifact can be used as a material for upgrade. -->
@@ -756,6 +767,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48968" name="Artifact - Received Healing" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Received Healing. Can be equipped in a support artifact slot. When enchanted, increases Received Healing bonus. Only a support artifact can be used as a material for upgrade. -->
@@ -765,6 +777,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48969" name="Artifact - P. Atk." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Atk. Can be equipped in a balance artifact slot. When enchanted, increases P. Atk. bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -774,6 +787,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48970" name="Artifact - M. Atk." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Atk. Can be equipped in a balance artifact slot. When enchanted, increases M. Atk. bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -783,6 +797,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48971" name="Artifact - P. Accuracy" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Accuracy. Can be equipped in a balance artifact slot. When enchanted, increases P. Accuracy bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -792,6 +807,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48972" name="Artifact - M. Accuracy" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Accuracy. Can be equipped in a balance artifact slot. When enchanted, increases M. Accuracy bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -801,6 +817,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48973" name="Artifact Normal Attack Critical Rate" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Critical Rate for standard attacks. Can be equipped in a balance artifact slot. When enchanted, increases Critical Rate for standard attacks. Only a balance artifact can be used as a material for upgrade. -->
@@ -810,6 +827,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48974" name="Artifact - P. Skill Critical Rate" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Skill Critical Rate. Can be equipped in a balance artifact slot. When enchanted, increases P. Skill Critical Rate bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -819,6 +837,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48975" name="Artifact - M. Skill Critical Rate" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Critical Rate. Can be equipped in a balance artifact slot. When enchanted, increases M. Critical Rate bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -828,6 +847,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48976" name="Artifact - Potion/ Elixir Effect Bonus" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Recovery Potions' Effect. Can be equipped in a balance artifact slot. When enchanted, increases Recovery Potions' Effect bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -837,6 +857,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48977" name="Artifact - Received Damage When Immobilized" additionalName="Balance" type="Armor">
 		<!-- An artifact that decreases Received Damage when Immobilized. Can be equipped in a balance artifact slot. When enchanted, increases Received Damage when Immobilized bonus. Only a balance artifact can be used as a material for upgrade. -->
@@ -846,6 +867,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48978" name="Scroll of Escape - Atelia Refinery" type="EtcItem">
 		<!-- A scroll that teleports you to the Atelia Refinery -->
@@ -867,6 +889,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35252" level="1" /> <!-- Artifact - Attack Attribute -->
 		</skills>
@@ -877,6 +900,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35253" level="1" /> <!-- Artifact - Defense Attribute -->
 		</skills>
@@ -888,6 +912,7 @@
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35254" level="1" /> <!-- Artifact - Received Damage When Imobilized -->
 		</skills>
@@ -899,6 +924,7 @@
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35255" level="1" /> <!-- Artifact - P. Skill Power -->
 		</skills>
@@ -910,6 +936,7 @@
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35256" level="1" /> <!-- Artifact - M. Skill Power -->
 		</skills>
@@ -922,6 +949,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48986" name="Dragon's Relic" type="EtcItem">
 		<!-- Use it to obtain a Dragon's Relic Chest or Shining Dragon Treasure Chest. There is a chance to obtain an Artifact Fragment. -->
@@ -935,7 +963,7 @@
 		<!-- Double-click to obtain a random rare item. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -943,7 +971,7 @@
 		<!-- Double-click to obtain Glowing Dragon's Attribute Potion (XP) and a very rare item. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -960,7 +988,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -997,7 +1025,7 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1012,7 +1040,7 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1027,7 +1055,7 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1043,7 +1071,7 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1086,7 +1114,7 @@
 		<!-- Double-click to participate in the lucky gift draw. When the buff disappears, you can get it again. -->
 		<set name="icon" val="icon.christmas_card_box2" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />

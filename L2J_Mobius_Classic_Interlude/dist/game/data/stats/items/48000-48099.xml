@@ -4,7 +4,7 @@
 		<!-- A scroll that contains harmony between races. Use it to increase your XP and SP by 50% for 30 minutes. Cannot be used with Fall of the Dragon/Nevit's Hourglass/Dandy's Home Run Ball. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_london_olympic_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -36,7 +36,7 @@
 		<!-- Changes the appearance of a top armor or a one-piece into that of Chevalier. It changes everything, making the appearance of all armor into that of Chevalier. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -47,7 +47,7 @@
 		<!-- Changes the appearance of a top armor or a one-piece into that of Valkyrie. It changes everything, making the appearance of all armor into that of Valkyrie. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -58,7 +58,7 @@
 		<!-- Extra Pass for Shilen's Altar. Double-click to reset cooldown to Shilen's Altar. Cannot use if locked out from Instanced Zone. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

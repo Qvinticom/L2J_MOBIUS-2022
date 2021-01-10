@@ -8,6 +8,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38601" name="Steel Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain either Immortal, Twilight, or Seraph armor. -->
@@ -17,6 +18,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38602" name="Steel Full Plate Helmet" type="Armor">
 		<!-- Steel Full Plate Helmet. -->
@@ -28,6 +30,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">58</stat>
 		</stats>
@@ -43,6 +46,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="3493" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">239</stat>
 		</stats>
@@ -57,6 +61,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="400" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">39</stat>
 		</stats>
@@ -71,6 +76,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">39</stat>
 		</stats>
@@ -85,6 +91,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="407" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="sDef">203</stat>
 			<stat type="rShld">20</stat>
@@ -102,6 +109,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="660" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">60</stat>
 		</stats>
@@ -117,6 +125,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="323" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">37</stat>
 		</stats>
@@ -131,6 +140,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="207" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">32</stat>
 		</stats>
@@ -145,6 +155,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="410" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">32</stat>
 		</stats>
@@ -160,6 +171,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1483" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -175,6 +187,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="520" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">59</stat>
 		</stats>
@@ -189,6 +202,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="407" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">32</stat>
 		</stats>
@@ -203,6 +217,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="203" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">33</stat>
 		</stats>
@@ -217,6 +232,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="193" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">66</stat>
 		</stats>
@@ -231,6 +247,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="193" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -245,6 +262,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="377" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -260,6 +278,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="3327" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">270</stat>
 		</stats>
@@ -274,6 +293,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="400" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="sDef">230</stat>
 			<stat type="rShld">20</stat>
@@ -291,6 +311,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="847" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">127</stat>
 		</stats>
@@ -305,6 +326,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="197" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">62</stat>
 		</stats>
@@ -319,6 +341,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="197" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
@@ -333,6 +356,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="393" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pDef">41</stat>
 		</stats>
@@ -347,6 +371,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="403" />
+		<set name="material" val="DAMASCUS" />
 		<stats>
 			<stat type="sDef">216</stat>
 			<stat type="rShld">20</stat>
@@ -364,6 +389,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1833" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">202</stat>
 		</stats>
@@ -378,6 +404,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="193" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -392,6 +419,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="377" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -407,6 +435,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="3193" />
+		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
@@ -421,6 +450,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="187" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
@@ -435,6 +465,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="183" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
@@ -449,6 +480,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="370" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
@@ -463,6 +495,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="393" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="sDef">256</stat>
 			<stat type="rShld">20</stat>
@@ -480,6 +513,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="817" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">139</stat>
 		</stats>
@@ -494,6 +528,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="190" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">69</stat>
 		</stats>
@@ -508,6 +543,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="193" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
@@ -522,6 +558,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="370" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
@@ -536,6 +573,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="397" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="sDef">243</stat>
 			<stat type="rShld">20</stat>
@@ -553,6 +591,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1433" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -568,6 +607,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="493" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">80</stat>
 		</stats>
@@ -582,6 +622,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="193" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
@@ -596,6 +637,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="370" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
@@ -611,6 +653,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="2540" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">205</stat>
 		</stats>
@@ -626,6 +669,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1087" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -640,6 +684,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="180" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -654,6 +699,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="370" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -668,6 +714,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="183" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">83</stat>
 		</stats>
@@ -682,6 +729,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="390" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="sDef">290</stat>
 			<stat type="rShld">20</stat>
@@ -699,6 +747,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="767" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">166</stat>
 		</stats>
@@ -713,6 +762,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="180" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -727,6 +777,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="370" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -741,6 +792,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="183" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">83</stat>
 		</stats>
@@ -756,6 +808,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="940" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">13</stat>
 			<stat type="rEvas">-8</stat>
@@ -772,6 +825,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1650" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">249</stat>
 		</stats>
@@ -786,6 +840,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="180" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -800,6 +855,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="370" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -814,6 +870,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="183" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">83</stat>
 		</stats>
@@ -829,6 +886,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="2520" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">226</stat>
 		</stats>
@@ -844,6 +902,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1070" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -858,6 +917,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="180" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -872,6 +932,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="170" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -886,6 +947,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="360" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -900,6 +962,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="380" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="sDef">321</stat>
 			<stat type="rShld">20</stat>
@@ -917,6 +980,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="590" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -932,6 +996,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="290" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -946,6 +1011,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="180" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -960,6 +1026,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="170" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -974,6 +1041,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="360" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -989,6 +1057,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="310" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">15</stat>
 			<stat type="rEvas">-8</stat>
@@ -1005,6 +1074,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1390" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">170</stat>
 		</stats>
@@ -1020,6 +1090,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="460" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">106</stat>
 		</stats>
@@ -1034,6 +1105,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="180" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -1048,6 +1120,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="170" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -1062,6 +1135,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="360" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -1076,6 +1150,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">39</stat>
 		</stats>
@@ -1090,6 +1165,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">52</stat>
 		</stats>
@@ -1104,6 +1180,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">26</stat>
 		</stats>
@@ -1118,6 +1195,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">51</stat>
 		</stats>
@@ -1132,6 +1210,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">68</stat>
 		</stats>
@@ -1146,6 +1225,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">34</stat>
 		</stats>
@@ -1160,6 +1240,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -1174,6 +1255,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">80</stat>
 		</stats>
@@ -1188,6 +1270,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">40</stat>
 		</stats>
@@ -1202,6 +1285,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">71</stat>
 		</stats>
@@ -1216,6 +1300,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">95</stat>
 		</stats>
@@ -1230,6 +1315,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">48</stat>
 		</stats>
@@ -1244,6 +1330,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">79</stat>
 		</stats>
@@ -1258,6 +1345,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">106</stat>
 		</stats>
@@ -1272,6 +1360,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="50" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -1287,6 +1376,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">94</stat>
 		</stats>
@@ -1302,6 +1392,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">126</stat>
 		</stats>
@@ -1317,6 +1408,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="50" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">63</stat>
 		</stats>
@@ -1334,6 +1426,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="477" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">61</stat>
@@ -1355,6 +1448,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="547" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">156</stat>
 			<stat type="mAtk">83</stat>
@@ -1377,6 +1471,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="807" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">118</stat>
 			<stat type="mAtk">56</stat>
@@ -1398,6 +1493,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="477" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">85</stat>
 			<stat type="mAtk">81</stat>
@@ -1420,6 +1516,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="677" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1445,6 +1542,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="250" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">86</stat>
 			<stat type="mAtk">91</stat>
@@ -1467,6 +1565,7 @@
 		<set name="soulshots" val="8" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="597" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pAtk">220</stat>
 			<stat type="mAtk">61</stat>
@@ -1489,6 +1588,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="660" />
+		<set name="material" val="STEEL" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>

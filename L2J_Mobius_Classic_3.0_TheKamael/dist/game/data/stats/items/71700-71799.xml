@@ -178,7 +178,7 @@
 	<item id="71713" name="+16 Weapon Coupon (No-grade)" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for a No-grade weapon +16 in the L-Coin Store. -->
 		<set name="icon" val="BranchIcon.Icon.rp_necklace_of_einhasad_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -187,7 +187,7 @@
 	<item id="71714" name="+7 Weapon Coupon (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for a C-grade weapon +7 in the L-Coin Store. -->
 		<set name="icon" val="BranchIcon.Icon.rp_ring_of_maphr_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -196,7 +196,7 @@
 		<!-- Double-click to obtain Compound Bow +16 and Infinite Wooden Quiver. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -206,7 +206,7 @@
 		<!-- Double-click to obtain Eminence Bow +7 and Infinite Steel Quiver. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -214,7 +214,7 @@
 	<item id="71717" name="ADEN Gatcha Ticket" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for 300 L-Coins and a valuable item by any Dimensional Merchant. -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -224,7 +224,7 @@
 		<!-- Double-click to obtain the standard Shadow Master appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -233,7 +233,7 @@
 		<!-- Double-click to obtain the high-grade Shadow Master appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -242,7 +242,7 @@
 		<!-- Double-click to obtain the rare Shadow Master appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -251,7 +251,7 @@
 		<!-- Double-click to obtain the legendary Shadow Master appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -260,7 +260,7 @@
 		<!-- Double-click to obtain the mythic Shadow Master appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_thief" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -269,7 +269,7 @@
 		<!-- Double-click to obtain the standard Admiral appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -278,7 +278,7 @@
 		<!-- Double-click to obtain the high-grade Admiral appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -287,7 +287,7 @@
 		<!-- Double-click to obtain the rare Admiral appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -296,7 +296,7 @@
 		<!-- Double-click to obtain the legendary Admiral appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -305,7 +305,7 @@
 		<!-- Double-click to obtain the mythic Admiral appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_navy" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -314,7 +314,7 @@
 		<!-- Double-click to obtain the standard Nymph appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -323,7 +323,7 @@
 		<!-- Double-click to obtain the high-grade Nymph appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -332,7 +332,7 @@
 		<!-- Double-click to obtain the rare Nymph appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -341,7 +341,7 @@
 		<!-- Double-click to obtain the legendary Nymph appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -350,7 +350,7 @@
 		<!-- Double-click to obtain the mythic Nymph appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_nymph" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -359,7 +359,7 @@
 		<!-- Double-click to obtain the standard Demon appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -368,7 +368,7 @@
 		<!-- Double-click to obtain the high-grade Demon appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -377,7 +377,7 @@
 		<!-- Double-click to obtain the rare Demon appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -386,7 +386,7 @@
 		<!-- Double-click to obtain the legendary Demon appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -395,7 +395,7 @@
 		<!-- Double-click to obtain the mythic Demon appearance. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_costume_devil" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -404,7 +404,7 @@
 		<!-- Double-click to obtain Fire Dragon Pendant +6. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -414,7 +414,7 @@
 		<!-- Double-click to obtain a +8 S-grade weapon. -->
 		<set name="icon" val="icon.bm_gold_lure_special_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -423,7 +423,7 @@
 		<!-- Double-click to obtain +5 Dragon Pendant - Attack/ Magic Power Lv. 4. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -536,7 +536,7 @@
 	<item id="71752" name="Dimensional Spirit" type="EtcItem">
 		<!-- Required for creating and upgrading Dimensional Talisman. Take it to Alchemist Veruti in Giran to enchant Dimensional Talisman. Take it to Head Blacksmith Ferris in Aden to transform Talisman of Border to Dimensional Talisman. -->
 		<set name="icon" val="icon.bm_dimension_soul" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -546,7 +546,7 @@
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -554,7 +554,7 @@
 		<!-- Double-click to obtain Sayha's Blessing. There is also a chance to obtain one of the following items: +16 Weapon Pack (C/ B-grade), Brooch Lv. 3, Wind/ Fire/ Earth/ Water Spirit Evolution Stone, Weapon Pack (C/ B-grade), Armor Pack (B-grade), Scroll: Enchant Weapon (B/ C-grade), Scroll: Enchant Armor (B-grade), Sayha's Cloak Coupon, Agathion Coupon, Eva's Hair Accessory Pack, Radiant Jewelry Box, Talisman of Aden Enchant Pack, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Effect Scroll, Sayha's Storm Lv. 3, Soulshot Ticket. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -892,7 +892,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -902,7 +902,7 @@
 	<item id="71769" name="Weapon Coupon (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- You can exchange the coupon for a B-grade weapon via Dimensional Merchant. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -914,7 +914,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -926,7 +926,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -938,7 +938,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -948,7 +948,7 @@
 	<item id="71773" name="Newbie Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Acquired XP/ SP (hunting) +50%. Required level: 1-39. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
 		<set name="icon" val="BranchSys2.lcon.br_life_rune_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="50" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -958,7 +958,7 @@
 		<!-- Double-click to obtain one of the following items: Talisman of Baium, Zaken's Earring, Queen Ant's Ring, Exquisite Jewel Box, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Effect Scroll. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -966,7 +966,7 @@
 	<item id="71775" name="Golden Ticket" additionalName="Event" type="EtcItem">
 		<!-- Reward for completing the Golden Quest during the Golden Week event. Can be exchanged for various items by the Dimensional Merchant. -->
 		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -976,7 +976,7 @@
 		<!-- Double-click to obtain one of the various items. -->
 		<set name="icon" val="icon.npoint_valakas_30day_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -986,7 +986,7 @@
 		<!-- Double-click to obtain one of the various items. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. Can be shared within an account through Dimensional Merchant. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -998,7 +998,7 @@
 		<!-- Double-click to obtain Sealed Samurai Long Sword enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1008,7 +1008,7 @@
 		<!-- Double-click to obtain Sealed Mace of Underworld +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1018,7 +1018,7 @@
 		<!-- Double-click to obtain Sealed Demon's Staff enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1028,7 +1028,7 @@
 		<!-- Double-click to obtain Sealed Crystal Dagger enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1038,7 +1038,7 @@
 		<!-- Double-click to obtain Sealed Eminence Bow enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1048,7 +1048,7 @@
 		<!-- Double-click to obtain Sealed Orcish Poleaxe enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1058,7 +1058,7 @@
 		<!-- Double-click to obtain Sealed Katana*Katana enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1068,7 +1068,7 @@
 		<!-- Double-click to obtain Sealed Yaksa Mace enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1078,7 +1078,7 @@
 		<!-- Double-click to obtain Sealed Berserker Blade enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1088,7 +1088,7 @@
 		<!-- Double-click to obtain Sealed Great Pata enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1098,7 +1098,7 @@
 		<!-- Double-click to obtain Sealed Admiral's Estoc enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1108,7 +1108,7 @@
 		<!-- Double-click to obtain Sealed Saber Tooth enchanted to +4. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1118,7 +1118,7 @@
 		<!-- Double-click to obtain Sealed Samurai Long Sword enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1128,7 +1128,7 @@
 		<!-- Double-click to obtain Sealed Mace of Underworld enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1138,7 +1138,7 @@
 		<!-- Double-click to obtain Sealed Demon's Staff enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1148,7 +1148,7 @@
 		<!-- Double-click to obtain Sealed Crystal Dagger enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1158,7 +1158,7 @@
 		<!-- Double-click to obtain Sealed Eminence Bow enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1168,7 +1168,7 @@
 		<!-- Double-click to obtain Sealed Orcish Poleaxe enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1178,7 +1178,7 @@
 		<!-- Double-click to obtain Sealed Katana*Katana enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1188,7 +1188,7 @@
 		<!-- Double-click to obtain Sealed Yaksa Mace enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1198,7 +1198,7 @@
 		<!-- Double-click to obtain Sealed Berserker Blade enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1208,7 +1208,7 @@
 		<!-- Double-click to obtain Sealed Great Pata enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

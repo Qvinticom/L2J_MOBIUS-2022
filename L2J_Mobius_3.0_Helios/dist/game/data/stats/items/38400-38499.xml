@@ -9,6 +9,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38399" min="1" max="1" chance="100" /> <!-- Expertise Rune (C-grade) - 2-hour -->
 		</capsuled_items>
@@ -21,6 +22,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17571" level="1" /> <!-- Expertise Rune (B-grade) -->
 		</skills>
@@ -34,6 +36,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38401" min="1" max="1" chance="100" /> <!-- Expertise Rune (B-grade) - 2-hour -->
 		</capsuled_items>
@@ -46,6 +49,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17572" level="1" /> <!-- Expertise Rune (A-grade) -->
 		</skills>
@@ -59,6 +63,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38403" min="1" max="1" chance="100" /> <!-- Expertise Rune (A-grade) - 2-hour -->
 		</capsuled_items>
@@ -71,6 +76,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17573" level="1" /> <!-- Expertise Rune (S-grade) -->
 		</skills>
@@ -84,6 +90,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38405" min="1" max="1" chance="100" /> <!-- Expertise Rune (S-grade) - 2-hour -->
 		</capsuled_items>
@@ -96,6 +103,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17574" level="1" /> <!-- Expertise Rune (S80-grade) -->
 		</skills>
@@ -109,6 +117,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38407" min="1" max="1" chance="100" /> <!-- Expertise Rune (S80-grade) - 2-hour -->
 		</capsuled_items>
@@ -121,6 +130,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17575" level="1" /> <!-- Expertise Rune (R-grade) -->
 		</skills>
@@ -134,6 +144,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38409" min="1" max="1" chance="100" /> <!-- Expertise Rune (R-grade) - 2-hour -->
 		</capsuled_items>
@@ -146,6 +157,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17576" level="1" /> <!-- Expertise Rune (R95-grade) -->
 		</skills>
@@ -159,6 +171,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38411" min="1" max="1" chance="100" /> <!-- Expertise Rune (R95-grade) - 2-hour -->
 		</capsuled_items>
@@ -171,6 +184,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17577" level="1" /> <!-- Expertise Rune (R99-grade) -->
 		</skills>
@@ -185,6 +199,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38413" min="1" max="1" chance="100" /> <!-- Expertise Rune (R99-grade) - 2-hour -->
 		</capsuled_items>
@@ -197,6 +212,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38416" name="Trumpetfish Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dual dagger into that of a Trumpetfish. 30-day. -->
@@ -206,6 +222,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38417" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a dual blunt weapon into that of a Blue Mackerel. -->
@@ -214,6 +231,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38418" name="Trumpetfish Appearance Stone: Dual Dagger" type="EtcItem">
 		<!-- Turns the appearance of a dual dagger into that of a Trumpetfish. -->
@@ -222,6 +240,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38419" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a one-handed blunt weapon into that of a Blue Mackerel. 30-day. -->
@@ -231,6 +250,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38420" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a one-handed blunt weapon into that of a Blue Mackerel. -->
@@ -239,6 +259,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38421" name="Blue Mackerel: One-handed Blunt Weapon" type="Weapon">
 		<!-- Blue Mackerel-shaped weapon. One-handed blunt weapon. -->
@@ -255,6 +276,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="172" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -278,6 +300,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">181</stat>
@@ -302,6 +325,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">186</stat>
@@ -325,6 +349,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -348,6 +373,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">186</stat>
@@ -371,6 +397,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -394,6 +421,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -417,6 +445,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -440,6 +469,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -463,6 +493,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -486,6 +517,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -504,6 +536,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -526,6 +559,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">186</stat>
@@ -549,6 +583,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -567,6 +602,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -581,6 +617,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -600,6 +637,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -614,6 +652,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="38439" name="Agathion - Twinkling Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Virgo -->
@@ -621,6 +660,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="38440" name="Agathion - Radiant Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Virgo -->
@@ -628,6 +668,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="38441" name="Agathion - Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Virgo. -->
@@ -635,6 +676,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="38442" name="Agathion - Faint Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Virgo. -->
@@ -642,6 +684,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="38443" name="Monster Only: Centaur Axe" type="Weapon">
 		<!-- Monster weapon. One-handed Sword -->
@@ -658,6 +701,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -676,6 +720,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -695,6 +740,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="250" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">186</stat>
@@ -718,6 +764,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -741,6 +788,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -764,6 +812,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">181</stat>
@@ -781,6 +830,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17611" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -802,6 +852,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17611" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -823,6 +874,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17611" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -844,6 +896,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17611" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -864,6 +917,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17611" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -883,6 +937,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17612" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -904,6 +959,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17612" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -925,6 +981,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17612" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -946,6 +1003,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17612" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -966,6 +1024,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17612" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -985,6 +1044,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17613" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1006,6 +1066,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17613" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1027,6 +1088,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17613" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1048,6 +1110,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17613" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1068,6 +1131,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17613" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1087,6 +1151,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17614" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1108,6 +1173,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17614" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1129,6 +1195,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17614" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1150,6 +1217,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17614" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1170,6 +1238,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17614" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1189,6 +1258,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17615" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1210,6 +1280,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17615" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1231,6 +1302,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17615" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1252,6 +1324,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17615" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1273,6 +1346,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17615" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1292,6 +1366,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17616" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1313,6 +1388,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17616" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1334,6 +1410,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17616" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1355,6 +1432,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17616" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1375,6 +1453,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17616" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1394,6 +1473,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17617" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1415,6 +1495,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17617" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1436,6 +1517,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17617" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1457,6 +1539,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17617" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1477,6 +1560,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17617" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1496,6 +1580,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17618" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1517,6 +1602,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17618" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1538,6 +1624,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17618" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1559,6 +1646,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17618" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1579,6 +1667,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17618" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1598,6 +1687,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17619" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1619,6 +1709,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17619" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1640,6 +1731,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17619" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1661,6 +1753,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17619" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1681,6 +1774,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17619" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1700,6 +1794,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17620" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1721,6 +1816,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17620" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1742,6 +1838,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17620" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1764,6 +1861,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17620" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1784,6 +1882,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17620" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -1803,6 +1902,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17621" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->

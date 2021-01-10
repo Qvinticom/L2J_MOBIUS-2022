@@ -29,7 +29,7 @@
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -38,7 +38,7 @@
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -47,7 +47,7 @@
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -56,7 +56,7 @@
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -65,14 +65,14 @@
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47908" name="Shining Magic Bait Exchange Coupon" type="EtcItem">
 		<!-- Fishing Guild Members in each village can exchange this for 1 of your desired Shining Magic Bait. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket2" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -117,7 +117,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
@@ -127,7 +127,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
@@ -137,7 +137,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
@@ -148,7 +148,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -187,7 +187,7 @@
 		<!-- When used, increases EXP/SP from hunting by 50%, and every 5 billion EXP, a Stand of Shining Growth is obtained for 30 minutes. Cannot be used with Fall of the Dragon, Dandy's Home Run Ball, and Agathion - EXP Bottle. Cooldown 5 minutes. -->
 		<set name="icon" val="icon.bm_nebit_bonus_time_up" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -312,7 +312,7 @@
 		<!-- Double-click to use a magic woodpile for one player. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_firewood_seed_solo" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="WOOD" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -320,7 +320,7 @@
 		<!-- Double-click to use a magic woodpile for party use. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_firewood_seed_party" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="WOOD" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -329,7 +329,7 @@
 		<set name="icon" val="icon.ev_elf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -338,7 +338,7 @@
 		<set name="icon" val="icon.ev_darkelf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -347,7 +347,7 @@
 		<set name="icon" val="icon.ev_orc_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -356,7 +356,7 @@
 		<set name="icon" val="icon.ev_dwarf_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -365,7 +365,7 @@
 		<set name="icon" val="icon.ev_human_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -374,7 +374,7 @@
 		<set name="icon" val="icon.ev_kamael_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -383,7 +383,7 @@
 		<set name="icon" val="icon.ev_ertheia_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -392,7 +392,7 @@
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -400,7 +400,7 @@
 		<!-- This first gift was prepared for all that deeply love Lineage 2. Double-click to obtain a reward. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -410,7 +410,7 @@
 		<!-- This second gift was prepared for all that deeply love Lineage 2. Double-click to obtain a reward. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -420,7 +420,7 @@
 		<!-- This third gift was prepared for all that deeply love Lineage 2. Double-click to obtain a reward. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -430,7 +430,7 @@
 		<!-- A shining golden chest. Double-click to obtain one of the items that Frederick the Destroyer tenaciously gathered over a long time. With a premium account, you will receive an even better reward. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -440,7 +440,7 @@
 		<!-- An old, dusty box. Double-click to obtain one of the 13th anniversary items that Frederick the Destroyer haphazardly gathered. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -450,7 +450,7 @@
 		<!-- A shining golden chest. Double-click to obtain one of the items that Frederick the Destroyer tenaciously gathered over a long time. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -459,7 +459,7 @@
 	<item id="47944" name="13th Anniversary Item" type="EtcItem">
 		<!-- An event item for the 13th anniversary of Lineage 2. Village event NPC Bliss needs it for the event. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_13th" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -493,7 +493,7 @@
 		<!-- Double-click to send the Magic Flame towards heaven and receive a reward. Many people send their hopes and wishes towards heaven with this flame for luck. It is said that the wishes will come true if the flame reaches the sky without extinguishing. Maybe you will receive a reward if you send it up with a wish. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_firewood_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -502,7 +502,7 @@
 		<set name="icon" val="icon.ev_13th_paper_inzone" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -513,7 +513,7 @@
 		<set name="icon" val="icon.ev_13th_paper_field" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -522,7 +522,7 @@
 	<item id="47949" name="Request - Instanced Zone Dungeon" type="EtcItem">
 		<!-- You can complete the mission if you carry out 1 type of daily quest in an instanced zone dungeon of at least level 85. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_13th_paper_inzone" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -532,7 +532,7 @@
 	<item id="47950" name="Request - Fields" type="EtcItem">
 		<!-- You can complete the mission if you carry out 1 type of daily quest in a field of at least level 85. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_13th_paper_field" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />

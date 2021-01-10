@@ -7,6 +7,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90923" name="Shining Ore" additionalName="Not in Use" type="EtcItem">
 		<!-- Bring some amount of Shining Ore and a Lv. 3-5 Jewel to a Dimensional Merchant to receive a Lv. 3-5 Jewelry Box. Cannot be dropped. -->
@@ -14,6 +15,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90929" name="Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- P./M. Critical Damage +2%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -83,6 +85,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90941" name="Lv. 3 Cat's Eye Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 3 Cat's Eye. Cannot be dropped. -->
@@ -92,6 +95,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90942" name="Lv. 4 Cat's Eye Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 4 Cat's Eye. Cannot be dropped. -->
@@ -101,6 +105,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90943" name="Lv. 5 Cat's Eye Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Lv. 5 Cat's Eye. Cannot be dropped. -->
@@ -110,5 +115,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

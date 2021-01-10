@@ -5,7 +5,7 @@
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -20,13 +20,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72016" name="Giran Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\n- Giran Seal\n\n<Random>\n- Spellbook: Ultimate Death Knight Transformation\n- Boss Weapon Pack\n- Baium's Ring\n- Zaken's Earring\n- Queen Ant's Ring\n- Orfen's Earring\n- Ring of Core\n- Spellbook: Divine Beam\n- Spellbook: White Guardian\n- Ice Crystal Breastplate\n- Ice Crystal Gaiters\n- Leather Armor of Lightning\n- Leather Leggings of Lightning\n- Flaming Tunic\n+ other items -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -37,7 +38,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i09" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -52,6 +53,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="72022" name="Package: Shield of Nightmare" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -62,6 +64,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="72023" name="Growth Supply Pack - Lv. 60" type="EtcItem">
 		<!-- Double-click to obtain the following items.\nRequired level: 60+.\n\n<Guaranteed>\n- Scroll: Boost Attack (10 pcs.)\n- Soulshot Ticket (20 pcs.) -->
@@ -72,6 +75,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72024" name="Growth Supply Pack - Lv. 65" type="EtcItem">
 		<!-- Double-click to obtain the following items.\nRequired level: 65+.\n\n<Guaranteed>\n- Scroll: Boost Defense (10 pcs.)\n- Soulshot Ticket (20 pcs.) -->
@@ -82,6 +86,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72025" name="Growth Supply Pack - Lv. 68" type="EtcItem">
 		<!-- Double-click to obtain the following items.\nRequired level: 68+.\n\n<Guaranteed>\n- Scroll: Boost Attack (25 pcs.)\n- Soulshot Ticket (75 pcs.) -->
@@ -92,6 +97,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72026" name="Growth Supply Pack - Lv. 71" type="EtcItem">
 		<!-- Double-click to obtain the following items.\nRequired level: 71+.\n\n<Guaranteed>\n- Scroll: Boost Attack (25 pcs.)\n- Soulshot Ticket (75 pcs.)\n- Enchanted B-grade Armor Coupon -->
@@ -102,6 +108,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72027" name="Growth Supply Pack - Lv. 74" type="EtcItem">
 		<!-- Double-click to obtain the following items.\nRequired level: 74+.\n\n<Guaranteed>\n- Scroll: Boost Defense (25 pcs.)\n- Soulshot Ticket (75 pcs.)\n- Enchanted B-grade Armor Coupon -->
@@ -112,6 +119,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72028" name="Growth Supply Pack - Lv. 76" type="EtcItem">
 		<!-- Double-click to obtain the following items.\nRequired level: 76+.\n\n<Guaranteed>\n- Scroll: Boost Attack (25 pcs.)\n- Soulshot Ticket (75 pcs.)\n- Enchanted B-grade Armor Coupon -->
@@ -122,6 +130,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72029" name="Growth Supply Pack - Lv. 79" type="EtcItem">
 		<!-- Double-click to obtain the following items.\nRequired level: 79+.\n\n<Guaranteed>\n- Enchant Kit: Talisman of Eva (2 pcs.)\n- Enchant Kit: Talisman of Aden (2 pcs.)\n- A-grade Armor Coupon -->
@@ -132,6 +141,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72040" name="Festival Gift Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -142,6 +152,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="72041" name="Festival Coin" type="EtcItem">
 		<!-- A coin granted for participating in the Festival. Can be exchanged for various items through the Game Assistant. -->
@@ -150,6 +161,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="72042" name="Special Festival Spellbook Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -158,6 +170,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72043" name="Sparkling Accessory Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -168,6 +181,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72044" name="Boss' Accessory Fragment" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant.\n<Exchangeable items>\n- Ring of Core (25 fragments)\n- Queen Ant's Ring (50 fragments)\n- Orfen's Earring (50 fragments)\n- Zaken's Earring (60 fragments)\n- Baium's Ring (180 fragments)\n- Sparkling Accessory Pack (1 fragment) -->
@@ -176,6 +190,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="72067" name="Jewelry Box Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain one of the following items.\n\n<Random>\n- Amber Lv. 5\n- Opal Lv. 5\n- Coral Lv. 5\n- Onyx Lv. 5\n- Spinel Lv. 5\n- Zircon Lv. 5\n- Moonstone Lv. 5 -->
@@ -186,6 +201,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="72073" name="Pack of Seals" type="EtcItem">
 		<!-- Double-click to obtain the specified item. -->
@@ -196,6 +212,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="72074" name="Halloween Kit" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -206,5 +223,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

@@ -8,6 +8,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18714" level="6" /> <!-- Blue Cat's Eye -->
 		</skills>
@@ -105,6 +106,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47703" min="1" max="1" chance="3.57142" /> <!-- Red Cat's Eye Lv. 3 Jewelry Box -->
 			<item id="47704" min="1" max="1" chance="3.57142" /> <!-- Red Cat's Eye Lv. 4 Jewelry Box -->
@@ -145,6 +147,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47709" min="1" max="1" chance="7.14285" /> <!-- Red Cat's Eye Fortune Box -->
 			<item id="47710" min="1" max="1" chance="7.14285" /> <!-- Blue Cat's Eye Fortune Box -->
@@ -171,6 +174,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47677" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 1 -->
 			<item id="47678" min="1" max="1" chance="20" /> <!-- Red Cat's Eye lv. 2 -->
@@ -188,6 +192,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="47682" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 1 -->
 			<item id="47683" min="1" max="1" chance="20" /> <!-- Blue Cat's Eye lv. 2 -->
@@ -201,7 +206,7 @@
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -218,6 +223,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="28296" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
@@ -230,5 +236,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 </list>

@@ -280,6 +280,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10800" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
 			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
@@ -292,7 +293,7 @@
 	<item id="70115" name="Fishing Coin" type="EtcItem">
 		<!-- The coin you found in the whale caught using Golden Bait. Can be exchanged for various items in the Fishermen's Guild. -->
 		<set name="icon" val="icon.fairy_adena_joke" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -803,7 +804,7 @@
 	<item id="70160" name="1st Anniversary Coin" type="EtcItem">
 		<!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen?Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_11th_token" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -812,7 +813,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -820,7 +821,7 @@
 		<!-- Double-click the chest to get one of the treasures, gathered by Fire Dragon Valakas. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -953,7 +954,7 @@
 	<item id="70172" name="Coin of Tears" type="EtcItem">
 		<!-- A coin saturated with grief. You can find it in the Ruins of Agony once in a while. -->
 		<set name="icon" val="BranchIcon.Icon.vip_silver_coin" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -962,7 +963,7 @@
 	<item id="70173" name="Decayed Coin" type="EtcItem">
 		<!-- A coin which decayed over time. You can find it in the Ruins of Agony once in a while. -->
 		<set name="icon" val="BranchIcon.Icon.vip_silver_coin" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -971,7 +972,7 @@
 	<item id="70174" name="Shabby Coin" type="EtcItem">
 		<!-- A coin worn off due to frequent use. It was lying in the Abandoned Camp. -->
 		<set name="icon" val="BranchIcon.Icon.vip_silver_coin" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -980,7 +981,7 @@
 	<item id="70175" name="Crude Coin" type="EtcItem">
 		<!-- This coin was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while/ -->
 		<set name="icon" val="BranchIcon.Icon.vip_silver_coin" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -989,7 +990,7 @@
 	<item id="70176" name="Old Coin" type="EtcItem">
 		<!-- A very old coin. Someone dropped it Cruma Tower long ago. -->
 		<set name="icon" val="BranchIcon.Icon.vip_silver_coin" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -999,7 +1000,7 @@
 		<!-- A box saturated with grief. You can find it in the Ruins of Agony once in a while. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1009,7 +1010,7 @@
 		<!-- A box which decayed over time. You can find it in the Ruins of Agony once in a while. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1019,7 +1020,7 @@
 		<!-- A box from the Abandoned Camp, shabby and very old. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1029,7 +1030,7 @@
 		<!-- This box was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1039,7 +1040,7 @@
 		<!-- A very old box. Someone dropped it Cruma Tower long ago. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

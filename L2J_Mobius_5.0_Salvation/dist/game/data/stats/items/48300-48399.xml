@@ -4,7 +4,7 @@
 		<!-- Upon use, it restores 3000 HP and the remaining power restores CP. Instant effect with no cooldown. Cannot be used in the Olympiad. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -30,7 +30,7 @@
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -48,12 +48,13 @@
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -63,12 +64,13 @@
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -84,6 +86,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -99,6 +102,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">226</stat>
 		</stats>
@@ -114,6 +118,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">226</stat>
 		</stats>
@@ -129,6 +134,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">226</stat>
 		</stats>
@@ -144,6 +150,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -159,6 +166,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -174,6 +182,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -197,7 +206,7 @@
 		<!-- Popular beer at the Mystic Tavern. Use it to recover Vitality. Take it along with some fish stew to a Dimensional Merchant to receive even more special beer in return. Cannot be used in the Olympiad. No weekly usage limit. -->
 		<set name="icon" val="icon.bm_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -205,7 +214,7 @@
 		<!-- Brewed with a secret special method of the Mystic Tavern. When used, recovers Vitality instantly and CON/ MEN/ LUC/ CHA +1 for 10 minutes. Using additional ?oney Vitality Beer' while the buff is active enables up to Lv. 3 stacked effects.. Honey Vitality Beer Lv. 2: CON/ MEN/ LUC/ CHA +2 and XP gained +10% for 10 min. Honey Vitality Beer Lv. 3: CON/ MEN/ LUC/ CHA +3 and XP gained +30% for 10 min. Cannot be used together when fish stew. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_royal_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -674,6 +683,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="crystal_type" val="R" />
 	</item>
 	<item id="48362" name="Adventure Guild Completion Box" type="EtcItem">
 		<!-- Adventure Guild Completion Box -->
@@ -712,7 +722,7 @@
 	<item id="48366" name="Lithra's Consideration" type="EtcItem">
 		<!-- Thoughts Lithra has planted to manipulate living creatures and gain more power. As Lithra's Consideration is tied with Lithra's power, removing it from creatures that serve Lithra weakens Lithra's power. Gather them and take them to Nerupa. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -723,7 +733,7 @@
 	<item id="48367" name="Thread of Fate" type="EtcItem">
 		<!-- The thread of fate that binds Nerupa, Lithra, and the Mother Tree together. Normally invisible, but Nerupa's power revealed it to living eyes. -->
 		<set name="icon" val="icon.etc_fortune_web" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -734,7 +744,7 @@
 	<item id="48368" name="Nerupa Bud Petals" type="EtcItem">
 		<!-- Petals that monsters born from the Nerupa Buds have.These are the proof of the impact of time regression. As Nerupa Bud Petals of the same shape contain different memories of time, Nerupa can read the memories through these petals. -->
 		<set name="icon" val="icon.etc_nerupa_petal" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -829,7 +839,7 @@
 	<item id="48377" name="Traces of Evil Spirit" type="EtcItem">
 		<!-- Items that Black Wizard Lapathia asked you to obtain from monsters in the Altar of Evil for a purification ritual. -->
 		<set name="icon" val="icon.etc_powder_gray_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -840,7 +850,7 @@
 	<item id="48378" name="Beast Shard" type="EtcItem">
 		<!-- Items that Black Wizard Lapathia asked you to obtain from monsters in the Altar of Evil for a memorial ritual for her perished kin. -->
 		<set name="icon" val="icon.etc_bodypart_liver_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -851,7 +861,7 @@
 	<item id="48379" name="Putrefied Extract" type="EtcItem">
 		<!-- Extract that Grocer Vollodos asked you to collect by defeating bug monsters in the Bloody Swampland. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -862,7 +872,7 @@
 	<item id="48380" name="Rotten Blood" type="EtcItem">
 		<!-- Blood that Grocer Vollodos asked you to collect by defeating demons and undead monsters in the Bloody Swampland. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -873,7 +883,7 @@
 	<item id="48381" name="Traces of Mutation" type="EtcItem">
 		<!-- Traces obtained after defeating mutated fairies and satyrs in the Forest of Fairies. Take them to the Fairy Refugee. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -884,7 +894,7 @@
 	<item id="48382" name="Cocoon Destroyer Shell" type="EtcItem">
 		<!-- Shells obtained after defeating Cocoon Destroyers in Kimerian's Forest. Take them to Nerupa. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_green_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -895,7 +905,7 @@
 	<item id="48383" name="Control Module" type="EtcItem">
 		<!-- Control modules obtained after defeating the Berserk Commander Golems on the Isle of Souls. Take them to Hesed of the Black Anvil Guild. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -906,7 +916,7 @@
 	<item id="48384" name="Cannonball of Despair" type="EtcItem">
 		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it stuns Spezion and his clones for 10 seconds, and removes the Invincibility buff for 1 minute. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -915,7 +925,7 @@
 	<item id="48385" name="Cannonball of Lunacy" type="EtcItem">
 		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and causes Spezion's clones and minions to use the ?razed Immolation' skill and self-destruct. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -924,7 +934,7 @@
 	<item id="48386" name="Cannonball of Rage" type="EtcItem">
 		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 minute and inflicts ?roded Rage' buff on Spezion's clones and minions for 30 seconds. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -985,7 +995,7 @@
 		<set name="icon" val="icon.fishing_cube_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
 	</item>

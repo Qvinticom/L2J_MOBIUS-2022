@@ -8,6 +8,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13685" level="1" /> <!-- Special Resistance Earring - Paralyze -->
 		</skills>
@@ -23,6 +24,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13686" level="1" /> <!-- Special Resistance Earring - Mental Attack -->
 		</skills>
@@ -38,6 +40,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13687" level="1" /> <!-- Special Resistance Earring - Sleep -->
 		</skills>
@@ -53,6 +56,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13688" level="1" /> <!-- Special Resistance Earring - Poison -->
 		</skills>
@@ -68,6 +72,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13689" level="1" /> <!-- Special Resistance Earring - Knock Back/ Knock Down -->
 		</skills>
@@ -83,6 +88,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13690" level="1" /> <!-- Special Resistance Earring - Aerial Yoke -->
 		</skills>
@@ -101,6 +107,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18352" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
 		</skills>
@@ -119,6 +126,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18353" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
 		</skills>
@@ -137,6 +145,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18354" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
 		</skills>
@@ -155,6 +164,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18355" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
 		</skills>
@@ -170,6 +180,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45611" name="Atelia Energy Crystal" type="EtcItem">
 		<!-- Artificial crystal created with Atelia. Take it to Merlot to get a Dimensional Coin. -->
@@ -179,6 +190,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45612" name="Atelia Energy Crystal" type="EtcItem">
 		<!-- Artificial crystal created with Atelia. Take it to Merlot to get a Dimensional Coin. -->
@@ -188,6 +200,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45613" name="Atelia Energy Crystal" type="EtcItem">
 		<!-- Artificial crystal created with Atelia. Take it to Merlot to get a Dimensional Coin. -->
@@ -197,6 +210,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45614" name="Talisman - Battle: Attack (1-day)" type="Armor">
 		<!-- Enables the Talisman of Battle - Attack skill. For 10 sec., P. Atk. +20%, M. Atk. +20%, Skill Critical Rate +20%, Skill Critical Damage +20%. Can only be used in the Grand Olympiad and the Ceremony of Chaos. Available for 1 d. -->
@@ -209,6 +223,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13691" level="1" /> <!-- Talisman - Battle: Attack -->
 		</skills>
@@ -224,6 +239,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13691" level="1" /> <!-- Talisman - Battle: Attack -->
 		</skills>
@@ -239,6 +255,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13691" level="1" /> <!-- Talisman - Battle: Attack -->
 		</skills>
@@ -254,6 +271,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13692" level="1" /> <!-- Talisman - Battle: Speed -->
 		</skills>
@@ -269,6 +287,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13692" level="1" /> <!-- Talisman - Battle: Speed -->
 		</skills>
@@ -284,6 +303,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13692" level="1" /> <!-- Talisman - Battle: Speed -->
 		</skills>
@@ -299,6 +319,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13693" level="1" /> <!-- Talisman - Battle: Support -->
 		</skills>
@@ -314,6 +335,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13693" level="1" /> <!-- Talisman - Battle: Support -->
 		</skills>
@@ -329,6 +351,7 @@
 		<set name="bodypart" val="deco1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13693" level="1" /> <!-- Talisman - Battle: Support -->
 		</skills>
@@ -342,6 +365,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45624" name="Mysterious Butler's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing the Mysterious Butler's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -352,6 +376,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45625" name="Galladucci's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Galladucci's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -362,6 +387,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45626" name="Sir Eric Rodemai's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Sir Eric Rodemai's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -372,6 +398,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45627" name="Lionel Hunter's Mission List - Part 1" type="EtcItem">
 		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Verdure Elder Elikia from Heine, the Mysterious Butler, Weapon Merchant Galladucci from Giran, and Sir Eric Rodemai from Aden." -->
@@ -382,6 +409,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45628" name="Daichir's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Daichir's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -392,6 +420,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45629" name="Olympiad Manager's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing the Olympiad Manager's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -402,6 +431,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45630" name="Ishuma's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Ishuma's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -412,6 +442,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45631" name="Sir Kristof Rodemai's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Sir Kristof Rodemai's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -422,6 +453,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45632" name="Lionel Hunter's Mission List - Part 2" type="EtcItem">
 		<!-- Second list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Head Priest of the Earth Daichir from Schuttgart, the Olympiad Manager, Maestro Ishuma from the Wharf of Gludio Airships, and Sir Kristof Rodemai from Giran." -->
@@ -432,6 +464,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45633" name="Kaiena's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Kaiena's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -442,6 +475,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45634" name="Merlot's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Merlot's mission. Take it to Eva's Knight Lionel Hunter in Heine to meet the qualifications for the Exalted. -->
@@ -452,6 +486,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45635" name="Blacksmith of Mammon's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Blacksmith of Mammon's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -462,6 +497,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45636" name="Sir Gustav Athebaldt's Certificate" type="EtcItem">
 		<!-- Certificate received for finishing Sir Gustav Athebaldt's mission. Take it to Lionel Hunter in Heine to meet the qualifications for Exalted. -->
@@ -472,6 +508,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45637" name="Lionel Hunter's Mission List - Part 3" type="EtcItem">
 		<!-- The 3rd list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back their certificates - Captain Curtis from Aden, Merlot from Hunters' Village, Blacksmith of Mammon, and Sir Gustav Athebaldt from Oren." -->
@@ -482,6 +519,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45638" name="Obtain Exalted Status" type="EtcItem">
 		<!-- Get the Exalted status as reward. -->
@@ -491,6 +529,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="45639" name="Citrine Pendant Fragment" type="EtcItem">
 		<!-- Key material for making Citrine Pendant. -->
@@ -500,6 +539,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="45640" name="Citrine Pendant" type="EtcItem">
 		<!-- A precious pendant made of a golden crystal. Maestro Ishuma has requested this item in order to test your qualifications for Exalted. -->
@@ -510,6 +550,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45641" name="Rodemai's Rune" additionalName="15-day" type="EtcItem">
 		<!-- Acquired XP/ SP +7%. -->
@@ -521,6 +562,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="21600" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18263" level="1" /> <!-- Rodemai's Rune -->
 		</skills>
@@ -530,7 +572,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -553,6 +595,7 @@
 		<set name="weight" val="30" />
 		<set name="recipe_id" val="4298" /> <!-- mk_r_citrine_pendant -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45644" name="Exalted Tiara" type="Armor">
 		<!-- Hair accessory exclusively used by those with the Exalted status. Attribute Attack +50 when equipped. -->
@@ -586,6 +629,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="mAtk">1</stat>
 			<stat type="pAtkSpd">379</stat>
@@ -600,6 +644,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45647" name="Returning Warrior's Bracelet" additionalName="Event" type="Armor">
 		<!-- MP +187, unlocks 5 talisman slots. -->
@@ -612,6 +657,7 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="4000" level="1" /> <!-- Returning Warrior's Bracelet -->
 		</skills>
@@ -627,6 +673,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="45649" name="Kokko's Talisman" additionalName="Event" type="Armor">
 		<!-- Talisman to summon Kokko. -->
@@ -636,6 +683,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="45650" name="Pippi's Fortune Pocket - Stage 1" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 400,000 XP. Cannot be combined. Available to characters below level 85. -->
@@ -645,6 +693,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45651" name="Pippi's Fortune Pocket - Stage 2" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 1,600,000 XP. Cannot be combined. Available to characters below level 85. -->
@@ -654,6 +703,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45652" name="Pippi's Fortune Pocket - Stage 3" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 6,400,000 XP. Cannot be combined. Available to characters below level 85. -->
@@ -663,6 +713,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45653" name="Dynasty Breastplate of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Breastplate Armor of Fortune Set. Expires after 30 days if not used. -->
@@ -671,6 +722,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45654" name="Dynasty Leather Armor of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Leather Armor of Fortune Set. Expires after 30 days if not used. -->
@@ -679,6 +731,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45655" name="Dynasty Tunic of Fortune Set Pack" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Tunic of Fortune Set. Expires after 30 days if not used. -->
@@ -687,6 +740,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45656" name="Dynasty Accessory of Fortune Set" additionalName="30-day" type="EtcItem">
 		<!-- When used, you acquire a Dynasty Accessory of Fortune Set. Expires after 30 days if not used. -->
@@ -695,6 +749,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45657" name="Dynasty Breastplate of Fortune" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
@@ -706,6 +761,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">226</stat>
 		</stats>
@@ -720,6 +776,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -733,6 +790,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -746,6 +804,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -759,6 +818,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -772,6 +832,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="sDef">321</stat>
 			<stat type="rShld">20</stat>
@@ -788,6 +849,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">170</stat>
 		</stats>
@@ -802,6 +864,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">106</stat>
 		</stats>
@@ -815,6 +878,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -828,6 +892,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -841,6 +906,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -855,6 +921,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -869,6 +936,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -882,6 +950,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -895,6 +964,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -908,6 +978,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -922,6 +993,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">15</stat>
 			<stat type="rEvas">-8</stat>
@@ -936,6 +1008,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">79</stat>
 		</stats>
@@ -949,6 +1022,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">106</stat>
 		</stats>
@@ -962,6 +1036,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -973,6 +1048,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Defense Type Heavy set. -->
@@ -981,6 +1057,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Assassin Type Light set. -->
@@ -989,6 +1066,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Twilight heavy armor set (enhanced, 30-day) enchanted to +6. -->
@@ -997,6 +1075,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Magic Type Robe set. -->
@@ -1005,6 +1084,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +6 enchanted 30-day Twilight Recovery Type Robe set. -->
@@ -1013,6 +1093,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45683" name="Twilight Helmet" additionalName="Attack Type/ Heavy (30-day)" type="Armor">
 		<set name="icon" val="icon.armor_helmet_i00" />
@@ -1023,6 +1104,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1038,6 +1120,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">341</stat>
 		</stats>
@@ -1052,6 +1135,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">213</stat>
 		</stats>
@@ -1065,6 +1149,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1078,6 +1163,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1092,6 +1178,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="DAMASCUS" />
 		<stats>
 			<stat type="sDef">466</stat>
 			<stat type="rShld">20</stat>
@@ -1107,6 +1194,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1122,6 +1210,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">341</stat>
 		</stats>
@@ -1136,6 +1225,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">213</stat>
 		</stats>
@@ -1149,6 +1239,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1162,6 +1253,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1176,6 +1268,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="DAMASCUS" />
 		<stats>
 			<stat type="sDef">466</stat>
 			<stat type="rShld">20</stat>
@@ -1191,6 +1284,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1206,6 +1300,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">272</stat>
 			<stat type="rEvas">5</stat>
@@ -1222,6 +1317,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">170</stat>
 			<stat type="rEvas">3</stat>
@@ -1237,6 +1333,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1250,6 +1347,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>

@@ -5,54 +5,63 @@
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94501" name="Spellbook: Titanic Break" type="EtcItem">
 		<!-- A spellbook for learning the Titanic Break skill.\n\n<Classes>\nTitan\n\n<Skill effect>\nAttacks with a sword to stun enemies. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94502" name="Spellbook: Ogre Spirit Totem" type="EtcItem">
 		<!-- A spellbook for learning the Ogre Spirit Totem Lv. 2 skill.\n\n<Classes>\nGrand Khavatari\n\n<Skill effect>\nIncreases Max HP and decreases received damage.\nWhen used, reflects damage for a while. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94503" name="Spellbook: Rabbit Spirit Totem" type="EtcItem">
 		<!-- A spellbook for learning the Rabbit Spirit Totem Lv. 2 skill.\n\n<Classes>\nGrand Khavatari\n\n<Skill effect>\nIncreases Speed and Atk. Spd.\nWhen used, significantly increases Speed and Atk. Spd. for a while. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94504" name="Spellbook: Puma Spirit Totem" type="EtcItem">
 		<!-- A spellbook for learning the Puma Spirit Totem Lv. 2 skill.\n\n<Classes>\nGrand Khavatari\n\n<Skill effect>\nIncreases P. Skill Power.\nWhen used, significantly increases P. Skill Critical Rate and P. Skill Critical Damage for a while. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94505" name="Spellbook: Burning Strike" type="EtcItem">
 		<!-- A scroll for learning the Burning Strike skill.\n\n<Class>\nGrand Khavatari\n\n<Skill effect>\nUses Momentum to deliver a powerful blow. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94506" name="Spellbook: Burning Assault" type="EtcItem">
 		<!-- A scroll for learning the Burning Assault skill.\n\n<Class>\nGrand Khavatari\n\n<Skill effect>\nAttacks the enemy with energy decreasing their P. Def. and consuming Momentum. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94507" name="Spellbook: Armor Break" type="EtcItem">
 		<!-- A scroll for learning the Armor Break skill.\n\n<Class>\nGrand Khavatari\n\n<Skill effect>\nHas a certain chance to remove the target's armor defense and decrease their Speed. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94508" name="Spellbook: Cacophony of War" type="EtcItem">
 		<!-- A scroll for learning the Cacophony of War skill.\n\n<Class>\nGrand Khavatari\n\n<Skill effect>\nInflicts Fear on nearby enemies applying a mark on them.\nAttacking the marked target instantly kills them. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94509" name="Frintezza's Doll Lv. 1" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 1>\nSTR/ INT +1\nSkill Power +1%\nAtk. Spd. +20\nCasting Spd. +20\nSpeed +1\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
@@ -60,6 +69,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94510" name="Daily Kit: Supplies" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -70,6 +80,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94511" name="Package: Frintezza's Doll (7-day)" type="EtcItem">
 		<!-- Double-click to obtain the following:\n\nFrintezza's Doll (7-day).\n\nUnused packages can be exchanged for Frintezza's Doll Lv. 1 through Game Assistant. -->
@@ -80,6 +91,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94512" name="Frintezza's Doll" additionalName="7-day" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 2>\nSTR/ INT +1\nDEX/ WIT +1\nCON/ MEN +1\nSkill Power +2%\nAtk. Spd. +50\nCasting Spd. +50\nSpeed +2\n\nBoosts parameters when in inventory. -->
@@ -88,6 +100,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94513" name="Package: Frintezza's Doll Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -98,6 +111,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94514" name="Package: Frintezza's Doll Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -108,6 +122,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94515" name="Package: Frintezza's Doll Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -118,6 +133,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94516" name="Pet Rescuer's Gift" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -126,6 +142,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94517" name="Improved Pet XP Crystal" type="EtcItem">
 		<!-- Applies the following effect.\n\n<When used>\nXP +2,000,000,000 for a summoned pet\n\nNote!\nCan be used only when a pet is summoned. -->
@@ -135,6 +152,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94518" name="Amber" additionalName="Lv. 5" type="Armor">
 		<!-- <Active skill>\nInterrupts a skill used by the target.\n\n<PvP effect>\nIgnores CP and deals 2000 fixed damage.\n\n Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -236,6 +254,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94526" name="Gemstone Powder" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant.\n<Exchangeable Items>\nPackage: Amber Lv. 3 (20 pcs.)\nPackage: Opal Lv. 3 (30 pcs.)\nPackage: Coral Lv. 3 (40 pcs.)\nPackage: Onyx Lv. 3 (50 pcs.)\nPackage: Spinel Lv. 3 (40 pcs.)\nPackage: Zircon Lv. 3 (40 pcs.)\nPackage: Moonstone Lv. 3 (20 pcs.)\nPackage: Random Gem Lv. 1-6 (4 pcs.) -->
@@ -244,6 +263,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94527" name="Package: Random Gem Lv. 1-6" type="EtcItem">
 		<!-- Double-click to obtain one of the following items.\nAmber Lv. 1-6\nOpal Lv. 1-6\nCoral Lv. 1-6\nOnyx Lv. 1-6\nSpinel Lv. 1-6\nZircon Lv. 1-6\nMoonstone Lv. 1-6 -->
@@ -254,6 +274,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94528" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -264,6 +285,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94529" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -274,6 +296,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94530" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -284,6 +307,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94531" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -294,6 +318,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94532" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -304,6 +329,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94533" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -314,6 +340,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94534" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -324,6 +351,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94535" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -334,6 +362,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94536" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -344,6 +373,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94537" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -354,6 +384,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94538" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -364,6 +395,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94539" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -374,6 +406,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94540" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -384,6 +417,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94541" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -394,6 +428,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94542" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -404,6 +439,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94543" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -414,6 +450,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94544" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -424,6 +461,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94545" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -434,6 +472,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94546" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -444,6 +483,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94547" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -454,6 +494,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94548" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -464,6 +505,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94549" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -474,6 +516,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94550" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -484,6 +527,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94551" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -494,6 +538,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94552" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -504,6 +549,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94553" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -514,6 +560,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94554" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -524,6 +571,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94555" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -534,6 +582,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94556" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -544,6 +593,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94557" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -554,6 +604,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94558" name="Iron Gate Guild Secret Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -564,6 +615,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94559" name="Sayha's Blessing Scroll" additionalName="Event" type="EtcItem">
 		<!-- Applies a buff when used.\n\n<Buff effect>\nAll stats +1\nRecovery Potions' Effect +50\nMP Recovery +10\nP./ M. Atk. and P./ M. Def. +150\nAtk. Spd. and Casting Spd. +100\n\nDuration: 20 min.\nCooldown: 10 min.\nThe effect remains after death. -->
@@ -573,6 +625,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94560" name="Iron Gate Guild's Bronze Key" additionalName="Event" type="EtcItem">
 		<!-- Can be used in the secret Iron Gate Guild shop. -->
@@ -581,6 +634,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94561" name="Iron Gate Guild Bronze Key Fragment" additionalName="Event" type="EtcItem">
 		<!-- Can be exchanged for Iron Gate Guild's Bronze Key in the Special Craft tab of L-Coin Store. -->
@@ -589,6 +643,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94562" name="Transformation Scroll: Queen Ant (High-grade)" additionalName="Event" type="EtcItem">
 		<!-- Transforms into powerful Queen Ant for 15 min.\n\n<Appearance skills>\n- Queen Ant's Ground Shaker\nDeals significant damage to nearby enemies.\n\n- Queen Ant's Rain of Stones\nDeals significant damage to the target and nearby enemies.\n\nCan be used only in Black Anvil Guild Camp. -->
@@ -598,6 +653,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94563" name="Pa'agrio Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -608,6 +664,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94564" name="+9 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -618,6 +675,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94565" name="+10 Talisman of Aden Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -628,6 +686,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94566" name="Unknown Coupon" additionalName="Event" type="EtcItem">
 		<!-- A coupon for various items.\n<font color=eeaa22>(Used in different events.)</font> -->
@@ -638,6 +697,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94567" name="Zaken's Headquarters Coupon" additionalName="Event" type="EtcItem">
 		<!-- Zaken's Headquarters Entrance Pass -->
@@ -648,6 +708,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94568" name="Pirate Jewelry Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -658,6 +719,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94569" name="Zaken's Treasure Chest" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -668,6 +730,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94570" name="Daily Kit: Blessing" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -678,6 +741,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94571" name="Blessed/ Cursed Scroll: Enchant Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -688,6 +752,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94572" name="Blessed/ Cursed Scroll: Enchant Armor Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -698,6 +763,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="94573" name="Package: +5 Sirra's Blade" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -708,6 +774,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94574" name="Package: +5 Sword of Ipos" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -718,6 +785,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94575" name="Package: +5 Barakiel's Axe" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -728,6 +796,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94576" name="Package: +5 Behemoth' Tuning Fork" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -738,6 +807,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94577" name="Package: +5 Naga's Storm" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -748,6 +818,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94578" name="Package: +5 Tiphon's Spear" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -758,6 +829,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94579" name="Package: +5 Shyeed's Bow" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -768,6 +840,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94580" name="Package: +5 Sobekk's Hurricane" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -778,6 +851,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94581" name="Package: +5 Themis' Tongue" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -788,6 +862,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94582" name="Package: +5 Cabrio's Hand" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -798,6 +873,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94583" name="Package: +5 Daimon Crystal" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -808,6 +884,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94584" name="Package: +5 Tallum Blade*Damascus" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -818,6 +895,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94585" name="Package: +5 Éclair Bijou" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -828,6 +906,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94586" name="Package: +5 Durendal" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -838,6 +917,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94587" name="Package: +5 Armor of Nightmare" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -848,6 +928,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94588" name="Package: +5 Helm of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -858,6 +939,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94589" name="Package: +5 Gauntlets of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -868,6 +950,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94590" name="Package: +5 Boots of Nightmare (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -878,6 +961,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94591" name="Package: +5 Majestic Plate Armor" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -888,6 +972,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94592" name="Package: +5 Majestic Circlet (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -898,6 +983,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94593" name="Package: +5 Majestic Gauntlets (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -908,6 +994,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94594" name="Package: +5 Majestic Boots (Heavy)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -918,6 +1005,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94595" name="Package: +5 Leather Armor of Nightmare" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -928,6 +1016,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94596" name="Package: +5 Helm of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -938,6 +1027,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94597" name="Package: +5 Gauntlets of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -948,6 +1038,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94598" name="Package: +5 Boots of Nightmare (Light)" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -958,6 +1049,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="94599" name="Package: +5 Majestic Leather Armor" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -968,5 +1060,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

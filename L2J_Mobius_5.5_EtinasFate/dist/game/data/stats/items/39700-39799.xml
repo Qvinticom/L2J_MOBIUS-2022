@@ -6,6 +6,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39701" name="Little Angel Wings" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -13,6 +14,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39702" name="Fairy Antennae" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -20,6 +22,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39703" name="Fairy Antennae" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -27,6 +30,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="50000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39704" name="Chapeau" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -34,6 +38,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39705" name="Chapeau" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -41,6 +46,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39706" name="Artisan's Goggles" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -48,6 +54,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39707" name="Artisan's Goggles" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -55,6 +62,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39708" name="Arrow-pierced Apple" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
@@ -62,6 +70,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39709" name="Arrow-pierced Apple" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
@@ -69,6 +78,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="price" val="200000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="39710" name="Irene's Brooch" type="Armor">
 		<!-- Made by Shadai, who was inspired by Moon Voice Irene. Activates 5 Jewel Slots. -->
@@ -77,6 +87,7 @@
 		<set name="bodypart" val="brooch" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 		</skills>
@@ -94,6 +105,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39712" name="1st Liberation Fragment" type="EtcItem">
 		<!-- Found by the Ertheia upon the 1st Liberation, maybe this is related to the Grail. -->
@@ -105,6 +117,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39713" name="Shining Mysterious Fragment" type="EtcItem">
 		<!-- Found from the magical creatures of Cruma Tower Underground Lv. 3. The energy is unstable and must be destroyed. -->
@@ -116,6 +129,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39714" name="Normal Fragment Dust" type="EtcItem">
 		<!-- Shining Mysterious Fragment turns into this once crushed with the Hidden Crusher. Take these to Janssen in Cruma Tower Underground Lv. 3. -->
@@ -127,6 +141,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39715" name="Energy of Regeneration" type="EtcItem">
 		<!-- Found among magical creatures of followers of darkness in Cruma Tower Underground Lv. 2. Used for restoring a broken machine. -->
@@ -138,6 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39716" name="Regeneration Device Core" type="EtcItem">
 		<!-- A device for restoring the broken machine in Cruma Tower Underground Lv. 2, made by Belkadhi. You can use the machine to briefly meet an ancient Giant. -->
@@ -149,6 +165,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39717" name="Cat Fighter" type="Weapon">
 		<!-- A basic for appearance modification. -->
@@ -165,6 +182,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="152" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -189,6 +207,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="152" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -214,6 +233,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="205" />
 		<set name="damage_range" val="0;0;66;120" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -249,6 +269,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39722" name="Missive Scraps" type="EtcItem">
 		<!-- Obtained by killing the Embryo Predators that suddenly appeared in Forsaken Plains. Take these to Novain. -->
@@ -260,6 +281,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39723" name="Broken Magic Device Fragment" type="EtcItem">
 		<!-- Obtained by killing giants in Forsaken Plains. Seems to be a part of a lost magic device. Take these to Novain. -->
@@ -271,6 +293,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39724" name="Embryo Missives" type="EtcItem">
 		<!-- Embryo's secret orders. Double-click to read. -->
@@ -281,6 +304,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39725" name="Old Jewelry Box" type="EtcItem">
 		<!-- Obtained while investigating brkoen shelves in the Forest of the Dead area. Take this to Tracker Hatuba. -->
@@ -292,6 +316,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39726" name="Emissary's Reward Box (Low-grade)" type="EtcItem">
 		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
@@ -303,6 +328,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="39727" name="Emissary's Reward Box (Mid-grade)" type="EtcItem">
 		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
@@ -314,6 +340,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="39728" name="Emissary's Reward Box (High-grade)" type="EtcItem">
 		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
@@ -325,6 +352,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="39729" name="Emissary's Reward Box (Top-grade)" type="EtcItem">
 		<!-- Reward for successfully completing missions for the Delegation. Double-click to open. -->
@@ -336,6 +364,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="39730" name="Stakato Chitin" type="EtcItem">
 		<!-- Obtained by killing Stakatos in the Swamp of Screams. Bring these to Mercenary Kahman for rrewardrs. -->
@@ -347,6 +376,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39731" name="Quality Stakato Chitin" type="EtcItem">
 		<!-- Obtained by killing Stakatos in the Swamp of Screams. Bring these to Mercenary Kahman for rrewardrs. -->
@@ -358,6 +388,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39732" name="Monster Flesh" type="EtcItem">
 		<!-- Obtained by killing creatures in the Forest of the Dead. Take it to the Mysterious Wizard for rewards. -->
@@ -369,6 +400,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39733" name="Monster Blood" type="EtcItem">
 		<!-- Obtained by killing creatures in the Forest of the Dead. Bring these to Mysterious Wizard for rewards. -->
@@ -380,6 +412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39734" name="Eye of Darkness" type="EtcItem">
 		<!-- Badge of Daimon the White-eyed ingrained in monsters of the Wall of Argos. Take these to Hermit at the Wall of Argos for rewards. -->
@@ -391,6 +424,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39735" name="Dark Malice" type="EtcItem">
 		<!-- The will of Daimon the White-eyed ingrained in monsters of the Wall of Argos. Take these to Hermit at the Wall of Argos for rewards. -->
@@ -402,6 +436,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39736" name="Dragon Bone Dust" type="EtcItem">
 		<!-- Obtained by killing monsters in Dragon Valley. Take these to Namo at the entrance of the valley. -->
@@ -413,6 +448,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39737" name="Dragon Bone Fragment" type="EtcItem">
 		<!-- Obtained by killing monsters in Dragon Valley. Take these to Namo at the entrance of the valley. -->
@@ -424,6 +460,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="39738" name="Rune Stone" type="EtcItem">
 		<!-- Rock engraved with ancient rune. Used to infuse skills with ancient wisdom. Consumed when learning skills for each class. -->
@@ -431,48 +468,56 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39739" name="Tempus Fragment: Warrior" type="EtcItem">
 		<!-- Item needed to obtain the skills of a Warrior. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39740" name="Tempus Fragment: Archer" type="EtcItem">
 		<!-- Item needed to obtain the skills of a Archer. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39741" name="Tempus Fragment: Wizard" type="EtcItem">
 		<!-- Item needed to obtain the skills of a Wizard. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39742" name="Tempus Fragment: Rogue" type="EtcItem">
 		<!-- Item needed to obtain the skills of a Rogue. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39743" name="Tempus Fragment: Summoner" type="EtcItem">
 		<!-- Item needed to obtain the skills of a Summoner. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39744" name="Tempus Fragment: Enchanter" type="EtcItem">
 		<!-- Item needed to obtain the skills of a Enchanter. -->
 		<set name="icon" val="icon.giant_book_i01" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39745" name="Tempus Fragment: Healer" type="EtcItem">
 		<!-- Item needed to obtain the skills of a Healer. -->
 		<set name="icon" val="icon.giant_book_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="39746" name="Sealed Pendant" type="EtcItem">
 		<!-- Main ingredient for making a pendant. -->
@@ -480,6 +525,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="39747" name="Dimensional Bracelet - Stage 1" additionalName="Basic" type="Armor">
 		<!-- Activates 1 talisman slot when equipped. -->
@@ -492,6 +538,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -507,6 +554,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -522,6 +570,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -537,6 +586,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -552,6 +602,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -567,6 +618,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -582,6 +634,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -597,6 +650,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -612,6 +666,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -627,6 +682,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18058" level="1" /> <!-- Dimensional Bracelet -->
@@ -643,6 +699,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18059" level="1" /> <!-- Dimensional Bracelet -->
@@ -659,6 +716,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18060" level="1" /> <!-- Dimensional Bracelet -->
@@ -675,6 +733,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18061" level="1" /> <!-- Dimensional Bracelet -->
@@ -691,6 +750,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18062" level="1" /> <!-- Dimensional Bracelet -->
@@ -707,6 +767,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18063" level="1" /> <!-- Dimensional Bracelet -->
@@ -723,6 +784,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18064" level="1" /> <!-- Dimensional Bracelet -->
@@ -739,6 +801,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18065" level="1" /> <!-- Dimensional Bracelet -->
@@ -755,6 +818,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18066" level="1" /> <!-- Dimensional Bracelet -->
@@ -771,6 +835,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18067" level="1" /> <!-- Dimensional Bracelet -->
@@ -787,6 +852,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18068" level="1" /> <!-- Dimensional Bracelet -->
@@ -803,6 +869,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18069" level="1" /> <!-- Dimensional Bracelet -->
@@ -819,6 +886,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18070" level="1" /> <!-- Dimensional Bracelet -->
@@ -835,6 +903,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18071" level="1" /> <!-- Dimensional Bracelet -->
@@ -851,6 +920,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18072" level="1" /> <!-- Dimensional Bracelet -->
@@ -867,6 +937,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18073" level="1" /> <!-- Dimensional Bracelet -->
@@ -883,6 +954,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18074" level="1" /> <!-- Dimensional Bracelet -->
@@ -899,6 +971,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18075" level="1" /> <!-- Dimensional Bracelet -->
@@ -915,6 +988,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18076" level="1" /> <!-- Dimensional Bracelet -->
@@ -931,6 +1005,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18077" level="1" /> <!-- Dimensional Bracelet -->
@@ -947,6 +1022,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18078" level="1" /> <!-- Dimensional Bracelet -->
@@ -963,6 +1039,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18079" level="1" /> <!-- Dimensional Bracelet -->
@@ -979,6 +1056,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18080" level="1" /> <!-- Dimensional Bracelet -->
@@ -995,6 +1073,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18081" level="1" /> <!-- Dimensional Bracelet -->
@@ -1011,6 +1090,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18082" level="1" /> <!-- Dimensional Bracelet -->
@@ -1027,6 +1107,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18083" level="1" /> <!-- Dimensional Bracelet -->
@@ -1043,6 +1124,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18084" level="1" /> <!-- Dimensional Bracelet -->
@@ -1059,6 +1141,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18085" level="1" /> <!-- Dimensional Bracelet -->
@@ -1075,6 +1158,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18086" level="1" /> <!-- Dimensional Bracelet -->
@@ -1091,6 +1175,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18087" level="1" /> <!-- Dimensional Bracelet -->
@@ -1107,6 +1192,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18088" level="1" /> <!-- Dimensional Bracelet -->
@@ -1123,6 +1209,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18089" level="1" /> <!-- Dimensional Bracelet -->
@@ -1139,6 +1226,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18090" level="1" /> <!-- Dimensional Bracelet -->
@@ -1155,6 +1243,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18091" level="1" /> <!-- Dimensional Bracelet -->
@@ -1171,6 +1260,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18092" level="1" /> <!-- Dimensional Bracelet -->
@@ -1187,6 +1277,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18093" level="1" /> <!-- Dimensional Bracelet -->
@@ -1203,6 +1294,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18094" level="1" /> <!-- Dimensional Bracelet -->
@@ -1219,6 +1311,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18095" level="1" /> <!-- Dimensional Bracelet -->
@@ -1235,6 +1328,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18096" level="1" /> <!-- Dimensional Bracelet -->
@@ -1251,6 +1345,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18052" level="1" /> <!-- Dimensional Bracelet -->
 			<skill id="18097" level="1" /> <!-- Dimensional Bracelet -->
@@ -1267,6 +1362,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18053" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -1282,6 +1378,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18053" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -1297,6 +1394,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18053" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -1312,6 +1410,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="18053" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>

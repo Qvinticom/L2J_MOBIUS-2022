@@ -10,6 +10,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27652" level="5" /> <!-- Eva's Earring -->
 		</skills>
@@ -28,6 +29,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27652" level="6" /> <!-- Eva's Earring -->
 		</skills>
@@ -46,6 +48,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27658" level="1" /> <!-- Sayha's Ring -->
 		</skills>
@@ -64,6 +67,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27658" level="2" /> <!-- Sayha's Ring -->
 		</skills>
@@ -82,6 +86,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27658" level="3" /> <!-- Sayha's Ring -->
 		</skills>
@@ -100,6 +105,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27658" level="4" /> <!-- Sayha's Ring -->
 		</skills>
@@ -118,6 +124,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27658" level="5" /> <!-- Sayha's Ring -->
 		</skills>
@@ -136,6 +143,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27658" level="6" /> <!-- Sayha's Ring -->
 		</skills>
@@ -154,6 +162,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27664" level="1" /> <!-- Maphr's Ring -->
 		</skills>
@@ -172,6 +181,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27664" level="2" /> <!-- Maphr's Ring -->
 		</skills>
@@ -190,6 +200,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27664" level="3" /> <!-- Maphr's Ring -->
 		</skills>
@@ -208,6 +219,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27664" level="4" /> <!-- Maphr's Ring -->
 		</skills>
@@ -226,6 +238,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27664" level="5" /> <!-- Maphr's Ring -->
 		</skills>
@@ -244,6 +257,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="27664" level="6" /> <!-- Maphr's Ring -->
 		</skills>
@@ -257,18 +271,21 @@
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27715" name="Recipe: Gran Kain's Necklace - Stage 2" type="EtcItem">
 		<!-- Recipe for making Gran Kain's Necklace Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27716" name="Recipe: Gran Kain's Necklace - Stage 3" type="EtcItem">
 		<!-- Recipe for making Gran Kain's Necklace Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27717" name="Recipe: Gran Kain's Necklace - Stage 1 (25%)" type="EtcItem">
 		<!-- Recipe for making Gran Kain's Necklace Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
@@ -276,7 +293,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5016" />
@@ -288,7 +305,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5017" />
@@ -300,7 +317,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5018" />
@@ -312,7 +329,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5019" />
@@ -324,7 +341,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5020" />
@@ -336,7 +353,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5021" />
@@ -348,7 +365,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5022" />
@@ -360,7 +377,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5023" />
@@ -372,7 +389,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5024" />
@@ -384,7 +401,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5025" />
@@ -396,7 +413,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5026" />
@@ -408,7 +425,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5027" />
@@ -420,7 +437,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5028" />
@@ -432,7 +449,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5029" />
@@ -444,7 +461,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5030" />
@@ -456,7 +473,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5031" />
@@ -468,7 +485,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5032" />
@@ -480,7 +497,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5033" />
@@ -492,7 +509,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5034" />
@@ -504,7 +521,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5035" />
@@ -516,7 +533,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5036" />
@@ -528,7 +545,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5037" />
@@ -540,7 +557,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5038" />
@@ -552,7 +569,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5039" />
@@ -564,7 +581,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5040" />
@@ -576,7 +593,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5041" />
@@ -588,7 +605,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5042" />
@@ -600,7 +617,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5043" />
@@ -612,7 +629,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5044" />
@@ -624,7 +641,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5045" />
@@ -636,7 +653,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5046" />
@@ -648,7 +665,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5047" />
@@ -660,7 +677,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5048" />
@@ -672,7 +689,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5049" />
@@ -684,7 +701,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5050" />
@@ -696,7 +713,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5051" />
@@ -708,6 +725,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27754" name="Luck Box 2" additionalName="Underground" type="EtcItem">
 		<!-- Get 1 of the following: Seven Signs' Energy, bottle of Orfen's Soul, Queen Ant's Soul, Baium's Soul, Antharas' Soul, or Valakas' Soul, R-grade enchant stone or enchant scroll, Lucky Box 1, Destruction Weapon/Armor Scroll. -->
@@ -715,6 +733,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27755" name="Luck Box 3" additionalName="Underground" type="EtcItem">
 		<!-- Get 1 of the following: Life Stone Instilled with Giants' Power, one of four Enchant Elemental Shirts (+7), Seed Talisman Upgrade Pack, , Immortal Scroll/Chapter 1, XP Rune III, Prestige Rune 100%, Talisman - Annihilation Crafting Pack, Pa'agrio's Warm Breeze, Lucky Box 1/2, Ghost Potion, Queen Ant/Antharas/Valakas/Frintezza's Soul Fragment, Feather of Blessing Pack, Emperor's Growth Scroll, Elcyum Powder, Gemstone (R-grade). -->
@@ -722,6 +741,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27756" name="+7 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -729,6 +749,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27757" name="+7 Physical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Physical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -736,6 +757,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27758" name="+7 Magical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Magical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -743,6 +765,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27759" name="+7 Pa'agrio's Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Pa'agrio's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -750,6 +773,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27760" name="+7 Sayha's Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Sayha's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -757,6 +781,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27761" name="+7 Eva's Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Eva's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -764,6 +789,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27762" name="+7 Maphr's Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Maphr's Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
@@ -771,5 +797,6 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 </list>

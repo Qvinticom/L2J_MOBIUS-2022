@@ -30,6 +30,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47602" name="Weapon Supply Box" type="EtcItem">
 		<!-- A weapon pack that the Weapon Merchant Lector has asked you to take to the Administrative Offices. -->
@@ -39,6 +40,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47603" name="Armor Supply Box" type="EtcItem">
 		<!-- An armor supply box that the Weapon Merchant Lector has asked you to take to the Administrative Offices -->
@@ -48,6 +50,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47604" name="Grocery Supply Box" type="EtcItem">
 		<!-- A grocery supply box that the Grocer Katerina has asked you to take to the Administrative Offices -->
@@ -57,6 +60,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47605" name="Accessory Supply Box" type="EtcItem">
 		<!-- An accessory supply box that the Accessory Merchant Trevor has asked you to take to the Administrative Offices -->
@@ -66,6 +70,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47606" name="Husk Distribution Report" type="EtcItem">
 		<!-- An Exploration Area 2 Husk Distribution Report that was misplaced in Area 2 by Nagel while retreating to Area 1. Collect and take to Celin who is in Area 2 for the meantime, instead of Nagel. -->
@@ -75,6 +80,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47607" name="King's Tonic" type="EtcItem">
 		<!-- A tonic that the Searchdog King takes for health. Due to the King's habit of hiding his possessions here and there, the tonic lies scattered throughout Exploration Area 4. The Husks sometimes unearth the tonic that the King has hidden, and carry them around. Collect the King's Tonic from the Husks, and take them to Sebion. -->
@@ -84,6 +90,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47608" name="Monkey Bait" additionalName="R" type="EtcItem">
 		<!-- Fishing time: 75 sec. Fishing standby time: 15 sec. A fishing bait bought from Chef Monkey. Allows to catch Ugly Fish, Nimble Fish, or Powerful Fish. There is a chance to obtain Chef Monkey's Treasure Chest. Required level: 85-94. -->
@@ -91,6 +98,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47609" name="Monkey Bait" additionalName="R95" type="EtcItem">
 		<!-- Fishing time: 75 sec. Fishing standby time: 15 sec. A fishing bait bought from Chef Monkey. Allows to catch Ugly Fish, Nimble Fish, or Powerful Fish. There is a chance to obtain Chef Monkey's Treasure Chest. Required level: 95-98. -->
@@ -98,6 +106,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47610" name="Monkey Bait" additionalName="R99" type="EtcItem">
 		<!-- Fishing time: 75 sec. Fishing standby time: 15 sec. A fishing bait bought from Chef Monkey. Allows to catch Ugly Fish, Nimble Fish, or Powerful Fish. There is a chance to obtain Chef Monkey's Treasure Chest. Required level: 99+. -->
@@ -105,25 +114,28 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47611" name="Chef Monkeys' Banana Herb" type="EtcItem">
 		<!-- Chef Monkeys' Banana Herb. P.Atk./ M. Atk./ P. Def./ M. Def. +50% for 5 min., and Acquired XP/ SP +10%. Effect disappears when restarted. -->
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="47612" name="Chef Monkey's Treasure Chest" type="EtcItem">
 		<!-- Chef Monkey's Treasure Chest caught with Banana Bait. Double-click to obtain various items. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47613" name="Angler's Bait (85)" type="EtcItem">
 		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler's Treasure Chest. Can be used only at levels 85 - 94. -->
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47614" name="Angler's Bait (95)" type="EtcItem">
@@ -131,7 +143,7 @@
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47615" name="Angler's Bait (99)" type="EtcItem">
@@ -139,13 +151,13 @@
 		<set name="icon" val="icon.bm_silver_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47616" name="Angler's Bait Exchange Coupon" type="EtcItem">
 		<!-- Can be exchanged for Angler's Bait of your choice through the Fishing Guild members in any town. -->
 		<set name="icon" val="icon.etc_bm_lure_special_ticket" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47617" name="Angler's Fishing Rod - Stage 5" additionalName="30-day" type="Weapon">
@@ -257,6 +269,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38857" min="1" max="1" chance="100" /> <!-- Ruby Lv. 3 -->
 		</capsuled_items>
@@ -269,6 +282,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38929" min="1" max="1" chance="100" /> <!-- Sapphire Lv. 3 -->
 		</capsuled_items>
@@ -281,6 +295,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38852" min="1" max="1" chance="100" /> <!-- Topaz Lv. 3 -->
 		</capsuled_items>
@@ -293,6 +308,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38877" min="1" max="1" chance="100" /> <!-- Opal Lv. 3 -->
 		</capsuled_items>
@@ -305,6 +321,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38872" min="1" max="1" chance="100" /> <!-- Obsidian Lv. 3 -->
 		</capsuled_items>
@@ -317,6 +334,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38892" min="1" max="1" chance="100" /> <!-- Diamond Lv. 3 -->
 		</capsuled_items>
@@ -329,6 +347,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38882" min="1" max="1" chance="100" /> <!-- Emerald Lv. 3 -->
 		</capsuled_items>
@@ -341,6 +360,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38887" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 3 -->
 		</capsuled_items>
@@ -353,6 +373,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38897" min="1" max="1" chance="100" /> <!-- Pearl Lv. 3 -->
 		</capsuled_items>
@@ -365,6 +386,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46672" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 3 -->
 		</capsuled_items>
@@ -377,6 +399,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46677" min="1" max="1" chance="100" /> <!-- Garnet Lv. 3 -->
 		</capsuled_items>
@@ -389,6 +412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46682" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 3 -->
 		</capsuled_items>
@@ -401,6 +425,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38858" min="1" max="1" chance="100" /> <!-- Ruby Lv. 4 -->
 		</capsuled_items>
@@ -413,6 +438,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38930" min="1" max="1" chance="100" /> <!-- Sapphire Lv. 4 -->
 		</capsuled_items>
@@ -425,6 +451,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38853" min="1" max="1" chance="100" /> <!-- Topaz Lv. 4 -->
 		</capsuled_items>
@@ -437,6 +464,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38878" min="1" max="1" chance="100" /> <!-- Opal Lv. 4 -->
 		</capsuled_items>
@@ -449,6 +477,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38873" min="1" max="1" chance="100" /> <!-- Obsidian Lv. 4 -->
 		</capsuled_items>
@@ -461,6 +490,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38893" min="1" max="1" chance="100" /> <!-- Diamond Lv. 4 -->
 		</capsuled_items>
@@ -473,6 +503,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38883" min="1" max="1" chance="100" /> <!-- Emerald Lv. 4 -->
 		</capsuled_items>
@@ -485,6 +516,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38888" min="1" max="1" chance="100" /> <!-- Aquamarine Lv. 4 -->
 		</capsuled_items>
@@ -497,6 +529,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="38898" min="1" max="1" chance="100" /> <!-- Pearl Lv. 4 -->
 		</capsuled_items>
@@ -509,6 +542,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46673" min="1" max="1" chance="100" /> <!-- Vital Stone Lv. 4 -->
 		</capsuled_items>
@@ -521,6 +555,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46678" min="1" max="1" chance="100" /> <!-- Garnet Lv. 4 -->
 		</capsuled_items>
@@ -533,6 +568,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46683" min="1" max="1" chance="100" /> <!-- Tanzanite Lv. 4 -->
 		</capsuled_items>
@@ -681,7 +717,7 @@
 		<!-- A Chest of Glory given to the victors in the Ceremony of Chaos. When double clicked, a prize is given, but it is also possible to obtain nothing. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -701,6 +737,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="18700" level="1" /> <!-- Freya's Art of Seduction -->
 		</skills>
@@ -718,6 +755,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="18701" level="1" /> <!-- Freya's Art of Seduction -->
 		</skills>
@@ -735,6 +773,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18702" level="1" /> <!-- Pa'agrio's Blessing -->
 		</skills>
@@ -752,6 +791,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18703" level="1" /> <!-- Pa'agrio's Blessing -->
 		</skills>
@@ -800,7 +840,7 @@
 		<!-- Double-click to obtain 180 PA Points. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -816,6 +856,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="18710" level="1" /> <!-- Formal Wear Appearance Stone -->
 		</skills>
@@ -836,6 +877,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="18725" level="1" /> <!-- Art of Seduction -->
 		</skills>
@@ -856,6 +898,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="18726" level="1" /> <!-- Art of Seduction -->
 		</skills>
@@ -876,6 +919,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18727" level="1" /> <!-- Pa'agrio's Blessing - Might -->
 		</skills>
@@ -896,6 +940,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18728" level="1" /> <!-- Pa'agrio's Blessing - Exp -->
 		</skills>
@@ -1054,6 +1099,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18814" level="6" /> <!-- Topaz -->
 			<skill id="17701" level="6" /> <!-- Topaz - Spiritshot -->
@@ -1067,6 +1113,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18717" level="6" /> <!-- Ruby -->
 		</skills>
@@ -1079,6 +1126,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18719" level="6" /> <!-- Sapphire -->
 		</skills>
@@ -1091,6 +1139,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17704" level="6" /> <!-- Obsidian -->
 		</skills>
@@ -1103,6 +1152,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17705" level="6" /> <!-- Opal -->
 		</skills>
@@ -1115,6 +1165,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17825" level="6" /> <!-- Emerald -->
 		</skills>
@@ -1127,6 +1178,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17823" level="6" /> <!-- Aquamarine -->
 		</skills>
@@ -1139,6 +1191,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17708" level="6" /> <!-- Diamond -->
 		</skills>
@@ -1151,6 +1204,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="17709" level="6" /> <!-- Pearl -->
 		</skills>
@@ -1163,6 +1217,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18568" level="6" /> <!-- Vital Stone -->
 			<skill id="27439" level="3" /> <!-- Vital Stone - Vital Wind -->
@@ -1177,6 +1232,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="equip_reuse_delay" val="30" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="6" /> <!-- Garnet -->
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
@@ -1190,6 +1246,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18815" level="6" /> <!-- Tanzanite -->
 			<skill id="18565" level="6" /> <!-- Greater Tanzanite - Barrier -->
@@ -1203,6 +1260,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18713" level="6" /> <!-- Red Cat's Eye -->
 		</skills>

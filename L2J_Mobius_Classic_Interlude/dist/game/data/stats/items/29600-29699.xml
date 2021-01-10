@@ -12,7 +12,7 @@
 		<!-- Increases XP/SP gain by 35% for 20 minutes. Buff remains after death. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -27,7 +27,7 @@
 		<!-- Increases XP/SP gain by 45% for 20 minutes. Buff remains after death. -->
 		<set name="icon" val="icon.etc_recall_exp_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -42,7 +42,7 @@
 		<!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -56,7 +56,7 @@
 		<!-- Magic potion that instantly restores great amount of HP. Instant effect with no cooldown. Cannot be used when HP is full. Cannot be exchanged, dropped, sold, or stored in private warehouse. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

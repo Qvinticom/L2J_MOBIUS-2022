@@ -21,6 +21,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91102" name="Gold Big Fish Chest" type="EtcItem">
 		<!-- Double-click to obtain 1 random item: the best item and ingredient A-grade, Sealed Rune, Advanced Armor Enchant Stone (A-grade). Cannot be dropped or sold. Will be deleted after event. -->
@@ -29,6 +30,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91103" name="Silver Big Fish Chest" type="EtcItem">
 		<!-- Double-click to obtain 1 random item: rare accessory, Sayha's Golden Light Blessing. Cannot be dropped or sold. The item will be removed after the event is over. -->
@@ -37,6 +39,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91104" name="Advanced Armor Enchant Stone (A-grade)" type="EtcItem">
 		<!-- Enchant success rate +20% for armor (A-grade) when using Armor Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. Cannot be dropped. -->
@@ -44,6 +47,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91105" name="Advanced Armor Enchant Stone (B-grade)" type="EtcItem">
 		<!-- Enchant success rate +20% for armor (B-grade) when using Armor Enchant Scrolls. Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. Cannot be dropped. -->
@@ -51,6 +55,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91106" name="Wind Cube of Abundance" additionalName="30-day" type="EtcItem">
 		<!-- A 30-day item. Double-click to obtain Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
@@ -61,6 +66,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91107" name="Wind Cube of Abundance" additionalName="90-day" type="EtcItem">
 		<!-- A 90-day item. Double-click to obtain Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
@@ -71,6 +77,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91108" name="Amulet of Winds" additionalName="90-day" type="EtcItem">
 		<!-- A 30-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1. Acquired XP/ SP through hunting +20%, Acquired XP/ SP through fishing +50%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -79,6 +86,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91109" name="Blue Dynasty Scroll" type="EtcItem">
 		<!-- Makes you armor look like Blue Dynasty one for 15 min. Effect remains after death. Cannot be dropped. Blue Dynasty: Max HP/ MP +20%, Acquired XP/ SP +20%. Effect remains after death. <Attention>. When used in Teddy Bear/ Kat the Cat/ Cat/ Panda transformation, the effects are lost. Cooldown: 1 min. -->
@@ -87,6 +95,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91110" name="Kat the Cat Scroll" type="EtcItem">
 		<!-- Changes the appearance to Kat the Cat for 15 min. Effect remains after death. Cannot be dropped. Kat the Cat's Energy: Max HP/ MP +20%, Acquired XP/ SP +20%. Effect remains after death. <Attention>. When used in Teddy Bear/ Blue Dynasty/ Cat/ Panda transformation, the effects are lost. Cooldown: 1 min. -->
@@ -95,6 +104,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91111" name="Agathion Pisces" additionalName="30-day" type="Armor">
 		<!-- A 30-day item. Equipping it in the Bracelet's main slot summons the Agathion Pisces and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -128,6 +138,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91114" name="Inventory Expansion Ticket - Lv. 2" type="EtcItem">
 		<!-- Item needed to obtain Expand Inventory Lv. 2. Can be obtained from from a fishing guild member. Cannot be dropped or sold. -->
@@ -135,6 +146,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91115" name="Inventory Expansion Ticket - Lv. 3" type="EtcItem">
 		<!-- Item needed to obtain Expand Inventory Lv. 3. Can be obtained from from a fishing guild member. Cannot be dropped or sold. -->
@@ -142,6 +154,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91116" name="Nebula’s Old Necklace" additionalName="Lv4" type="Armor">
 		<!-- MP +42, Water Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
@@ -151,7 +164,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -171,7 +184,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -191,7 +204,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -211,7 +224,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -231,7 +244,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -252,7 +265,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -272,7 +285,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -292,7 +305,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -310,6 +323,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91125" name="Ignis' Breath" type="EtcItem">
 		<!-- Can be exchanged for Agathion Ignis through Svein. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -318,6 +332,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91126" name="Nebula's Breath" type="EtcItem">
 		<!-- Can be exchanged for Agathion Nebula through Svein. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -326,6 +341,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91127" name="Procella's Breath" type="EtcItem">
 		<!-- Can be exchanged for Agathion Procella through Svein. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -334,6 +350,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91128" name="Petram's Breath" type="EtcItem">
 		<!-- Can be exchanged for Agathion Petram through Svein. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -342,6 +359,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91129" name="Agathion Ignis" type="Armor">
 		<!-- Equipping it in the Bracelet's main slot summons the Agathion Ignis and activates the Special Ability option. Fire Attack Power +100. Cannot be dropped. -->
@@ -411,6 +429,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91134" name="Improved Master Fisherman's Blessing (4 h.)" type="EtcItem">
 		<!-- For 4 h. during fishing Acquired XP/ SP +200%. Effect remains after death. Cannot be dropped or sold. -->
@@ -420,6 +439,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91135" name="Improved Master Fisherman's Blessing (8 h.)" type="EtcItem">
 		<!-- For 8 h. during fishing Acquired XP/ SP +200%. Effect remains after death. Cannot be dropped or sold. -->
@@ -429,6 +449,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91136" name="Dandy's Golden Ball" type="EtcItem">
 		<!-- Golden Ball received from Dandy. For 1 hr., acquired XP/SP +100%. Maximize Sayha's Grace effect. Changes the appearance of your armor into that of a Lineage II Uniform. Buff remains after death. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
@@ -439,6 +460,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91137" name="Windstorm Box" type="EtcItem">
 		<!-- Double-click to obtain various items. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Will be deleted after event. -->
@@ -448,6 +470,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91138" name="Reinforced Antharas' Earring" type="Armor">
 		<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +10%, Stun Resistance and Stun Atk. Rate +10%, Mental Resistance and Atk. Rate +10%, Reflect Damage Resistance +7%, Healing Effects +10%, Skill MP Consumption -4%, Vampiric Rage effect +2%. The effect doesn't stack if two identical earrings are worn. -->
@@ -455,7 +478,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="3558" level="13" /> <!-- Antharas' Earring -->
@@ -576,6 +599,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91149" name="+5 Agathion Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following +5 enchanted Agathions: Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius. Cannot be dropped. -->
@@ -584,6 +608,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91150" name="+10 Agathion Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following +10 enchanted Agathions: Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius. Cannot be dropped. -->
@@ -592,6 +617,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91151" name="Attribute Necklace Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Ignis/ Nebula/ Procella/ Petram's Necklace. Cannot be dropped. -->
@@ -600,6 +626,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91152" name="Blessed Pendant Box" type="EtcItem">
 		<!-- Double-click to obtain Blessed Fire Dragon Pendant or Blessed Land Dragon Pendant. Cannot be dropped. -->
@@ -608,6 +635,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91153" name="+15 Weapon Pack (A-grade)" type="EtcItem">
 		<!-- Double-click to obtain one of the following +15 enchanted weapons: Sirra's Blade, Sword of Ipos, Barakiel's Axe, Behemoth' Tuning Fork, Naga Storm, Tiphon's Spear, Shyeed's Bow, Sobekk's Hurricane, Themis' Tongue, Cabrio's Hand, Daimon Crystal, Tallum Blade*Damascus. Cannot be dropped. -->
@@ -616,6 +644,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91154" name="Sibi's Samurai Black Long Sword" type="Weapon">
 		<!-- When successfully enchanted, a reward can be acquired. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Will be deleted after event. -->
@@ -646,6 +675,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91156" name="Fisherman's Blessing (24 hr.)" type="EtcItem">
 		<!-- For 24 h. during fishing Acquired XP/ SP +50%, changes armor appearance to that of a Hanbok. Cannot be used with Master Fisherman's Blessing. Cannot be dropped or sold. Will be deleted after event. -->
@@ -655,6 +685,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91157" name="Maphr Potion" additionalName="Event" type="EtcItem">
 		<!-- For 10 min. the enchant success rate is increased. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. <Attention>. Cannot be used to enchant pendants, Agathions, hair accessories, rare accessories, Spirit's Neclaces. Will be deleted after event. -->
@@ -663,6 +694,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91158" name="Maphr Potion" type="EtcItem">
 		<!-- For 10 min. the enchant success rate is increased. Cannot be used to enchant some items. <Attention>. Cannot be used to enchant pendants, Agathions, hair accessories, rare accessories, Spirit's Neclaces. Will be deleted after event. -->
@@ -670,6 +702,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91159" name="Agathion Coupon" type="EtcItem">
 		<!-- Can be exchanged through NPC Pona to get Zodiac Agathion, Agathion Enchant Scroll Pack and Enchant Scroll. Cannot be dropped. -->
@@ -677,6 +710,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91160" name="Agathion Enchant Scroll Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Agathion Enchant Scroll/ Quality Agathion Enchant Scroll/ Solid Scroll: Enchant Agathion/ Agathion's Soul/ Blessed Agathion's Soul. Cannot be dropped. -->
@@ -685,6 +719,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91161" name="Agathion Bracelet - Stage 5" type="Armor">
 		<!-- When worn, 5 Agathion slots are activated. STR/ INT/ CON/ MEN/ DEX/ WIT +1. Mental/ stun/ sleep/ paralyse attacks resistance +8%. Cannot be dropped. -->
@@ -730,7 +765,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="1" /> <!-- Anakim Power -->
@@ -740,7 +775,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="2" /> <!-- Anakim Power -->
@@ -750,7 +785,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="3" /> <!-- Anakim Power -->
@@ -760,7 +795,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="4" /> <!-- Anakim Power -->
@@ -770,7 +805,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="5" /> <!-- Anakim Power -->
@@ -780,7 +815,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="6" /> <!-- Anakim Power -->
@@ -790,7 +825,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="7" /> <!-- Anakim Power -->
@@ -800,7 +835,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="8" /> <!-- Anakim Power -->
@@ -810,7 +845,7 @@
 		<!-- A stone with the power of Anakim. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="9" /> <!-- Anakim Power -->
@@ -820,7 +855,7 @@
 		<!-- A stone with the power of Anakim. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_water_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54034" level="10" /> <!-- Anakim Power -->
@@ -830,7 +865,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="1" /> <!-- Lilith Power -->
@@ -840,7 +875,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="2" /> <!-- Lilith Power -->
@@ -850,7 +885,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="3" /> <!-- Lilith Power -->
@@ -860,7 +895,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="4" /> <!-- Lilith Power -->
@@ -870,7 +905,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="5" /> <!-- Lilith Power -->
@@ -880,7 +915,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="6" /> <!-- Lilith Power -->
@@ -890,7 +925,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="7" /> <!-- Lilith Power -->
@@ -900,7 +935,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="8" /> <!-- Lilith Power -->
@@ -910,7 +945,7 @@
 		<!-- A stone with the power of Lilith. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="9" /> <!-- Lilith Power -->
@@ -920,7 +955,7 @@
 		<!-- A stone with the power of Lilith. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="54035" level="10" /> <!-- Lilith Power -->
@@ -933,6 +968,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91184" name="Quick MP Recovery Potion" type="EtcItem">
 		<!-- Instantly recovers MP. Cannot be dropped or sold in the grocery store. -->
@@ -958,7 +994,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -974,7 +1010,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -990,6 +1026,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91188" name="Blessed Spirit's Varnish" type="EtcItem">
 		<!-- Enhances characteristics of Spirit's accessories. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Depending on the item type, activates special options from level +1 and higher. Cannot be dropped or sold. -->
@@ -998,6 +1035,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91189" name="Fire Attribute Attack Potion" type="EtcItem">
 		<!-- Use to get Fire Attack Power +50 for 20 min. Cannot be dropped or sold. -->
@@ -1071,6 +1109,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91194" name="Talisman of Authority Lv. 5" additionalName="30-day" type="Armor">
 		<!-- A 30-day item. P./ M. Def. +24, HP +12%, MP +8%, P./ M. Atk. +5%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -1120,6 +1159,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91198" name="Scroll of Escape: Garden of Eva" type="EtcItem">
 		<!-- A magical scroll that relocates you to the Garden of Eva. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Warning: Speak with Gatekeeper Clarissa to teleport to the Garden of Eva. -->
@@ -1130,6 +1170,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91199" name="Scroll of Escape: Land of Winds" type="EtcItem">
 		<!-- A magical scroll that relocates you to the Land of Winds. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Warning: Speak with Gatekeeper Clarissa to teleport to the Land of Winds. -->
@@ -1140,5 +1181,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 </list>

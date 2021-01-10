@@ -3,7 +3,7 @@
 	<item id="93100" name="Mid-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -11,7 +11,7 @@
 	<item id="93101" name="High-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 B-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -19,7 +19,7 @@
 	<item id="93102" name="Top-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -27,42 +27,42 @@
 	<item id="93103" name="Spellbook: Divine Beam" type="EtcItem">
 		<!-- A spellbook for learning the Divine Beam skill.\n\n<Classes>\nCardinal, Hierophant, Eva's Saint, Shillien Saint\n\n<Skill effect>\nA divine beam strikes the target. Inflicts magic damage. When you are attacking the enemy affected by Hold, the debuff is removed and an extra attack is triggered. Deals additional damage to demons and undead. -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93104" name="Scroll: Earth Tremor" type="EtcItem">
 		<!-- A scroll for learning the Earth Tremor skill.\n\n<Class>\nMaestro\n\n<Skill effect>\nAttacks the enemy with the power of earth. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93105" name="Scroll: Prophecy of Light" type="EtcItem">
 		<!-- A scroll for learning the Prophecy of Light skill.\n\n<Class>\nCardinal\n\n<Skill effect>\nIncreases Max HP/ MP, P./ M. Def, damage to monsters, Healing Power and Debuff Resistance. -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93106" name="Scroll: Mass Dryad Root" type="EtcItem">
 		<!-- A scroll for learning the Mass Dryad Root skill.\n\n<Class>\nShillien Saint\n\n<Skill effect>\nHolds nearby enemies. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93107" name="Scroll: Mass Wind Shackles" type="EtcItem">
 		<!-- A scroll for learning the Mass Wind Shackles skill.\n\n<Class>\nShillien Saint\n\n<Skill effect>\nDecreases nearby enemies' Atk. Spd. and Casting Spd. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93108" name="Blueprint: Machine Assistance" type="EtcItem">
 		<!-- A blueprint for learning the Machine Assistance skill.\n\n<Class>\nWarsmith\n\n<Skill effect>\nWith a certain chance, after an attack summons Golem fighting by your side. -->
 		<set name="icon" val="icon.etc_plan_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -272,7 +272,7 @@
 	<item id="93121" name="Low-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n10 B-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_special_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -282,7 +282,7 @@
 	<item id="93122" name="Mid-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -292,7 +292,7 @@
 	<item id="93123" name="High-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 B-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -302,7 +302,7 @@
 	<item id="93124" name="Top-grade Life Stone - Shield/ Sigil" type="EtcItem">
 		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -324,7 +324,7 @@
 	<item id="93126" name="Secret Strongbox" additionalName="Event" type="EtcItem">
 		<!-- Nobody knows what is hidden there but surely it's something very valuable. So, trust no one and keep it away in a safe place. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -408,7 +408,7 @@
 		<!-- Only for agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -419,7 +419,7 @@
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -434,7 +434,7 @@
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -449,7 +449,7 @@
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -464,7 +464,7 @@
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -479,7 +479,7 @@
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -560,7 +560,7 @@
 		<set name="icon" val="Branchsys2.icon2.g_alegra_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -581,7 +581,7 @@
 		<!-- An extra pass to a daily dungeon. Double-click to reset the instance zone timer (both for normal and epic dungeons). Can be used only once a day. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -590,7 +590,7 @@
 		<!-- An extra pass to a daily dungeon. Double-click to reset the instance zone timer (both for normal and epic dungeons). Can be used only once a day. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

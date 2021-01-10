@@ -36,14 +36,14 @@
 		<!-- A scroll that contains harmony between races. Use it to increase your XP and SP by 50% for 30 min. Cannot be used with Fall of the Dragon/ Nevit's Hourglass/ Dandy's Home Run Ball. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.etc_london_olympic_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48005" name="Transformed Energy" type="EtcItem">
 		<!-- Crystallized form of suspicious energy that manifests in the Energy of Wind. It seems to have been affected by the Altar of Oblivion built in the Garden of Spirits. Take it to Magister Belas, who should be near the Garden of Spirits. -->
 		<set name="icon" val="icon.drake_wing_lure_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -56,7 +56,7 @@
 		<!-- Item obtained after defeating Harpe who appeared at the Altar of Oblivion. According to Ferin, it contains information on how the Altar of Oblivion affects other matters in the Material Realm. Take them to Ferin. -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -77,6 +77,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="crystal_type" val="R" />
 	</item>
 	<item id="48008" name="Freya's Ice Crystal" type="EtcItem">
 		<!-- Take it along with a Freya's Wind Scroll to NPC Freya in Schuttgart Castle to receive a present of destiny from Freya. Will be deleted on Wednesday, January 18, 2017, after regular maintenance. -->
@@ -133,7 +134,7 @@
 		<set name="icon" val="icon.bm_freya_dark_rune_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -166,7 +167,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -177,7 +178,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -200,7 +201,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -211,7 +212,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -234,7 +235,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">400</stat>
@@ -244,7 +245,7 @@
 		<!-- Changes the appearance of upper or full-body armor to that of a White Knight Suit costume. Makes entire armor look like the White Knight Suit costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -255,7 +256,7 @@
 		<!-- Changes the appearance of upper or full-body armor to that of a Healer costume. Makes entire armor look like the Healer costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -266,7 +267,7 @@
 		<!-- Changes the appearance of upper or full-body armor to that of a Chevalier costume. Makes entire armor look like the Chevalier costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -277,7 +278,7 @@
 		<!-- Changes the appearance of upper or full-body armor to that of a Kat the Cat costume. Makes entire armor look like the Kat the Cat costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -288,7 +289,7 @@
 		<!-- Changes the appearance of upper or full-body armor to that of a Barbarian Wolf costume. Makes entire armor look like the Barbarian Wolf costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -299,7 +300,7 @@
 		<!-- Changes the appearance of upper or full-body armor to that of a Valkyrie costume. Makes entire armor look like the Valkyrie costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
@@ -320,7 +321,7 @@
 	<item id="48030" name="Faction Amity Token" type="EtcItem">
 		<!-- Token that strengthens the amity with a faction. Use it at the completion of a faction quest to gain extra quest XP and Amity Points. However, no further rewards will be gained if the quest rewards do not include XP or Amity Points. -->
 		<set name="icon" val="icon.faction_boost_reward" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -328,7 +329,7 @@
 		<!-- Extra Pass for Shilen's Altar. Double-click to reset cooldown to Shilen's Altar. Cannot use if locked out from Instance Zone. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -339,7 +340,7 @@
 		<set name="icon" val="icon.bm_sayhas_talisman_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -731,7 +732,7 @@
 	<item id="48065" name="Zodiac Cube Fragment" type="EtcItem">
 		<!-- Mysterious fragment filled with the power of stars, obtainable from some Fishing Treasure Chests or by hunting. Can be exchanged for Zodiac Agathion Cubes through the Fishing Guild Member in every town. -->
 		<set name="icon" val="icon.star_agathion_cube_peice" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -750,7 +751,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -764,7 +765,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -778,7 +779,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -792,7 +793,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -806,7 +807,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -920,7 +921,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -934,7 +935,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -948,7 +949,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -962,7 +963,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -976,7 +977,7 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

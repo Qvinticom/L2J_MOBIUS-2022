@@ -8,6 +8,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="27601" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. -->
@@ -17,12 +18,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="27602" name="Abundance Box" type="EtcItem">
 		<!-- Get 1 of the following: 1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bottle of Queen Ant's Soul, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Bottle of Orfen's Soul, Octavis' Earring, Istina's Earring, Octavis' Necklace, Immortal Scroll Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum x2, Superior Giant's Codex - Discipline Chapter 1, Giant's Energy x10, Orfen's Earring, Elcyum Crystal x8, Tempest Stone, Gemstone (R-grade) x40, 1 of 5 Fortune Pocket - Stage 5. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27603" name="Daily Mission Reward Chest" type="EtcItem">
 		<!-- Reward chest for completing daily missions. You can obtain one of various rewards. -->
@@ -35,6 +38,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="27618" level="1" /> <!-- Daily Mission Reward Chest -->
 		</skills>
@@ -44,24 +48,28 @@
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="27605" name="Blessed Helios Pack (Physical)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Helios Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, Shooter. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27606" name="Blessed Helios Pack (Magical)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Helios Buster, Caster, Retributer. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27607" name="Blessed Helios Pack (Dual Weapons)" type="EtcItem">
 		<!-- Double-click to receive one of the following: Blessed Helios Dual Sword, Dual Dagger, Dual Blunt. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27608" name="Card Pouch" additionalName="Event" type="EtcItem">
 		<!-- A card pouch with great magic power. Double-click to receive one of the event cards. -->
@@ -69,114 +77,133 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27609" name="Infinite Odyssey - Schuttgart Castle" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_schuttgart_castle" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27610" name="Infinite Odyssey - Forge of the Gods" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_fire_flower" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27611" name="Infinite Odyssey - Summer Labyrinth" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_summer_maze" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27612" name="Infinite Odyssey - Frozen Labyrinth" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_winter_maze" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27613" name="New Territory Card: Ashen Shadow Revolutionaries" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_ashy_shadow" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27614" name="New Territory Card: Garden of Spirits" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_Temple_of_Ancient_Spirit" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27615" name="New Territory Card: Underground Gainak" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_gainak" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27616" name="Mystic Tavern Card: Settlen's Tavern" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_ep_pub_settlen" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27617" name="Mystic Tavern Card: Kelbim" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_kelbim" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27618" name="Mystic Tavern Card: Dwarf Archaeologist" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_archeologist" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27619" name="Mystic Tavern Card: Tauti" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_tauti" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27620" name="Mystic Tavern Card: Freya" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_freya" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27621" name="Embryo's Card: Atelia Fortress" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_astatine" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27622" name="Embryo's Card: Command Post" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_high_defender" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27623" name="Embryo's Card: Kelbim Raid" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_kelbim_raid" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27624" name="Legendary Card: Exalted" additionalName="Event" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_hidden" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27625" name="Hidden Card" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.card_hidden" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27626" name="Aspiring Orc Ruler of Aden" additionalName="Event" type="EtcItem">
 		<set name="icon" val="icon.card_orc" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27627" name="Agathion - Matryoshka (7-day)" type="EtcItem">
 		<!-- Can summon Agathion - Matryoshka (7-day). -->
@@ -185,6 +212,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="27628" name="Agathion - Matryoshka (30-day)" type="EtcItem">
 		<!-- Can summon Agathion - Matryoshka (30-day). -->
@@ -193,6 +221,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="27629" name="Agathion - Minion Eye (7-day)" type="EtcItem">
 		<!-- Can summon Agathion - Minion Eye (7-day). -->
@@ -201,6 +230,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="27630" name="Agathion - Minion Eye (30-day)" type="EtcItem">
 		<!-- Can summon Agathion - Minion Eye (30-day). -->
@@ -209,6 +239,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="27631" name="Prestige Rune 100% Pack" additionalName="1-hr." type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 100% (1-hr.). -->
@@ -218,6 +249,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27632" name="Fancy Fishing Rod" type="Weapon">
 		<!-- A fancy fishing rod. Receive 50% extra XP/ SP when fishing. Reduces fishing time. Consumes 1 Fishing Shot. -->
@@ -226,6 +258,7 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1000" />
+		<set name="material" val="BONE" />
 		<skills>
 			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
 		</skills>
@@ -246,6 +279,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="material" val="BONE" />
 		<skills>
 			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
 		</skills>
@@ -263,6 +297,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27635" name="Fancy Fishing Rod" additionalName="7-day" type="Weapon">
 		<!-- A 7-day fancy fishing rod. Receive 50% extra XP/ SP when fishing. Reduces fishing time. Consumes 1 Fishing Shot. -->
@@ -275,6 +310,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="BONE" />
 		<skills>
 			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
 		</skills>
@@ -292,6 +328,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27637" name="Fancy Fishing Rod" additionalName="30-day" type="Weapon">
 		<!-- A 30-day fancy fishing rod. Receive 50% extra XP/ SP when fishing. Reduces fishing time. Consumes 1 Fishing Shot. -->
@@ -304,6 +341,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="40320" />
+		<set name="material" val="BONE" />
 		<skills>
 			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
 		</skills>
@@ -321,6 +359,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27639" name="Hidden Treasure Chest" type="EtcItem">
 		<!-- A hidden treasure chest. Double-click to get a random item. -->
@@ -328,11 +367,12 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27640" name="Heine Fishing Coin" type="EtcItem">
 		<!-- Coin obtained from fishing with Heine Special Bait. Take it to Peeves to exchange for a Elite Fishing Rod. -->
 		<set name="icon" val="icon.etc_coins_blue_i00" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -345,6 +385,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27642" name="Heine Exclusive Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 90 - 94. -->
@@ -355,6 +396,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27643" name="Heine Exclusive Bait (95-98)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 95 - 98. -->
@@ -365,6 +407,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27644" name="Heine Exclusive Bait (99-)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Lv. 99 or above. -->
@@ -375,12 +418,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27645" name="Heine Exclusive Bait Coupon" type="EtcItem">
 		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27646" name="Exclusive Reward Chest" type="EtcItem">
 		<!-- Exclusive Reward Chest. Double-click to get a random item. -->
@@ -388,6 +433,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27647" name="Heine Exclusive Reward Chest" type="EtcItem">
 		<!-- Double-click to get Heine Fishing Coins. Has a chance of obtaining an Exclusive Treasure Chest. -->
@@ -395,18 +441,21 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27648" name="Heine Exclusive Fishing Tools - 300 Pack" type="EtcItem">
 		<!-- Double-click to get 300 Heine Exclusive Bait Coupons and 300 Fishing Shots. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27649" name="Heine Exclusive Fishing Tools - 3,000 Pack" type="EtcItem">
 		<!-- Double-click to get 3,000 Heine Exclusive Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27650" name="Heine Exclusive Bait (85-89)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 85 - 89. -->
@@ -417,6 +466,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27651" name="Heine Exclusive Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 90 - 94. -->
@@ -427,6 +477,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27652" name="Heine Exclusive Bait (95-98)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 95 - 98. -->
@@ -437,6 +488,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27653" name="Heine Exclusive Bait (99-)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Lv. 99 or above. -->
@@ -447,12 +499,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="27654" name="Heine Exclusive Bait Coupon" type="EtcItem">
 		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27655" name="Exclusive Reward Chest" type="EtcItem">
 		<!-- Exclusive Reward Chest. Double-click to get a random item. -->
@@ -460,6 +514,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27656" name="Heine Exclusive Reward Chest" type="EtcItem">
 		<!-- Double-click to get Heine Fishing Coins. Has a chance of obtaining an Exclusive Treasure Chest. -->
@@ -467,18 +522,21 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27657" name="Heine Exclusive Fishing Tools - 300 Pack" type="EtcItem">
 		<!-- Double-click to get 300 Heine Exclusive Bait Coupons and 300 Fishing Shots. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27658" name="Heine Exclusive Fishing Tools - 3,000 Pack" type="EtcItem">
 		<!-- Double-click to get 3,000 Heine Exclusive Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27659" name="Anniversary Coin" additionalName="Event" type="EtcItem">
 		<!-- An anniversary coin. It might be a good idea to collect these for later?-1 -->
@@ -489,6 +547,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27660" name="Shadai's Jewelry Box" type="EtcItem">
 		<!-- Double-click to get 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
@@ -499,6 +558,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="27551" level="1" /> <!-- Shadai's Jewelry Box -->
 		</skills>
@@ -508,6 +568,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="27662" name="La Vie En Rose's Brilliant Brooch Pack" type="EtcItem">
 		<!-- Double-click to acquire 55 La Vie En Rose's Jewelry Boxes and 1 Noble Brooch Chest. Cannot be used in the auction house. -->
@@ -553,6 +614,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="time" val="10080" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
 		</skills>
@@ -571,6 +633,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13317" level="1" /> <!-- Earth Wyrm Heart Ring -->
 			<skill id="13318" level="1" /> <!-- Earth Wyrm Heart Ring - Heartbeat Accelerate -->
@@ -585,6 +648,7 @@
 		<set name="icon" val="icon.bm_freya_crystal" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27667" name="Freya's Luxury Shopping Bag" type="EtcItem">
 		<!-- Double-click to obtain Freya's Frozen Scroll, Freya's Art of Seduction, and Freya's Gift Box. -->
@@ -592,6 +656,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27668" name="Freya's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain one of the various rewards prepared by Freya. -->
@@ -599,6 +664,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27669" name="Sirra's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain 1 random item for enchantment. -->
@@ -606,6 +672,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27670" name="Snow Man's Gift Box" type="EtcItem">
 		<!-- Double-click to obtain an item for character growth and strengthening. -->
@@ -613,6 +680,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27671" name="Freya's Fated Support Box" type="EtcItem">
 		<!-- Double-click to obtain 1 random item out of the following: Freya's Scroll of Storm, Freya's Bloody Rune (2 hr). -->
@@ -620,6 +688,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27672" name="Black Freya's Kindness" type="EtcItem">
 		<!-- Double-click to obtain 1 random item out of the following: Dark/ White Assassin Suit, Red/ White Noblesse Outfit, Pirate Red/ Crew Outfit, Cowboy Purple Outfit Appearance Stone. -->
@@ -627,6 +696,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27673" name="Freya's Scroll of Storm" type="EtcItem">
 		<!-- Vitality consumption +150% and Acquired XP/ SP +150% when hunting. Does not disappear upon death. Duration 10 min. Cooldown 10 min. Only usable when 1 or more Vitality slot is full. -->
@@ -637,6 +707,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<cond>
 			<player MinimumVitalityPoints="35000" />
 		</cond>
@@ -651,6 +722,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27675" name="Freya's Wish-filled Gift" type="EtcItem">
 		<!-- Double-click to obtain 1 random rare item. -->
@@ -659,6 +731,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27676" name="Sirra's Wish-filled Gift" type="EtcItem">
 		<!-- Double-click to obtain 1 random item for enchantment. -->
@@ -667,6 +740,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27677" name="Snowman's Wish-filled Gift" type="EtcItem">
 		<!-- Double-click to obtain 1 random item for skill enchantment. -->
@@ -675,6 +749,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="27678" name="Gran Kain's Necklace - Stage 1" type="Armor">
 		<!-- MP +107, Dark Attack Resistance +50, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +15%, M. Atk. +10%, Skill Power +15%, Max HP +3%, Max MP +5% Resistance to the following abnormal statuses: Stun +25%, Aggression +25%, Windstorm +25%, Banishment +25%, Disarm +15%, Sleep +15%. -->
@@ -687,6 +762,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46717" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 1 -->
 			<skill id="46718" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 1 -->
@@ -707,6 +783,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46723" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 2 -->
 			<skill id="46724" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 2 -->
@@ -728,6 +805,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46729" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 3 -->
 			<skill id="46730" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 3 -->
@@ -749,6 +827,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46759" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 4 -->
 			<skill id="46760" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 4 -->
@@ -770,6 +849,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46765" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 5 -->
 			<skill id="46766" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 5 -->
@@ -791,6 +871,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46771" level="1" type="ON_EQUIP" /> <!-- Equip Gran Kain's Necklace - Necklace Stage 6 -->
 			<skill id="46772" level="1" type="ON_UNEQUIP" /> <!-- Unequip Gran Kain's Necklace - Necklace Stage 6 -->
@@ -812,6 +893,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46735" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 1 -->
 			<skill id="46736" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 1 -->
@@ -832,6 +914,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46741" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 2 -->
 			<skill id="46742" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 2 -->
@@ -853,6 +936,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46747" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 3 -->
 			<skill id="46748" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 3 -->
@@ -874,6 +958,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46777" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 4 -->
 			<skill id="46778" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 4 -->
@@ -895,6 +980,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46783" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 5 -->
 			<skill id="46784" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 5 -->
@@ -916,6 +1002,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46789" level="1" type="ON_EQUIP" /> <!-- Equip Einhasad's Necklace - Necklace Stage 6 -->
 			<skill id="46790" level="1" type="ON_UNEQUIP" /> <!-- Unequip Einhasad's Necklace - Necklace Stage 6 -->
@@ -937,6 +1024,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46719" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 1 -->
 			<skill id="46720" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 1 -->
@@ -957,6 +1045,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46725" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 2 -->
 			<skill id="46726" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 2 -->
@@ -978,6 +1067,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46731" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 3 -->
 			<skill id="46732" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 3 -->
@@ -999,6 +1089,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46761" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 4 -->
 			<skill id="46762" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 4 -->
@@ -1020,6 +1111,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46767" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 5 -->
 			<skill id="46768" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 5 -->
@@ -1041,6 +1133,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46773" level="1" type="ON_EQUIP" /> <!-- Equip Pa'agrio's Earring - Earring Stage 6 -->
 			<skill id="46774" level="1" type="ON_UNEQUIP" /> <!-- Unequip Pa'agrio's Earring - Earring Stage 6 -->
@@ -1062,6 +1155,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46737" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 1 -->
 			<skill id="46738" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 1 -->
@@ -1082,6 +1176,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46743" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 2 -->
 			<skill id="46744" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 2 -->
@@ -1103,6 +1198,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46749" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 3 -->
 			<skill id="46750" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 3 -->
@@ -1124,6 +1220,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="46779" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 4 -->
 			<skill id="46780" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 4 -->

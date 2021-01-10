@@ -18,6 +18,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="8" /> <!-- Special Ability: Critical Damage -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -51,6 +52,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -84,6 +86,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3565" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -117,6 +120,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -150,6 +154,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3565" level="9" /> <!-- Special Ability: Focus -->
@@ -183,6 +188,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3568" level="2" /> <!-- Special Ability: HP Drain -->
@@ -217,6 +223,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -251,6 +258,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -286,6 +294,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -320,6 +329,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
@@ -354,6 +364,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -388,6 +399,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -423,6 +435,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -458,6 +471,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -492,6 +506,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -526,6 +541,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -560,6 +576,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -593,6 +610,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -627,6 +645,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -662,6 +681,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -697,6 +717,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3576" level="8" /> <!-- Special Ability: MP Regeneration -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -732,6 +753,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
@@ -767,6 +789,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
 			<skill id="3576" level="8" /> <!-- Special Ability: MP Regeneration -->
@@ -801,6 +824,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -833,6 +857,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -865,6 +890,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -897,6 +923,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
@@ -930,6 +957,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -963,6 +991,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -996,6 +1025,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -1029,6 +1059,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1062,6 +1093,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1096,6 +1128,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1130,6 +1163,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
@@ -1164,6 +1198,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -1198,6 +1233,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1231,6 +1267,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1264,6 +1301,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1297,6 +1335,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1330,6 +1369,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1363,6 +1403,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1396,6 +1437,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="8" /> <!-- Special Ability: Critical Damage -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1430,6 +1472,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="8" /> <!-- Special Ability: Critical Damage -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1464,6 +1507,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1498,6 +1542,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3565" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1532,6 +1577,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1566,6 +1612,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3565" level="9" /> <!-- Special Ability: Focus -->
@@ -1600,6 +1647,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3568" level="2" /> <!-- Special Ability: HP Drain -->
@@ -1635,6 +1683,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -1670,6 +1719,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1706,6 +1756,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1741,6 +1792,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
@@ -1776,6 +1828,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1811,6 +1864,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1847,6 +1901,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1883,6 +1938,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1918,6 +1974,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1953,6 +2010,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1988,6 +2046,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -2022,6 +2081,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -2057,6 +2117,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -2093,6 +2154,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -2129,6 +2191,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3576" level="8" /> <!-- Special Ability: MP Regeneration -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -2165,6 +2228,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
@@ -2201,6 +2265,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
 			<skill id="3576" level="8" /> <!-- Special Ability: MP Regeneration -->
@@ -2236,6 +2301,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -2269,6 +2335,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -2302,6 +2369,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -2335,6 +2403,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
@@ -2369,6 +2438,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -2403,6 +2473,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -2437,6 +2508,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -2471,6 +2543,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -2505,6 +2578,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -2535,6 +2609,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9201" level="1" /> <!-- Elixir: Pipe Organ Melody -->
 			<skill id="9202" level="1" /> <!-- Elixir: Guitar Melody -->
@@ -2554,6 +2629,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9197" level="1" /> <!-- Scroll: 1,000,000 SP -->
 		</skills>
@@ -2569,6 +2645,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="17754" min="5000" max="5000" chance="100" /> <!-- R-grade Soulshot -->
 		</capsuled_items>
@@ -2584,6 +2661,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="17754" min="10000" max="10000" chance="100" /> <!-- R-grade Soulshot -->
 		</capsuled_items>
@@ -2599,6 +2677,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19441" min="5000" max="5000" chance="100" /> <!-- R-grade Spiritshot -->
 		</capsuled_items>
@@ -2614,6 +2693,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19441" min="10000" max="10000" chance="100" /> <!-- R-grade Spiritshot -->
 		</capsuled_items>
@@ -2629,6 +2709,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19442" min="5000" max="5000" chance="100" /> <!-- Blessed R-grade Spiritshot -->
 		</capsuled_items>
@@ -2644,6 +2725,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19442" min="10000" max="10000" chance="100" /> <!-- Blessed R-grade Spiritshot -->
 		</capsuled_items>
@@ -2658,6 +2740,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="18550" min="10000" max="10000" chance="100" /> <!-- Orichalcum Arrow -->
 		</capsuled_items>
@@ -2672,6 +2755,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19443" min="10000" max="10000" chance="100" /> <!-- Orichalcum Bolt -->
 		</capsuled_items>
@@ -2685,6 +2769,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18103" min="1" max="1" chance="100" /> <!-- Unidentified Requiem Shaper -->
 			<item id="18104" min="1" max="1" chance="100" /> <!-- Unidentified Requiem Cutter -->
@@ -2711,6 +2796,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18117" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Helmet - Heavy armor -->
 			<item id="18118" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Breastplate - Heavy armor -->
@@ -2729,6 +2815,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18123" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Leather Helmet - Light armor -->
 			<item id="18124" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Leather Armor - Light armor -->
@@ -2746,6 +2833,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18128" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Circlet - Robe -->
 			<item id="18129" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Tunic - Robe -->
@@ -2764,6 +2852,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18137" min="1" max="1" chance="100" /> <!-- Unidentified Apocalypse Shaper -->
 			<item id="18138" min="1" max="1" chance="100" /> <!-- Unidentified Apocalypse Cutter -->
@@ -2790,6 +2879,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18151" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Helmet - Heavy armor -->
 			<item id="18152" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Breastplate - Heavy armor -->
@@ -2808,6 +2898,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18157" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Leather Helmet - Light armor -->
 			<item id="18158" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Leather Armor - Light armor -->
@@ -2825,6 +2916,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18162" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Circlet - Robe -->
 			<item id="18163" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Tunic - Robe -->
@@ -2843,6 +2935,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18134" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Necklace -->
 			<item id="18135" min="2" max="2" chance="100" /> <!-- Unidentified Immortal Earring -->
@@ -2858,6 +2951,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="18168" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Necklace -->
 			<item id="18169" min="2" max="2" chance="100" /> <!-- Unidentified Twilight Earring -->
@@ -2873,6 +2967,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30295" name="Embryo's Imprinting" type="EtcItem">
 		<!-- Embryo's seal that has been imprinted in blood. Bring it to a pathfinder of the Dusk in the Town of Aden and ask about it. -->
@@ -2883,6 +2978,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30296" name="Ranger's Report" type="EtcItem">
 		<!-- The report of a ranger of the Dusk that was found in the Catacomb and the Necropolis. -->
@@ -2894,6 +2990,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30297" name="Superior Giant's Codex" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for +1~+10 skill enchantment after Awakening. -->
@@ -2903,6 +3000,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30298" name="Superior Giant's Codex - Mastery" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for +1~+10 blessed skill enchantment after Awakening. -->
@@ -2912,6 +3010,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30299" name="Superior Giant's Codex - Discipline" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed to change an enchantment path +1~+10 after Awakening. -->
@@ -2921,5 +3020,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
 	</item>
 </list>

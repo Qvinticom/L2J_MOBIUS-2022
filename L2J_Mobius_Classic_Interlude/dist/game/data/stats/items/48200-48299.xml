@@ -211,14 +211,14 @@
 	<item id="48212" name="Noble Upgrade Stone" type="EtcItem">
 		<!-- Ingredient needed to upgrade Circlets of Authority/Foresight/Grace into Noble Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Circlets into Noble Circlets. -->
 		<set name="icon" val="icon.bm_hair_acc_upgrade_1" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48213" name="Radiant Upgrade Stone" type="EtcItem">
 		<!-- Ingredient needed to upgrade Noble Circlets of Authority/Foresight/Grace into Radiant Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Noble Circlets into Radiant Circlets. -->
 		<set name="icon" val="icon.bm_hair_acc_upgrade_2" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -239,7 +239,7 @@
 	<item id="48215" name="Circlet Spirit Stone" type="EtcItem">
 		<!-- Spirit Stone for circlets. Can only augment Noble/Radiant circlets. -->
 		<set name="icon" val="Icon.bm_mineral_circlet_hair_acc" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -274,7 +274,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -285,7 +285,7 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

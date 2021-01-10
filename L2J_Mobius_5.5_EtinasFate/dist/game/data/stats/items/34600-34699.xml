@@ -10,6 +10,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9324" level="1" /> <!-- Player Commendation - Transform Rose (Female) -->
 		</skills>
@@ -24,6 +25,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9323" level="1" /> <!-- Player Commendation - Transform Rose (Male) -->
 		</skills>
@@ -45,6 +47,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9292" level="1" /> <!-- Player Commendation - Quick Healing Potion -->
 		</skills>
@@ -58,6 +61,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9293" level="1" /> <!-- Player Commendation - Soulshot (No-grade) -->
 		</skills>
@@ -72,6 +76,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9294" level="1" /> <!-- Player Commendation - Soulshot (D-grade) -->
 		</skills>
@@ -86,6 +91,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9295" level="1" /> <!-- Player Commendation - Soulshot (C-grade) -->
 		</skills>
@@ -100,6 +106,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9296" level="1" /> <!-- Player Commendation - Soulshot (B-grade) -->
 		</skills>
@@ -114,6 +121,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9297" level="1" /> <!-- Player Commendation - Soulshot (A-grade) -->
 		</skills>
@@ -128,6 +136,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9298" level="1" /> <!-- Player Commendation - Soulshot (S-grade) -->
 		</skills>
@@ -157,6 +166,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9300" level="1" /> <!-- Player Commendation - Blessed Spiritshot (No-grade) -->
 		</skills>
@@ -171,6 +181,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9301" level="1" /> <!-- Player Commendation - Blessed Spiritshot (D-grade) -->
 		</skills>
@@ -185,6 +196,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9302" level="1" /> <!-- Player Commendation - Blessed Spiritshot (C-grade) -->
 		</skills>
@@ -199,6 +211,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9303" level="1" /> <!-- Player Commendation - Blessed Spiritshot (B-grade) -->
 		</skills>
@@ -213,6 +226,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9304" level="1" /> <!-- Player Commendation - Blessed Spiritshot (A-grade) -->
 		</skills>
@@ -227,6 +241,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9305" level="1" /> <!-- Player Commendation - Blessed Spiritshot (S-grade) -->
 		</skills>
@@ -257,6 +272,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9318" level="1" /> <!-- Open PC Points Coupon -->
 		</skills>
@@ -274,6 +290,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9332" level="1" /> <!-- Drum Melody - Enhanced Cocktail -->
 			<skill id="9334" level="1" /> <!-- Pipe Organ Melody - Enhanced Cocktail -->
@@ -292,6 +309,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9319" level="1" /> <!-- Use PC Points Coupon -->
 		</skills>
@@ -310,6 +328,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9281" level="1" /> <!-- Drum Melody - Heavenly Cocktail -->
 			<skill id="9283" level="1" /> <!-- Pipe Organ Melody - Heavenly Cocktail -->
@@ -329,6 +348,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13368" level="1" /> <!-- Talisman (R-grade) - Half-kill/Lethal Strike Resistance -->
 		</skills>
@@ -346,6 +366,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13367" level="1" /> <!-- Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Active) -->
 		</skills>
@@ -363,6 +384,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -380,6 +402,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -397,6 +420,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -413,6 +437,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -428,6 +453,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9396" level="1" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</skills>
@@ -443,6 +469,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9375" level="1" /> <!-- Einhasad's Energy -->
 		</skills>
@@ -458,6 +485,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="34630" name="Outlaw's Eyepatch" type="Armor">
 		<!-- Outlaw's Eyepatch -->
@@ -470,6 +498,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="34631" name="Eyepatch" type="Armor">
 		<!-- Eyepatch -->
@@ -482,6 +511,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="34632" name="Party Hat" type="Armor">
 		<!-- Party Hat -->
@@ -494,6 +524,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="34633" name="Refined Angel Ring" type="Armor">
 		<!-- Refined Angel Ring -->
@@ -506,6 +537,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="34634" name="Refined Devil Horn" type="Armor">
 		<!-- Refined Devil Horn -->
@@ -518,6 +550,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="500000" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="34635" name="Pirate's Eyepatch - STR Pendant" type="EtcItem">
 		<!-- Can increase STR by equipping the Pirate's Eyepatch. -->
@@ -525,6 +558,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34636" name="Pirate's Eyepatch - DEX Pendant" type="EtcItem">
 		<!-- Can increase DEX by equipping the Pirate's Eyepatch. -->
@@ -532,6 +566,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34637" name="Outlaw's Eyepatch - CON Pendant" type="EtcItem">
 		<!-- Can increase CON by equipping the Outlaw's Eyepatch. -->
@@ -539,6 +574,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34638" name="Outlaw's Eyepatch - MEN Pendant" type="EtcItem">
 		<!-- Can increase MEN by equipping the Outlaw's Eyepatch. -->
@@ -546,6 +582,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34639" name="Eyepatch - INT Pendant" type="EtcItem">
 		<!-- Can increase INT by equipping the Eyepatch. -->
@@ -553,6 +590,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34640" name="Eyepatch - WIT Pendant" type="EtcItem">
 		<!-- Can increase WIT by equipping the Eyepatch. -->
@@ -560,6 +598,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34641" name="Party Hat - Critical Rate Pendant" type="EtcItem">
 		<!-- Can increase P. Critical Rate by equipping a Party Hat. -->
@@ -567,6 +606,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34642" name="Party Hat - Critical Damage Pendant" type="EtcItem">
 		<!-- Can increase P. Critical Damage by equipping a Party Hat. -->
@@ -574,6 +614,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34643" name="Refined Angel Ring - P. Def. Pendant" type="EtcItem">
 		<!-- Can P. Def. +equipping a Refined Angel Ring. -->
@@ -581,6 +622,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34644" name="Refined Angel Ring - M. Def. Pendant" type="EtcItem">
 		<!-- Can M. Def. +equipping a Refined Angel Ring. -->
@@ -588,6 +630,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34645" name="Refined Angel Ring - Evasion Pendant" type="EtcItem">
 		<!-- Can increase Evasion by equipping a Refined Angel Ring. -->
@@ -595,6 +638,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34646" name="Refined Devil Horn - P. Atk. Pendant" type="EtcItem">
 		<!-- Can P. Atk. +equipping a Refined Devil Horn. -->
@@ -602,6 +646,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34647" name="Refined Devil Horn - M. Atk. Pendant" type="EtcItem">
 		<!-- Can M. Atk. +equipping a Refined Devil Horn. -->
@@ -609,6 +654,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34648" name="Refined Devil Horn - Accuracy Pendant" type="EtcItem">
 		<!-- Can increase Accuracy by equipping a Refined Devil Horn. -->
@@ -616,6 +662,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="34649" name="Fire Stone Fragment" type="EtcItem">
 		<!-- Can infuse a bound item or item acquired through mentor/ mentee with the fire attribute. -->
@@ -628,6 +675,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9325" level="1" /> <!-- Fire Stone -->
 		</skills>
@@ -643,6 +691,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9326" level="1" /> <!-- Water Stone -->
 		</skills>
@@ -658,6 +707,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9327" level="1" /> <!-- Wind Stone -->
 		</skills>
@@ -673,6 +723,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9328" level="1" /> <!-- Earth Stone -->
 		</skills>
@@ -688,6 +739,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9329" level="1" /> <!-- Holy Stone -->
 		</skills>
@@ -703,6 +755,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9330" level="1" /> <!-- Dark Stone -->
 		</skills>
@@ -718,6 +771,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9325" level="2" /> <!-- Fire Crystal -->
 		</skills>
@@ -733,6 +787,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9326" level="2" /> <!-- Water Crystal -->
 		</skills>
@@ -748,6 +803,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9327" level="2" /> <!-- Wind Crystal -->
 		</skills>
@@ -763,6 +819,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9328" level="2" /> <!-- Earth Crystal -->
 		</skills>
@@ -778,6 +835,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9329" level="2" /> <!-- Holy Crystal -->
 		</skills>
@@ -793,6 +851,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9330" level="2" /> <!-- Dark Crystal -->
 		</skills>
@@ -993,6 +1052,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34674" name="Scroll: Seal Weapon (C-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1004,6 +1064,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34675" name="Scroll: Seal Weapon (B-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1015,6 +1076,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34676" name="Scroll: Seal Weapon (A-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1026,6 +1088,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34677" name="Scroll: Seal Weapon (S-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1037,6 +1100,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34678" name="Scroll: Seal Weapon (S80-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1048,6 +1112,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34679" name="Scroll: Seal Weapon (R-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1059,6 +1124,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34680" name="Scroll: Seal Weapon (R95-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1070,6 +1136,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34681" name="Scroll: Seal Weapon (R99-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1081,6 +1148,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34682" name="Scroll: Seal Armor (D-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1092,6 +1160,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34683" name="Scroll: Seal Armor (C-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1103,6 +1172,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34684" name="Scroll: Seal Armor (B-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1114,6 +1184,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34685" name="Scroll: Seal Armor (A-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1125,6 +1196,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34686" name="Scroll: Seal Armor (S-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1136,6 +1208,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34687" name="Scroll: Seal Armor (S80-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1147,6 +1220,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34688" name="Scroll: Seal Armor (R-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1158,6 +1232,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34689" name="Scroll: Seal Armor (R95-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1169,6 +1244,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34690" name="Scroll: Seal Armor (R99-grade)" type="EtcItem">
 		<!-- Scroll that returns an item from bound to unidentified status. All enchant values are reset. -->
@@ -1180,6 +1256,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="34691" name="Hair Accessory Pack" type="EtcItem">
 		<!-- Chest containing Hair Accessory. -->
@@ -1191,6 +1268,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9337" level="1" /> <!-- Hair Accessory Pack -->
 		</skills>
@@ -1205,6 +1283,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9338" level="1" /> <!-- Pendant Pack -->
 		</skills>
@@ -1219,6 +1298,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9339" level="1" /> <!-- Attribute Stone Fragment Box -->
 		</skills>
@@ -1233,6 +1313,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9341" level="1" /> <!-- Hero's Lucky Enchant Stone Pack -->
 		</skills>
@@ -1247,6 +1328,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9342" level="1" /> <!-- Hero's Destruction Enchant Scroll Pack -->
 		</skills>
@@ -1261,6 +1343,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9343" level="1" /> <!-- Hero's Blessed Enchant Scroll Pack -->
 		</skills>
@@ -1275,6 +1358,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9344" level="1" /> <!-- Hero's Unbind Scroll Pack -->
 		</skills>
@@ -1289,6 +1373,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9340" level="1" /> <!-- Hero's Attribute Crystal Pack -->
 		</skills>
@@ -1303,6 +1388,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22591" level="1" /> <!-- Check Item -->
 		</skills>

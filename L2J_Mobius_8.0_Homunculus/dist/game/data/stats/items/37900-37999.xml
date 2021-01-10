@@ -6,6 +6,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37901" name="SP Rune Pack (Low-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Low-grade SP Rune (7-day). -->
@@ -13,6 +14,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37902" name="SP Rune Pack (Mid-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Mid-grade SP Rune (7-day). -->
@@ -20,6 +22,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37903" name="SP Rune Pack (Top-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an High-grade SP Rune (7-day). -->
@@ -31,6 +34,7 @@
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="37897" min="1" max="1" chance="100" /> <!-- High-grade SP Rune - 7-day -->
 		</capsuled_items>
@@ -60,6 +64,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37906" name="Kat the Cat's Box of Roses" type="EtcItem">
 		<!-- Double-click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. -->
@@ -67,6 +72,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37907" name="Pig Lollipop Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Pig Lollipop. -->
@@ -76,6 +82,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37908" name="Chrono Cithara Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -85,6 +92,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37909" name="Chrono Unitus Appearance Stone: Fist Weapon" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -94,6 +102,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37910" name="Chrono Campana Appearance Stone: Spear" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -103,6 +112,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37911" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -112,6 +122,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37912" name="Chrono Maracas Appearance Stone: Dual Sword" type="EtcItem">
 		<!-- Changes the appearance of a dual sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -121,6 +132,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37913" name="Pumpkin Dagger Appearance Stone: Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dagger into that of a Pumpkin Dagger. -->
@@ -130,6 +142,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37914" name="Pumpkin Dual Dagger Appearance Stone: Dual Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Pumpkin Dual Dagger. -->
@@ -139,6 +152,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37915" name="Scarecrow Magic Sword Appearance Stone: Magic Sword" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of a Scarecrow Magic Sword. -->
@@ -148,6 +162,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37916" name="Pumpkin Dagger" type="Weapon">
 		<!-- Cute, pumpkin-shaped dagger. -->
@@ -155,6 +170,7 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -174,6 +190,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="price" val="121780000" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -189,6 +206,7 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -207,6 +225,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37920" name="Chrono Cithara Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -217,6 +236,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37921" name="Chrono Unitus Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -227,6 +247,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37922" name="Chrono Campana Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -237,6 +258,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37923" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -247,6 +269,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37924" name="Chrono Maracas Appearance Stone: Dual Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of dual swords into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -257,6 +280,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37925" name="Pumpkin Dagger Appearance Stone: Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger into that of a Pumpkin Dagger. 15-day. -->
@@ -267,6 +291,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37926" name="Pumpkin Dual Dagger Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Pumpkin Dual Dagger. 15-day. -->
@@ -277,6 +302,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37927" name="Scarecrow Sword Appearance Stone: Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of a Scarecrow Magic Sword. 15-day. -->
@@ -287,6 +313,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37928" name="PA - Art of Seduction" type="EtcItem">
 		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P./ M. Def. 30% for 30 min. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
@@ -302,6 +329,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="26918" level="1" /> <!-- Art of Seduction -->
 		</skills>
@@ -318,6 +346,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">435</stat>
 			<stat type="mAtk">189</stat>
@@ -339,6 +368,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">529</stat>
 			<stat type="mAtk">189</stat>
@@ -360,6 +390,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">435</stat>
 			<stat type="mAtk">189</stat>
@@ -382,6 +413,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">348</stat>
 			<stat type="mAtk">252</stat>
@@ -404,6 +436,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">643</stat>
 			<stat type="mAtk">230</stat>
@@ -426,6 +459,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">423</stat>
 			<stat type="mAtk">278</stat>
@@ -448,6 +482,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">380</stat>
 			<stat type="mAtk">189</stat>
@@ -470,6 +505,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">529</stat>
 			<stat type="mAtk">189</stat>
@@ -492,6 +528,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">856</stat>
 			<stat type="mAtk">189</stat>
@@ -514,6 +551,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">529</stat>
 			<stat type="mAtk">189</stat>
@@ -536,6 +574,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -561,6 +600,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">479</stat>
 			<stat type="mAtk">230</stat>
@@ -583,6 +623,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">572</stat>
 			<stat type="mAtk">230</stat>
@@ -606,6 +647,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
+		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">771</stat>
 			<stat type="mAtk">189</stat>
@@ -624,6 +666,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37944" name="Emperor's Cookie" type="EtcItem">
 		<!-- For 1 h., Prevailing/ Combat/ Refreshing Sonata buffs are applied. Cooldown is 60min. Double-click to use. Buff remains even after death. -->
@@ -637,6 +680,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17297" level="1" /> <!-- Emperor's Cookie: Prevailing Sonata -->
 			<skill id="17298" level="1" /> <!-- Emperor's Cookie: Daring Sonata -->
@@ -650,6 +694,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -666,6 +711,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -683,6 +729,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -700,6 +747,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -717,6 +765,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -734,6 +783,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -752,6 +802,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -770,6 +821,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -789,6 +841,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -807,6 +860,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -826,6 +880,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -844,6 +899,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -862,6 +918,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -880,6 +937,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -898,6 +956,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -917,6 +976,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="28" max="28" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="13" max="13" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -935,6 +995,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="4" max="4" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="2" max="2" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -954,6 +1015,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="9" max="9" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="5" max="5" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -972,6 +1034,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="6" max="6" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -990,6 +1053,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="2" max="2" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1008,6 +1072,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="2" max="2" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1027,6 +1092,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="2" max="2" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1045,6 +1111,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="23" max="23" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36811" min="10" max="10" chance="100" /> <!-- Corroded Immortal Leather Helmet Ingredient -->
@@ -1064,6 +1131,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="59" max="59" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36812" min="10" max="10" chance="100" /> <!-- Corroded Immortal Leather Armor Ingredient -->
@@ -1082,6 +1150,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="37" max="37" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36813" min="10" max="10" chance="100" /> <!-- Corroded Immortal Leather Legging Ingredient -->
@@ -1100,6 +1169,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="15" max="15" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36814" min="10" max="10" chance="100" /> <!-- Corroded Immortal Leather Glove Ingredient -->
@@ -1119,6 +1189,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="15" max="15" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36815" min="10" max="10" chance="100" /> <!-- Corroded Immortal Leather Boot Ingredient -->
@@ -1137,6 +1208,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="23" max="23" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36816" min="10" max="10" chance="100" /> <!-- Corroded Immortal Circlet Ingredient -->
@@ -1155,6 +1227,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="59" max="59" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36817" min="10" max="10" chance="100" /> <!-- Corroded Immortal Tunic Ingredient -->
@@ -1173,6 +1246,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="37" max="37" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36818" min="10" max="10" chance="100" /> <!-- Corroded Immortal Stocking Ingredient -->
@@ -1192,6 +1266,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="15" max="15" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36819" min="10" max="10" chance="100" /> <!-- Corroded Immortal Glove Ingredient -->
@@ -1211,6 +1286,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="15" max="15" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36820" min="10" max="10" chance="100" /> <!-- Corroded Immortal Shoe Ingredient -->
@@ -1230,6 +1306,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="15" max="15" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36821" min="10" max="10" chance="100" /> <!-- Corroded Immortal Sigil Ingredient -->
@@ -1248,6 +1325,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="6" max="6" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36822" min="10" max="10" chance="100" /> <!-- Corroded Corroded Immortal Necklace Gem -->
@@ -1265,6 +1343,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="5" max="5" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36823" min="10" max="10" chance="100" /> <!-- Corroded Corroded Immortal Earring Gem -->
@@ -1282,6 +1361,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36824" min="10" max="10" chance="100" /> <!-- Corroded Corroded Immortal Ring Gem -->
@@ -1300,6 +1380,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1319,6 +1400,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1338,6 +1420,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1357,6 +1440,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1376,6 +1460,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1395,6 +1480,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1414,6 +1500,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1432,6 +1519,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1451,6 +1539,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1470,6 +1559,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1488,6 +1578,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="75" max="75" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="35" max="35" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1507,6 +1598,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="10" max="10" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="5" max="5" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1526,6 +1618,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="25" max="25" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="12" max="12" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1544,6 +1637,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="16" max="16" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="8" max="8" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1562,6 +1656,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="7" max="7" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1581,6 +1676,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="7" max="7" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1600,6 +1696,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="36523" min="7" max="7" chance="100" /> <!-- Corroded Adamantite Nugget -->
 			<item id="36543" min="3" max="3" chance="100" /> <!-- Corroded Adamantite Wire -->
@@ -1619,6 +1716,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="60" max="60" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36842" min="10" max="10" chance="100" /> <!-- Corroded Twilight Leather Helmet Ingredient -->
@@ -1638,6 +1736,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17371" min="160" max="160" chance="100" /> <!-- R-grade Crystal -->
 			<item id="36843" min="10" max="10" chance="100" /> <!-- Corroded Twilight Leather Armor Ingredient -->

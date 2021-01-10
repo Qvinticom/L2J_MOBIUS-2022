@@ -18,6 +18,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -49,6 +50,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -80,6 +82,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="2" /> <!-- Special Ability: Empower -->
 		</skills>
@@ -112,6 +115,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="3" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -143,6 +147,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="3" /> <!-- Special Ability: Focus -->
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
@@ -176,6 +181,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="3" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -207,6 +213,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="3" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -232,6 +239,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">107</stat>
 		</stats>
@@ -248,6 +256,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">107</stat>
 		</stats>
@@ -264,6 +273,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">107</stat>
 		</stats>
@@ -281,6 +291,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">263</stat>
 		</stats>
@@ -298,6 +309,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">197</stat>
 		</stats>
@@ -315,6 +327,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">132</stat>
 		</stats>
@@ -332,6 +345,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">164</stat>
 		</stats>
@@ -349,6 +363,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">123</stat>
 		</stats>
@@ -366,6 +381,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">82</stat>
 		</stats>
@@ -382,6 +398,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -398,6 +415,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -414,6 +432,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -430,6 +449,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -446,6 +466,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -462,6 +483,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -478,6 +500,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="sDef">399</stat>
 			<stat type="rShld">20</stat>
@@ -497,6 +520,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">19</stat>
 			<stat type="rEvas">-8</stat>
@@ -512,6 +536,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="23107" min="1" max="1" chance="100" /> <!-- Vorpal Helmet of Fortune - 90-day -->
 			<item id="23110" min="1" max="1" chance="100" /> <!-- Vorpal Breastplate of Fortune - 90-day -->
@@ -531,6 +556,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="23108" min="1" max="1" chance="100" /> <!-- Vorpal Leather Helmet of Fortune - 90-day -->
 			<item id="23111" min="1" max="1" chance="100" /> <!-- Vorpal Leather Breastplate of Fortune - 90-day -->
@@ -549,6 +575,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="time" val="129600" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="23109" min="1" max="1" chance="100" /> <!-- Vorpal Circlet of Fortune - 90-day -->
 			<item id="23112" min="1" max="1" chance="100" /> <!-- Vorpal Tunic of Fortune - 90-day -->
@@ -569,6 +596,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="23124" min="1" max="1" chance="100" /> <!-- Vorpal Heavy Armor of Fortune Set Pack (S80-grade) - 90-day -->
 			<item id="23125" min="1" max="1" chance="100" /> <!-- Vorpal Light Armor of Fortune Set Pack (S80-grade) - 90-day -->
@@ -586,6 +614,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="23093" min="1" max="1" chance="100" /> <!-- Vesper Cutter of Fortune - 90-day -->
 			<item id="23094" min="1" max="1" chance="100" /> <!-- Vesper Slasher of Fortune - 90-day -->
@@ -616,6 +645,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="23130" min="2" max="2" chance="100" /> <!-- Vorpal Ring of Fortune - 90-day -->
 			<item id="23131" min="2" max="2" chance="100" /> <!-- Vorpal Earring of Fortune - 90-day -->
@@ -634,6 +664,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">65</stat>
 		</stats>
@@ -650,6 +681,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">98</stat>
 		</stats>
@@ -666,6 +698,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">131</stat>
 		</stats>
@@ -680,6 +713,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23134" name="Name Change Ticket" type="EtcItem">
 		<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com. -->
@@ -691,6 +725,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23135" name="Awakening Class Change Ticket" type="EtcItem">
 		<!-- Put this item on the character that will receive the service, and send a support ticket on support.lineage2.com -->
@@ -702,6 +737,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23136" name="Uthanka's Ring" type="Armor">
 		<!-- Ring acquired when you mourn for Pirate Captain Uthanka's spirit. Use it to turn into Pirate Captain Uthanka. -->
@@ -716,6 +752,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="21294" level="1" type="ON_EQUIP" /> <!-- Transformed: Uthanka -->
 			<skill id="21295" level="1" type="ON_UNEQUIP" /> <!-- Un-equip Uthanka's Ring -->
@@ -731,6 +768,7 @@
 		<set name="time" val="1440" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22626" level="1" /> <!-- Extra Pass -->
 		</skills>
@@ -754,6 +792,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3411" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
@@ -786,6 +825,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="8298" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
@@ -811,6 +851,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">42</stat>
 		</stats>
@@ -826,6 +867,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">42</stat>
 		</stats>
@@ -841,6 +883,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">42</stat>
 		</stats>
@@ -856,6 +899,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">42</stat>
 		</stats>
@@ -871,6 +915,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">42</stat>
 		</stats>
@@ -887,6 +932,7 @@
 		<set name="time" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21324" level="1" /> <!-- Einhasad's Authority -->
 			<skill id="21320" level="1" /> <!-- Desperate Exorcism -->
@@ -906,6 +952,7 @@
 		<set name="time" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21323" level="1" /> <!-- Restore the Crystal of Protection -->
 			<skill id="21297" level="1" /> <!-- Nevit's Touch -->
@@ -921,6 +968,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22630" level="1" /> <!-- Ghost Potion -->
 		</skills>
@@ -933,6 +981,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="23149" name="Exorcist's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use this to receive a useful item out of many. -->
@@ -942,6 +991,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22627" level="1" /> <!-- Exorcist's Gift -->
 		</skills>
@@ -954,6 +1004,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22628" level="1" /> <!-- Einhasad's Gift -->
 		</skills>
@@ -966,6 +1017,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22629" level="1" /> <!-- Shilen's Gift -->
 		</skills>
@@ -981,6 +1033,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21298" level="1" /> <!-- Release Agathion's Seal - Lancet -->
 			<skill id="23141" level="1" /> <!-- Lancet Agathion Cute Trick -->
@@ -1001,6 +1054,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21299" level="1" /> <!-- Release Agathion's Seal - Liposa -->
 			<skill id="23142" level="1" /> <!-- Liposa Agathion Cute Trick -->
@@ -1021,6 +1075,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21300" level="1" /> <!-- Release Agathion's Seal - Velarin -->
 			<skill id="23143" level="1" /> <!-- Velarin Agathion Cute Trick -->
@@ -1041,6 +1096,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21301" level="1" /> <!-- Release Agathion's Seal - Dulcinel -->
 			<skill id="23144" level="1" /> <!-- Dulcinel Agathion Cute Trick -->
@@ -1061,6 +1117,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21302" level="1" /> <!-- Release Agathion's Seal - Chimeros -->
 			<skill id="23145" level="1" /> <!-- Chimeros Agathion Cute Trick -->
@@ -1081,6 +1138,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21303" level="1" /> <!-- Release Agathion's Seal - Niveri -->
 			<skill id="23146" level="1" /> <!-- Niveri Agathion Cute Trick -->
@@ -1101,6 +1159,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21304" level="1" /> <!-- Release Agathion's Seal - Hamell -->
 			<skill id="23147" level="1" /> <!-- Hamell Agathion Cute Trick -->
@@ -1121,6 +1180,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21305" level="1" /> <!-- Release Agathion's Seal - Joriya -->
 			<skill id="23148" level="1" /> <!-- Joriya Agathion Cute Trick -->
@@ -1141,6 +1201,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21306" level="1" /> <!-- Release Agathion's Seal - Ralmak -->
 			<skill id="23149" level="1" /> <!-- Ralmak Agathion Cute Trick -->
@@ -1161,6 +1222,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21307" level="1" /> <!-- Release Agathion's Seal - Goras -->
 			<skill id="23150" level="1" /> <!-- Goras Agathion Cute Trick -->
@@ -1181,6 +1243,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21308" level="1" /> <!-- Release Agathion's Seal - Vensar -->
 			<skill id="23151" level="1" /> <!-- Vensar Agathion Cute Trick -->
@@ -1201,6 +1264,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21309" level="1" /> <!-- Release Agathion's Seal - Kiela -->
 			<skill id="23152" level="1" /> <!-- Kiela Agathion Cute Trick -->
@@ -1221,6 +1285,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="22634" level="1" /> <!-- Soul Avatar's Large Placid -->
 		</skills>
@@ -1232,6 +1297,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="23166" name="Cream for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Cream for Summer Slushie sought by Herina. Tastes smooth. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
@@ -1240,6 +1306,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="23167" name="Ice for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Ice for Summer Slushie sought by Herina. Seems finely shaven. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
@@ -1248,6 +1315,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="23168" name="Biscuits for Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Basket containing biscuits for Summer Slushie sought by Herina. Includes assorted biscuits, fruits, candy, and the like. You need 10 each of chocolate/cream/ice/biscuits to make 1 Sweet Summer Slushie. -->
@@ -1256,6 +1324,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="23169" name="Sweet Summer Slushie" additionalName="Event" type="EtcItem">
 		<!-- Summer Slushie made by Herina. Use it to change into a Beach Swimsuit. For 1 hr., Atk. Spd. + 5%, Casting Spd. + 5%, Speed + 5, and Max HP/MP + 5%. Cooldown is 1 hr. -->
@@ -1268,6 +1337,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22631" level="1" /> <!-- Sweet Summer Slushie -->
 		</skills>
@@ -1285,6 +1355,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22631" level="2" /> <!-- Fantastic Summer Slushie -->
 		</skills>
@@ -1300,6 +1371,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23172" name="Beach Swimsuit Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of a Beach Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
@@ -1313,6 +1385,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22632" level="1" /> <!-- Beach Swimsuit Appearance Stone -->
 		</skills>
@@ -1328,6 +1401,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23174" name="Herina's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain either a Fantastic Summer Slushie, Beach Swimsuit Appearance Stone, Alluring Swimsuit, Beach Sun Cap Pack (30-day), or Stylish Straw Hat Pack (30-day) at random. -->
@@ -1339,6 +1413,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22633" level="1" /> <!-- Herina's Gift Box -->
 		</skills>
@@ -1355,6 +1430,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23176" name="Stylish Straw Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat made of straw fibers. Uses 2 hair accessory slots. 30-day. -->
@@ -1368,6 +1444,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23177" name="Brilliant Beach Sun Cap Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Brilliant Beach Sun Cap (30-day). -->
@@ -1381,6 +1458,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23175" min="1" max="1" chance="100" /> <!-- Brilliant Beach Sun Cap - 30-day (Event) -->
 		</capsuled_items>
@@ -1397,6 +1475,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23176" min="1" max="1" chance="100" /> <!-- Stylish Straw Hat - 30-day (Event) -->
 		</capsuled_items>
@@ -1412,6 +1491,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23180" name="Ninja Pants" type="Armor">
 		<!-- Ninja Pants. Part of a costume. -->
@@ -1424,6 +1504,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23181" name="Ninja Gloves" type="Armor">
 		<!-- Ninja Gloves. Part of a costume. -->
@@ -1436,6 +1517,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23182" name="Ninja Shoes" type="Armor">
 		<!-- Ninja Shoes. Part of a costume. -->
@@ -1448,6 +1530,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23183" name="Ninja Hair Accessory" type="Armor">
 		<!-- Ninja Hair Accessory. Mask form. Part of a costume. -->
@@ -1460,6 +1543,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23184" name="Traditional Taiwanese Top" type="Armor">
 		<!-- Traditional Taiwanese Top. Part of a costume. -->
@@ -1472,6 +1556,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23185" name="Traditional Taiwanese Pants" type="Armor">
 		<!-- Traditional Taiwanese Pants. Part of a costume. -->
@@ -1484,6 +1569,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23186" name="Traditional Taiwanese Gloves" type="Armor">
 		<!-- Traditional Taiwanese Gloves. Part of a costume. -->
@@ -1496,6 +1582,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23187" name="Traditional Taiwanese Shoes" type="Armor">
 		<!-- Traditional Taiwanese Shoes. Part of a costume. -->
@@ -1508,6 +1595,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23188" name="Traditional Taiwanese Hair Accessory" type="Armor">
 		<!-- Traditional Taiwanese Hair Accessory. Hat form. Part of a costume. -->
@@ -1520,6 +1608,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23189" name="Ninja Top Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Ninja outfit. Abilities do not change after modification. Can be used regardless of material. -->
@@ -1533,6 +1622,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22635" level="1" /> <!-- Ninja Top Appearance Stone -->
 		</skills>
@@ -1549,6 +1639,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22636" level="1" /> <!-- Ninja Pants Appearance Stone -->
 		</skills>
@@ -1565,6 +1656,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22637" level="1" /> <!-- Ninja Gloves Appearance Stone -->
 		</skills>
@@ -1581,6 +1673,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22638" level="1" /> <!-- Ninja Shoes Appearance Stone -->
 		</skills>
@@ -1597,6 +1690,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22643" level="1" /> <!-- Ninja Hair Accessory Appearance Stone -->
 		</skills>
@@ -1613,6 +1707,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22639" level="1" /> <!-- Tribal Warrior Top Appearance Stone -->
 		</skills>
@@ -1629,6 +1724,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22640" level="1" /> <!-- Tribal Warrior Pants Appearance Stone -->
 		</skills>
@@ -1645,6 +1741,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22641" level="1" /> <!-- Tribal Warrior Gloves Appearance Stone -->
 		</skills>
@@ -1661,6 +1758,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22642" level="1" /> <!-- Tribal Warrior Shoes Appearance Stone -->
 		</skills>
@@ -1677,6 +1775,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22644" level="1" /> <!-- Tribal Warrior Hair Accessory Appearance Stone -->
 		</skills>
@@ -1692,6 +1791,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23189" min="1" max="1" chance="100" /> <!-- Ninja Top Appearance Stone -->
 			<item id="23190" min="1" max="1" chance="100" /> <!-- Ninja Pants Appearance Stone -->

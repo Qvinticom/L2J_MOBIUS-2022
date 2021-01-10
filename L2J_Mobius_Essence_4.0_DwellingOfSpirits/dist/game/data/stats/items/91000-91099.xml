@@ -7,6 +7,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91001" name="Box with 3 Jewels Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain Pearl - Lv. 3 (30-day), Diamond - Lv. 3 (30-day), Jade - Lv. 3 (30-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -17,6 +18,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91002" name="Box with 5 Jewels Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Pearl - Lv. 4 (30-day), Diamond - Lv. 4 (30-day), Jade - Lv. 4 (30-day), Garnet - Lv. 4 (30-day), Vital Stone - Lv. 4 (30-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -26,6 +28,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91003" name="Agathion Bracelet - Lv. 1" additionalName="1-day" type="Armor">
 		<!-- 1-day item. When worn, 2 Agathion slots are activated. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -65,6 +68,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="91006" name="Damaged Zaken's Earring" type="Armor">
 		<!-- Severly Damaged Zaken's Earring. With the help of Balthus Knights' Varnish, Balthus Knights' Matte Varnish, Balthus Knights' Shining Varnish it can be enchanted up to +10. Starting from +4 adds passive skills. Damaged Zaken's Earring +10 can be exchanged for Zaken's Earring. -->
@@ -72,7 +76,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<stats>
@@ -87,6 +91,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91008" name="Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain Special Dragon Fruit. Additionally can be obtained 1 random item: Fire Dragon Relic Chest/ Land Dragon Relic Chest/ Dragon Heart and other items. Cannot be dropped or sold. The item will be removed after the event is over. -->
@@ -95,6 +100,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91009" name="Fire Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain 1 random item: the best item and ingredient A-grade, Sealed Rune, any type of Scroll: Enchant and other rare items. Cannot be dropped or sold. The item will be removed after the event is over. -->
@@ -103,6 +109,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91010" name="Land Dragon's Relic Chest" type="EtcItem">
 		<!-- Double-click to obtain 1 random item: rare accessory, Dragon Dye Box and other rare items. Cannot be dropped or sold. The item will be removed after the event is over. -->
@@ -111,6 +118,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91011" name="Dragon's Dye Box" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Double-click to obtain 1 item for character after 3rd Class Transfer: Best Dye of STR, Best Dye of CON, Best Dye of DEX, Best Dye of INT, Best Dye of MEN, Best Dye of WIT. Cannot be dropped. -->
@@ -119,6 +127,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91012" name="Weapon Supply Box (Best A-grade)" type="EtcItem">
 		<!-- Double-click to obtain 1 A-Grade Weapon best quality. Cannot be dropped. -->
@@ -127,6 +136,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91013" name="Weapon Ingredient/Recipe Box (Top A-grade)" type="EtcItem">
 		<!-- Double-click to obtain a top A-grade weapon ingredient or recipe. Cannot be dropped. -->
@@ -135,6 +145,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91014" name="Weapon Recipe Box (Best A-grade)" type="EtcItem">
 		<!-- Double-click to obtain Weapon Recipe A-Grade best quality. Cannot be dropped. -->
@@ -143,6 +154,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91015" name="Sirra's Blade Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Sirra's Blade Edges and Recipe: Sirra's Blade (60%). Cannot be dropped. -->
@@ -152,6 +164,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91016" name="Sword of Ipos Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Sword of Ipos Blades and Recipe: Sword of Ipos (60%). Cannot be dropped. -->
@@ -161,6 +174,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91017" name="Barakiel's Axe Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Barakiel's Axe Pieces and Recipe: Barakiel's Axe (60%). Cannot be dropped. -->
@@ -170,6 +184,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91018" name="Behemoth' Tuning Fork Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Behemoth' Tuning Fork Pieces and Recipe: Behemoth' Tuning Fork (60%). Cannot be dropped. -->
@@ -179,6 +194,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91019" name="Naga Storm Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Naga Storm Pieces and Recipe: Naga Storm (60%). Cannot be dropped. -->
@@ -188,6 +204,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91020" name="Tiphon's Spear Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Tiphon's Spear Edges and Recipe: Tiphon's Spear (60%). Cannot be dropped. -->
@@ -197,6 +214,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91021" name="Shyeed's Bow Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Shyeed's Bow Shafts and Recipe: Shyeed's Bow (60%). Cannot be dropped. -->
@@ -206,6 +224,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91022" name="Sobekk's Hurricane Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Sobekk's Hurricane Edges and Recipe: Sobekk's Hurricane (60%). Cannot be dropped. -->
@@ -215,6 +234,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91023" name="Themis' Tongue Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Themis' Tongue Pieces and Recipe: Themis' Tongue (60%). Cannot be dropped. -->
@@ -224,6 +244,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91024" name="Cabrio's Hand Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Cabrio's Hand Heads and Recipe: Cabrio's Hand (60%). Cannot be dropped. -->
@@ -233,6 +254,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91025" name="Daimon Crystal Ingredient/Recipe Box" type="EtcItem">
 		<!-- Double-click to obtain 20 Daimon Crystal Fragments and Recipe: Daimon Crystal (60%). Cannot be dropped. -->
@@ -242,6 +264,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91026" name="Dragon's Heart" type="EtcItem">
 		<!-- Ingredient for Dragon Miracle Potion. May be exchanged for various items during certaing time periods. Cannot be dropped. -->
@@ -249,6 +272,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91027" name="Dragon's Miracle Potion" type="EtcItem">
 		<!-- For 20 min. Sayha Grace points +5000, Acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P./ M. Crirical Rate +20, P./ M. Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery +30%, Sayha Grace Consumption -10%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Can be cumulate up to 3 times. Cannot be dropped. -->
@@ -257,6 +281,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91028" name="Dragon's Recovery Potion" additionalName="Not Available" type="EtcItem">
 		<!-- Instant HP recovery. Provides HP +1000 and uses the remaining points to recover CP. -->
@@ -265,6 +290,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91029" name="Hidden Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Silver Bait, Dandy's Home Run Ball, Savior Scroll: Enchant Weapon/ Earring, Shining Savior's Earring, Zaken's Earring. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Will be deleted after event. -->
@@ -275,6 +301,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="91030" name="Spirit's Blessing" type="EtcItem">
 		<!-- Use to get Attribute XP Bonus +20% for 20 min. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -283,7 +310,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -297,24 +324,28 @@
 		<set name="icon" val="icon.elemental_evol_stone_water_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91032" name="Fire Spirit Evolution Stone" type="EtcItem">
 		<!-- Filled with the power of Fire Attribute. Use it to evolve Fire Spirit. -->
 		<set name="icon" val="icon.elemental_evol_stone_fire_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91033" name="Wind Spirit Evolution Stone" type="EtcItem">
 		<!-- Filled with the power of Wind Attribute. Use it to evolve Wind Spirit. -->
 		<set name="icon" val="icon.elemental_evol_stone_wind_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91034" name="Earth Spirit Evolution Stone" type="EtcItem">
 		<!-- Filled with the power of Earth Attribute. Use it to evolve Earth Spirit. -->
 		<set name="icon" val="icon.elemental_evol_stone_earth_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91035" name="Water Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Water Attribute XP points. -->
@@ -324,6 +355,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="AddSpiritExp" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91036" name="Fire Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Fire Attribute. Use it to acquire 9300 Fire Attribute XP points. -->
@@ -333,6 +365,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="AddSpiritExp" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91037" name="Wind Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Wind Attribute XP points. -->
@@ -342,6 +375,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="AddSpiritExp" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91038" name="Earth Spirit Rough Jewel" type="EtcItem">
 		<!-- Rough Jewel with the power of Earth Attribute. Use it to acquire 9300 Earth Attribute XP points. -->
@@ -351,6 +385,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="AddSpiritExp" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91039" name="Water Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Water Attribute. Can be used to create equipment with the power of Water Attribute. -->
@@ -359,6 +394,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91040" name="Fire Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Fire Attribute. Can be used to create equipment with the power of Fire Attribute. -->
@@ -367,6 +403,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91041" name="Wind Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Wind Attribute. Can be used to create equipment with the power of Wind Attribute. -->
@@ -375,6 +412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91042" name="Earth Attribute Fragment" type="EtcItem">
 		<!-- A material filled with the power of Earth Attribute. Can be used to create equipment with the power of Earth Attribute. -->
@@ -383,6 +421,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="91043" name="Nebula’s Old Necklace" additionalName="Lv1" type="Armor">
 		<!-- MP +35, Water Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->
@@ -392,7 +431,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -412,7 +451,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -432,7 +471,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -452,7 +491,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -472,7 +511,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -492,7 +531,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -512,7 +551,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -533,7 +572,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -553,7 +592,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -573,7 +612,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -593,7 +632,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -613,7 +652,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
@@ -724,6 +763,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91060" name="Bracelet of Authority" type="Armor">
 		<!-- Activates 5 Talisman slots when equipped. HP/ MP Recovery Bonus +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10000. Cannot be dropped. -->
@@ -884,6 +924,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="91077" name="Venir's Talisman Lv. 1" type="Armor">
 		<!-- When equipped, CON +1. Can be upgraded to higher level using Venir's Talisman Fragment. Does not disappear if upgrade fails. Effects from two such talismans do not stack. Cannot be dropped. -->

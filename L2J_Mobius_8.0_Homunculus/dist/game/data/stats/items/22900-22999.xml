@@ -11,6 +11,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22603" level="1" /> <!-- Expand Inventory Lv. 1 -->
 		</skills>
@@ -26,6 +27,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22603" level="2" /> <!-- Expand Inventory Lv. 2 -->
 		</skills>
@@ -41,6 +43,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22604" level="1" /> <!-- Expand Warehouse Lv. 1 -->
 		</skills>
@@ -56,6 +59,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22604" level="2" /> <!-- Expand Warehouse Lv. 2 -->
 		</skills>
@@ -72,6 +76,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22605" level="1" /> <!-- Scroll: Enchant Power Shirt -->
 		</skills>
@@ -88,6 +93,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22606" level="1" /> <!-- Blessed Scroll: Enchant Power Shirt -->
 		</skills>
@@ -103,6 +109,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22944" min="1" max="1" chance="100" /> <!-- XP Rune 50% - 1-hour -->
 		</capsuled_items>
@@ -120,6 +127,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22908" name="Scar" type="Armor">
 		<!-- Scar. This is a male-only accessory. -->
@@ -134,6 +142,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="22909" name="Ruthless Tribe Mask" type="Armor">
 		<!-- A mask which formerly belonged to Looters. -->
@@ -149,6 +158,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22910" name="Wedding Cake Pack" type="EtcItem">
 		<!-- Wrapped wedding pack containing honeymoon ticket and a big wedding cake. -->
@@ -162,6 +172,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="22945" min="1" max="1" chance="100" /> <!-- Honeymoon Ticket (7-day) - 7-day -->
 			<item id="22946" min="1" max="1" chance="100" /> <!-- Big Wedding Cake -->
@@ -177,6 +188,7 @@
 		<set name="bodypart" val="alldress" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="22912" name="Formal Wear Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Formal Wear (30-day). -->
@@ -189,6 +201,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="22911" min="1" max="1" chance="100" /> <!-- Formal Wear - 30-day -->
 		</capsuled_items>
@@ -204,6 +217,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">1</stat>
 		</stats>
@@ -219,6 +233,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">1</stat>
 		</stats>
@@ -235,6 +250,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="22613" level="1" /> <!-- Flower Shower -->
 		</skills>
@@ -256,6 +272,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3261" level="1" /> <!-- Forgiveness -->
 		</skills>
@@ -282,6 +299,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22918" name="Assassin's Bamboo Hat" type="Armor">
 		<!-- A hat made from bulrush. Occupies 2 Hair Accessory slots. -->
@@ -297,6 +315,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22919" name="Fire Stone" type="EtcItem">
 		<!-- Fire Attribute Attack +5, when the stone is bestowed on a weapon. Water Resistance +6, when the stone is bestowed on armor. Can be bestowed up to Lv. 3. Armor can be bestowed by up to 3 attributes. Opposite attributes cannot be bestowed together. -->
@@ -419,6 +438,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="2329" level="2" /> <!-- Fire Crystal -->
 		</skills>
@@ -436,6 +456,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="2330" level="2" /> <!-- Water Crystal -->
 		</skills>
@@ -453,6 +474,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="2332" level="2" /> <!-- Earth Crystal -->
 		</skills>
@@ -470,6 +492,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="2331" level="2" /> <!-- Wind Crystal -->
 		</skills>
@@ -487,6 +510,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="2334" level="2" /> <!-- Dark Crystal -->
 		</skills>
@@ -504,6 +528,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="2333" level="2" /> <!-- Holy Crystal -->
 		</skills>
@@ -522,6 +547,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22932" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" type="EtcItem">
 		<!-- A pass for adventurers from the Kartia Research Center. Double-click to reset the instance zone timer for the Lv. 85 solo dungeon. -->
@@ -531,6 +557,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22607" level="1" /> <!-- Extra Pass -->
 		</skills>
@@ -543,6 +570,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22608" level="1" /> <!-- Extra Pass -->
 		</skills>
@@ -555,6 +583,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22609" level="1" /> <!-- Extra Pass -->
 		</skills>
@@ -567,6 +596,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22610" level="1" /> <!-- Extra Pass -->
 		</skills>
@@ -579,6 +609,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22611" level="1" /> <!-- Extra Pass -->
 		</skills>
@@ -591,6 +622,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22612" level="1" /> <!-- Extra Pass -->
 		</skills>
@@ -606,6 +638,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21287" level="1" /> <!-- Emergency Ballista Repair -->
 		</skills>
@@ -621,6 +654,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21288" level="1" /> <!-- Emergency Ballista Repair -->
 		</skills>
@@ -636,6 +670,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21289" level="1" /> <!-- Throw Corrosive Acid -->
 		</skills>
@@ -651,6 +686,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21290" level="1" /> <!-- Throw Corrosive Acid -->
 		</skills>
@@ -666,6 +702,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21291" level="1" /> <!-- Relic Engraving Activation -->
 		</skills>
@@ -681,6 +718,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21292" level="1" /> <!-- Relic Engraving Activation -->
 		</skills>
@@ -695,6 +733,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
@@ -709,6 +748,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22615" level="1" /> <!-- Honeymoon Ticket - Joy of Vitality -->
 		</skills>
@@ -724,6 +764,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22616" level="1" /> <!-- Summon Big Wedding Cake -->
 		</skills>
@@ -739,6 +780,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
 			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
@@ -756,6 +798,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21271" level="1" /> <!-- Ride Black Bear -->
@@ -772,6 +815,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22950" name="Refined Angel Ring" additionalName="30-day" type="Armor">
 		<!-- Refined angel's ring. Uses 2 hair accessory slots. -->
@@ -784,6 +828,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22951" name="Refined Devil Horn" additionalName="30-day" type="Armor">
 		<!-- Refined Devil Horn. Uses 2 hair accessory slots. -->
@@ -796,6 +841,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22952" name="Ruthless Tribe Mask" additionalName="30-day" type="Armor">
 		<!-- A mask which formerly belonged to Looters. -->
@@ -808,6 +854,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22953" name="Agathion - Uthanka" additionalName="30-day" type="Armor">
 		<!-- Summons Uthanka. -->
@@ -820,6 +867,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21109" level="1" /> <!-- Release Agathion's Seal - Uthanka -->
 			<skill id="23087" level="1" /> <!-- Uthanka Agathion Cute Trick -->
@@ -837,6 +885,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21214" level="1" /> <!-- Release Agathion's Seal - Cheerleader Orodriel -->
 			<skill id="23220" level="1" /> <!-- Cheerleader Orodriel Agathion Cute Trick -->
@@ -854,6 +903,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="619" level="1" type="ON_UNEQUIP" /> <!-- Dispel Transform -->
 			<skill id="21270" level="1" /> <!-- Ride Tame Princess Ant -->
@@ -870,6 +920,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21048" level="1" /> <!-- Release Agathion's Seal - Dryad -->
 			<skill id="23054" level="1" /> <!-- Agathion Cute Trick - Dryad -->
@@ -887,6 +938,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="21154" level="1" /> <!-- Blessed Soul -->
 		</skills>
@@ -902,6 +954,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22959" name="SP Rune 50%" additionalName="1-hour" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Acquired SP +50%. The remaining time decreases even when not playing. -->
@@ -914,6 +967,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
@@ -928,6 +982,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
@@ -942,6 +997,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
@@ -957,6 +1013,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22963" name="Shiny Platform Summon Bracelet" type="Armor">
 		<!-- Can stand upon the Shiny Platform with brilliant lighting when equipped. -->
@@ -968,6 +1025,7 @@
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21232" level="1" /> <!-- Shiny Platform -->
@@ -985,6 +1043,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22965" name="Arrow-pierced Apple" type="Armor">
 		<!-- Arrow-pierced Apple. It can be worn on the head. Uses 2 hair accessory slots. Used as ingredient for quest: One Who Faces the Limit. -->
@@ -998,6 +1057,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="22966" name="Vitality Maintaining Potion (1-hour)" type="EtcItem">
 		<!-- Maintains Vitality for 1 h. Vitality item with limited usage. -->
@@ -1011,6 +1071,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22617" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -1026,6 +1087,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22947" min="1" max="1" chance="100" /> <!-- Agathion Singer & Dancer - 30-day -->
 		</capsuled_items>
@@ -1041,6 +1103,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22948" min="1" max="1" chance="100" /> <!-- Black Bear Bracelet - 30-day -->
 		</capsuled_items>
@@ -1056,6 +1119,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22949" min="1" max="1" chance="100" /> <!-- Black Gem Mask - 30-day -->
 		</capsuled_items>
@@ -1071,6 +1135,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22950" min="1" max="1" chance="100" /> <!-- Refined Angel Ring - 30-day -->
 		</capsuled_items>
@@ -1086,6 +1151,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22951" min="1" max="1" chance="100" /> <!-- Refined Devil Horn - 30-day -->
 		</capsuled_items>
@@ -1101,6 +1167,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22952" min="1" max="1" chance="100" /> <!-- Ruthless Tribe Mask - 30-day -->
 		</capsuled_items>
@@ -1116,6 +1183,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22953" min="1" max="1" chance="100" /> <!-- Agathion Uthanka - 30-day -->
 		</capsuled_items>
@@ -1131,6 +1199,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22954" min="1" max="1" chance="100" /> <!-- Agathion Cheerleader Orodriel - 30-day -->
 		</capsuled_items>
@@ -1146,6 +1215,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22955" min="1" max="1" chance="100" /> <!-- Tame Queen Ant Bracelet - 30-day -->
 		</capsuled_items>
@@ -1161,6 +1231,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22956" min="1" max="1" chance="100" /> <!-- Agathion Dryad - 30-day -->
 		</capsuled_items>
@@ -1176,6 +1247,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22957" min="1" max="1" chance="100" /> <!-- Pink Paper Mask Set - Blessed Soul / 30-day -->
 		</capsuled_items>
@@ -1191,6 +1263,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22958" min="1" max="1" chance="100" /> <!-- Arrow-pierced Apple - 30-day -->
 		</capsuled_items>
@@ -1206,6 +1279,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hour -->
 		</capsuled_items>
@@ -1221,6 +1295,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22960" min="1" max="1" chance="100" /> <!-- Nevit's Rune 100% - 1-hour -->
 		</capsuled_items>
@@ -1236,6 +1311,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22961" min="1" max="1" chance="100" /> <!-- Nevit's Rune 200% - 1-hour -->
 		</capsuled_items>
@@ -1250,6 +1326,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22983" name="Lv. 1 Giant DEX Dye" additionalName="DEX +3/ CON -2" type="EtcItem">
 		<!-- DEX +3, CON -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1261,6 +1338,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22984" name="Lv. 1 Giant CON Dye" additionalName="CON +3/ STR -2" type="EtcItem">
 		<!-- CON +3, STR -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1272,6 +1350,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22985" name="Lv. 1 Giant INT Dye" additionalName="INT +3/ WIT -2" type="EtcItem">
 		<!-- INT +3, WIT -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1283,6 +1362,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22986" name="Lv. 1 Giant WIT Dye" additionalName="WIT +3/ MEN -2" type="EtcItem">
 		<!-- WIT +3, MEN -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1294,6 +1374,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22987" name="Lv. 1 Giant MEN Dye" additionalName="MEN +3/ INT -2" type="EtcItem">
 		<!-- MEN +3, INT -2. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1305,6 +1386,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22988" name="Lv. 1 Ancient STR Dye" additionalName="STR +3/ DEX -2/ Fire Resistance +5" type="EtcItem">
 		<!-- STR +3, DEX -2, Fire Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1316,6 +1398,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22989" name="Lv. 1 Ancient DEX Dye" additionalName="DEX +3/ CON -2/ Earth Resistance +5" type="EtcItem">
 		<!-- DEX +3, CON -2, Earth Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1327,6 +1410,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22990" name="Lv. 1 Ancient CON Dye" additionalName="CON +3/ STR -2/ Dark Resistance +5" type="EtcItem">
 		<!-- CON +3, STR -2, Dark Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1338,6 +1422,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22991" name="Lv. 1 Ancient INT Dye" additionalName="INT +3/ WIT -2/ Water Resistance +5" type="EtcItem">
 		<!-- INT +3, WIT -2, Water Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1349,6 +1434,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22992" name="Lv. 1 Ancient WIT Dye" additionalName="WIT +3/ MEN -2/ Wind Resistance +5" type="EtcItem">
 		<!-- WIT +3, MEN -2, Wind Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1360,6 +1446,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22993" name="Lv. 1 Ancient MEN Dye" additionalName="MEN +3/ INT -2/ Holy Resistance +5" type="EtcItem">
 		<!-- MEN +3, INT -2, Holy Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1371,6 +1458,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22994" name="Lv. 1 Legendary STR Dye" additionalName="STR +3/ DEX -1/ Fire Resistance +5" type="EtcItem">
 		<!-- STR +3, DEX -1, Fire Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1382,6 +1470,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22995" name="Lv. 1 Legendary DEX Dye" additionalName="DEX +3/ CON -1/ Earth Resistance +5" type="EtcItem">
 		<!-- DEX +3, CON -1, Earth Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1393,6 +1482,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22996" name="Lv. 1 Legendary CON Dye" additionalName="CON +3/ STR -1/ Dark Resistance +5" type="EtcItem">
 		<!-- CON +3, STR -1, Dark Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1404,6 +1494,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22997" name="Lv. 1 Legendary INT Dye" additionalName="INT +3/ WIT -1/ Water Resistance +5" type="EtcItem">
 		<!-- INT +3, WIT -1, Water Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1415,6 +1506,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22998" name="Lv. 1 Legendary WIT Dye" additionalName="WIT +3/ MEN -1/ Wind Resistance +5" type="EtcItem">
 		<!-- WIT +3, MEN -1, Wind Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1426,6 +1518,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="22999" name="Lv. 1 Legendary MEN Dye" additionalName="MEN +3/ INT -1/ Holy Resistance +5" type="EtcItem">
 		<!-- MEN +3, INT -1, Holy Resistance +5. Collect 10 units and take them to the Dye Merchant in town to get a symbol that boosts your abilities. Attribute Resistance effects of two dyes do not stack. Requirements: all classes after the Awakening and the 3rd Liberation. -->
@@ -1437,5 +1530,6 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 </list>

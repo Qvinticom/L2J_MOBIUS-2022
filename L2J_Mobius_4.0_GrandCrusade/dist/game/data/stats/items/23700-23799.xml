@@ -11,6 +11,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23701" name="Tribal Warrior Pants" additionalName="Modified Set" type="Armor">
 		<!-- Tribal Warrior Pants. Part of a costume. Modifying the full set creates a new skill. -->
@@ -23,6 +24,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23702" name="Tribal Warrior Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Tribal Warrior Gloves. Part of a costume. Modifying the full set creates a new skill. -->
@@ -35,6 +37,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23703" name="Tribal Warrior Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Tribal Warrior Shoes. Part of a costume. Modifying the full set creates a new skill. -->
@@ -47,6 +50,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23704" name="Tribal Warrior Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Tribal Warrior outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
@@ -59,6 +63,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22904" level="1" /> <!-- Tribal Warrior Top Appearance Stone -->
 		</skills>
@@ -74,6 +79,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22905" level="1" /> <!-- Tribal Warrior Pants Appearance Stone -->
 		</skills>
@@ -89,6 +95,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22906" level="1" /> <!-- Tribal Warrior Gloves Appearance Stone -->
 		</skills>
@@ -104,6 +111,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22907" level="1" /> <!-- Tribal Warrior Shoes Appearance Stone -->
 		</skills>
@@ -119,6 +127,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23709" name="Metal Suit Pants" additionalName="Modified Set" type="Armor">
 		<!-- Metal Suit Pants. Part of a costume. Modifying the full set creates a new skill. -->
@@ -131,6 +140,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23710" name="Metal Suit Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Metal Suit Gloves. Part of a costume. Modifying the full set creates a new skill. -->
@@ -143,6 +153,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23711" name="Metal Suit Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Metal Suit Shoes. Part of a costume. Modifying the full set creates a new skill. -->
@@ -155,6 +166,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23712" name="Metal Suit Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Metal Suit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
@@ -167,6 +179,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22908" level="1" /> <!-- Metal Suit Top Appearance Stone -->
 		</skills>
@@ -182,6 +195,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22909" level="1" /> <!-- Metal Suit Pants Appearance Stone -->
 		</skills>
@@ -197,6 +211,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22910" level="1" /> <!-- Metal Suit Gloves Appearance Stone -->
 		</skills>
@@ -212,6 +227,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22911" level="1" /> <!-- Metal Suit Shoes Appearance Stone -->
 		</skills>
@@ -227,6 +243,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23717" name="Military Pants" additionalName="Modified Set" type="Armor">
 		<!-- Military Pants. Part of a costume. Modifying the full set creates a new skill. -->
@@ -239,6 +256,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23718" name="Military Gloves" additionalName="Modified Set" type="Armor">
 		<!-- Military Gloves. Part of a costume. Modifying the full set creates a new skill. -->
@@ -251,6 +269,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23719" name="Military Shoes" additionalName="Modified Set" type="Armor">
 		<!-- Military Shoes. Part of a costume. Modifying the full set creates a new skill. -->
@@ -263,6 +282,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="23720" name="Military Top Appearance Stone" additionalName="Modified Set" type="EtcItem">
 		<!-- Changes the appearance of a top into that of a Military Outfit. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
@@ -275,6 +295,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22912" level="1" /> <!-- Military Top Appearance Stone -->
 		</skills>
@@ -290,6 +311,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22913" level="1" /> <!-- Military Pants Appearance Stone -->
 		</skills>
@@ -305,6 +327,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22914" level="1" /> <!-- Military Gloves Appearance Stone -->
 		</skills>
@@ -320,6 +343,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22915" level="1" /> <!-- Military Shoes Appearance Stone -->
 		</skills>
@@ -333,6 +357,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="21380" level="1" /> <!-- Adenian Tattoo: Speed -->
 		</skills>
@@ -356,6 +381,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="21381" level="1" /> <!-- Adenian Tattoo: Speed -->
 		</skills>
@@ -379,6 +405,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="21382" level="1" /> <!-- Adenian Tattoo: Speed -->
 		</skills>
@@ -401,6 +428,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="23728" name="Erupting Vitality XP Potion" type="EtcItem">
 		<!-- For 1 hr., XP Bonus + 100% with current Vitality. Note that Vitality Bonus does not apply to boss monsters. -->
@@ -414,6 +442,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="21355" level="1" /> <!-- Erupting Vitality XP Potion -->
 		</skills>
@@ -430,6 +459,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="21356" level="1" /> <!-- Erupting Vitality Replenishing Potion -->
 		</skills>
@@ -446,6 +476,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="21357" level="1" /> <!-- Erupting Vitality Conservation Potion -->
 		</skills>
@@ -462,6 +493,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26019" level="1" /> <!-- Divine Scroll: Enchant Weapon (A-grade) -->
 		</skills>
@@ -478,6 +510,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22077" level="1" /> <!-- Divine Scroll: Enchant Weapon (S-grade) -->
 		</skills>
@@ -494,6 +527,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22440" level="1" /> <!-- Divine Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -510,6 +544,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26021" level="1" /> <!-- Divine Scroll: Enchant Armor (A-grade) -->
 		</skills>
@@ -526,6 +561,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22078" level="1" /> <!-- Divine Scroll: Enchant Armor (S-grade) -->
 		</skills>
@@ -542,6 +578,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22443" level="1" /> <!-- Divine Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -556,6 +593,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26019" level="1" /> <!-- Divine Scroll: Enchant Weapon (A-grade) -->
 		</skills>
@@ -570,6 +608,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22077" level="1" /> <!-- Divine Scroll: Enchant Weapon (S-grade) -->
 		</skills>
@@ -584,6 +623,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22440" level="1" /> <!-- Divine Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -598,6 +638,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26021" level="1" /> <!-- Divine Scroll: Enchant Armor (A-grade) -->
 		</skills>
@@ -612,6 +653,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22078" level="1" /> <!-- Divine Scroll: Enchant Armor (S-grade) -->
 		</skills>
@@ -626,6 +668,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22443" level="1" /> <!-- Divine Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -638,6 +681,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="180" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -650,6 +694,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="600" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -662,6 +707,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="1" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -677,6 +723,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23743" min="1" max="1" chance="100" /> <!-- Prestige Rune 30% - 3-hour -->
 		</capsuled_items>
@@ -692,6 +739,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23744" min="1" max="1" chance="100" /> <!-- Prestige Rune 30% - 10-hour -->
 		</capsuled_items>
@@ -707,6 +755,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23745" min="1" max="1" chance="100" /> <!-- Prestige Rune 30% - 7-day -->
 		</capsuled_items>
@@ -719,6 +768,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="180" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -731,6 +781,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="600" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -743,6 +794,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="2" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -758,6 +810,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23749" min="1" max="1" chance="100" /> <!-- Prestige Rune 50% - 3-hour -->
 		</capsuled_items>
@@ -772,6 +825,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23750" min="1" max="1" chance="100" /> <!-- Prestige Rune 50% - 10-hour -->
 		</capsuled_items>
@@ -787,6 +841,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23751" min="1" max="1" chance="100" /> <!-- Prestige Rune 50% - 7-day -->
 		</capsuled_items>
@@ -799,6 +854,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="180" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="3" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -811,6 +867,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="600" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="3" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -823,6 +880,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22588" level="3" /> <!-- High-grade Drop Rate Rune -->
 		</skills>
@@ -838,6 +896,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23755" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 3-hour -->
 		</capsuled_items>
@@ -853,6 +912,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23756" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 10-hour -->
 		</capsuled_items>
@@ -868,6 +928,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23757" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 7-day -->
 		</capsuled_items>
@@ -882,6 +943,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="40320" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="23762" name="High-grade Elixir Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 5 each of High-grade Elixir of Life/Mind/CP. Cannot be used in the Olympiad. -->
@@ -893,6 +955,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="35675" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Life (R-grade) -->
 			<item id="35676" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) -->
@@ -911,6 +974,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="time" val="1440" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22940" level="1" /> <!-- Vitality Recovery Potion -->
 		</skills>
@@ -925,6 +989,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="1440" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23765" name="Feather of Blessing" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. Can resurrect at the spot if stored in the inventory. -->
@@ -934,6 +999,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23766" name="Warrior's Quick CP Potion" type="EtcItem">
 		<!-- Premium User Only. Potion with the strength of an ancient warrior. Restores 350 CP. -->
@@ -963,6 +1029,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23768" name="Luxury Fortune Reading Ticket" type="EtcItem">
 		<!-- Ticket used in a Luxury Fortune Reading. -->
@@ -972,6 +1039,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23769" name="Improved Lucky Enchant Stone: Weapon (D-grade)" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (D-grade). Only for items enchanted between + 10 and + 15. -->
@@ -983,6 +1051,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22942" level="1" /> <!-- Improved Lucky Enchant Stone: Weapon (D-grade) -->
 		</skills>
@@ -997,6 +1066,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22943" level="1" /> <!-- Improved Lucky Enchant Stone: Weapon (C-grade) -->
 		</skills>
@@ -1011,6 +1081,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22944" level="1" /> <!-- Improved Lucky Enchant Stone: Weapon (B-grade) -->
 		</skills>
@@ -1025,6 +1096,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22945" level="1" /> <!-- Improved Lucky Enchant Stone: Weapon (A-grade) -->
 		</skills>
@@ -1039,6 +1111,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22946" level="1" /> <!-- Improved Lucky Enchant Stone: Weapon (S-grade) -->
 		</skills>
@@ -1054,6 +1127,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22947" level="1" /> <!-- Improved Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -1068,6 +1142,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22948" level="1" /> <!-- Improved Lucky Enchant Stone: Armor (D-grade) -->
 		</skills>
@@ -1082,6 +1157,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22949" level="1" /> <!-- Improved Lucky Enchant Stone: Armor (C-grade) -->
 		</skills>
@@ -1096,6 +1172,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22950" level="1" /> <!-- Improved Lucky Enchant Stone: Armor (B-grade) -->
 		</skills>
@@ -1110,6 +1187,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22951" level="1" /> <!-- Improved Lucky Enchant Stone: Armor (A-grade) -->
 		</skills>
@@ -1124,6 +1202,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22952" level="1" /> <!-- Improved Lucky Enchant Stone: Armor (S-grade) -->
 		</skills>
@@ -1138,6 +1217,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22953" level="1" /> <!-- Improved Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -1152,6 +1232,7 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22954" level="1" /> <!-- Giant's Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -1166,6 +1247,7 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22955" level="1" /> <!-- Giant's Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -1180,6 +1262,7 @@
 		<set name="etcitem_type" val="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22956" level="1" /> <!-- Giant's Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -1194,6 +1277,7 @@
 		<set name="etcitem_type" val="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22957" level="1" /> <!-- Giant's Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -1208,6 +1292,7 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22958" level="1" /> <!-- Lesser Giant's Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -1222,6 +1307,7 @@
 		<set name="etcitem_type" val="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22959" level="1" /> <!-- Lesser Giant's Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -1236,6 +1322,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22960" level="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (D-grade) -->
 		</skills>
@@ -1250,6 +1337,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22961" level="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (C-grade) -->
 		</skills>
@@ -1264,6 +1352,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22962" level="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (B-grade) -->
 		</skills>
@@ -1278,6 +1367,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22963" level="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (A-grade) -->
 		</skills>
@@ -1292,6 +1382,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22964" level="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (S-grade) -->
 		</skills>
@@ -1306,6 +1397,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22965" level="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (R-grade) -->
 		</skills>
@@ -1320,6 +1412,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22966" level="1" /> <!-- Blessed Lucky Enchant Stone: Armor (D-grade) -->
 		</skills>
@@ -1334,6 +1427,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22967" level="1" /> <!-- Blessed Lucky Enchant Stone: Armor (C-grade) -->
 		</skills>
@@ -1348,6 +1442,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22968" level="1" /> <!-- Blessed Lucky Enchant Stone: Armor (B-grade) -->
 		</skills>
@@ -1362,6 +1457,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22969" level="1" /> <!-- Blessed Lucky Enchant Stone: Armor (A-grade) -->
 		</skills>
@@ -1376,6 +1472,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22970" level="1" /> <!-- Blessed Lucky Enchant Stone: Armor (S-grade) -->
 		</skills>
@@ -1390,6 +1487,7 @@
 		<set name="etcitem_type" val="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22971" level="1" /> <!-- Blessed Lucky Enchant Stone: Armor (R-grade) -->
 		</skills>
@@ -1402,5 +1500,6 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 </list>

@@ -8,6 +8,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90301" name="Plunder Tarantula's Kidney Stone" type="EtcItem">
 		<!-- A transparent stone that can be found in a body of Plunder Tarantula. Very smooth and shiny, used as an adornment. -->
@@ -17,6 +18,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90302" name="New Cleaning Tool's Supply List" type="EtcItem">
 		<!-- Priest Gerald tries to make tools for decorating the inner parts of the Temple that is currently under repairs. This is the list of materials that he needs. -->
@@ -28,6 +30,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90303" name="Bat Bristle" type="EtcItem">
 		<!-- Bristles from the neck of a Barbed Bat. Very soft, used for making brushes. -->
@@ -37,6 +40,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90304" name="Trimden Web" type="EtcItem">
 		<!-- Trimden Web. When its sticky enzyme is removed, it becomes very smooth and gleaming. Used as a fiber for making expensive fabric. -->
@@ -46,6 +50,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90305" name="Kerope Werewolf's Twig Charm" type="EtcItem">
 		<!-- Kerope Werewolf Charm. -->
@@ -55,6 +60,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90306" name="Warrior's Armor" type="Armor">
 		<!-- Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -139,6 +145,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="39257" level="1" /> <!-- Newbie MP Recovery Potion -->
 		</skills>
@@ -819,6 +826,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90359" name="Fortune Brooch" type="EtcItem">
 		<!-- Double-click to obtain Fortune Jewelry Chest. Cannot be dropped. -->
@@ -827,6 +835,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90360" name="Fortune Topaz Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Topaz. Cannot be dropped. -->
@@ -835,6 +844,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90361" name="Fortune Garnet Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Garnet. Cannot be dropped. -->
@@ -843,6 +853,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90362" name="Fortune Jade Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Jade. Cannot be dropped. -->
@@ -851,6 +862,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90363" name="Fortune Ruby Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Ruby. Cannot be dropped. -->
@@ -859,6 +871,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90364" name="Fortune Sapphire Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Sapphire. Cannot be dropped. -->
@@ -867,6 +880,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90365" name="Fortune Diamond Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Diamond. Cannot be dropped. -->
@@ -875,6 +889,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90366" name="Fortune Pearl Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Pearl. Cannot be dropped. -->
@@ -883,6 +898,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90367" name="Fortune Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Vital Stone. Cannot be dropped. -->
@@ -891,6 +907,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90368" name="Shiny Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Shiny Jewelry Box. Cannot be dropped. -->
@@ -899,6 +916,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="90369" name="Topaz Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Topaz. Cannot be dropped. -->
@@ -908,6 +926,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90370" name="Garnet Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Garnet. Cannot be dropped. -->
@@ -917,6 +936,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90371" name="Jade Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Jade. Cannot be dropped. -->
@@ -926,6 +946,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90372" name="Ruby Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Ruby. Cannot be dropped. -->
@@ -935,6 +956,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90373" name="Sapphire Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Sapphire. Cannot be dropped. -->
@@ -944,6 +966,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90374" name="Diamond Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Diamond. Cannot be dropped. -->
@@ -953,6 +976,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90375" name="Pearl Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Pearl. Cannot be dropped. -->
@@ -962,6 +986,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90376" name="Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Vital Stone. Cannot be dropped. -->
@@ -971,6 +996,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90377" name="Lv. 3 Topaz Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Topaz. Cannot be dropped. -->
@@ -980,6 +1006,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90378" name="Lv. 4 Topaz Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Topaz. Cannot be dropped. -->
@@ -989,6 +1016,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90379" name="Lv. 5 Topaz Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Topaz. Cannot be dropped. -->
@@ -998,6 +1026,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90380" name="Lv. 3 Garnet Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Garnet. Cannot be dropped. -->
@@ -1007,6 +1036,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90381" name="Lv. 4 Garnet Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Garnet. Cannot be dropped. -->
@@ -1016,6 +1046,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90382" name="Lv. 5 Garnet Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Garnet. Cannot be dropped. -->
@@ -1025,6 +1056,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90383" name="Lv. 3 Jade Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Jade. Cannot be dropped. -->
@@ -1034,6 +1066,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90384" name="Lv. 4 Jade Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Jade. Cannot be dropped. -->
@@ -1043,6 +1076,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90385" name="Lv. 4 Jade Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Jade. Cannot be dropped. -->
@@ -1052,6 +1086,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90386" name="Lv. 3 Ruby Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Ruby. Cannot be dropped. -->
@@ -1061,6 +1096,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90387" name="Lv. 4 Ruby Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Ruby. Cannot be dropped. -->
@@ -1070,6 +1106,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90388" name="Lv. 5 Ruby Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Ruby. Cannot be dropped. -->
@@ -1079,6 +1116,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90389" name="Lv. 3 Sapphire Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Sapphire. Cannot be dropped. -->
@@ -1088,6 +1126,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90390" name="Lv. 4 Sapphire Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Sapphire. Cannot be dropped. -->
@@ -1097,6 +1136,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90391" name="Lv. 5 Sapphire Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Sapphire. Cannot be dropped. -->
@@ -1106,6 +1146,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90392" name="Lv. 3 Diamond Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Diamond. Cannot be dropped. -->
@@ -1115,6 +1156,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90393" name="Lv. 4 Diamond Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Diamond. Cannot be dropped. -->
@@ -1124,6 +1166,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90394" name="Lv. 5 Diamond Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Diamond. Cannot be dropped. -->
@@ -1133,6 +1176,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90395" name="Lv. 3 Pearl Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Pearl. Cannot be dropped. -->
@@ -1142,6 +1186,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90396" name="Lv. 4 Pearl Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Pearl. Cannot be dropped. -->
@@ -1151,6 +1196,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90397" name="Lv. 5 Pearl Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 5 Pearl. Cannot be dropped. -->
@@ -1160,6 +1206,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90398" name="Lv. 3 Vital Stone Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Vital Stone. Cannot be dropped. -->
@@ -1169,6 +1216,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="90399" name="Lv. 4 Vital Stone Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Vital Stone. Cannot be dropped. -->
@@ -1178,5 +1226,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

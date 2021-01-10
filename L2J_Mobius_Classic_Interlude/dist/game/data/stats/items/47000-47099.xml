@@ -130,6 +130,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47007" name="Paulina's Apocalypse Shaper" type="Weapon">
 		<!-- Apocalypse Shaper imbued with the energy of Paulina. -->
@@ -952,6 +953,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47084" min="1" max="1" chance="100" /> <!-- Beloa's Gift Box -->
 			<item id="19442" min="2000" max="2000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
@@ -986,6 +988,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="47046" name="Alligator Leather" type="EtcItem">
 		<!-- An Alligator Leather gained by hunting alligators on Alligator Island. Collect these and take them to Head Blacksmith Flutter at the Town of Oren. -->
@@ -995,6 +998,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47047" name="Destroyed Gargoyle Fragment" type="EtcItem">
 		<!-- A Broken Gargoyle Fragment obtained after defeating the Hunter Gargoyle in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
@@ -1004,6 +1008,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47048" name="Basilisk Scale" type="EtcItem">
 		<!-- A Basilisk Scale obtained after defeating the Tarlk Basilisk or Elder Tarlk Basilisk in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
@@ -1013,6 +1018,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47049" name="Mahum ID Tag" type="EtcItem">
 		<!-- ID Tag obtained after defeating the Mahum monsters in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
@@ -1022,6 +1028,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47050" name="Spore Pocket" type="EtcItem">
 		<!-- A pocket containing spores, obtained after defeating monsters in the Sea of Spores area. Take this to Paterson at the Town of Aden. -->
@@ -1031,6 +1038,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47051" name="Mark of the Plains Monsters" type="EtcItem">
 		<!-- Obtained after defeating monsters in the Forsaken Plains area. Take it to Head Blacksmith Flutter in the Town of Oren. -->
@@ -1040,6 +1048,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47052" name="Mark of the Plateau Monsters" type="EtcItem">
 		<!-- Obtained after defeating monsters in the Forsaken Plains area. Take it to Head Blacksmith Flutter in the Town of Oren. -->
@@ -1049,6 +1058,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47053" name="Slaughterer Mark" type="EtcItem">
 		<!-- A mark of proof obtained after defeating monsters in the Fields of Massacre. Collect and take it to Captain Mathias in the Town of Rune. -->
@@ -1058,6 +1068,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47054" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to the Fairy Citizen in the Arms of Timiniel. -->
@@ -1068,6 +1079,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17945" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
 		</skills>
@@ -1081,6 +1093,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17946" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
 		</skills>
@@ -1094,6 +1107,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17991" level="1" /> <!-- Scroll of Escape: Harnak Underground Ruins -->
 		</skills>
@@ -1107,6 +1121,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17989" level="1" /> <!-- Scroll of Escape: Bloody Swampland -->
 		</skills>
@@ -1120,6 +1135,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17992" level="1" /> <!-- Scroll of Escape: Kartia's Labyrinth -->
 		</skills>
@@ -1133,6 +1149,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17997" level="1" /> <!-- Scroll of Escape: Isle of Souls -->
 		</skills>
@@ -1146,6 +1163,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17999" level="1" /> <!-- Scroll of Escape: Seal of Shilen -->
 		</skills>
@@ -1159,6 +1177,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18124" level="1" /> <!-- Scroll of Escape: Pagan Temple -->
 		</skills>
@@ -1172,6 +1191,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18000" level="1" /> <!-- Scroll of Escape: Cemetery -->
 		</skills>
@@ -1185,6 +1205,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="18220" level="1" /> <!-- Scroll of Escape: Blazing Swamp -->
 		</skills>
@@ -1200,6 +1221,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46864" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Helmet - Heavy Armor -->
 			<item id="46865" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Breastplate - Heavy Armor -->
@@ -1220,6 +1242,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46870" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Helmet - Light Armor -->
 			<item id="46871" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Armor - Light Armor -->
@@ -1239,6 +1262,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46875" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Circlet - Robe -->
 			<item id="46876" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Tunic - Robe -->
@@ -1259,6 +1283,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46881" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Necklace - Skill Cooldown -->
 			<item id="46882" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Earring - Vampiric Rage -->
@@ -1277,6 +1302,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46898" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Breastplate - Heavy Armor -->
 			<item id="46899" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Gaiters - Heavy Armor -->
@@ -1295,6 +1321,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46904" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Leather Armor - Light Armor -->
 			<item id="46905" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Leather Leggings - Light Armor -->
@@ -1313,6 +1340,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46909" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Tunic - Robe -->
 			<item id="46910" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Stockings - Robe -->
@@ -1332,6 +1360,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="46914" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Necklace - Skill Cooldown -->
 			<item id="46915" min="1" max="1" chance="100" /> <!-- Premium Account - Paulina's Seraph Earring - Vampiric Rage -->
@@ -1350,6 +1379,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47073" name="Blessed Paulina's Specter Cutter Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Cutter which can be equipped from Lv. 85 upwards. -->
@@ -1361,6 +1391,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47074" name="Blessed Paulina's Specter Slasher Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Slasher which can be equipped from Lv. 85 upwards. -->
@@ -1372,6 +1403,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47075" name="Blessed Paulina's Specter Avenger Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Avenger which can be equipped from Lv. 85 upwards. -->
@@ -1383,6 +1415,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47076" name="Blessed Paulina's Specter Fighter Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Fighter which can be equipped from Lv. 85 upwards. -->
@@ -1394,6 +1427,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47077" name="Blessed Paulina's Specter Stormer Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Stormer which can be equipped from Lv. 85 upwards. -->
@@ -1405,6 +1439,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47078" name="Blessed Paulina's Specter Thrower Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Thrower which can be equipped from Lv. 85 upwards. -->
@@ -1416,6 +1451,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47079" name="Blessed Paulina's Specter Shooter Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Shooter which can be equipped from Lv. 85 upwards. -->
@@ -1427,6 +1463,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47080" name="Blessed Paulina's Specter Dual Dagger Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Dual Dagger which can be equipped from Lv. 85 upwards. -->
@@ -1438,6 +1475,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47081" name="Blessed Paulina's Specter Caster Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Caster which can be equipped from Lv. 85 upwards. -->
@@ -1449,6 +1487,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47082" name="Blessed Paulina's Specter Retributer Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Retributer which can be equipped from Lv. 85 upwards. -->
@@ -1460,6 +1499,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="47083" name="Tulesir's Gift Box" type="EtcItem">
 		<!-- Use to receive 1 random item. -->
@@ -1469,6 +1509,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47084" name="Beloa's Gift Box" type="EtcItem">
 		<!-- Use to obtain one of the following: Kaliel's Energy Box, Superior Giant's Codex Box, Venir's Talisman Box. -->
@@ -1479,6 +1520,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="36152" min="1" max="1" chance="33" /> <!-- Kaliel's Energy Box -->
 			<item id="47085" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex Box -->
@@ -1494,6 +1536,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="30297" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex -->
 			<item id="30298" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex - Mastery -->
@@ -1509,6 +1552,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="39634" min="1" max="1" chance="60" /> <!-- Venir's Talisman - Stage 1 -->
 			<item id="39635" min="1" max="1" chance="35" /> <!-- Venir's Talisman - Stage 2 -->
@@ -1523,12 +1567,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="47088" name="Crystal with Anakim's Energy" type="EtcItem">
 		<!-- A crystal with Anakim's Energy. When compounded with the Shining Soul of Monster Spirit, the crystal absorbs the monster's soul and becomes Anakim Soul Crystal, which releases the seal of power and is able to assign special abilities to weapons. -->
 		<set name="icon" val="icon.bm_ensoul_stone_PvE_empty" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="47089" name="Anakim Soul Crystal" additionalName="Stage 1" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1536,6 +1582,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47090" name="Anakim Soul Crystal" additionalName="Stage 2" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1543,6 +1590,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47091" name="Anakim Soul Crystal" additionalName="Stage 3" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1550,6 +1598,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47092" name="Anakim Soul Crystal" additionalName="Stage 4" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1557,6 +1606,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47093" name="Anakim Soul Crystal" additionalName="Stage 5" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1564,6 +1614,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47094" name="Anakim Soul Crystal" additionalName="Stage 6" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1571,6 +1622,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47095" name="Anakim Soul Crystal" additionalName="Stage 7" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1578,6 +1630,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47096" name="Anakim Soul Crystal" additionalName="Stage 8" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1585,6 +1638,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47097" name="Anakim Soul Crystal" additionalName="Stage 9" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. Can be upgraded to the next stage by compounding with a monster's soul. If upgrade is successful, the power of the soul sealed into the Soul Crystal becomes stronger. -->
@@ -1592,6 +1646,7 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47098" name="Anakim Soul Crystal" additionalName="Stage 10" type="EtcItem">
 		<!-- A crystal with Anakim's Soul. Can assign soul crystal enhancement ability to weapons. -->
@@ -1599,11 +1654,13 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="47099" name="Crystal with Lilith's Energy" type="EtcItem">
 		<!-- A crystal with Lilith's Energy. When compounded with the Shining Soul of Monster Spirit, the crystal absorbs the monster's soul and becomes Lilith's Soul Crystal, which releases the seal of power and is able to assign special abilities to weapons. -->
 		<set name="icon" val="icon.bm_ensoul_stone_PvP_empty" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 </list>

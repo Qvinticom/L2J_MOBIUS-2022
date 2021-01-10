@@ -14,6 +14,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -31,6 +32,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SHIELD" />
+		<set name="material" val="DAMASCUS" />
 		<stats>
 			<stat type="sDef">515</stat>
 			<stat type="rShld">20</stat>
@@ -50,6 +52,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -69,6 +72,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
@@ -94,6 +98,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">188</stat>
 			<stat type="rEvas">3</stat>
@@ -114,6 +119,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -132,6 +138,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -149,6 +156,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -168,6 +176,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -193,6 +202,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">129</stat>
 			<stat type="mDef">31</stat>
@@ -213,6 +223,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -231,6 +242,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -248,6 +260,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">47</stat>
 			<stat type="rEvas">-8</stat>
@@ -265,6 +278,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">161</stat>
 			<stat type="maxMp">62</stat>
@@ -282,6 +296,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">121</stat>
 			<stat type="maxMp">46</stat>
@@ -299,6 +314,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="RING" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">80</stat>
 			<stat type="maxMp">31</stat>
@@ -322,6 +338,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
 		</skills>
@@ -353,6 +370,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
 		</skills>
@@ -383,6 +401,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
 		</skills>
@@ -413,6 +432,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
 		</skills>
@@ -444,6 +464,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
 		</skills>
@@ -475,6 +496,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
@@ -508,6 +530,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
 		</skills>
@@ -540,6 +563,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
 		</skills>
@@ -572,6 +596,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
 		</skills>
@@ -603,6 +628,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
 		</skills>
@@ -635,6 +661,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
 		</skills>
@@ -667,6 +694,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
 		</skills>
@@ -697,6 +725,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
 		</skills>
@@ -728,6 +757,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
 		</skills>
@@ -754,6 +784,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -773,6 +804,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
@@ -796,6 +828,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">250</stat>
 		</stats>
@@ -814,6 +847,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -832,6 +866,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -849,6 +884,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SHIELD" />
+		<set name="material" val="DAMASCUS" />
 		<stats>
 			<stat type="sDef">546</stat>
 			<stat type="rShld">20</stat>
@@ -868,6 +904,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -887,6 +924,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
@@ -912,6 +950,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">200</stat>
 			<stat type="rEvas">3</stat>
@@ -932,6 +971,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -950,6 +990,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -967,6 +1008,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="HELMET" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -986,6 +1028,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -1011,6 +1054,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">137</stat>
 			<stat type="mDef">33</stat>
@@ -1031,6 +1075,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -1049,6 +1094,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="FEET" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -1066,6 +1112,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="rEvas">-8</stat>
@@ -1083,6 +1130,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">174</stat>
 			<stat type="maxMp">65</stat>
@@ -1100,6 +1148,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">130</stat>
 			<stat type="maxMp">49</stat>
@@ -1117,6 +1166,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="RING" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">87</stat>
 			<stat type="maxMp">33</stat>
@@ -1140,6 +1190,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13283" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
 		</skills>
@@ -1171,6 +1222,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
 		</skills>
@@ -1201,6 +1253,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13262" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
 		</skills>
@@ -1231,6 +1284,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13257" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
 		</skills>
@@ -1262,6 +1316,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13268" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
 		</skills>
@@ -1293,6 +1348,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
@@ -1326,6 +1382,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13293" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
 		</skills>
@@ -1358,6 +1415,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
 		</skills>
@@ -1389,6 +1447,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
 		</skills>
@@ -1419,6 +1478,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13300" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
 		</skills>
@@ -1450,6 +1510,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1399831000" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13305" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
 		</skills>
@@ -1482,6 +1543,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13278" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
 		</skills>
@@ -1512,6 +1574,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13288" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
 		</skills>
@@ -1543,6 +1606,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1679797200" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13273" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
 		</skills>
@@ -1569,6 +1633,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="274252000" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">162</stat>
 			<stat type="rEvas">1.2</stat>
@@ -1590,6 +1655,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="731340000" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
@@ -1614,6 +1680,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="457087000" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">148</stat>
 			<stat type="rCrit">2.9</stat>
@@ -1634,6 +1701,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="182835000" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">108</stat>
 			<stat type="accCombat">1.15</stat>
@@ -1654,6 +1722,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="182835000" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">108</stat>
 			<stat type="moveSpeed">30</stat>
@@ -1672,6 +1741,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="191976000" />
+		<set name="material" val="DAMASCUS" />
 		<stats>
 			<stat type="sDef">592</stat>
 			<stat type="rShld">20</stat>
@@ -1691,6 +1761,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="274252000" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">162</stat>
 			<stat type="rEvas">1.2</stat>
@@ -1712,6 +1783,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="731340000" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
@@ -1738,6 +1810,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="457087000" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">148</stat>
 			<stat type="rCrit">2.9</stat>
@@ -1760,6 +1833,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="182835000" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">108</stat>
 			<stat type="accCombat">1.15</stat>
@@ -1780,6 +1854,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="182835000" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">108</stat>
 			<stat type="moveSpeed">30</stat>
@@ -1798,6 +1873,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="274252000" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">162</stat>
 			<stat type="rEvas">1.2</stat>
@@ -1819,6 +1895,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="731340000" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -1845,6 +1922,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="457087000" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">148</stat>
 			<stat type="mDef">42</stat>
@@ -1867,6 +1945,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="182835000" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">108</stat>
 			<stat type="accCombat">1.15</stat>
@@ -1887,6 +1966,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="182835000" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">108</stat>
 			<stat type="moveSpeed">30</stat>
@@ -1905,6 +1985,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="191976000" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">54</stat>
 			<stat type="rEvas">-8</stat>
@@ -1921,6 +2002,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="190453000" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">192</stat>
 		</stats>
@@ -1936,6 +2018,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="142839000" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">144</stat>
 		</stats>
@@ -1951,6 +2034,7 @@
 		<set name="blessed" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="95226000" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">96</stat>
 		</stats>
@@ -1970,6 +2054,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8568" level="1" /> <!-- Maximum Sonic Focus -->
 			<skill id="8569" level="1" /> <!-- Sonic Rage -->
@@ -1991,6 +2076,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8565" level="1" /> <!-- Dread Pool -->
 			<skill id="8566" level="1" /> <!-- Earthquake -->
@@ -2012,6 +2098,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8539" level="1" /> <!-- Spirit of the Phoenix -->
 			<skill id="8540" level="1" /> <!-- Shield of Faith -->
@@ -2033,6 +2120,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8541" level="1" /> <!-- Seed of Revenge -->
 			<skill id="8540" level="1" /> <!-- Shield of Faith -->
@@ -2054,6 +2142,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8555" level="1" /> <!-- Throwing Dagger -->
 			<skill id="8556" level="1" /> <!-- Exciting Adventure -->
@@ -2075,6 +2164,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8560" level="1" /> <!-- Flame Hawk -->
 			<skill id="8563" level="1" /> <!-- Death Shot -->
@@ -2096,6 +2186,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8580" level="1" /> <!-- Fire Vortex Buster -->
 			<skill id="8581" level="1" /> <!-- Meteor -->
@@ -2117,6 +2208,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8583" level="1" /> <!-- Day of Doom -->
 			<skill id="8581" level="1" /> <!-- Meteor -->
@@ -2138,6 +2230,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8590" level="1" /> <!-- Final Servitor -->
 			<skill id="8593" level="1" /> <!-- Servitor Barrier -->
@@ -2159,6 +2252,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8545" level="1" /> <!-- Turn to Stone -->
 			<skill id="8546" level="1" /> <!-- Arcane Wisdom -->
@@ -2180,6 +2274,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8545" level="1" /> <!-- Turn to Stone -->
 			<skill id="8546" level="1" /> <!-- Arcane Wisdom -->
@@ -2201,6 +2296,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8542" level="1" /> <!-- Touch of Eva -->
 			<skill id="8540" level="1" /> <!-- Shield of Faith -->
@@ -2222,6 +2318,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8548" level="1" /> <!-- Song of Purification -->
 			<skill id="8547" level="1" /> <!-- Song of Champion -->
@@ -2242,6 +2339,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8555" level="1" /> <!-- Throwing Dagger -->
 			<skill id="8557" level="1" /> <!-- Wind Riding -->
@@ -2263,6 +2361,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8561" level="1" /> <!-- Arrow Rain -->
 			<skill id="8563" level="1" /> <!-- Death Shot -->
@@ -2284,6 +2383,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8585" level="1" /> <!-- Ice Vortex Crusher -->
 			<skill id="8586" level="1" /> <!-- Star Fall -->

@@ -4,7 +4,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_sealed_vesper_circlet_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="3167180" />
 		<set name="is_stackable" val="true" />
@@ -13,7 +13,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_sealed_vesper_jaket_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="8445840" />
 		<set name="is_stackable" val="true" />
@@ -22,7 +22,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_sealed_vesper_hose_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="5278660" />
 		<set name="is_stackable" val="true" />
@@ -31,7 +31,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_sealed_vesper_gloves_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="2111460" />
 		<set name="is_stackable" val="true" />
@@ -40,7 +40,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_sealed_vesper_shoes_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="2111460" />
 		<set name="is_stackable" val="true" />
@@ -49,7 +49,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_sealed_vesper_sigil_piece_I00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="2111460" />
 		<set name="is_stackable" val="true" />
@@ -57,7 +57,7 @@
 	<item id="80306" name="Bloody Coin" type="EtcItem">
 		<!-- Can be exchanged for special equipment. -->
 		<set name="icon" val="icon.etc_coins_black_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -67,7 +67,7 @@
 		<!-- A lucky coupon to the warriors who are going to face the Water Dragon. Using the coupon you can win powerful supply items in a lottery. Double-click to get special effect: Acquired XP/ SP +15% for 60 min. The effect is not removed if you switch to a different class or have died. -->
 		<set name="icon" val="icon.blue_save_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -78,7 +78,7 @@
 	<item id="80308" name="Water Dragon Coin" type="EtcItem">
 		<!-- A coin exchangeable for supply items for the warriors who are going to face the Water Dragon. Can be exchanged for supply items through the Water Dragon s Messenger after the Water Dragon appears. -->
 		<set name="icon" val="icon.etc_magic_coin_blue_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -326,7 +326,7 @@
 	<item id="80322" name="Pontus Stone" type="EtcItem">
 		<!-- A mark required for safe passage deep within Fafurion's Nest. Fafurion gave the mark to his temple guard, Cyrax. If the Pontus Stone falls into hands other than Cyrax's, it will automatically return to him after a certain time. -->
 		<set name="icon" val="icon.etc_fafurion_guardpontus_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -334,7 +334,7 @@
 	<item id="80323" name="Minion's Symbol" type="EtcItem">
 		<!-- A mark that only a few of Fafurion s best minions can receive. It also indicates that they are still under Fafurion s influence. Gather the marks and take them to Lupicia at the entrance of Fafurion Temple. -->
 		<set name="icon" val="icon.etc_symbol_subordinate_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -346,7 +346,7 @@
 	<item id="80324" name="Fragment of Power" type="EtcItem">
 		<!-- A Fragment of Power obtained by defeating Fafurion s minions. It still contains the power that Fafurion bestowed upon his men guarding his temple. Gather the fragments and take them to Lupicia at the entrance of Fafurion Temple. -->
 		<set name="icon" val="icon.etc_piece_of_power_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -358,7 +358,7 @@
 	<item id="80325" name="Deformed Claw" type="EtcItem">
 		<!-- Proof of the secret relationship between Krofins and Fafurion. The deformed claws indicate that Fafurion has bestowed some of his power upon the Krofins. Gather the claws and take them to Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.etc_modify_claw_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -370,7 +370,7 @@
 	<item id="80326" name="Broken Contract Fragments" type="EtcItem">
 		<!-- Proof that the contract between the priestess kin and Fafurion is weakening after the death of Priestess Parme. This fragment of the contract may lead you to find clues to Fafurion. Gather them and take them to Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.etc_cut_off_contract_01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -385,7 +385,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="161659000" />
 		<set name="is_stackable" val="true" />
@@ -398,7 +398,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="161659000" />
 		<set name="is_stackable" val="true" />
@@ -411,7 +411,7 @@
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="30" />
 		<set name="price" val="161659000" />
 		<set name="is_stackable" val="true" />
@@ -422,7 +422,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="16165900" />
 		<set name="is_stackable" val="true" />
@@ -431,7 +431,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="16165900" />
 		<set name="is_stackable" val="true" />
@@ -440,7 +440,7 @@
 		<!-- Not in use anymore. Can be sold to any trader. -->
 		<set name="icon" val="icon.etc_vesper_singer_piece_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="16165900" />
 		<set name="is_stackable" val="true" />
@@ -1510,7 +1510,7 @@
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1524,7 +1524,7 @@
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1551,7 +1551,7 @@
 	<item id="80393" name="Bloody Helios Upgrade Stone" type="EtcItem">
 		<!-- A crystal that contains a spirit s strong fighting will. The special power of the upgrade stone unbinds +12 or above Enchanted Bloody Helios Weapons. -->
 		<set name="icon" val="icon.weapone_upgrade_crystal" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1560,7 +1560,7 @@
 	<item id="80394" name="Bloody Eternal Upgrade Stone" type="EtcItem">
 		<!-- A crystal that contains a spirit s strong will for protection. The special power of the upgrade stone unbinds +8 or above Enchanted Bloody Eternal Armor. -->
 		<set name="icon" val="icon.amor_upgrade_crystal" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

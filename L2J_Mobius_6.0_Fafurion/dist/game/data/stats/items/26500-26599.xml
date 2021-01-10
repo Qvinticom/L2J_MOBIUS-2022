@@ -9,6 +9,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27440" level="4" /> <!-- Cat's Eye -->
 		</skills>
@@ -20,6 +21,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27440" level="5" /> <!-- Cat's Eye -->
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
@@ -34,6 +36,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27442" level="1" /> <!-- Amethyst -->
 		</skills>
@@ -47,6 +50,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27442" level="2" /> <!-- Amethyst -->
 		</skills>
@@ -60,6 +64,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27442" level="3" /> <!-- Amethyst -->
 		</skills>
@@ -73,6 +78,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27442" level="4" /> <!-- Amethyst -->
 		</skills>
@@ -84,6 +90,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="27442" level="5" /> <!-- Amethyst -->
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
@@ -126,6 +133,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="26510" name="Attendance Vitality Tonic" additionalName="Event" type="EtcItem">
 		<!-- Attendance Vitality Tonic. 1 out of 4 bars on the vitality gauge are replenished. Cooldown 60 min. Cannot be used in the Olympiad. -->
@@ -139,6 +147,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="reuse_delay" val="3600000" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="27445" level="1" /> <!-- Attendance Vitality Tonic -->
 		</skills>
@@ -151,6 +160,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26388" min="1" max="1" chance="100" /> <!-- Anakim Outfit Appearance Stone - 30-day -->
 			<item id="46186" min="1" max="1" chance="100" /> <!-- Agathion - Anakim Holy Barrier - 30-day -->
@@ -162,6 +172,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="26513" name="Lv. 5 Legendary CHA Dye Pack" type="EtcItem">
 		<!-- Double-click to get 1 of the following Lv. 5 Legendary Dyes: STR/ DEX/ CON/ INT/ WIT/ MEN (CHA). -->
@@ -171,6 +182,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="39415" min="1" max="1" chance="16" /> <!-- Legendary STR Dye Lv. 5 (Charisma) - STR +5, CHA +5 -->
 			<item id="39416" min="1" max="1" chance="17" /> <!-- Legendary DEX Dye Lv. 5 (Charisma) - DEX +5, CHA +5 -->
@@ -188,6 +200,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="39445" min="1" max="1" chance="16" /> <!-- Legendary STR Dye Lv. 5 (Luck) - STR +5, LUC +5 -->
 			<item id="39446" min="1" max="1" chance="17" /> <!-- Legendary DEX Dye Lv. 5 (Luck) - DEX +5, LUC +5 -->
@@ -205,6 +218,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="39403" min="1" max="1" chance="16" /> <!-- Legendary STR Dye Lv. 3 (Charisma) - STR +4, CHA +3 -->
 			<item id="39404" min="1" max="1" chance="17" /> <!-- Legendary DEX Dye Lv. 3 (Charisma) - DEX +4, CHA +3 -->
@@ -222,6 +236,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="39433" min="1" max="1" chance="16" /> <!-- Legendary STR Dye Lv. 3 (Luck) - STR +4, LUC +3 -->
 			<item id="39434" min="1" max="1" chance="17" /> <!-- Legendary DEX Dye Lv. 3 (Luck) - DEX +4, LUC +3 -->
@@ -236,6 +251,7 @@
 		<set name="icon" val="icon.etc_life_stone_of_begining_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="26518" name="Pirate Captain Outfit" type="Armor">
 		<!-- Pirate captain's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -245,6 +261,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="26519" name="Pirate Crew Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -254,6 +271,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="26520" name="Pirate Captain Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can use Pirate Captain skill after appearance modification. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->
@@ -262,6 +280,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26521" name="Pirate Crew Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Can use Pirate Crew skill after appearance modification. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
@@ -270,6 +289,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="26522" name="Rabbit Ears" additionalName="STR +Critical Rate" type="Armor">
 		<!-- STR +3 and P. Critical Rate +50 when equipped. -->
@@ -281,6 +301,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -296,6 +317,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -311,6 +333,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -326,6 +349,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -341,6 +365,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -356,6 +381,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -371,6 +397,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -386,6 +413,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -401,6 +429,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -416,6 +445,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -431,6 +461,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -446,6 +477,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -461,6 +493,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -476,6 +509,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -491,6 +525,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -506,6 +541,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -521,6 +557,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -536,6 +573,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -551,6 +589,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -566,6 +605,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -581,6 +621,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -596,6 +637,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -611,6 +653,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -626,6 +669,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -641,6 +685,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -656,6 +701,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -671,6 +717,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -686,6 +733,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -701,6 +749,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -716,6 +765,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -731,6 +781,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
@@ -746,6 +797,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
@@ -761,6 +813,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
@@ -776,6 +829,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
@@ -791,6 +845,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
@@ -806,6 +861,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12894" level="1" /> <!-- Demon Circlet - P. Atk. -->
@@ -821,6 +877,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
@@ -836,6 +893,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
@@ -851,6 +909,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
@@ -866,6 +925,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
@@ -881,6 +941,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
@@ -896,6 +957,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12895" level="1" /> <!-- Demon Circlet - M. Atk. -->
@@ -911,6 +973,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
@@ -926,6 +989,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
@@ -941,6 +1005,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
@@ -956,6 +1021,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
@@ -971,6 +1037,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
@@ -986,6 +1053,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12896" level="1" /> <!-- Demon Circlet - P. Accuracy -->
@@ -1001,6 +1069,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -1016,6 +1085,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -1031,6 +1101,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -1046,6 +1117,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -1061,6 +1133,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -1076,6 +1149,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12889" level="1" /> <!-- Romantic Chapeau - P. Critical Rate -->
@@ -1091,6 +1165,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -1106,6 +1181,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -1121,6 +1197,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -1136,6 +1213,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -1151,6 +1229,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -1166,6 +1245,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12890" level="1" /> <!-- Romantic Chapeau - Critical Damage -->
@@ -1181,6 +1261,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -1196,6 +1277,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -1211,6 +1293,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -1226,6 +1309,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -1241,6 +1325,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -1256,6 +1341,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12891" level="1" /> <!-- Angel Circlet - P. Def. -->
@@ -1271,6 +1357,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -1286,6 +1373,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -1301,6 +1389,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -1316,6 +1405,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -1331,6 +1421,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -1346,6 +1437,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12892" level="1" /> <!-- Angel Circlet - M. Def. -->
@@ -1361,6 +1453,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12883" level="1" /> <!-- Rabbit Ears - STR -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -1376,6 +1469,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12884" level="1" /> <!-- Rabbit Ears - DEX -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -1391,6 +1485,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12885" level="1" /> <!-- Raccoon Ears: CON -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -1406,6 +1501,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12886" level="1" /> <!-- Raccoon Ears: MEN -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -1421,6 +1517,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12887" level="1" /> <!-- Cat Ears: INT -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->
@@ -1436,6 +1533,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="12888" level="1" /> <!-- Cat Ears: WIT -->
 			<skill id="12893" level="1" /> <!-- Angel Circlet - P. Evasion -->

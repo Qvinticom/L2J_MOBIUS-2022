@@ -8,6 +8,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45901" name="Kokko's Shiny Egg" type="EtcItem">
 		<!-- Kokko's shiny egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
@@ -17,6 +18,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45902" name="Kokko's Golden Egg" type="EtcItem">
 		<!-- Kokko's golden egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
@@ -26,6 +28,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="45903" name="Apocalypse Weapon Pack Coupon" type="EtcItem">
 		<!-- Take it to Maphr's agent Yuna to get a box containing an Apocalypse weapon. Will be deleted once the event ends. -->
@@ -35,6 +38,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45904" name="Pippi's Shirt" type="Armor">
 		<!-- Speed +7, STR +1, INT +1 when equipped. -->
@@ -45,6 +49,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="130" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18374" level="1" /> <!-- Pippi's Shirt -->
 		</skills>
@@ -61,6 +66,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="130" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18375" level="1" /> <!-- Kokko's Shirt -->
 		</skills>
@@ -78,6 +84,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="440" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18376" level="1" /> <!-- Pippi's Belt -->
 		</skills>
@@ -95,6 +102,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="440" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="18377" level="1" /> <!-- Kokko's Belt -->
 		</skills>
@@ -108,6 +116,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45909" name="Apocalypse Cutter Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Cutter Focus. -->
@@ -115,6 +124,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45910" name="Apocalypse Slasher Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Slasher Focus. -->
@@ -122,6 +132,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45911" name="Apocalypse Avenger Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Avenger Focus. -->
@@ -129,6 +140,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45912" name="Apocalypse Fighter Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Fighter Focus. -->
@@ -136,6 +148,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45913" name="Apocalypse Stormer Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Stormer Damage Up. -->
@@ -143,6 +156,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45914" name="Apocalypse Thrower Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Thrower Focus. -->
@@ -150,6 +164,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45915" name="Apocalypse Shooter Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Shooter Focus. -->
@@ -157,6 +172,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45916" name="Apocalypse Buster Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Buster Acumen. -->
@@ -164,6 +180,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45917" name="Apocalypse Caster Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Caster Acumen. -->
@@ -171,6 +188,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45918" name="Apocalypse Retributer Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Retributer Acumen. -->
@@ -178,6 +196,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45919" name="Apocalypse Dual Sword Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Dual Sword Damage Up. -->
@@ -185,6 +204,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45920" name="Apocalypse Dual Dagger Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Dual Dagger Focus. -->
@@ -192,6 +212,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45921" name="Apocalypse Dual Blunt Weapon Pack" type="EtcItem">
 		<!-- Double-click to get a +3/ 4/ 6/ 9/ 11 enchanted Apocalypse Dual Blunt Weapon Damage Up. -->
@@ -199,6 +220,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45922" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 1" type="EtcItem">
 		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 1. Can be obtained if main class is over level 99. -->
@@ -437,6 +459,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45939" name="Dimensional Coin" type="EtcItem">
 		<!-- Receive various rewards through Merlot. -->
@@ -446,6 +469,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45940" name="Dimensional Coin" type="EtcItem">
 		<!-- Receive various rewards through Merlot. -->
@@ -455,6 +479,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45941" name="Dimensional Coin" type="EtcItem">
 		<!-- Receive various rewards through Merlot. -->
@@ -464,6 +489,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45942" name="Atelia Energy Combination Box" type="EtcItem">
 		<!-- A mysterious box that combines Atelia Energy Crystals and creates 1~5 new Atelia Energy Crystals of Grade 2~4. If it fails, you might not get anything. -->
@@ -472,6 +498,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45943" name="Enhanced Atelia Energy Combination Box" type="EtcItem">
 		<!-- A mysterious box that combines Atelia Energy Crystals and creates 1~5 new Atelia Energy Crystals of Grade 1~2. If it fails, you might not get anything. -->
@@ -480,6 +507,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45944" name="Dimensional Hero's Supply Box" type="EtcItem">
 		<!-- Double-click to obtain gifts for Dimensional Raid heroes. Double-click to get 1 of the following: Top-grade Spirit Stone, Elcyum, Blessed Scroll: Enchant Weapon (R-grade), Blessed Scroll: Enchant Armor (R-grade), Bloody Helios Enhancement Stone, or Bloody Eternal Enhancement Stone. -->
@@ -489,6 +517,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45945" name="Decisive Recovery Potion" type="EtcItem">
 		<!-- Restores 3000 HP, and the remaining power restores CP. Instant effect with no cooldown. -->
@@ -501,6 +530,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="16453" level="1" /> <!-- Exalted Production -->
 		</skills>
@@ -511,6 +541,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45947" name="Damascus Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Damascus Sword of Fortune. -->
@@ -518,6 +549,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45948" name="Samurai Long Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Samurai Long Sword of Fortune. -->
@@ -525,6 +557,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45949" name="Dynasty Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Sword of Fortune. -->
@@ -532,6 +565,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45950" name="Tallum Blade*Damascus of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Tallum Blade*Damascus of Fortune. -->
@@ -539,6 +573,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45951" name="Samurai Long Sword*Samurai Long Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Samurai Long Sword*Samurai Long Sword of Fortune. -->
@@ -546,6 +581,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45952" name="Spirit Sword*Raid Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Spirit Sword*Raid Sword of Fortune. -->
@@ -553,6 +589,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45953" name="Dynasty Dual Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Dual Sword of Fortune. -->
@@ -560,6 +597,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45954" name="Tiphon's Spear of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Tiphon's Spear of Fortune. -->
@@ -567,6 +605,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45955" name="Lance of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Lance of Fortune. -->
@@ -574,6 +613,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45956" name="Orcish Poleaxe of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Orcish Poleaxe of Fortune. -->
@@ -581,6 +621,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45957" name="Dynasty Halberd of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Halberd of Fortune. -->
@@ -588,6 +629,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45958" name="Barakiel's Axe of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Barakiel's Axe of Fortune. -->
@@ -595,6 +637,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45959" name="Art of Battle Axe of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Art of Battle Axe of Fortune. -->
@@ -602,6 +645,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45960" name="Yaksa Mace of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Yaksa Mace of Fortune. -->
@@ -609,6 +653,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45961" name="Dynasty Cudgel of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Cudgel of Fortune. -->
@@ -616,6 +661,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45962" name="Sword of Ipos of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sword of Ipos of Fortune. -->
@@ -623,6 +669,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45963" name="Guardian's Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Guardian's Sword of Fortune. -->
@@ -630,6 +677,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45964" name="Berserker Blade of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Berserker Blade of Fortune. -->
@@ -637,6 +685,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45965" name="Dynasty Blade of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Blade of Fortune. -->
@@ -644,6 +693,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45966" name="Sobekk's Hurricane of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sobekk's Hurricane of Fortune. -->
@@ -651,6 +701,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45967" name="Bellion Cestus of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Bellion Cestus of Fortune. -->
@@ -658,6 +709,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45968" name="Great Pata of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Great Pata of Fortune. -->
@@ -665,6 +717,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45969" name="Dynasty Bagh-Nakh of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Bagh-Nakh of Fortune. -->
@@ -672,6 +725,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45970" name="Naga's Storm of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Naga's Storm of Fortune. -->
@@ -679,6 +733,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45971" name="Kris of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Kris of Fortune. -->
@@ -686,6 +741,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45972" name="Dark Screamer of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dark Screamer of Fortune. -->
@@ -693,6 +749,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45973" name="Dynasty Knife of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Knife of Fortune. -->
@@ -700,6 +757,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45974" name="Shyeed's Bow of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Shyeed's Bow of Fortune. -->
@@ -707,6 +765,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45975" name="Bow of Peril of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Bow of Peril of Fortune. -->
@@ -714,6 +773,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45976" name="Eminence Bow of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Eminence Bow of Fortune. -->
@@ -721,6 +781,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45977" name="Dynasty Bow of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Bow of Fortune. -->
@@ -728,6 +789,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45978" name="Sword of Miracles of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sword of Miracles of Fortune. -->
@@ -735,6 +797,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45979" name="Wizard's Tear of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Wizard's Tear of Fortune. -->
@@ -742,6 +805,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45980" name="Homunkulus' Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Homunkulus' Sword of Fortune. -->
@@ -749,6 +813,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45981" name="Dynasty Phantom of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Phantom of Fortune. -->
@@ -756,6 +821,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45982" name="Durendal of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Durendal of Fortune. -->
@@ -763,6 +829,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45983" name="Dismantler of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dismantler of Fortune. -->
@@ -770,6 +837,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45984" name="Saber Tooth of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Saber Tooth of Fortune. -->
@@ -777,6 +845,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45985" name="Dynasty Ancient Sword of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Ancient Sword of Fortune. -->
@@ -784,6 +853,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45986" name="Éclair Bijou of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Éclair Bijou of Fortune. -->
@@ -791,6 +861,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45987" name="Colichemarde of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Colichemarde of Fortune. -->
@@ -798,6 +869,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45988" name="Admiral's Estoc of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Admiral's Estoc of Fortune. -->
@@ -805,6 +877,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45989" name="Dynasty Rapier of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Rapier of Fortune. -->
@@ -812,6 +885,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45990" name="Screaming Vengeance of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Screaming Vengeance of Fortune. -->
@@ -819,6 +893,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45991" name="Hell Hound of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Hell Hound of Fortune. -->
@@ -826,6 +901,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45992" name="Sharpshooter of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Sharpshooter of Fortune. -->
@@ -833,6 +909,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45993" name="Dynasty Crossbow of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a +4 enchanted Dynasty Crossbow of Fortune. -->
@@ -840,6 +917,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45994" name="Apocalypse Shaper Focus Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create +6 Enchanted Apocalypse Shaper Focus (30-day). Will be deleted after the event. -->
@@ -847,6 +925,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45995" name="Apocalypse Cutter Focus Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create +6 Enchanted Apocalypse Cutter Focus (30-day). Will be deleted after the event. -->
@@ -854,6 +933,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45996" name="Apocalypse Slasher Focus Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create +6 Enchanted Apocalypse Slasher Focus (30-day). Will be deleted after the event. -->
@@ -861,6 +941,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45997" name="Apocalypse Dual Sword Damage Up Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create +6 Enchanted Apocalypse Dual Sword Damage Up (30-day). Will be deleted after the event. -->
@@ -868,6 +949,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45998" name="Apocalypse Dual Dagger Focus Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create +6 Enchanted Apocalypse Dual Dagger Focus (30-day). Will be deleted after the event. -->
@@ -875,6 +957,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="45999" name="Apocalypse Dual Blunt Weapon Damage Up Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to create +6 Enchanted Apocalypse Dual Blunt Weapon Damage Up (30-day). Will be deleted after the event. -->
@@ -882,5 +965,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 </list>

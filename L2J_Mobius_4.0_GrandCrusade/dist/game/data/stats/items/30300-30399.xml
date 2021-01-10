@@ -7,6 +7,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30301" name="Superior Giant's Codex Manuscript" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for skill enchantment after Awakening. -->
@@ -18,6 +19,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30302" name="Superior Giant's Codex Manuscript - Mastery" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for blessed skill enchantment after Awakening. -->
@@ -29,6 +31,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30303" name="Superior Giant's Codex Manuscript - Discipline" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed for changing the skill enchantment method after Awakening. -->
@@ -40,6 +43,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30304" name="Superior Giant's Codex Manuscript - Oblivion" type="EtcItem">
 		<!-- Superior Giant's Codex. Item needed to restore a previous skill enchantment after Awakening. -->
@@ -51,6 +55,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30305" name="Check Test Item" type="EtcItem">
 		<!-- Check Test Item -->
@@ -62,6 +67,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="30306" name="Essence of the Lesser Giants" type="EtcItem">
 		<!-- Ravidoff in the Reliquary of the Giants will exchange these items for Superior Giant's Codexes. -->
@@ -72,6 +78,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30307" name="R99 (Rare) Belt" type="Armor">
 		<set name="icon" val="icon.armor_belt_i03" />
@@ -85,6 +92,7 @@
 		<set name="commissionItemType" val="BELT" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="35565000" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -99,6 +107,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3556000" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
 		</skills>
@@ -114,6 +123,7 @@
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="71131000" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">50</stat>
 		</stats>
@@ -130,6 +140,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="148, 149, 150, 151" />
 		</cond>
@@ -150,6 +161,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="152, 153, 154, 155, 156, 157" />
 		</cond>
@@ -170,6 +182,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="158, 159, 160, 161" />
 		</cond>
@@ -190,6 +203,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="162, 163, 164, 165" />
 		</cond>
@@ -210,6 +224,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="166, 167, 168, 169, 170" />
 		</cond>
@@ -230,6 +245,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="176, 177, 178" />
 		</cond>
@@ -250,6 +266,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="171, 172, 173, 174, 175" />
 		</cond>
@@ -270,6 +287,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="1518">
 			<player class_id_restriction="179, 180, 181" />
 		</cond>
@@ -289,6 +307,7 @@
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="30319" name="Mark of Effort" type="EtcItem">
 		<!-- Mark that symbolizes the efforts of a returned adventurer. It represents the right to receive each type of support through the adventure guildsmen. Also, if you possess Marks of Effort, that benefit accumulates. Increases. -->
@@ -300,6 +319,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30320" name="Tamlin Orc's Badge" type="EtcItem">
 		<!-- Tamlin Orc's badge that retired adventurer Isael Silvershadow of Hunter Village asks you to collect. -->
@@ -311,6 +331,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30321" name="Memorial Crystal" type="EtcItem">
 		<!-- Mark that retired adventurer Isael Silvershadow of Hunter Village asks you to collect. By hunting with a sponsor, you can acquire tremendous experience in a short period of time. -->
@@ -322,6 +343,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30322" name="Flame Ashes" type="EtcItem">
 		<!-- Flame Ashes that Head Blacksmith Peris of the Town of Aden asks you to collect. -->
@@ -333,6 +355,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30323" name="Crystals of Experience" type="EtcItem">
 		<!-- Marks that Head Blacksmith Peris of the Town of Aden asks you to collect. By hunting with a sponsor, you can acquire tremendous experience in a short period of time. -->
@@ -344,6 +367,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="30324" name="Enhanced Pailaka Ring" type="EtcItem">
 		<!-- Pailaka forgotten temple reward item. Ring with great M. Def. Has the effect of MP + 15. Cannot be enchanted. -->
@@ -354,6 +378,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30325" name="Returning Adventurer's Mark" type="EtcItem">
 		<!-- Mark of a returned adventurer It represents the right to receive each type of support through the adventure guildsmen. 30 day limited period. -->
@@ -365,6 +390,7 @@
 		<set name="time" val="43200" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="2" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30326" name="Antharas' Symbol Dye" type="EtcItem">
 		<set name="icon" val="icon.dragon_dye_i01" />
@@ -373,6 +399,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="30327" name="Valakas' Symbol Dye" type="EtcItem">
 		<set name="icon" val="icon.dragon_dye_i01" />
@@ -381,6 +408,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="30328" name="Earth Wyrm's Symbol Dye" type="EtcItem">
 		<set name="icon" val="icon.etc_str_hena_i02" />
@@ -389,6 +417,7 @@
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="30329" name="Envoy Weapon" type="Weapon">
 		<!-- Envoy Weapon -->
@@ -407,6 +436,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">5</stat>
 			<stat type="mAtk">5</stat>
@@ -429,6 +459,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="waterRes">30</stat>
@@ -446,6 +477,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="holyRes">30</stat>
@@ -463,6 +495,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="windRes">30</stat>
@@ -480,6 +513,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="darkRes">30</stat>
@@ -497,6 +531,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="earthRes">30</stat>
@@ -514,6 +549,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="waterRes">30</stat>
@@ -531,6 +567,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="fireRes">30</stat>
@@ -548,6 +585,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="fireRes">30</stat>
@@ -565,6 +603,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="windRes">30</stat>
@@ -582,6 +621,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8786" level="1" /> <!-- Top-grade Royal Guard Earring - Gludio -->
 		</skills>
@@ -601,6 +641,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8787" level="1" /> <!-- Top-grade Royal Guard Earring - Dion -->
 		</skills>
@@ -620,6 +661,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8788" level="1" /> <!-- Top-grade Royal Guard Earring - Giran -->
 		</skills>
@@ -639,6 +681,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8789" level="1" /> <!-- Top-grade Royal Guard Earring - Oren -->
 		</skills>
@@ -658,6 +701,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8790" level="1" /> <!-- Top-grade Royal Guard Earring - Aden -->
 		</skills>
@@ -677,6 +721,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8791" level="1" /> <!-- Top-grade Royal Guard Earring - Innadril -->
 		</skills>
@@ -696,6 +741,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8792" level="1" /> <!-- Top-grade Royal Guard Earring - Goddard -->
 		</skills>
@@ -715,6 +761,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8793" level="1" /> <!-- Top-grade Royal Guard Earring - Rune -->
 		</skills>
@@ -734,6 +781,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8794" level="1" /> <!-- Top-grade Royal Guard Earring - Schuttgart -->
 		</skills>
@@ -753,6 +801,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8795" level="1" /> <!-- Top-grade Royal Guard Ring - Gludio -->
 		</skills>
@@ -772,6 +821,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8796" level="1" /> <!-- Top-grade Royal Guard Ring - Dion -->
 		</skills>
@@ -791,6 +841,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8797" level="1" /> <!-- Top-grade Royal Guard Ring - Giran -->
 		</skills>
@@ -810,6 +861,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8798" level="1" /> <!-- Top-grade Royal Guard Ring - Oren -->
 		</skills>
@@ -829,6 +881,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8799" level="1" /> <!-- Top-grade Royal Guard Ring - Aden -->
 		</skills>
@@ -848,6 +901,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8800" level="1" /> <!-- Top-grade Royal Guard Ring - Innadril -->
 		</skills>
@@ -867,6 +921,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8801" level="1" /> <!-- Top-grade Royal Guard Ring - Goddard -->
 		</skills>
@@ -886,6 +941,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8802" level="1" /> <!-- Top-grade Royal Guard Ring - Rune -->
 		</skills>
@@ -905,6 +961,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8803" level="1" /> <!-- Top-grade Royal Guard Ring - Schuttgart -->
 		</skills>
@@ -1058,6 +1115,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="20" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="2096" level="1" /> <!-- Soul Crystal -->
 		</skills>
@@ -1070,6 +1128,7 @@
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="30365" name="Headgear" type="Armor">
 		<!-- Headgear crafting ingredient -->
@@ -1085,6 +1144,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="530" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">114</stat>
 		</stats>
@@ -1104,6 +1164,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1070" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">76</stat>
 		</stats>
@@ -1123,6 +1184,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="510" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">76</stat>
 		</stats>
@@ -1139,6 +1201,7 @@
 		<set name="commissionItemType" val="UNDERWEAR" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3997000" />
+		<set name="material" val="CRYSTAL" />
 		<stats>
 			<stat type="pDef">38</stat>
 		</stats>
@@ -1156,6 +1219,7 @@
 		<set name="commissionItemType" val="BELT" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1998000" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">19</stat>
 		</stats>
@@ -1171,6 +1235,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3556000" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
 		</skills>
@@ -1186,6 +1251,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
 			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
@@ -1208,6 +1274,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="13136" level="1" /> <!-- Hero's Cloak -->
 		</skills>
@@ -1229,6 +1296,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="13137" level="1" /> <!-- Glorious Cloak -->
 		</skills>
@@ -1248,6 +1316,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
 			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
@@ -1263,7 +1332,7 @@
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="ORIHARUKON" />
+		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1274,7 +1343,7 @@
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="ORIHARUKON" />
+		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1285,7 +1354,7 @@
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="ORIHARUKON" />
+		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1296,7 +1365,7 @@
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="ORIHARUKON" />
+		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1307,7 +1376,7 @@
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="ORIHARUKON" />
+		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1318,7 +1387,7 @@
 		<set name="etcitem_type" val="BOLT" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="ORIHARUKON" />
+		<set name="material" val="GOLD" />
 		<set name="crystal_type" val="R" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1333,6 +1402,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9207" level="1" /> <!-- Lucky Clover (R-grade) -->
 		</skills>
@@ -1347,6 +1417,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9208" level="1" /> <!-- Lucky Clover (R-grade) -->
 		</skills>
@@ -1364,6 +1435,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">55</stat>
 		</stats>
@@ -1376,6 +1448,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30385" name="Certificate of Life" type="EtcItem">
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
@@ -1385,6 +1458,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30386" name="Certificate of Hero" type="EtcItem">
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
@@ -1394,6 +1468,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30387" name="Certificate of Hell" type="EtcItem">
 		<!-- Proof given to those who successfully complete a mission. Can be exchanged for equipment. -->
@@ -1403,6 +1478,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="30388" name="Returning Adventurer's Support Box (S-grade)" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains S-grade equipment and weapon. Double-click to use. -->
@@ -1414,6 +1490,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="30389" name="Returning Adventurer's Support Box (A-grade)" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains A-grade equipment and weapon. Double-click to use. -->
@@ -1425,6 +1502,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="30390" name="Returning Adventurer's Support Box (B-grade)" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains B-grade equipment and weapon. Double-click to use. -->
@@ -1436,6 +1514,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="30391" name="Returning Adventurer's Support Box (C-grade)" type="EtcItem">
 		<!-- Box containing support items for a returner. Contains C-grade equipment and weapon. Double-click to use. -->
@@ -1447,6 +1526,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="30392" name="Infinity Shaper" type="Weapon">
 		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/MP/CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Skill Critical Damage +10%. -->
@@ -1466,6 +1546,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13146" level="1" /> <!-- Special Ability: Infinity Shaper -->
 		</skills>
@@ -1498,6 +1579,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13147" level="1" /> <!-- Special Ability: Infinity Cutter -->
 		</skills>
@@ -1529,6 +1611,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13148" level="1" /> <!-- Special Ability: Infinity Slasher -->
 		</skills>
@@ -1560,6 +1643,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13149" level="1" /> <!-- Special Ability: Infinity Avenger -->
 		</skills>
@@ -1592,6 +1676,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13150" level="1" /> <!-- Special Ability: Infinity Fighter -->
 		</skills>
@@ -1624,6 +1709,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13151" level="1" /> <!-- Special Ability: Infinity Stormer -->
@@ -1658,6 +1744,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13152" level="1" /> <!-- Special Ability: Infinity Thrower -->
 		</skills>
@@ -1691,6 +1778,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13153" level="1" /> <!-- Special Ability: Infinity Shooter -->
 		</skills>

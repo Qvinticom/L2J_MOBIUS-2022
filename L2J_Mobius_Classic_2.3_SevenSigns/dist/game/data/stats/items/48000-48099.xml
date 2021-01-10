@@ -6,7 +6,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="CLOTH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -62,7 +62,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="BRONZE" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48046" name="Agathion Enchant Scroll" type="EtcItem">
@@ -71,6 +71,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="48047" name="Quality Agathion Enchant Scroll" type="EtcItem">
 		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Can not use for items with enchant level more than +8. -->
@@ -78,6 +79,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="48048" name="Agathion - Virgo" type="Armor">
 		<!-- An item which can be used to obtain the power of the Agathion Virgo. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Def. increased. Starting from +6, bonus to mental attacks. Cannot be dropped or sold. -->
@@ -140,7 +142,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -151,7 +153,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -186,5 +188,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 </list>

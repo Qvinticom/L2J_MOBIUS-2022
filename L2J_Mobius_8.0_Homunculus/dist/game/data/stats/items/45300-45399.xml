@@ -10,6 +10,7 @@
 		<set name="weight" val="150" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="17619" level="1" /> <!-- Release Agathion's Seal -->
 			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
@@ -35,6 +36,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion Blessed Pisces - 30-day -->
 		</capsuled_items>
@@ -50,6 +52,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -65,18 +68,21 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45376" name="Reward Capsule" additionalName="Event" type="EtcItem">
 		<!-- It looks like something nice might be inside! Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45377" name="L2B2's Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Something nice might be inside! Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45378" name="Vitality Replenishing Herb - Party" additionalName="Event" type="EtcItem">
 		<!-- Restores a certain amount of Vitality for all party members. -->
@@ -84,12 +90,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45379" name="Monster Research" additionalName="Event" type="EtcItem">
 		<!-- A report on the monsters of Aden. Take these to L2B2 for rewards. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hour" type="Weapon">
 		<!-- Looks like the energy pack is nearly drained, but it can use Confusion. 1-hour. -->
@@ -102,6 +110,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="60" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -121,6 +130,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="60" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -138,6 +148,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="45383" name="Maid Hairband" additionalName="15-day" type="Armor">
 		<!-- Cute hairband. Female only. Uses 2 hair accessory slots. -->
@@ -148,6 +159,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="45384" name="Laborer Hat" additionalName="15-day" type="Armor">
 		<!-- Hat worn by Lei Feng. Uses 1 hair accessory slot. -->
@@ -158,6 +170,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="45385" name="Ruthless Tribe Mask" additionalName="15-day" type="Armor">
 		<!-- Mask worn by a ruthless tribe. Uses 1 hair accessory slot. -->
@@ -168,84 +181,98 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="45386" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45387" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45388" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45389" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45390" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45391" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45392" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45393" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45394" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45395" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45396" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45397" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45398" name="Drop Rate Setting Comparison Purpose" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="45399" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
@@ -257,5 +284,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 </list>

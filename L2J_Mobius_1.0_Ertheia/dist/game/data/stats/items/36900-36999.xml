@@ -8,6 +8,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4106" /> <!-- mk_leather_strap_lv5 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36901" name="Recipe: Steel Wire - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Silver Wire (Lv. 2) into Steel Wire (Lv. 1). Requires Create Item (Lv. 6). -->
@@ -17,6 +18,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4107" /> <!-- mk_metal_strap_lv1 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36902" name="Recipe: Steel Wire - Combination" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Steel (Lv. 1) and Thread (Lv. 1) into Steel Wire (Lv. 1). Requires Create Item (Lv. 6). -->
@@ -26,6 +28,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4108" /> <!-- mk_metal_strap_lv1 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36903" name="Recipe: Silver Wire - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Adamantite Wire (Lv. 3) into Silver Wire (Lv. 2). Requires Create Item (Lv. 8). -->
@@ -35,6 +38,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4109" /> <!-- mk_metal_strap_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36904" name="Recipe: Silver Wire - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Steel Wire (Lv. 1) into Silver Wire (Lv. 2). Requires Create Item (Lv. 6). -->
@@ -44,6 +48,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4110" /> <!-- mk_metal_strap_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36905" name="Recipe: Silver Wire - Combination" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Silver (Lv. 2) and Thin Braid (Lv. 2) into Silver Wire (Lv. 2). Requires Create Item (Lv. 6). -->
@@ -53,6 +58,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4111" /> <!-- mk_metal_strap_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36906" name="Recipe: Adamantite Wire - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Orichalcum Wire (Lv. 4) into Adamantite Wire (Lv. 3). Requires Create Item (Lv. 11). -->
@@ -62,6 +68,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4112" /> <!-- mk_metal_strap_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36907" name="Recipe: Adamantite Wire - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Silver Wire (Lv. 2) into Adamantite Wire (Lv. 3). Requires Create Item (Lv. 8). -->
@@ -71,6 +78,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4113" /> <!-- mk_metal_strap_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36908" name="Recipe: Adamantite Wire - Combination" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Adamantite (Lv. 3) and Synthetic Braid (Lv. 3) into Adamantite Wire (Lv. 3). Requires Create Item (Lv. 6). -->
@@ -80,6 +88,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4114" /> <!-- mk_metal_strap_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36909" name="Recipe: Orichalcum Wire - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Durandil Wire (Lv. 5) into Orichalcum Wire (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -89,6 +98,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4115" /> <!-- mk_metal_strap_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36910" name="Recipe: Orichalcum Wire - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Adamantite Wire (Lv. 3) into Orichalcum Wire (Lv. 4). Requires Create Item (Lv. 11). -->
@@ -98,6 +108,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4116" /> <!-- mk_metal_strap_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36911" name="Recipe: Orichalcum Wire - Combination" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Orichalcum (Lv. 4) and Durable Braid (Lv. 4) into Orichalcum Wire (Lv. 4). Requires Create Item (Lv. 6). -->
@@ -107,6 +118,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4117" /> <!-- mk_metal_strap_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36912" name="Recipe: Durandil Wire - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Orichalcum Wire (Lv. 4) into Durandil Wire (Lv. 5). Requires Create Item (Lv. 14). -->
@@ -116,6 +128,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4118" /> <!-- mk_metal_strap_lv5 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36913" name="Recipe: Durandil Wire - Combination" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Durandil Wire (Lv. 5) and Quality Braid (Lv. 5) into Durandil Wire (Lv. 5). Requires Create Item (Lv. 6). -->
@@ -125,6 +138,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4119" /> <!-- mk_metal_strap_lv5 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36914" name="Recipe: Weapon Fragment (Low-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (Lv. 2) into Weapon Fragment (Low-grade) (Lv. 1). Requires Create Item (Lv. 6). -->
@@ -134,6 +148,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4120" /> <!-- mk_weapon_fragment_lv1 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36915" name="Recipe: Weapon Fragment - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (Mid-grade) (Lv. 3) into Weapon Fragment (Lv. 2). Requires Create Item (Lv. 8). -->
@@ -143,6 +158,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4121" /> <!-- mk_weapon_fragment_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36916" name="Recipe: Weapon Fragment - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (Low-grade) (Lv. 1) into Weapon Fragment (Lv. 2). Requires Create Item (Lv. 6). -->
@@ -153,6 +169,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="4122" /> <!-- mk_weapon_fragment_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36917" name="Recipe: Weapon Fragment (Mid-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (High-grade) (Lv. 4) into Weapon Fragment (Mid-grade) (Lv. 3). Requires Create Item (Lv. 11). -->
@@ -162,6 +179,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4123" /> <!-- mk_weapon_fragment_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36918" name="Recipe: Weapon Fragment (Mid-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (Lv. 2) into Weapon Fragment (Mid-grade) (Lv. 3). Requires Create Item (Lv. 8). -->
@@ -171,6 +189,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4124" /> <!-- mk_weapon_fragment_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36919" name="Recipe: Weapon Fragment (High-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (Top-grade) (Lv. 5) into Weapon Fragment (High-grade) (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -180,6 +199,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4125" /> <!-- mk_weapon_fragment_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36920" name="Recipe: Weapon Fragment (High-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (Mid-grade) (Lv. 3) into Weapon Fragment (High-grade) (Lv. 4). Requires Create Item (Lv. 11). -->
@@ -189,6 +209,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4126" /> <!-- mk_weapon_fragment_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36921" name="Recipe: Weapon Fragment (Top-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Weapon Fragment (High-grade) (Lv. 4) into Weapon Fragment (Top-grade) (Lv. 5). Requires Create Item (Lv. 14). -->
@@ -198,6 +219,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4127" /> <!-- mk_weapon_fragment_lv5 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36922" name="Recipe: Armor Fragment (Low-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (Lv. 2) into Armor Fragment (Low-grade) (Lv. 1). Requires Create Item (Lv. 6). -->
@@ -207,6 +229,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4128" /> <!-- mk_armor_fragment_lv1 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36923" name="Recipe: Armor Fragment - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (Mid-grade) (Lv. 3) into Armor Fragment (Lv. 2). Requires Create Item (Lv. 8). -->
@@ -216,6 +239,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4129" /> <!-- mk_armor_fragment_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36924" name="Recipe: Armor Fragment - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (Low-grade) (Lv. 1) into Armor Fragment (Lv. 2). Requires Create Item (Lv. 6). -->
@@ -225,6 +249,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4130" /> <!-- mk_armor_fragment_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36925" name="Recipe: Armor Fragment (Mid-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (High-grade) (Lv. 4) into Armor Fragment (Mid-grade) (Lv. 3). Requires Create Item (Lv. 11). -->
@@ -234,6 +259,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4131" /> <!-- mk_armor_fragment_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36926" name="Recipe: Armor Fragment (Mid-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (Lv. 2) into Armor Fragment (Mid-grade) (Lv. 3). Requires Create Item (Lv. 8). -->
@@ -244,6 +270,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="4132" /> <!-- mk_armor_fragment_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36927" name="Recipe: Armor Fragment (High-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (Top-grade) (Lv. 5) into Armor Fragment (High-grade) (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -253,6 +280,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4133" /> <!-- mk_armor_fragment_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36928" name="Recipe: Armor Fragment (High-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (Mid-grade) (Lv. 3) into Armor Fragment (High-grade) (Lv. 4). Requires Create Item (Lv. 11). -->
@@ -262,6 +290,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4134" /> <!-- mk_armor_fragment_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36929" name="Recipe: Armor Fragment (Top-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Armor Fragment (High-grade) (Lv. 4) into Armor Fragment (Top-grade) (Lv. 5). Requires Create Item (Lv. 14). -->
@@ -271,6 +300,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4135" /> <!-- mk_armor_fragment_lv5 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36930" name="Recipe: Accessory Gem (Low-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (Lv. 2) into Accessory Gem (Low-grade) (Lv. 1). Requires Create Item (Lv. 6). -->
@@ -280,6 +310,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4136" /> <!-- mk_acc_fragment_lv1 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36931" name="Recipe: Accessory Gem - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (Mid-grade) (Lv. 3) into Accessory Gem (Lv. 2). Requires Create Item (Lv. 8). -->
@@ -289,6 +320,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4137" /> <!-- mk_acc_fragment_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36932" name="Recipe: Accessory Gem - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (Low-grade) (Lv. 1) into Accessory Gem (Lv. 2). Requires Create Item (Lv. 6). -->
@@ -298,6 +330,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4138" /> <!-- mk_acc_fragment_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36933" name="Recipe: Accessory Gem (Mid-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (High-grade) (Lv. 4) into Accessory Gem (Mid-grade) (Lv. 3). Requires Create Item (Lv. 11). -->
@@ -307,6 +340,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4139" /> <!-- mk_acc_fragment_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36934" name="Recipe: Accessory Gem (Mid-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (Lv. 2) into Accessory Gem (Mid-grade) (Lv. 3). Requires Create Item (Lv. 8). -->
@@ -317,6 +351,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="4140" /> <!-- mk_acc_fragment_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36935" name="Recipe: Accessory Gem (High-grade) - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (Top-grade) (Lv. 5) into Accessory Gem (High-grade) (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -326,6 +361,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4141" /> <!-- mk_acc_fragment_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36936" name="Recipe: Accessory Gem (High-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (Mid-grade) (Lv. 3) into Accessory Gem (High-grade) (Lv. 4). Requires Create Item (Lv. 11). -->
@@ -336,6 +372,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="4142" /> <!-- mk_acc_fragment_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36937" name="Recipe: Accessory Gem (Top-grade) - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Accessory Gem (High-grade) (Lv. 4) into Accessory Gem (Top-grade) (Lv. 5). Requires Create Item (Lv. 14). -->
@@ -345,6 +382,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4143" /> <!-- mk_acc_fragment_lv5 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36938" name="Recipe: Cokes - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Greater Cokes (Lv. 2) into Cokes (Lv. 1). Requires Create Item (Lv. 6). -->
@@ -354,6 +392,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4144" /> <!-- mk_cokes_lv1 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36939" name="Recipe: Greater Cokes - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Synthetic Cokes (Lv. 3) into Greater Cokes (Lv. 2). Requires Create Item (Lv. 8). -->
@@ -363,6 +402,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4145" /> <!-- mk_cokes_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36940" name="Recipe: Greater Cokes - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Cokes (Lv. 1) into Greater Cokes (Lv. 2). Requires Create Item (Lv. 6). -->
@@ -372,6 +412,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4146" /> <!-- mk_cokes_lv2 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36941" name="Recipe: Synthetic Cokes - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Greater Synthetic Cokes (Lv. 4) into Synthetic Cokes (Lv. 3). Requires Create Item (Lv. 11). -->
@@ -381,6 +422,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4147" /> <!-- mk_cokes_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36942" name="Recipe: Synthetic Cokes - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Greater Cokes (Lv. 2) into Synthetic Cokes (Lv. 3). Requires Create Item (Lv. 8). -->
@@ -391,6 +433,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="4148" /> <!-- mk_cokes_lv3 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36943" name="Recipe: Greater Synthetic Cokes - Downgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Exquisite Synthetic Cokes (Lv. 5) into Greater Synthetic Cokes (Lv. 4). Requires Create Item (Lv. 14). -->
@@ -400,6 +443,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4149" /> <!-- mk_cokes_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36944" name="Recipe: Greater Synthetic Cokes - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Synthetic Cokes (Lv. 3) into Greater Synthetic Cokes (Lv. 4). Requires Create Item (Lv. 11). -->
@@ -409,6 +453,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4150" /> <!-- mk_cokes_lv4 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36945" name="Recipe: Exquisite Synthetic Cokes - Upgrade" type="EtcItem">
 		<!-- For Tyrr Maestros only. Recipe for changing Greater Synthetic Cokes (Lv. 4) into Exquisite Synthetic Cokes (Lv. 5). Requires Create Item (Lv. 14). -->
@@ -418,6 +463,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4151" /> <!-- mk_cokes_lv5 -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36946" name="Lindvior's Earring" type="Armor">
 		<!-- MP + 59, Petrification and Resistance to it + 50%, Knock Back/Knock Down and Resistance to it + 40%, Pulling and Resistance to it + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, P./M. Abnormal Status Reflection + 10%. Reflect damage magic back to the attacker with the probability of 10%. Movement Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. When two identical earrings are equipped, only one effect is applied. -->
@@ -430,6 +476,7 @@
 		<set name="price" val="192622000" />
 		<set name="immediate_effect" val="true" />
 		<set name="enchant_enabled" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
 			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
@@ -444,6 +491,7 @@
 		<set name="weight" val="60" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36948" name="Blessed Lindvior's Earring" type="Armor">
 		<!-- No longer provided -->
@@ -452,6 +500,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13525" level="1" /> <!-- Blessed Lindvior's Earring -->
 			<skill id="13526" level="1" /> <!-- Blessed Lindvior's Earring -->
@@ -469,6 +518,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="36950" name="Toma's Living Guide" type="EtcItem">
 		<!-- Lineage II Living Guide written by Master Toma with great efforts. -->
@@ -489,6 +539,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -505,7 +556,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="7116" level="1" /> <!-- Air Bike -->
@@ -520,6 +571,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36954" name="No-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a no-grade item and a D-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -530,6 +582,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36955" name="D-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a D-grade item and a C-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -540,6 +593,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36956" name="C-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a C-grade item and a B-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -550,6 +604,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36957" name="B-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a B-grade item and an A-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -560,6 +615,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36958" name="A-grade" type="EtcItem">
 		<!-- Double-click to receive a box with an A-grade item and an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -570,6 +626,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36959" name="S-grade" type="EtcItem">
 		<!-- Double-click to receive an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -580,6 +637,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36960" name="Fire Stone (+ 60)" type="EtcItem">
 		<!-- Can bestow fire attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->
@@ -861,6 +919,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9234" level="1" /> <!-- Scroll: Enchant Hair Accessory -->
 		</skills>
@@ -871,6 +930,7 @@
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="LIFE_STONE" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="36980" name="9th Anniversary Rocket Gun Hat: Chain Fireworks" type="Armor">
 		<!-- Item to commemorate the 9th anniversary. Hat shaped like a rocket gun. Enables the Chain Fireworks skill. -->
@@ -878,6 +938,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 		</skills>
@@ -888,6 +949,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
@@ -899,6 +961,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
@@ -910,6 +973,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
@@ -921,6 +985,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
@@ -932,6 +997,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
@@ -943,6 +1009,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
@@ -954,6 +1021,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
@@ -965,6 +1033,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
@@ -976,6 +1045,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
@@ -987,6 +1057,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
@@ -998,6 +1069,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
@@ -1009,6 +1081,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
@@ -1020,6 +1093,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
@@ -1031,6 +1105,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13493" level="1" /> <!-- Chain Fireworks -->
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
@@ -1045,6 +1120,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36996" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (20-day) (Event). -->
@@ -1055,6 +1131,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="28800" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36997" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (10-day) (Event). -->
@@ -1065,6 +1142,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="14400" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36998" name="9th Anniversary Gift Box" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Gift Box that contains 9th Anniversary Rocket Gun Hat: Chain Fireworks and 9th Anniversary Cube (5-day) (Event). -->
@@ -1075,6 +1153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="7200" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36999" name="9th Anniversary Cube (30-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
@@ -1085,5 +1164,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 	</item>
 </list>

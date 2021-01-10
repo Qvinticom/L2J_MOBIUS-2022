@@ -6,8 +6,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -22,7 +21,7 @@
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -34,7 +33,7 @@
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -60,7 +59,7 @@
 		<!-- A famous drink from the Mystic Tavern. Recovers some Vitality. Can be exchanged for a rare sort of beer through the Game Assistant. Cannot be used in the Olympiad. A Vitality item with no restrictions. -->
 		<set name="icon" val="icon.bm_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -68,7 +67,7 @@
 		<!-- Honey beer made from Mystic Tavern's special recipe. Recovers Vitality. For 10 min., CON/ MEN/ LUC/ CHA +1. Using another Honey Vitality Beer while its effect is active stacks it up to Lv. 3. Vitality item with no restrictions. Honey Vitality Beer Lv. 2: For 10 min., CON/ MEN/ LUC/ CHA +2, acquired XP +10%. Honey Vitality Beer Lv. 3: For 10 min, CON/ MEN/ LUC/ CHA +3, acquired XP +30%. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_royal_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -83,6 +82,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="28197" level="1" /> <!-- Teddy Bear Appearance Stone -->
 		</skills>
@@ -98,6 +98,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="28198" level="1" /> <!-- Cat Plushy Appearance Stone -->
 		</skills>
@@ -113,6 +114,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="28199" level="1" /> <!-- Panda Plushy Appearance Stone -->
 		</skills>
@@ -122,7 +124,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -131,7 +133,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -141,7 +143,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="STEEL" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="weight" val="10" />
@@ -159,8 +161,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
+		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -273,7 +274,7 @@
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -282,7 +283,7 @@
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -291,7 +292,7 @@
 		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -300,7 +301,7 @@
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -309,7 +310,7 @@
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -318,7 +319,7 @@
 		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -354,7 +355,7 @@
 	<item id="29227" name="Shattered Gourd Shard" type="EtcItem">
 		<!-- Crystal shard which came out of broken gourd. Take it to Puss the Cat to exchange it for a special item. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29228" name="Babayaga Agathion Charm" additionalName="Luxury" type="Armor">
@@ -451,7 +452,7 @@
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -462,7 +463,7 @@
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -473,7 +474,7 @@
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -484,7 +485,7 @@
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -598,7 +599,7 @@
 		<!-- Double-click to obtain Elmoreden Cloak enchanted to +7. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -613,7 +614,7 @@
 		<!-- Double-click to obtain a +7 Aden Cloak. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -628,7 +629,7 @@
 		<!-- Double-click to obtain Elmore Cloak enchanted to +7. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -643,7 +644,7 @@
 		<!-- Double-click to obtain Ferios Cloak enchanted to +7. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -735,109 +736,109 @@
 	</item>
 	<item id="29256" name="Seven Deadly Sins Card: Meliodas" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29257" name="Seven Deadly Sins Card: Meliodas 2" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_fish" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29258" name="Seven Deadly Sins Card: Diane" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_dian" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29259" name="Seven Deadly Sins Card: Ban" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_van" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29260" name="Seven Deadly Sins Card: King" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_king" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29261" name="Seven Deadly Sins Card: Gowther" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_go" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29262" name="Seven Deadly Sins Card: Merlin" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_merlin" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29263" name="Seven Deadly Sins Card: Escanor" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_esca" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29264" name="Lioneth Kingdom Card: Elizabeth" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_eli" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29265" name="Dreyfus Card: Gil Sanda" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_gil" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29266" name="Dreyfus Card: Howzer" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_how" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29267" name="Handsen Card: Yurigo" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_yuri" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29268" name="Ten Commandments Card: Jerudoris" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_jeru" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29269" name="Ten Commandments Card: Estarossa" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_rotsa" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29270" name="Ten Commandments Card: Galan" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_tung" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29271" name="Brittania" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_bri" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29272" name="Pet Card: Hawk" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_hawk" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29273" name="Legendary Knights Card: Seven Deadly Sins" type="EtcItem">
 		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_legend" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -847,7 +848,7 @@
 		<!-- Suspicious supplies prepared by Sibi for the Balthus Knights. Double-click to obtain a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -857,7 +858,7 @@
 		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

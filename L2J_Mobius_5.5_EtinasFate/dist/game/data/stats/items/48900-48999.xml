@@ -14,7 +14,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifactbook" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
@@ -30,7 +30,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifactbook" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
@@ -46,7 +46,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifactbook" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<cond msgId="113" addName="1">
@@ -63,6 +63,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48958" name="Artifact - M. Atk." additionalName="Fighting Spirit" type="Armor">
 		<set name="icon" val="icon.artifact_b_ma" />
@@ -71,6 +72,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48959" name="Artifact - Atk. Spd." additionalName="Fighting Spirit" type="Armor">
 		<set name="icon" val="icon.artifact_b_pa_speed" />
@@ -79,6 +81,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48960" name="Artifact - Casting Spd." additionalName="Fighting Spirit" type="Armor">
 		<set name="icon" val="icon.artifact_b_ma_speed" />
@@ -87,6 +90,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48961" name="Artifact - P. Def." additionalName="Protection" type="Armor">
 		<set name="icon" val="icon.artifact_c_phy_def" />
@@ -95,6 +99,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48962" name="Artifact - M. Def." additionalName="Protection" type="Armor">
 		<set name="icon" val="icon.artifact_c_mag_def" />
@@ -103,6 +108,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48963" name="Artifact - Max HP" additionalName="Protection" type="Armor">
 		<set name="icon" val="icon.artifact_c_hp" />
@@ -111,6 +117,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48964" name="Artifact - Max MP" additionalName="Protection" type="Armor">
 		<set name="icon" val="icon.artifact_c_mp" />
@@ -119,6 +126,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48965" name="Artifact - XP Gain" additionalName="Support" type="Armor">
 		<set name="icon" val="icon.artifact_d_exp" />
@@ -127,6 +135,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48966" name="Artifact - HP Absorption" additionalName="Support" type="Armor">
 		<set name="icon" val="icon.artifact_d_vampiric_rage" />
@@ -135,6 +144,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48967" name="Artifact - Speed" additionalName="Support" type="Armor">
 		<set name="icon" val="icon.artifact_d_move_speed" />
@@ -143,6 +153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48968" name="Artifact - Received Heal Amount" additionalName="Support" type="Armor">
 		<set name="icon" val="icon.artifact_d_heal_effect" />
@@ -151,6 +162,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48969" name="Artifact - P. Atk." additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_pa" />
@@ -159,6 +171,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48970" name="Artifact - M. Atk." additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_ma" />
@@ -167,6 +180,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48971" name="Artifact - P. Accuracy" additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_hit" />
@@ -175,6 +189,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48972" name="Artifact - M. Accuracy" additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_mhit" />
@@ -183,6 +198,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48973" name="Artifact - P. Critical Rate" additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_crt_per" />
@@ -191,6 +207,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48974" name="Artifact - P. Skill Critical Rate" additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_crt_skill_per" />
@@ -199,6 +216,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48975" name="Artifact - M. Skill Critical Rate" additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_crt_mag_per" />
@@ -207,6 +225,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48976" name="Artifact - Potion / Elixir Effect Bonus" additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_hp_special" />
@@ -215,6 +234,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48977" name="Artifact - Received Damage Reduction When Imobilized" additionalName="Balance" type="Armor">
 		<set name="icon" val="icon.artifact_a_block_act_dmg" />
@@ -223,6 +243,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="48980" name="Artifact - Attack Attribute" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Attack Attribute. Can be applied to Artifact - Balance slots. Attack Attribute +30 when equipped. Can be purchased at Giran Town Luxury Shop. Cannot be upgraded. -->
@@ -230,6 +251,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35252" level="1" /> <!-- Artifact - Attack Attribute -->
 		</skills>
@@ -240,6 +262,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35253" level="1" /> <!-- Artifact - Defense Attribute -->
 		</skills>
@@ -251,6 +274,7 @@
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35254" level="1" /> <!-- Artifact - Received Damage When Imobilized -->
 		</skills>
@@ -262,6 +286,7 @@
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35255" level="1" /> <!-- Artifact - P. Skill Power -->
 		</skills>
@@ -273,6 +298,7 @@
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="35256" level="1" /> <!-- Artifact - M. Skill Power -->
 		</skills>
@@ -284,5 +310,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 </list>

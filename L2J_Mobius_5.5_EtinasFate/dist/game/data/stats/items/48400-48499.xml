@@ -22,7 +22,7 @@
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -31,7 +31,7 @@
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -40,7 +40,7 @@
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -95,6 +95,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="48409" name="Scarlet Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Scarlet Scarab appearance for 30 days. -->
@@ -104,6 +105,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="48410" name="Gold Scarab Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Gold Scarab appearance for 30 days. -->
@@ -113,13 +115,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="48411" name="Release Seal Scroll (15-min) Box" additionalName="15-min." type="EtcItem">
 		<!-- Double-click to obtain 10 Release Seal Scrolls (15-min). -->
 		<set name="icon" val="BranchSys3.g_ev_invite_fantasy_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -182,8 +185,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="pDef">30</stat>
 		</stats>
@@ -194,8 +198,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="CLOTH" />
 		<set name="weight" val="440" />
+		<set name="crystal_type" val="R" />
 		<stats>
 			<stat type="pDef">40</stat>
 		</stats>
@@ -211,6 +216,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BELT" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="15145" level="2" /> <!-- Ruler's Authority -->
 		</skills>
@@ -227,26 +233,26 @@
 	<item id="48418" name="Authority Ornament" type="EtcItem">
 		<!-- Ruler's Authority enhancement material. Talk to Ilia in the Town of Aden to enhance your Ruler's Authority. -->
 		<set name="icon" val="icon.grankain_powerbelt_deco" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48419" name="Clan Hall Belt Ornament" type="EtcItem">
 		<!-- Clan Hall Belt crafting material. Talk to Ilia in the Town of Aden to craft a Clan Hall Belt. -->
 		<set name="icon" val="icon.etc_belt_deco_i02" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48420" name="Belt Crafting Scroll" type="EtcItem">
 		<!-- Item containing the secret of Clan Hall Belt crafting. Talk to Ilia in the Town of Aden to craft a Clan Hall Belt. -->
 		<set name="icon" val="icon.event_energy_enchant_scroll_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="50000000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48421" name="Belt Disassembly Scroll" type="EtcItem">
 		<!-- Item containing the secret of Nurka/ Gustav/ Lidia's Belt disassembly. Talk to Ilia in the Town of Aden to disassemble each belt and obtain Clan Hall Belt Ornaments. There is also a small chance of obtaining an Authority Ornament during disassembly, which is used to enhance the Ruler's Authority. -->
 		<set name="icon" val="icon.combatagit_belt_disassemble" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="price" val="10000000" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -261,6 +267,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="time" val="43200" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="48423" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - P. Skill Critical Damage -->
 			<item id="48424" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - M. Skill Critical Damage -->
@@ -278,6 +285,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48427" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage - Passive -->
 		</capsuled_items>
@@ -291,6 +299,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48428" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
 		</capsuled_items>
@@ -305,6 +314,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48429" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
 		</capsuled_items>
@@ -319,6 +329,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48430" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance - Active -->
 		</capsuled_items>
@@ -345,7 +356,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -361,7 +372,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -377,7 +388,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -393,7 +404,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -405,7 +416,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -417,7 +428,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -429,7 +440,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -441,7 +452,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -453,7 +464,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -465,7 +476,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -477,7 +488,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -489,7 +500,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -506,7 +517,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -523,7 +534,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -539,7 +550,7 @@
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -556,7 +567,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -573,7 +584,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -590,7 +601,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -607,7 +618,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -624,7 +635,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -641,7 +652,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -658,7 +669,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -675,7 +686,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -692,7 +703,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -710,7 +721,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
+		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -728,7 +739,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
+		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -749,6 +760,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
+		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="48455" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman- Vitality Box -->
 			<item id="48456" min="1" max="1" chance="6.6" /> <!-- Fortress Talisman - P. Skill Power Pack -->
@@ -775,6 +787,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48439" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Vitality - 15-day -->
 		</capsuled_items>
@@ -787,6 +800,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48440" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Skill Power - 15-day -->
 		</capsuled_items>
@@ -799,6 +813,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48441" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Skill Power - 15-day -->
 		</capsuled_items>
@@ -811,6 +826,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48442" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Atk. - 15-day -->
 		</capsuled_items>
@@ -823,6 +839,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48443" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Atk. - 15-day -->
 		</capsuled_items>
@@ -835,6 +852,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48444" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Def. - 15-day -->
 		</capsuled_items>
@@ -847,6 +865,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48445" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Def. - 15-day -->
 		</capsuled_items>
@@ -859,6 +878,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48446" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Atk. Spd. - 15-day -->
 		</capsuled_items>
@@ -871,6 +891,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48447" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Casting Spd. - 15-day -->
 		</capsuled_items>
@@ -883,6 +904,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48448" min="1" max="1" chance="100" /> <!-- Fortress Talisman - P. Accuracy - 15-day -->
 		</capsuled_items>
@@ -895,6 +917,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48449" min="1" max="1" chance="100" /> <!-- Fortress Talisman - M. Accuracy - 15-day -->
 		</capsuled_items>
@@ -907,6 +930,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48450" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Shield Defense - 15-day -->
 		</capsuled_items>
@@ -919,6 +943,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48451" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Max HP - 15-day -->
 		</capsuled_items>
@@ -931,6 +956,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48452" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Max MP - 15-day -->
 		</capsuled_items>
@@ -943,6 +969,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="48453" min="1" max="1" chance="100" /> <!-- Fortress Talisman - Speed - 15-day -->
 		</capsuled_items>
@@ -952,7 +979,7 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -962,7 +989,7 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -979,7 +1006,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -990,7 +1017,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i09" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1001,7 +1028,7 @@
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1011,7 +1038,7 @@
 		<!-- Use it to obtain a Dark Helios Enhancement Stone or Bloody Helios Enhancement Stone. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1030,7 +1057,7 @@
 		<!-- Use to obtain 3 Vitality Replenishing Star Candies and 1 PA Points Coupon (720 Points). Also, there is a chance to obtain 1 of PA - Art of Seduction, Freya's Art of Seduction, Freya's Art of Seduction - Barrier or Freya's Art of Seduction - XP. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1041,7 +1068,7 @@
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1079,7 +1106,7 @@
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1094,7 +1121,7 @@
 		<set name="icon" val="icon.reflect_attack_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1110,7 +1137,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1126,7 +1153,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1170,7 +1197,7 @@
 		<!-- Merlot's gift that can be used as long as the influence of Honor Force remains. Recovers two of the four Vitality Gauge bars. The usage limit of 5 times per week does not apply. Will be deleted during maintenance on Wednesday, January 24th, 2018. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1183,7 +1210,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1203,7 +1230,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1223,7 +1250,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -1260,7 +1287,7 @@
 		<!-- Material needed to upgrade a Dragon Shirt to a Dragon Leather Shirt. Talk to Head Blacksmith Ferris at Aden Castle to upgrade a +5 Dragon Shirt to a Dragon Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_1" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1268,7 +1295,7 @@
 		<!-- Material needed to upgrade a Dragon Leather Shirt to a Dragon Rind Leather Shirt. Talk to Head Blacksmith Ferris in the Town of Aden to upgrade a +5 Dragon Leather Shirt to a Dragon Rind Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_2" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

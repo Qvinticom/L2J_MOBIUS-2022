@@ -11,6 +11,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23194" min="1" max="1" chance="100" /> <!-- Traditional Taiwanese Top Appearance Stone -->
 			<item id="23195" min="1" max="1" chance="100" /> <!-- Traditional Taiwanese Pants Appearance Stone -->
@@ -29,6 +30,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="9512" level="1" /> <!-- Draco's Accessory Gift Box -->
 		</skills>
@@ -45,6 +47,7 @@
 		<set name="time" val="4320" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="22645" level="1" /> <!-- Alien Mask -->
 		</skills>
@@ -61,6 +64,7 @@
 		<set name="time" val="4320" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="22646" level="1" /> <!-- Super Strong Giant's Mask -->
 		</skills>
@@ -77,6 +81,7 @@
 		<set name="time" val="4320" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="22647" level="1" /> <!-- Shriek Mask -->
 		</skills>
@@ -93,6 +98,7 @@
 		<set name="time" val="4320" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="22648" level="1" /> <!-- Red Devil Mask -->
 		</skills>
@@ -109,6 +115,7 @@
 		<set name="time" val="4320" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="22649" level="1" /> <!-- Mummy Mask -->
 		</skills>
@@ -123,6 +130,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="22651" level="1" /> <!-- Playful Hair Accessory Pack -->
 		</skills>
@@ -141,6 +149,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9513" level="1" /> <!-- Draco's Health Potion -->
 		</skills>
@@ -160,6 +169,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9514" level="1" /> <!-- Draco's Mana Potion -->
 		</skills>
@@ -176,6 +186,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22650" level="1" /> <!-- Transformation Scroll: Zombie -->
 		</skills>
@@ -193,6 +204,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22652" level="1" /> <!-- Drake Maul Appearance Stone -->
 		</skills>
@@ -210,6 +222,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22653" level="1" /> <!-- Freya's Staff Appearance Stone -->
 		</skills>
@@ -227,6 +240,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22654" level="1" /> <!-- Spezion's Claw Appearance Stone -->
 		</skills>
@@ -244,6 +258,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22655" level="1" /> <!-- Maliss Stormer Appearance Stone -->
 		</skills>
@@ -261,6 +276,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22656" level="1" /> <!-- Steregos' Dagger Appearance Stone -->
 		</skills>
@@ -278,6 +294,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22657" level="1" /> <!-- Ron's Dual Blunt Appearance Stone -->
 		</skills>
@@ -295,6 +312,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22658" level="1" /> <!-- Darion's Hellblade Appearance Stone -->
 		</skills>
@@ -312,6 +330,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22659" level="1" /> <!-- Doll Blader's Butcher Blades Appearance Stone -->
 		</skills>
@@ -329,6 +348,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22660" level="1" /> <!-- Tiat's Claw of Destruction Appearance Stone -->
 		</skills>
@@ -346,6 +366,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22661" level="1" /> <!-- Aenkinel's Blades of Delusion Appearance Stone -->
 		</skills>
@@ -363,6 +384,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22662" level="1" /> <!-- Yehan Klanikus' Blood Brother Appearance Stone -->
 		</skills>
@@ -380,6 +402,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22663" level="1" /> <!-- Mardil's Fan Appearance Stone -->
 		</skills>
@@ -393,6 +416,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="22664" level="1" /> <!-- Monster Weapon Appearance Stone Pack A -->
 		</skills>
@@ -406,6 +430,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="22665" level="1" /> <!-- Monster Weapon Appearance Stone Pack B -->
 		</skills>
@@ -421,6 +446,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="22666" level="1" /> <!-- Soul Avatar's Giant Placid -->
 		</skills>
@@ -436,6 +462,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="23227" name="Apple Spritzer" type="EtcItem">
 		<!-- Refreshing apple drink. Maintains Vitality for 30 min. Cooldown is 60 min. Vitality item with limited usage. -->
@@ -448,6 +475,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22667" level="2" /> <!-- Apple Spritzer -->
 		</skills>
@@ -464,6 +492,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22668" level="1" /> <!-- Roasted Sausage -->
 		</skills>
@@ -480,6 +509,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22669" level="1" /> <!-- Pretzel -->
 		</skills>
@@ -500,6 +530,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22670" level="1" /> <!-- Snack Mix -->
 		</skills>
@@ -518,6 +549,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="23232" name="Traces of Ancient Kartia's Labyrinth" type="EtcItem">
 		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps a Kartia Researcher may know more about it. -->
@@ -530,6 +562,7 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23233" name="Traces of Ancient Kartia's Labyrinth" additionalName="Event" type="EtcItem">
 		<!-- Traces of Ancient Kartia's Labyrinth. Perhaps a Kartia Researcher may know more about it. -->
@@ -544,6 +577,7 @@
 		<set name="is_coc_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="23234" name="Alluring Swimsuit Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of upper armor into that of an Alluring Swimsuit. One pieces are also possible. It modifies everything, making the appearance of all armor into that of swimwear. When changed, the cloak is not visible. Appearance is restored through the use of a Restoration Stone. -->
@@ -558,6 +592,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22671" level="1" /> <!-- Alluring Swimsuit Appearance Stone -->
 		</skills>
@@ -575,6 +610,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="22672" level="1" /> <!-- Seductive Swimsuit Appearance Stone -->
 		</skills>
@@ -587,6 +623,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="21285" level="1" /> <!-- Scroll of Escape: Uthanka's Tomb -->
 		</skills>
@@ -601,6 +638,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="21325" level="1" /> <!-- Release Agathion's Seal - Uthanka -->
 			<skill id="23542" level="1" /> <!-- Uthanka Agathion Cute Trick -->
@@ -617,6 +655,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22675" level="1" /> <!-- Blessed Scroll: Enchant Elemental Shirt Pack -->
 		</skills>
@@ -632,6 +671,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23240" min="1" max="1" chance="100" /> <!-- Pa'agrio's Shirt -->
 		</capsuled_items>
@@ -650,6 +690,7 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="9367" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Power of Pa'agrio -->
 			<skill id="9367" level="1" type="ON_ENCHANT" type_value="8" /> <!-- Power of Pa'agrio -->
@@ -673,6 +714,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22674" level="1" /> <!-- Blessed Scroll: Enchant Elemental Shirt -->
 		</skills>
@@ -688,6 +730,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22676" level="1" /> <!-- Weapon Pack -->
 		</skills>
@@ -703,6 +746,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22677" level="1" /> <!-- Weapon Pack -->
 		</skills>
@@ -718,6 +762,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22678" level="1" /> <!-- Weapon Pack -->
 		</skills>
@@ -733,6 +778,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22679" level="1" /> <!-- Weapon Pack -->
 		</skills>
@@ -748,6 +794,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22680" level="1" /> <!-- Weapon Pack -->
 		</skills>
@@ -763,6 +810,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22681" level="1" /> <!-- Armor Pack -->
 		</skills>
@@ -778,6 +826,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22682" level="1" /> <!-- Armor Pack -->
 		</skills>
@@ -793,6 +842,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22683" level="1" /> <!-- Armor Pack -->
 		</skills>
@@ -808,6 +858,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22684" level="1" /> <!-- Armor Pack -->
 		</skills>
@@ -823,6 +874,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22685" level="1" /> <!-- Armor Pack -->
 		</skills>
@@ -834,6 +886,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="23253" name="XP Rune III (Lv. 1-99) 50%" additionalName="30-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 50%. The remaining time decreases even when not playing. -->
@@ -845,6 +898,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
@@ -859,6 +913,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="6" /> <!-- XP Rune III (Lv. 1-100+) 100% -->
 		</skills>
@@ -873,6 +928,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="6" /> <!-- XP Rune III (Lv. 1-100+) 100% -->
 		</skills>
@@ -887,6 +943,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="6" /> <!-- XP Rune III (Lv. 1-100+) 100% -->
 		</skills>
@@ -901,6 +958,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="7" /> <!-- XP Rune III (Lv. 1-100+) 200% -->
 		</skills>
@@ -915,6 +973,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="7" /> <!-- XP Rune III (Lv. 1-100+) 200% -->
 		</skills>
@@ -929,6 +988,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26046" level="7" /> <!-- XP Rune III (Lv. 1-100+) 200% -->
 		</skills>
@@ -943,6 +1003,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="5" /> <!-- SP Rune 50% -->
 		</skills>
@@ -957,6 +1018,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
@@ -971,6 +1033,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
@@ -985,6 +1048,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
@@ -999,6 +1063,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
@@ -1013,6 +1078,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
@@ -1027,6 +1093,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="26047" level="7" /> <!-- SP Rune 200% -->
 		</skills>
@@ -1041,6 +1108,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
@@ -1055,6 +1123,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
@@ -1070,6 +1139,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
@@ -1083,6 +1153,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1096,6 +1167,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1109,6 +1181,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="60" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1122,6 +1195,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1135,6 +1209,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1148,6 +1223,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
@@ -1163,6 +1239,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23253" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 50% - 30-day -->
 		</capsuled_items>
@@ -1178,6 +1255,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 100% - 1-hour -->
 		</capsuled_items>
@@ -1193,6 +1271,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 100% - 7-day -->
 		</capsuled_items>
@@ -1208,6 +1287,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23256" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 100% - 30-day -->
 		</capsuled_items>
@@ -1223,6 +1303,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23257" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 200% - 1-hour -->
 		</capsuled_items>
@@ -1238,6 +1319,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23258" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 200% - 7-day -->
 		</capsuled_items>
@@ -1253,6 +1335,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23259" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-99) 200% - 30-day -->
 		</capsuled_items>
@@ -1268,6 +1351,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23260" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 30-day -->
 		</capsuled_items>
@@ -1283,6 +1367,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
@@ -1298,6 +1383,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23262" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 7-day -->
 		</capsuled_items>
@@ -1313,6 +1399,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23263" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 30-day -->
 		</capsuled_items>
@@ -1328,6 +1415,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23264" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 1-hour -->
 		</capsuled_items>
@@ -1343,6 +1431,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23265" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 7-day -->
 		</capsuled_items>
@@ -1358,6 +1447,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23266" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 30-day -->
 		</capsuled_items>
@@ -1373,6 +1463,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23267" min="1" max="1" chance="100" /> <!-- Eva's Rune - 1-hour -->
 		</capsuled_items>
@@ -1388,6 +1479,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23268" min="1" max="1" chance="100" /> <!-- Eva's Rune - 7-day -->
 		</capsuled_items>
@@ -1403,6 +1495,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23269" min="1" max="1" chance="100" /> <!-- Eva's Rune - 30-day -->
 		</capsuled_items>
@@ -1418,6 +1511,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23270" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% - 1-hour -->
 		</capsuled_items>
@@ -1433,6 +1527,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23271" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% - 1-hour -->
 		</capsuled_items>
@@ -1448,6 +1543,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23272" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% - 1-hour -->
 		</capsuled_items>
@@ -1463,6 +1559,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23273" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% - 30-day -->
 		</capsuled_items>
@@ -1478,6 +1575,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23274" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% - 30-day -->
 		</capsuled_items>
@@ -1493,6 +1591,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="23275" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% - 30-day -->
 		</capsuled_items>
@@ -1507,6 +1606,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22686" level="1" /> <!-- Blessed Scroll: Enchant Elemental Shirt Pack -->
 		</skills>

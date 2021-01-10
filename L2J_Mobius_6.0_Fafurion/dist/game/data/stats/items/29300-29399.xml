@@ -42,14 +42,14 @@
 		<!-- Material needed to upgrade Noble Warrior's/ Wizard's/ Knight's Circlets to Radiant. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Circlets into Noble Circlets. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_7th_sins_upgrade_jp" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29305" name="Dragon Claw Coupon" type="EtcItem">
 		<!-- Coupon to use the power of dragons. Take a dragon weapon (fragment) with limited abiliteis to Snake to exchange for a temporarily enhanced dragon weapon (high-grade). -->
 		<set name="icon" val="BranchIcon.icon.g_bm_7th_sins_dragon_trade_jp" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -73,7 +73,7 @@
 		<set name="icon" val="icon.sayha2017_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1158,7 +1158,7 @@
 		<!-- Double-click to obtain one of the following Appearance Stones: School Uniform A/ School Uniform B, Pirate Crew, Blue Dynasty, Red/ White Noblesse, Red Musketeer, Cowboy-Purple, White Assassin, Healer/ Chevalier/ Barbarian Wolf/ Valkyrie. -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1179,7 +1179,7 @@
 		<!-- Double-click to obtain a +5 Hawk Agathion Charm - Stage 3 (7-day). -->
 		<set name="icon" val="icon.sayha2017_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1203,7 +1203,7 @@
 		<set name="icon" val="icon.sayha2017_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1224,7 +1224,7 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1236,7 +1236,7 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1248,7 +1248,7 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1273,7 +1273,7 @@
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1283,7 +1283,7 @@
 	<item id="29369" name="Hero's Mark" type="EtcItem">
 		<!-- Mark for heroes. Take the Hero's Mark to the Dimensional Merchant to exchange for equipment. -->
 		<set name="icon" val="icon.return_user_item" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1293,7 +1293,7 @@
 		<!-- Double-click to obtain one of many random items. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1301,7 +1301,7 @@
 		<!-- Double-click to acquire one Heavy Seraph armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1319,7 +1319,7 @@
 		<!-- Double-click to acquire one Light Seraph armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1336,7 +1336,7 @@
 		<!-- Double-click to acquire one Robe Seraph armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1354,7 +1354,7 @@
 		<!-- Double-click to acquire one Heavy Eternal armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1372,7 +1372,7 @@
 		<!-- Double-click to acquire one Light Eternal armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1389,7 +1389,7 @@
 		<!-- Double-click to acquire one Robe Eternal armor set. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -1415,7 +1415,7 @@
 		<!-- Recharges a certain amount of Vitality when used. No weekly usage limit. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1479,7 +1479,7 @@
 		<!-- Replenishes 1 Vitality slot when used. For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Defense Attribute +100, Damage +10%, P./ M. Skill Power +10%, XP/ SP +30%, Received Damage -10%, Skill MP Consumption -15%. Buffs remains even after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys3.Icon1.g_beerfestival_bavarian_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1488,7 +1488,7 @@
 		<!-- Replenishes 4 Vitality slots when used. For 2 hours, Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk. Spd./ Casting Spd. +10%, Speed +20, Attack/ Defense Attribute +100, Damage +10%, P./ M. Skill Power +10%, XP/ SP +30%, Received Damage -10%, Skill MP Consumption -15%. Buffs remains even after death. Cooldown is 5 min. Cannot stack with Art of Seduction and Pa'agrio's Blessing. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys3.Icon1.g_beerfestival_bavarian_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1514,7 +1514,7 @@
 		<set name="icon" val="icon.sayha2017_box_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1546,7 +1546,7 @@
 		<set name="icon" val="icon.sayha2017_box_i03" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1569,7 +1569,7 @@
 		<!-- Double-click the box to randomly obtain one of various items. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1577,7 +1577,7 @@
 		<!-- Double-click the box to obtain 1 Glowing Dragon's Attribute Potion (XP). Has a chance to obtain a very rare item at random. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1585,7 +1585,7 @@
 		<!-- Double-click to get 1 random item. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1621,7 +1621,7 @@
 		<!-- Double-click to obtain one of the following items at a certain rate: Sayha's Talisman Stage 7/ Stage 8 Pack, Noble Knight's/ Wizard's/ Warrior's Circlet, Kaliel's Energy Longing, Ultimate Lv. 3/ Lv. 4 Jewelry Box, Noble Circlet Upgrade Stone, Dimensional Bracelet Stage 6 Pack CHA +5/ Basic, Freya's Bloody/ Dark Rune (30-day) Pack, Starlight Jar, Low-grade Zodiac Agathion Pack, Dark/ Bloody Eternal Enhancement Stone, Lv. 5 Legendary CHA Dye Pack, Lv. 5 Legendary Dye Pack Event, Top-grade Spirit Stone, Giant's Scroll: Enchant Weapon (R-grade), Dimensional Bracelet Enhancement Stone Pack, Superior Giant's Codex - Chapter 1, Pa'agrio's Blessing EXP/ Might, Freya's Art of Seduction EXP/ Barrier, Energy of Destruction 20-unit Pack, Giant's Energy 3-unit Pack, Giant's Scroll: Enchant Armor (R-grade), Freya's CHA Potion, Scroll: Enchant Armor x2/ Weapon x1 Pack (R-grade), Blessed Lucky Enchant Stone: Armor x2/ Weapon x1 Pack (R-grade), Bottle Fragment of Antharas' x4/ Valakas' Soul x5, Gemstone (R-grade) x10. -->
 		<set name="icon" val="icon.bm_dragon_present_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1629,7 +1629,7 @@
 		<!-- Double-click to obtain one of the following items at a certain rate: Ultimate Lv. 4/ Lv. 5 Jewelry Box, Lindvior's Earring, Blessed Valakas' Necklace, Blessed Antharas' Earring, Mystic Soul Crystal, Sealed Talisman - Insanity/ Longing, Red Starlight Jar, Ancient Zodiac Agathion Charm Book of Growth, Mystic Soul Crystal Fragment, Life Stone Instilled with Giants' Power, Royal White Save Card (R99-grade), Lesser Giant's Lucky Enchant Stone: Weapon/ Armor Pack (R-grade), Scroll of Blessing: (R99-grade), Freya's Rune (30-day) Box, Apparition Stone (All-purpose), Life Stone Instilled with Giants' Power, Giant's Energy 100-unit Pack, Superior Giant's Codex - Mastery x2/ Mastery Chapter 1, Source of the Emperor, Eva's Rune (3-day) Pack (Event), Pa'agrio's Blessing Might x5, Freya's Art of Seduction Barrier x5. -->
 		<set name="icon" val="icon.bm_dragon_present_4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

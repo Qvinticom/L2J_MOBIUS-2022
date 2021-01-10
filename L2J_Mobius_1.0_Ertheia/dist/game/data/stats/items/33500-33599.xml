@@ -9,6 +9,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33501" name="Mark of the King" type="EtcItem">
 		<!-- High-level proof received by those with high achievements during the campaign. Can exchange for a special gift from the Kingdom Mark Manager in the Town of each castle. -->
@@ -19,6 +20,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33502" name="Weapon Attribute Change Crystal (S-grade)" type="EtcItem">
 		<!-- Double-click to change the attribute of an S(S80) grade weapon that cannot be bound. Can be used when an S-grade weapon with a bestowed attribute exists in the inventory. Cannot be exchanged, dropped, sold in shops, or used in a private store. -->
@@ -31,6 +33,7 @@
 		<set name="handler" val="ChangeAttributeCrystal" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33503" name="Hero's Blessed Buff Scroll" type="EtcItem">
 		<!-- When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate + 20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. -->
@@ -47,6 +50,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22256" level="1" /> <!-- Might -->
 			<skill id="22257" level="1" /> <!-- Wind Walk -->
@@ -76,6 +80,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="33503" min="5" max="5" chance="100" /> <!-- Hero's Blessed Buff Scroll -->
 		</capsuled_items>
@@ -93,6 +98,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="12898" level="1" /> <!-- Noblesse Blessing -->
 		</skills>
@@ -108,6 +114,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="33505" min="5" max="5" chance="100" /> <!-- Scroll: Noblesse Blessing -->
 		</capsuled_items>
@@ -125,6 +132,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9209" level="1" /> <!-- Kukuru -->
 		</skills>
@@ -140,6 +148,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="33507" min="30" max="30" chance="100" /> <!-- Scroll: Mount Kukuru -->
 		</capsuled_items>
@@ -155,6 +164,7 @@
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="13342" level="1" /> <!-- T-shirt of Destiny -->
 		</skills>
@@ -174,6 +184,7 @@
 		<set name="bodypart" val="waist" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<set name="material" val="CLOTH" />
 		<skills>
 			<skill id="13343" level="1" /> <!-- Belt of Destiny -->
 		</skills>
@@ -188,6 +199,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33512" name="Returning Hero's Vitality Replenishing Juice" type="EtcItem">
 		<!-- Recovers Vitality while acquiring XP through hunting for 4 hours. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
@@ -202,6 +214,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9577" level="1" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</skills>
@@ -218,6 +231,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="33512" min="5" max="5" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</capsuled_items>
@@ -231,6 +245,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33515" name="Gift Box of Destiny" type="EtcItem">
 		<!-- Can acquire 250 Returning Hero's Marks, 1 Returning Hero's Vitality Replenishing Juice pack of 5, and a Superior Minion coupon pack of 2. -->
@@ -241,6 +256,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33516" name="Unbind Scroll (R-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to transforms R-grade Bound items to Standard items. -->
@@ -253,6 +269,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="33517" name="Unbind Scroll (R95-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- Has a low chance to transforms R95-grade Bound items to Standard items. -->
@@ -265,6 +282,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="33518" name="Blessed Scroll of Resurrection" type="EtcItem">
 		<!-- Magic scroll that resurrects a dead character and restores his or her XP completely. -->
@@ -279,6 +297,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="12935" level="1" /> <!-- Blessed Scroll of Resurrection -->
 		</skills>
@@ -297,6 +316,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9185" level="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -315,6 +335,7 @@
 		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9186" level="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -326,6 +347,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17304" min="1" max="1" chance="100" /> <!-- Immortal Helmet - Heavy Armor -->
 			<item id="17305" min="1" max="1" chance="100" /> <!-- Immortal Breastplate - Heavy Armor -->
@@ -342,6 +364,7 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="17310" min="1" max="1" chance="100" /> <!-- Immortal Leather Helmet - Light Armor -->
 			<item id="17311" min="1" max="1" chance="100" /> <!-- Immortal Leather Armor - Light Armor -->
@@ -362,6 +385,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8644" level="1" /> <!-- Talisman (R-grade) - M. Critical Rate -->
 		</skills>
@@ -378,6 +402,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8645" level="1" /> <!-- Talisman (R-grade) - P. Accuracy -->
 		</skills>
@@ -394,6 +419,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8646" level="1" /> <!-- Talisman (R-grade) - M. Accuracy -->
 		</skills>
@@ -410,6 +436,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8647" level="1" /> <!-- Talisman (R-grade) - P. Evasion -->
 		</skills>
@@ -426,6 +453,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8648" level="1" /> <!-- Talisman (R-grade) - M. Evasion -->
 		</skills>
@@ -442,6 +470,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8649" level="1" /> <!-- Talisman (R-grade) - P. Critical Rate -->
 		</skills>
@@ -458,6 +487,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8650" level="1" /> <!-- Talisman (R-grade) - P. Critical Evasion -->
 		</skills>
@@ -475,6 +505,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8687" level="1" /> <!-- Talisman (R-grade) - M. Critical Rate (Active) -->
 		</skills>
@@ -492,6 +523,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8688" level="1" /> <!-- Talisman (R-grade) - P. Accuracy (Active) -->
 		</skills>
@@ -509,6 +541,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8689" level="1" /> <!-- Talisman (R-grade) - M. Accuracy (Active) -->
 		</skills>
@@ -526,6 +559,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8690" level="1" /> <!-- Talisman (R-grade) - P. Evasion (Active) -->
 		</skills>
@@ -543,6 +577,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8691" level="1" /> <!-- Talisman (R-grade) - M. Evasion (Active) -->
 		</skills>
@@ -560,6 +595,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8692" level="1" /> <!-- Talisman (R-grade) - P. Critical Rate (Active) -->
 		</skills>
@@ -577,6 +613,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8693" level="1" /> <!-- Talisman (R-grade) - P. Critical Evasion (Active) -->
 		</skills>
@@ -593,6 +630,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13138" level="1" /> <!-- Haste Talisman -->
 		</skills>
@@ -609,6 +647,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13139" level="1" /> <!-- P. Atk. Talisman -->
 		</skills>
@@ -625,6 +664,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13140" level="1" /> <!-- P. Def. Talisman -->
 		</skills>
@@ -641,6 +681,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13141" level="1" /> <!-- Casting Spd. Talisman -->
 		</skills>
@@ -657,6 +698,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13142" level="1" /> <!-- M. Def. Talisman -->
 		</skills>
@@ -673,6 +715,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13143" level="1" /> <!-- M. Atk. Talisman -->
 		</skills>
@@ -694,6 +737,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="504570" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3045" level="14" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -713,6 +757,7 @@
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33545" name="Bound Tallum Blade*Damascus" additionalName="Event" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. -->
@@ -731,6 +776,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1348420" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3045" level="17" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
@@ -751,6 +797,7 @@
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="33547" name="Bound Dynasty Sword" additionalName="Focus (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
@@ -770,6 +817,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -800,6 +848,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -830,6 +879,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -861,6 +911,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -891,6 +942,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -921,6 +973,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -952,6 +1005,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -982,6 +1036,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -1012,6 +1067,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3048" level="2" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -1043,6 +1099,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="8312" level="1" /> <!-- Special Ability: Cheap Shot -->
@@ -1076,6 +1133,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="2" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -1108,6 +1166,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1139,6 +1198,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1170,6 +1230,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3009" level="8" /> <!-- Special Ability: Evasion -->
@@ -1202,6 +1263,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3066" level="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -1233,6 +1295,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3600" level="10" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -1264,6 +1327,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3070" level="4" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
@@ -1296,6 +1360,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
@@ -1328,6 +1393,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3057" level="4" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -1359,6 +1425,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1390,6 +1457,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3027" level="7" /> <!-- Special Ability: Rsk. Focus -->
 		</skills>
@@ -1421,6 +1489,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -1452,6 +1521,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3048" level="2" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -1483,6 +1553,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -1514,6 +1585,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3069" level="1" /> <!-- Special Ability: Rsk. Evasion -->
@@ -1546,6 +1618,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3565" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1577,6 +1650,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="2" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1608,6 +1682,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -1639,6 +1714,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3048" level="2" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -1670,6 +1746,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -1701,6 +1778,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3057" level="4" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -1732,6 +1810,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1763,6 +1842,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3027" level="7" /> <!-- Special Ability: Rsk. Focus -->
 		</skills>
@@ -1794,6 +1874,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="4395050" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="8295" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
@@ -1826,6 +1907,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3411" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
@@ -1857,6 +1939,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="2" /> <!-- Special Ability: Focus -->
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
@@ -1889,6 +1972,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
@@ -1921,6 +2005,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
@@ -1954,6 +2039,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1985,6 +2071,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2016,6 +2103,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -2049,6 +2137,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3360" level="1" /> <!-- Special Ability: Cheap Shot -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -2082,6 +2171,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="2" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -2114,6 +2204,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="3747300" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -2142,6 +2233,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1219900" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">226</stat>
 		</stats>
@@ -2161,6 +2253,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="762400" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -2178,6 +2271,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="457450" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -2196,6 +2290,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="304950" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -2214,6 +2309,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="304950" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -2232,6 +2328,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="320200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="sDef">321</stat>
 			<stat type="rShld">20</stat>
@@ -2253,6 +2350,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="914900" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">170</stat>
 		</stats>
@@ -2272,6 +2370,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="571800" />
+		<set name="material" val="SCALE_OF_DRAGON" />
 		<stats>
 			<stat type="pDef">106</stat>
 		</stats>
@@ -2289,6 +2388,7 @@
 		<set name="element_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="457450" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>

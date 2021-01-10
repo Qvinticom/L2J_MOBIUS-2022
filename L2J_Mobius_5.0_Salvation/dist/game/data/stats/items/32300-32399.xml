@@ -12,6 +12,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="1155" /> <!-- mk_R95_shirt -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32301" name="Recipe: Eternal Belt (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Eternal Belt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -25,6 +26,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="1156" /> <!-- mk_R99_1_belt -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32302" name="Recipe: Eternal Bracelet (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Eternal Bracelet. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -38,6 +40,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="1157" /> <!-- mk_R99_1_bracelet -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32303" name="Recipe: Eternal Shirt (60%)" type="EtcItem">
 		<!-- Used by all classes after completion of the fourth class transfer. Recipe for Eternal Shirt. Requires Create Common Item Lv. 10. Success rate is 60%. -->
@@ -51,6 +54,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="1158" /> <!-- mk_R99_1_shirt -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32304" name="Immortal Belt Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Immortal Belt. -->
@@ -61,6 +65,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32305" name="Immortal Bracelet Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Immortal Bracelet. -->
@@ -71,6 +76,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32306" name="Immortal Shirt Lining" type="EtcItem">
 		<!-- Main ingredient for making an Immortal Shirt. -->
@@ -81,6 +87,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32307" name="Twilight Belt Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Twilight Belt. -->
@@ -91,6 +98,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32308" name="Twilight Bracelet Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Twilight Bracelet. -->
@@ -101,6 +109,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32309" name="Twilight Shirt Lining" type="EtcItem">
 		<!-- Main ingredient for making a Twilight Shirt. -->
@@ -111,6 +120,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32310" name="Seraph Belt Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Seraph Belt. -->
@@ -121,6 +131,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32311" name="Seraph Bracelet Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Seraph Bracelet. -->
@@ -131,6 +142,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32312" name="Seraph Shirt Lining" type="EtcItem">
 		<!-- Main ingredient for making a Seraph Shirt. -->
@@ -141,6 +153,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32313" name="Eternal Belt Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Eternal Belt. -->
@@ -151,6 +164,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32314" name="Eternal Bracelet Fragment" type="EtcItem">
 		<!-- Main ingredient for making an Eternal Bracelet. -->
@@ -161,6 +175,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32315" name="Eternal Shirt Lining" type="EtcItem">
 		<!-- Main ingredient for making an Eternal Shirt. -->
@@ -171,6 +186,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="32316" name="Elixir of Blessing" type="EtcItem">
 		<!-- For 30 minutes, it receives the following level 1 effects: Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. Can be used at level 85 or above. Cooldown is 2 min. -->
@@ -186,6 +202,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9201" level="1" /> <!-- Elixir: Pipe Organ Melody -->
 			<skill id="9202" level="1" /> <!-- Elixir: Guitar Melody -->
@@ -205,6 +222,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="1159" /> <!-- mk_elixir_of_blessing -->
 		<set name="handler" val="Recipes" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="32318" name="Basic Talisman - P. Atk. Spd." type="Armor">
 		<!-- Atk. Spd. +2% when equipped. Shadow weapon. -->
@@ -218,6 +236,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13138" level="1" /> <!-- Haste Talisman -->
 		</skills>
@@ -234,6 +253,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13139" level="1" /> <!-- P. Atk. Talisman -->
 		</skills>
@@ -250,6 +270,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13140" level="1" /> <!-- P. Def. Talisman -->
 		</skills>
@@ -266,6 +287,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13141" level="1" /> <!-- Casting Spd. Talisman -->
 		</skills>
@@ -282,6 +304,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13142" level="1" /> <!-- M. Def. Talisman -->
 		</skills>
@@ -298,6 +321,7 @@
 		<set name="duration" val="60" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13143" level="1" /> <!-- M. Atk. Talisman -->
 		</skills>
@@ -318,6 +342,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="143356000" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">396</stat>
 			<stat type="mAtk">176</stat>
@@ -343,6 +368,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="143356000" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">396</stat>
 			<stat type="mAtk">176</stat>
@@ -368,6 +394,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="143356000" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">396</stat>
 			<stat type="mAtk">176</stat>
@@ -393,6 +420,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="143356000" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">396</stat>
 			<stat type="mAtk">176</stat>
@@ -418,6 +446,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="143356000" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">482</stat>
 			<stat type="mAtk">176</stat>
@@ -441,6 +470,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1880" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="mAtk">21</stat>
 			<stat type="randomDamage">5</stat>
@@ -460,6 +490,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1050" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="mAtk">17</stat>
 			<stat type="randomDamage">20</stat>
@@ -479,6 +510,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1880" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="mAtk">21</stat>
 			<stat type="randomDamage">20</stat>
@@ -498,6 +530,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1880" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="mAtk">21</stat>
 			<stat type="randomDamage">20</stat>
@@ -517,6 +550,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1050" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="mAtk">24</stat>
 			<stat type="randomDamage">20</stat>
@@ -536,6 +570,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1880" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="mAtk">31</stat>
 			<stat type="randomDamage">20</stat>
@@ -555,6 +590,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1880" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -578,6 +614,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1050" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="mAtk">17</stat>
 			<stat type="randomDamage">5</stat>
@@ -597,6 +634,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1880" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="mAtk">21</stat>
 			<stat type="randomDamage">5</stat>
@@ -613,6 +651,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="379" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">68</stat>
 			<stat type="mDef">1</stat>
@@ -628,6 +667,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="236" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">43</stat>
 			<stat type="mDef">1</stat>
@@ -643,6 +683,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="284" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">53</stat>
 			<stat type="mDef">1</stat>
@@ -658,6 +699,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="177" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">33</stat>
 			<stat type="mDef">1</stat>
@@ -675,6 +717,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="284" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">34</stat>
 			<stat type="pAtk">346</stat>
@@ -694,6 +737,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="177" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">21</stat>
 			<stat type="pAtk">360</stat>
@@ -711,6 +755,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="95" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">17</stat>
 			<stat type="pAtk">317</stat>
@@ -727,6 +772,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="95" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">17</stat>
 			<stat type="mDef">1</stat>
@@ -743,6 +789,7 @@
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="142" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">26</stat>
 			<stat type="pAtk">359</stat>
@@ -760,6 +807,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="99" />
+		<set name="material" val="BONE" />
 		<stats>
 			<stat type="pAtk">482</stat>
 			<stat type="pAtkSpd">325</stat>
@@ -782,6 +830,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">429</stat>
 			<stat type="mAtk">52</stat>
@@ -807,6 +856,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">724</stat>
 			<stat type="mAtk">39</stat>
@@ -832,6 +882,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">444</stat>
 			<stat type="mAtk">39</stat>
@@ -858,6 +909,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="4955" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -886,6 +938,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">396</stat>
 			<stat type="mAtk">39</stat>
@@ -912,6 +965,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="4955" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">386</stat>
 			<stat type="mAtk">32</stat>
@@ -938,6 +992,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">482</stat>
 			<stat type="mAtk">39</stat>
@@ -965,6 +1020,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="4955" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">396</stat>
 			<stat type="mAtk">32</stat>
@@ -990,6 +1046,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">482</stat>
 			<stat type="mAtk">39</stat>
@@ -1015,6 +1072,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">482</stat>
 			<stat type="mAtk">57</stat>
@@ -1039,6 +1097,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1063,6 +1122,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="mAtk">39</stat>
 			<stat type="randomDamage">5</stat>
@@ -1081,6 +1141,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1411" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pDef">95</stat>
 		</stats>
@@ -1097,6 +1158,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="976" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -1113,6 +1175,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1170" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
@@ -1129,6 +1192,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="732" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">46</stat>
 		</stats>
@@ -1145,6 +1209,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1170" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
@@ -1161,6 +1226,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="732" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">30</stat>
 		</stats>
@@ -1176,6 +1242,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1191,6 +1258,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1206,6 +1274,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1221,6 +1290,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1236,6 +1306,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1251,6 +1322,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1266,6 +1338,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">24</stat>
 			<stat type="rShld">20</stat>
@@ -1283,6 +1356,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="391" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">24</stat>
 			<stat type="rEvas">-8</stat>
@@ -1298,6 +1372,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1955" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1312,6 +1387,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1955" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1326,6 +1402,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1955" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1340,6 +1417,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1955" />
+		<set name="material" val="LEATHER" />
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -1353,6 +1431,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="2930" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">37</stat>
 		</stats>
@@ -1366,6 +1445,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="2930" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pDef">37</stat>
 			<stat type="mDef">1</stat>
@@ -1381,6 +1461,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="2050" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="sDef">128</stat>
 			<stat type="rShld">20</stat>
@@ -1402,6 +1483,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">86</stat>
 			<stat type="mAtk">91</stat>
@@ -1427,6 +1509,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">68</stat>
@@ -1452,6 +1535,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">122</stat>
 			<stat type="mAtk">76</stat>
@@ -1477,6 +1561,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">122</stat>
 			<stat type="mAtk">68</stat>
@@ -1501,6 +1586,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="MITHRIL" />
 		<stats>
 			<stat type="pAtk">139</stat>
 			<stat type="mAtk">76</stat>
@@ -1525,6 +1611,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -1553,6 +1640,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
 		</skills>
@@ -1581,6 +1669,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">169</stat>
 			<stat type="mAtk">76</stat>
@@ -1605,6 +1694,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="88145" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">116</stat>
 			<stat type="mAtk">61</stat>
@@ -1630,6 +1720,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">151</stat>
 			<stat type="mAtk">76</stat>
@@ -1656,6 +1747,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">277</stat>
 			<stat type="mAtk">75</stat>
@@ -1682,6 +1774,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="HORN" />
 		<stats>
 			<stat type="pAtk">316</stat>
 			<stat type="mAtk">84</stat>
@@ -1708,6 +1801,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">155</stat>
 			<stat type="mAtk">68</stat>
@@ -1734,6 +1828,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">176</stat>
 			<stat type="mAtk">76</stat>
@@ -1759,6 +1854,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">111</stat>
 			<stat type="mAtk">101</stat>
@@ -1784,6 +1880,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">122</stat>
 			<stat type="mAtk">68</stat>
@@ -1809,6 +1906,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">139</stat>
 			<stat type="mAtk">76</stat>
@@ -1834,6 +1932,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">119</stat>
 			<stat type="mAtk">100</stat>
@@ -1859,6 +1958,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>

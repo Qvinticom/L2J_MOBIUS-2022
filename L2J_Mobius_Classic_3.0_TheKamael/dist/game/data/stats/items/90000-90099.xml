@@ -3,49 +3,49 @@
 	<item id="90000" name="Best Dye of DEX (DEX + 4 CON - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv4_1_dye_dex" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90001" name="Best Dye of INT (INT + 4 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->
 		<set name="icon" val="icon.lv4_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90002" name="Best Dye of INT (INT + 4 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 1st class transfer, before 2nd class transfer. -->
 		<set name="icon" val="icon.lv4_1_dye_int" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90003" name="Best Dye of MEN (MEN + 4 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv4_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90004" name="Best Dye of MEN (MEN + 4 WIT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv4_1_dye_men" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90005" name="Best Dye of WIT (WIT + 4 INT - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv4_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90006" name="Best Dye of WIT (WIT + 4 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 3rd Class Transfer. -->
 		<set name="icon" val="icon.lv4_1_dye_wit" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -53,7 +53,7 @@
 		<!-- A mineral formed inside a monster under an immense impact. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires D-grade Gemstones (200 pcs.). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -102,7 +102,7 @@
 		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires D-grade Gemstones (200 pcs.). Cannot be sold at an NPC's store. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -111,7 +111,7 @@
 		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires C-grade Gemstones (300 pcs.). Cannot be sold at an NPC's store. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -120,7 +120,7 @@
 		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires B-grade Gemstones (400 pcs.). Cannot be sold at an NPC's store. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -129,7 +129,7 @@
 		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires A-grade Gemstones (500 pcs.). Cannot be sold at an NPC's store. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -138,7 +138,7 @@
 		<!-- A mineral formed inside a monster under an immense impact. Serves as a material in weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Jeros. Augmentation requires B-grade Gemstones (400 pcs.). Cannot be sold at an NPC's store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -154,7 +154,7 @@
 	<item id="90018" name="Elite Symbol of Monster Arena" type="EtcItem">
 		<!-- Received as a reward for winning in the Elite Monster Arena. Can be traded for a special item with Arena Manager Lau. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_residence_token_royalguard" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -163,7 +163,7 @@
 	<item id="90019" name="Symbol of Monster Arena" type="EtcItem">
 		<!-- Received as a reward for winning in the Monster Arena. Can be traded for a special item with Arena Manager Lau. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_residence_token_giantchaser" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -173,7 +173,7 @@
 		<!-- Double-click to obtain one of the following Dyes for 3rd Class Transfer: Best Dye of STR, Best Dye of CON, Best Dye of DEX, Best Dye of INT, Best Dye of WIT, or Best Dye of MEN. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -289,28 +289,28 @@
 	<item id="90028" name="Clasp" type="EtcItem">
 		<!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
 		<set name="icon" val="icon.pin_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90029" name="Mid-grade Clasp" type="EtcItem">
 		<!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
 		<set name="icon" val="icon.pin_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90030" name="High-grade Clasp" type="EtcItem">
 		<!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
 		<set name="icon" val="icon.pin_i02" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90031" name="Top-grade Clasp" type="EtcItem">
 		<!-- A clasp which improves Belt? properties. Arena Manager Lau can enhance the Clasp for you. -->
 		<set name="icon" val="icon.pin_i03" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 	</item>
@@ -318,7 +318,7 @@
 		<!-- Restores a large amount of HP. Reuse Time: 3 minutes. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -327,7 +327,7 @@
 		<!-- Restores a large amount of MP. Reuse Time: 3 minutes. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -336,7 +336,7 @@
 		<!-- Double-click to obtain one of the Spellbooks for 3rd Class Transfer. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -344,7 +344,7 @@
 		<!-- Double-click to obtain one of the following items: High/Medium/Average Quality Life Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -442,7 +442,7 @@
 		<set name="icon" val="icon.empty_bottle" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -473,7 +473,7 @@
 	<item id="90045" name="Magical Tablet" type="EtcItem">
 		<!-- A tablet filled with magic power. Collect 31 tablets and give them to Trader Lorenzo or Harmony to get Spellbook: 3rd Class Transfer. -->
 		<set name="icon" val="icon.etc_hidden_1st_page_i00" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90046" name="Scroll: Vengeance" type="EtcItem">

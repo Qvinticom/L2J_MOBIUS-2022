@@ -26,7 +26,7 @@
 		<!-- When used. XP/SP gain +30%. XP/SP gain in Vitality state +30%. and P. Atk./P. Def./M. Atk./M. Def. +15% for 30 min. Cooldown 5 min. -->
 		<set name="icon" val="icon.ev_15th_cake" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -47,7 +47,7 @@
 		<!-- A firecracker item for the 15th Anniversary. Using it starts a fireworks display that lasts 10 seconds. The fireworks generates a magic number between 1 and 6. and using the item again during the fireworks adds further 1-6 to the first magic number generated. You receive '15th Anniversary Coins' when the display ends. You receive the maximum reward when the magic number reaches 15. and the fireworks end when the number exceeds 15. -->
 		<set name="icon" val="icon.ev_15th_firework" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -105,7 +105,7 @@
 		<!-- Double-click to obtain a Lv. 3 jewel. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -115,7 +115,7 @@
 		<!-- Double-click to obtain one level 1 Gem. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -136,6 +136,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="39350" level="1" /> <!-- Freya's Ice Rose -->
 		</skills>
@@ -144,7 +145,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake and rescuing Clumsy Snow. Double-click to obtain a Lindvior's Earring. Ramona's Fancy Earring. Helios's Majestic Earring. or Orfen's Soul Earring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -154,7 +155,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Ring of Creation. Tauti's Ring. Earth Wyrm Heart Ring. Baium's Soul Ring. Forgotten Ring of the Core. Mimir's Worn Ring or Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -164,7 +165,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Harnak's Deformed Necklace or Frintezza's Soul Necklace. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -174,7 +175,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Kain van Halter. Mermoden. Leona. Pantheon or Lionel Stage 8 Soul Crystal. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -184,7 +185,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a +7 Guard Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -194,7 +195,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Lv. 5 Gem. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -204,7 +205,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Dark/Bloody Weapon Enhancement Stone. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -214,7 +215,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Talisman - Seven Signs. Seven Signs' Energy. Sealed Talisman - Golden Bough. Sealed Talisman - Longing or Energy of Longing. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -224,7 +225,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Lindvior's Earring. Blessed Valakas' Necklace. Blessed Antharas' Earring. Tauti's Ring. Frintezza's Necklace. Earth Wyrm Heart Ring. Ring of Creation. Baium's Soul Ring. Harnak's Deformed Necklace. Orfen's Soul Earring or Queen Ant's Soul Ring. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -234,7 +235,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Kain van Halter. Mermoden. Leona. Pantheon or Lionel Stage 7 Soul Crystal. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -244,7 +245,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a +3 Guard Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -254,7 +255,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Super Advanced Seed Bracelet - Stage 1 or Top-grade Seed Bracelet - Stage 1. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -264,7 +265,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a Sealed Talisman - Golden Bough. Sealed Talisman - Longing or Energy of Longing. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -274,7 +275,7 @@
 		<!-- A reward earned for eating a 15th Anniversary Cake to rescue Clumsy Snow. Double-click to obtain a +5 Zodiac Agathion Charm. -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -284,7 +285,7 @@
 		<!-- Double-click to obtain Kain van Halter, Mermoden, Leona, Pantheon, or Lionel Soul Crystal Lv. 1. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -326,7 +327,7 @@
 		<!-- Use it to obtain 1-3 Blessed Circlet Enchant Scrolls. -->
 		<set name="icon" val="icon.bm_aden_renewal_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -334,7 +335,7 @@
 		<!-- Double-click to obtain one of the special items. -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -381,7 +382,7 @@
 	<item id="80636" name="Artifact Crystal" type="EtcItem">
 		<!-- Artifact crafting material. Take them to Alexandria at the Town of Giran Luxury Shop to craft artifacts. -->
 		<set name="icon" val="icon.bm_artifact_stone" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -521,6 +522,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80648" name="Artifact - P. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -528,6 +530,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80649" name="Artifact - M. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -535,6 +538,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="1" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80650" name="Artifact - Bow Resistance" additionalName="Protection" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -542,6 +546,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80651" name="Artifact - Dagger Resistance" additionalName="Protection" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -549,6 +554,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80652" name="Artifact - Sword Resistance" additionalName="Protection" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -556,6 +562,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="2" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80653" name="Artifact - Vitality Bonus" additionalName="Support" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -563,6 +570,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80654" name="Artifact - Vitality Consumption Rate Reduction" additionalName="Support" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -570,6 +578,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80655" name="Artifact - Skill MP Consumption Reduction" additionalName="Support" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -577,6 +586,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="3" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80656" name="Artifact - P. Def." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -584,6 +594,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80657" name="Artifact - M. Def." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -591,6 +602,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80658" name="Artifact - Normal Attack Critical Damage" additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -598,6 +610,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80659" name="Artifact - P. Skill Critical Damage" additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -605,6 +618,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80660" name="Artifact - M. Skill Critical Damage" additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -612,6 +626,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80661" name="Artifact - Atk. Spd." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -619,6 +634,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80662" name="Artifact - Casting Spd." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
@@ -626,6 +642,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="artifactSlot" val="4" />
 		<!-- Skill add in option stat when enchant/upgrade -->
+		<set name="material" val="SILVER" />
 	</item>
 	<item id="80663" name="Dragon Claw Box (Advanced)" type="EtcItem">
 		<!-- Use it to obtain an Advanced Antharas. Valakas. Lindvior or Fafurion weapon. -->
@@ -731,6 +748,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="39213" level="1" /> <!-- Royal Fish Soup -->
 		</skills>

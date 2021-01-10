@@ -30,7 +30,7 @@
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -147,7 +147,7 @@
 	<item id="70312" name="Tryout Event Coin" additionalName="Event" type="EtcItem">
 		<!-- A coin, commemorating Olympiad Opening. Is given to those warriors who takes part in the Tryout. You can exchange it for a Special Potion through NPC Riana. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_ev_kalie_token" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -157,7 +157,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -167,7 +167,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -177,7 +177,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_lesser_potion_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -187,7 +187,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -197,7 +197,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -207,7 +207,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -217,7 +217,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -227,7 +227,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -237,7 +237,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -247,7 +247,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -257,7 +257,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -267,7 +267,7 @@
 		<!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -302,7 +302,7 @@
 	<item id="70327" name="Olympiad Commemorative Amulet - 100%" additionalName="3 hours" type="EtcItem">
 		<!-- When in inventory XP/SP gain +100%. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.skill19226" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -386,7 +386,7 @@
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -397,7 +397,7 @@
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -408,7 +408,7 @@
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -419,7 +419,7 @@
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -430,7 +430,7 @@
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -441,7 +441,7 @@
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -452,7 +452,7 @@
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -463,7 +463,7 @@
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -474,7 +474,7 @@
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -494,7 +494,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -514,7 +514,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -534,7 +534,7 @@
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -568,7 +568,7 @@
 		<!-- Special material, invented by Kusto to produce weapons. It can be used as the material to produce A-grade weapon or to break the seal with the help of Kusto. -->
 		<set name="icon" val="icon.etc_adamantium_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -576,7 +576,7 @@
 		<!-- Transforms you into Pirate for 30 minutes. The effect persists through death. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -584,7 +584,7 @@
 		<!-- Transforms you into Dark Assassin for 30 minutes. The effect persists through death. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -592,7 +592,7 @@
 		<!-- Transforms you into White Assassin for 30 minutes. The effect persists through death. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

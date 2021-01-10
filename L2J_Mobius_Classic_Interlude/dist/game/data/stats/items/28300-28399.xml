@@ -143,6 +143,7 @@
 		<set name="icon" val="icon.etc_r991_ring_piece" />
 		<set name="weight" val="60" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28308" name="Shilen's Necklace" type="Armor">
 		<!-- A necklace containing Shilen's strength. -->
@@ -183,6 +184,7 @@
 		<set name="icon" val="icon.etc_r991_necklace_piece" />
 		<set name="weight" val="60" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28312" name="Shilen's Earring" type="Armor">
 		<!-- An earring containing Shilen's strength. -->
@@ -223,6 +225,7 @@
 		<set name="icon" val="icon.etc_r991_earring_piece" />
 		<set name="weight" val="60" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28316" name="Scroll: Shilen's Ring" type="EtcItem">
 		<!-- Enchant scroll exclusive to Shilen's Ring. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
@@ -231,6 +234,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="28317" name="Scroll: Shilen's Necklace" type="EtcItem">
 		<!-- Enchant scroll exclusive to Shilen's Necklace. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
@@ -239,6 +243,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="28318" name="Scroll: Shilen's Earring" type="EtcItem">
 		<!-- Enchant scroll exclusive to Shilen's Earring. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
@@ -247,6 +252,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="28319" name="Gran Kain's Necklace - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 1. -->
@@ -255,6 +261,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27678" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 1 -->
 		</capsuled_items>
@@ -266,6 +273,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27679" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 2 -->
 		</capsuled_items>
@@ -277,6 +285,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27680" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 3 -->
 		</capsuled_items>
@@ -288,6 +297,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27681" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 4 -->
 		</capsuled_items>
@@ -299,6 +309,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27682" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 5 -->
 		</capsuled_items>
@@ -310,6 +321,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27683" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 6 -->
 		</capsuled_items>
@@ -321,6 +333,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27684" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 1 -->
 		</capsuled_items>
@@ -332,6 +345,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27685" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 2 -->
 		</capsuled_items>
@@ -343,6 +357,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27686" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 3 -->
 		</capsuled_items>
@@ -354,6 +369,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27687" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 4 -->
 		</capsuled_items>
@@ -365,6 +381,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27688" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 5 -->
 		</capsuled_items>
@@ -376,6 +393,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27689" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 6 -->
 		</capsuled_items>
@@ -387,6 +405,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27690" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 1 -->
 		</capsuled_items>
@@ -398,6 +417,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27691" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 2 -->
 		</capsuled_items>
@@ -409,6 +429,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27692" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 3 -->
 		</capsuled_items>
@@ -420,6 +441,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27693" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 4 -->
 		</capsuled_items>
@@ -431,6 +453,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27694" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 5 -->
 		</capsuled_items>
@@ -442,6 +465,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27695" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 6 -->
 		</capsuled_items>
@@ -453,6 +477,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27696" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 1 -->
 		</capsuled_items>
@@ -464,6 +489,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27697" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 2 -->
 		</capsuled_items>
@@ -475,6 +501,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27698" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 3 -->
 		</capsuled_items>
@@ -486,6 +513,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27699" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 4 -->
 		</capsuled_items>
@@ -497,6 +525,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27700" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 5 -->
 		</capsuled_items>
@@ -508,6 +537,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27701" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 6 -->
 		</capsuled_items>
@@ -519,6 +549,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27702" min="1" max="1" chance="100" /> <!-- Sayha's Ring -Stage 1 -->
 		</capsuled_items>
@@ -530,6 +561,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27703" min="1" max="1" chance="100" /> <!-- Sayha's Ring -Stage 2 -->
 		</capsuled_items>
@@ -541,6 +573,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27704" min="1" max="1" chance="100" /> <!-- Sayha's Ring -Stage 3 -->
 		</capsuled_items>
@@ -552,6 +585,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27705" min="1" max="1" chance="100" /> <!-- Sayha's Ring -Stage 4 -->
 		</capsuled_items>
@@ -563,6 +597,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27706" min="1" max="1" chance="100" /> <!-- Sayha's Ring -Stage 5 -->
 		</capsuled_items>
@@ -574,6 +609,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27707" min="1" max="1" chance="100" /> <!-- Sayha's Ring -Stage 6 -->
 		</capsuled_items>
@@ -585,6 +621,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27708" min="1" max="1" chance="100" /> <!-- Maphr's Ring -Stage 1 -->
 		</capsuled_items>
@@ -596,6 +633,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27709" min="1" max="1" chance="100" /> <!-- Maphr's Ring -Stage 2 -->
 		</capsuled_items>
@@ -607,6 +645,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27710" min="1" max="1" chance="100" /> <!-- Maphr's Ring -Stage 3 -->
 		</capsuled_items>
@@ -618,6 +657,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27711" min="1" max="1" chance="100" /> <!-- Maphr's Ring -Stage 4 -->
 		</capsuled_items>
@@ -629,6 +669,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27712" min="1" max="1" chance="100" /> <!-- Maphr's Ring -Stage 5 -->
 		</capsuled_items>
@@ -640,6 +681,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="27713" min="1" max="1" chance="100" /> <!-- Maphr's Ring -Stage 6 -->
 		</capsuled_items>
@@ -652,6 +694,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="28356" name="Prestige Cube Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing 1 Prestige Cube (7-day). -->
@@ -661,6 +704,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="28357" name="Special Treasure Chest" type="EtcItem">
 		<!-- Exclusive treasure chest. Double-click to receive a random item. -->
@@ -668,6 +712,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="28358" name="La Vie En Rose's Elegant Brooch" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot +12. -->
@@ -691,6 +736,7 @@
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_powder_jewel" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28360" name="Cat's Eye Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Cat's Eye Lv. 3. -->
@@ -699,6 +745,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26499" min="1" max="1" chance="100" /> <!-- Cat's Eye - Lv. 3 -->
 		</capsuled_items>
@@ -710,6 +757,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26500" min="1" max="1" chance="100" /> <!-- Cat's Eye - Lv. 4 -->
 		</capsuled_items>
@@ -721,6 +769,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26504" min="1" max="1" chance="100" /> <!-- Amethyst - Lv. 3 -->
 		</capsuled_items>
@@ -736,6 +785,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26505" min="1" max="1" chance="100" /> <!-- Amethyst - Lv. 4 -->
 		</capsuled_items>
@@ -745,13 +795,14 @@
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_jewel_grinder" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28365" name="Ultimate Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry Box. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -767,6 +818,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26478" min="1" max="1" chance="100" /> <!-- Vital Stone - Lv. 3 -->
 		</capsuled_items>
@@ -778,6 +830,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26488" min="1" max="1" chance="100" /> <!-- Tanzanite - Lv. 3 -->
 		</capsuled_items>
@@ -789,6 +842,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26479" min="1" max="1" chance="100" /> <!-- Vital Stone - Lv. 4 -->
 		</capsuled_items>
@@ -800,6 +854,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26489" min="1" max="1" chance="100" /> <!-- Tanzanite - Lv. 4 -->
 		</capsuled_items>
@@ -811,6 +866,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26483" min="1" max="1" chance="100" /> <!-- Garnet - Lv. 3 -->
 		</capsuled_items>
@@ -822,6 +878,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="26484" min="1" max="1" chance="100" /> <!-- Garnet - Lv. 4 -->
 		</capsuled_items>
@@ -833,6 +890,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="28373" name="Tanzanite Lv. 3 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Tanzanite Lv. 3. -->
@@ -841,6 +899,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="28374" name="Vital Stone Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Vital Stone Lv. 4. -->
@@ -849,6 +908,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="28375" name="Tanzanite Lv. 4 Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a Tanzanite Lv. 4. -->
@@ -857,6 +917,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="28376" name="Greater Cat's Eye" type="Armor">
 		<!-- Decreases damage received from Reflect Damage by 50 and there's a 10% chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -866,6 +927,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27440" level="6" /> <!-- Cat's Eye -->
 			<skill id="27441" level="1" /> <!-- Cat's Eye - Invincibility -->
@@ -879,6 +941,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27442" level="6" /> <!-- Amethyst -->
 			<skill id="27443" level="1" /> <!-- Amethyst - Remove Invincibility/Immunity -->
@@ -892,6 +955,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18568" level="6" /> <!-- Vital Stone -->
 			<skill id="27439" level="3" /> <!-- Vital Wind -->
@@ -905,6 +969,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="6" /> <!-- Garnet -->
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
@@ -918,6 +983,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="27549" level="6" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -929,6 +995,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="28382" name="Ultimate Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain a La Vie En Rose's Jewelry Box. -->
@@ -938,6 +1005,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="LEATHER" />
 		<skills>
 			<skill id="27720" level="1" /> <!-- Ultimate Jewelry Box -->
 		</skills>
@@ -950,6 +1018,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
 		<skills>
 			<skill id="18566" level="6" /> <!-- Garnet -->
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
@@ -986,6 +1055,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="28386" min="1" max="1" chance="100" /> <!-- Race Change Ticket -->
 		</capsuled_items>
@@ -1000,6 +1070,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="28387" name="Agathion - Unlimited Vitality Pack" type="EtcItem">
 		<!-- Wrapped pack containing Agathion - Unlimited Vitality. -->
@@ -1012,6 +1083,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="28388" name="Agathion - Unlimited Vitality" type="Armor">
 		<!-- Summons Unlimited Vitality Agathion. -->
@@ -1036,6 +1108,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28390" name="Heine Exclusive Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 90 - 94. -->
@@ -1047,6 +1120,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28391" name="Heine Exclusive Bait (95-98)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 95 - 98. -->
@@ -1058,6 +1132,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28392" name="Heine Exclusive Bait (99+)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Lv. 99 or above. -->
@@ -1069,12 +1144,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="28393" name="Heine Exclusive Bait Coupon" type="EtcItem">
 		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="28394" name="Heine Exclusive Reward Chest" type="EtcItem">
 		<!-- Double-click to get Heine Fishing Coin. Has a chance of obtaining an Exclusive Treasure Chest. -->
@@ -1084,6 +1161,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="19442" min="1" max="1" chance="50" /> <!-- Blessed Spiritshot (R-grade) -->
 			<item id="27640" min="1" max="1" chance="100" /> <!-- Heine Fishing Coin -->
@@ -1097,6 +1175,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="28393" min="300" max="300" chance="100" /> <!-- Heine Exclusive Bait Coupon -->
 			<item id="38154" min="300" max="300" chance="100" /> <!-- Fishing Shot -->
@@ -1110,6 +1189,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="28393" min="3000" max="3000" chance="100" /> <!-- Heine Exclusive Bait Coupon -->
 			<item id="38154" min="3000" max="3000" chance="100" /> <!-- Fishing Shot -->
@@ -1138,6 +1218,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="33776" min="10000" max="10000" chance="100" /> <!-- Soulshot (C-grade) - Event -->
 			<item id="33777" min="10000" max="10000" chance="100" /> <!-- Soulshot (B-grade) - Event -->
@@ -1155,6 +1236,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="PAPER" />
 		<capsuled_items>
 			<item id="33790" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (C-grade) - Event -->
 			<item id="33791" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (B-grade) - Event -->

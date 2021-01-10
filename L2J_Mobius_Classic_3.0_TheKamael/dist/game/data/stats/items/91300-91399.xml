@@ -23,7 +23,7 @@
 		<!-- The chest is filled with Primavera's blessing. Double-click to obtain one of the following items: Fire/ Earth Dragon Belt, Enchant Scroll Ticket depending on the item grade or one of supplies items. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. The item will be deleted after the event is over. -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -856,7 +856,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -866,7 +866,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -876,7 +876,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -886,7 +886,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -904,7 +904,7 @@
 		<set name="icon" val="icon.fishing_cube_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -915,7 +915,7 @@
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1037,42 +1037,42 @@
 	<item id="91384" name="Essence of Queen Ant" type="EtcItem">
 		<!-- Take this item and Phoenix Ring enchanted for +10 to +12 to Head Blacksmith Ferris to Aden Village to upgrade it and get Immortal Ant Queen's Ring. -->
 		<set name="icon" val="icon.queen_ant_essence_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91385" name="Essence of Orfen" type="EtcItem">
 		<!-- Take this item and Black Ore Earring enchanted for +10 to +12 to Head Blacksmith Ferris to Aden Village to upgrade it and get an Immortal Orfen's Earring. -->
 		<set name="icon" val="icon.earring_of_orfen_essence_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91386" name="Essence of Core" type="EtcItem">
 		<!-- Take this item and Phoenix Ring enchanted for +10 to +12 to Head Blacksmith Ferris to Aden Village to upgrade it and get a Ring of Immortal Core. -->
 		<set name="icon" val="icon.ring_of_core_essence_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91387" name="Essence of Baium" type="EtcItem">
 		<!-- Take this item and Majestic Ring enchanted for +10 to +12 to Head Blacksmith Ferris to Aden Village to upgrade it and get an Immortal Baium's Ring. -->
 		<set name="icon" val="icon.ring_of_baium_essence_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91388" name="Essence of Zaken" type="EtcItem">
 		<!-- Take this item and Phoenix Earring enchanted for +10 to +12 to Head Blacksmith Ferris to Aden Village to upgrade it and get an Immortal Zaken's Earring. -->
 		<set name="icon" val="icon.earring_of_zaken_essence_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91389" name="Essence of Antharas" type="EtcItem">
 		<!-- Take this item and Majestic Earring enchanted for +10 to +12 to Head Blacksmith Ferris to Aden Village to upgrade it and get an Immortal Antharas' Earring. -->
 		<set name="icon" val="icon.earring_of_antaras_essence_i01" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="CRYSTAL" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>

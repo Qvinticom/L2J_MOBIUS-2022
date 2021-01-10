@@ -1010,7 +1010,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1038,7 +1038,7 @@
 		<set name="icon" val="icon.bm_royal_black_beer" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1120,7 +1120,7 @@
 		<!-- PA-only item Grants Horn Melody. Guitar Melody. Pipe Organ Melody. Drum Melody Lv. 5/Warrior's Harmony Lv. 2/War Drum. Marching Drum. Soothing Drum/Elemental Resistance. Resistance Debuff. and Mental Attack Resistance effects for 60 min. <Note> The Emperor's Special Cocktail applies for the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_p" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1130,7 +1130,7 @@
 		<!-- PA-only item Grants Horn Melody. Guitar Melody. Pipe Organ Melody. Drum Melody Lv. 5/Wizard's Harmony Lv. 2/War Drum. Marching Drum. Soothing Drum/Elemental Resistance. Resistance Debuff. and Mental Attack Resistance effects for 60 min. <Note> The Emperor's Special Cocktail applies for the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_m" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1140,7 +1140,7 @@
 		<!-- PA-only item Grants Horn Melody. Guitar Melody. Pipe Organ Melody. Drum Melody Lv. 5/Knight's Harmony Lv. 2/War Drum. Marching Drum. Soothing Drum/Elemental Resistance. Resistance Debuff. and Mental Attack Resistance effects for 60 min. <Note> The Emperor's Special Cocktail applies for the duration of the last used item. -->
 		<set name="icon" val="icon.bm_special_cocktail_of_king_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1222,7 +1222,7 @@
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1307,8 +1307,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R99" />
-		<set name="material" val="DAMASCUS" />
+		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1326,8 +1325,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R99" />
-		<set name="material" val="DAMASCUS" />
+		<set name="material" val="BRONZE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1498,7 +1496,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1509,7 +1507,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1520,7 +1518,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1531,7 +1529,7 @@
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1540,7 +1538,7 @@
 	<item id="80788" name="Red Libra Request - Plains of the Lizardmen" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eradicate monsters in the Plains of the Lizardmen. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1550,7 +1548,7 @@
 	<item id="80789" name="Red Libra Request - Sel Mahum Training Grounds" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eradicate monsters in the Sel Mahum Training Grounds. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1560,7 +1558,7 @@
 	<item id="80790" name="Red Libra Request - Alligator Island" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eradicate monsters on Alligator Island. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1570,7 +1568,7 @@
 	<item id="80791" name="Red Libra Request - Tanor Canyon" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eradicate monsters in Tanor Canyon. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1581,7 +1579,7 @@
 		<!-- A love letter filled with Rok's earnest love toward Lucy Use it 10 times at Lucy might get you the Fondest Heart. -->
 		<set name="icon" val="icon.ev_2018_xmas_letter" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1637,7 +1635,7 @@
 		<!-- When used. increases XP/SP gained from hunting by 100% for 30 min. Does not stack with the Fall of the Dragon or Dandy's Home Run Ball. Does not stack with the effect of Agathion - XP Bottle. Cooldown 5 min. -->
 		<set name="icon" val="icon.bm_dragon_breath" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

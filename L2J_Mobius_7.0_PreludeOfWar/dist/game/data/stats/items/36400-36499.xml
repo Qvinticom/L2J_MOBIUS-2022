@@ -12,6 +12,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="9828" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
@@ -23,6 +24,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36402" name="Lucky Pouch (High-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 6 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 2 Feathers of Blessing, 2 Heavenly Cocktails, and 1 High-grade Lucky Enchant Stone: Armor (R-grade). -->
@@ -31,6 +33,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36403" name="Lucky Pouch (Top-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 12 Scrolls: Midsummer Passion, 2 Vitality Replenishing Star Candies, 3 Feathers of Blessing, 2 Heavenly Cocktails, 2 units of Energy of Destruction, and a Rare Accessory Pack (Expiratory). If you are very lucky, you might get a Rare Accessory Pack (Permanent), a Weapon Pack (R99-grade), and an Unbind Scroll Pack additionally. -->
@@ -39,6 +42,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36404" name="Scroll: Midsummer Passion" additionalName="Event" type="EtcItem">
 		<!-- Increases acquired XP and SP by 30% for 1 hour. -->
@@ -49,6 +53,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9832" level="1" /> <!-- Scroll: Midsummer Passion -->
 		</skills>
@@ -60,6 +65,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="36406" name="Rare Accessory Pack (Permanent)" additionalName="Event" type="EtcItem">
 		<!-- Double-click for one of the following items: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
@@ -67,6 +73,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="36407" name="Weapon Pack (R99-grade)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 1 unidentified Helios weapon. -->
@@ -74,6 +81,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="36408" name="Unbind Scroll Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get 1 of the following: R, R95 or R99 weapon/ armor Unbind Scroll -->
@@ -81,6 +89,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="36409" name="Blessed Antharas' Earring" additionalName="14-day" type="Armor">
 		<!-- MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings. -->
@@ -93,6 +102,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
 			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
@@ -112,6 +122,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
 			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
@@ -131,6 +142,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
 		</skills>
@@ -149,6 +161,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13317" level="1" /> <!-- Earth Wyrm Heart Ring -->
 			<skill id="13318" level="1" /> <!-- Earth Wyrm Heart Ring -->
@@ -169,6 +182,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="price" val="5000000" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="36414" name="Dragon Claw" type="EtcItem">
 		<!-- Material for making a dragon weapon. -->
@@ -176,6 +190,7 @@
 		<set name="weight" val="2" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36415" name="Dragon Blood" type="EtcItem">
 		<!-- Item consumed when using a skill of a dragon weapon. -->
@@ -183,6 +198,7 @@
 		<set name="weight" val="2" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36416" name="Dragon Tooth" type="EtcItem">
 		<!-- Item consumed when using a skill of a dragon weapon. -->
@@ -190,6 +206,7 @@
 		<set name="weight" val="2" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="36417" name="Antharas Shaper" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' Shaper Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Cannot be crystallized, enchanted, augmented, changed or assigned an attribute. -->
@@ -204,6 +221,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -227,6 +245,7 @@
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -251,6 +270,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2339</stat>
 			<stat type="mAtk">517</stat>
@@ -275,6 +295,7 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -296,6 +317,8 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="is_sellable" val="false" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -319,6 +342,7 @@
 		<set name="weight" val="2010" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -345,6 +369,7 @@
 		<set name="weight" val="1550" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -368,6 +393,7 @@
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -391,6 +417,7 @@
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -414,6 +441,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -436,6 +464,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -459,6 +488,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -481,6 +511,7 @@
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -505,6 +536,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2339</stat>
 			<stat type="mAtk">517</stat>
@@ -529,6 +561,7 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -552,6 +585,7 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -576,6 +610,7 @@
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">1157</stat>
 			<stat type="mAtk">759</stat>
@@ -600,6 +635,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -625,6 +661,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2339</stat>
 			<stat type="mAtk">517</stat>
@@ -648,6 +685,7 @@
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -671,6 +709,7 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -693,6 +732,7 @@
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -717,6 +757,7 @@
 		<set name="weight" val="1580" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2106</stat>
 			<stat type="mAtk">517</stat>
@@ -740,6 +781,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2050" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -1012,7 +1054,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1209,7 +1251,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1323,7 +1365,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1707,7 +1749,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1918,7 +1960,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
+		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2040,7 +2082,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2441,7 +2483,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />

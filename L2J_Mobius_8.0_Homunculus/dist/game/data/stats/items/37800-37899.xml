@@ -19,11 +19,13 @@
 		<!-- Bring 10 fragments to the Blacksmith of Mammon to obtain a Bloody Armor Enhancement Stone. -->
 		<set name="icon" val="icon.energy_condenser_fragment_pvp" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37802" name="Dark Armor Enhancement Stone Fragment" type="EtcItem">
 		<!-- Bring 10 fragments to the Blacksmith of Mammon to obtain a Dark Armor Enhancement Stone. -->
 		<set name="icon" val="icon.energy_condenser_fragment_pve" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37803" name="Master Yogi's Special Scroll: Enchant Weapon" type="EtcItem">
 		<!-- Special weapon enchant scroll containing Master Yogi's power, only usable on Master Yogi's Staff. The item and the enchant value remain intact when enchanting fails. Cannot be used on a Staff enchanted to +15 or higher. Lucky Enchant Stones cannot be used with this item. -->
@@ -31,6 +33,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37804" name="Replica Tiara" type="Armor">
 		<!-- A replica of the Exalted Tiara. Attribute Attack +30. -->
@@ -41,6 +44,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13772" level="1" /> <!-- Replica Tiara -->
 		</skills>
@@ -61,6 +65,7 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="EVENT" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">11</stat>
 			<stat type="mAtk">12</stat>
@@ -79,6 +84,7 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="EVENT" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">11</stat>
 			<stat type="mAtk">12</stat>
@@ -97,6 +103,7 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="EVENT" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">11</stat>
 			<stat type="mAtk">12</stat>
@@ -115,6 +122,7 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="EVENT" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">11</stat>
 			<stat type="mAtk">12</stat>
@@ -129,31 +137,37 @@
 		<!-- Master Yogi's power assembly. Bring it to Master Yogi with a +15 ~ +17 Master Yogi's Staff to increase the Staff' enchant value by 1. -->
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37810" name="Metal Suit Hair Accessory" type="Armor">
 		<!-- Metal Suit Hair Accessory. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_hair" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="CLOTH" />
 	</item>
 	<item id="37811" name="Metal Suit Breastplate" type="Armor">
 		<!-- Metal Suit Breastplate. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37812" name="Metal Suit Gaiters" type="Armor">
 		<!-- Metal Suit Pants. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_l" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37813" name="Metal Suit Gloves" type="Armor">
 		<!-- Metal Suit Gloves. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_g" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37814" name="Metal Suit Boots" type="Armor">
 		<!-- Metal Suit Boots. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_b" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="37815" name="Metal Suit Pack" type="EtcItem">
 		<!-- Mysterious box containing 30-day limit appearance stone for Metal Shoot hair accessory, breastplate, gaiters, boots, and gloves. -->
@@ -161,6 +175,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37816" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of Metal Shoot hair for 30 days. -->
@@ -172,6 +187,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37817" name="Metal Suit Breastplate Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Metal Suit Breastplate for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -183,6 +199,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37818" name="Metal Suit Gaiters Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of a Metal Suit Pants for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -194,6 +211,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37819" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of Metal Suit Gloves for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -205,6 +223,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37820" name="Metal Suit Boots Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of boots to that of Metal Suit Boots for 30 days. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -216,6 +235,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37821" name="Transformation Potion: Metal Suit" type="EtcItem">
 		<!-- Modifies your appearance into that of a Metal Suit for 1 h. -->
@@ -223,6 +243,7 @@
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="37822" name="Scroll of Escape - Hellbound" type="EtcItem">
 		<!-- Scroll that teleports you to Hellbound. -->
@@ -230,6 +251,7 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37823" name="Leona's Gift" type="EtcItem">
 		<!-- Leona Blackbird's present that is given to the heroes who help in defeating the evil on Hellbound. Must be under level 99 to use. -->
@@ -239,6 +261,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37824" name="Hair Accessory Appearance Stone Coupon" additionalName="15-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special appearance hair accessory appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
@@ -248,6 +271,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37825" name="Hair Accessory Appearance Stone Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special appearance hair accessory appearance stone (30-day limited). The exchange can be done through the Adventurers' Guide. -->
@@ -257,6 +281,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37826" name="NC Dinos Hat Appearance Stone" additionalName="15-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (15-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -268,6 +293,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37827" name="NC Dinos Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of an NC Dinos Cap (30-day). Works for items that use the same number of hair accessory slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -279,6 +305,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37828" name="Vigilante Hat Appearance Stone" additionalName="15-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (15-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -290,6 +317,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37829" name="Vigilante Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (30-day). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in characteristics. Double-click to use. Note!. When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -301,6 +329,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37830" name="Valentine Appearance Stone Coupon: Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special appearance weapon appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
@@ -310,6 +339,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37831" name="Valentine Appearance Stone Coupon: Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special weapon appearance stone (30-day). The exchange can be done through the Adventurers' Guide. -->
@@ -323,6 +353,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37832" name="Valentine Appearance Stone: Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon. 15-day. -->
@@ -334,6 +365,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37833" name="Valentine Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon. 15-day. -->
@@ -345,6 +377,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37834" name="Valentine Appearance Stone: Two-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. 15-day. -->
@@ -356,6 +389,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37835" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of a Valentine's Day weapon. 15-day. -->
@@ -367,6 +401,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37836" name="Valentine Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon. 15-day. -->
@@ -378,6 +413,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37837" name="Valentine Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon. 15-day. -->
@@ -389,6 +425,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37838" name="Valentine Appearance Stone: Bow" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon. 15-day. -->
@@ -400,6 +437,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37839" name="Valentine Appearance Stone: Crossbow" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon. 15-day. -->
@@ -411,6 +449,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37840" name="Valentine Appearance Stone: Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 15-day. -->
@@ -422,6 +461,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37841" name="Valentine Appearance Stone: One-handed Staff" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of a Valentine's Day weapon. 15-day. -->
@@ -433,6 +473,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37842" name="Valentine Appearance Stone: Two-handed Staff" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of a Valentine's Day weapon. 15-day. -->
@@ -444,6 +485,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37843" name="Valentine Appearance Stone: Dual Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of a Valentine's Day weapon. 15-day. -->
@@ -455,6 +497,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37844" name="Valentine Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of dual daggers to that of a Valentine's Day weapon. 15-day. -->
@@ -466,6 +509,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37845" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapon to that of a Valentine's Day weapon. 15-day. -->
@@ -477,6 +521,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37846" name="Valentine Appearance Stone: Shield" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 15-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -488,6 +533,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37847" name="Valentine Appearance Stone: Sigil" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 15-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -499,6 +545,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37848" name="Valentine Appearance Stone: Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon. 30-day. -->
@@ -510,6 +557,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37849" name="Valentine Appearance Stone: One-handed Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon. 30-day. -->
@@ -521,6 +569,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37850" name="Valentine Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Valentine weapon. 30-day. -->
@@ -532,6 +581,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37851" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of a Valentine's Day weapon. 30-day. -->
@@ -543,6 +593,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37852" name="Valentine Appearance Stone: Fist Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon. 30-day. -->
@@ -554,6 +605,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37853" name="Valentine Appearance Stone: Spear" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon. 30-day. -->
@@ -565,6 +617,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37854" name="Valentine Appearance Stone: Bow" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon. 30-day. -->
@@ -576,6 +629,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37855" name="Valentine Appearance Stone: Crossbow" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon. 30-day. -->
@@ -587,6 +641,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37856" name="Valentine Appearance Stone: Magic Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 30-day. -->
@@ -598,6 +653,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37857" name="Valentine Appearance Stone: One-handed Staff" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of a Valentine's Day weapon. 30-day. -->
@@ -609,6 +665,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37858" name="Valentine Appearance Stone: Two-handed Staff" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of a Valentine's Day weapon. 30-day. -->
@@ -620,6 +677,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37859" name="Valentine Appearance Stone: Dual Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of dual swords to that of a Valentine's Day weapon. 30-day. -->
@@ -631,6 +689,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37860" name="Valentine Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of dual daggers to that of a Valentine's Day weapon. 30-day. -->
@@ -642,6 +701,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37861" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of dual blunt weapon to that of a Valentine's Day weapon. 30-day. -->
@@ -653,6 +713,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37862" name="Valentine Appearance Stone: Shield" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 30-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -664,6 +725,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37863" name="Valentine Appearance Stone: Sigil" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 30-day. An appearance-modified item cannot be exchanged until it gets back to its original appearance. -->
@@ -675,6 +737,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37864" name="Hero's SP Scroll (Novice)" type="EtcItem">
 		<!-- Double-click to obtain 1,000,000 SP. -->
@@ -684,6 +747,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37865" name="Hero's SP Scroll (Experienced)" type="EtcItem">
 		<!-- Double-click to obtain 5,000,000 SP. -->
@@ -693,6 +757,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37866" name="Hero's SP Scroll (Expert)" type="EtcItem">
 		<!-- Double-click to obtain 10,000,000 SP. -->
@@ -702,6 +767,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
 		<!-- For 30 min., P. Atk. +10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
@@ -736,6 +802,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13570" level="1" /> <!-- Hero's Weapon: Dagger -->
 		</skills>
@@ -765,6 +832,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13571" level="1" /> <!-- Hero's Weapon: One-handed Sword -->
 		</skills>
@@ -793,6 +861,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13572" level="1" /> <!-- Hero's Weapon: Two-handed Sword -->
 		</skills>
@@ -821,6 +890,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13573" level="1" /> <!-- Hero's Weapon: One-handed Blunt Weapon -->
 		</skills>
@@ -850,6 +920,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13574" level="1" /> <!-- Hero's Weapon: Fist Weapon -->
 		</skills>
@@ -879,6 +950,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13575" level="1" /> <!-- Hero's Weapon: Spear -->
@@ -910,6 +982,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
 		<set name="reuse_delay" val="1500" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13576" level="1" /> <!-- Hero's Weapon: Bow -->
 		</skills>
@@ -940,6 +1013,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
 		<set name="reuse_delay" val="1350" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13577" level="1" /> <!-- Hero's Weapon: Crossbow -->
 		</skills>
@@ -970,6 +1044,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="21600" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13578" level="1" /> <!-- Hero's Weapon: One-handed Magic Sword -->
 		</skills>
@@ -999,6 +1074,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="21600" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13579" level="1" /> <!-- Hero's Weapon: One-handed Magic Blunt Weapon -->
 		</skills>
@@ -1029,6 +1105,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="13580" level="1" /> <!-- Hero's Weapon: Two-handed Magic Blunt Weapon -->
 		</skills>
@@ -1058,6 +1135,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13581" level="1" /> <!-- Hero's Weapon: Dualsword -->
 		</skills>
@@ -1086,6 +1164,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13582" level="1" /> <!-- Hero's Weapon: Dual Dagger -->
 		</skills>
@@ -1115,6 +1194,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="21600" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13583" level="1" /> <!-- Hero's Weapon: Dual Blunt Weapon -->
 		</skills>
@@ -1136,6 +1216,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37883" name="Valiant Chest" type="EtcItem">
 		<!-- Treasure box containing hero's present. Double-click to acquire various appearance changing stones and SP scrolls. -->
@@ -1143,6 +1224,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37884" name="Hero's Badge" type="EtcItem">
 		<!-- Hero's episode event item. After the event ends, characters will receive a reward according to the acquired quantity on the live server. -->
@@ -1151,6 +1233,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37885" name="Hero's Energy" type="EtcItem">
 		<!-- Hero's episode event item. After the event ends, characters will be allowed to exchange them for XP scrolls and SP runes through the Adventurers' Guide on the live server. -->
@@ -1159,6 +1242,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37886" name="Hero's XP Scroll" type="EtcItem">
 		<!-- Scroll the replenishes 100,000,000 XP. Can only be used by characters above level 85. When used by characters below level 98, the XP is only replenished by 30%. Cannot be used by chaotic characters. Cannot be used in the Olympiad. -->
@@ -1170,6 +1254,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37887" name="Hero's SP Rune" additionalName="1-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 1-day item. Cannot be used in the Olympiad. -->
@@ -1179,12 +1264,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="1440" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37888" name="Vigilante Hat" type="Armor">
 		<!-- Vigilante Hat. -->
 		<set name="icon" val="icon.accessory_archer_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="37889" name="Herb of Growth" type="EtcItem">
 		<!-- Acquired XP/ SP +50% for 10 min. -->
@@ -1233,6 +1320,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37893" name="Bloodied Demonic Tome" type="EtcItem">
 		<!-- Ancient book of the demon stained with the blood of caravans. Budenka, the ancient book keeper of the Caravan, is collecting such books in the Refugee Village. -->
@@ -1243,6 +1331,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="37894" name="Healing Potion Improved Warrior's Recovery Potion" type="EtcItem">
 		<!-- Recovers 5000 HP. If HP is full, recovers CP. No cooldown. -->
@@ -1269,6 +1358,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37896" name="SP Rune (Mid-grade)" additionalName="7-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 20%. 7-day. -->
@@ -1279,6 +1369,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTRT_RUNE_SELECT" />
 		<set name="time" val="10080" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="37897" name="SP Rune (High-grade)" additionalName="7-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 30%. 7-day. -->
@@ -1303,11 +1394,13 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 	<item id="37899" name="SP Rune Pack (Mid-grade) (1-day)" type="EtcItem">
 		<!-- Double-click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
 	</item>
 </list>

@@ -4,6 +4,7 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -12,6 +13,7 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -20,6 +22,7 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -28,6 +31,7 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
+		<set name="material" val="CLOTH" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -39,6 +43,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46405" name="Mr. K's Gift Basket" type="EtcItem">
 		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hour Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/ White Uniform Hat/ Ribbon Hairband. -->
@@ -49,6 +54,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46406" name="Angel Cat's Energy" type="EtcItem">
 		<!-- For 30 minutes, P. Atk. +5%, M. Atk. by 20%, P. Def. by 5%, M. Def. by 5%, Atk. Spd. by 5%, Casting Spd. by 5%, Max HP/ MP by 5%, and XP and SP acquired through hunting increase by 30%. Cannot be used in the Olympiad. Cannot be applied along with event buffs such as Angel Cat's Blessing and Letter Collector's Gift. -->
@@ -59,6 +65,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="weight" val="5" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46407" name="Tattered Monk Clothes" type="EtcItem">
 		<!-- Tattered clothes are the remains of the monks you battled in the Monastery of Silence. The clothes are nothing more than rags after their years of use. Let's take them to Greymore in the Monastery of Silence. -->
@@ -69,6 +76,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46408" name="Torch" type="EtcItem">
 		<!-- A torch that was requested by Blacksmith Vulcan at the Forge of the Gods, Lower Level. Collect these and take them to Vulcan. -->
@@ -79,6 +87,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46409" name="Plain Dinosaur Bone" type="EtcItem">
 		<!-- Singsing from the Primeval Isle requested bones so that the natives can conduct research. Collect these and take them to Karakawei. -->
@@ -89,6 +98,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46410" name="Dinosaur Tissue" type="EtcItem">
 		<!-- Dinosaur tissue used by magicians and Dwarven artisans for research. Collect these and take them to Dinn of Primeval Isle. -->
@@ -99,6 +109,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46411" name="Dinosaur Egg" type="EtcItem">
 		<!-- Ancient eggs used by magicians and Dwarven artisans for research. Collect these and take them to Dinn of Primeval Isle. -->
@@ -109,6 +120,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46412" name="Broken Golem Shard" type="EtcItem">
 		<!-- Shard obtained from hunting Golems in the Pavel Ruins. Collect these and take them to Collector Gutenhagen. -->
@@ -119,6 +131,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46413" name="Dinosaur Fang Necklace" type="EtcItem">
 		<!-- Dinosaur fang necklace obtained for defeating the Elroki Raiders who attacked the Primeval Isle Wharf. Collect these and take them to Dinn of Primeval Isle to get a reward. -->
@@ -129,6 +142,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46414" name="Sheep Hat - Physical" additionalName="7-day" type="Armor">
 		<!-- STR +3, P. Atk. +3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -139,6 +153,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
 		<!-- INT +3, M. Atk. +5% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -149,6 +164,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
 		<!-- CON +3, P./ M. Def +3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
@@ -159,6 +175,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="46417" name="Gutenhagen's Weapon Recipe Coupon" type="EtcItem">
 		<!-- Coupon received from Collector Gutenhagen in the Pavel Ruins. Exchange it for a Weapon Recipe through Gutenhagen. -->
@@ -167,6 +184,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46418" name="Perfect Charm" additionalName="14-day" type="EtcItem">
 		<!-- STR, INT, CON, DEX, WIT, MEN, LUC, CHA +1 when placed in the inventory. Deleted after event. -->
@@ -177,6 +195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="20160" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46419" name="Sheep Hat" type="Armor">
 		<!-- Hat that looks like a white sheep. Uses 2 hair accessory slots. -->
@@ -184,6 +203,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="46420" name="Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch the same items as when fishing with regular bait, and get more XP. Under Lv. 85 only. Deleted after event. -->
@@ -195,6 +215,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46421" name="R Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Can be used by characters Lv. 85 - 94. Deleted after event. -->
@@ -206,6 +227,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46422" name="R95 Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Can be used by characters Lv. 95 - 98. Deleted after event. -->
@@ -217,6 +239,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46423" name="R99 Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Lv. 99 or above. Deleted after event. -->
@@ -228,6 +251,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46424" name="Sheep Hat" additionalName="14-day" type="Armor">
 		<!-- Hat that looks like a sheep. Uses 2 hair accessory slots. <Active Skill>. 1.Blessed Resurrection (Cooldown 60 min). 2.Baa~: Can obtain 2 Sheep Bait Coupons when using the skill.(Only once a day). Deleted after event. -->
@@ -238,6 +262,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
+		<set name="material" val="WOOD" />
 	</item>
 	<item id="46425" name="Sheep Bait Coupon" type="EtcItem">
 		<!-- Exchange for 30 Sheep Bait for your corresponding level through a fishing guild member. Deleted after event. -->
@@ -247,6 +272,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46426" name="For NPC_Right Hand Glass" type="Weapon">
 		<!-- For NPC. -->
@@ -257,6 +283,7 @@
 		<set name="soulshots" val="2" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>
@@ -274,6 +301,7 @@
 		<set name="soulshots" val="2" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>
@@ -291,6 +319,7 @@
 		<set name="soulshots" val="2" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>
@@ -306,6 +335,7 @@
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>
@@ -321,6 +351,7 @@
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>
@@ -337,6 +368,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46432" name="Divine Box" type="EtcItem">
 		<!-- Reward for defeating the pagans inside the Pagan Temple. Double-click to use. Cannot be used in the Olympiad. -->
@@ -346,6 +378,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46433" name="Cursed Grave Goods" type="EtcItem">
 		<!-- Items made by angry spirits to use physical force. Collect these and take them to Karuda in the Crypts of Disgrace to receive a reward. -->
@@ -355,6 +388,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46434" name="Karuda's Reward Coupon" type="EtcItem">
 		<!-- Coupon received for helping Karuda in the Crypts of Disgrace. Exchange it for a reward through Karuda. -->
@@ -363,6 +397,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46435" name="Heine Special Bait (85-89)" type="EtcItem">
 		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used by Lv.85-Lv.89. -->
@@ -374,6 +409,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46436" name="Heine Special Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Seed Bracelet Treasure Chest. Can be used by characters Lv. 90- 94. -->
@@ -385,6 +421,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46437" name="Heine Special Bait (95-98)" type="EtcItem">
 		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used by Lv.95-Lv.98. -->
@@ -396,6 +433,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46438" name="Heine Special Bait (99-)" type="EtcItem">
 		<!-- Fishing Bait. When used, various types of fish can be caught. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or Seed Bracelet Treasure Chest. Can only be used above Lv.99. -->
@@ -407,12 +445,14 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46439" name="Heine Special Bait Coupon" type="EtcItem">
 		<!-- Exchange for 1 Heine Special Bait of your choice through a fishing guild member. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46440" name="Heine Treasure Chest" type="EtcItem">
 		<!-- Double-click to get Heine Fishing Coins. Has a chance of obtaining a Hidden Treasure Chest. -->
@@ -420,6 +460,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46441" name="Zodiac Agathion Pack" type="EtcItem">
 		<!-- Double-click to randomly obtain one Zodiac Agathion. -->
@@ -427,353 +468,412 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46442" name="Heine Special Fishing Tools - 300 Pack" type="EtcItem">
 		<!-- Double-click to get 300 Heine Special Bait Coupons and 300 Fishing Shots. -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46443" name="Heine Special Fishing Tools - 3,000 Pack" type="EtcItem">
 		<!-- Double-click to get 3,000 Heine Special Bait Coupons, 3,000 Fishing Shots, and 1 Fishing Rod Pack (30-day). -->
 		<set name="icon" val="icon.etc_bm_lure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46444" name="Kain's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46445" name="Kain's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46446" name="Kain's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46447" name="Kain's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46448" name="Kain's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46449" name="Kain's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46450" name="Kain's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46451" name="Kain's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46452" name="Kain's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46453" name="Kain's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46454" name="Kain's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46455" name="Kain's Soul Crystal - Stage 12" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46456" name="Kain's Soul Crystal - Stage 13" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46457" name="Kain's Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46458" name="Kain's Soul Crystal - Stage 15" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46459" name="Mermoden's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46460" name="Mermoden's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46461" name="Mermoden's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46462" name="Mermoden's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46463" name="Mermoden's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46464" name="Mermoden's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46465" name="Mermoden's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46466" name="Mermoden's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46467" name="Mermoden's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46468" name="Mermoden's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46469" name="Mermoden's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46470" name="Mermoden's Soul Crystal - Stage 12" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46471" name="Mermoden's Soul Crystal - Stage 13" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46472" name="Mermoden's Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46473" name="Mermoden's Soul Crystal - Stage 15" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46474" name="Leona's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46475" name="Leona's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46476" name="Leona's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46477" name="Leona's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46478" name="Leona's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46479" name="Leona's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46480" name="Leona's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46481" name="Leona's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46482" name="Leona's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46483" name="Leona's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46484" name="Leona's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46485" name="Leona's Soul Crystal - Stage 12" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46486" name="Leona's Soul Crystal - Stage 13" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46487" name="Leona's Soul Crystal - Stage 14" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46488" name="Leona's Soul Crystal - Stage 15" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46489" name="Pantheon's Soul Crystal - Stage 1" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46490" name="Pantheon's Soul Crystal - Stage 2" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46491" name="Pantheon's Soul Crystal - Stage 3" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46492" name="Pantheon's Soul Crystal - Stage 4" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46493" name="Pantheon's Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46494" name="Pantheon's Soul Crystal - Stage 6" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46495" name="Pantheon's Soul Crystal - Stage 7" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46496" name="Pantheon's Soul Crystal - Stage 8" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46497" name="Pantheon's Soul Crystal - Stage 9" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46498" name="Pantheon's Soul Crystal - Stage 10" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="46499" name="Pantheon's Soul Crystal - Stage 11" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
+		<set name="material" val="CRYSTAL" />
 	</item>
 </list>

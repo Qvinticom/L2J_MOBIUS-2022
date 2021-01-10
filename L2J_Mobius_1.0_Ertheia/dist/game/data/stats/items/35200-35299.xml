@@ -20,6 +20,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
@@ -54,6 +55,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
@@ -87,6 +89,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
@@ -121,6 +124,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
@@ -155,6 +159,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
@@ -187,6 +192,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
@@ -220,6 +226,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
@@ -253,6 +260,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
 			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
@@ -287,6 +295,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
@@ -321,6 +330,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
@@ -355,6 +365,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
@@ -388,6 +399,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
@@ -421,6 +433,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
@@ -454,6 +467,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
@@ -487,6 +501,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
@@ -520,6 +535,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
@@ -553,6 +569,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
@@ -587,6 +604,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="8" /> <!-- Special Ability: Critical Damage -->
 			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
@@ -621,6 +639,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
@@ -655,6 +674,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3565" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
@@ -689,6 +709,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
@@ -723,6 +744,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
@@ -757,6 +779,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13111" level="1" /> <!-- Special Ability: HP Drain -->
@@ -791,6 +814,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13110" level="4" /> <!-- Special Ability: Guidance -->
@@ -825,6 +849,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13109" level="4" /> <!-- Special Ability: Damage Up -->
@@ -860,6 +885,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
@@ -895,6 +921,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
@@ -930,6 +957,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
@@ -965,6 +993,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
 			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
@@ -1000,6 +1029,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -1036,6 +1066,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
@@ -1071,6 +1102,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
@@ -1105,6 +1137,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1140,6 +1173,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
@@ -1174,6 +1208,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
 			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
@@ -1209,6 +1244,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
@@ -1244,6 +1280,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -1280,6 +1317,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3576" level="8" /> <!-- Special Ability: MP Regeneration -->
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
@@ -1316,6 +1354,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
@@ -1352,6 +1391,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
@@ -1387,6 +1427,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1420,6 +1461,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1453,6 +1495,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1486,6 +1529,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1520,6 +1564,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
@@ -1554,6 +1599,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -1588,6 +1634,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1622,6 +1669,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -1656,6 +1704,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1690,6 +1739,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -1725,6 +1775,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1760,6 +1811,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8849" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
@@ -1795,6 +1847,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1829,6 +1882,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1863,6 +1917,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8850" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1897,6 +1952,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -1931,6 +1987,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -1965,6 +2022,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8851" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -1999,6 +2057,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="8" /> <!-- Special Ability: Critical Damage -->
 			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
@@ -2034,6 +2093,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3572" level="8" /> <!-- Special Ability: Critical Damage -->
 			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
@@ -2069,6 +2129,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8852" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -2104,6 +2165,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3565" level="9" /> <!-- Special Ability: Focus -->
@@ -2139,6 +2201,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -2174,6 +2237,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8853" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -2209,6 +2273,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
@@ -2245,6 +2310,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
@@ -2281,6 +2347,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8854" level="1" /> <!-- PvE Damage Increase -->
@@ -2318,6 +2385,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -2354,6 +2422,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -2390,6 +2459,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8855" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13061" level="1" /> <!-- Special Ability: Long Blow -->
@@ -2426,6 +2496,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -2463,6 +2534,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13113" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Slow -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -2500,6 +2572,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -2536,6 +2609,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -2572,6 +2646,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -2608,6 +2683,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8857" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
@@ -2643,6 +2719,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8858" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
@@ -2679,6 +2756,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -2716,6 +2794,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="13114" level="1" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
@@ -2753,6 +2832,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3576" level="8" /> <!-- Special Ability: MP Regeneration -->
@@ -2790,6 +2870,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -2827,6 +2908,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="8859" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3575" level="8" /> <!-- Special Ability: Empower -->
@@ -2863,6 +2945,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -2897,6 +2980,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -2931,6 +3015,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8860" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -2965,6 +3050,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -3000,6 +3086,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3567" level="9" /> <!-- Special Ability: Focus -->
@@ -3035,6 +3122,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8861" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -3070,6 +3158,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3566" level="9" /> <!-- Special Ability: Focus -->
@@ -3105,6 +3194,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="3573" level="7" /> <!-- Special Ability: Guidance -->
@@ -3140,6 +3230,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8862" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="13062" level="4" /> <!-- Special Ability: Damage Up -->
@@ -3166,6 +3257,7 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="UNDERWEAR" />
+		<set name="material" val="CRYSTAL" />
 		<skills>
 			<skill id="8871" level="1" /> <!-- Glorious T-shirt -->
 		</skills>
@@ -3183,6 +3275,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="9461" level="1" /> <!-- Scroll of Escape: Guillotine Fortress -->
 		</skills>
@@ -3197,6 +3290,7 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8863" level="1" /> <!-- Tauti's Bracelet -->
 		</skills>
@@ -3216,6 +3310,7 @@
 		<set name="commissionItemType" val="BRACELET" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="8804" level="1" /> <!-- Enhanced Tauti's Bracelet -->
 		</skills>
@@ -3231,6 +3326,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="35296" name="Specter Shaper Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Shaper. -->
@@ -3241,6 +3337,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="35297" name="Specter Cutter Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Cutter. -->
@@ -3251,6 +3348,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="35298" name="Specter Slasher Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Slasher. -->
@@ -3261,6 +3359,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="35299" name="Specter Avenger Fragment" type="EtcItem">
 		<!-- Main ingredient for making a Specter Avenger. -->
@@ -3271,5 +3370,6 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
+		<set name="material" val="LIQUID" />
 	</item>
 </list>

@@ -8,6 +8,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38201" name="Trumpetfish Appearance Stone: Dagger" type="EtcItem">
 		<!-- Turns the appearance of a one-handed dagger into that of a Trumpetfish. -->
@@ -17,6 +18,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38202" name="Shark Appearance Stone: Two-handed Sword" type="EtcItem">
 		<!-- Turns the appearance of a two-handed sword into that of a Shark. -->
@@ -26,6 +28,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38203" name="Squid Appearance Stone: Spear" type="EtcItem">
 		<!-- Turns the appearance of a spear into that of a Squid. -->
@@ -35,6 +38,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38204" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a two-handed blunt weapon into that of a Sea Horse. -->
@@ -45,6 +49,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38205" name="Lobster Appearance Stone: Fist Weapon" type="EtcItem">
 		<!-- Turns the appearance of a fist weapon into that of a Lobster. -->
@@ -54,6 +59,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38206" name="Giant Crab Appearance Stone: Bow" type="EtcItem">
 		<!-- Turns the appearance of a bow into that of a Giant Crab. -->
@@ -63,6 +69,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38207" name="Crayfish Appearance Stone: Crossbow" type="EtcItem">
 		<!-- Turns the appearance of a crossbow into that of a Crayfish. -->
@@ -72,6 +79,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38208" name="Starfish Appearance Stone: Sigil" type="EtcItem">
 		<!-- Turns the appearance of a sigil into that of a Starfish. -->
@@ -81,6 +89,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38209" name="Turtle Appearance Stone: Shield" type="EtcItem">
 		<!-- Turns the appearance of a shield into that of a Turtle. -->
@@ -90,6 +99,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38210" name="Blue Mackerel Appearance Stone: Dual Sword" type="EtcItem">
 		<!-- Turns the appearance of a dual sword into that of a Blue Mackerel. -->
@@ -99,6 +109,7 @@
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="38211" name="Blue Mackerel: One-handed Sword" type="Weapon">
 		<!-- Blue Mackerel-shaped weapon. One-handed sword. -->
@@ -113,6 +124,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="144" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -135,6 +147,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="106" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">80</stat>
 			<stat type="mAtk">54</stat>
@@ -158,6 +171,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="209" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -181,6 +195,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="205" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -207,6 +222,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="101" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">152</stat>
 			<stat type="mAtk">122</stat>
@@ -229,6 +245,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="152" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>
@@ -252,6 +269,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">191</stat>
 			<stat type="mAtk">54</stat>
@@ -275,6 +293,7 @@
 		<set name="soulshots" val="6" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">117</stat>
 			<stat type="mAtk">54</stat>
@@ -296,6 +315,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="100" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="sDef">47</stat>
 			<stat type="rShld">20</stat>
@@ -312,6 +332,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="200" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -329,6 +350,7 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="247" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">107</stat>
 			<stat type="mAtk">51</stat>
@@ -350,6 +372,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="300000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17387" level="1" /> <!-- Fish Stew: WIT -->
 		</skills>
@@ -366,6 +389,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="300000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17388" level="1" /> <!-- Fish Stew: INT -->
 		</skills>
@@ -382,6 +406,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="300000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17389" level="1" /> <!-- Fish Stew: MEN -->
 		</skills>
@@ -398,6 +423,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="300000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17390" level="1" /> <!-- Fish Stew: DEX -->
 		</skills>
@@ -414,6 +440,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="300000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17391" level="1" /> <!-- Fish Stew: STR -->
 		</skills>
@@ -430,6 +457,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="300000" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="17392" level="1" /> <!-- Fish Stew: CON -->
 		</skills>

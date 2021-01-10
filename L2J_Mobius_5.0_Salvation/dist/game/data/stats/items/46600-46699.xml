@@ -4,6 +4,7 @@
 		<set name="icon" val="icon.armor_t56_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -13,6 +14,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
+		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -24,6 +26,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
 		<set name="bodypart" val="back" />
+		<set name="material" val="CLOTH" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
@@ -44,6 +47,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="46604" name="Zubei Armor Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of Red Zubei. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
@@ -54,6 +58,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="46605" name="White Assassin Suit Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of the White Assassin Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
@@ -64,6 +69,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="46606" name="Blue Dynasty Circlet" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. -->
@@ -72,6 +78,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="46607" name="Blue Dynasty Circlet" additionalName="STR" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. STR +3 when equipped. -->
@@ -80,6 +87,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
@@ -91,6 +99,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
@@ -102,6 +111,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
@@ -113,6 +123,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
@@ -124,6 +135,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
@@ -135,6 +147,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
@@ -146,6 +159,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
@@ -157,6 +171,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
@@ -168,6 +183,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
@@ -179,6 +195,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
@@ -190,6 +207,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
@@ -201,6 +219,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
@@ -212,6 +231,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
@@ -223,6 +243,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>
@@ -249,6 +270,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46623" name="5,000,000,000 Adana" additionalName="Event" type="EtcItem">
 		<!-- Adena? No, this is Adana. Take it to Event Manager Miss Patch to exchange for a 30-day Armor Set (R-grade or above), or a Weapon (R-grade or above). Lv. 85 or above. Deleted after event. -->
@@ -259,6 +281,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46624" name="Entrance Pass: Embryo Command Post" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
@@ -267,6 +290,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46625" name="Entrance Pass: Nightmare Kamaloka" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
@@ -277,6 +301,7 @@
 		<set name="time" val="1440" />
 		<set name="handler" val="ItemSkills" />
 		<set name="reuse_delay" val="86400000" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46626" name="Growth Accelerator Feed" additionalName="Mystic Tavern - Kelbim" type="EtcItem">
 		<!-- Feed for military dogs to accelerate growth. -->
@@ -287,6 +312,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 	</item>
 	<item id="46627" name="Blue Dynasty Circlet" additionalName="LUC" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. LUC +3 when equipped. -->
@@ -295,6 +321,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="18048" level="1" /> <!-- Hair Accessory (LUC) -->
 		</skills>
@@ -306,6 +333,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
 		</skills>
@@ -333,6 +361,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="is_depositable" val="false" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">107.0</stat>
 			<stat type="mAtk">68.0</stat>
@@ -350,6 +379,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">142.0</stat>
 			<stat type="maxMp">58</stat>
@@ -365,6 +395,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">107.0</stat>
 			<stat type="maxMp">43</stat>
@@ -380,6 +411,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">71.0</stat>
 			<stat type="maxMp">29</stat>
@@ -395,6 +427,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">161.0</stat>
 			<stat type="maxMp">62</stat>
@@ -410,6 +443,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">121.0</stat>
 			<stat type="maxMp">46</stat>
@@ -425,6 +459,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">80.0</stat>
 			<stat type="maxMp">31</stat>
@@ -440,6 +475,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">174.0</stat>
 			<stat type="maxMp">65</stat>
@@ -455,6 +491,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="SILVER" />
 		<stats>
 			<stat type="mDef">130.0</stat>
 			<stat type="maxMp">49</stat>
@@ -470,6 +507,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="material" val="GOLD" />
 		<stats>
 			<stat type="mDef">87.0</stat>
 			<stat type="maxMp">33</stat>
@@ -484,6 +522,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46640" name="Assistant Roa's Gift" additionalName="Event" type="EtcItem">
 		<!-- Gift box full of Roa's love. Double-click to get a random gift from Roa. -->
@@ -493,11 +532,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46641" name="Entrance Pass: Crystal Caverns" type="EtcItem">
 		<!-- Double-click to reset cooldown to Crystal Cavern's Coral Garden, Steam Corridor, and Emerald Square. Can only be used once a day outside of the instance zone. Can enter twice each time it is used. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46642" name="Proof of Red" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Proof given to those who carry out the missions given by the Red Libra merchants. Use with Elder Green to change a dual class or with Artisan Black to exchange for a weapon. Deleted when the Red Libra merchants leave. -->
@@ -506,6 +547,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46643" name="Rudi" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Oil made by Grocer Pink. Collect 1320 of these and take them to Grocer Pink to receive 10 Lv.5 Giant Dyes. -->
@@ -513,6 +555,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46644" name="Red Libra Supplies Lv. 1" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -521,6 +564,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46645" name="Red Libra Supplies Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -529,6 +573,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46646" name="Red Libra Supplies Lv. 3" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -537,6 +582,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46647" name="Red Libra Supplies Lv. 4" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Reward received from Bodyguard Blue for your help. Double-click to get one random item. Deleted when the Red Libra merchants leave. -->
@@ -545,6 +591,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46648" name="Red Libra Talisman - Resurrection" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Revives all party members. Additionally, restores 100% XP. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -553,6 +600,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="46649" name="Red Libra Talisman - Restoration" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Restores HP/ MP/ CP of all party members and dispels debuffs at a set rate. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -561,6 +609,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="46650" name="Red Libra Talisman - Purge" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Dispels debuffs of all party members and makes them invincible to all debuffs for 7 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -569,6 +618,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="46651" name="Red Libra Talisman - Speed" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Increases Speed of all party members by 70 for 10 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -577,6 +627,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="46652" name="Red Libra Talisman - Resistance" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Decreases damage received by 10%. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -585,6 +636,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="material" val="GOLD" />
 	</item>
 	<item id="46653" name="Elysium Shaper" additionalName="Event" type="Weapon">
 		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -600,6 +652,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">690.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -621,6 +674,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">770.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -642,6 +696,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -663,6 +718,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">770.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -685,6 +741,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -708,6 +765,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -733,6 +791,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1521.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -755,6 +814,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1286.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -776,6 +836,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
 			<stat type="mAtk">481.0</stat>
@@ -797,6 +858,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
 			<stat type="mAtk">481.0</stat>
@@ -819,6 +881,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">776.0</stat>
 			<stat type="mAtk">518.0</stat>
@@ -842,6 +905,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -864,6 +928,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">792.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -885,6 +950,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -898,6 +964,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46668" name="La Vie En Rose's Radiant Brooch" type="Armor">
 		<!-- Activates 5 jewel slots when equipped. Inventory Slots +12. -->
@@ -908,6 +975,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="13659" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
 			<skill id="13924" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
@@ -921,6 +989,7 @@
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46670" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 3%. Effect does not stack with additional jewels of the same type. -->
@@ -931,6 +1000,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="1" /> <!-- Vital Stone -->
 		</skills>
@@ -944,6 +1014,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="2" /> <!-- Vital Stone -->
 		</skills>
@@ -957,6 +1028,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="3" /> <!-- Vital Stone -->
 			<skill id="27439" level="1" /> <!-- Vital Stone - Vital Wind --> 			
@@ -971,6 +1043,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="4" /> <!-- Vital Stone -->
 			<skill id="27439" level="2" /> <!-- Vital Stone - Vital Wind --> 	
@@ -983,6 +1056,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18568" level="5" /> <!-- Vital Stone -->
 			<skill id="27439" level="3" /> <!-- Vital Stone - Vital Wind --> 	
@@ -997,6 +1071,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="1" /> <!-- Garnet -->
 		</skills>
@@ -1010,6 +1085,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="2" /> <!-- Garnet -->
 		</skills>
@@ -1023,6 +1099,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="3" /> <!-- Garnet -->
 		</skills>
@@ -1036,6 +1113,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="4" /> <!-- Garnet -->
 		</skills>
@@ -1047,6 +1125,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18566" level="5" /> <!-- Garnet -->
 			<skill id="18567" level="1" /> <!-- Garnet - Purge -->
@@ -1061,6 +1140,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="1" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -1074,6 +1154,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="2" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -1087,6 +1168,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="3" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -1100,6 +1182,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="4" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -1111,6 +1194,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
 		<skills>
 			<skill id="18565" level="5" /> <!-- Tanzanite - Barrier -->
 		</skills>
@@ -1176,7 +1260,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
+		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -1190,6 +1274,7 @@
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46691" name="Function Test Item" type="EtcItem">
 		<!-- Double-click to get 1 of the following: La Vie En Rose's Vital Stone Chest, La Vie En Rose's Garnet Chest, or La Vie En Rose's Tanzanite Chest. -->
@@ -1198,6 +1283,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LEATHER" />
 	</item>
 	<item id="46692" name="Entrance Pass: Embryo Command Post" type="EtcItem">
 		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
@@ -1206,6 +1292,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="46693" name="Emperor Shunaiman's Shaper" additionalName="30-day" type="Weapon">
 		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->

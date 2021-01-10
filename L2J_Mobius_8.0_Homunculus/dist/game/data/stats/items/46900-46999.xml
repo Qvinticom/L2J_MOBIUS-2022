@@ -368,6 +368,7 @@
 		<set name="is_stackable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="PaulinasSupportBox" />
+		<set name="material" val="PAPER" />
 		<cond msgId="1902">
 			<player levelRange="40;120" />
 		</cond>
@@ -451,6 +452,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47021" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Helmet - Heavy armor -->
 			<item id="47022" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Breastplate - Heavy armor -->
@@ -475,6 +477,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47027" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Helmet - Light armor -->
 			<item id="47028" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Armor - Light armor -->
@@ -499,6 +502,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="FISH" />
 		<capsuled_items>
 			<item id="47032" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Circlet - Robe -->
 			<item id="47033" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Tunic - Robe -->

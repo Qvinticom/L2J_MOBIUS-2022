@@ -18,6 +18,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3577" level="2" type_chance="20" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Hold -->
 			<skill id="3893" level="1" /> <!-- Blunt Weapon of Mana Regeneration -->
@@ -52,6 +53,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3893" level="1" /> <!-- Blunt Weapon of Mana Regeneration -->
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
@@ -85,6 +87,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3893" level="1" /> <!-- Blunt Weapon of Mana Regeneration -->
 			<skill id="21280" level="1" /> <!-- Freya's Authority -->
@@ -118,6 +121,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3655" level="1" /> <!-- PvP Weapon - Rapid Fire -->
 			<skill id="3893" level="1" /> <!-- Blunt Weapon of Mana Regeneration -->
@@ -152,6 +156,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3552" level="3" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3654" level="1" /> <!-- PvP Weapon - Casting -->
@@ -187,6 +192,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3654" level="1" /> <!-- PvP Weapon - Casting -->
 			<skill id="3575" level="4" /> <!-- Special Ability: Empower -->
@@ -222,6 +228,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="3654" level="1" /> <!-- PvP Weapon - Casting -->
 			<skill id="3576" level="4" /> <!-- Special Ability: MP Regeneration -->
@@ -257,6 +264,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="21281" level="1" /> <!-- Spezion's Authority -->
 			<skill id="13265" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
@@ -289,6 +297,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3565" level="7" /> <!-- Special Ability: Focus -->
 			<skill id="21281" level="1" /> <!-- Spezion's Authority -->
@@ -322,6 +331,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="2" /> <!-- Special Ability: Damage Up -->
 			<skill id="21281" level="1" /> <!-- Spezion's Authority -->
@@ -355,6 +365,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="21281" level="1" /> <!-- Spezion's Authority -->
@@ -388,6 +399,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3565" level="7" /> <!-- Special Ability: Focus -->
 			<skill id="13062" level="2" /> <!-- Special Ability: Damage Up -->
@@ -422,6 +434,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13062" level="2" /> <!-- Special Ability: Damage Up -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -456,6 +469,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3565" level="7" /> <!-- Special Ability: Focus -->
@@ -490,6 +504,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="21282" level="1" /> <!-- Maliss' Authority -->
@@ -523,6 +538,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13111" level="1" /> <!-- Special Ability: HP Drain -->
 			<skill id="21282" level="1" /> <!-- Maliss' Authority -->
@@ -556,6 +572,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13110" level="1" /> <!-- Special Ability: Guidance -->
 			<skill id="21282" level="1" /> <!-- Maliss' Authority -->
@@ -589,6 +606,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13109" level="1" /> <!-- Special Ability: Damage Up -->
 			<skill id="21282" level="1" /> <!-- Maliss' Authority -->
@@ -622,6 +640,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3568" level="2" /> <!-- Special Ability: HP Drain -->
@@ -657,6 +676,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="3573" level="4" /> <!-- Special Ability: Guidance -->
@@ -692,6 +712,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13062" level="1" /> <!-- Special Ability: Damage Up -->
@@ -727,6 +748,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="21283" level="1" /> <!-- Steregos' Authority -->
 			<skill id="13281" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
@@ -759,6 +781,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="5" /> <!-- Special Ability: Guidance -->
 			<skill id="21283" level="1" /> <!-- Steregos' Authority -->
@@ -792,6 +815,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="21283" level="1" /> <!-- Steregos' Authority -->
@@ -825,6 +849,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="7" /> <!-- Special Ability: Focus -->
 			<skill id="21283" level="1" /> <!-- Steregos' Authority -->
@@ -858,6 +883,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3573" level="5" /> <!-- Special Ability: Guidance -->
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
@@ -892,6 +918,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3564" level="8" /> <!-- Special Ability: Haste -->
 			<skill id="3567" level="7" /> <!-- Special Ability: Focus -->
@@ -926,6 +953,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3567" level="7" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="5" /> <!-- Special Ability: Guidance -->
@@ -960,6 +988,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="21284" level="1" /> <!-- Ron's Authority -->
 			<skill id="13271" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
@@ -992,6 +1021,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="8" /> <!-- Special Ability: Focus -->
 			<skill id="21284" level="1" /> <!-- Ron's Authority -->
@@ -1025,6 +1055,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3573" level="6" /> <!-- Special Ability: Guidance -->
 			<skill id="21284" level="1" /> <!-- Ron's Authority -->
@@ -1058,6 +1089,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13062" level="3" /> <!-- Special Ability: Damage Up -->
 			<skill id="21284" level="1" /> <!-- Ron's Authority -->
@@ -1091,6 +1123,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3566" level="8" /> <!-- Special Ability: Focus -->
 			<skill id="3573" level="6" /> <!-- Special Ability: Guidance -->
@@ -1125,6 +1158,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3573" level="6" /> <!-- Special Ability: Guidance -->
 			<skill id="13062" level="3" /> <!-- Special Ability: Damage Up -->
@@ -1159,6 +1193,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13062" level="3" /> <!-- Special Ability: Damage Up -->
 			<skill id="3566" level="8" /> <!-- Special Ability: Focus -->
@@ -1188,6 +1223,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22624" level="1" /> <!-- Hair Accessory Restoration Stone -->
 		</skills>
@@ -1203,6 +1239,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22595" level="1" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -1218,6 +1255,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22596" level="2" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -1233,6 +1271,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22597" level="3" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -1248,6 +1287,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="21294" level="1" type="ON_EQUIP" /> <!-- Transformed: Uthanka -->
 			<skill id="21295" level="1" type="ON_UNEQUIP" /> <!-- Un-equip Uthanka's Ring -->
@@ -1265,6 +1305,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="30" />
+		<set name="material" val="SILVER" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21286" level="1" /> <!-- Ride Unicorn -->
@@ -1320,6 +1361,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22888" min="10000" max="10000" chance="100" /> <!-- Mysterious R-grade Soulshot -->
 		</capsuled_items>
@@ -1336,6 +1378,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22888" min="5000" max="5000" chance="100" /> <!-- Mysterious R-grade Soulshot -->
 		</capsuled_items>
@@ -1352,6 +1395,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22889" min="10000" max="10000" chance="100" /> <!-- Mysterious Blessed R-grade Spiritshot -->
 		</capsuled_items>
@@ -1368,6 +1412,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="material" val="STEEL" />
 		<capsuled_items>
 			<item id="22889" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed R-grade Spiritshot -->
 		</capsuled_items>
@@ -1379,6 +1424,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
 	</item>
 	<item id="22895" name="Ancient Kartia's Labyrinth Chronicle" type="EtcItem">
 		<!-- Take it to Kartia Researcher to get a reward. -->
@@ -1391,6 +1437,7 @@
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 	</item>
 	<item id="22896" name="Ancient Kartia's Labyrinth Origins" additionalName="Stage 1" type="EtcItem">
 		<!-- Double-click to obtain 1,200,000,000 XP and 360,000 SP. Cooldown is 2 days. Required level: 85-89. -->
@@ -1404,6 +1451,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22599" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
@@ -1420,6 +1468,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22600" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
@@ -1436,6 +1485,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
 		<skills>
 			<skill id="22601" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
@@ -1453,6 +1503,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
 		<skills>
 			<skill id="22602" level="1" /> <!-- Scroll: Decrease Vitality -->
 		</skills>
