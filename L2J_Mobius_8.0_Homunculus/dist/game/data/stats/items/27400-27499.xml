@@ -1159,6 +1159,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18568" level="1" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="27481" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Vitality bonus +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->
@@ -1170,6 +1173,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="5" />
 		<set name="material" val="GOLD" />
+		<skills>
+			<skill id="18568" level="2" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="27482" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Vitality bonus +12%. Enables the Vital Wind skill. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. <Enchanting>. Compounding of two jewels of the same level. <Enhancing>. Greater Jewel can be obtained through compounding of two jewels of Lv. 5. -->

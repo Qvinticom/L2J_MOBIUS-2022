@@ -424,8 +424,9 @@
 		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
 		<icon>
 			<value level="1">icon.soul_spirit1</value>
-			<value level="2">icon.soul_spirit1</value>
+			<value level="2">icon.soul_spirit2</value>
 		</icon>
+		<affectRange>1000</affectRange>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
