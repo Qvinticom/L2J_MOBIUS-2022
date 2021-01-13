@@ -210,6 +210,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -223,7 +224,7 @@
 		<!-- A souvenir weapon in memory of 5000 day promises. -->
 		<set name="icon" val="icon.weapon_chrono_tambourine_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -245,7 +246,7 @@
 		<!-- A souvenir weapon in memory of 5000 day promises. -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -266,7 +267,7 @@
 		<!-- A souvenir weapon in memory of 5000 day promises. -->
 		<set name="icon" val="icon.weapon_chrono_darbuka_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -287,7 +288,7 @@
 		<!-- A souvenir weapon in memory of 5000 day promises. -->
 		<set name="icon" val="icon.weapon_chrono_maracas_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -333,6 +334,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">194</stat>
 			<stat type="mAtk">111</stat>
@@ -344,7 +346,7 @@
 	<item id="93423" name="Lance" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -366,7 +368,7 @@
 	<item id="93424" name="Deadman's Glory" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1600" />
@@ -376,6 +378,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">194</stat>
 			<stat type="mAtk">111</stat>
@@ -388,7 +391,7 @@
 	<item id="93425" name="Art of Battle Axe" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1570" />
@@ -398,6 +401,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">194</stat>
 			<stat type="mAtk">111</stat>
@@ -410,7 +414,7 @@
 	<item id="93426" name="Staff of Evil Spirits" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -435,7 +439,7 @@
 	<item id="93427" name="Demon's Dagger" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
@@ -445,6 +449,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">111</stat>
@@ -456,7 +461,7 @@
 	<item id="93428" name="Bellion Cestus" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -480,7 +485,7 @@
 	<item id="93429" name="Bow of Peril" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -504,7 +509,7 @@
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -560,6 +565,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">155</stat>
 			<stat type="mAtk">149</stat>
@@ -571,7 +577,7 @@
 	<item id="93433" name="Star Buster" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -594,7 +600,7 @@
 	<item id="93434" name="Dismantler" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -617,7 +623,7 @@
 	<item id="93435" name="Colichemarde" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
@@ -627,6 +633,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">185</stat>
 			<stat type="mAtk">135</stat>

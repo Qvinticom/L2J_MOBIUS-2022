@@ -22,6 +22,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40302" name="Buff Helmet" additionalName="CHA" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CHA + 3. -->
@@ -30,6 +31,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40303" name="Entrance Pass: Spezion (Normal)" type="EtcItem">
 		<!-- Double-click to reset cooldown to Spezion's (normal) dungeon. Usable once a day outside instances while on a cooldown. -->
@@ -1006,6 +1008,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="40363" name="Carrot" type="EtcItem">
 		<!-- Give some of these to Galup and you might get a special gift. You can give it to Hungry Galup in the hunting zones. Can be used as an ingredient for alchemy. -->
@@ -1110,6 +1113,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair" />
 	</item>
 	<item id="40370" name="Sweet Cheese Hat" additionalName="30-day" type="Armor">
 		<!-- A delicious cheese hat. There might be a pink rat hiding in there somewhere. -->
@@ -1122,6 +1126,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40371" name="Vigilante Hat" additionalName="30-day" type="Armor">
 		<!-- A swashbuckler's hat. -->
@@ -1134,6 +1139,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40372" name="Agathion - Three-headed Dragon" additionalName="30-day" type="Armor">
 		<!-- Can summon Pisces when equipped. <Active Skill>. 1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.)\n\n(Passive Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Attck/Resistance + 30. -->

@@ -831,6 +831,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="accCombat">-8E-07</stat>
 			<stat type="rShld">20</stat>
@@ -1058,6 +1059,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="81487" name="Sayha's Talisman" additionalName="Exalted" type="Armor">
 		<!-- Sayha's Talisman imbued with the power of the Exalted. P. Def. +676, M. Def. +441, acquired XP/ SP +5%. If equipped with Venir's Talisman Lv. 10+, Skill Power +2%, Skill Cooldown -2%. Effects of two identical talismans do not stack, the higher-level talisman takes precedence. Cannot be upgraded. -->
@@ -1069,6 +1071,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="81488" name="Blessed Exalted Seed Bracelet" type="Armor">
 		<!-- Seed Bracelet imbued with Lionel Hunter's blessing. Unlocks an agathion's main slot. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (Cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +30. 3. P./ M. Atk. and P./ M. Def. +5%. -->

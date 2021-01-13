@@ -12,6 +12,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
+		<set name="bodypart" val="hair2" />
 		<stats>
 			<stat type="maxMp">256</stat>
 		</stats>
@@ -507,7 +508,7 @@
 		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
 		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -530,7 +531,7 @@
 		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
 		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -553,7 +554,7 @@
 		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
 		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -576,7 +577,7 @@
 		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
 		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

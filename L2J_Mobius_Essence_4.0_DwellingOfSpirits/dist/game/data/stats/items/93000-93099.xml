@@ -10,6 +10,7 @@
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -21,13 +22,14 @@
 	<item id="93001" name="Awoken Weapon: One-handed Blunt Weapon" additionalName="Test" type="Weapon">
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="mp_consume" val="4" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -326,7 +328,7 @@
 	<item id="93029" name="Aden Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -349,7 +351,7 @@
 	<item id="93030" name="Aden Bow" type="Weapon">
 		<set name="icon" val="icon.weapon_gastraphetes_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -373,7 +375,7 @@
 	<item id="93031" name="Aden Club" type="Weapon">
 		<set name="icon" val="icon.weapon_war_pick_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -420,7 +422,7 @@
 	<item id="93033" name="Two-Handed Blunt Weapon of Aden" type="Weapon">
 		<set name="icon" val="icon.weapon_ghost_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -444,7 +446,7 @@
 	<item id="93034" name="Aden Spear" type="Weapon">
 		<set name="icon" val="icon.weapon_dwarven_trident_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -467,7 +469,7 @@
 	<item id="93035" name="Aden Fist" type="Weapon">
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -491,7 +493,7 @@
 	<item id="93036" name="Aden Rapier" type="Weapon">
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -514,7 +516,7 @@
 	<item id="93037" name="Aden Ancient Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
@@ -652,6 +654,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">156</stat>
 			<stat type="mAtk">91</stat>
@@ -663,7 +666,7 @@
 	<item id="93048" name="Demon's Staff" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -687,7 +690,7 @@
 	<item id="93049" name="Ecliptic Axe" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
@@ -697,6 +700,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="C" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">122</stat>
@@ -709,7 +713,7 @@
 	<item id="93050" name="Crystal Dagger" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
@@ -719,6 +723,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">136</stat>
 			<stat type="mAtk">91</stat>
@@ -730,7 +735,7 @@
 	<item id="93051" name="Eminence Bow" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -753,7 +758,7 @@
 	<item id="93052" name="Orcish Poleaxe" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -776,7 +781,7 @@
 		<!-- As with two-handed swords/blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -798,7 +803,7 @@
 	<item id="93054" name="Yaksa Mace" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
@@ -808,6 +813,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="C" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">156</stat>
 			<stat type="mAtk">91</stat>
@@ -842,7 +848,7 @@
 	<item id="93056" name="Great Pata" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -865,7 +871,7 @@
 	<item id="93057" name="Admiral's Estoc" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
@@ -875,6 +881,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="C" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">149</stat>
 			<stat type="mAtk">110</stat>
@@ -886,7 +893,7 @@
 	<item id="93058" name="Saber Tooth" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

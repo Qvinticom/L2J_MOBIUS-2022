@@ -52,11 +52,12 @@
 	<item id="94005" name="Character Creation Window - Rapier" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_infinity_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="mp_consume" val="16" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">149</stat>
 			<stat type="mAtk">110</stat>
@@ -69,7 +70,7 @@
 	<item id="94006" name="Character Creation Window - Ancient Sword" additionalName="Not Available" type="Weapon">
 		<set name="icon" val="icon.weapon_infinity_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -160,10 +161,11 @@
 	<item id="94012" name="Character Creation Window - Shield" additionalName="Not Available" type="Armor">
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="FIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1190" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="randomDamage">15240</stat>
 			<stat type="rShld">20</stat>
@@ -363,6 +365,7 @@
 		<set name="mp_consume" val="1" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="randomDamage">31822</stat>
 			<stat type="pAtkRange">40</stat>
@@ -371,7 +374,7 @@
 	<item id="94027" name="Emerald Weapon: Dagger" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_sword" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="STEEL" />
@@ -380,6 +383,7 @@
 		<set name="mp_consume" val="8" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="randomDamage">31822</stat>
 			<stat type="pAtkRange">40</stat>
@@ -406,7 +410,7 @@
 	<item id="94029" name="Emerald Weapon: Fist Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualfist" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -424,7 +428,7 @@
 	<item id="94030" name="Emerald Weapon: Spear" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_pole" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -442,7 +446,7 @@
 	<item id="94031" name="Emerald Weapon: Bow" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_bow" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -462,7 +466,7 @@
 		<!-- Emerald Weapon Appearance Changed Icon -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_shield" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -479,7 +483,7 @@
 	<item id="94033" name="Emerald Weapon: One-handed Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="172" />
@@ -488,6 +492,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="B" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="randomDamage">31822</stat>
 			<stat type="pAtkRange">40</stat>
@@ -496,7 +501,7 @@
 	<item id="94034" name="Emerald Weapon: Two-handed Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -514,7 +519,7 @@
 	<item id="94035" name="Emerald Weapon - One-handed Staff" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="172" />
@@ -524,6 +529,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="crystal_type" val="B" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -531,7 +537,7 @@
 	<item id="94036" name="Emerald Weapon - Two-handed Staff" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -549,7 +555,7 @@
 	<item id="94037" name="Emerald Weapon - Dual Swords" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -567,7 +573,7 @@
 	<item id="94038" name="Emerald Weapon - Dual Daggers" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualdagger" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
@@ -585,7 +591,7 @@
 	<item id="94039" name="Emerald Weapon: Dual Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualblunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

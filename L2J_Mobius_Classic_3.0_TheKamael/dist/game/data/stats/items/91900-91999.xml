@@ -236,7 +236,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -264,6 +264,8 @@
 		<set name="weight" val="1300" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">26</stat>
@@ -575,6 +577,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91938" name="Primeval Isle's Prolongating Stone" type="EtcItem">
 		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
@@ -1204,7 +1207,7 @@
 	<item id="91986" name="Monster Only (Grail Apostle Spear)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

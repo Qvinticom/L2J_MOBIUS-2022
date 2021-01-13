@@ -456,6 +456,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">156</stat>
 			<stat type="mAtk">91</stat>
@@ -468,7 +469,7 @@
 		<!-- A Ecliptic Axe filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
@@ -478,6 +479,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="C" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">122</stat>
@@ -491,7 +493,7 @@
 		<!-- An Eminence Bow filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -524,7 +526,7 @@
 		<!-- A Katana*Katana filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -571,7 +573,7 @@
 		<!-- An Admiral's Estoc filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="RAPIER" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
@@ -581,6 +583,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="C" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">149</stat>
 			<stat type="mAtk">110</stat>
@@ -594,7 +597,7 @@
 		<!-- A Demon's Staff filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -620,7 +623,7 @@
 		<!-- A Crystal Dagger filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
@@ -630,6 +633,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">136</stat>
 			<stat type="mAtk">91</stat>
@@ -642,7 +646,7 @@
 		<!-- A Orcish Poleaxe filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -665,7 +669,7 @@
 		<!-- A Yaksa Mace filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
@@ -675,6 +679,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="C" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">156</stat>
 			<stat type="mAtk">91</stat>
@@ -688,7 +693,7 @@
 		<!-- A Great Pata filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
@@ -713,7 +718,7 @@
 		<!-- An Saber Tooth filled with energy of gratitude. Cannot be enchanted or augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

@@ -57,6 +57,7 @@
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">251</stat>
 			<stat type="mAtk">137</stat>
@@ -991,7 +992,7 @@
 		<!-- Not used. -->
 		<set name="icon" val="icon.ev_12th_weapon" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
@@ -1013,13 +1014,14 @@
 		<!-- A souvenir in honor of the Lineage II anniversary. When equipped, you can play it.\nCannot be used when a sigil is equipped. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="mp_consume" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>

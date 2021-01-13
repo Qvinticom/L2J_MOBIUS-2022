@@ -863,8 +863,8 @@
 		<!-- Monster weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dualblunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lrhand" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="D" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -913,6 +913,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="rbracelet" />
 	</item>
 	<item id="38562" name="Legendary Bumjoon Bracelet" type="Armor">
 		<!-- TBD -->
@@ -924,6 +925,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="rbracelet" />
 	</item>
 	<item id="38563" name="Legendary Junghyun Bracelet" type="Armor">
 		<!-- TBD -->
@@ -935,6 +937,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="rbracelet" />
 	</item>
 	<item id="38564" name="Monster Weapon: Invisible Dagger" type="Weapon">
 		<!-- Monster weapon. -->
@@ -1281,6 +1284,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="38588" name="Puffer Hat" type="Armor">
 		<!-- Puffer-shaped hair accessory. Uses 2 hair accessory slots. -->
@@ -1288,6 +1292,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="38589" name="Shark Hat" type="Armor">
 		<!-- Shark-shaped hair accessory. Uses 2 hair accessory slots. -->
@@ -1295,6 +1300,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="38590" name="Turtle Hat" type="Armor">
 		<!-- Turtle-shaped hair accessory. Uses 2 hair accessory slots. -->
@@ -1302,6 +1308,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="38591" name="Tiat's Belt" type="Armor">
 		<!-- Belt instilled with Tiat's power. Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slot + 18. Received damage - 6%. -->
@@ -1357,6 +1364,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="38595" name="Steel Keshanberk" type="Weapon">
 		<!-- <Special Option>. Critical + 68. Cannot augment or bestow a Soul Crystal option. -->

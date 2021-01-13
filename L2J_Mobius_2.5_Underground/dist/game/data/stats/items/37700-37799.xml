@@ -413,12 +413,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="37726" name="NC Dinos Shortstop Cap" type="Armor">
 		<!-- NC Dinos Defense Hat. -->
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="37727" name="Dandy's Gift Box" type="EtcItem">
 		<!-- Double click to acquire a 7-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, and Ruler's Authority Belt. -->

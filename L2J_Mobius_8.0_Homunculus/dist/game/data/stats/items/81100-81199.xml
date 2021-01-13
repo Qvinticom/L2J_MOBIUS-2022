@@ -668,7 +668,7 @@
 		<!-- Weapon for those who have taken their path of honor not long ago. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or imbued with attributes. Can be exchanged for other Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -699,7 +699,7 @@
 		<!-- Weapon for those who have taken their path of honor not long ago. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or imbued with attributes. Can be exchanged for other Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -762,7 +762,7 @@
 		<!-- Weapon for those who have taken their path of honor not long ago. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or imbued with attributes. Can be exchanged for other Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -791,8 +791,8 @@
 		<!-- A weapon for those who have taken their path of honor not so long ago. PvE damage +10%, Max HP +15%, Casting Spd. +15%, M. Skill Critical Damage +10%, M. Critical Rate +50. Cannot be enchanted, crystallized, given another appearance, augmented, assigned an attribute, or imbued with a soul crystal. Can be exchanged for another Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -851,7 +851,7 @@
 		<!-- A weapon for those who have taken their path of honor not so long ago. PvE damage +10%, Max HP +15%, Atk. Spd./ Casting Spd. +15%, P. Critical Damage/ M. Skill Critical Damage +10%. Cannot be enchanted, crystallized, given another appearance, augmented, assigned an attribute, or imbued with a soul crystal. Can be exchanged for another Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -882,7 +882,7 @@
 		<!-- Weapon for those who have taken their path of honor not long ago. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +5%, Critical Rate for standard attacks +100. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or imbued with attributes. Can be exchanged for other Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -922,6 +922,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="isAppearanceable" val="false" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<skills>
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase -->
 			<skill id="35614" level="1" /> <!-- Blessing of the Exalted - Combat -->
@@ -1130,7 +1131,7 @@
 		<!-- Weapon for those who are going to overcome their limits. PvE Damage +10%, Max HP +15%, Atk. Spd. +15%, Critical Damage for standard attacks +10%, Critical Rate for standard attacks +50. Cannot be enchanted, crystallized, appearance modified, or imbued with attributes. Can be augmented with Exalted Spirit Stone, also Special Soul Crystal can be used. Can be exchanged for other enhanced Exalted weapon through Lionel Hunter in Heine. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />

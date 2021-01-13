@@ -6,6 +6,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="38901" name="Brooch (2-slot)" type="Armor">
 		<!-- Test Brooch -->
@@ -13,6 +14,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="38902" name="Brooch (3-slot)" type="Armor">
 		<!-- Test Brooch -->
@@ -20,6 +22,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="38903" name="Brooch (4-slot)" type="Armor">
 		<!-- Test Brooch -->
@@ -27,6 +30,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="38904" name="Brooch (5-slot)" type="Armor">
 		<!-- Test Brooch -->
@@ -34,6 +38,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="38905" name="Brooch (6-slot)" type="Armor">
 		<!-- Test Brooch -->
@@ -41,6 +46,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="38906" name="10th Anniversary Item" type="EtcItem">
 		<!-- Lineage II 10th Anniversary item. It is exchanged for items needed to participate in the events through the Chaotic Chronicle, Chaotic Throne, and Goddess of Destruction event NPC's in the village. -->
@@ -512,6 +518,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
@@ -526,6 +533,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
@@ -540,6 +548,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
@@ -622,7 +631,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -644,7 +653,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1740" />
 		<set name="material" val="FINE_STEEL" />
 	</item>
@@ -690,6 +699,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1580" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 	</item>
 	<item id="38968" name="+4 Helios Buster Coupon" type="Weapon">
 		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +4 Enchanted Helios Buster. -->
@@ -698,7 +708,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -709,7 +719,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1080" />
 		<set name="material" val="WOOD" />
 	</item>
@@ -776,7 +786,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -798,7 +808,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1740" />
 		<set name="material" val="FINE_STEEL" />
 	</item>
@@ -844,6 +854,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1580" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 	</item>
 	<item id="38982" name="+5 Helios Buster Coupon" type="Weapon">
 		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +5 Enchanted Helios Buster. -->
@@ -852,7 +863,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -863,7 +874,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1080" />
 		<set name="material" val="WOOD" />
 	</item>
@@ -930,7 +941,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -952,7 +963,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1740" />
 		<set name="material" val="FINE_STEEL" />
 	</item>
@@ -998,6 +1009,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1580" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 	</item>
 	<item id="38996" name="+6 Helios Buster Coupon" type="Weapon">
 		<!-- Take it to Yogi's Staff Manager "Goddess of Destruction" to exchange it for a +6 Enchanted Helios Buster. -->
@@ -1006,7 +1018,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="material" val="STEEL" />
 	</item>
@@ -1017,7 +1029,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1080" />
 		<set name="material" val="WOOD" />
 	</item>

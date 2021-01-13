@@ -220,6 +220,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -232,6 +233,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -244,6 +246,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -256,6 +259,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -268,6 +272,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -280,6 +285,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -292,6 +298,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="1440" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -304,6 +311,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="4320" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -316,6 +324,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
@@ -638,6 +647,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="45649" name="Kokko's Talisman" additionalName="Event" type="Armor">
 		<!-- Talisman to summon Kokko. Will be deleted once the event ends. -->
@@ -648,6 +658,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="underwear" />
 	</item>
 	<item id="45650" name="Pippi's Fortune Pocket - Stage 1" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 400000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
@@ -726,6 +737,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">226</stat>
 		</stats>
@@ -741,6 +753,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -755,6 +768,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -769,6 +783,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -783,6 +798,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -797,6 +813,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="sDef">321</stat>
 			<stat type="rShld">20</stat>
@@ -814,6 +831,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">170</stat>
 		</stats>
@@ -829,6 +847,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">106</stat>
 		</stats>
@@ -843,6 +862,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -857,6 +877,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -871,6 +892,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -886,6 +908,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">113</stat>
 		</stats>
@@ -901,6 +924,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">71</stat>
 		</stats>
@@ -915,6 +939,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">92</stat>
 		</stats>
@@ -929,6 +954,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -943,6 +969,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">61</stat>
 		</stats>
@@ -958,6 +985,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="pDef">15</stat>
 			<stat type="rEvas">-8</stat>
@@ -973,6 +1001,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="rear;lear" />
 		<stats>
 			<stat type="mDef">79</stat>
 		</stats>
@@ -987,6 +1016,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="neck" />
 		<stats>
 			<stat type="mDef">106</stat>
 		</stats>
@@ -1001,6 +1031,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -1069,6 +1100,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1085,6 +1117,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">341</stat>
 		</stats>
@@ -1100,6 +1133,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">213</stat>
 		</stats>
@@ -1114,6 +1148,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1128,6 +1163,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1143,6 +1179,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="DAMASCUS" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="sDef">466</stat>
 			<stat type="rShld">20</stat>
@@ -1159,6 +1196,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1175,6 +1213,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">341</stat>
 		</stats>
@@ -1190,6 +1229,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">213</stat>
 		</stats>
@@ -1204,6 +1244,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1218,6 +1259,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1233,6 +1275,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="DAMASCUS" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="sDef">466</stat>
 			<stat type="rShld">20</stat>
@@ -1249,6 +1292,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -1265,6 +1309,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">272</stat>
 			<stat type="rEvas">5</stat>
@@ -1282,6 +1327,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">170</stat>
 			<stat type="rEvas">3</stat>
@@ -1298,6 +1344,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -1312,6 +1359,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>

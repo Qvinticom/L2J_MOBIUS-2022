@@ -343,7 +343,7 @@
 		<!-- Increases P./ M. Atk. When enchanted to +5 and higher, increases Hold/ Sleep/ Paralysis Atk. Rate.\n\nEquipping it in the main slot summons Agathion Ignis.\n\nNote!\nIf equipped with Agathion Aquarius or Agathion Leo, only Agathion Ignis is active. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
@@ -356,7 +356,7 @@
 		<!-- Increases all Critical Rate. When enchanted to +5 and higher, decreases Skill Cooldown.\n\nEquipping it in the main slot summons Agathion Nebula.\n\nNote!\nIf Agathion Scorpio or Agathion Capricorn are equipped, only Agathion Nebula will be active. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
@@ -369,7 +369,7 @@
 		<!-- Increases Atk. Spd./Casting Spd. When enchanted to +5 and higher, decreases Skill MP consumption.\n\nEquipping it in the main slot summons Agathion Procella.\n\nNote!\nIf equipped with Agathion Libra or Agathion Sagittarius, only Agathion Procella is active. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
@@ -382,7 +382,7 @@
 		<!-- Increases P./ M. Def. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate.\n\nEquipping it in the main slot summons Agathion Petram.\n\nNote!\nIf Agathion Taurus or Agathion Virgo are equipped, only Agathion Petram will be active. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
@@ -395,7 +395,7 @@
 		<!-- Increases the acquired XP/ SP bonus from Sayha's Grace. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP.\n\nEquipping it in the main slot summons Agathion Joy.\n\nNote!\nIf Agathion Gemini is equipped, only Agathion Joy will be active. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />

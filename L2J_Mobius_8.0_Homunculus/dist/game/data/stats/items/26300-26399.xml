@@ -10,6 +10,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="26301" name="3rd Anniversary Agathion" additionalName="14-day" type="Armor">
 		<!-- For the anniversary of Lineage II. Summons Agathion Nepal Snow. -->
@@ -21,6 +22,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="26302" name="6th Anniversary Hat" type="Armor">
 		<!-- A hair accessory for the anniversary of Lineage II. Uses 2 hair accessory slots. -->
@@ -32,6 +34,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="26303" name="6th Anniversary Agathion" additionalName="14-day" type="Armor">
 		<!-- For the anniversary of Lineage II. Summons Agathion Nepal Snow. -->
@@ -43,6 +46,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="26304" name="Campfire Flint" type="EtcItem">
 		<!-- Required for starting a campfire. For 10 min., Skill Cooldown -10%, PvE damage +10%, grants Vampiric Rage effect. The effect activates only if the fire is started at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
@@ -287,6 +291,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="26327" name="Lineage II Baseball Cap" type="Armor">
 		<!-- Lineage II baseball cap. -->
@@ -295,6 +300,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="26328" name="School Uniform A" type="Armor">
 		<!-- School Uniform A. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -305,6 +311,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="26329" name="School Uniform Hair A" type="Armor">
 		<!-- School Uniform A hair accessory. -->
@@ -314,6 +321,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="26330" name="School Uniform B" type="Armor">
 		<!-- School Uniform B. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -324,6 +332,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="26331" name="School Uniform Hair B" type="Armor">
 		<!-- School Uniform B hair accessory. -->
@@ -333,6 +342,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="26332" name="Lineage II Baseball Uniform Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
@@ -595,6 +605,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="26356" name="Pirate Crew Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -605,6 +616,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="26357" name="Pirate Captain Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->
@@ -1033,6 +1045,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="26390" name="Mysterious Quick Healing Potion" type="EtcItem">
 		<!-- Magical, liquid medicine that greatly restores HP for 15 sec. Cannot be used in the Olympiad or the Ceremony of Chaos. -->

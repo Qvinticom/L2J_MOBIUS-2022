@@ -5,6 +5,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -14,6 +15,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -23,6 +25,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -32,6 +35,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="240" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -155,6 +159,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
 		<!-- INT +3, M. Atk. +5% when equipped. Uses 2 hair accessory slots. -->
@@ -166,6 +171,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
 		<!-- CON +3, P./ M. Def. +3% when equipped. Uses 2 hair accessory slots. -->
@@ -177,6 +183,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="46417" name="Gutenhagen's Weapon Recipe Coupon" type="EtcItem">
 		<!-- Coupon received from Collector Gutenhagen in the Pavel Ruins. Exchange it for a Weapon Recipe through Gutenhagen. -->
@@ -205,6 +212,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="46420" name="Sheep Bait" type="EtcItem">
 		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters below level 85. -->
@@ -264,6 +272,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="46425" name="Sheep Bait Coupon" type="EtcItem">
 		<!-- Can be exchanged for 30 Sheep Bait of your level through the Fishermen's Guild Member in any town. -->
@@ -337,6 +346,8 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>
@@ -353,6 +364,8 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>

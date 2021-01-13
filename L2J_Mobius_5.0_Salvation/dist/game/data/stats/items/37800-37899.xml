@@ -63,7 +63,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="crystal_type" val="R110" />
+		<set name="crystal_type" val="R99" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 		<stats>
@@ -82,7 +82,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="crystal_type" val="R110" />
+		<set name="crystal_type" val="R99" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 		<stats>
@@ -101,7 +101,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="crystal_type" val="R110" />
+		<set name="crystal_type" val="R99" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 		<stats>
@@ -120,7 +120,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="crystal_type" val="R110" />
+		<set name="crystal_type" val="R99" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
 		<stats>
@@ -144,30 +144,35 @@
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_hair" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="37811" name="Metal Suit Breastplate" type="Armor">
 		<!-- Metal Suit Breastplate. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="chest" />
 	</item>
 	<item id="37812" name="Metal Suit Gaiters" type="Armor">
 		<!-- Metal Suit Gaiters. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_l" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="legs" />
 	</item>
 	<item id="37813" name="Metal Suit Gloves" type="Armor">
 		<!-- Metal Suit Gloves. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_g" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 	</item>
 	<item id="37814" name="Metal Suit Boots" type="Armor">
 		<!-- Metal Suit Boots. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_b" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 	</item>
 	<item id="37815" name="Metal Suit Pack" type="EtcItem">
 		<!-- Mysterious box containing 30-day limit appearance stone for Metal Shoot hair accessory, breastplate, gaiters, boots, and gloves. -->
@@ -1270,6 +1275,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="37889" name="Herb of Growth" type="EtcItem">
 		<!-- For 10 min., XP/ SP obtained through hunting +50%. -->

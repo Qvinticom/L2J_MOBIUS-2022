@@ -702,6 +702,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="alldress" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -762,6 +763,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="24141" name="Lucky Day Box" type="EtcItem">
 		<!-- A daily gift from either Chaotic Chronicle, Chaotic Throne, or Goddess of Destruction NPC. You can receive an event item. -->

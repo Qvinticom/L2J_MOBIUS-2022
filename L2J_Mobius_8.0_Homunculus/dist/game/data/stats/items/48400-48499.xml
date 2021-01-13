@@ -55,6 +55,8 @@
 		<set name="weight" val="200" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -69,6 +71,8 @@
 		<set name="weight" val="200" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -83,6 +87,8 @@
 		<set name="weight" val="200" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -1156,6 +1162,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -1171,6 +1178,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -1179,7 +1187,7 @@
 		<!-- PA. A magical t-shirt for M. Def. <Item Skill>. M. Def. +15. Speed +7. Max HP/ MP +536. Water/ Fire/ Wind/ Earth/ Holy/ Dark Resistance +24. STR/ DEX/ CON/ INT/ WIT/ MEN +3. M. Def. +8%. Received M. Skill Critical Damage -12%. Has a 7% chance to reflect magical skill debuffs. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -1195,7 +1203,7 @@
 		<!-- P. Def. +1126. M. Def. +736, and Acquired XP/ SP +10%. When equipped with Venir s Talisman Lv. 10 or higher, Skill Power +3% Skill Cooldown -3%. <Active Skills>. Sayha's Grace Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is active. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />

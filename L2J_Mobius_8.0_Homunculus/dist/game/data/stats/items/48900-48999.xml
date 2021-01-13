@@ -346,7 +346,7 @@
 		<!-- An ornamental silver knife that the Blacksmith of Mammon gave you to test whether you are qualified to become Exalted. Has little value as a weapon. Can be enchanted with the Scroll: Enchant Lady's Ornamental Silver Knife. Enchant the knife to +7 and take it to the Blacksmith of Mammon to receive his acknowledgment. You cannot use any Enchant Stone for enchantment. -->
 		<set name="icon" val="icon.weapon_shining_knife_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -359,6 +359,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="mAtk">1</stat>
 			<stat type="pAtkSpd">379</stat>

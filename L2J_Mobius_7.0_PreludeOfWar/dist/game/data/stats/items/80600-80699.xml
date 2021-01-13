@@ -129,7 +129,7 @@
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="POTION" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
@@ -306,7 +306,7 @@
 		<!-- Fishing Time Reduction: 30s A rod made for Fishing Guild Leader Santiago. It has the name of the legendary Angler written on it. Fishing Shot: 1 -->
 		<set name="icon" val="icon.fishing_rod05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />

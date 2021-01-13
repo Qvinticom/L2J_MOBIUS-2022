@@ -74,6 +74,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="5100" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="RAPIER" />
 		<stats>
 			<stat type="pAtk">39</stat>
 			<stat type="mAtk">26</stat>
@@ -87,7 +89,7 @@
 		<!-- Weapon appearance for Kamael Male -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />

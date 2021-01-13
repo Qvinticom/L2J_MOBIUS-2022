@@ -493,7 +493,7 @@
 		<!-- Dark Assassin Suit. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
 		<set name="icon" val="icon.dark_assassin" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="alldress" />
 		<!-- UNCONFIRMED -->
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
@@ -1106,6 +1106,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40275" name="Buff Helmet" additionalName="Str" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
@@ -1116,6 +1117,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40276" name="Buff Helmet" additionalName="DEX" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. DEX + 3. -->
@@ -1124,6 +1126,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40277" name="Buff Helmet" additionalName="CON" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. CON + 3. -->
@@ -1132,6 +1135,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40278" name="Buff Helmet" additionalName="MEN" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. MEN + 3. -->
@@ -1140,6 +1144,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40279" name="Buff Helmet" additionalName="Int" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
@@ -1148,6 +1153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40280" name="Buff Helmet" additionalName="WIT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. WIT + 3. -->
@@ -1156,6 +1162,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40281" name="Buff Helmet" additionalName="Critical Rate" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Critical Rate + 50. -->
@@ -1164,6 +1171,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40282" name="Buff Helmet" additionalName="Critical Damage" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Critical Damage + 90, M. Critical Damage + 68. -->
@@ -1172,6 +1180,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40283" name="Buff Helmet" additionalName="P. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Def. + 5%. -->
@@ -1180,6 +1189,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40284" name="Buff Helmet" additionalName="M. Def." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Def. + 5%. -->
@@ -1188,6 +1198,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40285" name="Buff Helmet" additionalName="Evasion" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Evasion + 5. -->
@@ -1196,6 +1207,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40286" name="Buff Helmet" additionalName="P. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. P. Atk. + 5%. -->
@@ -1204,6 +1216,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40287" name="Buff Helmet" additionalName="M. Atk." type="Armor">
 		<!-- Uses 2 Hair Accessory slots. M. Atk. + 10%. -->
@@ -1212,6 +1225,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40288" name="Buff Helmet" additionalName="Accuracy" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. Accuracy + 5. -->
@@ -1220,6 +1234,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
 		<!-- Go to Tiffany in town for a special gift. -->

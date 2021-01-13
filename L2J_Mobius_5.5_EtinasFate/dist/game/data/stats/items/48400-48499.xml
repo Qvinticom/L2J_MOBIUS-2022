@@ -55,6 +55,8 @@
 		<set name="weight" val="200" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -69,6 +71,8 @@
 		<set name="weight" val="200" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -83,6 +87,8 @@
 		<set name="weight" val="200" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -1112,6 +1118,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -1127,6 +1134,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -1135,7 +1143,7 @@
 		<!-- A magical Shirt specialized for magical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -1151,7 +1159,7 @@
 		<!-- When equipped, Sayha's power increases P. Def. by 1126, M. Def. by 736, and Acquired XP/ SPed by 10%. Equipping it with Venir Talisman Stage 10 or higher increases Skill Power by 3% and reduces cooldown by 3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is applies. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />

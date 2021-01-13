@@ -84,7 +84,7 @@
 		<!-- Antharas Shaper fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Shaper - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -93,6 +93,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -107,7 +108,7 @@
 		<!-- Antharas Slasher fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Slasher - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -130,7 +131,7 @@
 		<!-- Antharas Thrower fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Thrower - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -154,7 +155,7 @@
 		<!-- Antharas Buster fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Buster - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -163,6 +164,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -184,6 +186,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -197,7 +200,7 @@
 		<!-- Antharas Stormer fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Stormer - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -221,7 +224,7 @@
 		<!-- Antharas Fighter fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Fighter - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -245,7 +248,7 @@
 		<!-- Antharas Avenger fragment to celebrate the collaboration with Seven Deadly Sins.Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Avenger - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -254,6 +257,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -277,6 +281,7 @@
 		<set name="weight" val="1740" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -291,7 +296,7 @@
 		<!-- Antharas Dual Sword fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Antharas Dual Sword - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -314,7 +319,7 @@
 		<!-- Valakas Shaper fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Valakas Shaper - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -323,6 +328,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -346,6 +352,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -359,7 +366,7 @@
 		<!-- Valakas Slasher fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Valakas Slasher - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -382,7 +389,7 @@
 		<!-- Valakas Thrower fragment to celebrate the collaboration with Seven Deadly Sins.Thrower Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Valakas Thrower - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -406,7 +413,7 @@
 		<!-- Valakas Buster fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Valakas Buster - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -415,6 +422,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -427,7 +435,7 @@
 		<!-- Valakas Caster fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Valakas Caster - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -436,6 +444,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -450,7 +459,7 @@
 		<!-- Valakas Retributer fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Valakas Retributer - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +483,7 @@
 		<!-- Lindvior Shaper fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Lindvior Shaper - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -483,6 +492,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1039</stat>
 			<stat type="mAtk">517</stat>
@@ -497,7 +507,7 @@
 		<!-- Lindvior Thrower fragment to celebrate the collaboration with Seven Deadly Sins.Thrower Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Lindvior Thrower - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -521,7 +531,7 @@
 		<!-- Lindvior Slasher fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Lindvior Slasher - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -544,7 +554,7 @@
 		<!-- Lindvior Caster fragment to celebrate the collaboration with Seven Deadly Sins. Take it along with a Dragon Claw Coupon to Snake and exchange for 1 Lindvior Caster - High-grade (1-hr). Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -553,6 +563,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -575,6 +586,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -589,7 +601,7 @@
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -618,6 +630,7 @@
 		<set name="weight" val="2050" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -632,7 +645,7 @@
 		<!-- Antharas Shaper High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -640,6 +653,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">2177</stat>
 			<stat type="mAtk">1084</stat>
@@ -654,7 +668,7 @@
 		<!-- Antharas Slasher High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -676,7 +690,7 @@
 		<!-- Antharas Thrower High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -699,7 +713,7 @@
 		<!-- Antharas Buster High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Crit Rate +100, P. Skill Crit Rate +30%, M. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -707,6 +721,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -727,6 +742,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -740,7 +756,7 @@
 		<!-- Antharas Stormer High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -763,7 +779,7 @@
 		<!-- Antharas Fighter High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -786,7 +802,7 @@
 		<!-- Antharas Avenger High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
@@ -794,6 +810,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -816,6 +833,7 @@
 		<set name="weight" val="1740" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -830,7 +848,7 @@
 		<!-- Antharas Dual Sword High-grade to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Antharas Lash. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -852,7 +870,7 @@
 		<!-- Valakas Shaper fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Valakas' Bite. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -861,6 +879,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">2177</stat>
 			<stat type="mAtk">1084</stat>
@@ -884,6 +903,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -897,7 +917,7 @@
 		<!-- Valakas Slasher fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Valakas' Bite. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -920,7 +940,7 @@
 		<!-- Valakas Thrower fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Valakas' Bite. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -944,7 +964,7 @@
 		<!-- Valakas Buster fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Crit Rate +100, P. Skill Crit Rate +30%, M. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Valakas' Bite. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -953,6 +973,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -965,7 +986,7 @@
 		<!-- Valakas Caster fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Crit Rate +100, P. Skill Crit Rate +30%, M. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Valakas' Bite. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -974,6 +995,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -988,7 +1010,7 @@
 		<!-- Valakas Retributer fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Crit Rate +100, P. Skill Crit Rate +30%, M. Skill Crit Damage +30%, Damage to Dragons +100%. Active Skills - Can use Dignity and Valakas' Bite. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -1012,7 +1034,7 @@
 		<!-- Lindvior Shaper fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%.Active Skills - Can use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1021,6 +1043,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">2177</stat>
 			<stat type="mAtk">1084</stat>
@@ -1035,7 +1058,7 @@
 		<!-- Lindvior Thrower fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%.Active Skills - Can use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -1059,7 +1082,7 @@
 		<!-- Lindvior Slasher fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Crit Rate +100, P. Skill Crit Rate +30%, P. Skill Crit Damage +30%, Damage to Dragons +100%.Active Skills - Can use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -1082,7 +1105,7 @@
 		<!-- Lindvior Caster fragment to celebrate the collaboration with Seven Deadly Sins. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Crit Rate +100, P. Skill Crit Rate +30%, M. Skill Crit Damage +30%, Damage to Dragons +100%.Active Skills - Can use Dignity and Lindvior's Wingbeat. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, augment, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1091,6 +1114,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">1990</stat>
 			<stat type="mAtk">1446</stat>
@@ -1113,6 +1137,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -1127,7 +1152,7 @@
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
@@ -1156,6 +1181,7 @@
 		<set name="weight" val="2050" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>

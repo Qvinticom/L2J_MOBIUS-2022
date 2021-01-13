@@ -3,7 +3,7 @@
 	<item id="6715" name="Monster Only (Silenos Archer)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -51,6 +51,7 @@
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">24</stat>
 			<stat type="mAtk">17</stat>
@@ -63,7 +64,7 @@
 	<item id="6718" name="Monster Only (Einhasad Shaman)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ADAMANTAITE" />
@@ -113,7 +114,7 @@
 	<item id="6720" name="Monster Only (Halisha's Shadow)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -146,7 +147,7 @@
 	<item id="6722" name="Monster Only (Ahrimanes)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />

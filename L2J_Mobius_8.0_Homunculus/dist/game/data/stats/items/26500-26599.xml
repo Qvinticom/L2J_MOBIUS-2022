@@ -264,6 +264,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="26519" name="Pirate Crew Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
@@ -274,6 +275,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="26520" name="Pirate Captain Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can use Pirate Captain skill after appearance modification. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->

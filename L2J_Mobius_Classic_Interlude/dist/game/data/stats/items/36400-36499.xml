@@ -183,6 +183,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="price" val="5000000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="36414" name="Dragon Claw" type="EtcItem">
 		<!-- Material for making a dragon weapon. -->
@@ -213,12 +214,15 @@
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DAGGER" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1039</stat>
@@ -235,12 +239,15 @@
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
@@ -256,14 +263,17 @@
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2339</stat>
@@ -280,13 +290,16 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">950</stat>
@@ -303,11 +316,13 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
@@ -323,13 +338,16 @@
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2010" />
 		<set name="commissionItemType" val="SPEAR" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -349,12 +367,15 @@
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1550" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
@@ -371,12 +392,15 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
@@ -393,12 +417,15 @@
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
@@ -415,12 +442,15 @@
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="crystal_type" val="R" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
@@ -435,13 +465,16 @@
 		<!-- Valakas' Shaper Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DAGGER" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1039</stat>
@@ -457,13 +490,16 @@
 		<!-- Valakas' Cutter Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
@@ -478,13 +514,16 @@
 		<!-- Valakas' Slasher Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
@@ -499,15 +538,18 @@
 		<!-- Valakas' Thrower Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2339</stat>
@@ -523,14 +565,17 @@
 		<!-- Valakas' Buster Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">950</stat>
@@ -545,14 +590,17 @@
 		<!-- Valakas' Caster Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1080" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">950</stat>
@@ -568,14 +616,17 @@
 		<!-- Valakas' Retributer Fragment. Can be upgraded to a higher grade through Valakas Watchman Klein. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1080" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">1157</stat>
@@ -592,13 +643,16 @@
 		<!-- Lindvior's Shaper Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="DAGGER" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1039</stat>
@@ -614,15 +668,18 @@
 		<!-- Lindvior's Thrower Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2339</stat>
@@ -638,13 +695,16 @@
 		<!-- Lindvior's Slasher Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1445</stat>
@@ -659,14 +719,17 @@
 		<!-- Lindvior's Caster Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">950</stat>
@@ -681,13 +744,16 @@
 		<!-- Lindvior's Cutter Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
@@ -702,13 +768,18 @@
 		<!-- Lindvior's Shooter Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="bodypart" val="lrhand" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
 		<set name="weight" val="1580" />
 		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">2106</stat>
@@ -724,13 +795,16 @@
 		<!-- Lindvior's Dual Dagger Fragment. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="default_action" val="EQUIP" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2050" />
+		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">1188</stat>
@@ -747,13 +821,16 @@
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -773,13 +850,16 @@
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -798,15 +878,18 @@
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -826,14 +909,17 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -852,13 +938,16 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -877,13 +966,16 @@
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -904,13 +996,16 @@
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -930,13 +1025,16 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -956,13 +1054,16 @@
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -982,13 +1083,16 @@
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1008,13 +1112,16 @@
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1034,13 +1141,16 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1059,13 +1169,16 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1084,15 +1197,18 @@
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1112,14 +1228,17 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -1138,14 +1257,17 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -1165,13 +1287,16 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -1192,13 +1317,16 @@
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1218,15 +1346,18 @@
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1246,13 +1377,16 @@
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1271,14 +1405,17 @@
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 		</skills>
@@ -1298,13 +1435,16 @@
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1323,14 +1463,17 @@
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1350,13 +1493,16 @@
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1376,13 +1522,17 @@
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1404,13 +1554,17 @@
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1431,15 +1585,19 @@
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1461,14 +1619,18 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1489,13 +1651,17 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1516,13 +1682,17 @@
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1545,13 +1715,17 @@
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1573,13 +1747,17 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1601,13 +1779,17 @@
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1629,13 +1811,17 @@
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1657,13 +1843,17 @@
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1685,13 +1875,17 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1712,13 +1906,17 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1739,15 +1937,19 @@
 		<set name="icon" val="icon.weapon_valrakas_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1769,14 +1971,18 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1797,14 +2003,18 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1826,13 +2036,18 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1855,13 +2070,17 @@
 		<set name="icon" val="icon.weapon_lind_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1883,15 +2102,19 @@
 		<set name="icon" val="icon.weapon_lind_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1913,13 +2136,17 @@
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1940,14 +2167,18 @@
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1969,13 +2200,17 @@
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -1996,14 +2231,18 @@
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2025,13 +2264,17 @@
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2053,13 +2296,17 @@
 		<set name="icon" val="icon.weapon_antaras_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2082,13 +2329,17 @@
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2110,15 +2361,19 @@
 		<set name="icon" val="icon.weapon_antaras_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
 		<set name="reuse_delay" val="1500" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2141,14 +2396,18 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2170,13 +2429,17 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2198,13 +2461,17 @@
 		<set name="icon" val="icon.weapon_antaras_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2228,13 +2495,17 @@
 		<set name="icon" val="icon.weapon_antaras_fist_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2257,13 +2528,17 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2286,13 +2561,17 @@
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2315,13 +2594,17 @@
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2344,13 +2627,17 @@
 		<set name="icon" val="icon.weapon_valrakas_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_type" val="R" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_sellable" val="false" />
+		<set name="equip_reuse_delay" val="300" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->

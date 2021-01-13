@@ -5,6 +5,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="alldress" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -13,7 +14,7 @@
 		<set name="icon" val="icon.skill1802" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="alldress" />
 		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pDef">400.0</stat>
@@ -74,7 +75,7 @@
 	<item id="46606" name="Blue Dynasty Circlet" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -83,7 +84,7 @@
 	<item id="46607" name="Blue Dynasty Circlet" additionalName="STR" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. STR + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -95,7 +96,7 @@
 	<item id="46608" name="Blue Dynasty Circlet" additionalName="DEX" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. DEX + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -107,7 +108,7 @@
 	<item id="46609" name="Blue Dynasty Circlet" additionalName="CON" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CON + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -119,7 +120,7 @@
 	<item id="46610" name="Blue Dynasty Circlet" additionalName="MEN" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. MEN + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -131,7 +132,7 @@
 	<item id="46611" name="Blue Dynasty Circlet" additionalName="INT" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. INT + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-			<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -143,7 +144,7 @@
 	<item id="46612" name="Blue Dynasty Circlet" additionalName="WIT" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. WIT + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -155,7 +156,7 @@
 	<item id="46613" name="Blue Dynasty Circlet" additionalName="Critical Rate" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -167,7 +168,7 @@
 	<item id="46614" name="Blue Dynasty Circlet" additionalName="Critical Damage" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -179,7 +180,7 @@
 	<item id="46615" name="Blue Dynasty Circlet" additionalName="P. Def." type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -191,7 +192,7 @@
 	<item id="46616" name="Blue Dynasty Circlet" additionalName="M. Def." type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -203,7 +204,7 @@
 	<item id="46617" name="Blue Dynasty Circlet" additionalName="Evasion" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -215,7 +216,7 @@
 	<item id="46618" name="Blue Dynasty Circlet" additionalName="P. Atk." type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -227,7 +228,7 @@
 	<item id="46619" name="Blue Dynasty Circlet" additionalName="M. Atk." type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -239,7 +240,7 @@
 	<item id="46620" name="Blue Dynasty Circlet" additionalName="Accuracy" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -317,7 +318,7 @@
 	<item id="46627" name="Blue Dynasty Circlet" additionalName="LUC" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. LUC + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -329,7 +330,7 @@
 	<item id="46628" name="Blue Dynasty Circlet" additionalName="CHA" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CHA + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -380,6 +381,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="neck" />
 		<stats>
 			<stat type="mDef">142.0</stat>
 			<stat type="maxMp">58</stat>
@@ -396,6 +398,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="rear;lear" />
 		<stats>
 			<stat type="mDef">107.0</stat>
 			<stat type="maxMp">43</stat>
@@ -412,6 +415,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<stats>
 			<stat type="mDef">71.0</stat>
 			<stat type="maxMp">29</stat>
@@ -428,6 +432,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="neck" />
 		<stats>
 			<stat type="mDef">161.0</stat>
 			<stat type="maxMp">62</stat>
@@ -444,6 +449,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="rear;lear" />
 		<stats>
 			<stat type="mDef">121.0</stat>
 			<stat type="maxMp">46</stat>
@@ -460,6 +466,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<stats>
 			<stat type="mDef">80.0</stat>
 			<stat type="maxMp">31</stat>
@@ -476,6 +483,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="neck" />
 		<stats>
 			<stat type="mDef">174.0</stat>
 			<stat type="maxMp">65</stat>
@@ -492,6 +500,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="rear;lear" />
 		<stats>
 			<stat type="mDef">130.0</stat>
 			<stat type="maxMp">49</stat>
@@ -508,6 +517,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<stats>
 			<stat type="mDef">87.0</stat>
 			<stat type="maxMp">33</stat>
@@ -601,6 +611,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="46649" name="Red Libra Talisman - Restoration" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Restores HP/MP/CP of all party members and cancels debuffs at a set rate. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -610,6 +621,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="46650" name="Red Libra Talisman - Cancel" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Cancels debuffs of all party members and makes them invincible to all debuffs for 7 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -619,6 +631,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="46651" name="Red Libra Talisman - Speed" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Increases Speed of all party members by 70 for 10 seconds. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -628,6 +641,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="46652" name="Red Libra Talisman - Resistance" additionalName="Event" type="Armor">
 		<!-- Red Libra item. Decreases damage received by 10%. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -637,6 +651,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="46653" name="Elysium Shaper" additionalName="Event" type="Weapon">
 		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
@@ -803,7 +818,7 @@
 		<!-- Red Libra item. Weapon used all throughout Elysium. It cannot be enchanted in Aden. Cannot be used in the Olympiad. Deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />

@@ -208,6 +208,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="rfinger;lfinger" />
 	</item>
 	<item id="23818" name="Uthanka's Ring" additionalName="7-day" type="Armor">
 		<!-- Can transform into Pirate Captain Uthanka (7-day). -->
@@ -219,6 +220,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="rfinger;lfinger" />
 	</item>
 	<item id="23819" name="Uthanka's Ring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Uthanka's Ring (7-day). -->
@@ -242,6 +244,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="23822" name="Agathion - Pirate Captain Uthanka" additionalName="7-day" type="Armor">
 		<!-- Summon Uthanka Agathion (7-day). -->
@@ -252,6 +255,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="23823" name="Agathion - Uthanka Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Uthanka Agathion (7-day). -->
@@ -657,6 +661,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="23853" name="Transparent Armor Appearance Stone" additionalName="Test" type="EtcItem">
 		<!-- Transparent armor appearance stone. Makes armor invisible so that Adenian Underwear and Tattoos are visible. Your cloak also becomes invisible. -->
@@ -908,6 +913,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="23869" name="Angel Cat's Blessing Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Angel Cat's Blessing (1-hour). -->
@@ -1001,6 +1007,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="23878" name="Samurai Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories. -->
@@ -1025,6 +1032,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="23880" name="Samurai Outfit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Samurai. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. -->
@@ -1049,6 +1057,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="23882" name="Anakim Outfit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of Anakim. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. -->
@@ -1073,6 +1082,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="chest" />
 	</item>
 	<item id="23884" name="Vampire Pants" type="Armor">
 		<!-- Vampiric wear. -->
@@ -1083,6 +1093,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="legs" />
 	</item>
 	<item id="23885" name="Vampire Gloves" type="Armor">
 		<!-- Vampiric wear. -->
@@ -1093,6 +1104,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 	</item>
 	<item id="23886" name="Vampire Shoes" type="Armor">
 		<!-- Vampiric wear. -->
@@ -1103,6 +1115,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 	</item>
 	<item id="23887" name="Vampire Hair Accessory" type="Armor">
 		<!-- Vampiric wear in the form of a mask. -->
@@ -1113,6 +1126,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="23888" name="Vampire Top Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. All armor types. -->

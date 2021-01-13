@@ -10,6 +10,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 		<skills>
 			<skill id="21388" level="1" /> <!-- Release Agathion's Seal - Anakim -->
 		</skills>
@@ -1069,6 +1070,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="23979" name="Vampire Top Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Vampire Outfit. No change in stats. All armor types. Can be stored in the clan warehouse. -->

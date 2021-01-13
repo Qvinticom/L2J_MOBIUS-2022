@@ -8,6 +8,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91601" name="Dimensional Talisman Lv. 10" type="Armor">
 		<!-- When equipped, P./ M. Def. +100, P./ M. Evasion +5, Max. HP/ MP/ CP +2000, Speed +10, Atk. Spd. +50, Casting Spd. +100, Acquired XP/ SP +30%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 9, Dimensional Guard Lv. 10 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used, Dimensional Barrier (for 15 sec. protection from 10 enemy attacks) can be used. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
@@ -17,6 +18,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91602" name="Sealed Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Doll of Border - Frintezza (30-day). Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. -->

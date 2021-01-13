@@ -183,6 +183,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="price" val="5000000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="36414" name="Dragon Claw" type="EtcItem">
 		<!-- Material for making a dragon weapon. -->
@@ -766,7 +767,7 @@
 	<item id="36439" name="Lindvior Shooter" additionalName="Fragment" type="Weapon">
 		<!-- Lindvior Shooter Fragment. Max HP can be more than 150,000. Cannot be enchanted, augmented, crystallized, appearance modified, assigned an attribute. <Enhancing>. Take the fragment and Dragon Claw to Jenna in Rune to enhance it to a Lindvior's standard weapon. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
-		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="bodypart" val="lrhand" />
 		<set name="crystal_type" val="R" />

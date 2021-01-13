@@ -496,6 +496,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 		<skills>
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 			<skill id="9783" level="1" /> <!-- Agathion's Gift: Jr. Cocoring -->
@@ -511,6 +512,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="36344" name="Male Swimsuit No. 2" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Male only. -->
@@ -520,6 +522,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="36345" name="Female Swimsuit No. 1" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Female only. -->
@@ -529,6 +532,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="36346" name="Female Swimsuit No. 2" additionalName="Event" type="Armor">
 		<!-- Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Female only. -->
@@ -538,6 +542,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="material" val="CLOTH" />
+		<set name="bodypart" val="alldress" />
 	</item>
 	<item id="36347" name="Scroll: Energy of Glory" additionalName="Event" type="EtcItem">
 		<!-- Increases acquired XP and SP by 30% for 30 min. -->
@@ -558,6 +563,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 	</item>
 	<item id="36349" name="Bracelet of Glory: Glory" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Str + 1, Int + 1. -->
@@ -614,6 +620,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9554" level="1" /> <!-- Hair Accessory: STR -->
 		</skills>
@@ -625,6 +632,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9555" level="1" /> <!-- Hair Accessory: DEX -->
 		</skills>
@@ -636,6 +644,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9556" level="1" /> <!-- Hair Accessory: CON -->
 		</skills>
@@ -647,6 +656,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9557" level="1" /> <!-- Hair Accessory: MEN -->
 		</skills>
@@ -658,6 +668,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9558" level="1" /> <!-- Hair Accessory: INT -->
 		</skills>
@@ -669,6 +680,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9559" level="1" /> <!-- Hair Accessory: WIT -->
 		</skills>
@@ -680,6 +692,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9560" level="1" /> <!-- Hair Accessory: Critical Rate -->
 		</skills>
@@ -691,6 +704,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9561" level="1" /> <!-- Hair Accessory: Critical Damage -->
 		</skills>
@@ -702,6 +716,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9562" level="1" /> <!-- Hair Accessory Circlet: P. Def. -->
 		</skills>
@@ -714,6 +729,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9563" level="1" /> <!-- Hair Accessory: M. Def. -->
 		</skills>
@@ -725,6 +741,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9564" level="1" /> <!-- Hair Accessory: Evasion -->
 		</skills>
@@ -736,6 +753,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9565" level="1" /> <!-- Hair Accessory: P. Atk. -->
 		</skills>
@@ -747,6 +765,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9566" level="1" /> <!-- Hair Accessory: M. Atk. -->
 		</skills>
@@ -758,6 +777,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hair2" />
 		<skills>
 			<skill id="9567" level="1" /> <!-- Hair Accessory: Accuracy -->
 		</skills>

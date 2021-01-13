@@ -8,6 +8,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91601" name="Dimensional Talisman Lv. 10" type="Armor">
 		<!-- When equipped, P./ M. Def. +100, P./ M. Evasion +5, Max. HP/ MP/ CP +2000, Speed +10, Atk. Spd. +50, Casting Spd. +100, Acquired XP/ SP +30%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 9, Dimensional Guard Lv. 10 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used, Dimensional Barrier (for 15 sec. protection from 10 enemy attacks) can be used. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
@@ -17,6 +18,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91602" name="Sealed Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain Doll of Border - Frintezza (30-day). Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. -->
@@ -56,7 +58,7 @@
 		<!-- Agathion Virgo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -67,7 +69,7 @@
 		<!-- Agathion Capricorn that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -78,7 +80,7 @@
 		<!-- Agathion Libra that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -89,7 +91,7 @@
 		<!-- Agathion Taurus that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -100,7 +102,7 @@
 		<!-- Agathion Leo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -111,7 +113,7 @@
 		<!-- Agathion Scorpio that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -122,7 +124,7 @@
 		<!-- Agathion Aquarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -133,7 +135,7 @@
 		<!-- Agathion Sagittarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -144,7 +146,7 @@
 		<!-- Agathion Virgo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -155,7 +157,7 @@
 		<!-- Agathion Capricorn that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -166,7 +168,7 @@
 		<!-- Agathion Libra that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -177,7 +179,7 @@
 		<!-- Agathion Taurus that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -188,7 +190,7 @@
 		<!-- Agathion Leo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -199,7 +201,7 @@
 		<!-- Agathion Scorpio that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -210,7 +212,7 @@
 		<!-- Agathion Aquarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -221,7 +223,7 @@
 		<!-- Agathion Sagittarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -232,7 +234,7 @@
 		<!-- Agathion Gemini that contains the dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases the Sayha's Grace effect and Max HP/ MP. Starting from +6, increases Max CP. -->
 		<set name="icon" val="icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -366,6 +368,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91638" name="Chronicle Cube" type="EtcItem">
 		<!-- Double-click to obtain Chronicle Cube Gift (maximum 15 times). Can be used only once a day. -->
@@ -819,7 +822,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
+		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
@@ -850,6 +853,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
@@ -863,7 +867,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
@@ -871,6 +875,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -887,7 +892,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="630" />
@@ -895,6 +900,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">25</stat>
 			<stat type="mAtk">28</stat>
@@ -907,7 +913,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_buzdygan_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
@@ -915,6 +921,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -931,7 +938,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1110" />
@@ -939,6 +946,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">27</stat>
 			<stat type="mAtk">21</stat>
@@ -953,7 +961,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_vipers_canine_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -976,7 +984,7 @@
 		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

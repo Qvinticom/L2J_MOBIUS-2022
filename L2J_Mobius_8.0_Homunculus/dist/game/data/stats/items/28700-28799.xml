@@ -826,7 +826,7 @@
 		<!-- Contains the power of Agathion Virgo. Can be enchanted up to +10. Depending on the enchant value, enables its primary and/ or secondary skills. Equipping it in the main slot enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -840,7 +840,7 @@
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="onepiece" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -853,7 +853,7 @@
 		<!-- Contains the power of Agathion Libra. Can be enchanted up to +10. Depending on the enchant value, enables its primary and/ or secondary skills. Equipping it in the main slot enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -866,7 +866,7 @@
 		<!-- Contains the power of Agathion Aries. Can be enchanted up to +10. Depending on the enchant value, enables its primary and/ or secondary skills. Equipping it in the main slot enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -887,6 +887,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="agathion" />
 		<stats>
 			<stat type="maxMp">141</stat>
 		</stats>
@@ -896,7 +897,7 @@
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -912,7 +913,7 @@
 		<!-- Contains the power of Agathion Gemini. Can be enchanted up to +10. Depending on the enchant value, enables its primary and/ or secondary skills. Equipping it in the main slot enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -925,7 +926,7 @@
 		<!-- Contains the power of Agathion Scorpio. Can be enchanted up to +10. Depending on the enchant value, enables its primary and/ or secondary skills. Equipping it in the main slot enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -939,7 +940,7 @@
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -960,12 +961,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="agathion" />
 	</item>
 	<item id="28755" name="Sagittarius Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- Contains the power of Agathion Sagittarius. Can be enchanted up to +10. Depending on the enchant value, enables its primary and/ or secondary skills. Equipping it in the main slot enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -978,7 +980,7 @@
 		<!-- Contains the power of Agathion Cancer. Can be enchanted up to +10. Depending on the enchant value, enables its primary and/ or secondary skills. Equipping it in the main slot enables both primary and secondary skills. Equipping in an additional slot enables only secondary skills. -->
 		<set name="icon" val="icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1063,12 +1065,13 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="agathion" />
 	</item>
 	<item id="28764" name="Agathion Charm - Freya (30-day)" type="Armor">
 		<!-- Summons Agathion Freya. Available for 30 d. Cannot be used in the Olympiad. <Active skill>. 1. Freya's Teleport: Aden/ Rune/ Talking Island Village (cooldown: 30 min.). <Item skills>. 1. Freya's Mind: Confusion Resistance +10%, Water Resistance +10. 2. Freya's Strength: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 3. Freya's Magic: P./ M. Skill MP Consumption -3%. -->
 		<set name="icon" val="icon.bm_agathion_base" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="enchant_enabled" val="true" />

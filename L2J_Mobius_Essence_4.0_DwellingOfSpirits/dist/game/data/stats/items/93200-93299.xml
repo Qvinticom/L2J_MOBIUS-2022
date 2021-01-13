@@ -993,6 +993,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">271</stat>
 			<stat type="mAtk">145</stat>
@@ -1004,7 +1005,7 @@
 	<item id="93292" name="Core's Plasmic Bow" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
@@ -1049,7 +1050,7 @@
 	<item id="93294" name="Baium's Thunder Breaker" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
@@ -1059,6 +1060,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">238</stat>
 			<stat type="mAtk">145</stat>
@@ -1070,7 +1072,7 @@
 	<item id="93295" name="Queen Ant's Stone Breaker" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.special_weapon_onehandblunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1550" />
@@ -1080,6 +1082,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="A" />
+		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">271</stat>
 			<stat type="mAtk">182</stat>

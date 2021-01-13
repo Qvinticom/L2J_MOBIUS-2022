@@ -10,6 +10,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -26,6 +27,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">272</stat>
 			<stat type="rEvas">5</stat>
@@ -43,6 +45,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">170</stat>
 			<stat type="rEvas">3</stat>
@@ -59,6 +62,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -73,6 +77,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -87,6 +92,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -103,6 +109,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -124,6 +131,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">117</stat>
 			<stat type="mDef">27</stat>
@@ -140,6 +148,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -154,6 +163,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -169,6 +179,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="pDef">42</stat>
 			<stat type="rEvas">-8</stat>
@@ -184,6 +195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -200,6 +212,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -221,6 +234,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">117</stat>
 			<stat type="mDef">27</stat>
@@ -237,6 +251,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -251,6 +266,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">85</stat>
 		</stats>
@@ -329,6 +345,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -345,6 +362,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -360,6 +378,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">250</stat>
 		</stats>
@@ -374,6 +393,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -388,6 +408,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -403,6 +424,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="DAMASCUS" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="sDef">546</stat>
 			<stat type="rShld">20</stat>
@@ -419,6 +441,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -435,6 +458,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">400</stat>
 		</stats>
@@ -450,6 +474,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">250</stat>
 		</stats>
@@ -464,6 +489,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -478,6 +504,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -493,6 +520,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="DAMASCUS" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="sDef">546</stat>
 			<stat type="rShld">20</stat>
@@ -509,6 +537,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -525,6 +554,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">320</stat>
 			<stat type="rEvas">5</stat>
@@ -542,6 +572,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">200</stat>
 			<stat type="rEvas">3</stat>
@@ -558,6 +589,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -572,6 +604,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -586,6 +619,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -602,6 +636,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">320</stat>
 			<stat type="rEvas">5</stat>
@@ -619,6 +654,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">200</stat>
 			<stat type="rEvas">3</stat>
@@ -635,6 +671,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -649,6 +686,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -663,6 +701,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -679,6 +718,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -700,6 +740,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">137</stat>
 			<stat type="mDef">33</stat>
@@ -716,6 +757,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -730,6 +772,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -745,6 +788,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="rEvas">-8</stat>
@@ -760,6 +804,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150</stat>
 		</stats>
@@ -776,6 +821,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -797,6 +843,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">137</stat>
 			<stat type="mDef">33</stat>
@@ -813,6 +860,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -827,6 +875,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100</stat>
 		</stats>
@@ -842,6 +891,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="rEvas">-8</stat>
@@ -911,6 +961,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -927,6 +978,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">377</stat>
 		</stats>
@@ -942,6 +994,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">235</stat>
 		</stats>
@@ -956,6 +1009,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -970,6 +1024,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -985,6 +1040,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="DAMASCUS" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="sDef">515</stat>
 			<stat type="rShld">20</stat>
@@ -1001,6 +1057,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -1017,6 +1074,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">377</stat>
 		</stats>
@@ -1032,6 +1090,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">235</stat>
 		</stats>
@@ -1046,6 +1105,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1060,6 +1120,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1075,6 +1136,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="DAMASCUS" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="sDef">515</stat>
 			<stat type="rShld">20</stat>
@@ -1091,6 +1153,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -1107,6 +1170,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">301</stat>
 			<stat type="rEvas">5</stat>
@@ -1124,6 +1188,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">188</stat>
 			<stat type="rEvas">3</stat>
@@ -1140,6 +1205,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1154,6 +1220,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1168,6 +1235,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -1184,6 +1252,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">301</stat>
 			<stat type="rEvas">5</stat>
@@ -1201,6 +1270,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">188</stat>
 			<stat type="rEvas">3</stat>
@@ -1217,6 +1287,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1231,6 +1302,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1245,6 +1317,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -1261,6 +1334,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -1282,6 +1356,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">129</stat>
 			<stat type="mDef">31</stat>
@@ -1298,6 +1373,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1312,6 +1388,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1327,6 +1404,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="pDef">47</stat>
 			<stat type="rEvas">-8</stat>
@@ -1342,6 +1420,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">141</stat>
 		</stats>
@@ -1358,6 +1437,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<skills>
 			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
 			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
@@ -1379,6 +1459,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">129</stat>
 			<stat type="mDef">31</stat>
@@ -1395,6 +1476,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1409,6 +1491,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">94</stat>
 		</stats>
@@ -1424,6 +1507,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
 		<stats>
 			<stat type="pDef">47</stat>
 			<stat type="rEvas">-8</stat>

@@ -209,6 +209,7 @@
 		<set name="weight" val="30" />
 		<set name="is_destroyable" val="false" />
 		<set name="material" val="SILVER" />
+		<set name="bodypart" val="lbracelet" />
 	</item>
 	<item id="46528" name="Server Keeper's Magic Pencil" type="Weapon">
 		<!-- A magic pen with a sharp tip that never goes dry. Can mount a Magic Broom when equipped. Provided to and only used by Server Keepers. -->
@@ -242,6 +243,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 		<set name="material" val="WOOD" />
+		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="46530" name="Top-grade Love Potion - Party" type="EtcItem">
 		<!-- For 15 sec., P./ M. Atk. and Atk. Spd./ Casting Spd of party members are increased. A strange power changes the appearance of your weapon. Does not stack with Battle Rhapsody. Cannot be used in the Olympiad. -->
@@ -347,6 +349,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="7520" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -357,6 +360,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="3170" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">250.0</stat>
 		</stats>
@@ -366,6 +370,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="510" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100.0</stat>
 		</stats>
@@ -375,6 +380,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1070" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100.0</stat>
 		</stats>
@@ -384,6 +390,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="530" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150.0</stat>
 		</stats>
@@ -394,6 +401,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="4140" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">320.0</stat>
 			<stat type="rEvas">5.0</stat>
@@ -406,6 +414,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1320" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">200.0</stat>
 			<stat type="rEvas">3.0</stat>
@@ -417,6 +426,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="510" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100.0</stat>
 		</stats>
@@ -426,6 +436,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1070" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100.0</stat>
 		</stats>
@@ -435,6 +446,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="530" />
 		<set name="material" val="BONE" />
+		<set name="bodypart" val="head" />
 		<stats>
 			<stat type="pDef">150.0</stat>
 		</stats>
@@ -445,6 +457,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1750" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="chest" />
 		<stats>
 			<stat type="pDef">220.0</stat>
 			<stat type="mDef">49.0</stat>
@@ -456,6 +469,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="850" />
 		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="bodypart" val="legs" />
 		<stats>
 			<stat type="pDef">137.0</stat>
 			<stat type="mDef">33.0</stat>
@@ -466,6 +480,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="510" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="gloves" />
 		<stats>
 			<stat type="pDef">100.0</stat>
 		</stats>
@@ -475,6 +490,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="1070" />
 		<set name="material" val="LEATHER" />
+		<set name="bodypart" val="feet" />
 		<stats>
 			<stat type="pDef">100.0</stat>
 		</stats>
@@ -658,6 +674,8 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lhand" />
+		<set name="weapon_type" val="FIST" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
 			<stat type="mAtk">21.0</stat>
@@ -905,6 +923,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="alldress" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -914,6 +933,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="alldress" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -923,6 +943,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="alldress" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -932,6 +953,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="alldress" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>
@@ -941,6 +963,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="alldress" />
 		<stats>
 			<stat type="pDef">400.0</stat>
 		</stats>

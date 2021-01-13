@@ -123,7 +123,7 @@
 		<!-- A 30-day item. Equipping it in the Bracelet's main slot summons the Agathion Cancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.can_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="50" />
@@ -512,6 +512,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91141" name="Venir's Talisman Lv. 20" type="Armor">
 		<!-- When equipped, CON, MEN +4, DEX, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -521,6 +523,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91142" name="Venir's Talisman Lv. 21" type="Armor">
 		<!-- When equipped, CON, MEN, DEX +4, WIT, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -530,6 +534,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91143" name="Venir's Talisman Lv. 22" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT +4, STR, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -539,6 +545,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91144" name="Venir's Talisman Lv. 23" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR +4, INT +3, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 8% of damage inflicted on the enemy as HP or 4% as MP. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -548,6 +556,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91145" name="Venir's Talisman Lv. 24" type="Armor">
 		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +4, P./ M. Skill Cooldown -7%. Additionally, has a chance of recovering 16% of damage inflicted on the enemy as HP or 8% as MP. Beggins can bestow special abilities of Land Dragon Belt or Fire Dragon Belt to this talisman. Effects from two such talismans do not stack. Cannot be dropped. -->
@@ -557,6 +567,8 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91146" name="Land Dragon Belt - Venir's Blessing Lv. 4" type="Armor">
 		<!-- CON +1, MEN +1, HP Recovery Bonus +2.31/ Max MP +1.54/ CP Recovery Bonus +3.07/ Max HP/ MP/ CP +15%, Iventory Slots +6, Weight Limit +7000, Healing Potions Effect +100 (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion), Incoming damage -6%. Applies effect Venir's Blessing Lv. 4. Cannot be dropped. -->
@@ -644,7 +656,7 @@
 		<!-- When successfully enchanted, a reward can be acquired. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Will be deleted after event. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -735,7 +747,7 @@
 		<!-- An item commemorating the game's 14th anniversary. Helps materializing your dreams. Allows using the Firecracker skill. Cannot be exchanged, dropped, sold, destroyed. Can be transferred between characters on one account and stored in a private warehouse. -->
 		<set name="icon" val="icon.ev_14th_weapon" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
@@ -1136,12 +1148,13 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91195" name="Bracelet of Border" additionalName="30-day" type="Armor">
 		<!-- A 30-day item. When equipped, opens up 4 Talisman slots. HP/ MP Recovery +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7,000. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_tradable" val="false" />
