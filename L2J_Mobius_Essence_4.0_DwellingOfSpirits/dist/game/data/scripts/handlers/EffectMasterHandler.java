@@ -212,6 +212,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("MagicCriticalDamage", MagicCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("MagicCriticalRate", MagicCriticalRate::new);
 		EffectHandler.getInstance().registerHandler("MagicCriticalRateByCriticalRate", MagicCriticalRateByCriticalRate::new);
+		EffectHandler.getInstance().registerHandler("MagicLampExpRate", MagicLampExpRate::new);
 		EffectHandler.getInstance().registerHandler("MagicMpCost", MagicMpCost::new);
 		EffectHandler.getInstance().registerHandler("ManaCharge", ManaCharge::new);
 		EffectHandler.getInstance().registerHandler("ManaDamOverTime", ManaDamOverTime::new);
