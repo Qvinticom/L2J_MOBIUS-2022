@@ -829,9 +829,16 @@
 	<skill id="54051" toLevel="1" name="Magic Lamp Charging Potion (1-hour)">
 		<!-- Magic Lantern recharge speed +20%. -->
 		<icon>icon.etc_recall_potion2</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalType>MAGIC_LAMP_RATE</abnormalType>
+		<abnormalTime>3600</abnormalTime>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="MagicLampExpRate">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54052" toLevel="1" name="Scroll: PK - Event">
 		<operateType>A1</operateType>

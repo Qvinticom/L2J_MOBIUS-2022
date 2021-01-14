@@ -897,6 +897,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54051" level="1" /> <!-- Magic Lamp Charging Potion (1-hour) -->
+		</skills>
 	</item>
 	<item id="93459" name="A-grade Armor Pack - Majestic Equipment" type="EtcItem">
 		<!-- Double-click to obtain one of the untradable items at random: Majestic Heavy Armor/ Light Armor/ Robe. -->
