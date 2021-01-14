@@ -56,6 +56,6 @@ public class ModifyMagicLampPoints extends AbstractEffect
 			return;
 		}
 		
-		MagicLampData.getInstance().addLampExp(player, _amount);
+		MagicLampData.getInstance().addLampExp(player, _amount, false);
 	}
 }

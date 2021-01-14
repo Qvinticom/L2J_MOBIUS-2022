@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.GreaterMagicLampHolder;
 import org.l2jmobius.gameserver.model.holders.MagicLampDataHolder;
+import org.l2jmobius.gameserver.model.stats.Stat;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
 
 /**
@@ -68,11 +69,11 @@ public class MagicLampData implements IXmlReader
 		}));
 	}
 	
-	public void addLampExp(PlayerInstance player, double exp)
+	public void addLampExp(PlayerInstance player, double exp, boolean rateModifiers)
 	{
 		if (Config.MAGIC_LAMP_ENABLE)
 		{
-			final int lampExp = (int) (exp * Config.MAGIC_LAMP_CHARGE_RATE);
+			final int lampExp = (int) (exp * (rateModifiers ? Config.MAGIC_LAMP_CHARGE_RATE * player.getStat().getMul(Stat.MAGIC_LAMP_EXP_RATE, 1) : 1));
 			int calc = lampExp + player.getLampExp();
 			if (calc > Config.MAGIC_LAMP_MAX_LEVEL_EXP)
 			{

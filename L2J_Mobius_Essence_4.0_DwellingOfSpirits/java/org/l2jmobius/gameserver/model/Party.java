@@ -896,7 +896,7 @@ public class Party extends AbstractPlayerGroup
 					}
 					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
 					PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
-					MagicLampData.getInstance().addLampExp(member, exp);
+					MagicLampData.getInstance().addLampExp(member, exp, true);
 				}
 			}
 			else

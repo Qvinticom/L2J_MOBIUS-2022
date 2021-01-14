@@ -531,7 +531,7 @@ public class Attackable extends Npc
 											attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, _isRaid), true, false);
 										}
 										PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
-										MagicLampData.getInstance().addLampExp(attacker, exp);
+										MagicLampData.getInstance().addLampExp(attacker, exp, true);
 									}
 								}
 								
