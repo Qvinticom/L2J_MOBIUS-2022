@@ -8,18 +8,19 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1010" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -31,8 +32,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -42,7 +43,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -54,8 +55,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2140" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -80,8 +81,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2120" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -106,8 +107,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2060" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -132,8 +133,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2100" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -158,8 +159,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2090" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -184,8 +185,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2080" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -210,8 +211,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2050" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -236,8 +237,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2090" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -262,8 +263,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2070" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -288,8 +289,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2050" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -315,7 +316,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1950" />
 		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -339,7 +340,7 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1930" />
 		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -362,8 +363,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1910" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -386,8 +387,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1900" />
-		<set name="soulshots" val="6" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -410,8 +411,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1880" />
-		<set name="soulshots" val="6" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -434,8 +435,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1870" />
-		<set name="soulshots" val="7" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -458,8 +459,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1830" />
-		<set name="soulshots" val="7" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -482,8 +483,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1850" />
-		<set name="soulshots" val="7" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -506,8 +507,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1830" />
-		<set name="soulshots" val="7" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -530,8 +531,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1840" />
-		<set name="soulshots" val="11" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -554,8 +555,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1820" />
-		<set name="soulshots" val="16" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -578,8 +579,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1810" />
-		<set name="soulshots" val="16" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -602,8 +603,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1590" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -625,8 +626,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -648,8 +649,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1560" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -671,8 +672,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1570" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -694,8 +695,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1560" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -717,8 +718,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -740,8 +741,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1540" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -763,8 +764,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -786,8 +787,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1540" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -809,8 +810,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1510" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />
@@ -832,8 +833,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_freightable" val="true" />

@@ -916,6 +916,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>
@@ -963,6 +964,8 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">3804</stat>
 			<stat type="mAtk">935</stat>
@@ -986,6 +989,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -1109,6 +1114,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>
@@ -1132,6 +1138,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1716</stat>
 			<stat type="mAtk">1247</stat>

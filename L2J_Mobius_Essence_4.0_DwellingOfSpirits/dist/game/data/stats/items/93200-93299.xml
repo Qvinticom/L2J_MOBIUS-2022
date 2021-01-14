@@ -988,8 +988,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1300" />
-		<set name="soulshots" val="4" />
-		<set name="mp_consume" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1000,6 +1000,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="93292" name="Core's Plasmic Bow" additionalName="Sealed" type="Weapon">
@@ -1011,9 +1012,9 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1640" />
-		<set name="soulshots" val="4" />
-		<set name="spiritshots" val="5" />
-		<set name="mp_consume" val="11" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="2" />
+		<set name="mp_consume" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1023,6 +1024,7 @@
 			<stat type="rCrit">1.2</stat>
 			<stat type="pAtkSpd">227</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="93293" name="Orfen's Venom Sword" additionalName="Sealed" type="Weapon">
@@ -1034,8 +1036,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1820" />
-		<set name="soulshots" val="4" />
-		<set name="mp_consume" val="2" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1045,6 +1047,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="93294" name="Baium's Thunder Breaker" additionalName="Sealed" type="Weapon">
@@ -1055,8 +1058,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="930" />
-		<set name="soulshots" val="4" />
-		<set name="mp_consume" val="8" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1067,6 +1070,7 @@
 			<stat type="rCrit">1.2</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="93295" name="Queen Ant's Stone Breaker" additionalName="Sealed" type="Weapon">
@@ -1076,8 +1080,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1550" />
-		<set name="soulshots" val="4" />
-		<set name="mp_consume" val="4" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1090,6 +1094,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="93296" name="Einhasad's Pendant Lv. 1" type="Armor">

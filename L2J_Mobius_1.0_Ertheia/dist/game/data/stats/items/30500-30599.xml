@@ -11,6 +11,7 @@
 		<set name="weight" val="1850" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="400" />
@@ -19,7 +20,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">64</stat>
@@ -42,6 +42,7 @@
 		<set name="weight" val="1850" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="400" />
@@ -50,7 +51,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">64</stat>
@@ -73,6 +73,7 @@
 		<set name="weight" val="1700" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="1500" />
@@ -80,8 +81,8 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
 		<stats>
 			<stat type="pAtk">400</stat>
 			<stat type="mAtk">99</stat>
@@ -103,6 +104,7 @@
 		<set name="weight" val="1700" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="1500" />
@@ -110,8 +112,8 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
 		<skills>
 			<skill id="3008" level="6" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -136,6 +138,7 @@
 		<set name="weight" val="1700" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="1310" />
@@ -143,8 +146,8 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
 		<stats>
 			<stat type="pAtk">400</stat>
 			<stat type="mAtk">99</stat>
@@ -166,6 +169,7 @@
 		<set name="weight" val="1700" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="1500" />
@@ -174,8 +178,8 @@
 		<set name="reduced_mp_consume" val="42,1" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
 		<stats>
 			<stat type="pAtk">400</stat>
 			<stat type="mAtk">99</stat>
@@ -197,6 +201,7 @@
 		<set name="weight" val="2050" />
 		<set name="price" val="53700" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -204,7 +209,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -312,6 +316,7 @@
 		<set name="weight" val="2100" />
 		<set name="price" val="53700" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -319,7 +324,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">96</stat>
@@ -342,6 +346,7 @@
 		<set name="weight" val="2020" />
 		<set name="price" val="53700" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -349,7 +354,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">96</stat>
@@ -370,6 +374,7 @@
 		<set name="weight" val="570" />
 		<set name="price" val="37175" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
@@ -378,7 +383,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">51</stat>
@@ -399,6 +403,7 @@
 		<set name="weight" val="540" />
 		<set name="price" val="53700" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
@@ -407,7 +412,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">63</stat>
@@ -429,6 +433,7 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -436,7 +441,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">169</stat>
@@ -459,13 +463,13 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3030" level="3" /> <!-- Special Ability: Rsk. Evasion -->
@@ -491,13 +495,13 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3034" level="3" /> <!-- Special Ability: Rsk. Haste -->
@@ -523,13 +527,13 @@
 		<set name="weight" val="1480" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;90" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3037" level="3" /> <!-- Special Ability: Haste -->
@@ -555,6 +559,7 @@
 		<set name="weight" val="1720" />
 		<set name="price" val="334025" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="400" />
@@ -562,7 +567,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">221</stat>
@@ -585,6 +589,7 @@
 		<set name="weight" val="1720" />
 		<set name="price" val="334025" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="400" />
@@ -592,7 +597,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3009" level="5" /> <!-- Special Ability: Evasion -->
@@ -618,6 +622,7 @@
 		<set name="weight" val="1720" />
 		<set name="price" val="334025" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="400" />
@@ -625,7 +630,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3021" level="5" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
@@ -651,6 +655,7 @@
 		<set name="weight" val="1720" />
 		<set name="price" val="334025" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="reuse_delay" val="400" />
@@ -659,7 +664,6 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="reduced_soulshot" val="19,1" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">221</stat>
@@ -736,6 +740,7 @@
 		<set name="weight" val="1500" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -743,7 +748,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
@@ -769,6 +773,7 @@
 		<set name="weight" val="1500" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -776,7 +781,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
@@ -802,6 +806,7 @@
 		<set name="weight" val="1500" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -809,7 +814,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
@@ -835,6 +839,7 @@
 		<set name="weight" val="1500" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -842,7 +847,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3426" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Maximum Ability -->
@@ -1104,6 +1108,7 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="88145" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -1111,7 +1116,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="BRONZE" />
 		<stats>
 			<stat type="pAtk">130</stat>
@@ -1133,13 +1137,13 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="88145" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3023" level="1" /> <!-- Special Ability: Critical Damage -->
@@ -1164,13 +1168,13 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="88145" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3010" level="1" /> <!-- Special Ability: Focus -->
@@ -1195,13 +1199,13 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="88145" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
@@ -1616,6 +1620,7 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -1623,7 +1628,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -1649,13 +1653,13 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -1682,13 +1686,13 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -1714,13 +1718,13 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;180" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -1746,6 +1750,7 @@
 		<set name="weight" val="1300" />
 		<set name="price" val="2137970" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -1753,7 +1758,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
 		<stats>
 			<stat type="pAtk">281</stat>
@@ -1775,6 +1779,7 @@
 		<set name="weight" val="1300" />
 		<set name="price" val="2137970" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -1782,7 +1787,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3564" level="1" /> <!-- Special Ability: Haste -->
@@ -1807,6 +1811,7 @@
 		<set name="weight" val="1300" />
 		<set name="price" val="2137970" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -1814,7 +1819,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1839,6 +1843,7 @@
 		<set name="weight" val="1300" />
 		<set name="price" val="2137970" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -1846,7 +1851,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
 		<skills>
 			<skill id="3566" level="1" /> <!-- Special Ability: Focus -->
@@ -1871,13 +1875,13 @@
 		<set name="weight" val="1900" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">231</stat>
@@ -1900,13 +1904,13 @@
 		<set name="weight" val="1900" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3068" level="2" /> <!-- Special Ability: Haste -->
@@ -1932,13 +1936,13 @@
 		<set name="weight" val="1900" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3067" level="1" /> <!-- Special Ability: Critical Damage -->
@@ -1964,13 +1968,13 @@
 		<set name="weight" val="1900" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3050" level="1" /> <!-- Special Ability: Focus -->
@@ -1996,6 +2000,7 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -2003,7 +2008,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="WOOD" />
 		<stats>
 			<stat type="pAtk">135</stat>
@@ -2026,13 +2030,13 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="1044" level="2" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Regeneration -->
@@ -2058,13 +2062,13 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="1035" level="3" type_chance="50" type="ON_MAGIC_SKILL" /> <!-- Mental Shield -->
@@ -2090,13 +2094,13 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="WOOD" />
 		<skills>
 			<skill id="1201" level="21" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Dryad Root -->
@@ -2122,6 +2126,7 @@
 		<set name="weight" val="2090" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -2129,7 +2134,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -2155,6 +2159,7 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -2162,7 +2167,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">135</stat>
@@ -2185,13 +2189,13 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="3031" level="3" /> <!-- Special Ability: Rsk. Evasion -->
@@ -2217,13 +2221,13 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1168" level="6" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Poison -->
@@ -2249,13 +2253,13 @@
 		<set name="weight" val="1010" />
 		<set name="price" val="165215" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1164" level="9" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
@@ -2281,6 +2285,7 @@
 		<set name="weight" val="990" />
 		<set name="price" val="183885" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -2288,7 +2293,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<stats>
 			<stat type="pAtk">141</stat>
@@ -2311,13 +2315,13 @@
 		<set name="weight" val="990" />
 		<set name="price" val="183885" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="3014" level="1" /> <!-- Special Ability: Mana Up -->
@@ -2343,13 +2347,13 @@
 		<set name="weight" val="990" />
 		<set name="price" val="183885" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1164" level="9" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
@@ -2375,13 +2379,13 @@
 		<set name="weight" val="990" />
 		<set name="price" val="183885" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="BLOOD_STEEL" />
 		<skills>
 			<skill id="1222" level="5" type_chance="7" type="ON_MAGIC_SKILL" /> <!-- Curse Chaos -->
@@ -2407,6 +2411,7 @@
 		<set name="weight" val="1090" />
 		<set name="price" val="24775" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
@@ -2414,7 +2419,6 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">45</stat>
@@ -2437,13 +2441,13 @@
 		<set name="weight" val="1910" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<stats>
 			<stat type="pAtk">259</stat>
@@ -2466,13 +2470,13 @@
 		<set name="weight" val="1910" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -2498,13 +2502,13 @@
 		<set name="weight" val="1910" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3068" level="2" /> <!-- Special Ability: Haste -->
@@ -2530,13 +2534,13 @@
 		<set name="weight" val="1910" />
 		<set name="price" val="704900" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -2563,13 +2567,13 @@
 		<set name="weight" val="1350" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ORIHARUKON" />
 		<stats>
 			<stat type="pAtk">155</stat>
@@ -2591,13 +2595,13 @@
 		<set name="weight" val="1350" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ORIHARUKON" />
 		<skills>
 			<skill id="3047" level="1" /> <!-- Special Ability: Acumen -->
@@ -2622,13 +2626,13 @@
 		<set name="weight" val="1350" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ORIHARUKON" />
 		<skills>
 			<skill id="3077" level="6" /> <!-- Special Ability: M. Atk. -->
@@ -2653,13 +2657,13 @@
 		<set name="weight" val="1350" />
 		<set name="price" val="504570" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ORIHARUKON" />
 		<skills>
 			<skill id="3048" level="1" /> <!-- Special Ability: Conversion -->

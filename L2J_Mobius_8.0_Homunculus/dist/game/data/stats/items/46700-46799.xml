@@ -45,6 +45,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13926" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -73,6 +74,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13926" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -102,6 +104,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13926" level="1" /> <!-- Emperor Shunaiman's Authority -->
 		</skills>
@@ -773,7 +776,6 @@
 		<set name="weight" val="300" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_magic_weapon" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->

@@ -627,7 +627,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_magic_weapon" val="true" />
 		<set name="crystal_type" val="EVENT" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -955,6 +954,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -977,6 +977,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">950</stat>
 			<stat type="mAtk">690</stat>
@@ -1001,6 +1002,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1157</stat>
 			<stat type="mAtk">759</stat>
@@ -1351,6 +1353,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="equip_reuse_delay" val="300" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="35530" level="1" /> <!-- Blood-stained Zariche - Wizard -->
 			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
@@ -1381,6 +1384,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="equip_reuse_delay" val="300" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="35530" level="1" /> <!-- Blood-stained Zariche - Wizard -->
 			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
@@ -1412,6 +1416,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="equip_reuse_delay" val="300" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="35530" level="1" /> <!-- Blood-stained Zariche - Wizard -->
 			<skill id="35533" level="1" /> <!-- Soul's Insanity - Zariche -->
@@ -1793,6 +1798,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="equip_reuse_delay" val="300" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="35532" level="1" /> <!-- Blood-stained Akamanah - Wizard -->
 			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
@@ -1823,6 +1829,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="equip_reuse_delay" val="300" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="35532" level="1" /> <!-- Blood-stained Akamanah - Wizard -->
 			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->
@@ -1854,6 +1861,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="equip_reuse_delay" val="300" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="35532" level="1" /> <!-- Blood-stained Akamanah - Wizard -->
 			<skill id="35536" level="1" /> <!-- Soul's Insanity - Akamanah -->

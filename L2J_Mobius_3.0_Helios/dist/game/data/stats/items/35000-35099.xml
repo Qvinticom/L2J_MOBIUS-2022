@@ -9,11 +9,11 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_destroyable" val="false" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
@@ -40,11 +40,11 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1700" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_destroyable" val="false" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
@@ -2290,6 +2290,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -2297,7 +2298,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8820" level="1" /> <!-- PvP Damage Increase -->
@@ -2325,6 +2325,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -2332,7 +2333,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8821" level="1" /> <!-- PvP Damage Increase -->
@@ -2359,6 +2359,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
@@ -2366,7 +2367,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8822" level="1" /> <!-- PvP Damage Increase -->
@@ -2393,6 +2393,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -2400,7 +2401,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="8823" level="1" /> <!-- PvP Damage Increase -->
@@ -2428,6 +2428,7 @@
 		<set name="weight" val="1550" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
@@ -2435,7 +2436,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8824" level="1" /> <!-- PvP Damage Increase -->

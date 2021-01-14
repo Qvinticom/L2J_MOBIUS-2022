@@ -254,7 +254,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -297,7 +297,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1770" />
-		<set name="soulshots" val="3" />
+		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="3" />
 		<set name="is_tradable" val="false" />
@@ -356,6 +356,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">86</stat>
 			<stat type="mAtk">91</stat>
@@ -382,6 +383,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">98</stat>
 			<stat type="mAtk">91</stat>
@@ -414,7 +416,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -568,7 +570,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -619,7 +621,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -720,13 +722,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">63</stat>
 			<stat type="mAtk">63</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -753,7 +756,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>

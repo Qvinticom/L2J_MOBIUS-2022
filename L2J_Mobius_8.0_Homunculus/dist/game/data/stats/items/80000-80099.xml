@@ -445,6 +445,8 @@
 		<set name="reuse_delay" val="1350" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="35266" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -597,6 +599,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="damage_range" val="0;0;44;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="35266" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->
@@ -626,6 +630,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="damage_range" val="0;0;40;120" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 			<skill id="13847" level="1" />	<!-- PvE Damage Increase -->

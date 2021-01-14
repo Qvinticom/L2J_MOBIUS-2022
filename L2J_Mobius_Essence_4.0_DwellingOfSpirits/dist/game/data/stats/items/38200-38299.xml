@@ -87,6 +87,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" type="Weapon">
@@ -108,7 +109,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -142,7 +143,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1820" />
-		<set name="soulshots" val="1" />
+		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="2" />
 		<set name="is_dropable" val="false" />

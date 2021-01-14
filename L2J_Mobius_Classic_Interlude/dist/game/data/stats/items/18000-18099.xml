@@ -29,6 +29,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -36,7 +37,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13280" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
@@ -62,6 +62,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -69,7 +70,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -94,6 +94,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
@@ -101,7 +102,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13259" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
@@ -126,6 +126,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -133,7 +134,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13254" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
@@ -159,6 +159,7 @@
 		<set name="weight" val="1550" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
@@ -166,7 +167,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13265" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
@@ -192,6 +192,7 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -199,7 +200,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -294,6 +294,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
@@ -301,7 +302,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="STEEL" />
 		<skills>
@@ -327,6 +327,7 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
@@ -334,7 +335,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
 		<skills>
@@ -361,6 +361,7 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="174548336" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -368,7 +369,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
 		<skills>
@@ -461,6 +461,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="218185419" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
@@ -468,7 +469,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13270" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
@@ -915,6 +915,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -922,7 +923,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13281" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
@@ -948,6 +948,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -955,7 +956,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -980,6 +980,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
@@ -987,7 +988,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13260" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
@@ -1012,6 +1012,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -1019,7 +1020,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13255" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
@@ -1045,6 +1045,7 @@
 		<set name="weight" val="1550" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
@@ -1052,7 +1053,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13266" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
@@ -1078,6 +1078,7 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -1085,7 +1086,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -1112,6 +1112,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -1120,7 +1121,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13291" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
@@ -1146,6 +1146,7 @@
 		<set name="weight" val="1580" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -1154,7 +1155,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
@@ -1180,6 +1180,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
@@ -1187,7 +1188,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="STEEL" />
 		<skills>
@@ -1213,6 +1213,7 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1220,7 +1221,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
 		<skills>
@@ -1247,6 +1247,7 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="366803000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1254,7 +1255,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
 		<skills>
@@ -1282,6 +1282,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="440163600" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
@@ -1289,7 +1290,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13276" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
@@ -1314,6 +1314,7 @@
 		<set name="weight" val="2050" />
 		<set name="price" val="440163600" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
@@ -1321,7 +1322,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13286" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
@@ -1347,6 +1347,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="440163600" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
@@ -1354,7 +1355,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13271" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
@@ -1801,6 +1801,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -1808,7 +1809,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
@@ -1834,6 +1834,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -1841,7 +1842,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1866,6 +1866,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
@@ -1873,7 +1874,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
@@ -1898,6 +1898,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -1905,7 +1906,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
@@ -1931,6 +1931,7 @@
 		<set name="weight" val="1550" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
@@ -1938,7 +1939,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
@@ -1964,6 +1964,7 @@
 		<set name="weight" val="2010" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -1971,7 +1972,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="BRONZE" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -1998,6 +1998,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -2006,7 +2007,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
@@ -2032,6 +2032,7 @@
 		<set name="weight" val="1580" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -2040,7 +2041,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
@@ -2066,6 +2066,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
@@ -2073,7 +2074,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="STEEL" />
 		<skills>
@@ -2099,6 +2099,7 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2106,7 +2107,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
 		<skills>
@@ -2133,6 +2133,7 @@
 		<set name="weight" val="1080" />
 		<set name="price" val="808295000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2140,7 +2141,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="material" val="WOOD" />
 		<skills>
@@ -2168,6 +2168,7 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="969954000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
@@ -2175,7 +2176,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
@@ -2200,6 +2200,7 @@
 		<set name="weight" val="2050" />
 		<set name="price" val="969954000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
@@ -2207,7 +2208,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
@@ -2233,6 +2233,7 @@
 		<set name="weight" val="1740" />
 		<set name="price" val="969954000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
@@ -2240,7 +2241,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="FINE_STEEL" />
 		<skills>
 			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->

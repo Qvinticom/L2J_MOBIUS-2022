@@ -700,6 +700,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">63</stat>
 			<stat type="mAtk">63</stat>
@@ -756,6 +757,7 @@
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">77</stat>
 			<stat type="mAtk">69</stat>
@@ -844,6 +846,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="enchant_enabled" val="true" />
+		<set name="mp_consume" val="2" />
 		<stats>
 			<stat type="pAtk">179</stat>
 			<stat type="mAtk">51</stat>
@@ -903,6 +906,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="enchant_enabled" val="true" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">63</stat>
 			<stat type="mAtk">63</stat>

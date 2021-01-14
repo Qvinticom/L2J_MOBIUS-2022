@@ -451,8 +451,8 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -463,6 +463,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="92331" name="Ecliptic Axe" additionalName="Event" type="Weapon">
@@ -473,13 +474,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="6" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="crystal_type" val="C" />
 		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">125</stat>
 			<stat type="mAtk">122</stat>
@@ -487,6 +489,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="92332" name="Eminence Bow" additionalName="Event" type="Weapon">
@@ -500,8 +503,8 @@
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1720" />
 		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="11" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -511,6 +514,7 @@
 			<stat type="rCrit">1.2</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="92333" name="Infinite Steel Quiver" type="EtcItem">
@@ -532,8 +536,8 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2270" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="13" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -542,7 +546,7 @@
 			<stat type="mAtk">91</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">16398</stat>
+			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -556,8 +560,8 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -567,6 +571,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="92336" name="Admiral's Estoc" additionalName="Event" type="Weapon">
@@ -577,8 +582,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="16" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -591,6 +596,7 @@
 			<stat type="pAtkSpd">406</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="92337" name="Demon's Staff" additionalName="Event" type="Weapon">
@@ -602,8 +608,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="990" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="7" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -614,7 +620,7 @@
 			<stat type="mAtk">134</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">14843</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
 		</stats>
@@ -628,8 +634,8 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1000" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="8" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -640,6 +646,7 @@
 			<stat type="rCrit">1.2</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="92339" name="Orcish Poleaxe" additionalName="Event" type="Weapon">
@@ -652,8 +659,8 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1950" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="9" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -663,6 +670,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="92340" name="Yaksa Mace" additionalName="Event" type="Weapon">
@@ -673,8 +681,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1640" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="4" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -687,6 +695,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="92341" name="Great Pata" additionalName="Event" type="Weapon">
@@ -699,8 +708,8 @@
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1460" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -709,7 +718,7 @@
 			<stat type="mAtk">91</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">14833</stat>
+			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
 		</stats>
@@ -723,8 +732,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1530" />
-		<set name="soulshots" val="2" />
-		<set name="mp_consume" val="18" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -736,6 +745,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">5</stat>
+			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
 	<item id="92343" name="Package: +16 Samurai Long Sword" type="EtcItem">

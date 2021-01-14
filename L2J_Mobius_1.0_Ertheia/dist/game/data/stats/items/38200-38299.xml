@@ -120,6 +120,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38212" name="Trumpetfish: Dagger" type="Weapon">
@@ -143,6 +144,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38213" name="Shark: Two-handed Sword" type="Weapon">
@@ -165,6 +167,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38214" name="Squid: Spear" type="Weapon">
@@ -192,6 +195,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" type="Weapon">
@@ -214,6 +218,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38216" name="Lobster: Fist Weapon" type="Weapon">
@@ -237,6 +242,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38217" name="Giant Crab: Bow" type="Weapon">
@@ -253,6 +259,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
 		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="2" />
 		<stats>
 			<stat type="pAtk">191</stat>
 			<stat type="mAtk">54</stat>
@@ -260,6 +267,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38218" name="Crayfish: Crossbow" type="Weapon">
@@ -283,6 +291,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">-1.5</stat>
 			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38219" name="Starfish: Sigil" type="Armor">
@@ -338,6 +347,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38222" name="Fish Stew" additionalName="WIT" type="EtcItem">

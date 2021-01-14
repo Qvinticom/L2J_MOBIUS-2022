@@ -468,6 +468,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">226</stat>
 			<stat type="mAtk">167</stat>
@@ -475,6 +476,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40333" name="Foundation Staff of Evil Spirits of Fortune" additionalName="90-day" type="Weapon">
@@ -492,6 +494,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">189</stat>
 			<stat type="mAtk">145</stat>
@@ -499,6 +502,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40334" name="Inferno Staff of Fortune" additionalName="90-day" type="Weapon">
@@ -516,6 +520,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -523,6 +528,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40335" name="Atuba Mace of Fortune" additionalName="90-day" type="Weapon">
@@ -539,6 +545,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<set name="material" val="FINE_STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -546,6 +553,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40336" name="Imperial Staff of Fortune" additionalName="90-day" type="Weapon">
@@ -563,6 +571,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -570,6 +579,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40337" name="Dynasty Staff of Fortune" additionalName="90-day" type="Weapon">
@@ -587,6 +597,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -594,6 +605,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40338" name="Ertheia Fighter Equipment Set" additionalName="90-day" type="EtcItem">
@@ -656,6 +668,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">226</stat>
 			<stat type="mAtk">167</stat>
@@ -663,6 +676,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40344" name="Foundation Staff of Evil Spirits of Fortune" additionalName="30-day" type="Weapon">
@@ -680,6 +694,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">189</stat>
 			<stat type="mAtk">145</stat>
@@ -687,6 +702,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40345" name="Inferno Staff of Fortune" additionalName="30-day" type="Weapon">
@@ -704,6 +720,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -711,6 +728,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40346" name="Atuba Mace of Fortune" additionalName="30-day" type="Weapon">
@@ -727,6 +745,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="FINE_STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -734,6 +753,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40347" name="Imperial Staff of Fortune" additionalName="30-day" type="Weapon">
@@ -751,6 +771,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -758,6 +779,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40348" name="Dynasty Staff of Fortune" additionalName="30-day" type="Weapon">
@@ -775,6 +797,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -782,6 +805,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40349" name="Ertheia Fighter Equipment Set" additionalName="30-day" type="EtcItem">
@@ -835,6 +859,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="14400" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">226</stat>
 			<stat type="mAtk">167</stat>
@@ -842,6 +867,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40354" name="Foundation Staff of Evil Spirits of Fortune" additionalName="10-day" type="Weapon">
@@ -859,6 +885,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="14400" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">189</stat>
 			<stat type="mAtk">145</stat>
@@ -866,6 +893,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40355" name="Inferno Staff of Fortune" additionalName="10-day" type="Weapon">
@@ -883,6 +911,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="14400" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">135</stat>
 			<stat type="mAtk">111</stat>
@@ -890,6 +919,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40356" name="Atuba Mace of Fortune" additionalName="10-day" type="Weapon">
@@ -906,6 +936,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="14400" />
 		<set name="material" val="FINE_STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">90</stat>
 			<stat type="mAtk">79</stat>
@@ -913,6 +944,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40357" name="Imperial Staff of Fortune" additionalName="10-day" type="Weapon">
@@ -930,6 +962,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="14400" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -937,6 +970,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40358" name="Dynasty Staff of Fortune" additionalName="10-day" type="Weapon">
@@ -954,6 +988,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="14400" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -961,6 +996,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40359" name="Ertheia Fighter Equipment Set" additionalName="10-day" type="EtcItem">

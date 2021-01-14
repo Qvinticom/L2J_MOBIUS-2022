@@ -218,12 +218,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lrhand" />
-		<set name="spiritshots" val="2" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="material" val="BRONZE" />
 		<stats>
@@ -231,6 +231,7 @@
 			<stat type="mAtk">1.0</stat>
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">8.0</stat>
+			<stat type="randomDamage">1</stat>
 		</stats>
 	</item>
 	<item id="46529" name="Manor Scholar's Hat" type="Armor">
@@ -269,8 +270,8 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
@@ -278,6 +279,7 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46533" name="Hansel's Weapon Crafting Potion" additionalName="Event" type="EtcItem">

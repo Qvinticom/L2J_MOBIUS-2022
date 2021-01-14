@@ -19,7 +19,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="91901" name="Military Fleuret" type="Weapon">
@@ -41,7 +41,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="91902" name="?clair Bijou" type="Weapon">
@@ -63,7 +63,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="91903" name="Lacerator" type="Weapon">
@@ -85,7 +85,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="91904" name="White Lightning" type="Weapon">
@@ -107,7 +107,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="91905" name="Laevateinn" type="Weapon">
@@ -115,8 +115,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="4" />
+		<set name="spiritshots" val="4" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="material" val="STEEL" />
@@ -129,7 +129,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="91906" name="Energy Rune" additionalName="30 days" type="EtcItem">
@@ -273,13 +273,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">26</stat>
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">40</stat>
+			<stat type="randomDamage">38</stat>
 		</stats>
 	</item>
 	<item id="91917" name="Scroll of Escape: Effective Training" type="EtcItem">
@@ -703,7 +705,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="91950" name="Novice Warrior's Ancient Sword" type="Weapon">

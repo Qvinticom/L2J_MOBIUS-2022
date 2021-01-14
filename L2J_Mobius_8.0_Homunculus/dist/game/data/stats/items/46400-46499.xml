@@ -291,8 +291,8 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
@@ -300,6 +300,7 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46427" name="For NPC_Right Hand Cup" type="Weapon">
@@ -309,8 +310,8 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
@@ -318,6 +319,7 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46428" name="For NPC_Right Hand Meat" type="Weapon">
@@ -327,8 +329,8 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="2" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="bodypart" val="rhand" />
 		<set name="material" val="STEEL" />
 		<stats>
 			<stat type="pAtk">31.0</stat>
@@ -336,6 +338,7 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46429" name="For NPC_Left Hand Glass" type="Weapon">
@@ -354,6 +357,7 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46430" name="For NPC_Left Hand Meat" type="Weapon">
@@ -372,6 +376,7 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46431" name="Harp's Reward Box" type="EtcItem">

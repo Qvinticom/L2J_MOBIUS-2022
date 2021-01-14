@@ -401,6 +401,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -468,6 +469,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="mp_consume" val="6" />
 		<skills>
 			<skill id="3567" level="1" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -798,6 +800,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -863,6 +866,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
+		<set name="mp_consume" val="6" />
 		<skills>
 			<skill id="3567" level="2" /> <!-- Special Ability: Focus -->
 		</skills>

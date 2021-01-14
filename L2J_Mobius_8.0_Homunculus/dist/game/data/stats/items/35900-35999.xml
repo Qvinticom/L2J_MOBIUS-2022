@@ -1747,6 +1747,7 @@
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="100" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
@@ -1754,7 +1755,6 @@
 		<set name="blessed" val="true" />
 		<set name="damage_range" val="0;0;200;500" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="8856" level="1" /> <!-- PvE Damage Increase -->

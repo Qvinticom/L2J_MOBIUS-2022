@@ -49,6 +49,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="9715" level="1" /> <!-- Heroes' Power -->
 			<skill id="13421" level="1" /> <!-- Buster Sealed with Heroes' Power -->
@@ -79,6 +80,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="9716" level="1" /> <!-- Heroes' Power -->
 			<skill id="13422" level="1" /> <!-- Caster Sealed with Heroes' Power -->
@@ -110,6 +112,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="9717" level="1" /> <!-- Heroes' Power -->
 			<skill id="13423" level="1" /> <!-- Retributer Sealed with Heroes' Power -->
@@ -474,6 +477,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="120" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13435" level="1" /> <!-- Buster Imbued with Heroes' Power -->
 		</skills>
@@ -503,6 +507,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="120" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13436" level="1" /> <!-- Caster Imbued with Heroes' Power -->
 		</skills>
@@ -533,6 +538,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="120" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="13437" level="1" /> <!-- Retributer Imbued with Heroes' Power -->
 		</skills>

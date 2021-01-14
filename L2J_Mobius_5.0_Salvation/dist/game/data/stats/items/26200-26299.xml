@@ -325,11 +325,12 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="990" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">152</stat>
 			<stat type="mAtk">122</stat>
@@ -349,11 +350,12 @@
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="960" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">134</stat>
@@ -373,11 +375,12 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="920" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">207</stat>
 			<stat type="mAtk">157</stat>
@@ -397,11 +400,12 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="910" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -421,11 +425,12 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -1201,6 +1206,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1224,6 +1230,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1248,6 +1255,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">733</stat>
 			<stat type="mAtk">535</stat>
@@ -1600,6 +1608,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1623,6 +1632,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -1647,6 +1657,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">733</stat>
 			<stat type="mAtk">535</stat>

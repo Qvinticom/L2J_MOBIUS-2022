@@ -128,7 +128,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1950" />
-		<set name="soulshots" val="1" />
+		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<stats>
@@ -152,13 +152,14 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1080" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">11</stat>
 			<stat type="mAtk">12</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -169,8 +170,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1560" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<stats>
 			<stat type="pAtk">24</stat>
@@ -189,8 +190,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1560" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -200,7 +201,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
@@ -215,8 +216,8 @@
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="990" />
 		<set name="price" val="956000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
@@ -227,7 +228,7 @@
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">20</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -239,7 +240,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1950" />
-		<set name="soulshots" val="1" />
+		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<stats>
@@ -293,8 +294,8 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2090" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">112</stat>
 			<stat type="mAtk">54</stat>

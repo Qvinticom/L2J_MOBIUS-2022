@@ -43,6 +43,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37689" name="Valentine One-handed Sword" type="Weapon">
@@ -63,6 +64,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37690" name="Valentine Two-handed Sword" type="Weapon">
@@ -83,6 +85,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37691" name="Valentine One-handed Blunt Weapon" type="Weapon">
@@ -104,6 +107,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37692" name="Valentine Fist Weapon" type="Weapon">
@@ -125,6 +129,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37693" name="Valentine Spear" type="Weapon">
@@ -172,6 +177,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37695" name="Valentine Crossbow" type="Weapon">
@@ -192,6 +198,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37696" name="Valentine One-handed Magic Sword" type="Weapon">
@@ -206,12 +213,14 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37697" name="Valentine One-handed Magic Blunt Weapon" type="Weapon">
@@ -226,6 +235,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">602</stat>
 			<stat type="mAtk">486</stat>
@@ -233,6 +243,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37698" name="Valentine Two-handed Magic Blunt Weapon" type="Weapon">
@@ -247,6 +258,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">733</stat>
 			<stat type="mAtk">535</stat>
@@ -254,6 +266,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37699" name="Valentine Dualsword" type="Weapon">
@@ -274,6 +287,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 </list>

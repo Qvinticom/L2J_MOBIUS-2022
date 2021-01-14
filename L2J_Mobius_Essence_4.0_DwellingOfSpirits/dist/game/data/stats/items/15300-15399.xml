@@ -33,8 +33,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1950" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -61,8 +61,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1830" />
-		<set name="soulshots" val="6" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="4" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -112,8 +112,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
-		<set name="soulshots" val="4" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -137,8 +137,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -149,7 +149,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">-1.5</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">40</stat>
+			<stat type="randomDamage">38</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>

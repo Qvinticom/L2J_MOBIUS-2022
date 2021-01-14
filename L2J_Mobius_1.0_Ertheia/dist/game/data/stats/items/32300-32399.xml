@@ -471,6 +471,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="1880" />
 		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="1" />
 		<stats>
 			<stat type="mAtk">21</stat>
 			<stat type="randomDamage">5</stat>
@@ -993,6 +994,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="7435" />
 		<set name="material" val="FINE_STEEL" />
+		<set name="mp_consume" val="2" />
 		<stats>
 			<stat type="pAtk">482</stat>
 			<stat type="mAtk">39</stat>
@@ -1748,6 +1750,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="110485" />
 		<set name="material" val="FINE_STEEL" />
+		<set name="mp_consume" val="3" />
 		<stats>
 			<stat type="pAtk">277</stat>
 			<stat type="mAtk">75</stat>
@@ -1775,6 +1778,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="165215" />
 		<set name="material" val="HORN" />
+		<set name="mp_consume" val="3" />
 		<stats>
 			<stat type="pAtk">316</stat>
 			<stat type="mAtk">84</stat>

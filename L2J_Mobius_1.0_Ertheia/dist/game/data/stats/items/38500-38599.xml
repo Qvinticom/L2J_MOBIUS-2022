@@ -879,6 +879,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38560" name="Monster Only: Etin Blunt Weapon" type="Weapon">
@@ -901,6 +902,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38561" name="Legendary Sangmin Bracelet" type="Armor">
@@ -959,6 +961,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38565" name="Aria's Bracelet: CON" type="Armor">
@@ -1386,6 +1389,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38596" name="Steel Bow of Peril" type="Weapon">
@@ -1402,6 +1406,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1700" />
 		<set name="material" val="BLOOD_STEEL" />
+		<set name="mp_consume" val="4" />
 		<stats>
 			<stat type="pAtk">400</stat>
 			<stat type="mAtk">99</stat>
@@ -1409,6 +1414,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38597" name="Steel Tallum Blade" type="Weapon">
@@ -1431,6 +1437,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38598" name="Steel Draconic Bow" type="Weapon">
@@ -1447,6 +1454,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="1650" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="mp_consume" val="6" />
 		<stats>
 			<stat type="pAtk">581</stat>
 			<stat type="mAtk">132</stat>
@@ -1454,6 +1462,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38599" name="Steel Dynasty Sword" type="Weapon">
@@ -1476,6 +1485,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 </list>

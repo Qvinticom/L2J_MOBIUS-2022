@@ -601,6 +601,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">111</stat>
 			<stat type="mAtk">111</stat>
@@ -835,6 +836,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">149</stat>
 			<stat type="mAtk">110</stat>

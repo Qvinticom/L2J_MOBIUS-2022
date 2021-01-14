@@ -1258,11 +1258,12 @@
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="990" />
 		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="3" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">152</stat>
 			<stat type="mAtk">122</stat>
@@ -1270,6 +1271,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40292" name="Steel Spirit's Staff - Magic Mental Shield" type="Weapon">
@@ -1281,11 +1283,12 @@
 		<set name="crystal_type" val="B" />
 		<set name="weight" val="960" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">134</stat>
@@ -1293,6 +1296,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40293" name="Steel Dasparion's Staff - Acumen" type="Weapon">
@@ -1304,11 +1308,12 @@
 		<set name="crystal_type" val="A" />
 		<set name="weight" val="920" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">207</stat>
 			<stat type="mAtk">157</stat>
@@ -1316,6 +1321,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40294" name="Steel Imperial Staff - Empower" type="Weapon">
@@ -1327,11 +1333,12 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="910" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">274</stat>
 			<stat type="mAtk">193</stat>
@@ -1339,6 +1346,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40295" name="Steel Dynasty Staff - Acumen" type="Weapon">
@@ -1350,11 +1358,12 @@
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">325</stat>
 			<stat type="mAtk">222</stat>
@@ -1362,6 +1371,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40296" name="Monster Weapon Appearance Stone: Turikki's Blunt Weapon" type="EtcItem">
@@ -1400,6 +1410,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="40299" name="Tiger Bow" type="Weapon">
@@ -1416,12 +1427,14 @@
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
 		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="2" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 </list>

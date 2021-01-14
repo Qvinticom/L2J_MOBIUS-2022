@@ -283,6 +283,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38422" name="Trumpetfish: Dual Dagger" type="Weapon">
@@ -308,6 +309,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38423" name="Blue Mackerel: Dual Blunt Weapon" type="Weapon">
@@ -332,6 +334,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38424" name="Monster Only: Amden Sword" type="Weapon">
@@ -356,6 +359,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38425" name="Monster Only: Amden Blunt Weapon" type="Weapon">
@@ -380,6 +384,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38426" name="Monster Only: Amden Bow" type="Weapon">
@@ -398,12 +403,14 @@
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
 		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="2" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38427" name="Monster Only: Centaur Weapon" type="Weapon">
@@ -428,6 +435,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38428" name="Monster Only: Minotaur Dagger" type="Weapon">
@@ -452,6 +460,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38429" name="Monster Only: Tiger Sword" type="Weapon">
@@ -476,6 +485,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38430" name="Monster Only: Tiger Bow" type="Weapon">
@@ -494,12 +504,14 @@
 		<set name="spiritshots" val="3" />
 		<set name="weight" val="181" />
 		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="2" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38431" name="Monster Only: Tiger Dagger" type="Weapon">
@@ -524,6 +536,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38432" name="Monster Only: Tiger Jewel" type="Weapon">
@@ -542,6 +555,7 @@
 			<stat type="mAtk">54</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38433" name="Monster Only: Tiger Blunt Weapon" type="Weapon">
@@ -566,6 +580,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38434" name="Monster Only: Tiger Polearm" type="Weapon">
@@ -590,6 +605,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38435" name="Monster Only: Tiger Shield" type="Weapon">
@@ -644,6 +660,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38438" name="Agathion - Blessed Virgo Pack" type="EtcItem">
@@ -708,6 +725,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38444" name="Monster Only: Centaur Shield" type="Weapon">
@@ -747,6 +765,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38446" name="Monster Only: Centaur Throwing Blade" type="Weapon">
@@ -771,6 +790,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38447" name="Monster Only: Miniotaur Polearm" type="Weapon">
@@ -795,6 +815,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38448" name="Monster Only: Minotaur Two-handed Axe" type="Weapon">
@@ -820,6 +841,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38449" name="Agathion - Blessed Capricorn" type="Armor">

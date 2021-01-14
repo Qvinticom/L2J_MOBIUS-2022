@@ -616,17 +616,20 @@
 		<set name="crystal_type" val="D" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="181" />
-		<set name="mp_consume" val="1" />
+		<set name="mp_consume" val="2" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="bodypart" val="lrhand" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">31</stat>
 			<stat type="mAtk">21</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="94360" name="Forgotten Primeval Garden's Time Stone" additionalName="Not used" type="EtcItem">

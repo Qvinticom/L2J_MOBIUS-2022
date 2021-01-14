@@ -1529,12 +1529,14 @@
 		<set name="bodypart" val="rhand" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">267</stat>
 			<stat type="mAtk">202</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="45798" name="Dynasty Knife of Fortune" additionalName="30-day" type="Weapon">
@@ -1560,6 +1562,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="45799" name="Dynasty Bow of Fortune" additionalName="30-day" type="Weapon">
@@ -1579,6 +1582,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
 		<stats>
 			<stat type="pAtk">654</stat>
 			<stat type="mAtk">151</stat>
@@ -1586,6 +1590,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 </list>

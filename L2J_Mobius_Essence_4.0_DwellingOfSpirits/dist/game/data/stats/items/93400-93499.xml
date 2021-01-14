@@ -206,17 +206,18 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="mp_consume" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rhand" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">38596</stat>
+			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -228,16 +229,17 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="mp_consume" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">38596</stat>
+			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
 		</stats>
@@ -250,16 +252,17 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="mp_consume" val="9" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">38596</stat>
+			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -271,7 +274,6 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="mp_consume" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -282,6 +284,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="93420" name="Chrono Maracas" additionalName="Event" type="Weapon">
@@ -292,7 +295,6 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
-		<set name="mp_consume" val="13" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -301,7 +303,7 @@
 			<stat type="mAtk">1</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">38596</stat>
+			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -329,8 +331,8 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1350" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -341,6 +343,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="93423" name="Lance" additionalName="Sealed" type="Weapon">
@@ -352,8 +355,8 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1920" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="9" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -363,6 +366,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="93424" name="Deadman's Glory" additionalName="Sealed" type="Weapon">
@@ -372,8 +376,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1600" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="4" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -386,6 +390,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="93425" name="Art of Battle Axe" additionalName="Sealed" type="Weapon">
@@ -395,8 +400,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1570" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="4" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -409,6 +414,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="93426" name="Staff of Evil Spirits" additionalName="Sealed" type="Weapon">
@@ -419,8 +425,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="930" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="7" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -431,7 +437,7 @@
 			<stat type="mAtk">163</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">14843</stat>
+			<stat type="randomDamage">19</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
 		</stats>
@@ -444,8 +450,8 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="970" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="8" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -456,6 +462,7 @@
 			<stat type="rCrit">1.2</stat>
 			<stat type="pAtkSpd">433</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="93428" name="Bellion Cestus" additionalName="Sealed" type="Weapon">
@@ -467,8 +474,8 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1390" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -477,7 +484,7 @@
 			<stat type="mAtk">111</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">14833</stat>
+			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
 		</stats>
@@ -491,9 +498,9 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1700" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="4" />
-		<set name="mp_consume" val="11" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="4" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -503,6 +510,7 @@
 			<stat type="rCrit">1.2</stat>
 			<stat type="pAtkSpd">293</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="93430" name="Samurai Long Sword*Samurai Long Sword" additionalName="Sealed" type="Weapon">
@@ -515,8 +523,8 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2080" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="13" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -525,7 +533,7 @@
 			<stat type="mAtk">111</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">16398</stat>
+			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -538,8 +546,8 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1930" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -549,6 +557,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="93432" name="Wizard's Tear" additionalName="Sealed" type="Weapon">
@@ -559,8 +568,8 @@
 		<set name="crystal_type" val="B" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1350" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -572,6 +581,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="93433" name="Star Buster" additionalName="Sealed" type="Weapon">
@@ -582,8 +592,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1930" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -595,6 +605,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="93434" name="Dismantler" additionalName="Sealed" type="Weapon">
@@ -605,8 +616,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1530" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="18" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -618,6 +629,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">5</stat>
+			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
 	<item id="93435" name="Colichemarde" additionalName="Sealed" type="Weapon">
@@ -627,8 +639,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
-		<set name="soulshots" val="3" />
-		<set name="mp_consume" val="16" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -641,6 +653,7 @@
 			<stat type="pAtkSpd">406</stat>
 			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">8</stat>
+			<stat type="randomDamage">19</stat>
 		</stats>
 	</item>
 	<item id="93436" name="+4 ~ +15 Weapon Pack - Samurai Long Sword" type="EtcItem">

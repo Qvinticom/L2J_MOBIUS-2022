@@ -1433,6 +1433,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38693" name="Steel Yaksa Mace" type="Weapon">
@@ -1456,6 +1457,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38694" name="Steel Saber*Sword of Revolution" type="Weapon">
@@ -1478,6 +1480,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38695" name="Steel Mysterious Sword" type="Weapon">
@@ -1500,6 +1503,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38696" name="Steel Body Slasher" type="Weapon">
@@ -1527,6 +1531,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38697" name="Steel Soulfire Dirk" type="Weapon">
@@ -1550,6 +1555,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38698" name="Steel Crystallized Ice Bow" type="Weapon">
@@ -1566,6 +1572,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="597" />
 		<set name="material" val="CRYSTAL" />
+		<set name="mp_consume" val="3" />
 		<stats>
 			<stat type="pAtk">220</stat>
 			<stat type="mAtk">61</stat>
@@ -1573,6 +1580,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38699" name="Steel Schlager" type="Weapon">
@@ -1599,6 +1607,7 @@
 			<stat type="accCombat">2</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
 </list>

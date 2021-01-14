@@ -51,6 +51,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -83,6 +84,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3575" level="2" /> <!-- Special Ability: Empower -->
 		</skills>
@@ -116,6 +118,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
 		<set name="material" val="STEEL" />
+		<set name="mp_consume" val="6" />
 		<skills>
 			<skill id="3567" level="3" /> <!-- Special Ability: Focus -->
 		</skills>

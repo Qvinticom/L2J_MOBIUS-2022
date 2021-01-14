@@ -63,7 +63,7 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="price" val="1226000" />
-		<set name="soulshots" val="1" />
+		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -246,6 +246,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>

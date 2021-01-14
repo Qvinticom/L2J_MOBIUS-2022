@@ -1249,7 +1249,7 @@
 		<set name="weight" val="500" />
 		<set name="soulshots" val="10" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="2" />
+		<set name="mp_consume" val="5" />
 		<set name="reuse_delay" val="820" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1319,6 +1319,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="21042" level="1" /> <!-- Blessing of Baguette -->
 		</skills>
@@ -1349,6 +1350,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="21042" level="1" /> <!-- Blessing of Baguette -->
 		</skills>
@@ -1380,6 +1382,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="21042" level="1" /> <!-- Blessing of Baguette -->
 		</skills>

@@ -1136,6 +1136,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="isAppearanceable" val="true" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="3418" level="1" /> <!-- Active Skill: Transform Pig -->

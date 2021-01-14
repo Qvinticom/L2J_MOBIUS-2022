@@ -200,7 +200,7 @@
 		<set name="weight" val="150" />
 		<set name="soulshots" val="9" />
 		<set name="spiritshots" val="3" />
-		<set name="mp_consume" val="3" />
+		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -652,9 +652,9 @@
 		<set name="weight" val="2250" />
 		<set name="price" val="8320" />
 		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="spiritshots" val="2" />
 		<stats>
 			<stat type="pAtk">21</stat>
 			<stat type="mAtk">12</stat>

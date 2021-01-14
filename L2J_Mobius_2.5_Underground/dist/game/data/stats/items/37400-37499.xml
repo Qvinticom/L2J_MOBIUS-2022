@@ -913,6 +913,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -965,6 +966,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -1044,6 +1046,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="mp_consume" val="6" />
 		<skills>
 			<skill id="3564" level="4" /> <!-- Special Ability: Haste -->
 		</skills>

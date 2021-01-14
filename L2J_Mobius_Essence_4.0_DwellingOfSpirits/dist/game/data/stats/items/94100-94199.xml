@@ -352,8 +352,8 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1300" />
-		<set name="soulshots" val="4" />
-		<set name="mp_consume" val="1" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="bodypart" val="rhand" />
 		<stats>
@@ -362,6 +362,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="94133" name="Daily Kit: Seals" type="EtcItem">

@@ -352,7 +352,6 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="true" />
-		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -368,6 +367,7 @@
 			<stat type="mAtk">68.0</stat>
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="rCrit">8.0</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46630" name="Twilight Necklace" additionalName="30-day" type="Armor">
@@ -662,8 +662,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -673,6 +673,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">433.0</stat>
 			<stat type="rCrit">12.0</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46654" name="Elysium Cutter" additionalName="Event" type="Weapon">
@@ -684,8 +685,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -695,6 +696,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="rCrit">8.0</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46655" name="Elysium Slasher" additionalName="Event" type="Weapon">
@@ -706,8 +708,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -717,6 +719,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">8.0</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46656" name="Elysium Avenger" additionalName="Event" type="Weapon">
@@ -728,8 +731,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -740,6 +743,7 @@
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46657" name="Elysium Fighter" additionalName="Event" type="Weapon">
@@ -751,8 +755,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -763,6 +767,7 @@
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46658" name="Elysium Stormer" additionalName="Event" type="Weapon">
@@ -775,8 +780,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -789,6 +794,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">8.0</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46659" name="Elysium Thrower" additionalName="Event" type="Weapon">
@@ -801,8 +807,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -812,6 +818,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">293.0</stat>
 			<stat type="rCrit">12.0</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46660" name="Elysium Shooter" additionalName="Event" type="Weapon">
@@ -824,8 +831,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -835,6 +842,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">12.0</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46661" name="Elysium Buster" additionalName="Event" type="Weapon">
@@ -846,17 +854,19 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
 			<stat type="mAtk">481.0</stat>
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="rCrit">8.0</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46662" name="Elysium Caster" additionalName="Event" type="Weapon">
@@ -868,18 +878,20 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="rhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
 			<stat type="mAtk">481.0</stat>
 			<stat type="pAtkSpd">379.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46663" name="Elysium Retributer" additionalName="Event" type="Weapon">
@@ -891,12 +903,13 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">776.0</stat>
 			<stat type="mAtk">518.0</stat>
@@ -904,6 +917,7 @@
 			<stat type="accCombat">8.0</stat>
 			<stat type="accMagic">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46664" name="Elysium Dualsword" additionalName="Event" type="Weapon">
@@ -915,8 +929,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -926,6 +940,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="rCrit">8.0</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46665" name="Elysium Dual Dagger" additionalName="Event" type="Weapon">
@@ -938,8 +953,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -949,6 +964,7 @@
 			<stat type="mAtk">388.0</stat>
 			<stat type="pAtkSpd">433.0</stat>
 			<stat type="rCrit">12.0</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46666" name="Elysium Dual Blunt Weapon" additionalName="Event" type="Weapon">
@@ -960,8 +976,8 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -972,6 +988,7 @@
 			<stat type="pAtkSpd">325.0</stat>
 			<stat type="accCombat">8.0</stat>
 			<stat type="rCrit">6.0</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46667" name="Lv.5 Giant Dye Pack" type="EtcItem">

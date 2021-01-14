@@ -76,13 +76,15 @@
 		<set name="price" val="5100" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">39</stat>
 			<stat type="mAtk">26</stat>
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">40</stat>
+			<stat type="randomDamage">38</stat>
 		</stats>
 	</item>
 	<item id="13470" name="Vesper Nagan" additionalName="Not used" type="Weapon">

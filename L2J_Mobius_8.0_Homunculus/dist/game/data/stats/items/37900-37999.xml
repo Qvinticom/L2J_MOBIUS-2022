@@ -207,6 +207,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="STEEL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -414,6 +415,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">348</stat>
 			<stat type="mAtk">252</stat>
@@ -460,6 +462,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">423</stat>
 			<stat type="mAtk">278</stat>
@@ -529,6 +532,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="mp_consume" val="6" />
 		<stats>
 			<stat type="pAtk">856</stat>
 			<stat type="mAtk">189</stat>

@@ -342,6 +342,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
+		<set name="mp_consume" val="1" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -394,6 +395,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -419,6 +421,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -444,6 +447,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -470,6 +474,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CRYSTAL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -496,6 +501,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CRYSTAL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -599,6 +605,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
+		<set name="mp_consume" val="1" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -625,6 +632,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -650,6 +658,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -676,6 +685,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -779,6 +789,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
+		<set name="mp_consume" val="1" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -805,6 +816,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -830,6 +842,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -855,6 +868,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="WOOD" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -1008,6 +1022,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="CRYSTAL" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -1066,13 +1081,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1097,13 +1112,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1128,13 +1143,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1159,13 +1174,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1190,13 +1205,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1221,13 +1236,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1252,13 +1267,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1283,13 +1298,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1314,13 +1329,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1345,13 +1360,13 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="136041000" />
 		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="true" />
 		<set name="element_enabled" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="spiritshots" val="1" />
 		<set name="material" val="STEEL" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
@@ -1408,6 +1423,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
@@ -1434,6 +1450,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="material" val="BRONZE" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">30</stat>
 			<stat type="mAtk">30</stat>
