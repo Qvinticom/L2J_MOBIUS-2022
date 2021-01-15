@@ -504,6 +504,20 @@
 		<stats>
 			<stat type="pDef">200</stat>
 		</stats>
+		<skills>
+			<skill id="50330" level="1" /> <!-- Ice Crystal Breastplate -->
+			<skill id="50331" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+		</skills>
 	</item>
 	<item id="93140" name="Ice Crystal Gaiters" type="Armor">
 		<!-- <Properties>\nCON +1\nOverweight limit +1000\nM. Def. +10\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
@@ -520,6 +534,20 @@
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
+		<skills>
+			<skill id="50333" level="1" /> <!-- Ice Crystal Gaiters -->
+			<skill id="50334" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+		</skills>
 	</item>
 	<item id="93141" name="Ice Crystal Breastplate" additionalName="Sealed" type="Armor">
 		<!-- <Properties>\nCON +2\nOverweight limit +1500\nM. Def. +15\nMax HP +150\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
@@ -531,12 +559,27 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="7700" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">200</stat>
 		</stats>
+		<skills>
+			<skill id="50330" level="1" /> <!-- Ice Crystal Breastplate -->
+			<skill id="50331" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+			<skill id="50332" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Ice Crystal Breastplate -->
+		</skills>
 	</item>
 	<item id="93142" name="Ice Crystal Gaiters" additionalName="Sealed" type="Armor">
 		<!-- <Properties>\nCON +1\nOverweight limit +1000\nM. Def. +10\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
@@ -548,12 +591,27 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="3320" />
+		<set name="enchant_enabled" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
+		<skills>
+			<skill id="50333" level="1" /> <!-- Ice Crystal Gaiters -->
+			<skill id="50334" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+			<skill id="50335" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Ice Crystal Gaiters -->
+		</skills>
 	</item>
 	<item id="93143" name="Siege Support Box - Goddard" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (2-100 pcs.). There is a small chance to obtain an additional item. -->

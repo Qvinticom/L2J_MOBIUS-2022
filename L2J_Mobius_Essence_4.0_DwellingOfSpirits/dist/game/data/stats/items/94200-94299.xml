@@ -694,14 +694,25 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">65</stat>
 		</stats>
 		<skills>
-			<skill id="50428" level="1" />
+			<skill id="50428" level="1" /> <!-- Stun Gauntlets -->
+			<skill id="50429" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Stun Gauntlets -->
 		</skills>
 	</item>
 	<item id="94264" name="Sealed Stun Gauntlets" type="Armor">
@@ -715,7 +726,7 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="540" />
 		<set name="price" val="1355000" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="is_tradable" val="false" />
@@ -723,6 +734,20 @@
 		<stats>
 			<stat type="pDef">65</stat>
 		</stats>
+		<skills>
+			<skill id="50428" level="1" /> <!-- Stun Gauntlets -->
+			<skill id="50429" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Stun Gauntlets -->
+			<skill id="50430" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Stun Gauntlets -->
+		</skills>
 	</item>
 	<item id="94265" name="Growth Kit" type="EtcItem">
 		<!-- Double-click to obtain following items.\n\n<Guaranteed>\nSayha's Blessing (200 pcs.)\nSayha's Storm Lv. 3 (100 pcs.)\nMagic Lamp Charging Potion (20 pcs.)\nEinhasad's Blessing Scroll (100 pcs.)\nSpirit Ore (5000 pcs.)\nSoulshot Ticket (1000 pcs.) -->
@@ -1047,7 +1072,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1200" />
-		<set name="enchant_enabled" val="1" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">56</stat>
 			<stat type="pAtkRange">40</stat>

@@ -1143,6 +1143,20 @@
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50305" level="1" /> <!-- Gloves of Silence -->
+			<skill id="50306" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Gloves of Silence -->
+		</skills>
 	</item>
 	<item id="93076" name="Gloves of Silence" additionalName="Sealed" type="Armor">
 		<!-- <Properties>\nSTR +1\nINT +1\nMax HP +150\nAtk. Spd. +8%\nCasting Spd. +15% -->
@@ -1155,9 +1169,24 @@
 		<set name="weight" val="540" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
+		<skills>
+			<skill id="50305" level="1" /> <!-- Gloves of Silence -->
+			<skill id="50306" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Enchant Effect: Gloves of Silence -->
+			<skill id="50307" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Enchant Effect: Gloves of Silence -->
+		</skills>
 	</item>
 	<item id="93077" name="Fortune Letter Box" type="EtcItem">
 		<!-- Double-click to obtain a random letter. If you have combined letters into certain words, you can get a reward. -->
