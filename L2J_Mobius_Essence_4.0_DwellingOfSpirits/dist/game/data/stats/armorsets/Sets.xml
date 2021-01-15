@@ -97,7 +97,9 @@
 	<set id="5" minimumPieces="2">
 		<requiredItems>
 			<item id="356" /> <!-- Full Plate Armor -->
+			<item id="93642" /> <!-- Full Plate Armor -->
 			<item id="2414" /> <!-- Full Plate Helmet -->
+			<item id="93639" /> <!-- Full Plate Helmet -->
 		</requiredItems>
 		<optionalItems>
 			<item id="2497" /> <!-- Full Plate Shield -->
@@ -116,10 +118,15 @@
 	<set id="6" minimumPieces="2">
 		<requiredItems>
 			<item id="357" /> <!-- Zubei's Breastplate -->
+			<item id="93501" /> <!-- Zubei's Breastplate -->
 			<item id="383" /> <!-- Zubei's Gaiters -->
+			<item id="93503" /> <!-- Zubei's Gaiters -->
 			<item id="90458" /> <!-- Zubei's Helmet (Heavy) -->
+			<item id="93547" /> <!-- Zubei's Helmet - Heavy Armor -->
 			<item id="5710" /> <!-- Zubei's Gauntlets (Heavy) -->
+			<item id="93520" /> <!-- Zubei's Gauntlets (Heavy) -->
 			<item id="5726" /> <!-- Zubei's Boots (Heavy) -->
+			<item id="93532" /> <!-- Zubei's Boots (Heavy) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -137,10 +144,15 @@
 	<set id="7" minimumPieces="2">
 		<requiredItems>
 			<item id="358" /> <!-- Blue Wolf Breastplate -->
+			<item id="93502" /> <!-- Blue Wolf Breastplate -->
 			<item id="2380" /> <!-- Blue Wolf Gaiters -->
+			<item id="93506" /> <!-- Blue Wolf Gaiters -->
 			<item id="90461" /> <!-- Blue Wolf Helmet (Heavy) -->
+			<item id="93550" /> <!-- Blue Wolf Helmet - Heavy Armor -->
 			<item id="5718" /> <!-- Blue Wolf Gloves (Heavy) -->
+			<item id="93526" /> <!-- Blue Wolf Gloves (Heavy) -->
 			<item id="5734" /> <!-- Blue Wolf Boots (Heavy) -->
+			<item id="93538" /> <!-- Blue Wolf Boots (Heavy) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -302,7 +314,9 @@
 	<set id="15" minimumPieces="2">
 		<requiredItems>
 			<item id="401" /> <!-- Drake Leather Armor -->
+			<item id="93643" /> <!-- Drake Leather Armor -->
 			<item id="2437" /> <!-- Drake Leather Boots -->
+			<item id="93644" /> <!-- Drake Leather Boots -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -355,8 +369,11 @@
 	<set id="18" minimumPieces="2">
 		<requiredItems>
 			<item id="439" /> <!-- Karmian Tunic -->
+			<item id="93646" /> <!-- Karmian Tunic -->
 			<item id="471" /> <!-- Karmian Stockings -->
+			<item id="93647" /> <!-- Karmian Stockings -->
 			<item id="2454" /> <!-- Karmian Gloves -->
+			<item id="93649" /> <!-- Karmian Gloves -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -430,10 +447,15 @@
 	<set id="22" minimumPieces="2">
 		<requiredItems>
 			<item id="2376" /> <!-- Avadon Breastplate -->
+			<item id="93504" /> <!-- Avadon Breastplate -->
 			<item id="2379" /> <!-- Avadon Gaiters -->
+			<item id="93505" /> <!-- Avadon Gaiters -->
 			<item id="90455" /> <!-- Avadon Circlet (Heavy) -->
+			<item id="93544" /> <!-- Avadon Circlet (Heavy Armor) -->
 			<item id="5714" /> <!-- Avadon Gloves (Heavy) -->
+			<item id="93523" /> <!-- Avadon Gloves (Heavy) -->
 			<item id="5730" /> <!-- Avadon Boots (Heavy) -->
+			<item id="93535" /> <!-- Avadon Boots (Heavy) -->
 		</requiredItems>
 		<optionalItems>
 			<item id="673" /> <!-- Avadon Shield -->
@@ -455,9 +477,13 @@
 	<set id="23" minimumPieces="2">
 		<requiredItems>
 			<item id="2381" /> <!-- Doom Plate Armor -->
+			<item id="93507" /> <!-- Doom Plate Armor -->
 			<item id="90464" /> <!-- Doom Helmet (Heavy) -->
+			<item id="93553" /> <!-- Doom Helmet - Heavy Armor -->
 			<item id="5722" /> <!-- Doom Gloves (Heavy) -->
+			<item id="93529" /> <!-- Doom Gloves (Heavy) -->
 			<item id="5738" /> <!-- Doom Boots (Heavy) -->
+			<item id="93541" /> <!-- Doom Boots (Heavy) -->
 		</requiredItems>
 		<optionalItems>
 			<item id="110" /> <!-- Doom Shield -->
@@ -524,10 +550,15 @@
 	<set id="26" minimumPieces="2">
 		<requiredItems>
 			<item id="2384" /> <!-- Zubei's Leather Shirt -->
+			<item id="93508" /> <!-- Zubei's Leather Shirt -->
 			<item id="2388" /> <!-- Zubei's Leather Gaiters -->
+			<item id="93509" /> <!-- Zubei's Leather Gaiters -->
 			<item id="90459" /> <!-- Zubei's Helmet (Light) -->
+			<item id="93548" /> <!-- Zubei's Helmet - Light Armor -->
 			<item id="5711" /> <!-- Zubei's Gauntlets (Light) -->
+			<item id="93521" /> <!-- Zubei's Gauntlets (Light) -->
 			<item id="5727" /> <!-- Zubei's Boots (Light) -->
+			<item id="93533" /> <!-- Zubei's Boots (Light) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -571,9 +602,13 @@
 	<set id="28" minimumPieces="2">
 		<requiredItems>
 			<item id="2390" /> <!-- Avadon Leather Armor -->
+			<item id="93510" /> <!-- Avadon Leather Armor -->
 			<item id="90456" /> <!-- Avadon Circlet (Light) -->
+			<item id="93545" /> <!-- Avadon Circlet (Light Armor) -->
 			<item id="5715" /> <!-- Avadon Gloves (Light) -->
+			<item id="93524" /> <!-- Avadon Gloves (Light) -->
 			<item id="5731" /> <!-- Avadon Boots (Light) -->
+			<item id="93536" /> <!-- Avadon Boots (Light) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -590,9 +625,13 @@
 	<set id="29" minimumPieces="2">
 		<requiredItems>
 			<item id="2391" /> <!-- Blue Wolf Leather Armor -->
+			<item id="93511" /> <!-- Blue Wolf Leather Armor -->
 			<item id="90462" /> <!-- Blue Wolf Helmet (Light) -->
+			<item id="93551" /> <!-- Blue Wolf Helmet - Light Armor -->
 			<item id="5719" /> <!-- Blue Wolf Gloves (Light) -->
+			<item id="93527" /> <!-- Blue Wolf Gloves (Light) -->
 			<item id="5735" /> <!-- Blue Wolf Boots (Light) -->
+			<item id="93539" /> <!-- Blue Wolf Boots (Light) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -609,9 +648,13 @@
 	<set id="30" minimumPieces="2">
 		<requiredItems>
 			<item id="2392" /> <!-- Leather Armor of Doom -->
+			<item id="93512" /> <!-- Doom Leather Armor -->
 			<item id="90465" /> <!-- Doom Helmet (Light) -->
+			<item id="93554" /> <!-- Doom Helmet - Light Armor -->
 			<item id="5723" /> <!-- Doom Gloves (Light) -->
+			<item id="93530" /> <!-- Doom Gloves (Light) -->
 			<item id="5739" /> <!-- Doom Boots (Light) -->
+			<item id="93542" /> <!-- Doom Boots (Light) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -697,10 +740,15 @@
 	<set id="34" minimumPieces="2">
 		<requiredItems>
 			<item id="2397" /> <!-- Tunic of Zubei -->
+			<item id="93513" /> <!-- Zubei's Tunic -->
 			<item id="2402" /> <!-- Stockings of Zubei -->
+			<item id="93516" /> <!-- Zubei's Stockings -->
 			<item id="90460" /> <!-- Zubei's Helmet (Robe) -->
+			<item id="93549" /> <!-- Zubei's Helmet - Robe -->
 			<item id="5712" /> <!-- Zubei's Gauntlets (Robe) -->
+			<item id="93522" /> <!-- Zubei's Gauntlets (Robe) -->
 			<item id="5728" /> <!-- Zubei's Boots (Robe) -->
+			<item id="93534" /> <!-- Zubei's Boots (Robe) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -718,10 +766,15 @@
 	<set id="35" minimumPieces="2">
 		<requiredItems>
 			<item id="2398" /> <!-- Blue Wolf Tunic -->
+			<item id="93514" /> <!-- Blue Wolf Tunic -->
 			<item id="2403" /> <!-- Blue Wolf Stockings -->
+			<item id="93517" /> <!-- Blue Wolf Stockings -->
 			<item id="90463" /> <!-- Blue Wolf Helmet (Robe) -->
+			<item id="93552" /> <!-- Blue Wolf Helmet - Robe -->
 			<item id="5720" /> <!-- Blue Wolf Gloves (Robe) -->
+			<item id="93528" /> <!-- Blue Wolf Gloves (Robe) -->
 			<item id="5736" /> <!-- Blue Wolf Boots (Robe) -->
+			<item id="93540" /> <!-- Blue Wolf Boots (Robe) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -739,10 +792,15 @@
 	<set id="36" minimumPieces="2">
 		<requiredItems>
 			<item id="2399" /> <!-- Tunic of Doom -->
+			<item id="93515" /> <!-- Doom Tunic -->
 			<item id="2404" /> <!-- Stockings of Doom -->
+			<item id="93518" /> <!-- Doom Stockings -->
 			<item id="90466" /> <!-- Doom Helmet (Robe) -->
+			<item id="93555" /> <!-- Doom Helmet - Robe -->
 			<item id="5724" /> <!-- Doom Gloves (Robe) -->
+			<item id="93531" /> <!-- Doom Gloves (Robe) -->
 			<item id="5740" /> <!-- Doom Boots (Robe) -->
+			<item id="93543" /> <!-- Doom Boots (Robe) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
@@ -786,9 +844,13 @@
 	<set id="38" minimumPieces="2">
 		<requiredItems>
 			<item id="2406" /> <!-- Avadon Robe -->
+			<item id="93519" /> <!-- Avadon Robe -->
 			<item id="90457" /> <!-- Avadon Circlet (Robe) -->
+			<item id="93546" /> <!-- Avadon Circlet (Robe) -->
 			<item id="5716" /> <!-- Avadon Gloves (Robe) -->
+			<item id="93525" /> <!-- Avadon Gloves (Robe) -->
 			<item id="5732" /> <!-- Avadon Boots (Robe) -->
+			<item id="93537" /> <!-- Avadon Boots (Robe) -->
 		</requiredItems>
 		<skills>
 			<skill id="3006" level="1" minimumPieces="2" /> <!-- Equip Set Items -->
