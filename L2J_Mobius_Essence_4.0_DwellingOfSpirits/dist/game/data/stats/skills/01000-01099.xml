@@ -1762,7 +1762,7 @@
 		</effects>
 	</skill>
 	<skill id="1031" toLevel="10" name="Divine Strike">
-		<!-- Inflicts holy damage on the undead with $s1 Power added to M. Atk. -->
+		<!-- Summons holy light. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. -->
 		<icon>icon.skill1031</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1823,11 +1823,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetRace">
-				<race>UNDEAD</race>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
