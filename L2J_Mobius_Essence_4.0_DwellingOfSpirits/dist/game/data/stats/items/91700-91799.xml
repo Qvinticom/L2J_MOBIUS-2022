@@ -595,7 +595,7 @@
 			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
 		</skills>
 	</item>
-	<item id="91757" name="Magic Lantern Acceleration Potion" type="EtcItem">
+	<item id="91757" name="Magic Lamp Charging Potion" type="EtcItem">
 		<!-- For 1 h., magic lantern recharge rate +20%. Cooldown: 1 min. -->
 		<set name="icon" val="icon.etc_recall_potion2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -604,6 +604,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54051" level="1" /> <!-- Magic Lamp Charging Potion (1-hour) -->
+		</skills>
 	</item>
 	<item id="91758" name="Ruby Lv. 5" additionalName="3 days" type="Armor">
 		<!-- Available for 3 days. Soulshot, Blessed Soulshot and Beast Soulshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->

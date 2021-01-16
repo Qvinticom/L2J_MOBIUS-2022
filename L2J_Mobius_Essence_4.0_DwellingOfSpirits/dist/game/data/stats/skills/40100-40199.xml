@@ -232,9 +232,16 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40138" toLevel="1" name="Magic Lamp Charging Potion - Event">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalType>MAGIC_LAMP_RATE</abnormalType>
+		<abnormalTime>3600</abnormalTime>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="MagicLampExpRate">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40139" toLevel="1" name="Spellbook: Mount Wyvern">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
