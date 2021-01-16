@@ -482,28 +482,40 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="HpRegen" fromLevel="1" toLevel="4">
-				<amount>5.24</amount>
-				<mode>PER</mode>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>-1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>-2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="2" toLevel="4">
+				<amount>1</amount>
+				<stat>DEX</stat>
 			</effect>
 			<effect name="Speed" fromLevel="2" toLevel="4">
 				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="4">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<SHOCK>30</SHOCK>
 			</effect>
 			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>3</amount>
-				<stat>STR</stat>
-			</effect>
-			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>-1</amount>
-				<stat>CON</stat>
-			</effect>
-			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>-2</amount>
+				<amount>1</amount>
 				<stat>DEX</stat>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="4" toLevel="4">
+				<amount>44</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -514,21 +526,33 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="StatUp" fromLevel="1" toLevel="3">
+				<amount>-2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="3">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
 			<effect name="MaxHp" fromLevel="1" toLevel="3">
 				<amount>320</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="2" toLevel="3">
+				<amount>1</amount>
+				<stat>STR</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<SLEEP>50</SLEEP>
 				<HOLD>50</HOLD>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>-3</amount>
+				<amount>1</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>3</amount>
-				<stat>CON</stat>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="3">
+				<amount>44</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -539,25 +563,29 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="StatUp" fromLevel="1" toLevel="3">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="3">
+				<amount>-2</amount>
+				<stat>INT</stat>
+			</effect>
 			<effect name="MpRegen" fromLevel="1" toLevel="3">
 				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp" fromLevel="2" toLevel="3">
-				<amount>3</amount>
-				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp" fromLevel="2" toLevel="3">
-				<amount>-1</amount>
-				<stat>WIT</stat>
-			</effect>
-			<effect name="StatUp" fromLevel="2" toLevel="3">
-				<amount>-2</amount>
+				<amount>1</amount>
 				<stat>INT</stat>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="2" toLevel="3">
 				<amount>5.26</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>1</amount>
+				<stat>INT</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
 				<SHOCK>30</SHOCK>
@@ -565,6 +593,10 @@
 			<effect name="MagicalAttackSpeed" fromLevel="3" toLevel="3">
 				<amount>15</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="3">
+				<amount>44</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -575,21 +607,33 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="StatUp" fromLevel="1" toLevel="3">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
 			<effect name="MpRegen" fromLevel="1" toLevel="3">
 				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk" fromLevel="2" toLevel="3">
+			<effect name="PAtk" fromLevel="1" toLevel="3">
 				<amount>2.7</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+			<effect name="StatUp" fromLevel="2" toLevel="3">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<SLEEP>50</SLEEP>
 				<HOLD>50</HOLD>
 			</effect>
 			<effect name="StatUp" fromLevel="3" toLevel="3">
-				<amount>3</amount>
+				<amount>1</amount>
 				<stat>DEX</stat>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="3">
+				<amount>44</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -600,28 +644,40 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>-2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>-1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
 			<effect name="MpRegen" fromLevel="1" toLevel="4">
 				<amount>5.26</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="2" toLevel="4">
+				<amount>1</amount>
+				<stat>INT</stat>
 			</effect>
 			<effect name="MaxMp" fromLevel="2" toLevel="4">
 				<amount>206</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="4">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<SHOCK>30</SHOCK>
 			</effect>
 			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>-2</amount>
-				<stat>INT</stat>
-			</effect>
-			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>-1</amount>
+				<amount>1</amount>
 				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>3</amount>
-				<stat>WIT</stat>
 			</effect>
 		</effects>
 	</skill>
@@ -632,37 +688,45 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="1" toLevel="4">
+				<amount>-3</amount>
+				<stat>WIT</stat>
+			</effect>
 			<effect name="MpRegen" fromLevel="1" toLevel="4">
 				<amount>5.26</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="2" toLevel="4">
+				<amount>1</amount>
+				<stat>WIT</stat>
 			</effect>
 			<effect name="Speed" fromLevel="2" toLevel="4">
 				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="4">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<SLEEP>50</SLEEP>
 				<HOLD>50</HOLD>
 			</effect>
-			<effect name="Breath" fromLevel="3" toLevel="4">
-				<amount>200</amount>
+			<effect name="MagicCriticalDamage" fromLevel="3" toLevel="4">
+				<amount>30</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>2</amount>
-				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp" fromLevel="4" toLevel="4">
 				<amount>1</amount>
-				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp" fromLevel="4" toLevel="4">
-				<amount>-3</amount>
 				<stat>WIT</stat>
-			</effect>
-			<effect name="MagicCriticalDamage" fromLevel="4" toLevel="4">
-				<amount>30</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
