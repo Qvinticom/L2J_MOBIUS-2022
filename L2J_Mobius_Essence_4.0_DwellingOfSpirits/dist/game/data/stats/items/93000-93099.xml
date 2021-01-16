@@ -996,6 +996,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50304" level="1" /> <!-- Hat of Glory -->
+		</skills>
 	</item>
 	<item id="93063" name="Inventory Expansion Ticket of Glory" type="EtcItem">
 		<!-- Double-click to learn Expand Inventory of Glory.\n\n<Classes>\nAll classes\n\n<Skill effect>\nIncreases number of inventory slots. -->
