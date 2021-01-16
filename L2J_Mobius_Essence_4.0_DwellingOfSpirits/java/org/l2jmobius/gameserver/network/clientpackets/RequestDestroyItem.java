@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -228,7 +229,7 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		}
 		
 		// LCoin UI update.
-		if (removedItem.getId() == ExBloodyCoinCount.LCOIN_ID)
+		if (removedItem.getId() == Inventory.LCOIN_ID)
 		{
 			player.sendPacket(new ExBloodyCoinCount(player));
 		}

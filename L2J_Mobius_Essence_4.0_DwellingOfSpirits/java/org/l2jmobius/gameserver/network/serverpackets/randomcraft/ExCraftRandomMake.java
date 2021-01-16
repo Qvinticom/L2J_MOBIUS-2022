@@ -14,34 +14,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.magiclamp;
+package org.l2jmobius.gameserver.network.serverpackets.randomcraft;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author L2CCCP
+ * @author Mode
  */
-public class ExMagicLampExpInfoUI implements IClientOutgoingPacket
+public class ExCraftRandomMake implements IClientOutgoingPacket
 {
-	private final PlayerInstance _player;
+	private final int _itemId;
+	private final long _itemCount;
 	
-	public ExMagicLampExpInfoUI(PlayerInstance player)
+	public ExCraftRandomMake(int itemId, long itemCount)
 	{
-		_player = player;
+		_itemId = itemId;
+		_itemCount = itemCount;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_MAGICLAMP_EXP_INFO.writeId(packet);
-		packet.writeD(Config.ENABLE_MAGIC_LAMP ? 0x01 : 0x00); // IsOpen
-		packet.writeD(Config.MAGIC_LAMP_MAX_LEVEL_EXP); // MaxMagicLampExp
-		packet.writeD(_player.getLampExp()); // MagicLampExp
-		packet.writeD(_player.getLampCount()); // MagicLampCount
+		OutgoingPackets.EX_CRAFT_RANDOM_MAKE.writeId(packet);
+		packet.writeC(0x00); // Close window
+		packet.writeH(0x0F); // Unknown
+		packet.writeD(_itemId);
+		packet.writeQ(_itemCount);
+		packet.writeC(0x00); // Enchantment level
 		return true;
 	}
 }

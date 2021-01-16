@@ -235,6 +235,7 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerRandomCraft;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerRefund;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerWarehouse;
 import org.l2jmobius.gameserver.model.items.Armor;
@@ -882,6 +883,8 @@ public class PlayerInstance extends Playable
 	private final AutoUseSettingsHolder _autoUseSettings = new AutoUseSettingsHolder();
 	
 	private ScheduledFuture<?> _timedHuntingZoneFinishTask = null;
+	
+	private PlayerRandomCraft _randomCraft = null;
 	
 	private final List<QuestTimer> _questTimers = new ArrayList<>();
 	private final List<TimerHolder<?>> _timerHolders = new ArrayList<>();
@@ -3394,7 +3397,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// LCoin UI update.
-		if (destoyedItem.getId() == ExBloodyCoinCount.LCOIN_ID)
+		if (destoyedItem.getId() == Inventory.LCOIN_ID)
 		{
 			sendPacket(new ExBloodyCoinCount(this));
 		}
@@ -3509,7 +3512,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// LCoin UI update.
-		if (item.getId() == ExBloodyCoinCount.LCOIN_ID)
+		if (item.getId() == Inventory.LCOIN_ID)
 		{
 			sendPacket(new ExBloodyCoinCount(this));
 		}
@@ -3584,7 +3587,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// LCoin UI update.
-		if (newItem.getId() == ExBloodyCoinCount.LCOIN_ID)
+		if (newItem.getId() == Inventory.LCOIN_ID)
 		{
 			sendPacket(new ExBloodyCoinCount(this));
 		}
@@ -3697,7 +3700,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// LCoin UI update.
-		if (item.getId() == ExBloodyCoinCount.LCOIN_ID)
+		if (item.getId() == Inventory.LCOIN_ID)
 		{
 			sendPacket(new ExBloodyCoinCount(this));
 		}
@@ -3777,7 +3780,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// LCoin UI update.
-		if (item.getId() == ExBloodyCoinCount.LCOIN_ID)
+		if (item.getId() == Inventory.LCOIN_ID)
 		{
 			sendPacket(new ExBloodyCoinCount(this));
 		}
@@ -6731,6 +6734,8 @@ public class PlayerInstance extends Playable
 			
 			player.restoreFriendList();
 			
+			player.restoreRandomCraft();
+			
 			player.loadRecommendations();
 			player.startRecoGiveTask();
 			player.startOnlineTimeUpdateTask();
@@ -7028,6 +7033,11 @@ public class PlayerInstance extends Playable
 					spirit.save();
 				}
 			}
+		}
+		
+		if (_randomCraft != null)
+		{
+			_randomCraft.store();
 		}
 	}
 	
@@ -14421,5 +14431,16 @@ public class PlayerInstance extends Playable
 			return _timedHuntingZoneFinishTask.getDelay(TimeUnit.MILLISECONDS);
 		}
 		return 0;
+	}
+	
+	private void restoreRandomCraft()
+	{
+		_randomCraft = new PlayerRandomCraft(this);
+		_randomCraft.restore();
+	}
+	
+	public PlayerRandomCraft getRandomCraft()
+	{
+		return _randomCraft;
 	}
 }

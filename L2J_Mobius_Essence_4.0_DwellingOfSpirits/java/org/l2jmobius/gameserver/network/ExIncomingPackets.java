@@ -99,6 +99,11 @@ import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProduct
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
 import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
+import org.l2jmobius.gameserver.network.clientpackets.randomcraft.ExRequestRandomCraftExtract;
+import org.l2jmobius.gameserver.network.clientpackets.randomcraft.ExRequestRandomCraftInfo;
+import org.l2jmobius.gameserver.network.clientpackets.randomcraft.ExRequestRandomCraftLockSlot;
+import org.l2jmobius.gameserver.network.clientpackets.randomcraft.ExRequestRandomCraftMake;
+import org.l2jmobius.gameserver.network.clientpackets.randomcraft.ExRequestRandomCraftRefresh;
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadHeroAndLegendInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadMyRankingInfo;
 import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadRankingInfo;
@@ -535,11 +540,11 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_CASTLEWAR_OBSERVER_START(0x196, null, ConnectionState.IN_GAME),
 	EX_RAID_TELEPORT_INFO(0x197, null, ConnectionState.IN_GAME),
 	EX_TELEPORT_TO_RAID_POSITION(0x198, null, ConnectionState.IN_GAME),
-	EX_CRAFT_EXTRACT(0x199, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_INFO(0x19A, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_LOCK_SLOTEX_CRAFT_RANDOM_INFO(0x19B, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_REFRESH(0x19C, null, ConnectionState.IN_GAME),
-	EX_CRAFT_RANDOM_MAKE(0x19D, null, ConnectionState.IN_GAME),
+	EX_CRAFT_EXTRACT(0x199, ExRequestRandomCraftExtract::new, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_INFO(0x19A, ExRequestRandomCraftInfo::new, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_LOCK_SLOTEX_CRAFT_RANDOM_INFO(0x19B, ExRequestRandomCraftLockSlot::new, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_REFRESH(0x19C, ExRequestRandomCraftRefresh::new, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_MAKE(0x19D, ExRequestRandomCraftMake::new, ConnectionState.IN_GAME),
 	EX_MULTI_SELL_LIST(0x19E, null, ConnectionState.IN_GAME),
 	EX_SAVE_ITEM_ANNOUNCE_SETTING(0x19F, null, ConnectionState.IN_GAME),
 	EX_OLYMPIAD_UI(0x1A0, null, ConnectionState.IN_GAME),

@@ -107,7 +107,13 @@ The Kamael: https://eu.4game.com/patchnotes/lineage2classic/154/
 
 Death Knight: https://eu.4game.com/patchnotes/lineage2essence/196/
 -Death Knight creation support
+-Death knight starting area
+-Death knight quests
 -Player bonus stats system
+-LCoin shop system
+-Sayha's Grace system
+-Random Craft system
+-Magic Lamp system
 
 Fluffy Reinforcement: https://eu.4game.com/patchnotes/lineage2essence/204/
 -Teleport favorites system

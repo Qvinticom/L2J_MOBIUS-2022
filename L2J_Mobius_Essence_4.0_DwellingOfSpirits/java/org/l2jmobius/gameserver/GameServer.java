@@ -91,6 +91,7 @@ import org.l2jmobius.gameserver.data.xml.PetSkillData;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.PlayerXpPercentLostData;
 import org.l2jmobius.gameserver.data.xml.PrimeShopData;
+import org.l2jmobius.gameserver.data.xml.RandomCraftData;
 import org.l2jmobius.gameserver.data.xml.RecipeData;
 import org.l2jmobius.gameserver.data.xml.ResidenceFunctionsData;
 import org.l2jmobius.gameserver.data.xml.SayuneData;
@@ -285,6 +286,7 @@ public class GameServer
 		LuckyGameData.getInstance();
 		AttendanceRewardData.getInstance();
 		MagicLampData.getInstance();
+		RandomCraftData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();

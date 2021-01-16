@@ -478,7 +478,7 @@ public class PlayerInventory extends Inventory
 				}
 				
 				// LCoin UI update.
-				if (item.getId() == ExBloodyCoinCount.LCOIN_ID)
+				if (item.getId() == Inventory.LCOIN_ID)
 				{
 					actor.sendPacket(new ExBloodyCoinCount(actor));
 				}

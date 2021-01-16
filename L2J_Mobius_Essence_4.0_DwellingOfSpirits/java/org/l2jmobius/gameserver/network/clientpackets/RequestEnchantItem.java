@@ -234,7 +234,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 						player.broadcastPacket(sm);
-						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(item, player));
+						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(player, item, ExItemAnnounce.ENCHANT));
 						
 						final Skill skill = CommonSkill.FIREWORK.getSkill();
 						if (skill != null)

@@ -109,6 +109,7 @@ import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayRecei
 import org.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.limitshop.ExBloodyCoinCount;
 import org.l2jmobius.gameserver.network.serverpackets.magiclamp.ExMagicLampExpInfoUI;
+import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftInfo;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
@@ -633,11 +634,6 @@ public class EnterWorld implements IClientIncomingPacket
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		
-		if (Config.MAGIC_LAMP_ENABLE)
-		{
-			player.sendPacket(new ExMagicLampExpInfoUI(player));
-		}
-		
 		// Handle soulshots, disable all on EnterWorld
 		player.sendPacket(new ExAutoSoulShot(0, true, 0));
 		player.sendPacket(new ExAutoSoulShot(0, true, 1));
@@ -662,6 +658,16 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.ENABLE_VITALITY)
 		{
 			player.sendPacket(new ExVitalityEffectInfo(player));
+		}
+		
+		if (Config.ENABLE_MAGIC_LAMP)
+		{
+			player.sendPacket(new ExMagicLampExpInfoUI(player));
+		}
+		
+		if (Config.ENABLE_RANDOM_CRAFT)
+		{
+			player.sendPacket(new ExCraftInfo(player));
 		}
 		
 		// Activate first agathion when available.

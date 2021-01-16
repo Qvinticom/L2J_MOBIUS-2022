@@ -14,34 +14,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.magiclamp;
+package org.l2jmobius.gameserver.network.clientpackets.randomcraft;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.OutgoingPackets;
-import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import org.l2jmobius.gameserver.network.GameClient;
+import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.randomcraft.ExCraftRandomInfo;
 
 /**
- * @author L2CCCP
+ * @author Mode
  */
-public class ExMagicLampExpInfoUI implements IClientOutgoingPacket
+public class ExRequestRandomCraftInfo implements IClientIncomingPacket
 {
-	private final PlayerInstance _player;
-	
-	public ExMagicLampExpInfoUI(PlayerInstance player)
+	@Override
+	public boolean read(GameClient client, PacketReader packet)
 	{
-		_player = player;
+		return true;
 	}
 	
 	@Override
-	public boolean write(PacketWriter packet)
+	public void run(GameClient client)
 	{
-		OutgoingPackets.EX_MAGICLAMP_EXP_INFO.writeId(packet);
-		packet.writeD(Config.ENABLE_MAGIC_LAMP ? 0x01 : 0x00); // IsOpen
-		packet.writeD(Config.MAGIC_LAMP_MAX_LEVEL_EXP); // MaxMagicLampExp
-		packet.writeD(_player.getLampExp()); // MagicLampExp
-		packet.writeD(_player.getLampCount()); // MagicLampCount
-		return true;
+		if (!Config.ENABLE_RANDOM_CRAFT)
+		{
+			return;
+		}
+		
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		player.sendPacket(new ExCraftRandomInfo(player));
 	}
 }

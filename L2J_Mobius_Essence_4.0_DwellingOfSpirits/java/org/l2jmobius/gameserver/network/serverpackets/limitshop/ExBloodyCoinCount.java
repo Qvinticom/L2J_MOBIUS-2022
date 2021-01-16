@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.limitshop;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -26,13 +27,11 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExBloodyCoinCount implements IClientOutgoingPacket
 {
-	public final static int LCOIN_ID = 91663;
-	
 	private final long _count;
 	
 	public ExBloodyCoinCount(PlayerInstance player)
 	{
-		_count = player.getInventory().getInventoryItemCount(LCOIN_ID, -1);
+		_count = player.getInventory().getInventoryItemCount(Inventory.LCOIN_ID, -1);
 	}
 	
 	@Override

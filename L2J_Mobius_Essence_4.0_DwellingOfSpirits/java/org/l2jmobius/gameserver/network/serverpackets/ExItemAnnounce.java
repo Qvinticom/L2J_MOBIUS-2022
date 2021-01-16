@@ -22,24 +22,29 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author NviX
+ * @author NviX, Mobius
  */
 public class ExItemAnnounce implements IClientOutgoingPacket
 {
+	public static final int ENCHANT = 0x00;
+	public static final int RANDOM_CRAFT = 0x02;
+	
 	private final ItemInstance _item;
 	private final PlayerInstance _player;
+	private final int _type;
 	
-	public ExItemAnnounce(ItemInstance item, PlayerInstance player)
+	public ExItemAnnounce(PlayerInstance player, ItemInstance item, int type)
 	{
-		_item = item;
 		_player = player;
+		_item = item;
+		_type = type;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_ITEM_ANNOUNCE.writeId(packet);
-		packet.writeC(0x00); // item icon
+		packet.writeC(_type); // announce type
 		packet.writeString(_player.getName()); // name of player
 		packet.writeD(_item.getId()); // item id
 		packet.writeD(_item.getEnchantLevel()); // enchant level

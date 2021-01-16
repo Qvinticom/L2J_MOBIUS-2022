@@ -14,22 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.serverpackets.magiclamp;
+package org.l2jmobius.gameserver.network.serverpackets.randomcraft;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.itemcontainer.PlayerRandomCraft;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author L2CCCP
+ * @author Mode
  */
-public class ExMagicLampExpInfoUI implements IClientOutgoingPacket
+public class ExCraftInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	
-	public ExMagicLampExpInfoUI(PlayerInstance player)
+	public ExCraftInfo(PlayerInstance player)
 	{
 		_player = player;
 	}
@@ -37,11 +37,13 @@ public class ExMagicLampExpInfoUI implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_MAGICLAMP_EXP_INFO.writeId(packet);
-		packet.writeD(Config.ENABLE_MAGIC_LAMP ? 0x01 : 0x00); // IsOpen
-		packet.writeD(Config.MAGIC_LAMP_MAX_LEVEL_EXP); // MaxMagicLampExp
-		packet.writeD(_player.getLampExp()); // MagicLampExp
-		packet.writeD(_player.getLampCount()); // MagicLampCount
+		OutgoingPackets.EX_CRAFT_INFO.writeId(packet);
+		
+		final PlayerRandomCraft rc = _player.getRandomCraft();
+		packet.writeD(rc.getFullCraftPoints()); // Full points owned
+		packet.writeD(rc.getCraftPoints()); // Craft Points (10k = 1%)
+		packet.writeC(rc.isSayhaRoll() ? 0x01 : 0x00); // Will get sayha?
+		
 		return true;
 	}
 }
