@@ -34,7 +34,7 @@ public class ExPledgeMissionRewardCount implements IClientOutgoingPacket
 	public ExPledgeMissionRewardCount(PlayerInstance player)
 	{
 		_doneMissionsCount = (int) DailyMissionData.getInstance().getDailyMissionData(player).stream().filter(d -> d.getRecentlyCompleted(player)).count();
-		_availableMissionsCount = DailyMissionData.getInstance().getDailyMissionData(player).size();
+		_availableMissionsCount = (int) DailyMissionData.getInstance().getDailyMissionData(player).stream().filter(d -> d.getStatus(player) == 1).count();
 	}
 	
 	@Override

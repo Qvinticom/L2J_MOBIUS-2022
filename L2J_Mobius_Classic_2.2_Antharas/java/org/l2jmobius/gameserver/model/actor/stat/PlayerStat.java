@@ -44,6 +44,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.util.Util;
@@ -250,6 +251,9 @@ public class PlayerStat extends PlayableStat
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLevelChanged(getActiveChar(), getLevel() - value, getLevel()), getActiveChar());
+		
+		// Update daily mission count.
+		getActiveChar().sendPacket(new ExConnectedTimeAndGettableReward(getActiveChar()));
 		
 		// Give AutoGet skills and all normal skills if Auto-Learn is activated.
 		getActiveChar().rewardSkills();

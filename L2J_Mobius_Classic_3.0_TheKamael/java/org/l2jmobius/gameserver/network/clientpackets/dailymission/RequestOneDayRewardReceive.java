@@ -75,8 +75,8 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 			}
 		}
 		
-		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
+		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		
 		ThreadPool.schedule(() ->
 		{

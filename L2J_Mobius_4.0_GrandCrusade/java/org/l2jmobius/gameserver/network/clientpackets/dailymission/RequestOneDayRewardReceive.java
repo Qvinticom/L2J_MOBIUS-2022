@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
+import org.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
 /**
  * @author Sdw
@@ -74,6 +75,7 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 			}
 		}
 		
+		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		
 		ThreadPool.schedule(() ->
