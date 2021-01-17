@@ -174,7 +174,6 @@ public class Skill implements IIdentifiable
 	
 	private final int _baseCritRate; // percent of success for skill critical hit (especially for PhysicalAttack & Blow - they're not affected by rCrit values or buffs).
 	private final boolean _directHpDmg; // If true then damage is being make directly
-	private final boolean _isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
 	private final int _effectPoint;
 	// Condition lists
 	private List<Condition> _preCondition;
@@ -316,7 +315,6 @@ public class Skill implements IIdentifiable
 		_isClanSkill = SkillTreeData.getInstance().isClanSkill(_id, _level);
 		_baseCritRate = set.getInt("baseCritRate", 0);
 		_directHpDmg = set.getBoolean("dmgDirectlyToHp", false);
-		_isTriggeredSkill = set.getBoolean("isTriggeredSkill", false);
 		_effectPoint = set.getInt("effectPoint", 0);
 		_flyType = set.getEnum("flyType", FlyType.class, null);
 		_flyRadius = set.getInt("flyRadius", 0);
@@ -839,11 +837,6 @@ public class Skill implements IIdentifiable
 	public boolean isChanneling()
 	{
 		return (_operateType != null) && _operateType.isChanneling();
-	}
-	
-	public boolean isTriggeredSkill()
-	{
-		return _isTriggeredSkill;
 	}
 	
 	/**

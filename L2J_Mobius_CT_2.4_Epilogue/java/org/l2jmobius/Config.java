@@ -163,7 +163,6 @@ public class Config
 	public static boolean AUTO_LEARN_FS_SKILLS;
 	public static boolean AUTO_LOOT_HERBS;
 	public static byte BUFFS_MAX_AMOUNT;
-	public static byte TRIGGERED_BUFFS_MAX_AMOUNT;
 	public static byte DANCES_MAX_AMOUNT;
 	public static boolean DANCE_CANCEL_BUFF;
 	public static boolean DANCE_CONSUME_ADDITIONAL_MP;
@@ -1746,7 +1745,6 @@ public class Config
 			AUTO_LEARN_FS_SKILLS = Character.getBoolean("AutoLearnForgottenScrollSkills", false);
 			AUTO_LOOT_HERBS = Character.getBoolean("AutoLootHerbs", false);
 			BUFFS_MAX_AMOUNT = Character.getByte("MaxBuffAmount", (byte) 20);
-			TRIGGERED_BUFFS_MAX_AMOUNT = Character.getByte("MaxTriggeredBuffAmount", (byte) 12);
 			DANCES_MAX_AMOUNT = Character.getByte("MaxDanceAmount", (byte) 12);
 			DANCE_CANCEL_BUFF = Character.getBoolean("DanceCancelBuff", false);
 			DANCE_CONSUME_ADDITIONAL_MP = Character.getBoolean("DanceConsumeAdditionalMP", true);

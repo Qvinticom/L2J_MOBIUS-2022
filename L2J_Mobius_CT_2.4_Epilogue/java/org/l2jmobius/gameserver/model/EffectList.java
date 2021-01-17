@@ -62,8 +62,6 @@ public class EffectList
 	private static final Logger LOGGER = Logger.getLogger(EffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */
 	private final Queue<BuffInfo> _buffs = new ConcurrentLinkedQueue<>();
-	/** Queue containing all triggered skills for this effect list. */
-	private final Queue<BuffInfo> _triggered = new ConcurrentLinkedQueue<>();
 	/** Queue containing all dances/songs for this effect list. */
 	private final Queue<BuffInfo> _dances = new ConcurrentLinkedQueue<>();
 	/** Queue containing all toggle for this effect list. */
@@ -111,15 +109,6 @@ public class EffectList
 	public Queue<BuffInfo> getBuffs()
 	{
 		return _buffs;
-	}
-	
-	/**
-	 * Gets triggered skill skills.
-	 * @return the triggered skill skills
-	 */
-	public Queue<BuffInfo> getTriggered()
-	{
-		return _triggered;
 	}
 	
 	/**
@@ -175,11 +164,6 @@ public class EffectList
 			buffs.addAll(_buffs);
 		}
 		
-		if (hasTriggered())
-		{
-			buffs.addAll(_triggered);
-		}
-		
 		if (hasDances())
 		{
 			buffs.addAll(_dances);
@@ -218,10 +202,6 @@ public class EffectList
 		{
 			effects = _debuffs;
 		}
-		else if (skill.isTriggeredSkill())
-		{
-			effects = _triggered;
-		}
 		else if (skill.isDance())
 		{
 			effects = _dances;
@@ -249,23 +229,6 @@ public class EffectList
 		if (hasBuffs())
 		{
 			for (BuffInfo info : _buffs)
-			{
-				if (info != null)
-				{
-					for (AbstractEffect effect : info.getEffects())
-					{
-						if ((effect != null) && (effect.getEffectType() == type))
-						{
-							return info;
-						}
-					}
-				}
-			}
-		}
-		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
 			{
 				if (info != null)
 				{
@@ -357,18 +320,6 @@ public class EffectList
 		if (hasBuffs())
 		{
 			for (BuffInfo b : _buffs)
-			{
-				if (b.getSkill().getId() == skillId)
-				{
-					info = b;
-					break;
-				}
-			}
-		}
-		
-		if (hasTriggered() && (info == null))
-		{
-			for (BuffInfo b : _triggered)
 			{
 				if (b.getSkill().getId() == skillId)
 				{
@@ -540,17 +491,7 @@ public class EffectList
 	{
 		return hasDances() ? _dances.size() : 0;
 	}
-	
-	/**
-	 * Gets the triggered buffs count.<br>
-	 * Prevents initialization.
-	 * @return the number of triggered buffs in this creature effect list
-	 */
-	public int getTriggeredBuffCount()
-	{
-		return hasTriggered() ? _triggered.size() : 0;
-	}
-	
+
 	/**
 	 * Gets the hidden buff count.
 	 * @return the number of hidden buffs
@@ -641,7 +582,7 @@ public class EffectList
 	public void stopAllEffects()
 	{
 		// Stop buffs.
-		stopAllBuffs(false, true);
+		stopAllBuffs(false);
 		// Stop dances and songs.
 		stopAllDances(false);
 		// Stop toggles.
@@ -669,18 +610,6 @@ public class EffectList
 				if (!info.getSkill().isStayAfterDeath())
 				{
 					stopAndRemove(true, info, _buffs);
-				}
-			}
-			update = true;
-		}
-		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
-			{
-				if (!info.getSkill().isStayAfterDeath())
-				{
-					stopAndRemove(true, info, _triggered);
 				}
 			}
 			update = true;
@@ -738,10 +667,6 @@ public class EffectList
 		{
 			stopAndRemove(broadcast, info, _buffs);
 		}
-		for (BuffInfo info : _triggered)
-		{
-			stopAndRemove(broadcast, info, _triggered);
-		}
 		for (BuffInfo info : _dances)
 		{
 			stopAndRemove(broadcast, info, _dances);
@@ -779,18 +704,6 @@ public class EffectList
 				if (!info.getSkill().isStayOnSubclassChange())
 				{
 					stopAndRemove(true, info, _buffs);
-				}
-			}
-			update = true;
-		}
-		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
-			{
-				if (!info.getSkill().isStayOnSubclassChange())
-				{
-					stopAndRemove(true, info, _triggered);
 				}
 			}
 			update = true;
@@ -839,18 +752,12 @@ public class EffectList
 	/**
 	 * Stops all the active buffs.
 	 * @param update set to true to update the effect flags and icons
-	 * @param triggered if {@code true} stops triggered skills buffs
 	 */
-	public void stopAllBuffs(boolean update, boolean triggered)
+	public void stopAllBuffs(boolean update)
 	{
 		if (hasBuffs())
 		{
 			_buffs.forEach(b -> stopAndRemove(update, b, _buffs));
-		}
-		
-		if (triggered && hasTriggered())
-		{
-			_triggered.forEach(b -> stopAndRemove(update, b, _triggered));
 		}
 		
 		// Update effect flags and icons.
@@ -933,18 +840,6 @@ public class EffectList
 		if (hasBuffs())
 		{
 			for (BuffInfo info : _buffs)
-			{
-				if (info != null)
-				{
-					action.accept(info);
-				}
-			}
-			update = true;
-		}
-		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
 			{
 				if (info != null)
 				{
@@ -1079,18 +974,6 @@ public class EffectList
 			update = true;
 		}
 		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
-			{
-				if (info.getSkill().isRemovedOnAnyActionExceptMove())
-				{
-					stopAndRemove(true, info, _triggered);
-				}
-			}
-			update = true;
-		}
-		
 		if (hasDebuffs())
 		{
 			for (BuffInfo info : _debuffs)
@@ -1148,18 +1031,6 @@ public class EffectList
 					if ((info != null) && info.getSkill().isRemovedOnDamage())
 					{
 						stopAndRemove(true, info, _buffs);
-					}
-				}
-				update = true;
-			}
-			
-			if (hasTriggered())
-			{
-				for (BuffInfo info : _triggered)
-				{
-					if ((info != null) && info.getSkill().isRemovedOnDamage())
-					{
-						stopAndRemove(true, info, _triggered);
 					}
 				}
 				update = true;
@@ -1226,7 +1097,7 @@ public class EffectList
 	 */
 	public boolean isEmpty()
 	{
-		return !hasBuffs() && !hasTriggered() && !hasDances() && !hasDebuffs() && !hasToggles();
+		return !hasBuffs() && !hasDances() && !hasDebuffs() && !hasToggles();
 	}
 	
 	/**
@@ -1237,16 +1108,6 @@ public class EffectList
 	public boolean hasBuffs()
 	{
 		return !_buffs.isEmpty();
-	}
-	
-	/**
-	 * Verify if this effect list has triggered skills.<br>
-	 * Prevents initialization.
-	 * @return {@code true} if {@link #_triggered} is not {@code null} and is not empty
-	 */
-	public boolean hasTriggered()
-	{
-		return !_triggered.isEmpty();
 	}
 	
 	/**
@@ -1301,14 +1162,6 @@ public class EffectList
 		if (hasBuffs())
 		{
 			for (BuffInfo info : _buffs)
-			{
-				update |= function.apply(info);
-			}
-		}
-		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
 			{
 				update |= function.apply(info);
 			}
@@ -1482,10 +1335,6 @@ public class EffectList
 			{
 				buffsToRemove = getDanceCount() - Config.DANCES_MAX_AMOUNT;
 			}
-			else if (skill.isTriggeredSkill())
-			{
-				buffsToRemove = getTriggeredBuffCount() - Config.TRIGGERED_BUFFS_MAX_AMOUNT;
-			}
 			else if (!skill.isHealingPotionSkill())
 			{
 				buffsToRemove = getBuffCount() - _owner.getStat().getMaxBuffCount();
@@ -1590,15 +1439,6 @@ public class EffectList
 					{
 						addIcon(info, asu, ps, psSummon, os, isSummon);
 					}
-				}
-			}
-			
-			// Triggered buffs.
-			if (hasTriggered())
-			{
-				for (BuffInfo info : _triggered)
-				{
-					addIcon(info, asu, ps, psSummon, os, isSummon);
 				}
 			}
 			
@@ -1747,27 +1587,6 @@ public class EffectList
 			}
 		}
 		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
-			{
-				if (info == null)
-				{
-					continue;
-				}
-				
-				if (info.getSkill().isRemovedOnAnyActionExceptMove())
-				{
-					_hasBuffsRemovedOnAnyAction = true;
-				}
-				
-				if (info.getSkill().isRemovedOnDamage())
-				{
-					_hasBuffsRemovedOnDamage = true;
-				}
-			}
-		}
-		
 		if (hasToggles())
 		{
 			for (BuffInfo info : _toggles)
@@ -1811,20 +1630,6 @@ public class EffectList
 		if (hasBuffs())
 		{
 			for (BuffInfo info : _buffs)
-			{
-				if (info != null)
-				{
-					for (AbstractEffect e : info.getEffects())
-					{
-						flags |= e.getEffectFlags();
-					}
-				}
-			}
-		}
-		
-		if (hasTriggered())
-		{
-			for (BuffInfo info : _triggered)
 			{
 				if (info != null)
 				{

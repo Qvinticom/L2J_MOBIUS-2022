@@ -63,7 +63,6 @@
 		</for>
 	</skill>
 	<skill id="5902" levels="1" name="NPC Trigger Target Cancel">
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />

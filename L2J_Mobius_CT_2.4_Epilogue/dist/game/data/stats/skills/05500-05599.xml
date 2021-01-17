@@ -364,7 +364,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
@@ -825,7 +824,6 @@
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="MAXIMUM_ABILITY" />
 		<set name="affectRange" val="1000" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -843,7 +841,6 @@
 	<skill id="5548" levels="4" name="Critical Spiritual Energy Attack">
 		<!-- Absorbs Soul after Critical Hit. -->
 		<table name="#magicLevel">20 40 58 70</table>
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -907,7 +904,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
@@ -975,7 +971,6 @@
 		<set name="abnormalType" val="PROTECTION" />
 		<set name="icon" val="icon.skill0755" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
@@ -1023,7 +1018,6 @@
 		<set name="abnormalType" val="WILL" />
 		<set name="icon" val="icon.skill0758" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
@@ -1060,7 +1054,6 @@
 		<set name="abnormalType" val="SEED_OF_KNIGHT" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -1089,7 +1082,6 @@
 		<set name="abnormalType" val="SEED_OF_KNIGHT" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -1119,7 +1111,6 @@
 		<set name="abnormalType" val="SEED_OF_KNIGHT" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -1148,7 +1139,6 @@
 		<set name="abnormalType" val="SEED_OF_KNIGHT" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -1177,7 +1167,6 @@
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0767" />
 		<set name="isDebuff" val="true" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLevel" val="81" />
 		<set name="mpConsume" val="43" />
@@ -1205,7 +1194,6 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1492" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="47" />
@@ -1226,7 +1214,6 @@
 		<set name="icon" val="icon.skill1493" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
@@ -1249,7 +1236,6 @@
 		<set name="icon" val="icon.skill1494" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLevel" val="83" />
 		<set name="operateType" val="A2" />
@@ -1267,7 +1253,6 @@
 		<set name="abnormalType" val="SUMMON_CONDITION" />
 		<set name="icon" val="icon.skill1497" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SERVITOR" />
@@ -1285,7 +1270,6 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1498" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SERVITOR" />
@@ -1307,7 +1291,6 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
@@ -1327,7 +1310,6 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill0110" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
@@ -1348,7 +1330,6 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
@@ -1362,7 +1343,6 @@
 	<skill id="5575" levels="1" name="Wizard Ability - Mana Steal">
 		<!-- Wizard's Mana. -->
 		<set name="icon" val="icon.skill1398" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1383,7 +1363,6 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1418" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
@@ -1395,7 +1374,6 @@
 	<skill id="5577" levels="1" name="Healer Ability - Heal">
 		<!-- Cure by Healer. -->
 		<set name="icon" val="icon.skill1011" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1415,7 +1393,6 @@
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1349" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
@@ -1725,7 +1702,6 @@
 		<table name="#magicLevel">60 62 64 66 68 70 72 74</table>
 		<set name="icon" val="icon.skill1511" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -1752,7 +1728,6 @@
 		<set name="icon" val="icon.skill1515" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />

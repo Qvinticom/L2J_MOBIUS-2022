@@ -283,7 +283,6 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="IRON_SHIELD_I" />
 		<set name="icon" val="icon.skill0527" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -300,7 +299,6 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARCHER_SPECIAL" />
 		<set name="icon" val="icon.skill0532" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -319,7 +317,6 @@
 		<set name="abnormalType" val="ARCHER_SPECIAL" />
 		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill0533" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -339,7 +336,6 @@
 		<set name="abnormalType" val="ARCHER_SPECIAL_I" />
 		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill0534" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -351,7 +347,6 @@
 		</for>
 	</skill>
 	<skill id="5429" levels="1" name="Counter Mind">
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -366,7 +361,6 @@
 		<set name="affectRange" val="300" />
 		<set name="icon" val="icon.skill0537" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="115" />
@@ -677,7 +671,6 @@
 		<set name="icon" val="icon.skill0523" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
@@ -688,7 +681,6 @@
 		</for>
 	</skill>
 	<skill id="5448" levels="1" name="Oblivion">
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -701,7 +693,6 @@
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -718,7 +709,6 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="80" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
@@ -734,7 +724,6 @@
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ALL_SPEED_DOWN" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -753,7 +742,6 @@
 		<set name="abnormalLevel" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="T_CRT_DMG_UP" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -766,7 +754,6 @@
 	<skill id="5453" levels="4" name="Mental Impoverish">
 		<table name="#magicLevel">68 70 72 74</table>
 		<table name="#power">148 153 157 162</table>
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="#magicLevel" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
@@ -1211,7 +1198,6 @@
 		<set name="effectPoint" val="1" />
 		<set name="flyRadius" val="300" />
 		<set name="flyType" val="THROW_UP" />
-		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLevel" val="86" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
