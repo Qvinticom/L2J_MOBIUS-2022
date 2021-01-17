@@ -46,11 +46,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="ReduceCancel">
-				<amount>53</amount>
+				<amount>-53</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>10</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
@@ -94,12 +94,16 @@
 				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MagicalDefence">
-				<amount>11</amount>
+				<amount>-11</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>3</amount>
+				<amount>-3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
@@ -107,7 +111,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>16</amount>
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
@@ -165,12 +169,12 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>10</amount>
+				<amount>-20</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>10</amount>
+				<amount>-20</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
@@ -180,12 +184,12 @@
 				<magicType>3</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>10</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>10</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
