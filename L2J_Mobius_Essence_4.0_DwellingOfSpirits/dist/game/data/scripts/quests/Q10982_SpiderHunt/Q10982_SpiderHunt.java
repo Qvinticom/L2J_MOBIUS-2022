@@ -90,6 +90,12 @@ public class Q10982_SpiderHunt extends Quest
 		String htmltext = null;
 		switch (event)
 		{
+			case "30002-01.html":
+			{
+				qs.startQuest();
+				htmltext = event;
+				break;
+			}
 			case "30332.html":
 			{
 				htmltext = event;
