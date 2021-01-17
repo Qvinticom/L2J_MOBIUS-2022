@@ -300,7 +300,7 @@ public class SepulcherMonsterInstance extends MonsterInstance
 	
 	private void giveCup(PlayerInstance player)
 	{
-		final String questId = "620_FourGoblets";
+		final String questId = "Q620_FourGoblets";
 		int cupId = 0;
 		final int oldBrooch = 7262;
 		
