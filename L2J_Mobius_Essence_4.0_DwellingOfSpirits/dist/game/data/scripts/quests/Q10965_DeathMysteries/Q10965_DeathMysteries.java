@@ -51,8 +51,8 @@ public class Q10965_DeathMysteries extends Quest
 	private static final ItemHolder ADVENTURERS_AGATHION_GRIFIN = new ItemHolder(91935, 1);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
-	private static final int MAX_LEVEL = 35;
-	private static final int MIN_LEVEL = 40;
+	private static final int MAX_LEVEL = 40;
+	private static final int MIN_LEVEL = 37;
 	
 	public Q10965_DeathMysteries()
 	{
