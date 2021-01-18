@@ -59,6 +59,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String REVELATION_SKILL_2_MAIN_CLASS = "RevelationSkill2";
 	public static final String REVELATION_SKILL_1_DUAL_CLASS = "DualclassRevelationSkill1";
 	public static final String REVELATION_SKILL_2_DUAL_CLASS = "DualclassRevelationSkill2";
+	public static final String LAST_PLEDGE_REPUTATION_LEVEL = "LAST_PLEDGE_REPUTATION_LEVEL";
 	public static final String FORTUNE_TELLING_VARIABLE = "FortuneTelling";
 	public static final String FORTUNE_TELLING_BLACK_CAT_VARIABLE = "FortuneTellingBlackCat";
 	public static final String DELUSION_RETURN = "DELUSION_RETURN";

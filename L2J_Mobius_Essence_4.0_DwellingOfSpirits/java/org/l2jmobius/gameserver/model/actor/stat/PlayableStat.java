@@ -25,11 +25,16 @@ import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayableExpChanged;
 import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.items.Weapon;
+import org.l2jmobius.gameserver.model.variables.PlayerVariables;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PlayableStat extends CreatureStat
 {
@@ -84,12 +89,23 @@ public class PlayableStat extends CreatureStat
 			addLevel(level - getLevel());
 		}
 		
-		if ((getLevel() > oldLevel) && getActiveChar().isPlayer())
+		int newLevel = getLevel();
+		if ((newLevel > oldLevel) && getActiveChar().isPlayer())
 		{
 			final PlayerInstance player = getActiveChar().getActingPlayer();
 			if (SkillTreeData.getInstance().hasAvailableSkills(player, player.getClassId()))
 			{
 				getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
+			}
+			
+			// Check last rewarded level - prevent reputation farming via deleveling
+			int lastPledgedLevel = player.getVariables().getInt(PlayerVariables.LAST_PLEDGE_REPUTATION_LEVEL, 0);
+			if (lastPledgedLevel < newLevel)
+			{
+				int leveledUpCount = newLevel - lastPledgedLevel;
+				addReputationToClanBasedOnLevel(player, leveledUpCount);
+				
+				player.getVariables().set(PlayerVariables.LAST_PLEDGE_REPUTATION_LEVEL, newLevel);
 			}
 		}
 		
@@ -253,5 +269,96 @@ public class PlayableStat extends CreatureStat
 	{
 		final Weapon weapon = getActiveChar().getActiveWeaponItem();
 		return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
+	}
+	
+	private void addReputationToClanBasedOnLevel(PlayerInstance player, int leveledUpCount)
+	{
+		Clan clan = player.getClan();
+		if (clan == null)
+		{
+			return;
+		}
+		
+		if (clan.getLevel() < 3) // When a character from clan level 3 or above increases its level, CRP are added
+		{
+			return;
+		}
+		
+		int reputation = 0;
+		for (int i = 0; i < leveledUpCount; i++)
+		{
+			int level = player.getLevel() - i;
+			if ((level >= 20) && (level <= 25))
+			{
+				reputation += Config.LVL_UP_20_AND_25_REP_SCORE;
+			}
+			else if ((level >= 26) && (level <= 30))
+			{
+				reputation += Config.LVL_UP_26_AND_30_REP_SCORE;
+			}
+			else if ((level >= 31) && (level <= 35))
+			{
+				reputation += Config.LVL_UP_31_AND_35_REP_SCORE;
+			}
+			else if ((level >= 36) && (level <= 40))
+			{
+				reputation += Config.LVL_UP_36_AND_40_REP_SCORE;
+			}
+			else if ((level >= 41) && (level <= 45))
+			{
+				reputation += Config.LVL_UP_41_AND_45_REP_SCORE;
+			}
+			else if ((level >= 46) && (level <= 50))
+			{
+				reputation += Config.LVL_UP_46_AND_50_REP_SCORE;
+			}
+			else if ((level >= 51) && (level <= 55))
+			{
+				reputation += Config.LVL_UP_51_AND_55_REP_SCORE;
+			}
+			else if ((level >= 56) && (level <= 60))
+			{
+				reputation += Config.LVL_UP_56_AND_60_REP_SCORE;
+			}
+			else if ((level >= 61) && (level <= 65))
+			{
+				reputation += Config.LVL_UP_61_AND_65_REP_SCORE;
+			}
+			else if ((level >= 66) && (level <= 70))
+			{
+				reputation += Config.LVL_UP_66_AND_70_REP_SCORE;
+			}
+			else if ((level >= 71) && (level <= 75))
+			{
+				reputation += Config.LVL_UP_71_AND_75_REP_SCORE;
+			}
+			else if ((level >= 76) && (level <= 80))
+			{
+				reputation += Config.LVL_UP_76_AND_80_REP_SCORE;
+			}
+			else if ((level >= 81) && (level <= 120))
+			{
+				reputation += Config.LVL_UP_81_PLUS_REP_SCORE;
+			}
+		}
+		
+		if (reputation == 0)
+		{
+			return;
+		}
+		
+		reputation = (int) Math.ceil(reputation * Config.LVL_OBTAINED_REP_SCORE_MULTIPLIER);
+		
+		clan.addReputationScore(reputation, true);
+		
+		for (ClanMember member : clan.getMembers())
+		{
+			if (member.isOnline())
+			{
+				final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION);
+				sm.addInt(reputation);
+				member.getPlayerInstance().sendPacket(sm);
+			}
+		}
 	}
 }
