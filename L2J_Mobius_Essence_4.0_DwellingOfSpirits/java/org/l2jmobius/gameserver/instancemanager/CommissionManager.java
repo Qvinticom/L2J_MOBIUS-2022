@@ -56,8 +56,9 @@ import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommi
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionRegister;
 
 /**
- * @author NosBit
+ * @author NosBit, Ren
  */
+
 public class CommissionManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CommissionManager.class.getName());
@@ -66,12 +67,21 @@ public class CommissionManager
 	private static final int ITEMS_LIMIT_PER_REQUEST = 999;
 	private static final int MAX_ITEMS_REGISTRED_PER_PLAYER = 10;
 	private static final long MIN_REGISTRATION_AND_SALE_FEE = 1000;
-	private static final double REGISTRATION_FEE_PER_DAY = 0.001;
+	private static final double REGISTRATION_FEE_PER_DAY = 0.0001;
 	private static final double SALE_FEE_PER_DAY = 0.005;
+	private static final int DURATION[] =
+	{
+		1,
+		3,
+		5,
+		7,
+		15,
+		30
+	};
 	
 	private static final String SELECT_ALL_ITEMS = "SELECT * FROM `items` WHERE `loc` = ?";
 	private static final String SELECT_ALL_COMMISSION_ITEMS = "SELECT * FROM `commission_items`";
-	private static final String INSERT_COMMISSION_ITEM = "INSERT INTO `commission_items`(`item_object_id`, `price_per_unit`, `start_time`, `duration_in_days`) VALUES (?, ?, ?, ?)";
+	private static final String INSERT_COMMISSION_ITEM = "INSERT INTO `commission_items`(`item_object_id`, `price_per_unit`, `start_time`, `duration_in_days`, `discount_in_percentage`) VALUES (?, ?, ?, ?, ?)";
 	private static final String DELETE_COMMISSION_ITEM = "DELETE FROM `commission_items` WHERE `commission_id` = ?";
 	
 	private final Map<Long, CommissionItem> _commissionItems = new ConcurrentSkipListMap<>();
@@ -106,7 +116,7 @@ public class CommissionManager
 						LOGGER.warning(getClass().getSimpleName() + ": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
 						continue;
 					}
-					final CommissionItem commissionItem = new CommissionItem(commissionId, itemInstance, rs.getLong("price_per_unit"), rs.getTimestamp("start_time").toInstant(), rs.getByte("duration_in_days"));
+					final CommissionItem commissionItem = new CommissionItem(commissionId, itemInstance, rs.getLong("price_per_unit"), rs.getTimestamp("start_time").toInstant(), rs.getByte("duration_in_days"), rs.getByte("discount_in_percentage"));
 					_commissionItems.put(commissionItem.getCommissionId(), commissionItem);
 					if (commissionItem.getEndTime().isBefore(Instant.now()))
 					{
@@ -186,9 +196,10 @@ public class CommissionManager
 	 * @param itemObjectId the item object id
 	 * @param itemCount the item count
 	 * @param pricePerUnit the price per unit
-	 * @param durationInDays the duration in days
+	 * @param durationType the duration type
+	 * @param discountInPercentage the discount type
 	 */
-	public void registerItem(PlayerInstance player, int itemObjectId, long itemCount, long pricePerUnit, byte durationInDays)
+	public void registerItem(PlayerInstance player, int itemObjectId, long itemCount, long pricePerUnit, int durationType, byte discountInPercentage)
 	{
 		if (itemCount < 1)
 		{
@@ -213,6 +224,8 @@ public class CommissionManager
 			return;
 		}
 		
+		final byte durationInDays = (byte) DURATION[durationType];
+		
 		synchronized (this)
 		{
 			//@formatter:off
@@ -223,12 +236,12 @@ public class CommissionManager
 			
 			if (playerRegisteredItems >= MAX_ITEMS_REGISTRED_PER_PLAYER)
 			{
-				player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
+				player.sendPacket(SystemMessageId.THE_MAXIMUM_NUMBER_OF_AUCTION_HOUSE_ITEMS_FOR_REGISTRATION_IS_10);
 				player.sendPacket(ExResponseCommissionRegister.FAILED);
 				return;
 			}
 			
-			final long registrationFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * REGISTRATION_FEE_PER_DAY) * durationInDays);
+			final long registrationFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * REGISTRATION_FEE_PER_DAY) * Math.min(durationInDays, 7));
 			if (!player.getInventory().reduceAdena("Commission Registration Fee", registrationFee, player, null))
 			{
 				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_REGISTER_THE_ITEM);
@@ -245,6 +258,30 @@ public class CommissionManager
 				return;
 			}
 			
+			switch (Math.max(durationType, discountInPercentage))
+			{
+				case 4:
+				{
+					player.destroyItemByItemId("Consume", 22353, 1, player, true); // 15 days
+					break;
+				}
+				case 5:
+				{
+					player.destroyItemByItemId("Consume", 22354, 1, player, true); // 30 days
+					break;
+				}
+				case 30:
+				{
+					player.destroyItemByItemId("Consume", 22351, 1, player, true); // 30% discount
+					break;
+				}
+				case 100:
+				{
+					player.destroyItemByItemId("Consume", 22352, 1, player, true); // 100% discount
+					break;
+				}
+			}
+			
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_COMMISSION_ITEM, Statement.RETURN_GENERATED_KEYS))
 			{
@@ -253,18 +290,20 @@ public class CommissionManager
 				ps.setLong(2, pricePerUnit);
 				ps.setTimestamp(3, Timestamp.from(startTime));
 				ps.setByte(4, durationInDays);
+				ps.setByte(5, discountInPercentage);
 				ps.executeUpdate();
 				try (ResultSet rs = ps.getGeneratedKeys())
 				{
 					if (rs.next())
 					{
-						final CommissionItem commissionItem = new CommissionItem(rs.getLong(1), itemInstance, pricePerUnit, startTime, durationInDays);
+						final CommissionItem commissionItem = new CommissionItem(rs.getLong(1), itemInstance, pricePerUnit, startTime, durationInDays, discountInPercentage);
 						final ScheduledFuture<?> saleEndTask = ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
 						commissionItem.setSaleEndTask(saleEndTask);
 						_commissionItems.put(commissionItem.getCommissionId(), commissionItem);
 						player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));
 						player.sendPacket(SystemMessageId.THE_ITEM_HAS_BEEN_SUCCESSFULLY_REGISTERED);
 						player.sendPacket(ExResponseCommissionRegister.SUCCEED);
+						
 					}
 				}
 			}
@@ -374,10 +413,13 @@ public class CommissionManager
 		
 		if (deleteItemFromDB(commissionId))
 		{
-			final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * SALE_FEE_PER_DAY) * commissionItem.getDurationInDays());
+			final float discountFee = (float) commissionItem.getDiscountInPercentage() / 100;
+			
+			final long saleFee = (long) Math.max(MIN_REGISTRATION_AND_SALE_FEE, (totalPrice * SALE_FEE_PER_DAY) * Math.min(commissionItem.getDurationInDays(), 7));
+			final long addDiscount = (long) (saleFee * discountFee);
 			final Message mail = new Message(itemInstance.getOwnerId(), itemInstance, MailType.COMMISSION_ITEM_SOLD);
 			final Mail attachement = mail.createAttachments();
-			attachement.addItem("Commission Item Sold", Inventory.ADENA_ID, totalPrice - saleFee, player, null);
+			attachement.addItem("Commission Item Sold", Inventory.ADENA_ID, (totalPrice - saleFee) + addDiscount, player, null);
 			MailManager.getInstance().sendMessage(mail);
 			
 			player.sendPacket(new ExResponseCommissionBuyItem(commissionItem));

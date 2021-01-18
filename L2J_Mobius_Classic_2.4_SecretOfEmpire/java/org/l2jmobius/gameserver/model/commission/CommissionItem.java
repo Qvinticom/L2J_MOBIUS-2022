@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
- * @author NosBit
+ * @author NosBit, Ren
  */
 public class CommissionItem
 {
@@ -34,9 +34,10 @@ public class CommissionItem
 	private final long _pricePerUnit;
 	private final Instant _startTime;
 	private final byte _durationInDays;
+	private final byte _discountInPercentage;
 	private ScheduledFuture<?> _saleEndTask;
 	
-	public CommissionItem(long commissionId, ItemInstance itemInstance, long pricePerUnit, Instant startTime, byte durationInDays)
+	public CommissionItem(long commissionId, ItemInstance itemInstance, long pricePerUnit, Instant startTime, byte durationInDays, byte discountInPercentage)
 	{
 		_commissionId = commissionId;
 		_itemInstance = itemInstance;
@@ -44,6 +45,7 @@ public class CommissionItem
 		_pricePerUnit = pricePerUnit;
 		_startTime = startTime;
 		_durationInDays = durationInDays;
+		_discountInPercentage = discountInPercentage;
 	}
 	
 	/**
@@ -98,6 +100,15 @@ public class CommissionItem
 	public byte getDurationInDays()
 	{
 		return _durationInDays;
+	}
+	
+	/**
+	 * Gets the discount in percentage
+	 * @return the _discountInPercentage
+	 */
+	public byte getDiscountInPercentage()
+	{
+		return _discountInPercentage;
 	}
 	
 	/**

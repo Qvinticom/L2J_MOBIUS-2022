@@ -24,14 +24,15 @@ import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 
 /**
- * @author NosBit
+ * @author NosBit, Ren
  */
 public class RequestCommissionRegister implements IClientIncomingPacket
 {
 	private int _itemObjectId;
 	private long _pricePerUnit;
 	private long _itemCount;
-	private int _durationType; // -1 = None, 0 = 1 Day, 1 = 3 Days, 2 = 5 Days, 3 = 7 Days
+	private int _durationType; // -1 = None, 0 = 1 Day, 1 = 3 Days, 2 = 5 Days, 3 = 7 Days, 4 = 15 Days, 5 = 30 Days;
+	private int _feeDiscountType; // 0 = none, 1 = 30% discount, 2 = 100% discount;
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -41,6 +42,8 @@ public class RequestCommissionRegister implements IClientIncomingPacket
 		_pricePerUnit = packet.readQ();
 		_itemCount = packet.readQ();
 		_durationType = packet.readD();
+		_feeDiscountType = packet.readH();
+		// packet.readH(); // Unknown IDS;
 		// packet.readD(); // Unknown
 		// packet.readD(); // Unknown
 		return true;
@@ -55,9 +58,39 @@ public class RequestCommissionRegister implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_durationType < 0) || (_durationType > 3))
+		if ((_feeDiscountType < 0) || (_feeDiscountType > 2))
+		{
+			LOGGER.warning("Player " + player + " sent incorrect commission discount type: " + _feeDiscountType + ".");
+			return;
+		}
+		
+		if ((_feeDiscountType == 1) && (player.getInventory().getItemByItemId(22351) == null))
+		{
+			LOGGER.warning("Player " + player + ": Auction House Fee 30% Voucher no found in her inventory.");
+			return;
+		}
+		else if ((_feeDiscountType == 2) && (player.getInventory().getItemByItemId(22352) == null))
+		{
+			LOGGER.warning("Player " + player + ": Auction House Fee 100% Voucher no found in her inventory.");
+			return;
+		}
+		
+		if ((_durationType < 0) || (_durationType > 5))
 		{
 			LOGGER.warning("Player " + player + " sent incorrect commission duration type: " + _durationType + ".");
+			return;
+		}
+		
+		if ((_durationType == 4) && (player.getInventory().getItemByItemId(22353) == null))
+		{
+			
+			LOGGER.warning("Player " + player + ": Auction House (15-day) ExtensiΓ³n no found in her inventory.");
+			return;
+			
+		}
+		else if ((_durationType == 5) && (player.getInventory().getItemByItemId(22354) == null))
+		{
+			LOGGER.warning("Player " + player + ": Auction House (30-day) ExtensiΓ³n no found in her inventory.");
 			return;
 		}
 		
@@ -67,6 +100,6 @@ public class RequestCommissionRegister implements IClientIncomingPacket
 			return;
 		}
 		
-		CommissionManager.getInstance().registerItem(player, _itemObjectId, _itemCount, _pricePerUnit, (byte) ((_durationType * 2) + 1));
+		CommissionManager.getInstance().registerItem(player, _itemObjectId, _itemCount, _pricePerUnit, _durationType, (byte) Math.min((_feeDiscountType * 30) * _feeDiscountType, 100));
 	}
 }
