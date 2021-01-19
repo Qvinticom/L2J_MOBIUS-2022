@@ -585,8 +585,8 @@ public class StoryOfTauti extends AbstractInstance
 					}
 					if (world.isStatus(10) && (archangel.getCurrentHpPercent() < 30))
 					{
-						final Npc deton = world.getNpc(DETON);
 						world.spawnGroup("last_deton");
+						final Npc deton = world.getNpc(DETON);
 						deton.setRunning();
 						deton.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, DETON_MOVE_3);
 						startQuestTimer("msg_12", 6000, deton, null);
