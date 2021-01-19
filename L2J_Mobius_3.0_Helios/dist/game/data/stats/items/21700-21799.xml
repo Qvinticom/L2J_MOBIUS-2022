@@ -4,7 +4,6 @@
 		<!-- Wrapped Pack containing Power Shirt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -21,7 +20,6 @@
 		<!-- Wrapped Pack containing Power Shirt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1037,7 +1035,6 @@
 		<set name="material" val="COTTON" />
 		<set name="weight" val="10" />
 		<set name="price" val="1800" />
-		<set name="immediate_effect" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1052,7 +1049,6 @@
 		<!-- Treasure sack containing the treasure of beginner adventurers. Open it to obtain one random C or D-grade Weapon. -->
 		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="COTTON" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1065,7 +1061,6 @@
 		<!-- Treasure sack containing the treasure of experienced adventurers. Open it to obtain one random B, A or S-grade Weapon (Dynasty excluded). -->
 		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="COTTON" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1078,7 +1073,6 @@
 		<!-- Treasure sack containing the treasure of great adventurers. Open it to obtain one random Dynasty, Icarus or Vesper Weapon. -->
 		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="COTTON" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

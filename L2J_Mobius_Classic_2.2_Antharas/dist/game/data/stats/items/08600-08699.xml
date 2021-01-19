@@ -3,7 +3,6 @@
 	<item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" type="EtcItem">
 		<!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i00" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="commissionItemType" val="SPELLBOOK" />
@@ -17,7 +16,6 @@
 	<item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)" type="EtcItem">
 		<!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i01" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -31,7 +29,6 @@
 	<item id="8620" name="Ancient Book: Divine Inspiration (Manuscript)" type="EtcItem">
 		<!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i02" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="commissionItemType" val="SPELLBOOK" />
@@ -45,7 +42,6 @@
 	<item id="8621" name="Ancient Book: Divine Inspiration (Original Version)" type="EtcItem">
 		<!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i03" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="commissionItemType" val="SPELLBOOK" />
