@@ -881,8 +881,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -893,8 +891,6 @@
 			</effect>						
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>
@@ -905,8 +901,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -917,8 +911,6 @@
 			</effect>						
 			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>
@@ -997,8 +989,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="1" toLevel="1">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1007,8 +997,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="2" toLevel="2">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1017,8 +1005,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="3" toLevel="3">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>15</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1027,8 +1013,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="4" toLevel="4">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>

@@ -1273,8 +1273,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Stun -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>15</chance>
 				<targetType>TARGET</targetType>
@@ -1640,8 +1638,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Seed of Revenge -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>
@@ -1706,8 +1702,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Spirit of Phoenix -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>
@@ -1780,8 +1774,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Eva's Will -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>
@@ -1846,8 +1838,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Pain of Shillien -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>

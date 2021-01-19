@@ -321,12 +321,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
 				<skillId>1760</skillId> <!-- Armor Destruction -->
 				<skillLevel>2</skillLevel>
 			</effect>
@@ -377,12 +372,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
 				<skillId>1760</skillId> <!-- Armor Destruction -->
 				<skillLevel>2</skillLevel>
 			</effect>
@@ -428,12 +418,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
 				<skillId>1760</skillId> <!-- Armor Destruction -->
 				<skillLevel>2</skillLevel>
 			</effect>
@@ -710,8 +695,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -760,8 +743,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1344,8 +1325,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Overheat -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>
@@ -1378,8 +1357,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Coolant Leak -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>

@@ -50,9 +50,9 @@ public class TriggerSkillByDeathBlow extends AbstractEffect
 	public TriggerSkillByDeathBlow(StatSet params)
 	{
 		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
-		_maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
+		_maxAttackerLevel = params.getInt("maxAttackerLevel", Integer.MAX_VALUE);
 		_chance = params.getInt("chance", 100);
-		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
+		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.Creature);
 	}

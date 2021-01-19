@@ -1307,8 +1307,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Critical Damage Increase -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>

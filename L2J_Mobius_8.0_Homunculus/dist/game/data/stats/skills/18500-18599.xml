@@ -715,30 +715,13 @@
 				</amount>
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="10">
-				<!-- Greater Garnet - Cancel Stun -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>100</chance>
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>18721</skillId> <!-- Greater Garnet - Cancel Stun/ Silence -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="11" toLevel="20">
-				<!-- Superior Garnet - Cancel Stun -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>100</chance>
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>18721</skillId> <!-- Superior Garnet - Cancel Stun/ Silence -->
 				<skillLevel>2</skillLevel>
 			</effect>

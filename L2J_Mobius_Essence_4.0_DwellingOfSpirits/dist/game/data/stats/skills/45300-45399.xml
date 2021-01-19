@@ -1575,8 +1575,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -1644,8 +1642,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -1713,8 +1709,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -1906,8 +1900,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
@@ -2894,8 +2886,6 @@
 		<effects>
 		    <effect name="TriggerSkillByAttack">
 			    <attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>SELF</targetType>

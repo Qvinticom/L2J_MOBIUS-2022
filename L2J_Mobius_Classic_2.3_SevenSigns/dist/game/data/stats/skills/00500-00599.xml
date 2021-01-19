@@ -1615,8 +1615,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Iron Shield -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -1797,8 +1795,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Chance -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -1817,8 +1813,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Rapid Shot -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>100</minDamage>
@@ -1837,8 +1831,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Dash -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>100</minDamage>
@@ -1857,8 +1849,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Mind -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -3157,8 +3147,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
@@ -3170,8 +3158,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>

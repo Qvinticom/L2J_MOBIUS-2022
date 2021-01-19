@@ -1014,8 +1014,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Bleed -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>

@@ -863,16 +863,10 @@
 				<dispel>IMPROVE_VAMPIRIC_HASTE,-1;ATTACK_TIME_DOWN,-1;CASTING_TIME_DOWN,-1</dispel>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<!-- Flame Armor -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
 				<skillId>5567</skillId> <!-- Flaming Armor -->
-				<skillLevel>1</skillLevel>
-				<minDamage>1</minDamage>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;CASTING_TIME_DOWN</slot>
@@ -1519,19 +1513,15 @@
 				</cubicLvl>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<!-- Fairy Blessing -->
 				<minDamage>10</minDamage>
+				<chance>60</chance>
+				<attackerType>Playable</attackerType>
 				<skillId>11827</skillId> <!-- Fairy Blessing -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">3</value>
 					<value level="3">5</value>
 				</skillLevel>
-				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<targetType>SELF</targetType>
-				<chance>60</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -2271,15 +2261,9 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Critical Damage Increase -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
-				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
 				<skillId>11569</skillId> <!-- Critical Strike -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="MaxMp">
 				<amount>20</amount>
@@ -2670,15 +2654,9 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Critical Damage Increase -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
-				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
 				<skillId>11569</skillId> <!-- Critical Strike -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="MagicCriticalRate">
 				<amount>20</amount>
@@ -2724,15 +2702,9 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Critical Damage Increase -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
-				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
 				<skillId>11569</skillId> <!-- Critical Strike -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="MagicCriticalRate">
 				<amount>20</amount>

@@ -301,8 +301,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="20">
 				<!-- Recover MP -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>ENEMY</targetType>
@@ -2246,8 +2244,6 @@
 			<effect name="TriggerSkillBySkill">
 				<isCritical>true</isCritical>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>

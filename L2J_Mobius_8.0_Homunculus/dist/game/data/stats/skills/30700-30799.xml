@@ -496,36 +496,21 @@
 				</amount>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Focus Force -->
-				<isCritical>false</isCritical>
+				<chance>25</chance>
 				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
 				</skillLevel>
-				<allowWeapons>ALL</allowWeapons>
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
-				<chance>25</chance>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Focus Force -->
 				<isCritical>true</isCritical>
+				<chance>30</chance>
 				<skillId>6814</skillId> <!-- Focus Force -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
 				</skillLevel>
-				<allowWeapons>ALL</allowWeapons>
-				<minDamage>1</minDamage>
-				<chance>30</chance>
-				<targetType>SELF</targetType>
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1152,17 +1137,9 @@
 				<stat>STR</stat>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Physical Pose -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>3</chance>
-				<targetType>SELF</targetType>
-				<isCritical>false</isCritical>
 				<allowWeapons>DUAL,DUALBLUNT</allowWeapons>
 				<skillId>5559</skillId> <!-- Physical Pose -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -2456,15 +2433,8 @@
 			<effect name="BlockControl" />
 			<effect name="Fear" />
 			<effect name="TriggerSkillByDamage">
-				<!-- Cancel Fear -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>100</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
 				<skillId>1703</skillId> <!-- Cancel Fear -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="Speed">
 				<amount>-12</amount>

@@ -1182,8 +1182,6 @@
 		<magicLevel>99</magicLevel>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance> <!-- Chance appears almost 100% -->
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>

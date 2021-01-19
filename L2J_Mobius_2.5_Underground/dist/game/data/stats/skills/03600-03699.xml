@@ -591,8 +591,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Power of Apella -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -663,8 +661,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Power of Apella -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -735,8 +731,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Power of Apella -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -2059,8 +2053,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- PvP Weapon - CP Drain -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>50</minDamage>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
@@ -2081,8 +2073,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- PvP Weapon - Cancel -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>50</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -2103,8 +2093,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- PvP Weapon - Ignore Shield Defense -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>50</minDamage>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>
@@ -2125,8 +2113,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- PvP Weapon - Attack Chance -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>50</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -2147,8 +2133,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Weapon - Casting -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -2167,8 +2151,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- PvP Weapon - Rapid Fire -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>50</minDamage>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
@@ -2189,8 +2171,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- PvP Weapon - Decrease Range -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>50</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -2211,8 +2191,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- PvP Weapon - Decrease Resist -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>50</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -2233,8 +2211,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Shield - Reflect Damage -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>40</minDamage>
@@ -2253,8 +2229,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Damage Down -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -2273,8 +2247,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Critical Down -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -2311,8 +2283,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Speed Down -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>50</minDamage>
@@ -2331,8 +2301,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Mirage -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>50</minDamage>
@@ -2403,8 +2371,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Talisman - Increase Force -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>20</minDamage>

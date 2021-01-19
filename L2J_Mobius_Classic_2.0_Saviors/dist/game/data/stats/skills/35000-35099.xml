@@ -882,8 +882,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>111</maxAttackerLevel>
 				<skillId>35027</skillId> <!-- Border Power - Lv. 1 -->
 				<skillLevel>
 					<value level="1">0</value>

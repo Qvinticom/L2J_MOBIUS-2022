@@ -1357,77 +1357,41 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="7" toLevel="10">
-				<!-- Elmoreden Spirit Shot -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="14">
-				<!-- Elmoreden Spirit Shot -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>40</chance>
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="15" toLevel="18">
-				<!-- Elmoreden Spirit Shot -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="19" toLevel="20">
-				<!-- Elmoreden Spirit Shot -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Wrath of Elmoreden -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27887</skillId> <!-- Wrath of Elmoreden -->
 				<skillLevel>
 					<value level="1">0</value>
@@ -1453,17 +1417,10 @@
 				</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Recovery of Elmoreden -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>false</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27894</skillId> <!-- Recovery of Elmoreden -->
 				<skillLevel>
 					<value level="1">0</value>
@@ -1489,19 +1446,9 @@
 				</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="20" toLevel="20">
-				<!-- Power Bomber of Elmoreden -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27888</skillId> <!-- Power Bomber of Elmoreden -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1595,17 +1542,9 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Wrath of Aden -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27889</skillId> <!-- Wrath of Aden -->
 				<skillLevel>
 					<value level="1">0</value>
@@ -1631,19 +1570,10 @@
 				</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack"> <!-- Guess -->
-				<!-- Spirit of Aden -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance> <!-- Guess -->
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27883</skillId> <!-- Spirit of Aden -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1762,17 +1692,9 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Wrath of Elmore -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27890</skillId> <!-- Wrath of Elmore -->
 				<skillLevel>
 					<value level="1">0</value>
@@ -1798,19 +1720,10 @@
 				</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack"> <!-- Guess -->
-				<!-- Spirit of Elmore -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance> <!-- Guess -->
-				<targetType>SELF</targetType>
 				<allowSkillAttack>false</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27884</skillId> <!-- Spirit of Elmore -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1997,17 +1910,9 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<!-- Barrier of Ferios -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27891</skillId> <!-- Barrier of Ferios -->
 				<skillLevel>
 					<value level="1">0</value>
@@ -2033,17 +1938,9 @@
 				</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<!-- Defense of Ferios -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27892</skillId> <!-- Defense of Ferios -->
 				<skillLevel>
 					<value level="1">0</value>
@@ -2069,17 +1966,7 @@
 				</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Spirit of Ferios -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>30</chance>
-				<targetType>SELF</targetType>
-				<allowSkillAttack>false</allowSkillAttack>
-				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>27893</skillId> <!-- Spirit of Ferios -->
 				<skillLevel>
 					<value level="1">0</value>

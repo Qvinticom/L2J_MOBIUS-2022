@@ -1071,8 +1071,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Warrior Ability - Haste -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1094,8 +1092,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Knight Ability - Defense -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1115,8 +1111,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Log Ability - Critical Chance -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1138,8 +1132,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Wizard Ability - Mana Steal -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1161,8 +1153,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Enchanter Ability - Barrier -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>

@@ -787,8 +787,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="4" toLevel="10">
 				<!-- Fatal Critical Strike -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance> <!-- TODO: Chance increase with skill level -->
 				<targetType>SELF</targetType>
@@ -799,8 +797,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="4" toLevel="10">
 				<!-- Fatal Critical Strike -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance> <!-- TODO: Chance increase with skill level -->
 				<targetType>SELF</targetType>

@@ -1813,15 +1813,9 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Counter Critical -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
-				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
 				<skillId>6059</skillId> <!-- Counter Critical -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-30</amount>
@@ -3501,15 +3495,9 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Counter Critical -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
-				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
 				<skillId>6059</skillId> <!-- Counter Critical -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-30</amount>

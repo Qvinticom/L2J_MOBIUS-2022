@@ -2762,8 +2762,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
@@ -2775,8 +2773,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>

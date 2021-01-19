@@ -1506,30 +1506,15 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- La Vie En Rose's Blessing -->
 				<isCritical>true</isCritical>
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
-				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>35628</skillId> <!-- La Vie En Rose s Blessing -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- La Vie En Rose's Blessing -->
-				<isCritical>false</isCritical>
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
-				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>35628</skillId> <!-- La Vie En Rose s Blessing -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByMagicType">
 				<magicTypes>0;1</magicTypes>
@@ -1790,28 +1775,15 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- La Vie En Rose's Blessing -->
 				<isCritical>true</isCritical>
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
-				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>35628</skillId> <!-- La Vie En Rose s Blessing -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- La Vie En Rose's Blessing -->
-				<isCritical>false</isCritical>
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
-				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>35628</skillId> <!-- La Vie En Rose s Blessing -->
 				<skillLevel>2</skillLevel>
 			</effect>

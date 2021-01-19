@@ -1164,8 +1164,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Legendary Cloak - Silence -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
@@ -1214,8 +1212,6 @@
 			<effect name="TriggerSkillByDamage" fromLevel="1" toLevel="1">
 				<!-- Legendary Cloak - Barrier -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1225,8 +1221,6 @@
 			<effect name="TriggerSkillByDamage" fromLevel="2" toLevel="2">
 				<!-- Legendary Cloak - Barrier -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1236,8 +1230,6 @@
 			<effect name="TriggerSkillByDamage" fromLevel="3" toLevel="3">
 				<!-- Legendary Cloak - Barrier -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1345,8 +1337,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Legendary Cloak - Invincibility -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<hpPercent>30</hpPercent>

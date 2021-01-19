@@ -497,8 +497,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Light Flow -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>100</minDamage>
@@ -669,8 +667,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Lightning Barrier -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
@@ -1612,8 +1608,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Steal Mana -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<minDamage>
 					<value level="1">41</value>
 					<value level="2">51</value>
@@ -2196,8 +2190,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Bless the Blood -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>60</chance>
 				<targetType>SELF</targetType>
 				<minDamage>60</minDamage>
@@ -2804,8 +2796,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Counter Critical -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
@@ -2830,8 +2820,6 @@
 		<effects>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>5</chance>
 				<targetType>MY_PARTY</targetType>
@@ -2842,8 +2830,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>MY_PARTY</targetType>
@@ -2854,8 +2840,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
@@ -3902,8 +3886,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Penetration Attack -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>

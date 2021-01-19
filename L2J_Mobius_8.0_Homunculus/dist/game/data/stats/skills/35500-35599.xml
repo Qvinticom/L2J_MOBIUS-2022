@@ -448,26 +448,15 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="11">
-				<!-- Kaliel's Protection -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
 				<skillId>30818</skillId> <!-- Kaliel's Protection -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="11">
 				<!-- Kaliel's Protection -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
 				<skillId>30818</skillId> <!-- Kaliel's Protection -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TalismanSlot">
 				<slots>6</slots>

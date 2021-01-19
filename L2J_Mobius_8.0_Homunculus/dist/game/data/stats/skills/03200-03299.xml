@@ -292,8 +292,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Heal -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -334,8 +332,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Blessed Body -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -376,8 +372,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Prayer -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -418,8 +412,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Recharge -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -460,8 +452,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Blessed Soul -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -507,8 +497,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Mana Gain -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -554,8 +542,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Ritual -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -596,8 +582,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Cheer -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -643,8 +627,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Might -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -695,8 +677,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Empower -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -742,8 +722,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Duel Might -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -789,8 +767,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Shield -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -841,8 +817,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Magic Barrier -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -888,8 +862,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Duel Weakness -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -935,8 +907,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Agility -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -987,8 +957,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Guidance -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1034,8 +1002,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Focus -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1076,8 +1042,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Wild Magic -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1123,8 +1087,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Charm -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>1</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1175,8 +1137,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Slow -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1227,8 +1187,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Winter -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1274,8 +1232,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Stun -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1316,8 +1272,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Hold -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1358,8 +1312,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Sleep -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1400,8 +1352,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Paralyze -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1442,8 +1392,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Medusa -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1484,8 +1432,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Fear -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1531,8 +1477,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Poison -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1583,8 +1527,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Bleed -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1630,8 +1572,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Silence -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -1672,8 +1612,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Doom -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>4</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>

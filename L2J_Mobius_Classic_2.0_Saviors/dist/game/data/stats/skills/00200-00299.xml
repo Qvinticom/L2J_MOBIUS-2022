@@ -67,8 +67,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="48">
 				<!-- Blunt Mastery -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>SELF</targetType>
@@ -323,8 +321,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="48">
 				<!-- Dagger Mastery -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>33</chance>
 				<targetType>SELF</targetType>

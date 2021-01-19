@@ -1416,8 +1416,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="7" toLevel="10">
 				<!-- Elmoreden Spirit Shot -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>
@@ -1431,8 +1429,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="14">
 				<!-- Elmoreden Spirit Shot -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>40</chance>
 				<targetType>ENEMY</targetType>
@@ -1446,8 +1442,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="15" toLevel="18">
 				<!-- Elmoreden Spirit Shot -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>ENEMY</targetType>
@@ -1461,8 +1455,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="19" toLevel="20">
 				<!-- Elmoreden Spirit Shot -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>ENEMY</targetType>
@@ -1476,8 +1468,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Wrath of Elmoreden -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>ENEMY</targetType>
@@ -1512,8 +1502,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Recovery of Elmoreden -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
@@ -1548,8 +1536,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="20" toLevel="20">
 				<!-- Power Bomber of Elmoreden -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
@@ -1654,8 +1640,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Wrath of Aden -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
@@ -1690,8 +1674,6 @@
 			<effect name="TriggerSkillByAttack"> <!-- Guess -->
 				<!-- Spirit of Aden -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance> <!-- Guess -->
 				<targetType>SELF</targetType>
@@ -1821,8 +1803,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Wrath of Elmore -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
@@ -1857,8 +1837,6 @@
 			<effect name="TriggerSkillByAttack"> <!-- Guess -->
 				<!-- Spirit of Elmore -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance> <!-- Guess -->
 				<targetType>SELF</targetType>
@@ -2056,8 +2034,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Barrier of Ferios -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
@@ -2092,8 +2068,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Defense of Ferios -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
@@ -2128,8 +2102,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Spirit of Ferios -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>

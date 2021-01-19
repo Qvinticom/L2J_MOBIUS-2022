@@ -971,10 +971,6 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>
 					<value level="1">2</value>
 					<value level="2">2</value>
@@ -986,16 +982,9 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>46715</skillId> <!-- Pa'agrio - Reliable Hit -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>
 					<value level="1">1</value>
 					<value level="2">1</value>
@@ -1007,10 +996,7 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>false</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>46715</skillId> <!-- Pa'agrio - Reliable Hit -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1148,10 +1134,6 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>
 					<value level="1">2</value>
 					<value level="2">2</value>
@@ -1163,16 +1145,9 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>46797</skillId> <!-- Sayha - Restrain Physical and Magic -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>
 					<value level="1">1</value>
 					<value level="2">1</value>
@@ -1184,10 +1159,7 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>false</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>46797</skillId> <!-- Sayha - Restrain Physical and Magic -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1197,10 +1169,6 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>
 					<value level="1">2</value>
 					<value level="2">2</value>
@@ -1212,16 +1180,9 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>46798</skillId> <!-- Maphr - Yoke -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>
 					<value level="1">1</value>
 					<value level="2">1</value>
@@ -1233,10 +1194,7 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>false</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<isCritical>false</isCritical>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>46798</skillId> <!-- Maphr - Yoke -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>

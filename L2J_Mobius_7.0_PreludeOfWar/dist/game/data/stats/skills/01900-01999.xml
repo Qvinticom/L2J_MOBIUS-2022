@@ -373,7 +373,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Undying Will -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1683,8 +1682,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Dual - MP Drain -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
@@ -1698,8 +1695,6 @@
 				<skillId>1995</skillId> <!-- Dual - MP Drain -->
 				<skillLevel>1</skillLevel>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
@@ -1816,8 +1811,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Dual - Berserker's Rage -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>4</chance>
 				<targetType>SELF</targetType>
@@ -1829,8 +1822,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Dual - Berserker's Rage -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1927,8 +1918,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Dual - Light of Protection -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<skillId>1979</skillId> <!-- Dual Certification - Light of Protection -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1</minDamage>
@@ -1973,8 +1962,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Dual - Light of Blessing -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<skillId>1981</skillId> <!-- Dual - Light of Blessing -->
 				<skillLevel>1</skillLevel>
 				<minDamage>1000</minDamage>

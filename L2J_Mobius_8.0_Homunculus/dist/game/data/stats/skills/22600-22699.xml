@@ -2761,18 +2761,10 @@
 		</passiveConditions>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- 5% Chance of becoming invincible for 5 sec. -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>5</chance>
-				<targetType>SELF</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>true</allowNormalAttack>
-				<allowWeapons>ALL</allowWeapons>
 				<skillId>22703</skillId> <!-- Flynt's Sealed Rune of Will_Trigger -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="StatUp">
 				<amount>7</amount>

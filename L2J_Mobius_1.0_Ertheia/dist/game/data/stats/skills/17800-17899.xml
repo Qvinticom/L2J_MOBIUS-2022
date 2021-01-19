@@ -667,8 +667,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="5">
 				<!-- Aquamarine -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>100</minDamage>
 				<chance>
 					<value level="1">1</value>

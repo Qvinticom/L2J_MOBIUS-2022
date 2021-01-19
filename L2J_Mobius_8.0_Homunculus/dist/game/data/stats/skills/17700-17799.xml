@@ -136,46 +136,24 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="10">
-				<!-- Greater Obsidian - Cancel Target -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>100</chance>
 				<targetType>ENEMY</targetType>
-				<minDamage>1</minDamage>
 				<skillId>18720</skillId> <!-- Greater Obsidian - Cancel Target -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="10">
-				<!-- Greater Obsidian - Cancel Target -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>100</chance>
 				<targetType>ENEMY</targetType>
-				<minDamage>1</minDamage>
 				<skillId>18720</skillId> <!-- Greater Obsidian - Cancel Target -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByDamage" fromLevel="11" toLevel="20">
-				<!-- Greater Obsidian - Cancel Target -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>100</chance>
 				<targetType>ENEMY</targetType>
-				<minDamage>1</minDamage>
 				<skillId>18720</skillId> <!-- Greater Obsidian - Cancel Target -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="20">
-				<!-- Greater Obsidian - Cancel Target -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>100</chance>
 				<targetType>ENEMY</targetType>
-				<minDamage>1</minDamage>
 				<skillId>18720</skillId> <!-- Superior Obsidian - Cancel Target -->
 				<skillLevel>2</skillLevel>
 			</effect>

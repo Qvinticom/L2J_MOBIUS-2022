@@ -1305,15 +1305,9 @@
 		<affectObject>CLAN</affectObject>
 		<effects>
 			<effect name="TriggerSkillByDamage">
-				<!-- Critical Damage Increase -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
-				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
 				<skillId>11569</skillId> <!-- Critical Strike -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>MULTI_BUFF;COUNTER_CRITICAL;CRITICAL_PROB_UP;CRITICAL_DMG_UP;MAGIC_CRITICAL_UP;IMPROVE_HIT_DEFENCE_CRT_RATE_UP;IMPROVE_CRT_RATE_DMG_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;MAX_BREATH_UP;HOLY_ATTACK;AVOID_UP;DECREASE_WEIGHT_PENALTY;RESIST_HOLY_UNHOLY</dispel>

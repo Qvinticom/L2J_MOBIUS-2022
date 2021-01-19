@@ -53,8 +53,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Physical Pose -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>7</chance>
 				<targetType>SELF</targetType>
@@ -1570,8 +1568,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Critical Damage Increase -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
@@ -2186,8 +2182,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">0</value>
 					<value level="2">99</value>
@@ -2893,8 +2887,6 @@
 				<skillId>11556</skillId> <!-- Cancel Transform -->
 				<skillLevel>1</skillLevel>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<chance>100</chance>
 			</effect>
@@ -3688,8 +3680,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Superior Mana Steal -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>100</minDamage>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
@@ -4207,8 +4197,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
@@ -4219,8 +4207,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
@@ -4657,8 +4643,6 @@
 				<skillId>11556</skillId> <!-- Cancel Transform -->
 				<skillLevel>1</skillLevel>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<chance>100</chance>
 			</effect>
@@ -5208,8 +5192,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Critical Damage Increase -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>

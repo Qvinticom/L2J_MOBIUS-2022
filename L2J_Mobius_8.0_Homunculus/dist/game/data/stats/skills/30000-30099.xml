@@ -891,32 +891,15 @@
 				<targetType>SELF</targetType>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Cancel Shadow Move -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>100</chance>
-				<targetType>SELF</targetType>
 				<allowNormalAttack>true</allowNormalAttack>
 				<allowSkillAttack>true</allowSkillAttack>
 				<isCritical>true</isCritical>
 				<skillId>14839</skillId> <!-- Cancel Hide -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Cancel Shadow Move -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>100</chance>
-				<targetType>SELF</targetType>
 				<allowNormalAttack>true</allowNormalAttack>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillId>14839</skillId> <!-- Cancel Hide -->
-				<skillLevel>1</skillLevel>
-				<isCritical>false</isCritical>
 			</effect>
 		</effects>
 		<endEffects>

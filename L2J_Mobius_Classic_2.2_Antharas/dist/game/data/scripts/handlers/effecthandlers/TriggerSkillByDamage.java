@@ -52,7 +52,7 @@ public class TriggerSkillByDamage extends AbstractEffect
 	public TriggerSkillByDamage(StatSet params)
 	{
 		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
-		_maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
+		_maxAttackerLevel = params.getInt("maxAttackerLevel", Integer.MAX_VALUE);
 		_minDamage = params.getInt("minDamage", 1);
 		_chance = params.getInt("chance", 100);
 		_hpPercent = params.getInt("hpPercent", 100);

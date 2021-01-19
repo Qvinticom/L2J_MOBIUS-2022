@@ -78,8 +78,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="53">
 				<!-- Blunt Mastery -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>50</chance>
 				<targetType>SELF</targetType>
@@ -716,8 +714,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="59">
 				<!-- Slow -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
@@ -729,8 +725,6 @@
 			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="59">
 				<!-- Slow -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>

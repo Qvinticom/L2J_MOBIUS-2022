@@ -334,8 +334,6 @@
 				<skillId>11556</skillId> <!-- Cancel Transform -->
 				<skillLevel>1</skillLevel>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<chance>100</chance>
 			</effect>
@@ -1341,8 +1339,6 @@
 				<skillId>11556</skillId> <!-- Cancel Transform -->
 				<skillLevel>1</skillLevel>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<chance>100</chance>
 			</effect>
@@ -1700,8 +1696,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Critical Damage Increase -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>300</minDamage>
 				<chance>80</chance>
 				<targetType>SELF</targetType>

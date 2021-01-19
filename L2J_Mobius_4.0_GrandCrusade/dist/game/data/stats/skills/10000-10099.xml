@@ -386,8 +386,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -3748,8 +3746,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
@@ -3952,8 +3948,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
@@ -4132,8 +4126,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Vampirism -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillId>10070</skillId> <!-- Vampirism -->
 				<skillLevel>
@@ -4194,8 +4186,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
@@ -4429,8 +4419,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>

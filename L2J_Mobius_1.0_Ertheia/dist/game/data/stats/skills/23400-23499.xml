@@ -865,8 +865,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Flame Armor -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
@@ -1529,8 +1527,6 @@
 					<value level="3">5</value>
 				</skillLevel>
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<chance>60</chance>
 			</effect>
@@ -2274,8 +2270,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Critical Damage Increase -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
@@ -2648,8 +2642,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Critical Damage Increase -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
@@ -2735,8 +2727,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Critical Damage Increase -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>

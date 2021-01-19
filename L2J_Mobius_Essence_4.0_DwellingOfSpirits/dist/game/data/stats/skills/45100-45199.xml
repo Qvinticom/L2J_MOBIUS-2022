@@ -3246,8 +3246,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="5">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>80</chance>
 				<targetType>ENEMY</targetType>
@@ -3258,8 +3256,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="6" toLevel="8">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>80</chance>
 				<targetType>ENEMY</targetType>
@@ -3270,8 +3266,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="9">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>80</chance>
 				<targetType>ENEMY</targetType>
@@ -3616,8 +3610,6 @@
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>30</chance>
@@ -3628,8 +3620,6 @@
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>15</chance>

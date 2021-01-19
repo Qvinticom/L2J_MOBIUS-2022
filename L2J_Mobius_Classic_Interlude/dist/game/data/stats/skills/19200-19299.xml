@@ -1000,8 +1000,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
@@ -1014,8 +1012,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Cancel Shadow Move -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
@@ -2385,8 +2381,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>

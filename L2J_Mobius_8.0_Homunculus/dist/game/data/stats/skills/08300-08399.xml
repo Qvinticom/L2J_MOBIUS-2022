@@ -22,8 +22,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Speed Down -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>50</minDamage>
@@ -73,8 +71,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Speed Down -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>50</minDamage>
@@ -140,8 +136,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Mirage -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>50</minDamage>
@@ -188,8 +182,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Mirage -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>50</minDamage>
@@ -245,8 +237,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Critical Down -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -300,8 +290,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- PvP Armor - Critical Down -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>25</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
@@ -361,8 +349,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Effect of Doubt -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>33</chance>
 				<targetType>TARGET</targetType>

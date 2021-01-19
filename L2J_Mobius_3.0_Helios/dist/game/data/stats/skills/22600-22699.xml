@@ -2746,8 +2746,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- 5% Chance of becoming invincible for 5 sec. -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>5</chance>
 				<targetType>SELF</targetType>

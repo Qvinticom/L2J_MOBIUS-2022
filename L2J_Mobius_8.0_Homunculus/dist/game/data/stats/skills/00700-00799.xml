@@ -2141,8 +2141,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Protection Power -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>300</minDamage>
@@ -2165,8 +2163,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Protection Power -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -2201,8 +2197,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Protection Power -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -2229,8 +2223,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Physical Pose -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
 				<targetType>SELF</targetType>
@@ -2281,8 +2273,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Physical Pose -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
 				<targetType>SELF</targetType>
@@ -2357,8 +2347,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Seed of Revenge -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>8</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -2567,8 +2555,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Expose Weak Point -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>5</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
@@ -3152,8 +3138,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Spirit of Phoenix -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -3262,8 +3246,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Eva's Will -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -3349,8 +3331,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Pain of Shillien -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -3583,8 +3563,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Betrayal Mark -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>

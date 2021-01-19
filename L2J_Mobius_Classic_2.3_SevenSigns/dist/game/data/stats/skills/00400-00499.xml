@@ -2553,8 +2553,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Mirage -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -3491,8 +3489,6 @@
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>

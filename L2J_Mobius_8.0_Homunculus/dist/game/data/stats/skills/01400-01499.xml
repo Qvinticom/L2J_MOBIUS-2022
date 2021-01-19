@@ -3951,8 +3951,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Oblivion -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -4010,8 +4008,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Weak Constitution -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -4081,8 +4077,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Thin Skin -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -4140,8 +4134,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Enervation -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -4194,8 +4186,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Spite -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -4247,8 +4237,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Mental Impoverish -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
@@ -4419,8 +4407,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Healer Ability - Heal -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -4440,8 +4426,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Summoner Ability - Spirit -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -4472,8 +4456,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Flame Armor -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
@@ -4508,8 +4490,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Frost Armor -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
@@ -4544,8 +4524,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Hurricane Armor -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -4671,8 +4649,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Excessive Royalty -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SUMMON</targetType>
 				<minDamage>100</minDamage>
@@ -4691,8 +4667,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Mutual Response -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>5</chance>
 				<targetType>SUMMON</targetType>

@@ -504,8 +504,6 @@
 				</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>25</chance>
@@ -523,8 +521,6 @@
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1146,8 +1142,6 @@
 			<effect name="TriggerSkillByAttack">
 				<!-- Physical Pose -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
 				<targetType>SELF</targetType>
@@ -2450,8 +2444,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Cancel Fear -->
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>

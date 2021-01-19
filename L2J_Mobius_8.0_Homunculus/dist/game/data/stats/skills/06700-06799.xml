@@ -562,8 +562,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Bless the Blood -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>60</chance>
 				<targetType>SELF</targetType>
 				<minDamage>60</minDamage>

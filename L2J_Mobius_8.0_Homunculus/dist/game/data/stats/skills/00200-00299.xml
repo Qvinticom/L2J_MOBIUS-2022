@@ -62,17 +62,10 @@
 		</passiveConditions>
 		<effects>
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="45">
-				<!-- Blunt Mastery -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>50</chance>
-				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
 				<skillId>5604</skillId> <!-- Sword / Blunt Weapon Mastery -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -306,17 +299,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="TriggerSkillByAttack" fromLevel="9" toLevel="45">
-				<!-- Dagger Mastery -->
-				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>33</chance>
-				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>DAGGER,DUALDAGGER</allowWeapons>
 				<skillId>5603</skillId> <!-- Dagger Mastery -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk">
 				<amount>

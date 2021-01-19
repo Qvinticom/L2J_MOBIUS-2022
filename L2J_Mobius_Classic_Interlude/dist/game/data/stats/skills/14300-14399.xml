@@ -1862,8 +1862,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>

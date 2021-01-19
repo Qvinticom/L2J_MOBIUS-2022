@@ -4346,8 +4346,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Patience -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -4887,8 +4885,6 @@
 				</skillLevel>
 				<allowWeapons>DUAL,SWORD,BLUNT</allowWeapons>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>15</chance>
@@ -4912,8 +4908,6 @@
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -4961,8 +4955,6 @@
 				</skillLevel>
 				<allowWeapons>DUALFIST</allowWeapons>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>15</chance>
@@ -4986,8 +4978,6 @@
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
 			</effect>
 		</effects>
 	</skill>

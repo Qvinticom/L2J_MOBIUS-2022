@@ -489,8 +489,6 @@
 				<skillLevel>1</skillLevel>
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>
@@ -516,8 +514,6 @@
 				<chance>40</chance>
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -619,8 +615,6 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Self Heal (Warrior) - Recovers 10% of Max HP. -->
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
@@ -2375,8 +2369,6 @@
 				<!-- Lightning Force -->
 				<isCritical>false</isCritical>
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">30</value>
 					<value level="2">10</value>

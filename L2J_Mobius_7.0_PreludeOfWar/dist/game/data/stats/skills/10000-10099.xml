@@ -410,8 +410,6 @@
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 				<affectScope>SINGLE</affectScope>
@@ -648,8 +646,6 @@
 		<effects>
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="13">
 				<attackerType>Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
@@ -3938,8 +3934,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
@@ -4211,8 +4205,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
@@ -4433,8 +4425,6 @@
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillId>10070</skillId> <!-- Avenging Will -->
 				<skillLevel>
@@ -4450,8 +4440,6 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillId>10067</skillId> <!-- Spirit of Revenge -->
 				<skillLevel>
@@ -4528,8 +4516,6 @@
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>80</chance>
 				<targetType>MY_PARTY</targetType>
 				<affectScope>SINGLE</affectScope>
@@ -4966,8 +4952,6 @@
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
