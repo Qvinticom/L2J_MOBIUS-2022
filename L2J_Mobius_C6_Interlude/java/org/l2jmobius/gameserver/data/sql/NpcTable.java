@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.model.MinionData;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate.Race;
 import org.l2jmobius.gameserver.model.skills.BaseStat;
 import org.l2jmobius.gameserver.model.skills.Stat;
 
@@ -105,16 +106,19 @@ public class NpcTable
 				
 				final int skillId = npcskills.getInt("skillid");
 				final int level = npcskills.getInt("level");
-				if ((npcDat.getRace() == null) && (skillId == 4416))
-				{
-					npcDat.setRace(level);
-					continue;
-				}
-				
 				npcSkill = SkillTable.getInstance().getSkill(skillId, level);
 				if (npcSkill == null)
 				{
 					continue;
+				}
+				
+				if (skillId == 4416)
+				{
+					final Race race = npcDat.getRace();
+					if ((race == null) || (race == Race.UNKNOWN))
+					{
+						npcDat.setRace(level);
+					}
 				}
 				
 				npcDat.addSkill(npcSkill);
