@@ -913,6 +913,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -965,6 +966,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<set name="material" val="ADAMANTAITE" />
+		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="3047" level="3" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -1275,10 +1277,13 @@
 		<set name="icon" val="icon.br_noblesse_oblige_of_vesper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
-		<set name="price" val="500000" />
-		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="material" val="WOOD" />
 		<set name="bodypart" val="hairall" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+ 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="37498" name="Energy of Dimensions" type="EtcItem">
 		<!-- Buff for people who share a world with the victorious clan in a dimensional siege. Atk. Spd. + 10%, Casting Spd. + 10%, Speed + 10, and Max HP/MP/CP + 10%. Does not stack with Art of Seduction. Cooldown is 60 min. Cannot be used in the Olympiad. -->
