@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list maintainEnchantment="true" applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
 		<npc>30678</npc> <!-- Helton -->
 		<npc>30688</npc> <!-- Duning -->
@@ -11,15 +11,16 @@
 		<ingredient count="1" id="142" /> <!-- Keshanberk -->
 		<ingredient count="1" id="142" /> <!-- Keshanberk -->
 		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
-		<ingredient count="35" id="2133" /> <!-- A-grade Gemstone -->
+		<ingredient count="35" id="2133" /> <!-- Gemstone (A-grade) -->
 		<ingredient count="150" id="1461" /> <!-- Crystal (A-Grade) -->
 		<production count="1" id="5233" /> <!-- Keshanberk*Keshanberk -->
 	</item>
+	
 	<item>
 		<ingredient count="1" id="142" /> <!-- Keshanberk -->
 		<ingredient count="1" id="79" /> <!-- Damascus -->
 		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
-		<ingredient count="45" id="2133" /> <!-- A-grade Gemstone -->
+		<ingredient count="45" id="2133" /> <!-- Gemstone (A-grade) -->
 		<ingredient count="200" id="1461" /> <!-- Crystal (A-Grade) -->
 		<production count="1" id="5705" /> <!-- Keshanberk*Damascus -->
 	</item>
@@ -27,16 +28,16 @@
 		<ingredient count="1" id="79" /> <!-- Damascus -->
 		<ingredient count="1" id="79" /> <!-- Damascus -->
 		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
-		<ingredient count="60" id="2133" /> <!-- A-grade Gemstone -->
+		<ingredient count="60" id="2133" /> <!-- Gemstone (A-grade) -->
 		<ingredient count="300" id="1461" /> <!-- Crystal (A-Grade) -->
 		<production count="1" id="5706" /> <!-- Damascus*Damascus -->
 	</item>
 	<item>
-		<ingredient count="1" id="80" /> <!-- Talum Blade -->
+		<ingredient count="1" id="142" /> <!-- Tallum Blade -->
 		<ingredient count="1" id="79" /> <!-- Damascus -->
 		<ingredient count="1" id="5126" /> <!-- Dualsword Craft Stamp -->
-		<ingredient count="120" id="2133" /> <!-- A-grade Gemstone -->
+		<ingredient count="120" id="2133" /> <!-- Gemstone (A-grade) -->
 		<ingredient count="500" id="1461" /> <!-- Crystal (A-Grade) -->
-		<production count="1" id="8938" /> <!-- Talum Blade*Damascus -->
+		<production count="1" id="8938" /> <!-- Tallum Blade*Damascus -->
 	</item>
 </list>
