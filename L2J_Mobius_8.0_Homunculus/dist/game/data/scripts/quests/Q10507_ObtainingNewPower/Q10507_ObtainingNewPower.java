@@ -14,64 +14,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10879_ExaltedGuideToPower;
+package quests.Q10507_ObtainingNewPower;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLevel;
+import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
 
 /**
- * Exalted, Guide to Power (10879)
- * @URL https://l2wiki.com/Exalted,_Guide_to_Power
- * @author Dmitri
+ * @author Sero
  */
-public class Q10879_ExaltedGuideToPower extends Quest
+public class Q10507_ObtainingNewPower extends Quest
 {
 	// NPC
 	private static final int LIONEL = 33907;
 	// Items
-	private static final int PROOF_OF_PRIDE = 80827;
+	private static final int PROOF_OF_STRENGTH = 47843;
 	private static final int LIONEL_MISSION_LIST_5 = 47834;
 	// Rewards
-	private static final int DIGNITY_OF_THE_EXALTED = 47853;
-	private static final int VITALITY_OF_THE_EXALTED = 47855;
+	private static final int DIGNITY_OF_THE_EXALTED_LV6 = 80970;
 	// Misc
-	private static final int MIN_LEVEL = 105;
-	private static final int MIN_COMPLETE_LEVEL = 107;
-	private static final int PROOF_OF_PRIDE_NEEDED = 80000;
+	private static final int MIN_LEVEL = 107;
+	private static final int MIN_COMPLETE_LEVEL = 110;
+	private static final int PROOF_OF_STRENGTH_NEEDED = 160000;
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		// Hellbound monsters
-		24511, // Lunatikan
-		24515, // Kandiloth
-		24512, // Garion Neti
-		24513, // Desert Wendigo
-		24514, // Koraza
-		// Enchanted Valley
-		23581, // Apherus
-		23568, // Nymph Lily
-		23569, // Nymph Lily
-		23570, // Nymph Tulip
-		23571, // Nymph Tulip
-		23572, // Nymph Cosmos
-		23573, // Nymph Cosmos
-		19600, // Flower Bud
-		23566, // Nymph Rose
-		23567, // Nymph Rose
-		23578, // Nymph Guardian
-		// Ivory Tower
-		24422, // Stone Golem
-		24425, // Steel Golem
-		24421, // Stone Gargoyle
-		24424, // Gargoyle Hunter
-		24426, // Stone Cube
-		24423, // Monster Eye
 		// Silent Valley
 		24506, // Silence Witch
 		24508, // Silence Warrior
@@ -161,15 +134,15 @@ public class Q10879_ExaltedGuideToPower extends Quest
 		24485, // Behemoth Dragon
 	};
 	
-	public Q10879_ExaltedGuideToPower()
+	public Q10507_ObtainingNewPower()
 	{
-		super(10879);
+		super(10507);
 		addStartNpc(LIONEL);
 		addTalkId(LIONEL);
 		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "33907-00.html");
-		addCondCompletedQuest(Q10873_ExaltedReachingAnotherLevel.class.getSimpleName(), "33907-00.html");
-		registerQuestItems(LIONEL_MISSION_LIST_5, PROOF_OF_PRIDE);
+		addCondCompletedQuest(Q10879_ExaltedGuideToPower.class.getSimpleName(), "33907-00.html");
+		registerQuestItems(LIONEL_MISSION_LIST_5, PROOF_OF_STRENGTH);
 	}
 	
 	@Override
@@ -189,29 +162,21 @@ public class Q10879_ExaltedGuideToPower extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33907-05.html":
+			case "33907-02.html":
 			{
 				if (qs.isCreated())
 				{
 					giveItems(player, LIONEL_MISSION_LIST_5, 1);
 					qs.startQuest();
-					qs.setMemoState(1);
 					htmltext = event;
 				}
 				break;
 			}
-			case "33907-05a.html":
-			{
-				qs.setMemoState(2);
-				htmltext = event;
-				break;
-			}
-			case "33907-08.html":
+			case "33907-04.html":
 			{
 				if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
-					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
-					giveItems(player, VITALITY_OF_THE_EXALTED, 1);
+					giveItems(player, DIGNITY_OF_THE_EXALTED_LV6, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -235,19 +200,15 @@ public class Q10879_ExaltedGuideToPower extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (qs.getMemoState())
+				if (qs.getMemoState() == 1)
 				{
-					case 1:
+					if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 					{
-						if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
-						{
-							htmltext = "33907-07.html";
-						}
-						else
-						{
-							htmltext = "33907-06.html";
-						}
-						break;
+						htmltext = "33907-03.html";
+					}
+					else
+					{
+						htmltext = "33907-06.html";
 					}
 				}
 				break;
@@ -274,11 +235,12 @@ public class Q10879_ExaltedGuideToPower extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
-			if (getQuestItemsCount(player, PROOF_OF_PRIDE) < PROOF_OF_PRIDE_NEEDED)
+			if (getQuestItemsCount(player, PROOF_OF_STRENGTH) < PROOF_OF_STRENGTH_NEEDED)
 			{
-				giveItemRandomly(player, PROOF_OF_PRIDE, 1, PROOF_OF_PRIDE_NEEDED, 1, true);
+				giveItemRandomly(player, PROOF_OF_STRENGTH, 1, PROOF_OF_STRENGTH_NEEDED, 1, true);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if ((getQuestItemsCount(player, PROOF_OF_PRIDE) >= PROOF_OF_PRIDE_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+			if ((getQuestItemsCount(player, PROOF_OF_STRENGTH) >= PROOF_OF_STRENGTH_NEEDED) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 			{
 				qs.setCond(2, true);
 			}

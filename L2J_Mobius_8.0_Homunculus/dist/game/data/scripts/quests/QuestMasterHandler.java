@@ -29,6 +29,7 @@ import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
 import quests.Q10423_EmbryoStrongholdRaid.Q10423_EmbryoStrongholdRaid;
 import quests.Q10454_FinalEmbryoApostle.Q10454_FinalEmbryoApostle;
+import quests.Q10507_ObtainingNewPower.Q10507_ObtainingNewPower;
 import quests.Q10566_BestChoice.Q10566_BestChoice;
 import quests.Q10575_LetsGoFishing.Q10575_LetsGoFishing;
 import quests.Q10576_GlitteringWeapons.Q10576_GlitteringWeapons;
@@ -63,7 +64,6 @@ import quests.not_done.Q00839_RequestFromTheUnworldlyVisitors;
 import quests.not_done.Q00840_RequestFromTheKingdomsRoyalGuard;
 import quests.not_done.Q01900_StormIsleSecretSpot;
 import quests.not_done.Q01901_StormIsleFurtiveDeal;
-import quests.not_done.Q10507_ObtainingNewPower;
 import quests.not_done.Q10595_TheDimensionalWarpPart8;
 import quests.not_done.Q10596_TheDimensionalWarpPart9;
 import quests.not_done.Q10886_SaviorsPathSearchTheRefinery;
@@ -100,7 +100,7 @@ public class QuestMasterHandler
 		Q01901_StormIsleFurtiveDeal.class, // TODO: Not done.
 		Q10423_EmbryoStrongholdRaid.class,
 		Q10454_FinalEmbryoApostle.class,
-		Q10507_ObtainingNewPower.class, // TODO: Not done.
+		Q10507_ObtainingNewPower.class,
 		Q10566_BestChoice.class,
 		Q10575_LetsGoFishing.class,
 		Q10576_GlitteringWeapons.class,

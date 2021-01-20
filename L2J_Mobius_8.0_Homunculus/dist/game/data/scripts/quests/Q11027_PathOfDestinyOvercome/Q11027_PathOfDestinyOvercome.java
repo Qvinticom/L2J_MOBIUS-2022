@@ -562,6 +562,11 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 								htmltext = "30648-25.html";
 								break;
 							}
+							case 15:
+							{
+								htmltext = "30648-26c.html";
+								break;
+							}
 							case 16:
 							{
 								htmltext = "30648-30.html";
