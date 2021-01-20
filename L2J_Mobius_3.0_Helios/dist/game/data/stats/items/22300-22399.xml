@@ -24,6 +24,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22397" level="1" /> <!-- Sweet Chocolate Cookie -->
 		</skills>
@@ -1012,6 +1013,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22412" level="1" /> <!-- Weapon Conversion - One-handed Emerald Weapon -->
 		</skills>
@@ -1030,6 +1032,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22413" level="1" /> <!-- Weapon Conversion - Dual Emerald Weapons -->
 		</skills>

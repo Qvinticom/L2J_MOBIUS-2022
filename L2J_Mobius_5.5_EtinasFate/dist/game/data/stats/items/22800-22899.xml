@@ -1247,6 +1247,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22595" level="1" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -1263,6 +1264,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22596" level="2" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -1279,6 +1281,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22597" level="3" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -1459,6 +1462,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="172800000" />
 		<skills>
 			<skill id="22599" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
@@ -1476,6 +1480,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="172800000" />
 		<skills>
 			<skill id="22600" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
@@ -1493,6 +1498,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="172800000" />
 		<skills>
 			<skill id="22601" level="1" /> <!-- Ancient Kartia's Labyrinth Origins -->
 		</skills>
@@ -1511,6 +1517,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="604800000" />
 		<skills>
 			<skill id="22602" level="1" /> <!-- Scroll: Decrease Vitality -->
 		</skills>

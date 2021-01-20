@@ -298,6 +298,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="106" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22028" level="1" /> <!-- Chocolate Cookie -->
 		</skills>

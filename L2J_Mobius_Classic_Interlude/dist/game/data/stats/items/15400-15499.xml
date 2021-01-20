@@ -343,6 +343,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="9042" level="1" /> <!-- 6th Anniversary Cube -->
@@ -358,6 +359,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="36000" />
 		<skills>
 			<skill id="9043" level="1" /> <!-- 6th Anniversary Cube -->
@@ -373,6 +375,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="28800" />
 		<skills>
 			<skill id="9044" level="1" /> <!-- 6th Anniversary Cube -->
@@ -388,6 +391,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="21600" />
 		<skills>
 			<skill id="9045" level="1" /> <!-- 6th Anniversary Cube -->
@@ -403,6 +407,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="14400" />
 		<skills>
 			<skill id="9046" level="1" /> <!-- 6th Anniversary Cube -->
@@ -418,6 +423,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="7200" />
 		<skills>
 			<skill id="9047" level="1" /> <!-- 6th Anniversary Cube -->
@@ -433,6 +439,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="4320" />
 		<skills>
 			<skill id="9048" level="1" /> <!-- 6th Anniversary Cube -->
@@ -465,6 +472,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="604800000" />
 		<skills>
 			<skill id="9040" level="1" /> <!-- PC Points -->
 		</skills>
@@ -480,6 +488,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="43200000" />
 		<skills>
 			<skill id="9041" level="1" /> <!-- 6th Anniversary Cake -->
 		</skills>
@@ -521,6 +530,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="reuse_delay" val="82800000" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="8360" level="1" /> <!-- Vitality Maintenance Effect -->
@@ -672,6 +682,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="1800000" />
 		<skills>
 			<skill id="9067" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -703,6 +714,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9068" level="2" /> <!-- Vitality Maintaining Potion -->
 		</skills>

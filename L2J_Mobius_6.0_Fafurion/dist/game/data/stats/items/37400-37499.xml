@@ -1281,12 +1281,19 @@
 	<item id="37493" name="Hair Accessory Restoration Stone" type="EtcItem">
 		<!-- Restores a modified hair accessory to its original form. Double-click to start the process. -->
 		<set name="icon" val="Icon.restore_processing_stone_r_i00" />
-		<set name="price" val="200000" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_HAIRACC" />
-		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_HAIRACC" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="price" val="200000" />
 		<set name="material" val="PAPER" />
+		<skills>
+			<skill id="22624" level="1" /> <!-- Hair Accessory Restoration Stone -->
+		</skills>
 	</item>
 	<item id="37494" name="Chaos Essence (Dual Class)" type="EtcItem">
 		<!-- Mysterious essence with the power of chaos. Take it to Hardin at the Reliquary of the Giants to change your specialized awakened class. Cannot be used by Ertheia. Can be used only by dual classes. 30-day. -->
@@ -1296,6 +1303,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="37495" name="Lindvior's Scale" type="EtcItem">
@@ -1340,6 +1348,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 	</item>
 	<item id="37499" name="Fire Stone" additionalName="Event" type="EtcItem">
 		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->

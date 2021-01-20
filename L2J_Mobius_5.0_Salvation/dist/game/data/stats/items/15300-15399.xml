@@ -1607,6 +1607,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="9038" level="1" /> <!-- Steamed Rice Cake -->
@@ -1624,6 +1625,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="9039" level="1" /> <!-- Steamed Rice Cake -->

@@ -9,6 +9,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="120000" />
 		<skills>
 			<skill id="9989" level="1" /> <!-- Elixir of Protection -->
 		</skills>
@@ -22,6 +23,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="120000" />
 		<skills>
 			<skill id="9990" level="1" /> <!-- Elixir of Magic -->
 		</skills>
@@ -35,6 +37,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="120000" />
 		<skills>
 			<skill id="9988" level="1" /> <!-- Elixir of Aggression -->
 		</skills>

@@ -946,6 +946,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="reuse_delay" val="3600000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="70050" />
 		</cond>
@@ -1221,6 +1222,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9183" level="1" /> <!-- Freya's Refreshing Breeze (4-hour) -->
 		</skills>
@@ -1239,6 +1241,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9184" level="1" /> <!-- Freya's Refreshing Breeze (4-hour) (Event) -->
 		</skills>

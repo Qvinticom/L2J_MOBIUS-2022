@@ -745,12 +745,20 @@
 		<!-- When used, increases Attack Attributes by 70, all Attribute Resistance by 70, and Acquired XP/ SP by 30% for 30 min. Buffs persist after death. Cooldown is 5 min. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<skills>
+			<skill id="39356" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="48858" name="Mysterious Ancient Herb" type="EtcItem">
 		<set name="icon" val="BranchSys2.icon.etc_vampiric_rage_herb_i01" />

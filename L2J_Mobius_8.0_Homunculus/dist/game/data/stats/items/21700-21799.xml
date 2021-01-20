@@ -79,6 +79,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<skills>
 			<skill id="22251" level="1" /> <!-- Honey Rice Cakes -->
 		</skills>
@@ -143,6 +144,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<skills>
 			<skill id="22255" level="1" /> <!-- Honey Rice Cakes -->
 		</skills>
@@ -175,6 +177,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22252" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
@@ -597,6 +600,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22270" level="1" /> <!-- Letter Collector's Gift -->
 		</skills>

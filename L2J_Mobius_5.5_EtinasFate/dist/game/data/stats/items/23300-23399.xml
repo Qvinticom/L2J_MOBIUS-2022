@@ -470,6 +470,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22707" level="2" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -558,6 +559,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="259200000" />
 		<skills>
 			<skill id="22710" level="2" /> <!-- Scroll: Increase Vitality -->
 		</skills>
@@ -574,6 +576,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="259200000" />
 		<skills>
 			<skill id="22710" level="3" /> <!-- Scroll: Increase Vitality -->
 		</skills>
@@ -588,6 +591,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22711" level="1" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -602,6 +606,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22711" level="2" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -616,6 +621,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22711" level="3" /> <!-- Scroll: Replenish Vitality -->
 		</skills>
@@ -713,6 +719,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22713" level="1" /> <!-- Letter Collector's Gift -->
 		</skills>

@@ -1493,6 +1493,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22284" level="1" /> <!-- PC Vitality -->
 		</skills>
@@ -1526,6 +1527,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22283" level="1" /> <!-- Player Commendation - Blessing -->
 		</skills>
@@ -1559,6 +1561,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22285" level="1" /> <!-- PC Vitality -->
 		</skills>
@@ -1576,6 +1579,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22286" level="1" /> <!-- PC Vitality -->
 		</skills>
@@ -1593,6 +1597,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22287" level="1" /> <!-- PC Vitality -->
 		</skills>
@@ -1801,6 +1806,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22313" level="1" /> <!-- Pa'agrio's Warm Breeze (4-hour) -->
 		</skills>
@@ -1938,6 +1944,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22302" level="1" /> <!-- Sweet Chocolate (4-hour) -->
 		</skills>
@@ -2049,6 +2056,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="3600000" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -2091,6 +2099,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="3600000" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -2111,6 +2120,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="600000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="12010, 12001" />
 		</cond>

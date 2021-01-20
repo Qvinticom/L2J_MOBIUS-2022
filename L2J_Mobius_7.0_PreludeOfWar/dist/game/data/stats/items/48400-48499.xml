@@ -272,7 +272,6 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
-		<set name="time" val="43200" />
 		<set name="material" val="LEATHER" />
 		<capsuled_items>
 			<item id="48423" min="1" max="1" chance="25" /> <!-- Talisman - Wind Box - P. Skill Critical Damage -->
@@ -299,6 +298,7 @@
 	<item id="48424" name="Talisman - Wind Box" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: M. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1311,10 +1311,19 @@
 		<!-- When used, Attack Attribute +70, all Attribute Resistance +70, and Acquired XP/ SP +30% for 30 min. Effect remains after death. Cooldown is 5 min. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
+		<skills>
+			<skill id="39205" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
+		</skills>
 	</item>
 	<item id="48498" name="Blessed Scroll: Enchant Dragon Shirt" type="EtcItem">
 		<!-- Enchant Scroll that is exclusively for Dragon Shirts. The scroll can enchant up to +5. Failure to enchant resets the enchantment level of the Dragon Shirt. -->

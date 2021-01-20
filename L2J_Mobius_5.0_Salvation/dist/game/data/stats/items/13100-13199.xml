@@ -866,6 +866,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="shared_reuse_group" val="106" />
 		<set name="for_npc" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<cond addName="1" msgId="113">
 			<player instanceId="43,44,45" />
 		</cond>
@@ -888,6 +889,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="shared_reuse_group" val="106" />
 		<set name="for_npc" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<cond addName="1" msgId="113">
 			<player instanceId="43,44,45" />
 		</cond>

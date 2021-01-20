@@ -1792,6 +1792,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="1800000" />
 		<skills>
 			<skill id="22054" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -1811,6 +1812,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22055" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>

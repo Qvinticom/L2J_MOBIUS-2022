@@ -234,6 +234,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="1800000" />
 		<cond>
 			<player MinimumVitalityPoints="35000" />
 		</cond>

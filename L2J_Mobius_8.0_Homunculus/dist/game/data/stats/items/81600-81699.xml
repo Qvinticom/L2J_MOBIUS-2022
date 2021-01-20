@@ -685,6 +685,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="itemSkills" />
+		<set name="reuse_delay" val="540000" />
 		<cond>
 			<player MinimumVitalityPoints="35000" />
 		</cond>
@@ -703,6 +704,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="itemSkills" />
+		<set name="reuse_delay" val="540000" />
 		<cond>
 			<player MinimumVitalityPoints="35000" />
 		</cond>

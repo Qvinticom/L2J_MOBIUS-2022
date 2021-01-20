@@ -1851,6 +1851,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="600000" />
 		<skills>
 			<skill id="2837" level="1" /> <!-- Gracia Key -->
 		</skills>

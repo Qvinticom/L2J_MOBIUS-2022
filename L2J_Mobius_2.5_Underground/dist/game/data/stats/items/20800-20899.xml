@@ -1850,6 +1850,7 @@
 		<set name="is_premium" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="18000000" />
 		<skills>
 			<skill id="22129" level="1" /> <!-- Red Dimensional Stone -->
 		</skills>
@@ -1904,6 +1905,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="106" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22138" level="1" /> <!-- Mango Dessert -->
 		</skills>

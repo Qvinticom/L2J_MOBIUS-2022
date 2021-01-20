@@ -351,6 +351,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="106" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="2645" level="1" /> <!-- Multi-Colored Honey Rice Cake -->
 		</skills>
@@ -370,6 +371,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="shared_reuse_group" val="106" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="2646" level="1" /> <!-- Honey Wheat Cake -->
 		</skills>

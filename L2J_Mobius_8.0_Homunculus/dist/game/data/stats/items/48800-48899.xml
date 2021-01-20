@@ -803,6 +803,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
 		<skills>
 			<skill id="39356" level="1" /> <!-- Glowing Dragon's Attribute Potion -->
 		</skills>

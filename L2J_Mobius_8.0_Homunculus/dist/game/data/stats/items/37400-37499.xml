@@ -1348,6 +1348,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 	</item>
 	<item id="37499" name="Fire Stone" additionalName="Event" type="EtcItem">
 		<!-- Fire Attack +5 when bestowed on a weapon. Water Resistance +6 when bestowed on armor. Can be used up to Attribute Lv. 3. A maximum of three types of Attribute Resistance can be bestowed. Opposite attributes cannot be bestowed together. -->

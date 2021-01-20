@@ -359,6 +359,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="14400000" />
 		<skills>
 			<skill id="21277" level="1" /> <!-- Miracle of the Tree - Vitality Recovery -->
 		</skills>

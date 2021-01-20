@@ -1501,6 +1501,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22765" level="1" /> <!-- PC Vitality -->
 		</skills>
@@ -1517,6 +1518,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="1800000" />
 		<skills>
 			<skill id="22766" level="1" /> <!-- Vitality Maintaining Potion -->
 		</skills>
@@ -1533,6 +1535,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="22767" level="2" /> <!-- Vitality Maintaining Potion -->
 		</skills>

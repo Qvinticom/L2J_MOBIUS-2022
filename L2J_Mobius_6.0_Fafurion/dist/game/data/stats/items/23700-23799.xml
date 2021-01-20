@@ -990,6 +990,7 @@
 		<set name="time" val="1440" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 	</item>
 	<item id="23765" name="Feather of Blessing" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. Can resurrect at the spot if stored in the inventory. -->
@@ -1501,5 +1502,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="600000" />
 	</item>
 </list>

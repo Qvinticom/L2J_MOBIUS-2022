@@ -1282,6 +1282,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="60000" />
 		<cond>
 			<player MinimumVitalityPoints="35000" />
 		</cond>
@@ -1299,6 +1300,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="1800000" />
 	</item>
 	<item id="27596" name="Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
 		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Requiem or Apocalypse equipment for Blessed equipment. -->

@@ -840,6 +840,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9750" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>
@@ -1115,6 +1116,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9751" level="1" /> <!-- Vitality Replenishing Potion -->
 		</skills>

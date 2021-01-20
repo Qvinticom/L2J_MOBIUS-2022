@@ -673,6 +673,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="15000" />
 		<skills>
 			<skill id="17085" level="1" /> <!-- Kisung's Power Up -->
 		</skills>

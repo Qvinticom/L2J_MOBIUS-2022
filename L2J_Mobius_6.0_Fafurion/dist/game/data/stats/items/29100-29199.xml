@@ -513,6 +513,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="360000" />
 	</item>
 	<item id="29142" name="Freya's Charisma Potion" additionalName="Panda Transformation" type="EtcItem">
 		<!-- Changes the appearance to that of a panda doll, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
@@ -521,6 +522,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="360000" />
 	</item>
 	<item id="29143" name="Rudolph's Nose" type="Armor">
 		<!-- Accessory in the form of Rudolph's nose. -->
@@ -647,6 +649,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="60000" />
 	</item>
 	<item id="29155" name="Lineage II Baseball Uniform Appearance Stone" additionalName="Event" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Tops and one-pieces only. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->

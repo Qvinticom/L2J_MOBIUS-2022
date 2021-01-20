@@ -162,6 +162,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
 		<skills>
 			<skill id="39570" level="1" /> <!-- Honey Dark Beer -->
 		</skills>
@@ -170,7 +171,7 @@
 		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. Note!. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="reuse_delay" val="3600000" />
+		<set name="reuse_delay" val="300000" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -205,6 +206,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="300000" />
 		<skills>
 			<skill id="39503" level="1" /> <!-- Shining Nevit's Gold Hourglass -->
 		</skills>
@@ -565,6 +567,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_dropable" val="false" />
+		<set name="reuse_delay" val="540000" />
 		<cond>
 			<player MinimumVitalityPoints="35000" />
 		</cond>

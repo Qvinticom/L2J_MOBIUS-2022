@@ -434,6 +434,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="material" val="GOLD" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9522" level="1" /> <!-- Summon Clan Member -->
 		</skills>
@@ -470,6 +471,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="1800000" />
 		<skills>
 			<skill id="9523" level="1" /> <!-- Mysterious Incantation -->
 		</skills>
@@ -488,6 +490,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9528" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
@@ -1389,6 +1392,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9752" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
@@ -1830,6 +1834,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="3600000" />
 		<skills>
 			<skill id="9569" level="1" /> <!-- Heavenly P. Atk. Cookie -->
 		</skills>

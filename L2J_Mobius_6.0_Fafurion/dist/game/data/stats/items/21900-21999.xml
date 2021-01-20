@@ -13,6 +13,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="600000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="12010, 12001" />
 		</cond>
@@ -33,6 +34,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="600000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="12010, 12001" />
 		</cond>
@@ -53,6 +55,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="600000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="12010, 12001" />
 		</cond>
@@ -75,6 +78,7 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="300000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="12010, 12001" />
 		</cond>
@@ -97,6 +101,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="is_depositable" val="false" />
+		<set name="reuse_delay" val="300000" />
 		<cond addName="1" msgId="113">
 			<player insideZoneId="12010, 12001" />
 		</cond>

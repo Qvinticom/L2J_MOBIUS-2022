@@ -326,6 +326,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="540000" />
 		<skills>
 			<skill id="18126" level="1" /> <!-- Freya's Frozen Scroll -->
 		</skills>
@@ -369,6 +370,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="material" val="PAPER" />
+		<set name="reuse_delay" val="540000" />
 		<skills>
 			<skill id="18126" level="1" /> <!-- Freya's Frozen Scroll -->
 		</skills>
