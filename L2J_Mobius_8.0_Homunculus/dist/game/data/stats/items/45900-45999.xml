@@ -233,6 +233,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18345" level="1" /> <!-- Dignity of the Exalted Lv. 1 -->
 		</skills>
@@ -248,6 +253,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18345" level="2" /> <!-- Dignity of the Exalted Lv. 2 -->
 		</skills>
@@ -263,6 +273,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18345" level="3" /> <!-- Dignity of the Exalted Lv. 3 -->
 		</skills>
@@ -278,6 +293,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18348" level="1" /> <!-- Belief of the Exalted -->
 		</skills>
@@ -293,6 +313,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18349" level="1" /> <!-- Blessing of the Exalted -->
 		</skills>
@@ -308,6 +333,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18350" level="1" /> <!-- Summon Instant Cure Potion -->
 		</skills>
@@ -323,6 +353,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18351" level="1" /> <!-- Favor of the Exalted -->
 		</skills>

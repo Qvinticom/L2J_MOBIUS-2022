@@ -631,6 +631,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18345" level="4" /> <!-- Dignity of the Exalted Lv. 4 -->
 		</skills>
@@ -646,6 +652,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18345" level="5" /> <!-- Dignity of the Exalted Lv. 5 -->
 		</skills>
@@ -676,6 +688,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18793" level="2" /> <!-- Spellbook: Vitality of the Exalted Lv. 2 -->
 		</skills>

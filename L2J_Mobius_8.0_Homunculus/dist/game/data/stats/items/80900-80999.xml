@@ -376,6 +376,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="85" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="39551" level="1" /> <!-- Spellbook: Renewed Energy of Power -->
 		</skills>
@@ -976,6 +982,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player subclass="false" />
+				<player level="105" />
+			</and>
+		</cond>
 		<skills>
 			<skill id="18345" level="6" /> <!-- Dignity of the Exalted Lv. 6 -->
 		</skills>
