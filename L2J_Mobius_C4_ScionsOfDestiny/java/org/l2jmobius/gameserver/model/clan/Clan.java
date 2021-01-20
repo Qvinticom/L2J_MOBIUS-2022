@@ -302,6 +302,31 @@ public class Clan
 			final SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LORD_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_S1);
 			sm.addString(member.getName());
 			broadcastToOnlineMembers(sm);
+			
+			transferCwhToNewLeader(member.getPlayerInstance().getObjectId(), player.getObjectId());
+		}
+	}
+	
+	public void transferCwhToNewLeader(int newLeaderId, int oldLeaderId)
+	{
+		// No need to update anything.
+		if (newLeaderId == oldLeaderId)
+		{
+			return;
+		}
+		
+		// Update cwh in database.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			final PreparedStatement statement = con.prepareStatement("UPDATE items SET owner_id = ? WHERE loc = 'CLANWH' AND owner_id = ?");
+			statement.setInt(1, newLeaderId);
+			statement.setInt(2, oldLeaderId);
+			statement.execute();
+			statement.close();
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("Error while transferring cwh " + e);
 		}
 	}
 	
