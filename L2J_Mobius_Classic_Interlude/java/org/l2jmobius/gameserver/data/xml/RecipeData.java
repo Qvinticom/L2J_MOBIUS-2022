@@ -181,8 +181,8 @@ public class RecipeData implements IXmlReader
 								final Item item = ItemTable.getInstance().getTemplate(id);
 								if (item != null)
 								{
-									final int itemCrystalId = item.getCrystalType().getId();
-									if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+									final int itemCrystalLevel = item.getCrystalType().getLevel();
+									if ((itemCrystalLevel > Config.MAX_EQUIPABLE_ITEM_GRADE.getLevel()) && (itemCrystalLevel < CrystalType.EVENT.getLevel()))
 									{
 										continue RECIPES_FILE;
 									}

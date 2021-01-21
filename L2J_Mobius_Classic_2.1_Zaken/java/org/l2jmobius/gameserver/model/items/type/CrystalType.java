@@ -35,14 +35,14 @@ public enum CrystalType
 	R99(10, 17371, 30, 500),
 	EVENT(11, 0, 0, 0);
 	
-	private final int _id;
+	private final int _level;
 	private final int _crystalId;
 	private final int _crystalEnchantBonusArmor;
 	private final int _crystalEnchantBonusWeapon;
 	
-	CrystalType(int id, int crystalId, int crystalEnchantBonusArmor, int crystalEnchantBonusWeapon)
+	CrystalType(int level, int crystalId, int crystalEnchantBonusArmor, int crystalEnchantBonusWeapon)
 	{
-		_id = id;
+		_level = level;
 		_crystalId = crystalId;
 		_crystalEnchantBonusArmor = crystalEnchantBonusArmor;
 		_crystalEnchantBonusWeapon = crystalEnchantBonusWeapon;
@@ -52,9 +52,9 @@ public enum CrystalType
 	 * Gets the crystal type ID.
 	 * @return the crystal type ID
 	 */
-	public int getId()
+	public int getLevel()
 	{
-		return _id;
+		return _level;
 	}
 	
 	/**
@@ -78,11 +78,11 @@ public enum CrystalType
 	
 	public boolean isGreater(CrystalType crystalType)
 	{
-		return getId() > crystalType.getId();
+		return getLevel() > crystalType.getLevel();
 	}
 	
 	public boolean isLesser(CrystalType crystalType)
 	{
-		return getId() < crystalType.getId();
+		return getLevel() < crystalType.getLevel();
 	}
 }

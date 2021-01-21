@@ -25,8 +25,10 @@ import org.l2jmobius.gameserver.data.xml.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.ItemType;
+import org.l2jmobius.gameserver.model.stats.Stat;
 
 /**
  * @author UnAfraid
@@ -215,9 +217,11 @@ public class EnchantScroll extends AbstractEnchantItem
 			return EnchantResultType.ERROR;
 		}
 		
+		final int crystalLevel = enchantItem.getItem().getCrystalType().getLevel();
+		final double enchantRateStat = (crystalLevel > CrystalType.NONE.getLevel()) && (crystalLevel < CrystalType.EVENT.getLevel()) ? player.getStat().getValue(Stat.ENCHANT_RATE) : 0;
 		final double bonusRate = getBonusRate();
 		final double supportBonusRate = (supportItem != null) ? supportItem.getBonusRate() : 0;
-		final double finalChance = Math.min(chance + bonusRate + supportBonusRate, 100);
+		final double finalChance = Math.min(chance + bonusRate + supportBonusRate + enchantRateStat, 100);
 		final double random = 100 * Rnd.nextDouble();
 		final boolean success = (random < finalChance);
 		return success ? EnchantResultType.SUCCESS : EnchantResultType.FAILURE;

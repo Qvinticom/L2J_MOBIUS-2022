@@ -1553,6 +1553,14 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
+		<effects>
+			<effect name="EnchantRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9371" toLevel="1" name="Sayha's Portal">
 		<!-- Summons a portal that stays for 5 min. Cannot be used in special places like the GM Consultation Services. -->

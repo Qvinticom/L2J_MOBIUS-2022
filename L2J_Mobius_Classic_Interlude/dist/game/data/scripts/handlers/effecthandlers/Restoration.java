@@ -71,8 +71,8 @@ public class Restoration extends AbstractEffect
 		final Item extractable = ItemTable.getInstance().getTemplate(_itemId);
 		if (extractable != null)
 		{
-			final int itemCrystalId = extractable.getCrystalType().getId();
-			if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+			final int itemCrystalLevel = extractable.getCrystalType().getLevel();
+			if ((itemCrystalLevel > Config.MAX_EQUIPABLE_ITEM_GRADE.getLevel()) && (itemCrystalLevel < CrystalType.EVENT.getLevel()))
 			{
 				effected.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 				return;

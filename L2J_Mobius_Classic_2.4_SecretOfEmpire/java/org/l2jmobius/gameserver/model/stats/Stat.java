@@ -198,6 +198,7 @@ public enum Stat
 	BREATH("breath"),
 	FALL("fall"),
 	FISHING_EXP_SP_BONUS("fishingExpSpBonus"),
+	ENCHANT_RATE("enchantRate"),
 	
 	// VULNERABILITIES
 	DAMAGE_ZONE_VULN("damageZoneVuln"),

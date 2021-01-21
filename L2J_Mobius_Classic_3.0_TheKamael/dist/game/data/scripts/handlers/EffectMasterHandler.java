@@ -135,6 +135,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ElementalSpiritAttack", ElementalSpiritAttack::new);
 		EffectHandler.getInstance().registerHandler("ElementalSpiritDefense", ElementalSpiritDefense::new);
 		EffectHandler.getInstance().registerHandler("EnableCloak", EnableCloak::new);
+		EffectHandler.getInstance().registerHandler("EnchantRate", EnchantRate::new);
 		EffectHandler.getInstance().registerHandler("EnergyAttack", EnergyAttack::new);
 		EffectHandler.getInstance().registerHandler("EnlargeAbnormalSlot", EnlargeAbnormalSlot::new);
 		EffectHandler.getInstance().registerHandler("EnlargeSlot", EnlargeSlot::new);

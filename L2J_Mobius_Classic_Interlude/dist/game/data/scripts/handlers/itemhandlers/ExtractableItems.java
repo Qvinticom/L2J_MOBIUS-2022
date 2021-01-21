@@ -210,8 +210,8 @@ public class ExtractableItems implements IItemHandler
 	private void addItem(Map<ItemInstance, Long> extractedItems, ItemInstance newItem)
 	{
 		// Max equipable item grade configuration.
-		final int itemCrystalId = newItem.getItem().getCrystalType().getId();
-		if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+		final int itemCrystalLevel = newItem.getItem().getCrystalType().getLevel();
+		if ((itemCrystalLevel > Config.MAX_EQUIPABLE_ITEM_GRADE.getLevel()) && (itemCrystalLevel < CrystalType.EVENT.getLevel()))
 		{
 			return;
 		}

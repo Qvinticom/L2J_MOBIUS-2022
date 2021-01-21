@@ -2113,7 +2113,7 @@ public class PlayerInstance extends Playable
 		{
 			if ((item != null) && item.isEquipped() && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT)))
 			{
-				crystaltype = item.getItem().getCrystalType().getId();
+				crystaltype = item.getItem().getCrystalType().getLevel();
 				if (crystaltype > expertiseLevel)
 				{
 					if (item.isWeapon() && (crystaltype > weaponPenalty))
@@ -8698,7 +8698,7 @@ public class PlayerInstance extends Playable
 	{
 		for (int itemId : _activeSoulShots)
 		{
-			if (ItemTable.getInstance().getTemplate(itemId).getCrystalType().getId() == crystalType)
+			if (ItemTable.getInstance().getTemplate(itemId).getCrystalType().getLevel() == crystalType)
 			{
 				disableAutoShot(itemId);
 			}

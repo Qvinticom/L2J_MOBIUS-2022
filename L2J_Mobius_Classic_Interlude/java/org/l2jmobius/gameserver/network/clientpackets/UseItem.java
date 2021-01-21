@@ -181,8 +181,8 @@ public class UseItem implements IClientIncomingPacket
 		if (item.isEquipable())
 		{
 			// Max equipable item grade configuration.
-			final int itemCrystalId = item.getItem().getCrystalType().getId();
-			if (!player.isGM() && (itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+			final int itemCrystalLevel = item.getItem().getCrystalType().getLevel();
+			if (!player.isGM() && (itemCrystalLevel > Config.MAX_EQUIPABLE_ITEM_GRADE.getLevel()) && (itemCrystalLevel < CrystalType.EVENT.getLevel()))
 			{
 				return;
 			}
