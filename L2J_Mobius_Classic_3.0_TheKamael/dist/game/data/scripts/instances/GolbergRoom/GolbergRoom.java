@@ -120,6 +120,11 @@ public class GolbergRoom extends AbstractInstance
 					return null;
 				}
 				
+				if (world.getParameters().getInt("treasureCounter", 0) == 0)
+				{
+					world.getParameters().set("treasureCounter", 0);
+				}
+				
 				if (player.isGM())
 				{
 					if (world.getParameters().getInt("treasureCounter", 0) <= 27)

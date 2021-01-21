@@ -835,10 +835,64 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="51075" toLevel="1" name="Top-grade A-grade Weapon Pack">
+		<icon>icon.etc_treasure_box_i07</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91012</itemConsumeId>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.09">
+						<item id="8678" count="1" /> <!-- Sirra's Blade -->
+					</item>
+					<item chance="9.09">
+						<item id="8679" count="1" /> <!-- Sword of Ipos -->
+					</item>
+					<item chance="9.09">
+						<item id="8680" count="1" /> <!-- Barakiel's Axe -->
+					</item>
+					<item chance="9.09">
+						<item id="8681" count="1" /> <!-- Behemoth' Tuning Fork -->
+					</item>
+					<item chance="9.09">
+						<item id="8682" count="1" /> <!-- Naga Storm -->
+					</item>
+					<item chance="9.09">
+						<item id="8683" count="1" /> <!-- Tiphon's Spear -->
+					</item>
+					<item chance="9.09">
+						<item id="8684" count="1" /> <!-- Shyeed's Bow -->
+					</item>
+					<item chance="9.09">
+						<item id="8685" count="1" /> <!-- Sobekk's Hurricane -->
+					</item>
+					<item chance="9.09">
+						<item id="8686" count="1" /> <!-- Themis' Tongue -->
+					</item>
+					<item chance="9.09">
+						<item id="8687" count="1" /> <!-- Cabrio's Hand -->
+					</item>
+					<item chance="9.09">
+						<item id="8688" count="1" /> <!-- Daimon Crystal -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51076" toLevel="1" name="Top A-grade Weapon Ingredient/ Recipe Pack">
 		<operateType>A1</operateType>

@@ -137,6 +137,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51075" level="1" /> <!-- Weapon Pack (Best A-grade) -->
+		</skills>
 	</item>
 	<item id="91013" name="Weapon Ingredient/Recipe Box (Top A-grade)" type="EtcItem">
 		<!-- Double-click to obtain a top A-grade weapon ingredient or recipe. Cannot be dropped. -->
