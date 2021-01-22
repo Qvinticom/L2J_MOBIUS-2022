@@ -39,7 +39,6 @@ public class Camille extends AbstractInstance
 	private static final int ERDA = 34319;
 	// Locations
 	private static final Location ENTER_LOCATION = new Location(-245768, 147832, 4662);
-	private static final Location TELEPORTER_LOCATION = new Location(-245752, 151112, 4662);
 	private static final Location CAMILLE_LOCATION = new Location(-245752, 150392, 11845);
 	// Misc
 	private static final int TEMPLATE_ID = 266;
@@ -100,7 +99,7 @@ public class Camille extends AbstractInstance
 				}
 				case ISBURG:
 				{
-					addSpawn(TRANSMISSION_UNIT, TELEPORTER_LOCATION, false, 0, false, world.getId());
+					world.spawnGroup("teleport");
 					world.setReenterTime();
 					break;
 				}
