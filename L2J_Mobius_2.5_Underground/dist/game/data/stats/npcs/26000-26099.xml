@@ -102,6 +102,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38425" /> <!-- Monster Only: Amden Blunt Weapon -->
 		<acquire exp="7749416066" sp="1859859" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="12861324.2335153" hpRegen="10.5" mp="62880.1198801199" mpRegen="3.6" />
@@ -282,6 +283,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38445" /> <!-- Monster Only: One-handed Blunt Weapon -->
 		<acquire exp="7749416066" sp="1859859" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="12861324.2335153" hpRegen="10.5" mp="62880.1198801199" mpRegen="3.6" />
@@ -372,6 +374,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15566" /> <!-- Black Visage -->
 		<acquire exp="7749416066" sp="1859859" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="12861324.2335153" hpRegen="10.5" mp="62880.1198801199" mpRegen="3.6" />
@@ -546,6 +549,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17325" /> <!-- Apocalypse Cutter -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1224888" hpRegen="10.5" mp="62880" mpRegen="3.6" />
 			<speed>
@@ -576,6 +580,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38426" /> <!-- Monster Only: Amden Bow -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1224888" hpRegen="10.5" mp="62880" mpRegen="3.6" />
 			<speed>
@@ -606,6 +611,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8688" /> <!-- Daimon Crystal -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1224888" hpRegen="10.5" mp="62880" mpRegen="3.6" />
 			<speed>
@@ -635,6 +641,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17332" lhand="15588" /> <!-- Apocalypse Buster / Elegia Sigil -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1224888" hpRegen="10.5" mp="62880" mpRegen="3.6" />
 			<speed>
@@ -662,6 +669,7 @@
 	<npc id="26010" level="92" type="Monster" name="Encroached Orc Assassin" title="Raid Minion">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15559" /> <!-- Skull Edge -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="304477.456647399" hpRegen="10.5" mp="20960.396039604" mpRegen="3.6" />
 			<speed>
@@ -977,6 +985,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8203" /> <!-- Monster Only (Venom Sword) -->
 		<acquire exp="6810821128" sp="1634597" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="11229414.1117178" hpRegen="9.5" mp="58572.4275724276" mpRegen="3.3" />
@@ -1163,6 +1172,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="234" /> <!-- Demon's Dagger -->
 		<acquire exp="6810821128" sp="1634597" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="11229414.1117178" hpRegen="9.5" mp="58572.4275724276" mpRegen="3.3" />
@@ -1492,6 +1502,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17325" lhand="17343"/> <!-- Apocalypse Cutter / Twilight Shield Heavy armor -->
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="20236290.2141957" hpRegen="10.5" mp="69522.4775224775" mpRegen="3.6" />
@@ -1674,6 +1685,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17327" lhand="17343"/> <!-- Apocalypse Avenger / Twilight Shield Heavy armor -->
 		<acquire exp="9339738544" sp="2241537" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="20236290.2141957" hpRegen="10.5" mp="69522.4775224775" mpRegen="3.6" />
@@ -2026,6 +2038,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8213" /> <!-- Monster Only (Solina Father Mace) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1587160" hpRegen="10.5" mp="69522" mpRegen="3.6" />
 			<speed>
@@ -2963,6 +2976,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38427" /> <!-- Monster Only: Centaur Weapon -->
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="18588531.2893742" hpRegen="10.5" mp="68400.0999000999" mpRegen="3.6" />
@@ -3151,6 +3165,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38427" /> <!-- Monster Only: Centaur Weapon -->
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="18588531.2893742" hpRegen="10.5" mp="68400.0999000999" mpRegen="3.6" />
@@ -3361,6 +3376,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38446" /> <!-- Monster Only: Centaur Throwing Blade -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -3390,6 +3406,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38427" /> <!-- Monster Only: Centaur Weapon -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -3418,6 +3435,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38427" /> <!-- Monster Only: Centaur Weapon -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -4365,6 +4383,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38564" lhand="38432" /> <!-- Monster Weapon: Invisible Dagger / Monster Only: Tiger Jewel -->
 		<acquire exp="8254270241" sp="1981024" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="14214606.047879" hpRegen="10.5" mp="65070.4295704296" mpRegen="3.6" />
@@ -4455,6 +4474,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38429" lhand="38435" /> <!-- Monster Weapon: Tiger Sword / Monster Only: Tiger Shield -->
 		<acquire exp="8254270241" sp="1981024" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="14214606.047879" hpRegen="10.5" mp="65070.4295704296" mpRegen="3.6" />
@@ -4545,6 +4565,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38564" lhand="38432" /> <!-- Monster Weapon: Invisible Dagger / Monster Only: Tiger Jewel -->
 		<acquire exp="8254270241" sp="1981024" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="14214606.047879" hpRegen="10.5" mp="65070.4295704296" mpRegen="3.6" />
@@ -4719,6 +4740,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38434" /> <!-- Monster Only: Tiger Polearm -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1353772" hpRegen="10.5" mp="65070" mpRegen="3.6" />
 			<speed>
@@ -4749,6 +4771,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38430" /> <!-- Monster Only: Tiger Bow -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1353772" hpRegen="10.5" mp="65070" mpRegen="3.6" />
 			<speed>
@@ -4779,6 +4802,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38429" lhand="38436" /> <!-- Monster Only: Tiger Sword / Monster Only: Tiger Sigil -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1353772" hpRegen="10.5" mp="65070" mpRegen="3.6" />
 			<speed>
@@ -4808,6 +4832,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38437" /> <!-- Monster Only: Tiger Staff -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1353772" hpRegen="10.5" mp="65070" mpRegen="3.6" />
 			<speed>
@@ -4965,6 +4990,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38448" /> <!-- Monster Only: Minotaur Two-handed Axe -->
 		<acquire exp="6810821128" sp="1634597" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="11229414.1117178" hpRegen="9.5" mp="58572.4275724276" mpRegen="3.3" />
@@ -5151,6 +5177,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38448" /> <!-- Monster Only: Minotaur Two-handed Axe -->
 		<acquire exp="6810821128" sp="1634597" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="11229414.1117178" hpRegen="9.5" mp="58572.4275724276" mpRegen="3.3" />
@@ -5454,6 +5481,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38428" /> <!-- Monster Only: Minotaur Dagger -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1069468" hpRegen="9.5" mp="58572" mpRegen="3.3" />
 			<speed>

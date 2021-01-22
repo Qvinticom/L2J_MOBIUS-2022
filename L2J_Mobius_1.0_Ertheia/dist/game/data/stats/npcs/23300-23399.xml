@@ -680,6 +680,7 @@
 	<npc id="23314" level="99" type="Monster" name="Nerva Orc Raider">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17325" /> <!-- Apocalypse Cutter -->
 		<acquire exp="95996432" sp="153594" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
@@ -765,6 +766,7 @@
 	<npc id="23316" level="99" type="Monster" name="Nerva Orc Priest">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17332" lhand="15588" /> <!-- Apocalypse Buster / Elegia Sigil -->
 		<acquire exp="124437219" sp="199099" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
@@ -809,6 +811,7 @@
 	<npc id="23317" level="99" type="Monster" name="Nerva Orc Wizard">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8688" /> <!-- Daimon Crystal -->
 		<acquire exp="111937319" sp="179099" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
@@ -853,6 +856,7 @@
 	<npc id="23318" level="99" type="Monster" name="Nerva Orc Assassin">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15559" /> <!-- Skull Edge -->
 		<acquire exp="104493556" sp="167189" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
@@ -896,6 +900,7 @@
 	<npc id="23319" level="99" type="Monster" name="Nerva Orc Ambusher">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15559" /> <!-- Skull Edge -->
 		<acquire exp="88903791" sp="142246" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
@@ -1202,6 +1207,7 @@
 	<npc id="23326" level="99" type="Monster" name="Wizard" title="Nerva Bloodlust">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8688" /> <!-- Daimon Crystal -->
 		<acquire exp="30863520" sp="49381" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
@@ -1249,6 +1255,7 @@
 	<npc id="23327" level="99" type="Monster" name="Soldier" title="Nerva Bloodlust">
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17325" /> <!-- Apocalypse Cutter -->
 		<acquire exp="30863520" sp="49381" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834.104046243" hpRegen="10.5" mp="23550.495049505" mpRegen="3.6" />
