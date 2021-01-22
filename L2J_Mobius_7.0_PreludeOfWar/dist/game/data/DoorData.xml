@@ -18326,4 +18326,28 @@
 		<status showHp="false" />
 		<openStatus default="close" />
 	</door>
+	<door id="12220001" name="E_F_Camille_door_01">
+		<nodes nodeZ="4624">
+			<node x="-245777" y="148770" />
+			<node x="-245473" y="148772" />
+			<node x="-245472" y="148868" />
+			<node x="-245776" y="148867" />
+		</nodes>
+		<location x="-245489" y="148819" z="4640" height="1500" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="12220002" name="E_F_Camille_door_02">
+		<nodes nodeZ="4624">
+			<node x="-246048" y="148772" />
+			<node x="-245744" y="148771" />
+			<node x="-245743" y="148867" />
+			<node x="-246049" y="148868" />
+		</nodes>
+		<location x="-246031" y="148819" z="4640" height="1500" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
 </list>
