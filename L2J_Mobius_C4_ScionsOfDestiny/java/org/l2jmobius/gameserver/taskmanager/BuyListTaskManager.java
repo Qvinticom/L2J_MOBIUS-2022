@@ -53,7 +53,10 @@ public class BuyListTaskManager
 					final Integer time = entry.getKey();
 					synchronized (PENDING_UPDATES)
 					{
-						PENDING_UPDATES.add(time);
+						if (!PENDING_UPDATES.contains(time))
+						{
+							PENDING_UPDATES.add(time);
+						}
 					}
 					REFRESH_TIME.put(time, currentTime + (time.intValue() * 60 * 60 * 1000L));
 				}
@@ -86,19 +89,23 @@ public class BuyListTaskManager
 		}, 50, 50);
 	}
 	
-	public void addTime(int time, long refreshTime)
+	public void addTime(int timeValue, long updateValue)
 	{
-		if (refreshTime == 0)
+		final Integer time = Integer.valueOf(timeValue);
+		if (updateValue == 0)
 		{
 			synchronized (PENDING_UPDATES)
 			{
-				PENDING_UPDATES.add(time);
+				if (!PENDING_UPDATES.contains(time))
+				{
+					PENDING_UPDATES.add(time);
+				}
 			}
-			REFRESH_TIME.put(time, System.currentTimeMillis() + (time * 60 * 60 * 1000L));
+			REFRESH_TIME.put(time, System.currentTimeMillis() + (timeValue * 60 * 60 * 1000L));
 		}
 		else
 		{
-			REFRESH_TIME.put(time, refreshTime);
+			REFRESH_TIME.put(time, updateValue);
 		}
 	}
 	
