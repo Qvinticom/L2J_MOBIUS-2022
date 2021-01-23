@@ -26,11 +26,11 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.StoreTradeList;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 
 /**
  * @version $Revision: 1.5.4.13 $ $Date: 2005/04/06 16:13:38 $
@@ -42,31 +42,6 @@ public class TradeController
 	private int _nextListId;
 	private final Map<Integer, StoreTradeList> _lists;
 	private final Map<Integer, StoreTradeList> _listsTaskItem;
-	
-	/** Task launching the function for restore count of Item (Clan Hall) */
-	public class RestoreCount implements Runnable
-	{
-		private final int _timer;
-		
-		public RestoreCount(int time)
-		{
-			_timer = time;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				restoreCount(_timer);
-				dataTimerSave(_timer);
-				ThreadPool.schedule(new RestoreCount(_timer), _timer * 60 * 60 * 1000);
-			}
-			catch (Throwable t)
-			{
-			}
-		}
-	}
 	
 	protected TradeController()
 	{
@@ -214,11 +189,11 @@ public class TradeController
 					savetimer = rset2.getLong("savetimer");
 					if ((savetimer - currentMillis) > 0)
 					{
-						ThreadPool.schedule(new RestoreCount(time), savetimer - System.currentTimeMillis());
+						BuyListTaskManager.getInstance().addTime(time, savetimer);
 					}
 					else
 					{
-						ThreadPool.schedule(new RestoreCount(time), 0);
+						BuyListTaskManager.getInstance().addTime(time, 0);
 					}
 				}
 				rset2.close();
@@ -375,11 +350,11 @@ public class TradeController
 						savetimer = rset2.getLong("savetimer");
 						if ((savetimer - currentMillis) > 0)
 						{
-							ThreadPool.schedule(new RestoreCount(time), savetimer - System.currentTimeMillis());
+							BuyListTaskManager.getInstance().addTime(time, savetimer);
 						}
 						else
 						{
-							ThreadPool.schedule(new RestoreCount(time), 0);
+							BuyListTaskManager.getInstance().addTime(time, 0);
 						}
 					}
 					rset2.close();
@@ -436,7 +411,7 @@ public class TradeController
 		return lists;
 	}
 	
-	protected void restoreCount(int time)
+	public void restoreCount(int time)
 	{
 		if (_listsTaskItem == null)
 		{
@@ -449,12 +424,12 @@ public class TradeController
 		}
 	}
 	
-	protected void dataTimerSave(int time)
+	public void dataTimerSave(int time)
 	{
 		final long timerSave = System.currentTimeMillis() + (time * 60 * 60 * 1000);
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			final PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer =? WHERE time =?");
+			final PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer=? WHERE time=?");
 			statement.setLong(1, timerSave);
 			statement.setInt(2, time);
 			statement.executeUpdate();
@@ -485,13 +460,13 @@ public class TradeController
 				}
 				
 				listId = list.getListId();
-				for (ItemInstance Item : list.getItems())
+				for (ItemInstance item : list.getItems())
 				{
-					if (Item.getCount() < Item.getInitCount()) // needed?
+					if (item.getCount() < item.getInitCount()) // needed?
 					{
 						statement = con.prepareStatement("UPDATE merchant_buylists SET currentCount=? WHERE item_id=? AND shop_id=?");
-						statement.setInt(1, Item.getCount());
-						statement.setInt(2, Item.getItemId());
+						statement.setInt(1, item.getCount());
+						statement.setInt(2, item.getItemId());
 						statement.setInt(3, listId);
 						statement.executeUpdate();
 						statement.close();
