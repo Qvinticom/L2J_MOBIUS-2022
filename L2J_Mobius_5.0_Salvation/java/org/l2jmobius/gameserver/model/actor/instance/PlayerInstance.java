@@ -7034,6 +7034,10 @@ public class PlayerInstance extends Playable
 		{
 			aVars.storeMe();
 		}
+		
+		getInventory().updateDatabase();
+		getWarehouse().updateDatabase();
+		getFreight().updateDatabase();
 	}
 	
 	@Override

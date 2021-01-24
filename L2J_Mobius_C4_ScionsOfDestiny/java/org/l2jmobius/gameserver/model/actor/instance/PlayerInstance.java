@@ -8432,6 +8432,10 @@ public class PlayerInstance extends Playable
 			aVars.storeMe();
 		}
 		
+		getInventory().updateDatabase();
+		getWarehouse().updateDatabase();
+		getFreight().updateDatabase();
+		
 		// If char is in Offline trade, setStored must be true
 		setStored(isInOfflineMode());
 	}

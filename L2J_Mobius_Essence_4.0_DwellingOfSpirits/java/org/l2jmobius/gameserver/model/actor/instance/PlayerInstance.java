@@ -7024,6 +7024,10 @@ public class PlayerInstance extends Playable
 			aVars.storeMe();
 		}
 		
+		getInventory().updateDatabase();
+		getWarehouse().updateDatabase();
+		getFreight().updateDatabase();
+		
 		if (_spirits != null)
 		{
 			for (ElementalSpirit spirit : _spirits)
