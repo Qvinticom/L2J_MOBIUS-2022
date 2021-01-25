@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.conditions;
 
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -26,19 +27,22 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 public class ConditionPlayerSouls extends Condition
 {
 	private final int _souls;
+	private final SoulType _type;
 	
 	/**
 	 * Instantiates a new condition player souls.
 	 * @param souls the souls
+	 * @param type the soul type
 	 */
-	public ConditionPlayerSouls(int souls)
+	public ConditionPlayerSouls(int souls, SoulType type)
 	{
 		_souls = souls;
+		_type = type;
 	}
 	
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getChargedSouls() >= _souls);
+		return (effector.getActingPlayer() != null) && (effector.getActingPlayer().getChargedSouls(_type) >= _souls);
 	}
 }

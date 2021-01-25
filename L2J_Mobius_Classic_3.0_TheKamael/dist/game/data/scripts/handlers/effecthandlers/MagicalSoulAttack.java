@@ -66,8 +66,26 @@ public class MagicalSoulAttack extends AbstractEffect
 			effected.stopFakeDeath(true);
 		}
 		
-		final int chargedSouls = Math.min(skill.getMaxSoulConsumeCount(), effector.getActingPlayer().getCharges());
-		if (!effector.getActingPlayer().decreaseCharges(chargedSouls))
+		final int chargedLightSouls = Math.min(skill.getMaxLightSoulConsumeCount(), effector.getActingPlayer().getCharges());
+		if ((chargedLightSouls > 0) && !effector.getActingPlayer().decreaseCharges(chargedLightSouls))
+		{
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			sm.addSkillName(skill);
+			effector.sendPacket(sm);
+			return;
+		}
+		
+		final int chargedShadowSouls = Math.min(skill.getMaxShadowSoulConsumeCount(), effector.getActingPlayer().getCharges());
+		if ((chargedShadowSouls > 0) && !effector.getActingPlayer().decreaseCharges(chargedShadowSouls))
+		{
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+			sm.addSkillName(skill);
+			effector.sendPacket(sm);
+			return;
+		}
+		
+		final int chargedSouls = chargedLightSouls + chargedShadowSouls;
+		if (chargedSouls < 1)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(skill);

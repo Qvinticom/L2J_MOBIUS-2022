@@ -16,6 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -27,16 +28,18 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class SoulSavedSkillCondition implements ISkillCondition
 {
+	private final SoulType _type;
 	private final int _amount;
 	
 	public SoulSavedSkillCondition(StatSet params)
 	{
+		_type = params.getEnum("type", SoulType.class, SoulType.LIGHT);
 		_amount = params.getInt("amount");
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return caster.isPlayer() && (caster.getActingPlayer().getChargedSouls() >= _amount);
+		return caster.isPlayer() && (caster.getActingPlayer().getChargedSouls(_type) >= _amount);
 	}
 }

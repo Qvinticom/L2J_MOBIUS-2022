@@ -161,7 +161,8 @@ public class Skill implements IIdentifiable
 	private final BasicProperty _basicProperty;
 	
 	private final int _minPledgeClass;
-	private final int _soulMaxConsume;
+	private final int _lightSoulMaxConsume;
+	private final int _shadowSoulMaxConsume;
 	private final int _chargeConsume;
 	
 	private final boolean _isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
@@ -345,7 +346,8 @@ public class Skill implements IIdentifiable
 		_basicProperty = set.getEnum("basicProperty", BasicProperty.class, BasicProperty.NONE);
 		_isSuicideAttack = set.getBoolean("isSuicideAttack", false);
 		_minPledgeClass = set.getInt("minPledgeClass", 0);
-		_soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
+		_lightSoulMaxConsume = set.getInt("lightSoulMaxConsume", 0);
+		_shadowSoulMaxConsume = set.getInt("shadowSoulMaxConsume", 0);
 		_chargeConsume = set.getInt("chargeConsume", 0);
 		_isTriggeredSkill = set.getBoolean("isTriggeredSkill", false);
 		_effectPoint = set.getInt("effectPoint", 0);
@@ -1022,9 +1024,14 @@ public class Skill implements IIdentifiable
 		return _abnormalType == AbnormalType.HP_RECOVER;
 	}
 	
-	public int getMaxSoulConsumeCount()
+	public int getMaxLightSoulConsumeCount()
 	{
-		return _soulMaxConsume;
+		return _lightSoulMaxConsume;
+	}
+	
+	public int getMaxShadowSoulConsumeCount()
+	{
+		return _shadowSoulMaxConsume;
 	}
 	
 	public int getChargeConsumeCount()

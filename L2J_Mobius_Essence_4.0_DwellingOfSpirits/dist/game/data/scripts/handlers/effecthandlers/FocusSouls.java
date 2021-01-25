@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -32,10 +33,12 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 public class FocusSouls extends AbstractEffect
 {
 	private final int _charge;
+	private final SoulType _type;
 	
 	public FocusSouls(StatSet params)
 	{
 		_charge = params.getInt("charge", 0);
+		_type = params.getEnum("type", SoulType.class, SoulType.LIGHT);
 	}
 	
 	@Override
@@ -57,10 +60,10 @@ public class FocusSouls extends AbstractEffect
 		if (maxSouls > 0)
 		{
 			final int amount = _charge;
-			if ((target.getChargedSouls() < maxSouls))
+			if ((target.getChargedSouls(_type) < maxSouls))
 			{
-				final int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());
-				target.increaseSouls(count);
+				final int count = ((target.getChargedSouls(_type) + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls(_type));
+				target.increaseSouls(count, _type);
 			}
 			else
 			{

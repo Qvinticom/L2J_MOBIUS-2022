@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -37,11 +38,13 @@ import org.l2jmobius.gameserver.network.serverpackets.ExSpawnEmitter;
  */
 public class SoulEating extends AbstractEffect
 {
+	private final SoulType _type;
 	private final int _expNeeded;
 	private final int _maxSouls;
 	
 	public SoulEating(StatSet params)
 	{
+		_type = params.getEnum("type", SoulType.class, SoulType.LIGHT);
 		_expNeeded = params.getInt("expNeeded");
 		_maxSouls = params.getInt("maxSouls");
 	}
@@ -77,13 +80,13 @@ public class SoulEating extends AbstractEffect
 		{
 			final PlayerInstance player = playable.getActingPlayer();
 			final int maxSouls = (int) player.getStat().getValue(Stat.MAX_SOULS, 0);
-			if (player.getChargedSouls() >= maxSouls)
+			if (player.getChargedSouls(_type) >= maxSouls)
 			{
 				playable.sendPacket(SystemMessageId.YOU_CAN_T_ABSORB_MORE_SOULS);
 				return;
 			}
 			
-			player.increaseSouls(1);
+			player.increaseSouls(1, _type);
 			
 			if ((player.getTarget() != null) && player.getTarget().isNpc())
 			{

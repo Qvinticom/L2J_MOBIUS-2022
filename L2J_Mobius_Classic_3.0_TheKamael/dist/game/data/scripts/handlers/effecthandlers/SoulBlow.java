@@ -17,6 +17,7 @@
 package handlers.effecthandlers;
 
 import org.l2jmobius.gameserver.enums.ShotType;
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -83,11 +84,21 @@ public class SoulBlow extends AbstractEffect
 		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
 		final byte shld = Formulas.calcShldUse(effector, effected);
 		double damage = Formulas.calcBlowDamage(effector, effected, skill, false, _power, shld, ss);
-		if ((skill.getMaxSoulConsumeCount() > 0) && effector.isPlayer())
+		
+		if (effector.isPlayer())
 		{
-			// Souls Formula (each soul increase +4%)
-			final int chargedSouls = (effector.getActingPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? effector.getActingPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
-			damage *= 1 + (chargedSouls * 0.04);
+			if (skill.getMaxLightSoulConsumeCount() > 0)
+			{
+				// Souls Formula (each soul increase +4%)
+				final int chargedSouls = (effector.getActingPlayer().getChargedSouls(SoulType.LIGHT) <= skill.getMaxLightSoulConsumeCount()) ? effector.getActingPlayer().getChargedSouls(SoulType.LIGHT) : skill.getMaxLightSoulConsumeCount();
+				damage *= 1 + (chargedSouls * 0.04);
+			}
+			if (skill.getMaxShadowSoulConsumeCount() > 0)
+			{
+				// Souls Formula (each soul increase +4%)
+				final int chargedSouls = (effector.getActingPlayer().getChargedSouls(SoulType.SHADOW) <= skill.getMaxShadowSoulConsumeCount()) ? effector.getActingPlayer().getChargedSouls(SoulType.SHADOW) : skill.getMaxShadowSoulConsumeCount();
+				damage *= 1 + (chargedSouls * 0.04);
+			}
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, true, false);

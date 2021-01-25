@@ -3678,19 +3678,40 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpSoulMax" />
+			<condition name="OpSoulMax" type="LIGHT" />
 		</conditions>
 		<effects>
 			<effect name="FocusSouls">
+				<type>LIGHT</type>
 				<charge>2</charge>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="394" toLevel="1" name="Absorb Shadow Souls">
-		<!-- TODO: Shadow Souls Implementation -->
-		<magicLevel>1</magicLevel>
+		<effectPoint>150</effectPoint>
+		<hitTime>500</hitTime>
+		<hpConsume>30</hpConsume>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">49</value>
+			<value level="3">58</value>
+			<value level="4">66</value>
+			<value level="5">72</value>
+		</magicLevel>
 		<operateType>A1</operateType>
+		<reuseDelay>2000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSoulMax" type="SHADOW" />
+		</conditions>
+		<effects>
+			<effect name="FocusSouls">
+				<type>SHADOW</type>
+				<charge>2</charge>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="395" toLevel="1" name="Heroic Miracle">
 		<!-- For 30 sec., P. Def. +5400, M. Def. +4050, Buff-canceling Attack Resistance +80, and Speed +5. Consumes 40 Soulstone(s). -->
@@ -3806,7 +3827,8 @@
 	<skill id="397" toLevel="2" name="Light Veil">
 		<!-- Enough Shine Souls have been gathered to be in the Shine Side state. <Acceleration Stage 1>. P. Atk. +130, Atk. Spd. +30, Casting Spd. +40, Speed +10. P./M. Def. +5%. Has a chance to recover MP when attacking. -->
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>			
 		<isMagic>4</isMagic>
 		<magicLevel>
 			<value level="1">20</value>
@@ -3884,7 +3906,8 @@
 	<skill id="398" toLevel="2" name="Shadow Veil">
 		<!-- Enough Shadow Souls have been gathered to be in the Shadow Side state. <Acceleration Stage 2>. P. Atk. +280, Atk. Spd. +80, Casting Spd. +120, Speed +15. Has a chance to activate powerful attack skills. -->
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>	
 		<isMagic>4</isMagic>
 		<magicLevel>
 			<value level="1">20</value>

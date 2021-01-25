@@ -2235,10 +2235,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpSoulMax" />
+			<condition name="OpSoulMax" type="LIGHT" />
 		</conditions>
 		<effects>
 			<effect name="FocusSouls">
+				<type>LIGHT</type>
 				<charge>
 					<value level="1">70</value>
 					<value level="2">100</value>
@@ -2260,10 +2261,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpSoulMax" />
+			<condition name="OpSoulMax" type="SHADOW" />
 		</conditions>
 		<effects>
 			<effect name="FocusSouls">
+				<type>SHADOW</type>
 				<charge>
 					<value level="1">70</value>
 					<value level="2">100</value>
@@ -3595,6 +3597,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="SoulEating">
+				<type>LIGHT</type>
 				<maxSouls>
 					<value level="1">100</value>
 					<value level="2">100</value>
@@ -3629,8 +3632,45 @@
 	<skill id="45179" toLevel="2" name="Shadow Master">
 		<!-- Allows to absorb the power of shadows.\n\nCollect 100 Shadow Souls to assume the Shadow Veil.\n\n<Shadow Veil>\nGrants Evolved Wings Lv. 2 that allows to make powerful attacks. -->
 		<icon>icon.skill_jinkama_black1</icon>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">60</value>
+		</magicLevel>
 		<operateType>P</operateType>
-		<isMagic>4</isMagic>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="SoulEating">
+				<type>SHADOW</type>
+				<maxSouls>
+					<value level="1">100</value>
+					<value level="2">100</value>
+				</maxSouls>
+				<expNeeded>
+					<value level="1">294</value>
+					<value level="2">2160</value>
+				</expNeeded>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<isCritical>true</isCritical>
+				<skillId>45181</skillId> <!-- Shadow Soul Absorption -->
+				<skillLevel>1</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<attackerType>Creature</attackerType>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<chance>30</chance>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<isCritical>false</isCritical>
+				<skillId>45181</skillId> <!-- Shadow Soul Absorption -->
+				<skillLevel>1</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<attackerType>Creature</attackerType>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<chance>15</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45180" toLevel="4" name="Light Soul Absorption">
 		<!-- Activates when attacking. -->
@@ -3643,17 +3683,33 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpSoulMax" />
+			<condition name="OpSoulMax" type="LIGHT" />
 		</conditions>
 		<effects>
 			<effect name="FocusSouls">
+				<type>LIGHT</type>
 				<charge>1</charge>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="45181" toLevel="4" name="Shadow Soul Absorption">
-		<!-- Activates when attacking. -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLevel>20</magicLevel>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSoulMax" type="SHADOW" />
+		</conditions>
+		<effects>
+			<effect name="FocusSouls">
+				<type>SHADOW</type>
+				<charge>1</charge>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45182" toLevel="8" name="Soul Thrust">
 		<!-- M. Def. -$s1. -->

@@ -39,6 +39,7 @@ import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.PlayerState;
 import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.conditions.ConditionCategoryType;
@@ -537,7 +538,8 @@ public abstract class DocumentBase
 				case "souls":
 				{
 					final int value = Integer.decode(getValue(a.getNodeValue(), template));
-					cond = joinAnd(cond, new ConditionPlayerSouls(value));
+					final SoulType type = Enum.valueOf(SoulType.class, a.getNodeValue());
+					cond = joinAnd(cond, new ConditionPlayerSouls(value, type));
 					break;
 				}
 				case "weight":

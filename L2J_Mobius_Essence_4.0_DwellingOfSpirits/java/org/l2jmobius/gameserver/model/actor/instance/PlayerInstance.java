@@ -101,6 +101,7 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.Sex;
 import org.l2jmobius.gameserver.enums.ShortcutType;
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.enums.Team;
@@ -675,7 +676,7 @@ public class PlayerInstance extends Playable
 	private final static int KAMAEL_SHADOW_MASTER = 45179;
 	private final static int KAMAEL_LIGHT_TRANSFORMATION = 397;
 	private final static int KAMAEL_SHADOW_TRANSFORMATION = 398;
-	private int _souls = 0;
+	private final Map<SoulType, Integer> _souls = new ConcurrentHashMap<>(2);
 	private ScheduledFuture<?> _soulTask = null;
 	
 	// Death Points
@@ -11317,46 +11318,51 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Returns the Number of Souls this PlayerInstance got.
+	 * Returns the Number of souls.
+	 * @param type the type of souls.
 	 * @return
 	 */
-	public int getChargedSouls()
+	public int getChargedSouls(SoulType type)
 	{
-		return _souls;
+		return _souls.getOrDefault(type, 0).intValue();
 	}
 	
 	/**
 	 * Increase Souls
 	 * @param count
+	 * @param type
 	 */
-	public void increaseSouls(int count)
+	public void increaseSouls(int count, SoulType type)
 	{
-		_souls += count;
+		final int newCount = getChargedSouls(type) + count;
+		_souls.put(type, newCount);
 		final SystemMessage sm = new SystemMessage(SystemMessageId.YOUR_SOUL_COUNT_HAS_INCREASED_BY_S1_IT_IS_NOW_AT_S2);
 		sm.addInt(count);
-		sm.addInt(_souls);
+		sm.addInt(newCount);
 		sendPacket(sm);
 		restartSoulTask();
 		sendPacket(new EtcStatusUpdate(this));
 		
-		// TODO: Unhardcode?
-		if ((getRace() == Race.KAMAEL) && (_souls >= 100))
+		if ((getRace() == Race.KAMAEL) && (newCount >= 100) && !isTransformed())
 		{
-			int skillLevel = getShadowMasterLevel();
-			if (skillLevel > 0)
+			if (type == SoulType.LIGHT)
 			{
-				abortCast();
-				decreaseSouls(100);
-				SkillData.getInstance().getSkill(KAMAEL_SHADOW_TRANSFORMATION, skillLevel).applyEffects(this, this);
-			}
-			else
-			{
-				skillLevel = getLightMasterLevel();
+				final int skillLevel = getLightMasterLevel();
 				if (skillLevel > 0)
 				{
 					abortCast();
-					decreaseSouls(100);
+					decreaseSouls(100, type);
 					SkillData.getInstance().getSkill(KAMAEL_LIGHT_TRANSFORMATION, skillLevel).applyEffects(this, this);
+				}
+			}
+			else // Shadow.
+			{
+				final int skillLevel = getShadowMasterLevel();
+				if (skillLevel > 0)
+				{
+					abortCast();
+					decreaseSouls(100, type);
+					SkillData.getInstance().getSkill(KAMAEL_SHADOW_TRANSFORMATION, skillLevel).applyEffects(this, this);
 				}
 			}
 		}
@@ -11375,17 +11381,19 @@ public class PlayerInstance extends Playable
 	/**
 	 * Decreases existing Souls.
 	 * @param count
+	 * @param type
 	 * @return
 	 */
-	public boolean decreaseSouls(int count)
+	public boolean decreaseSouls(int count, SoulType type)
 	{
-		_souls -= count;
-		if (_souls < 0)
+		int newCount = getChargedSouls(type) - count;
+		if (newCount < 0)
 		{
-			_souls = 0;
+			newCount = 0;
 		}
+		_souls.put(type, newCount);
 		
-		if (_souls == 0)
+		if (newCount == 0)
 		{
 			stopSoulTask();
 		}
@@ -11403,7 +11411,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void clearSouls()
 	{
-		_souls = 0;
+		_souls.clear();
 		stopSoulTask();
 		sendPacket(new EtcStatusUpdate(this));
 	}

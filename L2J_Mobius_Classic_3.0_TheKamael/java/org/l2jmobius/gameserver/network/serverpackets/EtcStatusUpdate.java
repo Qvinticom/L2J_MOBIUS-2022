@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class EtcStatusUpdate implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
-	private final boolean _isLight;
-	private final boolean _isShadow;
 	private int _mask;
 	
 	public EtcStatusUpdate(PlayerInstance player)
@@ -38,17 +36,6 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 		_mask = _player.getMessageRefusal() || _player.isChatBanned() || _player.isSilenceMode() ? 1 : 0;
 		_mask |= _player.isInsideZone(ZoneId.DANGER_AREA) ? 2 : 0;
 		_mask |= _player.hasCharmOfCourage() ? 4 : 0;
-		
-		if (_player.getRace() == Race.KAMAEL)
-		{
-			_isShadow = _player.getShadowMasterLevel() > 0;
-			_isLight = !_isShadow && (_player.getLightMasterLevel() > 0);
-		}
-		else
-		{
-			_isLight = false;
-			_isShadow = false;
-		}
 	}
 	
 	@Override
@@ -61,10 +48,10 @@ public class EtcStatusUpdate implements IClientOutgoingPacket
 		packet.writeC(0); // Weapon Grade Penalty [1-4]
 		packet.writeC(0); // Armor Grade Penalty [1-4]
 		packet.writeC(0); // Death Penalty [1-15, 0 = disabled)], not used anymore in Ertheia
-		packet.writeC(!_isShadow && !_isLight ? _player.getChargedSouls() : 0);
+		packet.writeC(0); // Old count for charged souls.
 		packet.writeC(_mask);
-		packet.writeC(_isShadow ? _player.getChargedSouls() : 0); // Shadow souls
-		packet.writeC(_isLight ? _player.getChargedSouls() : 0); // Light souls
+		packet.writeC(_player.getChargedSouls(SoulType.SHADOW)); // Shadow souls
+		packet.writeC(_player.getChargedSouls(SoulType.LIGHT)); // Light souls
 		return true;
 	}
 }

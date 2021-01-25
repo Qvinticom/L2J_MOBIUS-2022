@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.ActionData;
 import org.l2jmobius.gameserver.enums.ItemSkillType;
 import org.l2jmobius.gameserver.enums.NextActionType;
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.enums.StatusUpdateType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -490,7 +491,11 @@ public class SkillCaster implements Runnable
 		if (caster.isPlayer())
 		{
 			// Consume Souls if necessary.
-			if ((_skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxSoulConsumeCount()))
+			if ((_skill.getMaxLightSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxLightSoulConsumeCount(), SoulType.LIGHT))
+			{
+				return false;
+			}
+			if ((_skill.getMaxShadowSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxShadowSoulConsumeCount(), SoulType.SHADOW))
 			{
 				return false;
 			}

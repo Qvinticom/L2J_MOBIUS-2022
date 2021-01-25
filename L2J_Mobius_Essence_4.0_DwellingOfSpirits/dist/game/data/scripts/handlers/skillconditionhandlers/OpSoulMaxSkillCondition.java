@@ -16,6 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
+import org.l2jmobius.gameserver.enums.SoulType;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -28,14 +29,17 @@ import org.l2jmobius.gameserver.model.stats.Stat;
  */
 public class OpSoulMaxSkillCondition implements ISkillCondition
 {
+	private final SoulType _type;
+	
 	public OpSoulMaxSkillCondition(StatSet params)
 	{
+		_type = params.getEnum("type", SoulType.class, SoulType.LIGHT);
 	}
 	
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
 		final int maxSouls = (int) caster.getStat().getValue(Stat.MAX_SOULS);
-		return caster.isPlayable() && (caster.getActingPlayer().getChargedSouls() < maxSouls);
+		return caster.isPlayable() && (caster.getActingPlayer().getChargedSouls(_type) < maxSouls);
 	}
 }
