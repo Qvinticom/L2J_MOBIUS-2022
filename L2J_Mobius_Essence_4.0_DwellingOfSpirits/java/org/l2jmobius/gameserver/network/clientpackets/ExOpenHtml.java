@@ -20,7 +20,7 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
 
 /**
  * @author Mobius
@@ -43,10 +43,6 @@ public class ExOpenHtml implements IClientIncomingPacket
 			return;
 		}
 		
-		// FIXME:
-		// client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/32478.html")));
-		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/32478.html"));
-		player.sendPacket(html);
+		client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/32478.html")));
 	}
 }

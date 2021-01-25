@@ -16,6 +16,7 @@
  */
 package ai.others.DimensionalMerchant;
 
+import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -27,6 +28,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerFreight;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
+import org.l2jmobius.gameserver.network.serverpackets.ExPremiumManagerShowHtml;
 import org.l2jmobius.gameserver.network.serverpackets.PackageToList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 
@@ -101,6 +103,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(Npc npc, PlayerInstance player)
+	{
+		player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/32478.html")));
+		return null;
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
