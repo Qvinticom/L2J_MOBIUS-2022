@@ -476,16 +476,17 @@
 	<item id="91931" name="Adventurer's Mark Lv. 5" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP/ MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
-		<set name="is_dropable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="handler" val="Book" />
 		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="Book" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="5" />
