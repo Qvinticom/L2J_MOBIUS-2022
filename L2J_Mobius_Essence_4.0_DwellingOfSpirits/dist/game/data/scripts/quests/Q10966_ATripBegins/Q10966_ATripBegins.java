@@ -50,6 +50,7 @@ public class Q10966_ATripBegins extends Quest
 	private static final ItemHolder TALISMAN_OF_ADEN = new ItemHolder(91745, 1);
 	private static final ItemHolder SCROLL_OF_ENCHANT_TALISMAN_OF_ADEN = new ItemHolder(91756, 1);
 	private static final ItemHolder ADVENTURERS_BRACELET = new ItemHolder(91934, 1);
+	private static final ItemHolder SCROLL_OF_ENCHANT_ADEN_WEAPON = new ItemHolder(93038, 2);
 	// Monsters
 	private static final int ARACHNID_PREDATOR = 20926;
 	private static final int SKELETON_BOWMAN = 20051;
@@ -95,6 +96,8 @@ public class Q10966_ATripBegins extends Quest
 		switch (event)
 		{
 			case "30332-01.htm":
+			case "30332-07.htm":
+			case "30332-08.htm":
 			case "34139-01.htm":
 			case "34139-02.html":
 			case "34139-03.html":
@@ -129,15 +132,22 @@ public class Q10966_ATripBegins extends Quest
 				htmltext = event;
 				break;
 			}
+			case "30332-06.html":
+			{
+				htmltext = event;
+				break;
+			}
 			case "30332-05.html":
 			{
 				if (qs.isCond(3))
 				{
+					showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BRACELET_AND_TALISMAN_OF_ADEN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_TALISMAN, ExShowScreenMessage.TOP_CENTER, 10000);
 					addExpAndSp(player, 1000000, 27000);
 					giveItems(player, SOE_NOVICE);
 					giveItems(player, TALISMAN_OF_ADEN);
 					giveItems(player, SCROLL_OF_ENCHANT_TALISMAN_OF_ADEN);
 					giveItems(player, ADVENTURERS_BRACELET);
+					giveItems(player, SCROLL_OF_ENCHANT_ADEN_WEAPON);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

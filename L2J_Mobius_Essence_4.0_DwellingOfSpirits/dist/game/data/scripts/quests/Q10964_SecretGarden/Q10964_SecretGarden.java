@@ -47,6 +47,8 @@ public class Q10964_SecretGarden extends Quest
 	private static final int TURAK_BUGBEAR_WARRIOR = 20249;
 	// Items
 	private static final ItemHolder SCROLL_ENCHANT_ADEN_WEAPON = new ItemHolder(93038, 2);
+	private static final ItemHolder TRAVELER_AGATHION_SUMMON_BRACELET = new ItemHolder(91933, 1);
+	private static final ItemHolder TRAVELER_AGATHION_GRIFFIN = new ItemHolder(91935, 1);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final int MIN_LEVEL = 30;
@@ -85,26 +87,39 @@ public class Q10964_SecretGarden extends Quest
 			case "30332-01.htm":
 			{
 				qs.startQuest();
+				showOnScreenMsg(player, NpcStringId.BEFORE_YOU_GO_FOR_A_BATTLE_CHECK_THE_SKILL_WINDOW_ALT_K_NEW_SKILLS_WILL_HELP_YOU_TO_GET_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 				htmltext = event;
+				break;
+			}
+			case "Nod":
+			{
 				break;
 			}
 			case "30289-01.html":
 			{
-				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
 			case "30289-02.html":
 			{
+				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
 			case "30289-03.html":
+			case "30289-04.html":
+			{
+				htmltext = event;
+				break;
+			}
+			case "30289-05.html":
 			{
 				if (qs.isStarted())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_MISSION_ADVENTURER_S_JOURNEY_II_IS_NOW_AVAILABLE_NCLICK_THE_YELLOW_QUESTION_MARK_IN_THE_RIGHT_BOTTOM_CORNER_OF_YOUR_SCREEN_TO_SEE_THE_QUEST_S_INFO, 2, 5000));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_GOT_ADVENTURER_S_AGATHION_BRACELET_AND_ADVENTURER_S_AGATHION_GRIFFIN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_AGATHION, 2, 5000));
 					addExpAndSp(player, 3500000, 95000);
+					giveItems(player, TRAVELER_AGATHION_SUMMON_BRACELET);
+					giveItems(player, TRAVELER_AGATHION_GRIFFIN);
 					giveItems(player, SCROLL_ENCHANT_ADEN_WEAPON);
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -180,7 +195,7 @@ public class Q10964_SecretGarden extends Quest
 					}
 					else if (qs.isCond(3))
 					{
-						htmltext = "30289-02.html";
+						htmltext = "30289-04.html";
 					}
 					break;
 				}

@@ -47,12 +47,13 @@ public class Q10965_DeathMysteries extends Quest
 	private static final int WINDUS = 20553;
 	private static final int GRANDIS = 20554;
 	// Items
-	private static final ItemHolder ADVENTURERS_AGATHION_BRACELET = new ItemHolder(91933, 1);
-	private static final ItemHolder ADVENTURERS_AGATHION_GRIFIN = new ItemHolder(91935, 1);
+	private static final ItemHolder BLUE_LANTERNT = new ItemHolder(93074, 1);
+	private static final ItemHolder MAGIC_LAMP_CHARGING_POTION = new ItemHolder(91757, 1);
+	private static final ItemHolder SCROLL_OF_ENCHANT_ADEN_WEAPON = new ItemHolder(93038, 2);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final int MAX_LEVEL = 40;
-	private static final int MIN_LEVEL = 37;
+	private static final int MIN_LEVEL = 35;
 	
 	public Q10965_DeathMysteries()
 	{
@@ -102,6 +103,7 @@ public class Q10965_DeathMysteries extends Quest
 			case "30289-03.htm":
 			{
 				qs.startQuest();
+				showOnScreenMsg(player, NpcStringId.BEFORE_YOU_GO_FOR_A_BATTLE_CHECK_THE_SKILL_WINDOW_ALT_K_NEW_SKILLS_WILL_HELP_YOU_TO_GET_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
 				htmltext = event;
 				break;
 			}
@@ -125,10 +127,10 @@ public class Q10965_DeathMysteries extends Quest
 			{
 				if (qs.isStarted())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_GOT_ADVENTURER_S_AGATHION_BRACELET_AND_ADVENTURER_S_AGATHION_GRIFFIN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_AGATHION, 2, 5000));
-					addExpAndSp(player, 3000000, 75000);
-					giveItems(player, ADVENTURERS_AGATHION_BRACELET);
-					giveItems(player, ADVENTURERS_AGATHION_GRIFIN);
+					addExpAndSp(player, 5000000, 135000);
+					giveItems(player, BLUE_LANTERNT);
+					giveItems(player, MAGIC_LAMP_CHARGING_POTION);
+					giveItems(player, SCROLL_OF_ENCHANT_ADEN_WEAPON);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;

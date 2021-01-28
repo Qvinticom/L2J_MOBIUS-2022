@@ -98,7 +98,7 @@ public class Q10967_CulturedAdventurer extends Quest
 				if (qs.isStarted())
 				{
 					player.sendPacket(new ExShowScreenMessage("You've obtained Adventurer's Brooch and Adventurer's Gem Fragment.#Check the tutorial to equip the gems.", 5000));
-					addExpAndSp(player, 2000000, 50000);
+					addExpAndSp(player, 2500000, 67500);
 					giveItems(player, ADVENTURERS_BROOCH);
 					giveItems(player, ADVENTURERS_BROOCH_GEMS);
 					giveItems(player, SCROLL_ENCHANT_ADEN_WEAPON);
@@ -122,24 +122,14 @@ public class Q10967_CulturedAdventurer extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			switch (npc.getId())
+			if (qs.isCond(2))
 			{
-				case CAPTAIN_BATHIS:
-				{
-					if (qs.isCond(2))
-					{
-						htmltext = "30332-04.html";
-					}
-					break;
-				}
+				htmltext = "30332-04.html";
 			}
 		}
 		else if (qs.isCompleted())
 		{
-			if (npc.getId() == CAPTAIN_BATHIS)
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-			}
+			htmltext = getAlreadyCompletedMsg(player);
 		}
 		return htmltext;
 	}
