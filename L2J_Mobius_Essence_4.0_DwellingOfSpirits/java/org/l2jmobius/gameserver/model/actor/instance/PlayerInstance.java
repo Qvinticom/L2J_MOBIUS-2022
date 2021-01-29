@@ -553,6 +553,8 @@ public class PlayerInstance extends Playable
 	private Location _lastLoc;
 	private boolean _observerMode = false;
 	
+	private Location _teleportLocation;
+	
 	/** Stored from last ValidatePosition **/
 	private final Location _lastServerPosition = new Location(0, 0, 0);
 	
@@ -10402,6 +10404,16 @@ public class PlayerInstance extends Playable
 			_teleportWatchdog.cancel(false);
 			_teleportWatchdog = null;
 		}
+	}
+	
+	public void setTeleportLocation(Location location)
+	{
+		_teleportLocation = location;
+	}
+	
+	public Location getTeleportLocation()
+	{
+		return _teleportLocation;
 	}
 	
 	public void setLastServerPosition(int x, int y, int z)
