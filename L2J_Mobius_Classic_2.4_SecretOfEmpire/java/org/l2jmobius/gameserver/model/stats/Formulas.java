@@ -1667,7 +1667,25 @@ public class Formulas
 		return 1;
 	}
 	
-	public static double calcSpiritElementalDamage(Creature attacker, Creature target, double baseDamage)
+	public static boolean calcSpiritElementalCrit(Creature attacker, Creature target)
+	{
+		if (attacker.isPlayer())
+		{
+			final PlayerInstance attackerPlayer = attacker.getActingPlayer();
+			final ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
+			if (ElementalType.NONE == type)
+			{
+				return false;
+			}
+			
+			final double critRate = attackerPlayer.getElementalSpiritCritRate();
+			return Math.min(critRate * 10, 380) > Rnd.get(1000);
+		}
+		
+		return false;
+	}
+	
+	public static double calcSpiritElementalDamage(Creature attacker, Creature target, double baseDamage, boolean isCrit)
 	{
 		if (attacker.isPlayer())
 		{
@@ -1678,8 +1696,6 @@ public class Formulas
 				return 0;
 			}
 			
-			final double critRate = attackerPlayer.getElementalSpiritCritRate();
-			final boolean isCrit = Math.min(critRate * 10, 380) > Rnd.get(1000);
 			final double critDamage = attackerPlayer.getElementalSpiritCritDamage();
 			final double attack = (attackerPlayer.getActiveElementalSpiritAttack() - target.getElementalSpiritDefenseOf(type)) + Rnd.get(-2, 6);
 			if (target.isPlayer())

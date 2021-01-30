@@ -79,7 +79,7 @@ public class RealDamage extends AbstractEffect
 		// Send message.
 		if (effector.isPlayer())
 		{
-			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false);
+			effector.sendDamageMessage(effected, skill, (int) damage, 0, false, false, false);
 		}
 	}
 }

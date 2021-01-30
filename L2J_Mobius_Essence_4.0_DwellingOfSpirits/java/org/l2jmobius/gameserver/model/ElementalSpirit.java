@@ -285,7 +285,7 @@ public class ElementalSpirit
 	
 	public int getCriticalDamage()
 	{
-		return _template.getCriticalDamageAtLevel(_data.getLevel()) + getCriticalRatePoints();
+		return _template.getCriticalDamageAtLevel(_data.getLevel()) + getCriticalDamagePoints();
 	}
 	
 	public void setInUse(boolean value)

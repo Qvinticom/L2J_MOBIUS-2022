@@ -4552,6 +4552,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		double elementalDamage = 0;
+		boolean elementalCrit = false;
 		
 		// Calculate PvP/PvE damage received. It is a post-attack stat.
 		if (attacker != null)
@@ -4576,7 +4577,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			
 			if (!reflect)
 			{
-				elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, amount);
+				elementalCrit = Formulas.calcSpiritElementalCrit(attacker, this);
+				elementalDamage = Formulas.calcSpiritElementalDamage(attacker, this, amount, elementalCrit);
 				amount += elementalDamage;
 			}
 		}
@@ -4602,7 +4604,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (attacker != null)
 		{
-			attacker.sendDamageMessage(this, skill, (int) amount, elementalDamage, critical, false);
+			attacker.sendDamageMessage(this, skill, (int) amount, elementalDamage, critical, false, elementalCrit);
 		}
 	}
 	
@@ -4736,8 +4738,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param elementalDamage
 	 * @param crit
 	 * @param miss
+	 * @param elementalCrit
 	 */
-	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss, boolean elementalCrit)
 	{
 	}
 	

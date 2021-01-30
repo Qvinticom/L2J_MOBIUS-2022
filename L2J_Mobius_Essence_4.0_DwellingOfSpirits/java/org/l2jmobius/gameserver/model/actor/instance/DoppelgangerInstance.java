@@ -124,11 +124,11 @@ public class DoppelgangerInstance extends Npc
 	public void doAttack(double damage, Creature target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
 		super.doAttack(damage, target, skill, isDOT, directlyToHp, critical, reflect);
-		sendDamageMessage(target, skill, (int) damage, 0, critical, false);
+		sendDamageMessage(target, skill, (int) damage, 0, critical, false, false);
 	}
 	
 	@Override
-	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss, boolean elementalCrit)
 	{
 		if (miss || (getSummoner() == null) || !getSummoner().isPlayer())
 		{

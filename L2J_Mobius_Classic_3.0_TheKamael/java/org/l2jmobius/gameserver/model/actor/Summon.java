@@ -731,7 +731,7 @@ public abstract class Summon extends Playable
 	}
 	
 	@Override
-	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss, boolean elementalCrit)
 	{
 		if (miss || (_owner == null))
 		{

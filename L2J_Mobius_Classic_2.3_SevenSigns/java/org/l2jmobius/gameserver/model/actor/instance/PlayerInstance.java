@@ -11386,7 +11386,7 @@ public class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss)
+	public void sendDamageMessage(Creature target, Skill skill, int damage, double elementalDamage, boolean crit, boolean miss, boolean elementalCrit)
 	{
 		// Check if hit is missed
 		if (miss)
@@ -11429,6 +11429,13 @@ public class PlayerInstance extends Playable
 			{
 				sendPacket(new ExMagicAttackInfo(getObjectId(), target.getObjectId(), ExMagicAttackInfo.CRITICAL));
 			}
+		}
+		
+		if (elementalCrit)
+		{
+			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_ATTACK_CRITICAL_IS_ACTIVATED);
+			sm.addElementalSpirit(getActiveElementalSpiritType());
+			sendPacket(sm);
 		}
 		
 		if (isInOlympiadMode() && target.isPlayer() && target.getActingPlayer().isInOlympiadMode() && (target.getActingPlayer().getOlympiadGameId() == getOlympiadGameId()))
