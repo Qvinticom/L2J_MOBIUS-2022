@@ -33,9 +33,17 @@ import quests.Q10964_SecretGarden.Q10964_SecretGarden;
 import quests.Q10965_DeathMysteries.Q10965_DeathMysteries;
 import quests.Q10966_ATripBegins.Q10966_ATripBegins;
 import quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer;
+import quests.Q10968_ThePowerOfTheMagicLamp.Q10968_ThePowerOfTheMagicLamp;
+import quests.Q10969_SporeInfestedPlace.Q10969_SporeInfestedPlace;
+import quests.Q10970_RespectForGraves.Q10970_RespectForGraves;
 import quests.Q10971_TalismanEnchant.Q10971_TalismanEnchant;
 import quests.Q10972_CombiningGems.Q10972_CombiningGems;
 import quests.Q10973_EnchantingAgathions.Q10973_EnchantingAgathions;
+import quests.Q10974_NewStylishEquipment.Q10974_NewStylishEquipment;
+import quests.Q10975_LetsPayRespectsToOurFallenBrethren.Q10975_LetsPayRespectsToOurFallenBrethren;
+import quests.Q10976_MemoryOfTheGloriousPast.Q10976_MemoryOfTheGloriousPast;
+import quests.Q10977_TracesOfBattle.Q10977_TracesOfBattle;
+import quests.Q10978_MissingPets.Q10978_MissingPets;
 import quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling;
 import quests.Q10982_SpiderHunt.Q10982_SpiderHunt;
 import quests.Q10983_TroubledForest.Q10983_TroubledForest;
@@ -46,14 +54,6 @@ import quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves;
 import quests.Q10988_Conspiracy.Q10988_Conspiracy;
 import quests.Q10989_DangerousPredators.Q10989_DangerousPredators;
 import quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;
-import quests.not_done.Q10968_ThePowerOfTheMagicLamp;
-import quests.not_done.Q10969_SporeInfestedPlace;
-import quests.not_done.Q10970_RespectForGraves;
-import quests.not_done.Q10974_NewStylishEquipment;
-import quests.not_done.Q10975_LetsPayRespectsToOurFallenBrethren;
-import quests.not_done.Q10976_MemoryOfTheGloriousPast;
-import quests.not_done.Q10977_TracesOfBattle;
-import quests.not_done.Q10978_MissingPets;
 
 /**
  * @author NosBit
@@ -88,17 +88,17 @@ public class QuestMasterHandler
 		Q10988_Conspiracy.class,
 		Q10989_DangerousPredators.class,
 		Q10990_PoisonExtraction.class,
-		Q10968_ThePowerOfTheMagicLamp.class, // TODO: Not done.
-		Q10969_SporeInfestedPlace.class, // TODO: Not done.
-		Q10970_RespectForGraves.class, // TODO: Not done.
+		Q10968_ThePowerOfTheMagicLamp.class,
+		Q10969_SporeInfestedPlace.class,
+		Q10970_RespectForGraves.class,
 		Q10971_TalismanEnchant.class,
 		Q10972_CombiningGems.class,
 		Q10973_EnchantingAgathions.class,
-		Q10974_NewStylishEquipment.class, // TODO: Not done.
-		Q10975_LetsPayRespectsToOurFallenBrethren.class, // TODO: Not done.
-		Q10976_MemoryOfTheGloriousPast.class, // TODO: Not done.
-		Q10977_TracesOfBattle.class, // TODO: Not done.
-		Q10978_MissingPets.class, // TODO: Not done.
+		Q10974_NewStylishEquipment.class,
+		Q10975_LetsPayRespectsToOurFallenBrethren.class,
+		Q10976_MemoryOfTheGloriousPast.class,
+		Q10977_TracesOfBattle.class,
+		Q10978_MissingPets.class,
 	};
 	
 	public static void main(String[] args)
