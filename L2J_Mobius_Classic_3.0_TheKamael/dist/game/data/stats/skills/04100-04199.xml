@@ -2861,7 +2861,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4164" toLevel="15" name="Cubic Paralysis">
+	<skill id="4164" toLevel="18" name="Cubic Paralysis">
 		<!-- Paralyzed and unable to move temporarily. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2888,6 +2888,9 @@
 			<value level="13">80</value>
 			<value level="14">81</value>
 			<value level="15">82</value>
+			<value level="16">83</value>
+			<value level="17">84</value>
+			<value level="18">85</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2916,7 +2919,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="4165" toLevel="14" name="Cubic Icy Air">
+	<skill id="4165" toLevel="17" name="Cubic Icy Air">
 		<!-- Continuously damaged by icy air. -->
 		<icon>icon.skill1183</icon>
 		<abnormalLevel>
@@ -2934,6 +2937,9 @@
 			<value level="12">8</value>
 			<value level="13">8</value>
 			<value level="14">8</value>
+			<value level="15">8</value>
+			<value level="16">8</value>
+			<value level="17">8</value>
 		</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -2959,6 +2965,9 @@
 			<value level="12">80</value>
 			<value level="13">81</value>
 			<value level="14">82</value>
+			<value level="15">83</value>
+			<value level="16">84</value>
+			<value level="17">85</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2982,12 +2991,15 @@
 					<value level="12">164</value>
 					<value level="13">164</value>
 					<value level="14">164</value>
+					<value level="15">164</value>
+					<value level="16">164</value>
+					<value level="17">164</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4166" toLevel="15" name="Cubic Stun">
+	<skill id="4166" toLevel="18" name="Cubic Stun">
 		<!-- Immobilizes and stuns target. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -3015,6 +3027,9 @@
 			<value level="13">80</value>
 			<value level="14">81</value>
 			<value level="15">82</value>
+			<value level="16">83</value>
+			<value level="17">84</value>
+			<value level="18">85</value>
 		</magicLevel>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
