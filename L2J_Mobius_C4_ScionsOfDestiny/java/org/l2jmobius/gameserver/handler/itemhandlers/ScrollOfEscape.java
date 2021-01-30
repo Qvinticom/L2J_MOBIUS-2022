@@ -158,6 +158,12 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
+		if (player.isCastingNow())
+		{
+			player.sendMessage("You may not use this item while casting a skill.");
+			return;
+		}
+		
 		// Check if this is a blessed scroll, if it is then shorten the cast time.
 		final int itemId = item.getItemId();
 		final SystemMessage sm3 = new SystemMessage(SystemMessageId.USE_S1);
@@ -183,7 +189,6 @@ public class ScrollOfEscape implements IItemHandler
 		// Abort combat.
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.abortAttack();
-		player.abortCast(true);
 		player.disableAllSkills();
 		
 		final Skill skill = SkillTable.getInstance().getSkill(escapeSkill, 1);
