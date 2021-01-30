@@ -297,6 +297,16 @@ public class MinionList
 		// move monster to masters instance
 		minion.setInstance(master.getInstanceWorld());
 		
+		// Set custom Npc server side name and title
+		if (minion.getTemplate().isUsingServerSideName())
+		{
+			minion.setName(minion.getTemplate().getName());
+		}
+		if (minion.getTemplate().isUsingServerSideTitle())
+		{
+			minion.setTitle(minion.getTemplate().getTitle());
+		}
+		
 		// Init the position of the Minion and add it in the world as a visible object
 		final int offset = 200;
 		final int minRadius = (int) master.getCollisionRadius() + 30;
