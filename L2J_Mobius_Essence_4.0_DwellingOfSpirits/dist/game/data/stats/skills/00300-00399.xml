@@ -450,58 +450,31 @@
 			<value level="19">72</value>
 			<value level="20">74</value>
 		</magicLevel>
-		<mpInitialConsume>
-			<value level="1">4</value>
-			<value level="2">5</value>
-			<value level="3">5</value>
-			<value level="4">6</value>
-			<value level="5">7</value>
-			<value level="6">7</value>
-			<value level="7">8</value>
-			<value level="8">9</value>
-			<value level="9">9</value>
-			<value level="10">10</value>
-			<value level="11">10</value>
-			<value level="12">11</value>
-			<value level="13">11</value>
-			<value level="14">12</value>
-			<value level="15">12</value>
-			<value level="16">13</value>
-			<value level="17">13</value>
-			<value level="18">13</value>
-			<value level="19">14</value>
-			<value level="20">14</value>
-		</mpInitialConsume>
-		<operateType>T</operateType>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>NONE</targetType>
 		<effects>
-			<effect name="MpConsumePerLevel">
-				<power>0.8</power>
-				<ticks>5</ticks>
-			</effect>
 			<effect name="CriticalDamage">
 				<amount>
-					<value level="1">35</value>
-					<value level="2">48</value>
-					<value level="3">64</value>
-					<value level="4">84</value>
-					<value level="5">109</value>
-					<value level="6">139</value>
-					<value level="7">166</value>
-					<value level="8">196</value>
-					<value level="9">229</value>
-					<value level="10">266</value>
-					<value level="11">306</value>
-					<value level="12">349</value>
-					<value level="13">379</value>
-					<value level="14">410</value>
-					<value level="15">443</value>
-					<value level="16">475</value>
-					<value level="17">509</value>
-					<value level="18">542</value>
-					<value level="19">576</value>
-					<value level="20">609</value>
+					<value level="1">40</value>
+					<value level="2">60</value>
+					<value level="3">80</value>
+					<value level="4">100</value>
+					<value level="5">130</value>
+					<value level="6">180</value>
+					<value level="7">210</value>
+					<value level="8">240</value>
+					<value level="9">270</value>
+					<value level="10">300</value>
+					<value level="11">330</value>
+					<value level="12">360</value>
+					<value level="13">390</value>
+					<value level="14">420</value>
+					<value level="15">450</value>
+					<value level="16">480</value>
+					<value level="17">520</value>
+					<value level="18">550</value>
+					<value level="19">580</value>
+					<value level="20">620</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
