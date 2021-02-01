@@ -120,7 +120,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 				final Instance world = npc.getInstanceWorld();
 				if (world != null)
 				{
-					final PlayerInstance plr = world.getPlayers().stream().findAny().get();
+					final PlayerInstance plr = world.getPlayers().stream().findAny().orElse(null);
 					if ((plr != null) && (plr.isInsideRadius3D(npc, 100)))
 					{
 						npc.abortAttack();
