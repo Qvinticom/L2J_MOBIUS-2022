@@ -7379,7 +7379,7 @@
 			<condition name="RemainMpPer">
 				<amount>
 					<value level="1">25</value>
-					<value level="2">30</value>
+					<value fromLevel="2" toLevel="36">30</value>
 				</amount>
 				<percentType>LESS</percentType>
 			</condition>
