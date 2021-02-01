@@ -41,7 +41,7 @@ public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler
 	{
 		super(holder);
 		_minLevel = holder.getParams().getInt("minLevel", 0);
-		_maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
+		_maxLevel = holder.getParams().getInt("maxLevel", Integer.MAX_VALUE);
 	}
 	
 	@Override

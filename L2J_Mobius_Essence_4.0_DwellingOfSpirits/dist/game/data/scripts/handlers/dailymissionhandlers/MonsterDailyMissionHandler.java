@@ -48,7 +48,7 @@ public class MonsterDailyMissionHandler extends AbstractDailyMissionHandler
 		super(holder);
 		_amount = holder.getRequiredCompletions();
 		_minLevel = holder.getParams().getInt("minLevel", 0);
-		_maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
+		_maxLevel = holder.getParams().getInt("maxLevel", Integer.MAX_VALUE);
 		final String ids = holder.getParams().getString("ids", "");
 		if (!ids.isEmpty())
 		{
