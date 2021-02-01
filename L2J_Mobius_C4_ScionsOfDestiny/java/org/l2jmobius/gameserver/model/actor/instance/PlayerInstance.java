@@ -220,6 +220,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradePressOwnOk;
 import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
@@ -521,7 +522,6 @@ public class PlayerInstance extends Playable
 	private final HashMap<Integer, Long> _confirmDlgRequests = new HashMap<>();
 	private int _currentMultiSellId = -1;
 	private int _partyroom = 0;
-	private Future<?> _autoSaveTask = null;
 	
 	/** The table containing all minimum level needed for each Expertise (None, D, C, B, A, S). */
 	private static final int[] EXPERTISE_LEVELS =
@@ -8133,7 +8133,7 @@ public class PlayerInstance extends Playable
 			
 			player.restoreFriendList();
 			
-			player.startAutoSaveTask();
+			PlayerAutoSaveTaskManager.getInstance().add(player);
 		}
 		catch (Exception e)
 		{
@@ -9409,31 +9409,15 @@ public class PlayerInstance extends Playable
 		return _hennaDEX;
 	}
 	
-	private void startAutoSaveTask()
-	{
-		if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null))
-		{
-			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, Config.CHAR_DATA_STORE_INTERVAL, Config.CHAR_DATA_STORE_INTERVAL);
-		}
-	}
-	
-	private void stopAutoSaveTask()
-	{
-		if (_autoSaveTask != null)
-		{
-			_autoSaveTask.cancel(false);
-			_autoSaveTask = null;
-		}
-	}
-	
-	protected void autoSave()
+	public void autoSave()
 	{
 		store();
 		
 		if (Config.UPDATE_ITEMS_ON_CHAR_STORE)
 		{
-			_inventory.updateDatabase();
+			getInventory().updateDatabase();
 			getWarehouse().updateDatabase();
+			getFreight().updateDatabase();
 		}
 	}
 	
@@ -13612,7 +13596,7 @@ public class PlayerInstance extends Playable
 		// Remove WorldObject object from _allObjects of World
 		World.getInstance().removeObject(this);
 		World.getInstance().removeFromAllPlayers(this); // force remove in case of crash during teleport
-		stopAutoSaveTask();
+		PlayerAutoSaveTaskManager.getInstance().remove(this);
 	}
 	
 	private class ShortBuffTask implements Runnable

@@ -342,6 +342,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.EnumIntBitmask;
 import org.l2jmobius.gameserver.util.FloodProtectors;
@@ -801,8 +802,6 @@ public class PlayerInstance extends Playable
 	private int _questZoneId = -1;
 	
 	private final Fishing _fishing = new Fishing(this);
-	
-	private Future<?> _autoSaveTask = null;
 	
 	public void setPvpFlagLasts(long time)
 	{
@@ -6727,7 +6726,8 @@ public class PlayerInstance extends Playable
 			player.startOnlineTimeUpdateTask();
 			
 			player.setOnlineStatus(true, false);
-			player.startAutoSaveTask();
+			
+			PlayerAutoSaveTaskManager.getInstance().add(player);
 		}
 		catch (Exception e)
 		{
@@ -7988,32 +7988,16 @@ public class PlayerInstance extends Playable
 		return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
 	}
 	
-	private void startAutoSaveTask()
-	{
-		if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null))
-		{
-			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, Config.CHAR_DATA_STORE_INTERVAL, Config.CHAR_DATA_STORE_INTERVAL);
-		}
-	}
-	
-	private void stopAutoSaveTask()
-	{
-		if (_autoSaveTask != null)
-		{
-			_autoSaveTask.cancel(false);
-			_autoSaveTask = null;
-		}
-	}
-	
-	protected void autoSave()
+	public void autoSave()
 	{
 		storeMe();
 		storeRecommendations();
 		
 		if (Config.UPDATE_ITEMS_ON_CHAR_STORE)
 		{
-			_inventory.updateDatabase();
+			getInventory().updateDatabase();
 			getWarehouse().updateDatabase();
+			getFreight().updateDatabase();
 		}
 	}
 	
@@ -11096,7 +11080,8 @@ public class PlayerInstance extends Playable
 		// Stop all passives and augment options
 		getEffectList().stopAllPassives(false, false);
 		getEffectList().stopAllOptions(false, false);
-		stopAutoSaveTask();
+		
+		PlayerAutoSaveTaskManager.getInstance().remove(this);
 		
 		return super.deleteMe();
 	}
@@ -13806,11 +13791,6 @@ public class PlayerInstance extends Playable
 		{
 			_pvpRegTask.cancel(false);
 			_pvpRegTask = null;
-		}
-		if ((_autoSaveTask != null) && !_autoSaveTask.isDone() && !_autoSaveTask.isCancelled())
-		{
-			_autoSaveTask.cancel(false);
-			_autoSaveTask = null;
 		}
 		if ((_taskWarnUserTakeBreak != null) && !_taskWarnUserTakeBreak.isDone() && !_taskWarnUserTakeBreak.isCancelled())
 		{
