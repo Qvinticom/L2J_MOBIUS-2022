@@ -678,8 +678,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>105</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>30820</skillId> <!-- Dual Class - Renewed Energy of Power -->
@@ -779,7 +777,6 @@
 			<condition name="CheckLevel">
 				<minLevel>100</minLevel>
 				<maxLevel>120</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>
@@ -803,7 +800,6 @@
 			<condition name="CheckLevel">
 				<minLevel>105</minLevel>
 				<maxLevel>120</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>
@@ -828,7 +824,6 @@
 			<condition name="CheckLevel">
 				<minLevel>107</minLevel>
 				<maxLevel>120</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>

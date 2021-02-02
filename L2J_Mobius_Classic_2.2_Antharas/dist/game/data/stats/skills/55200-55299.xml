@@ -457,9 +457,7 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<passiveConditions>
 			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
 				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
 		<effects>

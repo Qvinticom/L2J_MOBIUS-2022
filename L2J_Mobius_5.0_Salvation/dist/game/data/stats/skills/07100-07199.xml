@@ -569,8 +569,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>95</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpCanNotUseAirship" />
 			<condition name="OpCheckClassList">
@@ -767,8 +765,6 @@
 			<condition name="OpMainjob" />
 			<condition name="CheckLevel">
 				<minLevel>99</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>19115</skillId> <!-- Air Bike -->
@@ -798,8 +794,6 @@
 			<condition name="OpMainjob" />
 			<condition name="CheckLevel">
 				<minLevel>99</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>8906</skillId> <!-- Riding the Hell Hound -->
@@ -828,8 +822,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>99</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>8907</skillId> <!-- Riding the Pegasus -->
@@ -858,8 +850,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>99</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>8908</skillId> <!-- Riding the Wing Hound -->
@@ -888,8 +878,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>99</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>8909</skillId> <!-- Riding the War Horse -->
@@ -918,8 +906,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>99</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>8910</skillId> <!-- Riding the Griffin -->

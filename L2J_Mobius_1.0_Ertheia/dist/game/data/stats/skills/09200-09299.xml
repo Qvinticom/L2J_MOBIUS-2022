@@ -287,8 +287,6 @@
 			</condition>
 			<condition name="CheckLevel">
 				<minLevel>40</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>
@@ -375,8 +373,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>52</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>1405</skillId> <!-- Divine Inspiration -->
@@ -404,8 +400,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>61</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>1405</skillId> <!-- Divine Inspiration -->
@@ -433,8 +427,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>76</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>1405</skillId> <!-- Divine Inspiration -->
@@ -462,8 +454,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>76</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>1405</skillId> <!-- Divine Inspiration -->

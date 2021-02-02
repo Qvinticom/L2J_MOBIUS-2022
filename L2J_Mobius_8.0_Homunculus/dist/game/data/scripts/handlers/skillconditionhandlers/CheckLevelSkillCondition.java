@@ -34,9 +34,9 @@ public class CheckLevelSkillCondition implements ISkillCondition
 	
 	public CheckLevelSkillCondition(StatSet params)
 	{
-		_minLevel = params.getInt("minLevel");
-		_maxLevel = params.getInt("maxLevel");
-		_affectType = params.getEnum("affectType", SkillConditionAffectType.class);
+		_minLevel = params.getInt("minLevel", 1);
+		_maxLevel = params.getInt("maxLevel", Integer.MAX_VALUE);
+		_affectType = params.getEnum("affectType", SkillConditionAffectType.class, SkillConditionAffectType.CASTER);
 	}
 	
 	@Override

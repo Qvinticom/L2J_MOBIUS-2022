@@ -137,13 +137,6 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
-		</passiveConditions>
 		<effects>
 			<effect name="ExpModify">
 				<amount>50</amount>
@@ -667,13 +660,6 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
-		</passiveConditions>
 		<effects>
 			<effect name="ExpModify">
 				<amount>30</amount>
@@ -1310,8 +1296,6 @@
 		<passiveConditions>
 			<condition name="CheckLevel">
 				<minLevel>20</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
 		<effects>

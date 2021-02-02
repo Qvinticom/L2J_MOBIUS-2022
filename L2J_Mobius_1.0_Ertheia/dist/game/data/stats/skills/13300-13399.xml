@@ -1806,8 +1806,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>85</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
@@ -1841,8 +1839,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>76</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpAlignment">
 				<affectType>CASTER</affectType>

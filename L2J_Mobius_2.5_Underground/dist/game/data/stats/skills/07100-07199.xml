@@ -569,8 +569,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>95</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpCanNotUseAirship" />
 			<condition name="OpCheckClassList">
@@ -767,8 +765,6 @@
 			<condition name="OpMainjob" />
 			<condition name="CheckLevel">
 				<minLevel>99</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
 				<skillId>19115</skillId> <!-- Air Bike -->

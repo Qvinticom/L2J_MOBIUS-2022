@@ -37,8 +37,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>85</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
@@ -63,8 +61,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>90</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
@@ -89,8 +85,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>95</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
@@ -115,8 +109,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>60</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
@@ -141,8 +133,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>76</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpMainjob" />
 		</conditions>
@@ -2084,9 +2074,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>90</maxLevel>
-				<affectType>CASTER</affectType>
+				<maxLevel>89</maxLevel>
 			</condition>
 			<condition name="OpCheckAbnormal">
 				<type>INSTANT_EV_BUFF1</type>

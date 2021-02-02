@@ -498,9 +498,7 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
 				<maxLevel>84</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 	</skill>
@@ -524,8 +522,6 @@
 		<conditions>
 			<condition name="CheckLevel">
 				<minLevel>85</minLevel>
-				<maxLevel>127</maxLevel>
-				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 	</skill>
