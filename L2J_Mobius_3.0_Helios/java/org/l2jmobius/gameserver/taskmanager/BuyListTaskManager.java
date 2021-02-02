@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.taskmanager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -29,17 +31,19 @@ import org.l2jmobius.gameserver.model.buylist.Product;
 public class BuyListTaskManager
 {
 	private static final Map<Product, Long> PRODUCTS = new ConcurrentHashMap<>();
-	private static boolean _working = false;
+	private static final List<Product> PENDING_UPDATES = new ArrayList<>();
+	private static boolean _workingProducts = false;
+	private static boolean _workingSaves = false;
 	
 	public BuyListTaskManager()
 	{
 		ThreadPool.scheduleAtFixedRate(() ->
 		{
-			if (_working)
+			if (_workingProducts)
 			{
 				return;
 			}
-			_working = true;
+			_workingProducts = true;
 			
 			final long currentTime = System.currentTimeMillis();
 			for (Entry<Product, Long> entry : PRODUCTS.entrySet())
@@ -48,12 +52,40 @@ public class BuyListTaskManager
 				{
 					final Product product = entry.getKey();
 					PRODUCTS.remove(product);
-					product.restock();
+					synchronized (PENDING_UPDATES)
+					{
+						if (!PENDING_UPDATES.contains(product))
+						{
+							PENDING_UPDATES.add(product);
+						}
+					}
 				}
 			}
 			
-			_working = false;
+			_workingProducts = false;
 		}, 1000, 60000);
+		
+		ThreadPool.scheduleAtFixedRate(() ->
+		{
+			if (_workingSaves)
+			{
+				return;
+			}
+			_workingSaves = true;
+			
+			if (!PENDING_UPDATES.isEmpty())
+			{
+				final Product product;
+				synchronized (PENDING_UPDATES)
+				{
+					product = PENDING_UPDATES.get(0);
+					PENDING_UPDATES.remove(product);
+				}
+				product.restock();
+			}
+			
+			_workingSaves = false;
+		}, 50, 50);
 	}
 	
 	public void add(Product product, long endTime)
