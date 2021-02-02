@@ -927,7 +927,7 @@
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1893,43 +1893,13 @@
 	<skill id="1033" toLevel="3" name="Poison Resistance">
 		<!-- For $s1, Poison Resistance +$s2. -->
 		<icon>icon.skill1033</icon>
-		<abnormalLevel>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-		</abnormalLevel>
-		<abnormalTime>1200</abnormalTime>
-		<abnormalType>RESIST_POISON</abnormalType>
-		<castRange>400</castRange>
-		<effectPoint>
-			<value level="1">331</value>
-			<value level="2">379</value>
-			<value level="3">418</value>
-		</effectPoint>
-		<effectRange>900</effectRange>
-		<hitTime>4000</hitTime>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">35</value>
 			<value level="2">40</value>
 			<value level="3">44</value>
 		</magicLevel>
-		<mpConsume>
-			<value level="1">24</value>
-			<value level="2">28</value>
-			<value level="3">31</value>
-		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">6</value>
-			<value level="2">7</value>
-			<value level="3">8</value>
-		</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
-		<basicProperty>NONE</basicProperty>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceTrait">
 				<POISON>
@@ -2095,7 +2065,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1040" toLevel="9" name="Shield">
+	<skill id="1040" toLevel="10" name="Shield">
 		<!-- For $s1, P. Def. +$s2. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>
@@ -2108,23 +2078,47 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
+			<value level="10">10</value>
 		</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
-		<castRange>400</castRange>
+		<castRange>
+			<value level="1">-1</value>
+			<value level="2">-1</value>
+			<value level="3">-1</value>
+			<value level="4">-1</value>
+			<value level="5">400</value>
+			<value level="6">400</value>
+			<value level="7">400</value>
+			<value level="8">400</value>
+			<value level="9">400</value>
+			<value level="10">400</value>
+		</castRange>
 		<effectPoint>
-			<value level="1">121</value>
-			<value level="2">243</value>
-			<value level="3">418</value>
-			<value level="4">121</value>
-			<value level="5">243</value>
-			<value level="6">418</value>
-			<value level="7">121</value>
-			<value level="8">243</value>
-			<value level="9">418</value>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">121</value>
+			<value level="6">243</value>
+			<value level="7">418</value>
+			<value level="8">121</value>
+			<value level="9">243</value>
+			<value level="10">418</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
-		<hitTime>1000</hitTime>
+		<hitTime>
+			<value level="1">1000</value>
+			<value level="2">1000</value>
+			<value level="3">1000</value>
+			<value level="4">1000</value>
+			<value level="5">4000</value>
+			<value level="6">4000</value>
+			<value level="7">4000</value>
+			<value level="8">4000</value>
+			<value level="9">4000</value>
+			<value level="10">4000</value>
+		</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
 			<value level="1">2</value>
@@ -2136,6 +2130,7 @@
 			<value level="7">7</value>
 			<value level="8">25</value>
 			<value level="9">44</value>
+			<value level="10">44</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">0</value>
@@ -2147,6 +2142,7 @@
 			<value level="7">10</value>
 			<value level="8">23</value>
 			<value level="9">39</value>
+			<value level="10">39</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">0</value>
@@ -2158,9 +2154,21 @@
 			<value level="7">2</value>
 			<value level="8">5</value>
 			<value level="9">8</value>
+			<value level="10">8</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>
+			<value level="1">10000</value>
+			<value level="2">10000</value>
+			<value level="3">10000</value>
+			<value level="4">10000</value>
+			<value level="5">2000</value>
+			<value level="6">2000</value>
+			<value level="7">2000</value>
+			<value level="8">2000</value>
+			<value level="9">2000</value>
+			<value level="10">2000</value>
+		</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -2177,6 +2185,7 @@
 					<value level="7">250</value>
 					<value level="8">250</value>
 					<value level="9">250</value>
+					<value level="10">250</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

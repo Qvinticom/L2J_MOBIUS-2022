@@ -80,7 +80,6 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 		</abnormalLevel>
-		<effectPoint>268</effectPoint>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>AVOID_SKILL</abnormalType>
 		<hitTime>1000</hitTime>
@@ -95,7 +94,7 @@
 			<value level="3">21</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -122,17 +121,28 @@
 		<!-- Throws a spear to attack the enemy's surroundings with bonus $s1 Power. Stuns for $s2. Available when the distance is at least 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1606</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>50</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>900</castRange>
+		<castRange>700</castRange>
 		<effectRange>1000</effectRange>
-		<hitTime>2500</hitTime>
-		<effectPoint>-507</effectPoint>
+		<hitTime>3000</hitTime>
+		<effectPoint>
+			<value level="1">-650</value>
+			<value level="2">-710</value>
+			<value level="3">-770</value>
+			<value level="4">-830</value>
+			<value level="5">-890</value>
+			<value level="6">-950</value>
+			<value level="7">-1010</value>
+			<value level="8">-1070</value>
+			<value level="9">-1130</value>
+			<value level="10">-1190</value>
+		</effectPoint>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">42</value>
@@ -147,20 +157,20 @@
 			<value level="10">78</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">63</value>
-			<value level="2">70</value>
-			<value level="3">78</value>
-			<value level="4">85</value>
-			<value level="5">92</value>
-			<value level="6">99</value>
-			<value level="7">106</value>
-			<value level="8">112</value>
-			<value level="9">121</value>
-			<value level="10">133</value>
+			<value level="1">51</value>
+			<value level="2">55</value>
+			<value level="3">60</value>
+			<value level="4">64</value>
+			<value level="5">69</value>
+			<value level="6">73</value>
+			<value level="7">78</value>
+			<value level="8">82</value>
+			<value level="9">87</value>
+			<value level="10">91</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -191,7 +201,6 @@
 					<value level="10">3435</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -1265,10 +1274,10 @@
 			<value level="4">84</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">120</value>
-			<value level="2">130</value>
-			<value level="3">141</value>
-			<value level="4">153</value>
+			<value level="1">61</value>
+			<value level="2">63</value>
+			<value level="3">64</value>
+			<value level="4">66</value>
 		</mpConsume>
 		<reuseDelay>120000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1289,40 +1298,94 @@
 			<effect name="PhysicalMute" />
 			<effect name="Root" />
 			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveRaidMagicalSkillDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveRaidPhysicalAttackDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveRaidPhysicalSkillDefenceBonus">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">40</value>
+					<value level="3">30</value>
+					<value level="4">20</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="EnergyAttack">
+				<power>
+					<value level="1">1091</value>
+					<value level="2">1183</value>
+					<value level="3">1278</value>
+					<value level="4">1376</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -1330,19 +1393,19 @@
 		<!-- Throws a spear to attack an enemy with bonus $s1 Power added to P. Atk. Becomes immobilized for $s2. Available when the distance is at least 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill1625</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<castRange>900</castRange>
+		<castRange>700</castRange>
 		<coolTime>500</coolTime>
-		<effectPoint>-655</effectPoint>
+		<effectPoint>-400</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectRange>1400</effectRange>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<mpConsume>63</mpConsume>
+		<mpConsume>60</mpConsume>
 		<magicLevel>78</magicLevel>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1375,10 +1438,10 @@
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>80</magicLevel>
-		<mpConsume>67</mpConsume>
+		<mpConsume>91</mpConsume>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
-		<effectPoint>-137</effectPoint>
+		<effectPoint>-1190</effectPoint>
 		<reuseDelay>8000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -1396,6 +1459,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>2911</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP;SPEED_UP_SPECIAL;SONG_OF_WIND</dispel>

@@ -3824,21 +3824,121 @@
 		<!-- P. Def. +-1400@0:20, M. Def. +-1050@0:15.\n\n<Stats depends on the character level>\nRequired level: 76.\nP. Def. +20, M. Def. +15 with each level. -->
 		<icon>icon.skill19131</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>76</minLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">120</value>
+					<value level="2">140</value>
+					<value level="3">160</value>
+					<value level="4">180</value>
+					<value level="5">200</value>
+					<value level="6">220</value>
+					<value level="7">240</value>
+					<value level="8">260</value>
+					<value level="9">280</value>
+					<value level="10">300</value>
+					<value level="11">320</value>
+					<value level="12">340</value>
+					<value level="13">360</value>
+					<value level="14">380</value>
+					<value level="15">400</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">90</value>
+					<value level="2">105</value>
+					<value level="3">120</value>
+					<value level="4">135</value>
+					<value level="5">150</value>
+					<value level="6">165</value>
+					<value level="7">180</value>
+					<value level="8">195</value>
+					<value level="9">210</value>
+					<value level="10">225</value>
+					<value level="11">240</value>
+					<value level="12">255</value>
+					<value level="13">270</value>
+					<value level="14">285</value>
+					<value level="15">300</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45189" toLevel="1" name="Evolution Power">
 		<!-- P. Atk. +-1400@0:20, M. Atk. +-1400@0:20.\n\n<Stats depends on the character level>\nRequired level: 80.\nP. Atk. +20, M. Atk. +20 with each level. -->
 		<icon>icon.skill19132</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>80</minLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">220</value>
+					<value level="3">240</value>
+					<value level="4">260</value>
+					<value level="5">280</value>
+					<value level="6">300</value>
+					<value level="7">320</value>
+					<value level="8">340</value>
+					<value level="9">360</value>
+					<value level="10">380</value>
+					<value level="11">400</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">220</value>
+					<value level="3">240</value>
+					<value level="4">260</value>
+					<value level="5">280</value>
+					<value level="6">300</value>
+					<value level="7">320</value>
+					<value level="8">340</value>
+					<value level="9">360</value>
+					<value level="10">380</value>
+					<value level="11">400</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45190" toLevel="1" name="Detection">
 		<!-- Allows to find invisible enemies nearby. The target can't become invisible and cancel this effect for 2 sec. Requires a weapon. -->
 		<icon>icon.skill19203</icon>
+		<coolTime>300</coolTime>
+		<affectRange>300</affectRange>
+		<effectPoint>-1</effectPoint>
+		<hitTime>1200</hitTime>
+		<magicLevel>76</magicLevel>
+		<mpConsume>70</mpConsume>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
-		<hitTime>1200</hitTime>
-		<coolTime>300</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<mpConsume>70</mpConsume>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>INVISIBLE</affectObject>
+		<effects>
+			<effect name="Detection" />
+		</effects>
 	</skill>
 	<skill id="45191" toLevel="3" name="STR Increase Bonus">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

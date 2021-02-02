@@ -15,7 +15,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
 		<stayAfterDeath>true</stayAfterDeath>
-		<hitTime>3000</hitTime>
+		<hitTime>3500</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -32,24 +32,12 @@
 				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>3</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="Accuracy">
 				<amount>1</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicAccuracy">
 				<amount>1</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PAtk">
@@ -68,6 +56,18 @@
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1801" toLevel="1" name="Dark Assassin Transformation">
@@ -85,7 +85,7 @@
 		<magicLevel>56</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
-		<hitTime>3000</hitTime>
+		<hitTime>3500</hitTime>
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -155,7 +155,7 @@
 		<magicLevel>56</magicLevel>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
-		<hitTime>3000</hitTime>
+		<hitTime>3500</hitTime>
 		<stayAfterDeath>true</stayAfterDeath>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>

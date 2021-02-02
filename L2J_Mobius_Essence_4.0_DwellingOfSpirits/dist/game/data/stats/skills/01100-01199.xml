@@ -1617,7 +1617,7 @@
 			<value level="3">12</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -3814,7 +3814,7 @@
 	<skill id="1175" toLevel="40" name="Aqua Swirl">
 		<!-- Releases a water vortex to inflict Water damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1175</icon>
-		<castRange>750</castRange>
+		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-91</value>
 			<value level="2">-102</value>
@@ -3863,7 +3863,7 @@
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">17</value>
+			<value level="1">20</value>
 			<value level="2">20</value>
 			<value level="3">23</value>
 			<value level="4">25</value>
@@ -3891,151 +3891,109 @@
 			<value level="26">74</value>
 			<value level="27">76</value>
 			<value level="28">78</value>
-			<value level="29">80</value>
-			<value level="30">81</value>
-			<value level="31">82</value>
-			<value level="32">83</value>
-			<value level="33">84</value>
-			<value level="34">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="35">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="36">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="37">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="38">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="39">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="40">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="29">79</value>
+			<value level="30">80</value>
+			<value level="31">81</value>
+			<value level="32">82</value>
+			<value level="33">83</value>
+			<value level="34">84</value>
+			<value level="35">85</value>
+			<value level="36">86</value>
+			<value level="37">87</value>
+			<value level="38">88</value>
+			<value level="39">89</value>
+			<value level="40">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">14</value>
-			<value level="2">16</value>
-			<value level="3">17</value>
-			<value level="4">18</value>
-			<value level="5">20</value>
-			<value level="6">21</value>
-			<value level="7">23</value>
-			<value level="8">24</value>
-			<value level="9">38</value>
-			<value level="10">39</value>
-			<value level="11">40</value>
-			<value level="12">42</value>
-			<value level="13">43</value>
-			<value level="14">44</value>
-			<value level="15">46</value>
-			<value level="16">47</value>
-			<value level="17">48</value>
-			<value level="18">50</value>
-			<value level="19">51</value>
-			<value level="20">52</value>
-			<value level="21">54</value>
-			<value level="22">55</value>
-			<value level="23">56</value>
-			<value level="24">58</value>
-			<value level="25">59</value>
-			<value level="26">60</value>
-			<value level="27">66</value>
-			<value level="28">97</value>
-			<value level="29">68</value>
-			<value level="30">70</value>
-			<value level="31">71</value>
-			<value level="32">72</value>
-			<value level="33">74</value>
-			<value level="34">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="35">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="36">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="37">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="38">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="39">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="40">74</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="1">18</value>
+			<value level="2">20</value>
+			<value level="3">22</value>
+			<value level="4">23</value>
+			<value level="5">26</value>
+			<value level="6">27</value>
+			<value level="7">28</value>
+			<value level="8">30</value>
+			<value level="9">33</value>
+			<value level="10">35</value>
+			<value level="11">36</value>
+			<value level="12">37</value>
+			<value level="13">38</value>
+			<value level="14">40</value>
+			<value level="15">41</value>
+			<value level="16">42</value>
+			<value level="17">44</value>
+			<value level="18">45</value>
+			<value level="19">46</value>
+			<value level="20">47</value>
+			<value level="21">49</value>
+			<value level="22">50</value>
+			<value level="23">51</value>
+			<value level="24">53</value>
+			<value level="25">54</value>
+			<value level="26">55</value>
+			<value level="27">56</value>
+			<value level="28">58</value>
+			<value level="29">58</value>
+			<value level="30">59</value>
+			<value level="31">59</value>
+			<value level="32">60</value>
+			<value level="33">60</value>
+			<value level="34">62</value>
+			<value level="35">62</value>
+			<value level="36">63</value>
+			<value level="37">63</value>
+			<value level="38">64</value>
+			<value level="39">64</value>
+			<value level="40">65</value>
 		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">4</value>
-			<value level="2">4</value>
-			<value level="3">5</value>
-			<value level="4">5</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">6</value>
-			<value level="8">6</value>
-			<value level="9">6</value>
-			<value level="10">7</value>
-			<value level="11">8</value>
-			<value level="12">9</value>
-			<value level="13">10</value>
-			<value level="14">10</value>
-			<value level="15">10</value>
-			<value level="16">10</value>
-			<value level="17">10</value>
-			<value level="18">10</value>
-			<value level="19">10</value>
-			<value level="20">10</value>
-			<value level="21">10</value>
-			<value level="22">10</value>
-			<value level="23">10</value>
-			<value level="24">10</value>
-			<value level="25">10</value>
-			<value level="26">10</value>
-			<value level="27">10</value>
-			<value level="28">10</value>
-			<value level="29">10</value>
-			<value level="30">10</value>
-			<value level="31">10</value>
-			<value level="32">10</value>
-			<value level="33">10</value>
-			<value level="34">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="35">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="36">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="37">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="38">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="39">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="40">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>1200</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttackRange">
 				<power>
-					<value level="1">23</value>
-					<value level="2">26</value>
-					<value level="3">29</value>
-					<value level="4">32</value>
-					<value level="5">35</value>
-					<value level="6">38</value>
-					<value level="7">42</value>
-					<value level="8">44</value>
-					<value level="9">47</value>
-					<value level="10">49</value>
-					<value level="11">51</value>
-					<value level="12">53</value>
-					<value level="13">55</value>
-					<value level="14">57</value>
-					<value level="15">59</value>
-					<value level="16">61</value>
-					<value level="17">63</value>
-					<value level="18">65</value>
-					<value level="19">67</value>
-					<value level="20">69</value>
-					<value level="21">71</value>
-					<value level="22">73</value>
-					<value level="23">75</value>
-					<value level="24">77</value>
-					<value level="25">79</value>
-					<value level="26">81</value>
-					<value level="27">83</value>
-					<value level="28">85</value>
-					<value level="29">87</value>
-					<value level="30">89</value>
-					<value level="31">91</value>
-					<value level="32">93</value>
-					<value level="33">95</value>
-					<value level="34">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="35">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="36">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="37">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="38">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="39">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="40">95</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">31</value>
+					<value level="2">34</value>
+					<value level="3">39</value>
+					<value level="4">42</value>
+					<value level="5">47</value>
+					<value level="6">51</value>
+					<value level="7">56</value>
+					<value level="8">59</value>
+					<value level="9">68</value>
+					<value level="10">69</value>
+					<value level="11">71</value>
+					<value level="12">73</value>
+					<value level="13">74</value>
+					<value level="14">76</value>
+					<value level="15">78</value>
+					<value level="16">79</value>
+					<value level="17">82</value>
+					<value level="18">85</value>
+					<value level="19">89</value>
+					<value level="20">90</value>
+					<value level="21">92</value>
+					<value level="22">95</value>
+					<value level="23">98</value>
+					<value level="24">102</value>
+					<value level="25">105</value>
+					<value level="26">108</value>
+					<value level="27">112</value>
+					<value level="28">115</value>
+					<value level="29">117</value>
+					<value level="30">119</value>
+					<value level="31">120</value>
+					<value level="32">122</value>
+					<value level="33">124</value>
+					<value level="34">125</value>
+					<value level="35">127</value>
+					<value level="36">130</value>
+					<value level="37">132</value>
+					<value level="38">135</value>
+					<value level="39">137</value>
+					<value level="40">140</value>
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
