@@ -2939,36 +2939,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 	}
 	
-	/**
-	 * Task lauching the function stopPvPFlag().
-	 */
-	class PvPFlag implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			// try
-			// {
-			if (System.currentTimeMillis() > _pvpFlagLasts)
-			{
-				stopPvPFlag();
-			}
-			else if (System.currentTimeMillis() > (_pvpFlagLasts - 5000))
-			{
-				updatePvPFlag(2);
-			}
-			else
-			{
-				updatePvPFlag(1);
-			}
-			// }
-			// catch (Exception e)
-			// {
-			// LOGGER.warning("error in pvp flag task: " + e);
-			// }
-		}
-	}
-	
 	/** Map 32 bits (0x0000) containing all abnormal effect in progress. */
 	private int _AbnormalEffects;
 	
@@ -8326,71 +8296,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		_castInterruptTime = newSkillCastEndTime - 12;
 	}
 	
-	/** The _ pvp reg task. */
-	private Future<?> _PvPRegTask;
-	
-	/** The _pvp flag lasts. */
-	long _pvpFlagLasts;
-	
-	/**
-	 * Sets the pvp flag lasts.
-	 * @param time the new pvp flag lasts
-	 */
-	public void setPvpFlagLasts(long time)
-	{
-		_pvpFlagLasts = time;
-	}
-	
-	/**
-	 * Gets the pvp flag lasts.
-	 * @return the pvp flag lasts
-	 */
-	public long getPvpFlagLasts()
-	{
-		return _pvpFlagLasts;
-	}
-	
-	/**
-	 * Start pvp flag.
-	 */
-	public void startPvPFlag()
-	{
-		updatePvPFlag(1);
-		
-		_PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlag(), 1000, 1000);
-	}
-	
-	/**
-	 * Stop pvp reg task.
-	 */
-	public void stopPvpRegTask()
-	{
-		if (_PvPRegTask != null)
-		{
-			_PvPRegTask.cancel(true);
-		}
-	}
-	
-	/**
-	 * Stop pvp flag.
-	 */
-	public void stopPvPFlag()
-	{
-		stopPvpRegTask();
-		
-		updatePvPFlag(0);
-		
-		_PvPRegTask = null;
-	}
-	
-	/**
-	 * Update pvp flag.
-	 * @param value the value
-	 */
-	public void updatePvPFlag(int value)
-	{
-	}
-	
 	/**
 	 * Return a Random Damage in function of the weapon.
 	 * @param target the target
@@ -8409,7 +8314,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	@Override
 	public String toString()
 	{
-		return "mob " + getObjectId();
+		return "Creature " + getObjectId();
 	}
 	
 	/**

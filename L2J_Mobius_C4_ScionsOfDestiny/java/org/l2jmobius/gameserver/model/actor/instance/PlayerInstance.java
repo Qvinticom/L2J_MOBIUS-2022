@@ -221,6 +221,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
+import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 import org.l2jmobius.gameserver.util.IllegalPlayerAction;
@@ -299,6 +300,7 @@ public class PlayerInstance extends Playable
 	private int _lastKill = 0;
 	private int _count = 0;
 	private byte _pvpFlag;
+	private long _pvpFlagLasts;
 	private byte _siegeState = 0;
 	private int _curWeightPenalty = 0;
 	private byte _zoneValidateCounter = 4;
@@ -1638,7 +1640,50 @@ public class PlayerInstance extends Playable
 		return _pvpFlag;
 	}
 	
-	@Override
+	/**
+	 * Sets the pvp flag lasts.
+	 * @param time the new pvp flag lasts
+	 */
+	public void setPvpFlagLasts(long time)
+	{
+		_pvpFlagLasts = time;
+	}
+	
+	/**
+	 * Gets the pvp flag lasts.
+	 * @return the pvp flag lasts
+	 */
+	public long getPvpFlagLasts()
+	{
+		return _pvpFlagLasts;
+	}
+	
+	/**
+	 * Start pvp flag.
+	 */
+	public void startPvPFlag()
+	{
+		updatePvPFlag(1);
+		PvpFlagTaskManager.getInstance().add(this);
+	}
+	
+	/**
+	 * Stop pvp reg task.
+	 */
+	public void stopPvpRegTask()
+	{
+		PvpFlagTaskManager.getInstance().remove(this);
+	}
+	
+	/**
+	 * Stop pvp flag.
+	 */
+	public void stopPvPFlag()
+	{
+		stopPvpRegTask();
+		updatePvPFlag(0);
+	}
+	
 	public void updatePvPFlag(int value)
 	{
 		if (getPvpFlag() == value)

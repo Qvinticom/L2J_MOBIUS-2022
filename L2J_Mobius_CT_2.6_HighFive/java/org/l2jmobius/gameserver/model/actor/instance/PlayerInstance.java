@@ -162,7 +162,6 @@ import org.l2jmobius.gameserver.model.actor.tasks.player.FameTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.InventoryEnableTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.LookingForFishTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.PetFeedTask;
-import org.l2jmobius.gameserver.model.actor.tasks.player.PvPFlagTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.RecoBonusTaskEnd;
 import org.l2jmobius.gameserver.model.actor.tasks.player.RecoGiveTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.RentPetTask;
@@ -327,6 +326,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
+import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.EnumIntBitmask;
 import org.l2jmobius.gameserver.util.FloodProtectors;
@@ -815,8 +815,6 @@ public class PlayerInstance extends Playable
 	
 	private volatile long _lastItemAuctionInfoRequest = 0;
 	
-	private Future<?> _pvpRegTask;
-	
 	private long _pvpFlagLasts;
 	
 	private long _notMoveUntil = 0;
@@ -883,27 +881,18 @@ public class PlayerInstance extends Playable
 	public void startPvPFlag()
 	{
 		updatePvPFlag(1);
-		if (_pvpRegTask == null)
-		{
-			_pvpRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
-		}
+		PvpFlagTaskManager.getInstance().add(this);
 	}
 	
 	public void stopPvpRegTask()
 	{
-		if (_pvpRegTask == null)
-		{
-			return;
-		}
-		_pvpRegTask.cancel(true);
-		_pvpRegTask = null;
+		PvpFlagTaskManager.getInstance().remove(this);
 	}
 	
 	public void stopPvPFlag()
 	{
 		stopPvpRegTask();
 		updatePvPFlag(0);
-		_pvpRegTask = null;
 	}
 	
 	// Character UI
@@ -14513,11 +14502,6 @@ public class PlayerInstance extends Playable
 		{
 			_fallingDamageTask.cancel(false);
 			_fallingDamageTask = null;
-		}
-		if ((_pvpRegTask != null) && !_pvpRegTask.isDone() && !_pvpRegTask.isCancelled())
-		{
-			_pvpRegTask.cancel(false);
-			_pvpRegTask = null;
 		}
 		if ((_taskWarnUserTakeBreak != null) && !_taskWarnUserTakeBreak.isDone() && !_taskWarnUserTakeBreak.isCancelled())
 		{
