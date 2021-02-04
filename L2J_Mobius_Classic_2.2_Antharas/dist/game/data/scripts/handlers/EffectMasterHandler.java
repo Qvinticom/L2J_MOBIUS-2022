@@ -322,6 +322,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("SphericBarrier", SphericBarrier::new);
 		EffectHandler.getInstance().registerHandler("SpModify", SpModify::new);
 		EffectHandler.getInstance().registerHandler("Spoil", Spoil::new);
+		EffectHandler.getInstance().registerHandler("StatAddForLevel", StatAddForLevel::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSkillCritical", StatBonusSkillCritical::new);
 		EffectHandler.getInstance().registerHandler("StatBonusSpeed", StatBonusSpeed::new);
 		EffectHandler.getInstance().registerHandler("StatByMoveType", StatByMoveType::new);
