@@ -60,19 +60,15 @@ public class DBInstallerConsole implements DBOutputInterface
 				_con = connector.getConnection();
 			}
 			
-			System.out.print("(C)lean install, (U)pdate or (E)xit? ");
+			System.out.print("(I)nstall or (E)xit? ");
 			final String resp = scn.next();
-			if (resp.equalsIgnoreCase("c"))
+			if (resp.equalsIgnoreCase("i"))
 			{
-				System.out.print("Do you really want to destroy your db (Y/N)?");
+				System.out.print("Do you really want to wipe your db (Y/N)?");
 				if (scn.next().equalsIgnoreCase("y"))
 				{
 					rt = new RunTasks(this, db, dir);
 				}
-			}
-			else if (resp.equalsIgnoreCase("u"))
-			{
-				rt = new RunTasks(this, db, dir);
 			}
 		}
 		
@@ -95,7 +91,7 @@ public class DBInstallerConsole implements DBOutputInterface
 	 * @param user the user name
 	 * @param pass the password
 	 * @param database the database name
-	 * @param mode the mode, c: Clean, u:update
+	 * @param mode the mode, c: Clean
 	 * @throws Exception
 	 */
 	public DBInstallerConsole(String defDatabase, String dir, String host, String port, String user, String pass, String database, String mode) throws Exception
@@ -108,7 +104,7 @@ public class DBInstallerConsole implements DBOutputInterface
 		
 		final MySqlConnect connector = new MySqlConnect(host, port, user, pass, currentDatabase, true);
 		_con = connector.getConnection();
-		if ((mode != null) && ("c".equalsIgnoreCase(mode) || "u".equalsIgnoreCase(mode)))
+		if ((mode != null) && "i".equalsIgnoreCase(mode))
 		{
 			final RunTasks rt = new RunTasks(this, currentDatabase, dir);
 			rt.run();
