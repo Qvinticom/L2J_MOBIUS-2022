@@ -33,10 +33,9 @@ public class Q10507_ObtainingNewPower extends Quest
 {
 	// NPC
 	private static final int LIONEL = 33907;
-	// Items
+	// Item
 	private static final int PROOF_OF_STRENGTH = 47843;
-	private static final int LIONEL_MISSION_LIST_5 = 47834;
-	// Rewards
+	// Reward
 	private static final int DIGNITY_OF_THE_EXALTED_LV6 = 80970;
 	// Misc
 	private static final int MIN_LEVEL = 107;
@@ -142,7 +141,7 @@ public class Q10507_ObtainingNewPower extends Quest
 		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "33907-00.html");
 		addCondCompletedQuest(Q10879_ExaltedGuideToPower.class.getSimpleName(), "33907-00.html");
-		registerQuestItems(LIONEL_MISSION_LIST_5, PROOF_OF_STRENGTH);
+		registerQuestItems(PROOF_OF_STRENGTH);
 	}
 	
 	@Override
@@ -156,23 +155,14 @@ public class Q10507_ObtainingNewPower extends Quest
 		}
 		switch (event)
 		{
-			case "33907-03.htm":
-			case "33907-04.htm":
+			case "33907-02.htm":
 			{
+				qs.startQuest();
 				htmltext = event;
+				
 				break;
 			}
-			case "33907-02.html":
-			{
-				if (qs.isCreated())
-				{
-					giveItems(player, LIONEL_MISSION_LIST_5, 1);
-					qs.startQuest();
-					htmltext = event;
-				}
-				break;
-			}
-			case "33907-04.html":
+			case "33907-04.htm":
 			{
 				if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
@@ -200,17 +190,16 @@ public class Q10507_ObtainingNewPower extends Quest
 			}
 			case State.STARTED:
 			{
-				if (qs.getMemoState() == 1)
+				
+				if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
-					if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
-					{
-						htmltext = "33907-03.html";
-					}
-					else
-					{
-						htmltext = "33907-06.html";
-					}
+					htmltext = "33907-03.htm";
 				}
+				else
+				{
+					htmltext = "33907-06.htm";
+				}
+				
 				break;
 			}
 			case State.COMPLETED:
