@@ -74,14 +74,74 @@
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
-			<condition fromLevel="2" toLevel="2" name="OpSkill">
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
 				<skillId>1372</skillId> <!-- Expand Inventory -->
-				<skillLevel>1</skillLevel>
-				<hasLearned>true</hasLearned>
+				<skillLevel>2</skillLevel>
+				<hasLearned>false</hasLearned>
 			</condition>
 			<condition fromLevel="2" toLevel="2" name="OpSkill">
 				<skillId>1372</skillId> <!-- Expand Inventory -->
 				<skillLevel>2</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>3</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+		    		<skillId>1372</skillId> <!-- Expand Inventory -->
+		    		<skillLevel>4</skillLevel>
+		    		<hasLearned>false</hasLearned>
+		    </condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+		    		<skillId>1372</skillId> <!-- Expand Inventory -->
+		    		<skillLevel>5</skillLevel>
+		    		<hasLearned>false</hasLearned>
+		    </condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+		    		<skillId>1372</skillId> <!-- Expand Inventory -->
+		    		<skillLevel>6</skillLevel>
+		    		<hasLearned>false</hasLearned>
+		    </condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>7</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>8</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>3</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>4</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>5</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>6</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>7</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>8</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
@@ -100,6 +160,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 		<isMagic>2</isMagic>
+		<itemConsumeId>
+			<value level="1">22902</value>
+			<value level="2">22903</value>
+		</itemConsumeId>
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -109,14 +173,74 @@
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
-			<condition fromLevel="2" toLevel="2" name="OpSkill">
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
 				<skillId>1371</skillId> <!-- Expand Warehouse -->
-				<skillLevel>1</skillLevel>
-				<hasLearned>true</hasLearned>
+				<skillLevel>2</skillLevel>
+				<hasLearned>false</hasLearned>
 			</condition>
 			<condition fromLevel="2" toLevel="2" name="OpSkill">
 				<skillId>1371</skillId> <!-- Expand Warehouse -->
 				<skillLevel>2</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>3</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+		    		<skillId>1371</skillId> <!-- Expand Warehouse -->
+		    		<skillLevel>4</skillLevel>
+		    		<hasLearned>false</hasLearned>
+		    </condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+		    		<skillId>1371</skillId> <!-- Expand Warehouse -->
+		    		<skillLevel>5</skillLevel>
+		    		<hasLearned>false</hasLearned>
+		    </condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+		    		<skillId>1371</skillId> <!-- Expand Inventory -->
+		    		<skillLevel>6</skillLevel>
+		    		<hasLearned>false</hasLearned>
+		    </condition>
+		    <condition fromLevel="1" toLevel="1" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>7</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>8</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>3</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Inventory -->
+				<skillLevel>4</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>5</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>6</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>7</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>8</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
