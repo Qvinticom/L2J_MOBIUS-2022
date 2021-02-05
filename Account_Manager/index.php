@@ -229,7 +229,10 @@ $error = "";
 
 	<div class="p-anim">
 	</div>
-	<video autoplay="" id="bgvid" loop=""><source src="media/bg.webm" type="video/webm"> <source src="media/bg.mp4" type="video/mp4"></video>
+	<video playsinline autoplay muted loop id="bgvid">
+		<source src="media/bg.webm" type="video/webm">
+		<source src="media/bg.mp4" type="video/mp4">
+	</video>
 
 	<header>
 		<div class="container">
