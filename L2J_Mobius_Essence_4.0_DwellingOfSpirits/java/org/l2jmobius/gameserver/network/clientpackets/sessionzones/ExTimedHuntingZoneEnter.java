@@ -83,7 +83,12 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((_zoneId == 1) && (player.getLevel() < 78))
+		if (((_zoneId == 1) && (player.getLevel() < 40)) //
+			|| ((_zoneId == 4) && (player.getLevel() < 76)) //
+			|| ((_zoneId == 11) && (player.getLevel() < 60)) //
+			|| ((_zoneId == 12) && (player.getLevel() < 80)) //
+			|| ((_zoneId == 101) && (player.getLevel() < 40)) //
+		)
 		{
 			player.sendMessage("Your level does not correspond the zone equivalent.");
 		}
@@ -114,6 +119,51 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 				case 1: // Primeval Isle
 				{
 					player.teleToLocation(9400, -21720, -3634);
+					break;
+				}
+				case 4: // Forgotten Primeval Garden
+				{
+					player.teleToLocation(-112937, 213590, -13248);
+					break;
+				}
+				case 11: // Aligator Island
+				{
+					player.teleToLocation(115528, 191580, -3371);
+					break;
+				}
+				case 12: // Antharas Lair
+				{
+					player.teleToLocation(133247, 114445, -3724);
+					break;
+				}
+				case 101: // Transcendent Instance Zone 1
+				{
+					player.teleToLocation(63443, 26304, -3755);
+					break;
+				}
+				case 102: // Transcendent Instance Zone 2
+				{
+					player.teleToLocation(125277, 70262, -4408);
+					break;
+				}
+				case 103: // Transcendent Instance Zone 3
+				{
+					player.teleToLocation(148724, -22366, -3436);
+					break;
+				}
+				case 104: // Transcendent Instance Zone 4
+				{
+					player.teleToLocation(167965, 28800, -3606);
+					break;
+				}
+				case 106: // Transcendent Instance Zone 6
+				{
+					player.teleToLocation(99797, 110524, -3702);
+					break;
+				}
+				case 107: // Transcendent Instance Zone 7
+				{
+					player.teleToLocation(-50416, 145363, -2825);
 					break;
 				}
 			}

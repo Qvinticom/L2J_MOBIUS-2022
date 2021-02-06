@@ -3,13 +3,18 @@
 	<item id="92400" name="Primeval Garden's Time Stone" additionalName="Event" type="EtcItem">
 		<!-- Prolongs your Primeval Garden's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_3" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40060" level="1"/> <!-- Primeval Garden's Time Stone -->
+		</skills>
 	</item>
 	<item id="92401" name="Spellbook: White Guardian" type="EtcItem">
 		<!-- A spellbook for learning White Guardian Transformation.\n\n<Classes>\nAll classes, except Kamael and Death Knight\n\n<Skill effect>\nTransforms into White Guardian. Increases Max HP/ MP, P./ M. Accuracy, P./ M. Atk., P./ M. Def., Atk. Spd., P. Skill Critical Damage, M. Skill Critical Rate, Speed. -->

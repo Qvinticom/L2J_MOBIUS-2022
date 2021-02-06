@@ -374,9 +374,27 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40165" toLevel="1" name="Alligator Island's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93704</itemConsumeId> <!-- Alligator Island Prolongation Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>60</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>11</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40166" toLevel="1" name="Mid-grade HP Recovery Potion - Event">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

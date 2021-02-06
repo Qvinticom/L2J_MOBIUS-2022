@@ -63,6 +63,30 @@ public class AddHuntingTime extends AbstractEffect
 			player.sendMessage("You cannot exceed the time zone limit.");
 			return;
 		}
+		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_PRIMEVAL))
+		{
+			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
+			player.sendMessage("You cannot exceed the time zone limit.");
+			return;
+		}
+		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_ALLIGATOR))
+		{
+			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
+			player.sendMessage("You cannot exceed the time zone limit.");
+			return;
+		}
+		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_GARDEN))
+		{
+			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
+			player.sendMessage("You cannot exceed the time zone limit.");
+			return;
+		}
+		else if ((endTime > currentTime) && (((endTime - currentTime) + _time) >= Config.TIME_LIMITED_MAX_ADDED_ANTHARAS))
+		{
+			player.getInventory().addItem("AddHuntingTime effect refund", item.getId(), 1, player, player);
+			player.sendMessage("You cannot exceed the time zone limit.");
+			return;
+		}
 		
 		if (player.isInTimedHuntingZone(_zoneId))
 		{
@@ -75,6 +99,14 @@ public class AddHuntingTime extends AbstractEffect
 			if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 			{
 				endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+			}
+			else if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+			{
+				endTime = currentTime + Config.TIME_LIMITED_ZONE_PRIMEVAL;
+			}
+			else if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY_ANTHARAS) < currentTime)
+			{
+				endTime = currentTime + Config.TIME_LIMITED_ZONE_ANTHARAS;
 			}
 			else if (endTime < currentTime)
 			{

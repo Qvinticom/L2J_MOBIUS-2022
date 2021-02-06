@@ -846,8 +846,15 @@ public class Config
 	public static List<String> TELNET_HOSTS;
 	public static int TELNET_PORT;
 	public static long TIME_LIMITED_ZONE_INITIAL_TIME;
+	public static long TIME_LIMITED_ZONE_PRIMEVAL;
+	public static long TIME_LIMITED_ZONE_ANTHARAS;
+	public static long TIME_LIMITED_MAX_ADDED_PRIMEVAL;
+	public static long TIME_LIMITED_MAX_ADDED_ALLIGATOR;
+	public static long TIME_LIMITED_MAX_ADDED_GARDEN;
+	public static long TIME_LIMITED_MAX_ADDED_ANTHARAS;
 	public static long TIME_LIMITED_MAX_ADDED_TIME;
 	public static long TIME_LIMITED_ZONE_RESET_DELAY;
+	public static long TIME_LIMITED_ZONE_RESET_DELAY_ANTHARAS;
 	public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
 	public static boolean TRAINING_CAMP_ENABLE;
 	public static boolean TRAINING_CAMP_PREMIUM_ONLY;
@@ -1906,9 +1913,16 @@ public class Config
 			
 			// Load Time Limited Zone config file (if exists)
 			final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
+			TIME_LIMITED_ZONE_PRIMEVAL = timeLimitedZoneSettings.getLong("PrimevalStart", 7200000);
+			TIME_LIMITED_ZONE_ANTHARAS = timeLimitedZoneSettings.getLong("AntharasLairStart", 25200000);
+			TIME_LIMITED_MAX_ADDED_PRIMEVAL = timeLimitedZoneSettings.getLong("PrimevalMaxTime", 46800000);
+			TIME_LIMITED_MAX_ADDED_ALLIGATOR = timeLimitedZoneSettings.getLong("AlligatorMaxTime", 10800000);
+			TIME_LIMITED_MAX_ADDED_GARDEN = timeLimitedZoneSettings.getLong("PrimevalGardenMaxTime", 21600000);
+			TIME_LIMITED_MAX_ADDED_ANTHARAS = timeLimitedZoneSettings.getLong("AntharasLairMaxTime", 151200000);
 			TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
 			TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
 			TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
+			TIME_LIMITED_ZONE_RESET_DELAY_ANTHARAS = timeLimitedZoneSettings.getLong("AntharasLairResetDelay", 604800000);
 			TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 10000);
 			
 			// Load Magic Lamp config file (if exists)

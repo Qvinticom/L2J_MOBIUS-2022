@@ -14368,7 +14368,16 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone(int x, int y)
 	{
-		return isInTimedHuntingZone(1, x, y); // Primeval Isle
+		return isInTimedHuntingZone(1, x, y) // Primeval Isle
+			|| isInTimedHuntingZone(4, x, y) // Primeval Garden
+			|| isInTimedHuntingZone(11, x, y) // Aligator Island
+			|| isInTimedHuntingZone(12, x, y) // Antharas Lair
+			|| isInTimedHuntingZone(101, x, y) // Transcendent Instance Zone 1
+			|| isInTimedHuntingZone(102, x, y) // Transcendent Instance Zone 2
+			|| isInTimedHuntingZone(103, x, y) // Transcendent Instance Zone 3
+			|| isInTimedHuntingZone(104, x, y) // Transcendent Instance Zone 4
+			|| isInTimedHuntingZone(106, x, y) // Transcendent Instance Zone 6
+			|| isInTimedHuntingZone(107, x, y); // Transcendent Instance Zone 7
 	}
 	
 	public boolean isInTimedHuntingZone(int zoneId)
@@ -14386,6 +14395,42 @@ public class PlayerInstance extends Playable
 			case 1: // Primeval Isle
 			{
 				return (x == 20) && (y == 17);
+			}
+			case 4: // Primeval Garden
+			{
+				return (x == 24) && (y == 19);
+			}
+			case 11: // Primeval Garden
+			{
+				return (x == 23) && (y == 23);
+			}
+			case 12: // Antharas Lair
+			{
+				return (x == 25) && (y == 21);
+			}
+			case 101: // Transcendent Instance Zone 1
+			{
+				return (x == 21) && (y == 18);
+			}
+			case 102: // Transcendent Instance Zone 2
+			{
+				return (x == 23) && (y == 19);
+			}
+			case 103: // Transcendent Instance Zone 3
+			{
+				return (x == 24) && (y == 17);
+			}
+			case 104: // Transcendent Instance Zone 4
+			{
+				return (x == 24) && (y == 18);
+			}
+			case 106: // Transcendent Instance Zone 6
+			{
+				return (x == 23) && (y == 21);
+			}
+			case 107: // Transcendent Instance Zone 7
+			{
+				return (x == 18) && (y == 22);
 			}
 		}
 		return false;

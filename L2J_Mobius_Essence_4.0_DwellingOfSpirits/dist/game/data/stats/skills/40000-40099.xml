@@ -508,9 +508,28 @@
 		</effects>
 	</skill>
 	<skill id="40060" toLevel="1" name="Primeval Garden's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>92400</itemConsumeId> <!-- Primeval Garden's Prolongation Stone -->
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>76</minLevel>
+				<maxLevel>999</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="AddHuntingTime">
+				<zoneId>4</zoneId>
+				<time>3600000</time>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40061" toLevel="1" name="Primeval Garden's Time Stone">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
