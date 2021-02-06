@@ -330,6 +330,12 @@ public class BuffInfo
 			// Call on start.
 			effect.onStart(_effector, _effected, _skill, _item);
 			
+			// Do not add continuous effect if target just died from the initial effect, otherwise they'll be ticked forever.
+			if (_effected.isDead())
+			{
+				continue;
+			}
+			
 			// If it's a continuous effect, if has ticks schedule a task with period, otherwise schedule a simple task to end it.
 			if (effect.getTicks() > 0)
 			{
