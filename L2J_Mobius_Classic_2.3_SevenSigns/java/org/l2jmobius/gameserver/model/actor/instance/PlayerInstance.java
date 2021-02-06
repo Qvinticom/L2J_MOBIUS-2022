@@ -53,6 +53,7 @@ import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.RecipeController;
 import org.l2jmobius.gameserver.ai.CreatureAI;
+import org.l2jmobius.gameserver.ai.CreatureAI.IntentionCommand;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.PlayerAI;
 import org.l2jmobius.gameserver.ai.SummonAI;
@@ -8378,15 +8379,19 @@ public class PlayerInstance extends Playable
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
 			// Upon failed conditions, next action is called.
-			if ((usedSkill.getNextAction() != NextActionType.NONE) && (target != this) && target.isAutoAttackable(this) && ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO)))
+			if ((usedSkill.getNextAction() != NextActionType.NONE) && (target != this) && target.isAutoAttackable(this))
 			{
-				if (usedSkill.getNextAction() == NextActionType.ATTACK)
+				final IntentionCommand nextIntention = getAI().getNextIntention();
+				if ((nextIntention == null) || (nextIntention.getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
 				{
-					getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-				}
-				else if (usedSkill.getNextAction() == NextActionType.CAST)
-				{
-					getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, usedSkill, target, item, false, false);
+					if (usedSkill.getNextAction() == NextActionType.ATTACK)
+					{
+						getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+					}
+					else if (usedSkill.getNextAction() == NextActionType.CAST)
+					{
+						getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, usedSkill, target, item, false, false);
+					}
 				}
 			}
 			
