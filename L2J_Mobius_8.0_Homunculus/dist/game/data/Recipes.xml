@@ -28088,6 +28088,22 @@
 			<stat name="CUR_MP" val="270" />
 		</statUse>
 	</recipe>
+	<recipe id="1457" name="mk_renewal_mineral_armor" level="10" itemId="81730" successRate="60" isCommonRecipe="true">
+		<materials>
+			<item id="81215" count="2" />
+			<item id="81217" count="16" />
+			<item id="81218" count="16" />
+			<item id="81219" count="16" />
+			<item id="35562" count="3" />
+			<item id="35563" count="3" />
+		</materials>
+		<product>
+			<item id="81728" count="1" chance="100" /> <!-- Armor Augment Stone -->
+		</product>
+		<statUse>
+			<stat name="CUR_MP" val="10" />
+		</statUse>
+	</recipe>
 	<recipe id="5000" name="mk_richness_talisman_lv1" level="10" itemId="26342" successRate="25" isCommonRecipe="false">
 		<materials>
 			<item id="23837" count="1" /> <!-- Talisman - Hunter -->
