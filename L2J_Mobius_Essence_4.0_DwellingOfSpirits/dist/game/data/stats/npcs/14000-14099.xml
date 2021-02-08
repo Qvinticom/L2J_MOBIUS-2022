@@ -210,7 +210,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14007" level="76" type="Pet" name="Reanimated Man">
+	<npc id="14007" level="75" type="Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2981,16 +2981,16 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14080" level="76" type="Pet" name="Cursed Man">
+	<npc id="14080" level="79" type="Pet" name="Cursed Man">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="4709" level="7" />
-			<skill name="PhysicalSpecial2" id="4708" level="7" />
+			<skill name="PhysicalSpecial1" id="4709" level="1" />
+			<skill name="PhysicalSpecial2" id="4708" level="1" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2719" hpRegen="10.2" mp="1540" mpRegen="3" />
-			<attack physical="1059.981" magical="556.79" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<attack physical="1120.981" magical="556.79" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="323.78" magical="236.93" />
 			<speed>
 				<walk ground="80" />
@@ -3011,8 +3011,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4709" level="7" /> <!-- Cursed Blow -->
-			<skill id="4708" level="7" /> <!-- Cursed Strike -->
+			<skill id="4709" level="1" /> <!-- Cursed Blow -->
+			<skill id="4708" level="1" /> <!-- Cursed Strike -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3022,17 +3022,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14081" level="78" type="Pet" name="Cursed Man">
+	<npc id="14081" level="83" type="Pet" name="Cursed Man">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="4709" level="8" />
-			<skill name="PhysicalSpecial2" id="4708" level="8" />
+			<skill name="PhysicalSpecial1" id="4709" level="2" />
+			<skill name="PhysicalSpecial2" id="4708" level="2" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2802" hpRegen="10.2" mp="1607" mpRegen="3" />
-			<attack physical="1112.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="1195.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="352.7" magical="273.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3052,8 +3052,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4709" level="8" /> <!-- Cursed Blow -->
-			<skill id="4708" level="8" /> <!-- Cursed Strike -->
+			<skill id="4709" level="2" /> <!-- Cursed Blow -->
+			<skill id="4708" level="2" /> <!-- Cursed Strike -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>

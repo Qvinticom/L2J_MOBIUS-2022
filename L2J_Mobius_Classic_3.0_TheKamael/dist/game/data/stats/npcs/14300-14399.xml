@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="14300" level="27" type="Pet" name="Boxer the Unicorn">
 		<parameters>
-			<skill name="HealMagic" id="4025" level="4" />
+			<skill name="HealMagic" id="4025" level="2" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -30,7 +30,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4025" level="4" /> <!-- Master Recharge -->
+			<skill id="4025" level="2" /> <!-- Master Recharge -->
 		</skillList>
 		<shots soul="3" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -42,7 +42,7 @@
 	</npc>
 	<npc id="14301" level="37" type="Pet" name="Boxer the Unicorn">
 		<parameters>
-			<skill name="HealMagic" id="4025" level="5" />
+			<skill name="HealMagic" id="4025" level="3" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -70,7 +70,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4025" level="5" /> <!-- Master Recharge -->
+			<skill id="4025" level="3" /> <!-- Master Recharge -->
 		</skillList>
 		<shots soul="3" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -82,7 +82,7 @@
 	</npc>
 	<npc id="14302" level="46" type="Pet" name="Boxer the Unicorn">
 		<parameters>
-			<skill name="HealMagic" id="4025" level="5" />
+			<skill name="HealMagic" id="4025" level="4" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -110,7 +110,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4025" level="5" /> <!-- Master Recharge -->
+			<skill id="4025" level="4" /> <!-- Master Recharge -->
 		</skillList>
 		<shots soul="3" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1784,7 +1784,7 @@
 	</npc>
 	<npc id="14344" level="37" type="Pet" name="Mirage the Unicorn">
 		<parameters>
-			<skill name="DDMagic" id="4261" level="2" />
+			<skill name="DDMagic" id="4261" level="3" />
 			<param name="step1_action01" value="46" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -1812,7 +1812,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4261" level="2" /> <!-- Mega Storm Strike -->
+			<skill id="4261" level="3" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1822,9 +1822,9 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14345" level="47" type="Pet" name="Mirage the Unicorn">
+	<npc id="14345" level="46" type="Pet" name="Mirage the Unicorn">
 		<parameters>
-			<skill name="DDMagic" id="4261" level="3" />
+			<skill name="DDMagic" id="4261" level="4" />
 			<param name="step1_action01" value="46" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -1852,7 +1852,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4261" level="3" /> <!-- Mega Storm Strike -->
+			<skill id="4261" level="4" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1864,7 +1864,7 @@
 	</npc>
 	<npc id="14346" level="54" type="Pet" name="Mirage the Unicorn">
 		<parameters>
-			<skill name="DDMagic" id="4261" level="3" />
+			<skill name="DDMagic" id="4261" level="5" />
 			<param name="step1_action01" value="46" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -1892,7 +1892,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4261" level="3" /> <!-- Mega Storm Strike -->
+			<skill id="4261" level="5" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1904,7 +1904,7 @@
 	</npc>
 	<npc id="14347" level="22" type="Pet" name="Mirage the Unicorn">
 		<parameters>
-			<skill name="DDMagic" id="4261" level="4" />
+			<skill name="DDMagic" id="4261" level="2" />
 			<param name="step1_action01" value="46" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -1932,7 +1932,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4261" level="4" /> <!-- Mega Storm Strike -->
+			<skill id="4261" level="2" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1944,7 +1944,7 @@
 	</npc>
 	<npc id="14348" level="32" type="Pet" name="Mirage the Unicorn">
 		<parameters>
-			<skill name="DDMagic" id="4261" level="4" />
+			<skill name="DDMagic" id="4261" level="3" />
 			<param name="step1_action01" value="46" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -1972,7 +1972,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4261" level="4" /> <!-- Mega Storm Strike -->
+			<skill id="4261" level="3" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1984,7 +1984,7 @@
 	</npc>
 	<npc id="14349" level="42" type="Pet" name="Mirage the Unicorn">
 		<parameters>
-			<skill name="DDMagic" id="4261" level="5" />
+			<skill name="DDMagic" id="4261" level="4" />
 			<param name="step1_action01" value="46" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -2012,7 +2012,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4261" level="5" /> <!-- Mega Storm Strike -->
+			<skill id="4261" level="4" /> <!-- Mega Storm Strike -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>

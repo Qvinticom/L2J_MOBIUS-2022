@@ -92,8 +92,8 @@
 		<effects>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">8</value>
-					<value level="2">10</value>
+					<value level="1">12</value>
+					<value level="2">12</value>
 					<value level="3">12</value>
 					<value level="4">12</value>
 					<value level="5">12</value>
@@ -110,8 +110,8 @@
 			</effect>
 			<effect name="Accuracy">
 				<amount>
-					<value level="1">2</value>
-					<value level="2">2</value>
+					<value level="1">3</value>
+					<value level="2">3</value>
 					<value level="3">3</value>
 					<value level="4">3</value>
 					<value level="5">3</value>
@@ -297,8 +297,8 @@
 		<effects>
 			<effect name="MpRegen">
 				<amount>
-					<value level="1">30</value>
-					<value level="2">32</value>
+					<value level="1">35</value>
+					<value level="2">35</value>
 					<value level="3">35</value>
 					<value level="4">35</value>
 					<value level="5">35</value>
@@ -407,8 +407,8 @@
 		<effects>
 			<effect name="Reuse">
 				<amount>
-					<value level="1">-10</value>
-					<value level="2">-12</value>
+					<value level="1">-15</value>
+					<value level="2">-15</value>
 					<value level="3">-15</value>
 					<value level="4">-15</value>
 					<value level="5">-15</value>
@@ -486,19 +486,19 @@
 			<effect name="DispelBySlotProbability">
 				<dispel>SLEEP;ROOT_MAGICALLY;STUN;PARALYZE;SILENCE</dispel>
 				<rate>
-					<value level="1">40</value>
-					<value level="2">45</value>
-					<value level="3">50</value>
-					<value level="4">55</value>
-					<value level="5">60</value>
+					<value level="1">55</value>
+					<value level="2">55</value>
+					<value level="3">60</value>
+					<value level="4">60</value>
+					<value level="5">65</value>
 					<value level="6">65</value>
 					<value level="7">70</value>
-					<value level="8">75</value>
-					<value level="9">80</value>
-					<value level="10">85</value>
-					<value level="11">90</value>
-					<value level="12">95</value>
-					<value level="13">100</value>
+					<value level="8">70</value>
+					<value level="9">75</value>
+					<value level="10">75</value>
+					<value level="11">80</value>
+					<value level="12">80</value>
+					<value level="13">85</value>
 				</rate>
 			</effect>
 		</effects>
@@ -526,17 +526,17 @@
 		<activateRate>
 			<value level="1">40</value>
 			<value level="2">40</value>
-			<value level="3">40</value>
-			<value level="4">41</value>
-			<value level="5">42</value>
-			<value level="6">43</value>
-			<value level="7">44</value>
-			<value level="8">45</value>
-			<value level="9">46</value>
-			<value level="10">47</value>
-			<value level="11">48</value>
-			<value level="12">49</value>
-			<value level="13">50</value>
+			<value level="3">45</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
+			<value level="6">50</value>
+			<value level="7">55</value>
+			<value level="8">55</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">65</value>
+			<value level="12">65</value>
+			<value level="13">70</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>400</castRange>
@@ -618,9 +618,9 @@
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-6</value>
-					<value level="3">-8</value>
+					<value level="1">-10</value>
+					<value level="2">-10</value>
+					<value level="3">-10</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
@@ -636,9 +636,9 @@
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-6</value>
-					<value level="3">-8</value>
+					<value level="1">-10</value>
+					<value level="2">-10</value>
+					<value level="3">-10</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
@@ -677,17 +677,17 @@
 		<activateRate>
 			<value level="1">40</value>
 			<value level="2">40</value>
-			<value level="3">40</value>
-			<value level="4">41</value>
-			<value level="5">42</value>
-			<value level="6">43</value>
-			<value level="7">44</value>
-			<value level="8">45</value>
-			<value level="9">46</value>
-			<value level="10">47</value>
-			<value level="11">48</value>
-			<value level="12">49</value>
-			<value level="13">50</value>
+			<value level="3">45</value>
+			<value level="4">45</value>
+			<value level="5">50</value>
+			<value level="6">50</value>
+			<value level="7">55</value>
+			<value level="8">55</value>
+			<value level="9">60</value>
+			<value level="10">60</value>
+			<value level="11">65</value>
+			<value level="12">65</value>
+			<value level="13">70</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -771,9 +771,9 @@
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-6</value>
-					<value level="3">-8</value>
+					<value level="1">-10</value>
+					<value level="2">-10</value>
+					<value level="3">-10</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
@@ -789,9 +789,9 @@
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">-4</value>
-					<value level="2">-6</value>
-					<value level="3">-8</value>
+					<value level="1">-10</value>
+					<value level="2">-10</value>
+					<value level="3">-10</value>
 					<value level="4">-10</value>
 					<value level="5">-10</value>
 					<value level="6">-10</value>
@@ -866,19 +866,19 @@
 		<effects>
 			<effect name="Heal">
 				<power>
-					<value level="1">541</value>
-					<value level="2">611</value>
-					<value level="3">659</value>
-					<value level="4">666</value>
-					<value level="5">669</value>
-					<value level="6">673</value>
-					<value level="7">676</value>
-					<value level="8">679</value>
-					<value level="9">681</value>
-					<value level="10">684</value>
-					<value level="11">687</value>
-					<value level="12">689</value>
-					<value level="13">692</value>
+					<value level="1">600</value>
+					<value level="2">659</value>
+					<value level="3">680</value>
+					<value level="4">700</value>
+					<value level="5">730</value>
+					<value level="6">759</value>
+					<value level="7">780</value>
+					<value level="8">810</value>
+					<value level="9">840</value>
+					<value level="10">880</value>
+					<value level="11">925</value>
+					<value level="12">948</value>
+					<value level="13">968</value>
 				</power>
 			</effect>
 		</effects>
@@ -954,20 +954,20 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">1046</value>
-					<value level="2">1230</value>
-					<value level="3">1425</value>
-					<value level="4">1626</value>
-					<value level="5">1727</value>
-					<value level="6">1827</value>
-					<value level="7">1925</value>
-					<value level="8">2020</value>
-					<value level="9">2067</value>
-					<value level="10">2112</value>
-					<value level="11">6459</value>
-					<value level="12">6593</value>
-					<value level="13">7004</value>
-					<value level="14">7443</value>
+					<value level="1">6459</value>
+					<value level="2">7443</value>
+					<value level="3">7800</value>
+					<value level="4">8200</value>
+					<value level="5">8560</value>
+					<value level="6">8870</value>
+					<value level="7">9250</value>
+					<value level="8">9560</value>
+					<value level="9">9980</value>
+					<value level="10">10500</value>
+					<value level="11">11000</value>
+					<value level="12">12000</value>
+					<value level="13">12900</value>
+					<value level="14">14000</value>
 				</power>
 			</effect>
 			<effect name="BlockActions" />
@@ -1034,20 +1034,20 @@
 		<effects>
 			<effect name="FatalBlow">
 				<power>
-					<value level="1">4181</value>
-					<value level="2">4920</value>
-					<value level="3">5700</value>
-					<value level="4">6503</value>
-					<value level="5">6906</value>
-					<value level="6">7305</value>
-					<value level="7">7698</value>
-					<value level="8">8079</value>
-					<value level="9">8265</value>
-					<value level="10">8447</value>
-					<value level="11">8743</value>
-					<value level="12">8918</value>
-					<value level="13">9101</value>
-					<value level="14">9283</value>
+					<value level="1">8743</value>
+					<value level="2">9283</value>
+					<value level="3">9800</value>
+					<value level="4">10200</value>
+					<value level="5">10800</value>
+					<value level="6">11500</value>
+					<value level="7">12100</value>
+					<value level="8">12800</value>
+					<value level="9">13400</value>
+					<value level="10">14000</value>
+					<value level="11">14800</value>
+					<value level="12">15500</value>
+					<value level="13">16200</value>
+					<value level="14">16900</value>
 				</power>
 				<criticalChance>10</criticalChance>
 				<chanceBoost>200</chanceBoost>

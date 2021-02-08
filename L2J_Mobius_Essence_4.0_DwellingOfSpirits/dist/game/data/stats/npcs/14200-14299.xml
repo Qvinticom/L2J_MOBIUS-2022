@@ -807,7 +807,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14220" level="76" type="Pet" name="Kai the Cat">
+	<npc id="14220" level="75" type="Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
@@ -816,7 +816,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2719" hpRegen="8.5" mp="1540" mpRegen="3" />
-			<attack physical="896.908595" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="920.908595" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="48" />
@@ -2053,24 +2053,24 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14251" level="58" type="Pet" name="Feline Queen">
+	<npc id="14251" level="77" type="Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="1" />
 			<skill name="Buff2" id="4700" level="1" />
 			<skill name="DDMagic" id="4701" level="1" />
-			<skill name="buff3" id="5638" level="1" />
+			<!-- <skill name="buff3" id="5638" level="1" />
 			<skill name="buff4" id="5639" level="1" />
 			<skill name="buff5" id="5640" level="1" />
 			<param name="buff_action3" value="1051" />
 			<param name="buff_action4" value="1052" />
-			<param name="buff_action5" value="1053" />
+			<param name="buff_action5" value="1053" /> -->
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
-			<attack physical="177.76" magical="302.44" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="237.99" magical="174.15" />
+			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
 				<run ground="170" />
@@ -2093,9 +2093,9 @@
 			<skill id="4699" level="1" /> <!-- Blessing of Queen -->
 			<skill id="4700" level="1" /> <!-- Gift of Queen -->
 			<skill id="4701" level="1" /> <!-- Cure of Queen -->
-			<skill id="5639" level="1" /> <!-- Feline Queen - Blessed Soul -->
-			<skill id="5638" level="1" /> <!-- Feline Queen - Blessed Body -->
-			<skill id="5640" level="1" /> <!-- Feline Queen - Haste -->
+			<!-- <skill id="5639" level="1" /> Feline Queen - Blessed Soul
+			<skill id="5638" level="1" /> Feline Queen - Blessed Body 
+			<skill id="5640" level="1" /> Feline Queen - Haste -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2105,24 +2105,24 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14252" level="60" type="Pet" name="Feline Queen">
+	<npc id="14252" level="79" type="Pet" name="Feline Queen">
 		<parameters>
-			<skill name="Buff1" id="4699" level="1" />
-			<skill name="Buff2" id="4700" level="1" />
-			<skill name="DDMagic" id="4701" level="1" />
-			<skill name="buff3" id="5638" level="1" />
+			<skill name="Buff1" id="4699" level="2" />
+			<skill name="Buff2" id="4700" level="2" />
+			<skill name="DDMagic" id="4701" level="2" />
+			<!-- <skill name="buff3" id="5638" level="1" />
 			<skill name="buff4" id="5639" level="1" />
-			<skill name="buff5" id="5640" level="2" />
+			<skill name="buff5" id="5640" level="1" />
 			<param name="buff_action3" value="1051" />
 			<param name="buff_action4" value="1052" />
-			<param name="buff_action5" value="1053" />
+			<param name="buff_action5" value="1053" /> -->
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
-			<attack physical="190.6" magical="328.7" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="247.65" magical="181.22" />
+			<vitals hp="3000" hpRegen="8.5" mp="1783" mpRegen="3" />
+			<attack physical="315.05" magical="596.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.70061" magical="249.45587" />
 			<speed>
 				<walk ground="26" />
 				<run ground="170" />
@@ -2142,12 +2142,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4699" level="1" /> <!-- Blessing of Queen -->
-			<skill id="4700" level="1" /> <!-- Gift of Queen -->
-			<skill id="4701" level="1" /> <!-- Cure of Queen -->
-			<skill id="5639" level="1" /> <!-- Feline Queen - Blessed Soul -->
-			<skill id="5638" level="1" /> <!-- Feline Queen - Blessed Body -->
-			<skill id="5640" level="2" /> <!-- Feline Queen - Haste -->
+			<skill id="4699" level="2" /> <!-- Blessing of Queen -->
+			<skill id="4700" level="2" /> <!-- Gift of Queen -->
+			<skill id="4701" level="2" /> <!-- Cure of Queen -->
+			<!-- <skill id="5639" level="1" /> Feline Queen - Blessed Soul
+			<skill id="5638" level="1" /> Feline Queen - Blessed Body 
+			<skill id="5640" level="1" /> Feline Queen - Haste -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2157,24 +2157,24 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14253" level="62" type="Pet" name="Feline Queen">
+	<npc id="14253" level="81" type="Pet" name="Feline Queen">
 		<parameters>
-			<skill name="Buff1" id="4699" level="1" />
-			<skill name="Buff2" id="4700" level="1" />
-			<skill name="DDMagic" id="4701" level="1" />
-			<skill name="buff3" id="5638" level="2" />
+			<skill name="Buff1" id="4699" level="3" />
+			<skill name="Buff2" id="4700" level="3" />
+			<skill name="DDMagic" id="4701" level="3" />
+			<!-- <skill name="buff3" id="5638" level="1" />
 			<skill name="buff4" id="5639" level="1" />
-			<skill name="buff5" id="5640" level="2" />
+			<skill name="buff5" id="5640" level="1" />
 			<param name="buff_action3" value="1051" />
 			<param name="buff_action4" value="1052" />
-			<param name="buff_action5" value="1053" />
+			<param name="buff_action5" value="1053" /> -->
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
-			<attack physical="203.62" magical="355.86" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34" magical="188.31" />
+			<vitals hp="3200" hpRegen="8.5" mp="1983" mpRegen="3" />
+			<attack physical="330.05" magical="615.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="360.70061" magical="260.45587" />
 			<speed>
 				<walk ground="26" />
 				<run ground="170" />
@@ -2194,12 +2194,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4699" level="1" /> <!-- Blessing of Queen -->
-			<skill id="4700" level="1" /> <!-- Gift of Queen -->
-			<skill id="4701" level="1" /> <!-- Cure of Queen -->
-			<skill id="5639" level="1" /> <!-- Feline Queen - Blessed Soul -->
-			<skill id="5638" level="2" /> <!-- Feline Queen - Blessed Body -->
-			<skill id="5640" level="2" /> <!-- Feline Queen - Haste -->
+			<skill id="4699" level="3" /> <!-- Blessing of Queen -->
+			<skill id="4700" level="3" /> <!-- Gift of Queen -->
+			<skill id="4701" level="3" /> <!-- Cure of Queen -->
+			<!-- <skill id="5639" level="1" /> Feline Queen - Blessed Soul
+			<skill id="5638" level="1" /> Feline Queen - Blessed Body 
+			<skill id="5640" level="1" /> Feline Queen - Haste -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2209,24 +2209,24 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14254" level="64" type="Pet" name="Feline Queen">
+	<npc id="14254" level="83" type="Pet" name="Feline Queen">
 		<parameters>
-			<skill name="Buff1" id="4699" level="2" />
-			<skill name="Buff2" id="4700" level="2" />
-			<skill name="DDMagic" id="4701" level="2" />
-			<skill name="buff3" id="5638" level="2" />
-			<skill name="buff4" id="5639" level="2" />
-			<skill name="buff5" id="5640" level="2" />
+			<skill name="Buff1" id="4699" level="4" />
+			<skill name="Buff2" id="4700" level="4" />
+			<skill name="DDMagic" id="4701" level="4" />
+			<!-- <skill name="buff3" id="5638" level="1" />
+			<skill name="buff4" id="5639" level="1" />
+			<skill name="buff5" id="5640" level="1" />
 			<param name="buff_action3" value="1051" />
 			<param name="buff_action4" value="1052" />
-			<param name="buff_action5" value="1053" />
+			<param name="buff_action5" value="1053" /> -->
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
-			<attack physical="216.73" magical="383.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="267.04" magical="195.41" />
+			<vitals hp="3450" hpRegen="8.5" mp="2050" mpRegen="3" />
+			<attack physical="350.05" magical="625.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="379.70061" magical="280.45587" />
 			<speed>
 				<walk ground="26" />
 				<run ground="170" />
@@ -2246,12 +2246,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4699" level="2" /> <!-- Blessing of Queen -->
-			<skill id="4700" level="2" /> <!-- Gift of Queen -->
-			<skill id="4701" level="2" /> <!-- Cure of Queen -->
-			<skill id="5639" level="2" /> <!-- Feline Queen - Blessed Soul -->
-			<skill id="5638" level="2" /> <!-- Feline Queen - Blessed Body -->
-			<skill id="5640" level="2" /> <!-- Feline Queen - Haste -->
+			<skill id="4699" level="4" /> <!-- Blessing of Queen -->
+			<skill id="4700" level="4" /> <!-- Gift of Queen -->
+			<skill id="4701" level="4" /> <!-- Cure of Queen -->
+			<!-- <skill id="5639" level="1" /> Feline Queen - Blessed Soul
+			<skill id="5638" level="1" /> Feline Queen - Blessed Body 
+			<skill id="5640" level="1" /> Feline Queen - Haste -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2261,24 +2261,24 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14255" level="66" type="Pet" name="Feline Queen">
+	<npc id="14255" level="84" type="Pet" name="Feline Queen">
 		<parameters>
-			<skill name="Buff1" id="4699" level="2" />
-			<skill name="Buff2" id="4700" level="2" />
-			<skill name="DDMagic" id="4701" level="2" />
-			<skill name="buff3" id="5638" level="2" />
-			<skill name="buff4" id="5639" level="2" />
-			<skill name="buff5" id="5640" level="2" />
+			<skill name="Buff1" id="4699" level="5" />
+			<skill name="Buff2" id="4700" level="5" />
+			<skill name="DDMagic" id="4701" level="5" />
+			<!-- <skill name="buff3" id="5638" level="1" />
+			<skill name="buff4" id="5639" level="1" />
+			<skill name="buff5" id="5640" level="1" />
 			<param name="buff_action3" value="1051" />
 			<param name="buff_action4" value="1052" />
-			<param name="buff_action5" value="1053" />
+			<param name="buff_action5" value="1053" /> -->
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
-			<attack physical="229.83" magical="412.32" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="276.73" magical="202.5" />
+			<vitals hp="3650" hpRegen="8.5" mp="2150" mpRegen="3" />
+			<attack physical="370.05" magical="640.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="398.70061" magical="295.45587" />
 			<speed>
 				<walk ground="26" />
 				<run ground="170" />
@@ -2298,12 +2298,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4699" level="2" /> <!-- Blessing of Queen -->
-			<skill id="4700" level="2" /> <!-- Gift of Queen -->
-			<skill id="4701" level="2" /> <!-- Cure of Queen -->
-			<skill id="5639" level="2" /> <!-- Feline Queen - Blessed Soul -->
-			<skill id="5638" level="2" /> <!-- Feline Queen - Blessed Body -->
-			<skill id="5640" level="2" /> <!-- Feline Queen - Haste -->
+			<skill id="4699" level="5" /> <!-- Blessing of Queen -->
+			<skill id="4700" level="5" /> <!-- Gift of Queen -->
+			<skill id="4701" level="5" /> <!-- Cure of Queen -->
+			<!-- <skill id="5639" level="1" /> Feline Queen - Blessed Soul
+			<skill id="5638" level="1" /> Feline Queen - Blessed Body 
+			<skill id="5640" level="1" /> Feline Queen - Haste -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2313,24 +2313,24 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14256" level="68" type="Pet" name="Feline Queen">
+	<npc id="14256" level="85" type="Pet" name="Feline Queen">
 		<parameters>
-			<skill name="Buff1" id="4699" level="2" />
-			<skill name="Buff2" id="4700" level="2" />
-			<skill name="DDMagic" id="4701" level="2" />
-			<skill name="buff3" id="5638" level="2" />
-			<skill name="buff4" id="5639" level="2" />
-			<skill name="buff5" id="5640" level="2" />
+			<skill name="Buff1" id="4699" level="6" />
+			<skill name="Buff2" id="4700" level="6" />
+			<skill name="DDMagic" id="4701" level="6" />
+			<!-- <skill name="buff3" id="5638" level="1" />
+			<skill name="buff4" id="5639" level="1" />
+			<skill name="buff5" id="5640" level="1" />
 			<param name="buff_action3" value="1051" />
 			<param name="buff_action4" value="1052" />
-			<param name="buff_action5" value="1053" />
+			<param name="buff_action5" value="1053" /> -->
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
-			<attack physical="242.83" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="286.36" magical="209.55" />
+			<vitals hp="3790" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<attack physical="390.05" magical="660.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="410.70061" magical="305.45587" />
 			<speed>
 				<walk ground="26" />
 				<run ground="170" />
@@ -2350,12 +2350,12 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4699" level="2" /> <!-- Blessing of Queen -->
-			<skill id="4700" level="2" /> <!-- Gift of Queen -->
-			<skill id="4701" level="2" /> <!-- Cure of Queen -->
-			<skill id="5639" level="2" /> <!-- Feline Queen - Blessed Soul -->
-			<skill id="5638" level="2" /> <!-- Feline Queen - Blessed Body -->
-			<skill id="5640" level="2" /> <!-- Feline Queen - Haste -->
+			<skill id="4699" level="6" /> <!-- Blessing of Queen -->
+			<skill id="4700" level="6" /> <!-- Gift of Queen -->
+			<skill id="4701" level="6" /> <!-- Cure of Queen -->
+			<!-- <skill id="5639" level="1" /> Feline Queen - Blessed Soul
+			<skill id="5638" level="1" /> Feline Queen - Blessed Body 
+			<skill id="5640" level="1" /> Feline Queen - Haste -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4175,7 +4175,7 @@
 	</npc>
 	<npc id="14296" level="32" type="Pet" name="Boxer the Unicorn">
 		<parameters>
-			<skill name="HealMagic" id="4025" level="2" />
+			<skill name="HealMagic" id="4025" level="3" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -4203,7 +4203,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4025" level="2" /> <!-- Master Recharge -->
+			<skill id="4025" level="3" /> <!-- Master Recharge -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4215,7 +4215,7 @@
 	</npc>
 	<npc id="14297" level="42" type="Pet" name="Boxer the Unicorn">
 		<parameters>
-			<skill name="HealMagic" id="4025" level="3" />
+			<skill name="HealMagic" id="4025" level="4" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -4255,7 +4255,7 @@
 	</npc>
 	<npc id="14298" level="50" type="Pet" name="Boxer the Unicorn">
 		<parameters>
-			<skill name="HealMagic" id="4025" level="3" />
+			<skill name="HealMagic" id="4025" level="5" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -4283,7 +4283,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4025" level="3" /> <!-- Master Recharge -->
+			<skill id="4025" level="5" /> <!-- Master Recharge -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4295,7 +4295,7 @@
 	</npc>
 	<npc id="14299" level="58" type="Pet" name="Boxer the Unicorn">
 		<parameters>
-			<skill name="HealMagic" id="4025" level="4" />
+			<skill name="HealMagic" id="4025" level="5" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -4323,7 +4323,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4025" level="4" /> <!-- Master Recharge -->
+			<skill id="4025" level="5" /> <!-- Master Recharge -->
 		</skillList>
 		<shots soul="3" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>

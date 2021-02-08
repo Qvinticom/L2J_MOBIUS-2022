@@ -232,7 +232,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14805" level="76" type="Pet" name="Dark Panther">
+	<npc id="14805" level="75" type="Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="7" />
 			<skill name="step_skill02" id="6096" level="5" />
@@ -248,7 +248,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2719" hpRegen="8.5" mp="1540" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="805.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="25" />
@@ -296,7 +296,7 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="2902" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="860.08905" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -330,11 +330,11 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14807" level="78" type="Pet" name="Dark Panther">
+	<npc id="14807" level="82" type="Pet" name="Dark Panther">
 		<parameters>
-			<skill name="step_skill01" id="6095" level="8" />
-			<skill name="step_skill02" id="6096" level="6" />
-			<skill name="step_skill03" id="6094" level="4" />
+			<skill name="step_skill01" id="6095" level="12" />
+			<skill name="step_skill02" id="6096" level="10" />
+			<skill name="step_skill03" id="6094" level="8" />
 			<param name="step_skill_target01" value="0" />
 			<param name="step_skill_target02" value="0" />
 			<param name="step_skill_target03" value="0" />
@@ -345,9 +345,9 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
-			<attack physical="864.3681" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="3612" hpRegen="8.5" mp="1615" mpRegen="3" />
+			<attack physical="980.3681" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="378.7" magical="273.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -367,9 +367,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="6094" level="4" /> <!-- Panther Cancel -->
-			<skill id="6096" level="6" /> <!-- Panther Fatal Claw -->
-			<skill id="6095" level="8" /> <!-- Panther Dark Claw -->
+			<skill id="6094" level="8" /> <!-- Panther Cancel -->
+			<skill id="6096" level="10" /> <!-- Panther Fatal Claw -->
+			<skill id="6095" level="12" /> <!-- Panther Dark Claw -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -379,11 +379,11 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14808" level="78" type="Pet" name="Dark Panther">
+	<npc id="14808" level="83" type="Pet" name="Dark Panther">
 		<parameters>
-			<skill name="step_skill01" id="6095" level="8" />
-			<skill name="step_skill02" id="6096" level="6" />
-			<skill name="step_skill03" id="6094" level="4" />
+			<skill name="step_skill01" id="6095" level="13" />
+			<skill name="step_skill02" id="6096" level="11" />
+			<skill name="step_skill03" id="6094" level="9" />
 			<param name="step_skill_target01" value="0" />
 			<param name="step_skill_target02" value="0" />
 			<param name="step_skill_target03" value="0" />
@@ -394,9 +394,9 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
-			<attack physical="868.64715" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="3922" hpRegen="8.5" mp="1624" mpRegen="3" />
+			<attack physical="1020.64715" magical="610.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="395.7" magical="286.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -416,9 +416,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="6094" level="4" /> <!-- Panther Cancel -->
-			<skill id="6096" level="6" /> <!-- Panther Fatal Claw -->
-			<skill id="6095" level="8" /> <!-- Panther Dark Claw -->
+			<skill id="6094" level="9" /> <!-- Panther Cancel -->
+			<skill id="6096" level="11" /> <!-- Panther Fatal Claw -->
+			<skill id="6095" level="13" /> <!-- Panther Dark Claw -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -428,11 +428,11 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14809" level="78" type="Pet" name="Dark Panther">
+	<npc id="14809" level="84" type="Pet" name="Dark Panther">
 		<parameters>
-			<skill name="step_skill01" id="6095" level="8" />
-			<skill name="step_skill02" id="6096" level="6" />
-			<skill name="step_skill03" id="6094" level="4" />
+			<skill name="step_skill01" id="6095" level="14" />
+			<skill name="step_skill02" id="6096" level="12" />
+			<skill name="step_skill03" id="6094" level="10" />
 			<param name="step_skill_target01" value="0" />
 			<param name="step_skill_target02" value="0" />
 			<param name="step_skill_target03" value="0" />
@@ -443,9 +443,9 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
-			<attack physical="872.9262" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="4432" hpRegen="8.5" mp="1632" mpRegen="3" />
+			<attack physical="1180.9262" magical="640.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="410.7" magical="295.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -465,9 +465,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="6094" level="4" /> <!-- Panther Cancel -->
-			<skill id="6096" level="6" /> <!-- Panther Fatal Claw -->
-			<skill id="6095" level="8" /> <!-- Panther Dark Claw -->
+			<skill id="6094" level="10" /> <!-- Panther Cancel -->
+			<skill id="6096" level="12" /> <!-- Panther Fatal Claw -->
+			<skill id="6095" level="14" /> <!-- Panther Dark Claw -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1817,7 +1817,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14836" level="80" type="Pet" name="Feline King">
+	<npc id="14836" level="77" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -1826,9 +1826,9 @@
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2880" hpRegen="13.43" mp="1674" mpRegen="3.09" />
-			<attack physical="1824.2" magical="1163.4" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="556.5" magical="588" />
+			<vitals hp="2980" hpRegen="13.43" mp="1674" mpRegen="3.09" />
+			<attack physical="990.2" magical="450" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="345" magical="317" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -1859,18 +1859,18 @@
 			<height normal="16.055" />
 		</collision>
 	</npc>
-	<npc id="14837" level="80" type="Pet" name="Magnus the Unicorn">
+	<npc id="14837" level="85" type="Pet" name="Magnus the Unicorn">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5138" level="1" />
-			<skill name="PhysicalSpecial2" id="5139" level="1" />
+			<skill name="PhysicalSpecial1" id="5138" level="6" />
+			<skill name="PhysicalSpecial2" id="5139" level="6" />
 			<skill name="PhysicalSpecial3" id="7000" level="1" />
 		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2880" hpRegen="13.43" mp="1674" mpRegen="3.09" />
-			<attack physical="1658.3" magical="2457" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="556.5" magical="588" />
+			<vitals hp="4358" hpRegen="13.43" mp="1674" mpRegen="3.09" />
+			<attack physical="1300" magical="980" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="405" magical="498" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -1880,6 +1880,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="1894" level="1" /> <!-- Unicorn's Potential -->			
 			<skill id="4408" level="4" /> <!-- HP High -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1889,8 +1890,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="6" /> <!-- Whiplash -->
+			<skill id="5139" level="6" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1901,7 +1902,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14838" level="80" type="Pet" name="Spectral Lord">
+	<npc id="14838" level="77" type="Pet" name="Spectral Lord">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />
@@ -1910,9 +1911,9 @@
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2880" hpRegen="13.43" mp="1674" mpRegen="3.09" />
-			<attack physical="1395.8" magical="1169.7" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="403.2" magical="376.6" />
+			<vitals hp="3425" hpRegen="13.43" mp="1674" mpRegen="3.09" />
+			<attack physical="950" magical="523" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="405" magical="389" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3121,7 +3122,7 @@
 			<height normal="15.5" />
 		</collision>
 	</npc>
-	<npc id="14871" level="81" type="Pet" name="Feline King">
+	<npc id="14871" level="60" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3164,7 +3165,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14872" level="81" type="Pet" name="Feline King">
+	<npc id="14872" level="60" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3207,7 +3208,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14873" level="81" type="Pet" name="Feline King">
+	<npc id="14873" level="60" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3250,18 +3251,18 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14874" level="82" type="Pet" name="Feline King">
+	<npc id="14874" level="81" type="Pet" name="Feline King">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5135" level="1" />
-			<skill name="PhysicalSpecial2" id="5136" level="1" />
+			<skill name="PhysicalSpecial1" id="5135" level="2" />
+			<skill name="PhysicalSpecial2" id="5136" level="2" />
 			<skill name="PhysicalSpecial3" id="5137" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2930" hpRegen="8.5" mp="1726" mpRegen="6" />
-			<attack physical="921.223695555556" magical="629.076361111111" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.515554666667" magical="254.296801111111" />
+			<vitals hp="3423" hpRegen="8.5" mp="1986" mpRegen="6" />
+			<attack physical="1040.3" magical="500" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="370" magical="352" />
 			<speed>
 				<walk ground="10" />
 				<run ground="180" />
@@ -3282,8 +3283,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5137" level="1" /> <!-- Grip of the Cat -->
-			<skill id="5135" level="1" /> <!-- Slash -->
-			<skill id="5136" level="1" /> <!-- Spin Slash -->
+			<skill id="5135" level="2" /> <!-- Slash -->
+			<skill id="5136" level="2" /> <!-- Spin Slash -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3295,16 +3296,16 @@
 	</npc>
 	<npc id="14875" level="82" type="Pet" name="Feline King">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5135" level="1" />
-			<skill name="PhysicalSpecial2" id="5136" level="1" />
+			<skill name="PhysicalSpecial1" id="5135" level="3" />
+			<skill name="PhysicalSpecial2" id="5136" level="3" />
 			<skill name="PhysicalSpecial3" id="5137" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2942" hpRegen="8.5" mp="1739" mpRegen="6" />
-			<attack physical="927.839984444444" magical="633.594428888889" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.050693333333" magical="255.420148888889" />
+			<vitals hp="3789" hpRegen="8.5" mp="2139" mpRegen="6" />
+			<attack physical="1140.3" magical="550" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="390" magical="365" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3325,8 +3326,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5137" level="1" /> <!-- Grip of the Cat -->
-			<skill id="5135" level="1" /> <!-- Slash -->
-			<skill id="5136" level="1" /> <!-- Spin Slash -->
+			<skill id="5135" level="3" /> <!-- Slash -->
+			<skill id="5136" level="3" /> <!-- Spin Slash -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3336,18 +3337,18 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14876" level="82" type="Pet" name="Feline King">
+	<npc id="14876" level="83" type="Pet" name="Feline King">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5135" level="1" />
-			<skill name="PhysicalSpecial2" id="5136" level="1" />
+			<skill name="PhysicalSpecial1" id="5135" level="4" />
+			<skill name="PhysicalSpecial2" id="5136" level="4" />
 			<skill name="PhysicalSpecial3" id="5137" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2954" hpRegen="8.5" mp="1752" mpRegen="6" />
-			<attack physical="934.456273333333" magical="638.112496666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.585832" magical="256.543496666667" />
+			<vitals hp="4153" hpRegen="8.5" mp="2452" mpRegen="6" />
+			<attack physical="1250.3" magical="600" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="415" magical="375.1" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3368,8 +3369,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5137" level="1" /> <!-- Grip of the Cat -->
-			<skill id="5135" level="1" /> <!-- Slash -->
-			<skill id="5136" level="1" /> <!-- Spin Slash -->
+			<skill id="5135" level="4" /> <!-- Slash -->
+			<skill id="5136" level="4" /> <!-- Spin Slash -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3379,18 +3380,18 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14877" level="83" type="Pet" name="Feline King">
+	<npc id="14877" level="84" type="Pet" name="Feline King">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5135" level="1" />
-			<skill name="PhysicalSpecial2" id="5136" level="1" />
+			<skill name="PhysicalSpecial1" id="5135" level="5" />
+			<skill name="PhysicalSpecial2" id="5136" level="5" />
 			<skill name="PhysicalSpecial3" id="5137" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2967" hpRegen="8.5" mp="1765" mpRegen="6" />
-			<attack physical="941.072562222222" magical="642.630564444444" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.120970666667" magical="257.666844444444" />
+			<vitals hp="4498" hpRegen="8.5" mp="2765" mpRegen="6" />
+			<attack physical="1370.3" magical="650" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="440" magical="385.6" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3411,8 +3412,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5137" level="1" /> <!-- Grip of the Cat -->
-			<skill id="5135" level="1" /> <!-- Slash -->
-			<skill id="5136" level="1" /> <!-- Spin Slash -->
+			<skill id="5135" level="5" /> <!-- Slash -->
+			<skill id="5136" level="5" /> <!-- Spin Slash -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3422,18 +3423,18 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14878" level="83" type="Pet" name="Feline King">
+	<npc id="14878" level="85" type="Pet" name="Feline King">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5135" level="1" />
-			<skill name="PhysicalSpecial2" id="5136" level="1" />
+			<skill name="PhysicalSpecial1" id="5135" level="6" />
+			<skill name="PhysicalSpecial2" id="5136" level="6" />
 			<skill name="PhysicalSpecial3" id="5137" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="8.5" mp="1778" mpRegen="6" />
-			<attack physical="947.688851111111" magical="647.148632222222" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.656109333333" magical="258.790192222222" />
+			<vitals hp="4950" hpRegen="8.5" mp="3000" mpRegen="6" />
+			<attack physical="1500.3" magical="700" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="495" magical="405" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3454,8 +3455,8 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5137" level="1" /> <!-- Grip of the Cat -->
-			<skill id="5135" level="1" /> <!-- Slash -->
-			<skill id="5136" level="1" /> <!-- Spin Slash -->
+			<skill id="5135" level="6" /> <!-- Slash -->
+			<skill id="5136" level="6" /> <!-- Spin Slash -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3465,7 +3466,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14879" level="83" type="Pet" name="Feline King">
+	<npc id="14879" level="90" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3508,7 +3509,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14880" level="84" type="Pet" name="Feline King">
+	<npc id="14880" level="90" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3551,7 +3552,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14881" level="84" type="Pet" name="Feline King">
+	<npc id="14881" level="90" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3594,7 +3595,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14882" level="84" type="Pet" name="Feline King">
+	<npc id="14882" level="90" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3637,7 +3638,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14883" level="85" type="Pet" name="Feline King">
+	<npc id="14883" level="90" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3680,7 +3681,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14884" level="85" type="Pet" name="Feline King">
+	<npc id="14884" level="90" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3723,7 +3724,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14885" level="85" type="Pet" name="Feline King">
+	<npc id="14885" level="90" type="Pet" name="Feline King">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3766,7 +3767,7 @@
 			<height normal="16.01" />
 		</collision>
 	</npc>
-	<npc id="14886" level="81" type="Pet" name="Magnus the Unicorn">
+	<npc id="14886" level="60" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -3774,10 +3775,10 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2892" hpRegen="8.5" mp="1687" mpRegen="6" />
-			<attack physical="901.374828888889" magical="615.522157777778" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="342.910138666667" magical="250.926757777778" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2880" hpRegen="13.43" mp="1674" mpRegen="3.09" />
+			<attack physical="1658.3" magical="2457" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="556.5" magical="588" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3809,18 +3810,18 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14887" level="81" type="Pet" name="Magnus the Unicorn">
+	<npc id="14887" level="60" type="Pet" name="Magnus the Unicorn">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5138" level="1" />
-			<skill name="PhysicalSpecial2" id="5139" level="1" />
+			<skill name="PhysicalSpecial1" id="5138" level="2" />
+			<skill name="PhysicalSpecial2" id="5139" level="2" />
 			<skill name="PhysicalSpecial3" id="7000" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2905" hpRegen="8.5" mp="1700" mpRegen="6" />
-			<attack physical="907.991117777778" magical="620.040225555556" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="344.445277333333" magical="252.050105555556" />
+			<vitals hp="2880" hpRegen="13.43" mp="1674" mpRegen="3.09" />
+			<attack physical="1658.3" magical="2457" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="556.5" magical="588" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3840,8 +3841,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="2" /> <!-- Whiplash -->
+			<skill id="5139" level="2" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3852,10 +3853,10 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14888" level="81" type="Pet" name="Magnus the Unicorn">
+	<npc id="14888" level="60" type="Pet" name="Magnus the Unicorn">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5138" level="1" />
-			<skill name="PhysicalSpecial2" id="5139" level="1" />
+			<skill name="PhysicalSpecial1" id="5138" level="3" />
+			<skill name="PhysicalSpecial2" id="5139" level="3" />
 			<skill name="PhysicalSpecial3" id="7000" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
@@ -3883,8 +3884,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="3" /> <!-- Whiplash -->
+			<skill id="5139" level="3" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3895,18 +3896,18 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14889" level="82" type="Pet" name="Magnus the Unicorn">
+	<npc id="14889" level="77" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
-			<skill name="PhysicalSpecial2" id="5139" level="1" />
+			<skill name="PhysicalSpecial2" id="5139" level="4" />
 			<skill name="PhysicalSpecial3" id="7000" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2930" hpRegen="8.5" mp="1726" mpRegen="6" />
-			<attack physical="921.223695555556" magical="629.076361111111" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.515554666667" magical="254.296801111111" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2600" hpRegen="13.43" mp="1674" mpRegen="3.09" />
+			<attack physical="930" magical="600" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="328" magical="345" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3938,18 +3939,18 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14890" level="82" type="Pet" name="Magnus the Unicorn">
+	<npc id="14890" level="81" type="Pet" name="Magnus the Unicorn">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5138" level="1" />
-			<skill name="PhysicalSpecial2" id="5139" level="1" />
+			<skill name="PhysicalSpecial1" id="5138" level="5" />
+			<skill name="PhysicalSpecial2" id="5139" level="5" />
 			<skill name="PhysicalSpecial3" id="7000" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2942" hpRegen="8.5" mp="1739" mpRegen="6" />
-			<attack physical="927.839984444444" magical="633.594428888889" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.050693333333" magical="255.420148888889" />
+			<vitals hp="3100" hpRegen="8.5" mp="1739" mpRegen="6" />
+			<attack physical="990" magical="680.5" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352" magical="370" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -3969,8 +3970,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="2" /> <!-- Whiplash -->
+			<skill id="5139" level="2" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3983,16 +3984,16 @@
 	</npc>
 	<npc id="14891" level="82" type="Pet" name="Magnus the Unicorn">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5138" level="1" />
-			<skill name="PhysicalSpecial2" id="5139" level="1" />
+			<skill name="PhysicalSpecial1" id="5138" level="6" />
+			<skill name="PhysicalSpecial2" id="5139" level="6" />
 			<skill name="PhysicalSpecial3" id="7000" level="1" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2954" hpRegen="8.5" mp="1752" mpRegen="6" />
-			<attack physical="934.456273333333" magical="638.112496666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.585832" magical="256.543496666667" />
+			<vitals hp="3400" hpRegen="8.5" mp="1752" mpRegen="6" />
+			<attack physical="1020" magical="750.1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="365" magical="390" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -4012,8 +4013,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="3" /> <!-- Whiplash -->
+			<skill id="5139" level="3" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4033,9 +4034,9 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2967" hpRegen="8.5" mp="1765" mpRegen="6" />
-			<attack physical="941.072562222222" magical="642.630564444444" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.120970666667" magical="257.666844444444" />
+			<vitals hp="3750" hpRegen="8.5" mp="1765" mpRegen="6" />
+			<attack physical="1090" magical="840.6" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="375.1" magical="415" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -4055,8 +4056,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="4" /> <!-- Whiplash -->
+			<skill id="5139" level="4" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4067,7 +4068,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14893" level="83" type="Pet" name="Magnus the Unicorn">
+	<npc id="14893" level="84" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4076,9 +4077,9 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="8.5" mp="1778" mpRegen="6" />
-			<attack physical="947.688851111111" magical="647.148632222222" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.656109333333" magical="258.790192222222" />
+			<vitals hp="4035" hpRegen="8.5" mp="1778" mpRegen="6" />
+			<attack physical="1201" magical="900.1" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="385.6" magical="440" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -4098,8 +4099,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="5" /> <!-- Whiplash -->
+			<skill id="5139" level="5" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4110,7 +4111,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14894" level="83" type="Pet" name="Magnus the Unicorn">
+	<npc id="14894" level="89" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4120,7 +4121,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2992" hpRegen="8.5" mp="1791" mpRegen="6" />
-			<attack physical="954.30514" magical="651.6667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1989.30514" magical="651.6667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="355.191248" magical="259.91354" />
 			<speed>
 				<walk ground="160" />
@@ -4141,8 +4142,8 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5138" level="1" /> <!-- Whiplash -->
-			<skill id="5139" level="1" /> <!-- Tidal Wave -->
+			<skill id="5138" level="6" /> <!-- Whiplash -->
+			<skill id="5139" level="6" /> <!-- Tidal Wave -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4153,7 +4154,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14895" level="84" type="Pet" name="Magnus the Unicorn">
+	<npc id="14895" level="89" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4196,7 +4197,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14896" level="84" type="Pet" name="Magnus the Unicorn">
+	<npc id="14896" level="90" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4239,7 +4240,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14897" level="84" type="Pet" name="Magnus the Unicorn">
+	<npc id="14897" level="91" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4282,7 +4283,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14898" level="85" type="Pet" name="Magnus the Unicorn">
+	<npc id="14898" level="92" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4325,7 +4326,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14899" level="85" type="Pet" name="Magnus the Unicorn">
+	<npc id="14899" level="93" type="Pet" name="Magnus the Unicorn">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />

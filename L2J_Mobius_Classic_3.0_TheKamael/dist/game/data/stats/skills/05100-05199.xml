@@ -1065,7 +1065,7 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>80</activateRate>
+		<activateRate>70</activateRate>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
@@ -1117,7 +1117,15 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>6198</power>
+				<power>
+					<value level="1">2900</value>
+					<value level="2">3450</value>
+					<value level="3">3600</value>
+					<value level="4">3850</value>
+					<value level="5">4100</value>
+					<value level="6">4450</value>
+				</power>
+				<allowedSkills>35016;35045;18103</allowedSkills>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions" />
@@ -1145,7 +1153,14 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>228</power>
+				<power>
+					<value level="1">220</value> <!-- 228 Retail Damage -->
+					<value level="2">222</value> <!-- 230 Retail Damage -->
+					<value level="3">224</value> <!-- 232 Retail Damage -->
+					<value level="4">226</value> <!-- 234 Retail Damage -->
+					<value level="5">228</value> <!-- 236 Retail Damage -->
+					<value level="6">232</value> <!-- 240 Retail Damage -->
+				</power>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -1201,7 +1216,14 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>8264</power>
+				<power>
+					<value level="1">8200</value> <!-- 8264 Retail Damage -->
+					<value level="2">8500</value> <!-- 8597 Retail Damage -->
+					<value level="3">8900</value> <!-- 8945 Retail Damage -->
+					<value level="4">9300</value> <!-- 9302 Retail Damage -->
+					<value level="5">9650</value> <!-- 9674 Retail Damage -->
+					<value level="6">9900</value> <!-- 10061 Retail Damage -->
+				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1228,7 +1250,14 @@
 		<effects>
 			<effect name="ConsumeBody" />
 			<effect name="MagicalAttack">
-				<power>228</power>
+				<power>
+					<value level="1">228</value>
+					<value level="2">230</value>
+					<value level="3">232</value>
+					<value level="4">234</value>
+					<value level="5">236</value>
+					<value level="6">240</value>
+				</power>
 			</effect>
 		</effects>
 	</skill>

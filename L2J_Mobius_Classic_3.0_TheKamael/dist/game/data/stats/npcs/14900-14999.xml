@@ -10,7 +10,7 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="6" />
-			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="880.002873333333" magical="1000.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="364.40208" magical="266.653626666667" />
 			<speed>
 				<walk ground="160" />
@@ -43,7 +43,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="14901" level="81" type="Pet" name="Spectral Lord">
+	<npc id="14901" level="60" type="Pet" name="Spectral Lord">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />
@@ -87,7 +87,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14902" level="81" type="Pet" name="Spectral Lord">
+	<npc id="14902" level="60" type="Pet" name="Spectral Lord">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />
@@ -131,7 +131,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14903" level="81" type="Pet" name="Spectral Lord">
+	<npc id="14903" level="60" type="Pet" name="Spectral Lord">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />
@@ -175,18 +175,18 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14904" level="82" type="Pet" name="Spectral Lord">
+	<npc id="14904" level="81" type="Pet" name="Spectral Lord">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5142" level="1" />
-			<skill name="PhysicalSpecial2" id="5141" level="1" />
-			<skill name="PhysicalSpecial3" id="5140" level="1" />
+			<skill name="PhysicalSpecial1" id="5142" level="2" />
+			<skill name="PhysicalSpecial2" id="5141" level="2" />
+			<skill name="PhysicalSpecial3" id="5140" level="2" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2930" hpRegen="8.5" mp="1726" mpRegen="6" />
-			<attack physical="921.223695555556" magical="629.076361111111" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.515554666667" magical="254.296801111111" />
+			<vitals hp="3780" hpRegen="8.5" mp="1726" mpRegen="6" />
+			<attack physical="1020" magical="580" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="442" magical="435" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -206,9 +206,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5142" level="1" /> <!-- Corpse Burst -->
-			<skill id="5140" level="1" /> <!-- Dark Curse -->
-			<skill id="5141" level="1" /> <!-- Dicing Death -->
+			<skill id="5142" level="2" /> <!-- Corpse Burst -->
+			<skill id="5140" level="2" /> <!-- Dark Curse -->
+			<skill id="5141" level="2" /> <!-- Dicing Death -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -221,16 +221,16 @@
 	</npc>
 	<npc id="14905" level="82" type="Pet" name="Spectral Lord">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5142" level="1" />
-			<skill name="PhysicalSpecial2" id="5141" level="1" />
-			<skill name="PhysicalSpecial3" id="5140" level="1" />
+			<skill name="PhysicalSpecial1" id="5142" level="3" />
+			<skill name="PhysicalSpecial2" id="5141" level="3" />
+			<skill name="PhysicalSpecial3" id="5140" level="3" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2942" hpRegen="8.5" mp="1739" mpRegen="6" />
-			<attack physical="927.839984444444" magical="633.594428888889" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.050693333333" magical="255.420148888889" />
+			<vitals hp="4175" hpRegen="8.5" mp="1739" mpRegen="6" />
+			<attack physical="1070" magical="640" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="468" magical="457" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -250,9 +250,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5142" level="1" /> <!-- Corpse Burst -->
-			<skill id="5140" level="1" /> <!-- Dark Curse -->
-			<skill id="5141" level="1" /> <!-- Dicing Death -->
+			<skill id="5142" level="3" /> <!-- Corpse Burst -->
+			<skill id="5140" level="3" /> <!-- Dark Curse -->
+			<skill id="5141" level="3" /> <!-- Dicing Death -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -263,18 +263,18 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14906" level="82" type="Pet" name="Spectral Lord">
+	<npc id="14906" level="83" type="Pet" name="Spectral Lord">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5142" level="1" />
-			<skill name="PhysicalSpecial2" id="5141" level="1" />
-			<skill name="PhysicalSpecial3" id="5140" level="1" />
+			<skill name="PhysicalSpecial1" id="5142" level="4" />
+			<skill name="PhysicalSpecial2" id="5141" level="4" />
+			<skill name="PhysicalSpecial3" id="5140" level="4" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2954" hpRegen="8.5" mp="1752" mpRegen="6" />
-			<attack physical="934.456273333333" magical="638.112496666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.585832" magical="256.543496666667" />
+			<vitals hp="4453" hpRegen="8.5" mp="1752" mpRegen="6" />
+			<attack physical="1150" magical="701" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="489" magical="482" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -294,9 +294,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5142" level="1" /> <!-- Corpse Burst -->
-			<skill id="5140" level="1" /> <!-- Dark Curse -->
-			<skill id="5141" level="1" /> <!-- Dicing Death -->
+			<skill id="5142" level="4" /> <!-- Corpse Burst -->
+			<skill id="5140" level="4" /> <!-- Dark Curse -->
+			<skill id="5141" level="4" /> <!-- Dicing Death -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -307,18 +307,18 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14907" level="83" type="Pet" name="Spectral Lord">
+	<npc id="14907" level="84" type="Pet" name="Spectral Lord">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5142" level="1" />
-			<skill name="PhysicalSpecial2" id="5141" level="1" />
-			<skill name="PhysicalSpecial3" id="5140" level="1" />
+			<skill name="PhysicalSpecial1" id="5142" level="5" />
+			<skill name="PhysicalSpecial2" id="5141" level="5" />
+			<skill name="PhysicalSpecial3" id="5140" level="5" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2967" hpRegen="8.5" mp="1765" mpRegen="6" />
-			<attack physical="941.072562222222" magical="642.630564444444" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.120970666667" magical="257.666844444444" />
+			<vitals hp="4875" hpRegen="8.5" mp="1765" mpRegen="6" />
+			<attack physical="1220" magical="743" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="523" magical="518" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -338,9 +338,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5142" level="1" /> <!-- Corpse Burst -->
-			<skill id="5140" level="1" /> <!-- Dark Curse -->
-			<skill id="5141" level="1" /> <!-- Dicing Death -->
+			<skill id="5142" level="5" /> <!-- Corpse Burst -->
+			<skill id="5140" level="5" /> <!-- Dark Curse -->
+			<skill id="5141" level="5" /> <!-- Dicing Death -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -351,18 +351,18 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14908" level="83" type="Pet" name="Spectral Lord">
+	<npc id="14908" level="85" type="Pet" name="Spectral Lord">
 		<parameters>
-			<skill name="PhysicalSpecial1" id="5142" level="1" />
-			<skill name="PhysicalSpecial2" id="5141" level="1" />
-			<skill name="PhysicalSpecial3" id="5140" level="1" />
+			<skill name="PhysicalSpecial1" id="5142" level="6" />
+			<skill name="PhysicalSpecial2" id="5141" level="6" />
+			<skill name="PhysicalSpecial3" id="5140" level="6" />
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2979" hpRegen="8.5" mp="1778" mpRegen="6" />
-			<attack physical="947.688851111111" magical="647.148632222222" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.656109333333" magical="258.790192222222" />
+			<vitals hp="5258" hpRegen="8.5" mp="1778" mpRegen="6" />
+			<attack physical="1356" magical="785" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="565" magical="552" />
 			<speed>
 				<walk ground="160" />
 				<run ground="180" />
@@ -382,9 +382,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5142" level="1" /> <!-- Corpse Burst -->
-			<skill id="5140" level="1" /> <!-- Dark Curse -->
-			<skill id="5141" level="1" /> <!-- Dicing Death -->
+			<skill id="5142" level="6" /> <!-- Corpse Burst -->
+			<skill id="5140" level="6" /> <!-- Dark Curse -->
+			<skill id="5141" level="6" /> <!-- Dicing Death -->
 		</skillList>
 		<shots soul="2" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -395,7 +395,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14909" level="83" type="Pet" name="Spectral Lord">
+	<npc id="14909" level="90" type="Pet" name="Spectral Lord">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />
@@ -439,7 +439,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14910" level="84" type="Pet" name="Spectral Lord">
+	<npc id="14910" level="90" type="Pet" name="Spectral Lord">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />
@@ -483,7 +483,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="14911" level="84" type="Pet" name="Spectral Lord">
+	<npc id="14911" level="90" type="Pet" name="Spectral Lord">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />

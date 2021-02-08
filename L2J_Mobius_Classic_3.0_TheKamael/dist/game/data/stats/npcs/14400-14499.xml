@@ -160,7 +160,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="14404" level="76" type="Pet" name="Merrow the Unicorn">
+	<npc id="14404" level="75" type="Pet" name="Merrow the Unicorn">
 		<parameters>
 			<skill name="DDMagic" id="4137" level="7" />
 			<param name="step1_action01" value="43" />
@@ -181,10 +181,10 @@
 		<status attackable="false" undying="false" />
 		<skillList>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="3" /> <!-- HP Medium-High -->
+			<skill id="4408" level="4" /> <!-- HP Medium-High -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
@@ -1406,24 +1406,25 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="14435" level="58" type="Pet" name="Seraphim the Unicorn">
+	<npc id="14435" level="77" type="Pet" name="Seraphim the Unicorn">
 		<parameters>
 			<skill name="Buff1" id="4702" level="1" />
 			<skill name="Buff2" id="4703" level="1" />
 			<skill name="DDMagic" id="4704" level="1" />
-			<skill name="buff3" id="5643" level="1" />
-			<skill name="buff4" id="5647" level="1" />
-			<skill name="buff5" id="5648" level="1" />
+			<!-- <skill name="buff3" id="5643" level="1" /> 
+			<skill name="buff4" id="5647" level="1" /> 
+			<skill name="buff5" id="5648" level="2" />
+			<skill name="buff6" id="5646" level="1" /> 
 			<param name="buff_action3" value="1054" />
 			<param name="buff_action4" value="1055" />
-			<param name="buff_action5" value="1056" />
+			<param name="buff_action5" value="1056" /> -->
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
-			<attack physical="177.76" magical="302.44" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="237.99" magical="174.15" />
+			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
+			<attack physical="297.05" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
@@ -1446,9 +1447,10 @@
 			<skill id="4702" level="1" /> <!-- Blessing of Seraphim -->
 			<skill id="4703" level="1" /> <!-- Gift of Seraphim -->
 			<skill id="4704" level="1" /> <!-- Cure of Seraphim -->
-			<skill id="5648" level="1" /> <!-- Seraphim the Unicorn - Empower -->
-			<skill id="5647" level="1" /> <!-- Seraphim the Unicorn - Clarity -->
-			<skill id="5643" level="1" /> <!-- Seraphim the Unicorn - Acumen -->
+			<!-- <skill id="5648" level="2" /> Seraphim the Unicorn - Empower -->
+			<!-- <skill id="5646" level="1" /> Seraphim the Unicorn - Wild Magic -->
+			<!-- <skill id="5647" level="1" /> Seraphim the Unicorn - Clarity -->
+			<!-- <skill id="5643" level="1" /> Seraphim the Unicorn - Acumen -->
 		</skillList>
 		<shots soul="1" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1458,128 +1460,25 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="14436" level="60" type="Pet" name="Seraphim the Unicorn">
-		<parameters>
-			<skill name="Buff1" id="4702" level="1" />
-			<skill name="Buff2" id="4703" level="1" />
-			<skill name="DDMagic" id="4704" level="1" />
-			<skill name="buff3" id="5643" level="1" />
-			<skill name="buff4" id="5647" level="1" />
-			<skill name="buff5" id="5648" level="2" />
-			<param name="buff_action3" value="1054" />
-			<param name="buff_action4" value="1055" />
-			<param name="buff_action5" value="1056" />
-		</parameters>
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
-			<attack physical="190.6" magical="328.7" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="247.65" magical="181.22" />
-			<speed>
-				<walk ground="27" />
-				<run ground="160" />
-			</speed>
-			<hitTime>710</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4702" level="1" /> <!-- Blessing of Seraphim -->
-			<skill id="4703" level="1" /> <!-- Gift of Seraphim -->
-			<skill id="4704" level="1" /> <!-- Cure of Seraphim -->
-			<skill id="5648" level="2" /> <!-- Seraphim the Unicorn - Empower -->
-			<skill id="5647" level="1" /> <!-- Seraphim the Unicorn - Clarity -->
-			<skill id="5643" level="1" /> <!-- Seraphim the Unicorn - Acumen -->
-		</skillList>
-		<shots soul="2" spirit="1" />
-		<exCrtEffect>false</exCrtEffect>
-		<ai type="BALANCED" />
-		<collision>
-			<radius normal="9" />
-			<height normal="25.5" />
-		</collision>
-	</npc>
-	<npc id="14437" level="62" type="Pet" name="Seraphim the Unicorn">
-		<parameters>
-			<skill name="Buff1" id="4702" level="1" />
-			<skill name="Buff2" id="4703" level="1" />
-			<skill name="DDMagic" id="4704" level="1" />
-			<skill name="buff3" id="5643" level="1" />
-			<skill name="buff4" id="5647" level="1" />
-			<skill name="buff5" id="5648" level="2" />
-			<param name="buff_action3" value="1054" />
-			<param name="buff_action4" value="1055" />
-			<param name="buff_action5" value="1056" />
-		</parameters>
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
-			<attack physical="203.62" magical="355.86" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34" magical="188.31" />
-			<speed>
-				<walk ground="27" />
-				<run ground="160" />
-			</speed>
-			<hitTime>710</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4702" level="1" /> <!-- Blessing of Seraphim -->
-			<skill id="4703" level="1" /> <!-- Gift of Seraphim -->
-			<skill id="4704" level="1" /> <!-- Cure of Seraphim -->
-			<skill id="5648" level="2" /> <!-- Seraphim the Unicorn - Empower -->
-			<skill id="5647" level="1" /> <!-- Seraphim the Unicorn - Clarity -->
-			<skill id="5643" level="1" /> <!-- Seraphim the Unicorn - Acumen -->
-		</skillList>
-		<shots soul="2" spirit="1" />
-		<exCrtEffect>false</exCrtEffect>
-		<ai type="BALANCED" />
-		<collision>
-			<radius normal="9" />
-			<height normal="25.5" />
-		</collision>
-	</npc>
-	<npc id="14438" level="64" type="Pet" name="Seraphim the Unicorn">
+	<npc id="14436" level="79" type="Pet" name="Seraphim the Unicorn">
 		<parameters>
 			<skill name="Buff1" id="4702" level="2" />
 			<skill name="Buff2" id="4703" level="2" />
 			<skill name="DDMagic" id="4704" level="2" />
-			<skill name="buff3" id="5643" level="1" />
-			<skill name="buff4" id="5647" level="1" />
+			<!-- <skill name="buff3" id="5643" level="1" /> 
+			<skill name="buff4" id="5647" level="1" /> 
 			<skill name="buff5" id="5648" level="2" />
+			<skill name="buff6" id="5646" level="1" /> 
 			<param name="buff_action3" value="1054" />
 			<param name="buff_action4" value="1055" />
-			<param name="buff_action5" value="1056" />
+			<param name="buff_action5" value="1056" /> -->
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
-			<attack physical="216.73" magical="383.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="267.04" magical="195.41" />
+			<vitals hp="2912" hpRegen="8.5" mp="1785" mpRegen="3" />
+			<attack physical="320.05" magical="602.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.7" magical="252.46" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
@@ -1602,9 +1501,10 @@
 			<skill id="4702" level="2" /> <!-- Blessing of Seraphim -->
 			<skill id="4703" level="2" /> <!-- Gift of Seraphim -->
 			<skill id="4704" level="2" /> <!-- Cure of Seraphim -->
-			<skill id="5648" level="2" /> <!-- Seraphim the Unicorn - Empower -->
-			<skill id="5647" level="1" /> <!-- Seraphim the Unicorn - Clarity -->
-			<skill id="5643" level="1" /> <!-- Seraphim the Unicorn - Acumen -->
+			<!-- <skill id="5648" level="2" /> Seraphim the Unicorn - Empower -->
+			<!-- <skill id="5646" level="1" /> Seraphim the Unicorn - Wild Magic -->
+			<!-- <skill id="5647" level="1" /> Seraphim the Unicorn - Clarity -->
+			<!-- <skill id="5643" level="1" /> Seraphim the Unicorn - Acumen -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1614,26 +1514,133 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="14439" level="66" type="Pet" name="Seraphim the Unicorn">
+	<npc id="14437" level="81" type="Pet" name="Seraphim the Unicorn">
 		<parameters>
-			<skill name="Buff1" id="4702" level="2" />
-			<skill name="Buff2" id="4703" level="2" />
-			<skill name="DDMagic" id="4704" level="2" />
-			<skill name="buff3" id="5643" level="1" />
-			<skill name="buff4" id="5647" level="1" />
+			<skill name="Buff1" id="4702" level="3" />
+			<skill name="Buff2" id="4703" level="3" />
+			<skill name="DDMagic" id="4704" level="3" />
+			<!-- <skill name="buff3" id="5643" level="1" /> 
+			<skill name="buff4" id="5647" level="1" /> 
 			<skill name="buff5" id="5648" level="2" />
-			<skill name="buff6" id="5646" level="1" />
+			<skill name="buff6" id="5646" level="1" /> 
 			<param name="buff_action3" value="1054" />
 			<param name="buff_action4" value="1055" />
-			<param name="buff_action5" value="1056" />
-			<param name="buff_action6" value="1057" />
+			<param name="buff_action5" value="1056" /> -->
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
-			<attack physical="229.83" magical="412.32" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="276.73" magical="202.5" />
+			<vitals hp="3025" hpRegen="8.5" mp="1935" mpRegen="3" />
+			<attack physical="338.05" magical="621.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.7" magical="263.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="160" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4702" level="3" /> <!-- Blessing of Seraphim -->
+			<skill id="4703" level="3" /> <!-- Gift of Seraphim -->
+			<skill id="4704" level="3" /> <!-- Cure of Seraphim -->
+			<!-- <skill id="5648" level="2" /> Seraphim the Unicorn - Empower -->
+			<!-- <skill id="5646" level="1" /> Seraphim the Unicorn - Wild Magic -->
+			<!-- <skill id="5647" level="1" /> Seraphim the Unicorn - Clarity -->
+			<!-- <skill id="5643" level="1" /> Seraphim the Unicorn - Acumen -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="14438" level="83" type="Pet" name="Seraphim the Unicorn">
+		<parameters>
+			<skill name="Buff1" id="4702" level="4" />
+			<skill name="Buff2" id="4703" level="4" />
+			<skill name="DDMagic" id="4704" level="4" />
+			<!-- <skill name="buff3" id="5643" level="1" /> 
+			<skill name="buff4" id="5647" level="1" /> 
+			<skill name="buff5" id="5648" level="2" />
+			<skill name="buff6" id="5646" level="1" /> 
+			<param name="buff_action3" value="1054" />
+			<param name="buff_action4" value="1055" />
+			<param name="buff_action5" value="1056" /> -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3155" hpRegen="8.5" mp="2155" mpRegen="3" />
+			<attack physical="351.05" magical="632.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="368.7" magical="277.46" />
+			<speed>
+				<walk ground="27" />
+				<run ground="160" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4702" level="4" /> <!-- Blessing of Seraphim -->
+			<skill id="4703" level="4" /> <!-- Gift of Seraphim -->
+			<skill id="4704" level="4" /> <!-- Cure of Seraphim -->
+			<!-- <skill id="5648" level="2" /> Seraphim the Unicorn - Empower -->
+			<!-- <skill id="5646" level="1" /> Seraphim the Unicorn - Wild Magic -->
+			<!-- <skill id="5647" level="1" /> Seraphim the Unicorn - Clarity -->
+			<!-- <skill id="5643" level="1" /> Seraphim the Unicorn - Acumen -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="14439" level="84" type="Pet" name="Seraphim the Unicorn">
+		<parameters>
+			<skill name="Buff1" id="4702" level="5" />
+			<skill name="Buff2" id="4703" level="5" />
+			<skill name="DDMagic" id="4704" level="5" />
+			<!-- <skill name="buff3" id="5643" level="1" /> 
+			<skill name="buff4" id="5647" level="1" /> 
+			<skill name="buff5" id="5648" level="2" />
+			<skill name="buff6" id="5646" level="1" /> 
+			<param name="buff_action3" value="1054" />
+			<param name="buff_action4" value="1055" />
+			<param name="buff_action5" value="1056" /> -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3315" hpRegen="8.5" mp="2415" mpRegen="3" />
+			<attack physical="370.05" magical="649.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="381.7" magical="293.46" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
@@ -1654,12 +1661,12 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4702" level="2" /> <!-- Blessing of Seraphim -->
-			<skill id="4703" level="2" /> <!-- Gift of Seraphim -->
-			<skill id="4704" level="2" /> <!-- Cure of Seraphim -->
-			<skill id="5648" level="2" /> <!-- Seraphim the Unicorn - Empower -->
-			<skill id="5646" level="1" /> <!-- Seraphim the Unicorn - Wild Magic -->
-			<skill id="5647" level="1" /> <!-- Seraphim the Unicorn - Clarity -->
-			<skill id="5643" level="1" /> <!-- Seraphim the Unicorn - Acumen -->
+			<skill id="4703" level="5" /> <!-- Gift of Seraphim -->
+			<skill id="4704" level="5" /> <!-- Cure of Seraphim -->
+			<!-- <skill id="5648" level="2" /> Seraphim the Unicorn - Empower -->
+			<!-- <skill id="5646" level="1" /> Seraphim the Unicorn - Wild Magic -->
+			<!-- <skill id="5647" level="1" /> Seraphim the Unicorn - Clarity -->
+			<!-- <skill id="5643" level="1" /> Seraphim the Unicorn - Acumen -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1669,26 +1676,25 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="14440" level="68" type="Pet" name="Seraphim the Unicorn">
+	<npc id="14440" level="85" type="Pet" name="Seraphim the Unicorn">
 		<parameters>
-			<skill name="Buff1" id="4702" level="2" />
-			<skill name="Buff2" id="4703" level="2" />
-			<skill name="DDMagic" id="4704" level="2" />
-			<skill name="buff3" id="5643" level="1" />
-			<skill name="buff4" id="5647" level="1" />
+			<skill name="Buff1" id="4702" level="6" />
+			<skill name="Buff2" id="4703" level="6" />
+			<skill name="DDMagic" id="4704" level="6" />
+			<!-- <skill name="buff3" id="5643" level="1" /> 
+			<skill name="buff4" id="5647" level="1" /> 
 			<skill name="buff5" id="5648" level="2" />
-			<skill name="buff6" id="5646" level="1" />
+			<skill name="buff6" id="5646" level="1" /> 
 			<param name="buff_action3" value="1054" />
 			<param name="buff_action4" value="1055" />
-			<param name="buff_action5" value="1056" />
-			<param name="buff_action6" value="1057" />
+			<param name="buff_action5" value="1056" /> -->
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
-			<attack physical="242.83" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="286.36" magical="209.55" />
+			<vitals hp="3515" hpRegen="8.5" mp="2685" mpRegen="3" />
+			<attack physical="390.05" magical="679.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="398.7" magical="315.46" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
@@ -1708,13 +1714,13 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4702" level="2" /> <!-- Blessing of Seraphim -->
-			<skill id="4703" level="2" /> <!-- Gift of Seraphim -->
-			<skill id="4704" level="2" /> <!-- Cure of Seraphim -->
-			<skill id="5648" level="2" /> <!-- Seraphim the Unicorn - Empower -->
-			<skill id="5646" level="1" /> <!-- Seraphim the Unicorn - Wild Magic -->
-			<skill id="5647" level="1" /> <!-- Seraphim the Unicorn - Clarity -->
-			<skill id="5643" level="1" /> <!-- Seraphim the Unicorn - Acumen -->
+			<skill id="4702" level="6" /> <!-- Blessing of Seraphim -->
+			<skill id="4703" level="6" /> <!-- Gift of Seraphim -->
+			<skill id="4704" level="6" /> <!-- Cure of Seraphim -->
+			<!-- <skill id="5648" level="2" /> Seraphim the Unicorn - Empower -->
+			<!-- <skill id="5646" level="1" /> Seraphim the Unicorn - Wild Magic -->
+			<!-- <skill id="5647" level="1" /> Seraphim the Unicorn - Clarity -->
+			<!-- <skill id="5643" level="1" /> Seraphim the Unicorn - Acumen -->
 		</skillList>
 		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3630,151 +3636,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="14480" level="32" type="Pet" name="Shadow">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="515" hpRegen="4.5" mp="286" mpRegen="1.8" />
-			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="125.57727" magical="91.89199" />
-			<speed>
-				<walk ground="80" />
-				<run ground="140" />
-			</speed>
-			<hitTime>540</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<shots soul="1" spirit="1" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
-		<collision>
-			<radius normal="10" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="14481" level="42" type="Pet" name="Shadow">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="668" hpRegen="5.5" mp="358" mpRegen="2.1" />
-			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="164.88513" magical="120.65578" />
-			<speed>
-				<walk ground="80" />
-				<run ground="140" />
-			</speed>
-			<hitTime>540</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<shots soul="2" spirit="1" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
-		<collision>
-			<radius normal="10" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="14482" level="50" type="Pet" name="Shadow">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="847" hpRegen="5.5" mp="432" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="200.23844" magical="146.5258" />
-			<speed>
-				<walk ground="80" />
-				<run ground="140" />
-			</speed>
-			<hitTime>540</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<shots soul="2" spirit="1" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
-		<collision>
-			<radius normal="10" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="14483" level="58" type="Pet" name="Shadow">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1050" hpRegen="6.5" mp="531" mpRegen="2.4" />
-			<attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="237.99429" magical="174.1539" />
-			<speed>
-				<walk ground="80" />
-				<run ground="140" />
-			</speed>
-			<hitTime>540</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<shots soul="2" spirit="1" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
-		<collision>
-			<radius normal="10" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="14484" level="27" type="Pet" name="Shadow">
+	<npc id="14480" level="27" type="Pet" name="Shadow">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3810,7 +3672,43 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="14485" level="37" type="Pet" name="Shadow">
+	<npc id="14481" level="32" type="Pet" name="Shadow">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="515" hpRegen="4.5" mp="286" mpRegen="1.8" />
+			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="125.57727" magical="91.89199" />
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<shots soul="1" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="10" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="14482" level="37" type="Pet" name="Shadow">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3846,7 +3744,43 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="14486" level="46" type="Pet" name="Shadow">
+	<npc id="14483" level="42" type="Pet" name="Shadow">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="668" hpRegen="5.5" mp="358" mpRegen="2.1" />
+			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="164.88513" magical="120.65578" />
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="10" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="14484" level="46" type="Pet" name="Shadow">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3882,7 +3816,43 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="14487" level="54" type="Pet" name="Shadow">
+	<npc id="14485" level="50" type="Pet" name="Shadow">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="847" hpRegen="5.5" mp="432" mpRegen="2.1" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.23844" magical="146.5258" />
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<shots soul="2" spirit="1" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="10" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="14486" level="54" type="Pet" name="Shadow">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3911,6 +3881,42 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<shots soul="4" spirit="2" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
+		<collision>
+			<radius normal="10" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="14487" level="58" type="Pet" name="Shadow">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1050" hpRegen="6.5" mp="531" mpRegen="2.4" />
+			<attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
+			<speed>
+				<walk ground="80" />
+				<run ground="140" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<shots soul="2" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>1.61051</sNpcPropHpRate>
 		<collision>
@@ -4206,7 +4212,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="14496" level="76" type="Pet" name="Shadow">
+	<npc id="14496" level="75" type="Pet" name="Shadow">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
