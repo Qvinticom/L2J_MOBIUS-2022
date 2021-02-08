@@ -1374,9 +1374,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipShield" />
-			<condition name="OpCheckCastRange">
-				<distance>200</distance>
-			</condition>
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
