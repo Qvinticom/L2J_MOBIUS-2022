@@ -1025,6 +1025,10 @@ public class Fort extends AbstractResidence
 	 */
 	public int getCastleIdByAmbassador(int npcId)
 	{
+		if ((_envoyCastles == null) || !_envoyCastles.containsKey(npcId))
+		{
+			return -1;
+		}
 		return _envoyCastles.get(npcId);
 	}
 	
