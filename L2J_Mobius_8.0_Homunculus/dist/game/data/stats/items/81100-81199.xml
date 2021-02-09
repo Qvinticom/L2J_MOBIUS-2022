@@ -483,6 +483,29 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<!-- Reward 1 chance="50" -->
+			<item id="57" min="1200000" max="1200000" chance="50" /> <!-- Adena -->
+			<!-- Reward 2 chance="50" -->
+			<item id="48418" min="1" max="1" chance="3.33" /> <!-- Authority Ornament -->
+			<item id="36186" min="1" max="1" chance="3.33" /> <!-- Energy of Desire -->
+			<item id="47420" min="1" max="1" chance="3.33" /> <!-- Energy of Longing -->
+			<item id="80964" min="1" max="1" chance="3.33" /> <!-- Energy of Protection -->
+			<item id="48860" min="1" max="1" chance="3.33" /> <!-- Fallen Angel's Ring Pack -->
+			<item id="36731" min="1" max="1" chance="3.33" /> <!-- Giant's Energy Spirit Stone -->
+			<item id="45931" min="1" max="1" chance="3.33" /> <!-- High-grade Weapon Augmenting Stone -->
+			<item id="17527" min="1" max="1" chance="3.33" /> <!-- Scroll: Enchant R-grade Armor -->
+			<item id="17526" min="1" max="1" chance="3.33" /> <!-- Scroll: Enchant R-grade Weapon -->
+			<item id="47494" min="1" max="1" chance="3.33" /> <!-- Selenite -->
+			<item id="30297" min="1" max="1" chance="3.33" /> <!-- Superior Giant's Codex -->
+			<item id="46150" min="1" max="1" chance="3.33" /> <!-- Superior Giant's Codex - Chapter 1 -->
+			<item id="30298" min="1" max="1" chance="3.33" /> <!-- Superior Giant's Codex - Mastery -->
+			<item id="46151" min="1" max="1" chance="3.33" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+			<item id="45932" min="1" max="1" chance="3.33" /> <!-- Top-grade Weapon Augmenting Stone -->	
+		</capsuled_items>
 	</item>
 	<item id="81152" name="Fafurion's Treasure Chest" type="EtcItem">
 		<!-- Precious treasure chest obtained after the campaign against Fafurion. Double-click to obtain one rare item. -->

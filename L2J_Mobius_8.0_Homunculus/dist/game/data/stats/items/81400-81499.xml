@@ -561,6 +561,89 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<!-- Reward 1 chance="33.33" -->
+			<item id="57" min="3000000" max="3000000" chance="33.33" /> <!-- Adena -->
+			<!-- Reward 2 chance="33.33" -->
+			<item id="80636" min="1" max="1" chance="5.55" /> <!-- Artifact Crystal -->
+			<item id="48418" min="1" max="1" chance="5.55" /> <!-- Authority Ornament -->
+			<item id="80839" min="1" max="1" chance="5.55" /> <!-- Crystal of Dawn -->
+			<item id="81134" min="1" max="1" chance="5.55" /> <!-- Crystal of Dyes -->
+			<item id="47420" min="1" max="1" chance="5.55" /> <!-- Energy of Longing -->
+			<item id="80964" min="1" max="1" chance="5.55" /> <!-- Energy of Protection -->
+			<item id="48876" min="1" max="1" chance="5.55" /> <!-- Forgotten Spellbook Chapter 1 -->
+			<item id="39573" min="1" max="1" chance="5.55" /> <!-- Sealed Talisman of Insanity -->
+			<item id="47494" min="1" max="1" chance="5.55" /> <!-- Selenite -->
+			<!-- Reward 3 chance="33.33" -->
+			<!--  R99 Armors -->
+			<item id="17434" min="1" max="1" chance="0.54" /> <!-- Eternal Boots Heavy armor  -->
+			<item id="17431" min="1" max="1" chance="0.54" /> <!-- Eternal Breastplate Heavy armor -->
+			<item id="17441" min="1" max="1" chance="0.54" /> <!-- Eternal Circlet Robe -->
+			<item id="17432" min="1" max="1" chance="0.54" /> <!-- Eternal Gaiters Heavy armor -->
+			<item id="17433" min="1" max="1" chance="0.54" /> <!-- Eternal Gauntlets Heavy armor -->
+			<item id="17444" min="1" max="1" chance="0.54" /> <!-- Eternal Gloves Robe -->
+			<item id="17430" min="1" max="1" chance="0.54" /> <!-- Eternal Helmet Heavy armor -->
+			<item id="17437" min="1" max="1" chance="0.54" /> <!-- Eternal Leather Armor Light armor -->
+			<item id="17440" min="1" max="1" chance="0.54" /> <!-- Eternal Leather Boots Light armor -->
+			<item id="17439" min="1" max="1" chance="0.54" /> <!-- Eternal Leather Gloves Light armor -->
+			<item id="17436" min="1" max="1" chance="0.54" /> <!-- Eternal Leather Helmet Light armor -->
+			<item id="17438" min="1" max="1" chance="0.54" /> <!-- Eternal Leather Leggings Light armor -->
+			<item id="17435" min="1" max="1" chance="0.54" /> <!-- Eternal Shield -->
+			<item id="17445" min="1" max="1" chance="0.54" /> <!-- Eternal Shoes Robe -->
+			<item id="17446" min="1" max="1" chance="0.54" /> <!-- Eternal Sigil -->
+			<item id="17443" min="1" max="1" chance="0.54" /> <!-- Eternal Stockings Robe -->
+			<item id="17442" min="1" max="1" chance="0.54" /> <!-- Eternal Tunic Robe -->
+			<!-- R99 Weapons -->
+			<item id="17419" min="1" max="1" chance="0.54" /> <!-- Helios Avenger -->
+			<item id="17424" min="1" max="1" chance="0.54" /> <!-- Helios Buster -->
+			<item id="17425" min="1" max="1" chance="0.54" /> <!-- Helios Caster -->
+			<item id="17417" min="1" max="1" chance="0.54" /> <!-- Helios Cutter -->
+			<item id="17429" min="1" max="1" chance="0.54" /> <!-- Helios Dual Blunt Weapon -->
+			<item id="17428" min="1" max="1" chance="0.54" /> <!-- Helios Dual Daggers -->
+			<item id="17427" min="1" max="1" chance="0.54" /> <!-- Helios Dual Swords -->
+			<item id="17420" min="1" max="1" chance="0.54" /> <!-- Helios Retributer -->
+			<item id="17426" min="1" max="1" chance="0.54" /> <!-- Helios Shaper -->
+			<item id="17423" min="1" max="1" chance="0.54" /> <!-- Helios Shooter -->
+			<item id="17418" min="1" max="1" chance="0.54" /> <!-- Helios Slasher -->
+			<item id="17421" min="1" max="1" chance="0.54" /> <!-- Helios Stormer -->
+			<item id="17422" min="1" max="1" chance="0.54" /> <!-- Helios Thrower -->
+			<!-- R110 Weapons -->
+			<item id="80093" min="1" max="1" chance="0.54" /> <!-- Krishna Avenger -->
+			<item id="80098" min="1" max="1" chance="0.54" /> <!-- Krishna Buster -->
+			<item id="80099" min="1" max="1" chance="0.54" /> <!-- Krishna Caster -->
+			<item id="80091" min="1" max="1" chance="0.54" /> <!-- Krishna Cutter -->
+			<item id="80103" min="1" max="1" chance="0.54" /> <!-- Krishna Dual Blunt Weapon -->
+			<item id="80102" min="1" max="1" chance="0.54" /> <!-- Krishna Dual Daggers -->
+			<item id="80101" min="1" max="1" chance="0.54" /> <!-- Krishna Dual Swords -->
+			<item id="80094" min="1" max="1" chance="0.54" /> <!-- Krishna Fighter -->
+			<item id="80100" min="1" max="1" chance="0.54" /> <!-- Krishna Retributer -->
+			<item id="80090" min="1" max="1" chance="0.54" /> <!-- Krishna Shaper -->
+			<item id="80097" min="1" max="1" chance="0.54" /> <!-- Krishna Shooter -->
+			<item id="80092" min="1" max="1" chance="0.54" /> <!-- Krishna Slasher -->
+			<item id="80095" min="1" max="1" chance="0.54" /> <!-- Krishna Stormer -->
+			<item id="80096" min="1" max="1" chance="0.54" /> <!-- Krishna Thrower -->
+			<!-- R110 Armors -->
+			<item id="80108" min="1" max="1" chance="0.54" /> <!-- Leviathan Boots Heavy armor -->
+			<item id="80105" min="1" max="1" chance="0.54" /> <!-- Leviathan Breastplate Heavy armor -->
+			<item id="80115" min="1" max="1" chance="0.54" /> <!-- Leviathan Circlet Robe -->
+			<item id="80106" min="1" max="1" chance="0.54" /> <!-- Leviathan Gaiters Heavy armor -->
+			<item id="80107" min="1" max="1" chance="0.54" /> <!-- Leviathan Gauntlets Heavy armor -->
+			<item id="80118" min="1" max="1" chance="0.54" /> <!-- Leviathan Gloves Robe -->
+			<item id="80104" min="1" max="1" chance="0.54" /> <!-- Leviathan Helmet Heavy armor -->
+			<item id="80111" min="1" max="1" chance="0.54" /> <!-- Leviathan Leather Armor Light armor -->
+			<item id="80114" min="1" max="1" chance="0.54" /> <!-- Leviathan Leather Boots Light armor -->
+			<item id="80113" min="1" max="1" chance="0.54" /> <!-- Leviathan Leather Gloves Light armor -->
+			<item id="80110" min="1" max="1" chance="0.54" /> <!-- Leviathan Leather Helmet Light armor -->
+			<item id="80112" min="1" max="1" chance="0.54" /> <!-- Leviathan Leather Leggings Light armor -->
+			<item id="80109" min="1" max="1" chance="0.54" /> <!-- Leviathan Shield -->
+			<item id="80119" min="1" max="1" chance="0.54" /> <!-- Leviathan Shoes Robe -->
+			<item id="80120" min="1" max="1" chance="0.54" /> <!-- Leviathan Sigil -->
+			<item id="80117" min="1" max="1" chance="0.54" /> <!-- Leviathan Stockings Robe -->
+			<item id="80116" min="1" max="1" chance="0.54" /> <!-- Leviathan Tunic Robe -->
+		</capsuled_items>
 	</item>
 	<item id="81453" name="Improved Rune Stone" type="EtcItem">
 		<!-- A stone that contains Einhasad's wisdom. Consumed when learning class skills. -->
