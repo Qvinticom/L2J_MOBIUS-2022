@@ -834,8 +834,11 @@ public class Config
 	public static List<String> TELNET_HOSTS;
 	public static int TELNET_PORT;
 	public static long TIME_LIMITED_ZONE_INITIAL_TIME;
+	public static long TIME_LIMITED_ZONE_INITIAL_TIME_WEEKLY;
 	public static long TIME_LIMITED_MAX_ADDED_TIME;
+	public static long TIME_LIMITED_MAX_ADDED_TIME_WEEKLY;
 	public static long TIME_LIMITED_ZONE_RESET_DELAY;
+	public static long TIME_LIMITED_ZONE_RESET_WEEKLY;
 	public static long TIME_LIMITED_ZONE_TELEPORT_FEE;
 	public static boolean TRAINING_CAMP_ENABLE;
 	public static boolean TRAINING_CAMP_PREMIUM_ONLY;
@@ -1985,8 +1988,11 @@ public class Config
 			// Load Time Limited Zone config file (if exists)
 			final PropertiesParser timeLimitedZoneSettings = new PropertiesParser(TIME_LIMITED_ZONE_CONFIG_FILE);
 			TIME_LIMITED_ZONE_INITIAL_TIME = timeLimitedZoneSettings.getLong("InitialTime", 3600000);
-			TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 18000000);
+			TIME_LIMITED_ZONE_INITIAL_TIME_WEEKLY = timeLimitedZoneSettings.getLong("InitialTimeWeekly", 36000000);
+			TIME_LIMITED_MAX_ADDED_TIME = timeLimitedZoneSettings.getLong("MaximumAddedTime", 21600000);
+			TIME_LIMITED_MAX_ADDED_TIME_WEEKLY = timeLimitedZoneSettings.getLong("MaximumAddedTimeWeekly", 43200000);
 			TIME_LIMITED_ZONE_RESET_DELAY = timeLimitedZoneSettings.getLong("ResetDelay", 36000000);
+			TIME_LIMITED_ZONE_RESET_WEEKLY = timeLimitedZoneSettings.getLong("ResetWeekly", 604800000);
 			TIME_LIMITED_ZONE_TELEPORT_FEE = timeLimitedZoneSettings.getLong("TeleportFee", 150000);
 			
 			// Load Training Camp config file (if exists)

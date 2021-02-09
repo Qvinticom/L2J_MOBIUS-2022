@@ -97,7 +97,12 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 		
 		final long currentTime = System.currentTimeMillis();
 		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
-		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+		
+		if ((_zoneId == 8) && ((endTime + Config.TIME_LIMITED_ZONE_RESET_WEEKLY) < currentTime))
+		{
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME_WEEKLY;
+		}
+		else if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
 		{
 			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
 		}
