@@ -4,7 +4,7 @@ System: https://mega.nz/file/xl1njaTY#BdVHadGs9bTDyrDE3QgBGvAqkmqSqPtn8hLpcCil1F
 
 JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/s7zba8udhswzw49/L2J_Mobius_Essence_4.0_DwellingOfSpirits_Geodata.zip
+Geodata: http://www.mediafire.com/file/d1o5j1871mfgk5j/L2J_Mobius_Essence_4.0_DwellingOfSpirits_Geodata.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
