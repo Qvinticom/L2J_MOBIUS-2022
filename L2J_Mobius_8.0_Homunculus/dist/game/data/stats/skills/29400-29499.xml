@@ -267,6 +267,1434 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="29423" toLevel="1" name="Heir's Radiance Lv. 5">
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 2 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>40</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>7</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DragonWeaponDefence">
+				<amount>-7</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29424" toLevel="1" name="Heir's Radiance Lv. 6">
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 3 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>50</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MaxHp">
+				<amount>6000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DragonWeaponDefence">
+				<amount>-10</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29425" toLevel="1" name="Heir's Radiance Lv. 7">
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 4 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>60</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>15</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DragonWeaponDefence">
+				<amount>-15</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29426" toLevel="1" name="Heir's Radiance Lv. 5">
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 2 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>40</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>40</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>7</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DragonWeaponDefence">
+				<amount>-7</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29427" toLevel="1" name="Heir's Radiance Lv. 6">
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 3 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>50</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MaxHp">
+				<amount>6000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DragonWeaponDefence">
+				<amount>-10</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29428" toLevel="1" name="Heir's Radiance Lv. 7">
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 4 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>60</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>15</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DragonWeaponDefence">
+				<amount>-15</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="29429" toLevel="5" name="Heir's Radiance - PvE">
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>A2</operateType>
+		<abnormalType>HEIR_PVE</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<reuseDelay>
+			<value level="1">21600000</value>
+			<value level="2">21600000</value>
+			<value level="3">21600000</value>
+			<value level="4">21600000</value>
+			<value level="5">21600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
+		<itemConsumeCount>1000</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">500</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointUp">
+				<value>
+					<value level="1">35000</value>
+					<value level="2">35000</value>
+					<value level="3">35000</value>
+					<value level="4">35000</value>
+					<value level="5">35000</value>
+				</value>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVP</slot>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>29429</skillId> <!-- Heir's Radiance - PvE -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>29392</skillId> <!-- Vitality Recovery -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="29430" toLevel="5" name="Heir's Radiance - PvP">
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note!. The effect disappears after logout and is not renewed after death. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>A2</operateType>
+		<abnormalType>HEIR_PVP</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<reuseDelay>
+			<value level="1">21600000</value>
+			<value level="2">21600000</value>
+			<value level="3">21600000</value>
+			<value level="4">21600000</value>
+			<value level="5">21600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1000</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">500</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">200</value>
+					<value level="2">250</value>
+					<value level="3">300</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AdditionalPotionCp">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">400</value>
+					<value level="3">500</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionHp">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">400</value>
+					<value level="3">500</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionMp">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">400</value>
+					<value level="3">500</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVE</slot>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>29430</skillId> <!-- Heir's Radiance - PvP -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="29431" toLevel="5" name="Heir's Radiance - PvE">
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>A2</operateType>
+		<abnormalType>HEIR_PVE</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<reuseDelay>
+			<value level="1">21600000</value>
+			<value level="2">21600000</value>
+			<value level="3">21600000</value>
+			<value level="4">21600000</value>
+			<value level="5">21600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
+		<itemConsumeCount>1000</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">500</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointUp">
+				<value>
+					<value level="1">35000</value>
+					<value level="2">35000</value>
+					<value level="3">35000</value>
+					<value level="4">35000</value>
+					<value level="5">35000</value>
+				</value>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVP</slot>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>29431</skillId> <!-- Heir's Radiance - PvE -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>29392</skillId> <!-- Vitality Recovery -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="29432" toLevel="5" name="Heir's Radiance - PvP">
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>A2</operateType>
+		<abnormalType>HEIR_PVP</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<reuseDelay>
+			<value level="1">21600000</value>
+			<value level="2">21600000</value>
+			<value level="3">21600000</value>
+			<value level="4">21600000</value>
+			<value level="5">21600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1000</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">500</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">300</value>
+					<value level="2">330</value>
+					<value level="3">360</value>
+					<value level="4">400</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AdditionalPotionCp">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">500</value>
+					<value level="3">500</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionHp">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">500</value>
+					<value level="3">500</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionMp">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">500</value>
+					<value level="3">500</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVE</slot>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>29432</skillId> <!-- Heir's Radiance - PvP -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="29433" toLevel="5" name="Heir's Radiance - PvE">
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>A2</operateType>
+		<abnormalType>HEIR_PVE</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<reuseDelay>
+			<value level="1">21600000</value>
+			<value level="2">21600000</value>
+			<value level="3">21600000</value>
+			<value level="4">21600000</value>
+			<value level="5">21600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<canBeDispelled>false</canBeDispelled>
+		<itemConsumeCount>1000</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">425</value>
+					<value level="3">450</value>
+					<value level="4">475</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">425</value>
+					<value level="3">450</value>
+					<value level="4">475</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">525</value>
+					<value level="3">550</value>
+					<value level="4">575</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">425</value>
+					<value level="3">450</value>
+					<value level="4">475</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointUp">
+				<value>
+					<value level="1">35000</value>
+					<value level="2">35000</value>
+					<value level="3">35000</value>
+					<value level="4">35000</value>
+					<value level="5">35000</value>
+				</value>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVP</slot>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>29433</skillId> <!-- Heir's Radiance - PvE -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>29392</skillId> <!-- Vitality Recovery -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</endEffects>
+	</skill>
+	<skill id="29434" toLevel="5" name="Heir's Radiance - PvP">
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
+		<operateType>A2</operateType>
+		<abnormalType>HEIR_PVP</abnormalType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<reuseDelay>
+			<value level="1">21600000</value>
+			<value level="2">21600000</value>
+			<value level="3">21600000</value>
+			<value level="4">21600000</value>
+			<value level="5">21600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1000</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">425</value>
+					<value level="3">450</value>
+					<value level="4">475</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">425</value>
+					<value level="3">450</value>
+					<value level="4">475</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">525</value>
+					<value level="3">550</value>
+					<value level="4">575</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">400</value>
+					<value level="2">425</value>
+					<value level="3">450</value>
+					<value level="4">475</value>
+					<value level="5">500</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AdditionalPotionCp">
+				<amount>
+					<value level="1">600</value>
+					<value level="2">600</value>
+					<value level="3">600</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionHp">
+				<amount>
+					<value level="1">600</value>
+					<value level="2">600</value>
+					<value level="3">600</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionMp">
+				<amount>
+					<value level="1">600</value>
+					<value level="2">600</value>
+					<value level="3">600</value>
+					<value level="4">600</value>
+					<value level="5">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HEIR_PVE</slot>
+			</effect>
+		</effects>
+		<endEffects>
+			<effect name="CallSkill">
+				<skillId>29434</skillId> <!-- Heir's Radiance - PvP -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+		</endEffects>
+	</skill>
 	<skill id="29437" toLevel="1" name="+10 Limited Leviathan Heavy Armor Pack Lv. 1">
 		<!-- Double-click to acquire Limited Leviathan Heavy Armor Set that has been enchanted to +10. -->
 		<operateType>A1</operateType>

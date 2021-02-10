@@ -1,5 +1,85 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="29900" name="Heir's Radiance Lv. 6" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +50, Attribute Resistance +50, Debuff Resistance +10%, Max HP +6000, P./ M. Skill Power +4%, all Critical Damage +4%, all stats +5, PvE damage +9%, received damage from Dragon's weapons -10%.\nEnables the Heir's Radiance - PvE Lv. 3 skill.\n\n<When used with Wizard's/ Knight's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +12%.\nWarrior's Circlet: P. Atk. +12%.\nWizard's Circlet: M. Atk. +12%.\nCannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29424" level="1" /> <!-- Heir's Radiance Lv. 6 -->
+			<skill id="29431" level="1" /> <!-- Heir's Radiance - PvE -->
+		</skills>
+	</item>
+	<item id="29901" name="Heir's Radiance Lv. 7" additionalName="PvE" type="Armor">
+		<!-- When equipped, Attribute Attack +60, Attribute Resistance +60, Debuff Resistance +15%, Max HP +7000, P./ M. Skill Power +5%, all Critical Damage +5%, all stats +5, PvE damage +10%, received damage from Dragon's weapons -15%.\nEnables the Heir's Radiance - PvE Lv. 4 skill.\n\n<When used with Wizard's/ Knight's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +15%.\nWarrior's Circlet: P. Atk. +15%.\nWizard's Circlet: M. Atk. +15%.\nCannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29425" level="1" /> <!-- Heir's Radiance Lv. 7 -->
+			<skill id="29433" level="1" /> <!-- Heir's Radiance - PvE -->
+		</skills>
+	</item>
+	<item id="29902" name="Heir's Radiance Lv. 5" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +40, Attribute Resistance +40, Debuff Resistance +7%, Max HP +5000, P./ M. Skill Power +3%, all Critical Damage +3%, all stats +4, PvP damage +7%, received damage from Dragon's weapons -7%.\nEnables the Heir's Radiance - PvP Lv. 2 skill.\n\n<When used with Wizard's/ Knight's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +10%.\nWarrior's Circlet: P. Atk. +10%.\nWizard's Circlet: M. Atk. +10%.\nCannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29426" level="1" /> <!-- Heir's Radiance Lv. 5 -->
+			<skill id="29430" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
+	</item>
+	<item id="29903" name="Heir's Radiance Lv. 6" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +50, Attribute Resistance +50, Debuff Resistance +10%, Max HP +6000, P./ M. Skill Power +4%, all Critical Damage +4%, all stats +5, PvP damage +9%, received damage from Dragon's weapons -10%.\nEnables the Heir's Radiance - PvP Lv. 3 skill.\n\n<When used with Wizard's/ Knight's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +12%.\nWarrior's Circlet: P. Atk. +12%.\nWizard's Circlet: M. Atk. +12%.\nCannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29427" level="1" /> <!-- Heir's Radiance Lv. 6 -->
+			<skill id="29432" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
+	</item>
+	<item id="29904" name="Heir's Radiance Lv. 7" additionalName="PvP" type="Armor">
+		<!-- When equipped, Attribute Attack +60, Attribute Resistance +60, Debuff Resistance +15%, Max HP +7000, P./ M. Skill Power +5%, all Critical Damage +5%, all stats +5, PvP damage +10%, received damage from Dragon's weapons -15%.\nEnables the Heir's Radiance - PvP Lv. 4 skill.\n\n<When used with Wizard's/ Knight's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +15%.\nWarrior's Circlet: P. Atk. +15%.\nWizard's Circlet: M. Atk. +15%.\nCannot be enchanted. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="false" />
+		<skills>
+			<skill id="29427" level="1" /> <!-- Heir's Radiance Lv. 7 -->
+			<skill id="29434" level="1" /> <!-- Heir's Radiance - PvP -->
+		</skills>
+	</item>
 	<item id="29917" name="+10 Limited Leviathan Armor Set Pack" type="EtcItem">
 		<!-- Double-click to acquire one of the following: +10 Limited Leviathan Heavy Armor Pack, +10 Limited Leviathan Light Armor Pack or +10 Limited Leviathan Robe Pack. -->
 		<set name="icon" val="Branchsys2.icon2.g-latus_box" />
