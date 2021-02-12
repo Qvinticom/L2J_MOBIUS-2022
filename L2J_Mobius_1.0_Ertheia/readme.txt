@@ -5,8 +5,8 @@ Use mega downloader to download https://megadownloader.en.softonic.com/
 
 System: https://mega.nz/#!s8lghARA!f7Hi1Yx5JWrNjT3kMRaGK_StI1Tnrxnhia8kaG8edSs
 
-JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
+JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
+Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/muge7mydml1en8t/L2J_Mobius_1.0_Ertheia_Geodata.zip
 
 

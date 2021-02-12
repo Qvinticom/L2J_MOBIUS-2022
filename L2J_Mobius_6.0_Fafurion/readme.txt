@@ -6,8 +6,8 @@ Use mega downloader to download https://megadownloader.en.softonic.com/
 Client mirror 2: https://drive.google.com/uc?id=1yeYwrQEIcmAz5Ha1R05c3QgntRPy9y0V&export=download
 System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
 
-JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
+JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
+Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
 Geodata: https://www.mediafire.com/file/w6j8cphwoji06is/L2J_Mobius_6.0_Fafurion_Geodata.zip
 
 

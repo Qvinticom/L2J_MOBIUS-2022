@@ -3,8 +3,8 @@ L2J-Mobius Epilogue
 Client: https://drive.google.com/uc?id=0BxcFDPsm5786MHpWQmR5Ym96VXc&export=download
 System: https://mega.nz/#!ppkUFIJQ!oat-UGQsf2liToQu19nCljGO5BAUInwfzln-ERBBB28
 
-JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
+JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
+Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/j126h41s6jl9dyn/L2J_Mobius_CT_2.4_Epilogue_Geodata.zip
 
 What is done

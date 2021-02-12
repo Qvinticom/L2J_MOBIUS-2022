@@ -3,8 +3,8 @@ L2J-Mobius Classic Seven Signs
 Client: https://drive.google.com/uc?id=1L4hcPsh5T3TOf_LcePonnMeQvcDm9DDV&export=download
 System: https://mega.nz/#!B10W0QSR!xon-5i8Z8g5-VoJPTt16leYVIVV8GosQE_OSH1j7pnM
 
-JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
+JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
+Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
 Geodata: https://www.mediafire.com/file/liyo9ibulkp3l9g/L2J_Mobius_Classic_2.3_SevenSigns_Geodata.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

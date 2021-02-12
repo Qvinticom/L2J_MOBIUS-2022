@@ -4,8 +4,8 @@ Client: https://drive.google.com/uc?id=1MA8eTpTZHblC9Iki4xXdWWbS4HGednDq&export=
 Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
 System: https://mega.nz/#!Fk0SAK6L!v3JSzKN6QuNzINgel0wp7zXovh0DOYzqxcm7etQOSLI
 
-JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
+JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
+Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
 Geodata: http://www.mediafire.com/file/gxjyde9ji7w0zs7/L2J_Mobius_4.0_GrandCrusade_Geodata.zip
 
 

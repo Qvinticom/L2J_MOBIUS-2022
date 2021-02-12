@@ -4,8 +4,8 @@ Base idea is to use C6 branch for C4 client.
 Client: https://mega.nz/file/dwcyga6Q#70bMDfvuQ6aiQEA_aI7JrPn66NzIZ289iZ0QfJj5MmE
 System: https://mega.nz/file/c09XTS7Y#MoIzoOZ8q-aAiKuE4XzB4JpJU67Eql61SHD4VhqP9Mw
 
-JDK: http://www.mediafire.com/file/xox35mknec8f1q0/bellsoft-jdk14%252B36-windows-amd64.msi
-Eclipse: http://www.mediafire.com/file/jubqhdvaldmip9t/eclipse-java-2020-06-R-win32-x86_64.zip
+JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
+Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
 Geodata: https://www.mediafire.com/file/n0pj5tn0v8z3e8s/L2J_Mobius_C4_ScionsOfDestiny_Geodata.zip
 
 
