@@ -358,7 +358,7 @@ public class AdminSkill implements IAdminCommandHandler
 		
 		final PlayerInstance player = target.getActingPlayer();
 		final Skill[] skills = player.getAllSkills().toArray(new Skill[player.getAllSkills().size()]);
-		final int maxSkillsPerPage = 10;
+		final int maxSkillsPerPage = 30;
 		int maxPages = skills.length / maxSkillsPerPage;
 		if (skills.length > (maxSkillsPerPage * maxPages))
 		{
@@ -384,7 +384,7 @@ public class AdminSkill implements IAdminCommandHandler
 		for (int x = 0; x < maxPages; x++)
 		{
 			final int pagenr = x + 1;
-			replyMSG.append("<td><a action=\"bypass -h admin_remove_skills " + x + "\">Page " + pagenr + "</a></td>");
+			replyMSG.append("<td><a action=\"bypass -h admin_remove_skills " + x + "\">P" + pagenr + "</a></td>");
 		}
 		
 		replyMSG.append("</tr></table></center><br><table width=270><tr><td width=80>Name:</td><td width=60>Level:</td><td width=40>Id:</td></tr>");
