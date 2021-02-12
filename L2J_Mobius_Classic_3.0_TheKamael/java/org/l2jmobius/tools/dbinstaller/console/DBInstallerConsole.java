@@ -91,7 +91,7 @@ public class DBInstallerConsole implements DBOutputInterface
 	 * @param user the user name
 	 * @param pass the password
 	 * @param database the database name
-	 * @param mode the mode, c: Clean
+	 * @param mode the mode, i: Install
 	 * @throws Exception
 	 */
 	public DBInstallerConsole(String defDatabase, String dir, String host, String port, String user, String pass, String database, String mode) throws Exception
