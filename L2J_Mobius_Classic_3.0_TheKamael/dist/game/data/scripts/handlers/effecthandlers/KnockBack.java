@@ -26,6 +26,8 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
+import org.l2jmobius.gameserver.model.effects.EffectFlag;
+import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
@@ -72,6 +74,18 @@ public class KnockBack extends AbstractEffect
 	}
 	
 	@Override
+	public long getEffectFlags()
+	{
+		return _knockDown ? EffectFlag.BLOCK_ACTIONS.getMask() : super.getEffectFlags();
+	}
+	
+	@Override
+	public EffectType getEffectType()
+	{
+		return _knockDown ? EffectType.BLOCK_ACTIONS : super.getEffectType();
+	}
+	
+	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		if (!_knockDown)
@@ -83,6 +97,8 @@ public class KnockBack extends AbstractEffect
 	@Override
 	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
+		effected.startParalyze();
+		
 		if (_knockDown)
 		{
 			knockBack(effector, effected);
