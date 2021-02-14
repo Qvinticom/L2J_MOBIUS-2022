@@ -2368,14 +2368,14 @@
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>700</coolTime>
-		<effectPoint>-4100</effectPoint>
+		<effectPoint>-6100</effectPoint>
 		<hitTime>1300</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<magicLevel>80</magicLevel>
-		<mpConsume>80</mpConsume>
+		<mpConsume>94</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2570,7 +2570,6 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<effectPoint>679</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLevel>80</magicLevel>
 		<mpConsume>36</mpConsume>
@@ -2610,7 +2609,6 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<effectPoint>679</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLevel>80</magicLevel>
 		<mpConsume>36</mpConsume>
@@ -2650,7 +2648,6 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<effectPoint>679</effectPoint>
 		<hitTime>1000</hitTime>
 		<magicLevel>80</magicLevel>
 		<mpConsume>36</mpConsume>
@@ -2688,14 +2685,14 @@
 		<icon>icon.skill0771</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
-		<castRange>900</castRange>
+		<castRange>700</castRange>
 		<coolTime>1000</coolTime>
-		<effectPoint>-500</effectPoint>
+		<effectPoint>-1220</effectPoint>
 		<effectRange>1400</effectRange>
 		<fanRange>0;0;900;40</fanRange>
 		<hitTime>3500</hitTime>
 		<magicLevel>80</magicLevel>
-		<mpConsume>280</mpConsume>
+		<mpConsume>147</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2712,6 +2709,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>8049</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -2726,13 +2725,13 @@
 		<icon>icon.skill0772</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
-		<castRange>900</castRange>
+		<castRange>700</castRange>
 		<coolTime>1000</coolTime>
-		<effectPoint>-500</effectPoint>
+		<effectPoint>-1220</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
 		<magicLevel>80</magicLevel>
-		<mpConsume>280</mpConsume>
+		<mpConsume>147</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2749,6 +2748,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>7043</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -2763,14 +2764,14 @@
 		<icon>icon.skill0773</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
-		<castRange>900</castRange>
+		<castRange>700</castRange>
 		<coolTime>1000</coolTime>
-		<effectPoint>-500</effectPoint>
+		<effectPoint>-1220</effectPoint>
 		<effectRange>1400</effectRange>
 		<fanRange>0;0;900;100</fanRange>
 		<hitTime>3000</hitTime>
 		<magicLevel>80</magicLevel>
-		<mpConsume>280</mpConsume>
+		<mpConsume>147</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2787,6 +2788,8 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>8452</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>

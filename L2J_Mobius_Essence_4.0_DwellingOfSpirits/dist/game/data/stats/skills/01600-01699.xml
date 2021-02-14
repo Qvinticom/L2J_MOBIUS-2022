@@ -690,6 +690,14 @@
 	<skill id="1611" toLevel="6" name="Power Supremacy">
 		<!-- Gathers power that exceeds your physical limit. P. Atk. +$s1 and Max HP -$s2 -->
 		<icon>icon.skill1611</icon>
+		<magicLevel>
+			<value level="1">48</value>
+			<value level="2">56</value>
+			<value level="3">64</value>
+			<value level="4">72</value>
+			<value level="5">80</value>
+			<value level="6">84</value>
+		</magicLevel>
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1075,16 +1083,9 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 		</abnormalLevel>
-		<abnormalTime>180</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION_SPECIAL</abnormalType>
 		<affectRange>900</affectRange>
-		<effectPoint>
-			<value level="1">835</value>
-			<value level="2">838</value>
-			<value level="3">842</value>
-			<value level="4">846</value>
-			<value level="5">850</value>
-		</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLevel>
 			<value level="1">80</value>
@@ -1138,12 +1139,18 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="HealEffect">
-				<amount>20</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">30</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1622" toLevel="1" name="Blood of Sacrifice">
+	<skill id="1622" toLevel="5" name="Blood of Sacrifice">
 		<!-- Sacrifices, decreasing Max HP by 20%. -->
 		<icon>icon.skill1621</icon>
 		<abnormalLevel>6</abnormalLevel>
@@ -1160,7 +1167,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MaxHp">
-				<amount>-20</amount>
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-18</value>
+					<value level="3">-16</value>
+					<value level="4">-14</value>
+					<value level="5">-12</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1579,7 +1592,7 @@
 		<!-- Throws a dagger at an enemy with bonus $s1 Power and injures their wrist. For $s2, there is a chance the wound will interrupt the target's skill casting. Requires a dagger. -->
 		<icon>icon.skill1629</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>30</abnormalTime>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1589,11 +1602,11 @@
 		<magicLevel>76</magicLevel>
 		<mpConsume>60</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<castRange>800</castRange>
+		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-707</effectPoint>
+		<reuseDelay>20000</reuseDelay>
+		<effectPoint>-400</effectPoint>
 		<isDebuff>true</isDebuff>
 		<isMagic>0</isMagic>
 		<targetType>ENEMY</targetType>
@@ -1608,6 +1621,7 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>396</power>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="SkillTurningOverTime">
 				<chance>65</chance>
@@ -1669,7 +1683,10 @@
 		<effectPoint>669</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>77</magicLevel>
-		<mpConsume>80</mpConsume>
+		<mpConsume>
+			<value level="1">80</value>
+			<value level="2">104</value>
+		</mpConsume>
 		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

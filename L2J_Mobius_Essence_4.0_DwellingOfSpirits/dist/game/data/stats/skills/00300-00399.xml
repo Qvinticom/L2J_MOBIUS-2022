@@ -495,20 +495,8 @@
 			<value level="9">9</value>
 			<value level="10">9</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 		</abnormalLevel>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
-		<effectPoint>
-			<value level="1">566</value>
-			<value level="2">582</value>
-			<value level="3">597</value>
-			<value level="4">611</value>
-			<value level="5">624</value>
-			<value level="6">635</value>
-			<value level="7">646</value>
-			<value level="8">655</value>
-			<value level="9">664</value>
-			<value level="10">664</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLevel>
 			<value level="1">60</value>
@@ -520,22 +508,22 @@
 			<value level="7">72</value>
 			<value level="8">74</value>
 			<value level="9">80</value>
-			<value level="10">80</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">85</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">28</value>
-			<value level="2">29</value>
-			<value level="3">30</value>
-			<value level="4">31</value>
-			<value level="5">32</value>
-			<value level="6">33</value>
-			<value level="7">34</value>
-			<value level="8">34</value>
-			<value level="9">35</value>
-			<value level="10">35</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="1">60</value>
+			<value level="2">62</value>
+			<value level="3">64</value>
+			<value level="4">66</value>
+			<value level="5">68</value>
+			<value level="6">70</value>
+			<value level="7">72</value>
+			<value level="8">74</value>
+			<value level="9">80</value>
+			<value level="10">85</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>75000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -548,19 +536,18 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockMove" fromLevel="1" toLevel="2" />
 			<effect name="Speed">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">-100</value>
-					<value level="4">-100</value>
-					<value level="5">-80</value>
-					<value level="6">-80</value>
-					<value level="7">-60</value>
-					<value level="8">-60</value>
-					<value level="9">-40</value>
-					<value level="10">-40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">-50</value>
+					<value level="2">-45</value>
+					<value level="3">-40</value>
+					<value level="4">-35</value>
+					<value level="5">-30</value>
+					<value level="6">-25</value>
+					<value level="7">-20</value>
+					<value level="8">-15</value>
+					<value level="9">-10</value>
+					<value level="10">-5</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -569,16 +556,16 @@
 			</effect>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">124</value>
-					<value level="2">134</value>
-					<value level="3">145</value>
-					<value level="4">155</value>
-					<value level="5">166</value>
-					<value level="6">177</value>
-					<value level="7">188</value>
-					<value level="8">199</value>
-					<value level="9">210</value>
-					<value level="10">210</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">140</value>
+					<value level="2">150</value>
+					<value level="3">160</value>
+					<value level="4">170</value>
+					<value level="5">180</value>
+					<value level="6">190</value>
+					<value level="7">200</value>
+					<value level="8">220</value>
+					<value level="9">250</value>
+					<value level="10">300</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -596,25 +583,7 @@
 					<value level="7">6</value>
 					<value level="8">6</value>
 					<value level="9">6</value>
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>BOW</item>
-				</weaponType>
-			</effect>
-			<effect name="PhysicalAttackRange">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">50</value>
-					<value level="3">100</value>
-					<value level="4">100</value>
-					<value level="5">150</value>
-					<value level="6">150</value>
-					<value level="7">200</value>
-					<value level="8">200</value>
-					<value level="9">200</value>
-					<value level="10">200</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="10">6</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -1154,22 +1123,10 @@
 			<value level="5">72</value>
 			<value level="6">74</value>
 		</magicLevel>
-		<mpInitialConsume>
-			<value level="1">12</value>
-			<value level="2">13</value>
-			<value level="3">13</value>
-			<value level="4">13</value>
-			<value level="5">14</value>
-			<value level="6">14</value>
-		</mpInitialConsume>
-		<operateType>T</operateType>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
 		<effects>
-			<effect name="MpConsumePerLevel">
-				<power>0.8</power>
-				<ticks>5</ticks>
-			</effect>
 			<effect name="ShieldDefence">
 				<amount>
 					<value level="1">446</value>
@@ -1383,15 +1340,9 @@
 		<!-- Paralysis/ Stun Resistance +30. Continuously consumes MP proportionately to your level. -->
 		<icon>icon.skill0335</icon>
 		<magicLevel>76</magicLevel>
-		<mpConsume>35</mpConsume>
-		<operateType>T</operateType>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>NONE</targetType>
 		<effects>
-			<effect name="ManaDamOverTime">
-				<power>1</power>
-				<ticks>5</ticks>
-			</effect>
 			<effect name="DefenceTrait">
 				<SHOCK>30</SHOCK>
 				<PARALYZE>30</PARALYZE>
@@ -1663,7 +1614,7 @@
 	<skill id="343" toLevel="15" name="Lethal Shot">
 		<!-- Shoots a deadly arrow that pierces the target with $s1 power.\nRequires a bow.\nIgnores Shield Defense.\nIgnores $s2 of the target's defense.\nCritical.\nOver-hit. -->
 		<icon>icon.skill0343</icon>
-		<castRange>900</castRange>
+		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -1682,7 +1633,7 @@
 			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
-		<hitTime>3000</hitTime>
+		<hitTime>2500</hitTime>
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">77</value>
@@ -1693,32 +1644,32 @@
 			<value level="7">82</value>
 			<value level="8">83</value>
 			<value level="9">84</value>
-			<value level="10">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="11">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="12">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="13">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="14">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="15">84</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">168</value>
-			<value level="2">174</value>
-			<value level="3">180</value>
-			<value level="4">186</value>
-			<value level="5">192</value>
-			<value level="6">198</value>
-			<value level="7">204</value>
-			<value level="8">211</value>
-			<value level="9">218</value>
-			<value level="10">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="11">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="12">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="13">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="14">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="15">218</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="1">68</value>
+			<value level="2">69</value>
+			<value level="3">70</value>
+			<value level="4">71</value>
+			<value level="5">72</value>
+			<value level="6">72</value>
+			<value level="7">73</value>
+			<value level="8">74</value>
+			<value level="9">75</value>
+			<value level="10">76</value>
+			<value level="11">77</value>
+			<value level="12">78</value>
+			<value level="13">78</value>
+			<value level="14">79</value>
+			<value level="15">80</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>6000</reuseDelay>
+		<reuseDelay>1500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
@@ -1733,22 +1684,24 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">6503</value>
-					<value level="2">6698</value>
-					<value level="3">6898</value>
-					<value level="4">7104</value>
-					<value level="5">7317</value>
-					<value level="6">7536</value>
-					<value level="7">7762</value>
-					<value level="8">7994</value>
-					<value level="9">8233</value>
-					<value level="10">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="11">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="12">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="13">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="14">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="15">8233</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">8617</value>
+					<value level="2">8759</value>
+					<value level="3">8901</value>
+					<value level="4">9044</value>
+					<value level="5">9187</value>
+					<value level="6">9331</value>
+					<value level="7">9475</value>
+					<value level="8">9620</value>
+					<value level="9">9765</value>
+					<value level="10">9912</value>
+					<value level="11">10058</value>
+					<value level="12">10205</value>
+					<value level="13">10353</value>
+					<value level="14">10501</value>
+					<value level="15">10649</value>
 				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.95</pDefMod>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -1776,31 +1729,44 @@
 			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1800</hitTime>
+		<hitTime>2000</hitTime>
 		<magicLevel>
 			<value level="1">76</value>
-			<value level="2">82</value>
-			<value level="3">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="4">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="5">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="11">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="12">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="13">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="14">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="15">82</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">85</value>
-			<value level="2">95</value>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">61</value>
+			<value level="4">62</value>
+			<value level="5">63</value>
+			<value level="6">63</value>
+			<value level="7">64</value>
+			<value level="8">65</value>
+			<value level="9">66</value>
+			<value level="10">66</value>
+			<value level="11">67</value>
+			<value level="12">68</value>
+			<value level="13">69</value>
+			<value level="14">69</value>
+			<value level="15">70</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>4000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
 		<targetType>ENEMY</targetType>
@@ -1815,21 +1781,21 @@
 		<effects>
 			<effect name="FatalBlow">
 				<power>
-					<value level="1">7148</value>
-					<value level="2">8577</value>
-					<value level="3">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="4">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="5">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="11">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="12">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="13">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="14">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="15">8577</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">7888</value>
+					<value level="2">8013</value>
+					<value level="3">8139</value>
+					<value level="4">8264</value>
+					<value level="5">8390</value>
+					<value level="6">8516</value>
+					<value level="7">8642</value>
+					<value level="8">8769</value>
+					<value level="9">8897</value>
+					<value level="10">9024</value>
+					<value level="11">9153</value>
+					<value level="12">9282</value>
+					<value level="13">9410</value>
+					<value level="14">9539</value>
+					<value level="15">9669</value>
 				</power>
 				<criticalChance>20</criticalChance>
 				<chanceBoost>300</chanceBoost>
@@ -2388,20 +2354,20 @@
 		<!-- Shoots an arrow at the enemy with 1973 Power added to P. Atk., and enemy's Speed -30% for 1 min. Requires a bow. Critical. Over-hit. -->
 		<icon>icon.skill0354</icon>
 		<abnormalLevel>3</abnormalLevel>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>30</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>900</castRange>
-		<effectPoint>-507</effectPoint>
+		<castRange>700</castRange>
+		<effectPoint>-405</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>77</magicLevel>
-		<mpConsume>78</mpConsume>
+		<mpConsume>95</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>15000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2474,10 +2440,9 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
-		<effectPoint>669</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLevel>78</magicLevel>
-		<mpConsume>36</mpConsume>
+		<mpConsume>108</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -2501,7 +2466,7 @@
 				<mode>PER</mode>
 				<position>FRONT</position>
 			</effect>
-			<effect name="CriticalRatePositionBonus">
+			<effect name="CriticalDamagePosition">
 				<amount>60</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
@@ -2519,10 +2484,9 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
-		<effectPoint>669</effectPoint>
 		<hitTime>2000</hitTime>
 		<magicLevel>78</magicLevel>
-		<mpConsume>36</mpConsume>
+		<mpConsume>108</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>

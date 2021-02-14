@@ -3825,14 +3825,26 @@
 		<icon>icon.skill19131</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>76</minLevel>
-				<affectType>CASTER</affectType>
-			</condition>
-		</passiveConditions>
 		<effects>
-			<effect name="PhysicalDefence">
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">76</value>
+					<value level="2">77</value>
+					<value level="3">78</value>
+					<value level="4">79</value>
+					<value level="5">80</value>
+					<value level="6">81</value>
+					<value level="7">82</value>
+					<value level="8">83</value>
+					<value level="9">84</value>
+					<value level="10">85</value>
+					<value level="11">86</value>
+					<value level="12">87</value>
+					<value level="13">88</value>
+					<value level="14">89</value>
+					<value level="15">90</value>
+				</level>
+				<stat>PHYSICAL_DEFENCE</stat>
 				<amount>
 					<value level="1">120</value>
 					<value level="2">140</value>
@@ -3852,7 +3864,25 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">76</value>
+					<value level="2">77</value>
+					<value level="3">78</value>
+					<value level="4">79</value>
+					<value level="5">80</value>
+					<value level="6">81</value>
+					<value level="7">82</value>
+					<value level="8">83</value>
+					<value level="9">84</value>
+					<value level="10">85</value>
+					<value level="11">86</value>
+					<value level="12">87</value>
+					<value level="13">88</value>
+					<value level="14">89</value>
+					<value level="15">90</value>
+				</level>
+				<stat>MAGICAL_DEFENCE</stat>
 				<amount>
 					<value level="1">90</value>
 					<value level="2">105</value>
@@ -3879,14 +3909,26 @@
 		<icon>icon.skill19132</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>80</minLevel>
-				<affectType>CASTER</affectType>
-			</condition>
-		</passiveConditions>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">76</value>
+					<value level="2">77</value>
+					<value level="3">78</value>
+					<value level="4">79</value>
+					<value level="5">80</value>
+					<value level="6">81</value>
+					<value level="7">82</value>
+					<value level="8">83</value>
+					<value level="9">84</value>
+					<value level="10">85</value>
+					<value level="11">86</value>
+					<value level="12">87</value>
+					<value level="13">88</value>
+					<value level="14">89</value>
+					<value level="15">90</value>
+				</level>
+				<stat>PHYSICAL_ATTACK</stat>
 				<amount>
 					<value level="1">200</value>
 					<value level="2">220</value>
@@ -3902,7 +3944,25 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">76</value>
+					<value level="2">77</value>
+					<value level="3">78</value>
+					<value level="4">79</value>
+					<value level="5">80</value>
+					<value level="6">81</value>
+					<value level="7">82</value>
+					<value level="8">83</value>
+					<value level="9">84</value>
+					<value level="10">85</value>
+					<value level="11">86</value>
+					<value level="12">87</value>
+					<value level="13">88</value>
+					<value level="14">89</value>
+					<value level="15">90</value>
+				</level>
+				<stat>MAGIC_ATTACK</stat>
 				<amount>
 					<value level="1">200</value>
 					<value level="2">220</value>
@@ -3925,11 +3985,14 @@
 		<icon>icon.skill19203</icon>
 		<coolTime>300</coolTime>
 		<affectRange>300</affectRange>
-		<effectPoint>-1</effectPoint>
+		<effectPoint>-760</effectPoint>
 		<hitTime>1200</hitTime>
 		<magicLevel>76</magicLevel>
+		<abnormalLevel>2</abnormalLevel>
+		<activateRate>-1</activateRate>
+		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<mpConsume>70</mpConsume>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3938,6 +4001,9 @@
 		<affectObject>INVISIBLE</affectObject>
 		<effects>
 			<effect name="Detection" />
+			<effect name="BlockAbnormalSlot">
+				<slot>HIDE</slot>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="45191" toLevel="3" name="STR Increase Bonus">

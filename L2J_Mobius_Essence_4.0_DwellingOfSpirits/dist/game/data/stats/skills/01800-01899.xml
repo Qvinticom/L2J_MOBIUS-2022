@@ -541,7 +541,12 @@
 	<skill id="1829" toLevel="4" name="Spell Master">
 		<!-- Casting Spd. +10%, M. Critical Rate +10. -->
 		<icon>icon.skill1901</icon>
-		<magicLevel>40</magicLevel>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">60</value>
+			<value level="3">70</value>
+			<value level="4">80</value>
+		</magicLevel>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -1444,22 +1449,22 @@
 		<!-- Attacks enemies in front of character with $s1 Power added to P. Atk., stunning target for $s2 Requires a shield. Over-hit. -->
 		<icon>icon.skill1898</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
-			<value level="1">-213</value>
-			<value level="2">-219</value>
-			<value level="3">-225</value>
-			<value level="4">-231</value>
-			<value level="5">-237</value>
-			<value level="6">-242</value>
-			<value level="7">-248</value>
-			<value level="8">-254</value>
-			<value level="9">-260</value>
+			<value level="1">-5800</value>
+			<value level="2">-5875</value>
+			<value level="3">-5950</value>
+			<value level="4">-6025</value>
+			<value level="5">-6100</value>
+			<value level="6">-6175</value>
+			<value level="7">-6250</value>
+			<value level="8">-6325</value>
+			<value level="9">-6400</value>
 		</effectPoint>
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
@@ -1478,20 +1483,20 @@
 			<value level="9">84</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">110</value>
-			<value level="2">121</value>
-			<value level="3">123</value>
-			<value level="4">125</value>
-			<value level="5">129</value>
-			<value level="6">131</value>
-			<value level="7">133</value>
-			<value level="8">135</value>
-			<value level="9">137</value>
+			<value level="1">90</value>
+			<value level="2">90</value>
+			<value level="3">91</value>
+			<value level="4">93</value>
+			<value level="5">94</value>
+			<value level="6">94</value>
+			<value level="7">96</value>
+			<value level="8">97</value>
+			<value level="9">99</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<coolTime>200</coolTime>
-		<reuseDelay>30000</reuseDelay>
+		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>

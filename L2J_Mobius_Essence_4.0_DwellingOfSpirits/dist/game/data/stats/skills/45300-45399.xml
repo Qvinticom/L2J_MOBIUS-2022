@@ -4002,7 +4002,7 @@
 		</effects>
 	</skill>
 	<skill id="45370" toLevel="1" name="Help of Hatred">
-		<magicLevel>1</magicLevel>
+		<magicLevel>76</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -4064,7 +4064,7 @@
 	<skill id="45374" toLevel="1" name="Help of Hatred">
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
-		<effectPoint>-1980</effectPoint>
+		<effectPoint>-500</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>700</hitTime>
 		<magicLevel>75</magicLevel>
@@ -4118,58 +4118,58 @@
 	<skill id="45377" toLevel="15" name="Ethereal Strike">
 		<castRange>700</castRange>
 		<effectPoint>
-			<value level="1">-379</value>
-			<value level="2">-389</value>
-			<value level="3">-399</value>
-			<value level="4">-408</value>
-			<value level="5">-418</value>
-			<value level="6">-428</value>
-			<value level="7">-438</value>
-			<value level="8">-448</value>
-			<value level="9">-457</value>
-			<value level="10">-467</value>
-			<value level="11">-477</value>
-			<value level="12">-486</value>
-			<value level="13">-495</value>
-			<value level="14">-505</value>
-			<value level="15">-514</value>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">44</value>
-			<value level="3">48</value>
-			<value level="4">52</value>
-			<value level="5">56</value>
-			<value level="6">58</value>
-			<value level="7">60</value>
-			<value level="8">62</value>
-			<value level="9">64</value>
-			<value level="10">66</value>
-			<value level="11">68</value>
-			<value level="12">70</value>
-			<value level="13">72</value>
-			<value level="14">74</value>
-			<value level="15">76</value>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">38</value>
-			<value level="2">43</value>
-			<value level="3">47</value>
-			<value level="4">50</value>
-			<value level="5">53</value>
-			<value level="6">55</value>
-			<value level="7">57</value>
-			<value level="8">59</value>
-			<value level="9">60</value>
-			<value level="10">63</value>
-			<value level="11">64</value>
-			<value level="12">67</value>
-			<value level="13">74</value>
-			<value level="14">83</value>
-			<value level="15">92</value>
+			<value level="1">56</value>
+			<value level="2">57</value>
+			<value level="3">58</value>
+			<value level="4">58</value>
+			<value level="5">59</value>
+			<value level="6">59</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">62</value>
+			<value level="10">62</value>
+			<value level="11">63</value>
+			<value level="12">63</value>
+			<value level="13">64</value>
+			<value level="14">64</value>
+			<value level="15">65</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -4492,58 +4492,58 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<effectPoint>
-			<value level="1">-379</value>
-			<value level="2">-389</value>
-			<value level="3">-399</value>
-			<value level="4">-408</value>
-			<value level="5">-418</value>
-			<value level="6">-428</value>
-			<value level="7">-438</value>
-			<value level="8">-448</value>
-			<value level="9">-457</value>
-			<value level="10">-467</value>
-			<value level="11">-477</value>
-			<value level="12">-486</value>
-			<value level="13">-495</value>
-			<value level="14">-505</value>
-			<value level="15">-514</value>
+			<value level="1">-400</value>
+			<value level="2">-405</value>
+			<value level="3">-410</value>
+			<value level="4">-415</value>
+			<value level="5">-420</value>
+			<value level="6">-425</value>
+			<value level="7">-430</value>
+			<value level="8">-435</value>
+			<value level="9">-440</value>
+			<value level="10">-445</value>
+			<value level="11">-450</value>
+			<value level="12">-455</value>
+			<value level="13">-460</value>
+			<value level="14">-465</value>
+			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLevel>
-			<value level="1">40</value>
-			<value level="2">44</value>
-			<value level="3">48</value>
-			<value level="4">52</value>
-			<value level="5">56</value>
-			<value level="6">58</value>
-			<value level="7">60</value>
-			<value level="8">62</value>
-			<value level="9">64</value>
-			<value level="10">66</value>
-			<value level="11">68</value>
-			<value level="12">70</value>
-			<value level="13">72</value>
-			<value level="14">74</value>
-			<value level="15">76</value>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">38</value>
-			<value level="2">43</value>
-			<value level="3">47</value>
-			<value level="4">50</value>
-			<value level="5">53</value>
-			<value level="6">55</value>
-			<value level="7">57</value>
-			<value level="8">59</value>
-			<value level="9">60</value>
-			<value level="10">63</value>
-			<value level="11">64</value>
-			<value level="12">67</value>
-			<value level="13">74</value>
-			<value level="14">83</value>
-			<value level="15">92</value>
+			<value level="1">56</value>
+			<value level="2">57</value>
+			<value level="3">58</value>
+			<value level="4">58</value>
+			<value level="5">59</value>
+			<value level="6">59</value>
+			<value level="7">60</value>
+			<value level="8">60</value>
+			<value level="9">62</value>
+			<value level="10">62</value>
+			<value level="11">63</value>
+			<value level="12">63</value>
+			<value level="13">64</value>
+			<value level="14">64</value>
+			<value level="15">65</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>

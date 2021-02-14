@@ -136,12 +136,12 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 		</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<castRange>900</castRange>
+		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-666</value>
 			<value level="2">-670</value>
@@ -162,14 +162,14 @@
 			<value level="5">84</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">70</value>
-			<value level="2">103</value>
-			<value level="3">107</value>
-			<value level="4">111</value>
+			<value level="1">103</value>
+			<value level="2">107</value>
+			<value level="3">111</value>
+			<value level="4">115</value>
 			<value level="5">119</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>20000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -207,7 +207,11 @@
 	<skill id="53009" toLevel="3" name="Sharpness">
 		<!-- Rate of attacks targeting the enemy's vital parts +10%. -->
 		<icon>icon.skill0409</icon>
-		<magicLevel>1</magicLevel>
+		<magicLevel>
+			<value level="1">40</value>
+			<value level="2">55</value>
+			<value level="3">70</value>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -224,9 +228,24 @@
 	<skill id="53010" toLevel="5" name="Knight's Protection">
 		<!-- For $s1, Shield Defense Rate +$s2, Shield Defense +$s3.\n\n<Auto-use> -->
 		<icon>icon.skill10012</icon>
-		<operateType>A2</operateType>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>KNIGHT_SHIELD</abnormalType>
+		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
-		<reuseDelay>10000</reuseDelay>
+		<magicLevel>
+			<value level="1">50</value>
+			<value level="2">60</value>
+			<value level="3">65</value>
+			<value level="4">70</value>
+			<value level="5">75</value>
+		</magicLevel>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">55</value>
@@ -234,6 +253,34 @@
 			<value level="4">70</value>
 			<value level="5">75</value>
 		</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ShieldDefenceRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="4">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>
+					<value level="1">120</value>
+					<value level="2">140</value>
+					<value level="3">160</value>
+					<value level="4">180</value>
+					<value level="4">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="53011" toLevel="2" name="Knight's Fortress">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

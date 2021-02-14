@@ -937,7 +937,16 @@
 		<icon>icon.skill0821</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
-		<effectPoint>-1</effectPoint>
+		<effectPoint>
+			<value level="1">-500</value>
+			<value level="2">-540</value>
+			<value level="3">-580</value>
+			<value level="4">-620</value>
+			<value level="5">-660</value>
+			<value level="6">-700</value>
+			<value level="7">-740</value>
+			<value level="8">-780</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>100</hitTime>
 		<magicLevel>
@@ -962,12 +971,11 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>2</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>70</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -977,8 +985,9 @@
 		<effects>
 			<effect name="TeleportToTarget" />
 			<effect name="TargetCancel" />
-			<effect name="BlockActions">
-				<allowedSkills>35016;35045;18103</allowedSkills>
+			<effect name="Speed">
+				<amount>-10</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
