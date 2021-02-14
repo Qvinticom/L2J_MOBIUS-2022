@@ -91,39 +91,11 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
-				<amount>
-					<value level="1">12</value>
-					<value level="2">12</value>
-					<value level="3">12</value>
-					<value level="4">12</value>
-					<value level="5">12</value>
-					<value level="6">12</value>
-					<value level="7">12</value>
-					<value level="8">12</value>
-					<value level="9">12</value>
-					<value level="10">12</value>
-					<value level="11">12</value>
-					<value level="12">12</value>
-					<value level="13">12</value>
-				</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
-				<amount>
-					<value level="1">3</value>
-					<value level="2">3</value>
-					<value level="3">3</value>
-					<value level="4">3</value>
-					<value level="5">3</value>
-					<value level="6">3</value>
-					<value level="7">3</value>
-					<value level="8">3</value>
-					<value level="9">3</value>
-					<value level="10">3</value>
-					<value level="11">3</value>
-					<value level="12">3</value>
-					<value level="13">3</value>
-				</amount>
+				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -296,21 +268,11 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="MpRegen">
-				<amount>
-					<value level="1">35</value>
-					<value level="2">35</value>
-					<value level="3">35</value>
-					<value level="4">35</value>
-					<value level="5">35</value>
-					<value level="6">35</value>
-					<value level="7">35</value>
-					<value level="8">35</value>
-					<value level="9">35</value>
-					<value level="10">35</value>
-					<value level="11">35</value>
-					<value level="12">35</value>
-					<value level="13">35</value>
-				</amount>
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -406,23 +368,13 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="Reuse">
-				<amount>
-					<value level="1">-15</value>
-					<value level="2">-15</value>
-					<value level="3">-15</value>
-					<value level="4">-15</value>
-					<value level="5">-15</value>
-					<value level="6">-15</value>
-					<value level="7">-15</value>
-					<value level="8">-15</value>
-					<value level="9">-15</value>
-					<value level="10">-15</value>
-					<value level="11">-15</value>
-					<value level="12">-15</value>
-					<value level="13">-15</value>
-				</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="MAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
