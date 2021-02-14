@@ -228,7 +228,7 @@ public class Q10962_NewHorizons extends Quest
 		}
 		
 		// Death Knights.
-		if (player.getClassId().getId() > 195)
+		if (player.isDeathKnight())
 		{
 			return;
 		}

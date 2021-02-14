@@ -183,7 +183,7 @@ public class Q10966_ATripBegins extends Quest
 				case CAPTAIN_BATHIS:
 				{
 					// Death Knights.
-					if (player.getClassId().getId() > 195)
+					if (player.isDeathKnight())
 					{
 						return htmltext;
 					}
@@ -194,7 +194,7 @@ public class Q10966_ATripBegins extends Quest
 				case MATHORN:
 				{
 					// Death Knights.
-					if (player.getClassId().getId() < 196)
+					if (!player.isDeathKnight())
 					{
 						return htmltext;
 					}
@@ -213,7 +213,7 @@ public class Q10966_ATripBegins extends Quest
 					if (qs.isCond(1))
 					{
 						// Death Knights.
-						if (player.getClassId().getId() > 195)
+						if (player.isDeathKnight())
 						{
 							return htmltext;
 						}
@@ -229,7 +229,7 @@ public class Q10966_ATripBegins extends Quest
 				case MATHORN:
 				{
 					// Death Knights.
-					if (player.getClassId().getId() < 196)
+					if (!player.isDeathKnight())
 					{
 						return htmltext;
 					}

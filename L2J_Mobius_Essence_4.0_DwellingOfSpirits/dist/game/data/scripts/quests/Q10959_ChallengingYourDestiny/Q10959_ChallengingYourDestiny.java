@@ -215,7 +215,7 @@ public class Q10959_ChallengingYourDestiny extends Quest
 		}
 		
 		// Death Knights.
-		if (player.getClassId().getId() < 196)
+		if (!player.isDeathKnight())
 		{
 			return;
 		}

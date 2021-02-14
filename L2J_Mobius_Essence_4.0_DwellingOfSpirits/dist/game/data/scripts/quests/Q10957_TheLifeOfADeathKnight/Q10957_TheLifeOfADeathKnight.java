@@ -128,7 +128,7 @@ public class Q10957_TheLifeOfADeathKnight extends Quest
 		String htmltext = getNoQuestMsg(player);
 		
 		// Death Knights.
-		if (player.getClassId().getId() < 196)
+		if (!player.isDeathKnight())
 		{
 			return htmltext;
 		}
@@ -209,7 +209,7 @@ public class Q10957_TheLifeOfADeathKnight extends Quest
 		}
 		
 		// Death Knights.
-		if (player.getClassId().getId() < 196)
+		if (!player.isDeathKnight())
 		{
 			return;
 		}

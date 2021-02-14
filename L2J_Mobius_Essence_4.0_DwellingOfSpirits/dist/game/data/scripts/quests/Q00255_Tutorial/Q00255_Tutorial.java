@@ -230,7 +230,7 @@ public class Q00255_Tutorial extends Quest
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		// Death Knights.
-		if (player.getClassId().getId() > 195)
+		if (player.isDeathKnight())
 		{
 			return null;
 		}
@@ -415,7 +415,7 @@ public class Q00255_Tutorial extends Quest
 		}
 		
 		// Death Knights.
-		if (player.getClassId().getId() > 195)
+		if (player.isDeathKnight())
 		{
 			return;
 		}
