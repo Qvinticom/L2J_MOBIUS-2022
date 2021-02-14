@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4600" toLevel="12" name="Decrease P. Def. and Stun">
-		<!-- Immediately P. Def. -17%, target is immobilized because of stun. -->
+		<!-- Instantly decreases P. Def. Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>
 			<value level="1">11</value>
@@ -135,7 +135,7 @@
 		</effects>
 	</skill>
 	<skill id="4602" toLevel="12" name="Decrease P. Atk.">
-		<!-- Immediately P. Atk. -17%. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -234,7 +234,7 @@
 		</effects>
 	</skill>
 	<skill id="4603" toLevel="12" name="Decrease P. Atk.">
-		<!-- Immediately P. Atk. -17%. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -532,7 +532,7 @@
 		</effects>
 	</skill>
 	<skill id="4606" toLevel="12" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -652,6 +652,7 @@
 		</effects>
 	</skill>
 	<skill id="4608" toLevel="2" name="Berserker Spirit">
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1819,7 +1820,7 @@
 		</effects>
 	</skill>
 	<skill id="4631" toLevel="3" name="Acumen Shield Wild Magic">
-		<!-- Casting Spd. +$s1, P. Def. +$s2, and critical rate of damage attack magic +$s3. -->
+		<!-- Casting Spd. +$s1, P. Def. +$s2, M. Skill Critical Rate +$s3. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2860,7 +2861,7 @@
 		</effects>
 	</skill>
 	<skill id="4649" toLevel="12" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -3258,7 +3259,7 @@
 		</effects>
 	</skill>
 	<skill id="4657" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3343,7 +3344,7 @@
 		</effects>
 	</skill>
 	<skill id="4658" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3428,7 +3429,7 @@
 		</effects>
 	</skill>
 	<skill id="4659" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -4237,7 +4238,7 @@
 		</effects>
 	</skill>
 	<skill id="4670" toLevel="12" name="Stun">
-		<!-- Immobilizes and stuns target for a short time. -->
+		<!-- Immobilizes and stuns a target for a short time. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
@@ -4758,7 +4759,7 @@
 		</effects>
 	</skill>
 	<skill id="4683" toLevel="1" name="Valakas Dragon Breath">
-		<!-- HP decreases rapidly from flame momentarily. -->
+		<!-- Deadly fire envelopes your entire body, causing your HP to drop rapidly. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4795,7 +4796,7 @@
 		</effects>
 	</skill>
 	<skill id="4684" toLevel="1" name="Valakas Dragon Breath">
-		<!-- HP decreases rapidly from flame momentarily. -->
+		<!-- Deadly fire envelopes your entire body, causing your HP to drop rapidly. -->
 		<icon>icon.skill4683</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4883,7 +4884,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4689" toLevel="2" name="Valakas Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill4689</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -5216,7 +5217,7 @@
 		</effects>
 	</skill>
 	<skill id="4699" toLevel="13" name="Blessing of Queen">
-		<!-- For $s1, party members' P. Critical Rate +$s2, P. Critical Damage +$s3. -->
+		<!-- A buff used by Feline Queen. For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3. -->
 		<icon>icon.skill1331</icon>
 		<abnormalLevel>
 			<value level="1">1</value>

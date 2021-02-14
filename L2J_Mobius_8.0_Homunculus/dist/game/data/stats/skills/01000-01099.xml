@@ -1739,7 +1739,7 @@
 		</effects>
 	</skill>
 	<skill id="1034" toLevel="13" name="Repose">
-		<!-- Diminishes undead monsters' will to attack.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Diminishes undead monsters' will to attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1034</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -1968,7 +1968,7 @@
 		</effects>
 	</skill>
 	<skill id="1042" toLevel="12" name="Hold Undead">
-		<!-- Paralyzes an undead monster for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Paralyzes an undead monster for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2341,7 +2341,7 @@
 		</effects>
 	</skill>
 	<skill id="1049" toLevel="14" name="Requiem">
-		<!-- Sings a requiem that prevents nearby undead monsters from making preemptive attacks for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Sings a requiem that prevents nearby undead monsters from making preemptive attacks for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1049</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -2675,7 +2675,7 @@
 		</effects>
 	</skill>
 	<skill id="1064" toLevel="14" name="Silence">
-		<!-- Blocks the target's M. skills for $s1\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks the target's M. skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -2815,7 +2815,7 @@
 		</effects>
 	</skill>
 	<skill id="1069" toLevel="42" name="Sleep">
-		<!-- Inflicts sleep for $s1\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts sleep for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1069</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3118,7 +3118,7 @@
 		</effects>
 	</skill>
 	<skill id="1072" toLevel="5" name="Sleeping Cloud">
-		<!-- Inflicts sleep on nearby enemies for $s1\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts sleep on nearby enemies for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1072</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3317,7 +3317,7 @@
 		</effects>
 	</skill>
 	<skill id="1075" toLevel="15" name="Peace">
-		<!-- Makes the target less aggressive, decreasing their will to attack.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Makes the target less aggressive, decreasing their will to attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1075</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
@@ -3857,7 +3857,7 @@
 		</effects>
 	</skill>
 	<skill id="1092" toLevel="19" name="Fear">
-		<!-- Inflicts Fear on the enemy forcing them to flee for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the enemy forcing them to flee for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -3967,7 +3967,7 @@
 		</effects>
 	</skill>
 	<skill id="1095" toLevel="5" name="Venom">
-		<!-- Poisons the target, causing them to lose $s2 HP per sec. for $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Poisons the target, causing them to lose $s2 HP per sec. for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1095</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4169,7 +4169,7 @@
 		</effects>
 	</skill>
 	<skill id="1097" toLevel="20" name="Dreaming Spirit">
-		<!-- Inflicts sleep for $s1\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts sleep for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1097</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

@@ -243,7 +243,7 @@
 		</effects>
 	</skill>
 	<skill id="19207" toLevel="1" name="Chant of Bison">
-		<!-- For $s1, all party members' P. Critical Rate/ Damage and P./ M. Skill Critical Rate/ Damage +$s2. Additionally, activates the Spirit of Iss effect. P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Prophecy of Might/ Victories of Pa'agrio. Consumes $s4 Spirit Ore. -->
+		<!-- For $s1, all party members' Critical Rate for standard attacks, P./ M. Skill Critical Rate, P./ M. Skill Power +$s2. Additionally, activates the Spirit of Iss effect: P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Prophecy of Might/ Victories of Pa'agrio. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19207</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
@@ -295,7 +295,7 @@
 		</effects>
 	</skill>
 	<skill id="19208" toLevel="9" name="Seal of Suspension">
-		<!-- For $s1, Physical and Magic skill cooldown of the target and nearby enemies +$s2. Consumes 5 Spirit Ore. -->
+		<!-- For $s1, P./ M. Skill Cooldown +$s2 for the target and nearby enemies. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill19208</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1366,7 +1366,7 @@
 		</effects>
 	</skill>
 	<skill id="19239" toLevel="2" name="Guardian's Robe Defense">
-		<!-- When using robe, P./ M. Def. +$s1. -->
+		<!-- When using robes, P./ M. Def. +$s1. -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2588,7 +2588,7 @@
 		</effects>
 	</skill>
 	<skill id="19297" toLevel="10" name="Counter Flip">
-		<!-- Counters the enemy's attack knocking them down for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Counters the enemy's attack knocking them down for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill19296</icon>
 		<abnormalLevel>
 			<value level="1">1</value>

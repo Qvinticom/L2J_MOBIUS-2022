@@ -300,7 +300,7 @@
 		</effects>
 	</skill>
 	<skill id="32011" toLevel="1" name="Spinning Shadow">
-		<!-- Deals great physical damage to nearby enemies inflicting Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Deals great physical damage to nearby enemies inflicting Bleed for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill6816</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -384,6 +384,7 @@
 		<hitTime>10000</hitTime>
 	</skill>
 	<skill id="32014" toLevel="2" name="Etina's Revelation">
+		<!-- For $s1, reduces all damage received by $s2 and increases Atk. Spd, Casting Spd, and Speed. -->
 		<icon>icon.skill11506</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -448,6 +449,7 @@
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32017" toLevel="2" name="Cry of Holy War">
+		<!-- Increases P./ M. Atk. for $s1 -->
 		<icon>icon.skill10325</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -469,7 +471,7 @@
 		</effects>
 	</skill>
 	<skill id="32018" toLevel="2" name="Stigma of Martyr">
-		<!-- Inflicts Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32018</icon>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -499,6 +501,7 @@
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32020" toLevel="2" name="Undead Creature">
+		<!-- Recovers your HP repeatedly for $s1 -->
 		<icon>icon.skill1310</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -552,6 +555,7 @@
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="32023" toLevel="2" name="Etina's Divine Punishment">
+		<!-- For $s1 reflects all damage received by 20%. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -598,6 +602,7 @@
 		<castRange>3000</castRange>
 	</skill>
 	<skill id="32026" toLevel="2" name="Rage of the Open Eye">
+		<!-- Prevents death for $s1 even if HP drops to 0. -->
 		<icon>icon.skill10022</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>

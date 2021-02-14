@@ -135,7 +135,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="30610" toLevel="1" name="Sharpen Edge of Storm">
-		<!-- Brandishes a spear in a wide circle to expand the strike range in all directions for $s1. Requires a spear. Unequipping the spear also cancels the Sharpen Edge of Storm effect. -->
+		<!-- Brandishes a spear in a wide circle to expand the strike range in all directions for $s1 Requires a spear. Unequipping the spear also cancels the Sharpen Edge of Storm effect. -->
 		<icon>icon.skill30610</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -173,7 +173,7 @@
 		</effects>
 	</skill>
 	<skill id="30611" toLevel="1" name="Edge of Storm">
-		<!-- Brandishes a spear in a wide circle to expand the strike range in all directions for $s1. Requires a spear. Unequipping the spear also cancels the Edge of Storm effect. -->
+		<!-- Brandishes a spear in a wide circle to expand the strike range in all directions for $s1 Requires a spear. Unequipping the spear also cancels the Edge of Storm effect. -->
 		<icon>icon.skill30610</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -903,7 +903,7 @@
 		</effects>
 	</skill>
 	<skill id="30631" toLevel="1" name="Robe Mastery">
-		<!-- When using robe, Max HP +$s1, P. Def. +$s2, M. Def. +$s3. -->
+		<!-- When using robes, Max HP +$s1, P. Def. +$s2, M. Def. +$s3. -->
 		<icon>icon.skill11252</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

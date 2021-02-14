@@ -44,7 +44,7 @@
 		</stats>
 	</item>
 	<item id="93002" name="Sayha's Blessing Pouch" type="EtcItem">
-		<!-- Double-click to obtain 1-3 Sayha's Blessings. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -59,7 +59,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93003" name="Sayha's Grace" type="EtcItem">
-		<!-- Sayha's Grace Consumption -10% for 20 min. -->
+		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption -10%. Duration: 20 min. -->
 		<set name="icon" val="icon.high_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -154,7 +154,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93013" name="Queen Ant Doll" additionalName="7-day" type="EtcItem">
-		<!-- <Queen Ant Doll's Sorcery Lv. 2>\nP. Atk. +8%\nP. Critical Damage +8%\nP. Skill Critical Damage +8%\nMax HP +12%.\n\nFor 7 days. Boosts parameters when in inventory. -->
+		<!-- <Queen Ant Doll's Sorcery Lv. 2>. P. Atk. +8%. P. Critical Damage +8%. P. Skill Critical Damage +8%. Max HP +12%. For 7 days. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -163,7 +163,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="93014" name="Baium Doll" additionalName="7-day" type="EtcItem">
-		<!-- <Baium Doll's Sorcery Lv. 2>\nSkill Cooldown -3%\nP. Def. +12%\nM. Def. +12%\nSilence Resistance +40%\nFear Resistance +40%\nParalysis Resistance +20%\nKnock Down Resistance +20%\nPull Resistance +20%\n\nFor 7 days. Boosts parameters when in inventory. -->
+		<!-- <Baium Doll's Sorcery Lv. 2>. Skill Cooldown -3%. P. Def. +12%. M. Def. +12%. Silence Resistance +40%. Fear Resistance +40%. Paralysis Resistance +20%. Knockdown Resistance +20%. Pull Resistance +20%. Available for 7 d. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -172,7 +172,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="93015" name="Orfen Doll" additionalName="7-day" type="EtcItem">
-		<!-- <Orfen Doll's Sorcery Lv. 2>\nM. Atk. +8%\nM. Skill Critical Damage +8%\nMax MP +12%.\n\nFor 7 days. Boosts parameters when in inventory. -->
+		<!-- <Orfen Doll's Sorcery Lv. 2>. M. Atk. +8%. M. Skill Critical Damage +8%. Max MP +12%. For 7 days. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -181,7 +181,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="93016" name="Queen Ant Doll" additionalName="7-day" type="EtcItem">
-		<!-- <Queen Ant Doll's Sorcery>\nP. Atk. +12%\nP. Critical Damage +10%\nP. Skill Critical Damage +10%\nMax HP +15%.\n\nFor 7 days. Boosts parameters when in inventory. -->
+		<!-- <Queen Ant Doll's Sorcery>. P. Atk. +12%. P. Critical Damage +10%. P. Skill Critical Damage +10%. Max HP +15%. For 7 days. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -190,7 +190,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="93017" name="Baium Doll" additionalName="7-day" type="EtcItem">
-		<!-- <Baium Doll's Sorcery>\nSkill Cooldown -4%\nP. Def. +15%\nM. Def. +15%\nSilence Resistance +45%\nFear Resistance +45%\nParalysis Resistance +25%\nKnock Down Resistance +25%\nPull Resistance +25%\n\nFor 7 days. Boosts parameters when in inventory. -->
+		<!-- <Baium Doll's Sorcery>. Skill Cooldown -4%. P. Def. +15%. M. Def. +15%. Silence Resistance +45%. Fear Resistance +45%. Paralysis Resistance +25%. Knockdown Resistance +25%. Pull Resistance +25%. Available for 7 d. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -199,7 +199,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="93018" name="Orfen Doll" additionalName="7-day" type="EtcItem">
-		<!-- <Orfen Doll's Sorcery>\nM. Atk. +15%\nM. Skill Critical Damage +10%\nMax MP +15%\n\nFor 7 days. Boosts parameters when in inventory. -->
+		<!-- <Orfen Doll's Sorcery>. M. Atk. +15%. M. Skill Critical Damage +10%. Max MP +15%. For 7 days. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -208,7 +208,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="93019" name="Package: Queen Ant Doll (7-day)" type="EtcItem">
-		<!-- Double-click to obtain Queen Ant Doll (7-day). -->
+		<!-- Double-click to obtain the following item:. Queen Ant Doll (7-day). Unused packages can be exchanged for Giran Seals through Game Assistant. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -219,7 +219,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93020" name="Package: Baium Doll (7-day)" type="EtcItem">
-		<!-- Double-click to obtain Baium Doll (7-day). -->
+		<!-- Double-click to obtain the following item:. Baium Doll (7-day). Unused packages can be exchanged for Giran Seals through Game Assistant. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -230,7 +230,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93021" name="Package: Orfen Doll (7-day)" type="EtcItem">
-		<!-- Double-click to obtain Orfen Doll (7-day). -->
+		<!-- Double-click to obtain the following item:. Orfen Doll (7-day). Unused packages can be exchanged for Giran Seals through Game Assistant. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -552,7 +552,7 @@
 		</stats>
 	</item>
 	<item id="93038" name="Scroll: Enchant Aden Weapon" type="EtcItem">
-		<!-- For Aden weapons only. P. Atk. +4 for one-handed swords/ blunts, daggers, spears. P. Atk. +5 for two-handed swords/ blunts, fists, dual swords. P. Atk. +8 for bows. M. Atk. +3 for all weapons. When enchanted to +4 or higher, P./ M. Atk. bonus is doubled.\nNote!\nThe maximum enchant value is +4. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4. Only for Aden weapons</font>. <font color=ff6666>Max enchant value: +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -568,7 +568,7 @@
 		</skills>
 	</item>
 	<item id="93039" name="Worthy Warrior Transformation" type="Armor">
-		<!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
+		<!-- When equipped, hats, weapons and accessories are not removed. -->
 		<set name="icon" val="icon.gomdori_chest_change" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -578,7 +578,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="93040" name="Scroll: Enchant Adventurer's Agathion Griffin" type="EtcItem">
-		<!-- For Adventurer's Agathion Griffin only.\nIncreases M. Def. when the agathion is enchanted. -->
+		<!-- For Adventurer's Agathion Griffin only. Increases M. Def. when the agathion is enchanted. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -944,7 +944,7 @@
 		</stats>
 	</item>
 	<item id="93059" name="Spellbook: Mount Glory of Champion" type="EtcItem">
-		<!-- Double-click to learn how to ride Glory of Champion.\n\n<Classes>\nAll classes\n\n<Skill effect>\nAllows to mount Glory of Champion. -->
+		<!-- Double-click to learn how to ride Glory of Champion. <Classes>. All classes. <Skill effect>. Allows to mount Glory of Champion. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -958,7 +958,7 @@
 		</skills>
 	</item>
 	<item id="93060" name="Spellbook: Mount White Wing" type="EtcItem">
-		<!-- Double-click to learn how to ride White Wing.\n\n<Classes>\nAll classes\n\n<Skill effect>\nAllows to mount White Wing. -->
+		<!-- Double-click to learn how to ride White Wing. <Classes>. All classes. <Skill effect>. Allows to mount White Wing. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -972,7 +972,7 @@
 		</skills>
 	</item>
 	<item id="93061" name="Spellbook: Mount Shining Lady" type="EtcItem">
-		<!-- Double-click to learn how to ride Shining Lady. Shining Lady can use Silent Ride.\n\n<Classes>\nAll classes\n\n<Skill effect>\nAllows to mount Shining Lady. -->
+		<!-- Double-click to learn how to ride Shining Lady. Shining Lady can use Silent Ride. <Classes>. All classes. <Skill effect>. Allows to mount Shining Lady. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1001,7 +1001,7 @@
 		</skills>
 	</item>
 	<item id="93063" name="Inventory Expansion Ticket of Glory" type="EtcItem">
-		<!-- Double-click to learn Expand Inventory of Glory.\n\n<Classes>\nAll classes\n\n<Skill effect>\nIncreases number of inventory slots. -->
+		<!-- Double-click to learn Expand Inventory of Glory. <Classes>. All classes. <Skill effect>. Increases number of inventory slots. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1015,7 +1015,7 @@
 		</skills>
 	</item>
 	<item id="93064" name="Weight Limit Ticket of Glory" type="EtcItem">
-		<!-- Double-click to learn Increased Weight Limit of Glory.\n\n<Classes>\nAll classes\n\n<Skill effect>\nIncreases weight limit. -->
+		<!-- Double-click to learn Increased Weight Limit of Glory. <Classes>. All classes. <Skill effect>. Increases weight limit. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1050,7 +1050,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93067" name="Sayha's Grace" additionalName="Event" type="EtcItem">
-		<!-- Sayha's Grace Consumption -10% for 20 min. -->
+		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption -10%. Duration: 20 min. -->
 		<set name="icon" val="icon.high_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1114,7 +1114,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93073" name="Sayha's Storm Lv. 3 (Event)" type="EtcItem">
-		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. Available if Sayha's Grace bar is filled by one unit or more. -->
+		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption +100%. Acquired XP +200%. Acquired SP +200%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=eeaa22>(Requires 35,000+ Sayha's Grace points.)</font> -->
 		<set name="icon" val="icon.bm_sayha_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1134,7 +1134,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93075" name="Gloves of Silence" type="Armor">
-		<!-- <Properties>\nSTR +1\nINT +1\nMax HP +150\nAtk. Spd. +8%\nCasting Spd. +15% -->
+		<!-- <Properties>. STR +1. INT +1. Max HP +150. Atk. Spd. +8%. Casting Spd. +15% -->
 		<set name="icon" val="icon.armor_t94_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1162,7 +1162,7 @@
 		</skills>
 	</item>
 	<item id="93076" name="Gloves of Silence" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nSTR +1\nINT +1\nMax HP +150\nAtk. Spd. +8%\nCasting Spd. +15% -->
+		<!-- <Properties>. STR +1. INT +1. Max HP +150. Atk. Spd. +8%. Casting Spd. +15% -->
 		<set name="icon" val="icon.armor_t94_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1437,7 +1437,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93096" name="Red Libra Coin" additionalName="Event" type="EtcItem">
-		<!-- Can be obtained after completing Bodyguard Blue's and Grocer Pink's quests. With the coins you can buy various goods of Red Libra Guild. -->
+		<!-- Can be obtained through Grocer Pink or Hierarch Green. With the coins you can buy various goods of Red Libra Guild. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -1452,7 +1452,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93098" name="Battle Scroll (Event)" type="EtcItem">
-		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P. Critical Rate/ M. Skill Critical Rate +30, Atk./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. Cooldown: 1 min. The effect remains after death. -->
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +350. P. Def. +200. M. Def. +200. Atk. Spd. +50. Casting Spd. +50. Max HP +500. Max MP +500. Max CP +500. P. Critical Rate +30. M. Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1462,7 +1462,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93099" name="Low-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n10 B-grade Gemstones are required for augmentation. -->
+		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_special_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />

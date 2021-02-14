@@ -10,29 +10,29 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39302" toLevel="2" name="Baium Doll's Sorcery">
-		<!-- Mental Resistance +$s1, Paralysis/ Knockdown/ Pull Resistance +$s2, P./ M. Def. +$s3, Skill Cooldown -$s4. -->
+		<!-- A doll imbued with Baium's power. <Effect> Skill Cooldown $s1 P. Def. $s2 M. Def. $s2 Silence Resistance $s3 Fear Resistance $s3 Paralysis Resistance $s4 Knockdown Resistance $s4 Pull Resistance $s4 -->
 		<icon>icon.bm_baium_doll_30d</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39303" toLevel="2" name="Queen Ant Doll's Sorcery">
-		<!-- P. Atk. +$s1, P. Critical Damage +$s2, Max HP +$s3. -->
+		<!-- A doll imbued with Queen Ant's power. <Effect> P. Atk. $s1 P. Critical Damage $s2 P. Skill Critical Damage $s2 Max HP $s3 -->
 		<icon>icon.bm_queen_ant_doll_30d</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39304" toLevel="2" name="Orfen Doll's Sorcery">
-		<!-- M. Atk. +$s1, M. Critical Damage +$s2, Max MP +$s3. -->
+		<!-- A doll imbued with Orfen's power. <Effect> M. Atk. $s1 M. Skill Critical Damage $s2 Max MP $s3 -->
 		<icon>icon.bm_orfen_doll_30d</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39305" toLevel="3" name="Dark Knight Transformation">
-		<!-- You are transformed into Dark Knight. For 15 min., Max HP/ MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/ Paralysis/ Mental Resistance +5%. Effect remains after death. -->
+		<!-- You are transformed into Dark Knight. For 20 min., Max HP/ MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Paralysis/ Silence/ Fear/ Stun Resistance +5%. The effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i05</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39306" toLevel="1" name="White Assassin Transformation">
-		<!-- You are transformed into White Assassin. For 15 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. Effect remains after death. -->
+		<!-- You are transformed into White Assassin. For 20 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -44,7 +44,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39308" toLevel="1" name="Life Control Tower's Scroll of Blessing">
-		<!-- For 60 min., Max HP/ MP +5%, Paralysis Resistance +15, Mental Attack Resistance +15, and Acquired XP/ SP +30%. -->
+		<!-- For 60 min., Max HP/ MP +5%, acquired XP/ SP +30%, Paralysis Resistance +15%, Fear/ Silence Resistance +10%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.etc_aidcharm_cancel_valbreath_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -52,7 +52,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39309" toLevel="1" name="Stabilized Eva's Scroll: Enchant Hair Accessory">
-		<!-- To Enchant Hair Accessory. -->
+		<!-- Enchants Hair Accessory. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39310" toLevel="1" name="Eva's Enhancement Pack - Hair Accessory">
@@ -98,7 +98,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39318" toLevel="3" name="Item Skill: Silence/Fear">
-		<!-- Mental Attack Resistance +$s1. -->
+		<!-- Fear/ Silence Resistance +$s1. -->
 		<icon>icon.skill11825</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -198,14 +198,14 @@
 		</effects>
 	</skill>
 	<skill id="39325" toLevel="3" name="Arcane Deliverance">
-		<!-- HP Recovery +5000, MP Recovery +2000, CP Recovery +3000. -->
+		<!-- Recovers HP/ MP/ CP after an attack. (20% of Max HP and lower) -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>900000</reuseDelay>
 	</skill>
 	<skill id="39326" toLevel="3" name="Arcane Speed">
-		<!-- For 2 min., Atk. Spd./ Casting Spd. +8%, Speed +8. -->
+		<!-- Increases Speed, Atk. Spd. and Casting Spd. after an attack. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -213,7 +213,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39327" toLevel="3" name="Arcane Barrier">
-		<!-- For 10 sec., becomes invincible. The effect disappears when character attacks. -->
+		<!-- Creates a barrier for a while when damage is taken. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -221,7 +221,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39328" toLevel="3" name="Arcane Immunity">
-		<!-- For 10 sec., makes you immune to all debuffs. -->
+		<!-- Grants immunity to debuffs for a while when damage is taken. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -229,7 +229,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39329" toLevel="3" name="Arcane Protection">
-		<!-- For 10 sec., P. Def. +3000 and M. Def. +2100. -->
+		<!-- Increases P./ M. Def for a while when damage is taken. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -237,7 +237,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39330" toLevel="3" name="Arcane Paralysis">
-		<!-- For 5 sec., use Sleep on target. Can only use on PCs. -->
+		<!-- Temporarily paralyzes the enemy after an attack. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -248,7 +248,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="39331" toLevel="3" name="Arcane Silence">
-		<!-- For 5 sec., interrupts P./ M. skills casting. Can only use on PCs. -->
+		<!-- Temporarily inflicts Silence on the enemy after an attack. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -259,7 +259,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="39332" toLevel="3" name="Arcane Critical Sense">
-		<!-- For 10 sec., P. Critical Damage and P. Critical Rate +50% against character, when character attacked. -->
+		<!-- All Critical Rate +3% All Critical Damage +150 -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -270,7 +270,7 @@
 		<mpConsume>43</mpConsume>
 	</skill>
 	<skill id="39333" toLevel="3" name="Arcane Power">
-		<!-- For 5 min., PvE Damage +10%. -->
+		<!-- P. Atk. +350 M. Atk. +500 -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -278,7 +278,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39334" toLevel="1" name="Lucky Fortune">
-		<!-- For 5 min., HP/ MP Recovery Bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Atk. Spd./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. -->
+		<!-- For 5 min., party member s HP/ MP Recovery Rate +20%, P. Accuracy +4, P. Evasion +4, P./ M. Atk. +15%, Atk./ Casting Spd. +10%, P. Critical Rate/ M. Skill Critical Rate +15%, P. Critical Damage/ M. Skill Critical Damage +15%. -->
 		<icon>icon.Accessary_middle_ages_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -287,7 +287,7 @@
 		<effectPoint>669</effectPoint>
 	</skill>
 	<skill id="39335" toLevel="2" name="Lucky Fortune">
-		<!-- For 5 min., receives help from a great spirit to get party members' HP Recovery +20%, Max MP +20%, M. Critical Rate +2, P. Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, P. Evasion +4. Speed -20%. -->
+		<!-- For 5 min., a great spirit grants party members: HP Recovery +20%, Max MP +20%, M. Skill Critical Rate +2, P. Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, P. Accuracy +4, Speed -20%. -->
 		<icon>icon.Accessary_middle_ages_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -335,7 +335,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39340" toLevel="1" name="Noble Blessed Body - Event">
-		<!-- For 1 h., Max. HP +35%. -->
+		<!-- Max HP +35% for 1 h. -->
 		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -345,7 +345,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39341" toLevel="1" name="Noble Blessed Soul - Event">
-		<!-- For 1 h., Max. MP +35%. -->
+		<!-- Max MP +35% for 1 h. -->
 		<icon>icon.skill1048</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -365,7 +365,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39343" toLevel="1" name="Acumen - Event">
-		<!-- For 1 h., Casting Spd. +30%. -->
+		<!-- Casting Spd. +30% for 1 h. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -375,7 +375,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39344" toLevel="1" name="Decrease Weight - Event">
-		<!-- For 1 h., weight penalty interval +9000. -->
+		<!-- For 1 h., overweight limit +9000. -->
 		<icon>icon.skill1257</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -385,7 +385,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39345" toLevel="1" name="Might - Event">
-		<!-- For 1 h., P. Atk. +15%. -->
+		<!-- For 1 h., P. Atk. +230. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -395,7 +395,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39346" toLevel="1" name="Shield - Event">
-		<!-- For 1 h., P. Def. +15%. -->
+		<!-- For 1 h., P. Def. +300. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -405,7 +405,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39347" toLevel="1" name="Magic Barrier - Event">
-		<!-- For 1 h., M. Def. +30%. -->
+		<!-- For 1 h., M. Def. +350. -->
 		<icon>icon.skill1036</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -415,7 +415,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39348" toLevel="1" name="Vampiric Rage - Event">
-		<!-- For 1 h., 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
+		<!-- For 1 h., with a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -435,7 +435,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39350" toLevel="1" name="Wind Walk - Event">
-		<!-- For 1 h., Speed +33. -->
+		<!-- Speed +33 for 1 h. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -445,7 +445,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39351" toLevel="1" name="Berserker Spirit - Event">
-		<!-- For 1 h., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -465,7 +465,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39353" toLevel="1" name="Greater Shield - Anniversary">
-		<!-- For 1 h., P. Def. +15%. -->
+		<!-- P. Def. +15% for 1 h. -->
 		<icon>icon.skill1389</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -475,7 +475,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39354" toLevel="1" name="Wild Magic - Event">
-		<!-- For 1 h., M. Critical Rate +20. -->
+		<!-- M. Skill Critical Rate +20 for 1 h. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -485,7 +485,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39355" toLevel="1" name="Clarity - Event">
-		<!-- For 1 h., physical skill MP consumption -20%, magic skill's MP consumption -10%, and song/ dance skill's MP consumption -20%. -->
+		<!-- For 1 h., P. Skill/ Song/ Dance MP Consumption -20%, M. Skill MP Consumption -10%. -->
 		<icon>icon.skill1397</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -505,7 +505,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39357" toLevel="1" name="Prophecy of Fire - Anniversary">
-		<!-- For 1 h., for a party member Max. HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. -->
+		<!-- For 1 h., for a party member Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. -->
 		<icon>icon.skill1356</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -515,7 +515,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39358" toLevel="1" name="Prophecy of Wind - Anniversary">
-		<!-- For 1 h., for a party member P. Evasion +3, P. Accuracy +3, P. Critical Rate +10%, P. Critical Damage +15%, Speed +10%, Debuff Resistance +10%, damage to Raid Bosses +15%. -->
+		<!-- For 1 h., party member's. P./ M. Accuracy +3, P./ M. Evasion +3, P. Critical Rate/ M. Skill Critical Rate +10%, P. Critical Damage/ M. Skill Critical Damage +15%, Speed +10%, Debuff Resistance +10%, damage to Raid Bosses +15%. -->
 		<icon>icon.skill1357</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -570,7 +570,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39367" toLevel="1" name="Transformation into Teddy Bear">
-		<!-- Transforms into a Teddy Bear. Max HP/ MP +20%, Sayha Grace XP/ SP +20%, while hunting. Effect remains after death. -->
+		<!-- Teddy Bear transformation. Max HP/ MP +20%, Acquired XP/ SP +20% while Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.gomdori_chest_change</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -606,7 +606,7 @@
 						<item id="236" count="1" minEnchant="16" maxEnchant="16" /> <!-- Soul Separator -->
 					</item>
 					<item chance="3">
-						<item id="8682" count="1" minEnchant="16" maxEnchant="16" /> <!-- Naga Storm -->
+						<item id="8682" count="1" minEnchant="16" maxEnchant="16" /> <!-- Naga's Storm -->
 					</item>
 					<item chance="3">
 						<item id="80" count="1" minEnchant="16" maxEnchant="16" /> <!-- Tallum Blade -->
@@ -703,7 +703,7 @@
 		</effects>
 	</skill>
 	<skill id="39369" toLevel="1" name="White Knight Transformation">
-		<!-- Transforms into White Knight. Max HP/ MP +10%, Stun/ Paralysis/ Mental Resistance +5%, PvE P. Atk. +5%, Received Damage -5%. -->
+		<!-- You are transformed into White Knight. For 20 min., Max HP/ MP +10%, Paralysis/ Silence/ Fear/ Stun Resistance +5%, PvE damage +5%, received damage -5%. The effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

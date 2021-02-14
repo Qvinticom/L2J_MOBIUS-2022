@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="3926" name="Scroll: Guidance" type="EtcItem">
-		<!-- Increases P. Accuracy by 2 for 20 minutes when used. -->
+		<!-- For 20 min., P. Accuracy +2. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -21,7 +21,7 @@
 		</skills>
 	</item>
 	<item id="3927" name="Scroll: Death Whisper" type="EtcItem">
-		<!-- For 20 minutes, P. Critical Damage +25%. -->
+		<!-- For 20 min., P. Critical Damage +25%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -41,7 +41,7 @@
 		</skills>
 	</item>
 	<item id="3928" name="Scroll: Focus" type="EtcItem">
-		<!-- Increases P. Critical Rate by 20% for 20 minutes when used. -->
+		<!-- P. Critical Rate +20% for 20 min. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -61,7 +61,7 @@
 		</skills>
 	</item>
 	<item id="3929" name="Scroll: Acumen" type="EtcItem">
-		<!-- When used increases Casting Spd. by 15% for 20 minutes. -->
+		<!-- When used, Casting Spd. +15% for 20 min. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -80,7 +80,7 @@
 		</skills>
 	</item>
 	<item id="3930" name="Scroll: Haste" type="EtcItem">
-		<!-- When used increases Atk. Spd. by 15% for 20 minutes. -->
+		<!-- When used, Atk. Spd. +15% for 20 min. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -100,7 +100,7 @@
 		</skills>
 	</item>
 	<item id="3931" name="Scroll: Agility" type="EtcItem">
-		<!-- Increases Evasion. -->
+		<!-- Increases P. Evasion. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -119,7 +119,7 @@
 		</skills>
 	</item>
 	<item id="3932" name="Scroll: Empower" type="EtcItem">
-		<!-- When used increases M. Atk. by 55% for 20 minutes. -->
+		<!-- For 20 min. M. Atk. +55%. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -139,7 +139,7 @@
 		</skills>
 	</item>
 	<item id="3933" name="Scroll: Might" type="EtcItem">
-		<!-- P. Atk. Increases. -->
+		<!-- Increases P. Atk. Effect 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -158,7 +158,7 @@
 		</skills>
 	</item>
 	<item id="3934" name="Scroll: Wind Walk" type="EtcItem">
-		<!-- Increases Speed by 20 for 20 minutes when used. -->
+		<!-- Speed +20 for 20 min. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -177,7 +177,7 @@
 		</skills>
 	</item>
 	<item id="3935" name="Scroll: Shield" type="EtcItem">
-		<!-- P. Def. Increases. -->
+		<!-- Increases P. Def. Effect 3. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -305,7 +305,7 @@
 		</stats>
 	</item>
 	<item id="3940" name="Blueprint: Summon Siege Golem" type="EtcItem">
-		<!-- Blueprint needed to learn the Summon Siege Golem technique. Required level: 49 -->
+		<!-- A blueprint for learning the Summon Siege Golem skill. <Class>. Warsmith. <Skill effect>. Summons a Siege Golem (only during a siege). -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -315,7 +315,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3941" name="Spellbook: Mass Resurrection" type="EtcItem">
-		<!-- Spellbook needed to learn Mass Resurrection. Used by Bishops. Required level: 40 -->
+		<!-- A spellbook for learning the Mass Resurrection skill. Used by Bishops. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -324,7 +324,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3942" name="Spellbook: Party Return" type="EtcItem">
-		<!-- Spellbook needed to learn Party Return. Used by Elven Elders. Required level: 48 -->
+		<!-- A spellbook for learning the Party Return skill. <Class>. Elven Elder. <Skill effect>. Teleports party members to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -334,7 +334,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3943" name="Amulet: Pa'agrio's Heart" type="EtcItem">
-		<!-- Amulet required for the Pa'agrio's Heart spell. Used by Overlords. Required level: 44 -->
+		<!-- An amulet for learning the Pa'agrio's Heart skill. Used by Overlords. Required level: 44. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -343,7 +343,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3944" name="Spellbook: Light" type="EtcItem">
-		<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles. Required level: 35 -->
+		<!-- A spellbook for learning the Decrease Weight skill. <Classes>. Elven Oracle, Prophet. <Skill effect>. Increases overweight limit. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -353,7 +353,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="3947" name="Blessed Spiritshot (No-grade)" type="EtcItem">
-		<!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -369,7 +369,7 @@
 		</skills>
 	</item>
 	<item id="3948" name="Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -387,7 +387,7 @@
 		</skills>
 	</item>
 	<item id="3949" name="Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -405,7 +405,7 @@
 		</skills>
 	</item>
 	<item id="3950" name="Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -423,7 +423,7 @@
 		</skills>
 	</item>
 	<item id="3951" name="Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -441,7 +441,7 @@
 		</skills>
 	</item>
 	<item id="3952" name="Blessed Spiritshot (S-grade)" type="EtcItem">
-		<!-- The power of Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with S-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -459,7 +459,7 @@
 		</skills>
 	</item>
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Blessed D-grade Spiritshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -473,7 +473,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3954" name="Recipe: Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Blessed C-grade Spiritshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -487,7 +487,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3955" name="Recipe: Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Blessed B-grade Spiritshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -501,7 +501,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3956" name="Recipe: Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Blessed A-grade Spiritshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -515,7 +515,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3957" name="Recipe: Blessed Spiritshot (S-grade) (100%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Blessed Spiritshot (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Blessed S-grade Spiritshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -528,7 +528,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3958" name="Blessed Scroll of Escape" type="EtcItem">
-		<!-- Magical scroll that relocates you to the nearest village. -->
+		<!-- Teleports to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -558,7 +558,7 @@
 		</skills>
 	</item>
 	<item id="3960" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -569,7 +569,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3961" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -580,7 +580,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3962" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -591,7 +591,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3963" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -602,7 +602,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3964" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -613,7 +613,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3965" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -624,7 +624,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3966" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -635,7 +635,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3967" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -646,7 +646,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3968" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -657,7 +657,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3969" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -668,7 +668,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3970" name="Mercenary Posting Ticket (Teleporter1)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -679,7 +679,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3971" name="Mercenary Posting Ticket (Teleporter2)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -690,7 +690,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3972" name="Mercenary Posting Ticket (Teleporter3)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Can't be used. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />

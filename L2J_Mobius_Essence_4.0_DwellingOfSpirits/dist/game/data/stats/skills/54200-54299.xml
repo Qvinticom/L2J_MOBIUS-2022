@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="54200" toLevel="1" name="Mount Glory of Champion">
+		<!-- You can mount Glory of Champion. -->
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -28,6 +29,7 @@
 		</effects>
 	</skill>
 	<skill id="54201" toLevel="1" name="Mount White Wing">
+		<!-- You can mount White Wing. -->
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -55,6 +57,7 @@
 		</effects>
 	</skill>
 	<skill id="54202" toLevel="1" name="Mount Shining Lady">
+		<!-- You can mount Shining Lady. -->
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -82,11 +85,12 @@
 		</effects>
 	</skill>
 	<skill id="54203" toLevel="1" name="Silent Ride">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Monsters don't attack first for 30 sec. Speed -20%. Can be used during riding only. The skill is disabled when the character is dismounted. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54204" toLevel="1" name="Worthy Warrior Transformation">
+		<!-- For warriors that has taken the 1st-3rd places in rankings among their race. Human Power grants unique appearance to a hero. Max HP +300. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -120,6 +124,7 @@
 		</effects>
 	</skill>
 	<skill id="54205" toLevel="1" name="Worthy Warrior Transformation">
+		<!-- For warriors that has taken the 1st-3rd places in rankings among their race. Transforms into a Kamael with two black wings. Max HP +300. -->
 		<icon>icon.skill0000</icon>
 		<abnormalVisualEffect>RANKER_DECO_KAMAEL</abnormalVisualEffect>
 		<abnormalLevel>1</abnormalLevel>
@@ -148,6 +153,7 @@
 		</effects>
 	</skill>
 	<skill id="54206" toLevel="1" name="Ultimate Death Knight Transformation">
+		<!-- For 20 min., you are transformed into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers. <Appearance effect> P. Atk. +40% P. Critical Damage +40% P. Skill Critical Damage +40% Atk. Spd. +50% Speed +5 Decreases penalty of Received Healing. Increases holy defense. Consumes 50 Spirit Ore. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -199,6 +205,7 @@
 		</effects>
 	</skill>
 	<skill id="54207" toLevel="1" name="Mount Night Mare">
+		<!-- Mounts a Night Mare. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -221,11 +228,12 @@
 		</effects>
 	</skill>
 	<skill id="54208" toLevel="1" name="Worthy Warrior Bonus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For warriors that has taken the 1st-3rd places in rankings among Death Knights. Max HP +300. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54209" toLevel="1" name="Worthy Warrior Transformation">
+		<!-- For warriors that has taken the 1st-3rd places in rankings among their race. Power of Orcs grants unique appearance to a hero. Max HP +300. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -254,6 +262,7 @@
 		</effects>
 	</skill>
 	<skill id="54210" toLevel="1" name="Worthy Warrior Transformation">
+		<!-- For warriors that has taken the 1st-3rd places in rankings among their race. Elven Power grants unique appearance to a hero. Max HP +300. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -282,6 +291,7 @@
 		</effects>
 	</skill>
 	<skill id="54211" toLevel="1" name="Worthy Warrior Transformation">
+		<!-- For warriors that has taken the 1st-3rd places in rankings among their race. Power of Dark Elves grants unique appearance to a hero. Max HP +300. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -310,6 +320,7 @@
 		</effects>
 	</skill>
 	<skill id="54212" toLevel="1" name="Worthy Warrior Transformation">
+		<!-- For warriors that has taken the 1st-3rd places in rankings among their race. Dwarven Power grants unique appearance to a hero. Max HP +300. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -338,7 +349,7 @@
 		</effects>
 	</skill>
 	<skill id="54213" toLevel="1" name="Mount Air Bike">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Allows to ride Air Bike. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

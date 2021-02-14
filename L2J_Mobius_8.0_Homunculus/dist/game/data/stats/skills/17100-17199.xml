@@ -187,7 +187,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17124" toLevel="24" name="Snake's Blessing Lv. 1">
-		<!-- Have a happy $s1 year! You can obtain a card in $s2 h. There are $s4 levels, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake.\n\nNote!\nThe cards can't be obtained and the Snake's Blessing can't be leveled up if your character is dead. Also you can't obtain the cards if your inventory is full. -->
+		<!-- Have a happy $s1 year! You can obtain a card in $s2 h. There are $s4 levels, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake. Note! The cards can't be obtained and the Snake's Blessing can't be leveled up if your character is dead. Also you can't obtain the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -225,7 +225,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17126" toLevel="24" name="Lucky Box 2">
-		<!-- Have a happy $s1 year! You can obtain a card in $s2 h. There are $s4 levels, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake.\n\nNote!\nThe cards can't be obtained and the Snake's Blessing can't be leveled up if your character is dead. Also you can't obtain the cards if your inventory is full. -->
+		<!-- Have a happy $s1 year! You can obtain a card in $s2 h. There are $s4 levels, so you can acquire up to $s3 cards. If the buff disappears, you can get it again from Snake. Note! The cards can't be obtained and the Snake's Blessing can't be leveled up if your character is dead. Also you can't obtain the cards if your inventory is full. -->
 		<icon>icon.card_event_everyday_gift</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -388,7 +388,7 @@
 		</effects>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing.\nFor $s1, P./ M. Atk., Atk. Spd. and Casting Spd. are increased by $s2. The effect disappears after logout. -->
+		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing. For $s1, P./ M. Atk., Atk. Spd. and Casting Spd. are increased by $s2. The effect disappears after logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<itemConsumeId>37704</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -459,7 +459,7 @@
 		</effects>
 	</skill>
 	<skill id="17156" toLevel="1" name="Decadence">
-		<!-- A deliciously dark flavor surrounds you.\nFor $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
+		<!-- A deliciously dark flavor surrounds you. For $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -516,7 +516,7 @@
 		</effects>
 	</skill>
 	<skill id="17157" toLevel="1" name="Sugar Rush">
-		<!-- An exhilarating thrill of sweet energy.\nFor $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
+		<!-- An exhilarating thrill of sweet energy. For $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -554,7 +554,7 @@
 		</effects>
 	</skill>
 	<skill id="17158" toLevel="1" name="Forever Alone">
-		<!-- Activating shield of self-built perfection.\nFor $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
+		<!-- Activating shield of self-built perfection. For $s1, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +$s2, Vitality Bonus +$s3. -->
 		<icon>icon.etc_whiteday_cookie</icon>
 		<abnormalTime>7200</abnormalTime>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -728,7 +728,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="17166" toLevel="1" name="Knight's Harmony- GM's Blessing">
-		<!-- The GM is always by your side. For $s1, this blessing increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Shield Defense Rate/ P. Def. by $s6, and decreases the chance of receiving Physical/ Magic Critical Hit by $s7. -->
+		<!-- The GM is always by your side. For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense/ Shield Defense Rate +$s6, received P./ M. Critical Rate -$s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>

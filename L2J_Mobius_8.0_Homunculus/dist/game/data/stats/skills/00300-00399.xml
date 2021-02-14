@@ -1668,7 +1668,7 @@
 		</effects>
 	</skill>
 	<skill id="343" toLevel="1" name="Lethal Shot">
-		<!-- Shoots a deadly arrow that pierces the target with 7698 power. Requires a bow. Half-Kill. Critical. Over-hit. -->
+		<!-- Shoots a deadly arrow that pierces the target with $s1 power. Requires a bow. Half-Kill. Critical. Over-hit. -->
 		<icon>icon.skill0343</icon>
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
@@ -1701,7 +1701,7 @@
 		</effects>
 	</skill>
 	<skill id="344" toLevel="1" name="Lethal Blow">
-		<!-- Attacks the target's vital points with 5773 power. Requires a dagger. Half-kill. Over-hit. -->
+		<!-- Attacks the target's vital points with $s1 power. Requires a dagger. Half-kill. Over-hit. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
@@ -1994,7 +1994,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="347" toLevel="1" name="Earthquake">
-		<!-- Attacks the enemy with 4848 power, cancelling their targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power, cancelling their targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0347</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2186,7 +2186,7 @@
 		</effects>
 	</skill>
 	<skill id="352" toLevel="1" name="Shield Bash">
-		<!-- Uses a shield to shock the enemy. Inflicts stun on the target for $s1 Cancels the enemy's target. Requires a shield.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Uses a shield to shock the enemy. Inflicts stun on the target for $s1 Cancels the enemy's target. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0352</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
@@ -2222,7 +2222,7 @@
 		</effects>
 	</skill>
 	<skill id="353" toLevel="1" name="Shield Slam">
-		<!-- Attacks the enemy with the shield, preventing them from using P. skills for $s1 Cancels enemy's target. Requires a shield.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Attacks the enemy with the shield, preventing them from using P. skills for $s1 Cancels enemy's target. Requires a shield. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0353</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -2425,7 +2425,7 @@
 		</effects>
 	</skill>
 	<skill id="358" toLevel="1" name="Bluff">
-		<!-- Tricks the enemy into showing their back, stunning them for $s1 and making them unwilling to attack you. Cancels the enemy's target. Requires a dagger.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Tricks the enemy into showing their back, stunning them for $s1 and making them unwilling to attack you. Cancels the enemy's target. Requires a dagger. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0358</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2520,7 +2520,7 @@
 		</effects>
 	</skill>
 	<skill id="361" toLevel="1" name="Stun Blast">
-		<!-- Creates a powerful shockwave that deals damage to the target and nearby enemies with $s1 power. Stuns enemies for $s2, their P. Def. -$s3, M. Def. -$s4. Cancels enemies' targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Creates a powerful shockwave that deals damage to the target and nearby enemies with $s1 power. Stuns enemies for $s2, their P. Def. -$s3, M. Def. -$s4. Cancels enemies' targets. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0361</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2577,7 +2577,7 @@
 		</effects>
 	</skill>
 	<skill id="362" toLevel="1" name="Armor Crush">
-		<!-- Attacks the enemy with $s1 power, stunning them for $s2, their P. Def. -$s3, M. Def. -$s4. Requires a sword, a blunt weapon, a two-handed sword, or a two-handed blunt weapon. Ignores Shield Defense. Critical. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks the enemy with $s1 power, stunning them for $s2, their P. Def. -$s3, M. Def. -$s4. Requires a sword, a blunt weapon, a two-handed sword, or a two-handed blunt weapon. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0362</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2812,7 +2812,7 @@
 		</effects>
 	</skill>
 	<skill id="367" toLevel="13" name="Dance of Medusa">
-		<!-- Dance that evokes the mirage of Medusa. Petrifies nearby enemies for $s1 Requires dual swords.\n\nInflicted status: Petrification. -->
+		<!-- Dance that evokes the mirage of Medusa. Petrifies nearby enemies for $s1 Requires dual swords. Inflicted status: Petrification. -->
 		<icon>icon.skill0367</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2952,7 +2952,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="369" toLevel="1" name="Evade Shot">
-		<!-- Attacks the enemy with 2020 power. P. Evasion +6 for 30 sec. Requires a bow. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. P. Evasion +$s3 for $s2 Requires a bow. Over-hit. -->
 		<icon>icon.skill0369</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

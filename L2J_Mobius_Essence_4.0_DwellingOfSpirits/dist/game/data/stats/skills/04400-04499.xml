@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4400" toLevel="3" name="Acumen">
-		<!-- Temporarily Atk. Spd. +15%. -->
+		<!-- Increases Casting Spd. for a certain amount of time. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -32,7 +32,7 @@
 		</effects>
 	</skill>
 	<skill id="4401" toLevel="3" name="Empower">
-		<!-- Temporarily M. Atk. +55%. -->
+		<!-- Increases M. Atk. for a certain amount of time. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -63,7 +63,7 @@
 		</effects>
 	</skill>
 	<skill id="4402" toLevel="2" name="Haste">
-		<!-- Temporarily Atk. Spd. +15%. -->
+		<!-- Increases Atk. Spd. for a certain amount of time. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -92,7 +92,7 @@
 		</effects>
 	</skill>
 	<skill id="4403" toLevel="3" name="Guidance">
-		<!-- Temporarily P. Accuracy +2. -->
+		<!-- Increases P. Accuracy for a certain amount of time. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -123,7 +123,7 @@
 		</effects>
 	</skill>
 	<skill id="4404" toLevel="3" name="Focus">
-		<!-- Temporarily P. Critical Rate +20%. -->
+		<!-- Temporarily increases P. Critical Rate. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -154,7 +154,7 @@
 		</effects>
 	</skill>
 	<skill id="4405" toLevel="3" name="Death Whisper">
-		<!-- Temporarily P. Critical Damage +25%. -->
+		<!-- Increases P. Critical Damage for a certain amount of time. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -185,7 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="4406" toLevel="3" name="Agility">
-		<!-- Temporarily P. Evasion +2. -->
+		<!-- Increases P. Evasion for a certain amount of time. -->
 		<icon>icon.skill1087</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1824,7 +1824,7 @@
 		</effects>
 	</skill>
 	<skill id="4437" toLevel="5" name="Greater Bleed Resistance">
-		<!-- Very resistant to Bleed. -->
+		<!-- Highly resistant to Bleed. -->
 		<icon>icon.skill4437</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1896,7 +1896,7 @@
 		</effects>
 	</skill>
 	<skill id="4441" toLevel="5" name="Enhanced Fear/Silence Resistance">
-		<!-- Very resistant to Mental Attack. -->
+		<!-- Highly resistant to Silence/ Fear. -->
 		<icon>icon.skill4441</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2176,7 +2176,7 @@
 		</effects>
 	</skill>
 	<skill id="4456" toLevel="5" name="Fear/Silence Vulnerability">
-		<!-- Vulnerable to Mental Attacks. -->
+		<!-- Fear/Silence vulnerability. -->
 		<icon>icon.skill4456</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2507,7 +2507,7 @@
 		</effects>
 	</skill>
 	<skill id="4466" toLevel="3" name="Surrender to Dark">
-		<!-- Immediately decreases Dark Resistance decreased and increases Holy Resistance. -->
+		<!-- Dark Resistance has been momentarily decreased, while Holy Resistance has been increased. -->
 		<icon>icon.skill4336_new</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -3211,7 +3211,7 @@
 		</effects>
 	</skill>
 	<skill id="4483" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3513,7 +3513,7 @@
 		</effects>
 	</skill>
 	<skill id="4488" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3700,7 +3700,7 @@
 		</effects>
 	</skill>
 	<skill id="4491" toLevel="12" name="Holy Weapon">
-		<!-- Makes Holy attacks. -->
+		<!-- Deals Holy damage. -->
 		<icon>icon.skill1043</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -3912,7 +3912,7 @@
 		</effects>
 	</skill>
 	<skill id="4494" toLevel="2" name="Raid Boss">
-		<!-- If the person who made the greatest contribution is $s1 or more levels higher than the Raid Boss, then the item/ adena rewards will decrease. If the difference is $s2 levels or more, then the monster will drop nothing at all. -->
+		<!-- If the person who has made the greatest contribution is $s1 or more levels higher than the Raid Boss, then there are no item/ adena rewards. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>

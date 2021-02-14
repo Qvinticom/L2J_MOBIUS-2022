@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="48001" toLevel="9" name="Piggy's Good Luck - Lv. 1">
-		<!-- Changing appearance for Hanbok for $s1. Atk./ Casting Spd. +$s2, Speed +$s3. Additionally you can get items after 2 h., 5 h. and 8 h. If your character is dead or the game is restarted, the effect won't disappear.\n<Note!> If your character is dead when the effect is disappeared, you won't get the sack. Also there must be empty slots in the inventory. If your character is dead you can't get the next level effect. -->
+		<!-- Changes the armor appearance to that of Hanbok for $s1 Atk. Spd./ Casting Spd. +$s2, Speed +$s3. Additionally you can obtain items after 2 h., 5 h., and 8 h. The effect remains after death and logout. Note! The items can't be obtained if your character is dead or if there is no free space in your inventory. You can't get the next level buff if your character is dead. -->
 		<icon>icon.skill_piggy_bless</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -22,7 +22,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="48012" toLevel="1" name="Mark of Wild Orc.">
-		<!-- Knock back and stun. -->
+		<!-- Knocks back and stuns the target. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -31,7 +31,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="48013" toLevel="1" name="Mark of Wild Orc.">
-		<!-- Knock back and stun. -->
+		<!-- Knocks back and stuns the target. -->
 		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -39,7 +39,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="48014" toLevel="1" name="Typhoon of Wild Orc">
-		<!-- Knock back and stun. -->
+		<!-- Knocks back and stuns the target. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -48,7 +48,7 @@
 		<effectPoint>-1</effectPoint>
 	</skill>
 	<skill id="48015" toLevel="1" name="Typhoon of Wild Orc">
-		<!-- Knock back and stun. -->
+		<!-- Knocks back and stuns the target. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -96,7 +96,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48021" toLevel="2" name="Raid Reward - Decrease Weight">
-		<!-- For 60 min., Weight Limit +9000. -->
+		<!-- For 60 min., weight limit +9000. -->
 		<icon>icon.skill1257</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -120,7 +120,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48024" toLevel="2" name="Raid Reward - Wind Walk">
-		<!-- For 60 min., Speed +33. -->
+		<!-- Speed +33 for 60 min. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -144,7 +144,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48027" toLevel="2" name="Raid Reward - Haste">
-		<!-- For 60 min., Atk. Spd. +33%. -->
+		<!-- Atk. Spd. +33% for 60 min. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -168,7 +168,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48030" toLevel="2" name="Raid Reward - Wild Magic">
-		<!-- For 60 min., M. Critical Rate +20. -->
+		<!-- M. Skill Critical Rate +20 for +60 min. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -176,7 +176,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48031" toLevel="2" name="Raid Reward - Acumen">
-		<!-- For 60 min., Casting Spd. +30%. -->
+		<!-- Casting Spd. +30% for 60 min. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -184,7 +184,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48032" toLevel="2" name="Raid Reward - Concentration">
-		<!-- For 60 min., Magic Cancel Rate -53. -->
+		<!-- For 60 min., Casting Interruption Rate -53. -->
 		<icon>icon.skill1078</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -192,7 +192,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48033" toLevel="2" name="Raid Reward - Victory">
-		<!-- For 60 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
+		<!-- For 60 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk./ Casting Spd. +60, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +10%. -->
 		<icon>icon.skill5074</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -208,7 +208,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48035" toLevel="2" name="Raid Reward - MP Recovery">
-		<!-- For 60 min., it recovers MP. The Sayha's Effect Scroll cannot be used if the buff is active. -->
+		<!-- For 60 min., recovers MP. The Sayha's Buff Scroll cannot be used if the buff is active. -->
 		<icon>icon.skill0213</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -224,7 +224,7 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="48037" toLevel="1" name="Lightning Strike">
-		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with 2927 power. Paralyzes for 3 sec. -->
+		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 power. Paralyzes for $s2 -->
 		<icon>icon.skill0279</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -260,7 +260,7 @@
 		<effectPoint>709</effectPoint>
 	</skill>
 	<skill id="48042" toLevel="1" name="Buff of Seeker">
-		<!-- The buff for adventurers who are going to explore the Tower of Insolence. For 5 min., P./ M. Atk. +10%, P./ M. Critical Rate +10. -->
+		<!-- The buff for adventurers who are going to explore the Tower of Insolence. For 5 min., P./ M. Atk. +10%, P. Critical Rate/ M. Skill Critical Rate +10. -->
 		<icon>icon.skill5076_a</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -297,51 +297,52 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="48048" toLevel="5" name="Sublime Self-Sacrifice">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When received damage exceeds a certain value, the character's HP is restored by difference between inflicted damage and this value. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48049" toLevel="5" name="Raid Blessing Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- You've dealt great damage to the Raid Boss. Your mood has improved. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48050" toLevel="1" name="Battle Aura">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Creates a battle zone within 1500 range. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48051" toLevel="1" name="Battle Zone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- If the character is killed in the battle zone by another character, the killed one doesn't lose XP and the attacking one doesn't get reputation penalty for the killing. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48052" toLevel="12" name="Craft Points +100">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +100. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48053" toLevel="1" name="PA Battle Buff">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max CP +1000 for 20 min. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48054" toLevel="2" name="Burning">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When the character is attacking an unique monster, acquired XP/ SP +$s2 for $s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48055" toLevel="5" name="Yogi's Energy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Even Yogi himself does not understand the nature of this energy. But for sure it is connected to Yogi s Weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48056" toLevel="1" name="Golden Pig's Teleport">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports to Golden Pig. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48057" toLevel="1" name="Ultimate Death Knight Experience">
+		<!-- <Ultimate Death Knight Transformation> You can experience Death Knight s destiny being cursed by the Fire Dragon Valakas, but having a great power. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -361,12 +362,11 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="48058" toLevel="4" name="Good Luck Buff Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P./ M. Atk. and P./ M. Def. +$s1, Acquired XP/ SP +$s2. When $s3 effect expires, the character obtains Lucky Box and $s4 buff. Note! You cannot obtain the item if you are dead or your inventory is full when you receive it. You can't get the next level buff if your character is dead. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48059" toLevel="3" name="Good Luck Buff - Reward Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -381,87 +381,79 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48062" toLevel="1" name="Jeras' Fire Show">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48063" toLevel="1" name="Fortress Battle - Meteor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48064" toLevel="1" name="Fortress Battle - Flame">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Powerful flames burn off HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48065" toLevel="1" name="Fortress Battle - Bleed">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48066" toLevel="1" name="Fortress Battle - Sword Storm">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48067" toLevel="1" name="Fortress Battle - Theor's AoE Attack Type 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- AoE P. Atk. On nearby enemies. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48068" toLevel="1" name="Fortress Battle - Theor's AoE Attack Type 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- AoE P. Atk. On nearby enemies. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48069" toLevel="1" name="Fortress Battle - Theor's AoE Attack Type 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- AoE P. Atk. On nearby enemies. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48070" toLevel="1" name="Master's Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, Acquired XP/ SP +$s2, MP Recovery Rate +$s3. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48071" toLevel="1" name="Master's Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For $s1, P./ M. Atk. and P./ M. Def. +250. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48072" toLevel="1" name="HP Recovery Block">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Natural HP recovery is deactivated. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48073" toLevel="10" name="Prominence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48074" toLevel="10" name="Twister">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48075" toLevel="10" name="Burning">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48076" toLevel="10" name="Aura Burn">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48077" toLevel="10" name="Blaze">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48078" toLevel="1" name="Clan Stronghold Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- A clan stronghold effect activated by a clan member in Cruma Tower. For $s1, Acquired XP/ SP +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -481,7 +473,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48082" toLevel="1" name="Beast's Range Fear">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Afflicted with Fear and moving against own will. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -491,42 +483,39 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48084" toLevel="3" name="Weakness">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Instantly P./ M. Atk. -$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48085" toLevel="1" name="Speed Boost">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 10 sec., increases Speed while crossing the zone borders in Antharas' Lair. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48086" toLevel="1" name="Dimensional Door A">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Summons a dimensional door that moves the PC to the Dimensional Door B. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48087" toLevel="1" name="Dimensional Door B">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Summons a dimensional door that moves the PC to the Dimensional Door A. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48088" toLevel="1" name="Earthquake">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48089" toLevel="1" name="Lightning">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48090" toLevel="1" name="Baium's Gift">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48091" toLevel="2" name="Slow Evasion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P./ M. Evasion is weakened. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -536,37 +525,37 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48093" toLevel="1" name="Raid Boss (Lv. 82)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48094" toLevel="1" name="Raid Boss (Lv. 82)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48095" toLevel="1" name="Raid Boss (Lv. 82)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48096" toLevel="1" name="Raid Boss (Lv. 82)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48097" toLevel="1" name="Small Rat Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- NPC helps you to transform into a white rat so you can save the Year of the Rat. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48098" toLevel="1" name="Mid Rat Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- NPC helps you to transform into a white rat so you can save the Year of the Rat. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="48099" toLevel="1" name="Big Rat Transformation">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- NPC helps you to transform into a white rat so you can save the Year of the Rat. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

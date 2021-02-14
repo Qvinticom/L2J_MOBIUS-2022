@@ -282,7 +282,7 @@
 		</effects>
 	</skill>
 	<skill id="32415" toLevel="1" name="Olympiad Harmony">
-		<!-- Standard buff for all Olympiad participants. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Critical Damage for standard attacks +$s5, M. Skill Critical Damage +$s6, Atk. Spd./ Casting Spd. +$s7, Attribute Attack +$s8, P. Def. +$s9, M. Def. +$s10, Shield Defense/ Shield Defense Rate +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13, Received P./ M. Critical Rate -$s14. -->
+		<!-- A common buff for all Olympiad participants. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Critical Damage for standard attacks +$s5, M. Skill Critical Damage +$s6, Atk. Spd./ Casting Spd. +$s7, Attribute Attack +$s8, P. Def. +$s9, M. Def. +$s10, Shield Defense/ Shield Defense Rate +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13, received Critical Rate from standard attacks/ M. skills -$s14. -->
 		<icon>icon.olympiad_buff</icon>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<operateType>A2</operateType>
@@ -433,7 +433,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="32422" toLevel="1" name="Olympiad Harmony">
-		<!-- Standard buff for all Olympiad participants. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Critical Damage for standard attacks +$s5, M. Skill Critical Damage +$s6, Atk. Spd./ Casting Spd. +$s7, Attribute Attack +$s8, P. Def. +$s9, M. Def. +$s10, Shield Defense/ Shield Defense Rate +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13, Received P./ M. Critical Rate -$s14. -->
+		<!-- A common buff for all Olympiad participants. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Critical Damage for standard attacks +$s5, M. Skill Critical Damage +$s6, Atk. Spd./ Casting Spd. +$s7, Attribute Attack +$s8, P. Def. +$s9, M. Def. +$s10, Shield Defense/ Shield Defense Rate +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13, received Critical Rate from standard attacks/ M. skills -$s14. -->
 		<icon>icon.olympiad_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -781,7 +781,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32462" toLevel="1" name="Void Crying">
-		<!-- Deals magic damage to the enemy and inflicts silence to prevent them from using skills for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Deals magic damage to the enemy and inflicts silence to prevent them from using skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1376</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

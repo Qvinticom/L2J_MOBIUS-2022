@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" toLevel="15" name="Stun Mastery">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit. -->
+		<!-- Stun Atk. Rate +$s1 when using a sword/ blunt weapon/ spear/ dual sword. -->
 		<icon>icon.skill0100</icon>
 		<magicLevel>
 			<value level="1">18</value>
@@ -79,7 +79,7 @@
 		</effects>
 	</skill>
 	<skill id="101" toLevel="48" name="Stun Shot">
-		<!-- Fires an arrow with $s1 Power added to P. Atk. and stuns the enemy for $s2. Requires a bow. Over-hit. Target cancel is possible. -->
+		<!-- Shoots an arrow with $s1 power. Stuns the target for $s2. Requires a bow. Over-hit. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -319,7 +319,7 @@
 		</effects>
 	</skill>
 	<skill id="102" toLevel="30" name="Entangle">
-		<!-- Enemy's Speed -$s2 for $s1. -->
+		<!-- For $s1, enemy's Speed -$s2. -->
 		<icon>icon.skill0102</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -472,7 +472,7 @@
 		</effects>
 	</skill>
 	<skill id="103" toLevel="5" name="Corpse Plague">
-		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every sec. -->
+		<!-- Causes a poison cloud to pour out from a corpse. Inflicts poison on enemies near the corpse for $s1, causing them to lose $s2 HP per sec. -->
 		<icon>icon.skill0103</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -541,7 +541,7 @@
 		</effects>
 	</skill>
 	<skill id="104" toLevel="1" name="Acumen">
-		<!-- Removes debuffs that decrease P.Accuracy and P. Evasion  -->
+		<!-- Removes debuffs that decrease P. Accuracy and P. Evasion. -->
 		<icon>icon.skill0104</icon>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
@@ -563,7 +563,7 @@
 		</effects>
 	</skill>
 	<skill id="105" toLevel="35" name="Freezing Weapon">
-		<!-- Momentarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
+		<!-- For $s1, imbues a weapon with ice power. With a certain chance decreases target s Speed. Can not be used with Bloody Weapon. <Freezing Strike> For $s3 Speed -$s4. Power $s2. -->
 		<icon>icon.skill0105</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -778,7 +778,7 @@
 		</effects>
 	</skill>
 	<skill id="106" toLevel="14" name="Veil">
-		<!-- Creates an illusion of nearby monsters for $s1. -->
+		<!-- Blurs enemy's vision, preventing them from making you a target for $s1 -->
 		<icon>icon.skill0106</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -832,7 +832,7 @@
 		</effects>
 	</skill>
 	<skill id="107" toLevel="15" name="Holy Aura">
-		<!-- Holds nearby undead monsters for $s1. -->
+		<!-- Damage to demons and the undead +$s2 for $s1 -->
 		<icon>icon.skill0107</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -911,7 +911,7 @@
 		</effects>
 	</skill>
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
-		<!-- Possessed by an Ogre's Spirit, P. Atk., P. Def. and M. Def. +20%, P. Critical Damage +20% for 5 min. Requires a fist weapon. -->
+		<!-- Max HP $s1 Received damage $s2 Consumes $s3 Spirit Ore. Cannot be used with Rabbit Spirit Totem or Puma Spirit Totem. -->
 		<icon>icon.skill0109</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -959,7 +959,7 @@
 		</effects>
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
-		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4, and restricts movement. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, Buff Cancel Resistance +$s4. Impossible to move while the skill is active. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1010,7 +1010,7 @@
 		</effects>
 	</skill>
 	<skill id="111" toLevel="2" name="Ultimate Evasion">
-		<!-- For $s1, P. Evasion +$s2, physical attack skill Evasion Rate +$s3, and Buff-canceling Attack Resistance +$s4. -->
+		<!-- For $s1, P. Evasion +$s2, P. Skill Evasion +$s3, Buff Cancel Resistance +$s4. -->
 		<icon>icon.skill0111</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1059,7 +1059,7 @@
 		</effects>
 	</skill>
 	<skill id="112" toLevel="4" name="Deflect Arrow">
-		<!-- Bow Resistance +$s2 for $s1. -->
+		<!-- Bow Resistance +$s1. -->
 		<icon>icon.skill0112</icon>
 		<magicLevel>
 			<value level="1">24</value>
@@ -1103,7 +1103,7 @@
 		</effects>
 	</skill>
 	<skill id="115" toLevel="30" name="Power Break">
-		<!-- Enemy's P. Atk. -$s2 for $s1. -->
+		<!-- For $s1, enemy's P. Atk. -$s2. -->
 		<icon>icon.skill0115</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1319,7 +1319,7 @@
 		</effects>
 	</skill>
 	<skill id="116" toLevel="30" name="Howl">
-		<!-- Nearby enemies' P. Atk. -$s2 for $s1. -->
+		<!-- Nearby enemies' P. Atk. -$s2 for $s1 -->
 		<icon>icon.skill0116</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1459,7 +1459,7 @@
 		</effects>
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2 Requires a fist weapon. Over-hit. -->
+		<!-- Stun +$s1 when using a fist weapon. -->
 		<icon>icon.skill0120</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -1565,7 +1565,7 @@
 		</effects>
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
-		<!-- Instantly recovers $s1 of Max HP and Max HP +$s3 for $s2. -->
+		<!-- For $s2, Max HP +$s3, additionally recovers $s1 HP. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1616,7 +1616,7 @@
 		</effects>
 	</skill>
 	<skill id="122" toLevel="30" name="Hex">
-		<!-- Enemy's P. Def. -$s2 for $s1. -->
+		<!-- For $s1, the enemy's P. Def. -$s2. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1738,7 +1738,7 @@
 		</effects>
 	</skill>
 	<skill id="123" toLevel="3" name="Spirit Barrier">
-		<!-- M. Def. +$s2 for $s1. -->
+		<!-- M. Def. +$s1, M. Damage Resistance +$s2. -->
 		<icon>icon.skill0123</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1787,7 +1787,7 @@
 		</effects>
 	</skill>
 	<skill id="127" toLevel="22" name="Hamstring">
-		<!-- Enemy's Speed -$s2 for $s1 -->
+		<!-- For $s1, enemy's Speed -$s2. -->
 		<icon>icon.skill0127</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1908,7 +1908,7 @@
 		</effects>
 	</skill>
 	<skill id="129" toLevel="5" name="Dark Elven Spirit">
-		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1 -->
+		<!-- Dark Elves are very dangerous enemies because of their unique fighting skills. P. Critical Damage +$s1 and additionally +$s2. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -1977,7 +1977,7 @@
 		</effects>
 	</skill>
 	<skill id="130" toLevel="2" name="Thrill Fight">
-		<!-- Speed -$s2 and Atk. Spd. +$s3 for $s1 -->
+		<!-- For $s1, Speed -$s2, Atk. Spd. +$s3. -->
 		<icon>icon.skill0130</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2018,7 +2018,7 @@
 		</effects>
 	</skill>
 	<skill id="131" toLevel="3" name="Hawk Eye">
-		<!-- Skill Power +$s2, Accuracy +$s3 for $s1 -->
+		<!-- P. Atk. +$s1, P. Accuracy +$s2. -->
 		<icon>icon.skill0131</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -2047,7 +2047,7 @@
 		</effects>
 	</skill>
 	<skill id="134" toLevel="1" name="Toughness">
-		<!-- Resistance to sleep/ hold/ poison +20. -->
+		<!-- Sleep/ Hold/ Poison/ Bleed Resistance +20. -->
 		<icon>icon.skill0134</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2084,7 +2084,7 @@
 		</effects>
 	</skill>
 	<skill id="139" toLevel="9" name="Guts">
-		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
+		<!-- P. Def. $s1 M. Def. $s1 Speed $s2 Debuff Resistance $s3 Cooldown: $s4 Cannot be used with Frenzy. -->
 		<icon>icon.skill0139</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2178,7 +2178,7 @@
 		</effects>
 	</skill>
 	<skill id="141" toLevel="5" name="Weapon Mastery">
-		<!-- P. Atk. +$s1, additionally +$s2. -->
+		<!-- Increases the weapon mastery. P. Atk. +$s1. -->
 		<icon>icon.skill0141</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -2203,7 +2203,7 @@
 		</effects>
 	</skill>
 	<skill id="142" toLevel="5" name="Armor Mastery">
-		<!-- P. Def. +$s1 and MP Recovery Bonus +$s2. -->
+		<!-- P. Def. +$s1, M. Def. +$s2, MP Recovery Rate +$s3. -->
 		<icon>icon.skill0142</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -2260,7 +2260,7 @@
 		</effects>
 	</skill>
 	<skill id="144" toLevel="51" name="Dual Sword Mastery">
-		<!-- P. Atk. +$s1 when using a dual sword. -->
+		<!-- P. Atk. +$s1 when using dual swords. -->
 		<icon>icon.skill0144</icon>
 		<magicLevel>
 			<value level="1">38</value>
@@ -2792,7 +2792,7 @@
 		</effects>
 	</skill>
 	<skill id="148" toLevel="8" name="Vital Force">
-		<!-- HP Recovery Bonus +$s1 and MP Recovery Bonus +$s2 when sitting. -->
+		<!-- When sitting, HP Recovery Rate +$s1, MP Recovery Rate +$s2. -->
 		<icon>icon.skill0148</icon>
 		<magicLevel>
 			<value level="1">24</value>
@@ -2838,7 +2838,7 @@
 		</effects>
 	</skill>
 	<skill id="150" toLevel="3" name="Weight Limit">
-		<!-- Weight limit +$s1 times. -->
+		<!-- Increases weight limit by $s1 times. -->
 		<icon>icon.skill0150</icon>
 		<magicLevel>
 			<value level="1">10</value>
@@ -2859,7 +2859,7 @@
 		</effects>
 	</skill>
 	<skill id="153" toLevel="4" name="Shield Mastery">
-		<!-- Shield Defense +$s1 and Defense Rate +$s2. -->
+		<!-- Shield Defense +$s1, Shield Defense Rate +$s2, P. Atk. +$s3. -->
 		<icon>icon.skill0153</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -2930,7 +2930,7 @@
 		</effects>
 	</skill>
 	<skill id="164" toLevel="3" name="Quick Recovery">
-		<!-- Cooldown for magic -$s1. -->
+		<!-- M. Skill Cooldown -$s1. -->
 		<icon>icon.skill0164</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -2965,7 +2965,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="168" toLevel="3" name="Attack Speed Boost">
-		<!-- Atk. Spd. +$s1 -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill0168</icon>
 		<magicLevel>
 			<value level="1">36</value>
@@ -3005,7 +3005,7 @@
 		</effects>
 	</skill>
 	<skill id="171" toLevel="9" name="Esprit">
-		<!-- HP Recovery Bonus +$s1 and MP Recovery Bonus +$s2 when running. -->
+		<!-- HP Recovery Rate +$s1, MP Recovery Rate +$s2 while running. -->
 		<icon>icon.skill0171</icon>
 		<magicLevel>
 			<value level="1">36</value>
@@ -3069,7 +3069,7 @@
 		</effects>
 	</skill>
 	<skill id="172" toLevel="14" name="Create Item">
-		<!-- Allows the user to manufacture level $s1 items. -->
+		<!-- Allows to craft items using Lv. $s1 recipes. -->
 		<icon>icon.skill0172</icon>
 		<magicLevel>
 			<value level="1">5</value>
@@ -3110,7 +3110,7 @@
 		</effects>
 	</skill>
 	<skill id="176" toLevel="9" name="Frenzy">
-		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Speed +$s6. Additionally, P. Accuracy +$s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt weapon, or spear. Available when HP is $s9 or lower. -->
+		<!-- P. Atk. $s1 Atk. Spd. $s2 P. Critical Rate $s3 P. Critical Damage $s4 P. Skill Critical Rate $s5 P. Skill Critical Damage $s5 Speed $s6 When using a two-handed sword/ blunt weapon or a spear P. Atk. $s7 P. Accuracy $s8 Cooldown: $s9 Cannot be used with Guts. -->
 		<icon>icon.skill0176</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3329,7 +3329,7 @@
 		</effects>
 	</skill>
 	<skill id="190" toLevel="55" name="Fatal Strike">
-		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks the target with $s1 power. Requires a sword, a blunt weapon, a spear, or dual swords. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
 		<icon>icon.skill0190</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3589,7 +3589,7 @@
 		</effects>
 	</skill>
 	<skill id="191" toLevel="6" name="Focus Mind">
-		<!-- MP Recovery Bonus +$s1. -->
+		<!-- MP Recovery Rate +$s1. -->
 		<icon>icon.skill0191</icon>
 		<magicLevel>
 			<value level="1">36</value>
@@ -3667,7 +3667,7 @@
 		</effects>
 	</skill>
 	<skill id="195" toLevel="2" name="Boost Breath">
-		<!-- Lung capacity +$s1. -->
+		<!-- Breath gauge +$s1. -->
 		<icon>icon.skill0195</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -3686,7 +3686,7 @@
 		</effects>
 	</skill>
 	<skill id="196" toLevel="2" name="Dignity">
-		<!-- Phys. Atk. + 10% and additionally +60. -->
+		<!-- P. Atk. +$s1 and additionally +$s2. -->
 		<icon>icon.skill0196</icon>
 		<magicLevel>43</magicLevel>
 		<operateType>P</operateType>
@@ -3709,7 +3709,7 @@
 		</effects>
 	</skill>
 	<skill id="197" toLevel="2" name="Honor">
-		<!-- Increases Phys. Def. -->
+		<!-- P. Def. +$s1. -->
 		<icon>icon.skill0197</icon>
 		<magicLevel>
 			<value level="1">40</value>

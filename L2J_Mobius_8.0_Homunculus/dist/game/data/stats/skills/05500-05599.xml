@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5500" toLevel="1" name="Black Dragon Claw">
-		<!-- Your character is temporarily losing HP because of bleeding. Power 10.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Your character is temporarily losing HP because of bleeding. Power 10. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -37,7 +37,7 @@
 		</effects>
 	</skill>
 	<skill id="5501" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -70,7 +70,7 @@
 		</effects>
 	</skill>
 	<skill id="5502" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -852,7 +852,7 @@
 		</effects>
 	</skill>
 	<skill id="5530" toLevel="12" name="Blood Storm">
-		<!-- Deals damage and inflicts bleed on the target. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Deals damage and inflicts bleed on the target. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1299,7 +1299,7 @@
 		</effects>
 	</skill>
 	<skill id="5551" toLevel="12" name="Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2272,7 +2272,7 @@
 		</effects>
 	</skill>
 	<skill id="5581" toLevel="1" name="Divine Beast Stun Attack">
-		<!-- Attacks and stuns the enemy with 704 power. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks and stuns the enemy with 704 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2745,7 +2745,7 @@
 		</effects>
 	</skill>
 	<skill id="5592" toLevel="16" name="Lightning Barrier">
-		<!-- Instant petrification.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Instant petrification. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill1515</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2834,7 +2834,7 @@
 		</effects>
 	</skill>
 	<skill id="5594" toLevel="1" name="Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect 11.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect 11. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2855,7 +2855,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5595" toLevel="1" name="Bleed">
-		<!-- Inflicts Bleed on the target and decreases HP. Effect 11.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect 11. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>

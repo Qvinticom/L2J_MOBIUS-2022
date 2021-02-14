@@ -1202,7 +1202,7 @@
 		</effects>
 	</skill>
 	<skill id="9551" toLevel="1" name="Knight's Harmony - Ceremony of Chaos">
-		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense Rate +$s6, and Shield Defense +$s7. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense Rate +$s6, Shield Defense +$s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -2235,7 +2235,7 @@
 		</conditions>
 	</skill>
 	<skill id="9594" toLevel="1" name="Mysterious Incantation">
-		<!-- Pulls a target to you.\n\nInflicted status: Pull. -->
+		<!-- Pulls a target to you. Inflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>

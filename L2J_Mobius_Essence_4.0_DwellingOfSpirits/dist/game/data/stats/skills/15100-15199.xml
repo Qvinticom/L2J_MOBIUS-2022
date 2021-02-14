@@ -53,7 +53,7 @@
 		</effects>
 	</skill>
 	<skill id="15141" toLevel="1" name="Super CP Lv. 1">
-		<!-- For test. Wizard Full Buff stage 1. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 1. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -69,7 +69,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15142" toLevel="1" name="Super CP Lv. 2">
-		<!-- For test. Wizard Full Buff stage 2. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 2. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -85,7 +85,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15143" toLevel="1" name="Super CP Lv. 3">
-		<!-- For test. Wizard Full Buff stage 3. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 3. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -101,7 +101,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15144" toLevel="1" name="Super CP Lv. 4">
-		<!-- For test. Wizard Full Buff stage 4. Increases abilities through Kyu's power. -->
+		<!-- For test. Wizard Full Buff Lv. 4. Increases abilities through Kyu's power. -->
 		<icon>icon.skill11065</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -380,7 +380,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15170" toLevel="1" name="Chaos Shield">
-		<!-- P. Def. and M. Def. are increased. -->
+		<!-- P./ M. Def. are increased. -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
@@ -685,7 +685,7 @@
 		</effects>
 	</skill>
 	<skill id="15185" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks targets at the front and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -720,7 +720,7 @@
 		</effects>
 	</skill>
 	<skill id="15186" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks targets at the front and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -755,7 +755,7 @@
 		</effects>
 	</skill>
 	<skill id="15187" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks targets at the front and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in the front and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -790,7 +790,7 @@
 		</effects>
 	</skill>
 	<skill id="15188" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 23391 power added to P. Atk. -->
+		<!-- Attacks the target and surrounding enemies with 23391 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -814,7 +814,7 @@
 		</effects>
 	</skill>
 	<skill id="15189" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 27459 power added to P. Atk. -->
+		<!-- Attacks the target and surrounding enemies with 27459 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -838,7 +838,7 @@
 		</effects>
 	</skill>
 	<skill id="15190" toLevel="1" name="Hayuk's Multiple Arrow">
-		<!-- Focuses on a target at the front and inflicts a long range attack. Attacks the target with 31527 power added to P. Atk. -->
+		<!-- Attacks the target and surrounding enemies with 31527 power added to P. Atk. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -862,7 +862,7 @@
 		</effects>
 	</skill>
 	<skill id="15191" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Rains down arrows like rain on the target and its surrounding area with 22526 power added to P. Atk. -->
+		<!-- Rains down arrows like rain on the target and nearby enemies with 22526 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -885,7 +885,7 @@
 		</effects>
 	</skill>
 	<skill id="15192" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Rains down arrows like rain on the target and its surrounding area with 26448 power added to P. Atk. -->
+		<!-- Rains down arrows like rain on the target and nearby enemies with 26448 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
@@ -908,7 +908,7 @@
 		</effects>
 	</skill>
 	<skill id="15193" toLevel="1" name="Hayuk's Heavy Arrow Rain">
-		<!-- Rains down arrows like rain on the target and its surrounding area with 30371 power added to P. Atk. -->
+		<!-- Rains down arrows like rain on the target and nearby enemies with 30371 power added to P. Atk. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="2400" name="Tallum Tunic" type="Armor">
+		<!-- <Properties>. WIT +1. Overweight limit +1500. M. Def. +15. Fear/ Silence Resistance +50% -->
 		<set name="icon" val="icon.armor_t79_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -100,6 +101,7 @@
 		</stats>
 	</item>
 	<item id="2405" name="Tallum Stockings" type="Armor">
+		<!-- <Properties>. WIT +1. Overweight limit +1000. M. Def. +10. Max HP +100. Max MP +120 -->
 		<set name="icon" val="icon.armor_t79_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -123,7 +125,7 @@
 		</skills>
 	</item>
 	<item id="2406" name="Avadon Robe" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -143,7 +145,7 @@
 		</stats>
 	</item>
 	<item id="2407" name="Dark Crystal Robe" type="Armor">
-		<!-- Full body armor. -->
+		<!-- <Properties>. WIT +2. Overweight limit +2500. M. Def. +25. Max HP +100. Max MP +120. Paralysis Resistance +50 -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -167,7 +169,7 @@
 		</skills>
 	</item>
 	<item id="2408" name="Robe of Nightmare" type="Armor">
-		<!-- Full body armor. -->
+		<!-- <Properties>. WIT +2. Overweight limit +2500. M. Def. +25. Max HP +100. Max MP +120. Sleep Resistance +70%. Hold Resistance +70% -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -191,7 +193,7 @@
 		</skills>
 	</item>
 	<item id="2409" name="Majestic Robe" type="Armor">
-		<!-- Full body armor. -->
+		<!-- <Properties>. WIT +2. Overweight limit +2500. M. Def. +25. Max HP +100. Max MP +120. Stun Resistance +50% -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -279,7 +281,7 @@
 		</stats>
 	</item>
 	<item id="2415" name="Avadon Circlet" type="Armor">
-		<!-- Sealed Avadon Circlet. The seal can be removed by a blacksmith in any village. -->
+		<!-- The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -992,7 +994,7 @@
 		</stats>
 	</item>
 	<item id="2464" name="Sealed Avadon Gloves" type="Armor">
-		<!-- Sealed Avadon Gloves. The seal can be removed by a blacksmith in any village. -->
+		<!-- The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t66_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />

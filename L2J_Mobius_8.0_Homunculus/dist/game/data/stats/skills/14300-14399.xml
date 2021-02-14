@@ -189,7 +189,7 @@
 		</effects>
 	</skill>
 	<skill id="14306" toLevel="1" name="Fear of Darkness">
-		<!-- Inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -283,7 +283,7 @@
 		</effects>
 	</skill>
 	<skill id="14310" toLevel="1" name="Sleep">
-		<!-- Sleep.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1072</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -392,7 +392,7 @@
 		</effects>
 	</skill>
 	<skill id="14314" toLevel="1" name="Yoke of the Heavenly Bow">
-		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -585,7 +585,7 @@
 		</effects>
 	</skill>
 	<skill id="14322" toLevel="1" name="Rush of the Heavenly Bow">
-		<!-- Charges forward, hits the enemy hard with the shoulder and stuns for 9 sec. Consumes up to 5 souls to increase power. Requires an ancient sword. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Charges forward, hits the enemy hard with the shoulder and stuns for 9 sec. Consumes up to 5 souls to increase power. Requires an ancient sword. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0494</icon>
 		<operateType>DA2</operateType>
 		<castRange>500</castRange>
@@ -674,7 +674,7 @@
 		</effects>
 	</skill>
 	<skill id="14325" toLevel="1" name="Fear">
-		<!-- Inflicts Fear on the enemy forcing them to flee for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the enemy forcing them to flee for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -703,7 +703,7 @@
 		</effects>
 	</skill>
 	<skill id="14326" toLevel="1" name="Restrain">
-		<!-- Blocks magic skills for 1 min.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks magic skills for 1 min. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -753,7 +753,7 @@
 		</effects>
 	</skill>
 	<skill id="14328" toLevel="1" name="Yoke">
-		<!-- Holds the enemy for 30 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the enemy for 30 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -822,7 +822,7 @@
 		</effects>
 	</skill>
 	<skill id="14331" toLevel="1" name="Feeler Yoke">
-		<!-- Holds the enemy for 30 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the enemy for 30 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -853,7 +853,7 @@
 		</effects>
 	</skill>
 	<skill id="14332" toLevel="1" name="Feeler Yoke">
-		<!-- Holds the enemy for 30 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the enemy for 30 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -920,7 +920,7 @@
 		</effects>
 	</skill>
 	<skill id="14334" toLevel="1" name="Poison Puddle">
-		<!-- Creates a poison cloud. Poisons nearby enemies, causing HP -2000 per second for 30 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Creates a poison cloud. Poisons nearby enemies, causing HP -2000 per second for 30 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -1020,7 +1020,7 @@
 		</effects>
 	</skill>
 	<skill id="14340" toLevel="1" name="Earth Wyrm Poison Cannon">
-		<!-- Creates a poison cloud. Poisons nearby enemies, causing HP -1 per second for 30 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Creates a poison cloud. Poisons nearby enemies, causing HP -1 per second for 30 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1091,7 +1091,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14344" toLevel="1" name="Earth Wyrm Push">
-		<!-- Shoots an arrow with 1 power and knocks the enemy back. Requires a bow. Over-hit. Cancels the target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Shoots an arrow with 1 power and knocks the enemy back. Requires a bow. Over-hit. Cancels the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -1232,7 +1232,7 @@
 		</effects>
 	</skill>
 	<skill id="14350" toLevel="1" name="Fear">
-		<!-- Inflicts Fear on the enemy forcing them to flee for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the enemy forcing them to flee for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1263,7 +1263,7 @@
 		</effects>
 	</skill>
 	<skill id="14351" toLevel="1" name="Provoke">
-		<!-- Provokes the enemy into attacking you. Power 1.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes the enemy into attacking you. Power 1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -1288,7 +1288,7 @@
 		</effects>
 	</skill>
 	<skill id="14352" toLevel="1" name="Sakum's Weapon">
-		<!-- Tricks the enemy into showing his back and makes them unwilling to attack you. Cancels the enemy's target. Stuns for 3 sec. Requires a dagger. Cancels the target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Tricks the enemy into showing his back and makes them unwilling to attack you. Cancels the enemy's target. Stuns for 3 sec. Requires a dagger. Cancels the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0358</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1333,7 +1333,7 @@
 		</effects>
 	</skill>
 	<skill id="14353" toLevel="1" name="Lazaros' Poison">
-		<!-- Inflicts Poison.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1365,7 +1365,7 @@
 		</effects>
 	</skill>
 	<skill id="14354" toLevel="1" name="Evangelos' Shock">
-		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0092</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1394,7 +1394,7 @@
 		</effects>
 	</skill>
 	<skill id="14355" toLevel="1" name="Theofanis' Fear">
-		<!-- Inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1423,7 +1423,7 @@
 		</effects>
 	</skill>
 	<skill id="14356" toLevel="1" name="Sotiris' Yoke">
-		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -1451,7 +1451,7 @@
 		</effects>
 	</skill>
 	<skill id="14357" toLevel="1" name="Black Lotus">
-		<!-- Sleep.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Sleep. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1072</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
@@ -1601,7 +1601,7 @@
 		</effects>
 	</skill>
 	<skill id="14363" toLevel="1" name="Sword Dance">
-		<!-- Inflicts bleed.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -1631,7 +1631,7 @@
 		</effects>
 	</skill>
 	<skill id="14364" toLevel="1" name="Sword Dance">
-		<!-- Inflicts bleed.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts bleed. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>650</castRange>
@@ -1684,7 +1684,7 @@
 		</effects>
 	</skill>
 	<skill id="14366" toLevel="1" name="Black Vortex Swamp">
-		<!-- The enemies swallowed by the swamp of darkness can't move, their HP is decreased.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- The enemies swallowed by the swamp of darkness can't move, their HP is decreased. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1787,7 +1787,7 @@
 		</effects>
 	</skill>
 	<skill id="14370" toLevel="1" name="Flame Earth Summon">
-		<!-- Inflicts Fear.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0763</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -1877,7 +1877,7 @@
 		</effects>
 	</skill>
 	<skill id="14372" toLevel="1" name="Root">
-		<!-- Holds.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1508</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2101,7 +2101,7 @@
 		</effects>
 	</skill>
 	<skill id="14380" toLevel="1" name="Antharas Tail Strike">
-		<!-- A powerful attack that decreases HP by 30%. Stuns and immobilizes for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- A powerful attack that decreases HP by 30%. Stuns and immobilizes for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4107</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -2198,7 +2198,7 @@
 		</effects>
 	</skill>
 	<skill id="14382" toLevel="1" name="Antharas Stun">
-		<!-- A powerful attack that stuns and immobilizes for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- A powerful attack that stuns and immobilizes for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4106</icon>
 		<operateType>A2</operateType>
 		<hitTime>6000</hitTime>
@@ -2347,7 +2347,7 @@
 		</effects>
 	</skill>
 	<skill id="14387" toLevel="1" name="Antharas Fear">
-		<!-- The enemy is feared and moves against own will. The character becomes temporarily uncontrolled.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- The enemy is feared and moves against own will. The character becomes temporarily uncontrolled. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4108</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -2378,7 +2378,7 @@
 		</effects>
 	</skill>
 	<skill id="14388" toLevel="1" name="Antharas Critical Fear">
-		<!-- The enemy suffers from a powerful magic attack, they are feared and move against own will. The character becomes temporarily uncontrolled.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- The enemy suffers from a powerful magic attack, they are feared and move against own will. The character becomes temporarily uncontrolled. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4108</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -2465,7 +2465,7 @@
 		</effects>
 	</skill>
 	<skill id="14392" toLevel="1" name="Tarask Splinter">
-		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<operateType>DA2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>600</castRange>
@@ -2596,7 +2596,7 @@
 		</effects>
 	</skill>
 	<skill id="14398" toLevel="1" name="Valakas Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4688</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>

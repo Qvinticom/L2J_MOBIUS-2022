@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19009" toLevel="1" name="Clan Advent">
-		<!-- When the clan leader logs in, clan members' P./ M. Atk. +2%. -->
+		<!-- When a clan leader is online, the following effects are applied for clan members. P. Atk. +$s1 M. Atk. +$s2 -->
 		<icon>icon.skill19009</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -65,7 +65,7 @@
 		</effects>
 	</skill>
 	<skill id="19034" toLevel="1" name="Seal of Ruler">
-		<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
+		<!-- Puts a seal imbued with the power of ancient ruler defending the castle. -->
 		<icon>icon.skill0246</icon>
 		<castRange>85</castRange>
 		<effectRange>400</effectRange>
@@ -142,7 +142,7 @@
 		</effects>
 	</skill>
 	<skill id="19039" toLevel="1" name="Cloak of Light">
-		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. Not available in a chaotic state. -->
+		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, Resistance to All Weapons +3%, P. Critical Rate/ M. Skill Critical Rate +10, Damage Reflection +3%. Not available in a chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -198,7 +198,7 @@
 		</effects>
 	</skill>
 	<skill id="19040" toLevel="1" name="Cloak of Darkness">
-		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, all kinds of Weapon Resistance +3%, P./ M. Critical Rate +10, damage reflection +3%. -->
+		<!-- Max HP/ MP/ CP +5%, P. Def. +3%, M. Def. +5%, Resistance to All Weapons +3%, P. Critical Rate/ M. Skill Critical Rate +10, Damage Reflection +3%. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>

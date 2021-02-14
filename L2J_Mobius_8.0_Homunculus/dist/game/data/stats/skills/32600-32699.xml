@@ -288,6 +288,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32629" toLevel="3" name="Queen Krosha Stamp">
+		<!-- Deals AoE damage and knocks down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill10262</value>
@@ -325,6 +326,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32632" toLevel="2" name="Queen Krosha Brilliance">
+		<!-- Amplifies Queen Krosha's power to increase P./ M. Def. by 100%. -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill32632</value>
@@ -584,7 +586,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="32661" toLevel="10" name="VICTORY Lv. 1">
-		<!-- Lineage II cheers for Korea. Vitality +$s1, acquired XP/ SP +$s2. You can receive a reward after 1 h. There are 9 levels. Note!. The Victory buff and items can't be obtained if your character is dead or has no free slots in the inventory. -->
+		<!-- Lineage II cheers for Korea. Vitality +$s1, acquired XP/ SP +$s2. You can receive a reward after 1 h. There are 9 levels. Note! The Victory buff and items can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.skill32661</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -598,7 +600,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="32663" toLevel="10" name="KOREA Lv. 1">
-		<!-- Lineage II cheers for Korea. Vitality Bonus +$s1, acquired XP/ SP +$s2. You can receive a reward after 1 h. There are 9 levels. Note!. The Korea buff and items can't be obtained if your character is dead or has no free slots in the inventory. -->
+		<!-- Lineage II cheers for Korea. Vitality Bonus +$s1, acquired XP/ SP +$s2. You can receive a reward after 1 h. There are 9 levels. Note! The Korea buff and items can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.skill32663</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

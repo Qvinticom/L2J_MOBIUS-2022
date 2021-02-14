@@ -902,7 +902,7 @@
 		</effects>
 	</skill>
 	<skill id="223" toLevel="49" name="Sting">
-		<!-- Attacks the enemy with $s1 power. Inflicts bleed causing loss of $s3 HP per sec. for $s2 Requires a sword, a dagger, or dual swords. Over-hit.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Attacks the enemy with $s1 power. Inflicts bleed causing loss of $s3 HP per sec. for $s2 Requires a sword, a dagger, or dual swords. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -2085,7 +2085,7 @@
 		</effects>
 	</skill>
 	<skill id="234" toLevel="41" name="Robe Mastery">
-		<!-- Increases P. Def. by $s1 when equipped with a robe. -->
+		<!-- When using robes, P. Def. +$s1. -->
 		<icon>icon.skill0234</icon>
 		<magicLevel>
 			<value level="1">18</value>
@@ -2185,7 +2185,7 @@
 		</effects>
 	</skill>
 	<skill id="235" toLevel="41" name="Robe Mastery">
-		<!-- Increases P. Def. by $s1 when equipped with a robe. -->
+		<!-- When using robes, P. Def. +$s1. -->
 		<icon>icon.skill0235</icon>
 		<magicLevel>
 			<value level="1">18</value>
@@ -2971,7 +2971,7 @@
 		</effects>
 	</skill>
 	<skill id="251" toLevel="45" name="Robe Mastery">
-		<!-- Increases P. Def. by $s1 when equipped with a robe. -->
+		<!-- When using robes, P. Def. +$s1. -->
 		<icon>icon.skill0251</icon>
 		<magicLevel>
 			<value level="1">4</value>
@@ -3808,7 +3808,7 @@
 		</effects>
 	</skill>
 	<skill id="260" toLevel="37" name="Hammer Crush">
-		<!-- Attacks the enemy with $s1 power. Inflicts stun for $s2 Requires a blunt weapon. Ignores Shield Defense. Critical. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks the enemy with $s1 power. Inflicts stun for $s2 Requires a blunt weapon. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0260</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -5040,7 +5040,7 @@
 		</effects>
 	</skill>
 	<skill id="279" toLevel="17" name="Lightning Strike">
-		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 power. Paralyzes for $s2\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 power. Paralyzes for $s2 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -5340,7 +5340,7 @@
 		</effects>
 	</skill>
 	<skill id="281" toLevel="37" name="Soul Breaker">
-		<!-- Attacks the target with $s1 power. Inflicts stun for $s2 Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks the target with $s1 power. Inflicts stun for $s2 Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0281</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -6611,7 +6611,7 @@
 		</effects>
 	</skill>
 	<skill id="299" toLevel="1" name="Summon Wild Hog Cannon">
-		<!-- Summons a siege weapon. It can move only in the normal mode. When the siege mode is active, it cannot move, but attacks targets from a distance. Switching modes takes 30 sec. Requires 70 B-grade Crystals. -->
+		<!-- Summons a siege weapon. It can move only in the normal mode. When the siege mode is active, it cannot move, but attacks targets from a distance. Switching modes takes $s1 Requires $s2 B-grade Crystals. -->
 		<icon>icon.skill0299</icon>
 		<hitTime>180000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

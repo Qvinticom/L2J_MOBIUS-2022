@@ -50,7 +50,7 @@
 		</effects>
 	</skill>
 	<skill id="501" toLevel="5" name="Magic Break">
-		<!-- For $s1, reduces enemy's M. Atk. by $s2 -->
+		<!-- For $s1, target's M. Atk. -$s2. -->
 		<icon>icon.skill0501</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -141,7 +141,7 @@
 		</effects>
 	</skill>
 	<skill id="503" toLevel="3" name="Scorn">
-		<!-- Provokes the enemies to the front with $s1 Power. -->
+		<!-- Provokes nearby monsters with $s1 power. -->
 		<icon>icon.skill0503</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1364,7 +1364,7 @@
 		</effects>
 	</skill>
 	<skill id="522" toLevel="4" name="Real Target">
-		<!-- Bow Resistance -$s2 and Stun Resistance -$s3 for $s1 -->
+		<!-- For $s1, Bow Resistance -$s2, Stun Resistance -$s3. -->
 		<icon>icon.skill0522</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1725,7 +1725,7 @@
 		</effects>
 	</skill>
 	<skill id="531" toLevel="2" name="Critical Wound">
-		<!-- P. Critical Damage inflicted on the enemy +$s1. Vital points attack resistance -$s2. Requires a dagger. -->
+		<!-- Target's Received P. Critical Damage +$s1, Vital Point Attack Resistance -$s2. Requires a dagger. -->
 		<icon>icon.skill0531</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1852,7 +1852,7 @@
 		</effects>
 	</skill>
 	<skill id="536" toLevel="1" name="Over the Body">
-		<!-- Expends combat spirit. For 60 sec., Max HP +35%, HP Recovery Bonus +15%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +15%, and Speed +20%. Can be used when CP is more than 80%. -->
+		<!-- P. Atk. $s1 Atk. Spd. $s2 P. Def. $s3 Speed $s3 Duration: $s4 -->
 		<icon>icon.skill0536</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -2009,7 +2009,7 @@
 		</effects>
 	</skill>
 	<skill id="559" toLevel="4" name="Spear">
-		<!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit. -->
+		<!-- Strikes the enemy with a spear, making them bleed with a certain chance. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>
 			<value level="1">6</value>
@@ -2071,7 +2071,7 @@
 		</effects>
 	</skill>
 	<skill id="560" toLevel="4" name="Power Slash">
-		<!-- A powerful frontal attack that involves swinging a polearm to assault enemies. Over-hit. Power $s1. -->
+		<!-- Powerful frontal attack that involves swinging a polearm to assault enemies. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -2196,7 +2196,7 @@
 		</effects>
 	</skill>
 	<skill id="563" toLevel="4" name="Horn of Doom">
-		<!-- Uses a horn to charge the enemy with a powerful ram attack. Over-hit. Power $s1. -->
+		<!-- Uses a horn to charge at the enemy with a powerful ram attack. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2297,7 +2297,7 @@
 		</effects>
 	</skill>
 	<skill id="565" toLevel="4" name="Horn Assault">
-		<!-- Releases the energy of a horn to attack a distant enemy. Over-hit. Power $s1. -->
+		<!-- Releases the energy of a horn to attack a distant enemy. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<coolTime>200</coolTime>
@@ -2339,7 +2339,7 @@
 		</effects>
 	</skill>
 	<skill id="567" toLevel="4" name="Radiant Heal">
-		<!-- Draws from the force of light to bestow the ability of recovery. Power $s1. -->
+		<!-- Calls upon holy light to restore HP. Power $s1 -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
@@ -2522,7 +2522,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="571" toLevel="4" name="Poison Dust">
-		<!-- Sprays a poisonous powder all over nearby enemies. -->
+		<!-- Sprays poisonous powder all over nearby enemies. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>
 			<value level="1">6</value>
@@ -2581,7 +2581,7 @@
 		</effects>
 	</skill>
 	<skill id="572" toLevel="4" name="Double Slasher">
-		<!-- Releases the energy of a sword to attack a distant enemy. Over-hit. Power $s1. -->
+		<!-- Releases the energy of a sword to attack a distant enemy. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -2680,7 +2680,7 @@
 		</effects>
 	</skill>
 	<skill id="575" toLevel="4" name="Steel Cutter">
-		<!-- Attacks with a sharp steel blade. Over-hit. Power $s1. -->
+		<!-- Attacks with a sharp steel blade. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2723,7 +2723,7 @@
 		</effects>
 	</skill>
 	<skill id="576" toLevel="4" name="Paw Strike">
-		<!-- Inflict a powerful attack with your forefeet. Over-hit. Power $s1. -->
+		<!-- Inflicts a powerful attack. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2766,7 +2766,7 @@
 		</effects>
 	</skill>
 	<skill id="577" toLevel="4" name="Fire Breath">
-		<!-- Spouts out a Fire attack that strikes enemies in front of you. Over-hit. Power $s1. -->
+		<!-- Spouts out a fire attack that strikes enemies at the front. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>
@@ -3033,7 +3033,7 @@
 		</effects>
 	</skill>
 	<skill id="582" toLevel="4" name="Scope Bleed">
-		<!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit. -->
+		<!-- Attacks nearby enemies with a lethal blow making them bleed. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>
 			<value level="1">6</value>
@@ -3133,7 +3133,7 @@
 			<effect name="TriggerSkillByMagicType">
 				<!-- Cancel Shadow Move -->
 				<magicTypes>0;1;2;3;4;22</magicTypes>
-				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillId>7097</skillId> <!-- Remove Trick -->
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
@@ -3146,7 +3146,7 @@
 				<targetType>MY_PARTY</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
-				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillId>7097</skillId> <!-- Remove Trick -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -3155,7 +3155,7 @@
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>MY_PARTY</targetType>
-				<skillId>7097</skillId> <!-- Cancel Shadow Move -->
+				<skillId>7097</skillId> <!-- Remove Trick -->
 				<skillLevel>1</skillLevel>
 				<isCritical>false</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
@@ -3209,7 +3209,7 @@
 		</effects>
 	</skill>
 	<skill id="586" toLevel="2" name="Rolling Attack">
-		<!-- Quickly swings your polearm around, attacking nearby enemies. Over-hit. Power $s1. -->
+		<!-- Quickly swings the polearm around, attacking nearby enemies. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3241,7 +3241,7 @@
 		</effects>
 	</skill>
 	<skill id="587" toLevel="2" name="Earth Storm">
-		<!-- Create a vortex of Earth that physically attacks your target. Over-hit. Power $s1. -->
+		<!-- Creates an earth vortex that physically attacks the target. Power $s1 Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<effectPoint>

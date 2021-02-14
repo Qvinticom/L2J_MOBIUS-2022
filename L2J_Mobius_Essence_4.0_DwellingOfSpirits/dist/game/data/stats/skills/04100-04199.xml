@@ -388,7 +388,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="4108" toLevel="1" name="Antharas Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill4108</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -518,7 +518,7 @@
 		</effects>
 	</skill>
 	<skill id="4111" toLevel="1" name="Antharas Petrify">
-		<!-- Petrified and unable to move temporarily. -->
+		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -641,7 +641,7 @@
 		</effects>
 	</skill>
 	<skill id="4116" toLevel="10" name="Magic Damage Resistance">
-		<!-- Resistance to magic attacks. -->
+		<!-- M. Damage Resistance. -->
 		<icon>icon.skill4116_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1918,7 +1918,7 @@
 		</effects>
 	</skill>
 	<skill id="4148" toLevel="12" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -3429,7 +3429,7 @@
 		</effects>
 	</skill>
 	<skill id="4174" toLevel="12" name="Shield">
-		<!-- Increases P. Def. -->
+		<!-- P. Def. is increased. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -3878,7 +3878,7 @@
 		</effects>
 	</skill>
 	<skill id="4182" toLevel="12" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -4180,7 +4180,7 @@
 		</effects>
 	</skill>
 	<skill id="4186" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4905,7 +4905,7 @@
 		</effects>
 	</skill>
 	<skill id="4197" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -4971,7 +4971,7 @@
 		</effects>
 	</skill>
 	<skill id="4198" toLevel="12" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -5052,7 +5052,7 @@
 		</effects>
 	</skill>
 	<skill id="4199" toLevel="12" name="Decrease P. Atk.">
-		<!-- P. Atk. decreases momentarily. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLevel>
 			<value level="1">1</value>

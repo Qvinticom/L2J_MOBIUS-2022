@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="92400" name="Primeval Garden's Time Stone" additionalName="Event" type="EtcItem">
-		<!-- Prolongs your Primeval Garden's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Forgotten Primeval Garden -->
 		<set name="icon" val="icon.timezone_refill_3" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -17,7 +17,7 @@
 		</skills>
 	</item>
 	<item id="92401" name="Spellbook: White Guardian" type="EtcItem">
-		<!-- A spellbook for learning White Guardian Transformation.\n\n<Classes>\nAll classes, except Kamael and Death Knight\n\n<Skill effect>\nTransforms into White Guardian. Increases Max HP/ MP, P./ M. Accuracy, P./ M. Atk., P./ M. Def., Atk. Spd., P. Skill Critical Damage, M. Skill Critical Rate, Speed. -->
+		<!-- A spellbook for learning White Guardian Transformation. <Classes>. All classes, except Kamael and Death Knight. <Skill effect>. Transforms into White Guardian. Increases Max HP/ MP, P./ M. Accuracy, P./ M. Atk., P./ M. Def., Atk. Spd., P. Skill Critical Damage, M. Skill Critical Rate, Speed. -->
 		<set name="icon" val="icon.si_phanteon_book" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -161,7 +161,7 @@
 		</stats>
 	</item>
 	<item id="92409" name="Special Dragon Fruit Lv. 2" type="EtcItem">
-		<!-- For 20 min., P./ M. Atk. +15%, P./ M. Def. +20%, Max HP/ MP/ CP +30%, HP/ MP Recovery Rate +40%, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +7%. Absorbs 7% of the inflicted damage as HP. Acquired XP/ SP +15%. Cooldown: 1 min. The effect remains after death. -->
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +15%. M. Atk. +15%. P. Def. +20%. M. Def. +20%. Max HP +30%. Max MP +30%. Max CP +30%. HP Recovery Rate +40%. MP Recovery Rate +40%. P. Critical Rate +20. M. Critical Rate +20. P. Critical Damage +7%. M. Critical Damage +7%. Acquired XP +15%. Acquired SP +15%. A chance to absorb 7% of the inflicted damage as HP. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm_dragon_fruit" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -171,7 +171,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92410" name="Special Dragon's Miracle Potion Lv. 2" type="EtcItem">
-		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P. Critical Rate/ M. Skill Critical Rate +40, P. Critical Damage/ M. Skill Critical Damage +12%, Atk./ Casting Spd. +70, Max HP/ CP +3000, Max MP +2000, HP/ MP Recovery Rate +12, Sayha's Grace Consumption -25%. With a certain chance, absorbs 7% of the inflicted damage as HP.\n\nNote!\nIf used when the Dragon's Miracle Potion effect is active, the buff will be replaced. -->
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +300. M. Atk. +450. P. Def. +400. M. Def. +550. Atk. Spd. +70. Casting Spd. +70. Max HP +3000. Max MP +2000. Max CP +3000. HP Recovery Rate +12. MP Recovery Rate +12. P. Critical Rate +40. M. Critical Rate +40. P. Critical Damage +12%. M. Critical Damage +12%. Acquired XP +50%. Acquired SP +50%. Sayha's Grace Consumption -25%. There is a certain chance to absorb 7% of the inflicted damage as HP. Duration: 20 min. <font color=ff6666>(When it is used with Special Dragon's Miracle Potion, the effect is changed.)</font> -->
 		<set name="icon" val="icon.bm_dragon_posion" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -505,7 +505,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92443" name="+1 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +1 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -516,7 +516,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92444" name="+2 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +2 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -527,7 +527,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92445" name="+3 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +3 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -538,7 +538,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92446" name="+4 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +4 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -549,7 +549,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92447" name="+5 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +5 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -560,7 +560,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92448" name="+6 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +6 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -571,7 +571,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92449" name="+7 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +7 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -582,7 +582,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92450" name="+8 Talisman of Aden Pack" type="EtcItem">
-		<!-- Double-click to obtain +8 Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -593,7 +593,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92451" name="+1 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +1 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -604,7 +604,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92452" name="+2 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +2 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -615,7 +615,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92453" name="+3 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +3 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -626,7 +626,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92454" name="+4 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +4 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -637,7 +637,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92455" name="+5 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +5 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -648,7 +648,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92456" name="+6 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +6 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -659,7 +659,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92457" name="+7 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +7 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -670,7 +670,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92458" name="+8 Talisman of Eva Pack" type="EtcItem">
-		<!-- Double-click to obtain +8 Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -681,7 +681,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92459" name="Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +692,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92460" name="+1 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +1 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -703,7 +703,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92461" name="+2 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +2 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -714,7 +714,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92462" name="+3 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +3 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -725,7 +725,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92463" name="+4 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +4 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92464" name="+5 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +5 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -747,7 +747,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92465" name="+6 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +6 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -758,7 +758,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92466" name="+7 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +7 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -769,7 +769,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92467" name="+8 Talisman of Speed Pack" type="EtcItem">
-		<!-- Double-click to obtain +8 Talisman of Speed. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -780,7 +780,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92468" name="Venir's Talisman Pack Lv. 1" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 1. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -791,7 +791,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92469" name="Venir's Talisman Pack Lv. 2" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 2. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -802,7 +802,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92470" name="Venir's Talisman Pack Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 3. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -813,7 +813,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92471" name="Venir's Talisman Pack Lv. 4" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 4. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -824,7 +824,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92472" name="Venir's Talisman Pack Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 5. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -835,7 +835,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92473" name="Venir's Talisman Pack Lv. 6" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 6. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -846,7 +846,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92474" name="Venir's Talisman Pack Lv. 7" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -857,7 +857,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92475" name="Venir's Talisman Pack Lv. 8" type="EtcItem">
-		<!-- Double-click to obtain Venir's Talisman Lv. 8. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

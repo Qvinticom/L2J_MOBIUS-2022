@@ -103,7 +103,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48912" name="Gran Kain's Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by +6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by +7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by +12 for bow weapons. Increases M. Atk. by +5 for all weapons. P./ M. Atk. increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. Failure to enchant does not crystallize the item and the enchantment level is retained thanks to the Gran Kain's power. Cannot be used on weapons enchanted to +20 or higher. -->
+		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fist weapons, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus increases greatly. For blessed weapons, the bonus increases more than for standard weapons. Thanks to Gran Kain's power, in case of failure the item is not crystallized, and its enchant value remains the same. Cannot be used for weapons enchanted to +20 or higher. -->
 		<set name="icon" val="icon.ev_shilen_scroll_of_enchant_wp" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -118,7 +118,7 @@
 		</skills>
 	</item>
 	<item id="48913" name="Gale Scroll" type="EtcItem">
-		<!-- Scroll to level up fast as the wind. For 10 min., Acquired XP/ SP +200%. The effect remains after death. Cooldown: 9 min. Required level: 1-107. Does not stack with Freya's Wind Scroll or Freya's Storm Scroll. -->
+		<!-- A scroll to level up as fast as the wind. For 10 min., acquired XP/ SP +200%. The effect remains after death. Cooldown: 9 min. Required level: 1-107. The effect does not stack with those of Freya's Frozen Scroll or Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.scrl_of_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1016,9 +1016,9 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="48982" min="1" max="1" chance="33.33" /> <!-- Artifact - Received Damage When Immobilized (Balance)-->
-			<item id="48983" min="1" max="1" chance="33.33" /> <!-- Artifact - P. Skill Power (Balance)-->
-			<item id="48984" min="1" max="1" chance="33.33" /> <!-- Artifact - M. Skill Power (Balance)-->
+			<item id="48982" min="1" max="1" chance="33.33" /> <!-- Artifact - Received Damage When Immobilized (No upgrade) - Balance -->
+			<item id="48983" min="1" max="1" chance="33.33" /> <!-- Artifact - P. Skill Power - Balance -->
+			<item id="48984" min="1" max="1" chance="33.33" /> <!-- Artifact - M. Skill Power - Balance -->
 		</capsuled_items>
 	</item>
 	<item id="48992" name="+5 Radiant Warrior's Circlet Box" type="EtcItem">

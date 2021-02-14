@@ -69,7 +69,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29507" name="Snowman's Fortune Box" type="EtcItem">
-		<!-- Double-click to obtain one of the following items at a certain rate: Dark/ Bloody Eternal Ingredient Set, Freya's Bloody/ Dark Rune (30-day) Pack, Freya's Rune (30-day) Box, Ancient Book: Divine Inspiration (Intermediate), Giant's Energy 100/ 20/ 3-unit Pack, R-grade Gemstone x500/ x50, Lv. 5 Legendary CHA/ LUC Dye Pack, Superior Giant's Codex - Mastery Chapter 1, Elcyum, 3-h. High-grade Maphr's Rune 100% Pack, Energy of Destruction 100/ 20-unit Pack, LUC +5 CHA +5 Lv. 5 Windy LUC Dye (Charisma), CHA +5 LUC +5 Lv. 5 Windy CHA Dye (Luck), Eva's Rune (3-day) Pack (Event), Superior Giant's Codex - Mastery, Freya's Dark/ Bloody Rune (2-h.) Box, Wind Vitality Tonic, Rune Stone, Freya's Vital Rune (30 min.) Box, Elcyum Crystal. -->
+		<!-- Double-click to obtain a random item. -->
 		<set name="icon" val="icon.bm_freya_snowman_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />

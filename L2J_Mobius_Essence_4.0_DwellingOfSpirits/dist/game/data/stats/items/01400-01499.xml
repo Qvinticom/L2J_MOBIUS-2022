@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1400" name="Spellbook: Surrender to Fire" type="EtcItem">
-		<!-- Spellbook needed to learn Surrender to Fire. Used by Human Wizards. Required level: 25 -->
+		<!-- A spellbook for learning the Surrender to Fire skill. Used by Human Wizards. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1401" name="Spellbook: Acumen" type="EtcItem">
-		<!-- Spellbook needed to learn Acumen. Used by Clerics. Required level: 20 -->
+		<!-- A spellbook for learning the Acumen skill. <Classes>. All classes after the 1st class change, except Orcs. <Skill effect>. Increases Casting Spd. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -20,7 +20,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1402" name="Spellbook: Agility" type="EtcItem">
-		<!-- Spellbook needed to learn Agility. Used by Elven Oracles. Required level: 25 -->
+		<!-- A spellbook for learning the Agility skill. Used by Elven Oracles. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -29,7 +29,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1403" name="Spellbook: Summon Kat the Cat" type="EtcItem">
-		<!-- Spellbook needed to learn Summon Kat the Cat. Used by Human Wizards. Required level: 20 -->
+		<!-- A spellbook for learning the Summon Kat the Cat skill. Used by Human Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -38,7 +38,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1404" name="Spellbook: Servitor Recharge" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Recharge. Used by Human Wizards, Elven Wizards, and Dark Wizards. Required level: 25 -->
+		<!-- A spellbook for learning the Servitor Recharge skill. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -47,7 +47,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1405" name="Spellbook: Servitor Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Heal. Used by Human Wizards, Elven Wizards, and Dark Wizards. Required level: 20 -->
+		<!-- A spellbook for learning the Servitor Heal skill. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -56,7 +56,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1406" name="Spellbook: Servitor Wind Walk" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Wind Walk. Used by Human Wizards. Required level: 35 -->
+		<!-- A spellbook for learning the Servitor Wind Walk skill. Used by Human Wizards. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -65,7 +65,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1407" name="Spellbook: Servitor Magic Boost" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Magic Boost. Used by Elven Wizards. Required level: 35 -->
+		<!-- A spellbook for learning the Servitor Magic Boost skill. Used by Elven Wizards. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -74,7 +74,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1408" name="Spellbook: Mighty Servitor" type="EtcItem">
-		<!-- Spellbook needed to learn Mighty Servitor. Used by Dark Wizards. Required level: 35 -->
+		<!-- A spellbook for learning the Mighty Servitor skill. Used by Dark Wizards. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -83,7 +83,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1409" name="Spellbook: Slow" type="EtcItem">
-		<!-- Spellbook needed to learn Slow. Used by Human Wizards and Dark Wizards. Required level: 35 -->
+		<!-- A spellbook for learning the Slow skill. <Classes>. Wizard, Dark Wizard. <Skill effect>. Decreases the enemy's Speed. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -93,7 +93,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1410" name="Spellbook: Poisonous Cloud" type="EtcItem">
-		<!-- Spellbook needed to learn Poisonous Cloud. Used by Human Wizards and Dark Wizards. Required level: 25 -->
+		<!-- A spellbook for learning the Poisonous Cloud skill. Used by Human Wizards and Dark Wizards. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -102,7 +102,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1411" name="Spellbook: Aura Burn" type="EtcItem">
-		<!-- Spellbook needed to learn Aura Burn. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 20 -->
+		<!-- A spellbook for learning the Aura Burn skill. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 20. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -111,7 +111,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1412" name="Spellbook: Water Resistance" type="EtcItem">
-		<!-- Spellbook needed to learn Water Resistance. Used by Elven Wizards and Prophets. Required level: Elven Wizard - 25, Prophet - 58 -->
+		<!-- A spellbook for learning the Water Resistance skill. Used by Elven Wizards and Prophets. Required level: Elven Wizard - 20, Prophet - 58. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -120,7 +120,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1413" name="Spellbook: Wind Resistance" type="EtcItem">
-		<!-- Spellbook needed to learn Wind Resistance. Used by Shillien Oracles and Prophets. Required level: Shillien Oracle - 35, Prophet - 58 -->
+		<!-- A spellbook for learning the Wind Resistance skill. Used by Shillien Oracles and Prophets. Required level: Shillien Oracle - 35, Prophet - 58. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -129,7 +129,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1414" name="Spellbook: Fire Resistance" type="EtcItem">
-		<!-- Spellbook needed to learn Fire Resistance. Used by Clerics. Required level: 30 -->
+		<!-- A spellbook for learning the Fire Resistance skill. Used by Clerics. Required level: 30. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -138,7 +138,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1415" name="Spellbook: Dryad Root" type="EtcItem">
-		<!-- Spellbook needed to learn Dryard Root. Used by Clerics, Oracles and Shillien Oracles. Required level: 23 -->
+		<!-- A spellbook for learning the Dryad Root skill. <Classes>. Cleric, Elven Oracle, Shillien Oracle. <Skill effect>. Holds the enemy in place. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -148,7 +148,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1416" name="Spellbook: Curse Chaos" type="EtcItem">
-		<!-- Spellbook needed to learn Curse Chaos. Used by Human Wizards and Dark Wizards. Required level: 35 -->
+		<!-- A spellbook for learning the Curse Chaos skill. <Classes>. Wizard, Dark Wizard. <Skill effect>. Decreases enemy's P. Accuracy. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -158,7 +158,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1417" name="Spellbook: Surrender to Earth" type="EtcItem">
-		<!-- Spellbook needed to learn Surrender to Earth. Used by Elven Wizards. Required level: 35 -->
+		<!-- A spellbook for learning the Surrender to Earth skill. Used by Elven Wizards. Required level: 35. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -167,7 +167,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1418" name="Spellbook: Surrender to Poison" type="EtcItem">
-		<!-- Spellbook needed to learn Surrender to Poison. Used by Dark Wizards. Required level: 25 -->
+		<!-- A spellbook for learning the Surrender to Poison skill. Used by Dark Wizards. Required level: 25. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -176,7 +176,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1419" name="Proof of Blood" type="EtcItem">
-		<!-- Item needed to upgrade a clan to level 5. -->
+		<!-- Can be exchanged for various items through Senior Appraiser Leo. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -184,7 +184,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="1420" name="Ingredient List" type="EtcItem">
-		<!-- List of cooking ingredients from Jonas. Mandragora essence. Honey. Dionian potato. Marsh moss. Floating eye meat. -->
+		<!-- List of cooking ingredients from Jonas. Mandragora essence. Honey. Dionian Potato. Marsh moss. Monster Eye's Meat. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -256,7 +256,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1426" name="Jacob's Insect Book" type="EtcItem">
-		<!-- Diagram that depicts the drawing of a bee. You must possess this in order to obtain nectar and royal jelly from the bloody bee or the Weird Wasp. -->
+		<!-- Diagram that depicts the drawing of a bee. You must possess this in order to obtain nectar and royal jelly from the Bloody Bee or the Weird Wasp. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -316,7 +316,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1431" name="Pano's Contract" type="EtcItem">
-		<!-- Contract Grocer Pano gave you. It says, if you kill Hobgoblins and bring 30 pieces of proof, he will give you potatoes as a reward. -->
+		<!-- Contract Grocer Pano gave you. It says, if you kill Hobgoblins and bring 30 pieces of proof, he will give you Sweet Potatoes as a reward. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -508,7 +508,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1447" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<!-- A letter from Magister Mirien about the taste of Jonas' dish. Take it to Jonas. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -649,7 +649,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="1463" name="Soulshot (D-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
+		<!-- Increases a weapon's physical power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -667,7 +667,7 @@
 		</skills>
 	</item>
 	<item id="1464" name="Soulshot (C-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. -->
+		<!-- Increases a weapon's physical power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -685,7 +685,7 @@
 		</skills>
 	</item>
 	<item id="1465" name="Soulshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
+		<!-- Increases a weapon's physical power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -703,7 +703,7 @@
 		</skills>
 	</item>
 	<item id="1466" name="Soulshot (A-grade)" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. -->
+		<!-- Increases a weapon's physical power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -721,7 +721,7 @@
 		</skills>
 	</item>
 	<item id="1467" name="Soulshot (S-grade)" type="EtcItem">
-		<!-- The power of Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with S-grade weapons. -->
+		<!-- Increases a weapon's physical power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1012,7 +1012,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1491" name="Bat Fang" type="EtcItem">
-		<!-- Fang taken by killing a blade bat or a barb bat. Collect 100 and take them to Bronze Key's Keef -->
+		<!-- A fang obtained by killing bats. Collect 100 of these and take them to Keef from the Bronze Key Guild. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

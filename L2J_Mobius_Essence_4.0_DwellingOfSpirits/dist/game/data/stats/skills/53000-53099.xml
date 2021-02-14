@@ -68,7 +68,7 @@
 		</effects>
 	</skill>
 	<skill id="53004" toLevel="5" name="Critical Vulnerability Decrease">
-		<!-- Success rate of attacks targeting the character's vital points -$s1, chance of receiving P. Critical Attack -$s2. -->
+		<!-- Chance of receiving damage from a vital point attack -$s1, Received P. Critical Rate -$s2. -->
 		<icon>icon.skill53004</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -93,7 +93,7 @@
 		</effects>
 	</skill>
 	<skill id="53005" toLevel="1" name="Detect Darkness">
-		<!-- Allows to find invisible enemies nearby character. Target can't become invisible and cancel this effect for 2 sec. Requires a bow. -->
+		<!-- Allows to find invisible enemies nearby character. Target can't become invisible and cancel the effect for 2 sec. Requires a bow. -->
 		<icon>icon.skill53005</icon>
 		<affectRange>300</affectRange>
 		<hitTime>1200</hitTime>
@@ -179,13 +179,14 @@
 		</effects>
 	</skill>
 	<skill id="53007" toLevel="3" name="Power Stance">
-		<!-- Temporarily P. Atk. +$s1 and Atk. Spd. +$s2. -->
+		<!-- Temporarily P. Atk. +$s1, Atk. Spd. +$s2. -->
 		<icon>icon.skill0232</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="53008" toLevel="1" name="Children of Eva">
+		<!-- M. Atk. +10, M. Critical Rate +5%, HP Recovery Bonus +5%. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -205,7 +206,7 @@
 		</effects>
 	</skill>
 	<skill id="53009" toLevel="3" name="Sharpness">
-		<!-- Rate of attacks targeting the enemy's vital parts +10%. -->
+		<!-- Vital Point Attack Rate +$s1. -->
 		<icon>icon.skill0409</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -226,7 +227,7 @@
 		</effects>
 	</skill>
 	<skill id="53010" toLevel="5" name="Knight's Protection">
-		<!-- For $s1, Shield Defense Rate +$s2, Shield Defense +$s3.\n\n<Auto-use> -->
+		<!-- Shield Defense Rate +$s2, Shield Defense +$s3 for $s1 -->
 		<icon>icon.skill10012</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -283,7 +284,7 @@
 		</effects>
 	</skill>
 	<skill id="53011" toLevel="2" name="Knight's Fortress">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases P. Atk. when hit. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

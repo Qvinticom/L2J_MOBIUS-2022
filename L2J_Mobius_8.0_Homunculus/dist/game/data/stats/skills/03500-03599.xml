@@ -1566,7 +1566,7 @@
 		</effects>
 	</skill>
 	<skill id="3571" toLevel="2" name="Special Ability: Critical Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1834,7 +1834,7 @@
 		</effects>
 	</skill>
 	<skill id="3577" toLevel="3" name="Special Ability: Magic Hold">
-		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2069,7 +2069,7 @@
 		</effects>
 	</skill>
 	<skill id="3584" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2140,7 +2140,7 @@
 		</effects>
 	</skill>
 	<skill id="3586" toLevel="1" name="Restrain Physical Skills">
-		<!-- Temporarily blocks P. skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Temporarily blocks P. skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -2209,7 +2209,7 @@
 		</effects>
 	</skill>
 	<skill id="3588" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2279,7 +2279,7 @@
 		</effects>
 	</skill>
 	<skill id="3590" toLevel="1" name="Restrain Magic Skills">
-		<!-- Temporarily blocks M. skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Temporarily blocks M. skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -2371,7 +2371,7 @@
 		</effects>
 	</skill>
 	<skill id="3593" toLevel="1" name="Infinity Bow Special Ability">
-		<!-- Decreases enemy's Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
+		<!-- Decreases enemy s Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
 		<icon>icon.weapon_the_bow_of_hero_i00</icon>
 		<magicLevel>80</magicLevel>
 		<operateType>P</operateType>

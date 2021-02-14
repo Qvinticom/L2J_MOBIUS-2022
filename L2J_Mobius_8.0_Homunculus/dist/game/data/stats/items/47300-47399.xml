@@ -1064,7 +1064,7 @@
 		</skills>
 	</item>
 	<item id="47373" name="Mammon's Talisman (30-day)" additionalName="Attack Attribute" type="Armor">
-		<!-- When equipped, Attribute Attack Bonus +40. -->
+		<!-- Attribute Attack +40. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1407,7 +1407,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47398" name="2 Bloody Eternal Enhancement Stones Box" type="EtcItem">
-		<!-- Festival Fairy's gift. Double-click to obtain 2 Bloody Eternal Enhancement Stones. -->
+		<!-- A gift from Festival Fairy. Double-click to obtain 2 Bloody Eternal Enhancement Stones. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />

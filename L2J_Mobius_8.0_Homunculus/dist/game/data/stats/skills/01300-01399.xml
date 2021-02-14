@@ -712,7 +712,7 @@
 		</effects>
 	</skill>
 	<skill id="1323" toLevel="1" name="Noblesse Blessing">
-		<!-- Maintains target's buff/ de-buff condition even following death and resurrection. The Noblesse Blessing disappears, however. Consumes 5 Spirit Ore. The skill cooldown is fixed.\n\n<The character is targeted automatically> -->
+		<!-- Maintains target's buff/ de-buff condition even following death and resurrection. The Noblesse Blessing disappears, however. Consumes 5 Spirit Ore. The skill cooldown is fixed. <The character is targeted automatically> -->
 		<icon>icon.skill1323</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1593,7 +1593,7 @@
 		</effects>
 	</skill>
 	<skill id="1336" toLevel="1" name="Curse of Doom">
-		<!-- Blocks enemy's P./ M. skills for $s1\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks enemy's P./ M. skills for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1336</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -1674,7 +1674,7 @@
 		</effects>
 	</skill>
 	<skill id="1338" toLevel="1" name="Arcane Chaos">
-		<!-- For $s1, the target's Buff Cancel Resistance -$s2, Debuff Resistance -$s3, also drains $s4 MP per sec. P. Skill MP Consumption +$s5, M. Skill MP Consumption +$s6, Song/ Dance MP Consumption +$s5.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- For $s1, the target's Buff Cancel Resistance -$s2, Debuff Resistance -$s3, also drains $s4 MP per sec. P. Skill MP Consumption +$s5, M. Skill MP Consumption +$s6, Song/ Dance MP Consumption +$s5. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1338</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3338,7 +3338,7 @@
 		</effects>
 	</skill>
 	<skill id="1375" toLevel="1" name="Heroic Grandeur">
-		<!-- For $s1, nearby enemies' P./ M. Def. -$s2, Speed -$s3, blocks them from using skills. Other Hero's debuffs cannot be applied at the same time. The debuff cannot be removed. Consumes $s4 Spirit Ore. Cannot be used in the Olympiad. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- For $s1, nearby enemies' P./ M. Def. -$s2, Speed -$s3, blocks them from using skills. Other Hero's debuffs cannot be applied at the same time. The debuff cannot be removed. Consumes $s4 Spirit Ore. Cannot be used in the Olympiad. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1375</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -3387,7 +3387,7 @@
 		</effects>
 	</skill>
 	<skill id="1376" toLevel="1" name="Heroic Dread">
-		<!-- For $s1, inflicts Fear on nearby enemies, their Speed -$s2. Other Hero's debuffs cannot be applied at the same time. The debuff cannot be removed. Consumes $s3 Spirit Ore. Cannot be used in the Olympiad. The skill cooldown is fixed.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- For $s1, inflicts Fear on nearby enemies, their Speed -$s2. Other Hero's debuffs cannot be applied at the same time. The debuff cannot be removed. Consumes $s3 Spirit Ore. Cannot be used in the Olympiad. The skill cooldown is fixed. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1376</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -3444,7 +3444,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="1380" toLevel="10" name="Betray">
-		<!-- Causes enemies' servitors to attack their masters. Consumes $s1 Spirit Ore.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Causes enemies' servitors to attack their masters. Consumes $s1 Spirit Ore. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1380</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3517,7 +3517,7 @@
 		</effects>
 	</skill>
 	<skill id="1381" toLevel="5" name="Mass Curse Fear">
-		<!-- Inflicts Fear on nearby enemies forcing them to flee for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on nearby enemies forcing them to flee for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1381</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -4321,7 +4321,7 @@
 		</effects>
 	</skill>
 	<skill id="1394" toLevel="10" name="Trance">
-		<!-- Inflicts sleep for $s1\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts sleep for $s1 Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1394</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -4400,7 +4400,7 @@
 		</effects>
 	</skill>
 	<skill id="1395" toLevel="10" name="Erase">
-		<!-- Banishes the enemy's servitor to another dimension. Consumes $s1 Spirit Ore.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Banishes the enemy's servitor to another dimension. Consumes $s1 Spirit Ore. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1395</icon>
 		<castRange>600</castRange>
 		<effectPoint>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="34603" name="Mysterious No-grade Soulshot" type="EtcItem">
-		<!-- Soulshot bestowed upon a weapon increases its attack power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<!-- Increases a weapon's physical power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -18,7 +18,7 @@
 		</skills>
 	</item>
 	<item id="34604" name="Mysterious Soulshot (D-grade)" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<!-- Increases a weapon's physical power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -36,7 +36,7 @@
 		</skills>
 	</item>
 	<item id="34605" name="Mysterious Soulshot (C-grade)" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<!-- Increases a weapon's physical power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -54,7 +54,7 @@
 		</skills>
 	</item>
 	<item id="34606" name="Mysterious Soulshot (B-grade)" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with B-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<!-- Increases a weapon's physical power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -72,7 +72,7 @@
 		</skills>
 	</item>
 	<item id="34607" name="Mysterious Soulshot (A-grade)" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<!-- Increases a weapon's physical power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -90,7 +90,7 @@
 		</skills>
 	</item>
 	<item id="34610" name="Mysterious Blessed No-grade Spiritshot" type="EtcItem">
-		<!-- Spiritshot bestowed upon a weapon increases its magic power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<!-- Increases a weapon's magic power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -107,7 +107,7 @@
 		</skills>
 	</item>
 	<item id="34611" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<!-- Increases a weapon's magic power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -125,7 +125,7 @@
 		</skills>
 	</item>
 	<item id="34612" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
+		<!-- Increases a weapon's magic power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -143,7 +143,7 @@
 		</skills>
 	</item>
 	<item id="34613" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with B-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<!-- Increases a weapon's magic power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -161,7 +161,7 @@
 		</skills>
 	</item>
 	<item id="34614" name="Mysterious Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
+		<!-- Increases a weapon's magic power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_tradable" val="false" />

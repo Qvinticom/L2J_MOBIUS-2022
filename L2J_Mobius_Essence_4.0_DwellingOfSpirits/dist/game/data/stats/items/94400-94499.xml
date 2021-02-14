@@ -252,7 +252,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94423" name="Life Stone - Accesories" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
+		<!-- Required for augmenting accessories of A-grade or higher, and Boss'/ Spirit/ Insolence/ Dragon Valley accessories. Adena required. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -260,7 +260,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94424" name="Life Stone - Accesories (Event)" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
+		<!-- Required for augmenting accessories of A-grade or higher, and Boss'/ Spirit/ Insolence/ Dragon Valley accessories. Adena required. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -292,7 +292,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94427" name="+2 Zaken's Earring" additionalName="7-day" type="Armor">
-		<!-- Available for 7 d.\n\n<Properties>\nMP +34\nMP Consumption -4%\nReceived Healing +10%\nHP Recovery Rate +20%\nWith a certain chance, absorbs 8% of the inflicted damage as HP.\nBleed Resistance and Atk. Rate +20%\nStun Resistance and Atk. Rate +15%\nSilence Resistance and Atk. Rate +15%\nFear Resistance and Atk. Rate +15%\n\nEffects of two identical earrings do not stack.\nCannot be enchanted. -->
+		<!-- Available for 7 d. <Properties>. MP +34. MP Consumption -4%. Received Healing +10%. HP Recovery Rate +20%. With a certain chance, absorbs 8% of the inflicted damage as HP. Bleed Resistance and Atk. Rate +20%. Stun Resistance and Atk. Rate +15%. Silence Resistance and Atk. Rate +15%. Fear Resistance and Atk. Rate +15%. Effects of two identical earrings do not stack. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -319,7 +319,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94429" name="Primeval Isle Supplies" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\nPackage: Agathion Ignis\nPackage: Agathion Nebula\nPackage: Agathion Procella\nPackage: Agathion Petram\nPackage: Agathion Joy\nLife Stone Lv. 2 - Armor\nSayha's Cookie (10 pcs.)\n\nAdditionally can be used as material for creating +7 Agathion Pack in the Event Special Craft tab. -->
+		<!-- Double-click to obtain one of the following items. <Random>. Package: Agathion Ignis. Package: Agathion Nebula. Package: Agathion Procella. Package: Agathion Petram. Package: Agathion Joy. Life Stone Lv. 2 - Armor. Sayha's Cookie (10 pcs.). Additionally can be used as material for creating +7 Agathion Pack in the Event Special Craft tab. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -330,7 +330,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94430" name="Primeval Garden Supplies" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\nAmber Lv. 1\nOpal Lv. 1\nCoral Lv. 1\nOnyx Lv. 1\nSpinel Lv. 1\nZircon Lv. 1\nMoonstone Lv. 1\nLife Stone - Accessories\nSayha's Cookie (10 pcs.)\n\nAdditionally can be used as material for creating Jewelry Box Lv. 5 in the Event Special Craft tab. -->
+		<!-- Double-click to obtain one of the following items. <Random>. Amber Lv. 1. Opal Lv. 1. Coral Lv. 1. Onyx Lv. 1. Spinel Lv. 1. Zircon Lv. 1. Moonstone Lv. 1. Life Stone - Accessories. Sayha's Cookie (10 pcs.). Additionally can be used as material for creating Jewelry Box Lv. 5 in the Event Special Craft tab. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -341,7 +341,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94431" name="Alligator Island Supplies" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\nEnchant Kit: Talisman of Aden\nEnchant Kit: Talisman of Eva\nEnchant Kit: Talisman of Speed\nEnchant Kit: Talisman of Authority\nLife Stone Lv. 2 - Weapon\nSayha's Cookie (10 pcs.)\n\nAdditionally can be used as material for creating +7 Talisman Pack in the Event Special Craft tab. -->
+		<!-- Double-click to obtain one of the following items. <Random>. Enchant Kit: Talisman of Aden. Enchant Kit: Talisman of Eva. Enchant Kit: Talisman of Speed. Enchant Kit: Talisman of Authority. Life Stone Lv. 2 - Weapon. Sayha's Cookie (10 pcs.). Additionally can be used as material for creating +7 Talisman Pack in the Event Special Craft tab. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -352,7 +352,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94432" name="+7 Agathion Box" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\n+7 Agathion Ignis\n+7 Agathion Nebula\n+7 Agathion Procella\n+7 Agathion Petram\n+7 Agathion Joy -->
+		<!-- Double-click to obtain one of the following items. <Random>. +7 Agathion Ignis. +7 Agathion Nebula. +7 Agathion Procella. +7 Agathion Petram. +7 Agathion Joy -->
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -363,7 +363,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94433" name="+5 Agathion Pack" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\n+5 Agathion Ignis\n+5 Agathion Nebula\n+5 Agathion Procella\n+5 Agathion Petram\n+5 Agathion Joy -->
+		<!-- Double-click to obtain one of the following items. <Random>. +5 Agathion Ignis. +5 Agathion Nebula. +5 Agathion Procella. +5 Agathion Petram. +5 Agathion Joy -->
 		<set name="icon" val="icon.star_agathion_cube" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -374,7 +374,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94434" name="Jewelry Box Lv. 6" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\n- Amber Lv. 6\n- Opal Lv. 6\n- Coral Lv. 6\n- Onyx Lv. 6\n- Spinel Lv. 6\n- Zircon Lv. 6\n- Moonstone Lv. 6 -->
+		<!-- Double-click to obtain one of the following items. <Random>. - Amber Lv. 6. - Opal Lv. 6. - Coral Lv. 6. - Onyx Lv. 6. - Spinel Lv. 6. - Zircon Lv. 6. - Moonstone Lv. 6 -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -385,7 +385,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94435" name="Jewelry Box Lv. 4" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\n- Amber Lv. 4\n- Opal Lv. 4\n- Coral Lv. 4\n- Onyx Lv. 4\n- Spinel Lv. 4\n- Zircon Lv. 4\n- Moonstone Lv. 4 -->
+		<!-- Double-click to obtain one of the following items. <Random>. - Amber Lv. 4. - Opal Lv. 4. - Coral Lv. 4. - Onyx Lv. 4. - Spinel Lv. 4. - Zircon Lv. 4. - Moonstone Lv. 4 -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -396,7 +396,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94436" name="Jewelry Box Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\n- Amber Lv. 3\n- Opal Lv. 3\n- Coral Lv. 3\n- Onyx Lv. 3\n- Spinel Lv. 3\n- Zircon Lv. 3\n- Moonstone Lv. 3 -->
+		<!-- Double-click to obtain one of the following items. <Random>. - Amber Lv. 3. - Opal Lv. 3. - Coral Lv. 3. - Onyx Lv. 3. - Spinel Lv. 3. - Zircon Lv. 3. - Moonstone Lv. 3 -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -407,7 +407,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94437" name="+7 Talisman Pack" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\n+7 Talisman of Aden Pack\n+7 Talisman of Eva Pack\n+7 Talisman of Speed Pack\n+7 Talisman of Authority Pack -->
+		<!-- Double-click to obtain one of the following items. <Random>. +7 Talisman of Aden Pack. +7 Talisman of Eva Pack. +7 Talisman of Speed Pack. +7 Talisman of Authority Pack -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -418,7 +418,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94438" name="+5 Talisman Pack" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n\n<Random>\n+5 Talisman of Aden Pack\n+5 Talisman of Eva Pack\n+5 Talisman of Speed Pack\n+5 Talisman of Authority Pack -->
+		<!-- Double-click to obtain one of the following items. <Random>. +5 Talisman of Aden Pack. +5 Talisman of Eva Pack. +5 Talisman of Speed Pack. +5 Talisman of Authority Pack -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +474,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94444" name="Baium's Trial Coupon" additionalName="Event" type="EtcItem">
-		<!-- Allows you to participate in the trial.\nCan be obtained through Augustina.\nNote!\nThe coupon is required even for re-entering. -->
+		<!-- Allows you to participate in the trial. Can be obtained through Augustina. Note!. The coupon is required even for re-entering. -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -483,6 +483,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94445" name="Augustina's Coupon (Event)" type="EtcItem">
+		<!-- A present from Augustina. Can be exchanged for various items through Augustina. -->
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -490,6 +491,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94446" name="Augustina's Seeds (Event)" type="EtcItem">
+		<!-- Seeds imbued with the summer energy. Can be exchanged for various items through Augustina. -->
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -497,7 +499,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94447" name="Augustina's Daily Gift Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nAugustina's Gift Box\n\n(Can be used only once a day, 14 times in total.) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Augustina's Gift Box. (Can be used only once a day, 14 times in total.) -->
 		<set name="icon" val="icon.event_six_party_cube_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -506,6 +508,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94448" name="Augustina's Gift Box (Event)" type="EtcItem">
+		<!-- Double-click to obtain the following items. <Guaranteed>. Sayha's Cookie (10 pcs.). Soulshot Ticket (10 pcs.). Spirit Ore (300 pcs.). Augustina's Coupon (2 pcs.). <Random>. HP Recovery Potion (100 pcs.). Scroll: Boost Attack (5 pcs.). Scroll: Boost Defense (5 pcs.). Extra Pass: Transcendent Instance Zone -->
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -515,17 +518,17 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<!-- <item id="93274" min="10" max="10" chance="100" /> --> <!-- Sayha's Cookie -->
+			<!-- <item id="93274" min="10" max="10" chance="100" /> --> <!-- Sayha's Cookie - Event -->
 			<item id="90907" min="10" max="10" chance="100" /> <!-- Soulshot Ticket -->
 			<item id="3031" min="300" max="300" chance="100" /> <!-- Spirit Ore -->
-			<item id="94445" min="2" max="2" chance="100" /> <!-- Augustina's Coupon -->
+			<item id="94445" min="2" max="2" chance="100" /> <!-- Augustina's Coupon - Event -->
 			<item id="91857" min="100" max="100" chance="33" /> <!-- Mid-grade HP Recovery Potion -->
-			<item id="94269" min="5" max="5" chance="33" /> <!-- Scroll: Enchant Attack -->
-			<item id="94271" min="5" max="5" chance="33" /> <!-- Scroll: Enchant Protection -->
+			<item id="94269" min="5" max="5" chance="33" /> <!-- Scroll: Boost Attack -->
+			<item id="94271" min="5" max="5" chance="33" /> <!-- Scroll: Boost Defense -->
 		</capsuled_items>
 	</item>
 	<item id="94449" name="Kit: Baium's Trial Coupon" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nBaium's Trial Coupon (14 pcs.) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Baium's Trial Coupon (14 pcs.) -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -536,7 +539,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94450" name="Augustina's Support Box Lv. 1" additionalName="Lv. 40" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nDragon Belt Pack\nAugustina's Support Box Lv. 1 (required level: 50+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Belt Pack. Augustina's Support Box Lv. 1 (required level: 50+) -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -547,7 +550,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94451" name="Augustina's Support Box Lv. 1" additionalName="Lv. 50" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nPackage: Cloak of Protection\nAugustina's Support Box Lv. 1 (required level: 55+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Cloak of Protection. Augustina's Support Box Lv. 1 (required level: 55+) -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -558,7 +561,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94452" name="Augustina's Support Box Lv. 1" additionalName="Lv. 55" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nShiny Jewelry Box\nEnchanted B-grade Armor Coupon\nSayha's Cookie (10 pcs.)\nAugustina's Support Box Lv. 1 (required level: 60+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Shiny Jewelry Box. Enchanted B-grade Armor Coupon. Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 1 (required level: 60+) -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -569,7 +572,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94453" name="Augustina's Support Box Lv. 1" additionalName="Lv. 60" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nAgathion Pack\nEnchanted B-grade Armor Coupon\nSayha's Cookie (20 pcs.)\nAugustina's Support Box Lv. 1 (required level: 65+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Agathion Pack. Enchanted B-grade Armor Coupon. Sayha's Cookie (20 pcs.). Augustina's Support Box Lv. 1 (required level: 65+) -->
 		<set name="icon" val="icon.npoint_valakas_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -580,7 +583,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94454" name="Augustina's Support Box Lv. 1" additionalName="Lv. 65" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nTalisman Fortune Box\nEnchanted B-grade Armor Coupon\nSayha's Cookie (40 pcs.)\nAugustina's Support Box Lv. 1 (required level: 70+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Talisman Fortune Box. Enchanted B-grade Armor Coupon. Sayha's Cookie (40 pcs.). Augustina's Support Box Lv. 1 (required level: 70+) -->
 		<set name="icon" val="icon.npoint_tauti_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -591,7 +594,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94455" name="Augustina's Support Box Lv. 1" additionalName="Lv. 70" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nPackage: Einhasad's Pendant Lv. 1\nEnchanted B-grade Armor Coupon\nSayha's Cookie (100 pcs.)\nAugustina's Support Box Lv. 1 (required level: 76+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Einhasad's Pendant Lv. 1. Enchanted B-grade Armor Coupon. Sayha's Cookie (100 pcs.). Augustina's Support Box Lv. 1 (required level: 76+) -->
 		<set name="icon" val="icon.npoint_antaras_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -602,7 +605,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94456" name="Augustina's Support Box Lv. 1" additionalName="Lv. 76" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nEnchant Kit: Circlet of Hero Lv. 1\nInventory Expansion Ticket Lv. 1\nSayha's Cookie (200 pcs.) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Enchant Kit: Circlet of Hero Lv. 1. Inventory Expansion Ticket Lv. 1. Sayha's Cookie (200 pcs.) -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -613,7 +616,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94457" name="Augustina's Support Box Lv. 2" additionalName="Lv. 70" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nDragon Belt Pack\nSupply Pouch (5 pcs.)\nSayha's Cookie (10 pcs.)\nAugustina's Support Box Lv. 2 (required level: 76+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Belt Pack. Supply Pouch (5 pcs.). Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 2 (required level: 76+) -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -624,7 +627,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94458" name="Augustina's Support Box Lv. 2" additionalName="Lv. 76" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nPackage: Cloak of Protection\nSupply Pouch (10 pcs.)\nSayha's Cookie (10 pcs.)\nAugustina's Support Box Lv. 2 (required level: 80+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Cloak of Protection. Supply Pouch (10 pcs.). Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 2 (required level: 80+) -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -635,7 +638,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94459" name="Augustina's Support Box Lv. 2" additionalName="Lv. 80" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nEnchanted B-grade Weapon Coupon\nSupply Pouch (5 pcs.)\nSayha's Cookie (10 pcs.)\nAugustina's Support Box Lv. 2 (required level: 81+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Enchanted B-grade Weapon Coupon. Supply Pouch (5 pcs.). Sayha's Cookie (10 pcs.). Augustina's Support Box Lv. 2 (required level: 81+) -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -646,7 +649,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94460" name="Augustina's Support Box Lv. 2" additionalName="Lv. 81" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nPackage: Einhasad's Pendant Lv. 1\nSupply Pouch (10 pcs.)\nSayha's Cookie (20 pcs.)\nAugustina's Support Box Lv. 2 (required level: 82+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Einhasad's Pendant Lv. 1. Supply Pouch (10 pcs.). Sayha's Cookie (20 pcs.). Augustina's Support Box Lv. 2 (required level: 82+) -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -657,7 +660,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94461" name="Augustina's Support Box Lv. 2" additionalName="Lv. 82" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nEnchant Kit: Circlet of Hero\nSupply Pouch (20 pcs.)\nSayha's Cookie (30 pcs.)\nAugustina's Support Box Lv. 2 (required level: 83+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Enchant Kit: Circlet of Hero. Supply Pouch (20 pcs.). Sayha's Cookie (30 pcs.). Augustina's Support Box Lv. 2 (required level: 83+) -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -668,7 +671,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94462" name="Augustina's Support Box Lv. 2" additionalName="Lv. 83" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nPackage: Einhasad's Pendant Lv. 1\nSupply Pouch (30 pcs.)\nSayha's Cookie (40 pcs.)\nAugustina's Support Box Lv. 2 (required level: 84+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Package: Einhasad's Pendant Lv. 1. Supply Pouch (30 pcs.). Sayha's Cookie (40 pcs.). Augustina's Support Box Lv. 2 (required level: 84+) -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -679,7 +682,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94463" name="Augustina's Support Box Lv. 2" additionalName="Lv. 84" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nEnchant Kit: Circlet of Hero\nSupply Pouch (40 pcs.)\nSayha's Cookie (50 pcs.)\nAugustina's Support Box Lv. 2 (required level: 85+) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Enchant Kit: Circlet of Hero. Supply Pouch (40 pcs.). Sayha's Cookie (50 pcs.). Augustina's Support Box Lv. 2 (required level: 85+) -->
 		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -690,7 +693,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94464" name="Augustina's Support Box Lv. 2" additionalName="Lv. 85" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nA-grade Weapon Coupon\nSupply Pouch (50 pcs.)\nSayha's Cookie (50 pcs.) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. A-grade Weapon Coupon. Supply Pouch (50 pcs.). Sayha's Cookie (50 pcs.) -->
 		<set name="icon" val="icon.bm_sayha_gold_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -701,7 +704,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94465" name="Free Welcome Kit" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nEnchanted C-grade Weapon Coupon\nValakas' Necklace\nRefined Romantic Chapeau: Gold\nScroll: Boost Attack (50 pcs.)\nScroll: Boost Defense (50 pcs.)\nSayha's Cookie (200 pcs.)\nSpirit Ore (2000 pcs.)\nSoulshot Ticket (200 pcs.) -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Enchanted C-grade Weapon Coupon. Valakas' Necklace. Refined Romantic Chapeau: Gold. Scroll: Boost Attack (50 pcs.). Scroll: Boost Defense (50 pcs.). Sayha's Cookie (200 pcs.). Spirit Ore (2000 pcs.). Soulshot Ticket (200 pcs.) -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -734,84 +737,84 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94468" name="Pet Book: Chain Block" type="EtcItem">
-		<!-- A book for learning the Chain Block pet skill.\n\nSkill effect: Binds the target and does not allow it to use range attacks.\n\nPet: Kookaburra -->
+		<!-- A book for learning the Chain Block pet skill. Skill effect: Binds the target and does not allow it to use range attacks. Pet: Kookaburra -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94469" name="Pet Book: Blocked Target Change" type="EtcItem">
-		<!-- A book for learning the Blocked Target Change pet skill.\n\nSkill effect: The target and the pet switch places.\n\nPet: Kookaburra -->
+		<!-- A book for learning the Blocked Target Change pet skill. Skill effect: The target and the pet switch places. Pet: Kookaburra -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94470" name="Pet Book: Hide" type="EtcItem">
-		<!-- A book for learning the Hide pet skill.\n\nSkill effect: Grants invisibility.\n\nPet: Tiger -->
+		<!-- A book for learning the Hide pet skill. Skill effect: Grants invisibility. Pet: Tiger -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94471" name="Pet Book: Strong Bite" type="EtcItem">
-		<!-- A book for learning the Strong Bite pet skill.\n\nSkill effect: Bites the enemy.\n\nPet: Tiger -->
+		<!-- A book for learning the Strong Bite pet skill. Skill effect: Bites the enemy. Pet: Tiger -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94472" name="Pet Book: Last Dire Claw" type="EtcItem">
-		<!-- A book for learning the Last Dire Claw pet skill.\n\nSkill effect: Delivers a powerful attack with claws.\n\nPet: Wolf -->
+		<!-- A book for learning the Last Dire Claw pet skill. Skill effect: Delivers a powerful attack with claws. Pet: Wolf -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94473" name="Pet Book: Scout's Strike" type="EtcItem">
-		<!-- A book for learning the Scout's Strike pet skill.\n\nSkill effect: Attacks and stuns the target.\n\nPet: Hawk -->
+		<!-- A book for learning the Scout's Strike pet skill. Skill effect: Attacks and stuns the target. Pet: Hawk -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94474" name="Pet Book: Feather Storm" type="EtcItem">
-		<!-- A book for learning the Feather Storm pet skill.\n\nSkill effect: Makes a tornado of feathers all around the target and decreases Speed.\n\nPet: Hawk -->
+		<!-- A book for learning the Feather Storm pet skill. Skill effect: Makes a tornado of feathers all around the target and decreases Speed. Pet: Hawk -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94475" name="Pet Book: Exploding Feather" type="EtcItem">
-		<!-- A book for learning the Exploding Feather pet skill.\n\nSkill effect: Explodes feathers and deals damage to the enemy.\n\nPet: Hawk -->
+		<!-- A book for learning the Exploding Feather pet skill. Skill effect: Explodes feathers and deals damage to the enemy. Pet: Hawk -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94476" name="Pet Book: Pulling Body" type="EtcItem">
-		<!-- A book for learning the Pulling Body pet skill.\n\nSkill effect: Increases defense, immobilizes, and pulls nearby enemies.\n\nPet: Buffalo -->
+		<!-- A book for learning the Pulling Body pet skill. Skill effect: Increases defense, immobilizes, and pulls nearby enemies. Pet: Buffalo -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94477" name="Pet Book: Back Explosion" type="EtcItem">
-		<!-- A book for learning the Back Explosion pet skill.\n\nSkill effect: Has a certain chance to stun and pull the target after an explosion.\n\nPet: Dragon -->
+		<!-- A book for learning the Back Explosion pet skill. Skill effect: Has a certain chance to stun and pull the target after an explosion. Pet: Dragon -->
 		<set name="icon" val="icon.etc_codex_of_giant_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94478" name="Pet Book: Steel Skin" type="EtcItem">
-		<!-- A book for learning the Steel Skin pet skill.\n\nSkill effect: Increases Defense according to the level.\n\nPet: All pets -->
+		<!-- A book for learning the Steel Skin pet skill. Skill effect: Increases Defense according to the level. Pet: All pets -->
 		<set name="icon" val="icon.etc_codex_of_giant_i02" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94479" name="Pet XP Crystal (Exchangeable)" additionalName="Not used" type="EtcItem">
-		<!-- Applies the following effect.\n\n<When used>\nXP +100,000,000 for a summoned pet\n\nNote!\nCan be used only when a pet is summoned. -->
+		<!-- Applies the following effect. <When used>. XP +100,000,000 for a summoned pet. Note!. Can be used only when a pet is summoned. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -819,7 +822,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94480" name="Pet XP Crystal" type="EtcItem">
-		<!-- Applies the following effect.\n\n<When used>\nXP +100,000,000 for a summoned pet\n\nNote!\nCan be used only when a pet is summoned. -->
+		<!-- Applies the following effect. <When used>. XP +100,000,000 for a summoned pet. Note!. Can be used only when a pet is summoned. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -857,7 +860,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94484" name="Pet Buff Scroll" additionalName="Event" type="EtcItem">
-		<!-- Applies a buff when used.\n\n<Buff effect>\nPet's HP +1000\nPet's P. Def. +300\nPet's M. Def. +300\nPet's HP Recovery +10\nWhen the buff is disappeared, Treat Coupon is granted.\n\nDuration: 3 h.\nCooldown: 1 min.\nThe effect disappears after death. -->
+		<!-- Applies a buff when used. <Buff effect>. Pet's HP +1000. Pet's P. Def. +300. Pet's M. Def. +300. Pet's HP Recovery +10. When the buff is disappeared, Treat Coupon is granted. Duration: 3 h. Cooldown: 1 min. The effect disappears after death. -->
 		<set name="icon" val="icon.newyear_dog" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -867,7 +870,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94485" name="Pet Trap" additionalName="Event" type="EtcItem">
-		<!-- Applies a buff when used.\n\n<Buff effect>\nHas a certain chance to capture a pet. -->
+		<!-- Applies a buff when used. <Buff effect>. Has a certain chance to capture a pet. -->
 		<set name="icon" val="icon.energy_condenser_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -921,7 +924,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94490" name="Mysterious Pack Lv. 2" type="EtcItem">
-		<!-- Unused packs can be exchanged through Game Assistant for various items.\nDouble-click to obtain one of the specified items. -->
+		<!-- Unused packs can be exchanged through Game Assistant for various items. Double-click to obtain one of the specified items. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -932,7 +935,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94491" name="Mysterious Pack Lv. 3" type="EtcItem">
-		<!-- Unused packs can be exchanged through Game Assistant for various items.\nDouble-click to obtain one of the specified items. -->
+		<!-- Unused packs can be exchanged through Game Assistant for various items. Double-click to obtain one of the specified items. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -943,7 +946,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94492" name="Mysterious Pack Lv. 4" type="EtcItem">
-		<!-- Unused packs can be exchanged through Game Assistant for various items.\nDouble-click to obtain one of the specified items. -->
+		<!-- Unused packs can be exchanged through Game Assistant for various items. Double-click to obtain one of the specified items. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -952,7 +955,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94493" name="Mysterious Pack Lv. 5" type="EtcItem">
-		<!-- Unused packs can be exchanged through Game Assistant for various items.\nDouble-click to obtain one of the specified items. -->
+		<!-- Unused packs can be exchanged through Game Assistant for various items. Double-click to obtain one of the specified items. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -961,7 +964,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94494" name="Mysterious Pack Lv. 6" type="EtcItem">
-		<!-- Unused packs can be exchanged through Game Assistant for various items.\nDouble-click to obtain one of the specified items. -->
+		<!-- Unused packs can be exchanged through Game Assistant for various items. Double-click to obtain one of the specified items. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -970,7 +973,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94495" name="Mysterious Pack Lv. 7" type="EtcItem">
-		<!-- Unused packs can be exchanged through Game Assistant for various items.\nDouble-click to obtain one of the specified items. -->
+		<!-- Unused packs can be exchanged through Game Assistant for various items. Double-click to obtain one of the specified items. -->
 		<set name="icon" val="icon.bm_sayha_silver_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -979,7 +982,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94496" name="Mysterious Pack Lv. 8" type="EtcItem">
-		<!-- Unused packs can be exchanged through Game Assistant for various items.\nDouble-click to obtain various items as well as specified. -->
+		<!-- Unused packs can be exchanged through Game Assistant for various items. Double-click to obtain various items as well as specified. -->
 		<set name="icon" val="icon.bm_sayha_gold_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -988,21 +991,21 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94497" name="Spellbook: Life Force Harmony" type="EtcItem">
-		<!-- A spellbook for learning the Life Force Harmony skill.\n\n<Classes>\nTitan\nGrand Khavatari\n\n<Skill effect>\nIncreases Max HP and other stats depending on current HP. -->
+		<!-- A spellbook for learning the Life Force Harmony skill. <Classes>. Titan. Grand Khavatari. <Skill effect>. Increases Max HP and other stats depending on current HP. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94498" name="Spellbook: Titan Champion" type="EtcItem">
-		<!-- A spellbook for learning the Titan Champion skill.\n\n<Classes>\nTitan\n\n<Skill effect>\nSignificantly increases P. Atk., P. Critical Rate, P. Critical Damage, Max HP and Speed. -->
+		<!-- A spellbook for learning the Titan Champion skill. <Classes>. Titan. <Skill effect>. Significantly increases P. Atk., P. Critical Rate, P. Critical Damage, Max HP and Speed. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94499" name="Spellbook: Titanic Weapon" type="EtcItem">
-		<!-- A spellbook for learning the Titanic Weapon skill.\n\n<Classes>\nTitan\n\n<Skill effect>\nIncreases P. Atk. When a two-handed sword is used, increases P. Atk., Atk. Spd. and attack range. -->
+		<!-- A spellbook for learning the Titanic Weapon skill. <Classes>. Titan. <Skill effect>. Increases P. Atk. When a two-handed sword is used, increases P. Atk., Atk. Spd. and attack range. -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

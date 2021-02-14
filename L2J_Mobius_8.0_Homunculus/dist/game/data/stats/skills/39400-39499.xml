@@ -307,7 +307,7 @@
 		</effects>
 	</skill>
 	<skill id="39410" toLevel="3" name="Guitar Melody - Emperor's Special Cocktail">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. But the buff is not deleted upon death. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Skill MP Consumption -$s4. The effect remains after death. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -680,7 +680,7 @@
 		</effects>
 	</skill>
 	<skill id="39417" toLevel="3" name="Knight's Harmony - Emperor's Special Cocktail">
-		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense and Shield Defense Rate +$s6, Received P./ M. Critical Rate -$s7. The effect remains after death. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense/ Shield Defense Rate +$s6, received Critical Rate from standard attacks/ M. skills -$s7. The effect remains after death. -->
 		<icon>icon.bm_special_cocktail_of_king_d</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -1278,7 +1278,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39465" toLevel="1" name="15th Anniversary Transformation">
-		<!-- Transforms you into a Snow Man, Scarecrow Jack, Tin Golem, Tow, Lure Tow, Heavy Tow, Warm Tow, White Dog, Pink Dog, or Golden Dog for $s1. <Alt + left click> to delete the buff. -->
+		<!-- Transforms you into a Snow Man, Scarecrow Jack, Tin Golem, Tow, Lure Tow, Heavy Tow, Warm Tow, White Dog, Pink Dog, or Golden Dog for $s1 <Alt + left click> to delete the buff. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1646,7 +1646,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39491" toLevel="1" name="PA Glowing Dragon's Attribute Potion">
-		<!-- For $s1 Attribute Attack +$s2, Attribute Resistance +$s3, Acquired XP/ SP +$s4. The effect remains after death. -->
+		<!-- For $s1, Attribute Attack +$s2, Attribute Resistance +$s3, acquired XP/ SP +$s4. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion_special</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>

@@ -401,7 +401,7 @@
 		</effects>
 	</skill>
 	<skill id="32530" toLevel="10" name="Red Nosed Rudolph Lv. 1">
-		<!-- You can receive items after $s1. There are $s2 levels. All basic stats +$s3, Vitality Consumption Rate -$s4. Note!. A reward for Red Nosed Rudolph and items can't be obtained if your character is dead or has no free slots in the inventory. -->
+		<!-- You can receive items after $s1. There are $s2 levels. All basic stats +$s3, Vitality Consumption Rate -$s4. Note! A reward for Red Nosed Rudolph and items can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.rudolph_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -423,7 +423,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="32533" toLevel="24" name="Super Lucky Dog Lv. 1">
-		<!-- Because of Golden Dog's power Vitality Consumption Rate -$s1. You can receive items after $s2. There are $s3 level. Note!. A reward for Super Lucky Dog Buff and items can't be obtained if your character is dead or has no free slots in the inventory. -->
+		<!-- Because of Golden Dog's power Vitality Consumption Rate -$s1. You can receive items after $s2. There are $s3 level. Note! A reward for Super Lucky Dog Buff and items can't be obtained if your character is dead or has no free slots in the inventory. -->
 		<icon>icon.christmas_card_box2</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -812,7 +812,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32558" toLevel="2" name="Darkness Fear">
-		<!-- Inflicts Fear on nearby enemies for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on nearby enemies for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1169</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

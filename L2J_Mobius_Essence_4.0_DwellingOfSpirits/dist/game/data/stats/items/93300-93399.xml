@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="93300" name="Einhasad�s Pendant Lv. 5" type="Armor">
-		<!-- <Invocation>\nIncreases Speed and recovers HP/ MP for 15 sec.\n\n<Einhasad's Pendant>\nM. Def. +45Acquired XP/ SP +35%\nReceived Damage -25%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Critical Damage +10%\nM. Skill Critical Damage +10%\nP. Atk. +15%\nM. Atk. +15%\n -->
+		<!-- <Invocation>. Increases Speed and recovers HP/ MP for 15 sec. <Einhasad's Pendant>. M. Def. +45. Acquired XP/ SP +35%. Received damage -25%. Atk. Spd. +10%. Casting Spd. +10%. P. Critical Damage +10%. M. Skill Critical Damage +10%. P. Atk. +15%. M. Atk. +15% -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -45,7 +45,7 @@
 		</skills>
 	</item>
 	<item id="93302" name="Scroll: Enchant Cloak of Protection" type="EtcItem">
-		<!-- Required to enchant Cloak of Protection. The maximum enchant value is +10. -->
+		<!-- Required for enchanting Cloak of Protection. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.etc_kalie_hero_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -60,7 +60,7 @@
 		</skills>
 	</item>
 	<item id="93303" name="Package: Cloak of Protection" type="EtcItem">
-		<!-- Double-click to obtain Cloak of Protection and 10 Scrolls: Enchant Cloak of Protection.\n\nDepending on its enchant value, Max HP/ MP, acquired XP/ SP, P./ M. Def., Bow Resistance and all Critical Damage are increased, received P. Critical Rate and received P. Critical Damage are decreased. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -76,7 +76,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93304" name="Package: Einhasad's Pendant Lv. 1" type="EtcItem">
-		<!-- Double-click to obtain Einhasad's Pendant Lv. 1.\n\nDepending on the enchant value (increased through compounding), P./ M. Def., Acquired XP/ SP, Atk. Spd./ Casting Spd., P./ M. Critical Damage, P./ M. Atk. are increased, and Received Damage is decreased. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -87,7 +87,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93305" name="Package: Einhasad's Pendant Lv. 2" type="EtcItem">
-		<!-- Double-click to obtain 2 Einhasad's Pendants Lv. 2.\n\nDepending on the enchant value (increased through compounding), P./ M. Def., Acquired XP/ SP, Atk. Spd./ Casting Spd., P./ M. Critical Damage, P./ M. Atk. are increased, and Received Damage is decreased. -->
+		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -98,7 +98,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93306" name="Package: Einhasad's Pendant Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain 2 Einhasad's Pendants Lv. 3.\n\nDepending on the enchant value (increased through compounding), P./ M. Def., Acquired XP/ SP, Atk. Spd./ Casting Spd., P./ M. Critical Damage, P./ M. Atk. are increased, and Received Damage is decreased. -->
+		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -109,7 +109,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93307" name="Package: Einhasad's Pendant Lv. 4" type="EtcItem">
-		<!-- Double-click to obtain 2 Einhasad's Pendants Lv. 4.\n\nDepending on the enchant value (increased through compounding), P./ M. Def., Acquired XP/ SP, Atk. Spd./ Casting Spd., P./ M. Critical Damage, P./ M. Atk. are increased, and Received Damage is decreased. -->
+		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -120,7 +120,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93308" name="Package: Einhasad's Pendant Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain 2 Einhasad's Pendants Lv. 5.\n\nDepending on the enchant value, P./ M. Atk., P./ M. Def., Acquired XP/ SP, Atk. Spd./ Casting Spd., P./ M. Critical Damage are increased, and Received Damage is decreased. -->
+		<!-- Double-click to obtain the specified item. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -131,7 +131,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93309" name="Piglet-Bank Lv.1" type="EtcItem">
-		<!-- A common money-box that looks like a piglet. Double-click to obtain various items, including Talisman of Speed, Charging Stone of Random Craft -1 charge. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_piggy_bank" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -142,7 +142,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93310" name="Piglet-Bank Lv.2" type="EtcItem">
-		<!-- A special money-box that looks like a piglet. DDouble-click to obtain various items, including Talisman of Speed, Charging Stone of Random Craft -1 charge. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_piggy_bank" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -153,7 +153,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93311" name="Piglet-Bank Lv.3" type="EtcItem">
-		<!-- A special money-box that looks like a piglet. Double-click to obtain various items, including Talisman of Speed, Charging Stone of Random Craft -1 charge, Cloth Piece. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_piggy_bank" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -164,7 +164,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93312" name="Piglet-Bank Lv.4" type="EtcItem">
-		<!-- A hardly won money-box that looks like a piglet. Double-click to obtain various items, including Talisman of Speed, Charging Stone of Random Craft -1 charge, Cloth Piece. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_piggy_bank" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -175,7 +175,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93313" name="Piglet-Bank Lv.5" type="EtcItem">
-		<!-- A treasured money-box that looks like a piglet. Double-click to obtain various items, including Ziggo's Jewel, Talisman of Speed, Primeval Isle's Time Stone. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_piggy_bank" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -186,7 +186,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93314" name="Golden Pig's Leaf" type="EtcItem">
-		<!-- A leaf stuck to Golden Pig�s smooth skin. It looks like you would get quite a large sum by selling it at a shop. -->
+		<!-- A leaf stuck to Golden Pig s smooth skin. It looks like you would get quite a large sum by selling it at a shop. -->
 		<set name="icon" val="icon.etc_leaf_gold_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -194,7 +194,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93315" name="Leather Armor of Lightning" type="Armor">
-		<!-- <Properties>\nSTR +1\nDEX +1\nOverweight limit +1500\nM. Def. +15\nMax HP +80\nMax MP +40\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. STR +1. DEX +1. Overweight limit +1500. M. Def. +15. Max HP +80. Max MP +40. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -224,7 +224,7 @@
 		</skills>
 	</item>
 	<item id="93316" name="Leather Leggings of Lightning" type="Armor">
-		<!-- <Properties>\nDEX +1\nOverweight limit +1000\nM. Def. +10\nMax HP +80\nMax MP +40\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. DEX +1. Overweight limit +1000. M. Def. +10. Max HP +80. Max MP +40. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -254,7 +254,7 @@
 		</skills>
 	</item>
 	<item id="93317" name="Leather Armor of Lightning" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nSTR +1\nDEX +1\nOverweight limit +1500\nM. Def. +15\nMax HP +80\nMax MP +40\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. STR +1. DEX +1. Overweight limit +1500. M. Def. +15. Max HP +80. Max MP +40. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -286,7 +286,7 @@
 		</skills>
 	</item>
 	<item id="93318" name="Leather Leggings of Lightning" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nDEX +1\nOverweight limit +1000\nM. Def. +10\nMax HP +80\nMax MP +40\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. DEX +1. Overweight limit +1000. M. Def. +10. Max HP +80. Max MP +40. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t101_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -387,7 +387,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93326" name="Blessed Scroll Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 1 Blessed Scroll: Enchant A-grade Weapon and 1 Blessed Scroll: Enchant A-grade Armor. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -398,7 +398,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93327" name="Ice Crystal Armor Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain Ice Crystal Breastplate and Ice Crystal Gaiters. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -435,7 +435,7 @@
 		</skills>
 	</item>
 	<item id="93330" name="Enchant Kit: Talisman of Authority" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Authority and Scroll: Enchant Talisman of Authority (10 pcs.).\n\nDepending on enchant value of Talisman of Authority, P./ M. Atk., P./ M. Def., Max HP/ MP, P./ M. Skill Critical Damage, P./ M. Skill Power are increased. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -493,7 +493,7 @@
 		</stats>
 	</item>
 	<item id="93333" name="+3 Talisman of Authority Pack" type="EtcItem">
-		<!-- Double-click to obtain +3 Talisman of Authority. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -504,7 +504,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93334" name="+4 Talisman of Authority" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain +4 Talisman of Authority. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.sayhas_talisman_new" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -557,7 +557,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93338" name="High-grade Red Lantern" additionalName="1st place" type="EtcItem">
-		<!-- Reward for achieving the 1st place in the Big Magic Lamp event.\nXP +1,200,000,000, SP +32,400,000. -->
+		<!-- Reward for achieving the 1st place in the Big Magic Lamp event. XP +1,200,000,000, SP +32,400,000. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -567,7 +567,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93339" name="High-grade Purple Lantern" additionalName="2nd place" type="EtcItem">
-		<!-- Reward for achieving the 2nd place in the Big Magic Lamp event.\nXP +360,000,000, SP +9,720,000. -->
+		<!-- Reward for achieving the 2nd place in the Big Magic Lamp event. XP +360,000,000, SP +9,720,000. -->
 		<set name="icon" val="icon.ensoul_big_pm" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -577,7 +577,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93340" name="High-grade Blue Lantern" additionalName="3rd place" type="EtcItem">
-		<!-- Reward for achieving the 3rd place in the Big Magic Lamp event.\nXP +120,000,000, SP +3,240,000. -->
+		<!-- Reward for achieving the 3rd place in the Big Magic Lamp event. XP +120,000,000, SP +3,240,000. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -587,7 +587,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93341" name="High-grade Green Lantern" additionalName="4th place" type="EtcItem">
-		<!-- Reward for achieving the 4th place in the Big Magic Lamp event.\nXP +60,000,000, SP +1,620,000. -->
+		<!-- Reward for achieving the 4th place in the Big Magic Lamp event. XP +60,000,000, SP +1,620,000. -->
 		<set name="icon" val="icon.ensoul_big_ep" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -597,7 +597,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93342" name="High-grade Lit Red Lantern" additionalName="1st place" type="EtcItem">
-		<!-- Reward for achieving the 1st place in the Big Magic Lamp event.\nXP +1,200,000,000, SP +32,400,000.\nCannot be transferred to higher-level characters. -->
+		<!-- Reward for achieving the 1st place in the Big Magic Lamp event. XP +1,200,000,000, SP +32,400,000. Cannot be transferred to higher-level characters. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -608,7 +608,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93343" name="High-grade Lit Purple Lantern" additionalName="2nd place" type="EtcItem">
-		<!-- Reward for achieving the 2nd place in the Big Magic Lamp event.\nXP +360,000,000, SP +9,720,000.\nCannot be transferred to higher-level characters. -->
+		<!-- Reward for achieving the 2nd place in the Big Magic Lamp event. XP +360,000,000, SP +9,720,000. Cannot be transferred to higher-level characters. -->
 		<set name="icon" val="icon.ensoul_big_pm" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -619,7 +619,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93344" name="High-grade Lit Blue Lantern" additionalName="3rd place" type="EtcItem">
-		<!-- <Reward for achieving the 3rd place in the Big Magic Lamp event>\nXP +120,000,000, SP +3,240,00.\nCannot be transferred to higher-level characters. -->
+		<!-- <Reward for achieving the 3rd place in the Big Magic Lamp event>. XP +120,000,000, SP +3,240,00. Cannot be transferred to higher-level characters. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -630,7 +630,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93345" name="High-grade Lit Green Lantern" additionalName="4th place" type="EtcItem">
-		<!-- Reward for achieving the 4th place in the Big Magic Lamp event.\nXP +60,000,000, SP +1,620,000.\nCannot be transferred to higher-level characters. -->
+		<!-- Reward for achieving the 4th place in the Big Magic Lamp event. XP +60,000,000, SP +1,620,000. Cannot be transferred to higher-level characters. -->
 		<set name="icon" val="icon.ensoul_big_ep" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -696,7 +696,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="93351" name="Deton�s Request Lv. 6" type="EtcItem">
-		<!-- A request issued by Deton to eliminate monsters in the Tower of Insolence. Characters of Lv. 70+ can receive the request by double-clicking the item. -->
+		<!-- A request issued by Deton to eliminate monsters in the Tower of Insolence or Sel Mahum Base. Characters of Lv. 70+ can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.alchemy_master_scroll" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -707,7 +707,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="93352" name="Deton�s Request Lv. 7" type="EtcItem">
-		<!-- A request issued by Deton to eliminate monsters in the Tower of Insolence. Characters of Lv. 70+ can receive the request by double-clicking the item. -->
+		<!-- A request issued by Deton to eliminate monsters in the Tower of Insolence or Sel Mahum Base. Characters of Lv. 70+ can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.alchemy_master_scroll" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -784,7 +784,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93359" name="Deton's Pack Lv. 4" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Package: Deton's Request Lv. 5, Soulshot Ticket, Battle Scroll. -->
+		<!-- Double-click to obtain one of the following items: Package: Deton's Request Lv. 5, Soulshot Ticket, Scroll: Boost Attack. -->
 		<set name="icon" val="icon.bm2018_transform_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -806,7 +806,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93361" name="Deton's Pack Lv. 6" type="EtcItem">
-		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 7, Talisman of Baium, Boss Weapon Pack, Orc King's Treasure. -->
+		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 7, Talisman of Baium, Boss' Weapon Pack, Orc King's Treasure. -->
 		<set name="icon" val="icon.bm2018_transform_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -817,7 +817,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93362" name="Deton's Pack Lv. 7" type="EtcItem">
-		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 8, Talisman of Baium, Boss Weapon Pack, Orc King's Treasure. -->
+		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 8, Talisman of Baium, Boss' Weapon Pack, Orc King's Treasure. -->
 		<set name="icon" val="icon.bm2018_transform_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -828,7 +828,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93363" name="Deton's Pack Lv. 8" type="EtcItem">
-		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 9, Talisman of Baium, Boss Weapon Pack, Orc King's Treasure. -->
+		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 9, Talisman of Baium, Boss' Weapon Pack, Orc King's Treasure. -->
 		<set name="icon" val="icon.bm2018_transform_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -839,7 +839,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93364" name="Deton�s Pack Lv. 9" type="EtcItem">
-		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 10, Talisman of Baium, Boss Weapon Pack, Orc King's Treasure. -->
+		<!-- Double-click to obtain one of many items, including Package: Deton's Request Lv. 10, Talisman of Baium, Boss' Weapon Pack, Orc King's Treasure. -->
 		<set name="icon" val="icon.bm2018_transform_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -850,7 +850,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93365" name="Deton�s Pack Lv. 10" type="EtcItem">
-		<!-- Double-click to obtain one of many items, including Talisman of Baium, Boss Weapon Pack, Orc King's Treasure. -->
+		<!-- Double-click to obtain one of many items, including Talisman of Baium, Boss' Weapon Pack, Orc King's Treasure. -->
 		<set name="icon" val="icon.bm2018_transform_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -903,7 +903,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93370" name="Einhasad's Blessing Scroll - Event" type="EtcItem">
-		<!-- Acquired XP/ SP +50% for 20 min. Cooldown: 1 min. The effect remains after death.\n\nNote!\nWhen used with Einhasad's Protection, Dandy's Home Run Ball, or Dandy's Golden Ball, the most powerful effect is active. -->
+		<!-- Applies a buff when used. <Buff effect>. Acquired XP +50%. Acquired SP +50%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When used with Einhasad's Protection, Dandy's Home Run Ball, Dandy's Golden Ball, the most powerful effect is active.)</font> -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -946,7 +946,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93374" name="Cloak of Protection Kit" type="EtcItem">
-		<!-- Double-click to obtain Cloak of Protection (10 pcs.).\n\nDepending on its enchant value, Max HP/ MP, acquired XP/ SP, P./ M. Def., Bow Resistance and all Critical Damage are increased, received P. Critical Rate and received P. Critical Damage are decreased. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -957,7 +957,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93375" name="Agathion Ignis Kit" type="EtcItem">
-		<!-- Double-click to obtain Agathion Ignis (10 pcs.).\n\nWhen the agathion is equipped, increases P./ M. Atk. When enchanted to +5 and higher, increases Hold/ Sleep/ Paralysis Atk. Rate. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -968,7 +968,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93376" name="Agathion Nebula Kit" type="EtcItem">
-		<!-- Double-click to obtain Agathion Nebula (10 pcs.).\n\nWhen the agathion is equipped, increases all Critical Rate. When enchanted to +5 and higher, decreases Skill Cooldown. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -979,7 +979,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93377" name="Agathion Procella Kit" type="EtcItem">
-		<!-- Double-click to obtain Agathion Procella (10 pcs.).\n\nWhen the agathion is equipped, Atk. Spd./ Casting Spd. is increased. When enchanted to +5 and higher, decreases Skill MP consumption. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -990,7 +990,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93378" name="Agathion Petram Kit" type="EtcItem">
-		<!-- Double-click to obtain Agathion Petram (10 pcs.).\n\nWhen the agathion is equipped, increases P./ M. Def. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1001,7 +1001,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93379" name="Agathion Joy Kit" type="EtcItem">
-		<!-- Double-click to obtain Agathion Joy (10 pcs.).\n\nWhen the agathion is equipped, the acquired XP/ SP bonus from Sayha's Grace is increased. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1012,7 +1012,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93380" name="Kit: 10 Dragon Belt Packs" type="EtcItem">
-		<!-- Double-click to obtain 10 Dragon Belt Packs. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1023,7 +1023,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93381" name="Enchant Kit: Talisman of Aden (10 pcs.)" type="EtcItem">
-		<!-- Double-click to obtain 10 Enchant Kits: Talisman of Aden. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1034,7 +1034,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93382" name="Enchant Kit: Talisman of Eva (10 pcs.)" type="EtcItem">
-		<!-- Double-click to obtain 10 Enchant Kits: Talisman of Eva. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_pirate_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1045,7 +1045,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93383" name="Spellbook: Mount Night Mare" type="EtcItem">
-		<!-- A spellbook for learning the Mount Night Mare skill. Required level: 76 (after the 3rd class change).\n\n<Class>\nDeath Knight (all races)\n\n<Skill effect>\nAllows to mount Night Mare. -->
+		<!-- A spellbook for learning the Mount Night Mare skill. Required level: 76 (after the 3rd class change). <Class>. Death Knight (all races). <Skill effect>. Allows to mount Night Mare. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1057,70 +1057,70 @@
 		</cond>
 	</item>
 	<item id="93384" name="Spellbook: Burning Field" type="EtcItem">
-		<!-- A spellbook for learning the Burning Field skill.\n\n<Class>\nDeath Knight (Human)\n\n<Skill effect>\nFlames cover a certain area. The amount of inflicted damage depends on character's P. Atk. -->
+		<!-- A spellbook for learning the Burning Field skill. <Class>. Death Knight (Human). <Skill effect>. Flames cover a certain area. The amount of inflicted damage depends on character's P. Atk. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93385" name="Spellbook: Frozen Field" type="EtcItem">
-		<!-- A spellbook for learning the Frozen Field skill.\n\n<Class>\nDeath Knight (Elf)\n\n<Skill effect>\nA cone of frost damages a certain area and freezes the enemies. The amount of inflicted damage depends on character's P. Atk. -->
+		<!-- A spellbook for learning the Frozen Field skill. <Class>. Death Knight (Elf). <Skill effect>. A cone of frost damages a certain area and freezes the enemies. The amount of inflicted damage depends on character's P. Atk. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93386" name="Spellbook: Lightning Storm" type="EtcItem">
-		<!-- A spellbook for learning the Lightning Storm skill.\n\n<Class>\nDeath Knight (Dark Elf)\n\n<Skill effect>\nA lightning storm damages a certain area. The amount of inflicted damage depends on character's P. Atk. -->
+		<!-- A spellbook for learning the Lightning Storm skill. <Class>. Death Knight (Dark Elf). <Skill effect>. A lightning storm damages a certain area. The amount of inflicted damage depends on character's P. Atk. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93387" name="Spellbook: Ultimate Death Knight Transformation" type="EtcItem">
-		<!-- A spellbook for learning the Ultimate Death Knight Transformation skill.\n\n<Class>\nDeath Knight (all races)\n\n<Skill effect>\nTransforms into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers. Increases P. Atk., P. Critical Damage, P. Skill Critical Damage, Atk. Spd., and Speed. -->
+		<!-- A spellbook for learning the Ultimate Death Knight Transformation skill. <Class>. Death Knight (all races). <Skill effect>. Transforms into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers. Increases P. Atk., P. Critical Damage, P. Skill Critical Damage, Atk. Spd., and Speed. -->
 		<set name="icon" val="icon.unique_skill_book01" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93388" name="Spellbook: Death Guard" type="EtcItem">
-		<!-- A spellbook for learning the Death Guard skill.\n\n<Class>\nDeath Knight (all races)\n\n<Skill effect>\nBlocks all frontal ranged attacks. -->
+		<!-- A spellbook for learning the Death Guard skill. <Class>. Death Knight (all races). <Skill effect>. Blocks all frontal ranged attacks. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93389" name="Spellbook: Call of Flame" type="EtcItem">
-		<!-- A spellbook for learning the Call of Flame skill.\n\n<Class>\nDeath Messenger (Human)\n\n<Skill effect>\nThe sword is set aflame.\nWith a certain chance, inflicts the effect that decreases enemy's HP and P./ M. Def. after an attack. -->
+		<!-- A spellbook for learning the Call of Flame skill. <Class>. Death Messenger (Human). <Skill effect>. The sword is set aflame. With a certain chance, inflicts the effect that decreases enemy's HP and P./ M. Def. after an attack. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93390" name="Spellbook: Call of Frost" type="EtcItem">
-		<!-- A spellbook for learning the Call of Frost skill.\n\n<Class>\nDeath Messenger (Elf)\n\n<Skill effect>\nThe sword is imbued with the frost energy. With a certain chance, inflicts the effect that decreases enemy's Atk. Spd., Casting Spd. and Speed after an attack. -->
+		<!-- A spellbook for learning the Call of Frost skill. <Class>. Death Messenger (Elf). <Skill effect>. The sword is imbued with the frost energy. With a certain chance, inflicts the effect that decreases enemy's Atk. Spd., Casting Spd. and Speed after an attack. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93391" name="Spellbook: Call of Lightning" type="EtcItem">
-		<!-- A spellbook for learning the Call of Lightning skill.\n\n<Class>\nDeath Messenger (Dark Elf)\n\n<Skill effect>\nThe sword is imbued with the lightning energy. With a certain chance, inflicts the effect that temporarily makes the enemy unable to attack. -->
+		<!-- A spellbook for learning the Call of Lightning skill. <Class>. Death Messenger (Dark Elf). <Skill effect>. The sword is imbued with the lightning energy. With a certain chance, inflicts the effect that temporarily makes the enemy unable to attack. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93392" name="Spellbook: Bone Cage" type="EtcItem">
-		<!-- A spellbook for learning the Bone Cage skill.\n\n<Class>\nDeath Messenger (all races)\n\n<Skill effect>\nPuts the enemy into the bone cage. The imprisoned enemies cannot be attacked as well as they cannot move, attack, teleport, target, use skills, recover HP/ CP/ MP. An additional effect depends from the character's race. -->
+		<!-- A spellbook for learning the Bone Cage skill. <Class>. Death Messenger (all races). <Skill effect>. Puts the enemy into the bone cage. The imprisoned enemies cannot be attacked as well as they cannot move, attack, teleport, target, use skills, recover HP/ CP/ MP. An additional effect depends on the character's race. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93393" name="Kit: 10 Reinforced Jewel Boxes" type="EtcItem">
-		<!-- Double-click to obtain 10 Reinforced Jewel Boxes. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_2018_jewelbox_random" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1149,7 +1149,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93396" name="Package: Deton's Request Lv. 1" type="EtcItem">
-		<!-- Double-click to obtain Deton�s Request Lv. 1. -->
+		<!-- Double-click to obtain Deton s Request Lv. 1. -->
 		<set name="icon" val="icon.alchemy_master_scroll" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1158,7 +1158,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93397" name="Package: Deton's Request Lv. 2" type="EtcItem">
-		<!-- Double-click to obtain Deton�s Request Lv. 2. -->
+		<!-- Double-click to obtain Deton s Request Lv. 2. -->
 		<set name="icon" val="icon.alchemy_master_scroll" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1167,7 +1167,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93398" name="Package: Deton's Request Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain Deton�s Request Lv. 3. -->
+		<!-- Double-click to obtain Deton s Request Lv. 3. -->
 		<set name="icon" val="icon.alchemy_master_scroll" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1176,7 +1176,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93399" name="Package: Deton's Request Lv. 4" type="EtcItem">
-		<!-- Double-click to obtain Deton�s Request Lv. 4. -->
+		<!-- Double-click to obtain Deton s Request Lv. 4. -->
 		<set name="icon" val="icon.alchemy_master_scroll" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

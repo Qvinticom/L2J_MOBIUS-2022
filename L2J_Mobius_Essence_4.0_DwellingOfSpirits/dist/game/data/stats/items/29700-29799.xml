@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="29700" name="Minor Blessed Scroll of Resurrection" additionalName="Event" type="EtcItem">
-		<!-- Magic Scroll resurrecting a character and restoring most part of XP. -->
+		<!-- Magic scroll that resurrects a dead party member and restores most of his or her XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29701" name="Rare Accessory Box" additionalName="for me" type="EtcItem">
-		<!-- Double-click on the item to receive: Queen Ant's Ring (30-day), Orfen's Earring (30-day), Ring of Core (30-day). -->
+		<!-- Double-click to obtain one of the following items: Queen Ant's Ring Lv. 1 (30-day), Orfen's Earring Lv. 1 (30-day), Ring of Core Lv. 1 (30-day). -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="FISH" />
@@ -24,7 +24,7 @@
 		</skills>
 	</item>
 	<item id="29702" name="Chant of Vampire Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain an Amulet: Chant of Vampire. -->
+		<!-- Double-click to obtain Amulet: Chant of Vampire. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -35,7 +35,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29703" name="Body of Avatar Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain a Spellbook: Body of Avatar. -->
+		<!-- Double-click to obtain Spellbook: Body of Avatar. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -46,7 +46,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29704" name="Fire Dragon Pendant" additionalName="Lvl 1" type="Armor">
-		<!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Fire Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -71,7 +71,7 @@
 		</stats>
 	</item>
 	<item id="29705" name="Fire Dragon Pendant" additionalName="Lvl 2" type="Armor">
-		<!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Fire Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -96,7 +96,7 @@
 		</stats>
 	</item>
 	<item id="29706" name="Fire Dragon Pendant" additionalName="Lvl 3" type="Armor">
-		<!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Fire Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -121,7 +121,7 @@
 		</stats>
 	</item>
 	<item id="29707" name="Fire Dragon Pendant" additionalName="Lvl 4" type="Armor">
-		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Fire Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -148,7 +148,7 @@
 		</stats>
 	</item>
 	<item id="29708" name="Fire Dragon Pendant" additionalName="Lvl 5" type="Armor">
-		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Fire Dragon's energy. Can be enchanted to +10 with Pendant Polish/ Shining Pendant Polish. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -175,7 +175,7 @@
 		</stats>
 	</item>
 	<item id="29709" name="Water Dragon Pendant" additionalName="Lvl 1" type="Armor">
-		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Water Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -200,7 +200,7 @@
 		</stats>
 	</item>
 	<item id="29710" name="Water Dragon Pendant" additionalName="Lvl 2" type="Armor">
-		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Water Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -225,7 +225,7 @@
 		</stats>
 	</item>
 	<item id="29711" name="Water Dragon Pendant" additionalName="Lvl 3" type="Armor">
-		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Water Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -250,7 +250,7 @@
 		</stats>
 	</item>
 	<item id="29712" name="Water Dragon Pendant" additionalName="Lvl 4" type="Armor">
-		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Water Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -277,7 +277,7 @@
 		</stats>
 	</item>
 	<item id="29713" name="Water Dragon Pendant" additionalName="Lvl 5" type="Armor">
-		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Water Dragon's energy. Can be enchanted to +10 with Pendant Polish/ Shining Pendant Polish. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -304,7 +304,7 @@
 		</stats>
 	</item>
 	<item id="29714" name="Wind Dragon Pendant" additionalName="Lvl 1" type="Armor">
-		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Wind Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -329,7 +329,7 @@
 		</stats>
 	</item>
 	<item id="29715" name="Wind Dragon Pendant" additionalName="Lvl 2" type="Armor">
-		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Wind Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -354,7 +354,7 @@
 		</stats>
 	</item>
 	<item id="29716" name="Wind Dragon Pendant" additionalName="Lvl 3" type="Armor">
-		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Wind Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -379,7 +379,7 @@
 		</stats>
 	</item>
 	<item id="29717" name="Wind Dragon Pendant" additionalName="Lvl 4" type="Armor">
-		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Wind Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -406,7 +406,7 @@
 		</stats>
 	</item>
 	<item id="29718" name="Wind Dragon Pendant" additionalName="Lvl 5" type="Armor">
-		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Wind Dragon's energy. Can be enchanted to +10 with Pendant Polish/ Shining Pendant Polish. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -433,7 +433,7 @@
 		</stats>
 	</item>
 	<item id="29719" name="Land Dragon Pendant" additionalName="Lvl 1" type="Armor">
-		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Earth Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -458,7 +458,7 @@
 		</stats>
 	</item>
 	<item id="29720" name="Land Dragon Pendant" additionalName="Lvl 2" type="Armor">
-		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Earth Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -483,7 +483,7 @@
 		</stats>
 	</item>
 	<item id="29721" name="Land Dragon Pendant" additionalName="Lvl 3" type="Armor">
-		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Earth Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -508,7 +508,7 @@
 		</stats>
 	</item>
 	<item id="29722" name="Land Dragon Pendant" additionalName="Lvl 4" type="Armor">
-		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Earth Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Game Assistant to add new effects. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -535,7 +535,7 @@
 		</stats>
 	</item>
 	<item id="29723" name="Land Dragon Pendant" additionalName="Lvl 5" type="Armor">
-		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
+		<!-- A pendant that contains the Earth Dragon's energy. Can be enchanted to +10 with Pendant Polish/ Shining Pendant Polish. The number of effects is increased by the enchanting. The enchanting is safe up to +1, after that in case of failure, the item disappears. Note!. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -562,7 +562,7 @@
 		</stats>
 	</item>
 	<item id="29724" name="Fire Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Fire Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
+		<!-- Double-click to obtain 1 Fire Dragon Pendant Lv. 1 and Pendant Polish (10 pcs). -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -571,12 +571,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29704" min="1" max="1" chance="100" /> <!-- Fire Dragon Pendant - Lv. 1 -->
+			<item id="29704" min="1" max="1" chance="100" /> <!-- Fire Dragon Pendant - Not available -->
 			<item id="49469" min="10" max="10" chance="100" /> <!-- Pendant Polish -->
 		</capsuled_items>
 	</item>
 	<item id="29725" name="Water Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Water Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
+		<!-- Double-click to obtain 1 Water Dragon Pendant Lv. 1 and Pendant Polish (10 pcs). -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -585,7 +585,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29726" name="Wind Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Wind Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
+		<!-- Double-click to obtain 1 Wind Dragon Pendant Lv. 1 and Pendant Polish (10 pcs). -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -594,7 +594,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29727" name="Land Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Land Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
+		<!-- Double-click to obtain 1 Earth Dragon Pendant Lv. 1 and Pendant Polish (10 pcs). -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -603,7 +603,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29728" name="Special Fire Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain Fire Dragon Pendant Chest (10 pcs). -->
+		<!-- Double-click to obtain 10 Fire Dragon Pendant Chests. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -612,11 +612,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29724" min="10" max="10" chance="100" /> <!-- Fire Dragon Pendant Chest -->
+			<item id="29724" min="10" max="10" chance="100" /> <!-- Fire Dragon Pendant Pack - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="29729" name="Special Water Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain Water Dragon Pendant Chest (10 pcs). -->
+		<!-- Double-click to obtain 10 Water Dragon Pendant Chests. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -625,7 +625,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29730" name="Special Wind Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Wind Dragon Pendant Chest (10 pcs). -->
+		<!-- Double-click to obtain 10 Wind Dragon Pendant Chests. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -634,7 +634,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29731" name="Special Land Dragon Pendant Chest" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Land Dragon Pendant Chest (10 pcs). -->
+		<!-- Double-click to obtain 10 Earth Dragon Pendant Packs. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -643,7 +643,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29732" name="Package: Shiny Pendant Polish for Fire Dragon Pendant" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Fire Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
+		<!-- Double-click to obtain 30 Fire Dragon Pendant Chests and a Shining Pendant Polish. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -652,12 +652,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29724" min="30" max="30" chance="100" /> <!-- Fire Dragon Pendant Chest -->
-			<item id="90138" min="1" max="1" chance="100" /> <!-- Pendant Glittering Varnish -->
+			<item id="29724" min="30" max="30" chance="100" /> <!-- Fire Dragon Pendant Pack - Not available -->
+			<item id="90138" min="1" max="1" chance="100" /> <!-- Glittering Pendant Polish -->
 		</capsuled_items>
 	</item>
 	<item id="29733" name="Package: Shiny Pendant Polish for Water Dragon Pendant" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Water Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
+		<!-- Double-click to obtain 30 Water Dragon Pendant Chests and a Shining Pendant Polish. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -666,7 +666,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29734" name="Package: Shiny Pendant Polish for Wind Dragon Pendant" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Wind Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
+		<!-- Double-click to obtain 30 Wind Dragon Pendant Chests and a Shining Pendant Polish. -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -675,7 +675,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29735" name="Package: Shiny Pendant Polish for Land Dragon Pendant" type="EtcItem">
-		<!-- Double-click on the Chest to obtain 1 Land Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
+		<!-- Double-click to obtain 30 Earth Dragon Pendant Packs and Shining Pendant Polish (1 pc.). -->
 		<set name="icon" val="BranchIcon.Icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -720,7 +720,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29740" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. Enchanting is safe up to +3. -->
+		<!-- For B-grade weapons. P. Atk. +4 for one-handed swords/ blunts, daggers, spears. P. Atk. +5 for two-handed swords/ blunts, fists, dual swords. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting from +4, P./ M. Atk. bonus is doubled. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29741" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +4. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29742" name="Blessed Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- P. Atk. +4 for B-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. +5 for two-handed sword, two-handed blunt, dual sword, and two-handed fist weapon. P. Atk. 8 for bow weapons. M. Atk. 3 for all weapons. Starting at +4, P. Atk./M. Atk. +double. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- For B-grade weapons. P. Atk. +4 for one-handed swords/ blunts, daggers and spears. P. Atk. +5 for two-handed swords/ blunts, dual swords, and fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. When enchanted to +4 and higher, P./ M. Atk. bonus is doubled. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -744,7 +744,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29743" name="Blessed Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- For B-grade armor and accessories. P. Def. +1. Starting from +4, P. Def. +3, Max HP is increased with each enchant value. The enchanting is safe up to +4. In case of failure the item does not disappear, but its enchant value is reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -760,7 +760,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29745" name="Premium Coin" type="EtcItem">
-		<!-- This coin is given as a bonus when buying items during an event. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- A coin given as a bonus for buying event items. Can be exchanged for various items by the Game Assistant. -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_premium_coin_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
@@ -770,7 +770,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29746" name="Mysterious Soulshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
+		<!-- Increases a weapon's physical power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.bm_spirit_bullet_red" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="29747" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.bm_spell_shot_red" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -800,7 +800,7 @@
 		</skills>
 	</item>
 	<item id="29748" name="Package: Mysterious Soulshot (C-grade, 100 pcs.)" type="EtcItem">
-		<!-- Double-click on the item to receive 100 Mysterious Soulshots (B-grade). -->
+		<!-- Double-click to obtain 100 Mysterious B-grade Soulshots. Take them to the Game Assistant to exchange for new Soulshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_pack_of_soulshot_b_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -809,11 +809,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29746" min="100" max="100" chance="100" /> <!-- Mysterious Soulshot (B-grade) -->
+			<item id="29746" min="100" max="100" chance="100" /> <!-- Mysterious B-grade Soulshot - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="29749" name="Package: Mysterious Blessed Spiritshot (D-grade, 100 pcs)" type="EtcItem">
-		<!-- Double-click on the item to receive 100 Mysterious Blessed Spiritshot (B-grade). -->
+		<!-- Double-click to obtain 100 Blessed B-grade Spiritshots. Take them to the Game Assistant to exchange for new Spiritshots. -->
 		<set name="icon" val="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -822,11 +822,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29747" min="100" max="100" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -->
+			<item id="29747" min="100" max="100" chance="100" /> <!-- Mysterious Blessed B-grade Spiritshot - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="29750" name="Sniper's Mysterious Package (B-grade)" type="EtcItem">
-		<!-- Double-click the item to receive Mysterious Soulshot (B-grade, 3000 pcs.), Scroll of Experience/ SP - Normal (30%, 12 pcs.), 2nd Class Transfer Effect Scroll (12 pcs.) Cannot be exchanged, dropped, or sold. -->
+		<!-- Double-click to obtain 3000 Soulshots, 12 XP/ SP Scrolls (30%), and 12 2nd Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -838,13 +838,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29746" min="3000" max="3000" chance="100" /> <!-- Mysterious Soulshot (B-grade) -->
-			<item id="29648" min="12" max="12" chance="100" /> <!-- XP/SP Scroll - Normal -->
-			<item id="29012" min="15" max="15" chance="100" /> <!-- 2nd Class Buff Scroll -->
+			<item id="29746" min="3000" max="3000" chance="100" /> <!-- Mysterious B-grade Soulshot - Not available -->
+			<item id="29648" min="12" max="12" chance="100" /> <!-- XP/SP Scroll - Normal - Not available -->
+			<item id="29012" min="15" max="15" chance="100" /> <!-- 2nd Class Buff Scroll - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="29751" name="Mystic's Mysterious Package (B-grade)" type="EtcItem">
-		<!-- Double-click the item to receive Mysterious Spiritshot (B-grade, 1000 pcs.), Scroll of Experience/ SP - Normal (30%, 12 pcs.), 2nd Class Transfer Effect Scroll (12 pcs.) Cannot be exchanged, dropped, or sold in a private store. -->
+		<!-- Double-click to obtain 1000 Blessed Spiritshots, 12 XP/ SP Scrolls (30%), and 12 2nd Class Buff Scrolls. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -856,13 +856,13 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29747" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -->
-			<item id="29648" min="12" max="12" chance="100" /> <!-- XP/SP Scroll - Normal -->
-			<item id="29012" min="15" max="15" chance="100" /> <!-- 2nd Class Buff Scroll -->
+			<item id="29747" min="1000" max="1000" chance="100" /> <!-- Mysterious Blessed B-grade Spiritshot - Not available -->
+			<item id="29648" min="12" max="12" chance="100" /> <!-- XP/SP Scroll - Normal - Not available -->
+			<item id="29012" min="15" max="15" chance="100" /> <!-- 2nd Class Buff Scroll - Not available -->
 		</capsuled_items>
 	</item>
 	<item id="29752" name="Halloween Suit" type="Armor">
-		<!-- If equipped, cannot wear armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Weapons and Magic Equipment will not be removed. Hair Accessory will not be removed, but will not display. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- When equipped, it is impossible to wear armor. Weapons and accessories are not removed. Hair accessories are not unequipped, but are invisible. -->
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

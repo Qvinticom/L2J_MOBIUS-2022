@@ -151,7 +151,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91908" name="+12 Weapon Pack (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a +12 S-grade weapon. -->
+		<!-- Double-click to obtain an S-grade weapon enchanted to +12. -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -161,7 +161,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91909" name="Wind Treasure Chest" type="EtcItem">
-		<!-- Double-click to obtain a +16 Weapon Pack (B-grade), a Spirit Evolution Stone, a Weapon/ Armor Pack (B/ C-grade), Dragon Scroll or another rare item. -->
+		<!-- Double-click to obtain a +16 B-grade Weapon Pack, a Spirit Evolution Stone, a B/ C-grade Weapon/ Armor Pack, Battle Scroll or another rare item. -->
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -172,7 +172,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91910" name="Sayha's Blessing" additionalName="Event" type="EtcItem">
-		<!-- Sayha's Grace points +35,000. Required level: 1-75. -->
+		<!-- Required level: 1-75. Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -190,7 +190,7 @@
 		</skills>
 	</item>
 	<item id="91911" name="Sayha's Effect Scroll" additionalName="Event" type="EtcItem">
-		<!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
+		<!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note!. The Battle Scroll effects don't stack. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -201,7 +201,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="91912" name="HP Potion" type="EtcItem">
-		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
+		<!-- Momentarily recovers 50 HP. If HP is full, CP is restored. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -218,7 +218,7 @@
 		</skills>
 	</item>
 	<item id="91913" name="Aden Spellbook Chest" type="EtcItem">
-		<!-- Double-click to obtain a spellbook for learning skills (for all races, except Orcs). <Spellbook List>. Spellbook: Empower, Spellbook: Focus, Spellbook: Wild Magic, Spellbook: Haste, Spellbook: Acumen, Spellbook: Death Whisper, Spellbook: Clarity, Spellbook: Berserker Spirit. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -229,7 +229,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91914" name="Aden Amulet Chest" type="EtcItem">
-		<!-- Double-click to obtain an amulet for learning Orc skills. <Amulet List>. Amulet: Chant of Focus, Amulet: Chant of Wild Magic, Amulet: Chant of Empower, Amulet: Chant of Acumen, Amulet: Chant of Haste, Amulet: Chant of Clarity, Amulet: Chant of Death Whisper, Amulet: Chant of Berserker Spirit. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91915" name="Enhanced Ancient Warrior's Sword" type="Weapon">
-		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
+		<!-- Cannot be enchanted/ augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -263,7 +263,7 @@
 		</stats>
 	</item>
 	<item id="91916" name="Enhanced Warrior's Rapier" type="Weapon">
-		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
+		<!-- Cannot be enchanted/ augmented, Soul Crystals cannot be inserted. -->
 		<set name="icon" val="icon.weapon_sealed_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -299,11 +299,11 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50152" level="1" />
+			<skill id="50152" level="1" /> <!-- Scroll of Escape: Effective Training -->
 		</skills>
 	</item>
 	<item id="91918" name="Scroll of Escape: Captain Bathis" type="EtcItem">
-		<!-- Teleports to Captain Bathis in Gludio Castle. -->
+		<!-- Teleports to Captain Bathis in Giran Castle. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -318,11 +318,11 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50154" level="1" />
+			<skill id="50154" level="1" /> <!-- Scroll of Escape: Captain Bathis -->
 		</skills>
 	</item>
 	<item id="91919" name="Scroll of Escape: Captain Bathis" type="EtcItem">
-		<!-- Teleports to Captain Bathis in Gludio Castle. -->
+		<!-- Teleports to Captain Bathis in Giran Castle. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -337,53 +337,53 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="51386" level="1" />
+			<skill id="51386" level="1" /> <!-- Scroll of Escape: Captain Bathis -->
 		</skills>
 	</item>
 	<item id="91920" name="Scroll: Magic Break" type="EtcItem">
-		<!-- Scroll needed to learn Magic Break. -->
+		<!-- A scroll for learning the Magic Break skill. <Class>. Doombringer. <Skill effect>. Decreases enemy's M. Atk. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91921" name="Scroll: Disarm" type="EtcItem">
-		<!-- Scroll needed to learn Disarm. -->
+		<!-- A scroll for learning the Disarm skill. <Class>. Doombringer. <Skill effect>. Disarms enemy. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91922" name="Scroll: Lightning Barrier" type="EtcItem">
-		<!-- Scroll needed to learn Lightning Barrier. -->
+		<!-- A scroll for learning the Lightning Barrier skill. <Class>. Soul Hound. <Skill effect>. Creates a lightning shield. Paralyzes an attacking enemy. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91923" name="Scroll: Lightning" type="EtcItem">
-		<!-- Scroll needed to learn Lightning. -->
+		<!-- A scroll for learning the Lightning skill. <Class>. Soul Hound. <Skill effect>. Strike enemy with lightning and paralyzes them. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91924" name="Scroll: Mental Panic" type="EtcItem">
-		<!-- Scroll needed to learn Mental Panic. -->
+		<!-- A scroll for learning the Mental Panic skill. <Class>. Trickster. <Skill effect>. Inflicts Fear on the enemy. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91925" name="Scroll: Soul Stigma" type="EtcItem">
-		<!-- Scroll needed to learn Soul Stigma. -->
+		<!-- A scroll for learning the Soul Stigma skill. <Class>. Trickster. <Skill effect>. Marks the target. Decreases target's P. Critical Damage and M. Skill Critical Damage. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91926" name="+3 Dragon Belt Chest" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain Dragon Belt +3. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -394,7 +394,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91927" name="Soulshot" type="EtcItem">
-		<!-- Increases weapon's physical power. -->
+		<!-- Increases weapon's physical power. <When used>. P. Damage +100%. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -414,7 +414,7 @@
 		</skills>
 	</item>
 	<item id="91928" name="Spiritshot" type="EtcItem">
-		<!-- Increases weapon's magic power. -->
+		<!-- Increases weapon s magic power. <When used>. M. Damage +100%. Received Healing is slightly increased. Casting Spd. +40. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -434,7 +434,7 @@
 		</skills>
 	</item>
 	<item id="91929" name="Blessed Soulshot" type="EtcItem">
-		<!-- Increases weapon's physical power. -->
+		<!-- Increases weapon's physical power. <When used>. P. Damage +130%. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_gold_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -454,7 +454,7 @@
 		</skills>
 	</item>
 	<item id="91930" name="Blessed Spiritshot" type="EtcItem">
-		<!-- Increases weapon's magic power. -->
+		<!-- Increases weapon s magic power. <When used>. M. Damage +300%. Received Healing is slightly increased. Casting Spd. +40. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +474,7 @@
 		</skills>
 	</item>
 	<item id="91931" name="Adventurer's Mark Lv. 5" type="EtcItem">
-		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP/ MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
+		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Rate +25%, MP Recovery Rate +25%. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -489,7 +489,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="51387" level="5" />
+			<skill id="51387" level="5" /> <!-- Adventurer's Mark -->
 		</skills>
 	</item>
 	<item id="91932" name="Adventurer's Brooch" type="Armor">
@@ -508,7 +508,7 @@
 		</skills>
 	</item>
 	<item id="91933" name="Adventurer's Agathion Bracelet" type="Armor">
-		<!-- Activates 1 Agathion slot. -->
+		<!-- Unlocks 1 agathion slot. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -523,7 +523,7 @@
 		</skills>
 	</item>
 	<item id="91934" name="Adventurer's Bracelet" type="Armor">
-		<!-- When equipped, opens up 1 Talisman slot. -->
+		<!-- When equipped, unlocks 1 talisman slot. -->
 		<set name="icon" val="icon.etc_rbracelet_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -540,7 +540,7 @@
 		</skills>
 	</item>
 	<item id="91935" name="Adventurer's Agathion Griffin" type="Armor">
-		<!-- Can be used to obtain the power of Agathion Griffin. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. <Unique Abilities>. P. Def. +5. -->
+		<!-- Contains the power of Agathion Griffin. Equipping it in the main slot summons the agathion. Enables its secondary skills. <Primary skill>. Increases P. Def. <Secondary skill>. P. Def. +5. -->
 		<set name="icon" val="icon.griffin_vehicle" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -571,7 +571,7 @@
 		</skills>
 	</item>
 	<item id="91937" name="Adventurer's Talisman" type="Armor">
-		<!-- M. Def. +5. The effect doesn't stack if two identical talismans are equipped. -->
+		<!-- M. Def. +5%. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -583,7 +583,7 @@
 		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91938" name="Primeval Isle's Prolongating Stone" type="EtcItem">
-		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Primeval Isle -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -592,7 +592,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91939" name="Ancient Pirates' Tomb's Prolongating Stone" type="EtcItem">
-		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Ancient Pirates' Tomb -->
 		<set name="icon" val="icon.timezone_refill_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -606,7 +606,7 @@
 		</skills>
 	</item>
 	<item id="91940" name="Heavenly Rift's Prolongating Stone" type="EtcItem">
-		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Heavenly Rift -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -626,7 +626,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91942" name="Crystal of Light" type="EtcItem">
-		<!-- Mysterious crystal that contains the light energy. Needed to learn Collect Light Souls Lv. 2. -->
+		<!-- A mysterious crystal that contains the light energy. Required for learning Collect Light Souls Lv. 2. <Classes>. All Kamael classes after the 3rd class change. <Skill effect>. Allows to obtain Light Souls. -->
 		<set name="icon" val="icon.high_energy_condense_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -634,7 +634,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91943" name="Crystal of Shadows" type="EtcItem">
-		<!-- Mysterious crystal that contains the shadow energy. Needed to learn Collect Shadow Souls Lv. 2. -->
+		<!-- A mysterious crystal that contains the dark energy. Required for learning Collect Shadow Souls Lv. 2. <Classes>. All Kamael classes after the 3rd class change. <Skill effect>. Allows to obtain Shadow Souls. -->
 		<set name="icon" val="icon.high_energy_condense_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -642,7 +642,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91944" name="Book of Light" type="EtcItem">
-		<!-- Mysterious book that contains the light energy. Needed to learn Light Master Lv. 2. -->
+		<!-- A mystery book imbued with power of light. Used to learn the Light Master Lv. 2 skill. <Classes>. Kamael after the 2nd class change. <Skill effect>. In Light Veil. P. Atk. +280. Atk. Spd. +80. Casting Spd. +120. Speed +15. P./ M. Def. +10%. P. Skill Critical Damage +200. M. Skill Critical Damage +200. Increases HP/ MP Recovery Rate. Has a certain chance to recover HP/ MP after an attack. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -650,7 +650,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91945" name="Book of Darkness" type="EtcItem">
-		<!-- Mysterious book that contains the shadow energy. Needed to learn Shadow Master Lv. 2. -->
+		<!-- A mystery book imbued with power of darkness. Used to learn the Shadow Master Lv. 2 skill. <Classes>. Kamael after the 2nd class change. <Skill effect>. In Shadow Veil. P. Atk. +500. Atk. Spd. +200. Casting Spd. +250. Speed +20. P. Skill Critical Damage +200. M. Skill Critical Damage +200. Has a certain chance to activate a powerful magic skill after an attack. Enables the ultimate skills. -->
 		<set name="icon" val="icon.giant_book_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -658,7 +658,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91946" name="Spellbook: Mount Griffin" type="EtcItem">
-		<!-- Spellbook needed to learn Mount Griffin. Required level: 76 (after the 3rd class change). -->
+		<!-- A spellbook for learning the Mount Griffin skill. Required level: 76 (after the 3rd class change). <Classes>. Kamael classes after the 3rd class change. <Skill effect>. Allows to mount Griffin. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -668,7 +668,7 @@
 		</cond>
 	</item>
 	<item id="91947" name="Admiral's Estoc +7" type="EtcItem">
-		<!-- Double-click to obtain Admiral's Estoc enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -678,7 +678,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91948" name="Saber Tooth +7" type="EtcItem">
-		<!-- Double-click to obtain Saber Tooth +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -733,7 +733,7 @@
 		</stats>
 	</item>
 	<item id="91951" name="Scroll: Enchant Talisman of Baium" type="EtcItem">
-		<!-- Required to enchant Talisman of Baium. The maximum enchant level is +10. In case of failure the item disappears. -->
+		<!-- Required to enchant Talisman of Baium. The maximum enchant value is +5. In case of failure the item disappears. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -741,7 +741,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91952" name="Ring of Insolence" type="Armor">
-		<!-- Increases Sleep Resistance. The effect doesn't stack if two identical items are equipped. -->
+		<!-- Increases Sleep Resistance. Effects of two identical items do not stack. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -786,7 +786,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="1" />
+			<skill id="50169" level="1" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91955" name="Scroll of Escape: Tower of Insolence (2nd Floor)" type="EtcItem">
@@ -807,7 +807,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="2" />
+			<skill id="50169" level="2" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91956" name="Scroll of Escape: Tower of Insolence (3rd Floor)" type="EtcItem">
@@ -828,7 +828,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="3" />
+			<skill id="50169" level="3" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91957" name="Scroll of Escape: Tower of Insolence (4th Floor)" type="EtcItem">
@@ -849,7 +849,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="4" />
+			<skill id="50169" level="4" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91958" name="Scroll of Escape: Tower of Insolence (5th Floor)" type="EtcItem">
@@ -870,7 +870,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="5" />
+			<skill id="50169" level="5" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91959" name="Scroll of Escape: Tower of Insolence (6th Floor)" type="EtcItem">
@@ -891,7 +891,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="6" />
+			<skill id="50169" level="6" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91960" name="Scroll of Escape: Tower of Insolence (7th Floor)" type="EtcItem">
@@ -912,7 +912,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="7" />
+			<skill id="50169" level="7" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91961" name="Scroll of Escape: Tower of Insolence (8th Floor)" type="EtcItem">
@@ -933,7 +933,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="8" />
+			<skill id="50169" level="8" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91962" name="Scroll of Escape: Tower of Insolence (9th Floor)" type="EtcItem">
@@ -954,7 +954,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="9" />
+			<skill id="50169" level="9" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91963" name="Scroll of Escape: Tower of Insolence (10th Floor)" type="EtcItem">
@@ -975,7 +975,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="10" />
+			<skill id="50169" level="10" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91964" name="Scroll of Escape: Tower of Insolence (11th Floor)" type="EtcItem">
@@ -996,7 +996,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="11" />
+			<skill id="50169" level="11" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91965" name="Scroll of Escape: Tower of Insolence (12th Floor)" type="EtcItem">
@@ -1017,11 +1017,11 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="50169" level="12" />
+			<skill id="50169" level="12" /> <!-- Scroll of Escape: Tower of Insolence (12th Floor) -->
 		</skills>
 	</item>
 	<item id="91966" name="Scroll: Enchant Ring of Insolence" type="EtcItem">
-		<!-- Required to enchant Ring of Insolence. The maximum enchant level is +10. -->
+		<!-- Required for enchanting Ring of Insolence. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1029,7 +1029,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91967" name="Scroll: Enchant Dragon Valley's Earring" type="EtcItem">
-		<!-- Required to enchant Dragon Valley's Earring. The maximum enchant level is +10. -->
+		<!-- Required for enchanting Dragon Valley's Earring. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1037,7 +1037,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91968" name="Enhanced Warrior's Rapier Chest" type="EtcItem">
-		<!-- Double-click to obtain Warrior's Rapier +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_sealed_rapier_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1048,7 +1048,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91969" name="Enhanced Ancient Warrior's Sword Chest" type="EtcItem">
-		<!-- Double-click to obtain Ancient Warrior's Sword +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1059,7 +1059,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91970" name="Ecliptic Axe +7" type="EtcItem">
-		<!-- Double-click to obtain Ecliptic Axe +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1069,7 +1069,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91971" name="Star Candy" additionalName="Event" type="EtcItem">
-		<!-- Sayha's Grace points +10,000. -->
+		<!-- Sayha's Grace points +10,000, Magic Lamp points +50,000, craft points +3250. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -1088,7 +1088,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91973" name="Special Dragon's Miracle Potion" additionalName="Event" type="EtcItem">
-		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Atk. Spd./ Casting Spd. +50, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. Has a certain chance to absorb 5% of the inflicted damage as HP. <Note> If used when the Dragon's Miracle Potion effect is active, the buff will be replaced. -->
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +250. M. Atk. +380. P. Def. +320. M. Def. +450. Atk. Spd. +50. Casting Spd. +50. Max HP +2500. Max MP +1500. Max CP +2500. HP Recovery Rate +10. MP Recovery Rate +10. P. Critical Rate +30. M. Critical Rate +30. P. Critical Damage +10%. M. Critical Damage +10%. Acquired XP +50%. Acquired SP +50%. Sayha's Grace Consumption -20%. There is a certain chance to absorb 5% of the inflicted damage as HP. Duration: 20 min. <font color=ff6666>(When it is used with Special Dragon's Miracle Potion, the effect is changed.)</font> -->
 		<set name="icon" val="icon.bm_dragon_posion" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1098,7 +1098,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91974" name="HP Potion" additionalName="Event" type="EtcItem">
-		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
+		<!-- Momentarily recovers 50 HP. If HP is full, CP is restored. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1110,7 +1110,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91975" name="Sayha's Victory" additionalName="Event" type="EtcItem">
-		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +200. M. Atk. +200. Atk. Spd. +60. Casting Spd. +60. Max HP +300. Max MP +300. Max CP +300. P. Critical Rate +20. M. Critical Rate +20. P. Critical Damage +10%. M. Critical Damage +10%. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1120,7 +1120,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91976" name="Unidentified Rock" type="EtcItem">
-		<!-- Mysterious stone. Double-click to obtain one of the following items: Spirit Ore, Heavenly Rift Ticket, HP Potion, Wind Spirit Evolution Stone, Tower of Insolence Scroll: Paralysis Resistance. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.destiny_stone" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1130,7 +1130,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91977" name="Tower of Insolence Scroll: Paralysis Resistance" type="EtcItem">
-		<!-- Increases Paralysis Resistance for 20 min. -->
+		<!-- Applies a buff when used. <Buff effect>. Paralysis Resistance +10%. Duration: 20 min. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1139,7 +1139,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91978" name="Dragon Valley Scroll: Mental Resistance" type="EtcItem">
-		<!-- Increases Mental Resistance for 20 min. -->
+		<!-- Applies a buff when used. <Buff effect>. Silence Resistance +10%. Fear Resistance +10%. Duration: 20 min. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1148,7 +1148,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91979" name="Giants' Sign Chest" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Giants' Coin Pouch, a rare accessory Lv. 3, Venir's Talisman Lv. 24, Special Sayha's Cloak +10, Scroll: Dragon Berserker, Feather of Blessing, or other rare items. -->
+		<!-- Double-click to obtain one of the following items: Giants' Coin Pouch, a rare accessory, Venir's Talisman Lv. 24, Special Sayha's Cloak +10, Scroll: Dragon Berserker, Feather of Blessing, or other rare items. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1168,7 +1168,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91981" name="Giants' Coin" type="EtcItem">
-		<!-- Coin used by ancient Giants. Can be exchanged for various items by the Dimensional Merchant. -->
+		<!-- Coin used by ancient Giants. Can be exchanged for various items by the Game Assistant. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i01" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -1176,7 +1176,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91982" name="+10 Special White Sayha's Cloak Chest" type="EtcItem">
-		<!-- Double-click to obtain Special White Sayha's Cloak +10. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1186,7 +1186,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91983" name="Primeval Isle's Prolongating Stone" additionalName="Event" type="EtcItem">
-		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Primeval Isle -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1202,7 +1202,7 @@
 		</skills>
 	</item>
 	<item id="91984" name="Ancient Pirates' Tomb's Prolongating Stone" additionalName="Event" type="EtcItem">
-		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Ancient Pirates' Tomb -->
 		<set name="icon" val="icon.timezone_refill_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1218,7 +1218,7 @@
 		</skills>
 	</item>
 	<item id="91985" name="Heavenly Rift's Prolongating Stone" additionalName="Event" type="EtcItem">
-		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Heavenly Rift -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -1351,17 +1351,17 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="91954" min="1" max="1" chance="14" />
-			<item id="91955" min="1" max="1" chance="14" />
-			<item id="91956" min="1" max="1" chance="14" />
-			<item id="91957" min="1" max="1" chance="14" />
-			<item id="91958" min="1" max="1" chance="14" />
-			<item id="91959" min="1" max="1" chance="15" />
-			<item id="91960" min="1" max="1" chance="15" />
+			<item id="91954" min="1" max="1" chance="14" /> <!-- Scroll of Escape: Tower of Insolence (1st Floor) -->
+			<item id="91955" min="1" max="1" chance="14" /> <!-- Scroll of Escape: Tower of Insolence (2nd Floor) -->
+			<item id="91956" min="1" max="1" chance="14" /> <!-- Scroll of Escape: Tower of Insolence (3rd Floor) -->
+			<item id="91957" min="1" max="1" chance="14" /> <!-- Scroll of Escape: Tower of Insolence (4th Floor) -->
+			<item id="91958" min="1" max="1" chance="14" /> <!-- Scroll of Escape: Tower of Insolence (5th Floor) -->
+			<item id="91959" min="1" max="1" chance="15" /> <!-- Scroll of Escape: Tower of Insolence (6th Floor) -->
+			<item id="91960" min="1" max="1" chance="15" /> <!-- Scroll of Escape: Tower of Insolence (7th Floor) -->
 		</capsuled_items>
 	</item>
 	<item id="91996" name="Scroll of Escape Pack: Tower of Insolence" additionalName="Floors 1-7" type="EtcItem">
-		<!-- Double-click to obtain Scroll of Escape: Tower of Insolence (1-7th Floors). -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1372,7 +1372,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91997" name="Primeval Isle's Prolongating Stone Pack" additionalName="L-Coin" type="EtcItem">
-		<!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1383,7 +1383,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91998" name="Primeval Isle's Prolongating Stone Pack" additionalName="Adena" type="EtcItem">
-		<!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1394,7 +1394,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91999" name="Water Spirit Jewel Shard" type="EtcItem">
-		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Water Attribute XP points. -->
+		<!-- Contains the power of Water. Double-click to acquire 9300 Water Attribute XP points. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

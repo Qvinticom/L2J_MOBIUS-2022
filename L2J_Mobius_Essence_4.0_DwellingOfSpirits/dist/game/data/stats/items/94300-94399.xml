@@ -36,7 +36,6 @@
 		</stats>
 	</item>
 	<item id="94302" name="Shield of Vengeance" additionalName="Sealed" type="Armor">
-		<!-- The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -56,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="94303" name="Life Stone - Circlet" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
+		<!-- Augments Circlet of Hero. Adena required. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -64,7 +63,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94304" name="Life Stone - Circlet" additionalName="Event" type="EtcItem">
-		<!-- Augments Circlet of Hero.\n\nAdena required. -->
+		<!-- Augments Circlet of Hero. Adena required. -->
 		<set name="icon" val="Icon.bm_mineral_circlet_hair_acc" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="2" />
@@ -75,7 +74,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94305" name="Scroll: Enchant Stats (Exchangeable)" type="EtcItem">
-		<!-- Applies a buff when used.\n\n<Buff effect>\nAll stats +1\n\nDuration: 20 min.\nCooldown: 1 min. -->
+		<!-- Applies a buff when used. <Buff effect>. All stats +1. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.stat_up_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -83,7 +82,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94306" name="Scroll: Enchant Stats" type="EtcItem">
-		<!-- Applies a buff when used.\n\n<Buff effect>\nAll stats +1\n\nDuration: 20 min.\nCooldown: 1 min. -->
+		<!-- Applies a buff when used. <Buff effect>. All stats +1. Duration: 20 min. Cooldown: 1 min. -->
 		<set name="icon" val="icon.stat_up_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -156,7 +155,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94314" name="Elixir" type="EtcItem">
-		<!-- A bottle containing mystery liquid.\n\n<Effect>\nStat Points +1\nOnly for characters of level 76 and higher.\nUp to 5 elixirs can be used. -->
+		<!-- A bottle containing mystery liquid. <Effect>. Stat Points +1. Only for characters of level 76 and higher. Up to 5 elixirs can be used. -->
 		<set name="icon" val="icon.giant_blue_potion" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -210,70 +209,70 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94319" name="Spellbook: Sword Symphony" type="EtcItem">
-		<!-- A spellbook for learning the Sword Symphony skill.\n\n<Classes>\nSwordsinger\n\n<Skill effect>\n1) Increases the attack range.\n2) There is a certain chance to decrease received damage.\n3) Increases Speed and Skill Evasion after a critical attack or successful evasion. -->
+		<!-- A spellbook for learning the Sword Symphony skill. <Classes>. Swordsinger. <Skill effect>. 1) Increases the attack range. 2) There is a certain chance to decrease received damage. 3) Increases Speed and Skill Evasion after a critical attack or successful evasion. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94320" name="Spellbook: Intoxicating Dance" type="EtcItem">
-		<!-- A spellbook for learning the Intoxicating Dance skill.\n\n<Classes>\nBladedancer\n\n<Skill effect>\n1) Inflicts a debuff increasing received damage and decreasing Speed (stacks up to 5 times) after an attack.\n2) Increases P. Atk and P. Skill Critical Damage after an attack. -->
+		<!-- A spellbook for learning the Intoxicating Dance skill. <Classes>. Bladedancer. <Skill effect>. 1) Inflicts a debuff increasing received damage and decreasing Speed (stacks up to 5 times) after an attack. 2) Increases P. Atk and P. Skill Critical Damage after an attack. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94321" name="Spellbook: Wild Beat" type="EtcItem">
-		<!-- A spellbook for learning the Wild Beat skill.\n\n<Class>\nSword Muse\n\n<Skill effect>\nForces the enemy to move towards you. -->
+		<!-- A spellbook for learning the Wild Beat skill. <Class>. Sword Muse. <Skill effect>. Forces the enemy to move towards you. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94322" name="Spellbook: Crazy Waltz" type="EtcItem">
-		<!-- A spellbook for learning the Crazy Waltz skill.\n\n<Classes>\nSpectral Dancer\n\n<Skill effect>\nA mesmerizing dance making enemies sleep and dance on the spot. -->
+		<!-- A spellbook for learning the Crazy Waltz skill. <Classes>. Spectral Dancer. <Skill effect>. A mesmerizing dance making enemies sleep and dance on the spot. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94323" name="Spellbook: Frantic Pace" type="EtcItem">
-		<!-- A spellbook for learning the Frantic Pace skill.\n\n<Classes>\nSword Muse\nSpectral Dancer\n\n<Skill effect>\nSharpens character's senses and allows to make a powerful blow.\nDeals additional damage to enemy affected by Hold. -->
+		<!-- A spellbook for learning the Frantic Pace skill. <Classes>. Sword Muse. Spectral Dancer. <Skill effect>. Sharpens character's senses and allows to make a powerful blow. Deals additional damage to enemy affected by Hold. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94324" name="Spellbook: Song of Earth" type="EtcItem">
-		<!-- A spellbook for learning the Song of Earth Lv. 2 skill.\n\n<Class>\nSwordsinger\n\n<Skill effect>\nFor the caster:\nP. Def. +500\nM. Def. +500\n\nFor nearby allies:\nP. Def. +200\nM. Def. +200\n -->
+		<!-- A spellbook for learning the Song of Earth Lv. 2 skill. <Class>. Swordsinger. <Skill effect>. For the caster:. P. Def. +500. M. Def. +500. For nearby allies:. P. Def. +200. M. Def. +200. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94325" name="Spellbook: The Song of the Hunter" type="EtcItem">
-		<!-- A spellbook for learning the Hunter's Song Lv. 2 skill.\n\n<Class>\nSwordsinger\n\n<Skill effect>\nFor the caster:\nAll Critical Rate +150\nFor nearby allies:\nAll Critical Rate +60\n -->
+		<!-- A spellbook for learning the Hunter's Song Lv. 2 skill. <Class>. Swordsinger. <Skill effect>. For the caster:. All Critical Rate +150. For nearby allies:. All Critical Rate +60. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94326" name="Spellbook: Warrior's Dance" type="EtcItem">
-		<!-- A spellbook for learning the Warrior's Dance Lv. 2 skill.\n\n<Class>\nBladedancer\n\n<Skill effect>\nFor the caster:\nP. Atk. +600\nM. Atk. +600\n\nFor nearby allies:\nP. Atk. +250\nM. Atk. +250\n -->
+		<!-- A spellbook for learning the Warrior's Dance Lv. 2 skill. <Class>. Bladedancer. <Skill effect>. For the caster:. P. Atk. +600. M. Atk. +600. For nearby allies:. P. Atk. +250. M. Atk. +250. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94327" name="Spellbook: Dance of Fire" type="EtcItem">
-		<!-- A spellbook for learning the Dance of Fire Lv. 2 skill.\n\n<Class>\nBladedancer\n\n<Skill effect>\nFor the caster:\nP. Critical Damage +40%\nP. Skill Critical Damage +10%\nM. Skill Critical Damage +10%\n\nFor nearby allies:\nP. Skill Critical Damage +4%\nM. Skill Critical Damage +4%\n -->
+		<!-- A spellbook for learning the Dance of Fire Lv. 2 skill. <Class>. Bladedancer. <Skill effect>. For the caster:. P. Critical Damage +40%. P. Skill Critical Damage +10%. M. Skill Critical Damage +10%. For nearby allies:. P. Skill Critical Damage +4%. M. Skill Critical Damage +4%. -->
 		<set name="icon" val="icon.etc_magic_book_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94328" name="Elixir Powder" type="EtcItem">
-		<!-- Powder imbued with power of immortality.\nMaterial to make Elixir. -->
+		<!-- Powder imbued with power of immortality. Material to make Elixir. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -416,7 +415,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94341" name="Special Buff Scroll" type="EtcItem">
-		<!-- Lasts for 24 hours.\n\nAll stats +1\n\nThe buff is leveling up every hour, also various items are granted.\n\n<Rewards>\nLv. 1-8: Sayha's Cookie (2 pcs.)\nLv. 9-15: Sayha's Storm Lv. 3 (2 pcs.)\nLv. 16-20: Soulshot Ticket (10 pcs.)\nLv. 21-23: Spirit Ore (100 pcs.)\nLv. 24: Charging Stone of Random Craft (2 pcs.)\n\nNote!\nThe effect does not remain after death. Items cannot be obtained after death. -->
+		<!-- Lasts for 24 hours. All stats +1. The buff is leveling up every hour, also various items are granted. <Rewards>. Lv. 1-8: Sayha's Cookie (2 pcs.). Lv. 9-15: Sayha's Storm Lv. 3 (2 pcs.). Lv. 16-20: Soulshot Ticket (10 pcs.). Lv. 21-23: Spirit Ore (100 pcs.). Lv. 24: Charging Stone of Random Craft (2 pcs.). Note!. The effect does not remain after death. Items cannot be obtained after death. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -609,6 +608,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94359" name="For Monster Only (Crossbow)" type="Weapon">
+		<!-- Monster weapon. Bow -->
 		<set name="icon" val="icon.weapon_falchion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -633,7 +633,7 @@
 		</stats>
 	</item>
 	<item id="94360" name="Forgotten Primeval Garden's Time Stone" additionalName="Not used" type="EtcItem">
-		<!-- Prolongs your Session Zone's raid for 60 min.\n\n<Hunting Zone>\nForgotten Primeval Garden -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Forgotten Primeval Garden -->
 		<set name="icon" val="icon.timezone_refill_oman_a_60" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="5" />
@@ -644,70 +644,70 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94361" name="Master's Book: Empower" type="EtcItem">
-		<!-- A spellbook for learning Empower Lv. 4.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases M. Atk. -->
+		<!-- A spellbook for learning Empower Lv. 4. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases M. Atk. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94362" name="Master's Book: Magic Barrier" type="EtcItem">
-		<!-- A spellbook for learning Magic Barrier Lv. 3.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases M. Def. -->
+		<!-- A spellbook for learning Magic Barrier Lv. 3. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases M. Def. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94363" name="Master's Book: Focus" type="EtcItem">
-		<!-- A spellbook for learning the Focus Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Critical Rate. -->
+		<!-- A spellbook for learning the Focus Lv. 4 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases P. Critical Rate. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94364" name="Master's Book: Death Whisper" type="EtcItem">
-		<!-- A spellbook for learning the Death Whisper Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Critical Damage. -->
+		<!-- A spellbook for learning the Death Whisper Lv. 4 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases P. Critical Damage. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94365" name="Master's Book: Wind Walk" type="EtcItem">
-		<!-- A spellbook for learning the Wind Walk Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Speed. -->
+		<!-- A spellbook for learning the Wind Walk Lv. 3 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases Speed. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94366" name="Master's Book: Berserker Spirit" type="EtcItem">
-		<!-- A spellbook for learning the Berserker Spirit Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P./ M. Atk., Atk. Spd., Casting Spd. and Speed.\nDecreases Max HP/ MP. -->
+		<!-- A spellbook for learning the Berserker Spirit Lv. 3 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases P./ M. Atk., Atk. Spd., Casting Spd. and Speed. Decreases Max HP/ MP. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94367" name="Master's Book: Clarity" type="EtcItem">
-		<!-- A spellbook for learning the Clarity Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Skill MP consumption. -->
+		<!-- A spellbook for learning the Clarity Lv. 4 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases Skill MP consumption. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94368" name="Master's Book: Wild Magic" type="EtcItem">
-		<!-- A spellbook for learning the Wild Magic Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases M. Skill Critical Rate. -->
+		<!-- A spellbook for learning the Wild Magic Lv. 3 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases M. Skill Critical Rate. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94369" name="Master's Book: Haste" type="EtcItem">
-		<!-- A spellbook for learning the Haste Lv. 3 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Atk. Spd. -->
+		<!-- A spellbook for learning the Haste Lv. 3 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases Atk. Spd. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94370" name="Master's Book: Acumen" type="EtcItem">
-		<!-- A spellbook for learning the Acumen Lv. 4 skill.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases Casting Spd. -->
+		<!-- A spellbook for learning the Acumen Lv. 4 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases Casting Spd. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -758,7 +758,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94375" name="Daily Cube: Supply - 30 charges" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nSupply Pack\n\nCan be used only once a day.\nCan be used up to 30 times.\nSpecial Supply Pack is granted after the 30th use. -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Supply Pack. Can be used only once a day. Can be used up to 30 times. Special Supply Pack is granted after the 30th use. -->
 		<set name="icon" val="icon.sa_cube" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -778,7 +778,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94377" name="Supply Pouch" type="EtcItem">
-		<!-- Double-click to obtain the following item:\n 10 Soulshot Ticket and 200 Spirit Ore -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -788,12 +788,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="91927" min="10" max="10" chance="100" /> <!-- Soulshot Ticket -->
+			<item id="91927" min="10" max="10" chance="100" /> <!-- Soulshot -->
 			<item id="3031" min="200" max="200" chance="100" /> <!-- Spirit Ore -->
 		</capsuled_items>
 	</item>
 	<item id="94378" name="Daily Cube: Supply - 10 charges" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nSupply Pack\n\nCan be used only once a day.\nCan be used up to 10 times. -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Supply Pack. Can be used only once a day. Can be used up to 10 times. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -813,6 +813,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94380" name="Scroll: Boost Attack" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +800. M. Atk. +800. Max HP +1000. All received Critical Damage -100. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
@@ -831,6 +832,7 @@
 		</skills>
 	</item>
 	<item id="94381" name="Scroll: Boost Defence" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect>. P. Def. +500. M. Def. +500. Max MP +800. Speed +2. All Critical Rate +30. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
@@ -859,7 +861,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94383" name="Scroll: Enchant Rare Accessories" type="EtcItem">
-		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1 -->
+		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->
 		<set name="icon" val="icon.etc_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -867,7 +869,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94384" name="Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
-		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1 -->
+		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->
 		<set name="icon" val="icon.etc_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -877,7 +879,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94385" name="Improved Scroll: Enchant Rare Accessories" type="EtcItem">
-		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1\nThe enchanting is random from +1 to +2.\nFor rare accessories enchanted to +2 or lower. -->
+		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -885,7 +887,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
-		<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1\nThe enchanting is random from +1 to +2.\nFor rare accessories enchanted to +2 or lower. -->
+		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />

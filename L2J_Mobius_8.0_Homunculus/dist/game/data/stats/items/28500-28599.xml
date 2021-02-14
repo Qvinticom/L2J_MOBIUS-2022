@@ -507,7 +507,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28546" name="Secret Embryo Bait Coupon" type="EtcItem">
-		<!-- Can be exchanged at NPC Peeves in Heine for a Secret Embryo Bait. -->
+		<!-- Can be exchanged for Shining Magic Bait of a required grade through Fisher Peeves in Heine. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket2" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -576,7 +576,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28554" name="Secret Embryo Bait Coupon" type="EtcItem">
-		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<!-- Can be exchanged for Shining Magic Bait of a required grade through Fisher Peeves in Heine. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket2" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -692,11 +692,11 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26497" min="1" max="1" chance="20" /> <!-- Cat's Eye 1 -->
-			<item id="26498" min="1" max="1" chance="20" /> <!-- Cat's Eye 2 -->
-			<item id="26499" min="1" max="1" chance="20" /> <!-- Cat's Eye 3 -->
-			<item id="26500" min="1" max="1" chance="20" /> <!-- Cat's Eye 4 -->
-			<item id="26501" min="1" max="1" chance="20" /> <!-- Cat's Eye 5 -->
+			<item id="26497" min="1" max="1" chance="20" /> <!-- Cat's Eye Lv. 1 -->
+			<item id="26498" min="1" max="1" chance="20" /> <!-- Cat's Eye Lv. 2 -->
+			<item id="26499" min="1" max="1" chance="20" /> <!-- Cat's Eye Lv. 3 -->
+			<item id="26500" min="1" max="1" chance="20" /> <!-- Cat's Eye Lv. 4 -->
+			<item id="26501" min="1" max="1" chance="20" /> <!-- Cat's Eye Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28565" name="Vital Stone Fortune Box" type="EtcItem">
@@ -710,11 +710,11 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="46670" min="1" max="1" chance="20" /> <!-- Vital Stone 1 -->
-			<item id="46671" min="1" max="1" chance="20" /> <!-- Vital Stone 2 -->
-			<item id="46672" min="1" max="1" chance="20" /> <!-- Vital Stone 3 -->
-			<item id="46673" min="1" max="1" chance="20" /> <!-- Vital Stone 4 -->
-			<item id="46674" min="1" max="1" chance="20" /> <!-- Vital Stone 5 -->
+			<item id="46670" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 1 -->
+			<item id="46671" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 2 -->
+			<item id="46672" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 3 -->
+			<item id="46673" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 4 -->
+			<item id="46674" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28566" name="Tanzanite Fortune Box" type="EtcItem">
@@ -736,11 +736,11 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="26502" min="1" max="1" chance="20" /> <!-- Amethyst 1 -->
-			<item id="26503" min="1" max="1" chance="20" /> <!-- Amethyst 2 -->
-			<item id="26504" min="1" max="1" chance="20" /> <!-- Amethyst 3 -->
-			<item id="26505" min="1" max="1" chance="20" /> <!-- Amethyst 4 -->
-			<item id="26506" min="1" max="1" chance="20" /> <!-- Amethyst 5 -->
+			<item id="26502" min="1" max="1" chance="20" /> <!-- Amethyst Lv. 1 -->
+			<item id="26503" min="1" max="1" chance="20" /> <!-- Amethyst Lv. 2 -->
+			<item id="26504" min="1" max="1" chance="20" /> <!-- Amethyst Lv. 3 -->
+			<item id="26505" min="1" max="1" chance="20" /> <!-- Amethyst Lv. 4 -->
+			<item id="26506" min="1" max="1" chance="20" /> <!-- Amethyst Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="28568" name="Garnet Fortune Box" type="EtcItem">

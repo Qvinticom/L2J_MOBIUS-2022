@@ -45,7 +45,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="13656" toLevel="1" name="Brooch Lv. 1">
-		<!-- Activates 2 jewel slots. -->
+		<!-- <Effect> 2 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -55,7 +55,7 @@
 		</effects>
 	</skill>
 	<skill id="13657" toLevel="1" name="Lv. 2 Brooch">
-		<!-- Activates 3 jewel slots. -->
+		<!-- <Effect> 3 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -65,7 +65,7 @@
 		</effects>
 	</skill>
 	<skill id="13658" toLevel="1" name="Lv. 3 Brooch">
-		<!-- Activates 4 jewel slots. -->
+		<!-- <Effect> 4 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -75,7 +75,7 @@
 		</effects>
 	</skill>
 	<skill id="13659" toLevel="1" name="Lv. 4 Brooch">
-		<!-- Activates 5 jewel slots. -->
+		<!-- <Effect> 5 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -85,7 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="13660" toLevel="1" name="Lv. 5 Brooch">
-		<!-- Activates 6 jewel slots. -->
+		<!-- <Effect> 6 jewels can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i06</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -95,7 +95,7 @@
 		</effects>
 	</skill>
 	<skill id="13661" toLevel="5" name="Brooch - Additional Effect">
-		<!-- Inventory Slot +5. -->
+		<!-- <Effect> Inventory Slots +5. -->
 		<icon>
 			<value level="1">icon.etc_bm_brooch_lavianrose_i00</value>
 			<value level="2">icon.etc_bm_brooch_lavianrose_i01</value>

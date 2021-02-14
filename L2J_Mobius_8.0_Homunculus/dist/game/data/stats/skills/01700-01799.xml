@@ -73,7 +73,7 @@
 		</effects>
 	</skill>
 	<skill id="1704" toLevel="1" name="Aggression Aura">
-		<!-- none\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0018</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -142,7 +142,7 @@
 		</effects>
 	</skill>
 	<skill id="1708" toLevel="1" name="Bleeding Shot">
-		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -170,7 +170,7 @@
 		</effects>
 	</skill>
 	<skill id="1709" toLevel="1" name="Poison Shot">
-		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -198,7 +198,7 @@
 		</effects>
 	</skill>
 	<skill id="1710" toLevel="1" name="Bleeding Shot">
-		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -229,7 +229,7 @@
 		</effects>
 	</skill>
 	<skill id="1711" toLevel="1" name="Poison Shot">
-		<!-- none\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -323,7 +323,7 @@
 		</effects>
 	</skill>
 	<skill id="1715" toLevel="1" name="Unison Rush">
-		<!-- Provokes by the Unison of Light.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes by the Unison of Light. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0245</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -957,7 +957,7 @@
 		</effects>
 	</skill>
 	<skill id="1756" toLevel="14" name="Trick">
-		<!-- Cancels the enemy's target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Cancels the enemy's target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0011</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>

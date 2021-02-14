@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="93100" name="Mid-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
+		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -9,7 +9,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93101" name="High-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 B-grade Gemstones are required for augmentation. -->
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden. 200 B-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -17,7 +17,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93102" name="Top-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden. 200 A-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -25,42 +25,42 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93103" name="Spellbook: Divine Beam" type="EtcItem">
-		<!-- A spellbook for learning the Divine Beam skill.\n\n<Classes>\nCardinal, Hierophant, Eva's Saint, Shillien Saint\n\n<Skill effect>\nA divine beam strikes the target. Inflicts magic damage. When you are attacking the enemy affected by Hold, the debuff is removed and an extra attack is triggered. Deals additional damage to demons and undead. -->
+		<!-- A spellbook for learning the Divine Beam skill. <Classes>. Cardinal, Hierophant, Eva's Saint, Shillien Saint. <Skill effect>. A divine beam strikes the target. Inflicts magic damage. When you are attacking the enemy affected by Hold, the debuff is removed and an extra attack is triggered. Deals additional damage to demons and undead. -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93104" name="Scroll: Earth Tremor" type="EtcItem">
-		<!-- A scroll for learning the Earth Tremor skill.\n\n<Class>\nMaestro\n\n<Skill effect>\nAttacks the enemy with the power of earth. -->
+		<!-- A scroll for learning the Earth Tremor skill. <Class>. Maestro. <Skill effect>. Attacks the enemy with the power of earth. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93105" name="Scroll: Prophecy of Light" type="EtcItem">
-		<!-- A scroll for learning the Prophecy of Light skill.\n\n<Class>\nCardinal\n\n<Skill effect>\nIncreases Max HP/ MP, P./ M. Def, damage to monsters, Healing Power and Debuff Resistance. -->
+		<!-- A scroll for learning the Prophecy of Light skill. <Class>. Cardinal. <Skill effect>. Increases Max HP/ MP, P./ M. Def, damage to monsters, Healing Power and Debuff Resistance. -->
 		<set name="icon" val="icon.etc_magic_book_white_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93106" name="Scroll: Mass Dryad Root" type="EtcItem">
-		<!-- A scroll for learning the Mass Dryad Root skill.\n\n<Class>\nShillien Saint\n\n<Skill effect>\nHolds nearby enemies. -->
+		<!-- A scroll for learning the Mass Dryad Root skill. <Class>. Shillien Saint. <Skill effect>. Holds nearby enemies. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93107" name="Scroll: Mass Wind Shackles" type="EtcItem">
-		<!-- A scroll for learning the Mass Wind Shackles skill.\n\n<Class>\nShillien Saint\n\n<Skill effect>\nDecreases nearby enemies' Atk. Spd. and Casting Spd. -->
+		<!-- A scroll for learning the Mass Wind Shackles skill. <Class>. Shillien Saint. <Skill effect>. Decreases nearby enemies' Atk. Spd. and Casting Spd. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93108" name="Blueprint: Machine Assistance" type="EtcItem">
-		<!-- A blueprint for learning the Machine Assistance skill.\n\n<Class>\nWarsmith\n\n<Skill effect>\nWith a certain chance, after an attack summons Golem fighting by your side. -->
+		<!-- A blueprint for learning the Machine Assistance skill. <Class>. Warsmith. <Skill effect>. With a certain chance, after an attack summons Golem fighting by your side. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -270,7 +270,7 @@
 		</stats>
 	</item>
 	<item id="93121" name="Low-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n10 B-grade Gemstones are required for augmentation. -->
+		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_special_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -280,7 +280,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93122" name="Mid-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\nA-grade Gemstones (2 pcs.) are required for augmentation. -->
+		<!-- Augments shields/ sigils. Adena required. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -290,7 +290,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93123" name="High-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 B-grade Gemstones are required for augmentation. -->
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden. 200 B-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -300,7 +300,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93124" name="Top-grade Life Stone - Shield/ Sigil" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden. 200 A-grade Gemstones are required for augmentation. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -340,7 +340,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="93128" name="Agathion Ignis" type="Armor">
-		<!-- Increases P./ M. Atk. When enchanted to +5 and higher, increases Hold/ Sleep/ Paralysis Atk. Rate.\n\nEquipping it in the main slot summons Agathion Ignis.\n\nNote!\nIf equipped with Agathion Aquarius or Agathion Leo, only Agathion Ignis is active. -->
+		<!-- Increases P./ M. Atk. When enchanted to +5 and higher, increases Hold/ Sleep/ Paralysis Atk. Rate. Equipping it in the main slot summons Agathion Ignis. Note!. If equipped with Agathion Aquarius or Agathion Leo, only Agathion Ignis is active. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -353,7 +353,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93129" name="Agathion Nebula" type="Armor">
-		<!-- Increases all Critical Rate. When enchanted to +5 and higher, decreases Skill Cooldown.\n\nEquipping it in the main slot summons Agathion Nebula.\n\nNote!\nIf Agathion Scorpio or Agathion Capricorn are equipped, only Agathion Nebula will be active. -->
+		<!-- Increases all Critical Rate. When enchanted to +5 and higher, decreases Skill Cooldown. Equipping it in the main slot summons Agathion Nebula. Note!. If Agathion Scorpio or Agathion Capricorn are equipped, only Agathion Nebula will be active. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -366,7 +366,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93130" name="Agathion Procella" type="Armor">
-		<!-- Increases Atk. Spd./Casting Spd. When enchanted to +5 and higher, decreases Skill MP consumption.\n\nEquipping it in the main slot summons Agathion Procella.\n\nNote!\nIf equipped with Agathion Libra or Agathion Sagittarius, only Agathion Procella is active. -->
+		<!-- Increases Atk. Spd./Casting Spd. When enchanted to +5 and higher, decreases Skill MP consumption. Equipping it in the main slot summons Agathion Procella. Note!. If equipped with Agathion Libra or Agathion Sagittarius, only Agathion Procella is active. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -379,7 +379,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93131" name="Agathion Petram" type="Armor">
-		<!-- Increases P./ M. Def. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate.\n\nEquipping it in the main slot summons Agathion Petram.\n\nNote!\nIf Agathion Taurus or Agathion Virgo are equipped, only Agathion Petram will be active. -->
+		<!-- Increases P./ M. Def. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate. Equipping it in the main slot summons Agathion Petram. Note!. If Agathion Taurus or Agathion Virgo are equipped, only Agathion Petram will be active. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -392,7 +392,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="93132" name="Agathion Joy" type="Armor">
-		<!-- Increases the acquired XP/ SP bonus from Sayha's Grace. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP.\n\nEquipping it in the main slot summons Agathion Joy.\n\nNote!\nIf Agathion Gemini is equipped, only Agathion Joy will be active. -->
+		<!-- Increases the acquired XP/ SP bonus from Sayha's Grace. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP. Equipping it in the main slot summons Agathion Joy. Note!. If Agathion Gemini is equipped, only Agathion Joy will be active. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -415,7 +415,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93134" name="Package: Agathion Ignis" type="EtcItem">
-		<!-- Double-click to obtain Agathion Ignis and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, P./ M. Atk. is increased. When enchanted to +5 and higher, increases Sleep/ Paralysis/ Hold Atk. Rate. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_fire_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -430,7 +430,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93135" name="Package: Agathion Nebula" type="EtcItem">
-		<!-- Double-click to obtain Agathion Nebula and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, all Critical Rate is increased. When enchanted to +5 and higher, decreases Skill Cooldown. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_water_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -445,7 +445,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93136" name="Package: Agathion Procella" type="EtcItem">
-		<!-- Double-click to obtain Agathion Procella and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, Atk. Spd./ Casting Spd. is increased. When enchanted to +5 and higher, decreases Skill MP consumption. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_wind_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -460,7 +460,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93137" name="Package: Agathion Petram" type="EtcItem">
-		<!-- Double-click to obtain Agathion Petram and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, P./ M. Def. is increased. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.agathion_earth_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -475,7 +475,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93138" name="Package: Agathion Joy" type="EtcItem">
-		<!-- Double-click to obtain Agathion Joy and 10 Scrolls: Enchant Agathion.\n\nWhen the agathion is equipped, the acquired XP/ SP bonus from Sayha's Grace is increased. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -490,7 +490,7 @@
 		</capsuled_items>
 	</item>
 	<item id="93139" name="Ice Crystal Breastplate" type="Armor">
-		<!-- <Properties>\nCON +2\nOverweight limit +1500\nM. Def. +15\nMax HP +150\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. STR +1. CON +2. Overweight limit +1500. M. Def. +15. Max HP +150. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -520,7 +520,7 @@
 		</skills>
 	</item>
 	<item id="93140" name="Ice Crystal Gaiters" type="Armor">
-		<!-- <Properties>\nCON +1\nOverweight limit +1000\nM. Def. +10\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. CON +1. Overweight limit +1000. M. Def. +10. Max HP +50. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t94_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -550,7 +550,7 @@
 		</skills>
 	</item>
 	<item id="93141" name="Ice Crystal Breastplate" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nCON +2\nOverweight limit +1500\nM. Def. +15\nMax HP +150\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. STR +1. CON +2. Overweight limit +1500. M. Def. +15. Max HP +150. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -582,7 +582,7 @@
 		</skills>
 	</item>
 	<item id="93142" name="Ice Crystal Gaiters" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nCON +1\nOverweight limit +1000\nM. Def. +10\nParalysis Resistance +20%\nStun Resistance +20%\nSleep Resistance +20%\nHold Resistance +20%\nSilence Resistance +20%\nFear Resistance +20% -->
+		<!-- <Properties>. CON +1. Overweight limit +1000. M. Def. +10. Max HP +50. Paralysis Resistance +20%. Stun Resistance +20%. Sleep Resistance +20%. Hold Resistance +20%. Silence Resistance +20%. Fear Resistance +20% -->
 		<set name="icon" val="icon.armor_t94_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -636,7 +636,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="93145" name="Extra Pass: Transcendent Instance Zone" type="EtcItem">
-		<!-- An extra pass to a daily dungeon. Double-click to reset the instance zone timer (both for normal and epic dungeons). Can be used only once a day. -->
+		<!-- Double-click to get an extra pass to a transcendent instance zone. Note!. Can be used once a day outside of instance zones. Can be used after completing a transcendent instance zone run. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -645,7 +645,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="93146" name="Extra Pass: Transcendent Instance Zone" additionalName="Event" type="EtcItem">
-		<!-- An extra pass to a daily dungeon. Double-click to reset the instance zone timer (both for normal and epic dungeons). Can be used only once a day. -->
+		<!-- Double-click to get an extra pass to a transcendent instance zone. Note!. Can be used once a day outside of instance zones. Can be used after completing a transcendent instance zone run. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

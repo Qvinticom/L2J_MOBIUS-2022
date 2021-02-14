@@ -1118,7 +1118,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="80064" name="Challenger's Scroll of Growth" type="EtcItem">
-		<!-- For 10 min., Acquired XP/ SP +200%. The effect remains after death. Cooldown: 9 min. Required level: 1-105. The effect does not stack with those of Freya's Frozen Scroll and Freya's Scroll of Storm. -->
+		<!-- For 10 min., acquired XP/ SP +200%. The effect remains after death. Cooldown: 9 min. Required level: 1-105. The effect does not stack with those of Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.bm_challenger_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1838,7 +1838,7 @@
 		</stats>
 	</item>
 	<item id="80090" name="Krishna Shaper" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Accuracy +4, P. Skill Critical Damage +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Accuracy +4, P. Skill Critical Damage +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i00" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
@@ -1870,7 +1870,7 @@
 		</stats>
 	</item>
 	<item id="80091" name="Krishna Cutter" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Accuracy +4, Critical Rate for standard attacks +30. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Accuracy +4, Critical Rate for standard attacks +30. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1901,7 +1901,7 @@
 		</stats>
 	</item>
 	<item id="80092" name="Krishna Slasher" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +5%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Atk. +5%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1932,7 +1932,7 @@
 		</stats>
 	</item>
 	<item id="80093" name="Krishna Avenger" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Accuracy +4, P./ M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Accuracy +4, P./ M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1963,7 +1963,7 @@
 		</stats>
 	</item>
 	<item id="80094" name="Krishna Fighter" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, Critical Damage for standard attacks +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Atk. +2%, Critical Damage for standard attacks +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_fist_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1995,7 +1995,7 @@
 		</stats>
 	</item>
 	<item id="80095" name="Krishna Stormer" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, increases the number of targets attacked with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Atk. +2%, increases the number of targets attacked with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2028,7 +2028,7 @@
 		</stats>
 	</item>
 	<item id="80096" name="Krishna Thrower" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, Atk. Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Atk. +2%, Atk. Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2061,7 +2061,7 @@
 		</stats>
 	</item>
 	<item id="80097" name="Krishna Shooter" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Atk. +2%, P. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, P. Atk. +2%, P. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2094,7 +2094,7 @@
 		</stats>
 	</item>
 	<item id="80098" name="Krishna Buster" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Accuracy +4, M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, M. Accuracy +4, M. Skill Power +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2126,7 +2126,7 @@
 		</stats>
 	</item>
 	<item id="80099" name="Krishna Caster" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Accuracy +4, Casting Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, M. Accuracy +4, Casting Spd. +2%. <Enchanting>. Use Scroll: Enchant R-grade Weapon. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

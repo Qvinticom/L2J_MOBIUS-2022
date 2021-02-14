@@ -145,7 +145,7 @@
 		</conditions>
 	</skill>
 	<skill id="7007" toLevel="4" name="Greater Seal of Flame">
-		<!-- Sets the target's allies on fire. 'ontinuously decreases the enemies' HP. Effect 8. -->
+		<!-- Sets the target's allies on fire. ?ontinuously decreases the enemies' HP. Effect 8. -->
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -1450,7 +1450,7 @@
 		</targetConditions>
 	</skill>
 	<skill id="7066" toLevel="1" name="Test Stun Charge">
-		<!-- Charges into the enemy and stuns.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Charges into the enemy and stuns. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1483,7 +1483,7 @@
 		</effects>
 	</skill>
 	<skill id="7067" toLevel="1" name="Test Range Charge">
-		<!-- Charges into the enemy and inflicts bleeding.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Charges into the enemy and inflicts bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1634,7 +1634,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7076" toLevel="1" name="Test - Delay Debuff">
-		<!-- Inflicts Bleed and stuns for 20 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed and stuns for 20 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1659,7 +1659,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7077" toLevel="1" name="Test - Delay Debuff - Call">
-		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1675,7 +1675,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="7078" toLevel="1" name="Test - Blink">
-		<!-- Inflicts Stun.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Stun. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2222,7 +2222,7 @@
 		</effects>
 	</skill>
 	<skill id="7099" toLevel="1" name="Clan-exclusive Pet Fear">
-		<!-- Inflicts Fear on the target for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the target for 3 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4108</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>

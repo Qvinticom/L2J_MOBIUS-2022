@@ -582,7 +582,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="48147" name="Agathion - Pegasus Pack" type="EtcItem">
-		<!-- Contains a Pegasus Agathion Charm. -->
+		<!-- Double-click to obtain Agathion Pegasus Charm. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -941,7 +941,7 @@
 		</skills>
 	</item>
 	<item id="48172" name="Herphah's Mission List" type="EtcItem">
-		<!-- A list of missions that Herphah instructed you to complete. "Complete missions for the following people and return with the certificates they give you. - Fishermen's Guild Leader Santiago in Heine, Blacksmith Rupio in the Town of Giran, Head Blacksmith Flutter in the Town of Oren, Blacksmith Vincenz in the Town of Rune, Head Blacksmith Ferris in the Town of Aden" -->
+		<!-- A list of missions given to you by Herphah. You are to obtain certificates from the following people: Fishing Guild Leader Santiago in Heine, Blacksmith Rupio in Giran, Head Blacksmith Flutter in Oren, Blacksmith Vincenz in Rune, and Head Blacksmith Ferris in Aden. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -952,7 +952,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48173" name="Certificate from Santiago" type="EtcItem">
-		<!-- Certificate received from Fishermen's Guild Leader Santiago after completing the fishing mission. Take it along with the rest of the certificates to Herphah in the Town of Aden. -->
+		<!-- The certificate received for completing Santiago's mission. Take it along with the rest of the certificates to Herphah in Aden. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

@@ -1959,7 +1959,7 @@
 		</effects>
 	</skill>
 	<skill id="6620" toLevel="7" name="Maguen Plasma">
-		<!-- P. Atk. and M. Atk. are increased. -->
+		<!-- Increases P./ M. Atk. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -2053,7 +2053,7 @@
 		</effects>
 	</skill>
 	<skill id="6622" toLevel="1" name="Stun">
-		<!-- For 20 sec. immobilizes and stuns target, P. Critical Rate +50%. -->
+		<!-- For 20 sec. immobilizes and stuns the target, target s Received P. Critical Rate +50%. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -2097,7 +2097,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6624" toLevel="1" name="Stun">
-		<!-- For 9 sec. immobilizes and stuns target, P. Critical Rate +50%. -->
+		<!-- For 9 sec. immobilizes and stuns the target, target s Received P. Critical Rate +50%. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2374,7 +2374,7 @@
 		</effects>
 	</skill>
 	<skill id="6637" toLevel="1" name="Energy of HP Drain">
-		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
+		<!-- Temporarily increases the amount of HP restored while absorbing part of the inflicted damage as HP. -->
 		<icon>icon.skill6637</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>4</abnormalLevel>
@@ -2405,7 +2405,7 @@
 		</effects>
 	</skill>
 	<skill id="6638" toLevel="1" name="Mysterious Aura">
-		<!-- The target's head is enlarged. -->
+		<!-- Makes your head larger. -->
 		<icon>icon.skill2513</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLevel>1</abnormalLevel>
@@ -2590,7 +2590,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
-		<!-- All actions are sealed by Tacrakahn's special ability. Impossible to dispel. -->
+		<!-- All actions are sealed by Taklacan's special ability. Impossible to dispel. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2712,7 +2712,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6662" toLevel="2" name="Freeze">
-		<!-- All actions are prohibited for $s1, and you lose $s2 HP per sec. -->
+		<!-- Immobilizes for $s1 and $s2 HP is lost per sec. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2758,7 +2758,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6663" toLevel="1" name="Raid Boss (Lv. 76)">
-		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
+		<!-- This powerful Chaos Golem was made from Star Stones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal a blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the horrifying golem army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2783,7 +2783,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6666" toLevel="1" name="Feral Shield">
-		<!-- P. Def. +18% for 5 min. -->
+		<!-- Increases P. Def. by 18% by 5 min. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -2810,7 +2810,7 @@
 		</effects>
 	</skill>
 	<skill id="6667" toLevel="1" name="Feral Wind Walk">
-		<!-- For 5 min., Speed +33. -->
+		<!-- Speed +33 for 5 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -2864,7 +2864,7 @@
 		</effects>
 	</skill>
 	<skill id="6669" toLevel="1" name="Feral Blessed Body">
-		<!-- Max HP +35% for 5 min. -->
+		<!-- Increases Max HP by 35% for 5 min. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -2891,7 +2891,7 @@
 		</effects>
 	</skill>
 	<skill id="6670" toLevel="1" name="Feral Vampiric Rage">
-		<!-- For 5 min., recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- For 5 min., recovers as HP 9% of the melee damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -2973,7 +2973,7 @@
 		</effects>
 	</skill>
 	<skill id="6672" toLevel="1" name="Feral Blessed Shield">
-		<!-- Shield defense rate +5% for 30 min. -->
+		<!-- Increases Shield defense rate by 5% for 30 min. -->
 		<icon>icon.skill1243</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -3075,7 +3075,7 @@
 		</effects>
 	</skill>
 	<skill id="6677" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3143,7 +3143,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6681" toLevel="1" name="Maguen Wind Walk">
-		<!-- For 20 min., Speed +40. -->
+		<!-- Speed +40 for 20 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3171,7 +3171,7 @@
 		</effects>
 	</skill>
 	<skill id="6682" toLevel="1" name="Elite Maguen Wind Walk">
-		<!-- For 20 min., Speed +45. -->
+		<!-- Speed +45 for 20 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3284,7 +3284,7 @@
 		</effects>
 	</skill>
 	<skill id="6688" toLevel="1" name="Awful Soup">
-		<!-- Atk. Spd. +20% and HP -0.5% per sec. for 3 min. -->
+		<!-- Atk. Spd. increases by 20% and HP decreases 0.5% per second for 3 min. -->
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -3336,7 +3336,7 @@
 		</effects>
 	</skill>
 	<skill id="6690" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3540,7 +3540,7 @@
 		</effects>
 	</skill>
 	<skill id="6698" toLevel="1" name="Freeze">
-		<!-- Actions prohibited for 15 sec. HP -115 and MP -5% per sec. -->
+		<!-- Actions prohibited for 15 sec. HP decreases by 115 and MP decreases by 5% per second. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -3579,7 +3579,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6699" toLevel="1" name="Ball Trapping Gnosian Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>

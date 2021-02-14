@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" toLevel="8" name="Pet's Recharge">
-		<!-- Restores MP. -->
+		<!-- Recovers MP. -->
 		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -68,7 +68,7 @@
 		</effects>
 	</skill>
 	<skill id="5201" toLevel="6" name="Pet's Concentration">
-		<!-- Temporarily the probability of magic being canceled due to damage taken -18. -->
+		<!-- Temporarily decreases probability of magic cancellation due to damage taken. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -191,7 +191,7 @@
 		</effects>
 	</skill>
 	<skill id="5203" toLevel="12" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -400,7 +400,7 @@
 		</effects>
 	</skill>
 	<skill id="5211" toLevel="1" name="Vampiric Rage (Event)">
-		<!-- Temporarily increases the ability to restore some HP from the damage inflicted on the enemy temporarily with a certain probability. -->
+		<!-- Temporarily increases the amount of HP restored while absorbing part of the inflicted damage as HP. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -544,7 +544,7 @@
 		</effects>
 	</skill>
 	<skill id="5217" toLevel="1" name="Empower (Event)">
-		<!-- Temporarily M. Atk. +55%. -->
+		<!-- Temporarily M. Atk. +100. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -707,7 +707,7 @@
 		</effects>
 	</skill>
 	<skill id="5225" toLevel="1" name="Invincibility">
-		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
+		<!-- Makes you invincible to regular attacks, skills and debuffs. -->
 		<icon>icon.skill1427</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -1061,7 +1061,7 @@
 		</effects>
 	</skill>
 	<skill id="5242" toLevel="1" name="Sickness">
-		<!-- Blurs vision. -->
+		<!-- Temporary illness that makes you queasy and blurs your vision. -->
 		<icon>icon.skill5242</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1468,7 +1468,7 @@
 		</effects>
 	</skill>
 	<skill id="5251" toLevel="12" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1973,7 +1973,7 @@
 		</effects>
 	</skill>
 	<skill id="5259" toLevel="12" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -2715,7 +2715,7 @@
 		</effects>
 	</skill>
 	<skill id="5271" toLevel="19" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill0518</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

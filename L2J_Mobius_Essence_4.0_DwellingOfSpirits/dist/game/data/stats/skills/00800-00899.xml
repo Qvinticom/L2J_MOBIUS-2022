@@ -130,7 +130,7 @@
 		</effects>
 	</skill>
 	<skill id="808" toLevel="1" name="Golem Punch">
-		<!-- Throws a powerful punch with 11205 Power that both stuns and inflicts damage to the enemy. Over-hit. -->
+		<!-- Throws a strong punch to inflict damage and stun the enemy with 11,205 power. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -162,7 +162,7 @@
 		</effects>
 	</skill>
 	<skill id="809" toLevel="1" name="Golem Tornado Swing">
-		<!-- Spinning attack strikes enemy with 6199 Power. Over-hit. -->
+		<!-- Spins attacking the enemy with 6199 power. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
@@ -184,7 +184,7 @@
 		</effects>
 	</skill>
 	<skill id="814" toLevel="9" name="Full Swing">
-		<!-- Widely swings a two-handed weapon to attack nearby enemies with $s1 Power added to P. Atk. Ignores Shield Defense. Requires a two-handed sword/ two-handed blunt to be equipped. Critical. Over-hit. -->
+		<!-- Widely swings a two-handed weapon to attack nearby enemies with $s1 power. Ignores Shield Defense. Requires a two-handed sword/ two-handed blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill0814</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -933,7 +933,7 @@
 		</effects>
 	</skill>
 	<skill id="821" toLevel="8" name="Shadow Step">
-		<!-- Moves a character behind enemy's back. Cancels the target and Stuns. -->
+		<!-- Teleports behind the target's back, decreasing their Speed for 10 sec. -->
 		<icon>icon.skill0821</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
@@ -1034,7 +1034,7 @@
 		</effects>
 	</skill>
 	<skill id="823" toLevel="3" name="Strengthen Golem">
-		<!-- Summoned golem's P. Atk. +$s2 and Atk. Spd. +$s3 for $s1. -->
+		<!-- For $s1, summoned golem's P. Atk. +$s2, Atk. Spd. +$s3. -->
 		<icon>icon.skill0823</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1089,7 +1089,7 @@
 		</effects>
 	</skill>
 	<skill id="824" toLevel="3" name="Golem Reinforcement">
-		<!-- For $s1, equips a summoned golem with an additional armor plate to get P. Def. +$s2 and Max HP +$s3. -->
+		<!-- For $s1, equips a summoned golem with an additional armor plate. Its P. Def. +$s2, Max HP +$s3. -->
 		<icon>icon.skill0824</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1194,7 +1194,7 @@
 		</effects>
 	</skill>
 	<skill id="826" toLevel="1" name="Spike">
-		<!-- For 20 min., adds a spike to a blunt weapon to get P. Atk. +10%. Additionally, Stun Atk. Rate +15%. -->
+		<!-- Thanks to the special Dwarven spells, P. Atk. +10% and additionally +120, Stun Atk. Rate +15%. -->
 		<icon>icon.skill0826</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1264,7 +1264,7 @@
 		</effects>
 	</skill>
 	<skill id="828" toLevel="1" name="Encase Armor">
-		<!-- Thickens the surface of heavy armor to get P. Def. +10% for 20 min. -->
+		<!-- Thanks to the special dwarven spells for armor, P. Def. +100. -->
 		<icon>icon.skill0828</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1671,7 +1671,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="848" toLevel="1" name="Gludio Territory Benefaction">
-		<!-- STR+ 1/ INT+ 1 -->
+		<!-- STR +1/ INT +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1688,7 +1688,7 @@
 		</effects>
 	</skill>
 	<skill id="849" toLevel="1" name="Dion Territory Benefaction">
-		<!-- DEX+ 1/ WIT+ 1 -->
+		<!-- DEX +1/ WIT +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1705,7 +1705,7 @@
 		</effects>
 	</skill>
 	<skill id="850" toLevel="1" name="Giran Territory Benefaction">
-		<!-- STR+ 1/ MEN+ 1 -->
+		<!-- STR +1/ MEN +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1722,7 +1722,7 @@
 		</effects>
 	</skill>
 	<skill id="851" toLevel="1" name="Oren Territory Benefaction">
-		<!-- CON+ 1/ MEN+ 1 -->
+		<!-- CON +1/ MEN +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1739,7 +1739,7 @@
 		</effects>
 	</skill>
 	<skill id="852" toLevel="1" name="Aden Territory Benefaction">
-		<!-- DEX+ 1/ MEN+ 1 -->
+		<!-- DEX +1/ MEN +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1756,7 +1756,7 @@
 		</effects>
 	</skill>
 	<skill id="853" toLevel="1" name="Innadril Territory Benefaction">
-		<!-- CON+ 1/ INT+ 1 -->
+		<!-- CON +1/ INT +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1773,7 +1773,7 @@
 		</effects>
 	</skill>
 	<skill id="854" toLevel="1" name="Goddard Territory Benefaction">
-		<!-- DEX+ 1/ INT+ 1 -->
+		<!-- DEX +1/ INT +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1790,7 +1790,7 @@
 		</effects>
 	</skill>
 	<skill id="855" toLevel="1" name="Rune Territory Benefaction">
-		<!-- STR+ 1/ WIT+ 1 -->
+		<!-- STR +1/ WIT +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1807,7 +1807,7 @@
 		</effects>
 	</skill>
 	<skill id="856" toLevel="1" name="Schuttgart Territory Benefaction">
-		<!-- CON+ 1/ WIT+ 1 -->
+		<!-- CON +1/ WIT +1 -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1915,7 +1915,7 @@
 		</effects>
 	</skill>
 	<skill id="871" toLevel="1" name="Might">
-		<!-- P. Atk. +15% for 20 min. -->
+		<!-- For 20 min., P. Atk. +15%. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1942,7 +1942,7 @@
 		</effects>
 	</skill>
 	<skill id="872" toLevel="8" name="Archer Captain Power Shot">
-		<!-- Uses a bow to attack a distant enemy with $s1 Power added to P. Atk. Over-hit. -->
+		<!-- Uses a bow to attack a distant enemy with $s1 power. Over-hit. -->
 		<icon>icon.skill0056</icon>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
@@ -2017,7 +2017,7 @@
 		</effects>
 	</skill>
 	<skill id="874" toLevel="8" name="Wizard Captain Flame Strike">
-		<!-- Launches a flaming swath of energy that inflicts Fire damage on the enemy with $s1 Power. -->
+		<!-- Launches an exploding fireball that inflicts damage on the enemy with $s1 Power. -->
 		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2080,7 +2080,7 @@
 		</effects>
 	</skill>
 	<skill id="875" toLevel="1" name="Empower">
-		<!-- M. Atk. power +75% for 20 min. -->
+		<!-- For 20 min., M. Atk. +75%. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2161,7 +2161,7 @@
 		</effects>
 	</skill>
 	<skill id="877" toLevel="8" name="Centurion Disarm">
-		<!-- Disarms the enemy and prevents him from equipping a weapon for $s1. -->
+		<!-- Disarms the enemy and prevents them from equipping a weapon for $s1 -->
 		<icon>icon.skill0485</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2296,7 +2296,7 @@
 		</effects>
 	</skill>
 	<skill id="880" toLevel="1" name="Knight Captain Ultimate Defense">
-		<!-- For 30 sec., P. Def. +3600, M. Def. +2700 and Buff-canceling Attack Resistance +80%. The player cannot move while the effect lasts. -->
+		<!-- For 30 sec., P. Def. +3600, M. Def. +2700, Buff Cancel Resistance +80%. Impossible to move while the effect is active. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2330,7 +2330,7 @@
 		</effects>
 	</skill>
 	<skill id="881" toLevel="7" name="Commander Twister">
-		<!-- Creates a powerful cyclone that inflicts Wind damage on the enemy. $s1 Power. -->
+		<!-- Creates a powerful cyclone that inflicts damage on the enemy. $s1 Power. -->
 		<icon>icon.skill1178</icon>
 		<castRange>750</castRange>
 		<effectPoint>-1</effectPoint>
@@ -2379,7 +2379,7 @@
 		</effects>
 	</skill>
 	<skill id="882" toLevel="7" name="Commander Blaze">
-		<!-- Ignites your body. Power $s1. -->
+		<!-- Ignites your body. Power $s1 -->
 		<icon>icon.skill1220</icon>
 		<castRange>750</castRange>
 		<effectPoint>-1</effectPoint>
@@ -2427,7 +2427,7 @@
 		</effects>
 	</skill>
 	<skill id="883" toLevel="7" name="Commander Seal of Binding">
-		<!-- Holds nearby enemies for $s1. -->
+		<!-- Immobilizes nearby enemies for $s1 -->
 		<icon>icon.skill1208</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

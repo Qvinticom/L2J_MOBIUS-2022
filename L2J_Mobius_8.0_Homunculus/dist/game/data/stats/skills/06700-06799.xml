@@ -100,7 +100,7 @@
 		</effects>
 	</skill>
 	<skill id="6705" toLevel="1" name="Stun">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>50</activateRate>
@@ -742,7 +742,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6734" toLevel="1" name="Destructive Energy">
-		<!-- The character is poisoned, for 5 sec. the enemy's HP -800 per sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- The character is poisoned, for 5 sec. the enemy's HP -800 per sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -825,7 +825,7 @@
 		</effects>
 	</skill>
 	<skill id="6738" toLevel="1" name="Hold">
-		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
@@ -893,7 +893,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6743" toLevel="1" name="Dark Wound">
-		<!-- Dark Resistance is decreased. HP -200 every sec. because of bleeding.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Dark Resistance is decreased. HP -200 every sec. because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1024,7 +1024,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6748" toLevel="1" name="Stun Attack">
-		<!-- Stuns the target for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1164,7 +1164,7 @@
 		</effects>
 	</skill>
 	<skill id="6754" toLevel="1" name="Bleed">
-		<!-- HP -200 every sec. because of bleeding.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- HP -200 every sec. because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1493,7 +1493,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6768" toLevel="1" name="Stun Attack">
-		<!-- Stuns the target for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stuns the target for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1661,7 +1661,7 @@
 		</effects>
 	</skill>
 	<skill id="6774" toLevel="1" name="Stun Attack">
-		<!-- Stuns the target for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stuns the target for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1719,7 +1719,7 @@
 		</effects>
 	</skill>
 	<skill id="6776" toLevel="1" name="Paralysis">
-		<!-- Gradually freezes the enemy's body for 10 sec. When it's frozen, inflicts Paralysis for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Gradually freezes the enemy's body for 10 sec. When it's frozen, inflicts Paralysis for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1765,7 +1765,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6777" toLevel="1" name="Bleeding Gash">
-		<!-- The enemy slows down for 20 sec., their HP -200 per sec. because of the bleeding. After that the enemy is paralyzed for 10 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- The enemy slows down for 20 sec., their HP -200 per sec. because of the bleeding. After that the enemy is paralyzed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1825,7 +1825,7 @@
 		</effects>
 	</skill>
 	<skill id="6779" toLevel="1" name="Paralysis">
-		<!-- Inflicts Paralysis.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Paralysis. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->

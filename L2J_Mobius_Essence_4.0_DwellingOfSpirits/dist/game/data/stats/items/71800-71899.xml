@@ -150,7 +150,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71815" name="Chronicle Cube Gift" type="EtcItem">
-		<!-- Double-click to obtain Dandy's Home Run Ball and Chronicle Chest. -->
+		<!-- Double-click to obtain Einhasad's Protection and Chronicle Pack. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -162,7 +162,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71816" name="Chronicle Chest" type="EtcItem">
-		<!-- Double-click to obtain an enchanted rare accessory or crafting supply (30-day). -->
+		<!-- Double-click to obtain various supplies. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
@@ -570,7 +570,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71891" name="ADEN Storm Gatcha Ticket" type="EtcItem">
-		<!-- Double-click to obtain 300 L-Coins and Sayha's Storm Lv. 3 (1-1000 pcs.). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -579,7 +579,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71899" name="Limited Sayha's Blessing" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to get the Limited Sayha's effect for 30 d. If Sayha's Grace is inactive, Acquired XP/ SP +200%, adena's drop rate penalty is decreased. -->
+		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 30 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

@@ -630,7 +630,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94042" name="Emerald Weapon Appearance Stone" type="EtcItem">
-		<!-- A memorable achievement reward for Lv. 90.\nChanges the appearance of your weapon into that of Emerald one (except shields and sigils). -->
+		<!-- A memorable achievement reward for Lv. 90. Changes the appearance of your weapon into that of Emerald one (except shields and sigils). -->
 		<set name="icon" val="icon.shape_shifting_dagger_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -673,7 +673,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="94046" name="Spellbook: Ability of Glory Lv. 1" type="EtcItem">
-		<!-- A memorable achievement reward for Lv. 90. Double-click to learn Ability of Glory.\n\n<Classes>\nAll classes\n\n<Skill effect>\nIncreases CON and MEN. -->
+		<!-- A memorable spellbook for reaching Lv. 90. Double-click to learn Glorious Warrior's Ability. <Classes>. All classes. <Skill effect>. Increases CON and MEN. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -684,7 +684,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94047" name="Spellbook: Ability of Glory" type="EtcItem">
-		<!-- A spellbook for learning the Ability of Glory skill. -->
+		<!-- A spellbook for learning Glorious Warrior's Ability. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -732,7 +732,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94054" name="Master's Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Enchant Kit: Talisman of Aden/ Eva/ Authority, Dragon Belt Pack, Package: Cloak of Protection, Package: Einhasad's Necklace, 5 jewels of Lv. 1. -->
+		<!-- Double-click to obtain one of the following items: Enchant Kit: Talisman of Aden/ Eva/ Authority, Package: Cloak of Protection, Package: Einhasad's Necklace, 5 jewels of Lv. 1. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1051,7 +1051,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94083" name="Helmet of Mana" type="Armor">
-		<!-- <Properties>\nSTR +1\nINT +1\nOverweight limit +1500\nM. Def. +10\nHP Recovery Rate +8%\nMP Recovery Rate +8%\nP. Atk. +6%\nM. Atk. +8% -->
+		<!-- <Properties>. STR +1. INT +1. Overweight limit +1500. M. Def. +10. HP Recovery Rate +8%. MP Recovery Rate +8%. P. Atk. +6%. M. Atk. +8% -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1079,7 +1079,7 @@
 		</skills>
 	</item>
 	<item id="94084" name="Helmet of Mana" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nSTR +1\nINT +1\nOverweight limit +1500\nM. Def. +10\nHP Recovery Rate +8%\nMP Recovery Rate +8%\nP. Atk. +6%\nM. Atk. +8% -->
+		<!-- <Properties>. STR +1. INT +1. Overweight limit +1500. M. Def. +10. HP Recovery Rate +8%. MP Recovery Rate +8%. P. Atk. +6%. M. Atk. +8% -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1109,7 +1109,7 @@
 		</skills>
 	</item>
 	<item id="94085" name="Boots of Evasion" type="Armor">
-		<!-- <Properties>\nSTR +1\nINT +1\nOverweight limit +1000\nM. Def. +10\nMax HP +200\nSpeed +8 -->
+		<!-- <Properties>. STR +1. INT +1. Overweight limit +1000. M. Def. +10. Max HP +200. Speed +8 -->
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1137,7 +1137,7 @@
 		</skills>
 	</item>
 	<item id="94086" name="Boots of Evasion" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nSTR +1\nINT +1\nOverweight limit +1000\nM. Def. +10\nMax HP +200\nSpeed +8 -->
+		<!-- <Properties>. STR +1. INT +1. Overweight limit +1000. M. Def. +10. Max HP +200. Speed +8 -->
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1167,7 +1167,7 @@
 		</skills>
 	</item>
 	<item id="94087" name="Package: Helmet of Mana" type="EtcItem">
-		<!-- Double-click to obtain Helmet of Mana (Exchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1178,7 +1178,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94088" name="Package: Helmet of Mana" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Helmet of Mana (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1189,7 +1189,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94089" name="Package: Boots of Evasion" type="EtcItem">
-		<!-- Double-click to obtain Boots of Evasion (Exchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1200,7 +1200,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94090" name="Package: Boots of Evasion" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Boots of Evasion (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t100_b_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1242,7 +1242,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94094" name="+7 Talisman of Authority Pack" type="EtcItem">
-		<!-- Double-click to obtain +7 Talisman of Authority. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_silver_lure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1253,7 +1253,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94095" name="Package: Inventory Expansion Ticket Lv. 4-5" type="EtcItem">
-		<!-- Double-click to obtain Inventory Expansion Ticket Lv. 4 and 5 Lv. 5. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1270,7 +1270,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94097" name="Sealed Wolf Necklace" type="EtcItem">
-		<!-- Double-click to obtain Wolf Necklace.\n -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_summon_wolf_r_02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1282,7 +1282,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94098" name="Sealed Buffalo Necklace" type="EtcItem">
-		<!-- Double-click to obtain Buffalo Necklace.\n -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.buffalo_necklace_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1294,7 +1294,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94099" name="Sealed Tiger Necklace" type="EtcItem">
-		<!-- Double-click to obtain Tiger Necklace.\n -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_tooth_gragon" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

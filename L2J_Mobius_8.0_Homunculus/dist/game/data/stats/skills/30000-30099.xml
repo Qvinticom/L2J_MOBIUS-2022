@@ -812,7 +812,7 @@
 		</endEffects>
 	</skill>
 	<skill id="30009" toLevel="10" name="Deceptive Blink">
-		<!-- The character teleports back and vanishes for $s1, becoming one with the wind. Speed +$s2. After that the Traces of Wind effect is granted. Requires a sword or a blunt weapon. Consumes 10 Spirit Ore. -->
+		<!-- The character teleports back and vanishes for $s1, becoming one with the wind. Speed +$s2. After that the Traces of Wind effect is granted. Requires a sword or a blunt weapon Consumes 10 Spirit Ore. -->
 		<icon>icon.skill30009</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1054,7 +1054,7 @@
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>30844</skillId> <!-- Threatening Wind -->
+				<skillId>30844</skillId> <!-- Perfect Threatening Wind -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -2125,7 +2125,7 @@
 		</effects>
 	</skill>
 	<skill id="30041" toLevel="17" name="Eminent Robe Mastery">
-		<!-- When equipped with a robe, P. Def. +$s1. Shields and Sigils are not worn, as you move with the wind. -->
+		<!-- When using robes, P. Def. +$s1. -->
 		<icon>icon.skill30024</icon>
 		<operateType>P</operateType>
 		<effects>

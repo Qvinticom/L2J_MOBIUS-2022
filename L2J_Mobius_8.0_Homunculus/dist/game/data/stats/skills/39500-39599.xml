@@ -144,7 +144,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39514" toLevel="3" name="Fantasia Harmony - Emperor's Special Cocktail">
-		<!-- The GM is always by your side. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, M. Skill Critical Damage +$s8, Atk. Spd. +$s9, Casting Spd. +$s10, Shield Defense/ Shield Defense Rate +$s11, Attribute Attack +$s12, Skill Cooldown -$s13, M. Skill MP Consumption -$s14, Received P. Critical Rate/ Received M. Skill Critical Rate -$s15. The effect remains after death. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, Critical Rate for standard attacks/ M. Skill Critical Rate +$s6, Critical Damage for standard attacks +$s7, M. Skill Critical Damage +$s8, Atk. Spd. +$s9, Casting Spd. +$s10, Shield Defense/ Shield Defense Rate +$s11, Attribute Attack +$s12, Skill Cooldown -$s13, Skill MP Consumption -$s14, received Critical Rate for standard attacks/ M. skills -$s15. The effect remains after death. -->
 		<icon>icon.bm_special_cocktail_of_king_d</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -372,7 +372,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39525" toLevel="1" name="PA Honey Dark Beer">
-		<!-- All stats +$s1, Vitality Bonus +$s2. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<!-- All stats +$s1, Vitality bonus +$s2. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_royal_black_beer</icon>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
@@ -424,7 +424,7 @@
 		</effects>
 	</skill>
 	<skill id="39526" toLevel="1" name="Honey Dark Beer">
-		<!-- All stats +$s1, Vitality Bonus +$s2. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<!-- All stats +$s1, Vitality bonus +$s2. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_royal_black_beer</icon>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>
@@ -522,7 +522,7 @@
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="39534" toLevel="1" name="Red Libra Blessing (7-day)">
-		<!-- Maintains Vitality when you have it in the inventory. -->
+		<!-- When in inventory, maintains the Vitality level. -->
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -752,7 +752,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="39563" toLevel="1" name="Maphr's Blessing (1-day)">
-		<!-- Maintains Vitality when you have it in the inventory. -->
+		<!-- When in inventory, maintains the Vitality level. -->
 		<icon>BranchSys.icon.br_rune_of_eva_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -842,7 +842,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39570" toLevel="1" name="Honey Dark Beer">
-		<!-- For $s1, all stats $s2, Vitality Bonus +$s3. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<!-- For $s1, all basic stats $s2, Vitality bonus +$s3. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<icon>icon.bm_royal_black_beer</icon>
 		<operateType>A2</operateType>
 		<isMagic>2</isMagic>

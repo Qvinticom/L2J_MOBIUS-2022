@@ -169,7 +169,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2509" name="Spiritshot (No-grade)" type="EtcItem">
-		<!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -185,7 +185,7 @@
 		</skills>
 	</item>
 	<item id="2510" name="Spiritshot (D-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -203,7 +203,7 @@
 		</skills>
 	</item>
 	<item id="2511" name="Spiritshot (C-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -221,7 +221,7 @@
 		</skills>
 	</item>
 	<item id="2512" name="Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
+		<!-- Increases a weapon's magic power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -239,7 +239,7 @@
 		</skills>
 	</item>
 	<item id="2513" name="Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -257,7 +257,7 @@
 		</skills>
 	</item>
 	<item id="2514" name="Spiritshot (S-grade)" type="EtcItem">
-		<!-- The power of Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with S-grade weapons. -->
+		<!-- Increases a weapon's magic power. Used with S-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />

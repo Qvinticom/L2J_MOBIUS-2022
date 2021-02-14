@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6611" name="Infinity Sword" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Reflect: for 5 min. damage received +8%. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Spd. +5%. Infinity Power - Reflect: for 5 min., Damage Reflection +8%. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -36,7 +36,7 @@
 		</stats>
 	</item>
 	<item id="6612" name="Infinity Slasher" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Slasher. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%. Infinity Power - Protection: for 2 min., makes you immune to debuffs 5 times. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -71,7 +71,7 @@
 		</stats>
 	</item>
 	<item id="6613" name="Infinity Axe" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Axe. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Spd. +5%. Infinity Power - Tenacity: for 2 min., returns 10% of the received damage back to the enemy. Recovers ??. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -107,7 +107,7 @@
 		</stats>
 	</item>
 	<item id="6614" name="Infinity Rod" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Rod. Max HP +10%, Max MP +25%, Max CP +30%, M. Critical Rate +20, Casting Spd. +5%, when equipped. Infinity Power - Mana Limit: for 30 sec. magic skills don't consume MP. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +10%, Max MP +25%, Max CP +30%, M. Skill Critical Rate +20, Casting Spd. +5%. Infinity Power - Mana Limit: for 30 sec., magic skills don't consume MP. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -144,7 +144,7 @@
 		</stats>
 	</item>
 	<item id="6616" name="Infinity Scepter" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Scepter. Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Vampiric Mana: for 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, M. Skill Critical Damage +10%. Infinity Power - Vampiric Mana: for 5 min., chance to absorb 3% of the inflicted damage as MP. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -181,7 +181,7 @@
 		</stats>
 	</item>
 	<item id="6617" name="Infinity Dagger" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dagger. Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%, when equipped. Infinity Power - Immortal: for 5 min. increases the chance of deadly attack. -->
+		<!-- A divine hero's weapon. Grants special properties, enables the Infinity Power skill. Increases PvP damage. Special properties: Max HP +15%, Max MP +20%, Max CP +30%, P. Critical Rate +20, P. Critical Damage +20%. Infinity Power - Immortal: for 5 min., Vital Point Attack Rate +20%. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -217,7 +217,7 @@
 		</stats>
 	</item>
 	<item id="6618" name="Infinity Fighter" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Fighter. Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%. Infinity Power - Protection: for 2 min., makes you immune to debuffs 5 times. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -253,7 +253,7 @@
 		</stats>
 	</item>
 	<item id="6619" name="Infinity Bow" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Bow. Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%, when equipped. Infinity Power - Archery: for 5 min. increases Speed and the bow's range. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +15%, Max MP +20%, Max CP +30%, Skill MP Consumption -5%, Atk. Spd. +10%. Infinity Power - Archery: for 5 min., increases Speed and the bow's range. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -291,7 +291,7 @@
 		</stats>
 	</item>
 	<item id="6620" name="Infinity Dualsword" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dual Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped. Infinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%. Infinity Power - Refresh: for 5 min., Skill Cooldown -10%. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -326,7 +326,7 @@
 		</stats>
 	</item>
 	<item id="6621" name="Infinity Spear" type="Weapon">
-		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Spear. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional PvP damage. Special Ability: Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%. Infinity Power - Tenacity: for 2 min., returns 10% of the received damage back to the enemy. Recovers ??. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -362,7 +362,7 @@
 		</stats>
 	</item>
 	<item id="6645" name="Beast Soulshot" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor? info window. (Used from the master? inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Soulshots increase servitor s physical attack. The required number of Soulshots is shown in the servitor s info window. (Used from the master s inventory.). <When used>. Servitor s P. Damage +100%. -->
 		<set name="icon" val="icon.etc_beast_soul_shot_i00" />
 		<set name="default_action" val="SUMMON_SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -381,7 +381,7 @@
 		</skills>
 	</item>
 	<item id="6646" name="Beast Spiritshot" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor? info window. (Used from the master? inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Spiritshots increase servitor s magic power. The required number of Spiritshots is shown in the servitor s info window. (Used from the master s inventory.). <When used>. Servitor s M. Damage +100%. Received Healing for servitors is slightly increased. Servitor s Casting Spd. +40. -->
 		<set name="icon" val="icon.etc_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -400,7 +400,7 @@
 		</skills>
 	</item>
 	<item id="6647" name="Blessed Beast Spiritshot" type="EtcItem">
-		<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor? info window. (Used from the master? inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Blessed Spiritshots required is given in the servitor s info window. (Used from the master s inventory.) -->
 		<set name="icon" val="icon.etc_blessed_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -419,7 +419,7 @@
 		</skills>
 	</item>
 	<item id="6660" name="Queen Ant's Ring" type="Armor">
-		<!-- MP +9, Poison Resistance and Atk. Rate +10%, P. /M. Accuracy +1, P. /M. Atk. +4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<!-- Max enchant value: +5. (Requires Scroll: Enchant Rare Accessories.). Boosts the item's parameters after enchanting. Effects of two identical rings do not stack. Safe enchanting to +1 -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -438,7 +438,7 @@
 		</stats>
 	</item>
 	<item id="6661" name="Orfen's Earring" type="Armor">
-		<!-- MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
+		<!-- Max enchant value: +5. (Requires Scroll: Enchant Rare Accessories.). Boosts the item's parameters after enchanting. Effects of two identical earrings do not stack. Safe enchanting to +1 -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -457,7 +457,7 @@
 		</stats>
 	</item>
 	<item id="6662" name="Ring of Core" type="Armor">
-		<!-- MP +9, Mental Resistance and Atk. Rate +10%, P./ M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
+		<!-- Max enchant value: +5. (Requires Scroll: Enchant Rare Accessories.). Boosts the item's parameters after enchanting. Effects of two identical rings do not stack. Safe enchanting to +1 -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -476,7 +476,7 @@
 		</stats>
 	</item>
 	<item id="6674" name="Sealed Imperial Crusader Breastplate" type="Armor">
-		<!-- The seal can be removed by a blacksmith in any village. -->
+		<!-- The seal can be removed by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t88_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -492,7 +492,7 @@
 		</stats>
 	</item>
 	<item id="6675" name="Sealed Imperial Crusader Gaiters" type="Armor">
-		<!-- The seal can be removed by a blacksmith in any village. -->
+		<!-- The seal can be removed by a blacksmith in any town. -->
 		<set name="icon" val="icon.armor_t88_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -692,7 +692,7 @@
 		</stats>
 	</item>
 	<item id="6688" name="Forgotten Blade Edge" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Forgotten Blade. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Forgotten Blade. No longer used. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -700,7 +700,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6689" name="Basalt Battlehammer Head" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Basalt Battlehammer. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Basalt Battlehammer. No longer used. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -708,7 +708,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6690" name="Imperial Staff Head" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Imperial Staff. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Imperial Staff. No longer used. -->
 		<set name="icon" val="icon.etc_bark_blue_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -716,7 +716,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6691" name="Angel Slayer Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Angel Slayer. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Angel Slayer. No longer used. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -724,7 +724,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6693" name="Dragon Hunter Axe Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a hunter axe. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Dragon Hunter Axe. No longer used. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -732,7 +732,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6694" name="Saint Spear Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Saint Spear. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Divine Spear. No longer used. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -740,7 +740,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6695" name="Demon Splinter Blade" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Demon Splinter. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Demon Splinter. No longer used. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -748,7 +748,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6696" name="Heaven's Divider Edge" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Heaven's Divider. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Heaven's Divider. No longer used. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -756,7 +756,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6697" name="Arcana Mace Head" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Imperial Staff. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Arcana Mace. No longer used. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -764,7 +764,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6698" name="Sealed Tateossian Earring Part" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Sealed Tateossian Earring. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Sealed Tateossian Earring. No longer used. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6699" name="Sealed Tateossian Ring Gem" type="EtcItem">
-		<!-- Main ingredient required for a Dwarf to make a Sealed Tateossian Ring. Can be sold at ordinary shops. -->
+		<!-- Key material for Dwarves to make Sealed Tateossian Ring. No longer used. -->
 		<set name="icon" val="icon.etc_crystal_ball_gold_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />

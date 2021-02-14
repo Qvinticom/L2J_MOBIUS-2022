@@ -34,20 +34,20 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="50104" toLevel="1" name="Temporary Invincibility">
-		<!-- Connects souls and recovers HP. -->
+		<!-- Connected to the spirit realm. Invincibility is granted. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>600000</hitTime>
 	</skill>
 	<skill id="50105" toLevel="1" name="Earth Life">
-		<!-- Resores HP for prolonged time thanks to the Earth Attribute power. -->
+		<!-- Continuously restores HP. -->
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="50106" toLevel="1" name="Pirate's Strike">
-		<!-- Inflicts damage on the enemy with 1876 Power. -->
+		<!-- Attacks the enemy with 1876 power. -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
@@ -55,7 +55,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="50107" toLevel="1" name="Pirate's Slash">
-		<!-- Inflicts damage on the enemy with 2112 Power. -->
+		<!-- Attacks the enemy with 2112 power. -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
@@ -71,7 +71,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="50109" toLevel="1" name="Pirate's Curse">
-		<!-- For 30 sec., P./ M. Atk. P. Def. and M. Def. -23%. -->
+		<!-- For 30 sec., P./ M. Atk. P./ M. Def. -23%. -->
 		<icon>icon.skill0046</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -129,7 +129,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="50115" toLevel="1" name="Pirate's Rage">
-		<!-- For 30 sec., M. Atk. +50%, P./ M. Def. +50%. -->
+		<!-- For $s1, M. Atk. +$s2, P./ M. Def. +$s3. -->
 		<icon>icon.skill11832</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -173,7 +173,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="50122" toLevel="1" name="Lord Ishka's Raid Shield">
-		<!-- P. Def. and M. Def. are increased for 5 min. -->
+		<!-- P./ M. Def. are increased for 5 min. -->
 		<icon>icon.skill0110</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -232,7 +232,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="50131" toLevel="1" name="Special Dragon's Miracle Potion">
-		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./ Casting Spd. +50, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
+		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk./ Casting Spd. +50, P. Critical Rate/ M. Skill Critical Rate +30, P. Critical Damage/ M. Skill Critical Damage +10%, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Rate +10, Sayha's Grace Consumption -20%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -260,7 +260,7 @@
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="50134" toLevel="1" name="XP Growth Scroll (Event)">
-		<!-- For 3 min., Acquired XP/ SP +30%. Cooldown: 1 min. The effect remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +30%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_rice_cake_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -651,7 +651,7 @@
 		</effects>
 	</skill>
 	<skill id="50170" toLevel="1" name="Special Dragon's Miracle Potion">
-		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./ Casting Spd. +50, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. With a certain chance absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
+		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk./ Casting Spd. +50, P. Critical Rate/ M. Skill Critical Rate +30, P. Critical Damage/ M. Skill Critical Damage +10%, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Rate +10, Sayha's Grace Consumption -20%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -661,7 +661,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50172" toLevel="1" name="Combat Scroll">
-		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
+		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +10%. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill5074</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -669,7 +669,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="50173" toLevel="1" name="Paralysis Resistance Scroll">
-		<!-- For 20 min., Paralysis Resistance +10%. -->
+		<!-- For 20 min., Paralysis Resistance +$s1. -->
 		<icon>icon.scroll_of_verification_i08</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -677,7 +677,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="50174" toLevel="1" name="Fear/Silence Resistance Scroll">
-		<!-- For 20 min., Mental Resistance +10%. -->
+		<!-- Fear/ Silence Resistance +$s1 for 20 min. -->
 		<icon>icon.scroll_of_verification_i08</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -763,7 +763,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="50183" toLevel="1" name="Adventurer's Brooch">
-		<!-- 1 gemstone can be equipped. -->
+		<!-- <Effect> 1 jewel can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -773,7 +773,7 @@
 		</effects>
 	</skill>
 	<skill id="50184" toLevel="1" name="Adventurer's Agathion Bracelet">
-		<!-- Activates the main agathion slot. -->
+		<!-- <Effect> Unlocks the main agathion slot. -->
 		<icon>icon.agathion_magmeld_teleport</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -783,13 +783,13 @@
 		</effects>
 	</skill>
 	<skill id="50185" toLevel="1" name="Summon Agathion Griffin">
-		<!-- Summons Agathion. -->
+		<!-- Summons Agathion Griffin. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="50186" toLevel="1" name="Agathion: Adventurer's Agathion Griffin">
-		<!-- P. Def. +5. -->
+		<!-- <Effect> P. Def. +$s1. -->
 		<icon>icon.griffin_vehicle</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -800,7 +800,7 @@
 		</effects>
 	</skill>
 	<skill id="50187" toLevel="1" name="Jewel: Adventurer's Rough Jewel">
-		<!-- Max HP +5 -->
+		<!-- <Effect> Max HP +$s1 -->
 		<icon>icon.etc_crystal_piece_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -811,17 +811,17 @@
 		</effects>
 	</skill>
 	<skill id="50188" toLevel="1" name="Adventurer's Talisman">
-		<!-- M. Def. +5. -->
+		<!-- <Effect> M. Def. +$s1 -->
 		<icon>icon.etc_talisman_i07</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="50189" toLevel="11" name="Ring: Ring of Insolence">
-		<!-- Sleep Resistance +$s1. -->
+		<!-- <Effect> Sleep Resistance +$s1 -->
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="50190" toLevel="11" name="Earring: Dragon Valley's Earring">
-		<!-- Stun Resistance +$s1. -->
+		<!-- <Effect> Stun Resistance +$s1 -->
 		<icon>icon.accessary_catseye_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -843,16 +843,17 @@
 		</effects>
 	</skill>
 	<skill id="50191" toLevel="5" name="Enchant Effect: +1 Talisman of Baium">
-		<!-- P. Atk. +16, M. Atk. +23, CON/ MEN +1, Skill Cooldown -1%. -->
+		<!-- <Effect> P. Atk. +16 M. Atk. +23 CON +1 MEN +1 Skill Cooldown -1% -->
 		<icon>icon.tallisman_baium</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="50192" toLevel="6" name="Talisman Bracelet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- <Effect> Talismans can be equipped: $s1 pcs. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50193" toLevel="11" name="Talisman: Talisman of Eva">
+		<!-- Imbued with Eva's energy. <Effect> M. Def. $s1 Max MP $s2 -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -936,6 +937,7 @@
 		</effects>
 	</skill>
 	<skill id="50194" toLevel="10" name="Gem: Amber">
+		<!-- Interrupts a skill used by the target. <PvP effect> Ignores CP and deals $s1 fixed damage. -->
 	<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<abnormalLevel>
@@ -993,7 +995,7 @@
 		</pvpEffects>
 	</skill>
 	<skill id="50195" toLevel="10" name="Gem: Opal">
-		<!-- Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +$s1. -->
+		<!-- Stun Resistance +$s1 Pull Resistance +$s1 Silence Resistance +$s1 Fear Resistance +$s1 Paralysis Resistance +$s1 -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1066,7 +1068,7 @@
 		</effects>
 	</skill>
 	<skill id="50196" toLevel="10" name="Gem: Opal - Special Ability">
-		<!-- Becomes invincible for debuffs for $s1 -->
+		<!-- Grants immunity to debuffs for $s1 -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -1120,7 +1122,7 @@
 		</effects>
 	</skill>
 	<skill id="50197" toLevel="10" name="Gem: Coral">
-		<!-- Atk. Spd./ Casting Spd. +$s1. -->
+		<!-- Atk. Spd. +$s1 Casting Spd. +$s1 -->
 		<icon>icon.etc_bm_jewel_coral_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1158,7 +1160,7 @@
 		</effects>
 	</skill>
 	<skill id="50198" toLevel="10" name="Gem: Onyx">
-		<!-- Soulshot Damage +$s1. -->
+		<!-- Soulshot Damage +$s1 -->
 		<icon>icon.etc_bm_jewel_onyx_i00</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1179,7 +1181,7 @@
 		</effects>
 	</skill>
 	<skill id="50199" toLevel="10" name="Gem: Onyx">
-		<!-- Blessed Soulshot Damage +$s1. -->
+		<!-- Blessed Soulshot Damage +$s1 -->
 		<icon>icon.etc_bm_jewel_onyx_i00</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

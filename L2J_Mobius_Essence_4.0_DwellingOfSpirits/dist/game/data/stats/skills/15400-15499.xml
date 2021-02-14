@@ -34,7 +34,7 @@
 		</effects>
 	</skill>
 	<skill id="15402" toLevel="1" name="Wisp's Blessing">
-		<!-- P. Atk. And M. Atk. increases temporarily. -->
+		<!-- P./ M. Atk. increases temporarily. -->
 		<icon>icon.skill11046</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -218,7 +218,7 @@
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="15415" toLevel="1" name="No-grade Appearance Modification">
-		<!-- Appearance Modification (No-grade) (Raid) -->
+		<!-- Changed to the appearance of a No-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -239,7 +239,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15416" toLevel="1" name="D-grade Appearance Modification">
-		<!-- Appearance Modification (D-grade) (Raid) -->
+		<!-- Changed to the appearance of a D-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -260,7 +260,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15417" toLevel="1" name="C-grade Appearance Modification">
-		<!-- Appearance Modification (C-grade) (Raid) -->
+		<!-- Changed to the appearance of a C-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -281,7 +281,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15418" toLevel="1" name="B-grade Appearance Modification">
-		<!-- Appearance Modification (B-grade) (Raid) -->
+		<!-- Changed to the appearance of a B-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -302,7 +302,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15419" toLevel="1" name="A-grade Appearance Modification">
-		<!-- Appearance Modification (A-grade) (Raid) -->
+		<!-- Changed to the appearance of an A-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -395,7 +395,7 @@
 		</effects>
 	</skill>
 	<skill id="15433" toLevel="1" name="Surrender to Dark">
-		<!-- Dark Attack Resistance decreased, and Holy Attack Resistance increases momentarily. -->
+		<!-- Dark Resistance has been momentarily decreased, while Holy Resistance has been increased. -->
 		<icon>icon.skill4336_new</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -508,7 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="15438" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -594,7 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="15442" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -650,7 +650,7 @@
 		</effects>
 	</skill>
 	<skill id="15444" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -726,7 +726,7 @@
 		</effects>
 	</skill>
 	<skill id="15447" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -794,7 +794,7 @@
 		</effects>
 	</skill>
 	<skill id="15450" toLevel="1" name="Weakness">
-		<!-- P. Atk. decreases momentarily. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -823,7 +823,7 @@
 		</effects>
 	</skill>
 	<skill id="15451" toLevel="1" name="Bleed">
-		<!-- HP decreases from bleeding. -->
+		<!-- Causes target to bleed severely, momentarily reducing HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -852,7 +852,7 @@
 		</effects>
 	</skill>
 	<skill id="15452" toLevel="1" name="Decrease P. Atk.">
-		<!-- P. Atk. decreases momentarily. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill1164</icon>
 		<operateType>A2</operateType>
 		<mpConsume>112</mpConsume>
@@ -898,7 +898,7 @@
 		</effects>
 	</skill>
 	<skill id="15454" toLevel="1" name="Memorable Raid Blessing">
-		<!-- For 2 hr., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, and acquired XP/ SP +30%. -->
+		<!-- For 2 h., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Atk. Spd. +5%, Casting Spd. +5%, Max HP/ MP +5%, and Acquired XP/ SP +30%. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -920,13 +920,13 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15455" toLevel="1" name="Thin Skin">
-		<!-- Received damage increases due to skin sensitivity. -->
+		<!-- Increases received damage. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>97</magicLevel>
 	</skill>
 	<skill id="15456" toLevel="1" name="Triol's Voice">
-		<!-- Triol's Voice -->
+		<!-- Triol's Voice. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
 		<hitTime>5000</hitTime>
@@ -947,7 +947,7 @@
 		</effects>
 	</skill>
 	<skill id="15457" toLevel="2" name="Triol's Reign">
-		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. -->
+		<!-- Blood is drained by Triol, one of the 4 Demons of Hell, decreasing the character's HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1018,7 +1018,7 @@
 		</effects>
 	</skill>
 	<skill id="15460" toLevel="1" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1173,7 +1173,7 @@
 		</effects>
 	</skill>
 	<skill id="15469" toLevel="1" name="Rites for Triol">
-		<!-- For 60 min., HP Recovery Bonus +20%. -->
+		<!-- HP Recovery Rate +20% for 60 min. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1211,7 +1211,7 @@
 		</effects>
 	</skill>
 	<skill id="15471" toLevel="1" name="No-grade Appearance Modification (Raid)">
-		<!-- Appearance Modification (No-grade) (Raid) -->
+		<!-- Changed to the appearance of a No-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1232,7 +1232,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15472" toLevel="1" name="D-grade Appearance Modification (Raid)">
-		<!-- Appearance Modification (D-grade) (Raid) -->
+		<!-- Changed to the appearance of a D-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1253,7 +1253,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15473" toLevel="1" name="C-grade Appearance Modification (Raid)">
-		<!-- Appearance Modification (C-grade) (Raid) -->
+		<!-- Changed to the appearance of a C-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1274,7 +1274,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15474" toLevel="1" name="B-grade Appearance Modification (Raid)">
-		<!-- Appearance Modification (B-grade) (Raid) -->
+		<!-- Changed to the appearance of a B-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1295,7 +1295,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15475" toLevel="1" name="A-grade Appearance Modification (Raid)">
-		<!-- Appearance Modification (A-grade) (Raid) -->
+		<!-- Changed to the appearance of an A-grade item. -->
 		<icon>BranchSys2.icon.br_royal_crown_of_vesper_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1347,7 +1347,7 @@
 		</effects>
 	</skill>
 	<skill id="15477" toLevel="1" name="Corrosive Acid Spray">
-		<!-- P. Def. and M. Def. decreased. -->
+		<!-- P./ M. Def. decreased. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1379,7 +1379,7 @@
 		</effects>
 	</skill>
 	<skill id="15478" toLevel="1" name="Spread Disease">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1410,7 +1410,7 @@
 		</effects>
 	</skill>
 	<skill id="15479" toLevel="1" name="Vomit Mucus">
-		<!-- P. Accuracy decreased due to mucus. -->
+		<!-- Decreases enemy's P. Accuracy. -->
 		<icon>icon.skill1222</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1463,7 +1463,7 @@
 		</effects>
 	</skill>
 	<skill id="15481" toLevel="1" name="Shoot Spider Web">
-		<!-- The web decreases Speed by 10%. -->
+		<!-- Target's Speed -10%. -->
 		<icon>icon.skill0102</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1589,7 +1589,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15493" toLevel="1" name="Charge">
-		<!-- Charges to attack a target. -->
+		<!-- Rush toward enemy. -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<effectPoint>-100</effectPoint>
@@ -1615,7 +1615,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15496" toLevel="1" name="Travis' Authority">
-		<!-- AoE M. Atk. On target's area. -->
+		<!-- AoE M. Atk. on target's area. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -1632,7 +1632,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15498" toLevel="1" name="Dragon Defender">
-		<!-- For 2 hr., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, and Speed +10. -->
+		<!-- For 2 h., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, and Speed +10. -->
 		<icon>icon.skill4689</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>

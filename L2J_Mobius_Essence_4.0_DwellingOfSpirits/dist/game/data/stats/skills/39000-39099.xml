@@ -9,7 +9,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39002" toLevel="1" name="HP Replenishing Potion">
-		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
+		<!-- Recovers HP for 15 sec. -->
 		<icon>icon.etc_lesser_potion_red_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -54,11 +54,11 @@
 		<hitTime>500</hitTime>
 	</skill>
 	<skill id="39011" toLevel="1" name="Facelifting Potion Pack">
-		<!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
+		<!-- Double-click to obtain one of the following items: Facelifting Potion A/ B/ C. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39012" toLevel="1" name="Dye Potion Pack">
-		<!-- Wrapped Pack containing either Dye Potion A, B, C, or D. -->
+		<!-- Double-click to obtain one of the following items: Dye Potion A/ B/ C/ D. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39013" toLevel="1" name="Scroll: Empower">
@@ -156,7 +156,7 @@
 		</effects>
 	</skill>
 	<skill id="39017" toLevel="1" name="Dance of Concentration">
-		<!-- For 20 min., Casting Spd. +5%. -->
+		<!-- Casting Spd. +5% for 20 min. -->
 		<icon>icon.bm_agathion_concentration</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -422,47 +422,47 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39032" toLevel="1" name="Lucky Package: No-grade Soulshots">
-		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (No-grade). -->
+		<!-- Double-click to obtain 100-10,000 No-grade Soulshots. -->
 		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39033" toLevel="1" name="Lucky Package: D-grade Soulshots">
-		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (D-grade). -->
+		<!-- Double-click to obtain 100-10,000 D-grade Soulshots. -->
 		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39034" toLevel="1" name="Lucky Package: C-grade Soulshots">
-		<!-- Open the package to get from 50 to 5000 Mysterious Soulshots (C-grade). -->
+		<!-- Double-click to obtain 50-5000 C-grade Soulshots. -->
 		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39035" toLevel="1" name="Lucky Package: No-grade Spiritshots">
-		<!-- Open the package to get from 50 to 1000 Spiritshots (No-grade). -->
+		<!-- Double-click to obtain 50-1000 No-grade Spiritshots. -->
 		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39036" toLevel="1" name="Lucky Package: D-grade Spiritshots">
-		<!-- Open the package to get from 80 to 3000 Spiritshots (D-grade). -->
+		<!-- Double-click to obtain 80-3000 D-grade Spiritshots. -->
 		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39037" toLevel="1" name="Lucky Package: C-grade Spiritshots">
-		<!-- Open the package to get from 30 to 1000 Spiritshots (C-grade). -->
+		<!-- Double-click to obtain 30-1000 C-grade Spiritshots. -->
 		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39038" toLevel="1" name="Lucky Package: Blessed No-grade Spiritshots">
-		<!-- Open the package to get from 100 to 10 000 Blessed Spiritshots (No-grade). -->
+		<!-- Double-click to obtain 100-10,000 Blessed No-grade Spiritshots. -->
 		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39039" toLevel="1" name="Lucky Package: Blessed D-grade Spiritshots">
-		<!-- Open the package to get from 100 to 10 000 Blessed Spiritshots (D-grade). -->
+		<!-- Double-click to obtain 100-10,000 Blessed D-grade Spiritshots. -->
 		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39040" toLevel="1" name="Lucky Package: Blessed C-grade Spiritshots">
-		<!-- Open the package to get from 50 to 5000 Blessed Spiritshots (C-grade). -->
+		<!-- Double-click to obtain 50-5000 Blessed C-grade Spiritshots. -->
 		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -479,7 +479,7 @@
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="39043" toLevel="1" name="Side Effect">
-		<!-- Enlarges the user's head for 10 min. Cooldown - 30 min. -->
+		<!-- Enlarges your head for 10 min. Cooldown: 30 min. -->
 		<icon>icon.skill2513</icon>
 		<!-- Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
 		<abnormalLevel>0</abnormalLevel>
@@ -504,7 +504,7 @@
 		</conditions>
 	</skill>
 	<skill id="39044" toLevel="1" name="Holiday Hat">
-		<!-- Resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore. -->
+		<!-- Resurrects a dead party member restoring them 50% XP. Consumes 1 Spirit Ore. Cooldown: 30 min. -->
 		<icon>icon.bm_romantic_chaperon_gold</icon>
 		<!-- Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 minutes. -->
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -535,7 +535,7 @@
 		</effects>
 	</skill>
 	<skill id="39045" toLevel="1" name="Holiday Hat's Overwhelming Power">
-		<!-- For 20 min., acquired XP/ SP +5%. Effect remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +5%. Cooldown: 60 min. The effect remains after death. -->
 		<icon>icon.skill19226</icon>
 		<!-- increases XP and SP gain by 5% for 20 minutes -->
 		<operateType>A2</operateType>
@@ -553,7 +553,7 @@
 		</effects>
 	</skill>
 	<skill id="39046" toLevel="1" name="Letter Collector's Gift">
-		<!-- Gives Santa appearance. For 1 h., acquired XP/ SP +10%, Max HP/ MP +10%. Speed +5. Cooldown: 30 min. Effect remains after death. -->
+		<!-- Changes your appearance to that of Santa. For 1 h., Acquired XP/ SP +10%, Max HP/ MP +10%, Speed +5. Cooldown: 30 min. The effect remains after death. -->
 		<icon>icon.shield_bread_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -561,7 +561,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39047" toLevel="3" name="Fish Stew - Might">
-		<!-- For $s1 P. Atk. +$s2. -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -588,7 +588,7 @@
 		</effects>
 	</skill>
 	<skill id="39048" toLevel="3" name="Fish Stew - Shield">
-		<!-- For $s1 P. Def. +$s2. -->
+		<!-- For $s1, P. Def. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -642,7 +642,7 @@
 		</effects>
 	</skill>
 	<skill id="39050" toLevel="3" name="Fish Stew - Vampiric Rage">
-		<!-- For $s1 recovers as HP $s2 of the melee damage inflicted on the enemy with a certain probability. -->
+		<!-- For $s1, with a certain chance, absorbs $s2 of the inflicted damage as HP. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -669,7 +669,7 @@
 		</effects>
 	</skill>
 	<skill id="39051" toLevel="3" name="Fish Stew - Empower">
-		<!-- M. Atk. +$s2 for $s1. -->
+		<!-- For $s1, M. Atk. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<abnormalLevel>26</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -746,7 +746,7 @@
 		</effects>
 	</skill>
 	<skill id="39055" toLevel="1" name="Agathion Teleport: Giran">
-		<!-- Teleport to Giran -->
+		<!-- Teleports to Giran. -->
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -825,13 +825,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100.0">
-						<item id="29575" count="1" /> <!-- Queen Ant's Ring - 30-day -->
+						<item id="29575" count="1" /> <!-- Queen Ant's Ring Lv. 1 - Not available -->
 					</item>
 					<item chance="100.0">
-						<item id="29576" count="1" /> <!-- Orfen's Earring - 30-day -->
+						<item id="29576" count="1" /> <!-- Orfen's Earring Lv. 1 - Not available -->
 					</item>
 					<item chance="100.0">
-						<item id="29577" count="1" /> <!-- Ring of Core - 30-day -->
+						<item id="29577" count="1" /> <!-- Ring of Core Lv. 1 - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -908,10 +908,10 @@
 						<item id="3099" count="1" /> <!-- Spellbook: Haste -->
 					</item>
 					<item chance="2.5">
-						<item id="8388" count="1" /> <!-- Spellbook: Greater Might -->
+						<item id="8388" count="1" /> <!-- Spellbook: Attack Prowess -->
 					</item>
 					<item chance="2.5">
-						<item id="8389" count="1" /> <!-- Spellbook: Greater Shield -->
+						<item id="8389" count="1" /> <!-- Spellbook: Defense Prowess -->
 					</item>
 					<item chance="2.5">
 						<item id="3051" count="1" /> <!-- Spellbook: Spirit Barrier -->
@@ -950,7 +950,7 @@
 						<item id="4924" count="1" /> <!-- Spellbook: Summon Spark Cubic -->
 					</item>
 					<item chance="2.5">
-						<item id="4205" count="1" /> <!-- Amulet: Pa'agrio's Rage -->
+						<item id="4205" count="1" /> <!-- Amulet: Chant of Berserker Spirit -->
 					</item>
 					<item chance="2.5">
 						<item id="3109" count="1" /> <!-- Amulet: Seal of Silence -->
@@ -959,13 +959,13 @@
 						<item id="3111" count="1" /> <!-- Amulet: Seal of Suspension -->
 					</item>
 					<item chance="2.5">
-						<item id="3118" count="1" /> <!-- Amulet: Chant of Rage -->
+						<item id="3118" count="1" /> <!-- Amulet: Chant of Death Whisper -->
 					</item>
 					<item chance="2.5">
 						<item id="6397" count="1" /> <!-- Amulet: Chant of Vampire -->
 					</item>
 					<item chance="2.5">
-						<item id="3116" count="1" /> <!-- Amulet: Chant of Fury -->
+						<item id="3116" count="1" /> <!-- Amulet: Chant of Haste -->
 					</item>
 					<item chance="2.5">
 						<item id="3940" count="1" /> <!-- Blueprint: Summon Siege Golem -->
@@ -984,7 +984,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39062" toLevel="1" name="Black Mask Teleport">
-		<!-- Teleports character to the nearest village. Cooldown - 2 h. -->
+		<!-- Teleports to the nearest town. Cooldown: 2 h. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>7200000</reuseDelay>
@@ -1084,7 +1084,7 @@
 						<item id="279" count="1" /> <!-- Reinforced Longbow -->
 					</item>
 					<item chance="7.14">
-						<item id="280" count="1" /> <!-- Light Crossbow -->
+						<item id="280" count="1" /> <!-- Light Bow -->
 					</item>
 					<item chance="7.14">
 						<item id="262" count="1" /> <!-- Scallop Jamadhr -->
@@ -1169,7 +1169,7 @@
 		</effects>
 	</skill>
 	<skill id="39074" toLevel="1" name="Angel Cat's Energy">
-		<!-- For 30 min., Max. HP/ MP +5%, and acquired XP/ SP +20%. Effect remains after death. -->
+		<!-- For 30 min., Max HP/ MP +5%, acquired XP/ SP +20%. The effect remains after death. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1289,7 +1289,7 @@
 		</effects>
 	</skill>
 	<skill id="39079" toLevel="1" name="Sheep's Resurrection">
-		<!-- Resurrects the dead. Besides, restores 70% of lost experience. -->
+		<!-- Resurrects a dead party member. Additionally restores 70% XP. -->
 		<icon>icon.skill11784</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -1299,7 +1299,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39080" toLevel="2" name="Sheep's Benediction">
-		<!-- For 3 h., P./ M. Atk. +7%, P./ M. Def +10%, HP/ MP/ CP +15%, HP/ MP Recovery Bonus +20%. Can be used once a day. The number of usages is set to zero at 6.30 AM. Effect remains after death. When the buff ends, character gets a sheep's present. Warning! The item disappears if a character dies upon obtaining the item, not having put the item into the inventory. -->
+		<!-- For 3 h., P./ M. Atk. +7%, P./ M. Def. +10%, Max HP/ MP/ CP +15%, HP/ MP Recovery Rate +20%. Can be used once a day (reset at 6:30 a.m.). The effect remains after death. When the buff is cancelled, you obtain a sheep's gift. Note! The gift can't be obtained if your character is dead. -->
 		<icon>icon.accessory_sheep_cap_white_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1311,7 +1311,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39082" toLevel="1" name="Glorious Amulet">
-		<!-- All stats +1. -->
+		<!-- STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1353,7 +1353,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39085" toLevel="1" name="Special Pirate Fruit">
-		<!-- For 20 min., P./ M. Atk. +7%, P./ M. Def. +10%, Max. HP/ CP/ MP +15%, HP/ MP Recovery Bonus +20%. With a certain chance, converts 3% of melee damage dealt into HP. Cooldown is 1 min. Effect remains after death. -->
+		<!-- For 20 min., P./ M. Atk. +7%, P./ M. Def. +10%, Max HP/ MP/ CP +15%, HP/ MP Recovery Rate +20%, acquired XP/ SP +5%. With a certain chance, absorbs 3% of the inflicted damage as HP. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.etc_codran_i09</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1448,7 +1448,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39090" toLevel="1" name="Agathion Teleport - Giran Castle">
-		<!-- Teleport to the Town of Giran. -->
+		<!-- Teleports to Giran. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
@@ -1472,17 +1472,17 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="39094" toLevel="2" name="Agathion's Soul">
-		<!-- STR/ INT/ CON/ MEN +1. -->
+		<!-- <Effect> STR +1 CON +1 INT +1 MEN +1 -->
 		<icon>icon.skill6343_2</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39095" toLevel="2" name="Blessed Agathion's Soul">
-		<!-- Mental/ Stun/ Sleep/ Paralysis Attack Resistance +$s1. -->
+		<!-- <Effect> Silence Resistance +$s1 Fear Resistance +$s1 Stun Resistance +$s1 Sleep Resistance +$s1 Paralysis Resistance +$s1 -->
 		<icon>icon.skill6366_2</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39096" toLevel="1" name="Agathion Teleport - Giran">
-		<!-- Teleport to the Town of Giran. -->
+		<!-- Teleports to Giran. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>60000</reuseDelay>

@@ -1,106 +1,106 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="54000" toLevel="22" name="Agathion: Agathion Taurus">
-		<!-- P. Def. +$s1. P. Def. increases when Agathion is upgraded. -->
+		<!-- <Effect> P. Def. +$s1. -->
 		<icon>icon.agathion_tau_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54001" toLevel="22" name="Agathion: Agathion Leo">
-		<!-- P. Atk. +$s1. P. Atk. increases when Agathion is upgraded. -->
+		<!-- <Effect> P. Atk. +$s1 -->
 		<icon>icon.agathion_leo_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54002" toLevel="22" name="Agathion: Agathion Scorpio">
-		<!-- P. Critical Rate +$s1. P. Critical Rate increases when Agathion is upgraded. -->
+		<!-- <Effect> P. Critical Rate +$s1 -->
 		<icon>icon.agathion_sco_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54003" toLevel="22" name="Agathion: Agathion Sagittarius">
-		<!-- Atk. Spd. +$s1. Atk. Spd. increases when Agathion is upgraded. -->
+		<!-- <Effect> Atk. Spd. +$s1 -->
 		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54004" toLevel="22" name="Agathion: Agathion Virgo">
-		<!-- M. Def. +$s1. M. Def. increases when Agathion is upgraded. -->
+		<!-- <Effect> M. Def. +$s1 -->
 		<icon>icon.agathion_virgo_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54005" toLevel="22" name="Agathion: Agathion Aquarius">
-		<!-- M. Atk. +$s1. M. Atk. increases when Agathion is upgraded. -->
+		<!-- <Effect> M. Atk. +$s1 -->
 		<icon>icon.agathion_aqu_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54006" toLevel="22" name="Agathion: Agathion Capricorn">
-		<!-- M. Critical Rate +$s1. M. Critical Rate increases when Agathion is upgraded. -->
+		<!-- <Effect> M. Skill Critical Rate +$s1 -->
 		<icon>icon.agathion_capr_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54007" toLevel="22" name="Agathion: Agathion Libra">
-		<!-- Casting Spd. +$s1. M. Casting Spd. increases when Agathion is upgraded. -->
+		<!-- <Effect> Casting Spd. +$s1 -->
 		<icon>icon.agathion_lib_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54008" toLevel="22" name="Agathion: Agathion Gemini">
-		<!-- When Sayha's Grace is active Acquired XP/ SP (hunting) +$s1. The effect of Sayha's Grace increases when Agathion is upgraded. -->
+		<!-- <Effect> When Sayha's Grace is used, acquired XP +$s1 When Sayha's Grace is used, acquired SP +$s1 -->
 		<icon>icon.agathion_gem_star_1</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54009" toLevel="1" name="Summon Agathion Taurus">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54010" toLevel="1" name="Summon Agathion Leo">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54011" toLevel="1" name="Summon Agathion Scorpio">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54012" toLevel="1" name="Summon Agathion Sagittarius">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54013" toLevel="1" name="Summon Agathion Virgo">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54014" toLevel="1" name="Summon Agathion Aquarius">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54015" toLevel="1" name="Summon Agathion Capricorn">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54016" toLevel="1" name="Summon Agathion Libra">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54017" toLevel="1" name="Summon Agathion Gemini">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="54018" toLevel="1" name="Seal Agathion">
-		<!-- Dismiss a summoned Agathion. -->
+		<!-- Releases the summoned agathion. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -114,7 +114,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54020" toLevel="1" name="Bracelet of Power">
-		<!-- HP/ MP Recovery +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
+		<!-- HP/ MP Recovery Rate +15%, P. Accuracy +2, M. Accuracy +2, Weight Limit +10,000. -->
 		<icon>icon.ertheia_bracelet_i01</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -140,7 +140,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54022" toLevel="2" name="Power of Shunaiman">
-		<!-- By the power of Shunaiman Stun/ Mental attack +5%, Damage Reflection Resistance +10%. -->
+		<!-- By the power of Shunaiman, Silence/ Fear/ Stun Atk. Rate +5%, Damage Reflection Resistance +10%. -->
 		<icon>
 			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
@@ -150,7 +150,7 @@
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="54023" toLevel="5" name="Water Attack Defense">
-		<!-- Water Attack Defense +20. -->
+		<!-- <Effect> Water Resistance +$s1 -->
 		<icon>icon.elemental_necklace_water_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -168,7 +168,7 @@
 		</effects>
 	</skill>
 	<skill id="54024" toLevel="5" name="Fire Attack Defense">
-		<!-- Fire Attack Defense +20. -->
+		<!-- <Effect> Fire Resistance +$s1 -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -186,7 +186,7 @@
 		</effects>
 	</skill>
 	<skill id="54025" toLevel="5" name="Wind Attack Defense">
-		<!-- Wind Attack Defense +20. -->
+		<!-- <Effect> Wind Resistance +$s1 -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -204,7 +204,7 @@
 		</effects>
 	</skill>
 	<skill id="54026" toLevel="5" name="Earth Attack Defense">
-		<!-- Earth Attack Defense +20. -->
+		<!-- <Effect> Earth Resistance +$s1 -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -222,7 +222,7 @@
 		</effects>
 	</skill>
 	<skill id="54027" toLevel="5" name="Attribute XP Increase">
-		<!-- Acquired attribute XP +3%. -->
+		<!-- <Effect> Acquired attribute XP +$s1 -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>P</operateType>
 		<magicLevel>1</magicLevel>
@@ -259,7 +259,7 @@
 		</effects>
 	</skill>
 	<skill id="54029" toLevel="4" name="Venir's Blessing">
-		<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +$s1. -->
+		<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +$s1, when equipped. -->
 		<icon>
 			<value level="1">icon.etc_all_stat_talisman_i00</value>
 			<value level="2">icon.etc_all_stat_talisman_i01</value>
@@ -269,7 +269,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54030" toLevel="11" name="Necklace: Ignis' Necklace">
-		<!-- Max HP +50. -->
+		<!-- A necklace imbued with Fire Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -307,7 +307,7 @@
 		</effects>
 	</skill>
 	<skill id="54031" toLevel="11" name="Necklace: Nebula's Necklace">
-		<!-- Max HP +50. -->
+		<!-- A necklace imbued with Water Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_water_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -345,7 +345,7 @@
 		</effects>
 	</skill>
 	<skill id="54032" toLevel="11" name="Necklace: Procella's Necklace">
-		<!-- Max HP +50. -->
+		<!-- A necklace imbued with Wind Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -383,7 +383,7 @@
 		</effects>
 	</skill>
 	<skill id="54033" toLevel="11" name="Necklace: Petram's Necklace">
-		<!-- Max HP +50. -->
+		<!-- A necklace imbued with Earth Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -421,34 +421,34 @@
 		</effects>
 	</skill>
 	<skill id="54034" toLevel="10" name="Anakim's Power">
-		<!-- When using the Recharge skill, MP Recovery Bonus +5, M. Atk. +1%. -->
+		<!-- <Effect> MP Recovery Rate +$s1 M. Atk. +$s2 -->
 		<icon>icon.etc_water_rune_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54035" toLevel="10" name="Lilith' Power">
-		<!-- Received Healing +1%, P. Atk. +1%. -->
+		<!-- <Effect> HP Recovery Rate +$s1 P. Atk. +$s2. -->
 		<icon>icon.etc_fire_rune_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54036" toLevel="5" name="Anakim Recovery">
-		<!-- Recovers 75 MP when skills are used. -->
+		<!-- <Effect> Recovers $s1 MP -->
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="54037" toLevel="5" name="Lilith Recovery">
-		<!-- Restores 100 HP when striking. -->
+		<!-- <Effect> Restores $s1 HP -->
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="54038" toLevel="1" name="Sayha's Cloak">
-		<!-- Max HP/ MP +3%. -->
+		<!-- Max HP/ MP +$s1. -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54039" toLevel="10" name="Sayha's Cloak +1">
-		<!-- Increases Max HP/MP +4%. -->
+		<!-- Max HP/ MP +$s1. -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -568,7 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="54040" toLevel="2" name="Sayha's Blink">
-		<!-- Cancels target and teleports to the back. -->
+		<!-- Cancels the enemy's target and teleports you backwards. -->
 		<icon>icon.sayha2017_blink</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -655,7 +655,7 @@
 		</effects>
 	</skill>
 	<skill id="54042" toLevel="1" name="Frintezza's Necklace - Special Ability">
-		<!-- Nearby enemies' P./ M. Skill Cooldown -100% for 2 min. -->
+		<!-- Nearby enemies' P./ M. Skill Cooldown -$s2 for $s1 -->
 		<icon>icon.accessory_necklace_of_frintessa_i05</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -664,7 +664,7 @@
 		<effectPoint>-666</effectPoint>
 	</skill>
 	<skill id="54043" toLevel="1" name="Rapid Wind">
-		<!-- For 5 sec., P. Def. +1000, M. Def. +1000, Speed +50. -->
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4. -->
 		<icon>icon.skill30008</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -672,12 +672,12 @@
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="54044" toLevel="1" name="Special Sayha's Cloak">
-		<!-- Max HP/ MP +15%, Acquired XP/ SP +30%, P. Def. +11%, M. Def. +6%, P./ M. Critical Damage +15%, Received Critical Damage -10%. -->
+		<!-- Max HP/ MP +$s1, Acquired XP/ SP +$s2, P. Def. +$s3, M. Def. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, Received P. Critical Damage/ Received M. Skill Critical Damage -$s6. -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54045" toLevel="10" name="Special Sayha's Cloak +1">
-		<!-- Max HP/ MP +$s1, Acquired XP/ SP +$s2, P. Def. +$s3, M. Def. +$s4, P. Critical Damage +$s5, M. Critical Damage +$s6, Received Critical Damage -$s7. -->
+		<!-- Max HP/ MP +$s1, Acquired XP/ SP +$s2, P. Def. +$s3, M. Def. +$s4, P. Critical Damage +$s5, M. Skill Critical Damage +$s6, Received P. Critical Damage/ Received M. Skill Critical Damage -$s7. -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -687,7 +687,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54047" toLevel="11" name="Talisman: Talisman of Aden">
-		<!-- P. Def. +5, M. Def. +5, Atk. Spd. +10, Casting Spd. +10, Max HP +100, Max MP +30 -->
+		<!-- A talisman for the warriors of Aden. -->
 		<icon>icon.bm_ensoul_stone_pvp</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -827,7 +827,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54051" toLevel="1" name="Magic Lamp Charging Potion (1-hour)">
-		<!-- Magic Lantern recharge speed +20%. -->
+		<!-- Magic Lamp charging rate +20%. -->
 		<icon>icon.etc_recall_potion2</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MAGIC_LAMP_RATE</abnormalType>
@@ -925,13 +925,13 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="54066" toLevel="1" name="Rudolph the Red Nose Blessing">
-		<!-- For 5 min. P./ M. Atk. +150, P./ M. Def. +100, Atk. Spd./ Casting Spd. +100, Speed +10, HP/ MP Recovery Bonus +30%. Changes the appearance to that of Rudolph. Effect remains after death and after a restart. -->
+		<!-- For 5 min., P./ M. Atk. +150, P./ M. Def. +100, Atk. Spd./ Casting Spd. +100, Speed +10, HP/ MP Recovery Rate +30%. Changes the appearance to that of Rudolph. The effect remains after death and logout. -->
 		<icon>BranchSys2.icon.event_lbracelet_rudolph</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="54067" toLevel="1" name="Sayha's Storm Lv. 3 - 1 h.">
-		<!-- For 1 h., momentum consumption speed while hunting +100%, acquired XP/ SP +200%. Buff does not disappear after death. Cooldown: 1 min. -->
+		<!-- For 1 h., Sayha's Grace Consumption +100%, acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -951,7 +951,7 @@
 		</effects>
 	</skill>
 	<skill id="54068" toLevel="1" name="Sayha's Gust - Event">
-		<!-- For 20 min., momentum consumption speed while hunting +100%, acquired XP/ SP +300%. Buff does not disappear after death. Cooldown: 1 min. -->
+		<!-- For 20 min., Sayha's Grace Consumption +100%, Acquired XP/ SP +300%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.ev_magic_flame_game_wind2</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -978,7 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="54069" toLevel="1" name="Magic Fire (Event)">
-		<!-- Magic Lantern recharge speed +100%. -->
+		<!-- Magic Lamp charging rate +100%. -->
 		<icon>icon.bm_soul_of_shilen</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1065,17 +1065,17 @@
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>54117</skillId> <!-- Sayha's Recover Hp -->
+				<skillId>54117</skillId> <!-- Sayha's Recover HP -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>54118</skillId> <!-- Sayha's Recover Mp -->
+				<skillId>54118</skillId> <!-- Sayha's Recover MP -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="54071" toLevel="1" name="Battle Scroll">
-		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. The effect remains after death. -->
+		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P. Critical Rate/ M. Skill Critical Rate +30, Atk./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. -->
 		<icon>icon.ev_charge_scroll</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -1198,7 +1198,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="54082" toLevel="11" name="Belt: Dragon Belt">
-		<!-- Weight Limit +$s1, Inventory Slots +$s2, DEX +$s3, WIT +$s4, CON +$s5, MEN +$s6. -->
+		<!-- Imbued with dragon power. <Effect> Weight limit $s1 DEX $s2 WIT $s3 -->
 		<icon>icon.r2_belt_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1512,7 +1512,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="54091" toLevel="5" name="Lakfi-Lakfi's Energy">
-		<!-- STR/ INT/ CON/ MEN/ DEX/ WIT +1. When the effect disappears, you will receive a gift from Lakfi-Lakfi.\n<Note!> If your character is dead when the effect disappear, you won't get any gift and the next level effect. Also there must be empty slots in the inventory. -->
+		<!-- STR/ INT/ CON/ MEN/ DEX/ WIT +1. When the buff is cancelled, you obtain a gift from Lakfi-Lakfi. Note! The gift can't be obtained if your character is dead or if there is no free space in your inventory. You can't get the next level buff if your character is dead. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

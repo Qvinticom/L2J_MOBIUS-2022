@@ -49,7 +49,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="12002" toLevel="2" name="Glimmer">
-		<!-- A crystal extracted from the Source of Life. Can be used on a Cocoon in the Fairy Settlement. -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.glimmer</value>
@@ -764,7 +763,7 @@
 						<item id="17980" count="1" /> <!-- Blessed Requiem Dual Blunt Weapon -->
 					</item>
 					<item chance="4">
-						<item id="17303" count="1" /> <!-- Requiem Dual Blunt Weapon -->
+						<item id="17303" count="1" /> <!-- Requiem Dual Blunt Weapons -->
 					</item>
 				</items>
 			</effect>
@@ -1846,7 +1845,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17876" count="1" /> <!-- Bound Apocalypse Dual Sword -->
+						<item id="17876" count="1" /> <!-- Bound Apocalypse Dual Swords -->
 					</item>
 					<item chance="1">
 						<item id="18012" count="1" /> <!-- Blessed Apocalypse Dual Swords -->
@@ -1880,7 +1879,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17877" count="1" /> <!-- Bound Apocalypse Dual Dagger -->
+						<item id="17877" count="1" /> <!-- Bound Apocalypse Dual Daggers -->
 					</item>
 					<item chance="1">
 						<item id="18013" count="1" /> <!-- Blessed Apocalypse Dual Daggers -->
@@ -1914,13 +1913,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17878" count="1" /> <!-- Bound Apocalypse Dual Blunt Weapon -->
+						<item id="17878" count="1" /> <!-- Bound Apocalypse Dual Blunt Weapons -->
 					</item>
 					<item chance="1">
-						<item id="18014" count="1" /> <!-- Blessed Apocalypse Dual Blunt Weapon -->
+						<item id="18014" count="1" /> <!-- Blessed Apocalypse Dual Blunt Weapons -->
 					</item>
 					<item chance="4">
-						<item id="17337" count="1" /> <!-- Apocalypse Dual Blunt Weapon -->
+						<item id="17337" count="1" /> <!-- Apocalypse Dual Blunt Weapons -->
 					</item>
 				</items>
 			</effect>
@@ -3002,7 +3001,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17910" count="1" /> <!-- Bound Specter Dual Sword -->
+						<item id="17910" count="1" /> <!-- Bound Specter Dual Swords -->
 					</item>
 					<item chance="1">
 						<item id="18046" count="1" /> <!-- Blessed Specter Dual Swords -->
@@ -3036,7 +3035,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17911" count="1" /> <!-- Bound Specter Dual Dagger -->
+						<item id="17911" count="1" /> <!-- Bound Specter Dual Daggers -->
 					</item>
 					<item chance="1">
 						<item id="18047" count="1" /> <!-- Blessed Specter Dual Daggers -->
@@ -3070,13 +3069,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17912" count="1" /> <!-- Bound Specter Dual Blunt Weapon -->
+						<item id="17912" count="1" /> <!-- Bound Specter Dual Blunt Weapons -->
 					</item>
 					<item chance="1">
-						<item id="18048" count="1" /> <!-- Blessed Specter Dual Blunt Weapon -->
+						<item id="18048" count="1" /> <!-- Blessed Specter Dual Blunt Weapons -->
 					</item>
 					<item chance="4">
-						<item id="17395" count="1" /> <!-- Specter Dual Blunt Weapon -->
+						<item id="17395" count="1" /> <!-- Specter Dual Blunt Weapons -->
 					</item>
 				</items>
 			</effect>

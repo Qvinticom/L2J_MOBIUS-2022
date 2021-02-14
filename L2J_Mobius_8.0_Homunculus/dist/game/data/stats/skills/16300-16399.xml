@@ -252,7 +252,7 @@
 		</effects>
 	</skill>
 	<skill id="16335" toLevel="1" name="Fear">
-		<!-- The target is feared and flees.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -334,7 +334,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16345" toLevel="2" name="Fire Flare">
-		<!-- HP is decreased because of bleeding.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- HP is decreased because of bleeding. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>25</mpConsume>
@@ -391,7 +391,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16351" toLevel="1" name="Kain's Sonic Star">
-		<!-- none\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -442,7 +442,7 @@
 		</effects>
 	</skill>
 	<skill id="16355" toLevel="1" name="Sacred Blow Down">
-		<!-- none\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10281</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
@@ -638,7 +638,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16375" toLevel="2" name="Dimensional Hammer">
-		<!-- Deals 100% physical damage and knocks the target down.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Deals 100% physical damage and knocks the target down. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0260</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -649,7 +649,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16376" toLevel="2" name="Dimensional Bind">
-		<!-- Hold for 5 sec. Power 100%.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Hold for 5 sec. Power 100%. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -660,7 +660,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16377" toLevel="2" name="Dimensional Chain">
-		<!-- Deals 100% physical damage and pulls the target.\n\nInflicted status: Pull. -->
+		<!-- Deals 100% physical damage and pulls the target. Inflicted status: Pull. -->
 		<icon>icon.skill0403</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -671,7 +671,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16378" toLevel="2" name="Dimensional Eruption">
-		<!-- Stuns the target for 5 sec. Power 100%.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stuns the target for 5 sec. Power 100%. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -689,7 +689,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16380" toLevel="2" name="Dimensional Recoil Shot">
-		<!-- Deals 100% physical damage and knock the target back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Deals 100% physical damage and knock the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10770</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -718,7 +718,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16383" toLevel="2" name="Dimensional Silence">
-		<!-- Deals AoE damage nearby enemies. Power 250. Blocks physical and magic skills for 5 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Deals AoE damage nearby enemies. Power 250. Blocks physical and magic skills for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -730,7 +730,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16384" toLevel="2" name="Dimensional Bleed">
-		<!-- Inflicts Bleed on nearby enemies, their HP -1000 per second.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on nearby enemies, their HP -1000 per second. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -750,7 +750,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16386" toLevel="2" name="Dimensional Stun">
-		<!-- Deals 200% damage and knocks nearby enemies back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Deals 200% damage and knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0777</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -761,7 +761,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16387" toLevel="1" name="Chain Smash">
-		<!-- Pulls a target to you.\n\nInflicted status: Pull. -->
+		<!-- Pulls a target to you. Inflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -888,7 +888,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16398" toLevel="1" name="Atelia Energy">
-		<!-- Counterfeit Atelia fragment is lodged in the body.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Counterfeit Atelia fragment is lodged in the body. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>

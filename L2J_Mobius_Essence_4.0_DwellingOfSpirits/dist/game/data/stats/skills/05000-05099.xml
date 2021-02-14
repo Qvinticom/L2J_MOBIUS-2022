@@ -112,7 +112,7 @@
 		</effects>
 	</skill>
 	<skill id="5006" toLevel="1" name="Frintezza Music">
-		<!-- A general performance. -->
+		<!-- Main performance. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>34000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -124,7 +124,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5007" toLevel="5" name="Frintezza Heal Music">
-		<!-- Music to soothe the soul. -->
+		<!-- Music to soothe one's soul. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>
 			<value level="1">32000</value>
@@ -372,7 +372,7 @@
 		</effects>
 	</skill>
 	<skill id="5012" toLevel="1" name="Breath of Scarlet">
-		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<!-- Immobilizes the enemy for an instant. -->
 		<icon>icon.skill5012</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -505,7 +505,7 @@
 	</effects>
 	</skill>
 	<skill id="5016" toLevel="1" name="Yoke of Scarlet">
-		<!-- Yoked status. -->
+		<!-- Immobilized. -->
 		<icon>icon.skill5016</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -630,7 +630,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5021" toLevel="12" name="Inspiration of Einhasad">
-		<!-- Makes Holy attacks. -->
+		<!-- Deals Holy damage. -->
 		<icon>icon.skill1043</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -671,7 +671,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5022" toLevel="12" name="Decrease Speed">
-		<!-- Immediately Speed -10%. -->
+		<!-- Immediately decreases Speed. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -718,7 +718,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5023" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -754,7 +754,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5024" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Immediately Atk. Spd. -17%. -->
+		<!-- Immediately decreases Atk. Spd. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -822,14 +822,14 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5028" toLevel="1" name="Raid Boss (Lv. 53)">
-		<!-- Originally worshiped Pa'agrio, but he is a shaman who tries to rule Orcs and Elmoaden by using the evil power of Kasha. They are extending their territory by using evil spirits, insects and Ragna Orcs who follow them. -->
+		<!-- A shaman who originally worshipped Pa'agrio, but then tried to rule Orcs and Elmore using the evil power of Kasha. He tried to expand his influence by using evil spirits, insects and the Ragna Orc tribe. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5029" toLevel="1" name="Raid Boss (Lv. 52)">
-		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
+		<!-- This powerful Chaos Golem was made from Star Stones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal a blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the horrifying golem army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is world domination. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -850,7 +850,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5032" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
+		<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Lord of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -885,7 +885,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5037" toLevel="3" name="Decrease Casting Spd.">
-		<!-- Immediately Casting Spd. -17%. -->
+		<!-- Immediately decreases Casting Spd. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1136,7 +1136,7 @@
 		</effects>
 	</skill>
 	<skill id="5044" toLevel="3" name="Ultimate Defense">
-		<!-- Increases P. Def., M. Def., and Buff-canceling Attack Resistance. Becomes immobile. -->
+		<!-- Increases P. Def., M. Def., Buff Cancel Resistance and immobilizes. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2316,7 +2316,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5068" toLevel="12" name="Decrease Speed">
-		<!-- Immediately target's Speed -30%. -->
+		<!-- Speed decreased temporarily. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -2365,7 +2365,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5069" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Immediately Atk. Spd. -23%. -->
+		<!-- Momentarily decreases Atk. Spd. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2414,7 +2414,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5070" toLevel="12" name="Decrease Casting Spd.">
-		<!-- Immediately Casting Spd. -23%. -->
+		<!-- Immediately decreases Casting Spd. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2463,7 +2463,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5071" toLevel="12" name="Decrease P. Atk.">
-		<!-- Immediately P. Atk. -23%. -->
+		<!-- Momentarily decreases P. Atk. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2512,7 +2512,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5072" toLevel="12" name="Decrease M. Atk.">
-		<!-- Immediately M. Atk. -50%. -->
+		<!-- Immediately decreases M. Atk. -->
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
@@ -3186,7 +3186,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5092" toLevel="1" name="Antharas Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill4108</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>

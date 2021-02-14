@@ -32,7 +32,7 @@
 		</stats>
 	</item>
 	<item id="5601" name="Meteor Shower" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +247 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +247 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -63,7 +63,7 @@
 		</stats>
 	</item>
 	<item id="5602" name="Elysian" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +54. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -122,7 +122,7 @@
 		</stats>
 	</item>
 	<item id="5604" name="Elysian" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +256 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +256 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -217,7 +217,7 @@
 		</stats>
 	</item>
 	<item id="5607" name="Branch of the Mother Tree" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
+		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12% -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -249,7 +249,7 @@
 		</stats>
 	</item>
 	<item id="5608" name="Carnage Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +40. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -317,7 +317,7 @@
 		</stats>
 	</item>
 	<item id="5610" name="Carnage Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +164 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +164 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -351,7 +351,7 @@
 		</stats>
 	</item>
 	<item id="5611" name="Soul Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +40. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -414,7 +414,7 @@
 		</stats>
 	</item>
 	<item id="5613" name="Soul Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +180 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +180 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -448,7 +448,7 @@
 		</stats>
 	</item>
 	<item id="5614" name="Bloody Orchid" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +58. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -504,7 +504,7 @@
 		</stats>
 	</item>
 	<item id="5616" name="Bloody Orchid" additionalName="Mortal Strike" type="Weapon">
-		<!-- <Soul Crystal Enhancement> Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
+		<!-- <Soul Crystal Enhancement>. Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -535,7 +535,7 @@
 		</stats>
 	</item>
 	<item id="5617" name="Soul Separator" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +58. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -591,7 +591,7 @@
 		</stats>
 	</item>
 	<item id="5619" name="Soul Separator" additionalName="Mortal Strike" type="Weapon">
-		<!-- <Soul Crystal Enhancement> Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
+		<!-- <Soul Crystal Enhancement>. Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -622,7 +622,7 @@
 		</stats>
 	</item>
 	<item id="5620" name="Blood Tornado" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +54. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -681,7 +681,7 @@
 		</stats>
 	</item>
 	<item id="5622" name="Blood Tornado" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +288 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -709,7 +709,7 @@
 		</stats>
 	</item>
 	<item id="5623" name="Dragon Grinder" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +54. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -768,7 +768,7 @@
 		</stats>
 	</item>
 	<item id="5625" name="Dragon Grinder" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +297 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -799,7 +799,7 @@
 		</stats>
 	</item>
 	<item id="5626" name="Halberd" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +54. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -861,7 +861,7 @@
 		</stats>
 	</item>
 	<item id="5628" name="Halberd" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -889,7 +889,7 @@
 		</stats>
 	</item>
 	<item id="5632" name="Tallum Glaive" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +54. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -951,7 +951,7 @@
 		</stats>
 	</item>
 	<item id="5634" name="Tallum Glaive" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -979,7 +979,7 @@
 		</stats>
 	</item>
 	<item id="5635" name="Tallum Blade" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +52. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1041,7 +1041,7 @@
 		</stats>
 	</item>
 	<item id="5637" name="Tallum Blade" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +247 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +247 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1128,7 +1128,7 @@
 		</stats>
 	</item>
 	<item id="5640" name="Elemental Sword" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
+		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12% -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1215,7 +1215,7 @@
 		</stats>
 	</item>
 	<item id="5643" name="Sword of Miracles" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
+		<!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12% -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1246,7 +1246,7 @@
 		</stats>
 	</item>
 	<item id="5644" name="Dragon Slayer" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +54. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1308,7 +1308,7 @@
 		</stats>
 	</item>
 	<item id="5646" name="Dragon Slayer" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +297 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1339,7 +1339,7 @@
 		</stats>
 	</item>
 	<item id="5647" name="Dark Legion's Edge" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+		<!-- <Soul Crystal Enhancement>. P. Critical Rate +52. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1398,7 +1398,7 @@
 		</stats>
 	</item>
 	<item id="5649" name="Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +255 during a Critical Attack. -->
+		<!-- <Soul Crystal Enhancement>. P. Atk. +255 after a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

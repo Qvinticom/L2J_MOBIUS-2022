@@ -277,7 +277,7 @@
 		</effects>
 	</skill>
 	<skill id="11604" toLevel="9" name="Seal of Invincibility">
-		<!-- Removes invincibility from a target and nearby enemies in PvP.\n\nConsumes $s1 Spirit Ore. -->
+		<!-- Removes invincibility from a target and nearby enemies in PvP. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11604_a</icon>
 		<affectLimit>10-10</affectLimit> <!-- Custom -->
 		<affectRange>200</affectRange> <!-- Custom -->
@@ -345,7 +345,7 @@
 		</effects>
 	</skill>
 	<skill id="11605" toLevel="1" name="Shield Song">
-		<!-- For $s1, P./ M. Def. +$s2, Attribute Resistance +$s3, Speed +$s4.\n\nConsumes $s5 Spirit Ore. -->
+		<!-- For $s1, P./ M. Def. +$s2, Attribute Resistance +$s3, Speed +$s4. Consumes $s5 Spirit Ore. -->
 		<icon>icon.skill11606new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
@@ -415,7 +415,7 @@
 		</effects>
 	</skill>
 	<skill id="11606" toLevel="1" name="Dance of Sword">
-		<!-- For $s1, P. Atk. +$s2, Attribute Attack +$s3, Speed +$s4.\n\nConsumes $s5 Spirit Ore. -->
+		<!-- For $s1, P. Atk. +$s2, Attribute Attack +$s3, Speed +$s4. Consumes $s5 Spirit Ore. -->
 		<icon>icon.skill11605new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>

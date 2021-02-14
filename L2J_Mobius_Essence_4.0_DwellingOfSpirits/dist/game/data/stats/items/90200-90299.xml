@@ -104,7 +104,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90209" name="Cobweb" type="EtcItem">
-		<!-- Spider's Silk made by Giant Spiders. Light and shiny. -->
+		<!-- A light and shiny cobweb made by Giant Spiders. -->
 		<set name="icon" val="icon.etc_cobweb_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -139,7 +139,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90212" name="Cobweb" type="EtcItem">
-		<!-- Spider's Silk made by Giant Spiders. Light and shiny. -->
+		<!-- A light and shiny cobweb made by Giant Spiders. -->
 		<set name="icon" val="icon.etc_cobweb_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -174,7 +174,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90215" name="Cobweb" type="EtcItem">
-		<!-- Spider's Silk made by Giant Spiders. Light and shiny. -->
+		<!-- A light and shiny cobweb made by Giant Spiders. -->
 		<set name="icon" val="icon.etc_cobweb_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -299,7 +299,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90226" name="Lv. 1 Brooch" additionalName="30 days" type="Armor">
-		<!-- Lv. 1 Brooch. 30-day. Activates 2 jewel slots when equipped. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- 30-day item. Activates 2 jewel slots. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -311,7 +311,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90227" name="Lv. 5 Jade" additionalName="3-day" type="Armor">
-		<!-- Lv. 5 Jade. 3-day. Atk. Spd./ Casting Spd. +14%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Available for 3 d. Atk. Spd./ Casting Spd. +14%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -429,7 +429,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90237" name="Hunting Plan" type="EtcItem">
-		<!-- List of Hierarch Talos that specifies materials needed for organizing a Hunting Festival. The event is called Shilen's Hunt and is intended to be festive, rather than formal. -->
+		<!-- List of Hierarch Talos that specifies materials needed for organizing a Hunting Festival. The event is called Shillien's Hunt and is intended to be festive, rather than formal. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -554,7 +554,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90248" name="Lv. 5 Vital Stone" additionalName="3-day" type="Armor">
-		<!-- Vital Stone Lv. 5 for 3 days. Sayha Grace XP/ SP +15%, Sayha Grace Consumption -30%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Available for 3 days. While Sayha's Grace is active, Acquired XP/ SP +15%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -591,7 +591,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90251" name="Crystalline Beast's Shinedust" type="EtcItem">
-		<!-- Dust made from the skin of Crystalline Beasts. It can repel magic and is often used for treating materials that require an additional protection from magic. -->
+		<!-- Dust made from the skin of Crystalline Beasts or scales of Moonstone Beasts. It can repel magic and is often used for treating materials that require an additional protection from magic. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -842,7 +842,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90273" name="Magical Potion of Leaping" additionalName="Lv. 4" type="EtcItem">
-		<!-- Provides 37 million XP/ 1.11 million SP. Intended for Lv. 45 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
+		<!-- XP +37,000,000, SP +1,110,000. Required level: 45. -->
 		<set name="icon" val="icon.etc_earth_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />

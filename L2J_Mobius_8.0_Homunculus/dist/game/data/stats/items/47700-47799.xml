@@ -113,28 +113,28 @@
 			<item id="47705" min="1" max="1" chance="3.57142" /> <!-- Blue Cat's Eye Lv. 3 Jewelry Box -->
 			<item id="47706" min="1" max="1" chance="3.57142" /> <!-- Blue Cat's Eye Lv. 4 Jewelry Box -->
 			<item id="47626" min="1" max="1" chance="3.57142" /> <!-- Ruby Jewelry Box Lv. 3 -->
-			<item id="47627" min="1" max="1" chance="3.57142" /> <!-- Sapphire Lv. 3 Jewelry Box -->
-			<item id="47628" min="1" max="1" chance="3.57142" /> <!-- Topaz Lv. 3 Jewelry Box -->
+			<item id="47627" min="1" max="1" chance="3.57142" /> <!-- Sapphire Jewelry Box Lv. 3 -->
+			<item id="47628" min="1" max="1" chance="3.57142" /> <!-- Topaz Jewelry Box Lv. 3 -->
 			<item id="47629" min="1" max="1" chance="3.57142" /> <!-- Opal Jewelry Box Lv. 3 -->
-			<item id="47630" min="1" max="1" chance="3.57142" /> <!-- Obsidian Lv. 3 Jewelry Box -->
+			<item id="47630" min="1" max="1" chance="3.57142" /> <!-- Obsidian Jewelry Box Lv. 3 -->
 			<item id="47631" min="1" max="1" chance="3.57142" /> <!-- Diamond Jewelry Box Lv. 3 -->
-			<item id="47632" min="1" max="1" chance="3.57142" /> <!-- Emerald Lv. 3 Jewelry Box -->
-			<item id="47633" min="1" max="1" chance="3.57142" /> <!-- Aquamarine Lv. 3 Jewelry Box -->
+			<item id="47632" min="1" max="1" chance="3.57142" /> <!-- Emerald Jewelry Box Lv. 3 -->
+			<item id="47633" min="1" max="1" chance="3.57142" /> <!-- Aquamarine Jewelry Box Lv. 3 -->
 			<item id="47634" min="1" max="1" chance="3.57142" /> <!-- Pearl Jewelry Box Lv. 3 -->
-			<item id="47635" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Lv. 3 Jewelry Box -->
+			<item id="47635" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Jewelry Box Lv. 3 -->
 			<item id="47636" min="1" max="1" chance="3.57142" /> <!-- Garnet Jewelry Box Lv. 3 -->
 			<item id="47637" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Jewelry Box Lv. 3 -->
-			<item id="47638" min="1" max="1" chance="3.57142" /> <!-- Ruby Lv. 4 Jewelry Box -->
-			<item id="47639" min="1" max="1" chance="3.57142" /> <!-- Sapphire Lv. 4 Jewelry Box -->
-			<item id="47640" min="1" max="1" chance="3.57142" /> <!-- Topaz Lv. 4 Jewelry Box -->
+			<item id="47638" min="1" max="1" chance="3.57142" /> <!-- Ruby Jewelry Box Lv. 4 -->
+			<item id="47639" min="1" max="1" chance="3.57142" /> <!-- Sapphire Jewelry Box Lv. 4 -->
+			<item id="47640" min="1" max="1" chance="3.57142" /> <!-- Topaz Jewelry Box Lv. 4 -->
 			<item id="47641" min="1" max="1" chance="3.57142" /> <!-- Opal Jewelry Box Lv. 4 -->
-			<item id="47642" min="1" max="1" chance="3.57142" /> <!-- Obsidian Lv. 4 Jewelry Box -->
-			<item id="47643" min="1" max="1" chance="3.57142" /> <!-- Diamond Lv. 4 Jewelry Box -->
-			<item id="47644" min="1" max="1" chance="3.57142" /> <!-- Emerald Lv. 4 Jewelry Box -->
-			<item id="47645" min="1" max="1" chance="3.57142" /> <!-- Aquamarine Lv. 4 Jewelry Box -->
-			<item id="47646" min="1" max="1" chance="3.57142" /> <!-- Pearl Lv. 4 Jewelry Box -->
-			<item id="47647" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Lv. 4 Jewelry Box -->
-			<item id="47648" min="1" max="1" chance="3.57142" /> <!-- Garnet Lv. 4 Jewelry Box -->
+			<item id="47642" min="1" max="1" chance="3.57142" /> <!-- Obsidian Jewelry Box Lv. 4 -->
+			<item id="47643" min="1" max="1" chance="3.57142" /> <!-- Diamond Jewelry Box Lv. 4 -->
+			<item id="47644" min="1" max="1" chance="3.57142" /> <!-- Emerald Jewelry Box Lv. 4 -->
+			<item id="47645" min="1" max="1" chance="3.57142" /> <!-- Aquamarine Jewelry Box Lv. 4 -->
+			<item id="47646" min="1" max="1" chance="3.57142" /> <!-- Pearl Jewelry Box Lv. 4 -->
+			<item id="47647" min="1" max="1" chance="3.57142" /> <!-- Vital Stone Jewelry Box Lv. 4 -->
+			<item id="47648" min="1" max="1" chance="3.57142" /> <!-- Garnet Jewelry Box Lv. 4 -->
 			<item id="47649" min="1" max="1" chance="3.57142" /> <!-- Tanzanite Jewelry Box Lv. 4 -->
 		</capsuled_items>
 	</item>
@@ -744,7 +744,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47749" name="Dark Eternal Enhancement Stones Box" type="EtcItem">
-		<!-- Festival Fairy's gift. Double-click to obtain 2 Dark Eternal Enhancement Stones. -->
+		<!-- A gift from Festival Fairy. Double-click to obtain 2 Dark Eternal Enhancement Stones. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />

@@ -61,7 +61,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5406" toLevel="1" name="Presentation - Demonic 2">
-		<!-- Not in use. -->
+		<!-- Not used. -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
@@ -120,7 +120,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5411" toLevel="1" name="Presentation - Baylor 11">
-		<!-- Not in use. -->
+		<!-- Not used. -->
 		<hitTime>1000</hitTime>
 		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
@@ -132,7 +132,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5412" toLevel="1" name="Presentation - Baylor 12">
-		<!-- Not in use. -->
+		<!-- Not used. -->
 		<hitTime>2500</hitTime>
 		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
@@ -142,7 +142,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5413" toLevel="1" name="Agathion Cute Trick - Beast Farm">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -157,7 +157,7 @@
 		</conditions>
 	</skill>
 	<skill id="5414" toLevel="1" name="Agathion Cute Trick - Rainbow Clan Hall">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -172,7 +172,7 @@
 		</conditions>
 	</skill>
 	<skill id="5415" toLevel="1" name="Agathion Cute Trick - Castle">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -200,14 +200,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5417" toLevel="1" name="Invincibility">
-		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
+		<!-- Makes you invincible to regular attacks, skills and debuffs. -->
 		<magicLevel>85</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="5418" toLevel="1" name="Invincibility">
-		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
+		<!-- Makes you invincible to regular attacks, skills and debuffs. -->
 		<magicLevel>85</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -227,7 +227,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5420" toLevel="1" name="Invincibility">
-		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
+		<!-- Makes you invincible to regular attacks, skills and debuffs. -->
 		<magicLevel>85</magicLevel>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -574,7 +574,7 @@
 		</effects>
 	</skill>
 	<skill id="5431" toLevel="1" name="Slow">
-		<!-- Atk. Spd. and Casting Spd. decreases temporarily. -->
+		<!-- Temporarily decreases the target's Atk. Spd. and Casting Spd. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -692,7 +692,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5437" toLevel="2" name="Dissonance">
-		<!-- A dissonance of body and soul that causes a condition rendering you unable to control your body. -->
+		<!-- You ride a mount. Your combat skills are weakened. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1380,7 +1380,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5458" toLevel="1" name="Agathion Cute Trick - Fortress">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1415,7 +1415,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5460" toLevel="1" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1608,7 +1608,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5471" toLevel="1" name="Raid Boss (Lv. 82)">
-		<!-- Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge. -->
+		<!-- Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Baylor. Furious at the slight, Kechi plots his revenge. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1622,7 +1622,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5473" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains. -->
+		<!-- This once-noble soul was originally a powerful seer able to communicate directly with the divine -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1734,7 +1734,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5486" toLevel="1" name="Endurance Defense Up">
-		<!-- P. Atk. +100. -->
+		<!-- P. Atk. +100 -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>

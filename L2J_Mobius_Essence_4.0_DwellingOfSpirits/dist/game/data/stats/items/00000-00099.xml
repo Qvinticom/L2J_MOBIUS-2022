@@ -116,7 +116,6 @@
 		</stats>
 	</item>
 	<item id="6" name="Apprentice's Wand" type="Weapon">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_apprentices_wand_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -220,7 +219,6 @@
 		</stats>
 	</item>
 	<item id="10" name="Dagger" type="Weapon">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -402,7 +400,7 @@
 		</stats>
 	</item>
 	<item id="17" name="Wooden Arrow" type="EtcItem">
-		<!-- An arrow made of wood. It is an arrow used for a No-grade bow. -->
+		<!-- Arrow made of wood. It is an arrow used for a No-grade bow. -->
 		<set name="icon" val="icon.etc_wooden_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -960,7 +958,7 @@
 		</stats>
 	</item>
 	<item id="60" name="Compound Armor" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t61_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

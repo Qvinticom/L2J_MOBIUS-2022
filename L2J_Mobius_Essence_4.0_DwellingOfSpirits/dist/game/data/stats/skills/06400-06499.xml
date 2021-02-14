@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6416" toLevel="1" name="Reptilikon Poison Breath">
-		<!-- Decreases 4 MP per sec. for 20 sec. -->
+		<!-- Decreases 4 MP per second for 20 sec. -->
 		<icon>icon.skill1102</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -36,7 +36,7 @@
 		</effects>
 	</skill>
 	<skill id="6417" toLevel="1" name="Reptilikon Poison Shot">
-		<!-- Decreases 4 MP per sec. for 20 sec. -->
+		<!-- Decreases 4 MP per second for 20 sec. -->
 		<icon>icon.skill1102</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -176,7 +176,7 @@
 		</effects>
 	</skill>
 	<skill id="6423" toLevel="1" name="Stun">
-		<!-- Immobilizes and stuns target for 3 sec. -->
+		<!-- Immobilizes and stuns a target for 3 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -224,7 +224,7 @@
 		</effects>
 	</skill>
 	<skill id="6425" toLevel="1" name="Demotivation Hex">
-		<!-- P. Def. -90% for 10 sec. -->
+		<!-- P. Def. decreases by 90% for 10 sec. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -368,7 +368,7 @@
 		</effects>
 	</skill>
 	<skill id="6431" toLevel="1" name="Feral Might">
-		<!-- P. Atk. +19% for 5 min. -->
+		<!-- P. Atk. increases by 19% for 5 min. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -449,7 +449,7 @@
 		</effects>
 	</skill>
 	<skill id="6434" toLevel="1" name="Feral Haste">
-		<!-- Atk. Spd. +38% for 5 min. -->
+		<!-- Atk. Spd. increases by 38% for 5 min. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>315</abnormalTime>
@@ -583,7 +583,7 @@
 		</effects>
 	</skill>
 	<skill id="6437" toLevel="7" name="Freezing Core Area">
-		<!-- Decreases $s1 HP per sec. by cold. -->
+		<!-- # ! -->
 		<icon>icon.skill1183</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -620,7 +620,7 @@
 		</effects>
 	</skill>
 	<skill id="6438" toLevel="1" name="Penalty Area">
-		<!-- Decreases 1000 HP per sec. -->
+		<!-- -1000 HP per sec. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1034,7 +1034,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6464" toLevel="1" name="Three Siblings' Trickery">
-		<!-- By the three sibling's trickery, Max HP/ MP/ CP +40% for 10 sec. -->
+		<!-- By the three sibling's trickery, Max HP/ MP/ CP are increased by 40% for 10 sec. -->
 		<icon>icon.ev_rotten_jack_ghost_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>

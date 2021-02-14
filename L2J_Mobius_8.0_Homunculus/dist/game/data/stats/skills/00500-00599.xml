@@ -929,7 +929,7 @@
 		</effects>
 	</skill>
 	<skill id="509" toLevel="34" name="Bleeding Shot">
-		<!-- Fires a special bolt with $s1 power. Inflicts Bleed on the enemy for $s2, making them lose $s3 HP per sec. Consumes up to $s4 souls to increase power. Requires a crossbow. Consumes $s5 special bolt(s). Over-hit.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Fires a special bolt with $s1 power. Inflicts Bleed on the enemy for $s2, making them lose $s3 HP per sec. Consumes up to $s4 souls to increase power. Requires a crossbow. Consumes $s5 special bolt(s). Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0509</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1206,7 +1206,7 @@
 		</effects>
 	</skill>
 	<skill id="511" toLevel="1" name="Temptation">
-		<!-- Quietly lures the enemy.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Quietly lures the enemy. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0511</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -1876,7 +1876,7 @@
 		</effects>
 	</skill>
 	<skill id="523" toLevel="7" name="Imbue Dark Seed">
-		<!-- Plants a Dark Seed in the enemy's body, making them lose $s2 HP per sec. for $s1 Once fully grown, the seed paralyzes the host body.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Plants a Dark Seed in the enemy's body, making them lose $s2 HP per sec. for $s1 Once fully grown, the seed paralyzes the host body. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0523</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -2014,7 +2014,7 @@
 		</effects>
 	</skill>
 	<skill id="526" toLevel="1" name="Enuma Elish">
-		<!-- Attacks enemies in the front using the Sword of Creation with 6060 power. Consumes up to 5 souls to increase damage. Over-hit. -->
+		<!-- Attacks enemies in the front using the Sword of Creation with $s1 power. Consumes up to $s2 souls to increase damage. Over-hit. -->
 		<icon>icon.skill0526</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -3130,7 +3130,7 @@
 		</effects>
 	</skill>
 	<skill id="559" toLevel="4" name="Spear">
-		<!-- Strikes the enemy with a spear, making them bleed with a certain chance. Power $s1 Effect $s2 Over-hit.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Strikes the enemy with a spear, making them bleed with a certain chance. Power $s1 Effect $s2 Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>
 			<value level="1">6</value>
@@ -3643,7 +3643,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="571" toLevel="4" name="Poison Dust">
-		<!-- Sprays poisonous powder all over nearby enemies. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Sprays poisonous powder all over nearby enemies. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>
 			<value level="1">6</value>
@@ -3744,7 +3744,7 @@
 		</effects>
 	</skill>
 	<skill id="573" toLevel="4" name="Earthquake">
-		<!-- Makes the earth shake stunning nearby enemies. Power $s1 Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Makes the earth shake stunning nearby enemies. Power $s1 Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -4187,7 +4187,7 @@
 		</effects>
 	</skill>
 	<skill id="582" toLevel="4" name="Scope Bleed">
-		<!-- Attacks nearby enemies with a lethal blow making them bleed. Power $s1 Effect $s2 Over-hit.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Attacks nearby enemies with a lethal blow making them bleed. Power $s1 Effect $s2 Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>
 			<value level="1">6</value>

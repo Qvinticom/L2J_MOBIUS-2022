@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="33000" toLevel="3" name="Tana's Basic Skill">
-		<!-- With a certain chance, P. Atk. +1%. after a standard attack. -->
+		<!-- With a certain chance, P. Atk. +1% after a standard attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="33001" toLevel="3" name="Pallo's Basic Skill">
-		<!-- With a certain chance, Def. +1%. when hit. -->
+		<!-- With a certain chance, Def. +1% when hit. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="33002" toLevel="3" name="Ayri's Basic Skill">
-		<!-- With a certain chance, Skill Power +1%. when using skills. -->
+		<!-- With a certain chance, Skill Power +1% when using skills. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="33003" toLevel="3" name="Churing's Basic Skill">
-		<!-- With a certain chance, M. Atk. +1%. after a magical attack. -->
+		<!-- With a certain chance, M. Atk. +1% after a magical attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -499,7 +499,7 @@
 		</effects>
 	</skill>
 	<skill id="33024" toLevel="3" name="Chuchu Lv. 5 - Link Lv. 1">
-		<!-- Adena drop rate +3% if you have. Vitality. -->
+		<!-- Adena drop rate +3% if you have Vitality. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1087,7 +1087,7 @@
 		</effects>
 	</skill>
 	<skill id="33049" toLevel="3" name="Water Chuchu Lv. 5 - Link Lv. 1">
-		<!-- Adena drop rate +4% if you have. Vitality. -->
+		<!-- Adena drop rate +4% if you have Vitality. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1675,7 +1675,7 @@
 		</effects>
 	</skill>
 	<skill id="33074" toLevel="3" name="Luminous Chuchu Lv. 5 - Link Lv. 1">
-		<!-- Adena drop rate +5% if you have. Vitality. -->
+		<!-- Adena drop rate +5% if you have Vitality. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1790,7 +1790,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="33080" toLevel="1" name="Vicious Bleed">
-		<!-- Inflicts Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1800" name="Recipe: Piece Bone Breastplate" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Piece Bone Breastplate. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Piece Bone Breastplate. Requires Create Item Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -15,7 +15,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1801" name="Recipe: Piece Bone Gaiters" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Piece Bone Gaiters. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Bone Gaiters. Requires Create Item Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -29,7 +29,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1802" name="Recipe: Necklace of Anguish" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Necklace of Anguish. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Necklace of Anguish. Requires Create Item Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -43,7 +43,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1803" name="Recipe: Necklace of Wisdom" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Necklace of Wisdom. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Necklace of Wisdom. Requires Create Item Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -57,7 +57,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1804" name="Recipe: Soulshot (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-D-grade. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for D-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -71,7 +71,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1805" name="Recipe: Soulshot (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-C-grade. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for C-grade Soulshots. Not used. Take it to the Cat Guild's Trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -85,7 +85,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1806" name="Recipe: Soulshot (B-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-B-grade. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for B-grade Soulshots. Not used. Take it to the Cat Guild's Trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -99,7 +99,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1807" name="Recipe: Soulshot (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-A-grade. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for A-grade Soulshots. Not used. Take it to the Cat Guild's Trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -113,7 +113,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
 	<item id="1808" name="Recipe: Soulshot (S-grade) (100%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Soulshot (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for S-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -126,7 +126,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1814" name="Recipe: Leather" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Leather. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Leather. Outdated and no longer used. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -140,7 +140,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1817" name="Recipe: Cord" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Cord. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Cord. Outdated and no longer used. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -154,7 +154,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="1825" name="Recipe: Oriharukon" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Oriharukon. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Oriharukon. Outdated and no longer used. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -206,7 +206,7 @@
 		</skills>
 	</item>
 	<item id="1831" name="Antidote" type="EtcItem">
-		<!-- Reagent that neutralizes Poison. -->
+		<!-- A reagent that neutralizes poison. -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -225,7 +225,7 @@
 		</skills>
 	</item>
 	<item id="1832" name="Greater Antidote" type="EtcItem">
-		<!-- High-quality reagent that neutralizes powerful Poison. -->
+		<!-- A high-quality reagent that neutralizes powerful poison. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -282,7 +282,7 @@
 		</skills>
 	</item>
 	<item id="1835" name="Soulshot (No-grade)" type="EtcItem">
-		<!-- A Soulshot temporarily increases attack power. Used with a No-grade weapon. -->
+		<!-- Increases a weapon's physical power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -443,7 +443,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1848" name="Clay Urn Fragment" type="EtcItem">
-		<!-- Relic of the Elmoreden Empire. Piece of a broken Clay Urn. -->
+		<!-- A piece of a clay urn from the Elmoreden Empire. -->
 		<set name="icon" val="icon.etc_broken_crystal_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -455,7 +455,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1849" name="Brass Tiara Piece" type="EtcItem">
-		<!-- Relic of the Elmoreden Empire. Part of a Brass Tiara. -->
+		<!-- A piece of a brass decoration from the Elmoreden Empire. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -467,7 +467,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1850" name="Bronze Mirror Piece" type="EtcItem">
-		<!-- Relic of the Elmoreden Empire. Part of a Bronze Mirror. -->
+		<!-- A bronze mirror piece from the Elmoreden Empire. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -479,7 +479,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1851" name="Jade Necklace Bead" type="EtcItem">
-		<!-- Relic of the Elmoreden Empire. Part of a Jade Necklace. -->
+		<!-- A jade necklace bead from the Elmoreden Empire. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -491,7 +491,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1852" name="Ancient Clay Urn" type="EtcItem">
-		<!-- Clay Urn of the Elmoreden Empire. Can be sold at a store. -->
+		<!-- A clay urn from the Elmoreden Empire. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -503,7 +503,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1853" name="Ancient Brass Tiara" type="EtcItem">
-		<!-- Relic of the Elmoreden Empire. Formal Brass Tiara. Can be sold at a store. -->
+		<!-- A brass tiara from the Elmoreden Empire. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_ancient_crown_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -515,7 +515,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1854" name="Ancient Bronze Mirror" type="EtcItem">
-		<!-- Relic of the Elmoreden Empire. Bronze mirror. Can be sold at a store. -->
+		<!-- A bronze mirror from the Elmoreden Empire. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_mirror_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -527,7 +527,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1855" name="Ancient Jade Necklace" type="EtcItem">
-		<!-- Relic of the Elmoreden Empire. Jade necklace. Can be sold at a store. -->
+		<!-- A jade necklace from the Elmoreden Empire. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -539,7 +539,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1856" name="Amulet: Chant of Life" type="EtcItem">
-		<!-- Amulet required for the Chant of Life spell. Used by Orc Shamans. Required level: 20 -->
+		<!-- An amulet for learning the Chant of Life skill. Used by Orc Shamans. Required level: 20. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -548,7 +548,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1857" name="Keltir Fang" type="EtcItem">
-		<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
+		<!-- Fang taken by killing Keltirs. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -560,7 +560,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1858" name="Keltir Fang" type="EtcItem">
-		<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
+		<!-- Fang taken by killing Keltirs. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -572,7 +572,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1859" name="Keltir Fang" type="EtcItem">
-		<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
+		<!-- Fang taken by killing Keltirs. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -584,7 +584,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1860" name="Keltir Fang" type="EtcItem">
-		<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
+		<!-- Fang taken by killing Keltirs. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -596,7 +596,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1861" name="Keltir Fang" type="EtcItem">
-		<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
+		<!-- Fang taken by killing Keltirs. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -608,7 +608,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1862" name="Keltir Fang" type="EtcItem">
-		<!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
+		<!-- Fang taken by killing Keltirs. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -620,7 +620,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1863" name="Map: Elmore" type="EtcItem">
-		<!-- Ancient, obsolete map. Can be purchased at any shop. -->
+		<!-- An ancient map. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -629,7 +629,7 @@
 		<set name="handler" val="Maps" />
 	</item>
 	<item id="1864" name="Stem" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_branch_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -640,7 +640,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1865" name="Varnish" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -651,7 +651,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1866" name="Suede" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_suede_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -662,7 +662,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1867" name="Animal Skin" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -673,7 +673,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1868" name="Thread" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_skein_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -684,7 +684,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1869" name="Iron Ore" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_lump_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -695,7 +695,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1870" name="Coal" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_coal_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -706,7 +706,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1871" name="Charcoal" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_charcoal_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -717,7 +717,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1872" name="Animal Bone" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1873" name="Silver Nugget" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -739,7 +739,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1874" name="Oriharukon Ore" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_oriharukon_ore_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -750,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1875" name="Stone of Purity" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -761,7 +761,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1876" name="Mithril Ore" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_mithril_ore_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1877" name="Adamantite Nugget" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_adamantite_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -783,7 +783,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1878" name="Durable Braid" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_braided_hemp_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -794,7 +794,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1879" name="Cokes" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -805,7 +805,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1880" name="Steel" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_lump_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -816,7 +816,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1881" name="Coarse Bone Powder" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_powder_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -827,7 +827,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1882" name="Leather" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_leather_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -838,7 +838,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1883" name="Steel Mold" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_mold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -849,7 +849,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1884" name="Cord" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_skein_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -860,7 +860,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1885" name="High-grade Suede" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -871,7 +871,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1886" name="Silver Mold" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_silver_mold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -882,7 +882,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1887" name="Varnish of Purity" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_potion_clear_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -893,7 +893,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1888" name="Synthetic Cokes" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_synthetic_cokes_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -904,7 +904,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1889" name="Synthetic Braid" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_compound_braid_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -915,7 +915,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1890" name="Mithril Alloy" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_lump_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -926,7 +926,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1891" name="Artisan's Frame" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_artisans_frame_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -937,7 +937,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1892" name="Blacksmith' Frame" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_blacksmiths_frame_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -948,7 +948,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1893" name="Oriharukon" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_oriharukon_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -959,7 +959,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1894" name="Crafted Leather" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_crafted_leather_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -970,7 +970,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1895" name="Metallic Fiber" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Material used by Dwarves for crafting items. No longer used. -->
 		<set name="icon" val="icon.etc_metallic_fiber_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -981,7 +981,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1896" name="Necklace of Anguish Chain" type="EtcItem">
-		<!-- Key material that Dwarves use to make the Necklace of Anguish. Can be sold. -->
+		<!-- Key material for Dwarves to make Necklace of Anguish. No longer used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -992,7 +992,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1897" name="Necklace of Wisdom Chain" type="EtcItem">
-		<!-- Key material that Dwarves use to make the Necklace of Wisdom. Can be sold. -->
+		<!-- Key material for Dwarves to make Necklace of Wisdom. No longer used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1003,7 +1003,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1898" name="Blue Diamond Necklace Gem" type="EtcItem">
-		<!-- Key material that Dwarves use to make the Blue Diamond Necklace. Can be sold. -->
+		<!-- Key material for Dwarves to make Blue Diamond Necklace. No longer used. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1014,7 +1014,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1899" name="Necklace of Devotion Chain" type="EtcItem">
-		<!-- Key material that Dwarves use to make the Necklace of Devotion. Can be sold. -->
+		<!-- Key material for Dwarves to make Necklace of Devotion. No longer used. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

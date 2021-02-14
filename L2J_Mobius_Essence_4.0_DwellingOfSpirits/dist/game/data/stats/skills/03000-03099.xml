@@ -54,7 +54,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="3007" toLevel="6" name="Special Ability: Guidance">
-		<!-- Increases P. Accuracy. -->
+		<!-- Increases P. Accuracy -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -81,7 +81,7 @@
 		</effects>
 	</skill>
 	<skill id="3008" toLevel="6" name="Special Ability: Guidance">
-		<!-- Increases P. Accuracy. -->
+		<!-- Increases P. Accuracy -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -108,7 +108,7 @@
 		</effects>
 	</skill>
 	<skill id="3009" toLevel="8" name="Special Ability: Evasion">
-		<!-- Increases P. Evasion. -->
+		<!-- Increases P. Evasion -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -351,7 +351,7 @@
 		</effects>
 	</skill>
 	<skill id="3017" toLevel="4" name="Special Ability: Magic Regeneration">
-		<!-- MP Recovery Bonus +$s2 for $s1. -->
+		<!-- MP Recovery Rate +$s2 for $s1 -->
 		<icon>icon.skill1044</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -569,7 +569,7 @@
 		</effects>
 	</skill>
 	<skill id="3023" toLevel="9" name="Special Ability: P. Critical Damage">
-		<!-- P. Critical Damage Boost -->
+		<!-- Increases P. Critical Damage. -->
 		<icon>icon.skill1242</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -602,7 +602,7 @@
 		</effects>
 	</skill>
 	<skill id="3024" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>
@@ -784,7 +784,7 @@
 		</effects>
 	</skill>
 	<skill id="3028" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Increases P. Evasion in critical situation. -->
+		<!-- Increases P. Evasion in critical situation -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -812,7 +812,7 @@
 		</effects>
 	</skill>
 	<skill id="3029" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Increases P. Evasion in critical situation. -->
+		<!-- Increases P. Evasion in critical situation -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -840,7 +840,7 @@
 		</effects>
 	</skill>
 	<skill id="3030" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Increases P. Evasion in critical situation. -->
+		<!-- Increases P. Evasion in critical situation -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -868,7 +868,7 @@
 		</effects>
 	</skill>
 	<skill id="3031" toLevel="6" name="Special Ability: Rsk. Evasion">
-		<!-- Increases P. Evasion in critical situation. -->
+		<!-- Increases P. Evasion in critical situation -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1010,7 +1010,7 @@
 		</effects>
 	</skill>
 	<skill id="3035" toLevel="6" name="Special Ability: Mortal Strike">
-		<!-- Increases success rate of attacks targeting the enemy's vital parts. -->
+		<!-- Increases Vital Point Attack Rate. -->
 		<icon>
 			<value level="1">icon.skill0410</value>
 			<value level="2">icon.skill0410</value>
@@ -1198,7 +1198,7 @@
 		</effects>
 	</skill>
 	<skill id="3040" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>
@@ -1263,7 +1263,7 @@
 		</effects>
 	</skill>
 	<skill id="3041" toLevel="6" name="Special Ability: Critical Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>
@@ -1328,7 +1328,7 @@
 		</effects>
 	</skill>
 	<skill id="3042" toLevel="16" name="Special Ability: P. Critical Damage">
-		<!-- P. Critical Damage Boost -->
+		<!-- Increases P. Critical Damage. -->
 		<icon>
 			<value level="1">icon.skill0193</value>
 			<value level="2">icon.skill0193</value>
@@ -1455,7 +1455,7 @@
 		</effects>
 	</skill>
 	<skill id="3043" toLevel="8" name="Special Ability: P. Critical Damage">
-		<!-- P. Critical Damage Boost -->
+		<!-- Increases P. Critical Damage. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1672,7 +1672,7 @@
 		</effects>
 	</skill>
 	<skill id="3046" toLevel="16" name="Special Ability: Guidance">
-		<!-- Increases P. Accuracy. -->
+		<!-- Increases P. Accuracy -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2083,7 +2083,7 @@
 		</effects>
 	</skill>
 	<skill id="3061" toLevel="3" name="Special Ability: Critical Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>7</abnormalLevel>
@@ -2120,7 +2120,7 @@
 		</effects>
 	</skill>
 	<skill id="3062" toLevel="2" name="Special Ability: Critical Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>7</abnormalLevel>
@@ -2187,7 +2187,7 @@
 		</effects>
 	</skill>
 	<skill id="3069" toLevel="1" name="Special Ability: Rsk. Evasion">
-		<!-- Increases P. Evasion in critical situation. -->
+		<!-- Increases P. Evasion in critical situation -->
 		<icon>icon.skill0198</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2374,7 +2374,7 @@
 		</effects>
 	</skill>
 	<skill id="3077" toLevel="6" name="Special Ability: M. Atk.">
-		<!-- Increases M. Atk. and MP Consumption -->
+		<!-- Increases M. Atk. and MP Consumption. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2439,7 +2439,7 @@
 		</effects>
 	</skill>
 	<skill id="3079" toLevel="6" name="Special Ability: Magic Paralysis">
-		<!-- Slows the enemy down for $s1, after that the enemy is fully paralysed for $s2. -->
+		<!-- Slows the enemy down for $s1, after that the enemy is fully paralysed for $s2 -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2488,7 +2488,7 @@
 		</endEffects>
 	</skill>
 	<skill id="3080" toLevel="15" name="Item Skill: Aggression">
-		<!-- In case of success: Provokes a target to attack during an standard physical attack. Power $s1. -->
+		<!-- When triggered: Increases the target's aggression after a regular physical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -2540,7 +2540,7 @@
 		</effects>
 	</skill>
 	<skill id="3081" toLevel="15" name="Item Skill: Charm (phys.)">
-		<!-- In case of success: Decreases the target's urge to attack during a standard physical attack. Power $s1. -->
+		<!-- When triggered: Decreases the target's agression after a regular physical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -2592,7 +2592,7 @@
 		</effects>
 	</skill>
 	<skill id="3082" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- In case of success: Burns up the target's MP during an standard physical attack. Power $s1. -->
+		<!-- When triggered: Burns up the target's MP after a regular physical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -2635,7 +2635,7 @@
 		</effects>
 	</skill>
 	<skill id="3083" toLevel="15" name="Item Skill: Slow (phys.)">
-		<!-- In case of success: Momentarily target's Speed -30% during a normal physical attack. -->
+		<!-- When triggered: Momentarily the target's Speed -30% after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>3</abnormalLevel>
@@ -2678,7 +2678,7 @@
 		</effects>
 	</skill>
 	<skill id="3084" toLevel="10" name="Item Skill: Winter (phys.)">
-		<!-- In case of success: Momentarily target's Atk. Spd. -23% during a normal physical attack. -->
+		<!-- When triggered: Momentarily the target's Atk. Spd. -23% after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>3</abnormalLevel>
@@ -2716,7 +2716,7 @@
 		</effects>
 	</skill>
 	<skill id="3085" toLevel="10" name="Item Skill: Stun">
-		<!-- In case of success: Momentarily inflicts Stun on the target during a normal physical attack. -->
+		<!-- When triggered: Momentarily stuns the target after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2753,7 +2753,7 @@
 		</effects>
 	</skill>
 	<skill id="3086" toLevel="15" name="Item Skill: Hold">
-		<!-- In case of success: Momentarily inflicts Hold on the target during a normal physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- When triggered: Momentarily inflicts Hold on the target after a regular physical attack. The target cannot be affected by any Hold attacks while the effect is active. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2798,7 +2798,7 @@
 		</effects>
 	</skill>
 	<skill id="3087" toLevel="10" name="Item Skill: Sleep">
-		<!-- In case of success: Momentarily inflicts Sleep on the target during a normal physical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<!-- When triggered: Momentarily inflicts Sleep on the target after a regular physical attack. Additional chance to be put into sleep greatly decreases while the effect is active. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2838,7 +2838,7 @@
 		</effects>
 	</skill>
 	<skill id="3088" toLevel="10" name="Item Skill: Paralysis">
-		<!-- In case of success: A normal physical attack Slows the enemy down for $s1, after that the enemy is fully paralysed for $s2 -->
+		<!-- When triggered: Regular physical attacks slow the enemy down for $s1, after that the enemy is fully paralysed for $s2 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2891,7 +2891,7 @@
 		</endEffects>
 	</skill>
 	<skill id="3089" toLevel="10" name="Item Skill: Medusa">
-		<!-- In case of success: Momentarily petrifies the target during a normal physical attack. -->
+		<!-- When triggered: Momentarily petrifies the target after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2929,7 +2929,7 @@
 		</effects>
 	</skill>
 	<skill id="3090" toLevel="10" name="Item Skill: Fear">
-		<!-- In case of success: Momentarily inflicts Fear on the target and causes him to flee during a normal physical attack. -->
+		<!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee after a standard physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -2967,7 +2967,7 @@
 		</effects>
 	</skill>
 	<skill id="3091" toLevel="15" name="Item Skill: Poison (phys.)">
-		<!-- In case of success: Momentarily inflicts Poison on the target during a normal physical attack. -->
+		<!-- When triggered: Momentarily poisons the target after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>
@@ -3045,7 +3045,7 @@
 		</effects>
 	</skill>
 	<skill id="3092" toLevel="15" name="Item Skill: Bleed (phys.)">
-		<!-- In case of success: Momentarily inflicts Bleed on the target during a normal physical attack. -->
+		<!-- When triggered: Momentarily inflicts Bleed on the target after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>
@@ -3124,7 +3124,7 @@
 		</effects>
 	</skill>
 	<skill id="3093" toLevel="10" name="Item Skill: Silence">
-		<!-- In case of success: Momentarily blocks the target's magic skill during a normal physical attack. -->
+		<!-- When triggered: Momentarily blocks the target's M. skills after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -3161,7 +3161,7 @@
 		</effects>
 	</skill>
 	<skill id="3094" toLevel="10" name="Item Skill: Doom">
-		<!-- In case of success: Momentarily blocks all of the target's physical and magic skills during a normal physical attack. -->
+		<!-- When triggered: Momentarily blocks the target's P./ M. skills after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -3199,7 +3199,7 @@
 		</effects>
 	</skill>
 	<skill id="3095" toLevel="10" name="Item Skill: Mana Burn">
-		<!-- Chance: Burns up the target's MP during magic use. Power $s1. -->
+		<!-- When triggered: Burns up the target's MP when using magic. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
@@ -3243,7 +3243,7 @@
 		</effects>
 	</skill>
 	<skill id="3096" toLevel="15" name="Item Skill: Slow (magic)">
-		<!-- In case of success: Momentarily target's Speed -30% during magic use. -->
+		<!-- When triggered: Momentarily target's Speed -30% when using magic. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>3</abnormalLevel>
@@ -3287,7 +3287,7 @@
 		</effects>
 	</skill>
 	<skill id="3097" toLevel="10" name="Item Skill: Winter (magic)">
-		<!-- In case of success: Momentarily target's Atk. Spd. -23% during magic use. -->
+		<!-- When triggered: Momentarily target's Atk. Spd. -23% when using magic. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>3</abnormalLevel>
@@ -3326,7 +3326,7 @@
 		</effects>
 	</skill>
 	<skill id="3098" toLevel="10" name="Item Skill: Stun">
-		<!-- In case of success: Momentarily inflicts Stun on the target during magic use. -->
+		<!-- When triggered: Momentarily stuns the target when using magic. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -3364,7 +3364,7 @@
 		</effects>
 	</skill>
 	<skill id="3099" toLevel="15" name="Item Skill: Hold">
-		<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<!-- When triggered: Momentarily inflicts Hold on the target when using magic. The target cannot be affected by any Hold attacks while the effect is active. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>

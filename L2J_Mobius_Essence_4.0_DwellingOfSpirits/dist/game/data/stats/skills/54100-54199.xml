@@ -45,6 +45,7 @@
 		</effects>
 	</skill>
 	<skill id="54102" toLevel="1" name="White Guardian Transformation">
+		<!-- For 20 min., Max HP/ MP +15%, P./ M. Accuracy +2, P./ M. Atk. and P./ M. Def. +3%, Atk. Spd. +5%, P. Skill Critical Damage +200, M. Skill Critical Rate +20, Speed +5. <Item consumption> 5 Elemental Stones -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -117,7 +118,7 @@
 		</effects>
 	</skill>
 	<skill id="54103" toLevel="1" name="Sayha's Decrease Weight">
-		<!-- For 20 min., Weight Limit +9000. -->
+		<!-- For 20 min., weight limit +9000. -->
 		<icon>icon.skill1257</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -138,7 +139,7 @@
 		</effects>
 	</skill>
 	<skill id="54104" toLevel="1" name="Sayha's Berserker Spirit">
-		<!-- For 20 min., Max HP/ MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -184,7 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="54105" toLevel="1" name="Sayha's Wind Walk">
-		<!-- For 20 min., Speed +33. -->
+		<!-- Speed +33 for 20 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -250,7 +251,7 @@
 		</effects>
 	</skill>
 	<skill id="54109" toLevel="1" name="Sayha's Haste">
-		<!-- For 20 min., Atk. Spd. +33%. -->
+		<!-- Atk. Spd. +33% for 20 min. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -316,7 +317,7 @@
 		</effects>
 	</skill>
 	<skill id="54112" toLevel="1" name="Sayha's Clarity">
-		<!-- For 20 min., MP Consumption for physical skills -20%, MP Consumption for magical skills -10%, and song/ dance skill's MP consumption -20%. -->
+		<!-- For 20 min., P. Skill/ Song/ Dance MP Consumption -20%, M. Skill MP Consumption -10%. -->
 		<icon>icon.skill1397</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -338,7 +339,7 @@
 		</effects>
 	</skill>
 	<skill id="54113" toLevel="1" name="Sayha's Wild Magic">
-		<!-- For 20 min., M. Critical Rate +20%. -->
+		<!-- M. Skill Critical Rate +20 for 20 min. -->
 		<icon>icon.skill1303</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -360,7 +361,7 @@
 		</effects>
 	</skill>
 	<skill id="54114" toLevel="1" name="Sayha's Acumen">
-		<!-- For 20 min., Casting Spd. +30%. -->
+		<!-- Casting Spd. +30% for 20 min. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -404,7 +405,7 @@
 		</effects>
 	</skill>
 	<skill id="54116" toLevel="1" name="Sayha's Victory">
-		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
+		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +10%. -->
 		<icon>icon.skill5074</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -488,7 +489,7 @@
 		</effects>
 	</skill>
 	<skill id="54118" toLevel="1" name="Sayha's Recover MP">
-		<!-- For 20 min., recovers MP. The Sayha's Effect Scroll cannot be used if the buff is active. -->
+		<!-- For 20 min., recovers MP. The Sayha's Buff Scroll cannot be used if the buff is active. -->
 		<icon>icon.skill0213</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -510,7 +511,7 @@
 		</effects>
 	</skill>
 	<skill id="54119" toLevel="1" name="Chef's Fish Stew - Victory">
-		<!-- For 3 h., HP/ MP Recovery Bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, PvE Damage +15%, Atk. Spd./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. The effect remains after death. -->
+		<!-- For $s1, HP/ MP Recovery Rate +$s2, P./ M. Accuracy +$s3, P./ M. Evasion +$s4, PvE Damage +$s5, Atk./ Casting Spd. +$s6, P. Critical Rate/ M. Skill Critical Rate +$s7, P. Critical Damage/ M. Skill Critical Damage +$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -529,7 +530,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="54122" toLevel="1" name="Improved Fire Attack Potion">
-		<!-- For 20 min., Fire Attack Power +80. Cooldown: 1 min. -->
+		<!-- For $s1, Fire Attack +$s2. Cooldown: $s3 -->
 		<icon>icon.etc_fire_potion_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -548,7 +549,7 @@
 		</effects>
 	</skill>
 	<skill id="54123" toLevel="1" name="Improved Water Attack Potion">
-		<!-- For 20 min., Water Attack Power +80. Cooldown: 1 min. -->
+		<!-- For $s1, Water Attack +$s2. Cooldown: $s3 -->
 		<icon>icon.etc_water_potion_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -567,7 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="54124" toLevel="1" name="Improved Wind Attack Potion">
-		<!-- For 20 min., Wind Attack Power +80. Cooldown: 1 min. -->
+		<!-- For $s1, Wind Attack +$s2. Cooldown: $s3 -->
 		<icon>icon.etc_wind_potion_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -586,7 +587,7 @@
 		</effects>
 	</skill>
 	<skill id="54125" toLevel="1" name="Improved Earth Attack Potion">
-		<!-- For 20 min., Earth Attack Power +80. Cooldown: 1 min. -->
+		<!-- For $s1, Earth Attack +$s2. Cooldown: $s3 -->
 		<icon>icon.etc_earth_potion_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>

@@ -29,7 +29,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="32903" toLevel="1" name="Mass Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -637,7 +637,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32959" toLevel="1" name="Mass Stun">
-		<!-- Attacks nearby enemies and stuns them for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks nearby enemies and stuns them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -652,7 +652,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32962" toLevel="1" name="Mass Aerial Yoke">
-		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -796,12 +796,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32991" toLevel="1" name="Unholy Bleeding Shot">
-		<!-- Inflicts Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32992" toLevel="1" name="Unholy Bleeding Shot">
-		<!-- Inflicts Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -835,7 +835,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32999" toLevel="3" name="Chuchu's Basic Skill">
-		<!-- Restores Vitality when killing. monsters. -->
+		<!-- Restores Vitality when killing monsters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>

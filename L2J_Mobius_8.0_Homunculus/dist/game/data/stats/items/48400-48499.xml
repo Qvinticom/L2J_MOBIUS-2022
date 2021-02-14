@@ -533,7 +533,7 @@
 		</skills>
 	</item>
 	<item id="48439" name="Fortress Talisman - Vitality" additionalName="15-day" type="Armor">
-		<!-- Vitality Bonus +10%. -->
+		<!-- Vitality bonus +10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1335,7 +1335,7 @@
 		</stats>
 	</item>
 	<item id="48494" name="Mysterious Dragon Slayer" type="Weapon">
-		<!-- ?ntains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Luna to obtain a special reward. -->
+		<!-- ?ontains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Luna to obtain a special reward. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1372,7 +1372,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48497" name="Glowing Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
-		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for +30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

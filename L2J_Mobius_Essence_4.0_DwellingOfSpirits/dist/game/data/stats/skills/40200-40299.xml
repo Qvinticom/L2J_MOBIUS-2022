@@ -26,12 +26,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40205" toLevel="8" name="Aden Adventure's Buff">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- CON +1 for $s1 h. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40206" toLevel="1" name="Cancel Aden Adventure's Buff">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Cancels the buff of the Aden Adventure. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -41,42 +41,41 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40208" toLevel="1" name="Anniversary Cake">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 5 min., party members' P./ M. Atk. +160, Acquired XP/ SP +160%, Max HP/ MP +160, Atk. Spd. +160, Casting Spd. +160, P./ M. Def. +160. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40209" toLevel="1" name="Dumpling Soup">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 min. P./ M. Atk. +150, P./ M. Def. +100, all Critical Rate +10%, Max HP/ MP +150. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40210" toLevel="1" name="Scroll: Enchant Circlet of Hero">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40211" toLevel="1" name="New Year Horoscope - Minor Luck">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Acquired XP/ SP +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40212" toLevel="1" name="New Year Horoscope - Medium Luck">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR +$s1 , DEX +$s1 INT +$s1 CON +$s1 MEN +$s1 WIT +$s1 HP +$s2 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40213" toLevel="1" name="New Year Horoscope - Great Luck">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR +$s1 , DEX +$s1 INT +$s1 CON +$s1 MEN +$s1 WIT +$s1 P. Atk. +$s2 M. Atk. +$s2 P. Def. +$s2 M. Def. +$s2 Max MP +$s3 All received Critical Damage -$s4 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40214" toLevel="1" name="Scroll of Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Turns a weapon into a blessed one. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40215" toLevel="1" name="Random Teleport">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Teleports to any place in the Black Anvil Guild Camp at random. Can be used only in the Black Anvil Guild Camp. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -86,17 +85,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40217" toLevel="1" name="Scroll of Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Turns a weapon into a blessed one. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40218" toLevel="1" name="We Play's Potion of Leaping">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- XP +7,490,000, SP +200,000. Required level: 60+. Cannot be used by chaotic characters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40219" toLevel="1" name="Scroll: Enchant Attack">
-		<!-- P. Atk. +800\nM. Atk. +800\nMax HP +1000\nAll received Critical Damage -100\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BOOST_ATTACK</abnormalType>
@@ -131,12 +130,12 @@
 		</effects>
 	</skill>
 	<skill id="40220" toLevel="1" name="Scroll: Enchant Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40221" toLevel="1" name="Scroll: Enchant Protection">
-		<!-- P. Def. +500\nM. Def. +500\nMax MP +800\nSpeed +2\nAll Critical Rate +30\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BOOST_DEFENCE</abnormalType>
@@ -171,32 +170,31 @@
 		</effects>
 	</skill>
 	<skill id="40222" toLevel="1" name="Scroll: Enchant Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40223" toLevel="1" name="Scroll: Enchant Stats">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- All stats +1 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40224" toLevel="1" name="Scroll: Enchant Stats">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- All stats +1 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40225" toLevel="1" name="Elixir">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Stat points +1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40226" toLevel="25" name="Special Buff Scroll Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR/ DEX/ CON +1 INT/ WIT/ MEN +1 The buff is leveling up every hour, also various items are granted. <Rewards> Lv. 1-8: Sayha's Cookie (2 pcs.) Lv. 9-15: Sayha's Storm Lv. 3 (2 pcs.) Lv. 16-20: Soulshot Ticket (10 pcs.) Lv. 21-23: Spirit Ore (100 pcs.) Lv. 24: Charging Stone of Random Craft (2 pcs.) Note! The effect does not remain after death. Items cannot be obtained after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40227" toLevel="5" name="Special Buff Scroll Reward Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -206,12 +204,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40229" toLevel="1" name="Scroll: Enchant Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40230" toLevel="1" name="Scroll: Enchant Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -221,52 +219,48 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40232" toLevel="1" name="Energy of Development">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- STR/ DEX/ CON +1 INT/ WIT/ MEN +1 MP Recovery Rate +5 Acquired XP/ SP +30% Duration: 4 h. The effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40233" toLevel="1" name="Scroll: Enchant Rare Accessories (Exchangeable)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40234" toLevel="1" name="Scroll: Enchant Rare Accessories">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40235" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories (Exchangeable)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40236" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40237" toLevel="1" name="Pet Crystal of Experience (Exchangeable)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pet XP +100,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40238" toLevel="1" name="Pet Crystals of Experience">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pet XP +100,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40239" toLevel="1" name="Pet Buff Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Max HP +1000 P. Def. +300 M. Def. +300 HP Recovery Rate +10 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40240" toLevel="1" name="Capture">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Allows to catch a pet. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40241" toLevel="1" name="Improved Pet Crystals of Experience">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pet XP +2,000,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -276,47 +270,45 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40243" toLevel="1" name="Sayha's Blessing Scroll - Stats">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- All stats +1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40244" toLevel="1" name="Sayha's Blessing Scroll - Recovery Potions' Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- HP Recovery Potion Effect +50. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40245" toLevel="1" name="Sayha's Blessing Scroll - MP Recovery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- MP Recovery +10. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40246" toLevel="1" name="Sayha's Blessing Scroll - Atk./ Def.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. +150 M. Atk. +150 P. Def. +150 M. Def. +150 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40247" toLevel="1" name="Sayha's Blessing Scroll - Atk. Spd./ Casting Spd.">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Atk. Spd. +100 Casting Spd. +100. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40248" toLevel="1" name="Primeval Garden's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40249" toLevel="1" name="Primeval Isle's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40250" toLevel="1" name="Pet Crystals of Experience (Low-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pet XP +1,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40251" toLevel="1" name="Pet XP Growth Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pet XP $s1 Removed when your pet is dead or recalled. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

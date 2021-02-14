@@ -87,7 +87,7 @@
 		</effects>
 	</skill>
 	<skill id="606" toLevel="1" name="Residence Fortitude">
-		<!-- Stun Resistance of clan members in residence +10. -->
+		<!-- Increases Stun Resistance by 10 of each member of the clan occupying the dwelling. -->
 		<icon>icon.skill0386</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -333,7 +333,7 @@
 		</effects>
 	</skill>
 	<skill id="619" toLevel="1" name="Cancel Transformation">
-		<!-- Undo the transformation. -->
+		<!-- Cancels transformation. -->
 		<icon>icon.skilltransform2</icon>
 		<effectPoint>10</effectPoint>
 		<hitTime>2500</hitTime>
@@ -353,7 +353,7 @@
 		</effects>
 	</skill>
 	<skill id="622" toLevel="2" name="Ultimate Escape">
-		<!-- P. Evasion +$s2 and Speed +$s3 for $s1 -->
+		<!-- For $s1, P./ M. Evasion +$s2, P./ M. Skill Evasion +$s3, Speed +$s4. -->
 		<icon>icon.skill0622</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1208,7 +1208,7 @@
 		</effects>
 	</skill>
 	<skill id="677" toLevel="1" name="Divine Warrior Transfixion of Earth">
-		<!-- Cuts with a downward blow to attack nearby enemies with 2323 Power added to P. Atk. Ignores Shield Defense. Over-hit. -->
+		<!-- Cuts with a downward blow to attack nearby enemies with 2323 power. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1232,7 +1232,7 @@
 		</effects>
 	</skill>
 	<skill id="678" toLevel="1" name="Divine Warrior War Cry">
-		<!-- P. Atk. +25% for 1 min. -->
+		<!-- Increases P. Atk. by 25% for 1 min. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -1255,7 +1255,7 @@
 		</effects>
 	</skill>
 	<skill id="679" toLevel="1" name="Sacrifice Warrior">
-		<!-- Sacrifices oneself to give P. Atk. of all party members +20% for 30 sec. Available only when HP is under 30%. -->
+		<!-- Sacrifices oneself to increase P. Atk. of all party members by 20% for 30 sec. Available only when HP is under 30%. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1294,7 +1294,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="680" toLevel="1" name="Divine Knight Hate">
-		<!-- Provokes the enemy to attack with 6752 Power. -->
+		<!-- Provokes the enemy to attack you. Power 6752. -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1321,7 +1321,7 @@
 		</effects>
 	</skill>
 	<skill id="681" toLevel="1" name="Divine Knight Aggression Aura">
-		<!-- Provokes nearby enemies to attack by 6752 Power. -->
+		<!-- Provokes nearby enemies to attack you. Power 6752. -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1348,7 +1348,7 @@
 		</effects>
 	</skill>
 	<skill id="682" toLevel="1" name="Divine Knight Stun Attack">
-		<!-- Damages and stuns the target simultaneously. Over-hit. Power 1162. -->
+		<!-- Attacks and stuns the enemy with 1162 power. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1383,7 +1383,7 @@
 		</effects>
 	</skill>
 	<skill id="683" toLevel="1" name="Divine Knight Thunder Storm">
-		<!-- inflicts Stun and damage to the enemies nearby at the same time. Momentarily stuns nearby enemies. Ignores Shield Defense. Over-hit. Power 775. -->
+		<!-- Attacks and stuns nearby enemies with 775 power. Ignores Shield Defense. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1491,7 +1491,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="686" toLevel="1" name="Divine Rogue Stun Shot">
-		<!-- Shoots arrows that inflict both damage and shock to the enemy in order to cancel target state. Momentarily stuns target. Over-hit. Power 2323. -->
+		<!-- Shoots arrows with 2323 power that deal damage to the enemy stunning them and making them lose their target. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1528,7 +1528,7 @@
 		</effects>
 	</skill>
 	<skill id="687" toLevel="1" name="Divine Rogue Double Shot">
-		<!-- Shoots 2 arrows continuously. Critical. Over-hit. Power 6195. -->
+		<!-- Shoots 2 arrows in succession with 6195 power. Critical. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
@@ -1551,7 +1551,7 @@
 		</effects>
 	</skill>
 	<skill id="688" toLevel="1" name="Divine Rogue Bleed Attack">
-		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit. -->
+		<!-- Strikes the enemy making them bleed. Over-hit. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1588,7 +1588,7 @@
 		</effects>
 	</skill>
 	<skill id="689" toLevel="1" name="Divine Rogue Deadly Blow">
-		<!-- Attacks the target's vital points. CP Siphon. Over-hit. Power 6969. -->
+		<!-- Attacks the target's vital points with 6969 power. Half-kill. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -1642,7 +1642,7 @@
 		</effects>
 	</skill>
 	<skill id="691" toLevel="1" name="Sacrifice Rogue">
-		<!-- Increase party member's P. Evasion by sacrificing yourself. Available only when HP is under 30 percent. -->
+		<!-- Increases P. Evasion of the party members by sacrificing yourself. Available only when HP<30%. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1711,7 +1711,7 @@
 		</effects>
 	</skill>
 	<skill id="693" toLevel="1" name="Divine Wizard Holy Strike">
-		<!-- Unleashes holy attack. Over-hit. Power 128. -->
+		<!-- Unleashes holy attack with 128 power. Over-hit. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<effectPoint>-844</effectPoint>
@@ -1761,7 +1761,7 @@
 		</effects>
 	</skill>
 	<skill id="695" toLevel="1" name="Divine Wizard: Divine Cloud">
-		<!-- Momentarily bring divine clouds making nearby enemies Sleep. Decrease probability of additional Sleep state while effects last. -->
+		<!-- Summons divine clouds making nearby enemies fall sleep. Decreases probability of additional sleep state while the effect lasts. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1833,7 +1833,7 @@
 		</effects>
 	</skill>
 	<skill id="697" toLevel="1" name="Sacrifice Wizard">
-		<!-- Increase party member's M. Atk. by sacrificing yourself. Usable only when MP is under 10 percent. -->
+		<!-- Sacrifices the character to increase party s M. Atk. Can be used only when MP < 10%. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1871,7 +1871,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="698" toLevel="1" name="Divine Healer Major Heal">
-		<!-- Restores HP with 946 Power. -->
+		<!-- Restores HP. Power 946. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>826</effectPoint>

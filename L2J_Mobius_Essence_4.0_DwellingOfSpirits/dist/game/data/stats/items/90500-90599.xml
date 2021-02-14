@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="90500" name="Dragon's Treasure Chest" type="EtcItem">
-		<!-- Double-click to randomly receive one of Enchantment Scrolls or one rare item. Cannot be dropped or sold. -->
+		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -10,7 +10,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90501" name="Dragon's Shining Treasure Chest" type="EtcItem">
-		<!-- Double-click to randomly receive one of the following items: rare belt, level 5 jewel, any Armor Enchant Stone, any other rare item. Cannot be dropped or sold. -->
+		<!-- Double-click to obtain one of various items. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -19,7 +19,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90502" name="Lucky Enchant Stone: Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
+		<!-- The enchant success rate +10% for D-grade armor with a common scroll. Only for armor +3 ~ +8 (for one-piece armor, +4 ~ +8). -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -28,7 +28,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90503" name="Lucky Enchant Stone: Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
+		<!-- The enchant success rate +10% for C-grade armor with a common scroll. Only for armor from +3 to +8 (for one-piece armor, from +4 to +8). -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -37,7 +37,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90504" name="Lucky Enchant Stone: Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
+		<!-- The enchant success rate +10% for B-grade armor with a common scroll. Only for armor +3 ~ +8 (for one-piece armor, +4 ~ +8). -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -46,7 +46,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90505" name="Lucky Enchant Stone: Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be exchanged, dropped or sold. Can be stored in private warehouse. -->
+		<!-- The enchant success rate +10% for A-grade armor with a common scroll. Only for armor +3 ~ +8 (for one-piece armor, +4 ~ +8). -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -55,7 +55,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90506" name="Valuable Mark of Balthus Knights" type="EtcItem">
-		<!-- XP/SP gain ++20% and a chance to get Special Supplies for 2 hour. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on the same account. -->
+		<!-- Double-click to get a buff: Acquired XP/ SP +20% for 2 h. Required level: 20+. When activated, allows participation in the Balthus Knights' prize draw for the duration of the effect. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -68,7 +68,7 @@
 		</skills>
 	</item>
 	<item id="90507" name="Dragon's Balthus Chest" type="EtcItem">
-		<!-- Double-click to obtain Dragon Treasure Chest that can have random rare accessories or one of many Enchanted Scrolls. Cannot be dropped or sold in the grocery store. -->
+		<!-- Double-click to obtain Dragon's Treasure Chest that contains rare accessories and enchantment scrolls. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -78,7 +78,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90508" name="Special Dragon's Fruit" additionalName="Event" type="EtcItem">
-		<!-- For 20 minutes, P./ M. Atk. +12%, P./ M. Def. +15%, Max HP/ CP/ MP +25%, HP/ MP Recovery Bonus +30%. P./ M. Critical Rate +10, P./ M. Critical Damage +5%. Vampiric Rage Effect +5%. Acquired XP/SP +10%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +12%. M. Atk. +12%. P. Def. +15%. M. Def. +15%. Max HP +25%. Max MP +25%. Max CP +25%. HP Recovery Rate +30%. MP Recovery Rate +30%. P. Critical Rate +10. M. Critical Rate +10. P. Critical Damage +5%. M. Critical Damage +5%. Acquired XP +10%. Acquired SP +10%. A chance to absorb 5% of the inflicted damage as HP. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.bm_dragon_fruit" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -92,7 +92,7 @@
 		</skills>
 	</item>
 	<item id="90509" name="Dragon's Gold Key" type="EtcItem">
-		<!-- Take 1 Gold Key and 15 Melissa's Recovery Potions to the Dimensional Merchant to exchange them for Shining Dragon Treasure Chest. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over on Jule 6, 2016. -->
+		<!-- Can be exchanged along with 15 Maliss' HP Recovery Potions for Shining Dragon's Treasure Chest by the Game Assistant. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -102,7 +102,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90510" name="Talisman of Border Pack +5" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Border - Lv. 5. Cannot be dropped. Note: cannot be returned once opened. -->
+		<!-- Double-click to obtain Talisman of Border Lv. 5. Note!. The obtained item cannot be transferred. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -112,7 +112,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90511" name="Talisman of Border Pack +6" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Border - Lv. 6. Cannot be dropped. Note: cannot be returned once opened. -->
+		<!-- Double-click to obtain Talisman of Border Lv. 6. Note!. The obtained item cannot be transferred. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -122,7 +122,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90512" name="Talisman of Border Pack +7" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Border - Lv. 7. Cannot be dropped. Note: cannot be returned once opened. -->
+		<!-- Double-click to obtain Talisman of Border Lv. 7. Note!. The obtained item cannot be transferred. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -132,7 +132,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90513" name="Talisman of Border Pack Lv. 8" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Border - Lv. 8. Cannot be dropped. Note: cannot be returned once opened. -->
+		<!-- Double-click to obtain Talisman of Border Lv. 8. Note!. The obtained item cannot be transferred. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -142,7 +142,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90514" name="Talisman of Border Pack Lv. 9" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Border - Lv. 9. Cannot be dropped. Note: cannot be returned once opened. -->
+		<!-- Double-click to obtain Talisman of Border Lv. 9. Note!. The obtained item cannot be transferred. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -152,7 +152,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90515" name="Talisman of Border Pack Lv. 10" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Border - Lv. 10. Cannot be dropped. Note: cannot be returned once opened. -->
+		<!-- Double-click to obtain Talisman of Border Lv. 10. Note!. The obtained item cannot be transferred. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -162,7 +162,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90516" name="Lesser GM's Blessing Chest" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Toy Knight's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Major Warrior Healing Potion. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -173,7 +173,7 @@
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="90517" name="Greater GM's Blessing Chest" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Spellbook Box - 3rd Class Transfer, Magic Gem, Spellbook Chest, Common Life Stone, Scroll of Mood Melody. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- Double-click to obtain one of the following items: Spellbook Chest - 3rd class change, Magic Gem, Spellbook Chest, Life Stone Lv. 1 - Weapon, Scroll of Mood Melody. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -184,7 +184,7 @@
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="90518" name="Greatest GM's Blessing Chest" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Box (15-day), Unidentified Stone, Dandy Shining Pendant (7-day), Dandy Shining Pendant (1-day), Dandy Pendant (7-day), Dandy Pendant (1-day). Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- Double-click to obtain one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Rock, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy's Pendant (1-day). -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -195,7 +195,7 @@
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="90519" name="Shining Scroll of Mood Melody" type="EtcItem">
-		<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. This effect will not be removed after death. Cannot be dropped. -->
+		<!-- For 20 min., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. Note!. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -204,7 +204,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90520" name="Fire Dragon's Blessing Scroll" type="EtcItem">
-		<!-- For 20 minutes. Blessing Of Fire Dragon: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+		<!-- Applies a buff when used. <Buff effect>. Buffs and debuffs remain even after death. Duration: 20 min. The effect does not remains after death. -->
 		<set name="icon" val="icon.bm_blessing_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -213,7 +213,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90521" name="Golden Fishing Rod Pouch" type="EtcItem">
-		<!-- Double-click to obtain 180 pcs. of Golden Bait, 180 pcs. of Fishing Shot. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -223,7 +223,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90522" name="Golden Treasure Chest" type="EtcItem">
-		<!-- Double-click on the Golden Treasure Chest to get one of its treasures. Cannot be dropped. -->
+		<!-- Double-click to obtain one of the treasures. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -232,7 +232,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90523" name="Shining Fishing kit" type="EtcItem">
-		<!-- Double-click to obtain 2 Mermaid Golden Fishing Rod Chests (30-day), 25920 Silver Baits, 20 of Einhasad's Protection, Talisman of Baium Box (30-day), Jewel Box (30-day). Cannot be dropped. -->
+		<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25,920 Silver Baits, 20 Einhasad's Protections, Talisman of Baium Box (30-day), Shining Jewel Box (30-day). -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -242,7 +242,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90524" name="Lucky Enchant Stone Chest - A-grade" type="EtcItem">
-		<!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (A-grade), Lucky Enchant Stone: Save Armor (A-grade), Lucky Enchant Stone: Protect Armor (A-grade). Cannot be dropped or sold. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -251,7 +251,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90525" name="Lucky Enchant Stone Chest - B-grade" type="EtcItem">
-		<!-- Double-click to randomly receive one of the following items: Lucky Enchant Stone: Armor (B-grade), Lucky Enchant Stone: Save Armor (B-grade), Lucky Enchant Stone: Protect Armor (B-grade). Cannot be dropped or sold. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -260,7 +260,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90526" name="Talisman of Baium Box" additionalName="30 days" type="EtcItem">
-		<!-- Double-click to obtain a Talisman of Baium (30-day). Cannot be dropped. -->
+		<!-- Double-click to obtain Talisman of Baium Box (30-day). -->
 		<set name="icon" val="icon.npoint_tauti_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -270,7 +270,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90527" name="Talisman of Baium" additionalName="30 days" type="Armor">
-		<!-- A 30-day item. P. Atk. +284, M. Atk. +392, M. Damage Resistance +10%, Skill Power +5%, Resistance to All Weapons +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P./ M. Critical Rate +20. Skill MP Consumption -5%. Skill Cooldown -3%. Can only be used by characters Lv. 60 and above. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- <Properties>. P. Atk. +284. M. Atk. +392. M. Damage Resistance +10%. Skill Power +5%. Resistance to All Weapons +5. P. Critical Rate +20. M. Skill Critical Rate +20. MP Consumption -5%. Skill Cooldown -3%. STR/ INT +1. DEX/ WIT +1. CON/ MEN +1. Available for 30 d. Required level: 60+. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.tallisman_baium" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -282,7 +282,7 @@
 		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="90528" name="Shining Jewel Box" additionalName="30 days" type="EtcItem">
-		<!-- Double-click to obtain Lv. 5 Jade (30-day). Lv. 5 Vital Stone (30-day), Lv. 5 Garnet (30-day). Cannot be dropped. -->
+		<!-- Double-click to obtain Jade Lv. 5 (30-day), Vital Stone Lv. 5 (30-day), Garnet Lv. 5 (30-day). -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -292,7 +292,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90529" name="Lv. 5 Jade" additionalName="30 days" type="Armor">
-		<!-- 30-day item. Atk. Spd./ Casting Spd. +14%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. Atk. Spd./ Casting Spd. +14%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -304,7 +304,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90530" name="Lv. 5 Vital Stone" additionalName="30 days" type="Armor">
-		<!-- A 30-day item. Sayha Grace XP/SP +15%, Sayha Grace Consumption -30% while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. When Sayha's Grace is active, Acquired XP/ SP +15%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -316,7 +316,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90531" name="Lv. 5 Garnet" additionalName="30 days" type="Armor">
-		<!-- 30-day item. Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +20%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 d. Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +20%. Grants immunity to debuffs for 15 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -328,7 +328,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="90532" name="Refined Rare Accessory Pack" type="EtcItem">
-		<!-- Double-click to randomly receive one of the following items: Refined Queen Ant's Ring, Refined Orfen's Earring, Refined Ring of Core, Refined Baium's Ring. Cannot be dropped or sold. -->
+		<!-- Double-click to obtain one of the following items: Package: +2 Queen Ant's Ring, Package: +2 Ring of Core, Package: +2 Orfen's Earring, Package: +2 Baium's Ring. -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -337,7 +337,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90533" name="Rare Accessory Box" type="EtcItem">
-		<!-- Double-click to randomly receive one of the following items: Queen Ant's Ring, Orfen's Earring, Ring of Core, Baium's Ring. Cannot be dropped or sold. -->
+		<!-- Double-click to obtain one of the following items: Queen Ant's Ring, Ring of Core, Orfen's Earring, Ring of Core, Baium's Ring. -->
 		<set name="icon" val="icon.npoint_valakas_30day_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -346,7 +346,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90534" name="Sigel's Rune - Stage 1" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +56. Sigel's Protection. - Max HP +4% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -354,7 +354,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90535" name="Sigel's Rune - Stage 2" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +68. Sigel's Protection. - Max HP +5% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -362,7 +362,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90536" name="Sigel's Rune - Stage 3" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +80. Sigel's Protection. - Max HP +6% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -370,7 +370,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90537" name="Sigel's Rune - Stage 4" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +92. Sigel's Protection. - Max HP +7% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -378,7 +378,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90538" name="Sigel's Rune - Stage 5" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +104. Sigel's Protection. - Max HP +8% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -386,7 +386,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90539" name="Sigel's Rune - Stage 6" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +116. Sigel's Protection. - Max HP +9% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -394,7 +394,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90540" name="Sigel's Rune - Stage 7" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +128. Sigel's Protection. - Max HP +10% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -402,7 +402,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90541" name="Sigel's Rune - Stage 8" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +140. Sigel's Protection. - Max HP +12% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -410,7 +410,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90542" name="Sigel's Rune - Stage 9" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +152. Sigel's Protection. - Max HP +14% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -418,7 +418,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90543" name="Sigel's Rune - Stage 10" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +164. Sigel's Protection. - Max HP +16% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -426,7 +426,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90544" name="Sigel's Rune - Stage 11" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +178. Sigel's Protection. - Max HP +18% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -434,7 +434,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90545" name="Sigel's Rune - Stage 12" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +192. Sigel's Protection. - Max HP +20% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -442,7 +442,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90546" name="Sigel's Rune - Stage 13" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +206. Sigel's Protection. - Max HP +22% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -450,7 +450,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90547" name="Sigel's Rune - Stage 14" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Sigel's Defense. - P. Def. +227. Sigel's Protection. - Max HP +25% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -458,7 +458,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90548" name="Sigel's Rune - Stage 15" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. <Soul Crystal properties>. Sigel's Defense. - P. Def. +248. Sigel's Protection. - Max HP +28% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -506,7 +506,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90554" name="Tyrr's Rune - Stage 1" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 9% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +3% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -514,7 +514,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90555" name="Tyrr's Rune - Stage 2" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - An 11% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +4% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -522,7 +522,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90556" name="Tyrr's Rune - Stage 3" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 13% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +5% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -530,7 +530,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90557" name="Tyrr's Rune - Stage 4" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 15% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +6% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -538,7 +538,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90558" name="Tyrr's Rune - Stage 5" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 17% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +6.5% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv00" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -546,7 +546,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90559" name="Tyrr's Rune - Stage 6" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 19% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +7% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -554,7 +554,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90560" name="Tyrr's Rune - Stage 7" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 21% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +7.5% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -562,7 +562,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90561" name="Tyrr's Rune - Stage 8" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 23% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +8% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -570,7 +570,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90562" name="Tyrr's Rune - Stage 9" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 25% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +8.5% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -578,7 +578,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90563" name="Tyrr's Rune - Stage 10" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 27% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +9% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -586,7 +586,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90564" name="Tyrr's Rune - Stage 11" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 29% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +9.3% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -594,7 +594,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90565" name="Tyrr's Rune - Stage 12" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 31% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +9.6% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -602,7 +602,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90566" name="Tyrr's Rune - Stage 13" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 33% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +10% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -610,7 +610,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90567" name="Tyrr's Rune - Stage 14" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Tyrr's Critical Stun. - A 35% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +10.5% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -618,7 +618,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90568" name="Tyrr's Rune - Stage 15" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. <Soul Crystal properties>. Tyrr's Critical Stun. - A 37% chance to stun the enemy after a physical critical attack. (requires a spear). Tyrr's Haste. - Atk. Spd. +11%. -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -666,7 +666,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90574" name="Othell's Rune - Stage 1" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +25. Othell's Mortal Strike. - Vital Point Attack Rate +14% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -674,7 +674,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90575" name="Othell's Rune - Stage 2" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +31. Othell's Mortal Strike. - Vital Point Attack Rate +18% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -682,7 +682,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90576" name="Othell's Rune - Stage 3" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +37. Othell's Mortal Strike. - Vital Point Attack Rate +22% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -690,7 +690,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90577" name="Othell's Rune - Stage 4" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +43. Othell's Mortal Strike. - Vital Point Attack Rate +25% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -698,7 +698,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90578" name="Othell's Rune - Stage 5" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +49. Othell's Mortal Strike. - Vital Point Attack Rate +28% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -706,7 +706,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90579" name="Othell's Rune - Stage 6" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +54. Othell's Mortal Strike. - Vital Point Attack Rate +31% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -714,7 +714,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90580" name="Othell's Rune - Stage 7" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +59. Othell's Mortal Strike. - Vital Point Attack Rate +34% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -722,7 +722,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90581" name="Othell's Rune - Stage 8" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +64. Othell's Mortal Strike. - Vital Point Attack Rate +37% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -730,7 +730,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90582" name="Othell's Rune - Stage 9" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +69. Othell's Mortal Strike. - Vital Point Attack Rate +40% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -738,7 +738,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90583" name="Othell's Rune - Stage 10" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +74. Othell's Mortal Strike. - Vital Point Attack Rate +43% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -746,7 +746,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90584" name="Othell's Rune - Stage 11" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +76. Othell's Mortal Strike. - Vital Point Attack Rate +45% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -754,7 +754,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90585" name="Othell's Rune - Stage 12" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +78. Othell's Mortal Strike. - Vital Point Attack Rate +47% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -762,7 +762,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90586" name="Othell's Rune - Stage 13" additionalName="Super" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +80. Othell's Mortal Strike. - Vital Point Attack Rate +49% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -770,7 +770,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90587" name="Othell's Rune - Stage 14" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +82. Othell's Mortal Strike. - Vital Point Attack Rate +51% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -778,7 +778,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90588" name="Othell's Rune - Stage 15" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Othell's Focus. - P. Critical Rate +84. Othell's Mortal Strike. - Vital Point Attack Rate +53% -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -826,7 +826,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90594" name="Yul's Rune - Stage 1" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Yul's Critical Damage. - P. Critical Damage +92. Yul's Guidance. - P. Accuracy +2 -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -834,7 +834,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90595" name="Yul's Rune - Stage 2" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Yul's Critical Damage. - P. Critical Damage +113. Yul's Guidance. - P. Accuracy +2.4 -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -842,7 +842,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90596" name="Yul's Rune - Stage 3" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Yul's Critical Damage. - P. Critical Damage +134. Yul's Guidance. - P. Accuracy +2.8 -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -850,7 +850,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90597" name="Yul's Rune - Stage 4" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Yul's Critical Damage. - P. Critical Damage +155. Yul's Guidance. - P. Accuracy +3.2 -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -858,7 +858,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90598" name="Yul's Rune - Stage 5" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Yul's Critical Damage. - P. Critical Damage +176. Yul's Guidance. - P. Accuracy +3.6 -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv01" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
@@ -866,7 +866,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="90599" name="Yul's Rune - Stage 6" type="EtcItem">
-		<!-- A stone with a symbol of ancient Giants engraved. Can be upgraded through Compound to the rune of a higher level. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
+		<!-- Has two properties. You can choose one of them and apply it to your weapon through a town blacksmith. Can be enhanced through compounding. <Soul Crystal properties>. Yul's Critical Damage. - P. Critical Damage +196. Yul's Guidance. - P. Accuracy +4 -->
 		<set name="icon" val="BranchIcon.Icon.g_rune_yr_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />

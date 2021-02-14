@@ -56,28 +56,28 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15214" toLevel="1" name="Tauti">
-		<!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shilen's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shilen's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
+		<!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shillien's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shillien's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="15215" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
+		<!-- The Guillotine was once an executioner. After drinking the blood of Shillien that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shillien. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="15216" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- This is an undead monster that was created through the blood of Shilen from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shilen by killing everything, thereby taking sacrifices for the darkness. -->
+		<!-- This is an undead monster that was created through the blood of Shillien from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shillien by killing everything, thereby taking sacrifices for the darkness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
 	<skill id="15217" toLevel="1" name="Raid Boss (Lv. 97)">
-		<!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
+		<!-- The master criminal who resurrected after drinking the blood of Shillien that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -105,7 +105,7 @@
 		</effects>
 	</skill>
 	<skill id="15219" toLevel="1" name="Double Strike">
-		<!-- Powerful attack on enemies near target. -->
+		<!-- Inflicts strong damage upon the enemies near the target. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -241,7 +241,7 @@
 		</effects>
 	</skill>
 	<skill id="15224" toLevel="1" name="Bloody Breath">
-		<!-- Your soul is sucked away, and your P. Def. and M. Def. is decreased. -->
+		<!-- Your soul is sucked away, and your P./ M. Def. is decreased. -->
 		<icon>icon.skill11769</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -364,7 +364,7 @@
 		</effects>
 	</skill>
 	<skill id="15229" toLevel="1" name="Soul Wave">
-		<!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Only damages targets debuffed with Soul Drain. -->
+		<!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Additional damage on targets debuffed with Soul Drain. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -428,7 +428,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15232" toLevel="1" name="Speed Up">
-		<!-- Atk. Spd. +200%. -->
+		<!-- Increases your Atk. Spd. by 200%. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -585,7 +585,7 @@
 		</effects>
 	</skill>
 	<skill id="15238" toLevel="1" name="Dark Breath">
-		<!-- Absorb the souls of enemies within 180 degrees of you and their P. Def. and M. Def. -30%. -->
+		<!-- Absorb the souls of enemies within 180 degrees of you and decrease their P./ M. Def. by 30%. -->
 		<icon>icon.skill11769</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -670,7 +670,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15246" toLevel="1" name="Nurka Blow">
-		<!-- Inflicts powerful damage on target and nearby enemies. -->
+		<!-- Inflicts a powerful blow on the target and nearby enemies. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -969,7 +969,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15270" toLevel="1" name="Lindvior's Mass Yoke">
-		<!-- Lindvior's Aerial Yoke for All Skill Presentation -->
+		<!-- Lindvior's Aerial Yoke for All Skill Area Data -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -1010,7 +1010,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15274" toLevel="1" name="Mighty Wind Strike">
-		<!-- Ranged projectile. -->
+		<!-- Long-range projectile -->
 		<operateType>A1</operateType>
 		<castRange>1800</castRange>
 		<hitTime>2500</hitTime>
@@ -1251,7 +1251,7 @@
 		</effects>
 	</skill>
 	<skill id="15293" toLevel="1" name="Logan's Revenge">
-		<!-- Logan's revenge left in his dying breath. Momentarily invincible. -->
+		<!-- Logan's revenge left in his dying breath. Grants invincibility temporarily. -->
 		<icon>icon.skill11758</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>40</abnormalTime>
@@ -1316,7 +1316,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15296" toLevel="1" name="Logan's Revenge">
-		<!-- Logan's mistake left in his escape. Momentarily invincible. -->
+		<!-- Logan's mistake left in his escape. Grants invincibility temporarily. -->
 		<icon>icon.skill11758</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

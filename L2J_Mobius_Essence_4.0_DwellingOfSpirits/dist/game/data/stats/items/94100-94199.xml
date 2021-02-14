@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="94100" name="Sealed Kookaburra Necklace" type="EtcItem">
-		<!-- Double-click to obtain Kookaburra Necklace.\n -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.kukaburo_necklace_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -13,7 +13,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94101" name="Sealed Dragon's Necklace" type="EtcItem">
-		<!-- Double-click to obtain Dragon's Necklace.\n -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.strider_necklace_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -25,7 +25,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94102" name="Sealed Hawk Necklace" type="EtcItem">
-		<!-- Double-click to obtain Hawk Necklace.\n -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.thunder_bird_necklace_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -48,7 +48,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94104" name="Package: Opal Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Opal Lv. 5. -->
+		<!-- Double-click to obtain Opal Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -70,7 +70,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94106" name="Package: Coral Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Coral Lv. 5. -->
+		<!-- Double-click to obtain Coral Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_coral_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -92,7 +92,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94108" name="Package: Onyx Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Onyx Lv. 5. -->
+		<!-- Double-click to obtain Onyx Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_onyx_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -114,7 +114,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94110" name="Package: Spinel Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Spinel Lv. 5. -->
+		<!-- Double-click to obtain Spinel Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -136,7 +136,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94112" name="Package: Zircon Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Zircon Lv. 5. -->
+		<!-- Double-click to obtain Zircon Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_bloodstone_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -158,7 +158,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94114" name="Package: Moonstone Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Moonstone Lv. 5. -->
+		<!-- Double-click to obtain Moonstone Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_moonstone_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -180,7 +180,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94116" name="Package: Amber Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Amber Lv. 5. -->
+		<!-- Double-click to obtain Amber Lv. 6. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_amber_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -210,7 +210,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="94119" name="Talisman of Baium" additionalName="Sealed" type="Armor">
-		<!-- <Properties>\nP. Atk. +284\nM. Atk. +392\nM. Damage Resistance +10%\nSkill Power +5%\nResistance to All Weapons +5\nP. Critical Rate +20\nM. Skill Critical Rate +20\nMP Consumption -5%\nSkill Cooldown -3%\nSTR/ INT +1\nDEX/ WIT +1\nCON/ MEN +1\n\nRequired level: 60+. Effects of two identical talismans do not stack. -->
+		<!-- <Properties>. P. Atk. +284. M. Atk. +392. M. Damage Resistance +10%. Skill Power +5%. Resistance to All Weapons +5. P. Critical Rate +20. M. Skill Critical Rate +20. MP Consumption -5%. Skill Cooldown -3%. STR/ INT +1. DEX/ WIT +1. CON/ MEN +1. Required level: 60+. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.baium_talisman_new" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -225,7 +225,7 @@
 		</cond>
 	</item>
 	<item id="94120" name="Package: Talisman of Baium" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Talisman of Baium (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.baium_talisman_new" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -236,7 +236,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94121" name="Package: Zaken's Blood Sword" type="EtcItem">
-		<!-- Double-click to obtain Zaken's Blood Sword (Exchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.special_weapon_onehandsword" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -247,7 +247,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94122" name="Package: Core's Plasmic Bow" type="EtcItem">
-		<!-- Double-click to obtain Core's Plasmic Bow (Exchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -258,7 +258,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94123" name="Package: Queen Ant's Stone Breaker" type="EtcItem">
-		<!-- Double-click to obtain Queen Ant's Stone Breaker (Exchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.special_weapon_onehandblunt" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -269,7 +269,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94124" name="Package: Orfen's Venom Sword" type="EtcItem">
-		<!-- Double-click to obtain Orfen's Venom Sword (Exchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -280,7 +280,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94125" name="Package: Baium's Thunder Breaker" type="EtcItem">
-		<!-- Double-click to obtain Baium's Thunder Breaker (Exchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -291,7 +291,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94126" name="Package: Zaken's Blood Sword" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Zaken's Blood Sword (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.special_weapon_onehandsword" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -302,7 +302,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94127" name="Package: Core's Plasmic Bow" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Core's Plasmic Bow (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_karupis_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -313,7 +313,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94128" name="Package: Queen Ant's Stone Breaker" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Queen Ant's Stone Breaker (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.special_weapon_onehandblunt" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -324,7 +324,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94129" name="Package: Orfen's Venom Sword" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Orfen's Venom Sword (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -335,7 +335,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94130" name="Package: Baium's Thunder Breaker" additionalName="Sealed" type="EtcItem">
-		<!-- Double-click to obtain Baium's Thunder Breaker (Unexchangeable). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_terakan_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -378,63 +378,63 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94134" name="Spellbook: Amazing Spike Thrust Mastery" type="EtcItem">
-		<!-- A spellbook for learning the Amazing Spike Thrust Mastery skill.\n\n<Class>\nDreadnought\n\n<Skill effect>\nSpike Thrust is enhanced and replaced by Amazing Spike Thrust. -->
+		<!-- A spellbook for learning the Amazing Spike Thrust Mastery skill. <Class>. Dreadnought. <Skill effect>. Spike Thrust is enhanced and replaced by Amazing Spike Thrust. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94135" name="Spellbook: Might" type="EtcItem">
-		<!-- A spellbook for learning Might Lv. 4.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Atk. -->
+		<!-- A spellbook for learning Might Lv. 4. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases P. Atk. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94136" name="Spellbook: Shield" type="EtcItem">
-		<!-- A spellbook for learning Shield Lv. 4.\n\n<Classes>\nAll classes after the 3rd class change\n\n<Skill effect>\nIncreases P. Def. -->
+		<!-- A spellbook for learning Shield Lv. 4. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases P. Def. -->
 		<set name="icon" val="icon.rare_skill_book01" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94137" name="Spellbook: Devour" type="EtcItem">
-		<!-- A spellbook for learning the Devour skill.\n\n<Class>\nDeath Knight\n\n<Skill effect>\nRecovers DP. -->
+		<!-- A spellbook for learning the Devour skill. <Class>. Death Knight. <Skill effect>. Recovers DP. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94138" name="Spellbook: Pain of Sagittarius" type="EtcItem">
-		<!-- A spellbook for learning Pain of Sagittarius Lv. 8.\n\n<Class>\nSagittarius\n\n<Skill effect>\nRecovers target's MP at the cost of HP. -->
+		<!-- A spellbook for learning Pain of Sagittarius Lv. 8. <Class>. Sagittarius. <Skill effect>. Recovers target's MP at the cost of HP. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94139" name="Spellbook: Morale" type="EtcItem">
-		<!-- A spellbook for learning Morale Lv. 9.\n\n<Class>\nMoonlight Sentinel\n\n<Skill effect>\nIncreases HP/ MP Recovery Rate when running. -->
+		<!-- A spellbook for learning Morale Lv. 9. <Class>. Moonlight Sentinel. <Skill effect>. Increases HP/ MP Recovery Rate when running. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94140" name="Spellbook: Dark Sense" type="EtcItem">
-		<!-- A spellbook for learning the Dark Sense skill.\n\n<Class>\nGhost Sentinel\n\n<Skill effect>\nRecovers MP after Double Shot and Lethal Shot critical attacks. -->
+		<!-- A spellbook for learning the Dark Sense skill. <Class>. Ghost Sentinel. <Skill effect>. Recovers MP after Double Shot and Lethal Shot critical attacks. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94141" name="Spellbook: Buff Thief" type="EtcItem">
-		<!-- A spellbook for learning the Buff Thief skill.\n\n<Classes>\nDreadnought, Fortune Seeker\n\n<Skill effect>\nWith a certain chance, steals enemy's buffs. -->
+		<!-- A spellbook for learning the Buff Thief skill. <Classes>. Dreadnought, Fortune Seeker. <Skill effect>. With a certain chance, steals enemy's buffs. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94142" name="Dumpling Soup" additionalName="Event" type="EtcItem">
-		<!-- For 20 min. P./ M. Atk. +150, P./ M. Def. +100, Max HP/ MP +150, All Critical Rate +10%. -->
+		<!-- Applies a buff when used. <Buff effect>. P. Atk. +150. M. Atk. +150. P. Def. +100. M. Def. +100. Max HP +150. Max MP +150. All Critical Rate +10%. Duration: 20 min. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -555,7 +555,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94153" name="Baium Doll Lv. 1" type="EtcItem">
-		<!-- <Baium Doll's Sorcery Lv. 1>\nSkill Cooldown -2%\nP. Def. +5%\nM. Def. +5%\nSilence Resistance +10%\nFear Resistance +10%\nParalysis Resistance +5%\nKnock Down Resistance +5%\nPull Resistance +5%\n\nBoosts parameters when in inventory.\nCan be upgraded through Compound. -->
+		<!-- <Baium Doll's Sorcery Lv. 1>. Skill Cooldown -2%. P. Def. +5%. M. Def. +5%. Silence Resistance +10%. Fear Resistance +10%. Paralysis Resistance +5%. Knockdown Resistance +5%. Pull Resistance +5%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -563,7 +563,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="94154" name="Queen Ant Doll Lv. 1" type="EtcItem">
-		<!-- <Queen Ant Doll's Sorcery Lv. 1>\nP. Atk. +2%\nP. Critical Damage +3%\nP. Skill Critical Damage +3%\nMax HP +4%\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
+		<!-- <Queen Ant Doll's Sorcery Lv. 1>. P. Atk. +2%. P. Critical Damage +3%. P. Skill Critical Damage +3%. Max HP +4%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -571,7 +571,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="94155" name="Orfen Doll Lv. 1" type="EtcItem">
-		<!-- <Orfen Doll's Sorcery Lv. 1>\nM. Atk. +2%\nM. Skill Critical Damage +3%\nMax MP +4%\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
+		<!-- <Orfen Doll's Sorcery Lv. 1>. M. Atk. +2%. M. Skill Critical Damage +3%. Max MP +4%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -579,7 +579,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="94156" name="Package: Baium Doll Lv. 1" type="EtcItem">
-		<!-- Double-click to obtain Baium Doll Lv. 1. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -590,7 +590,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94157" name="Package: Baium Doll Lv. 2" type="EtcItem">
-		<!-- Double-click to obtain Baium Doll Lv. 2. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -601,7 +601,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94158" name="Package: Baium Doll Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain Baium Doll Lv. 3. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -612,7 +612,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94159" name="Package: Queen Ant Doll Lv. 1" type="EtcItem">
-		<!-- Double-click to obtain Queen Ant Doll Lv. 1. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -623,7 +623,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94160" name="Package: Queen Ant Doll Lv. 2" type="EtcItem">
-		<!-- Double-click to obtain Queen Ant Doll Lv. 2. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -634,7 +634,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94161" name="Package: Queen Ant Doll Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain Queen Ant Doll Lv. 3. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -645,7 +645,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94162" name="Package: Orfen Doll Lv. 1" type="EtcItem">
-		<!-- Double-click to obtain Orfen Doll Lv. 1. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -656,7 +656,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94163" name="Package: Orfen Doll Lv. 2" type="EtcItem">
-		<!-- Double-click to obtain Orfen Doll Lv. 2. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -667,7 +667,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94164" name="Package: Orfen Doll Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain Orfen Doll Lv. 3. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -689,7 +689,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94166" name="Circlet of Hero" type="Armor">
-		<!-- Can be enchanted up to +10 with Scroll: Enchant Circlet of Hero. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1.\n\nUses 2 hair accessory slots. -->
+		<!-- Can be enchanted up to +10 with Scroll: Enchant Circlet of Hero. Activates special effects depending on the enchant value. The enchanting isn't safe even to +1. Uses 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_circlet_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -790,7 +790,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94174" name="Venir's Talisman Lv. 16" type="Armor">
-		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +2\nINT +2\nMax HP +100\nAll received Critical Rate -10%\nP./ M. Skill Cooldown -7%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +3. MEN +3. DEX +3. WIT +3. STR +2. INT +2. Max HP +100. All received Critical Rate -10%. P./ M. Skill Cooldown -7%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -804,7 +804,7 @@
 		</skills>
 	</item>
 	<item id="94175" name="Venir's Talisman Lv. 17" type="Armor">
-		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +3\nINT +2\nMax HP +200\nAll received Critical Rate -10%\nP./ M. Skill Cooldown -9%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +3. MEN +3. DEX +3. WIT +3. STR +3. INT +2. Max HP +200. All received Critical Rate -10%. P./ M. Skill Cooldown -9%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 12. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -818,7 +818,7 @@
 		</skills>
 	</item>
 	<item id="94176" name="Venir's Talisman Lv. 18" type="Armor">
-		<!-- <When equipped>\nCON +3\nMEN +3\nDEX +3\nWIT +3\nSTR +3\nINT +3\nMax HP +300\nAll received Critical Rate -12%\nP./ M. Skill Cooldown -9%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +3. MEN +3. DEX +3. WIT +3. STR +3. INT +3. Max HP +300. All received Critical Rate -12%. P./ M. Skill Cooldown -9%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -833,7 +833,7 @@
 		</skills>
 	</item>
 	<item id="94177" name="Venir's Talisman Lv. 19" type="Armor">
-		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +3\nWIT +3\nSTR +3\nINT +3\nMax HP +400\nAll received Critical Rate -12%\nP./ M. Skill Cooldown -11%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +4. MEN +4. DEX +3. WIT +3. STR +3. INT +3. Max HP +400. All received Critical Rate -12%. P./ M. Skill Cooldown -11%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -848,7 +848,7 @@
 		</skills>
 	</item>
 	<item id="94178" name="Venir's Talisman Lv. 20" type="Armor">
-		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +4\nWIT +4\nSTR +3\nINT +3\nMax HP +500\nAll received Critical Rate -14%\nP./ M. Skill Cooldown -11%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +4. MEN +4. DEX +4. WIT +4. STR +3. INT +3. Max HP +500. All received Critical Rate -14%. P./ M. Skill Cooldown -11%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -863,7 +863,7 @@
 		</skills>
 	</item>
 	<item id="94179" name="Venir's Talisman Lv. 21" type="Armor">
-		<!-- <When equipped>\nCON +4\nMEN +4\nDEX +4\nWIT +4\nSTR +4\nINT +4\nMax HP +600\nAll received Critical Rate -14%\nP./ M. Skill Cooldown -13%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +4. MEN +4. DEX +4. WIT +4. STR +4. INT +4. Max HP +600. All received Critical Rate -14%. P./ M. Skill Cooldown -13%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -878,7 +878,7 @@
 		</skills>
 	</item>
 	<item id="94180" name="Venir's Talisman Lv. 22" type="Armor">
-		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +4\nWIT +4\nSTR +4\nINT +4\nMax HP +700\nAll received Critical Rate -16%\nP./ M. Skill Cooldown -13%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +5. MEN +5. DEX +4. WIT +4. STR +4. INT +4. Max HP +700. All received Critical Rate -16%. P./ M. Skill Cooldown -13%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -893,7 +893,7 @@
 		</skills>
 	</item>
 	<item id="94181" name="Venir's Talisman Lv. 23" type="Armor">
-		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +5\nWIT +5\nSTR +4\nINT +4\nMax HP +800\nAll received Critical Rate -16%\nP./ M. Skill Cooldown -15%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +5. MEN +5. DEX +5. WIT +5. STR +4. INT +4. Max HP +800. All received Critical Rate -16%. P./ M. Skill Cooldown -15%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 18. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -908,7 +908,7 @@
 		</skills>
 	</item>
 	<item id="94182" name="Venir's Talisman Lv. 24" type="Armor">
-		<!-- <When equipped>\nCON +5\nMEN +5\nDEX +5\nWIT +5\nSTR +5\nINT +5\nMax HP +900\nAll received Critical Rate -18%\nP./ M. Skill Cooldown -15%\n\nCan be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 24.\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +5. MEN +5. DEX +5. WIT +5. STR +5. INT +5. Max HP +900. All received Critical Rate -18%. P./ M. Skill Cooldown -15%. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level value drops to 24. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -923,7 +923,7 @@
 		</skills>
 	</item>
 	<item id="94183" name="Venir's Talisman Lv. 25" type="Armor">
-		<!-- <When equipped>\nCON +6\nMEN +6\nDEX +6\nWIT +6\nSTR +6\nINT +6\nMax HP +1000\nAll received Critical Rate -18%\nP./ M. Skill Cooldown -17%\n\nEffects of two identical talismans do not stack. -->
+		<!-- <When equipped>. CON +6. MEN +6. DEX +6. WIT +6. STR +6. INT +6. Max HP +1000. All received Critical Rate -18%. P./ M. Skill Cooldown -17%. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.benir_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -938,7 +938,7 @@
 		</skills>
 	</item>
 	<item id="94184" name="Scroll of Blessing" type="EtcItem">
-		<!-- TODO: Create Item -->
+		<!-- When used, blesses your weapon. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
@@ -946,7 +946,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94185" name="Life Stone Lv. 1 - Weapon" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<!-- Augments weapons. Adena required. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -954,7 +954,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94186" name="Life Stone Lv. 2 - Weapon" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<!-- Augments weapons. Adena required. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -962,7 +962,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94187" name="Life Stone Lv. 1 - Armor" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<!-- Augments armor. Adena required. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -970,7 +970,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="94188" name="Life Stone Lv. 2 - Armor" type="EtcItem">
-		<!-- A mineral formed inside a monster under immense impact. Used for weapon augmentation by Blacksmiths Jeris in Giran and Jeros in Aden.\n\n200 A-grade Gemstones are required for augmentation. -->
+		<!-- Augments armor. Adena required. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
@@ -994,7 +994,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94191" name="New Year Horoscope - Minor Luck" additionalName="Event" type="EtcItem">
-		<!-- Acquired XP/ SP +50% for 20 min.\n5 Scrolls: New Year Horoscope - Minor Luck can be exchanged for one Scroll: New Year Horoscope - Medium Luck. -->
+		<!-- Acquired XP/ SP +50% for 20 min. 5 Scrolls: New Year Horoscope - Minor Luck can be exchanged for one Scroll: New Year Horoscope - Medium Luck. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1004,7 +1004,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94192" name="New Year Horoscope - Medium Luck" additionalName="Event" type="EtcItem">
-		<!-- STR/ DEX/ INT/ CON/ MEN/ WIT +1, HP +500 for 20 min.\n5 Scrolls: New Year Horoscope - Medium Luck can be exchanged for one Scroll: New Year Horoscope - Great Luck. -->
+		<!-- STR/ DEX/ INT/ CON/ MEN/ WIT +1, HP +500 for 20 min. 5 Scrolls: New Year Horoscope - Medium Luck can be exchanged for one Scroll: New Year Horoscope - Great Luck. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1074,7 +1074,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="94199" name="Black Anvil Guild Camp's Time Stone" additionalName="Event" type="EtcItem">
-		<!-- Prolongs your Session Zone's raid for 15 min.\n\n<Hunting Zone>\nBlack Anvil Guild Camp - World Hunting Zone. -->
+		<!-- Prolongs your Session Zone's raid for 15 min. <Hunting Zone>. Black Anvil Guild Camp - World Hunting Zone. -->
 		<set name="icon" val="icon.timezone_refill_oman_a_60" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="5" />

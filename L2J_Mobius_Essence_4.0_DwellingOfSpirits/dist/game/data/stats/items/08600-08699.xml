@@ -9,7 +9,7 @@
 		<set name="material" val="CRYSTAL" />
 	</item>
 	<item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" type="EtcItem">
-		<!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
+		<!-- A book for learning the Divine Inspiration Lv. 1 skill. <Classes>. All classes after the 2nd class change. <Skill effect>. Increases the number of buff slots. -->
 		<set name="icon" val="icon.etc_add_buffslot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -23,7 +23,7 @@
 		</skills>
 	</item>
 	<item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)" type="EtcItem">
-		<!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
+		<!-- A book for learning the Divine Inspiration Lv. 2 skill. <Classes>. All classes after the 2nd class change. <Skill effect>. Increases the number of buff slots. -->
 		<set name="icon" val="icon.etc_add_buffslot_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -37,7 +37,7 @@
 		</skills>
 	</item>
 	<item id="8620" name="Ancient Book: Divine Inspiration (Manuscript)" type="EtcItem">
-		<!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or above.) -->
+		<!-- A book for learning the Divine Inspiration Lv. 3 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases the number of buff slots. -->
 		<set name="icon" val="icon.etc_add_buffslot_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -51,7 +51,7 @@
 		</skills>
 	</item>
 	<item id="8621" name="Ancient Book: Divine Inspiration (Original Version)" type="EtcItem">
-		<!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
+		<!-- A book for learning the Divine Inspiration Lv. 4 skill. <Classes>. All classes after the 3rd class change. <Skill effect>. Increases the number of buff slots. -->
 		<set name="icon" val="icon.etc_add_buffslot_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -370,7 +370,7 @@
 		</stats>
 	</item>
 	<item id="8690" name="Recipe: Sirra's Blade (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Sirra's Blade. Requires Create Item Lv. 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -384,7 +384,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8691" name="Recipe: Sirra's Blade (100%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sirra's Blade. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -398,7 +398,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8692" name="Recipe: Sword of Ipos (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Sword of Ipos. Requires Create Item Lv. 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -412,7 +412,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8693" name="Recipe: Sword of Ipos (100%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Sword of Ipos. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -426,7 +426,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8694" name="Recipe: Barakiel's Axe (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Barakiel's Axe. Requires Create Item Lv. 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -440,7 +440,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8695" name="Recipe: Barakiel's Axe (100%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Barakiel's Axe. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -454,7 +454,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8696" name="Recipe: Behemoth' Tuning Fork (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Behemoth' Tuning Fork. Requires Create Item Lv. 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -468,7 +468,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8697" name="Recipe: Behemoth' Tuning Fork (100%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Behemoth' Tuning Fork. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -482,7 +482,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8698" name="Recipe: Naga Storm (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
+		<!-- For Dwarves only. A recipe for Naga Storm. Requires Create Item Lv. 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -496,7 +496,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8699" name="Recipe: Naga Storm (100%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. A recipe for Naga Storm. Requires Create Item Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

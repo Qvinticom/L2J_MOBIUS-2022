@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3100" toLevel="10" name="Item Skill: Sleep">
-		<!-- When triggered: Momentarily inflicts Sleep on the target when using magic. The target cannot be affected by any Sleep attacks while the effect is active.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- When triggered: Momentarily inflicts Sleep on the target when using magic. The target cannot be affected by any Sleep attacks while the effect is active. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -44,7 +44,7 @@
 		</effects>
 	</skill>
 	<skill id="3101" toLevel="10" name="Item Skill: Paralysis">
-		<!-- When triggered: Momentarily paralyzes the target when using magic.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- When triggered: Momentarily paralyzes the target when using magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -139,7 +139,7 @@
 		</effects>
 	</skill>
 	<skill id="3103" toLevel="10" name="Item Skill: Fear">
-		<!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee, when using magic.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee, when using magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -178,7 +178,7 @@
 		</effects>
 	</skill>
 	<skill id="3104" toLevel="15" name="Item Skill: Poison (Magic Active)">
-		<!-- When triggered: Momentarily poisons the target when using magic. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- When triggered: Momentarily poisons the target when using magic. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -257,7 +257,7 @@
 		</effects>
 	</skill>
 	<skill id="3105" toLevel="15" name="Item Skill: Bleed (Magic Active)">
-		<!-- When triggered: Momentarily inflicts Bleed on the target when using magic. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- When triggered: Momentarily inflicts Bleed on the target when using magic. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -337,7 +337,7 @@
 		</effects>
 	</skill>
 	<skill id="3106" toLevel="10" name="Item Skill: Silence">
-		<!-- When triggered: Momentarily blocks the target's M. skills when using magic.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- When triggered: Momentarily blocks the target's M. skills when using magic. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -375,7 +375,7 @@
 		</effects>
 	</skill>
 	<skill id="3107" toLevel="10" name="Item Skill: Doom">
-		<!-- When triggered: Temporarily blocks the target's P./ M. skills after magic use.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- When triggered: Temporarily blocks the target's P./ M. skills after magic use. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -631,7 +631,7 @@
 		</effects>
 	</skill>
 	<skill id="3113" toLevel="10" name="Item Skill: Stun">
-		<!-- When triggered: Momentarily stuns the target after a critical attack.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- When triggered: Momentarily stuns the target after a critical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -670,7 +670,7 @@
 		</effects>
 	</skill>
 	<skill id="3114" toLevel="15" name="Item Skill: Hold">
-		<!-- When triggered: Momentarily inflicts Hold on the target after a critical attack. The target is unlikely to be affected by any Hold attacks while the effect is active.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- When triggered: Momentarily inflicts Hold on the target after a critical attack. The target is unlikely to be affected by any Hold attacks while the effect is active. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -715,7 +715,7 @@
 		</effects>
 	</skill>
 	<skill id="3115" toLevel="10" name="Item Skill: Sleep">
-		<!-- When triggered: Momentarily inflicts Sleep on the target after a critical attack. The target cannot be affected by any Sleep attacks while the effect is active.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- When triggered: Momentarily inflicts Sleep on the target after a critical attack. The target cannot be affected by any Sleep attacks while the effect is active. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -757,7 +757,7 @@
 		</effects>
 	</skill>
 	<skill id="3116" toLevel="10" name="Item Skill: Paralysis">
-		<!-- When triggered: Momentarily paralyzes the target after a critical attack.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- When triggered: Momentarily paralyzes the target after a critical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -850,7 +850,7 @@
 		</effects>
 	</skill>
 	<skill id="3118" toLevel="10" name="Item Skill: Fear">
-		<!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee, after a critical attack.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee, after a critical attack. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -888,7 +888,7 @@
 		</effects>
 	</skill>
 	<skill id="3119" toLevel="15" name="Item Skill: Poison (Critical)">
-		<!-- When triggered: Momentarily poisons the target after a critical attack. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- When triggered: Momentarily poisons the target after a critical attack. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -966,7 +966,7 @@
 		</effects>
 	</skill>
 	<skill id="3120" toLevel="15" name="Item Skill: Bleed (Critical)">
-		<!-- When triggered: Momentarily inflicts Bleed on the target after a critical attack. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- When triggered: Momentarily inflicts Bleed on the target after a critical attack. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -1045,7 +1045,7 @@
 		</effects>
 	</skill>
 	<skill id="3121" toLevel="10" name="Item Skill: Silence">
-		<!-- When triggered: Momentarily blocks the target's M. skills after a critical attack.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- When triggered: Momentarily blocks the target's M. skills after a critical attack. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1082,7 +1082,7 @@
 		</effects>
 	</skill>
 	<skill id="3122" toLevel="10" name="Item Skill: Doom">
-		<!-- When triggered: Temporarily blocks the target's P./ M. skills after a critical attack.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- When triggered: Temporarily blocks the target's P./ M. skills after a critical attack. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -6097,7 +6097,7 @@
 		</effects>
 	</skill>
 	<skill id="3189" toLevel="10" name="Item Skill: Stun">
-		<!-- Active skill: Temporarily stuns the target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Active skill: Temporarily stuns the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -6172,7 +6172,7 @@
 		</effects>
 	</skill>
 	<skill id="3190" toLevel="10" name="Item Skill: Hold">
-		<!-- Active skill: Temporarily inflicts Hold on the target. The target cannot be affected by any Hold attacks while the effect is active.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Active skill: Temporarily inflicts Hold on the target. The target cannot be affected by any Hold attacks while the effect is active. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -6249,7 +6249,7 @@
 		</effects>
 	</skill>
 	<skill id="3191" toLevel="10" name="Item Skill: Sleep">
-		<!-- Active skill: Momentarily inflicts Sleep on the target. The target cannot be affected by any Sleep attacks while the effect is active.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Active skill: Momentarily inflicts Sleep on the target. The target cannot be affected by any Sleep attacks while the effect is active. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -6329,7 +6329,7 @@
 		</effects>
 	</skill>
 	<skill id="3192" toLevel="10" name="Item Skill: Paralysis">
-		<!-- Active skill: Temporarily paralyzes the target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Active skill: Temporarily paralyzes the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -6496,7 +6496,7 @@
 		</effects>
 	</skill>
 	<skill id="3194" toLevel="10" name="Item Skill: Fear">
-		<!-- Active skill: Momentarily inflicts Fear on the target forcing them to flee.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Active skill: Momentarily inflicts Fear on the target forcing them to flee. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -6571,7 +6571,7 @@
 		</effects>
 	</skill>
 	<skill id="3195" toLevel="15" name="Item Skill: Poison (Active)">
-		<!-- Active skill: Temporarily poisons the target. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Active skill: Temporarily poisons the target. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -6701,7 +6701,7 @@
 		</effects>
 	</skill>
 	<skill id="3196" toLevel="15" name="Item Skill: Bleed (Active)">
-		<!-- Active skill: Temporarily inflicts Bleed on the target. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Active skill: Temporarily inflicts Bleed on the target. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -6831,7 +6831,7 @@
 		</effects>
 	</skill>
 	<skill id="3197" toLevel="10" name="Item Skill: Silence">
-		<!-- Active skill: Temporarily blocks the target's M. skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Active skill: Temporarily blocks the target's M. skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -6905,7 +6905,7 @@
 		</effects>
 	</skill>
 	<skill id="3198" toLevel="10" name="Item Skill: Doom">
-		<!-- Active skill: Temporarily blocks the target's P./ M. skills.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Active skill: Temporarily blocks the target's P./ M. skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill3123</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

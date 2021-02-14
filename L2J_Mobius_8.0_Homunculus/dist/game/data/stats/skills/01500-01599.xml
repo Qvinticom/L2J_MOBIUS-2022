@@ -310,7 +310,7 @@
 		</effects>
 	</skill>
 	<skill id="1508" toLevel="1" name="Thorn Root">
-		<!-- Holds nearby enemies for 10 sec. making them lose 90 HP and 30 MP per sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds nearby enemies for 10 sec. making them lose 90 HP and 30 MP per sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1508</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -496,7 +496,7 @@
 		</effects>
 	</skill>
 	<skill id="1511" toLevel="8" name="Curse of Life Flow">
-		<!-- For $s1, inflicts a curse on the enemy that causes him to lose the power of life. Regenerates the target's HP if damaged at a certain rate.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- For $s1, inflicts a curse on the enemy that causes him to lose the power of life. Regenerates the target's HP if damaged at a certain rate. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill1511</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -587,7 +587,7 @@
 		</effects>
 	</skill>
 	<skill id="1512" toLevel="1" name="Soul Vortex">
-		<!-- Stirs up a vortex that inflicts non-attribute magic damage with $s1 power. For $s2, enemy's Speed -$s3, Atk. Spd. -$s4, Casting Spd. -$s5. Consumes $s6 MP per sec. Over-hit. -->
+		<!-- Stirs up a vortex that inflicts non-attribute magic damage with $s1 power. For $s2, enemy s Speed -$s3, Atk. Spd. -$s4, Casting Spd. -$s5. Consumes $s6 MP per sec. Over-hit. -->
 		<icon>icon.skill1512</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2833,7 +2833,7 @@
 		</effects>
 	</skill>
 	<skill id="1541" toLevel="1" name="Curse of Desparion">
-		<!-- Inflicts the Curse of Desparion, momentarily decreasing the enemy's Speed, P. Accuracy, P. Atk. and Atk. Spd.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts the Curse of Desparion, momentarily decreasing the enemy's Speed, P. Accuracy, P. Atk. and Atk. Spd. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1541</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3003,7 +3003,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="1546" toLevel="1" name="Strider Fear">
-		<!-- Inflicts Fear on the enemy forcing them to flee for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the enemy forcing them to flee for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1546</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>

@@ -549,7 +549,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48755" name="Shining Dragon Attribute Tonic (XP)" additionalName="Event" type="EtcItem">
-		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for +30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

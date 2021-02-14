@@ -396,7 +396,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="2031" toLevel="1" name="Healing Potion">
-		<!-- Increases HP Recovery Bonus. -->
+		<!-- Increases HP Recovery Rate. -->
 		<icon>icon.etc_lesser_potion_red_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -512,7 +512,7 @@
 		</effects>
 	</skill>
 	<skill id="2037" toLevel="1" name="Major Healing Potion">
-		<!-- Greatly increases HP Recovery Bonus. -->
+		<!-- Greatly increases HP Recovery Rate. -->
 		<icon>icon.etc_reagent_white_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -824,7 +824,7 @@
 		</effects>
 	</skill>
 	<skill id="2054" toLevel="1" name="Scroll: Haste">
-		<!-- For 20 min., Atk. Spd. +15%. -->
+		<!-- Atk. Spd. +15% for 20 min. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -893,7 +893,7 @@
 		</effects>
 	</skill>
 	<skill id="2057" toLevel="1" name="Scroll: Might">
-		<!-- P. Atk. +15% for 20 min. -->
+		<!-- For 20 min., P. Atk. +230. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1024,7 +1024,7 @@
 		</effects>
 	</skill>
 	<skill id="2064" toLevel="1" name="Scroll: Mana Regeneration">
-		<!-- Increases MP Recovery Bonus. -->
+		<!-- Increases MP Recovery Rate. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1197,7 +1197,7 @@
 		</effects>
 	</skill>
 	<skill id="2076" toLevel="1" name="Blessing of Eva">
-		<!-- Lung capacity +40%. -->
+		<!-- Breath gauge +40%. -->
 		<icon>icon.etc_bless_of_eva_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>400</abnormalTime>
@@ -1218,7 +1218,7 @@
 		</effects>
 	</skill>
 	<skill id="2077" toLevel="1" name="Potion of Revenge">
-		<!-- P. Def -17%, reflects a certain amount of damage back to the enemy -->
+		<!-- P. Def. -17%, reflects a certain amount of damage back to the enemy -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

@@ -684,7 +684,7 @@
 		</effects>
 	</skill>
 	<skill id="16224" toLevel="8" name="Mass Poison">
-		<!-- Inflicts Poison on the target and decreases HP. Effect $s1\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Poison on the target and decreases HP. Effect $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -697,7 +697,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16225" toLevel="8" name="Mass Bleed">
-		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed on the target and decreases HP. Effect $s1. Inflicted status: Infection (Bleed, Poison). -->
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -766,7 +766,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16228" toLevel="5" name="Mass Stun">
-		<!-- Attacks nearby enemies and stuns them for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks nearby enemies and stuns them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -797,7 +797,7 @@
 		</effects>
 	</skill>
 	<skill id="16229" toLevel="4" name="Mass Hold">
-		<!-- Inflicts Hold on the target and nearby enemies for $s1.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Inflicts Hold on the target and nearby enemies for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
@@ -837,7 +837,7 @@
 		</effects>
 	</skill>
 	<skill id="16230" toLevel="4" name="Sleeping Cloud">
-		<!-- Inflicts Sleep on the target and nearby enemies for $s1.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts Sleep on the target and nearby enemies for $s1. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1072</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>SLEEP</abnormalType>
@@ -880,7 +880,7 @@
 		</effects>
 	</skill>
 	<skill id="16231" toLevel="5" name="Mass Aerial Yoke">
-		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
@@ -930,7 +930,7 @@
 		</effects>
 	</skill>
 	<skill id="16232" toLevel="4" name="Mass Chain Smash">
-		<!-- Pulls nearby enemies toward you.\n\nInflicted status: Pull. -->
+		<!-- Pulls nearby enemies toward you. Inflicted status: Pull. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -972,7 +972,7 @@
 		</effects>
 	</skill>
 	<skill id="16233" toLevel="5" name="Mass Fear">
-		<!-- The target is feared and flees.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- The target is feared and flees. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>

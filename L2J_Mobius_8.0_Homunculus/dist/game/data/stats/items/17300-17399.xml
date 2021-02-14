@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17300" name="Requiem Retributer" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -98,7 +98,7 @@
 		</stats>
 	</item>
 	<item id="17303" name="Requiem Dual Blunt Weapon" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases P. Skill Power and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -230,7 +230,7 @@
 		</stats>
 	</item>
 	<item id="17309" name="Immortal Shield" additionalName="Heavy Armor" type="Armor">
-		<!-- ?n be enhanced by a blacksmith in any town. -->
+		<!-- Can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -657,7 +657,7 @@
 		</stats>
 	</item>
 	<item id="17328" name="Apocalypse Fighter" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases Atk. Spd. and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take it along with Scroll of Blessing: R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_kirche_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -689,7 +689,7 @@
 		</stats>
 	</item>
 	<item id="17329" name="Apocalypse Stormer" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases the number of targets attacked with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases the number of targets hit with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take it along with Scroll of Blessing: R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_grave_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -722,7 +722,7 @@
 		</stats>
 	</item>
 	<item id="17330" name="Apocalypse Thrower" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases P. Skill Power. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take it along with Scroll of Blessing: R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_spina_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -820,7 +820,7 @@
 		</stats>
 	</item>
 	<item id="17333" name="Apocalypse Caster" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take it along with Scroll of Blessing: R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_yuke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -853,7 +853,7 @@
 		</stats>
 	</item>
 	<item id="17334" name="Apocalypse Retributer" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take it along with Scroll of Blessing: R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_herencia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -950,7 +950,7 @@
 		</stats>
 	</item>
 	<item id="17337" name="Apocalypse Dual Blunt Weapon" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases P. Skill Power and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take it along with Scroll of Blessing: R-grade Weapon to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1082,7 +1082,7 @@
 		</stats>
 	</item>
 	<item id="17343" name="Twilight Shield" additionalName="Heavy Armor" type="Armor">
-		<!-- ?n be enhanced by a blacksmith in any town. -->
+		<!-- Can be enhanced by a blacksmith in any town. -->
 		<set name="icon" val="icon.kratere_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1927,7 +1927,7 @@
 		</stats>
 	</item>
 	<item id="17386" name="Specter Fighter" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases Atk. Spd. and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases Atk. Spd. and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_deodos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1959,7 +1959,7 @@
 		</stats>
 	</item>
 	<item id="17387" name="Specter Stormer" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases the number of targets attacked with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases the number of targets attacked with a spear. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_transgredi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1992,7 +1992,7 @@
 		</stats>
 	</item>
 	<item id="17388" name="Specter Thrower" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases P. Skill Power. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_solenas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2090,7 +2090,7 @@
 		</stats>
 	</item>
 	<item id="17391" name="Specter Caster" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Accuracy and M. Skill Critical Damage. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_alacer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2123,7 +2123,7 @@
 		</stats>
 	</item>
 	<item id="17392" name="Specter Retributer" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases M. Atk., M. Skill Critical Damage and Casting Spd. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2220,7 +2220,7 @@
 		</stats>
 	</item>
 	<item id="17395" name="Specter Dual Blunt Weapon" type="Weapon">
-		<!-- You can insert 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, increases P. Skill Power and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to Head Blacksmith of any town to enhance it to Blessed weapon. -->
+		<!-- 2 regular Soul Crystals and 1 special Soul Crystal can be inserted. When enchanted to +4, increases P. Skill Power and P. Atk. <Enchanting>. Use Scroll: Enchant R-grade Weapon. <Enhancing>. Take Scroll of Blessing: R95-grade Weapon and go to the Head Blacksmith in any town to make the weapon Blessed. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

@@ -64,7 +64,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15508" toLevel="4" name="Special Armor">
-		<!-- Special armor reduces servitors' received damage. -->
+		<!-- Special armor reduces servitors received damage. -->
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15509" toLevel="1" name="Laido Destruction">
@@ -203,7 +203,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15522" toLevel="1" name="Dark Poison">
-		<!-- Damages the enemy with dark poison decreasing HP.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Damages the enemy with dark poison decreasing HP. Inflicted status: Infection (Bleed, Poison). -->
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -384,7 +384,7 @@
 		</effects>
 	</skill>
 	<skill id="15530" toLevel="1" name="Slumber">
-		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -418,7 +418,7 @@
 		</effects>
 	</skill>
 	<skill id="15531" toLevel="1" name="Hold">
-		<!-- Holds the target.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
@@ -439,7 +439,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15533" toLevel="1" name="Spiteful Grudge">
-		<!-- Poisons the enemy, slowly draining his HP\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Poisons the enemy, slowly draining his HP Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -588,7 +588,7 @@
 		<hitTime>100</hitTime>
 	</skill>
 	<skill id="15543" toLevel="1" name="Poison Fog">
-		<!-- Throws poison dust on the enemy, slowly draining his HP.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Throws poison dust on the enemy, slowly draining his HP. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -692,7 +692,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15553" toLevel="1" name="Chain Hit">
-		<!-- Drags a target to the center.\n\nInflicted status: Pull. -->
+		<!-- Drags a target to the center. Inflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -723,7 +723,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15556" toLevel="1" name="Provoke">
-		<!-- Provokes nearby enemies into attacking you.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -757,7 +757,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15559" toLevel="1" name="Poison Attack">
-		<!-- Attacks all enemies poisoning them.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Attacks all enemies poisoning them. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -780,7 +780,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15561" toLevel="1" name="Connected Drain">
-		<!-- Inflicts Bleed and decreases HP for 5 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed and decreases HP for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -882,7 +882,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15569" toLevel="1" name="Chaotic Reign">
-		<!-- Pulls nearby monsters.\n\nInflicted status: Pull. -->
+		<!-- Pulls nearby monsters. Inflicted status: Pull. -->
 		<icon>icon.skill1469</icon>
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
@@ -934,7 +934,7 @@
 		</effects>
 	</skill>
 	<skill id="15573" toLevel="1" name="Master Siege Punch">
-		<!-- Inflicts a powerfull attack that knocks nearby enemies back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts a powerfull attack that knocks nearby enemies back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<operateType>A2</operateType>
 		<mpConsume>100</mpConsume>
@@ -1109,7 +1109,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15590" toLevel="1" name="Fear of Lindvior">
-		<!-- Inflicts Fear and forces to move against own will.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear and forces to move against own will. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill4108</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1186,7 +1186,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15595" toLevel="1" name="Lindvior's Fall">
-		<!-- Inflicts a physical attack on nearby characters.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts a physical attack on nearby characters. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0036</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>

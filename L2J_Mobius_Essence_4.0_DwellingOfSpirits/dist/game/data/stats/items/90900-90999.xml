@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="90900" name="Shining Agathion's Soul" type="EtcItem">
-		<!-- Agathion enchancement material. If you take this item along with an Agathion Bracelet - Lv. 4 to Blacksmith Baggins in Giran, you can enchance Agathion Bracelet. Cannot be dropped. -->
+		<!-- Can be used for the Agathion enchancement. Take it along with an Agathion Bracelet Lv. 4 to Blacksmith Baggins in Giran. -->
 		<set name="icon" val="icon.etc_raid_e_i02" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -9,7 +9,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="90901" name="Agathion Bracelet - Lv. 1" additionalName="15-day" type="Armor">
-		<!-- A 15-day item. When worn, 2 Agathion slots are activated. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Available for 15 days. Unlocks 2 agathion slots. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -25,7 +25,7 @@
 		</skills>
 	</item>
 	<item id="90902" name="Agathion Pisces" additionalName="15-day" type="Armor">
-		<!-- A 15-day item. Equipping it in the Bracelet's main slot summons the Agathion Pisces and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Available for 15 d. Equipping it in the main slot summons Agathion Pisces and enables its primary skills. -->
 		<set name="icon" val="icon.pis_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -42,7 +42,7 @@
 		</skills>
 	</item>
 	<item id="90903" name="Agathion Cancer" additionalName="15-day" type="Armor">
-		<!-- A 15-day item. Equipping it in the Bracelet's main slot summons the Agathion Cancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Available for 15 d. Equipping it in the main slot summons Agathion Cancer and enables its primary skills. -->
 		<set name="icon" val="icon.can_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -59,7 +59,7 @@
 		</skills>
 	</item>
 	<item id="90904" name="Agathion Box: Aries" additionalName="60-day" type="EtcItem">
-		<!-- Double-click to obtain Agathion Bracelet - Lv. 3 (60-day) and Agathion Aries (60-day). <Note>. For items obtained from a box, there are restrictions regarding movement. -->
+		<!-- Double-click to obtain Agathion Bracelet Lv. 3 (60-day) and Agathion Aries (60-day). Note!. The obtained items cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -69,7 +69,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90905" name="Singer and Dancer Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain Agathion Bracelet - Singer & Dancer (30-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain Agathion Singer & Dancer (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -81,7 +81,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90906" name="Singer and Dancer Pack" additionalName="90-day" type="EtcItem">
-		<!-- Double-click to obtain Agathion Bracelet - Singer & Dancer (90-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain Agathion Singer & Dancer (90-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -93,7 +93,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90907" name="Soulshot Ticket" additionalName="Event" type="EtcItem">
-		<!-- Can be exchanged through Dimensional Merchant to get Soulshot (No-grade/D-grade/C-grade), Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot. Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. -->
+		<!-- Can be exchanged by the Game Assistant for Soulshots, Blessed Spiritshots and Beast Soulshots/ Spiritshots. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i03" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -102,7 +102,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90908" name="Agathion Box: Rudolph" additionalName="2 hours" type="EtcItem">
-		<!-- Double-click to obtain Agathion Rudolph (2 hours). <Note>. For items obtained from a box, there are restrictions regarding movement. Cannot be dropped. -->
+		<!-- Double-click to obtain Agathion Rudolph (2-hour). Note!. The obtained item cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -113,7 +113,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90909" name="Agathion Rudolph" additionalName="2 hours" type="Armor">
-		<!-- A 2-hours item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph. Casting Spd./ Atk. Spd. +5%, during the hunt XP/SP gain +10%. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Available for 2 h. Summons Agathion Rudolph. Atk. Spd./ Casting Spd. +5%, Acquired XP/ SP +10%. -->
 		<set name="icon" val="BranchSys2.icon.event_lbracelet_rudolph" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="agathion" />
@@ -126,7 +126,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="90910" name="Christmas Red Sox" type="EtcItem">
-		<!-- Can be exchanged through the Fishermen's Guild for Rice Cake of Flaming Fighting Spirit (Event), Angel Cat's Energy (30-day), Special Pirate Fruit (Event). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
+		<!-- Can be exchanged through the Fishing Guildsmen for XP Growth Scroll (Event), Angel Cat's Energy (30-day), Special Pirate Fruit (Event). -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -136,7 +136,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90911" name="Battle Box Lv. 1" type="EtcItem">
-		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -146,7 +146,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90912" name="Battle Box Lv. 2" type="EtcItem">
-		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -156,7 +156,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90913" name="Battle Box Lv. 3" type="EtcItem">
-		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -166,7 +166,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90914" name="Battle Box Lv. 4" type="EtcItem">
-		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -176,7 +176,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90915" name="Valor Box" type="EtcItem">
-		<!-- Reward for valor warriors. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -186,7 +186,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90916" name="Rice-cake Soup" type="EtcItem">
-		<!-- Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, P./ M. Atk. Spd. +10%, Speed +10. Duration: 5 minutes. The effect is removed if the game is reloaded. -->
+		<!-- For 5 minutes, Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10. Deleted when entering the Olympiad. Deleted upon logout. Can be stacked with all XP/ SP bonuses. -->
 		<set name="icon" val="BranchSys.icon.br_taiwan_newyear_food_d_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -195,7 +195,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90917" name="XP Scroll: 10,000,000" type="EtcItem">
-		<!-- XP +10,000,000. Cannot be used by chaotic characters. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Recovers 10,000,000 XP. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -209,7 +209,7 @@
 		</skills>
 	</item>
 	<item id="90918" name="XP Scroll: 50,000,000" type="EtcItem">
-		<!-- XP +50,000,000. Cannot be used by chaotic characters. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Recovers 50,000,000 XP. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -223,7 +223,7 @@
 		</skills>
 	</item>
 	<item id="90919" name="XP Scroll: 100,000,000" type="EtcItem">
-		<!-- XP +100,000,000. Cannot be used by chaotic characters. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
+		<!-- Recovers 100,000,000 XP. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -237,7 +237,7 @@
 		</skills>
 	</item>
 	<item id="90920" name="Jade Lv. 5" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. Atk. Spd./ Casting Spd. +10%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Available for 7 days. Atk. Spd./ Casting Spd. +14%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -250,7 +250,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="90921" name="Vital Stone Lv. 5" additionalName="7-day" type="Armor">
-		<!-- A 7-day item. Sayha Grace XP/ SP +15%, Sayha Grace Consumption -30%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Available for 7 days. When Sayha's Grace is active, Acquired XP/ SP +15%, Sayha's Grace Consumption -30%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -263,7 +263,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="90922" name="Shining Jewelry Box" additionalName="Not in Use" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 1 chest with one of these items: Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Cat's Eye. Cannot be dropped. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -272,7 +272,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90923" name="Shining Ore" additionalName="Not in Use" type="EtcItem">
-		<!-- Bring some amount of Shining Ore and a Lv. 3-5 Jewel to a Dimensional Merchant to receive a Lv. 3-5 Jewelry Box. Cannot be dropped. -->
+		<!-- A certain amount of Shining Ore and a Jewel Lv. 3-5 can be exchanged for a Jewelry Box Lv. 3-5 by the Game Assistant. -->
 		<set name="icon" val="icon.bm_piece_of_ensoul_stone" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -280,7 +280,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90924" name="Aquamarine" additionalName="Lv. 1" type="Armor">
-		<!-- When using a skill after equipping, there is a chance of recovering 12 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- With a certain chance, MP +12 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -293,7 +293,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 	</item>
 	<item id="90925" name="Aquamarine" additionalName="Lv. 2" type="Armor">
-		<!-- When using a skill after equipping, there is a chance of recovering 16 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- MP +16 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -306,7 +306,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 	</item>
 	<item id="90926" name="Aquamarine" additionalName="Lv. 3" type="Armor">
-		<!-- When using a skill after equipping, there is a chance of recovering 20 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- MP +20 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -319,7 +319,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 	</item>
 	<item id="90927" name="Aquamarine" additionalName="Lv. 4" type="Armor">
-		<!-- When using a skill after equipping, there is a chance of recovering 30 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- MP +30 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -332,7 +332,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 	</item>
 	<item id="90928" name="Aquamarine" additionalName="Lv. 5" type="Armor">
-		<!-- When using a skill after equipping, there is a chance of recovering 50 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- With a certain chance, MP +50 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -345,7 +345,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 	</item>
 	<item id="90929" name="Cat's Eye" additionalName="Lv. 1" type="Armor">
-		<!-- P./ M. Critical Damage +2%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -358,7 +358,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90930" name="Cat's Eye" additionalName="Lv. 2" type="Armor">
-		<!-- P./ M. Critical Damage +4%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -371,7 +371,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90931" name="Cat's Eye" additionalName="Lv. 3" type="Armor">
-		<!-- P./ M. Critical Damage +6%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -384,7 +384,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90932" name="Cat's Eye" additionalName="Lv. 4" type="Armor">
-		<!-- P./ M. Critical Damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -397,7 +397,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90933" name="Cat's Eye" additionalName="Lv. 5" type="Armor">
-		<!-- P./ M. Critical Damage +15%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- P. Critical Damage/ M. Skill Critical Damage +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -410,7 +410,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90934" name="Brooch" additionalName="Lv. 3" type="Armor">
-		<!-- Activates 4 jewel slots when equipped. Inventory Slot +12. Cannot be dropped. -->
+		<!-- Activates 4 jewel slots. Inventory Slots +12. Can be compounded with another Brooch of the same level. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
@@ -425,7 +425,7 @@
 		</skills>
 	</item>
 	<item id="90935" name="Greater Jewel Box" additionalName="Lv. 4" type="EtcItem">
-		<!-- Double-click to obtain Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz or Cat's Eye Lv. 4. Cannot be dropped. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.bm_special_jewelbox_lv4" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -434,7 +434,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90936" name="Aquamarine Chest" type="EtcItem">
-		<!-- Double-click to obtain Aquamarine Lv. 1. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -444,7 +444,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90937" name="Aquamarine Box Lv. 3" type="EtcItem">
-		<!-- Double-click to obtain Aquamarine Lv. 3. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -454,7 +454,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90938" name="Aquamarine Box Lv. 4" type="EtcItem">
-		<!-- Double-click to obtain Aquamarine Lv. 4. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -464,7 +464,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90939" name="Aquamarine Box Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain Aquamarine Lv. 5. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +474,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90940" name="Cat's Eye Chest" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 1 Cat's Eye. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -484,7 +484,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90941" name="Lv. 3 Cat's Eye Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 3 Cat's Eye. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -494,7 +494,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90942" name="Lv. 4 Cat's Eye Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 4 Cat's Eye. Cannot be dropped. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -504,7 +504,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90943" name="Lv. 5 Cat's Eye Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 5 Cat's Eye. Cannot be dropped. -->
+		<!-- Double-click to obtain Cat's Eye Lv. 5. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -514,7 +514,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90944" name="Shining Brooch Fragment" type="EtcItem">
-		<!-- Brooch Lv. 2 and 2 Shining Brooch Fragments can be exchanged through Dimensional Merchant to get Brooch Lv. 3. Cannot be dropped. -->
+		<!-- Two fragments along with a Brooch can be exchanged by the Game Assistant for a higher-level Brooch. <Required Items>. Brooch Lv. 3: Brooch Lv. 2, Shining Brooch Fragments (2 pcs.). Brooch Lv. 4: Brooch Lv. 3, Shining Brooch Fragments (3 pcs.). -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -522,7 +522,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90945" name="Low-grade XP Scroll Ticket" type="EtcItem">
-		<!-- If you take this item to Leo and Rush, you can get 10,000,000 XP. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Can be exchanged for XP Scroll: 10,000,000 by Arena Manager Leo or Balthus Knight Rash. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -531,7 +531,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90946" name="Mid-grade XP Scroll Ticket" type="EtcItem">
-		<!-- If you take this item to Leo and Rush, you can get 50,000,000 XP. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Can be exchanged for XP Scroll: 50,000,000 by Arena Manager Leo or Balthus Knight Rash. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -540,7 +540,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90947" name="High-grade XP Scroll Ticket" type="EtcItem">
-		<!-- If you take this item to Leo and Rush, you can get 100,000,000 XP. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Can be exchanged for XP Scroll: 100,000,000 by Arena Manager Leo or Balthus Knight Rash. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -549,7 +549,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90948" name="Lucky Charm" additionalName="30-day" type="EtcItem">
-		<!-- A 30-day item. When in inventory, chance of dropping items -20%, chance of losing XP -20%. Cannot be used by chaotic characters. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. When in inventory, chance of dropping items after death -20%, chance of XP Penalty -20%. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.bm_freya_rune" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -559,7 +559,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90949" name="Transformation Scroll: White Knight" type="EtcItem">
-		<!-- Transforms you into White Knight for 15 minutes. The effect persists through death. During White Knight Transformation: Max HP/ MP +10%, PvE P. Atk. +5%, PvE P. Def +5%, stun/ fear/ mental attack chance +5%. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Transforms into White Knight. <Transformation effect>. P. Atk. in PvE +5%. P. Def. in PvE +5%. Max HP +10%. Max MP +10%. Stun Resistance +5%. Paralysis Resistance +5%. Silence Resistance +5%. Fear Resistance +5%. Duration: 20 min. The effect remains after death. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -569,7 +569,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="90950" name="Refined Baium's Ring" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. MP +27, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +5%, P. Critical Damage +15%, M. Critical Damage +10%, P./ M. Skill Power +10%. The effect does not stack if two identical rings are equipped. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- <Properties>. P. Skill Power +10%. M. Skill Power +10%. Atk. Spd. +5%. Casting Spd. +4%. P. Accuracy +4. M. Accuracy +4. P. Critical Damage +15%. M. Skill Critical Damage +10%. Max MP +27. Stun Resistance/ Atk. Rate +20%. Bleed Resistance/ Atk. Rate +15%. Available for 30 d. Effects of two identical rings do not stack. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -585,7 +585,7 @@
 		</stats>
 	</item>
 	<item id="90951" name="Angler's Fishing Box" type="EtcItem">
-		<!-- Double-click to obtain 30 Shining Golden Baits. If you are lucky, you will get Angler's Gold Box or Angler's Silver Box. Cannot be dropped or sold. The item will be removed after the event is over. -->
+		<!-- Double-click to obtain 30 Shining Golden Baits. If you are lucky, you will get Angler's Golden Box or Angler's Silver Box. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -594,7 +594,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90952" name="Angler's Gold Box" type="EtcItem">
-		<!-- Double-click to obtain 1 rare item. Cannot be dropped or sold. The item will be removed after the event is over. -->
+		<!-- Double-click to obtain a rare item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -603,7 +603,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90953" name="Angler's Silver Box" type="EtcItem">
-		<!-- Double-click to obtain 1 random item: rare accessories, Enchantment Scroll of any type, Item Box A/B Grade, Scroll: Enchant Fishing Weapon, Angler's Blessing. Cannot be dropped or sold. The item will be removed after the event is over. -->
+		<!-- Double-click to obtain 1 random item: a rare accessory, an enchantment scroll, an item box (grade A/ B), a fishing enchantment scroll, Angler's Blessing, etc. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -612,7 +612,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90954" name="Angler's Blessing (2 hours)" type="EtcItem">
-		<!-- For 2 h. during fishing Acquired XP/ SP +100%. Effect remains after death. Cannot be dropped or sold. -->
+		<!-- For 2 h. Acquired XP/ SP (fishing) +100%. The effect remains after death. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -622,7 +622,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="90955" name="Angler's Blessing (4 hours)" type="EtcItem">
-		<!-- For 4 h. during fishing Acquired XP/ SP +100%. Effect remains after death. Cannot be dropped or sold. -->
+		<!-- For 4 h. Acquired XP/ SP (fishing) +100%. The effect remains after death. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -632,7 +632,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="90956" name="Angler's Blessing (8 hours)" type="EtcItem">
-		<!-- For 8 h. during fishing Acquired XP/ SP +100%. Effect remains after death. Cannot be dropped or sold. -->
+		<!-- For 8 h. Acquired XP/ SP (fishing) +100%. The effect remains after death. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -642,7 +642,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="90957" name="Blue Mackerel Chest: Dual Sword (Event)" type="Weapon">
-		<!-- Open the chest to receive 1 Blue Mackerel: Dual Sword. This is grear reward! The item will be removed after the event is over. -->
+		<!-- Open the chest to receive a Blue Mackerel: Dual Sword. This is great reward! -->
 		<set name="icon" val="icon.wp_fishing11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -664,7 +664,7 @@
 		</stats>
 	</item>
 	<item id="90958" name="Scroll: Enchant Fishing Weapon" type="EtcItem">
-		<!-- Scroll for enchanting Event weapon Blue Mackerel: Dual Sword, than can be obtainned through the Fishermen's Guild. The item will be removed after the event is over. -->
+		<!-- A scroll for enchanting Blue Mackerel: Dual Swords, than can be obtained through the Fishing Guild. -->
 		<set name="icon" val="icon.etc_pvppoint_scroll1" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -672,7 +672,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90959" name="Improved Scroll: Enchant Fishing Weapon" type="EtcItem">
-		<!-- For Event weapon Blue Mackerel: Dual Sword. Enchants the weapon randomly from +1 to +3. Unable to enchant more than +17. Blue Mackerel: Dual Sword can be obtainned through the Fishermen's Guild. The item will be removed after the event is over. -->
+		<!-- For Blue Mackerel: Dual Swords. The enchanting is random from +1 to +3. Cannot be used on weapons enchanted to +17 or higher. Blue Mackerel: Dual Swords can be obtainned through the Fishing Guild. -->
 		<set name="icon" val="icon.etc_pvppoint_scroll10" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -680,7 +680,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90960" name="Transformation Scroll: Teddy Bear" type="EtcItem">
-		<!-- Changes the appearance to that of a teddy bear for 15 min. Effect remains after death. Cannot be dropped or sold. Max HP/ MP +20%. During Sayha Grace active, XP/ SP gain +20% while hunting. Can be stored in a private warehouse. <Attention>. Effect disappears when transformed into Blue Dynasty/ Kat the Cat/ Cat/ Panda. Reuse Time: 1 min. -->
+		<!-- Changes the appearance to that of a teddy bear. <Transformation effect>. Max HP +20%. Max MP +20%. Acquired XP +20%. Acquired SP +20%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>. <font color=eeaa22>(The effect is cancelled when transforming into Kat the Cat/ cat/ panda, or changing the armor appearance to that of Blue Dynasty.)</font> -->
 		<set name="icon" val="icon.gomdori_chest_change" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_dropable" val="false" />
@@ -689,7 +689,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="90961" name="Weapon Supply Box +15 (A-grade)" type="EtcItem">
-		<!-- Double-click to obtain an A-grade Weapon +15. -->
+		<!-- Double-click to obtain an A-grade weapon enchanted to +15. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
@@ -701,7 +701,7 @@
 		</skills>
 	</item>
 	<item id="90962" name="Chronicle Pencil" type="Weapon">
-		<!-- Pencil for the 1000th day after Lineage 2 Classic version start. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A pencil for the 1000th day after Lineage 2 Classic version start. -->
 		<set name="icon" val="BranchSys2.icon.g_pencil_of_servermaster" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -727,14 +727,14 @@
 		</stats>
 	</item>
 	<item id="90963" name="Solid Scroll: Enchant Agathion" type="EtcItem">
-		<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
+		<!-- Only for Zodiac agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. In case of failure the item is not destroyed, and its enchant value remains the same. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90964" name="Sealed Doll of Border Box" type="EtcItem">
-		<!-- You can obtain one of the 30-days items: Sealed Doll of Border - Baium, Sealed Doll of Border - Orfen, Doll of Border - Queen Ant. Cannot be dropped or sold. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -743,7 +743,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90965" name="Raid Lucky Charm" additionalName="7-day" type="EtcItem">
-		<!-- A 7-day item. When in inventory, chance of dropping items -50%, chance of losing XP -50%. Cannot be used by chaotic characters. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Available for 7 days. When in inventory, chance of dropping items after death -50%, chance of XP Penalty -50%. Cannot be used by chaotic characters. -->
 		<set name="icon" val="icon.etc_cross_of_einhasad_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -753,7 +753,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90966" name="Raid Lucky Charm Box" type="EtcItem">
-		<!-- You can obtain Raid Lucky Charm (7-day). Cannot be dropped or sold. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -772,7 +772,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90968" name="GM Repi Gift Box" type="EtcItem">
-		<!-- Double-click to obtain 1 random item: Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (Event) (3 pcs.), White Assassin Transformation Scroll (Event) (3 pcs.), Sayha's Storm (5 pcs.). Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -783,7 +783,7 @@
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="90969" name="Blessed Fire Dragon Pendant" type="Armor">
-		<!-- P./ M. Def. +24, Acquired XP/ SP +30%, P./ M. Atk. +80, P./ M. Critical Damage +10%, Reflect Damage Resistance +10%, when equipped. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Cannot be dropped. -->
+		<!-- M. Def. +24, Acquired XP/ SP +30%, P./ M. Atk. +80, P. Critical Damage/ M. Skill Critical Damage +10%, Damage Reflection Resistance +10%. Allows use of the Blessing of Fire Dragon and Fire Dragon's Protection skills. -->
 		<set name="icon" val="icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -797,7 +797,7 @@
 		</stats>
 	</item>
 	<item id="90970" name="Blessed Land Dragon Pendant" type="Armor">
-		<!-- P./ M. Def. +24, HP +600, MP +300, CP +600, Speed +7, Received Damage -20%, Reflect Damage Resistance +10%, when equipped. Allows using the Land Dragon Breath and Land Dragon Protection skills. Can be shared within account through Dimensional Merchant. Cannot be dropped. -->
+		<!-- M. Def. +24, Max HP/ CP +600, Max MP +300, Speed +7, Received Damage -20%, Damage Reflection Resistance +10%. Allows use of the Earth Dragon's Breath and Earth Dragon's Defense skills. -->
 		<set name="icon" val="icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -811,7 +811,7 @@
 		</stats>
 	</item>
 	<item id="90971" name="High-grade Shining Pendant Polish Box" type="EtcItem">
-		<!-- Double-click to obtain 1 random item: Pendant Matte Varnish, Shining Pendant Polish Box, Pendant Shiny Varnish. Cannot be dropped or sold. -->
+		<!-- Double-click to obtain Matte Pendant Polish, Shining Pendant Polish Box, or Glittering Pendant Polish. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -820,7 +820,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90972" name="Weapon Supply Box +8 (A-grade)" type="EtcItem">
-		<!-- Double-click to obtain an A-grade Weapon +8 exept high-level weapons. -->
+		<!-- Double-click to obtain an A-grade Weapon enchanted to +8, except high-level weapons. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
@@ -832,7 +832,7 @@
 		</skills>
 	</item>
 	<item id="90973" name="Zaken's Cloak" additionalName="30-day" type="Armor">
-		<!-- Zaken's Cloak that makes you feel Zaken's sorrow. Increases Max HP by 5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- A cloak that makes you feel Zaken's sorrow. Max HP +5%. -->
 		<set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -845,7 +845,7 @@
 		<set name="bodypart" val="back" />
 	</item>
 	<item id="90974" name="Sealed Doll of Border - Baium" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain Doll of Border - Baium (7-day). Cannot be dropped. -->
+		<!-- Double-click to obtain Doll of Border - Baium (7-day). -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -857,7 +857,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90975" name="Sealed Doll of Border - Queen Ant" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain Doll of Border - Queen Ant (7-day). Cannot be dropped. -->
+		<!-- Double-click to obtain Doll of Border - Queen Ant (7-day). -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -869,7 +869,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90976" name="Sealed Doll of Border - Orfen" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain Doll of Border - Orfen (7-day). Cannot be dropped. -->
+		<!-- Double-click to obtain Doll of Border - Orfen (7-day). -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -881,7 +881,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="90977" name="Doll of Border - Baium" additionalName="7-day" type="EtcItem">
-		<!-- A 7-day item. Boosts abilities if stored in the inventory. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. <Baium's Doll Spell>. Mental Resistance +40%, Paralysis/Knockdown/Pulling Resistance +20%, P./ M. Def. +12%, Cooldown -3%. -->
+		<!-- <Baium Doll's Sorcery>. Skill Cooldown -3%. P. Def. +12%. M. Def. +12%. Silence Resistance +40%. Fear Resistance +40%. Paralysis Resistance +20%. Knockdown Resistance +20%. Pull Resistance +20%. Available for 7 d. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -891,7 +891,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90978" name="Doll of Border - Queen Ant" additionalName="7-day" type="EtcItem">
-		<!-- A 7-day item. Boosts abilities if stored in the inventory. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. <Queen Ant's Doll Spell>. P. Atk. and Critical Damage +8%, Max HP +12%. -->
+		<!-- <Queen Ant Doll's Sorcery>. P. Atk. +8%. P. Critical Damage +8%. P. Skill Critical Damage +8%. Max HP +12%. Available for 7 days. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -901,7 +901,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90979" name="Doll of Border - Orfen" additionalName="7-day" type="EtcItem">
-		<!-- A 7-day item. Boosts abilities if stored in the inventory. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. <Orfen's Doll Spell>. M. Atk./M. Critical Damage +8%, Max MP +12%. -->
+		<!-- <Orfen Doll's Sorcery>. M. Atk. +8%. M. Skill Critical Damage +8%. Max MP +12%. For 7 days. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -911,7 +911,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90980" name="Pearl Lv. 4" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. P. Def. +46, M. Critical Damage Received -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. M. Def. +46, Received M. Skill Critical Damage -4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -924,7 +924,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="90981" name="Diamond Lv. 4" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. P. Def. +81, P. Critical Damage Received -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. P. Def. +81, Received P. Critical Damage -4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -938,7 +938,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="90982" name="Jade Lv. 4" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. Atk. Spd./ Casting Spd. +7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. Atk. Spd./ Casting Spd. +7%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -951,7 +951,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="90983" name="Garnet Lv. 4" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +11%, when equipped. When using a skill, character becomes invulnerable to debuff for 5 seconds. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 d. Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +11%. Grants immunity to debuffs for 5 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -964,7 +964,7 @@
 		<set name="bodypart" val="brooch_jewel" />
 	</item>
 	<item id="90984" name="Vital Stone Lv. 4" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. Sayha Grace XP/ SP +8%, Sayha Grace Consumption -10%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. While Sayha's Grace is active, Acquired XP/ SP +8%, Sayha's Grace Consumption -10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -977,7 +977,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="90985" name="Land Dragon's Belt" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/ MP/ CP +15%, Inventory Slots +6, Weight Limit +7000, Healing Potions Effect +100, Received Damage -6%. (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Available for 30 days. Inventory Slots +6, Weight Limit +7000, CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +15%, HP Recovery Potions' Effect +100, Received Damage -6%. -->
 		<set name="icon" val="icon.bm_antaras_belt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -992,7 +992,7 @@
 		</stats>
 	</item>
 	<item id="90986" name="Lucky Cube of Growth" additionalName="30-day" type="EtcItem">
-		<!-- A 30-day item. Double-click to obtain 900 Silver Baits and Savior' Growth Scroll (can be used only once a day). Intended for Lv. 20 or higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
+		<!-- Available for 30 days. Double-click to obtain 900 Silver Baits and Savior's Growth Scroll (can be used only once a day). Required level: 20. -->
 		<set name="icon" val="icon.etc_11th_event_group" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1004,7 +1004,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90987" name="Savior's Earring" type="Armor">
-		<!-- Acquired XP/ SP +2%, Max MP +20, when equipped. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant.The item will be removed after the event is over. -->
+		<!-- Acquired XP/ SP +2%, Max MP +20. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.r2_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1020,7 +1020,7 @@
 		</stats>
 	</item>
 	<item id="90988" name="Shining Savior's Earring" type="Armor">
-		<!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Stun/ Mental Attacks Resistance +4%, when equipped. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. -->
+		<!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Fear/ Stun/ Silence Resistance +4%. Grants Vampiric Rage effect. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.r2_earring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1033,7 +1033,7 @@
 		</stats>
 	</item>
 	<item id="90989" name="Savior's Earring Box" type="EtcItem">
-		<!-- Double-click to obtain Shining Savior's Earring with a low probability or Savior's Earring +3 with a high probability. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
+		<!-- Double-click to obtain Savior's Earring +3 (big chance) or Shining Savior's Earring (small chance). -->
 		<set name="icon" val="icon.bm_pirate_battle_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1044,7 +1044,7 @@
 		<set name="material" val="STEEL" />
 	</item>
 	<item id="90990" name="Scroll: Enchant Savior's Earring" type="EtcItem">
-		<!-- Only for Savior's Earring. Increases M. Def. Can be safely strengthened up to +3 and can be enhanced up to +7. If enchanting fails, the enchant level is maintained. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
+		<!-- Required for enchanting Savior's Earring. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +7. In case of failure, the enchant value remains the same. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1055,7 +1055,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90991" name="Lucky Hat" additionalName="30-day" type="Armor">
-		<!-- A 30-day item. Leather hat. Allows to use Blessing of Luck skill. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
+		<!-- A leather hat. Available for 30 days. Allows use of the Burglar's Blessing and Burglar's Luck skills. Occupies 2 hair accessory slots. -->
 		<set name="icon" val="icon.Accessary_middle_ages_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1068,7 +1068,7 @@
 		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="90992" name="Antharas' Earring" type="Armor">
-		<!-- MP +9, Bleed Resistance/Atk. Rate +10%, Stun Resistance/Atk. Rate +5%, Mental Attack Resistance/Atk. Rate +5%, Healing Power +6%, Skill MP Consumption -3%, Vampiric Rage effect +2%. The effect does not stack if two identical earrings are equipped. -->
+		<!-- Max enchant value: +5. (Requires Scroll: Enchant Rare Accessories.). Boosts the item's parameters after enchanting. Effects of two identical earrings do not stack. Safe enchanting to +1 -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1084,7 +1084,7 @@
 		</stats>
 	</item>
 	<item id="90993" name="Damaged Antharas' Earring" type="Armor">
-		<!-- Severly Damaged Antharas' Earring. With the help of Balthus Knights' Varnish, Balthus Knights' Matte Varnish, Balthus Knights' Shining Varnish it can be enchanted up to +10. Starting from +4 adds passive skills. Damaged Antharas' Earring +10 can be exchanged for Antharas' Earring. -->
+		<!-- Can be enchanted up to +10 with Balthus Knights' Varnish, Balthus Knights' Shining Varnish, or Balthus Knights' Glittering Varnish. Starting from +4, adds various effects. After enchanting to +10, can be exchanged for Antharas' Earring Lv. 1. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1097,7 +1097,7 @@
 		</stats>
 	</item>
 	<item id="90994" name="Damaged Baium's Ring" type="Armor">
-		<!-- Severly Damaged Baium's Ring. With the help of Balthus Knights' Varnish, Balthus Knights' Matte Varnish, Balthus Knights' Shining Varnish it can be enchanted up to +10. Starting from +4 adds passive skills. Damaged Baium's Ring +10 can be exchanged for Baium's Ring. -->
+		<!-- Can be enchanted up to +10 with Balthus Knights' Varnish, Balthus Knights' Shining Varnish, or Balthus Knights' Glittering Varnish. Starting from +4, adds various effects. After enchanting to +10, can be exchanged for Baium's Ring Lv. 1. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1141,7 +1141,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="90999" name="Rush's Supplies - Antharas" type="EtcItem">
-		<!-- Reward for defeating Antharas. Contains Damaged Antharas' Earring. Additionally can be obtained 1 random item: Portal Stone, Balthus Knights' Varnish, Balthus Knights' Shining Varnish, Balthus Knights' Glittering Varnish. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />

@@ -65,7 +65,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47908" name="Shining Magic Bait Exchange Coupon" type="EtcItem">
-		<!-- Fishermen's Guild Members in each village can exchange this for 1 of your desired Shining Magic Bait. -->
+		<!-- Can be exchanged for Shining Magic Bait of a required grade through Fisher Peeves in Heine. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket2" />
 		<set name="material" val="LEATHER" />
 		<set name="is_stackable" val="true" />
@@ -219,7 +219,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
-			<skill id="18713" level="6" />
+			<skill id="18713" level="6" /> <!-- Superior Red Cat's Eye Lv. 10 -->
 		</skills>
 	</item>
 	<item id="47922" name="Greater Blue Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
@@ -235,7 +235,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
-			<skill id="18714" level="5" />
+			<skill id="18714" level="5" /> <!-- Superior Blue Cat's Eye Lv. 10 -->
 		</skills>
 	</item>
 	<item id="47923" name="Greater Tanzanite Lv. 1" additionalName="30-day" type="Armor">
@@ -251,8 +251,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
-			<skill id="18815" level="6" />
-			<skill id="18565" level="6" />
+			<skill id="18815" level="6" /> <!-- Superior Tanzanite Lv. 10 -->
+			<skill id="18565" level="6" /> <!-- Superior Tanzanite - Barrier -->
 		</skills>
 	</item>
 	<item id="47924" name="Coin of Light" type="EtcItem">
@@ -1481,7 +1481,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_freightable" val="true" />
 		<capsuled_items>
-			<item id="37718" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- +5 Shiny Elemental Shirt -->
+			<item id="37718" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Shiny Elemental Shirt -->
 		</capsuled_items>
 	</item>
 	<item id="47987" name="Challenger's Weapon Enhancement Ticket" type="EtcItem">

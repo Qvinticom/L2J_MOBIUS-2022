@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="51200" toLevel="1" name="High Priest Energy">
-		<!-- Grants the power of High Priest. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
+		<!-- Grants the power of High Priest. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
 		<icon>icon.bm2018_healer_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51201" toLevel="1" name="Blood Noblesse Energy">
-		<!-- Grants the power of Blood Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
+		<!-- Grants the power of Blood Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
 		<icon>icon.bm2018_rednoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51202" toLevel="1" name="White Noblesse Energy">
-		<!-- Grants the power of White Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
+		<!-- Grants the power of White Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
 		<icon>icon.bm2018_whitenoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -44,7 +44,7 @@
 		<effectPoint>-5</effectPoint>
 	</skill>
 	<skill id="51206" toLevel="1" name="Valkyrie - Paralysis">
-		<!-- Paralyses and temporary disables ability to move. -->
+		<!-- Paralyzed and unable to move temporarily. -->
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -155,7 +155,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="51224" toLevel="2" name="Fish Stew - Clarity">
-		<!-- For $s1, P. Skill MP Consumption -$s2, M. Skill MP Consumption -$s3, song/ dance MP Consumption -$s4. -->
+		<!-- For $s1, P. Skill/ Song/ Dance MP Consumption -$s2, M. Skill MP Consumption -$s3. -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -175,7 +175,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="51227" toLevel="3" name="Spring Energy">
-		<!-- For 20 min., Max HP/ MP +3%, P. Atk. +3%, M. Atk. +5%, Atk. Spd./ Casting Spd. +3%, P./ M. Def +3%, Acquired XP/ SP +3%, Sayha's Grace Consumption -3%. -->
+		<!-- For 20 min., Max HP/ MP +3%, P. Atk. +3%, M. Atk. +5%, Atk. Spd./ Casting Spd. +3%, P./ M. Def. +3%, Acquired XP/ SP +3%, Sayha's Grace Consumption -3%. -->
 		<icon>icon.etc_leaf_green_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -183,7 +183,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="51228" toLevel="1" name="Sayha's Spring Wind">
-		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +150%. Cooldown: 20 min. The effect remains after death. -->
+		<!-- For 20 min., Sayha's Grace Consumption +100%, Acquired XP/ SP +150%. Cooldown: 20 min. The effect remains after death. -->
 		<icon>icon.ev_magic_flame_game_wind1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -197,7 +197,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="51230" toLevel="2" name="Grace Regeneration">
-		<!-- Primavera recovers Sayha's Grace. -->
+		<!-- Recovers Sayha's Grace. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51231" toLevel="2" name="Greater Ruby">
@@ -206,12 +206,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51232" toLevel="1" name="Greater Ruby">
-		<!-- Damage from Beast Soulshot +20%. -->
+		<!-- Beast Soulshot Damage +$s1. -->
 		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51233" toLevel="5" name="Greater Ruby">
-		<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +$s1, P. Atk. +$s2. -->
+		<!-- Soulshot/ Blessed Soulshot/ Beast Soulshot Damage +$s1, P. Atk. +$s2. -->
 		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -221,7 +221,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51235" toLevel="1" name="Greater Sapphire">
-		<!-- Beast Spiritshot Damage +20%. -->
+		<!-- Beast Spiritshot Damage +$s1. -->
 		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -259,7 +259,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="51240" toLevel="1" name="Night Goblin's Liquor">
-		<!-- For 5 min., P. Atk. +15%, M. Atk. +23%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Bonus Recovery +30%. Disappears after restart. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P./ M. Def. +$s4, Atk. Spd./ Casting Spd. +$s5, HP/ MP Bonus Recovery +$s6. Disappears after restart. -->
 		<icon>icon.bm_goblin_buff_herong</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -271,7 +271,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="51242" toLevel="1" name="Manuscript: Armor Break">
-		<!-- Allows you to learn Armor Break skill. Item will disappear after using. -->
+		<!-- Required for learning the Armor Break skill. Disappears after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
@@ -286,7 +286,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="51245" toLevel="1" name="Manuscript: Flash">
-		<!-- Allows you to learn Blaze skill. Item will disappear after using. -->
+		<!-- Allows you to learn Flash skill. Item will disappear after using. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
@@ -296,7 +296,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="51247" toLevel="1" name="Disarm">
-		<!-- For 5 sec. makes target's and nearby enemies' armor useless, P./ M. Atk. and Speed -30%, -1000 HP every sec. -->
+		<!-- For $s1 makes target's and nearby enemies' armor useless, P./ M. Atk. and Speed -$s2, -$s3 HP every sec. -->
 		<icon>icon.skill0485</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -343,7 +343,7 @@
 		</effects>
 	</skill>
 	<skill id="51248" toLevel="1" name="Armor Break">
-		<!-- For 5 sec. makes target's and nearby enemies' armor useless, P./ M. Def. and Speed -30%, -1000 HP every sec. -->
+		<!-- For $s1 makes target's and nearby enemies' armor useless, P./ M. Def. and Speed -$s2, -$s3 HP every sec. -->
 		<icon>icon.skill10703</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -390,7 +390,7 @@
 		</effects>
 	</skill>
 	<skill id="51249" toLevel="1" name="Spell Break">
-		<!-- For 10 sec. makes target's and nearby enemies' Skills useless. -->
+		<!-- For $s1 makes target's and nearby enemies' Skills useless. -->
 		<icon>icon.skill1412</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -412,7 +412,7 @@
 		<mpConsume>77</mpConsume>
 	</skill>
 	<skill id="51251" toLevel="1" name="Flash">
-		<!-- Cancels target of nearby enemies, for 5 sec., you cannot be targeted. -->
+		<!-- Cancels the target of nearby enemies. You cannot be targeted for $s1 -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -423,7 +423,7 @@
 		<mpConsume>77</mpConsume>
 	</skill>
 	<skill id="51252" toLevel="1" name="Berserker Mode">
-		<!-- For 20 sec., P./ M. Atk. and Atk./ Casting Spd. +50%, reflects 15% of received damage. Cannot be stacked with Berserker Spirit that will be available after transformation into Dragon Berserker.\n\n<Auto-use> -->
+		<!-- For $s1, P./ M. Atk. and Atk./ Casting Spd. +50%, reflects 15% of received damage. Cannot be stacked with Berserker Spirit that will be available after transformation into Dragon Berserker. -->
 		<icon>icon.skill10274</icon>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>20</effectPoint>
@@ -524,7 +524,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="51262" toLevel="1" name="Victory Balls Basket">
-		<!-- For 5 min., P. Atk. +15%, M. Atk. +23%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Bonus Recovery +30%. Disappears after restart. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P./ M. Def. +$s4, Atk. Spd./ Casting Spd. +$s5, HP/ MP Bonus Recovery +$s6. Disappears after restart. -->
 		<icon>BranchSys2.icon.br_soccer_ball_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -601,12 +601,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51279" toLevel="5" name="Dagger Resistance">
-		<!-- Resistance to dagger attacks +$s1. -->
+		<!-- Dagger Attack Resistance +$s1. -->
 		<icon>icon.skill4448</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51280" toLevel="5" name="Bow Resist">
-		<!-- Resistance to bow attacks +$s1. -->
+		<!-- Bow Resistance +$s1. -->
 		<icon>icon.skill4444</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -709,7 +709,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51297" toLevel="2" name="Frintezza Doll's Sorcery">
-		<!-- CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Paralysis/ Stun Atk. Rate +10%. -->
+		<!-- A doll imbued with Frintezza's power. <Effect> STR +$s1 INT +$s1 Skill Power +$s2 Atk. Spd. +$s3 Casting Spd. +$s3 Speed +$s4 -->
 		<icon>icon.bm_doll_frintessa_30d</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -724,7 +724,7 @@
 		<mpConsume>200</mpConsume>
 	</skill>
 	<skill id="51299" toLevel="10" name="Dimensional Guard">
-		<!-- For $s1 success rate of attacks targeting the character's vital points -$s2. -->
+		<!-- Because of dimensional protaction for $s1 rate of attacks targeting the character's vital points -$s2. -->
 		<icon>icon.skill11876</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

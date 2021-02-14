@@ -223,7 +223,7 @@
 		</effects>
 	</skill>
 	<skill id="1403" toLevel="1" name="Summon Your Spouse">
-		<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
+		<!-- Teleports a party member to the caster's current location. Requires a Summoning Crystal on the target. -->
 		<icon>icon.skill1403</icon>
 		<effectPoint>467</effectPoint>
 		<effectRange>-2</effectRange>
@@ -281,7 +281,7 @@
 		</effects>
 	</skill>
 	<skill id="1405" toLevel="6" name="Divine Inspiration">
-		<!-- Number of buffs an individual can receive +$s1. -->
+		<!-- Buff slots +$s1. -->
 		<icon>icon.skill1405</icon>
 		<magicLevel>
 			<value level="1">52</value>
@@ -307,7 +307,7 @@
 		</effects>
 	</skill>
 	<skill id="1406" toLevel="6" name="Summon Feline King">
-		<!-- Summons a Feline King. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning Skill> Summons Feline King. Consumes Spirit Ore ($s1 pcs.). -->
 		<icon>icon.skill1406</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -366,7 +366,7 @@
 		</effects>
 	</skill>
 	<skill id="1407" toLevel="6" name="Summon Magnus the Unicorn">
-		<!-- Summons Magnus the Unicorn. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning Skill> Summons Magnus the Unicorn. Consumes Spirit Ore ($s1 pcs.). -->
 		<icon>icon.skill1407</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -425,7 +425,7 @@
 		</effects>
 	</skill>
 	<skill id="1408" toLevel="6" name="Summon Spectral Lord">
-		<!-- Summons a Spectral Lord. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning Skill> Summons Spectral Lord. Consumes Spirit Ore ($s1 pcs.). -->
 		<icon>icon.skill1408</icon>
 		<hitTime>6000</hitTime>
 		<inheritElementals>true</inheritElementals>
@@ -486,7 +486,7 @@
 		</effects>
 	</skill>
 	<skill id="1409" toLevel="1" name="Cleanse">
-		<!-- Removes debuffs from the target. Consumes 20 Spirit Ore. -->
+		<!-- Removes debuffs from the target. Consumes Spirit Ore (20 pcs.). -->
 		<icon>icon.skill1409</icon>
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
@@ -512,7 +512,7 @@
 		</effects>
 	</skill>
 	<skill id="1410" toLevel="1" name="Salvation">
-		<!-- Resurrects from death fully recovered. Maintains buffs and debuffs even after death. Consumes 100 Spirit Ore. -->
+		<!-- <Skill with fixed cooldown> Resurrects from death fully recovered. Buffs and debuffs remain after death. Consumes 100 Spirit Ore. -->
 		<icon>icon.skill1410</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -541,7 +541,7 @@
 		</effects>
 	</skill>
 	<skill id="1411" toLevel="3" name="Mystic Immunity">
-		<!-- Becomes invincible from debuffs for $s1 Can only be used on party members. -->
+		<!-- Grants immunity to debuffs for $s1 -->
 		<icon>icon.skill1411</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
@@ -602,7 +602,7 @@
 		</effects>
 	</skill>
 	<skill id="1413" toLevel="2" name="Chant of Wild Magic">
-		<!-- For 5 min., a powerful spirit acts to get all party members' Max MP +15%, MP Recovery Bonus +1.5 when equipped with light or heavy armor, MP Recovery Bonus +4 when equipped with a robe, M. Def. +30%, M. Atk. +30%, Casting Spd. +20%, Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +25%, and Buff-canceling Attack Resistance +40%. Consumes 40 Spirit Ore. -->
+		<!-- M. Critical Rate $s1 -->
 		<icon>icon.skill1413</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -682,7 +682,7 @@
 		</effects>
 	</skill>
 	<skill id="1414" toLevel="2" name="Prophecy of Pa'agrio">
-		<!-- For $s1, party member's Max CP +$s2, CP Recovery Bonus +$s3, P./ M. Accuracy +$s4, P./ M. Evasion +$s5, P./ M. Atk. +$s6, Atk. Spd./ Casting Spd. +$s7, P./ M. Critical Rate +$s8, P./ M. Critical Damage +$s9. Consumes $s10 Spirit Ore. -->
+		<!-- For $s1, Max CP +$s2, CP Recovery Rate +$s3, P./ M. Accuracy +$s4, P./ M. Evasion +$s5, damage to monsters +$s6, Atk./ Casting Spd. +$s7, P. Critical Rate/ M. Skill Critical Rate +$s8, P. Critical Damage/ M. Skill Critical Damage +$s9. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1414</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -826,7 +826,7 @@
 		</effects>
 	</skill>
 	<skill id="1416" toLevel="7" name="Pa'agrio's Fist">
-		<!-- Nearby clan members' Max CP +$s2 for $s1 -->
+		<!-- For $s1, Max CP +$s2. Consumes 6 Spirit Ore. -->
 		<icon>icon.skill1416</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -858,7 +858,7 @@
 		</effects>
 	</skill>
 	<skill id="1417" toLevel="5" name="Aura Flash">
-		<!-- Attacks nearby enemies with $s1 Power added to M. Atk. Consumes $s2 Spirit Ore. -->
+		<!-- Attacks nearby enemies with $s1 power. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill1417</icon>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -1208,7 +1208,7 @@
 		</effects>
 	</skill>
 	<skill id="1426" toLevel="1" name="Miracle">
-		<!-- Fully recovers HP of nearby clan members. Consumes 100 Spirit Ore. -->
+		<!-- <Skill with fixed cooldown> Fully recovers HP of nearby clan members. Consumes 100 Spirit Ore. -->
 		<icon>icon.skill1426</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1272,7 +1272,7 @@
 		</effects>
 	</skill>
 	<skill id="1428" toLevel="10" name="Rapid Recharge">
-		<!-- Recovers up to $s1 MP depending on the party member level. Consumes $s2 Spirit Ore. -->
+		<!-- <Skill with fixed cooldown> Momentarily recovers $s1 MP. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill1428</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1341,7 +1341,7 @@
 		</effects>
 	</skill>
 	<skill id="1429" toLevel="1" name="Chant of Gate">
-		<!-- Summons party members. Consumes 500 Spirit Ore. -->
+		<!-- <Skill with fixed cooldown> Summons party members. Consumes 500 Spirit Ore. -->
 		<icon>icon.skill1429</icon>
 		<effectPoint>467</effectPoint>
 		<hitTime>15000</hitTime>
@@ -1370,7 +1370,7 @@
 		</effects>
 	</skill>
 	<skill id="1430" toLevel="5" name="Invocation">
-		<!-- P. Def. -$s2 and recovers $s3 MP every sec. for $s1. The status is canceled when damage is incurred. -->
+		<!-- For $s1, P. Def. -$s2. Recovers $s3 MP per sec. The effect is cancelled when hit. -->
 		<icon>icon.skill1430</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1494,7 +1494,7 @@
 		</effects>
 	</skill>
 	<skill id="1432" toLevel="5" name="Increase Power">
-		<!-- P. Atk. +$s2 for $s1. -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill1432</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1688,7 +1688,7 @@
 		</effects>
 	</skill>
 	<skill id="1435" toLevel="5" name="Death Mark">
-		<!-- Marks the enemy with a Death Mark. For $s1, P. Def. and M. Def. -$s2 and consumes $s3 HP per sec. -->
+		<!-- Inflicts a Death Mark Lv. $s1 on the target for 10 sec. when attacking. Enemies with the applied Death Mark receive more P. Critical Damage and M. Skill Critical Damage. -->
 		<icon>icon.skill1435</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLevel>15</magicLevel>
@@ -1708,7 +1708,7 @@
 				<minDamage>1</minDamage>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>45154</skillId> <!-- Death Mark Stage -->
+				<skillId>45154</skillId> <!-- Death Mark Lv. 1 -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1730,7 +1730,7 @@
 				<minDamage>1</minDamage>
 				<isCritical>true</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>45154</skillId> <!-- Death Mark Stage -->
+				<skillId>45154</skillId> <!-- Death Mark Lv. 1 -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -2234,7 +2234,7 @@
 		</effects>
 	</skill>
 	<skill id="1440" toLevel="3" name="Steal Divinity">
-		<!-- Steals up to $s1 of the enemy's abnormal statuses. Cannot steal buffs from monsters. -->
+		<!-- With a certain chance, steals up to $s1 of the enemy's buffs. Can't be used on monsters. Consumes 15 Spirit Ore. -->
 		<icon>icon.skill1440</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
@@ -2272,7 +2272,7 @@
 		</effects>
 	</skill>
 	<skill id="1441" toLevel="3" name="Soul Roar">
-		<!-- For 20 min., Max HP +25%, additionally recovers 20% HP. -->
+		<!-- For $s2, Max HP +$s3, additionally recovers $s1 HP. -->
 		<icon>icon.skill1441</icon>
 		<effectPoint>
 			<value level="1">408</value>
@@ -2406,7 +2406,7 @@
 		</effects>
 	</skill>
 	<skill id="1444" toLevel="5" name="Rapier Master">
-		<!-- Atk. Spd. +$s1 when equipping a Rapier -->
+		<!-- Atk. Spd. +$s1 when using a rapier. -->
 		<icon>icon.skill1444</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2634,7 +2634,7 @@
 		</effects>
 	</skill>
 	<skill id="1446" toLevel="5" name="Shadow Bind">
-		<!-- Catches the enemy's shadow and inflicts hold for $s1. -->
+		<!-- Catches the enemy's shadow and holds them for $s1 -->
 		<icon>icon.skill1446</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2683,7 +2683,7 @@
 		</effects>
 	</skill>
 	<skill id="1447" toLevel="5" name="Voice Bind">
-		<!-- Seals the enemy's voice, blocking their ability to cast magic for $s1. -->
+		<!-- Seals the enemy's voice, blocking their P./ M. skills for $s1 -->
 		<icon>icon.skill1447</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2729,7 +2729,7 @@
 		</effects>
 	</skill>
 	<skill id="1448" toLevel="1" name="Blink">
-		<!-- Teleports to the back. -->
+		<!-- Teleports the character backwards. -->
 		<icon>icon.skill1448</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2793,7 +2793,7 @@
 		</effects>
 	</skill>
 	<skill id="1451" toLevel="2" name="Fire Vortex Buster">
-		<!-- Detonates a Fire Vortex that inflicts damage on the enemy with bonus $s1 M. Atk. Power. -->
+		<!-- Summons a fire hurricane to attack the target with $s1 power. -->
 		<icon>icon.skill1451</icon>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -2873,7 +2873,7 @@
 		</effects>
 	</skill>
 	<skill id="1453" toLevel="2" name="Ice Vortex Crusher">
-		<!-- Attacks by ice vortex and inflicts water damage on the target with $s1 Power added to M. Atk. -->
+		<!-- Summons an ice hurricane to attack the target with $s1 power. -->
 		<icon>icon.skill1453</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -2986,7 +2986,7 @@
 		</effects>
 	</skill>
 	<skill id="1456" toLevel="2" name="Wind Vortex Slug">
-		<!-- Attacks by wind vortex and inflicts wind damage on the target with $s1 Power added to M. Atk. -->
+		<!-- Summons a wind hurricane to attack the target with $s1 power. -->
 		<icon>icon.skill1456</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -3111,7 +3111,7 @@
 		</effects>
 	</skill>
 	<skill id="1459" toLevel="3" name="Divine Power">
-		<!-- For $s1, Received Healing +$s2. -->
+		<!-- For $s1, Healing Power +$s2. -->
 		<icon>icon.skill1459</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -3147,7 +3147,7 @@
 		</effects>
 	</skill>
 	<skill id="1460" toLevel="10" name="Mana Gain">
-		<!-- When using the Recharge skill, target's MP Recovery Bonus +$s1 for 20 min. -->
+		<!-- MP +$s1. Grants bonuses depending on Max MP: <2500+> M. Accuracy +1 <4000+> M. Accuracy +2 <6500+> M. Accuracy +3 <10,000+> M. Accuracy +4 <15,000+> M. Accuracy +5 -->
 		<icon>icon.skill1460</icon>
 		<magicLevel>
 			<value level="1">76</value>
@@ -3267,7 +3267,7 @@
 		</effects>
 	</skill>
 	<skill id="1461" toLevel="1" name="Chant of Protection">
-		<!-- For 20 min., Critical Damage received by party members -30%. -->
+		<!-- Received P. Critical Damage -30% for $s1. Consumes 6 Spirit Ore. -->
 		<icon>icon.skill1461</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -4631,7 +4631,7 @@
 		</effects>
 	</skill>
 	<skill id="1495" toLevel="1" name="Vampiric Mist">
-		<!-- Scatters a fog of death to inflict dark damage on nearby enemies with 117 Power added to M. Atk. Absorbs 20% of the damage as HP. For 10 sec., Speed/ P. Atk./ Atk. Spd. -30% and P. Accuracy -8. -->
+		<!-- Creates a poisonous cloud that deals magic damage to nearby enemies with 117 power. Absorbs 20% of the inflicted damage as HP. For 10 sec., Speed/ P. Atk./ Atk. Spd. -30%, P. Accuracy -8. -->
 		<icon>icon.skill1495</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>

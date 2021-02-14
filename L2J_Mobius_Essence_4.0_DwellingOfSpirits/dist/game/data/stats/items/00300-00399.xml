@@ -760,7 +760,7 @@
 		</stats>
 	</item>
 	<item id="356" name="Full Plate Armor" type="Armor">
-		<!-- Full body armor. -->
+		<!-- One-piece armor. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -869,6 +869,7 @@
 		</stats>
 	</item>
 	<item id="365" name="Dark Crystal Breastplate" type="Armor">
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +15. Paralysis Resistance +50% -->
 		<set name="icon" val="icon.armor_t74_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -891,7 +892,7 @@
 		</skills>
 	</item>
 	<item id="374" name="Armor of Nightmare" type="Armor">
-		<!-- Full body armor. -->
+		<!-- <Properties>. CON +2. Overweight limit +2500. M. Def. +25. Max HP +200. Sleep Resistance +70%. Hold Resistance +70% -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1130,6 +1131,7 @@
 		</stats>
 	</item>
 	<item id="388" name="Dark Crystal Gaiters" type="Armor">
+		<!-- <Properties>. CON +1. Overweight limit +1000. M. Def. +10. Max HP +200 -->
 		<set name="icon" val="icon.armor_t74_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

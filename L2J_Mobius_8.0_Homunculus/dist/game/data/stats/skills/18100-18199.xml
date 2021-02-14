@@ -827,7 +827,7 @@
 						<item id="18085" count="1" /> <!-- Blessed Eternal Gaiters - Heavy armor -->
 					</item>
 					<item chance="0.36764706">
-						<item id="18082" count="1" /> <!-- Blessed Helios Dual Blunt Weapon -->
+						<item id="18082" count="1" /> <!-- Blessed Helios Dual Blunt Weapons -->
 					</item>
 					<item chance="0.36764706">
 						<item id="18081" count="1" /> <!-- Blessed Helios Dual Daggers -->
@@ -944,7 +944,7 @@
 						<item id="17416" count="1" /> <!-- Helios Shaper -->
 					</item>
 					<item chance="1.10294118">
-						<item id="17429" count="1" /> <!-- Helios Dual Blunt Weapon -->
+						<item id="17429" count="1" /> <!-- Helios Dual Blunt Weapons -->
 					</item>
 					<item chance="1.10294118">
 						<item id="17428" count="1" /> <!-- Helios Dual Daggers -->
@@ -1376,7 +1376,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18148" toLevel="1" name="Song of Sayha">
-		<!-- The Sayha's song imbues you with the power of wind. For 2 h., acquired XP/ SP +100%. -->
+		<!-- The Sayha s song imbues you with the power of wind. For 2 h., acquired XP/ SP +100%. -->
 		<icon>BranchSys2.icon.the_fall_of_dragon</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -2049,7 +2049,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18195" toLevel="1" name="Knock Back">
-		<!-- Knocks the target back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.invasion_gun</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

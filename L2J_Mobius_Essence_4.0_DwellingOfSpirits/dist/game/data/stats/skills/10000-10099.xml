@@ -55,7 +55,7 @@
 		</effects>
 	</skill>
 	<skill id="10094" toLevel="5" name="Mass Lightning Strike">
-		<!-- A lightning strike inflicts damage to the target and nearby enemies. Power $s1. Paralyzes enemies for $s2 Consumes $s3 Soulstone(s). -->
+		<!-- Strikes the target and nearby enemies with a lightning bolt that inflicts damage with $s1 power. Paralyzes enemies for $s2. Critical. Over-hit. -->
 		<icon>icon.skll10094</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>

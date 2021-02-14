@@ -212,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48520" name="Red Libra's Fortune Scroll" additionalName="Event" type="EtcItem">
-		<!-- Damage +5%. For 30 min., Vitality bonus +50%. -->
+		<!-- For 30 min., damage +5%, Vitality bonus +50%. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -396,7 +396,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48540" name="Fried Fish" additionalName="P. Atk." type="EtcItem">
-		<!-- Rotten Fried Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
 		<set name="icon" val="icon.fishing_buff_p_dmg" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -411,7 +411,7 @@
 		</skills>
 	</item>
 	<item id="48541" name="Steamed Fish" additionalName="M. Atk." type="EtcItem">
-		<!-- Rotten Steamed Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
 		<set name="icon" val="icon.fishing_buff_m_dmg" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -426,7 +426,7 @@
 		</skills>
 	</item>
 	<item id="48542" name="Grilled Fish" additionalName="Combat Speed" type="EtcItem">
-		<!-- Rotten Grilled Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
 		<set name="icon" val="icon.fishing_buff_pm_speed" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -441,7 +441,7 @@
 		</skills>
 	</item>
 	<item id="48543" name="Braised Fish" additionalName="Max HP/ MP" type="EtcItem">
-		<!-- Rotten Braised Fish. It has no effects. Take it to a fishermen's guild member in each village. -->
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
 		<set name="icon" val="icon.fishing_buff_hp_mp" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -456,7 +456,7 @@
 		</skills>
 	</item>
 	<item id="48544" name="Royal Fish Soup" additionalName="Combat Prowess" type="EtcItem">
-		<!-- Rotten Royal Fish Soup. It has no effects. Take it to a fishermen's guild member in each village. -->
+		<!-- Has no effects. Can be exchanged for fish through the Fishing Guild members in any town. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -558,7 +558,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- TODO:
 		<skills>
-			<skill id="39220" level="1" />
+			<skill id="39220" level="1" /> Olympiad Class Runner-up's Rune
 		</skills>
 		-->
 	</item>
@@ -573,7 +573,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- TODO:
 		<skills>
-			<skill id="39221" level="1" />
+			<skill id="39221" level="1" /> Legend Celebration Rune
 		</skills>
 		-->
 	</item>
@@ -1202,7 +1202,7 @@
 		</skills>
 	</item>
 	<item id="48575" name="Super Advanced Seed Bracelet" additionalName="Stage 2" type="Armor">
-		<!-- When equipped, unlocks the agathion's main slot and 2 additional slots. Can be enchanted through Fishermen's Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +50. 3. Vitality bonus +10%. <Enchanting>. 1. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
+		<!-- When equipped, unlocks the agathion's main slot and 2 additional slots. Can be enchanted through the Fishing Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +50. 3. Vitality bonus +10%. <Enchanting>. 1. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. 2. Take the bracelet and Star Sign to Santiago in Heine. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1220,7 +1220,7 @@
 		</skills>
 	</item>
 	<item id="48576" name="Super Advanced Seed Bracelet" additionalName="Stage 3" type="Armor">
-		<!-- When equipped, unlocks the agathion's main slot and 3 additional slots. Can be enchanted through Fishermen's Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +50. 3. Vitality bonus +15%. <Enchanting>. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. -->
+		<!-- When equipped, unlocks the agathion's main slot and 3 additional slots. Can be enchanted through the Fishing Guild Leader Santiago. <Active skill>. 1. Agathion Teleport: Teleports to Aden/ Rune/ Giran/ Heine (cooldown: 30 min.). <Item skills>. 1. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC +1. 2. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. Rate and Resistance +50. 3. Vitality bonus +15%. <Enchanting>. Take the bracelet, Ugly Fish and Nimble Fish to Santiago in Heine. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

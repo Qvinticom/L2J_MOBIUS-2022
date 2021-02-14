@@ -188,7 +188,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71713" name="+16 Weapon Coupon (No-grade)" additionalName="Event" type="EtcItem">
-		<!-- Can be exchanged for a No-grade weapon +16 in the L-Coin Store. -->
+		<!-- Can be exchanged for a +16 No-grade weapon in the L-Coin Store. -->
 		<set name="icon" val="BranchIcon.Icon.rp_necklace_of_einhasad_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -197,7 +197,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71714" name="+7 Weapon Coupon (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- Can be exchanged for a C-grade weapon +7 in the L-Coin Store. -->
+		<!-- Can be exchanged for a +7 C-grade weapon through the Game Assistant. -->
 		<set name="icon" val="BranchIcon.Icon.rp_ring_of_maphr_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -205,7 +205,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71715" name="Reinforced Compound Bow Chest" type="EtcItem">
-		<!-- Double-click to obtain Compound Bow +16 and Infinite Wooden Quiver. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_composition_bow_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
@@ -215,7 +215,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71716" name="Eminence Bow +7" type="EtcItem">
-		<!-- Double-click to obtain Eminence Bow +7 and Infinite Steel Quiver. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
@@ -224,7 +224,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71717" name="ADEN Gatcha Ticket" additionalName="Event" type="EtcItem">
-		<!-- Can be exchanged for 300 L-Coins and a valuable item by any Dimensional Merchant. -->
+		<!-- Can be exchanged for 300 L-Coins and a valuable item by the Game Assistant. -->
 		<set name="icon" val="icon.bm_jewel_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -565,7 +565,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71754" name="Good Luck Chest" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Blessing. There is also a chance to obtain one of the following items: +16 Weapon Pack (C/ B-grade), Brooch Lv. 3, Wind/ Fire/ Earth/ Water Spirit Evolution Stone, Weapon Pack (C/ B-grade), Armor Pack (B-grade), Scroll: Enchant Weapon (B/ C-grade), Scroll: Enchant Armor (B-grade), Sayha's Cloak Coupon, Agathion Coupon, Eva's Hair Accessory Pack, Radiant Jewelry Box, Talisman of Aden Enchant Pack, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Effect Scroll, Sayha's Storm Lv. 3, Soulshot Ticket. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -983,7 +983,7 @@
 		</cond>
 	</item>
 	<item id="71774" name="Aden Supply Box" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Talisman of Baium, Zaken's Earring, Queen Ant's Ring, Exquisite Jewel Box, Rice Cake of Flaming Fighting Spirit, Dragon Scroll, Sayha's Effect Scroll. -->
+		<!-- Double-click to obtain one of the following items: Talisman of Baium, Zaken's Earring, Queen Ant's Ring, Exquisite Jewel Box, XP Growth Scroll, Battle Scroll, Sayha's Buff Scroll. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -992,7 +992,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71775" name="Golden Ticket" additionalName="Event" type="EtcItem">
-		<!-- Reward for completing the Golden Quest during the Golden Week event. Can be exchanged for various items by the Dimensional Merchant. -->
+		<!-- A reward for completing the Golden Quest during the Golden Week event. Can be exchanged for various items by the Game Assistant. -->
 		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

@@ -154,7 +154,7 @@
 			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="20">
 				<attackerType>Playable</attackerType>
 				<targetType>ENEMY</targetType>
-				<skillId>18720</skillId> <!-- Superior Obsidian - Cancel Target -->
+				<skillId>18720</skillId> <!-- Greater Obsidian - Cancel Target -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="DamageByAttack">
@@ -644,7 +644,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17711" toLevel="24" name="10th Anniversary Blessing - Lv. 1">
-		<!-- You can obtain an item in $s1 h. (maximum $s2 times).\n\nNote!\nIf you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot obtain the cards if your inventory is full. -->
+		<!-- You can obtain an item in $s1 h. (maximum $s2 times). Note! If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot obtain the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -682,7 +682,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17713" toLevel="24" name="10th Anniversary Special Blessing Lv. 1">
-		<!-- You can obtain an item in $s1 h. (maximum $s2 times).\n\nNote!\nIf you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot obtain the cards if your inventory is full. -->
+		<!-- You can obtain an item in $s1 h. (maximum $s2 times). Note! If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot obtain the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
 		<castRange>

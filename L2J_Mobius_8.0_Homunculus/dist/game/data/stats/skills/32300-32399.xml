@@ -482,7 +482,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="32333" toLevel="1" name="Stigma of Martyrdom">
-		<!-- Inflicts Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill32018</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -1269,7 +1269,7 @@
 		</effects>
 	</skill>
 	<skill id="32388" toLevel="1" name="Demonic Bleed">
-		<!-- Inflicts Bleed for $s1. Inflicted status: Infection (Bleed, Poison). -->
+		<!-- Inflicts Bleed for $s1 Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>

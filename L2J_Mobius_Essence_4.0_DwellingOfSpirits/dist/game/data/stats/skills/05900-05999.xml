@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5900" toLevel="1" name="Burst of Oblivion">
-		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+		<!-- When receiving damage, the character's target is cancelled, and they can't use skills. -->
 		<icon>icon.skill1481</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -41,7 +41,7 @@
 		</effects>
 	</skill>
 	<skill id="5901" toLevel="2" name="Burst of Oblivion">
-		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+		<!-- When receiving damage, the character's target is cancelled, and they can't use skills. -->
 		<icon>icon.skill1481</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1053,7 +1053,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5943" toLevel="1" name="Energy of Contamination">
-		<!-- P. Def. is decreased and Skill MP Consumption is increased. -->
+		<!-- P. Def. is decreased and MP consumption for skills is increased. -->
 		<icon>icon.skill0103</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1196,7 +1196,7 @@
 		</conditions>
 	</skill>
 	<skill id="5954" toLevel="1" name="Agathion Cute Trick - Tinplate Golem">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1211,7 +1211,7 @@
 		</conditions>
 	</skill>
 	<skill id="5955" toLevel="1" name="Agathion Cute Trick - Joy">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1226,7 +1226,7 @@
 		</conditions>
 	</skill>
 	<skill id="5956" toLevel="1" name="Agathion Cute Trick - Angry Devil">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1241,7 +1241,7 @@
 		</conditions>
 	</skill>
 	<skill id="5957" toLevel="1" name="Agathion Cute Trick - Sorrow">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1256,7 +1256,7 @@
 		</conditions>
 	</skill>
 	<skill id="5958" toLevel="1" name="Agathion Cute Trick - Teddy Boy">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1271,7 +1271,7 @@
 		</conditions>
 	</skill>
 	<skill id="5959" toLevel="1" name="Agathion Cute Trick - Teddy Girl">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1414,7 +1414,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5968" toLevel="2" name="Rapid Shot">
-		<!-- With a bow Atk. Spd. +8% for a certain amount of time. -->
+		<!-- Temporarily increases Atk. Spd. when using a bow. -->
 		<icon>icon.skill0099</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1444,7 +1444,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5969" toLevel="2" name="Punch of Doom">
-		<!-- Inflicts great damage on the enemy with iron-fist and inflicts Stun. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. Power $s1. -->
+		<!-- Deals great damage to the enemy and inflicts stun on them. Power $s1 Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill005969</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1953,7 +1953,7 @@
 		</effects>
 	</skill>
 	<skill id="5989" toLevel="1" name="Invincibility">
-		<!-- Invincibility to regular hits and skills, as well as debuffs. -->
+		<!-- Makes you invincible to regular attacks, skills and debuffs. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -1970,7 +1970,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5990" toLevel="3" name="Lesser Heal">
-		<!-- Quickly restores HP. Power $s1. -->
+		<!-- Quickly restores HP. Power $s1 -->
 		<effectPoint>
 			<value level="1">595</value>
 			<value level="2">610</value>
@@ -2050,7 +2050,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5993" toLevel="1" name="Command of Anchor">
-		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+		<!-- When receiving damage, the character's target is cancelled, and they can't use skills. -->
 		<icon>icon.skill1481</icon>
 		<abnormalLevel>8</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2092,7 +2092,7 @@
 		</effects>
 	</skill>
 	<skill id="5994" toLevel="1" name="Mysterious Effect">
-		<!-- The target's head is enlarged. -->
+		<!-- Makes your head larger. -->
 		<icon>icon.skill2513</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>

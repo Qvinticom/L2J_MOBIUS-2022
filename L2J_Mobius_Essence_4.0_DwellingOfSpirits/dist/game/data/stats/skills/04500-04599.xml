@@ -108,7 +108,7 @@
 		<affectScope>NONE</affectScope>
 	</skill>
 	<skill id="4515" toLevel="1" name="Raid Curse">
-		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -676,7 +676,7 @@
 		</effects>
 	</skill>
 	<skill id="4541" toLevel="1" name="Nihilistic Curse">
-		<!-- Temporarily decreases P. Atk., Atk. Spd. and M. Atk.. Might skill can remove the curse. -->
+		<!-- Temporarily decreases P. Atk., Atk. Spd. and M. Atk. The curse can be removed with the Might skill. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -2198,7 +2198,7 @@
 		</effects>
 	</skill>
 	<skill id="4575" toLevel="2" name="Haste">
-		<!-- Atk. Spd. +15%. -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2240,7 +2240,7 @@
 		</effects>
 	</skill>
 	<skill id="4576" toLevel="3" name="Reflect Damage">
-		<!-- Reflect 10% of damage. -->
+		<!-- Reflects $s1 damage. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2369,7 +2369,7 @@
 		</effects>
 	</skill>
 	<skill id="4578" toLevel="1" name="Petrify">
-		<!-- Petrified and unable to move momentarily. -->
+		<!-- Momentarily petrifies the target. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>180</abnormalTime>
@@ -2591,7 +2591,7 @@
 		</effects>
 	</skill>
 	<skill id="4581" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2644,7 +2644,7 @@
 		</effects>
 	</skill>
 	<skill id="4582" toLevel="12" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -2807,7 +2807,7 @@
 		</effects>
 	</skill>
 	<skill id="4584" toLevel="12" name="Decrease P. Def. and Stun">
-		<!-- Immediately decreases P. Def., target is immobilized because of stun. -->
+		<!-- Instantly decreases P. Def. Immobilizes and stuns target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>
 			<value level="1">11</value>
@@ -3503,7 +3503,7 @@
 		</effects>
 	</skill>
 	<skill id="4592" toLevel="12" name="Decrease P. Def.">
-		<!-- Immediately P. Def. -17%. -->
+		<!-- Decreases P. Def. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3586,7 +3586,7 @@
 		</effects>
 	</skill>
 	<skill id="4593" toLevel="12" name="Decrease P. Def.">
-		<!-- Immediately P. Def. -17%. -->
+		<!-- Decreases P. Def. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3669,7 +3669,7 @@
 		</effects>
 	</skill>
 	<skill id="4594" toLevel="12" name="Decrease P. Def.">
-		<!-- Immediately P. Def. -17%. -->
+		<!-- Decreases P. Def. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4057,7 +4057,7 @@
 		</effects>
 	</skill>
 	<skill id="4599" toLevel="12" name="Decrease Speed">
-		<!-- Immediately target's Speed -10%. -->
+		<!-- Speed decreased temporarily. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>
 			<value level="1">1</value>

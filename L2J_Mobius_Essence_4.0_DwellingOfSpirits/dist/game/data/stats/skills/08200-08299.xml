@@ -18,7 +18,7 @@
 		</effects>
 	</skill>
 	<skill id="8256" toLevel="1" name="Summon Agathion Joy">
-		<!-- Summon Agathion -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -60,7 +60,7 @@
 		</effects>
 	</skill>
 	<skill id="8293" toLevel="1" name="Olympiad Hero's Earring">
-		<!-- Stun/ Mental Attack Resistance and Atk. Rate +20%. With some probability, restores HP by 4% from damage dealt to a target. -->
+		<!-- Silence/ Fear/ Stun Resistance and Atk. Rate +20%. With a certain chance, absorbs 4% of inflicted damage as HP. -->
 		<icon>icon.accessory_tateossian_earring_i00</icon>
 		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>

@@ -591,7 +591,7 @@
 		<set name="time" val="120" />
 	</item>
 	<item id="47441" name="Mysterious Talisman - Attack Attribute" additionalName="2-hour" type="Armor">
-		<!-- When equipped, Attribute Attack +50. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, Attribute Attack +50. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -701,7 +701,7 @@
 		<capsuled_items>
 			<item id="37718" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Shiny Elemental Shirt -->
 			<item id="46193" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Physical Reflect Shirt -->
-			<item id="46194" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Magical Elemental Shirt -->
+			<item id="46194" min="1" max="1" minEnchant="8" maxEnchant="8" chance="33.33" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
 	<item id="47452" name="+9 T-shirt Box (Shiny/ Attack/ Magic)" type="EtcItem">
@@ -717,7 +717,7 @@
 		<capsuled_items>
 			<item id="37718" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Shiny Elemental Shirt -->
 			<item id="46193" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Physical Reflect Shirt -->
-			<item id="46194" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Magical Elemental Shirt -->
+			<item id="46194" min="1" max="1" minEnchant="9" maxEnchant="9" chance="33.33" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
 	<item id="47453" name="Seven Signs Soul Crystal Box (Stage 4-8)" type="EtcItem">

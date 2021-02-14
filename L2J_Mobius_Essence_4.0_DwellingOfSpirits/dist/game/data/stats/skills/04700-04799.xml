@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4700" toLevel="13" name="Gift of Queen">
-		<!-- For $s1, party members' P. Atk. +$s2, P. Accuracy +$s3. -->
+		<!-- A buff used by Feline Queen. For $s1, P. Atk. +$s2, P. Accuracy +$s3. -->
 		<icon>icon.skill1331</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -178,7 +178,7 @@
 		</effects>
 	</skill>
 	<skill id="4702" toLevel="13" name="Blessing of Seraphim">
-		<!-- For $s1, party members' MP Recovery Bonus +$s2, M. Critical Rate +$s3. -->
+		<!-- A buff used by Seraphim. For $s1, MP Recovery Rate +$s2, M. Skill Critical Rate +$s3. -->
 		<icon>icon.skill1332</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -278,7 +278,7 @@
 		</effects>
 	</skill>
 	<skill id="4703" toLevel="13" name="Gift of Seraphim">
-		<!-- For $s1, party members' M. Skill Cooldown -$s2, M. Atk. +$s3. -->
+		<!-- A buff used by Seraphim. For $s1, pM. Skill Cooldown -$s2, M. Atk. +$s3. -->
 		<icon>icon.skill1332</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1090,7 +1090,7 @@
 		</effects>
 	</skill>
 	<skill id="4711" toLevel="12" name="Wild Defense">
-		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed. -->
+		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P./ M. Def. significantly while greatly reducing Atk. Spd. and Speed. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1181,7 +1181,7 @@
 		</effects>
 	</skill>
 	<skill id="4712" toLevel="12" name="Bright Burst">
-		<!-- Star Hatchling/ Strider's attack skill. Power $s1. -->
+		<!-- Star Hatchling/ Strider's attack skill. Power $s1 -->
 		<icon>icon.skill4712</icon>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -1255,7 +1255,7 @@
 		</effects>
 	</skill>
 	<skill id="4713" toLevel="12" name="Bright Heal">
-		<!-- Star Hatchling/ Strider's recovery magic. Regenerates the pet's HP. Power $s1. -->
+		<!-- Star Hatchling/ Strider's recovery magic. Regenerates the pet's HP. Power $s1 -->
 		<icon>icon.skill4713</icon>
 		<coolTime>1000</coolTime>
 		<effectPoint>
@@ -1335,7 +1335,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4715" toLevel="1" name="Wind Dragon">
-		<!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
+		<!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk. increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
 		<icon>icon.skill1373</icon>
 		<magicLevel>35</magicLevel>
 		<operateType>P</operateType>
@@ -1349,7 +1349,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4717" toLevel="12" name="Heal Trick">
-		<!-- A recovery magic used by a pet. Regenerates master's HP just a little bit. Power $s1. -->
+		<!-- Recovery magic used by a pet. Regenerates some of the master's HP. Power $s1 -->
 		<icon>icon.skill4717</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1409,7 +1409,7 @@
 		</effects>
 	</skill>
 	<skill id="4718" toLevel="12" name="Greater Heal Trick">
-		<!-- Recovery magic used by a pet. Regenerates its master's HP. Power $s1. -->
+		<!-- Recovery magic used by a pet. Regenerates its master's HP. Power $s1 -->
 		<icon>icon.skill4718</icon>
 		<castRange>600</castRange>
 		<effectPoint>

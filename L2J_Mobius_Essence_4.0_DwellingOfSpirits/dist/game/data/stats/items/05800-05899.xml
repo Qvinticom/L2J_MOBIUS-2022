@@ -152,7 +152,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="5809" name="Spellbook: Aqua Splash" type="EtcItem">
-		<!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers. Required level: 58 -->
+		<!-- A spellbook for learning the Aqua Splash skill. Used by Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -161,7 +161,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5810" name="Spellbook: Rain of Fire" type="EtcItem">
-		<!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers. Required level: 58 -->
+		<!-- A spellbook for learning the Rain of Fire skill. Used by Sorcerers and Spellsingers. Required level: 58. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -170,7 +170,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5811" name="Spellbook: Mass Slow" type="EtcItem">
-		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 61 -->
+		<!-- A spellbook for learning the Mass Slow skill. <Class>. Necromancer. <Skill effect>. Decreases Speed of surrounding enemies. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -180,7 +180,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="5812" name="Spellbook: Servitor Empowerment" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52 -->
+		<!-- A spellbook for learning the Servitor Empowerment skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -189,7 +189,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5813" name="Spellbook: Servitor Cure" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
+		<!-- A spellbook for learning the Servitor Cure skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -198,7 +198,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5814" name="Spellbook: Servitor Blessing" type="EtcItem">
-		<!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62 -->
+		<!-- A spellbook for learning the Servitor Blessing skill. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -207,7 +207,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5815" name="Spellbook: Wild Magic" type="EtcItem">
-		<!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders. Required level: 62 -->
+		<!-- A spellbook for learning the Wild Magic skill. <Classes>. All classes after the 1st class change, except Orcs. <Skill effect>. Increases M. Skill Critical Rate. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -217,7 +217,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
-		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 42 -->
+		<!-- A spellbook for learning the Advanced Block skill. <Classes>. Prophet, Elven Elder. <Skill effect>. Increases Shield Defense. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -227,7 +227,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="5817" name="Chrono Campana" type="Weapon">
-		<!-- Chronicle III Souvenir! Cannot be dropped. -->
+		<!-- Chronicle III Souvenir! -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

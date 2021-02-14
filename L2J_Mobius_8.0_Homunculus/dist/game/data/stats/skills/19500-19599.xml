@@ -90,7 +90,7 @@
 		</effects>
 	</skill>
 	<skill id="19504" toLevel="1" name="Tempted">
-		<!-- Plays the Chaos Symphony charming the target for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Plays the Chaos Symphony charming the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11533</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -429,7 +429,7 @@
 		</effects>
 	</skill>
 	<skill id="19528" toLevel="9" name="Right Angle Reverse">
-		<!-- Strikes the target stunning them for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Strikes the target stunning them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill19303</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2018,7 +2018,7 @@
 		</effects>
 	</skill>
 	<skill id="19565" toLevel="13" name="Shield Bash">
-		<!-- Strikes the target with a shield disabling their standard attacks for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Strikes the target with a shield disabling their standard attacks for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1462</icon>
 		<operateType>A1</operateType>
 		<castRange>80</castRange>
@@ -2376,7 +2376,7 @@
 		</effects>
 	</skill>
 	<skill id="19571" toLevel="1" name="Lightning Strike">
-		<!-- Paralyzes the target for $s1. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Paralyzes the target for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
@@ -2472,7 +2472,7 @@
 		<effectPoint>2</effectPoint>
 	</skill>
 	<skill id="19575" toLevel="13" name="Vanishing Stun">
-		<!-- Silenced by Vanishing Stun for $s1. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Silenced by Vanishing Stun for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10010</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>

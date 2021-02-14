@@ -41,13 +41,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="70">
-						<item id="90012" count="1" /> <!-- Common Life Stone -->
+						<item id="90012" count="1" /> <!-- Low-grade Life Stone - Weapon -->
 					</item>
 					<item chance="20">
-						<item id="90013" count="1" /> <!-- Mid-grade Life Stone -->
+						<item id="90013" count="1" /> <!-- Mid-grade Life Stone - Weapon -->
 					</item>
 					<item chance="10">
-						<item id="90014" count="1" /> <!-- High-grade Life Stone -->
+						<item id="90014" count="1" /> <!-- High-grade Life Stone - Weapon -->
 					</item>
 				</items>
 			</effect>
@@ -78,7 +78,7 @@
 		</effects>
 	</skill>
 	<skill id="39205" toLevel="1" name="Dark Assassin Transformation">
-		<!-- You are transformed into Dark Assassin. For 15 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +10, Speed +4. Cooldown: 10 min. -->
+		<!-- You are transformed into Dark Assassin. For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. Effect remains after death. -->
 		<icon>icon.empty_bottle</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>900</abnormalTime>
@@ -181,10 +181,10 @@
 						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<item chance="5">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="5">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 				</items>
 			</effect>
@@ -197,14 +197,14 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39210" toLevel="1" name="White Assassin Transformation">
-		<!-- You are transformed into White Assassin. For 15 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. Effect remains after death. -->
+		<!-- You are transformed into White Assassin. For 20 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
 		<icon>icon.etc_charm_of_courage_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39211" toLevel="1" name="Savior' Growth Scroll">
-		<!-- Acquired XP/ SP +50% for 2 h. Cooldown - 2 h. Effect remains after death. -->
+		<!-- For 2 h., Acquired XP/ SP +50%. Cooldown: 2 h. The effect remains after death. -->
 		<icon>icon.etc_kalie_hero_scroll</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -212,7 +212,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39212" toLevel="1" name="Einhasad's Protection">
-		<!-- For 1 h., acquired XP/ SP +100%. Cooldown - 1 h. Effect remains after death. -->
+		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -258,7 +258,7 @@
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="39219" toLevel="3" name="Dark Knight Transformation">
-		<!-- Transformed Dark Knight. Max HP/ MP +$s1, Stun/ Paralysis/ Mental Resistance +$s2, Attack Power in PvP +$s3, Received Damage -$s4. -->
+		<!-- You are transformed into Dark Knight. For 20 min., Max HP/ MP +10%, Paralysis/ Silence/ Fear/ Stun Resistance +5%, PvP damage +5%, received damage -5%. -->
 		<icon>icon.dark_kninght</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -279,7 +279,7 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="39223" toLevel="1" name="Bunch of Bananas">
-		<!-- For 5 min., Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10, Sayha Grace Consumption -30%. Changes the appearance to that of Santa. -->
+		<!-- For $s1, Acquired XP/ SP +$s2, P./ M. Atk. +$s3, P./ M. Def. +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. Changes the appearance to that of Santa Outfit. -->
 		<icon>Icon.ev_monkey_banana</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -461,7 +461,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="39228" toLevel="1" name="Chef's Fish Stew - Victory">
-		<!-- For 10 min., HP/ MP Recovery Bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Atk. Spd./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. Effect remains after death. -->
+		<!-- For $s1, HP/ MP Recovery Rate +$s2, P./ M. Accuracy +$s3, P./ M. Evasion +$s4, damage to monsters +$s5, Atk./ Casting Spd. +$s6, P. Critical Rate/ M. Skill Critical Rate +$s7, P. Critical Damage/ M. Skill Critical Damage +$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -551,7 +551,7 @@
 		</effects>
 	</skill>
 	<skill id="39229" toLevel="1" name="Chef's Fish Stew - Fire">
-		<!-- For 10 min., for a party member Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Effect remains after death. -->
+		<!-- For $s1, Max HP +$s2, HP Recovery Rate +$s3, P./ M. Def. +$s4, Atk./ Casting Spd. +$s5, damage to monsters +$s6, P. Critical Rate/ M. Skill Critical Rate +$s7, Debuff Resistance +$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -607,7 +607,7 @@
 		</effects>
 	</skill>
 	<skill id="39230" toLevel="1" name="Chef's Fish Stew - Water">
-		<!-- For 10 min., for a party member MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Effect remains after death. -->
+		<!-- For $s1, Max MP +$s2, MP Recovery Rate +$s3, P./ M. Def. +$s4, Atk./ Casting Spd. +$s5, damage to monsters +$s6, Debuff Resistance +$s7, Skill MP Consumption -$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -676,7 +676,7 @@
 		</effects>
 	</skill>
 	<skill id="39231" toLevel="1" name="Chef's Fish Stew - Wind">
-		<!-- A powerful spirit acts to get a party member's for 10 min. P./ M. Accuracy +3, P./ M. Evasion +3, P./ M. Critical Rate +10%, P./ M. Critical Damage +15%, Speed +10%, Debuff Resistance +10%, damage to Raid Bosses +15%. Effect remains after death. -->
+		<!-- For $s1, P./ M. Accuracy +$s2, P./ M. Evasion +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, Speed +$s6, Debuff Resistance +$s7, damage to monsters +$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -768,7 +768,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="39238" toLevel="1" name="MOPP Combat Ration">
-		<!-- For 5 min., Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10, Sayha Grace Consumption -30%. Changes the appearance to that of Santa. -->
+		<!-- For $s1, Acquired XP/ SP +$s2, P./ M. Atk. +$s3, P./ M. Def. +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. Changes the appearance to that of Santa Outfit. -->
 		<icon>icon.ev_mopp_herb</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -780,12 +780,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39240" toLevel="1" name="Sapphire">
-		<!-- Beast Spiritshot Damage +5%. -->
+		<!-- Beast Spiritshot Damage +$s1. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39241" toLevel="1" name="Sapphire">
-		<!-- Beast Spiritshot Damage +8%. -->
+		<!-- Beast Spiritshot Damage +$s1. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -856,28 +856,28 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39253" toLevel="1" name="Chef's Fish Stew - Victory">
-		<!-- For 10 min., HP/ MP Recovery Bonus +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +15%, Atk. Spd./ Casting Spd. +10%, P./ M. Critical Rate +15%, P./ M. Critical Damage +15%. Effect remains after death. -->
+		<!-- For $s1, HP/ MP Recovery Rate +$s2, P./ M. Accuracy +$s3, P./ M. Evasion +$s4, damage to monsters +$s5, Atk./ Casting Spd. +$s6, P. Critical Rate/ M. Skill Critical Rate +$s7, P. Critical Damage/ M. Skill Critical Damage +$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39254" toLevel="1" name="Chef's Fish Stew - Fire">
-		<!-- For 10 min., for a party member Max HP +10%, HP Recovery bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Effect remains after death. -->
+		<!-- For $s1, Max HP +$s2, HP Recovery Rate +$s3, P./ M. Def. +$s4, Atk./ Casting Spd. +$s5, damage to monsters +$s6, P. Critical Rate/ M. Skill Critical Rate +$s7, Debuff Resistance +$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39255" toLevel="1" name="Chef's Fish Stew - Water">
-		<!-- For 10 min., for a party member MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. Effect remains after death. -->
+		<!-- For $s1, Max MP +$s2, MP Recovery Rate +$s3, P./ M. Def. +$s4, Atk./ Casting Spd. +$s5, damage to monsters +$s6, Debuff Resistance +$s7, Skill MP Consumption -$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39256" toLevel="1" name="Chef's Fish Stew - Wind">
-		<!-- A powerful spirit acts to get a party member's for 10 min. P./ M. Accuracy +3, P./ M. Evasion +3, P./ M. Critical Rate +10%, P./ M. Critical Damage +15%, Speed +10%, Debuff Resistance +10%, damage to Raid Bosses +15%. Effect remains after death. -->
+		<!-- For $s1, P./ M. Accuracy +$s2, P./ M. Evasion +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, Speed +$s6, Debuff Resistance +$s7, damage to monsters +$s8. The effect remains after death. -->
 		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
@@ -928,35 +928,35 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="39261" toLevel="1" name="Fish Stew - Greater Might">
-		<!-- For 20 min. P. Atk. +4%. -->
+		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="39262" toLevel="1" name="Fish Stew - Greater Shield">
-		<!-- For 20 min. P. Def. +5%. -->
+		<!-- For $s1, P. Def. +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="39263" toLevel="1" name="Fish Stew - Wild Magic">
-		<!-- For 20 min., damage rate of magic +10 . -->
+		<!-- M. Skill Critical Rate +$s2 for $s1 -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="39264" toLevel="2" name="Fish Stew - Berserker Spirit">
-		<!-- For $s1 P. Def. -$s2, M. Def. -$s3, P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8 and Speed +$s9. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="39265" toLevel="3" name="Fish Stew - Decrease Weight">
-		<!-- For $s1 Weight limit +$s2. -->
+		<!-- For $s1, overweight limit +$s2. -->
 		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -969,7 +969,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="39267" toLevel="1" name="Mood Melody">
-		<!-- For 20 min., grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Effect remains after death. -->
+		<!-- For 20 min., grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Cooldown: 1 min. The effect remains after death. Note! Scroll of Mood Melody can't be used while the buff is still active. -->
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -983,7 +983,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="39269" toLevel="1" name="Special Dragons Fruit">
-		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Effect remains after death. -->
+		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P. Critical Rate/ M. Skill Critical Rate +10, P. Critical Damage/ M. Skill Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.bm_dragon_fruit</icon>
 		<operateType>A2</operateType>
 		<abnormalType>DRAGON_FRUIT</abnormalType>
@@ -1067,7 +1067,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="39272" toLevel="1" name="Balthus Knights' Top-grade Mark">
-		<!-- For 2 h., acquired XP/ SP+20%, grants a chance to obtain Special Supplies. Effect remains after death. -->
+		<!-- For 2 h., acquired XP/ SP +$s1. A badge of Balthus Knights grants a chance to obtain Special Supplies. Effect remains after death. -->
 		<icon>icon.ev_balthus_token</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>90506</itemConsumeId>
@@ -1096,7 +1096,7 @@
 		</effects>
 	</skill>
 	<skill id="39273" toLevel="1" name="Special Dragons Fruit">
-		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. Effect remains after death. -->
+		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P. Critical Rate/ M. Skill Critical Rate +10, P. Critical Damage/ M. Skill Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.bm_dragon_fruit</icon>
 		<operateType>A2</operateType>
 		<abnormalType>DRAGON_FRUIT</abnormalType>
@@ -1193,7 +1193,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39278" toLevel="1" name="Flower Sweets">
-		<!-- For 20 min., Max. HP/ MP +5%, Acquired XP/ SP +20%. -->
+		<!-- For 20 min., Max HP/ MP +5%, acquired XP/ SP +20%. -->
 		<icon>icon.flower_songpyeon</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1201,7 +1201,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39279" toLevel="1" name="Pumpkin Sweets">
-		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Bonus +30%. With a certain chance, converts 5% of P. melee damage dealt into HP. -->
+		<!-- For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +12%, P. Critical Rate/ M. Skill Critical Rate +10, P. Critical Damage/ M. Skill Critical Damage +5%, P./ M. Def. +15%, Max HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%. With a certain chance, absorbs 5% of the inflicted damage as HP. -->
 		<icon>icon.pumpkin_songpyeon</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1209,7 +1209,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39280" toLevel="1" name="Banana Sweets">
-		<!-- For 5 min. changes armor appearance to that of a Hanbok. Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10, Sayha Grace Consumption -30%. Deleted upon logout. -->
+		<!-- For 5 min., Acquired XP/ SP +50%, P. Atk. +15%, M. Atk. +23%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10, HP/ MP Recovery Rate +30%. Changes the appearance to that of Hanbok. The effect remains after death, but disappears after logout. -->
 		<icon>icon.songpyeon_herb</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1319,7 +1319,7 @@
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
 	<skill id="39298" toLevel="1" name="Shining Mood Melody">
-		<!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Effect remains after death. Cannot be used together with Scroll of Mood Melody. -->
+		<!-- For 20 min., activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown: 1 min. The effect remains after death. Note! Shining Scroll of Mood Melody can't be used while the buff is still active. -->
 		<icon>icon.bm_magmeld</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>

@@ -30,7 +30,7 @@
 		</stats>
 	</item>
 	<item id="902" name="Phoenix Ring" type="Armor">
-		<!-- Phoenix Ring. Provides additional MP +13. -->
+		<!-- MP +13. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -278,7 +278,7 @@
 		</stats>
 	</item>
 	<item id="920" name="Tateossian Necklace" type="Armor">
-		<!-- When equipped, MP +42. -->
+		<!-- MP +42. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -311,7 +311,7 @@
 		</stats>
 	</item>
 	<item id="924" name="Majestic Necklace" type="Armor">
-		<!-- Majestic Necklace. Provides additional MP +33. -->
+		<!-- MP +33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -361,7 +361,7 @@
 		</stats>
 	</item>
 	<item id="933" name="Phoenix Necklace" type="Armor">
-		<!-- Phoenix Necklace. Provides additional MP +26. -->
+		<!-- MP +26. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -522,7 +522,7 @@
 		</stats>
 	</item>
 	<item id="947" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. +4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. Enchanting is safe up to +3. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -538,7 +538,7 @@
 		</skills>
 	</item>
 	<item id="948" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +1. Accessories: M. Def. +1. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +3. Accessories: M. Def. +3. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -554,7 +554,7 @@
 		</skills>
 	</item>
 	<item id="951" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -570,7 +570,7 @@
 		</skills>
 	</item>
 	<item id="952" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
-		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +1. Accessories: M. Def. +1. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +3. Accessories: M. Def. +3. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -586,7 +586,7 @@
 		</skills>
 	</item>
 	<item id="955" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +4, M. Atk. +3. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +5, M. Atk. +3. Bow: P. Atk. +8, M. Atk. +3. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +8, M. Atk. +6. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +10, M. Atk. +6. Bow: P. Atk. +16, M. Atk. +6. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -602,7 +602,7 @@
 		</skills>
 	</item>
 	<item id="956" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
-		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +1. Accessories: M. Def. +1. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +3. Accessories: M. Def. +3. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -618,7 +618,7 @@
 		</skills>
 	</item>
 	<item id="959" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +15, M. Atk. +10. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +19, M. Atk. +10. Bow: P. Atk. +31, M. Atk. +10. <font color=bbaa88><When enchanted to +4 or higher></font>. One-handed sword/ blunt weapon, dagger, spear: P. Atk. +43, M. Atk. +43. Two-handed blunt weapons, dual swords, fist weapon: P. Atk. +77, M. Atk. +43. Bow: P. Atk. +126, M. Atk. +43. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -634,7 +634,7 @@
 		</skills>
 	</item>
 	<item id="960" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- P. Def. +2 for S-grade armor and accessories. Starting from +4, P. Def. +8. Ordinary armor can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. After +4 increases HP. -->
+		<!-- <font color=bbaa88><When enchanted from +1 to +3></font>. Armor: P. Def. +7. Accessories: M. Def. +5. <font color=bbaa88><When enchanted to +4 or higher></font>. Armor: P. Def. +26. Accessories: M. Def. +20. <font color=eeaa22>Safe enchanting to +4</font> -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -650,7 +650,7 @@
 		</skills>
 	</item>
 	<item id="963" name="Orc Arrowhead" type="EtcItem">
-		<!-- Arrowhead that Turath orc marksmen use on Talking Island. Collect these and take to Master Minia. -->
+		<!-- An arrowhead that the Tunath Orc Marksmen use on the Talking Island. Collect these and take them to Master Minia. -->
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -686,7 +686,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="966" name="Dryad's Tears" type="EtcItem">
-		<!-- Jewel that contains the essence of a dryad's soul. Gather ten of these and take them to Master Cobendell. -->
+		<!-- Jewel that contains the essence of a dryad's soul. Gather 10 of these and take them to Master Cobendell. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -710,7 +710,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="968" name="Karrod's Letter" type="EtcItem">
-		<!-- Letter written by Blacksmith Karrod. Take this to the Abyssal Celebrant Cecktinon in the Shilen Temple. -->
+		<!-- Letter written by Blacksmith Karrod. Take this to the Abyssal Celebrant Cecktinon in the Shillien Temple. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -818,7 +818,7 @@
 		</stats>
 	</item>
 	<item id="976" name="1st Badge of Sentinel" type="EtcItem">
-		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Tanuki skullcrusher and report to Sentinel Kendell. -->
+		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy Tanuki Skullcrusher and report to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -830,7 +830,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="977" name="1st Badge of Sentinel" type="EtcItem">
-		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Bhato bloodspear and report to Sentinel Kendell. -->
+		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy Bhato Bloodspear and report to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -914,7 +914,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="984" name="1st Onyx Talisman" type="EtcItem">
-		<!-- Necklace crafted of onyx. Take this to Abyssal Celebrant Kartia. -->
+		<!-- A necklace crafted of onyx. Take it to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -926,7 +926,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="985" name="1st Onyx Talisman" type="EtcItem">
-		<!-- Necklace crafted of onyx. Recover the original scrolls from the blackskull Orcs and bring them to Abyssal Celebrant Kartia. -->
+		<!-- A necklace crafted of onyx. Recover the scrolls from the Tumran Orcs and bring them to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -938,7 +938,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="986" name="Ancient Scroll" type="EtcItem">
-		<!-- Ancient scroll called Kaysha's Revelation. Take it along with the clay tablet to Abyssal Celebrant Kartia. -->
+		<!-- An ancient scroll called the Kaysha's Revelations. Take it along with Clay Tablet to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -950,7 +950,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="987" name="Ancient Clay Tablet" type="EtcItem">
-		<!-- Ancient clay tablet engraved with text. Take it along with the ancient scroll to Abyssal Celebrant Kartia. -->
+		<!-- An ancient clay tablet engraved with text. Take it along with Ancient Scroll to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -962,7 +962,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="988" name="Kartia's Translation" type="EtcItem">
-		<!-- Kartia's translation of Kaysha's Revelations. Take it to Hierarch Thifiell. -->
+		<!-- Kartia's translation of Kaysha's Revelations. Take it to Great Hierarch Thifiell. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -974,7 +974,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="989" name="Eldritch Dagger" type="Weapon">
-		<!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
+		<!-- Steel dagger engraved with the runes of Shillien and Gran Kain. -->
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />

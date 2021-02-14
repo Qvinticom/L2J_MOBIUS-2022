@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37662" name="Refined Romantic Chapeau: Gold" additionalName="100-day" type="Armor">
-		<!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +50%. Cooldown: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases Acquired XP/ SP by 5% for 20 minutes. Cooldown: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
+		<!-- Uses 2 hair accessory slots. <Active skills>. 1. Holiday Hat: Resurrects a dead party member, restoring them 50% XP. 1 Spirit Ore is required. Cooldown: 30 min. 2. Holiday Hat's Overwhelming Power: Acquired XP/ SP +5% for 20 min. Cooldown: 60 min. 3. Side Effect: Makes character's head bigger for 10 min. Cooldown: 30 min. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_gold" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_tradable" val="false" />
@@ -13,7 +13,7 @@
 		<set name="bodypart" val="hairall" />
 	</item>
 	<item id="37665" name="Refined Romantic Chapeau: Yellow" additionalName="33-day" type="Armor">
-		<!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +50%. Cooldown: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases Acquired XP/ SP by 5% for 20 minutes. Cooldown: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
+		<!-- Uses 2 hair accessory slots. <Active skills>. 1. Holiday Hat: Resurrects a dead party member, restoring them 50% XP. 1 Spirit Ore is required. Cooldown: 30 min. 2. Holiday Hat's Overwhelming Power: Acquired XP/ SP +5% for 20 min. Cooldown: 60 min. 3. Side Effect: Makes character's head bigger for 10 min. Cooldown: 30 min. -->
 		<set name="icon" val="icon.bm_romantic_chaperon_yellow" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_tradable" val="false" />
@@ -92,7 +92,7 @@
 		</stats>
 	</item>
 	<item id="37691" name="Valentine One-handed Blunt Weapon" type="Weapon">
-		<!-- Modifies the appearance of a weapon. Valentine One-handed Blunt Weapon form. -->
+		<!-- Can be used for changing a weapon's appearance to that of Valentine One-handed Club. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -114,7 +114,7 @@
 		</stats>
 	</item>
 	<item id="37692" name="Valentine Fist Weapon" type="Weapon">
-		<!-- Modifies the appearance of a weapon. Valentine Fist Weapon form. -->
+		<!-- Can be used for changing a weapon's appearance to that of Valentine Fist. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />

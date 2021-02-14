@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="45300" toLevel="10" name="Devastating Mind">
+		<!-- A spirit of devastation is going to destroy everything on its way. The effect depends on the amount of DP. P. Atk. +$s1. HP Recovery Rate +$s2. MP Recovery Rate +$s3. -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -61,6 +62,7 @@
 		</effects>
 	</skill>
 	<skill id="45301" toLevel="20" name="Punishment">
+		<!-- Attacks the target with $s1 power. Requires a one-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
 		<castRange>70</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -192,6 +194,7 @@
 		</effects>
 	</skill>
 	<skill id="45302" toLevel="20" name="Punishment">
+		<!-- Attacks the target with $s1 power. Requires a one-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
 		<castRange>70</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -323,6 +326,7 @@
 		</effects>
 	</skill>
 	<skill id="45303" toLevel="10" name="Wipeout">
+		<!-- Attacks the target with $s1 power. Requires a one-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
 		<castRange>70</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -438,6 +442,7 @@
 		</effects>
 	</skill>
 	<skill id="45305" toLevel="20" name="Fist of Fury">
+		<!-- Attacks the target with a fist imbued with fire energy of $s1 power. Has a chance to get $s2 DP after an attack. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. Over-hit. -->
 		<castRange>120</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -557,6 +562,7 @@
 		</effects>
 	</skill>
 	<skill id="45306" toLevel="20" name="Fist of Fury">
+		<!-- Attacks the target with a fist imbued with fire energy of $s1 power. Has a chance to get $s2 DP after an attack. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. Over-hit. -->
 		<castRange>120</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -676,6 +682,7 @@
 		</effects>
 	</skill>
 	<skill id="45307" toLevel="20" name="Fist of Fury">
+		<!-- Attacks the target with a fist imbued with frost energy of $s1 power. Has a chance to get $s2 DP after an attack. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. Over-hit. -->
 		<castRange>120</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -795,6 +802,7 @@
 		</effects>
 	</skill>
 	<skill id="45308" toLevel="20" name="Fist of Fury">
+		<!-- Attacks the target with a fist imbued with frost energy of $s1 power. Has a chance to get $s2 DP after an attack. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. Over-hit. -->
 		<castRange>120</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -914,6 +922,7 @@
 		</effects>
 	</skill>
 	<skill id="45309" toLevel="20" name="Fist of Fury">
+		<!-- Attacks the target with a fist imbued with lightning energy of $s1 power. Has a chance to get $s2 DP after an attack. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. Over-hit. -->
 		<castRange>120</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1033,6 +1042,7 @@
 		</effects>
 	</skill>
 	<skill id="45310" toLevel="20" name="Fist of Fury">
+		<!-- Attacks the target with a fist imbued with lightning energy of $s1 power. Has a chance to get $s2 DP after an attack. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. Over-hit. -->
 		<castRange>120</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1152,6 +1162,7 @@
 		</effects>
 	</skill>
 	<skill id="45311" toLevel="10" name="Deadly Pull">
+		<!-- Pulls the enemy within 700 range. Consumes 1 DP. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1215,6 +1226,7 @@
 		</effects>
 	</skill>
 	<skill id="45312" toLevel="15" name="Hellfire">
+		<!-- <Skill with fixed cooldown> Sticks the sword into the ground and summons a flame burning nearby enemies with $s1 power. The damaged enemies' P./ M. Def. -40% for 10 sec. Requires a one-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. Consumes 200 DP. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1333,6 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="45313" toLevel="3" name="Burning Field">
+		<!-- <Skill with fixed cooldown> Flames cover a certain area. Inflicted damage depends on character's P. Atk. Requires a one-handed sword. Critical. Over-hit. Consumes $s1 DP. -->
 		<effectPoint>
 			<value level="1">-1600</value>
 			<value level="2">-1700</value>
@@ -1349,7 +1362,7 @@
 		<affectRange>250</affectRange>
 		<channelingStart>1</channelingStart>
 		<channelingTickInterval>1</channelingTickInterval>
-		<channelingSkillId>45314</channelingSkillId> <!-- Conlagration -->
+		<channelingSkillId>45314</channelingSkillId> <!-- Conflagration -->
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -1378,6 +1391,7 @@
 		</effects>
 	</skill>
 	<skill id="45314" toLevel="3" name="Conflagration">
+		<!-- Burns the body and decreases HP. -->
 		<abnormalTime>10</abnormalTime>
 		<activateRate>-1</activateRate>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1408,6 +1422,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45316" toLevel="3" name="Frozen Field">
+		<!-- <Skill with fixed cooldown> A cone of frost damages a certain area and freezes the enemies. Inflicted damage depends on character's P. Atk. Requires a one-handed sword. Critical. Over-hit. Consumes $s1 DP. -->
 		<effectPoint>
 			<value level="1">-1600</value>
 			<value level="2">-1700</value>
@@ -1453,6 +1468,7 @@
 		</effects>
 	</skill>
 	<skill id="45317" toLevel="3" name="Congelation">
+		<!-- The target is frozen and unable to move. -->
 		<abnormalTime>5</abnormalTime>
 		<activateRate>-1</activateRate>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1477,6 +1493,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45319" toLevel="3" name="Lightning Storm">
+		<!-- <Skill with fixed cooldown> A lightning storm damages a certain area. Inflicted damage depends on character's P. Atk. Requires a one-handed sword. Critical. Over-hit. Consumes $s1 DP. -->
 		<effectPoint>
 			<value level="1">-1600</value>
 			<value level="2">-1700</value>
@@ -1522,6 +1539,7 @@
 		</effects>
 	</skill>
 	<skill id="45320" toLevel="3" name="Hailstorm">
+		<!-- Deals continuous damage. -->
 		<abnormalTime>7</abnormalTime>
 		<activateRate>-1</activateRate>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1552,6 +1570,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45322" toLevel="1" name="Call of Flame">
+		<!-- <Fixed cast time skill> The sword is set aflame. With a certain chance, inflicts the Burn effect after an attack. Requires a one-handed sword. <Burn> Constantly decreases enemy's HP and P./ M. Def. Consumes 30 DP. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>650</effectPoint>
@@ -1586,6 +1605,7 @@
 		</effects>
 	</skill>
 	<skill id="45323" toLevel="1" name="Burn">
+		<!-- Constantly drains HP. P./ M. Def. are decreased. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1619,6 +1639,7 @@
 		</effects>
 	</skill>
 	<skill id="45324" toLevel="1" name="Call of Frost">
+		<!-- <Fixed cast time skill> The sword is imbued with the frost energy. With a certain chance, inflicts the Frostbite effect after an attack. Requires a one-handed sword. <Frostbite> Temporarily decreases enemy's Speed, Atk. Spd. and Casting Spd. Consumes 30 DP. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>650</effectPoint>
@@ -1653,6 +1674,7 @@
 		</effects>
 	</skill>
 	<skill id="45325" toLevel="1" name="Frostbite">
+		<!-- Temporarily decreases enemy s Speed, Atk. Spd. and Casting Spd. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1686,6 +1708,7 @@
 		</effects>
 	</skill>
 	<skill id="45326" toLevel="1" name="Call of Lightning">
+		<!-- <Fixed cast time skill> The sword is imbued with the lightning energy. With a certain chance, inflicts the Shocking Wave effect after an attack. Requires a one-handed sword. <Shocking Wave> Temporarily makes the enemy unable to attack. Consumes 30 DP. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<effectPoint>650</effectPoint>
@@ -1720,6 +1743,7 @@
 		</effects>
 	</skill>
 	<skill id="45327" toLevel="1" name="Shocking Wave">
+		<!-- Temporarily makes the enemy unable to attack. -->
 		<abnormalLevel>1</abnormalLevel>
 		<activateRate>80</activateRate>
 		<abnormalTime>3</abnormalTime>
@@ -1745,6 +1769,7 @@
 		</effects>
 	</skill>
 	<skill id="45328" toLevel="5" name="Roar of Death">
+		<!-- Max HP/ CP +$s2 for $s1 Consumes 20 DP. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1807,6 +1832,7 @@
 		</effects>
 	</skill>
 	<skill id="45329" toLevel="2" name="Death Guard">
+		<!-- Creates a shield that blocks frontal long range attacks for 30 sec. The Death Shield has its own HP. When its HP drops to 0, the shield is broken. Consumes 100 DP. -->
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -1876,6 +1902,7 @@
 		</effects>
 	</skill>
 	<skill id="45330" toLevel="1" name="Dark Aura">
+		<!-- Fills you with the energy of death for 1 min. With a certain chance, forces the enemy to flee for 3 sec. Consumes 150 DP. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ELEMENTAL_ARMOR</abnormalType>
@@ -1909,6 +1936,7 @@
 		</effects>
 	</skill>
 	<skill id="45331" toLevel="1" name="Dark Horror">
+		<!-- Forces the enemy to flee for $s1. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -1935,6 +1963,7 @@
 		</effects>
 	</skill>
 	<skill id="45332" toLevel="5" name="Flaming Body">
+		<!-- <Fixed Cast Time Skill> The body is set aflame. For 5 min., P. Atk. +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3. <Gain DP> Requires a one-handed sword. While the effect lasts, extra DP can be gained. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2007,6 +2036,7 @@
 		</effects>
 	</skill>
 	<skill id="45333" toLevel="5" name="Flaming Body">
+		<!-- <Fixed Cast Time Skill> The body is set aflame. For 5 min., P. Atk. +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3. <Gain DP> Requires a one-handed sword. While the effect lasts, extra DP can be gained. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2079,6 +2109,7 @@
 		</effects>
 	</skill>
 	<skill id="45334" toLevel="5" name="Flaming Body">
+		<!-- <Fixed Cast Time Skill> The body is set aflame. For 5 min., P. Atk. +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3. <Gain DP> Requires a one-handed sword. While the effect lasts, extra DP can be gained. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2151,15 +2182,16 @@
 		</effects>
 	</skill>
 	<skill id="45335" toLevel="5" name="Soul Steal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- <Fixed cast time skill with fixed cooldown> Death knight's sword drains the enemy's soul. Requires a one-handed sword. You can drain up to $s1 souls. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45336" toLevel="5" name="Soul Steal">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Drained souls grant a buff for $s1. P./ M. Atk. +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45337" toLevel="1" name="Acceleration">
+		<!-- Hastens the character. For 30 sec., Atk. Spd. +100%, but P./ M. Evasion is decreased. <Gain DP> Requires a one-handed sword. While the effect lasts, extra DP can be gained. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
@@ -2190,6 +2222,7 @@
 		</effects>
 	</skill>
 	<skill id="45338" toLevel="10" name="Bone Cage">
+		<!-- Puts the enemy into the bone cage for 5 sec. The imprisoned enemies cannot be attacked as well as they cannot move, attack, teleport, target, use skills, recover HP/ MP/ CP. After the effect is over the bone cage explodes and damages the target. -->
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2247,6 +2280,7 @@
 		</endEffects>
 	</skill>
 	<skill id="45339" toLevel="10" name="Bone Cage">
+		<!-- Puts the enemy into the bone cage for 10 sec. The imprisoned enemies cannot be attacked as well as they cannot move, attack, teleport, target, use skills, recover HP/ MP/ CP. -->
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2298,6 +2332,7 @@
 		</effects>
 	</skill>
 	<skill id="45340" toLevel="10" name="Bone Cage">
+		<!-- Puts the enemy into the bone cage for 5 sec. The imprisoned enemies cannot be attacked as well as they cannot move, attack, teleport, target, use skills, recover HP/ MP/ CP. After the effect is over, the enemy's P./ M. Def. are decreased. -->
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2355,6 +2390,7 @@
 		</endEffects>
 	</skill>
 	<skill id="45341" toLevel="1" name="Bone Prison">
+		<!-- Imprisoned enemy's P./ M. Def. -15%. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
@@ -2383,6 +2419,7 @@
 		</effects>
 	</skill>
 	<skill id="45342" toLevel="25" name="Death Blind">
+		<!-- The enemy is blinded, their P./ M. Accuracy, Vital Point Attack Rate and all Critical Rate are decreased for $s1 -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
@@ -2473,6 +2510,7 @@
 		</effects>
 	</skill>
 	<skill id="45343" toLevel="15" name="Deadly Ligament Rupture">
+		<!-- Removes Speed-increasing buffs from nearby enemies and prevents receiving new ones for $s1 -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLOCK_SPEED_UP</abnormalType>
@@ -2536,6 +2574,7 @@
 		</effects>
 	</skill>
 	<skill id="45344" toLevel="10" name="Bone Crush">
+		<!-- Explodes and damages. -->
 		<operateType>A1</operateType>
 		<castRange>400</castRange> <!-- TODO: Verify values. -->
 		<effectRange>900</effectRange> <!-- TODO: Verify values. -->
@@ -2567,11 +2606,12 @@
 		</effects>
 	</skill>
 	<skill id="45345" toLevel="1" name="Dispel Devastating Mind">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Removes the effect of Devastating Mind. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45346" toLevel="1" name="Reviving After Death">
+		<!-- Resurrects and grants immunity for 3 sec. HP/ MP cannot be recovered. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>RESIST_DEATH</abnormalType>
@@ -2612,6 +2652,7 @@
 		</endEffects>
 	</skill>
 	<skill id="45347" toLevel="1" name="Forbidden To Die">
+		<!-- Has restrictions after resurrection. HP/ CP/ MP are set to 1. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BLOCK_RESURRECTION</abnormalType>
@@ -2633,6 +2674,7 @@
 		</effects>
 	</skill>
 	<skill id="45348" toLevel="1" name="Born To Be Dead - Recovery">
+		<!-- Recovers HP. -->
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
 		<operateType>A1</operateType>
@@ -2655,12 +2697,13 @@
 		</effects>
 	</skill>
 	<skill id="45349" toLevel="1" name="Born To Be Dead">
-		<!-- TODO: This passive should trigger the skill ID 45346 whenever the character receives fatal damage. I don't think there's an effect that does this now. -->
+		<!-- Resurrects the character. When Reviving After Death is triggered, resurrects and grants immunity for 3 sec., HP/ MP cannot be recovered. Cannot be used again for 600 sec. after Reviving After Death triggering. When Reviving After Death is triggered, also activates Forbidden To Die that sets HP/ CP/ MP to 1. Fully restores HP, if the character has 300 or more DP after Forbidden To Die expiring. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="45350" toLevel="5" name="Undying Body">
+		<!-- An undying body is vulnerable to holy attacks. Strong resistance to draining effects. Received Healing -$s1. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2684,6 +2727,7 @@
 		</effects>
 	</skill>
 	<skill id="45351" toLevel="1" name="Appetite for Destruction">
+		<!-- Enhances combat abilities of Death Knights in chaotic state. P. Atk. +10%, Atk. Spd. +100 in chaotic state. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2705,11 +2749,13 @@
 		</effects>
 	</skill>
 	<skill id="45352" toLevel="3" name="Death Points">
+		<!-- Death Knight uses power of rage. Max $s1 DP. Activates Devastating Mind that increases P. Atk. and Max HP/ MP depending on the amount of DP. Devastating Mind is available up to $s2. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="45353" toLevel="35" name="Death Sword Mastery">
+		<!-- P. Atk. +$s1 when using a one-handed sword. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2760,6 +2806,7 @@
 		</effects>
 	</skill>
 	<skill id="45354" toLevel="35" name="Death Armor Mastery">
+		<!-- P. Def. +$s1 when using heavy or light armor. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2853,6 +2900,7 @@
 		</effects>
 	</skill>
 	<skill id="45355" toLevel="1" name="Change Armor">
+		<!-- Changes the Death Knight armor appearance. When activated, an original appearance is shown. When deactivated, the Death Armor appearance is shown. Appearance changes due to the grade of armor top. If there is no armor top, Death Armor is not used. -->
 		<operateType>T</operateType>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>DK_CHANGE_ARMOR</abnormalVisualEffect>
@@ -2869,19 +2917,21 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="45356" toLevel="1" name="Forbidden To Revive">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- While the restriction is active, Reviving After Death cannot be triggered even after a killing blow. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45357" toLevel="1" name="Upgraded Deadly Pull">
+		<!-- Changes the effect of Deadly Pull. When activated: Mass Deadly Pull. When deactivated: Deadly Pull. -->
 		<operateType>T</operateType>
 	</skill>
 	<skill id="45358" toLevel="10" name="Mass Deadly Pull">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Pulls multiple enemies within 700 range. Consumes 1 DP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45359" toLevel="5" name="Drain Magic Energy">
+		<!-- With a certain chance, recovers $s1 MP in a battle. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3020,16 +3070,17 @@
 		</effects>
 	</skill>
 	<skill id="45360" toLevel="10" name="Transcendent Wipeout">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Attacks the target with $s1 power. Requires a one-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45361" toLevel="1" name="Ability of Glory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 2 h., CON/ MEN +$s1. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45362" toLevel="53" name="Swift Servitor Heal">
+		<!-- Recovers servitor's HP with $s1 power. Available when HP < $s2. -->
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">60</value>
@@ -3327,6 +3378,7 @@
 		</effects>
 	</skill>
 	<skill id="45363" toLevel="1" name="Amazing Rising Attack Mastery">
+		<!-- Rising Attack is enhanced and replaced by Amazing Rising Attack. <Amazing Rising Attack effect> Skill Power is increased. Skill Critical Rate is increased. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3342,6 +3394,7 @@
 		</effects>
 	</skill>
 	<skill id="45364" toLevel="50" name="Amazing Rising Attack">
+		<!-- Attacks the enemy with $s1 power. For $s2, enemy s P. Def. -$s3. Increases power upon consuming Momentum (up to 3). Requires dual swords. Ignores Shield Defense. Critical. Over-hit. -->
 		<icon>icon.skill0001</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -3635,11 +3688,12 @@
 		</effects>
 	</skill>
 	<skill id="45365" toLevel="1" name="Amazing Soul Smash Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Soul Smash is enhanced and replaced by Amazing Soul Smash. <Amazing Soul Smash Effect> Number of attacks is increased. Defense Ignore is increased. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45366" toLevel="10" name="Amazing Soul Smash">
+		<!-- Attacks the target with $s1 power. Requires an ancient sword or a two-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -3716,11 +3770,12 @@
 		</effects>
 	</skill>
 	<skill id="45367" toLevel="1" name="Amazing Thunder Storm Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Thunder Storm is enhanced and replaced by Amazing Thunder Storm. <Amazing Thunder Storm effect> Skill Power is increased. Ignores any defense. Decreases Cooldown. Skill Critical Rate is increased. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45368" toLevel="55" name="Amazing Thunder Storm">
+		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Ignores $s3 of Def. Critical. Over-hit. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3988,6 +4043,7 @@
 		</effects>
 	</skill>
 	<skill id="45369" toLevel="1" name="Phoenix Help">
+		<!-- There is a certain chance after using Shield Strike that the shield will be imbued with energy of phoenix. The energy strikes the enemy provoking them to attack you. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4002,6 +4058,7 @@
 		</effects>
 	</skill>
 	<skill id="45370" toLevel="1" name="Help of Hatred">
+		<!-- There is a certain chance after using Shield Strike that the shield will be imbued with energy of hatred. The energy strikes the enemy provoking them to attack you. -->
 		<magicLevel>76</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4016,6 +4073,7 @@
 		</effects>
 	</skill>
 	<skill id="45371" toLevel="1" name="Power of Eva">
+		<!-- There is a certain chance after using Tribunal that the cross will be imbued with power of Eva. The energy strikes the enemy provoking them to attack you. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4030,6 +4088,7 @@
 		</effects>
 	</skill>
 	<skill id="45372" toLevel="1" name="Shillien's Help">
+		<!-- There is a certain chance after using Judgment that the cross will be imbued with power of Shillien. The energy strikes the enemy provoking them to attack you. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4116,6 +4175,7 @@
 		</effects>
 	</skill>
 	<skill id="45377" toLevel="15" name="Ethereal Strike">
+		<!-- Creates a mysterious cyclone that attacks the enemy with $s1 power. -->
 		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-400</value>
@@ -4200,6 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="45378" toLevel="15" name="Flame Explosion">
+		<!-- Inflicts fire damage with $s1 power. Also deals magical damage. When you are attacking the enemy affected by Sleep, the debuff is removed and an extra attack is triggered. -->
 		<castRange>700</castRange>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -4296,6 +4357,7 @@
 		</effects>
 	</skill>
 	<skill id="45379" toLevel="15" name="Water Explosion">
+		<!-- Inflicts water damage with $s1 power. When you are attacking the enemy affected by Sleep, the debuff is cancelled and an extra attack is triggered. -->
 		<castRange>700</castRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
@@ -4392,6 +4454,7 @@
 		</effects>
 	</skill>
 	<skill id="45380" toLevel="15" name="Thunder Explosion">
+		<!-- Inflicts wind damage with $s1 power. When you are attacking the enemy affected by Sleep, the debuff is cancelled and an extra attack is triggered. -->
 		<castRange>700</castRange>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
@@ -4488,6 +4551,7 @@
 		</effects>
 	</skill>
 	<skill id="45381" toLevel="15" name="Void Explosion">
+		<!-- Inflicts dark damage with $s1 power. When you are attacking the enemy affected by Sleep, the debuff is cancelled and an extra attack is triggered. -->
 		<castRange>700</castRange>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
@@ -4584,16 +4648,17 @@
 		</effects>
 	</skill>
 	<skill id="45382" toLevel="1" name="Divine Beam Resistance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Divine Beam Resistance. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45383" toLevel="1" name="Amazing Spike Thrust Mastery">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Spike Thrust is enhanced and replaced by Amazing Spike Thrust. <Amazing Spike Thrust Effect> Skill Range is increased. Skill Power is increased. Defense Ignore is increased. There is a certain chance to deliver an extra attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45384" toLevel="15" name="Amazing Spike Thrust">
+		<!-- Attacks the target with $s1 power. There is a certain chance to deliver an extra blow. Requires a spear. Ignores Shield Defense. Ignores $s2 of Def. Critical. Over-hit. -->
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -4660,6 +4725,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45386" toLevel="55" name="Transcendent Spinning Slasher">
+		<!-- Swings a spear to attack nearby enemies with $s1 power. Requires a spear. Ignores Shield Defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. Starting from Skill Lv. 41, the power is greatly increased. -->
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<coolTime>733</coolTime>
@@ -4914,7 +4980,7 @@
 		</effects>
 	</skill>
 	<skill id="45387" toLevel="1" name="Dark Sense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Blessed by Shillien, recovers MP after a critical attack from some skills. <Skill list> Double Shot Lethal Shot -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -4924,6 +4990,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45389" toLevel="1" name="Devour">
+		<!-- Recovers $s1 DP. Consumes 30 Spirit Ore. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -4939,6 +5006,7 @@
 		</effects>
 	</skill>
 	<skill id="45390" toLevel="2" name="Buff Thief">
+		<!-- With a certain chance, steals up to $s1 of the enemy's buffs. Can't be used on monsters. Consumes 15 Spirit Ore. -->
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -4977,7 +5045,7 @@
 		</effects>
 	</skill>
 	<skill id="45391" toLevel="1" name="Sword Symphony">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When the skill is active, the following effects are applied. <Sword Attack Range> Increases attack range. Changes the attack animation. <Sword Defense> With a $s3 chance, received damage $s2 for $s1 when hit. (Cooldown: $s4) <Sword Blessing> For $s1, increases Speed and Skill Evasion after a critical attack or successful evasion (stacks up to 5 times). Consumes HP while active. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -4987,22 +5055,22 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45393" toLevel="1" name="Sword Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Received damage $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45394" toLevel="5" name="Sword Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Skill Evasion $s1 M. Skill Evasion $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45395" toLevel="1" name="Intoxicating Dance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When the skill is active, the following effects are applied. <Toxic Curse> For $s1, inflicts a debuff increasing received damage and decreasing Speed on the target after an attack. (stacks up to 5 times) <Poisonous Energy> For $s1, increases P. Atk. and P. Skill Critical Damage after an attack. When active, constantly consumes HP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45396" toLevel="5" name="Toxic Curse">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- A strong poison weakens defense and decreases Speed. Received damage $s1 Speed $s2 Received P. Skill Critical Damage $s3 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -5012,12 +5080,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45398" toLevel="1" name="Poisonous Slash">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- When attacking, has a chance to deal an additional blow to the target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45399" toLevel="1" name="Poisonous Energy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- P. Atk. $s1 P. Skill Critical Damage $s2 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

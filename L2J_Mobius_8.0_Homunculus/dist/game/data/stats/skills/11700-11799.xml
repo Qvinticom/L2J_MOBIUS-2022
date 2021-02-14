@@ -208,7 +208,7 @@
 		</effects>
 	</skill>
 	<skill id="11752" toLevel="13" name="Sustain">
-		<!-- For $s1, the targeted party member's HP +$s2 per sec. Received Healing +$s3, also increases Healing Power.\n\n<The character is targeted automatically> -->
+		<!-- For $s1, the targeted party member's HP +$s2 per sec. Received Healing +$s3, also increases Healing Power. <The character is targeted automatically> -->
 		<icon>icon.skill11752</icon>
 		<abnormalTime>15</abnormalTime>
 		<abnormalLevel>1</abnormalLevel>
@@ -463,7 +463,7 @@
 		</effects>
 	</skill>
 	<skill id="11755" toLevel="13" name="Radiant Heal">
-		<!-- Recovers target's HP with $s1 power. If HP is full, recovers CP.\n\n<The character is targeted automatically> -->
+		<!-- Recovers target's HP with $s1 power. If HP is full, recovers CP. <The character is targeted automatically> -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
 		<magicLevel>
@@ -561,7 +561,7 @@
 		</effects>
 	</skill>
 	<skill id="11756" toLevel="13" name="Panic Heal">
-		<!-- Recovers target's HP with $s1 power. If HP is full, recovers CP.\n\n<The character is targeted automatically> -->
+		<!-- Recovers target's HP with $s1 power. If HP is full, recovers CP. <The character is targeted automatically> -->
 		<icon>icon.skill11756</icon>
 		<operateType>A1</operateType>
 		<magicLevel>
@@ -741,7 +741,7 @@
 		</effects>
 	</skill>
 	<skill id="11758" toLevel="1" name="Celestial Protection">
-		<!-- For $s1, grants invincibility to a party member. The identical effects do not stack.\n\n<The character is targeted automatically> -->
+		<!-- For $s1, grants invincibility to a party member. The identical effects do not stack. <The character is targeted automatically> -->
 		<icon>icon.skill11758</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2269,7 +2269,7 @@
 		</effects>
 	</skill>
 	<skill id="11778" toLevel="11" name="Fatal Sleep">
-		<!-- Inflicts sleep on the target for $s1 After that, Atk. Spd./ Casting Spd./ Speed -$s2.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Inflicts sleep on the target for $s1 After that, Atk. Spd./ Casting Spd./ Speed -$s2. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill11778</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -2365,7 +2365,7 @@
 		</endEffects>
 	</skill>
 	<skill id="11779" toLevel="8" name="Yoked status">
-		<!-- Speed/ Atk. Spd./ Casting Spd. -$s1.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Speed/ Atk. Spd./ Casting Spd. -$s1. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill1394</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalLevel>1</abnormalLevel>

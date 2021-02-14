@@ -130,7 +130,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15308" toLevel="1" name="Half-Chop">
-		<!-- Inflicts a powerful P. Atk. on the target and causes Stun. -->
+		<!-- Inflicts a powerful P. Atk. on the target and Stuns them. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -154,7 +154,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15309" toLevel="1" name="Model Blood Siphon">
-		<!-- Instantly kills an ally and P. Atk./ Atk. Spd./ Max HP/ HP Recovery Rate +200% for 1 min. -->
+		<!-- Instantly kills an ally and increases your P. Atk./ Atk. Spd./ Max HP/ HP Recovery Rate by 200% for 1 min. -->
 		<icon>icon.skill11544</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -335,7 +335,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15318" toLevel="1" name="Memory Deterioration">
-		<!-- Attacks the target's area with magic and skill Cooldown +100%. -->
+		<!-- Attacks the target's area with magic and increases skill Cooldown by 100%. -->
 		<icon>icon.skill1248</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -552,7 +552,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15330" toLevel="7" name="Reputation Penalty">
-		<!-- You're being penalized for your reputation. Your XP does not refill even after resurrection. -->
+		<!-- You're being penalized for you'reputation. Your XP does not refill even after resurrection. -->
 		<icon>icon.skill5076_c</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -579,7 +579,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="15332" toLevel="1" name="Power Smash">
-		<!-- Inflicts a powerful attack on a target. -->
+		<!-- Powerful attack on one target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -620,7 +620,7 @@
 		</conditions>
 	</skill>
 	<skill id="15335" toLevel="1" name="Electric Stun">
-		<!-- Stunned for 3 sec. -->
+		<!-- Stuns for 3 sec. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<castRange>150</castRange>
@@ -645,7 +645,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15336" toLevel="1" name="Trouble Benefit">
-		<!-- P. Atk. and M. Atk. +10%. -->
+		<!-- P./ M. Atk. +10%. -->
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<hitTime>1000</hitTime>
@@ -668,7 +668,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15339" toLevel="1" name="Half-kill">
-		<!-- Cute target's HP in half. -->
+		<!-- Inflicts a powerful attack that cuts the target's HP in half. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -698,7 +698,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15341" toLevel="1" name="Crane Strike">
-		<!-- Attacks a single enemy. -->
+		<!-- Inflicts a powerful attack on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -759,7 +759,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15345" toLevel="1" name="Spanner Attack">
-		<!-- Attacks a single enemy. -->
+		<!-- Inflicts a powerful attack on the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>300</castRange>
@@ -859,7 +859,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15352" toLevel="1" name="Strife">
-		<!-- Powerful attack on enemies in a fan-shaped radius of you. -->
+		<!-- Inflicts powerful damage on targets within a fan-shaped range. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -878,7 +878,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15353" toLevel="1" name="Bleeding Range">
-		<!-- Inflicts Bleed 10% to nearby targets. -->
+		<!-- Inflicts bleed dealing 10% damage to nearby enemies. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -968,7 +968,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15357" toLevel="1" name="Heavy Attack">
-		<!-- Inflicts a powerful attack on a target. -->
+		<!-- Inflicts a powerful damage on a target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
@@ -1101,7 +1101,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15366" toLevel="1" name="Cannon Fire">
-		<!-- Bleeding -->
+		<!-- Bleeding. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -1341,7 +1341,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15396" toLevel="1" name="Skill Usage Restriction Area">
-		<!-- Cannot use all skills due to clan request progress, but Spd. and Atk. Spd. are increased. -->
+		<!-- A clan request is in progress. Using skills is limited, Speed and Atk. Spd. are increased. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_DEBUFF</abnormalType>

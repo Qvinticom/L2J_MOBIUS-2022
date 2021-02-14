@@ -491,7 +491,7 @@
 		</skills>
 	</item>
 	<item id="29845" name="Vitality Maintaining Rune" additionalName="10-day" type="EtcItem">
-		<!-- Available for 10 days. When in inventory, maintains the Vitality level. -->
+		<!-- Available for 10 d. When in inventory, maintains the Vitality level. -->
 		<set name="icon" val="icon.ev_charge_run" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -513,7 +513,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="29845" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune (10-day) -->
+			<item id="29845" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune - 10-day -->
 		</capsuled_items>
 	</item>
 	<item id="29847" name="Radiant Toy Box" type="EtcItem">
@@ -546,7 +546,7 @@
 			<item id="47880" min="1" max="1" chance="10" /> <!-- Enhanced Shadow Shooter -->
 			<item id="47881" min="1" max="1" chance="10" /> <!-- Enhanced Shadow Buster -->
 			<item id="47882" min="1" max="1" chance="10" /> <!-- Enhanced Shadow Retributer -->
-			<item id="47883" min="1" max="1" chance="10" /> <!-- Enhanced Shadow Dual Sword -->
+			<item id="47883" min="1" max="1" chance="10" /> <!-- Enhanced Shadow Dual Swords -->
 		</capsuled_items>
 	</item>
 	<item id="29849" name="Vitality Maintaining Rune" additionalName="2-hour" type="EtcItem">
@@ -793,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29899" name="Heir's Radiance Lv. 5" additionalName="PvE" type="Armor">
-		<!-- When equipped, Attribute Attack +40, Attribute Resistance +40, Debuff Resistance +7%, Max HP +5000, P./ M. Skill Power +3%, all Critical Damage +3%, all stats +4, PvE damage +7%, received damage from Dragon's weapons -7%.\nEnables the Heir's Radiance - PvE Lv. 2 skill.\n\n<When used with Wizard's/ Knight's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +10%.\nWarrior's Circlet: P. Atk. +10%.\nWizard's Circlet: M. Atk. +10%.\nCannot be enchanted. -->
+		<!-- When equipped, Attribute Attack +40, Attribute Resistance +40, Debuff Resistance +7%, Max HP +5000, P./ M. Skill Power +3%, all Critical Damage +3%, all stats +4, PvE damage +7%, received damage from Dragon's weapons -7%. Enables the Heir's Radiance - PvE Lv. 2 skill. <When used with Wizard's/ Knight's/ Warrior's Circlet>. Knight's Circlet: P./ M. Def. +10%. Warrior's Circlet: P. Atk. +10%. Wizard's Circlet: M. Atk. +10%. Cannot be enchanted. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_ring_of_light" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />

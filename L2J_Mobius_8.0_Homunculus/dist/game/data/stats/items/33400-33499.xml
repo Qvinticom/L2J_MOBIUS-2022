@@ -1848,7 +1848,7 @@
 		</skills>
 	</item>
 	<item id="33478" name="Destruction Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. +6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. P. Atk. +7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. P. Atk. +12 for bow weapons. M. Atk. +5 for all weapons. P./ M. Atk. increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. Enchanting failure does not crystallize the item and the enchant valuef is retained thanks to the Goddess of Destruction's power. Cannot be used on weapons enchanted to 15 or higher. -->
+		<!-- For R-grade weapons. P. Atk. +6 for one-handed swords/ blunts/ staffs, daggers, spears. P. Atk. +7 for two-handed swords/ blunts/ staffs, dual daggers, dual swords, fist weapons, crossbows. P. Atk. +12 for bows. M. Atk. +5 for all weapons. Starting from +4, P./ M. Atk. bonus increases greatly. For blessed weapons, the bonus increases more than for standard weapons. Thanks to the Goddess of Destruction's power, in case of failure, the item is not crystallized, and its enchant value remains the same. Cannot be used for weapons enchanted to +15 or higher. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2154,7 +2154,7 @@
 			<item id="17300" min="1" max="1" chance="100" /> <!-- Requiem Retributer -->
 			<item id="17301" min="1" max="1" chance="100" /> <!-- Requiem Dual Swords -->
 			<item id="17302" min="1" max="1" chance="100" /> <!-- Requiem Dual Daggers -->
-			<item id="17303" min="1" max="1" chance="100" /> <!-- Requiem Dual Blunt Weapon -->
+			<item id="17303" min="1" max="1" chance="100" /> <!-- Requiem Dual Blunt Weapons -->
 		</capsuled_items>
 	</item>
 	<item id="33496" name="Immortal Heavy Armor Pack - Standard" type="EtcItem">

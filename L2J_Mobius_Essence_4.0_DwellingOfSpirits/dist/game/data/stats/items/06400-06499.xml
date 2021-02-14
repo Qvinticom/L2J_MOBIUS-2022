@@ -64,7 +64,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6406" name="Firecracker" type="EtcItem">
-		<!-- Explosive device that brilliantly lights up the sky. -->
+		<!-- An explosive device that is launched in the sky exploding in multicoloured flashes. -->
 		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -92,7 +92,7 @@
 		</skills>
 	</item>
 	<item id="6408" name="Formal Wear" type="Armor">
-		<!-- Tuxedo for male characters, and a wedding dress for female characters. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
+		<!-- A tuxedo for male characters, and a wedding dress for female characters. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

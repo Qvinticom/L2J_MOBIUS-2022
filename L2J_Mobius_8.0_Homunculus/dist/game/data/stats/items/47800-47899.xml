@@ -359,7 +359,7 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="57" min="2147483647" max="2147483647" chance="100" /> <!-- Adena - max integer value is 2147483647 -->
+			<item id="57" min="2147483647" max="2147483647" chance="100" /> <!-- Adena -->
 		</capsuled_items>
 	</item>
 	<item id="47828" name="Test Adena Box" type="EtcItem">
@@ -372,7 +372,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47829" name="Lionel Hunter Mission List - 4" type="EtcItem">
-		<!-- List of missions received from Lionel Hunter to new Exalted Power. "Each of the following people will receive a commission and bring a certificate - search for Commando Captain Sporcha the Hellbound Refugee Camp, Giant Tracker Leader Krenaht in the Giant's Cave, Fishermen's Guild Leader Santiago in Heine, and Hunters Guild President Arcturus in the Hunter's Village." -->
+		<!-- The 4th request from Lionel Hunter that should be fulfilled to obtain a new Exalted Power. Complete missions from Commando Captain Sporcha in the Hellbound Refugee Camp, Giant Tracker Leader Krenaht in the Giant's Cave, the Fishing Guild Leader Santiago in Heine, and the Hunters' Guild President Arcturus in the Hunters' Village. Your another option is to go to Head Priest Sylvain in Dion's Temple of Einhasad. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -405,7 +405,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47832" name="Santiago's Certificate" type="EtcItem">
-		<!-- The certificate received for completing Fishermen's Guild Leader Santiago's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
+		<!-- The certificate received for completing the Fishing Guild Leader Santiago's mission. Take it to Lionel Hunter in Heine along with other certificates to get a new Exalted Power. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -515,7 +515,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47842" name="Special Fish Stew" type="EtcItem">
-		<!-- A special fish stew of a special recipe commissioned by Fishermen's Guild Leader Santiago. The taste is excellent, but it has no other effect. -->
+		<!-- Special fish stew from the Fishing Guild Leader Santiago. The taste is excellent, but it has no other effect. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
@@ -699,7 +699,7 @@
 		</skills>
 	</item>
 	<item id="47866" name="Star Sign" type="EtcItem">
-		<!-- Achievement of the commission of Fishermen's Guild Leader Santiago and compensation received. Used as material to Enhance Seed Bracelets. -->
+		<!-- A reward for completing the Fishing Guild Leader Santiago's mission. Required for upgrading Seed Bracelets. -->
 		<set name="icon" val="icon.star_sign" />
 		<set name="material" val="FISH" />
 		<set name="is_stackable" val="true" />

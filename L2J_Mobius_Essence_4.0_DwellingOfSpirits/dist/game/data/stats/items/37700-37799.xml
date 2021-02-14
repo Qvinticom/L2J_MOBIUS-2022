@@ -51,7 +51,7 @@
 		</stats>
 	</item>
 	<item id="37702" name="Valentine Shield" type="Armor">
-		<!-- Modifies the appearance of a weapon. Valentine Shield form. -->
+		<!-- Can be used for changing a weapon's appearance to that of Valentine Shield. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -116,7 +116,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37725" name="NC Dinos Uniform" type="Armor">
-		<!-- NC Dinos Uniform. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- NC Dinos Uniform. -->
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

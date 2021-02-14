@@ -889,7 +889,7 @@
 		</effects>
 	</skill>
 	<skill id="5841" toLevel="1" name="Multi Defense">
-		<!-- P. Def. and M. Def. are increased. -->
+		<!-- P./ M. Def. are increased. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -942,7 +942,7 @@
 		</effects>
 	</skill>
 	<skill id="5843" toLevel="1" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1292,7 +1292,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5860" toLevel="1" name="Wrath of Valakas">
-		<!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Body is activated, inflicting major damage on the stamina of nearby party members after 10 sec. -->
+		<!-- Temporarily blocks magic skills and decreases Speed. In 10 sec. Destruction of Body is activated, inflicting major physical damage on nearby allies. -->
 		<icon>icon.skill5860</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1315,7 +1315,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5861" toLevel="1" name="Authority of Valakas">
-		<!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Mind is activated, inflicting major damage on the minds of nearby party members after 10 sec. -->
+		<!-- Temporarily blocks magic skills and decreases Speed. In 10 sec. Destruction of Soul is activated, inflicting major mental damage on nearby allies. -->
 		<icon>icon.skill5861</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2305,7 +2305,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5892" toLevel="2" name="Cunning Coercion">
-		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Inflicts mental shock on the enemy momentarily. -->
+		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Momentarily inflicts mental shock on the enemy. -->
 		<icon>icon.skill0358</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>

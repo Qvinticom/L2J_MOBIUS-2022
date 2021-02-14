@@ -1076,7 +1076,7 @@
 		<set name="commissionItemType" val="FEET" />
 	</item>
 	<item id="5591" name="CP Potion" type="EtcItem">
-		<!-- Restores 50 CP. -->
+		<!-- Recovers 50 CP. -->
 		<set name="icon" val="icon.etc_cp_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

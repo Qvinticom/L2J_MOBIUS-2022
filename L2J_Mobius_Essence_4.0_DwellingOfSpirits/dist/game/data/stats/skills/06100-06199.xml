@@ -54,7 +54,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6105" toLevel="1" name="Turkey's Mistake">
-		<!-- The stupid turkey's mistake. For 1 h., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, P. Critical Rate +5, P. Critical Damage +15%, M. Critical Rate +20. -->
+		<!-- The stupid turkey's mistake. For 1 h., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, P. Critical Rate +5, P. Critical Damage +15%, M. Skill Critical Rate +20. -->
 		<icon>icon.turkey_buff_i00</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -269,7 +269,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6117" toLevel="3" name="Choice - Scissors">
-		<!-- You have selected Scissors. You cannot move for $s1. -->
+		<!-- You have selected Scissors. You cannot move for $s1 -->
 		<icon>
 			<value level="1">icon.xmas_gawi_i00</value>
 			<value level="2">icon.xmas_bawi_i00</value>
@@ -313,7 +313,7 @@
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="6120" toLevel="1" name="Santa's Reward">
-		<!-- For 1 h., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, P. Critical Rate +5, P. Critical Damage +15%, M. Critical Rate +2. -->
+		<!-- For 1 h., Max HP +10%, Max MP +10%, Max CP +10%, Speed +15%, P. Atk. +10%, M. Atk. +15%, P. Critical Rate +5, P. Critical Damage +15%, M. Skill Critical Rate +2. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -370,7 +370,7 @@
 		</effects>
 	</skill>
 	<skill id="6124" toLevel="1" name="Agathion Cute Trick - Neolithica">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -547,7 +547,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6133" toLevel="1" name="Mysterious Effect">
-		<!-- The target's head is enlarged. -->
+		<!-- Makes your head larger. -->
 		<icon>icon.skill2513</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1800</abnormalTime>
@@ -616,7 +616,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6136" toLevel="1" name="Agathion Chuchu's Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -632,7 +632,7 @@
 		</conditions>
 	</skill>
 	<skill id="6137" toLevel="1" name="Agathion Chuchu - Mysterious Effect">
-		<!-- The target's head is enlarged. -->
+		<!-- Makes your head larger. -->
 		<icon>icon.skill2513</icon>
 		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -653,7 +653,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6138" toLevel="1" name="Agathion Chuchu - Large Firecracker">
-		<!-- Can set off large firecrackers. -->
+		<!-- Ignites firecrackers. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -666,7 +666,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6139" toLevel="1" name="Fake Tears">
-		<!-- For 10 min., weapon appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But weapons don't change their abilities. -->
+		<!-- For 10 min., weapon appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
 		<icon>icon.etc_water_of_silen_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -721,7 +721,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6142" toLevel="3" name="Tar Trap">
-		<!-- You are covered in hot and sticky tar. Your Speed -$s2 for $s1. P. Def. and P. Evasion -$s3. -->
+		<!-- You are covered in hot and sticky tar. Your Speed -$s2 for $s1 P. Def. and P. Evasion -$s3. -->
 		<icon>icon.skill0770</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1178,7 +1178,7 @@
 		</effects>
 	</skill>
 	<skill id="6166" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
@@ -1699,7 +1699,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6197" toLevel="1" name="Agathion Cute Trick - Oink Oink">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1714,7 +1714,7 @@
 		</conditions>
 	</skill>
 	<skill id="6198" toLevel="1" name="Agathion Cute Trick - Light of the Dawn">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>55</magicLevel>

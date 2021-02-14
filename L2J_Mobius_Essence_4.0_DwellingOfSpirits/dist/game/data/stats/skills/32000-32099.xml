@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="32000" toLevel="1" name="Rice Cake of Fighting Spirit">
-		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Effect remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +20%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -24,7 +24,7 @@
 		</effects>
 	</skill>
 	<skill id="32001" toLevel="1" name="Rice Cake of Fighting Spirit - Event">
-		<!-- Acquired XP/ SP +20% for 20 min. Cooldown - 10 min. Effect remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +20%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -47,7 +47,7 @@
 		</effects>
 	</skill>
 	<skill id="32002" toLevel="1" name="XP Growth Scroll (Exchangeable)">
-		<!-- Acquired XP/ SP +30% for 3 min. Cooldown - 10 min. Effect remains after death. -->
+		<!-- For 20 min., acquired XP/ SP +30%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_rice_cake_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -129,40 +129,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.3">
-						<item id="4592" count="1" /> <!-- Greater Dye of CON <Con +2 DEX -2> - 2nd Class Transfer -->
+						<item id="4592" count="1" /> <!-- Greater CON Dye <CON +2 DEX -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4591" count="1" /> <!-- Greater Dye of CON <Con +2 Str -2> - 2nd Class Transfer -->
+						<item id="4591" count="1" /> <!-- Greater CON Dye <CON +2 STR -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4594" count="1" /> <!-- Greater Dye of DEX <Dex +2 CON -2> - 2nd Class Transfer -->
+						<item id="4594" count="1" /> <!-- Greater DEX Dye <DEX +2 CON -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4593" count="1" /> <!-- Greater Dye of DEX <Dex +2 Str -2> - 2nd Class Transfer -->
+						<item id="4593" count="1" /> <!-- Greater DEX Dye <DEX +2 STR -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4595" count="1" /> <!-- Greater Dye of INT <Int +2 Men -2> - 2nd Class Transfer -->
+						<item id="4595" count="1" /> <!-- Greater INT Dye <INT +2 MEN -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4596" count="1" /> <!-- Greater Dye of INT <Int +2 Wit -2> - 2nd Class Transfer -->
+						<item id="4596" count="1" /> <!-- Greater INT Dye <INT +2 WIT -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4597" count="1" /> <!-- Greater Dye of MEN <Men +2 Int -2> - 2nd Class Transfer -->
+						<item id="4597" count="1" /> <!-- Greater MEN Dye <MEN +2 INT -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4598" count="1" /> <!-- Greater Dye of MEN <Men +2 Wit -2> - 2nd Class Transfer -->
+						<item id="4598" count="1" /> <!-- Greater MEN Dye <MEN +2 WIT -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4589" count="1" /> <!-- Greater Dye of STR <STR +2 CON -2> - 2nd Class Transfer -->
+						<item id="4589" count="1" /> <!-- Greater STR Dye <STR +2 CON -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4590" count="1" /> <!-- Greater Dye of STR <STR +2 DEX -2> - 2nd Class Transfer -->
+						<item id="4590" count="1" /> <!-- Greater STR Dye <STR +2 DEX -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4599" count="1" /> <!-- Greater Dye of WIT <Wit +2 Int -2> - 2nd Class Transfer -->
+						<item id="4599" count="1" /> <!-- Greater WIT Dye <WIT +2 INT -2> - 2nd Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4600" count="1" /> <!-- Greater Dye of WIT <Wit +2 Men -2> - 2nd Class Transfer -->
+						<item id="4600" count="1" /> <!-- Greater WIT Dye <WIT +2 MEN -2> - 2nd Class Transfer -->
 					</item>
 				</items>
 			</effect>
@@ -189,40 +189,40 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.3">
-						<item id="4469" count="1" /> <!-- Dye of STR <STR +1 CON -1> - 1st Class Transfer -->
+						<item id="4469" count="1" /> <!-- STR Dye <STR +1 CON -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4470" count="1" /> <!-- Dye of STR <STR +1 DEX -1> - 1st Class Transfer -->
+						<item id="4470" count="1" /> <!-- STR Dye <STR +1 DEX -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4471" count="1" /> <!-- Dye of CON <Con +1 Str -1> - 1st Class Transfer -->
+						<item id="4471" count="1" /> <!-- CON Dye <CON +1 STR -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4472" count="1" /> <!-- Dye of CON <Con +1 DEX -1> - 1st Class Transfer -->
+						<item id="4472" count="1" /> <!-- CON Dye <CON +1 DEX -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4473" count="1" /> <!-- Dye of DEX <Dex +1 Str -1> - 1st Class Transfer -->
+						<item id="4473" count="1" /> <!-- DEX Dye <DEX +1 STR -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4474" count="1" /> <!-- Dye of DEX <Dex +1 CON -1> - 1st Class Transfer -->
+						<item id="4474" count="1" /> <!-- DEX Dye <DEX +1 CON -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4475" count="1" /> <!-- Dye of INT <Int +1 Men -1> - 1st Class Transfer -->
+						<item id="4475" count="1" /> <!-- INT Dye <INT +1 MEN -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4476" count="1" /> <!-- Dye of INT <Int +1 Wit -1> - 1st Class Transfer -->
+						<item id="4476" count="1" /> <!-- INT Dye <INT +1 WIT -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4477" count="1" /> <!-- Dye of MEN <Men +1 Int -1> - 1st Class Transfer -->
+						<item id="4477" count="1" /> <!-- MEN Dye <MEN +1 INT -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4478" count="1" /> <!-- Dye of MEN <Men +1 Wit -1> - 1st Class Transfer -->
+						<item id="4478" count="1" /> <!-- MEN Dye <MEN +1 WIT -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4479" count="1" /> <!-- Dye of WIT <Wit +1 Int -1> - 1st Class Transfer -->
+						<item id="4479" count="1" /> <!-- WIT Dye <WIT +1 INT -1> - 1st Class Transfer -->
 					</item>
 					<item chance="8.3">
-						<item id="4480" count="1" /> <!-- Dye of WIT <Wit +1 Men -1> - 1st Class Transfer -->
+						<item id="4480" count="1" /> <!-- WIT Dye <WIT +1 MEN -1> - 1st Class Transfer -->
 					</item>
 				</items>
 			</effect>
@@ -271,12 +271,12 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="32024" toLevel="1" name="Earring of Macken">
-		<!-- Increases MP recovery rate and healing power. -->
+		<!-- Increases MP Recovery Rate and Received Healing. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="32025" toLevel="1" name="Necklace of Macken">
-		<!-- P. Def. and M. Def. are increased. -->
+		<!-- Increases P./ M. Def. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -291,7 +291,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="32028" toLevel="1" name="Necklace of Macken">
-		<!-- P. Def. and M. Def. are increased. -->
+		<!-- P./ M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -443,7 +443,7 @@
 		</effects>
 	</skill>
 	<skill id="32036" toLevel="1" name="Teleport Stone: Gludin Village">
-		<!-- Teleports to Gludin. Cooldown - 60 min. -->
+		<!-- Teleports to Gludin. Cooldown: 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -470,7 +470,7 @@
 		</effects>
 	</skill>
 	<skill id="32037" toLevel="1" name="Teleport Stone: Town of Gludio">
-		<!-- Teleports to Gludio. Cooldown - 60 min. -->
+		<!-- Teleports to Gludio. Cooldown: 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -622,7 +622,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32049" toLevel="1" name="Storm Power">
-		<!-- Acquired XP/ SP +50% for 2 h. Cooldown: 2 h. Effect remains after death. -->
+		<!-- Acquired XP/ SP +50% for 2 h. Cooldown: 2 h. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.power_of_storm</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -633,7 +633,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32051" toLevel="1" name="Berserker Spirit">
-		<!-- For 20 min., P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+		<!-- For 20 min., Max HP/ MP -$s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5, Speed +$s6. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>4000</hitTime>

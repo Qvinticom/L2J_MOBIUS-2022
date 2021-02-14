@@ -228,7 +228,7 @@
 		</effects>
 	</skill>
 	<skill id="1506" toLevel="1" name="Blessing of Eva">
-		<!-- By casting Blessing of Eva, it recovers HP/ MP/ CP, and cancels all debuffs at a certain rate. -->
+		<!-- Casts Eva's blessing, recovering HP/ MP/ CP and removing debuffs with a certain chance. -->
 		<icon>icon.skill1506</icon>
 		<castRange>400</castRange>
 		<effectPoint>668</effectPoint>
@@ -261,7 +261,7 @@
 		</effects>
 	</skill>
 	<skill id="1507" toLevel="1" name="Spirit of Shillien">
-		<!-- For 30 sec., recovers as HP 80% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- By the Shillien's power, M. Atk. +15% for 20 min. -->
 		<icon>icon.skill1507</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -595,7 +595,7 @@
 		</effects>
 	</skill>
 	<skill id="1514" toLevel="2" name="Soul Barrier">
-		<!-- Spreads the soul's defensive barrier to get your Bow Resistance +$s2, Crossbow Resistance +$s3, and M. Def. +$s4 for $s1. -->
+		<!-- Creates a defensive barrier. For $s1, Bow Resistance +$s2, M. Def. +$s3. -->
 		<icon>icon.skill1514</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -640,7 +640,7 @@
 		</effects>
 	</skill>
 	<skill id="1515" toLevel="5" name="Lightning Barrier">
-		<!-- Spreads lightning's defensive barrier for 30 seconds. Has a chance to Paralyze the target that attacked you for 3 seconds.\n\n<Auto Use Skill> -->
+		<!-- Summons a lightning defensive barrier for 30 sec. Paralyzes the attacking opponent for 3 sec. -->
 		<icon>icon.skill1515</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -676,8 +676,7 @@
 		</effects>
 	</skill>
 	<skill id="1516" toLevel="10" name="Soul Strike">
-		<!-- When equipping a Rapier, has a chance to inflict additional M. Atk. when attacking the enemy. The type of M. Atk. that occurs for Soul Strike depends on the attack style.
-			<Physical Attack>Sword Energy\n<Magci Attack>Lightning -->
+		<!-- With a certain chance deals additional magic damage when attacking the target. Magic type depends on the attack style. <P. Atk.> Sword <M. Atk.> Lightning -->
 		<icon>icon.skill1516</icon>
 		<castRange>750</castRange>
 		<effectPoint>-662</effectPoint>
@@ -1627,7 +1626,7 @@
 		</effects>
 	</skill>
 	<skill id="1527" toLevel="3" name="Expert Casting">
-		<!-- Casting Cooldown -$s1, and Casting Spd. +$s2. -->
+		<!-- Casting Spd. +$s1, M. Skill Cooldown -$s2. -->
 		<icon>icon.skill1527</icon>
 		<magicLevel>
 			<value level="1">58</value>
@@ -2245,7 +2244,7 @@
 		</effects>
 	</skill>
 	<skill id="1533" toLevel="2" name="Enlightenment">
-		<!-- User receives mystical enlightenment for 20 sec., M. Atk. +10%, Heal +20%, Casting Spd. + 30% and M. Critical Rate +50%, and MP Consumption -70%. -->
+		<!-- <Skill with fixed cooldown> For $s1, M. Atk. +$s2, Received Healing +$s3, Casting Spd. +$s4, M. Skill Critical Rate +$s5, M. Skill MP Consumption -$s6. -->
 		<icon>icon.skill1532</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -2317,7 +2316,7 @@
 		</effects>
 	</skill>
 	<skill id="1535" toLevel="2" name="Chant of Wind Walk">
-		<!-- Party member's Speed +$s2 for $s1. -->
+		<!-- Speed $s1 -->
 		<icon>icon.skill1535</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2473,7 +2472,7 @@
 		</effects>
 	</skill>
 	<skill id="1539" toLevel="15" name="Stigma of Shillien">
-		<!-- For $s1, Melee Weapon Resistance -$s2. -->
+		<!-- By the Shillien's curse, the enemy's Weapon Atk. Resistance -$s2, M. Def. -$s3 for $s1 -->
 		<icon>icon.skill1539</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2749,7 +2748,7 @@
 		</effects>
 	</skill>
 	<skill id="1540" toLevel="1" name="Turn to Stone">
-		<!-- Petrifies oneself for 8 sec. to avoid incurring damage. -->
+		<!-- Petrifies oneself for 5 sec. protecting from damage. -->
 		<icon>icon.skill1540</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2828,7 +2827,7 @@
 		</effects>
 	</skill>
 	<skill id="1542" toLevel="2" name="Counter Critical">
-		<!-- For 20 min., Received P. Critical Damage -30%. When the target receives an attack above a certain amount of damage, increases P. Critical Damage of standard melee attack for 8 sec. -->
+		<!-- Received P. Critical Damage -$s2 for $s1. When the target receives an attack above a certain amount of damage, P. Critical Damage +$s4 for $s3. P. Def. Penalty -$s5. Consumes 20 Spirit Ore. -->
 		<icon>icon.skill1542</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2881,7 +2880,7 @@
 		</effects>
 	</skill>
 	<skill id="1543" toLevel="1" name="Great Fury">
-		<!-- With a certain probability, party members are seized with Great Fury after the character's attack. -->
+		<!-- With a certain chance grants the Great Fury effect when attacking that increases Atk. Spd. and P. Critical Damage. -->
 		<icon>icon.skill1543</icon>
 		<magicLevel>80</magicLevel>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2894,7 +2893,7 @@
 				<targetType>MY_PARTY</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>6060</skillId>
+				<skillId>6060</skillId> <!-- Great Fury -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -2904,7 +2903,7 @@
 				<targetType>MY_PARTY</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>6060</skillId>
+				<skillId>6060</skillId> <!-- Great Fury -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -2916,7 +2915,7 @@
 				<allowNormalAttack>false</allowNormalAttack>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>6060</skillId>
+				<skillId>6060</skillId> <!-- Great Fury -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
@@ -3026,7 +3025,7 @@
 		</effects>
 	</skill>
 	<skill id="1547" toLevel="5" name="Spirit Sharing">
-		<!-- For $s1, character's P. Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5, P./ M. Critical Rate +$s6. Transfers master's enchanced skills to the servitor. Consumes $s7 Spirit Ore. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd./ Casting Spd. +$s4, P. Critical Rate/ M. Skill Critical Rate +$s5. Transfers the caster's abilities to the summoned servitor. Consumes $s6 Spirit Ore. -->
 		<icon>icon.skill1497</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3185,7 +3184,7 @@
 		</effects>
 	</skill>
 	<skill id="1549" toLevel="2" name="Chant of Magic Barrier">
-		<!-- For 20 min., party members' elemental resistance +20. -->
+		<!-- M. Def. $s1 -->
 		<icon>icon.skill1549</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3224,7 +3223,7 @@
 		</effects>
 	</skill>
 	<skill id="1550" toLevel="2" name="Mass Cure">
-		<!-- Cures all poisoned party members. -->
+		<!-- Cures severe poisoning and bleeding of all party members. -->
 		<icon>icon.skill1550</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>662</effectPoint>
@@ -3246,7 +3245,7 @@
 		</effects>
 	</skill>
 	<skill id="1551" toLevel="1" name="Mass Purify">
-		<!-- Cancels paralysis and petrification effects, and also cures poison and bleed condition of all party members. -->
+		<!-- Removes immobilizing debuffs from party members. -->
 		<icon>icon.skill1551</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>662</effectPoint>
@@ -3268,7 +3267,7 @@
 		</effects>
 	</skill>
 	<skill id="1552" toLevel="2" name="Mass Vitalize">
-		<!-- Restores HP of party members with 796 Power, and also cures poison and bleed condition of all party members. -->
+		<!-- Restores HP of all party members and removes debuffs that decrease P./ M. Atk., P./ M. Def., Atk. Spd., Casting Spd and Speed. Power $s1. -->
 		<icon>icon.skill1552</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>1261</effectPoint>
@@ -3302,7 +3301,7 @@
 		</effects>
 	</skill>
 	<skill id="1553" toLevel="2" name="Chain Heal">
-		<!-- Recovers the target and the 10 most injured allies around the target +30% of their Max HP. The recovery amount decreases starting from the most injured person. Requires 4 Spirit Ore. -->
+		<!-- Recovers the target and the 10 most injured allies around the target by 30% of their Max HP. The recovery amount decreases starting from the most injured person. Requires 4 Spirit Ore. -->
 		<icon>icon.skill1553</icon>
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
@@ -3413,7 +3412,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="1556" toLevel="5" name="Arcane Shield">
-		<!-- For $s1, damage received -$s2 and turns the remaining damage into MP Consumption. When MP becomes 0, the skill's effect disappears. -->
+		<!-- <Skill with fixed cooldown> For $s1, received damage -$s2, blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. -->
 		<icon>icon.skill1556</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3462,7 +3461,7 @@
 		</effects>
 	</skill>
 	<skill id="1557" toLevel="5" name="Servitor Share">
-		<!-- Extends the summoner's abilities to the Servitor. Using the summoner's abilities as the basis, $s1 of P. Atk./P. Def./M. Atk./M. Def., $s2 Atk. Spd./Casting Spd., $s3 of Max HP/Max MP is transferred to the Servitor.\n\n<Auto Use Skill> -->
+		<!-- Transfers the summoner's abilities to the servitor. It gets $s1 of the owner's P./ M. Atk., and P./ M. Def., $s2 of Atk. Spd./ Casting Spd., and $s3 of Max HP/ MP. -->
 		<icon>icon.skill1557</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3833,7 +3832,7 @@
 		</effects>
 	</skill>
 	<skill id="1562" toLevel="2" name="Chant of Battle">
-		<!-- For $s1, all party members' P. Def. -$s2, M. Def. -$s3, and P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, Speed +$s9. -->
+		<!-- For $s1, Received P. Critical Rate -$s2, P. Atk. +$s3. Consumes 6 Spirit Ore. -->
 		<icon>icon.skill1562</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3991,7 +3990,7 @@
 		</effects>
 	</skill>
 	<skill id="1565" toLevel="5" name="Mana Pump">
-		<!-- Max MP +$s1 -->
+		<!-- Max MP +$s1. -->
 		<icon>icon.skill0213</icon>
 		<magicLevel>
 			<value level="1">40</value>

@@ -21,7 +21,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81702" name="Red Libra Blessing Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain Red Libra Blessing Rune (7-day). -->
+		<!-- Double-click to obtain Red Libra's Blessing Rune (7-day). -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -41,7 +41,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81704" name="Elysian Gift Box" additionalName="Event" type="EtcItem">
-		<!-- A present given by Red Libra Guild. Double-click to obtain Emperor's Special Cocktail (100 pcs.), Freya's Rose (100 pcs.), Honey Dark Beer (100 pcs.), Glowing Dragon's Attribute Potion (100 pcs.), Energy (200 pcs.). -->
+		<!-- A gift from the Red Libra Guild. Double-click to obtain Emperor's Special Cocktail (100 pcs.), Freya's Ice Rose (100 pcs.), Honey Dark Beer (100 pcs.), Glowing Dragon's Attribute Potion (XP) (100 pcs.), Vitality (200 pcs.). -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -77,7 +77,7 @@
 		</skills>
 	</item>
 	<item id="81707" name="Festival Fairy's Gift" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain one of the following items: Sayha's Talisman Lv. 9, +9 Fallen Angel's Ring Pack, Bloody Weapon Enhancement Stone, Sealed Talisman of Longing, Energy of Longing, Forgotten Spellbook, Superior Giant's Codex - Mastery, Superior Giant's Codex, Sayha's Talisman Pack, Angel Necklace/ Earring/ Ring Pack, various supplies. -->
+		<!-- Double-click to obtain a useful item. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -86,7 +86,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="81708" name="Scroll: Festival Fairy's Spring Energy" additionalName="Event" type="EtcItem">
-		<!-- A scroll prepared by Festival Fairy, it's imbued with spring energy. For 10 min., Acquired XP/ SP +200%. The effect disappears after main/dual class change, but remains after death. Cooldown: 9 min. Required level: 1-110. The effect does not stack with those of Freya's Frozen Scroll and Freya's Scroll of Storm. -->
+		<!-- A scroll prepared by Festival Fairy. It is imbued with Aden's energy. For 10 min., acquired XP/ SP +200%. The effect disappears after the main/ dual class change, but remains after death. Cooldown: 9 min. Required level: 1-110. The effect does not stack with those of Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -351,7 +351,7 @@
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<capsuled_items>
-			<item id="81733" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune (Event) -->
+			<item id="81733" min="1" max="1" chance="100" /> <!-- Vitality Maintaining Rune - Event -->
 		</capsuled_items>
 	</item>
 	<item id="81733" name="Vitality Maintaining Rune" additionalName="Event" type="EtcItem">

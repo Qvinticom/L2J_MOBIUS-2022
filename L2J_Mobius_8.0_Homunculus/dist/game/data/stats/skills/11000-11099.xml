@@ -2533,7 +2533,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11032" toLevel="9" name="Death Howl">
-		<!-- Attacks nearby enemies with $s1 power knocking them back. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks nearby enemies with $s1 power knocking them back. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11032</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -4074,7 +4074,7 @@
 		</effects>
 	</skill>
 	<skill id="11050" toLevel="9" name="Hell Binding">
-		<!-- Lifts the target in the air immobilizing them.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Lifts the target in the air immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11050</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -4161,7 +4161,7 @@
 		</effects>
 	</skill>
 	<skill id="11051" toLevel="7" name="Hell Binding">
-		<!-- Lifts the target in the air immobilizing them.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Lifts the target in the air immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11050</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -4242,7 +4242,7 @@
 		</effects>
 	</skill>
 	<skill id="11052" toLevel="9" name="Mass Hell Binding">
-		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11052</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">50</value>
@@ -4325,7 +4325,7 @@
 		</effects>
 	</skill>
 	<skill id="11053" toLevel="7" name="Mass Hell Binding">
-		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Lifts the target and nearby enemies in the air immobilizing them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="7">70</value>
@@ -4391,7 +4391,7 @@
 		</effects>
 	</skill>
 	<skill id="11054" toLevel="1" name="Yoke Status">
-		<!-- Immobilized midair.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Immobilized midair. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1042</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -4446,7 +4446,7 @@
 		</effects>
 	</skill>
 	<skill id="11055" toLevel="12" name="Death Fear">
-		<!-- Inflicts Fear on the target for $s1 Speed -$s2.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the target for $s1 Speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11055</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4555,7 +4555,7 @@
 		</effects>
 	</skill>
 	<skill id="11056" toLevel="13" name="Mass Death Fear">
-		<!-- Inflicts Fear on the target and nearby enemies for $s1 Speed -$s2.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the target and nearby enemies for $s1 Speed -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11056</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -4671,7 +4671,7 @@
 		</effects>
 	</skill>
 	<skill id="11057" toLevel="11" name="Magical Evasion">
-		<!-- Attacks nearby enemies with $s1 magical power, stunning them and cancelling their targets. Teleports you to the back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks nearby enemies with $s1 magical power, stunning them and cancelling their targets. Teleports you to the back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11057</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -4784,7 +4784,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11058" toLevel="8" name="Shadow Snare">
-		<!-- Creates a danger zone for $s1 that pulls nearby enemies to its center.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
+		<!-- Creates a danger zone for $s1 that pulls nearby enemies to its center. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11058</icon>
 		<operateType>A1</operateType>
 		<magicLevel>
@@ -4826,7 +4826,7 @@
 		</effects>
 	</skill>
 	<skill id="11059" toLevel="8" name="Shadow Snare Zone">
-		<!-- Pulls nearby enemies to the center.\n\nInflicted status: Danger Zone. -->
+		<!-- Pulls nearby enemies to the center. Inflicted status: Danger Zone. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
 		<abnormalLevel>1</abnormalLevel>
@@ -5747,7 +5747,7 @@
 		</effects>
 	</skill>
 	<skill id="11087" toLevel="3" name="Elemental Crash (Fire)">
-		<!-- Inflicts Fear on the target immobilizing them.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Inflicts Fear on the target immobilizing them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
@@ -5821,7 +5821,7 @@
 		</effects>
 	</skill>
 	<skill id="11089" toLevel="3" name="Elemental Crash (Wind)">
-		<!-- Knocks the target back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Knocks the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -5846,7 +5846,7 @@
 		</effects>
 	</skill>
 	<skill id="11090" toLevel="3" name="Elemental Crash (Earth)">
-		<!-- Holds the target with a certain chance.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Holds the target with a certain chance. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
@@ -5872,7 +5872,7 @@
 		</effects>
 	</skill>
 	<skill id="11091" toLevel="3" name="Elemental Crash (4 Elements)">
-		<!-- Stuns the target with a certain chance.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stuns the target with a certain chance. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11017</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>
@@ -6063,7 +6063,7 @@
 		</effects>
 	</skill>
 	<skill id="11094" toLevel="11" name="Magical Charge">
-		<!-- Attacks nearby enemies with $s1 magical power, stunning them and cancelling their targets. Teleports you to the front.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks nearby enemies with $s1 magical power, stunning them and cancelling their targets. Teleports you to the front. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill11094</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="92300" name="Majestic Boots" additionalName="Robe" type="Armor">
-		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. Casting Spd. +50. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -18,11 +18,11 @@
 		</stats>
 		<skills>
 			<skill id="50252" level="1" /> <!-- A-grade: Majestic Boots -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
+			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
 	<item id="92301" name="Tallum Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. INT +1. Max HP +100. Magic Attack Resistance +5%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +10. Max HP +50. P. Atk. +4%. HP Recovery Rate +5.5%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -39,11 +39,11 @@
 		</stats>
 		<skills>
 			<skill id="50218" level="1" /> <!-- A-grade: Tallum Helmet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92302" name="Tallum Helmet" additionalName="Light Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. MEN +1. Max MP +100. M. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. MEN +1. Overweight limit +1500. M. Def. +10. M. Atk. +8%. MP Recovery Rate +8%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -60,11 +60,11 @@
 		</stats>
 		<skills>
 			<skill id="50220" level="1" /> <!-- A-grade: Tallum Helmet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92303" name="Tallum Helmet" additionalName="Robe" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. MEN +1. Max MP +100. Received P. Critical Rate -20%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. MEN +1. Overweight limit +1500. M. Def. +10. M. Atk. +8%. MP Recovery Rate +5.5%. M. Def. +8%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -81,11 +81,11 @@
 		</stats>
 		<skills>
 			<skill id="50219" level="1" /> <!-- A-grade: Tallum Helmet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92304" name="Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +250. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +10. Max HP +100. P. Atk. +4%. HP Recovery Rate +5.5%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -102,11 +102,11 @@
 		</stats>
 		<skills>
 			<skill id="50209" level="1" /> <!-- A-grade: Dark Crystal Helmet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92305" name="Dark Crystal Helmet" additionalName="Light Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +100. M. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +10. P. Atk. +4%. MP Recovery Rate +5.5%. P. Critical Damage +30. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -123,11 +123,11 @@
 		</stats>
 		<skills>
 			<skill id="50211" level="1" /> <!-- A-grade: Dark Crystal Helmet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92306" name="Dark Crystal Helmet" additionalName="Robe" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max HP +100. Speed +7. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. MEN +1. Overweight limit +1500. M. Def. +10. M. Atk. +8%. MP Recovery Rate +5.5%. P. Def. +8%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -144,11 +144,11 @@
 		</stats>
 		<skills>
 			<skill id="50210" level="1" /> <!-- A-grade: Dark Crystal Helmet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92307" name="Helm of Nightmare" additionalName="Heavy Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +100. Received Damage -5%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +10. P. Atk. +4%. HP Recovery Rate +8%. Reflects 5% of the received damage. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -165,11 +165,11 @@
 		</stats>
 		<skills>
 			<skill id="50215" level="1" /> <!-- A-grade: Helm of Nightmare -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92308" name="Helm of Nightmare" additionalName="Light Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max MP +100. Melee Weapon Resistance +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +10. P. Atk. +4%. MP Recovery Rate +8%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -186,11 +186,11 @@
 		</stats>
 		<skills>
 			<skill id="50217" level="1" /> <!-- A-grade: Helm of Nightmare -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92309" name="Helm of Nightmare" additionalName="Robe" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max MP +100. P. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. MEN +1. Overweight limit +1500. M. Def. +10. M. Atk. +8%. MP Recovery Rate +8%. M. Skill Critical Damage +30. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -207,11 +207,11 @@
 		</stats>
 		<skills>
 			<skill id="50216" level="1" /> <!-- A-grade: Helm of Nightmare -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92310" name="Majestic Circlet" additionalName="Heavy Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. CON +1. Max HP +100. Speed +7. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +10. P. Atk. +4%. HP Recovery Rate +8%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -228,11 +228,11 @@
 		</stats>
 		<skills>
 			<skill id="50212" level="1" /> <!-- A-grade: Majestic Circlet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92311" name="Majestic Circlet" additionalName="Light Armor" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. CON +1. Max HP +100. P. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. CON +1. Overweight limit +1500. M. Def. +10. P. Atk. +4%. MP Recovery Rate +5.5%. P. Atk. +8% when using a bow. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -249,11 +249,11 @@
 		</stats>
 		<skills>
 			<skill id="50214" level="1" /> <!-- A-grade: Majestic Circlet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92312" name="Majestic Circlet" additionalName="Robe" type="Armor">
-		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max HP +250. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<!-- <Properties>. MEN +1. Overweight limit +1500. M. Def. +10. Max MP +300. M. Atk. +8%. MP Recovery Rate +8%. Can't be sealed by a town blacksmith. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -270,11 +270,11 @@
 		</stats>
 		<skills>
 			<skill id="50213" level="1" /> <!-- A-grade: Majestic Circlet -->
-			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet-->
+			<skill id="50267" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Helmet -->
 		</skills>
 	</item>
 	<item id="92313" name="Giran Trophy Chest" type="EtcItem">
-		<!-- Double-click to obtain one of the following rare items: Ignis' Necklace, Procella's Necklace, Petram's Necklace, Brooch Lv. 3. -->
+		<!-- Double-click to obtain Giran Seal. There is also a certain chance to obtain a rare item. -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -286,7 +286,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="92314" name="Giran Seal" type="EtcItem">
-		<!-- Acquired XP/ SP +20% for 20 min. Can be traded for various items by the Dimensional Merchant. -->
+		<!-- For 20 min., acquired XP/ SP +20%. Can be exchanged for various items in the L-Coin Store. Note!. When used with Einhasad's Blessing Scroll, Einhasad's Protection, Dandy's Home Run Ball, or Dandy's Golden Ball, the most powerful effect is active. -->
 		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -305,7 +305,7 @@
 		</skills>
 	</item>
 	<item id="92315" name="Luxury Magic Box" type="EtcItem">
-		<!-- Double-click to obtain one of the items: Lilith's Rune Lv. 10, Anakim's Rune Lv. 10, +10 Dragon Belt Chest. -->
+		<!-- Double-click to obtain one of the following items: Lilith' Rune Lv. 10, Anakim's Rune Lv. 10, +10 Dragon Belt Pack. -->
 		<set name="icon" val="icon.bm_circlet_upgrade_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -315,7 +315,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92316" name="+10 Dragon Belt Chest" type="EtcItem">
-		<!-- Double-click to obtain Dragon Belt +10. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -395,7 +395,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="92327" name="Queen Ant's Ring Lv. 1" type="Armor">
-		<!-- <Properties>\nP. Atk. +4%\nM. Atk. +4%\nP. Accuracy +1\nM. Accuracy +1\nMax MP +9\nPoison Resistance/ Atk. Rate +10%\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
+		<!-- <Properties>. P. Atk. +4%. M. Atk. +4%. P. Accuracy +1. M. Accuracy +1. Max MP +9. Poison Resistance/ Atk. Rate +10%. Effects of two identical rings do not stack. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -411,7 +411,7 @@
 		</stats>
 	</item>
 	<item id="92328" name="Orfen's Earring Lv. 1" type="Armor">
-		<!-- <Properties>\nMP Consumption -2%\nReceived Healing +2%\nMax MP +19\nSilence Resistance/ Atk. Rate +5%\nFear Resistance/ Atk. Rate +5%\nHold Resistance/ Atk. Rate +10%\n\nEffects of two identical earrings do not stack. Cannot be enchanted. -->
+		<!-- <Properties>. MP Consumption -2%. Received Healing +2%. Max MP +19. Silence Resistance and Atk. Rate +5%. Fear Resistance and Atk. Rate +5%. Hold Resistance and Atk. Rate +10%. Effects of two identical earrings do not stack. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -427,7 +427,7 @@
 		</stats>
 	</item>
 	<item id="92329" name="Ring of Core Lv. 1" type="Armor">
-		<!-- <Properties>\nReceived P. Damage -2%\nReceived M. Damage -2%\nP. Evasion +1\nM. Evasion +1\nMax MP +9\nSilence Resistance/ Atk. Rate +10%\nFear Resistance/ Atk. Rate +10%\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
+		<!-- <Properties>. Received P. Damage -2%. Received M. Damage -2%. P. Evasion +1. M. Evasion +1. Max MP +9. Silence Resistance and Atk. Rate +10%. Fear Resistance and Atk. Rate +10%. Effects of two identical rings do not stack. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -749,7 +749,7 @@
 		</stats>
 	</item>
 	<item id="92343" name="Package: +16 Samurai Long Sword" type="EtcItem">
-		<!-- Double-click to obtain Samurai Long Sword enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -760,7 +760,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92344" name="Package: +16 Ecliptic Axe" type="EtcItem">
-		<!-- Double-click to obtain Ecliptic Axe enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -771,7 +771,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92345" name="Package: +16 Eminence Bow" type="EtcItem">
-		<!-- Double-click to obtain Eminence Bow enchanted to +16 and Infinite Steel Quiver. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -782,7 +782,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92346" name="Package: +16 Katana*Katana" type="EtcItem">
-		<!-- Double-click to obtain Katana*Katana enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -793,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92347" name="Package: +16 Berserker Blade" type="EtcItem">
-		<!-- Double-click to obtain Berserker Blade enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -804,7 +804,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92348" name="Package: +16 Admiral's Estoc" type="EtcItem">
-		<!-- Double-click to obtain Admiral's Estoc enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -815,7 +815,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92349" name="Package: +16 Demon's Staff" type="EtcItem">
-		<!-- Double-click to obtain Demon's Staff enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -826,7 +826,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92350" name="Package: +16 Crystal Dagger" type="EtcItem">
-		<!-- Double-click to obtain Crystal Dagger enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -837,7 +837,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92351" name="Package: +16 Orcish Poleaxe" type="EtcItem">
-		<!-- Double-click to obtain Orcish Poleaxe enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -848,7 +848,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92352" name="Package: +16 Yaksa Mace" type="EtcItem">
-		<!-- Double-click to obtain Yaksa Mace enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -859,7 +859,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92353" name="Package: +16 Great Pata" type="EtcItem">
-		<!-- Double-click to obtain Great Pata enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -870,7 +870,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92354" name="Package: +16 Saber Tooth" type="EtcItem">
-		<!-- Double-click to obtain Saber Tooth enchanted to +16. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92355" name="Package: +7 Samurai Long Sword" type="EtcItem">
-		<!-- Double-click to obtain Samurai Long Sword enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -892,7 +892,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92356" name="Package: +7 Ecliptic Axe" type="EtcItem">
-		<!-- Double-click to obtain Ecliptic Axe enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -903,7 +903,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92357" name="Package: +7 Eminence Bow" type="EtcItem">
-		<!-- Double-click to obtain Eminence Bow +7 and Infinite Steel Quiver. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -914,7 +914,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92358" name="Package: +7 Katana*Katana" type="EtcItem">
-		<!-- Double-click to obtain Katana*Katana enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -925,7 +925,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92359" name="Package: +7 Berserker Blade" type="EtcItem">
-		<!-- Double-click to obtain Berserker Blade enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92360" name="Package: +7 Admiral's Estoc" type="EtcItem">
-		<!-- Double-click to obtain Admiral's Estoc enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -947,7 +947,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92361" name="Package: +7 Demon's Staff" type="EtcItem">
-		<!-- Double-click to obtain Demon's Staff enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -958,7 +958,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92362" name="Package: +7 Crystal Dagger" type="EtcItem">
-		<!-- Double-click to obtain Crystal Dagger enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -969,7 +969,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92363" name="Package: +7 Orcish Poleaxe" type="EtcItem">
-		<!-- Double-click to obtain Orcish Poleaxe enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -980,7 +980,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92364" name="Package: +7 Yaksa Mace" type="EtcItem">
-		<!-- Double-click to obtain Yaksa Mace enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -991,7 +991,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92365" name="Package: +7 Great Pata" type="EtcItem">
-		<!-- Double-click to obtain Great Pata enchanted to +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1002,7 +1002,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92366" name="Package: +7 Saber Tooth" type="EtcItem">
-		<!-- Double-click to obtain Saber Tooth +7. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1095,7 +1095,7 @@
 		</stats>
 	</item>
 	<item id="92372" name="+4 Blue Wolf Heavy Armor Set" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain +4 Blue Wolf heavy armor set (breastplate, gaiters, helmet, gloves boots). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1171,7 +1171,7 @@
 		</stats>
 	</item>
 	<item id="92377" name="+4 Blue Wolf Light Armor Set" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain +4 Blue Wolf light armor set (leather armor, helmet, gloves, boots). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1266,7 +1266,7 @@
 		</stats>
 	</item>
 	<item id="92383" name="+4 Blue Wolf Robe Set" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain +4 Blue Wolf robe set (tunic, stockings, helmet, gloves, boots). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1325,7 +1325,7 @@
 		</stats>
 	</item>
 	<item id="92387" name="+4 Black Ore Set" type="EtcItem">
-		<!-- Double-click to obtain two +4 Black Ore Rings, two +4 Black Ore Earrings and +4 Black Ore Necklace. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1396,7 +1396,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="92393" name="Sincerely Presented Jewel Box" type="EtcItem">
-		<!-- Double-click to obtain Sapphire, Diamond, Pearl, Vital Stone Lv. 4. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_special_jewelbox_lv5" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1429,7 +1429,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92396" name="Package: Sayha's Blessing (1000 pcs.)" type="EtcItem">
-		<!-- Double-click to obtain Sayha's Blessing (1000 pcs.). -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1440,7 +1440,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92397" name="Sayha's Blessing - Lv. 1-75" additionalName="Event" type="EtcItem">
-		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. Required level: 1-75. -->
+		<!-- Sayha's Grace points +35,000. Reqiured level: 1-75. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -1453,7 +1453,7 @@
 		</cond>
 	</item>
 	<item id="92398" name="Sayha's Blessing (Event)" type="EtcItem">
-		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
+		<!-- Sayha's Grace points +35,000. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -1463,7 +1463,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="92399" name="Primeval Garden's Time Stone (Exchangeable)" type="EtcItem">
-		<!-- Prolongs your Primeval Garden's raid for 60 min. -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Forgotten Primeval Garden -->
 		<set name="icon" val="icon.timezone_refill_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />

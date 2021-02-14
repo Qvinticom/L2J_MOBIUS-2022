@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="40000" toLevel="1" name="Tune of Might">
-		<!-- For 20 min., P. Atk. +15%. -->
+		<!-- For $s1, P. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -9,7 +9,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40001" toLevel="1" name="Tune of Shield">
-		<!-- For 20 min. P. Def. +15%. -->
+		<!-- For $s1, P. Def. +$s2. The effect remains after death. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -17,7 +17,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40002" toLevel="1" name="Tune of Focus">
-		<!-- For 20 min., P. Critical Rate +30%. -->
+		<!-- For $s1, P. Critical Rate +$s2. The effect remains after death. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -25,7 +25,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40003" toLevel="1" name="Tune of Haste">
-		<!-- For 20 min., Atk. Spd. +33%. -->
+		<!-- For $s1, Atk. Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -33,7 +33,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40004" toLevel="1" name="Tune of Acumen">
-		<!-- Casting Spd. +30% for 20 min. -->
+		<!-- For $s1, Casting Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -41,7 +41,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40005" toLevel="1" name="Tune of Empower">
-		<!-- For 20 min., M. Atk. +75%. -->
+		<!-- For $s1, M. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -49,7 +49,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40006" toLevel="1" name="Tune of Wind Walk">
-		<!-- For 20 min., Speed +33. -->
+		<!-- For $s1, Speed +$s2. The effect remains after death. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -57,7 +57,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40007" toLevel="1" name="Tune of Death Whisper">
-		<!-- For 20 min., P. Critical Damage +35%. -->
+		<!-- For $s1, P. Critical Damage +$s2. The effect remains after death. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -65,7 +65,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40008" toLevel="1" name="Tune of Vampiric Rage">
-		<!-- For 20 min. has a chance to absorb 9% of the damage inflicted on the target as HP. -->
+		<!-- For $s1, with a certain chance, absorbs $s2 of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -73,7 +73,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40009" toLevel="1" name="Tune of Wild Magic">
-		<!-- For 20 min., M. Critical Rate +20. -->
+		<!-- M. Skill Critical Rate +$s2 for $s1 The effect remains after death. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -81,7 +81,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40010" toLevel="1" name="Tune of Guidance">
-		<!-- For 20 min., P. Accuracy +4. -->
+		<!-- For $s1, P. Accuracy +$s2. The effect remains after death. -->
 		<icon>icon.skill1240</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -89,7 +89,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40011" toLevel="1" name="Tune of Clarity">
-		<!-- For 20 min., P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, song/ dance MP Consumption -20%. -->
+		<!-- For $s1, P. Skill/ Song/ Dance MP Consumption -$s2, M. Skill MP Consumption -$s3. The effect remains after death. -->
 		<icon>icon.skill1397</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -97,7 +97,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40012" toLevel="1" name="Tune of Berserker Spirit">
-		<!-- For 20 min., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting pd. +8%, Speed +8. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. The effect remains after death. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -105,7 +105,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40013" toLevel="1" name="Tune of Concentration">
-		<!-- For 20 min., Casting Interruption Rate -53%. -->
+		<!-- For $s1, Casting Interruption Rate -$s2. The effect remains after death. -->
 		<icon>icon.skill1078</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -113,7 +113,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40014" toLevel="1" name="Tune of Might">
-		<!-- For 1 h., P. Atk. +15%. -->
+		<!-- For $s1, P. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -121,7 +121,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40015" toLevel="1" name="Tune of Shield">
-		<!-- For 1 h. P. Def. +15%. -->
+		<!-- For $s1, P. Def. +$s2. The effect remains after death. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -129,7 +129,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40016" toLevel="1" name="Tune of Focus">
-		<!-- For 1 h., P. Critical Rate +30%. -->
+		<!-- For $s1, P. Critical Rate +$s2. The effect remains after death. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -137,7 +137,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40017" toLevel="1" name="Tune of Haste">
-		<!-- For 1 h., Atk. Spd. +33%. -->
+		<!-- For $s1, Atk. Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -145,7 +145,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40018" toLevel="1" name="Tune of Acumen">
-		<!-- Casting Spd. +30% for 1 h. -->
+		<!-- For $s1, Casting Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -153,7 +153,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40019" toLevel="1" name="Tune of Empower">
-		<!-- For 1 h., M. Atk. +75%. -->
+		<!-- For $s1, M. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -161,7 +161,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40020" toLevel="1" name="Tune of Wind Walk">
-		<!-- For 1 h., Speed +33. -->
+		<!-- For $s1, Speed +$s2. The effect remains after death. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -169,7 +169,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40021" toLevel="1" name="Tune of Death Whisper">
-		<!-- For 1 h., P. Critical Damage +35%. -->
+		<!-- For $s1, P. Critical Damage +$s2. The effect remains after death. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -177,7 +177,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40022" toLevel="1" name="Tune of Vampiric Rage">
-		<!-- For 1 h. has a chance to absorb 9% of the damage inflicted on the target as HP. -->
+		<!-- For $s1, with a certain chance, absorbs $s2 of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -185,7 +185,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40023" toLevel="1" name="Tune of Wild Magic">
-		<!-- For 1 h., M. Critical Rate +20. -->
+		<!-- M. Skill Critical Rate +$s2 for $s1 The effect remains after death. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -193,7 +193,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40024" toLevel="1" name="Tune of Guidance">
-		<!-- For 1 h., P. Accuracy +4. -->
+		<!-- For $s1, P. Accuracy +$s2. The effect remains after death. -->
 		<icon>icon.skill1240</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -201,7 +201,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40025" toLevel="1" name="Tune of Clarity">
-		<!-- For 1 h., P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, song/ dance MP Consumption -20%. -->
+		<!-- For $s1, P. Skill/ Song/ Dance MP Consumption -$s2, M. Skill MP Consumption -$s3. The effect remains after death. -->
 		<icon>icon.skill1397</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -209,7 +209,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40026" toLevel="1" name="Tune of Berserker Spirit">
-		<!-- For 1 h., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting pd. +8%, Speed +8. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. The effect remains after death. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -217,7 +217,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40027" toLevel="1" name="Tune of Concentration">
-		<!-- For 1 h., Casting Interruption Rate -53%. -->
+		<!-- For $s1, Casting Interruption Rate -$s2. The effect remains after death. -->
 		<icon>icon.skill1078</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -225,7 +225,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40028" toLevel="1" name="Tune of Might">
-		<!-- For 4 h., P. Atk. +15%. -->
+		<!-- For $s1, P. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -233,7 +233,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40029" toLevel="1" name="Tune of Shield">
-		<!-- For 4 h. P. Def. +15%. -->
+		<!-- For $s1, P. Def. +$s2. The effect remains after death. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -241,7 +241,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40030" toLevel="1" name="Tune of Focus">
-		<!-- For 4 h., P. Critical Rate +30%. -->
+		<!-- For $s1, P. Critical Rate +$s2. The effect remains after death. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -249,7 +249,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40031" toLevel="1" name="Tune of Haste">
-		<!-- For 4 h., Atk. Spd. +33%. -->
+		<!-- For $s1, Atk. Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -257,7 +257,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40032" toLevel="1" name="Tune of Acumen">
-		<!-- Casting Spd. +30% for 4 h. -->
+		<!-- For $s1, Casting Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -265,7 +265,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40033" toLevel="1" name="Tune of Empower">
-		<!-- For 4 h., M. Atk. +75%. -->
+		<!-- For $s1, M. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -273,7 +273,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40034" toLevel="1" name="Tune of Wind Walk">
-		<!-- For 4 h., Speed +33. -->
+		<!-- For $s1, Speed +$s2. The effect remains after death. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -281,7 +281,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40035" toLevel="1" name="Tune of Death Whisper">
-		<!-- For 4 h., P. Critical Damage +35%. -->
+		<!-- For $s1, P. Critical Damage +$s2. The effect remains after death. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -289,7 +289,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40036" toLevel="1" name="Tune of Vampiric Rage">
-		<!-- For 4 h. has a chance to absorb 9% of the damage inflicted on the target as HP. -->
+		<!-- For $s1, has a certain chance to absorb $s2 of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -297,7 +297,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40037" toLevel="1" name="Tune of Wild Magic">
-		<!-- For 4 h., M. Critical Rate +20. -->
+		<!-- M. Skill Critical Rate +$s2 for $s1 The effect remains after death. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -305,7 +305,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40038" toLevel="1" name="Tune of Guidance">
-		<!-- For 4 h., P. Accuracy +4. -->
+		<!-- For $s1, P. Accuracy +$s2. The effect remains after death. -->
 		<icon>icon.skill1240</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -313,7 +313,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40039" toLevel="1" name="Tune of Clarity">
-		<!-- For 4 h., P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, song/ dance MP Consumption -20%. -->
+		<!-- For $s1, P. Skill/ Song/ Dance MP Consumption -$s2, M. Skill MP Consumption -$s3. The effect remains after death. -->
 		<icon>icon.skill1397</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -321,7 +321,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40040" toLevel="1" name="Tune of Berserker Spirit">
-		<!-- For 4 h., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting pd. +8%, Speed +8. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. The effect remains after death. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -329,7 +329,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40041" toLevel="1" name="Tune of Concentration">
-		<!-- For 4 h., Casting Interruption Rate -53%. -->
+		<!-- For $s1, Casting Interruption Rate -$s2. The effect remains after death. -->
 		<icon>icon.skill1078</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -337,7 +337,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40042" toLevel="1" name="Tune of Might">
-		<!-- For 8 h., P. Atk. +15%. -->
+		<!-- For $s1, P. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -345,7 +345,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40043" toLevel="1" name="Tune of Shield">
-		<!-- For 8 h. P. Def. +15%. -->
+		<!-- For $s1, P. Def. +$s2. The effect remains after death. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -353,7 +353,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40044" toLevel="1" name="Tune of Focus">
-		<!-- For 8 h., P. Critical Rate +30%. -->
+		<!-- For $s1, P. Critical Rate +$s2. The effect remains after death. -->
 		<icon>icon.skill1077</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -361,7 +361,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40045" toLevel="1" name="Tune of Haste">
-		<!-- For 8 h., Atk. Spd. +33%. -->
+		<!-- For $s1, Atk. Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -369,7 +369,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40046" toLevel="1" name="Tune of Acumen">
-		<!-- Casting Spd. +30% for 8 h. -->
+		<!-- For $s1, Casting Spd. +$s2. The effect remains after death. -->
 		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -377,7 +377,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40047" toLevel="1" name="Tune of Empower">
-		<!-- For 8 h., M. Atk. +75%. -->
+		<!-- For $s1, M. Atk. +$s2. The effect remains after death. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -385,7 +385,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40048" toLevel="1" name="Tune of Wind Walk">
-		<!-- For 8 h., Speed +33. -->
+		<!-- For $s1, Speed +$s2. The effect remains after death. -->
 		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -393,7 +393,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40049" toLevel="1" name="Tune of Death Whisper">
-		<!-- For 8 h., P. Critical Damage +35%. -->
+		<!-- For $s1, P. Critical Damage +$s2. The effect remains after death. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -401,7 +401,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40050" toLevel="1" name="Tune of Vampiric Rage">
-		<!-- For 8 h. has a chance to absorb 9% of the damage inflicted on the target as HP. -->
+		<!-- For $s1, has a certain chance to absorb $s2 of the inflicted damage as HP. The effect remains after death. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -409,7 +409,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40051" toLevel="1" name="Tune of Wild Magic">
-		<!-- For 8 h., M. Critical Rate +20. -->
+		<!-- M. Skill Critical Rate +$s2 for $s1 The effect remains after death. -->
 		<icon>icon.skill1303</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -417,7 +417,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40052" toLevel="1" name="Tune of Guidance">
-		<!-- For 8 h., P. Accuracy +4. -->
+		<!-- For $s1, P. Accuracy +$s2. The effect remains after death. -->
 		<icon>icon.skill1240</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -425,7 +425,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40053" toLevel="1" name="Tune of Clarity">
-		<!-- For 8 h., P. Skill MP Consumption -20%, M. Skill MP Consumption -10%, song/ dance MP Consumption -20%. -->
+		<!-- For $s1, P. Skill/ Song/ Dance MP Consumption -$s2, M. Skill MP Consumption -$s3. The effect remains after death. -->
 		<icon>icon.skill1397</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -433,7 +433,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40054" toLevel="1" name="Tune of Berserker Spirit">
-		<!-- For 8 h., P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting pd. +8%, Speed +8. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. The effect remains after death. -->
 		<icon>icon.skill1062</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -441,7 +441,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="40055" toLevel="1" name="Tune of Concentration">
-		<!-- For 8 h., Casting Interruption Rate -53%. -->
+		<!-- For $s1, Casting Interruption Rate -$s2. The effect remains after death. -->
 		<icon>icon.skill1078</icon>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -459,14 +459,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40057" toLevel="1" name="Magic Fire (Event)">
-		<!-- For 1 h., magic lantern's recovery rate +100%. The effect remains after death. -->
+		<!-- Magic Lamp charging rate +100%. -->
 		<icon>icon.bm_soul_of_shilen</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="40058" toLevel="1" name="Giran Seal">
-		<!-- For 20 min., Acquired XP/ SP +20%. Cooldown: 1 min. The effect remains after death.\n\nWarning: Does not stack with Einhasad's Protection. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. Cooldown: 1 min. The effect remains after death. Note! The effect doesn't stack with Einhasad's Protection. -->
 		<icon>icon.etc_royal_seal_of_lord_i04</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -491,6 +491,7 @@
 		</effects>
 	</skill>
 	<skill id="40059" toLevel="1" name="Sayha's Grace">
+		<!-- For $s1, Sayha's Grace Consumption -$s2. The effect remains after death. You can cancel the effect by yourself. -->
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
@@ -532,7 +533,6 @@
 		</effects>
 	</skill>
 	<skill id="40061" toLevel="1" name="Primeval Garden's Time Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -547,156 +547,145 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40063" toLevel="1" name="Tower of Insolence (1st Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40064" toLevel="1" name="Tower of Insolence (2nd Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40065" toLevel="1" name="Tower of Insolence (3rd Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40066" toLevel="1" name="Tower of Insolence (4th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40067" toLevel="1" name="Tower of Insolence (5th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40068" toLevel="1" name="Tower of Insolence (6th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40069" toLevel="1" name="Tower of Insolence (7th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40070" toLevel="1" name="Tower of Insolence (8th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40071" toLevel="1" name="Tower of Insolence (9th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40072" toLevel="1" name="Tower of Insolence (10th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40073" toLevel="1" name="Tower of Insolence (11th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40074" toLevel="1" name="Tower of Insolence (12th Floor) Stone of Memory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40075" toLevel="1" name="Craft Points +100">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +100. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40076" toLevel="1" name="Craft Points +500">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +500. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40077" toLevel="1" name="Craft Points +1,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +1,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40078" toLevel="1" name="Craft Points +3,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +3,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40079" toLevel="1" name="Craft Points +5,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +5,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40080" toLevel="1" name="Craft Points +10,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +10,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40081" toLevel="1" name="Craft Points +30,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +30,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40082" toLevel="1" name="Craft Points +50,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +50,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40083" toLevel="1" name="Craft Points +100,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +100,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40084" toLevel="1" name="Craft Points +300,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +300,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40085" toLevel="1" name="Craft Points +500,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +500,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40086" toLevel="1" name="Craft Points +1,000,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Craft points +1,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40087" toLevel="1" name="Einhasad's Blessing Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- For 20 min., acquired XP/ SP +50%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40088" toLevel="1" name="Scroll: Enchant Moon Weapon">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Used to enchant a moon weapon. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40089" toLevel="1" name="Scroll: Enchant Adventurer's Agathion Griffin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Required for enchanting Adventurer's Agathion Griffin. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40090" toLevel="1" name="Scroll: Enchant Adventurer's Cloak">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Used to enchant Adventurer's Cloak. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40091" toLevel="1" name="Adventurer's Scroll: Enchant Hair Accessory">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Used to enchant hair accessories. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40092" toLevel="1" name="Scroll: Enchant Adventurer's Belt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Used to enchant Adventurer's Belt. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40093" toLevel="1" name="Inventory Expansion Ticket of Glory">
+		<!-- Double-click to learn Expand Inventory of Glory. -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -706,19 +695,20 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpSkill">
-				<skillId>45234</skillId> <!-- Inventory Expansion Ticket of Glory -->
+				<skillId>45234</skillId> <!-- Expand Inventory of Glory -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>45234</skillId> <!-- Inventory Expansion Ticket of Glory -->
+				<skillId>45234</skillId> <!-- Expand Inventory of Glory -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="40094" toLevel="1" name="Weight Limit Ticket of Glory">
+		<!-- Double-click to learn Increased Weight Limit of Glory. -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -728,19 +718,20 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpSkill">
-				<skillId>45235</skillId> <!-- Weight Limit Ticket of Glory -->
+				<skillId>45235</skillId> <!-- Increased Weight Limit of Glory -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>45235</skillId> <!-- Weight Limit Ticket of Glory -->
+				<skillId>45235</skillId> <!-- Increased Weight Limit of Glory -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="40095" toLevel="1" name="Spellbook: Mount Glory of Champion">
+		<!-- Double-click to learn how to ride Glory of Champion. -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -763,6 +754,7 @@
 		</effects>
 	</skill>
 	<skill id="40096" toLevel="1" name="Spellbook: Mount White Wing">
+		<!-- Double-click to learn how to ride White Wing. -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -785,6 +777,7 @@
 		</effects>
 	</skill>
 	<skill id="40097" toLevel="1" name="Spellbook: Mount Shining Lady">
+		<!-- Double-click to learn how to ride Shining Lady. -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -807,6 +800,7 @@
 		</effects>
 	</skill>
 	<skill id="40098" toLevel="1" name="Sayha's Grace">
+		<!-- For $s1, Sayha's Grace Consumption -$s2. The effect remains after death. You can cancel the effect by yourself. -->
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>

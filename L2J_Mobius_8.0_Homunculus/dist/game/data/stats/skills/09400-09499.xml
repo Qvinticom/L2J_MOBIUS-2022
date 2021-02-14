@@ -1243,7 +1243,7 @@
 						<item id="7129" count="1" /> <!-- Scroll of Escape: Oren -->
 					</item>
 					<item chance="8.3">
-						<item id="7131" count="1" /> <!-- Scroll of Escape: Hunter's Village -->
+						<item id="7131" count="1" /> <!-- Scroll of Escape: Hunters' Village -->
 					</item>
 					<item chance="8.3">
 						<item id="7132" count="1" /> <!-- Scroll of Escape: Aden -->
@@ -1569,7 +1569,7 @@
 		</effects>
 	</skill>
 	<skill id="9451" toLevel="1" name="Item Skill: Warp">
-		<!-- Stuns nearby enemies and removes their targeting, also teleports the character forward. Cooldown is 24 sec. Consumes 10 B-grade Gemstones.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stuns nearby enemies and removes their targeting, also teleports the character forward. Cooldown is 24 sec. Consumes 10 B-grade Gemstones. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.wizard_danger_warppow</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1</abnormalTime>
@@ -1709,7 +1709,7 @@
 		</effects>
 	</skill>
 	<skill id="9454" toLevel="1" name="Item Skill: Silence">
-		<!-- P./ M. Atk. can't be used for 5 sec. Consumes 30 B-grade Gemstones.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- P./ M. Atk. can't be used for 5 sec. Consumes 30 B-grade Gemstones. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.song_of_silence</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1802,7 +1802,7 @@
 		</effects>
 	</skill>
 	<skill id="9459" toLevel="1" name="Tauti's Wrath">
-		<!-- P. Atk. on nearby enemies and Knockdown for 3 sec. Power 27,552.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- P. Atk. on nearby enemies and Knockdown for 3 sec. Power 27,552. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1850,7 +1850,7 @@
 		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
-		<!-- Using Tauti's Wrath attacks nearby enemies with $s1 power and inflicts Knock Down. Consumes 4 Spirit Ore.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Using Tauti's Wrath attacks nearby enemies with $s1 power and inflicts Knock Down. Consumes 4 Spirit Ore. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -4098,7 +4098,7 @@
 		</effects>
 	</skill>
 	<skill id="9478" toLevel="1" name="Chat Prohibition Active">
-		<!-- Blocks chat for a certain time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Blocks chat for a certain time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.shutup</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

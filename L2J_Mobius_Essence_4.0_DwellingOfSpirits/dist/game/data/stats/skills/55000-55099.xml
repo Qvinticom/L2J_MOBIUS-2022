@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55000" toLevel="4" name="Acquired XP/ SP">
-		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. The effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -315,7 +315,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55031" toLevel="1" name="Report Status">
-		<!-- You are suspected to have used an illegal program, and your actions have been restricted. -->
+		<!-- You are under suspicion of using an illegal program. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -570,7 +570,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="55041" toLevel="1" name="XP/SP Scroll">
-		<!-- For 60 min., Acquired XP/ SP +20%. Effect remains after death. -->
+		<!-- For 60 min., acquired XP/ SP +20%. The effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -629,13 +629,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100.0">
-						<item id="29575" count="1" /> <!-- Queen Ant's Ring - 30-day -->
+						<item id="29575" count="1" /> <!-- Queen Ant's Ring Lv. 1 - Not available -->
 					</item>
 					<item chance="100.0">
-						<item id="29576" count="1" /> <!-- Orfen's Earring - 30-day -->
+						<item id="29576" count="1" /> <!-- Orfen's Earring Lv. 1 - Not available -->
 					</item>
 					<item chance="100.0">
-						<item id="29577" count="1" /> <!-- Ring of Core - 30-day -->
+						<item id="29577" count="1" /> <!-- Ring of Core Lv. 1 - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -665,72 +665,72 @@
 						<item id="49756" count="1" /> <!-- Cloth Piece -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49785" count="1" /> <!-- Weapon Supply Box (A-grade) -->
+						<item id="49785" count="1" /> <!-- A-grade Weapon Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49664" count="1" /> <!-- Weapon Supply Box (B-grade) -->
+						<item id="49664" count="1" /> <!-- B-grade Weapon Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49665" count="1" /> <!-- Armor Supply Box (B-grade) -->
+						<item id="49665" count="1" /> <!-- B-grade Armor Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49666" count="1" /> <!-- Ornament Supply Box (B-grade) -->
+						<item id="49666" count="1" /> <!-- B-grade Accessory Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49667" count="1" /> <!-- Weapon Supply Box (C-grade) -->
+						<item id="49667" count="1" /> <!-- C-grade Weapon Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49668" count="1" /> <!-- Armor Supply Box (C-grade) -->
+						<item id="49668" count="1" /> <!-- C-grade Armor Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49669" count="1" /> <!-- Ornament Supply Box (C-grade) -->
+						<item id="49669" count="1" /> <!-- C-grade Accessory Pack -->
 					</item>
 					<item chance="2.083333333333333">
 						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<!-- Enchant Scroll -->
 					<item chance="2.083333333333333">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Protecting Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Protecting Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+						<item id="6571" count="1" /> <!-- Protecting Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+						<item id="6572" count="1" /> <!-- Protecting Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+						<item id="6569" count="1" /> <!-- Protecting Scroll: Enchant A-grade Weapon (Exchangeable) -->
 					</item>
 					<!-- Mics -->
 					<item chance="2.083333333333333">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						<item id="1538" count="1" /> <!-- Improved Scroll of Escape -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit -->
+						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49081" count="1" /> <!-- Rice Cake of Flaming Fighting Spirit -->
+						<item id="49081" count="1" /> <!-- XP Growth Scroll (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
 						<item id="49518" count="1" /> <!-- Special Pirate Fruit -->
@@ -748,65 +748,65 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Event -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Event -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="90020" count="1" /> <!-- Box of Best Dye - 3rd Class Transfer -->
+						<item id="90020" count="1" /> <!-- Best Dye Pack - 3rd Class Transfer -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="70005" count="1" /> <!-- Sealed Rune - Stage 6 -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.083333333333333">
-						<item id="1891" count="1" /> <!-- Artisan's Frame -->
+						<item id="1891" count="1" /> <!-- Old Artisan's Frame - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1892" count="1" /> <!-- Blacksmith's Frame -->
+						<item id="1892" count="1" /> <!-- Old Blacksmith's Frame - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1893" count="1" /> <!-- Oriharukon -->
+						<item id="1893" count="1" /> <!-- Old Oriharukon - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1890" count="1" /> <!-- Mithril Alloy -->
+						<item id="1890" count="1" /> <!-- Old Mithril Alloy - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1887" count="1" /> <!-- Varnish of Purity -->
+						<item id="1887" count="1" /> <!-- Old Varnish of Purity - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4041" count="1" /> <!-- Mold Hardener -->
+						<item id="4041" count="1" /> <!-- Old Mold Hardener - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1875" count="1" /> <!-- Stone of Purity -->
+						<item id="1875" count="1" /> <!-- Old Stone of Purity - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1888" count="1" /> <!-- Synthetic Cokes -->
+						<item id="1888" count="1" /> <!-- Old Synthetic Cokes - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4042" count="1" /> <!-- Enria -->
+						<item id="4042" count="1" /> <!-- Old Enria - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4039" count="1" /> <!-- Mold Glue -->
+						<item id="4039" count="1" /> <!-- Old Mold Glue - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
+						<item id="1874" count="1" /> <!-- Old Oriharukon Ore - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1886" count="1" /> <!-- Silver Mold -->
+						<item id="1886" count="1" /> <!-- Old Silver Mold - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4040" count="1" /> <!-- Mold Lubricant -->
+						<item id="4040" count="1" /> <!-- Old Mold Lubricant - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1894" count="1" /> <!-- Crafted Leather -->
+						<item id="1894" count="1" /> <!-- Old Quality Leather - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1883" count="1" /> <!-- Steel Mold -->
+						<item id="1883" count="1" /> <!-- Old Steel Mold - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4043" count="1" /> <!-- Asofe -->
+						<item id="4043" count="1" /> <!-- Old Asofe - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -833,63 +833,63 @@
 				<items>
 					<!-- Supply Box -->
 					<item chance="2.777777777777778">
-						<item id="49664" count="1" /> <!-- Weapon Supply Box (B-grade) -->
+						<item id="49664" count="1" /> <!-- B-grade Weapon Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49665" count="1" /> <!-- Armor Supply Box (B-grade) -->
+						<item id="49665" count="1" /> <!-- B-grade Armor Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49666" count="1" /> <!-- Ornament Supply Box (B-grade) -->
+						<item id="49666" count="1" /> <!-- B-grade Accessory Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49667" count="1" /> <!-- Weapon Supply Box (C-grade) -->
+						<item id="49667" count="1" /> <!-- C-grade Weapon Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49668" count="1" /> <!-- Armor Supply Box (C-grade) -->
+						<item id="49668" count="1" /> <!-- C-grade Armor Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49669" count="1" /> <!-- Ornament Supply Box (C-grade) -->
+						<item id="49669" count="1" /> <!-- C-grade Accessory Pack -->
 					</item>
 					<item chance="2.777777777777778">
 						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<!-- Enchant Scroll -->
 					<item chance="2.777777777777778">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Protecting Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Protecting Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+						<item id="6571" count="1" /> <!-- Protecting Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+						<item id="6572" count="1" /> <!-- Protecting Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<!-- Mics -->
 					<item chance="2.777777777777778">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						<item id="1538" count="1" /> <!-- Improved Scroll of Escape -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit -->
+						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49081" count="1" /> <!-- Rice Cake of Flaming Fighting Spirit -->
+						<item id="49081" count="1" /> <!-- XP Growth Scroll (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
 						<item id="49518" count="1" /> <!-- Special Pirate Fruit -->
@@ -907,41 +907,41 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Event -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Event -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70005" count="1" /> <!-- Sealed Rune - Stage 6 -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70000" count="1" /> <!-- Sealed Rune - Stage 1 -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.777777777777778">
-						<item id="1885" count="1" /> <!-- High-grade Suede -->
+						<item id="1885" count="1" /> <!-- Old High-grade Suede - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
+						<item id="1877" count="1" /> <!-- Old Adamantite Nugget - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
+						<item id="1881" count="1" /> <!-- Old Bone Powder - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1880" count="1" /> <!-- Steel -->
+						<item id="1880" count="1" /> <!-- Old Steel - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1889" count="1" /> <!-- Synthetic Braid -->
+						<item id="1889" count="1" /> <!-- Old Synthetic Braid - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1879" count="1" /> <!-- Cokes -->
+						<item id="1879" count="1" /> <!-- Old Cokes - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1882" count="1" /> <!-- Leather -->
+						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1876" count="1" /> <!-- Mithril Ore -->
+						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -968,54 +968,54 @@
 				<items>
 					<!-- Supply Box -->
 					<item chance="1.0">
-						<item id="49667" count="1" /> <!-- Weapon Supply Box (C-grade) -->
+						<item id="49667" count="1" /> <!-- C-grade Weapon Pack -->
 					</item>
 					<item chance="1.0">
-						<item id="49668" count="1" /> <!-- Armor Supply Box (C-grade) -->
+						<item id="49668" count="1" /> <!-- C-grade Armor Pack -->
 					</item>
 					<item chance="1.0">
-						<item id="49669" count="1" /> <!-- Ornament Supply Box (C-grade) -->
+						<item id="49669" count="1" /> <!-- C-grade Accessory Pack -->
 					</item>
 					<item chance="1.0">
 						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<item chance="1.0">
-						<item id="49491" count="1" /> <!-- Weapon Supply Box (D-grade) -->
+						<item id="49491" count="1" /> <!-- D-grade Weapon Pack -->
 					</item>
 					<!-- Enchant Scroll -->
 					<item chance="4.0">
-						<item id="955" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+						<item id="955" count="1" /> <!-- Scroll: Enchant D-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="4.0">
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="3.5">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="3.5">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="1.5">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Protecting Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="1.5">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Protecting Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<!-- Mics -->
 					<item chance="6.299666666666667">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="6.299666666666667">
-						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						<item id="1538" count="1" /> <!-- Improved Scroll of Escape -->
 					</item>
 					<item chance="6.299666666666667">
-						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit -->
+						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="0.001">
-						<item id="70005" count="1" /> <!-- Sealed Rune - Stage 6 -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
 					</item>
 					<item chance="0.1">
-						<item id="70000" count="1" /> <!-- Sealed Rune - Stage 1 -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
 					</item>
 					<!-- Buff Scroll -->
 					<item chance="3.0">
@@ -1028,16 +1028,16 @@
 						<item id="3930" count="1" /> <!-- Scroll: Haste -->
 					</item>
 					<item chance="3.0">
-						<item id="29686" count="1" /> <!-- Scroll: Concentration -->
+						<item id="29686" count="1" /> <!-- Scroll: Concentration - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier -->
+						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29690" count="1" /> <!-- Scroll: Blessed Body -->
+						<item id="29690" count="1" /> <!-- Scroll: Blessed Body - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul -->
+						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="3928" count="1" /> <!-- Scroll: Focus -->
@@ -1049,51 +1049,51 @@
 						<item id="3932" count="1" /> <!-- Scroll: Empower -->
 					</item>
 					<item chance="3.0">
-						<item id="3935" count="1" /> <!-- Scroll: Shield - Not Available -->
+						<item id="3935" count="1" /> <!-- Scroll: Shield - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3933" count="1" /> <!-- Scroll: Might - Not Available -->
+						<item id="3933" count="1" /> <!-- Scroll: Might - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="4218" count="1" /> <!-- Scroll: Mana Regeneration -->
 					</item>
 					<!-- Material -->
 					<item chance="2.0">
-						<item id="1882" count="1" /> <!-- Leather -->
+						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1876" count="1" /> <!-- Mithril Ore -->
+						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1884" count="2" /> <!-- Cord -->
+						<item id="1884" count="2" /> <!-- Old Cord - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1895" count="2" /> <!-- Metallic Fiber -->
+						<item id="1895" count="2" /> <!-- Old Metallic Fiber - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1870" count="2" /> <!-- Coal -->
+						<item id="1870" count="2" /> <!-- Old Coal - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1878" count="2" /> <!-- Durable Braid -->
+						<item id="1878" count="2" /> <!-- Old Durable Braid - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1865" count="2" /> <!-- Varnish -->
+						<item id="1865" count="2" /> <!-- Old Varnish - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1872" count="2" /> <!-- Animal Bone -->
+						<item id="1872" count="2" /> <!-- Old Animal Bone - Not available -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="55047" toLevel="1" name="Romantic Chapeau - Blessed Body">
-		<!-- For 20 min., Max HP +10%. -->
+		<!-- Max HP +10% for 20 min. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalType>MAX_HP_UP</abnormalType>
@@ -1145,7 +1145,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55051" toLevel="4" name="Acquired XP/ SP">
-		<!-- For $s1, Acquired XP/ SP +$s2. Effect remains after death. -->
+		<!-- For $s1, Acquired XP/ SP +$s2. The effect remains after death. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1349,7 +1349,7 @@
 		</effects>
 	</skill>
 	<skill id="55059" toLevel="1" name="Summon Agathion Griffin">
-		<!-- Summons Agathion. -->
+		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1483,7 +1483,7 @@
 		</effects>
 	</skill>
 	<skill id="55065" toLevel="1" name="Scroll: Castle Berserker Spirit">
-		<!-- For 20 min., P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1578,7 +1578,7 @@
 		</effects>
 	</skill>
 	<skill id="55068" toLevel="1" name="Scroll: Castle Blessing">
-		<!-- Maintains buffs and debuffs upon death. The Noblesse Blessing and the Lucky Charm disappear, however. -->
+		<!-- For 20 min., grants the Castle Blessing effect that maintains all buffs and debuffs even after death. Cancels the effects of Noblesse Blessing and Lucky Charms. -->
 		<icon>icon.skill1323</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1622,7 +1622,7 @@
 		</effects>
 	</skill>
 	<skill id="55070" toLevel="1" name="Castle Earring">
-		<!-- Increases MP recovery rate and healing power. -->
+		<!-- Increases MP Recovery Rate and Received Healing. -->
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1641,7 +1641,7 @@
 		</effects>
 	</skill>
 	<skill id="55071" toLevel="1" name="Castle Necklace">
-		<!-- P. Def. and M. Def. are increased. -->
+		<!-- Increases P./ M. Def. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1683,72 +1683,72 @@
 						<item id="49756" count="1" /> <!-- Cloth Piece -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49785" count="1" /> <!-- Weapon Supply Box (A-grade) -->
+						<item id="49785" count="1" /> <!-- A-grade Weapon Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49664" count="1" /> <!-- Weapon Supply Box (B-grade) -->
+						<item id="49664" count="1" /> <!-- B-grade Weapon Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49665" count="1" /> <!-- Armor Supply Box (B-grade) -->
+						<item id="49665" count="1" /> <!-- B-grade Armor Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49666" count="1" /> <!-- Ornament Supply Box (B-grade) -->
+						<item id="49666" count="1" /> <!-- B-grade Accessory Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49667" count="1" /> <!-- Weapon Supply Box (C-grade) -->
+						<item id="49667" count="1" /> <!-- C-grade Weapon Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49668" count="1" /> <!-- Armor Supply Box (C-grade) -->
+						<item id="49668" count="1" /> <!-- C-grade Armor Pack -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49669" count="1" /> <!-- Ornament Supply Box (C-grade) -->
+						<item id="49669" count="1" /> <!-- C-grade Accessory Pack -->
 					</item>
 					<item chance="2.083333333333333">
 						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<!-- Enchant Scroll -->
 					<item chance="2.083333333333333">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+						<item id="730" count="1" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Protecting Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Protecting Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+						<item id="6571" count="1" /> <!-- Protecting Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+						<item id="6572" count="1" /> <!-- Protecting Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="6569" count="1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+						<item id="6569" count="1" /> <!-- Protecting Scroll: Enchant A-grade Weapon (Exchangeable) -->
 					</item>
 					<!-- Mics -->
 					<item chance="2.083333333333333">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						<item id="1538" count="1" /> <!-- Improved Scroll of Escape -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit -->
+						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49081" count="1" /> <!-- Rice Cake of Flaming Fighting Spirit -->
+						<item id="49081" count="1" /> <!-- XP Growth Scroll (Exchangeable) -->
 					</item>
 					<item chance="2.083333333333333">
 						<item id="49518" count="1" /> <!-- Special Pirate Fruit -->
@@ -1766,65 +1766,65 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Event -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Event -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="90020" count="1" /> <!-- Box of Best Dye - 3rd Class Transfer -->
+						<item id="90020" count="1" /> <!-- Best Dye Pack - 3rd Class Transfer -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="70005" count="1" /> <!-- Sealed Rune - Stage 6 -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.083333333333333">
-						<item id="1891" count="1" /> <!-- Artisan's Frame -->
+						<item id="1891" count="1" /> <!-- Old Artisan's Frame - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1892" count="1" /> <!-- Blacksmith's Frame -->
+						<item id="1892" count="1" /> <!-- Old Blacksmith's Frame - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1893" count="1" /> <!-- Oriharukon -->
+						<item id="1893" count="1" /> <!-- Old Oriharukon - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1890" count="1" /> <!-- Mithril Alloy -->
+						<item id="1890" count="1" /> <!-- Old Mithril Alloy - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1887" count="1" /> <!-- Varnish of Purity -->
+						<item id="1887" count="1" /> <!-- Old Varnish of Purity - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4041" count="1" /> <!-- Mold Hardener -->
+						<item id="4041" count="1" /> <!-- Old Mold Hardener - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1875" count="1" /> <!-- Stone of Purity -->
+						<item id="1875" count="1" /> <!-- Old Stone of Purity - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1888" count="1" /> <!-- Synthetic Cokes -->
+						<item id="1888" count="1" /> <!-- Old Synthetic Cokes - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4042" count="1" /> <!-- Enria -->
+						<item id="4042" count="1" /> <!-- Old Enria - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4039" count="1" /> <!-- Mold Glue -->
+						<item id="4039" count="1" /> <!-- Old Mold Glue - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
+						<item id="1874" count="1" /> <!-- Old Oriharukon Ore - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1886" count="1" /> <!-- Silver Mold -->
+						<item id="1886" count="1" /> <!-- Old Silver Mold - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4040" count="1" /> <!-- Mold Lubricant -->
+						<item id="4040" count="1" /> <!-- Old Mold Lubricant - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1894" count="1" /> <!-- Crafted Leather -->
+						<item id="1894" count="1" /> <!-- Old Quality Leather - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1883" count="1" /> <!-- Steel Mold -->
+						<item id="1883" count="1" /> <!-- Old Steel Mold - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4043" count="1" /> <!-- Asofe -->
+						<item id="4043" count="1" /> <!-- Old Asofe - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -1851,63 +1851,63 @@
 				<items>
 					<!-- Supply Box -->
 					<item chance="2.777777777777778">
-						<item id="49664" count="1" /> <!-- Weapon Supply Box (B-grade) -->
+						<item id="49664" count="1" /> <!-- B-grade Weapon Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49665" count="1" /> <!-- Armor Supply Box (B-grade) -->
+						<item id="49665" count="1" /> <!-- B-grade Armor Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49666" count="1" /> <!-- Ornament Supply Box (B-grade) -->
+						<item id="49666" count="1" /> <!-- B-grade Accessory Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49667" count="1" /> <!-- Weapon Supply Box (C-grade) -->
+						<item id="49667" count="1" /> <!-- C-grade Weapon Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49668" count="1" /> <!-- Armor Supply Box (C-grade) -->
+						<item id="49668" count="1" /> <!-- C-grade Armor Pack -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49669" count="1" /> <!-- Ornament Supply Box (C-grade) -->
+						<item id="49669" count="1" /> <!-- C-grade Accessory Pack -->
 					</item>
 					<item chance="2.777777777777778">
 						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<!-- Enchant Scroll -->
 					<item chance="2.777777777777778">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+						<item id="948" count="1" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Protecting Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Protecting Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6571" count="1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+						<item id="6571" count="1" /> <!-- Protecting Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="6572" count="1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+						<item id="6572" count="1" /> <!-- Protecting Scroll: Enchant B-grade Armor (Exchangeable) -->
 					</item>
 					<!-- Mics -->
 					<item chance="2.777777777777778">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						<item id="1538" count="1" /> <!-- Improved Scroll of Escape -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit -->
+						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="49081" count="1" /> <!-- Rice Cake of Flaming Fighting Spirit -->
+						<item id="49081" count="1" /> <!-- XP Growth Scroll (Exchangeable) -->
 					</item>
 					<item chance="2.777777777777778">
 						<item id="49518" count="1" /> <!-- Special Pirate Fruit -->
@@ -1925,41 +1925,41 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Event -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Event -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70005" count="1" /> <!-- Sealed Rune - Stage 6 -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70000" count="1" /> <!-- Sealed Rune - Stage 1 -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.777777777777778">
-						<item id="1885" count="1" /> <!-- High-grade Suede -->
+						<item id="1885" count="1" /> <!-- Old High-grade Suede - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
+						<item id="1877" count="1" /> <!-- Old Adamantite Nugget - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
+						<item id="1881" count="1" /> <!-- Old Bone Powder - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1880" count="1" /> <!-- Steel -->
+						<item id="1880" count="1" /> <!-- Old Steel - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1889" count="1" /> <!-- Synthetic Braid -->
+						<item id="1889" count="1" /> <!-- Old Synthetic Braid - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1879" count="1" /> <!-- Cokes -->
+						<item id="1879" count="1" /> <!-- Old Cokes - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1882" count="1" /> <!-- Leather -->
+						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1876" count="1" /> <!-- Mithril Ore -->
+						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -1986,54 +1986,54 @@
 				<items>
 					<!-- Supply Box -->
 					<item chance="1.0">
-						<item id="49667" count="1" /> <!-- Weapon Supply Box (C-grade) -->
+						<item id="49667" count="1" /> <!-- C-grade Weapon Pack -->
 					</item>
 					<item chance="1.0">
-						<item id="49668" count="1" /> <!-- Armor Supply Box (C-grade) -->
+						<item id="49668" count="1" /> <!-- C-grade Armor Pack -->
 					</item>
 					<item chance="1.0">
-						<item id="49669" count="1" /> <!-- Ornament Supply Box (C-grade) -->
+						<item id="49669" count="1" /> <!-- C-grade Accessory Pack -->
 					</item>
 					<item chance="1.0">
 						<item id="49541" count="1" /> <!-- Spellbook Chest -->
 					</item>
 					<item chance="1.0">
-						<item id="49491" count="1" /> <!-- Weapon Supply Box (D-grade) -->
+						<item id="49491" count="1" /> <!-- D-grade Weapon Pack -->
 					</item>
 					<!-- Enchant Scroll -->
 					<item chance="4.0">
-						<item id="955" count="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+						<item id="955" count="1" /> <!-- Scroll: Enchant D-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="4.0">
-						<item id="956" count="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
+						<item id="956" count="1" /> <!-- Scroll: Enchant D-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="3.5">
-						<item id="951" count="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+						<item id="951" count="1" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="3.5">
-						<item id="952" count="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
+						<item id="952" count="1" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<item chance="1.5">
-						<item id="6573" count="1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+						<item id="6573" count="1" /> <!-- Protecting Scroll: Enchant C-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="1.5">
-						<item id="6574" count="1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+						<item id="6574" count="1" /> <!-- Protecting Scroll: Enchant C-grade Armor (Exchangeable) -->
 					</item>
 					<!-- Mics -->
 					<item chance="6.299666666666667">
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="6.299666666666667">
-						<item id="1538" count="1" /> <!-- Blessed Scroll of Escape -->
+						<item id="1538" count="1" /> <!-- Improved Scroll of Escape -->
 					</item>
 					<item chance="6.299666666666667">
-						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit -->
+						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="0.001">
-						<item id="70005" count="1" /> <!-- Sealed Rune - Stage 6 -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
 					</item>
 					<item chance="0.1">
-						<item id="70000" count="1" /> <!-- Sealed Rune - Stage 1 -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
 					</item>
 					<!-- Buff Scroll -->
 					<item chance="3.0">
@@ -2046,16 +2046,16 @@
 						<item id="3930" count="1" /> <!-- Scroll: Haste -->
 					</item>
 					<item chance="3.0">
-						<item id="29686" count="1" /> <!-- Scroll: Concentration -->
+						<item id="29686" count="1" /> <!-- Scroll: Concentration - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier -->
+						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29690" count="1" /> <!-- Scroll: Blessed Body -->
+						<item id="29690" count="1" /> <!-- Scroll: Blessed Body - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul -->
+						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="3928" count="1" /> <!-- Scroll: Focus -->
@@ -2067,44 +2067,44 @@
 						<item id="3932" count="1" /> <!-- Scroll: Empower -->
 					</item>
 					<item chance="3.0">
-						<item id="3935" count="1" /> <!-- Scroll: Shield - Not Available -->
+						<item id="3935" count="1" /> <!-- Scroll: Shield - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3933" count="1" /> <!-- Scroll: Might - Not Available -->
+						<item id="3933" count="1" /> <!-- Scroll: Might - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="4218" count="1" /> <!-- Scroll: Mana Regeneration -->
 					</item>
 					<!-- Material -->
 					<item chance="2.0">
-						<item id="1882" count="1" /> <!-- Leather -->
+						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1876" count="1" /> <!-- Mithril Ore -->
+						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1884" count="2" /> <!-- Cord -->
+						<item id="1884" count="2" /> <!-- Old Cord - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1895" count="2" /> <!-- Metallic Fiber -->
+						<item id="1895" count="2" /> <!-- Old Metallic Fiber - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1870" count="2" /> <!-- Coal -->
+						<item id="1870" count="2" /> <!-- Old Coal - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1878" count="2" /> <!-- Durable Braid -->
+						<item id="1878" count="2" /> <!-- Old Durable Braid - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1865" count="2" /> <!-- Varnish -->
+						<item id="1865" count="2" /> <!-- Old Varnish - Not available -->
 					</item>
 					<item chance="2.0">
-						<item id="1872" count="2" /> <!-- Animal Bone -->
+						<item id="1872" count="2" /> <!-- Old Animal Bone - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -2155,7 +2155,7 @@
 		<mpConsume>23</mpConsume>
 	</skill>
 	<skill id="55079" toLevel="4" name="Regeneration">
-		<!-- For 20 min., HP Recovery rate +10%. -->
+		<!-- HP Recovery Rate +10% for 20 min. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2395,13 +2395,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100.0">
-						<item id="49477" count="1" /> <!-- Queen Ant's Ring - 15-day -->
+						<item id="49477" count="1" /> <!-- Queen Ant's Ring Lv. 1 - 15-day -->
 					</item>
 					<item chance="100.0">
-						<item id="49509" count="1" /> <!-- Ring of Core - 15-day -->
+						<item id="49509" count="1" /> <!-- Ring of Core Lv. 1 - 15-day -->
 					</item>
 					<item chance="100.0">
-						<item id="49493" count="1" /> <!-- Orfen's Earring - 15-day -->
+						<item id="49493" count="1" /> <!-- Orfen's Earring Lv. 1 - 15-day -->
 					</item>
 				</items>
 			</effect>
@@ -2445,7 +2445,7 @@
 		</effects>
 	</skill>
 	<skill id="55092" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 2">
-		<!-- P. Atk. +4 and P. Critical Damage +26. -->
+		<!-- P. Atk. +4, P. Critical Damage +26. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2462,7 +2462,7 @@
 		</effects>
 	</skill>
 	<skill id="55093" toLevel="10" name="Enchant Effect: Fire Dragon Pendant Lv. 2">
-		<!-- P. Atk. +6 and P. Critical Damage +38. -->
+		<!-- P. Atk. +6, P. Critical Damage +38. -->
 		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>

@@ -1176,7 +1176,7 @@
 		</skills>
 	</item>
 	<item id="80486" name="Mysterious Talisman - STR" additionalName="Event" type="Armor">
-		<!-- When equipped, STR +5. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, STR +5. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1188,7 +1188,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80487" name="Mysterious Talisman - INT" additionalName="Event" type="Armor">
-		<!-- When equipped, INT +5. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, INT +5. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1200,7 +1200,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80488" name="Mysterious Talisman - DEX" additionalName="Event" type="Armor">
-		<!-- When equipped, DEX +5. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, DEX +5. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1212,7 +1212,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80489" name="Mysterious Talisman - WIT" additionalName="Event" type="Armor">
-		<!-- When equipped, WIT +5. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, WIT +5. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1224,7 +1224,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80490" name="Mysterious Talisman - CON" additionalName="Event" type="Armor">
-		<!-- When equipped, CON +5. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, CON +5. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1236,7 +1236,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80491" name="Mysterious Talisman - MEN" additionalName="Event" type="Armor">
-		<!-- When equipped, MEN +5. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, MEN +5. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1248,7 +1248,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="80492" name="Mysterious Talisman - Attack Attribute" additionalName="Event" type="Armor">
-		<!-- When equipped, Attribute Attack +5. Effects of two identical talismans do not stack. -->
+		<!-- When equipped, Attribute Attack +50. Effects of two identical talismans (or similar PA talismans) do not stack. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />

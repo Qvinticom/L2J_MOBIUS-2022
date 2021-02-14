@@ -956,7 +956,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5535" toLevel="1" name="Little Angel Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -971,7 +971,7 @@
 		</conditions>
 	</skill>
 	<skill id="5536" toLevel="1" name="Little Devil Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -986,7 +986,7 @@
 		</conditions>
 	</skill>
 	<skill id="5537" toLevel="1" name="Rudolph Cuteness Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>
@@ -1013,7 +1013,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5539" toLevel="1" name="Little Angel Agathion Special Skill: Mysterious Power">
-		<!-- A mysterious power that no one knows. Use with caution! -->
+		<!-- Mysterious power with no explanation. Be careful when using! -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLevel>0</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -1054,7 +1054,7 @@
 		</effects>
 	</skill>
 	<skill id="5541" toLevel="1" name="Agathion Little Angel's Special Skill: Blessed Resurrection Power">
-		<!-- Allows the use of Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available for a party member. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -1131,7 +1131,7 @@
 		</effects>
 	</skill>
 	<skill id="5545" toLevel="1" name="Agathion Little Devil's Special Skill: Blessed Resurrection Power">
-		<!-- Allows the use of Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available for a party member. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -1167,7 +1167,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5547" toLevel="1" name="Maximum Ability">
-		<!-- Increases P. Atk., M. Atk., and received heal amount. -->
+		<!-- Increases P. Atk., M. Atk., and Received Healing. Greatly decreases Skill MP Consumption. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>MAXIMUM_ABILITY</abnormalType>
@@ -2253,7 +2253,7 @@
 		</effects>
 	</skill>
 	<skill id="5581" toLevel="1" name="Divine Beast Stun Attack">
-		<!-- Damages and stuns the target simultaneously. Over-hit. Power 704. -->
+		<!-- Attacks the enemy with 704 power, stunning them. Over-hit. -->
 		<icon>icon.skill0100</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2399,7 +2399,7 @@
 		</effects>
 	</skill>
 	<skill id="5586" toLevel="3" name="Pet Might">
-		<!-- Temporarily P. Atk. +8%. -->
+		<!-- Increases P. Atk. for a certain amount of time. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2450,7 +2450,7 @@
 		</effects>
 	</skill>
 	<skill id="5587" toLevel="3" name="Pet Shield">
-		<!-- Temporarily P. Def. +8%. -->
+		<!-- Increases P. Def. for a certain amount of time. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2501,7 +2501,7 @@
 		</effects>
 	</skill>
 	<skill id="5588" toLevel="3" name="Pet Focus">
-		<!-- Temporarily P. Critical Rate +20%. -->
+		<!-- Increases P. Critical Rate for a certain amount of time. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2552,7 +2552,7 @@
 		</effects>
 	</skill>
 	<skill id="5589" toLevel="3" name="Pet Death Whisper">
-		<!-- Temporarily P. Critical Damage +25%. -->
+		<!-- Increases P. Critical Damage for a certain amount of time. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2603,7 +2603,7 @@
 		</effects>
 	</skill>
 	<skill id="5590" toLevel="12" name="Pet Battle Heal">
-		<!-- Quickly restores HP. Power $s1. -->
+		<!-- Quickly restores HP. Power $s1 -->
 		<icon>icon.skill1218</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -2724,7 +2724,7 @@
 		</effects>
 	</skill>
 	<skill id="5592" toLevel="16" name="Lightning Barrier">
-		<!-- Momentarily stiffened. -->
+		<!-- Makes the target unable to move. -->
 		<icon>icon.skill1515</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2811,7 +2811,7 @@
 		</effects>
 	</skill>
 	<skill id="5594" toLevel="1" name="Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2891,6 +2891,7 @@
 		</effects>
 	</skill>
 	<skill id="5598" toLevel="12" name="Petrification Resistance">
+		<!-- Resist against Petrification. -->
 		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -2927,6 +2928,7 @@
 		</effects>
 	</skill>
 	<skill id="5599" toLevel="12" name="Stun Resistance">
+		<!-- Stun Resistance -->
 		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>

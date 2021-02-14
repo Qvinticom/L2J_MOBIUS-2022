@@ -777,6 +777,7 @@
 		</effects>
 	</skill>
 	<skill id="18723" toLevel="6" name="Ultimate Jewelry Box">
+		<!-- Double-click to obtain Fortune Jewel Box. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1438,7 +1439,7 @@
 						<item id="18081" count="1" minEnchant="10" maxEnchant="10" /> <!-- Blessed Helios Dual Daggers -->
 					</item>
 					<item chance="6.66">
-						<item id="18082" count="1" minEnchant="10" maxEnchant="10" /> <!-- Blessed Helios Dual Blunt Weapon -->
+						<item id="18082" count="1" minEnchant="10" maxEnchant="10" /> <!-- Blessed Helios Dual Blunt Weapons -->
 					</item>
 				</items>
 			</effect>
@@ -1882,7 +1883,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="18747" toLevel="1" name="Dragon's Attribute Potion (XP)">
-		<!-- For $s1 Attribute Attack +$s2, Attribute Resistance +$s3, Acquired XP/ SP +$s4. The effect remains after death. -->
+		<!-- For $s1, Attribute Attack +$s2, Attribute Resistance +$s3, acquired XP/ SP +$s4. The effect remains after death. -->
 		<icon>icon.bm_dragon_posion_brave</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>

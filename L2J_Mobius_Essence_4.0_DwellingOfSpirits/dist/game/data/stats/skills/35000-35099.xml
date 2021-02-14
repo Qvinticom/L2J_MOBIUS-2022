@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="35000" toLevel="1" name="Fire Dragon's Blessing">
-		<!-- Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+		<!-- Buffs/ debuffs remain after death, but Fire Dragon's Blessing disappears. -->
 		<icon>icon.bm_blessing_dragon</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -10,7 +10,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="35001" toLevel="1" name="Fire Dragon's Protection">
-		<!-- Fully restores a dying character. Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain after death, but Fire Dragon's Blessing disappears. -->
 		<icon>icon.bm_salvation_dragon</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -19,7 +19,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="35002" toLevel="1" name="Earth Dragon's Breath">
-		<!-- For 15 sec., Atk. Spd. -50% and Casting Spd. -50%. -->
+		<!-- For 15 sec., the target's Atk. Spd./ Casting Spd. -30%. -->
 		<icon>icon.bm_dragon_breath</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -29,7 +29,7 @@
 		<effectPoint>-190</effectPoint>
 	</skill>
 	<skill id="35003" toLevel="1" name="Earth Dragon's Defense">
-		<!-- For 15 sec., P. Def. +3600, M. Def. +3240, and Buff-canceling Attack Resistance +80%, and restricts movement. -->
+		<!-- For 15 sec., P. Def. +3600, M. Def. +3240, Buff Cancel Resistance +80%. -->
 		<icon>icon.bm_dragon_defence</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -165,12 +165,12 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="35009" toLevel="1" name="Black Mask Power">
-		<!-- STR+1, INT+1. -->
+		<!-- STR +1, INT +1. -->
 		<icon>icon.accessory_jjoro_masj_i00</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35010" toLevel="1" name="Refined Romantic Chapeau">
-		<!-- STR+1, INT+1. -->
+		<!-- STR +1, INT +1. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -215,7 +215,7 @@
 		</effects>
 	</skill>
 	<skill id="35012" toLevel="1" name="Pirate King Hat">
-		<!-- STR+1, INT+1. -->
+		<!-- STR +1, INT +1. -->
 		<icon>BranchSys2.icon.zaken_hair_accessary</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -226,7 +226,7 @@
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="35014" toLevel="1" name="Demon's Circlet">
-		<!-- STR+1, INT+1. -->
+		<!-- STR +1, INT +1. -->
 		<icon>icon.Accessary_demon_circlet_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -237,7 +237,7 @@
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="35016" toLevel="1" name="Core's Blessing">
-		<!-- Cancels all debuffs. Cannot be used if the character is inflicted with Fear/ Silence. -->
+		<!-- Removes all debuffs. -->
 		<icon>icon.accessory_ring_of_core_i03</icon>
 		<reuseDelay>120000</reuseDelay>
 		<hitTime>200</hitTime>
@@ -258,7 +258,7 @@
 		</effects>
 	</skill>
 	<skill id="35017" toLevel="7" name="Talisman: Talisman of Insolence I">
-		<!-- P. Atk. +14, M. Atk. +22. Effects from two such Talismans do not stack. -->
+		<!-- <Effect> P. Atk. +14 M. Atk. +22 -->
 		<icon>
 			<value level="1">icon.tallisman_oman_i02</value>
 			<value level="2">icon.tallisman_oman_i02</value>
@@ -545,7 +545,7 @@
 		</effects>
 	</skill>
 	<skill id="35018" toLevel="1" name="Talisman of Insolence">
-		<!-- Imbues with Talisman of Insolence power. -->
+		<!-- Imbues with Talisman of Insolence power VI -->
 		<icon>icon.tallisman_oman_i01</icon>
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN5</abnormalVisualEffect>
@@ -565,7 +565,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="35019" toLevel="1" name="Remove Talisman of Insolence">
-		<!-- The effect of Talisman of Insolence weakens. -->
+		<!-- The effect of Talisman of Insolence VI weakens. -->
 		<icon>icon.tallisman_oman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
@@ -621,7 +621,7 @@
 		</effects>
 	</skill>
 	<skill id="35022" toLevel="1" name="Chic Silver Chapeau">
-		<!-- STR+1, INT+1. -->
+		<!-- STR +1, INT +1. -->
 		<icon>BranchSys2.icon2.pi_silverchaperon</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1106,7 +1106,7 @@
 		</effects>
 	</skill>
 	<skill id="35026" toLevel="1" name="Blessing of Borders">
-		<!-- Restores 50% HP/ MP/ CP. -->
+		<!-- HP/ MP/ CP +50%. -->
 		<icon>icon.skill10034</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1116,7 +1116,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="35027" toLevel="9" name="Dimensional Border Power">
-		<!-- P./ M. Atk. +2%, P./ M. Critical Damage +10%. -->
+		<!-- P./ M. Atk. +2%, P. Critical Damage/ M. Skill Critical Damage +10%. -->
 		<icon>icon.skill10030</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1195,22 +1195,22 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35029" toLevel="5" name="Item Skill: Might in Duel - PvE">
-		<!-- Passive: P. Atk. in PvE +3%. -->
+		<!-- Item skill: P. Atk. in PvE +3%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35030" toLevel="5" name="Item Skill: Defense in Duel - PvP">
-		<!-- Passive: P. Def. in PvE +3%. -->
+		<!-- Item skill: P. Def. in PvP +3%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35031" toLevel="5" name="Item Skill: Defense in Duel - PvE">
-		<!-- Passive: P. Def. in PvE +3%. -->
+		<!-- Item skill: P. Def. in PvE +3%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35032" toLevel="5" name="Item Skill: Enhance">
-		<!-- Passive: Acquired XP/ SP +3%. -->
+		<!-- Item skill: Acquired XP/ SP +3%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1241,7 +1241,7 @@
 		<mpConsume>48</mpConsume>
 	</skill>
 	<skill id="35035" toLevel="1" name="Item Skill: Cleanse">
-		<!-- Skill: Cancels debuffs. -->
+		<!-- Skill: Removes a debuff. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -1251,7 +1251,7 @@
 		<mpConsume>48</mpConsume>
 	</skill>
 	<skill id="35036" toLevel="1" name="Warrior's Talisman - Attack">
-		<!-- Damage dealt in PvE +3%, M./ P. Critical Damage +20, M./ P. Skill Power +2%, M./ P. Accuracy +1. -->
+		<!-- PvE Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, M./ P. Accuracy +1. -->
 		<icon>icon.r90_sp_talisman_dr_mp_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1302,7 +1302,7 @@
 		</effects>
 	</skill>
 	<skill id="35037" toLevel="1" name="Warrior's Talisman - Defense">
-		<!-- PvE Damage +3%, Magic Attack Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
+		<!-- PvE Damage +3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
 		<icon>icon.r99_talisman_pd_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1344,7 +1344,7 @@
 		</effects>
 	</skill>
 	<skill id="35038" toLevel="1" name="Hero's Talisman - Attack">
-		<!-- PvP Damage +3%, M./ P. Critical Damage +20, Skill Power +2%, M./ P. Accuracy +1. -->
+		<!-- PvP Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, M./ P. Accuracy +1. -->
 		<icon>icon.r90_sp_talisman_dr_hp_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1387,7 +1387,7 @@
 		</effects>
 	</skill>
 	<skill id="35039" toLevel="1" name="Hero's Talisman - Defense">
-		<!-- PvP Damage +3%, Magic Attack Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Debuff Resistance +10%. -->
+		<!-- PvP Damage +3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Debuff Resistance +10%. -->
 		<icon>icon.r95_talisman_ca_down_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1426,7 +1426,7 @@
 		</effects>
 	</skill>
 	<skill id="35040" toLevel="1" name="Belt">
-		<!-- Inventory Slots +2, Weight Limit +1000. Use a Magic Rune Clip to upgrade it to Rag Belt. -->
+		<!-- Inventory Slots +2, Weight Limit +1000. Can be upgraded to Cloth Belt with a Magic Pin. -->
 		<icon>icon.belt_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1440,7 +1440,7 @@
 		</effects>
 	</skill>
 	<skill id="35041" toLevel="1" name="Cloth Belt">
-		<!-- When using the Belt, Inventory slot +2, weight limit +2000. HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, CP Recovery +1.66. You can enhance it to Leather Belt with magic. -->
+		<!-- When using the belt, Inventory slot +2, Weight Limit +2000. HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, CP Recovery +1.66. You can enhance it to Leather Belt with magic. -->
 		<icon>icon.belt_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1466,7 +1466,7 @@
 		</effects>
 	</skill>
 	<skill id="35042" toLevel="1" name="Leather Belt">
-		<!-- When using the Belt, Inventory slot +3, weight limit +3000. HP Recovery Bonus +1.47, MP Recovery Bonus +0.98, CP Recovery +1.96, Max HP/ MP/ CP +100. You can enhance it to Iron Belt with magic. -->
+		<!-- When using the belt, Inventory Slots +3, Weight Limit +3000, HP Recovery Bonus +1.47, MP Recovery Bonus +0.98, CP Recovery Bonus +1.96, Max HP/ MP/ CP +100. You can enhance it to Iron Belt with magic. -->
 		<icon>icon.belt_i02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1504,7 +1504,7 @@
 		</effects>
 	</skill>
 	<skill id="35043" toLevel="1" name="Iron Belt">
-		<!-- When using the Belt, Inventory slot +4, weight limit +4000. HP Recovery Bonus +1.70, MP Recovery Bonus +1.13, CP Recovery +2.26, Max HP/ MP/ CP +150. You can enhance it to Mithril Belt with magic. -->
+		<!-- When using the belt, Inventory Slots +4, Weight Limit +4000, HP Recovery Bonus +1.70, MP Recovery Bonus +1.13, CP Recovery Bonus +2.26, Max HP/ MP/ CP +150. You can enhance it to Mithril Belt with magic. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1542,7 +1542,7 @@
 		</effects>
 	</skill>
 	<skill id="35044" toLevel="1" name="Mithril Belt">
-		<!-- When using the Belt, Inventory slot +5, weight limit +5000. HP Recovery Bonus +1.92, MP Recovery Bonus +1.28, CP Recovery +2.56, Max HP/ MP/ CP +200. -->
+		<!-- When using the belt, Inventory Slots +5, Weight Limit +5000, HP Recovery Bonus +1.92, MP Recovery Bonus +1.28, CP Recovery Bonus +2.56, Max HP/ MP/ CP +200. -->
 		<icon>icon.belt_i04</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1580,7 +1580,7 @@
 		</effects>
 	</skill>
 	<skill id="35045" toLevel="1" name="Talisman of Battle - Liberate">
-		<!-- Cancels all debuffs. Cooldown: 10 min. -->
+		<!-- Removes all debuffs. Cooldown: 10 min. -->
 		<icon>icon.etc_talisman_i03</icon>
 		<operateType>A1</operateType>
 		<mpConsume>50</mpConsume>
@@ -1601,7 +1601,7 @@
 		</effects>
 	</skill>
 	<skill id="35046" toLevel="1" name="Earth Dragon Belt">
-		<!-- When using the Belt, adds 6 slots to the inventory, Weight Limit +7000, CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +15%, Healing Potions Effect +100. (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion) -->
+		<!-- Inventory Slots +6, Weight Limit +7000, CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +15%, HP Recovery Potions' Effect +100, Received Damage -6%. -->
 		<icon>icon.bm_antaras_belt</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1650,7 +1650,7 @@
 		</effects>
 	</skill>
 	<skill id="35047" toLevel="1" name="Fire Dragon Belt">
-		<!-- When using the Belt, adds 6 slots to the inventory, Weight Limit +7000, STR +1, INT +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +10%, Healing Potions Effect +100, M. Critical Rate +4%. (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion) -->
+		<!-- Inventory Slots +6, Weight Limit +7000, STR/ INT +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +10%, HP Recovery Potions' Effect +100, P. Critical Damage/ M. Skill Critical Damage +4%. -->
 		<icon>icon.bm_vallakas_belt</icon>
 		<operateType>P</operateType>
 		<effects>

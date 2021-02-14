@@ -27,7 +27,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="18398" level="1" />
+			<skill id="18398" level="1" /> <!-- Zaken's Treasure Chest -->
 		</skills>
 	</item>
 	<item id="46103" name="Leona Blackbird's Treasure Chest" type="EtcItem">
@@ -37,7 +37,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="18399" level="1" />
+			<skill id="18399" level="1" /> <!-- Leona Blackbird's Treasure Chest -->
 		</skills>
 	</item>
 	<item id="46104" name="Beora's Treasure Chest" type="EtcItem">
@@ -47,7 +47,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="18400" level="1" />
+			<skill id="18400" level="1" /> <!-- Beora's Treasure Chest -->
 		</skills>
 	</item>
 	<item id="46105" name="Gladiator's Treasure Chest" type="EtcItem">
@@ -57,7 +57,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="18401" level="1" />
+			<skill id="18401" level="1" /> <!-- Gladiator's Treasure Chest -->
 		</skills>
 	</item>
 	<item id="46106" name="Raymond's Treasure Chest" type="EtcItem">
@@ -67,7 +67,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="18402" level="1" />
+			<skill id="18402" level="1" /> <!-- Raymond's Treasure Chest -->
 		</skills>
 	</item>
 	<item id="46107" name="Turek Orc's Treasure Chest" type="EtcItem">
@@ -77,7 +77,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
 		<skills>
-			<skill id="18403" level="1" />
+			<skill id="18403" level="1" /> <!-- Turek Orc's Treasure Chest -->
 		</skills>
 	</item>
 	<item id="46108" name="Drake Maul Appearance Stone" additionalName="30-day" type="EtcItem">
@@ -552,7 +552,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="46146" name="Atelia Fortress Stronghold I Teleport Device" additionalName="24-hr" type="EtcItem">
-		<!-- A teleport device that takes you to Stronghold I. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 h.. -->
+		<!-- A device that can teleport you to the Golden Altar. It was brought from Aden in order to facilitate movement. Due to the instability in the Atelia Fortress, it can only be used for 24 h. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

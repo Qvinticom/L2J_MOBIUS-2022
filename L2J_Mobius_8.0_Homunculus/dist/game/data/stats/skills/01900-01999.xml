@@ -620,7 +620,7 @@
 		</effects>
 	</skill>
 	<skill id="1922" toLevel="2" name="Earth Tremor">
-		<!-- Knocks down nearby enemies for $s1, their P./ M. Def. -$s2.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Knocks down nearby enemies for $s1, their P./ M. Def. -$s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1922</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -2138,7 +2138,7 @@
 		</effects>
 	</skill>
 	<skill id="1982" toLevel="1" name="Dual - Shackles of the Giants">
-		<!-- Blocks target's physical skills for 5 sec. PvP only. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks target's physical skills for 5 sec. PvP only. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.dual_a_pblock</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -2167,7 +2167,7 @@
 		</effects>
 	</skill>
 	<skill id="1983" toLevel="1" name="Dual - Silence of the Giants">
-		<!-- Blocks target's magic skills for 5 sec. PvP only. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Blocks target's magic skills for 5 sec. PvP only. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.dual_a_mblock</icon>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -2196,7 +2196,7 @@
 		</effects>
 	</skill>
 	<skill id="1984" toLevel="1" name="Dual - Yoke of the Giants">
-		<!-- Decreases target and nearby enemies' Spd. by 90% for 5 sec. PvP only. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Decreases target and nearby enemies' Spd. by 90% for 5 sec. PvP only. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.dual_a_spdown</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2483,7 +2483,7 @@
 		</effects>
 	</skill>
 	<skill id="1996" toLevel="2" name="Hurricane Shackle">
-		<!-- For $s1, blocks target from using escape items and skills. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- For $s1, blocks target from using escape items and skills. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1996</icon>
 		<operateType>A3</operateType>
 		<castRange>600</castRange>

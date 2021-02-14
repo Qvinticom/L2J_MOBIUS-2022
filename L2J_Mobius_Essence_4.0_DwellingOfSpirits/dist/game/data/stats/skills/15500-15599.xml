@@ -36,7 +36,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15506" toLevel="1" name="Wondrous Herb of Power">
-		<!-- For 1 h. 30 sec., P. Atk. +100%. -->
+		<!-- P. Atk. +100% for 1 min. 30 sec. -->
 		<icon>icon.etc_warrior_set_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -45,7 +45,7 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15507" toLevel="1" name="Wondrous Herb of Magic">
-		<!-- For 1 h. 30 sec., M. Atk. +400%. -->
+		<!-- M. Atk. +400% for 1 min. 30 sec. -->
 		<icon>icon.etc_magic_set_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -79,7 +79,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15511" toLevel="1" name="Laido Punch">
-		<!-- Attacks a single enemy. -->
+		<!-- Powerful attack on enemy. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -137,7 +137,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15517" toLevel="1" name="Chaos Attack">
-		<!-- Swings arms to attack target. -->
+		<!-- Inflicts powerful physical damage. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
@@ -173,7 +173,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15521" toLevel="1" name="Flailing Spin">
-		<!-- Swings arms to attack target. -->
+		<!-- Inflicts powerful physical damage. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
@@ -232,7 +232,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15527" toLevel="1" name="Chaos Breath">
-		<!-- AoE M. Atk. On target's area. -->
+		<!-- AoE M. Atk. on target's area. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>300</castRange>
@@ -250,7 +250,7 @@
 		<hitTime>100</hitTime>
 	</skill>
 	<skill id="15529" toLevel="1" name="Absorb Spirit">
-		<!-- Soul is drained. P./ M. Def. -30%, and Atk. Spd. +10%. -->
+		<!-- Soul is drained. P. Def./ M. Def. -30%, and Atk. Spd. +10%. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -272,7 +272,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15531" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>13</mpConsume>
@@ -517,7 +517,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15557" toLevel="1" name="Crane Strike">
-		<!-- Target's Atk. Spd. -10%. -->
+		<!-- Decreases target's Atk. Spd. by 10%. -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -623,7 +623,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15570" toLevel="1" name="Master Siege Shield">
-		<!-- For 30 sec., reflects 50% of received damage. -->
+		<!-- For 30 sec., reflects 50% of the received damage. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A2</operateType>
 		<mpConsume>100</mpConsume>
@@ -633,7 +633,7 @@
 		<reuseDelay>150000</reuseDelay>
 	</skill>
 	<skill id="15571" toLevel="1" name="Master Siege Attack">
-		<!-- Launches a powerful attack on the target. -->
+		<!-- Powerful attack on enemy. -->
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
 		<mpConsume>100</mpConsume>
@@ -663,7 +663,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="15575" toLevel="1" name="Dedicated Blow">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
@@ -673,7 +673,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15576" toLevel="1" name="Dedicated Shot">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<castRange>250</castRange>
@@ -806,7 +806,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15589" toLevel="1" name="Painful Blow">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
@@ -826,7 +826,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15592" toLevel="1" name="Dark Wind Armor">
-		<!-- Reflects a part of received damage. -->
+		<!-- Reflects a portion of the received damage. -->
 		<icon>icon.skill4095</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -865,7 +865,7 @@
 		<hitTime>4200</hitTime>
 	</skill>
 	<skill id="15597" toLevel="1" name="Presentation - Lindvior's Landing">
-		<!-- Lindvior's Fall -->
+		<!-- Lindvior lands. -->
 		<operateType>A1</operateType>
 		<hitTime>5000</hitTime>
 	</skill>

@@ -25,47 +25,47 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51404" toLevel="1" name="Reinforced Spear's Power">
-		<!-- Double-click to obtain Glaive (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day. -->
+		<!-- Double-click to obtain D-grade Glaive enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<icon>icon.weapon_long_spear_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51405" toLevel="1" name="Reinforced Falchion's Power I">
-		<!-- Double-click to obtain Elven Long Sword (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day.\nInfluences the cooldown of Reinforced Falchion's Power II. -->
+		<!-- Double-click to obtain D-grade Elven Long Sword enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. Influences the cooldown of Reinforced Falchion's Power II. -->
 		<icon>icon.weapon_falchion_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51406" toLevel="1" name="Reinforced Falchion's Power II">
-		<!-- Double-click to obtain Bastard Sword*Crimson Sword (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day.\nInfluences the cooldown of Reinforced Falchion's Power I. -->
+		<!-- Double-click to obtain D-grade Bastard Sword*Crimson Sword enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. Influences the cooldown of Reinforced Falchion's Power I. -->
 		<icon>icon.weapon_falchion_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51407" toLevel="1" name="Reinforced Iron Hammer's Power">
-		<!-- Double-click to obtain Bonebreaker (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day. -->
+		<!-- Double-click to obtain D-grade Bonebreaker enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<icon>icon.weapon_iron_hammer_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51408" toLevel="1" name="Reinforced Voodoo Doll's Power">
-		<!-- Double-click to obtain Staff of Life (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day. -->
+		<!-- Double-click to obtain D-grade Staff of Life enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<icon>icon.weapon_voodoo_doll_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51409" toLevel="1" name="Reinforced Flanged Mace's Power">
-		<!-- Double-click to obtain Claymore (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day. -->
+		<!-- Double-click to obtain D-grade Claymore enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<icon>icon.weapon_buzdygan_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51410" toLevel="1" name="Reinforced Sword Breaker's Power">
-		<!-- Double-click to obtain Mithril Dagger (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day. -->
+		<!-- Double-click to obtain D-grade Mithril Dagger enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<icon>icon.weapon_sword_breaker_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51411" toLevel="1" name="Reinforced Viper Fang's Power">
-		<!-- Double-click to obtain Scallop Jamadhr (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day. -->
+		<!-- Double-click to obtain D-grade Scallop Jamadhr enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<icon>icon.weapon_vipers_canine_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51412" toLevel="1" name="Reinforced Compound Bow's Power">
-		<!-- Double-click to obtain Light Crossbow (D-grade) enchanted from +8 to +16.\n\nRequires 1 Weapon Ticket from the L-coin Shop.\nCan be used only once a day. -->
+		<!-- Double-click to obtain D-grade Light Bow enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<icon>icon.weapon_composition_bow_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -82,7 +82,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51416" toLevel="2" name="Blessing of Plenty - 100% (Event)">
-		<!-- Acquired L-Coins +$s1. -->
+		<!-- L-Coin drop rate +$s1. -->
 		<icon>
 			<value level="1">icon.aden_bless_rune_i01</value>
 			<value level="2">icon.aden_bless_rune_i02</value>
@@ -198,7 +198,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="51436" toLevel="1" name="Sayha's Storm Lv. 3">
-		<!-- For 20 min., Sayha's Grace Consumption +100%%, acquired XP/ SP +200%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
+		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -225,7 +225,7 @@
 		</effects>
 	</skill>
 	<skill id="51437" toLevel="1" name="Sayha's Storm Lv. 3 (Exchangeable)">
-		<!-- For 20 min., Sayha's Grace Consumption +100%%, acquired XP/ SP +200%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
+		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -252,7 +252,7 @@
 		</effects>
 	</skill>
 	<skill id="51438" toLevel="1" name="Sayha's Summoning Stick">
-		<!-- Use it to summon various monsters. -->
+		<!-- Required to summon various monsters. -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>2000</hitTime>
@@ -269,15 +269,15 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="51441" toLevel="1" name="Scroll of Escape: Abandoned Camp">
-		<!-- Magical scroll that relocates you to the Abandoned Camp. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- A magical scroll that teleports to the Abandoned Camp. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51442" toLevel="1" name="Scroll of Escape: Windmill Hill">
-		<!-- A magical scroll that relocates you to Windmill Hill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A magical scroll that teleports to the Windmill Hill. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51443" toLevel="1" name="Scroll of Escape: Ruins of Agony">
-		<!-- A magical scroll that relocates you to the Ruins of Agony. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A magical scroll that teleports to the Ruins of Agony. Cannot be exchanged, dropped, or sold. Can be stored in the warehouse. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51444" toLevel="1" name="Reinforced Spear Chest">
@@ -333,7 +333,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51453" toLevel="1" name="Exuberance Amulet">
-		<!-- When equipped, Acquired XP/ SP +20%, STR +1, CON +1, DEX +1, INT +1, WIT +1, MEN +1. -->
+		<!-- Acquired XP/ SP +20%, STR +1, CON +1, DEX +1, INT +1, WIT +1, MEN +1. -->
 		<icon>icon.bm_sayha_rune</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -358,28 +358,28 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51457" toLevel="1" name="Adventurer's Scroll: High Priest Transformation">
-		<!-- Grants the power of High Priest. For 20 min. acquired XP/ SP +5%, P. Atk. +63, M. Atk. +70. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance restores 300 HP and 80 MP of party members. -->
+		<!-- Grants the power of High Priest. For $s1 acquired XP/ SP +$s2, P. Atk. +$s3, M. Atk. +$s4. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance restores $s5 HP and $s6 MP of party members. -->
 		<icon>icon.bm2018_healer_i01</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51458" toLevel="1" name="Adventurer's Scroll: Valkyrie Transformation">
-		<!-- Grants the power of Valkyrie. For 20 min. P. Atk. +63, M. Atk. +70, P./ M. Critical Rate +20, Atk. Spd./ Casting Spd. +50, Speed +10, Sayha's Grace Consumption - 5%. Transformation effect remains after death. \n\n<Special ability>\nIn case of successful physical attack or skill use, there is a certain chance that enemy will get additional physical damage. The same is for magic skill use and additional magic damage. -->
+		<!-- Grants the power of Valkyrie. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> In case of successful standard attack or skill use, there is a certain chance that enemy will get additional physical damage. The same is for magic skill use and additional magic damage. -->
 		<icon>icon.bm2018_valkyrie_i01</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51459" toLevel="1" name="Adventurer's Scroll: Dragon Berserker Transformation">
-		<!-- Grants the power of Dragon Berserker. For 20 min. P. Atk. +135, M. Atk. +150, P./ M. Critical Rate +50, Atk. Spd./ Casting Spd. +100, Speed +15, Sayha's Grace Consumption -10%. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P. Atk. +300, M. Atk. +300, P./ M. Critical Damage +20 min.0, Atk. Spd./ Casting Spd. +20 min.1, Damage Reflection +20 min.2. -->
+		<!-- Grants the power of Dragon Berserker. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance P. Atk. +$s8, M. Atk. +$s9, P./ M. Critical Damage +$s10, Atk. Spd./ Casting Spd. +$s11, Damage Reflection +$s12. -->
 		<icon>icon.bm2018_dragon_i01</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51460" toLevel="1" name="High Priest - Blessing of Eva">
-		<!-- Restores 300 HP and 80 MP of party members. -->
+		<!-- Restores $s1 HP and $s2 MP of party members. -->
 		<icon>icon.skill1506</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -395,7 +395,7 @@
 		<effectPoint>-5</effectPoint>
 	</skill>
 	<skill id="51462" toLevel="1" name="Berserker Spirit">
-		<!-- Grants the power of Berserker. During Berserker effect P. Atk. +300, M. Atk. +300, P./ M. Critical Damage +135, Atk. Spd./ Casting Spd. +100. Reflects 15% damage to enemy. -->
+		<!-- Grants the power of Berserker. During Berserker effect P. Atk. +$s1, M. Atk. +$s2, P. Critical Damage/ M. Skill Critical Damage +$s3, Atk. Spd./ Casting Spd. +$s4. Reflects $s5 of received damage to the enemy. -->
 		<icon>icon.bm2018_dragon_i02</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>

@@ -559,7 +559,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="625" toLevel="1" name="Soul Gathering">
-		<!-- Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes 10 Spirit Ore. The skill cooldown is fixed. -->
+		<!-- Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes $s1 Spirit Ore. The skill cooldown is fixed. -->
 		<icon>icon.skill0467</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>1500</hitTime>
@@ -615,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="627" toLevel="40" name="Soul Shock">
-		<!-- Attacks the enemy with $s1 power inflicting Fear for $s2 Consumes $s3 souls. Requires a crossbow. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks the enemy with $s1 power inflicting Fear for $s2 Consumes $s3 souls. Requires a crossbow. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2301,7 +2301,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="680" toLevel="1" name="Divine Knight Hate">
-		<!-- Provokes the enemy into attacking you. Power 6752. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes the enemy into attacking you. Power 6752. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2328,7 +2328,7 @@
 		</effects>
 	</skill>
 	<skill id="681" toLevel="1" name="Divine Knight Aggression Aura">
-		<!-- Provokes nearby enemies into attacking you. Power 6752. The skill cooldown is fixed.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Provokes nearby enemies into attacking you. Power 6752. The skill cooldown is fixed. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill_transform_etc</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2355,7 +2355,7 @@
 		</effects>
 	</skill>
 	<skill id="682" toLevel="1" name="Divine Knight Stun Attack">
-		<!-- Attacks and stuns the enemy with 1162 power. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks and stuns the enemy with 1162 power. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2390,7 +2390,7 @@
 		</effects>
 	</skill>
 	<skill id="683" toLevel="1" name="Divine Knight Thunder Storm">
-		<!-- Attacks and stuns nearby enemies with 775 power. Ignores Shield Defense. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks and stuns nearby enemies with 775 power. Ignores Shield Defense. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2498,7 +2498,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="686" toLevel="1" name="Divine Rogue Stun Shot">
-		<!-- Shoots arrows with 2323 power that deal damage to the enemy stunning them and making them lose their target. Over-hit.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Shoots arrows with 2323 power that deal damage to the enemy stunning them and making them lose their target. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -2558,7 +2558,7 @@
 		</effects>
 	</skill>
 	<skill id="688" toLevel="1" name="Divine Rogue Bleed Attack">
-		<!-- Strikes the enemy with 1549 power making them bleed. Effect 3. Over-hit.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Strikes the enemy with 1549 power making them bleed. Effect 3. Over-hit. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -2768,7 +2768,7 @@
 		</effects>
 	</skill>
 	<skill id="695" toLevel="1" name="Divine Wizard Divine Cloud">
-		<!-- Summons divine clouds making nearby enemies fall sleep. Decreases probability of additional sleep state while the effect lasts.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Summons divine clouds making nearby enemies fall sleep. Decreases probability of additional sleep state while the effect lasts. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2840,7 +2840,7 @@
 		</effects>
 	</skill>
 	<skill id="697" toLevel="1" name="Sacrifice Wizard">
-		<!-- Sacrifices the character to increase party's M. Atk. Can be used only when MP<10%. The skill cooldown is fixed. -->
+		<!-- Sacrifices the character to increase party s M. Atk. Can be used only when MP<10%. The skill cooldown is fixed. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

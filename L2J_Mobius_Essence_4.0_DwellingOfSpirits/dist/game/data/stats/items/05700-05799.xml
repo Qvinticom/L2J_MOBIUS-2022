@@ -503,6 +503,7 @@
 		</stats>
 	</item>
 	<item id="5765" name="Dark Crystal Gloves" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +200. Atk. Spd. +8%. Received Healing +2% -->
 		<set name="icon" val="icon.armor_t74_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -520,10 +521,11 @@
 		</stats>
 		<skills>
 			<skill id="50236" level="1" type="ON_ENCHANT" type_value="5" /> <!-- A-grade: Dark Crystal Gloves -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5766" name="Dark Crystal Gloves" additionalName="Light" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Evasion +2 -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -541,10 +543,11 @@
 		</stats>
 		<skills>
 			<skill id="50238" level="1" /> <!-- A-grade: Dark Crystal Gloves -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5767" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. Casting Interruption Rate -25 -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -562,10 +565,11 @@
 		</stats>
 		<skills>
 			<skill id="50237" level="1" /> <!-- A-grade: Dark Crystal Gloves -->
-			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
+			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
 	<item id="5768" name="Tallum Gloves" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Def. +10 -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -583,10 +587,11 @@
 		</stats>
 		<skills>
 			<skill id="50245" level="1" /> <!-- A-grade: Tallum Gloves -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5769" name="Tallum Gloves" additionalName="Light" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Max MP +120. Casting Spd. +15% -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -604,10 +609,11 @@
 		</stats>
 		<skills>
 			<skill id="50247" level="1" /> <!-- A-grade: Tallum Gloves -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5770" name="Tallum Gloves" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +20. Max HP +50. Casting Spd. +15% -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -625,10 +631,11 @@
 		</stats>
 		<skills>
 			<skill id="50246" level="1" /> <!-- A-grade: Tallum Gloves -->
-			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
+			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
 	<item id="5771" name="Gauntlets of Nightmare" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Atk. +50 -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -646,10 +653,11 @@
 		</stats>
 		<skills>
 			<skill id="50242" level="1" /> <!-- A-grade: Gauntlets of Nightmare -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5772" name="Gauntlets of Nightmare" additionalName="Light" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. Absorbs 2% of the inflicted damage as HP. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -667,10 +675,11 @@
 		</stats>
 		<skills>
 			<skill id="50244" level="1" /> <!-- A-grade: Gauntlets of Nightmare -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5773" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. M. Atk. +50 -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -688,10 +697,11 @@
 		</stats>
 		<skills>
 			<skill id="50243" level="1" /> <!-- A-grade: Gauntlets of Nightmare -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
 	<item id="5774" name="Majestic Gauntlets" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. Atk. Spd. +50 -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -709,10 +719,11 @@
 		</stats>
 		<skills>
 			<skill id="50239" level="1" /> <!-- A-grade: Majestic Gauntlets -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5775" name="Majestic Gauntlets" additionalName="Light" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Atk. Spd. +8%. P. Skill Critical Damage +50 -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -730,10 +741,11 @@
 		</stats>
 		<skills>
 			<skill id="50241" level="1" /> <!-- A-grade: Majestic Gauntlets -->
-			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical)-->
+			<skill id="50263" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Physical) -->
 		</skills>
 	</item>
 	<item id="5776" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Casting Spd. +15%. Casting Spd. +50 -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -751,10 +763,11 @@
 		</stats>
 		<skills>
 			<skill id="50240" level="1" /> <!-- A-grade: Majestic Gauntlets -->
-			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic)-->
+			<skill id="50264" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Gloves (Magic) -->
 		</skills>
 	</item>
 	<item id="5777" name="Dark Crystal Boots" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +200. Speed +4. Received Healing +2% -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -772,10 +785,11 @@
 		</stats>
 		<skills>
 			<skill id="50248" level="1" /> <!-- A-grade: Dark Crystal Boots -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5778" name="Dark Crystal Boots" additionalName="Light" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Evasion +2 -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -793,10 +807,11 @@
 		</stats>
 		<skills>
 			<skill id="50250" level="1" /> <!-- A-grade: Dark Crystal Boots -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5779" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +7. Casting Interruption Rate -25 -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -814,10 +829,11 @@
 		</stats>
 		<skills>
 			<skill id="50249" level="1" /> <!-- A-grade: Dark Crystal Boots -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
 	<item id="5780" name="Tallum Boots" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Def. +10 -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -835,10 +851,11 @@
 		</stats>
 		<skills>
 			<skill id="50257" level="1" /> <!-- A-grade: Tallum Boots -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5781" name="Tallum Boots" additionalName="Light" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Max MP +120. Speed +4 -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -856,10 +873,11 @@
 		</stats>
 		<skills>
 			<skill id="50259" level="1" /> <!-- A-grade: Tallum Boots -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5782" name="Tallum Boots" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +20. Max HP +50. Speed +4 -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -877,10 +895,11 @@
 		</stats>
 		<skills>
 			<skill id="50258" level="1" /> <!-- A-grade: Tallum Boots -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
+			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
 	<item id="5783" name="Boots of Nightmare" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Atk. +50 -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -898,10 +917,11 @@
 		</stats>
 		<skills>
 			<skill id="50254" level="1" /> <!-- A-grade: Boots of Nightmare -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5784" name="Boots of Nightmare" additionalName="Light" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. Absorbs 2% of the inflicted damage as HP. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -919,10 +939,11 @@
 		</stats>
 		<skills>
 			<skill id="50256" level="1" /> <!-- A-grade: Boots of Nightmare -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5785" name="Boots of Nightmare" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. M. Atk. +50 -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -940,10 +961,11 @@
 		</stats>
 		<skills>
 			<skill id="50255" level="1" /> <!-- A-grade: Boots of Nightmare -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
+			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
 	<item id="5786" name="Majestic Boots" additionalName="Heavy" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +7. Atk. Spd. +50 -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -961,10 +983,11 @@
 		</stats>
 		<skills>
 			<skill id="50251" level="1" /> <!-- A-grade: Majestic Boots -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5787" name="Majestic Boots" additionalName="Light" type="Armor">
+		<!-- <Properties>. STR +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. P. Skill Critical Damage +50 -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -982,10 +1005,11 @@
 		</stats>
 		<skills>
 			<skill id="50253" level="1" /> <!-- A-grade: Majestic Boots -->
-			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical)-->
+			<skill id="50265" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Physical) -->
 		</skills>
 	</item>
 	<item id="5788" name="Majestic Boots" additionalName="Robe" type="Armor">
+		<!-- <Properties>. INT +1. Overweight limit +1000. M. Def. +10. Max HP +50. Speed +4. Casting Spd. +50 -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1003,11 +1027,11 @@
 		</stats>
 		<skills>
 			<skill id="50252" level="1" /> <!-- A-grade: Majestic Boots -->
-			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic)-->
+			<skill id="50266" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Enchant Effect: A-grade Boots (Magic) -->
 		</skills>
 	</item>
 	<item id="5789" name="Soulshot (No-grade) (Novice)" type="EtcItem">
-		<!-- A Soulshot (No-grade) for use by newbies. Cannot be exchanged, dropped, or sold. -->
+		<!-- A No-grade Soulshot for new players. Take it to the Game Assistant to exchange for a new one. -->
 		<set name="icon" val="icon.etc_soulshot_none_for_rookie_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -1024,7 +1048,7 @@
 		</skills>
 	</item>
 	<item id="5790" name="Spiritshot (No-grade) (Novice)" type="EtcItem">
-		<!-- A Spiritshot (No-grade) for use by newbies. Cannot be exchanged, dropped, or sold. -->
+		<!-- A No-grade Spiritshot for new players. Take it to the Game Assistant to exchange for a new one. -->
 		<set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />

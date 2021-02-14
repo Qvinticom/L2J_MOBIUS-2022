@@ -13,7 +13,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="16101" toLevel="1" name="Tauti">
-		<!-- One of Bremnon's weapons, named by Shilen as the Lord of Hellfire. With its own ego and the ability to control living beings' emotions, Tauti is manipulating the class warfare among the races in the Seed in order to evolve itself and complete the sacrifices for Shilen. -->
+		<!-- One of Bremnon's weapons, named by Shillien's the Lord of Hellfire. With its own ego and the ability to control living beings' emotions, Tauti is manipulating the class warfare among the races in the Seed in order to evolve itself and complete the sacrifices for Shillien. -->
 		<icon>icon.skillboss</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -194,7 +194,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16114" toLevel="5" name="Curse of the Dead">
-		<!-- Cuts target and party members' HP by $s1. -->
+		<!-- The target's and their party members' HP -50%. -->
 		<operateType>A1</operateType>
 		<mpConsume>59</mpConsume>
 		<castRange>1300</castRange>
@@ -230,7 +230,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16119" toLevel="1" name="Flare Chain">
-		<!-- Deals fire damage to target and nearby enemies. -->
+		<!-- Deals fire damage to the target and nearby enemies. -->
 		<operateType>A1</operateType>
 		<mpConsume>90</mpConsume>
 		<castRange>450</castRange>
@@ -241,7 +241,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16121" toLevel="5" name="Sleeping Cloud">
-		<!-- Inflicts Sleep on nearby enemies for $s1. -->
+		<!-- Inflicts sleep on nearby enemies for $s1 -->
 		<icon>icon.skill1072</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -321,7 +321,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16128" toLevel="1" name="Flame Bog">
-		<!-- Powerful flame attack on target and nearby enemies, draining HP for 5 sec. -->
+		<!-- Burns the target and nearby enemies, draining their HP for 5 sec. -->
 		<icon>icon.skill4279_new</icon>
 		<operateType>A2</operateType>
 		<mpConsume>81</mpConsume>
@@ -381,7 +381,7 @@
 		</effects>
 	</skill>
 	<skill id="16131" toLevel="1" name="Thirst Quench">
-		<!-- Your thirst has been quenched. P./ M. Atk., and Atk./ Casting Spd. +50%. -->
+		<!-- Your thirst has been quenched. P./ M. Atk. and Atk./ Casting Spd. +50%. -->
 		<icon>icon.release_thirst</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -546,7 +546,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16148" toLevel="5" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Frightened into fleeing. -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -564,7 +564,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16149" toLevel="5" name="Fatal Poison">
-		<!-- HP decreases from bleeding momentarily. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
@@ -601,7 +601,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16151" toLevel="7" name="Aura Spike">
-		<!-- Attacks the target with magic. -->
+		<!-- Attacks the enemy with magic. -->
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">30</value>
@@ -705,7 +705,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16159" toLevel="1" name="Beleth's Blaze">
-		<!-- Deals powerful fire damage to nearby enemies. -->
+		<!-- Deals fire damage to nearby enemies. -->
 		<operateType>A1</operateType>
 		<mpConsume>51</mpConsume>
 		<hitTime>2000</hitTime>
@@ -826,7 +826,7 @@
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="16174" toLevel="1" name="Herb of Growth">
-		<!-- Hellbound's mysterious powers give you 10 min. of acquired XP/ SP +50%. Entire party. -->
+		<!-- Hellbound's mysterious powers give you 10 min. of Acquired SP/ XP +50% through hunting. Entire party. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
@@ -835,7 +835,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="16175" toLevel="1" name="Major Herb of Growth">
-		<!-- Hellbound's mysterious powers give you 10 min. of acquired XP/ SP +100%. Entire party. -->
+		<!-- Hellbound's mysterious powers give you 10 min. of Acquired SP/ XP +100% through hunting. Entire party. -->
 		<icon>BranchSys2.icon.g_dawn_gem</icon>
 		<operateType>P</operateType>
 		<hitTime>100</hitTime>
@@ -844,7 +844,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="16176" toLevel="1" name="Superior Herb of Growth">
-		<!-- Hellbound's mysterious powers give you 2 min. of acquired XP/ SP +300%. Entire party. -->
+		<!-- Hellbound's mysterious powers give you 2 min. of Acquired SP/ XP +300% through hunting. Entire party. -->
 		<icon>icon.etc_str_symbol_i01</icon>
 		<operateType>P</operateType>
 		<hitTime>100</hitTime>
@@ -853,7 +853,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="16177" toLevel="5" name="Stun Resistance">
-		<!-- Resistance to Stun. -->
+		<!-- Resistant to Stun. -->
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16178" toLevel="1" name="Leona's Thunder Spear">
@@ -925,7 +925,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="16188" toLevel="1" name="Darkness">
-		<!-- Magical AoE attack to target and surrounding area. -->
+		<!-- Deals magic damage to the target and nearby enemies. -->
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>300</castRange>
@@ -969,7 +969,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16193" toLevel="1" name="Lurking Lunacy">
-		<!-- Casts Fear on target and nearby enemies for 2 sec. -->
+		<!-- Inflicts Fear on the target and nearby enemies for 2 sec. -->
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>300</castRange>
@@ -988,7 +988,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16195" toLevel="1" name="Guided Death">
-		<!-- Powerful magical AoE attack. -->
+		<!-- A powerful magical AoE attack. -->
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>1000</castRange>

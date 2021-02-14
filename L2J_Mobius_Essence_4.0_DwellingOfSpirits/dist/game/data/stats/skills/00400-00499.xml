@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" toLevel="30" name="Tribunal">
-		<!-- Attacks the target with $s1 power.\nFor $s2, the enemy's P. Critical Rate -$s3.\nRequires a sword or a blunt weapon.\nIgnores Shield Defense.\nIgnores $s4 of Def.\nCritical.\nOver-hit. -->
+		<!-- Attacks the target with $s1 power. For $s2, the enemy's P. Critical Rate -$s3. Requires a sword or a blunt weapon. Ignores Shield Defense. Ignores $s4 of Def. Critical. Over-hit. -->
 		<icon>icon.skill0400</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -233,7 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="401" toLevel="30" name="Judgment">
-		<!-- Attacks the target with $s1 power.\nFor $s2, the enemy's P. Critical Damage -$s3.\nRequires a sword or a blunt weapon.\nIgnores Shield Defense.\nIgnores $s4 of Def.\nCritical.\nOver-hit. -->
+		<!-- Attacks the target with $s1 power. For $s2, the enemy's P. Critical Damage -$s3. Requires a sword or a blunt weapon. Ignores Shield Defense. Ignores $s4 of Def. Critical. Over-hit. -->
 		<icon>icon.skill0401</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -465,7 +465,7 @@
 		</effects>
 	</skill>
 	<skill id="402" toLevel="25" name="Shackle">
-		<!-- For $s1, immobilizes the enemy. -->
+		<!-- Immobilizes the enemy for $s1 -->
 		<icon>icon.skill0402</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -573,7 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="403" toLevel="10" name="Shackle">
-		<!-- For $s1, immobilizes the enemy. -->
+		<!-- Immobilizes the enemy for $s1 -->
 		<icon>icon.skill0403</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -636,7 +636,7 @@
 		</effects>
 	</skill>
 	<skill id="404" toLevel="20" name="Mass Shackling">
-		<!-- Holds nearby enemies for $s1. -->
+		<!-- Immobilizes nearby enemies for $s1 -->
 		<icon>icon.skill0404</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -805,7 +805,7 @@
 		</effects>
 	</skill>
 	<skill id="406" toLevel="3" name="Angelic Archon">
-		<!-- Channels the gods' strength to greatly increase your combat effectiveness. For $s1, Debuff Resistance +$s2, P. Def. +$s3, M. Def. +$s4, P. Accuracy +$s5 when a sword/ blunt weapon is equipped, Speed +$s6, Atk. Spd. +$s7 when a sword/ blunt weapon is equipped, P. Critical Rate +$s8 when a sword is equipped, P. Critical Damage +$s9 when a blunt weapon is equipped, and Buff-canceling Attack Resistance +$s10. Effect of recovery magic -$s11. -->
+		<!-- The divine will greatly increases character's combat effectiveness. For $s1, Debuff Resistance +$s2, P. Def. +$s3, M. Def. +$s4. When using a sword or a blunt weapon, P. Accuracy +$s5, Speed +$s6. When using a sword or a blunt weapon, Atk. Spd. +$s7. When using a sword, P. Critical Rate +$s8. When using a blunt weapon, P. Critical Damage +$s9, Buff Cancel Resistance +$s10. Received Healing -$s11. -->
 		<icon>icon.skill0406</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1411,7 +1411,7 @@
 		</effects>
 	</skill>
 	<skill id="412" toLevel="11" name="Sand Bomb">
-		<!-- Hurls a sand cloud onto the enemy. For $s1, target's P. Accuracy -$s2 and M. Accuracy -$s3. -->
+		<!-- Detonates a sand bomb. For $s1, the enemy's P. Accuracy -$s2, M. Accuracy -$s3. -->
 		<icon>icon.skill0412</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1515,7 +1515,7 @@
 		</effects>
 	</skill>
 	<skill id="413" toLevel="10" name="Rapid Fire">
-		<!-- For $s1, when using a bow, P. Atk. +$s2, Atk. Spd. +$s3, Range -$s4. Requires a bow. -->
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3. Requires a bow. -->
 		<icon>icon.skill0413</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1628,7 +1628,7 @@
 		</effects>
 	</skill>
 	<skill id="414" toLevel="10" name="Dead Eye">
-		<!-- For $s1, when using a bow, P. Accuracy +$s2, P. Atk. +$s3, and P. Critical Damage +$s4. Atk. Spd. -$s5. Requires a bow. -->
+		<!-- For $s1, P. Accuracy +$s2, P. Atk. +$s3, P. Critical Damage +$s4, Atk. Spd. -$s5. Requires a bow. -->
 		<icon>icon.skill0414</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1748,7 +1748,7 @@
 		</effects>
 	</skill>
 	<skill id="415" toLevel="3" name="Spirit of Sagittarius">
-		<!-- Physical skill MP Consumption -$s2 for $s1. -->
+		<!-- P. Skill MP Consumption -$s1. -->
 		<icon>icon.skill0415</icon>
 		<magicLevel>76</magicLevel>
 		<operateType>P</operateType>
@@ -1810,7 +1810,7 @@
 		</effects>
 	</skill>
 	<skill id="417" toLevel="8" name="Pain of Sagittarius">
-		<!-- Sacrifices your own HP to regenerate MP with $s1 Power. -->
+		<!-- Sacrifices your own HP to recover $s1 MP. -->
 		<icon>icon.skill0417</icon>
 		<effectPoint>
 			<value level="1">549</value>
@@ -1886,7 +1886,7 @@
 		</effects>
 	</skill>
 	<skill id="420" toLevel="3" name="Zealot">
-		<!-- Channels the power of your guardian deity for $s1, Debuff Resistance +$s2, Buff-canceling Attack Resistance +$s3, Speed +$s4, P. Accuracy +$s5 when using a sword, blunt weapon or spear/ fist weapon, Atk. Spd. +$s6, P. Critical Rate +$s7 when using a sword/ spear, and P. Critical Damage +$s8 when using a sword/ blunt/ fist weapon. Physical skill MP Consumption -$s9 and Received Healing -$s10. Available when HP is $s11 or lower. -->
+		<!-- Atk. Spd. $s1 P. Critical Rate $s2 P. Critical Damage $s3 P. Skill Critical Rate $s4 P. Skill Critical Damage $s4 P. Accuracy $s5 Speed $s6 P. Skill MP Consumption $s7 Debuff Resistance $s8 Buff Cancel Resistance $s9 Received Healing $s7 Duration: $s10 -->
 		<icon>icon.skill0420</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2000,7 +2000,7 @@
 		</effects>
 	</skill>
 	<skill id="421" toLevel="5" name="Fell Swoop">
-		<!-- For $s1, number of attacked enemies +$s2. Requires a polearm. -->
+		<!-- For $s1, number of attacked enemies +$s2. Requires a spear. -->
 		<icon>icon.skill0421</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2170,7 +2170,7 @@
 		</effects>
 	</skill>
 	<skill id="425" toLevel="1" name="Hawk Nature">
-		<!-- Possessed by a Hawk's Spirit. For 5 min., when using a fist weapon, P. Accuracy +6, P. Critical Rate +50, and P. Critical Damage +30%. Requires a fist weapon. -->
+		<!-- When using a fist weapon P. Atk. $s1 P. Critical Rate $s2 -->
 		<icon>icon.skill0425</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2287,7 +2287,7 @@
 		</effects>
 	</skill>
 	<skill id="429" toLevel="13" name="Knighthood">
-		<!-- P. Def. +$s1, Shield Defense +$s2, and Bow Resistance +$s3 when equipped with heavy armor. -->
+		<!-- P. Def. +$s1, Shield Defense +$s2, Bow Resistance +$s3 when equipped with heavy armor. -->
 		<icon>icon.skill0429</icon>
 		<magicLevel>
 			<value level="1">78</value>
@@ -2341,7 +2341,7 @@
 		</effects>
 	</skill>
 	<skill id="430" toLevel="8" name="Master of Combat">
-		<!-- Max CP +$s1 and Max HP +$s2. -->
+		<!-- Max CP +$s1, Max HP +$s2, Received P. Critical Damage/ Received M. Skill Critical Damage -$s3. -->
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2536,7 +2536,7 @@
 		</effects>
 	</skill>
 	<skill id="437" toLevel="3" name="Song of Silence">
-		<!-- Sings a Song of Silence. Blocks all the enemies' physical/ magic skills for $s1. -->
+		<!-- Inflicts Silence on the enemy. For $s1, blocks nearby enemies' P./ M. skills. -->
 		<icon>icon.skill0437</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2661,7 +2661,7 @@
 		</effects>
 	</skill>
 	<skill id="442" toLevel="1" name="Sonic Barrier">
-		<!-- Uses Momentum make user invincible against standard attacks, skills and debuffs for 10 sec. Requires a dual sword. Requires Momentum level 3. -->
+		<!-- Uses sonic power to create a protective barrier for 10 sec. that blocks regular attacks, skills and debuffs. Any action except movement cancels the effect. Requires dual swords. Requires Momentum Lv. 3. -->
 		<icon>icon.skill0442</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2704,7 +2704,7 @@
 		</effects>
 	</skill>
 	<skill id="443" toLevel="1" name="Force Barrier">
-		<!-- Uses Momentum make user invincible against standard attacks, skills and debuffs for 10 sec. Requires a fist weapon. Requires Momentum level 4. -->
+		<!-- Uses sonic power to create a protective barrier for 10 sec. that blocks regular attacks, skills and debuffs. Any action except movement cancels the effect. Requires a fist weapon. Requires Momentum Lv. 3. -->
 		<icon>icon.skill0443</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -2747,7 +2747,7 @@
 		</effects>
 	</skill>
 	<skill id="444" toLevel="1" name="Sweeper Festival">
-		<!-- Use on the corpses of Spoiled monsters to obtain extra items. -->
+		<!-- Use it on the corpses of Spoiled monsters to obtain extra items. -->
 		<icon>BranchSys2.icon.br_skill0444_a</icon>
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -2766,7 +2766,7 @@
 		</effects>
 	</skill>
 	<skill id="445" toLevel="1" name="Mirage">
-		<!-- For 2 min., provides a chance to cancel the target of an attacking enemy. -->
+		<!-- For 2 min., Vital Point Attack Rate +15%, Received P. Critical Damage/ Received M. Skill Critical Damage -10%. -->
 		<icon>icon.skill0445</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -2796,7 +2796,7 @@
 		</effects>
 	</skill>
 	<skill id="446" toLevel="1" name="Evasion">
-		<!-- Allows to evade P./ M. Skill for 1 min. -->
+		<!-- Increases P./ M. Skill Evasion for 1 min. -->
 		<icon>icon.skill0446</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -2819,7 +2819,7 @@
 		</effects>
 	</skill>
 	<skill id="447" toLevel="1" name="Counterattack">
-		<!-- For 40 sec., returns received 20% damage back to the enemy. -->
+		<!-- For 40 sec., reflects 20% of the received damage back to the enemy. -->
 		<icon>icon.skill0447</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>40</abnormalTime>
@@ -2862,15 +2862,15 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14839</npcId>
+				<npcId>14839</npcId> <!-- Swoop Cannon -->
 				<lifeTime>1200</lifeTime>
-				<consumeItemId>2132</consumeItemId>
+				<consumeItemId>2132</consumeItemId> <!-- B-grade Gemstone -->
 				<consumeItemCount>13</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="449" toLevel="9" name="Summon Attractive Cubic">
-		<!-- Summons Attractive Cubic. Attractive Cubic can continuously use hate and hold magic on the enemy. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning skill> Summons Attractive Cubic that continuously casts Hate and Hold spells on the enemy. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill0449</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3022,7 +3022,7 @@
 		</effects>
 	</skill>
 	<skill id="451" toLevel="5" name="Sonic Move">
-		<!-- Momentum blast. For $s1, Speed +$s2. Requires Momentum level $s3. Requires dual swords to be equipped. -->
+		<!-- Creates a Momentum blast. For $s1, Speed +$s2. Requires Momentum Lv. $s3. Requires dual swords. -->
 		<icon>icon.skill0451</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3156,7 +3156,7 @@
 		</effects>
 	</skill>
 	<skill id="461" toLevel="3" name="Break Duress">
-		<!-- Use your spirit to escape from an immobile state. Requires Momentum level $s1. -->
+		<!-- Uses spirit energy to remove Stun, Sleep or Paralysis debuffs. Requires Momentum Lv. $s1. -->
 		<icon>icon.skill0461</icon>
 		<chargeConsume>
 			<value level="1">3</value>
@@ -3213,7 +3213,7 @@
 		</effects>
 	</skill>
 	<skill id="463" toLevel="5" name="Weapon Mastery">
-		<!-- P. Atk. +$s1, additionally +$s2. -->
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2. -->
 		<icon>icon.skill0141</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -3248,7 +3248,7 @@
 		</effects>
 	</skill>
 	<skill id="464" toLevel="5" name="Armor Mastery">
-		<!-- P. Def. +$s1 and MP Recovery Bonus +$s2. -->
+		<!-- P. Def. +$s1, M. Def. +$s2. -->
 		<icon>icon.skill0142</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -3283,7 +3283,7 @@
 		</effects>
 	</skill>
 	<skill id="465" toLevel="10" name="Light Armor Mastery">
-		<!-- P. Def. +$s1, P. Evasion +$s2 and Chance of receiving P. Critical Attack and received P. Critical Damage -$s3 when equipped with light armor. -->
+		<!-- When using light armor, P. Def. +$s1, P. Evasion +$s2, received P. Critical Rate/ Damage -$s3. -->
 		<icon>icon.skill0465</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -3759,7 +3759,7 @@
 		</effects>
 	</skill>
 	<skill id="474" toLevel="10" name="Rapier Mastery">
-		<!-- P. Atk. +$s1 when using a Rapier. -->
+		<!-- P. Atk. +$s1 when using a rapier. -->
 		<icon>icon.skill0474</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -3911,7 +3911,7 @@
 		</effects>
 	</skill>
 	<skill id="477" toLevel="10" name="Soul Smash">
-		<!-- Attacks the enemy with bonus $s1 Power added to P. Atk. Requires an Ancient Sword or Two-handed Sword. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks the target with $s1 power. Requires an ancient sword or a two-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Over-hit. -->
 		<icon>icon.skill0477</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -4302,7 +4302,7 @@
 		</conditions>
 	</skill>
 	<skill id="485" toLevel="5" name="Disarm">
-		<!-- Disarms the target for 3 sec. -->
+		<!-- Disarms the target for $s1. Can be used only in PvP. -->
 		<icon>icon.skill0485</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -5645,7 +5645,7 @@
 		</effects>
 	</skill>
 	<skill id="499" toLevel="3" name="Courage">
-		<!-- Mental Attack Resistance +$s2 for $s1. -->
+		<!-- Debuff Resistance +$s2 for $s1 -->
 		<icon>icon.skill0499</icon>
 		<abnormalLevel>
 			<value level="1">1</value>

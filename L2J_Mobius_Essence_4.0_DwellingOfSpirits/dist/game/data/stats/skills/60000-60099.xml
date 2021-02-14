@@ -130,7 +130,7 @@
 		</effects>
 	</skill>
 	<skill id="60006" toLevel="1" name="1st Place in the List of Ranks for Level Among Humans">
-		<!-- Bonus for 1st place in the list of ranks for level among humans. P./ M. Critical Damage +300. -->
+		<!-- Bonus for the 1st place in the list of ranks for level among humans. P. Critical Damage/ M. Skill Critical Damage +300. -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -181,7 +181,7 @@
 		</effects>
 	</skill>
 	<skill id="60009" toLevel="1" name="1st Place in the List of Ranks for Level Among Orcs">
-		<!-- Bonus for 1st place in the list of ranks for level among orcs. P./ M. Critical Rate +20. -->
+		<!-- Bonus for the 1st place in the list of ranks for level among orcs. P. Critical Rate/ M. Skill Critical Rate +20. -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -198,7 +198,7 @@
 		</effects>
 	</skill>
 	<skill id="60010" toLevel="1" name="1st Place in the List of Ranks for Level Among Dwarves">
-		<!-- Bonus for 1st place in the list of ranks for level among dwarves. Enchant success rate is increased. -->
+		<!-- Bonus for 1st place in the list of ranks for level among dwarves. Enchant success rate for weapon and armor when using scrolls +1%. -->
 		<icon>icon.race_ranking_1</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -230,7 +230,7 @@
 		</effects>
 	</skill>
 	<skill id="60012" toLevel="1" name="Bonuses for 1st Rank on the Server">
-		<!-- CON/ MEN +1, Weight Limit +5,000. -->
+		<!-- CON +1. MEN +1. Weight Limit +5000. -->
 		<icon>icon.UI_server_ranking_1</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -251,7 +251,7 @@
 		</effects>
 	</skill>
 	<skill id="60013" toLevel="1" name="Bonuses for 2nd Rank on the Server">
-		<!-- DEX/ WIT +1, Weight Limit +5000. -->
+		<!-- DEX +1. WIT +1. Weight Limit +5000. -->
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -271,7 +271,7 @@
 		</effects>
 	</skill>
 	<skill id="60014" toLevel="1" name="Bonuses for 3rd Rank on the Server">
-		<!-- STR/ INT +1, Hero's HP Recovery Potion and Maliss' HP Recovery Potion Effect +50, Weight Limit +90,000, P. Evasion +20. -->
+		<!-- STR +1 INT +1 Weight limit +90,000 P. Evasion +20 When HP Recovery Potions are used, additionally recovers 50 HP. -->
 		<icon>icon.UI_server_ranking_3</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -299,7 +299,7 @@
 		</effects>
 	</skill>
 	<skill id="60015" toLevel="1" name="Bonus for Rank Among Races">
-		<!-- Humans: P./ M. Critical Damage is increased. Elves: P./ M. Atk. is increased. Dark Elves: Atk./ Casting Spd. is increased. Orc: P./ M. Critical Rate is increased. Dwarves: Enchant success rate is increased. Kamael: P./ M. Accuracy, P./ M. Evasion is increased. -->
+		<!-- For warriors that have taken the 1st place in rankings among their race. Humans: P. Critical Damage/ M. Skill Critical Damage increased. Elves: P./ M. Atk. increased. Dark Elves: Atk. Spd./ Casting Spd. increased. Orcs: P. Critical Rate/ M. Skill Critical Rate increased. Dwarves: Enchant success rate increased. Kamaels: P./ M. Accuracy, P./ M. Evasion increased. For those who placed 1st-3rd: All races: Worthy Warrior Transformation with unique appearance available. Death Knights: Unique cloak appearance (only for the 1st place) and Worthy Warrior Bonus available. -->
 		<icon>icon.UI_race_ranking_1</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -316,82 +316,83 @@
 		<hitTime>3500</hitTime>
 	</skill>
 	<skill id="60018" toLevel="1" name="Teleport">
+		<!-- Teleport -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 	</skill>
 	<skill id="60019" toLevel="4" name="Jaban's Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Increases Atk. Power. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60020" toLevel="1" name="Test - The 4th Place in the List of Ranks for Level on the Server">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 4-6th places in the list of ranks for level on the server. CON/ MEN +1, Weight Limit +5,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60021" toLevel="1" name="Test - The 5th Place in the List of Ranks for Level on the Server">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 7-10th places in the list of ranks for level on the server. CON/ MEN +1, Weight Limit +5,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60022" toLevel="1" name="Test - The 2nd Place in the List of Ranks for Level Among Humans">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 2nd and 3rd places in the list of ranks for level among humans. P. Critical Damage/ M. Skill Critical Damage +300. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60023" toLevel="1" name="Test - The 2nd Place in the List of Ranks for Level Among Elves">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 2nd and 3rd places in the list of ranks for level among elves. P./ M. Atk. +300. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60024" toLevel="1" name="Test - The 2nd Place in the List of Ranks for Level Among Dark Elves">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 2nd and 3rd places in the list of ranks for level among dark elves. Atk. Spd./ Casting Spd. +200. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60025" toLevel="1" name="Test - The 2nd Place in the List of Ranks for Level Among Orcs">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 2nd and 3rd places in the list of ranks for level among orcs. P. Critical Rate/ M. Skill Critical Rate +20. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60026" toLevel="1" name="Test - The 2nd Place in the List of Ranks for Level Among Dwarves">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for 2nd and 3rd places in the list of ranks for level among dwarves. Enchant success rate for weapon and armor when using scrolls +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60027" toLevel="1" name="Test - The 2nd Place in the List of Ranks for Level Among Kamael">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for 2nd and 3rd places in the list of ranks for level among Kamael. P./ M. Accuracy, P./ M. Evasion +5. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60028" toLevel="1" name="Test - The 3rd Place in the List of Ranks for Level Among Humans">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 4-5th place in the list of ranks for level among humans. P. Critical Damage/ M. Skill Critical Damage +300. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60029" toLevel="1" name="Test - The 3rd Place in the List of Ranks for Level Among Elves">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 4-5th place in the list of ranks for level among elves. P./ M. Atk. +300. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60030" toLevel="1" name="Test - The 3rd Place in the List of Ranks for Level Among Dark Elves">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 4-5th place in the list of ranks for level among dark elves. Atk. Spd./ Casting Spd. +200. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60031" toLevel="1" name="Test - The 3rd Place in the List of Ranks for Level Among Orcs">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for the 4-5th place in the list of ranks for level among orcs. P. Critical Rate/ M. Skill Critical Rate +20. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60032" toLevel="1" name="Test - The 3rd Place in the List of Ranks for Level Among Dwarves">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for 4-5th place in the list of ranks for level among dwarves. Enchant success rate for weapon and armor when using scrolls +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="60033" toLevel="1" name="Test - The 3rd Place in the List of Ranks for Level Among Kamael">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus for 4-5th place in the list of ranks for level among Kamael. P./ M. Accuracy, P./ M. Evasion +5. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

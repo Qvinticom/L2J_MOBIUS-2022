@@ -407,7 +407,7 @@
 		</skills>
 	</item>
 	<item id="48831" name="Jewel Energy" type="EtcItem">
-		<!-- Enhance jewels during compounding. Can be used with any jewel Lv. 1-4. If compounding fails, jewel enhance level is reset. -->
+		<!-- Required for upgrading jewels through compounding. Can be used with any jewels up to Lv. 5. If compounding fails, the jewel's level drops to 1. -->
 		<set name="icon" val="icon.bm_blessed_jewel" />
 		<set name="material" val="LIQUID" />
 		<set name="is_sellable" val="false" />
@@ -520,7 +520,7 @@
 		</capsuled_items>
 	</item>
 	<item id="48840" name="Ultimate Lv. 1 Luxurious Jewelry Box" type="EtcItem">
-		<!-- Double-click to obtain one level 1 Greater Gem. -->
+		<!-- Double-click to obtain a Lv. 1 greater jewel. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -790,7 +790,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48857" name="Shining Dragon Attribute Tonic (XP)" additionalName="Event" type="EtcItem">
-		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for +30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
+		<!-- When used, Attribute Attack +70, Attribute Resistance +70, acquired XP/ SP +30% for 30 min. The effect remains after death. Cooldown: 5 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

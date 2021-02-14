@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
-		<!-- Immediately decreases Atk. Spd. -->
+		<!-- Momentarily decreases Atk. Spd. -->
 		<icon>icon.skill1206</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -144,7 +144,7 @@
 		</effects>
 	</skill>
 	<skill id="4202" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -703,7 +703,7 @@
 		</effects>
 	</skill>
 	<skill id="4210" toLevel="12" name="Chant of Life">
-		<!-- HP is recovered. -->
+		<!-- HP is restored. -->
 		<icon>icon.skill1229</icon>
 		<abnormalLevel>
 			<value level="1">11</value>
@@ -785,7 +785,7 @@
 		</effects>
 	</skill>
 	<skill id="4211" toLevel="12" name="Might">
-		<!-- P. Atk. +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -836,7 +836,7 @@
 		</effects>
 	</skill>
 	<skill id="4212" toLevel="12" name="Shield">
-		<!-- P. Def. +$s1 -->
+		<!-- P. Def. +$s1. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -938,7 +938,7 @@
 		</effects>
 	</skill>
 	<skill id="4214" toLevel="12" name="Reflect Damage">
-		<!-- Received damage is reflected by $s1. -->
+		<!-- Reflects $s1 of the received damage. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -988,7 +988,7 @@
 		</effects>
 	</skill>
 	<skill id="4215" toLevel="1" name="Raid Curse">
-		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<!-- You are cursed by the Raid Boss guardian spirit. You can't use P./ M. skills for a certain time period. This curse befalls those who attempt to challenge a raid boss who is 9 or more levels below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1065,7 +1065,7 @@
 		</effects>
 	</skill>
 	<skill id="4219" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1161,7 +1161,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4225" toLevel="5" name="Stun Resistance">
-		<!-- Resistance to Stun. -->
+		<!-- Resistant to Stun. -->
 		<icon>icon.skill4225</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1323,7 +1323,7 @@
 		</effects>
 	</skill>
 	<skill id="4230" toLevel="1" name="Wild Cannon">
-		<!-- Powerful attack on castle doors and walls. -->
+		<!-- Unleashes a devastating attack against castle gates and walls. -->
 		<castRange>2500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>3000</effectRange>
@@ -2789,7 +2789,7 @@
 		</effects>
 	</skill>
 	<skill id="4264" toLevel="1" name="Holiday Empower">
-		<!-- Temporarily M. Atk. +55%. -->
+		<!-- Temporarily M. Atk. +200. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2869,7 +2869,7 @@
 		</effects>
 	</skill>
 	<skill id="4267" toLevel="1" name="Grade Penalty">
-		<!-- A penalty applied when the grade of equipment one is wearing is not appropriate for one's Lv.. -->
+		<!-- The grade of your equipment is not appropriate for your level. -->
 		<icon>icon.skill4267</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3004,7 +3004,7 @@
 		</effects>
 	</skill>
 	<skill id="4273" toLevel="5" name="Dagger Resistance">
-		<!-- Resistance to dagger. -->
+		<!-- Increases Dagger Attack Resistance. -->
 		<icon>icon.skill4273_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3194,7 +3194,7 @@
 		</effects>
 	</skill>
 	<skill id="4286" toLevel="1" name="Greater Sleep Resistance">
-		<!-- Very resistant to Sleep. -->
+		<!-- Highly resistant to Sleep. -->
 		<icon>icon.skill4286</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3206,7 +3206,7 @@
 		</effects>
 	</skill>
 	<skill id="4287" toLevel="7" name="Hold Resistance">
-		<!-- Resistant to Hold attack. -->
+		<!-- Resistant to Hold. -->
 		<icon>icon.skill4287</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3226,7 +3226,7 @@
 		</effects>
 	</skill>
 	<skill id="4288" toLevel="1" name="Greater Hold Resistance">
-		<!-- Very resistant to Hold. -->
+		<!-- Highly resistant to Hold. -->
 		<icon>icon.skill4288</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3301,7 +3301,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4295" toLevel="1" name="Race">
-		<!-- Humanoid -->
+		<!-- Humanoids -->
 		<icon>icon.skill4295</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3315,7 +3315,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4297" toLevel="1" name="Race">
-		<!-- Angel -->
+		<!-- Angels -->
 		<icon>icon.skill4297</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>

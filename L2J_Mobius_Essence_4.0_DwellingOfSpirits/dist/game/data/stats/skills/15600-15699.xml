@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15600" toLevel="1" name="Lindvior's Attack">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<castRange>300</castRange>
@@ -11,7 +11,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="15601" toLevel="1" name="Lindvior's Attack">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<castRange>300</castRange>
@@ -63,7 +63,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15608" toLevel="7" name="Power Strike">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -89,7 +89,7 @@
 		</effects>
 	</skill>
 	<skill id="15609" toLevel="7" name="Decrease P. Def.">
-		<!-- Decreases P. Def. by $s1. -->
+		<!-- P. Def. -$s1. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -149,7 +149,7 @@
 		</effects>
 	</skill>
 	<skill id="15612" toLevel="7" name="Thunder Storm">
-		<!-- Stuns for $s1. -->
+		<!-- Stuns for $s1 -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -169,7 +169,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="15614" toLevel="7" name="Decrease M. Def.">
-		<!-- Decreases M. Def. by $s1. -->
+		<!-- M. Def. -$s1. -->
 		<icon>icon.skill1422</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -179,7 +179,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15615" toLevel="7" name="Increases P. Atk.">
-		<!-- P. Atk./ M. Atk. +$s1. -->
+		<!-- P./ M. Atk. +$s1. -->
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -197,7 +197,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15617" toLevel="7" name="Power Smash">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -216,7 +216,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15620" toLevel="7" name="Power Shot">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -225,7 +225,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="15621" toLevel="7" name="Stun Shot">
-		<!-- Attacks and Stuns target for $s1. -->
+		<!-- Attacks and stuns a target for $s1 -->
 		<icon>icon.skill0056</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -361,7 +361,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15654" toLevel="1" name="Master's Blessing - GM's Courage">
-		<!-- The GM is always by your side. P. Atk. toward monsters +100% for 5 min. -->
+		<!-- The GM is always by your side. Increases P. Atk. toward monsters by 100% for 5 min. -->
 		<icon>icon.skill5661</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -369,7 +369,7 @@
 		<isMagic>3</isMagic>
 	</skill>
 	<skill id="15655" toLevel="1" name="Master's Blessing - GM's Protection">
-		<!-- The GM is always by your side. Becomes invincible for 5 min. -->
+		<!-- The GM is always by your side. Grants invincibility for 5 min. -->
 		<icon>icon.skill5662</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -377,7 +377,7 @@
 		<isMagic>3</isMagic>
 	</skill>
 	<skill id="15656" toLevel="1" name="Power Strike">
-		<!-- Powerful physical attack on target. -->
+		<!-- Deals a lot of physical damage to the target. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -421,7 +421,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15661" toLevel="1" name="Dark Buster">
-		<!-- Attacks frontal enemies with the power of darkness. -->
+		<!-- Attacks enemies at the front with the power of darkness. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A1</operateType>
 		<castRange>1200</castRange>
@@ -441,7 +441,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15663" toLevel="1" name="Increases P. Atk.">
-		<!-- P. Atk. and M. Atk. +10%. -->
+		<!-- P./ M. Atk. +10%. -->
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -463,49 +463,49 @@
 		<castRange>600</castRange>
 	</skill>
 	<skill id="15666" toLevel="5" name="HP Increase 1">
-		<!-- Max HP +$s1 -->
+		<!-- Max HP +20%. -->
 		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15667" toLevel="5" name="Enhance P. Atk. 1">
-		<!-- P. Atk. +$s1. -->
+		<!-- P. Atk. +10%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15668" toLevel="5" name="Enhance M. Atk. 1">
-		<!-- M. Atk. +$s1. -->
+		<!-- M. Atk. +10%. -->
 		<icon>icon.skill1059</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15669" toLevel="5" name="Enhance P. Def. 1">
-		<!-- P. Def. +$s1, when equipped. -->
+		<!-- P. Def. +20%. -->
 		<icon>icon.skill1040</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15670" toLevel="5" name="Enhance M. Def. 1">
-		<!-- M. Def. +$s1. -->
+		<!-- M. Def. +20%. -->
 		<icon>icon.skill1010</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15671" toLevel="5" name="Enhance Atk. Spd. 1">
-		<!-- Atk. Spd. +$s1. -->
+		<!-- Atk. Spd. +10%. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15672" toLevel="5" name="Physical Attack Resistance 1">
-		<!-- Physical Attack Resistance +$s1. -->
+		<!-- Physical Attack Resistance +10. -->
 		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 	</skill>
 	<skill id="15673" toLevel="5" name="Terminal State">
-		<!-- For $s1, HP doesn't drop below 1. Stuns the target. -->
+		<!-- For 5 sec., HP doesn t drop below 1. Stuns the target. -->
 		<icon>icon.skill1608</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -513,7 +513,7 @@
 		<mpConsume>38</mpConsume>
 	</skill>
 	<skill id="15674" toLevel="1" name="Mass Shackling">
-		<!-- Provokes nearby enemies and inflicts Hold for 10 sec. -->
+		<!-- Provokes nearby enemies and inflicts hold on them for $s1 -->
 		<icon>icon.skill0404</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -524,7 +524,7 @@
 		<mpConsume>40</mpConsume>
 	</skill>
 	<skill id="15675" toLevel="1" name="Tribunal">
-		<!-- Inflicts physical damage on the enemy with 1010 Power added to P. Atk. and enemy's P. Critical Damage -20% for 30 sec. sec. when a sword or blunt weapon is used. Over-hit. -->
+		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's P. Critical Damage -$s3 for $s2 sec. when a sword or blunt weapon is used. Over-hit. -->
 		<icon>icon.skill0400</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -542,7 +542,7 @@
 		</effects>
 	</skill>
 	<skill id="15676" toLevel="1" name="Shield Stun">
-		<!-- Makes an attack with a shield, stunning the target for 9 sec. Requires a shield. -->
+		<!-- Uses a shield to shock the enemy. Inflicts stun on the target for $s1 Requires a shield. -->
 		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -639,14 +639,14 @@
 		</mpConsume>
 	</skill>
 	<skill id="15684" toLevel="4" name="Arena Administrator's Recovery">
-		<!-- Max HP/ MP +$s1. -->
+		<!-- Max HP/ MP +30%. -->
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="15685" toLevel="4" name="Heal">
-		<!-- Restores $s1 of target's HP. -->
+		<!-- Recovers 10% HP of the target. -->
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
 		<hitTime>2000</hitTime>
@@ -654,7 +654,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="15686" toLevel="3" name="Multi-healing">
-		<!-- Restores $s1 of allies' HP. -->
+		<!-- Recovers 10% HP of the allies. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>2500</reuseDelay>
@@ -742,7 +742,7 @@
 		<mpConsume>10</mpConsume>
 	</skill>
 	<skill id="15695" toLevel="15" name="Hex">
-		<!-- Enemy's P. Def. -$s2 for $s1. -->
+		<!-- For $s1, enemy's P. Def. -$s2. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>

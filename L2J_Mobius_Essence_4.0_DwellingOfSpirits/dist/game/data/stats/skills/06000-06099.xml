@@ -301,7 +301,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6034" toLevel="1" name="Freezing">
-		<!-- Target cannot move until the match starts. -->
+		<!-- Impossible to move until the match starts. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -344,7 +344,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6038" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. Chatting has been blocked. -->
+		<!-- You are under suspicion of using an illegal program. Chatting has been blocked. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -454,7 +454,7 @@
 		</effects>
 	</skill>
 	<skill id="6043" toLevel="1" name="Phoenix Flame Feather">
-		<!-- Spreads ring-shaped flames. Power 70. -->
+		<!-- Spreads defensive ring-shaped flames. Power 70. -->
 		<icon>icon.skill6043</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -753,7 +753,7 @@
 		</effects>
 	</skill>
 	<skill id="6049" toLevel="4" name="Battle Cry">
-		<!-- Utters a battle cry that increases one's own P. Atk., P. Def. and M. Def. -->
+		<!-- Utters a battle cry that increases one's own P. Atk., P./ M. Def. -->
 		<icon>icon.action117</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1056,7 +1056,7 @@
 		</effects>
 	</skill>
 	<skill id="6053" toLevel="4" name="Howl">
-		<!-- Amplifies one's own abilities with a loud roar, raising P. Atk., P. Def., M. Atk., and M. Def. -->
+		<!-- The pet momentarily amplifies its abilities with a loud roar. Increases P./ M. Atk. and P./ M. Def. -->
 		<icon>icon.action117</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1142,7 +1142,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="6055" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<!-- You are under suspicion of using an illegal program. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
@@ -1164,7 +1164,7 @@
 		</effects>
 	</skill>
 	<skill id="6056" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<!-- You are under suspicion of using an illegal program. Your actions have been restricted. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10800</abnormalTime>
@@ -1186,7 +1186,7 @@
 		</effects>
 	</skill>
 	<skill id="6057" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<!-- You are under suspicion of using this program illegally. you're no longer permitted to move. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
@@ -1209,7 +1209,7 @@
 		</effects>
 	</skill>
 	<skill id="6058" toLevel="1" name="Report Status">
-		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<!-- You are under suspicion of using this program illegally. you're no longer permitted to move. -->
 		<icon>icon.skill6038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7200</abnormalTime>
@@ -1232,7 +1232,7 @@
 		</effects>
 	</skill>
 	<skill id="6059" toLevel="1" name="Counter Critical">
-		<!-- P. Critical Damage is greatly increased. -->
+		<!-- P. Critical Damage +100%. -->
 		<icon>icon.skill1542</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
@@ -1266,7 +1266,7 @@
 		</effects>
 	</skill>
 	<skill id="6060" toLevel="1" name="Great Fury">
-		<!-- Atk. Spd. +30% for 8 sec. -->
+		<!-- Atk. Spd. +30%, P. Critical Damage +1000. -->
 		<icon>icon.skill1543</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
@@ -1291,7 +1291,7 @@
 		</effects>
 	</skill>
 	<skill id="6061" toLevel="1" name="Decrease Weight">
-		<!-- Weight penalty interval +9000, and the number of items an individual can possess increases. -->
+		<!-- Overweight limit +9000. Increases the amount of items that can be carried in the inventory. -->
 		<icon>icon.skill1257</icon>
 		<magicLevel>52</magicLevel>
 		<operateType>P</operateType>
@@ -1326,7 +1326,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6066" toLevel="1" name="Raid Boss (Lv. 81)">
-		<!-- Steals souls in order to secrete matter from the Seed of Infinity. These Soul Devourers eventually lose all capacity for thought, driven only by their unholy appetite. Thy particularly favor souls that suffered a horrific and agonizing death. -->
+		<!-- Steals souls in order to secrete matter from the Seed of Infinity. These Soul Devourers eventually lose all capacity for thought, driven only by their unholy appetite. They particularly favor souls that suffered a horrific and agonizing death. -->
 		<icon>icon.skillraid</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1497,7 +1497,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6090" toLevel="1" name="Lightning Strike">
-		<!-- The target is paralyzed. -->
+		<!-- Paralyzed. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1520,7 +1520,7 @@
 		</effects>
 	</skill>
 	<skill id="6091" toLevel="1" name="Anchor">
-		<!-- The target is paralyzed. -->
+		<!-- Paralyzed. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1542,7 +1542,7 @@
 		</effects>
 	</skill>
 	<skill id="6092" toLevel="1" name="Lightning">
-		<!-- The target is paralyzed. -->
+		<!-- Paralyzed. -->
 		<icon>icon.skill0791</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1565,7 +1565,7 @@
 		</effects>
 	</skill>
 	<skill id="6093" toLevel="1" name="Panther Hide">
-		<!-- Allows one to stay hidden. Movement speed -10%. The effect is canceled if any action other than movement is initiated. -->
+		<!-- Allows one to stay hidden. Speed -10%. The effect is cancelled if any action other than movement is initiated. -->
 		<icon>icon.skill0922</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1592,7 +1592,7 @@
 		</effects>
 	</skill>
 	<skill id="6094" toLevel="11" name="Panther Cancel">
-		<!-- Cancels multiple enemy buffs. -->
+		<!-- Cancels one or several of the target's buffs. -->
 		<icon>icon.skill6094</icon>
 		<castRange>40</castRange>
 		<effectPoint>-475</effectPoint>
@@ -1626,7 +1626,7 @@
 		</effects>
 	</skill>
 	<skill id="6095" toLevel="15" name="Panther Dark Claw">
-		<!-- Damages the target, decreasing Dark Attack Resistance by $s3 for $s2. -->
+		<!-- Attacks the enemy with $s1 power. -->
 		<icon>icon.skill1445</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

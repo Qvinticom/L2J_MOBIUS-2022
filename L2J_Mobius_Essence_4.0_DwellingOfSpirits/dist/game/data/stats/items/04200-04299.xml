@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="4200" name="Spellbook: Restore Life" type="EtcItem">
-		<!-- Spellbook needed to learn Restore Life. Used by Bishops. Required level: 44 -->
+		<!-- A spellbook for learning the Restore Life skill. Used by Bishops. Required level: 44. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4201" name="Spellbook: Stun Resistance" type="EtcItem">
-		<!-- Spellbook needed to learn Stun Resistance. Used by Elven Elders. Required level: 40 -->
+		<!-- A spellbook for learning the Stun Resistance skill. Used by Elven Elders. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -19,7 +19,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4202" name="Chrono Cithara" type="Weapon">
-		<!-- Chronicle I Souvenir! Cannot be dropped. -->
+		<!-- Chronicle I Souvenir! -->
 		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -42,7 +42,7 @@
 		</stats>
 	</item>
 	<item id="4203" name="Spellbook: Life Leech" type="EtcItem">
-		<!-- Spellbook needed to learn Life Leech. Used by Shillien Knights. Required level: 40 -->
+		<!-- A spellbook for learning the Life Leech skill. Used by Shillien Knights. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -51,7 +51,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4204" name="Amulet: Pa'agrio's Tact" type="EtcItem">
-		<!-- Amulet required for the Pa'agrio's Tact spell. Used by Overlords. Required level: 40 -->
+		<!-- An amulet for learning the Pa'agrio's Tact skill. Used by Overlords. Required level: 40. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4205" name="Amulet: Pa'agrio's Rage" type="EtcItem">
-		<!-- Amulet required for the Pa'agrio's Rage spell. Used by Overlords. Required level: 44 -->
+		<!-- An amulet for learning the Chant of Berserker Spirit skill. <Classes>. All Orcs after the 1st class change. <Skill effect>. Decreases Max HP/ MP, increasing P./ M. Atk., Atk. Spd., Casting Spd. and Speed. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -70,7 +70,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="4206" name="Spellbook: Transfer Pain" type="EtcItem">
-		<!-- Spellbook needed to learn Transfer Pain. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
+		<!-- A spellbook for learning the Transfer Pain skill. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -79,7 +79,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4207" name="Spellbook: Mana Regeneration" type="EtcItem">
-		<!-- Spellbook needed to learn Mana Regeneration. Used by Spellsingers. Required level: 40 -->
+		<!-- A spellbook for learning the Mana Regeneration skill. Used by Spellsingers. Required level: 40. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -88,7 +88,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4208" name="Spellbook: Curse Gloom" type="EtcItem">
-		<!-- Spellbook needed to learn Curse Gloom. Used by Necromancers. Required level: 44 -->
+		<!-- A spellbook for learning the Curse Gloom skill. Used by Necromancers. Required level: 44. -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -169,7 +169,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4218" name="Scroll: Mana Regeneration" type="EtcItem">
-		<!-- Increases Speed of MP recovery for 1 hour. -->
+		<!-- Increases MP recovery rate. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -185,7 +185,6 @@
 		</skills>
 	</item>
 	<item id="4219" name="Dream Sword" type="Weapon">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_knights_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -212,7 +211,6 @@
 		</stats>
 	</item>
 	<item id="4220" name="Dream Knife" type="Weapon">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -240,7 +238,6 @@
 		</stats>
 	</item>
 	<item id="4221" name="Ubiquitous Axe" type="Weapon">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -268,7 +265,6 @@
 		</stats>
 	</item>
 	<item id="4222" name="Dream Shield" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.shield_hoplon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -288,7 +284,6 @@
 		</stats>
 	</item>
 	<item id="4223" name="Ubiquitous Shield" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.shield_dwarven_chain_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -308,7 +303,6 @@
 		</stats>
 	</item>
 	<item id="4224" name="Dream Armor" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_blast_plate_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -327,7 +321,6 @@
 		</stats>
 	</item>
 	<item id="4225" name="Dream Stockings" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_mithril_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -346,7 +339,6 @@
 		</stats>
 	</item>
 	<item id="4226" name="Dream Gloves" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -364,7 +356,6 @@
 		</stats>
 	</item>
 	<item id="4227" name="Dream Boots" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_chain_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -382,7 +373,6 @@
 		</stats>
 	</item>
 	<item id="4228" name="Ubiquitous Armor" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_compound_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -401,7 +391,6 @@
 		</stats>
 	</item>
 	<item id="4229" name="Ubiquitous Stockings" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_compound_scale_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -420,7 +409,6 @@
 		</stats>
 	</item>
 	<item id="4230" name="Ubiquitous Gloves" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_manticor_skin_gloves_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -438,7 +426,6 @@
 		</stats>
 	</item>
 	<item id="4231" name="Ubiquitous Boots" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -627,7 +614,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4250" name="Jade Crystal" type="EtcItem">
-		<!-- Jade gemstone from the Enchanted Valley. Collect them and take them to Bentley of Hunter's Village. -->
+		<!-- Jade from the Enchanted Valley. Collect and take them to Bentley in Hunters' Village. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -855,7 +842,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4269" name="Articles of Dead Heroes" type="EtcItem">
-		<!-- The articles of dead soldiers who were sent as an expeditionary force 1,000 years ago. These articles have been collected by hunting cave servants. Take them to Antharas Watchman Gilmore. -->
+		<!-- Articles of dead soldiers who were sent here as an expeditionary force a thousand years ago. Collected by hunting cave servants. Take them to Antharas' Watchman Gilmore. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

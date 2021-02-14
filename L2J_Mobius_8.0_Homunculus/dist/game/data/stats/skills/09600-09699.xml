@@ -240,7 +240,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9612" toLevel="1" name="Clan Association - Guitar Melody">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. But the buff is not deleted upon death. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, M. Skill MP Consumption -$s4. The effect remains after death. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -1724,7 +1724,7 @@
 						<item id="30268" count="1" /> <!-- Blessed Helios Dual Daggers - Damage Up + Focus -->
 					</item>
 					<item chance="34">
-						<item id="30273" count="1" /> <!-- Blessed Helios Dual Blunt Weapon - Damage Up + Focus -->
+						<item id="30273" count="1" /> <!-- Blessed Helios Dual Blunt Weapons - Damage Up + Focus -->
 					</item>
 				</items>
 			</effect>

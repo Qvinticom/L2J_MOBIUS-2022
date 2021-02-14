@@ -1054,7 +1054,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13877" name="Drake's Flesh" type="EtcItem">
-		<!-- Obtained by hunting Variant Drake Wing minions. Collect them and take them to injured Soldier Tenius at Keucereus Alliance Base. -->
+		<!-- Drake's meat. Collect the necessary amount and take it to Soldier Tenius at the Keucereus Alliance Base. -->
 		<set name="icon" val="icon.etc_meat_of_monstereye_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1066,7 +1066,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13878" name="Rotten Blood" type="EtcItem">
-		<!-- Obtained from injured Soldier Tenius, this small vial contains spoiled blood that he claims contains the collected anger toward Keucereus. Its true origin is obscure. -->
+		<!-- A small vial with some suspicious-looking blood obtained from Soldier Tenius. It seems to anger Drakes and draw them to its owner. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1096,7 +1096,7 @@
 		</skills>
 	</item>
 	<item id="13880" name="Variant Drake Wing Horns" type="EtcItem">
-		<!-- Horn that sprouts out from the body of the Variant Drake. If you bring it to the injured soldier Tenis or soldier Plenos at Keucereus Alliance Base, you can receive a reward. -->
+		<!-- Drake's horns. Bring them to Soldiers Tenius or Plenos at the Keucereus Alliance Base to get a reward. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

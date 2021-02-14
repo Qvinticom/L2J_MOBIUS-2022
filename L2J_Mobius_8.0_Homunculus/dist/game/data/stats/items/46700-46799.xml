@@ -1141,11 +1141,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="material" val="LEATHER" />
 		<capsuled_items>
-			<item id="38885" min="1" max="1" chance="20" /> <!-- Aquamarine 1 -->
-			<item id="38886" min="1" max="1" chance="20" /> <!-- Aquamarine 2 -->
-			<item id="38887" min="1" max="1" chance="20" /> <!-- Aquamarine 3 -->
-			<item id="38888" min="1" max="1" chance="20" /> <!-- Aquamarine 4 -->
-			<item id="38889" min="1" max="1" chance="20" /> <!-- Aquamarine 5 -->
+			<item id="38885" min="1" max="1" chance="20" /> <!-- Aquamarine Lv. 1 -->
+			<item id="38886" min="1" max="1" chance="20" /> <!-- Aquamarine Lv. 2 -->
+			<item id="38887" min="1" max="1" chance="20" /> <!-- Aquamarine Lv. 3 -->
+			<item id="38888" min="1" max="1" chance="20" /> <!-- Aquamarine Lv. 4 -->
+			<item id="38889" min="1" max="1" chance="20" /> <!-- Aquamarine Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="46773" name="Pearl Fortune Box" type="EtcItem">
@@ -1177,11 +1177,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="material" val="LEATHER" />
 		<capsuled_items>
-			<item id="46670" min="1" max="1" chance="20" /> <!-- Vital Stone 1 -->
-			<item id="46671" min="1" max="1" chance="20" /> <!-- Vital Stone 2 -->
-			<item id="46672" min="1" max="1" chance="20" /> <!-- Vital Stone 3 -->
-			<item id="46673" min="1" max="1" chance="20" /> <!-- Vital Stone 4 -->
-			<item id="46674" min="1" max="1" chance="20" /> <!-- Vital Stone 5 -->
+			<item id="46670" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 1 -->
+			<item id="46671" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 2 -->
+			<item id="46672" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 3 -->
+			<item id="46673" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 4 -->
+			<item id="46674" min="1" max="1" chance="20" /> <!-- Vital Stone Lv. 5 -->
 		</capsuled_items>
 	</item>
 	<item id="46775" name="Garnet Fortune Box" type="EtcItem">
@@ -1233,7 +1233,7 @@
 		<set name="reuse_delay" val="3600000" />
 	</item>
 	<item id="46778" name="Special Bait Coupon of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Exchange for a Heine Special Bait of your choice through a fishermen's guild member in any town. -->
+		<!-- Can be exchanged for Heine Exclusive Bait of your choice through the Fishing Guild members in any town. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

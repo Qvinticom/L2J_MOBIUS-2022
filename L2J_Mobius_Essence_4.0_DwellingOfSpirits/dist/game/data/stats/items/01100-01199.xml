@@ -68,7 +68,7 @@
 		</stats>
 	</item>
 	<item id="1104" name="Stockings of Devotion" type="Armor">
-		<!-- Part of the devotion set. -->
+		<!-- Part of the Devotion set. -->
 		<set name="icon" val="icon.armor_t55_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -148,7 +148,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1114" name="Orc Amulet" type="EtcItem">
-		<!-- Amulet possessed by Kaboo Orcs for magic purposes. Take it to Sentinel Rayen. -->
+		<!-- An amulet that Kaboo Orcs use for their rituals. Take it to Sentinel Rayen. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -160,7 +160,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1115" name="Orc's Necklace" type="EtcItem">
-		<!-- Bone necklace possessed by Kaboo Orc fighters for magic purposes. Take it to Sentinel Rayen. -->
+		<!-- A bone necklace that Kaboo Orcs use for their rituals. Take it to Sentinel Rayen. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -172,7 +172,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1116" name="Orc Amulet" type="EtcItem">
-		<!-- Amulet that the Balor Orcs possess for magical purposes. Take this to Sentry Kayleen. -->
+		<!-- An amulet that Balor Orcs use for their rituals. Take it to Sentinel Kayleen. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -184,7 +184,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1117" name="Orc's Necklace" type="EtcItem">
-		<!-- Bone necklace that the Balor Orc fighters carry for magical purposes. Take this to Sentry Kayleen. -->
+		<!-- A bone necklace that Balor Orcs use for their rituals. Take it to Sentinel Kayleen. -->
 		<set name="icon" val="icon.accessary_necklace_of_anguish_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -526,7 +526,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1142" name="Rusted Bronze Sword" type="Weapon">
-		<!-- An old and rusty bronze sword called the 'Sword of Trial'. Use it to kill Giant Venomous Spiders and Arachnid Trackers. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- An old bronze sword also known as the Sword of Trial. Can be used for killing Venomous Spiders and Arachnid Trackers. -->
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -565,7 +565,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1144" name="Giant Venomous Spider's Leg" type="EtcItem">
-		<!-- Leg cut from a dead Venomous Spider or an Arachnid Tracker. Collect twenty of these and take to Master Auron. -->
+		<!-- A severed spider leg. Collect 20 of these and take them to Master Auron. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -588,7 +588,6 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="1146" name="Squire's Shirt" type="Armor">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t01_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -606,7 +605,6 @@
 		</stats>
 	</item>
 	<item id="1147" name="Squire's Pants" type="Armor">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t01_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -653,7 +651,7 @@
 		</stats>
 	</item>
 	<item id="1150" name="Spellbook: Wind Strike" type="EtcItem">
-		<!-- Spellbook needed to learn Wind Strike. -->
+		<!-- A spellbook for learning the Wind Strike skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -662,7 +660,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1151" name="Spellbook: Self Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Self Heal. -->
+		<!-- A spellbook for learning the Self Heal skill. -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -671,7 +669,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1152" name="Spellbook: Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
+		<!-- A spellbook for learning the Heal skill. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7. -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -776,7 +774,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1161" name="Ritual Sword" type="EtcItem">
-		<!-- Take this sword to the Grand Master of the Fighter Guild to transfer your class to Knight. -->
+		<!-- Take this sword to the Grand Master of the Warrior Guild to change your class to Knight. -->
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -788,7 +786,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1162" name="Coin of Lords" type="EtcItem">
-		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather two or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -800,7 +798,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1163" name="Coin of Lords" type="EtcItem">
-		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather two or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -812,7 +810,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1164" name="Coin of Lords" type="EtcItem">
-		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather two or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -824,7 +822,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1165" name="Coin of Lords" type="EtcItem">
-		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather two or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -836,7 +834,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1166" name="Coin of Lords" type="EtcItem">
-		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather two or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -848,7 +846,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1167" name="Coin of Lords" type="EtcItem">
-		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather two or more of these to end the Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -872,7 +870,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1169" name="Bugbear Necklace" type="EtcItem">
-		<!-- Necklace worn by Bugbears for incantation purposes. Collect ten of these and visit Captain Bathis. -->
+		<!-- A necklace that Bugbears use for their rituals. Collect 10 of these and take them to Captain Bathis. -->
 		<set name="icon" val="icon.etc_totem_necklace_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -932,7 +930,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1174" name="Einhasad's 1st Temple Badge" type="EtcItem">
-		<!-- As High Priest Levian requested, kill Langk Lizardmen and collect the proof. -->
+		<!-- As High Priestess Levian requested, kill Langk Lizardmen and collect the proof. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -944,7 +942,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1175" name="Lizardman's Totem" type="EtcItem">
-		<!-- Small sculpture Langk Lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
+		<!-- A small sculpture that Langk Lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
 		<set name="icon" val="icon.etc_totem_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1004,7 +1002,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1180" name="Bezique's Letter" type="EtcItem">
-		<!-- Captain Bezique's letter to Neti. Find Neti in Gludin Village and give her the letter. -->
+		<!-- Captain Bezique's letter to Neti. Take it to Neti in Gludin. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1016,7 +1014,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1181" name="Neti's Bow" type="Weapon">
-		<!-- Favorite bow used by Neti, who was once a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- Neti's favourite bow that she often used in her travels. Can be used when hunting the Skeletons and Spartoi in the Ruins of Agony to gather bone pieces. -->
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1045,7 +1043,7 @@
 		</stats>
 	</item>
 	<item id="1182" name="Neti's Dagger" type="Weapon">
-		<!-- Neti used this dagger when she was a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- Neti's dagger that she often used in her travels. Can be used when hunting the Skeletons and Spartoi in the Ruins of Agony to gather bone pieces. -->
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1084,7 +1082,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1184" name="Horseshoe of Light" type="EtcItem">
-		<!-- Proof you received after passing Neti's test. You must take it to Captain Bezique. -->
+		<!-- A proof that you've passed Neti's test. Take it to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_red_cresent_earing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1096,7 +1094,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1185" name="Most Wanted List" type="EtcItem">
-		<!-- It is written that whoever does away with the Cat's Eye Bandits and recovers the stolen goods will be rewarded. -->
+		<!-- It is written here that whoever does away with the Cat's Eye Bandits and recovers the stolen goods will be rewarded. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1108,7 +1106,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1186" name="Stolen Jewelry" type="EtcItem">
-		<!-- Fair amount of jewelry the Cat's Eye Bandits stole. You must take them to Captain Bezique. -->
+		<!-- Jewelry stolen by the Cat's Eye Bandits. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1120,7 +1118,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1187" name="Stolen Tomes" type="EtcItem">
-		<!-- Rare tome the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
+		<!-- A rare book stolen by the Cat's Eye Bandits. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1132,7 +1130,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1188" name="Stolen Ring" type="EtcItem">
-		<!-- Expensive necklace that the Cat's Eye Bandits stole. You must take it back to Captain Bezique. -->
+		<!-- An expensive ring stolen by the Cat's Eye Bandits. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_ring_of_grace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1144,7 +1142,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1189" name="Stolen Necklace" type="EtcItem">
-		<!-- Expensive necklace the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
+		<!-- An expensive necklace stolen by the Cat's Eye Bandits. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_necklace_of_blessing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1156,7 +1154,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1190" name="Bezique's Recommendation" type="EtcItem">
-		<!-- Take this letter to the Grand Masters of the Warrior Guild to change your class to a Rogue. -->
+		<!-- Take it to the Grand Master of the Warrior Guild to change your class to Rogue. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1240,7 +1238,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1197" name="Gallint's Certificate" type="EtcItem">
-		<!-- Certificate that Gallint gives for safekeeping of forbidden books. Give to Lionel and receive covenant. -->
+		<!-- Gallint's certificate for safekeeping forbidden books. Take it to Lionel. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

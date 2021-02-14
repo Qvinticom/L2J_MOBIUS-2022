@@ -22,7 +22,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16702" toLevel="1" name="Royal Shout">
-		<!-- A loud shout stuns nearby enemies.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- A loud shout stuns nearby enemies. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1399</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -42,7 +42,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16704" toLevel="1" name="Mimillion Flame">
-		<!-- Throws a fireball at the target, dealing magic damage and knocking the target back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Throws a fireball at the target, dealing magic damage and knocking the target back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1181</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -66,7 +66,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16706" toLevel="1" name="Mimillus Thunder">
-		<!-- Throws a lightning bolt at the target, dealing magic damage and paralysing the target.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Throws a lightning bolt at the target, dealing magic damage and paralysing the target. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -433,7 +433,7 @@
 		</effects>
 	</skill>
 	<skill id="16729" toLevel="1" name="Side Megabomber">
-		<!-- Knocks the enemy down in selected area for 10 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Knocks the enemy down in selected area for 10 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>20000</reuseDelay>
@@ -1092,7 +1092,7 @@
 		</effects>
 	</skill>
 	<skill id="16755" toLevel="1" name="Activate.Paralysis">
-		<!-- You are paralyzed and temporarily immobilized.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- You are paralyzed and temporarily immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1121,7 +1121,7 @@
 		</effects>
 	</skill>
 	<skill id="16756" toLevel="1" name="Activate.Knock Down">
-		<!-- You are knockbacked.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- You are knockbacked. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1399,7 +1399,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16774" toLevel="1" name="Stun Shot">
-		<!-- Stun and immobilization for a time.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Stun and immobilization for a time. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0101</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1427,7 +1427,7 @@
 		</effects>
 	</skill>
 	<skill id="16776" toLevel="1" name="Sleep">
-		<!-- Puts the enemy to sleep and immobilizes for a moment.\n\nInflicted status: Stupor (Sleep, Mutation). -->
+		<!-- Puts the enemy to sleep and immobilizes for a moment. Inflicted status: Stupor (Sleep, Mutation). -->
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1438,7 +1438,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16777" toLevel="1" name="Reprieve">
-		<!-- There has been a stay..of the execution... for 7 min.. -->
+		<!-- There has been a stay..of the execution... for $s1.. -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1493,7 +1493,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16781" toLevel="1" name="Ring of Corruption">
-		<!-- Makkum rotates the device on his back to create a ring-shaped zone of corruption around himself. In the zone of corruption, users suffer 1000 damage per second, and speed is reduced by 100. -->
+		<!-- Makkum rotates the device on his back to create a ring-shaped zone of corruption around himself. In the zone of corruption, users suffer $s1 damage per second, and speed is reduced by $s2. -->
 		<icon>icon.skill11023</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1506,7 +1506,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16782" toLevel="1" name="Violent Charge">
-		<!-- Makkum suddenly charges toward the target to deal 10% damage and inflict Stun for 3 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Makkum suddenly charges toward the target to deal $s1 damage and inflict Stun for $s2. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10318</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1519,7 +1519,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16783" toLevel="1" name="Sentence of Death">
-		<!-- Makkum declares death to the target to decrease Defense by 40% and Speed by 180. Failure to impeded this may result in an even more fearful skill. -->
+		<!-- Makkum declares death to the target to decrease Defense by $s1 and Speed by $s2. Failure to impeded this may result in an even more fearful skill. -->
 		<icon>icon.skill1561</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1533,7 +1533,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16784" toLevel="1" name="Guillotine Chopping">
-		<!-- Makkum's barrage of attacks inflict 300% power added to P. Atk. and inflict severe Bleed for 4 sec. -->
+		<!-- Makkum's barrage of attacks inflict $s1 power added to P. Atk. and inflict severe Bleed for $s2 -->
 		<icon>icon.skill1298</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1560,7 +1560,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16786" toLevel="1" name="Revenge Will">
-		<!-- Makkum casts a spell of revenge; those attacking Makkum are faced with 500% times the damage of their own attack reflected back to them. -->
+		<!-- Makkum casts a spell of revenge -->
 		<icon>icon.skill10307</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1593,7 +1593,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16789" toLevel="5" name="Standby State">
-		<!-- Standby for $s1\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Standby for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skillraid</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1602,7 +1602,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16790" toLevel="1" name="Stun Crush">
-		<!-- Attacks nearby enemies and stuns them for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1613,7 +1613,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16791" toLevel="1" name="Bloody Strike">
-		<!-- Deals great damage to a single target making them bleed for 10 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Deals great damage to a single target making them bleed for 10 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1624,7 +1624,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16792" toLevel="1" name="Rush Assault">
-		<!-- Charges toward the target and knocks it back.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Charges toward the target and knocks it back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0230</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1644,7 +1644,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="16794" toLevel="1" name="Crack of Air">
-		<!-- Pulls all enemies near the target to itself.\n\nInflicted status: Pull. -->
+		<!-- Pulls all enemies near the target to itself. Inflicted status: Pull. -->
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1697,7 +1697,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16797" toLevel="1" name="Curse of Silence">
-		<!-- Attacks enemies near the character and blocks physical and magic skills for 10 sec.\n\nInflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Attacks enemies near the character and blocks physical and magic skills for 10 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -1724,7 +1724,7 @@
 		</effects>
 	</skill>
 	<skill id="16798" toLevel="1" name="Absolute Black">
-		<!-- Attacks nearby enemies and stuns them for 5 sec.\n\nInflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks nearby enemies and stuns them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1734,7 +1734,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16799" toLevel="1" name="Curse of Blaze">
-		<!-- Deals great magic damage and burns the enemy for 5 sec.\n\nInflicted status: Infection (Bleed, Poison). -->
+		<!-- Deals great magic damage and burns the enemy for 5 sec. Inflicted status: Infection (Bleed, Poison). -->
 		<icon>icon.skill10262</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>

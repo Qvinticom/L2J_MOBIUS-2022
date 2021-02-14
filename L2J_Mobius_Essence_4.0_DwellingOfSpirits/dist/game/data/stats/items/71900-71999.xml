@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="71900" name="Limited Sayha's Blessing" additionalName="1 day" type="EtcItem">
-		<!-- Double-click to get the Limited Sayha's effect for 1 d. If Sayha's Grace is inactive, Acquired XP/ SP +200%, adena's drop rate penalty is decreased. -->
+		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 1 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -13,7 +13,7 @@
 		<set name="handler" val="LimitedSayha" />
 	</item>
 	<item id="71901" name="Limited Sayha's Blessing" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to get the Limited Sayha's effect for 7 d. If Sayha's Grace is inactive, Acquired XP/ SP +200%, adena's drop rate penalty is decreased. -->
+		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 7 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
 		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -176,7 +176,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="71936" name="Spellbook: Ninja" type="EtcItem">
-		<!-- Required to learn Ninja Transformation.\nCan't be used by the Kamael and Death Knights. -->
+		<!-- Transforms into Ninja. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
 		<set name="icon" val="icon.si_phanteon_book" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -185,7 +185,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71937" name="Spellbook: Cowboy" type="EtcItem">
-		<!-- Required to learn Cowboy Transformation.\nCan't be used by the Kamael and Death Knights. -->
+		<!-- Transforms into Cowboy. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
 		<set name="icon" val="icon.si_phanteon_book" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -194,7 +194,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71938" name="Spellbook: Steampunk" type="EtcItem">
-		<!-- Required to change the armor appearance to that of the Steampunk costume.\nCan't be used by the Kamael and Death Knights. -->
+		<!-- Changes the armor appearance to that of Steampunk Outfit. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
 		<set name="icon" val="icon.si_phanteon_book" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -203,7 +203,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71939" name="Spellbook: Qipao" type="EtcItem">
-		<!-- Required to change the armor appearance to that of the qipao.\nCan't be used by the Kamael and Death Knights. -->
+		<!-- Changes the armor appearance to that of Qipao. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
 		<set name="icon" val="icon.si_phanteon_book" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -212,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71940" name="Spellbook: Traditional Taiwanese Costume" type="EtcItem">
-		<!-- Required to change the armor appearance to that of the traditional Taiwanese costume.\nCan't be used by the Kamael and Death Knights. -->
+		<!-- Changes the armor appearance to that of Traditional Taiwanese Costume. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
 		<set name="icon" val="icon.si_phanteon_book" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LIQUID" />
@@ -243,7 +243,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71949" name="Dragon's Treasure Chest" type="EtcItem">
-		<!-- Double-click to obtain the following items.\n\n<Guaranteed>\n3 Dragon Coins\n\n<Random>\nSpellbook: Ultimate Death Knight Transformation\nTalisman of Baium\nBaium's Ring Lv. 1\nZaken's Earring Lv. 1\nBaium's Thunder Breaker\nZaken's Blood Sword\nCore's Plasmic Bow\nQueen Ant's Stone Breaker\nOrfen's Venom Sword\n+ other items. -->
+		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Coin (3 pcs.). <Random>. Spellbook: Ultimate Death Knight Transformation. Talisman of Baium. Baium's Ring Lv. 1. Zaken's Earring Lv. 1. Baium's Thunder Breaker. Zaken's Blood Sword. Core's Plasmic Bow. Queen Ant's Stone Breaker. Orfen's Venom Sword. + other items -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -281,7 +281,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71973" name="+3~8 Talisman/ Belt Coupon Box" type="EtcItem">
-		<!-- Double-click to obtain a coupon for a talisman or a belt enchanted from +3 to +8. The right to the priority logging-in is granted until the last day of the month in which the item has been used. -->
+		<!-- Double-click to obtain one of the specified items. <font color=eeaa22>The right to the priority logging-in is granted until the last day of the month in which the item has been used.</font> -->
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="FISH" />
@@ -340,7 +340,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="71983" name="Sealed Treasure Chest" type="EtcItem">
-		<!-- Double-click to obtain one of the following items.\n- Spellbook: Ultimate Death Knight Transformation\n- Talisman of Baium\n- Baium's Thunder Breaker\n- Zaken's Blood Sword\n- Core's Plasmic Bow\n- Queen Ant's Stone Breaker\n- Orfen's Venom Sword\n- Package: Baium Doll Lv. 1\n- Package: Queen Ant Doll Lv. 1\n- Package: Orfen Doll Lv. 1\nAlso you can get other items. -->
+		<!-- Double-click to obtain one of the following items. - Spellbook: Ultimate Death Knight Transformation. - Talisman of Baium. - Baium's Thunder Breaker. - Zaken's Blood Sword. - Core's Plasmic Bow. - Queen Ant's Stone Breaker. - Orfen's Venom Sword. - Package: Baium Doll Lv. 1. - Package: Queen Ant Doll Lv. 1. - Package: Orfen Doll Lv. 1. Also you can get other items. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

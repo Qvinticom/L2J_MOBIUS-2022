@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6700" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -17,7 +17,7 @@
 		</conditions>
 	</skill>
 	<skill id="6701" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned agathion perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -164,7 +164,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6714" toLevel="1" name="Wind Walk of Elcadia">
-		<!-- For 10 min., Speed +33. -->
+		<!-- Increases Speed by 33 for 10 min. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -189,7 +189,7 @@
 		</effects>
 	</skill>
 	<skill id="6715" toLevel="1" name="Haste of Elcadia">
-		<!-- Atk. Spd. +33% for 10 min. -->
+		<!-- Increases Atk. Spd. by 33% for 10 min. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -214,7 +214,7 @@
 		</effects>
 	</skill>
 	<skill id="6716" toLevel="1" name="Might of Elcadia">
-		<!-- P. Atk. +15% for 10 min. -->
+		<!-- For 10 min., P. Atk. +15%. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -239,7 +239,7 @@
 		</effects>
 	</skill>
 	<skill id="6717" toLevel="1" name="Berserker Spirit of Elcadia">
-		<!-- For 10 min., party member's P. Def. -8%, M. Def. -16%, Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
+		<!-- For $s1, Max HP/ MP -$s2, P. Atk. +$s3, M. Atk. +$s4, Atk. Spd. +$s5, Casting Spd. +$s6, Speed +$s7. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -342,7 +342,7 @@
 		</effects>
 	</skill>
 	<skill id="6720" toLevel="1" name="Focus of Elcadia">
-		<!-- For 10 min., P. Critical Rate +30%. -->
+		<!-- For 10 min., P. Critical Rate +40. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -367,7 +367,7 @@
 		</effects>
 	</skill>
 	<skill id="6721" toLevel="1" name="Empower of Elcadia">
-		<!-- M. Atk. +75% for 10 min. -->
+		<!-- For 10 min., M. Atk. +200. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -392,7 +392,7 @@
 		</effects>
 	</skill>
 	<skill id="6722" toLevel="1" name="Acumen of Elcadia">
-		<!-- Casting Spd. +30% for 10 min. -->
+		<!-- Increases Casting Spd. by 30% for 10 min. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -417,7 +417,7 @@
 		</effects>
 	</skill>
 	<skill id="6723" toLevel="1" name="Concentration of Elcadia">
-		<!-- Magic cancel damage -53 for 20 min. -->
+		<!-- For 20 min., Casting Interruption Rate -53%. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLevel>7</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -442,7 +442,7 @@
 		</effects>
 	</skill>
 	<skill id="6724" toLevel="1" name="Greater Heal of Elcadia">
-		<!-- Recovers the target's HP by 450 power and recovers 30 HP per sec. for 15 sec. -->
+		<!-- Recovers the target's HP by 450 power and recovers 30 HP per second for 15 sec. -->
 		<icon>icon.skill1217</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -523,7 +523,7 @@
 		</effects>
 	</skill>
 	<skill id="6727" toLevel="1" name="Vampiric Rage of Elcadia">
-		<!-- For 10 min., recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- For 10 min., with a certain chance, absorbs 9% of the inflicted damage as HP. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -548,7 +548,7 @@
 		</effects>
 	</skill>
 	<skill id="6728" toLevel="1" name="Recharge of Elcadia">
-		<!-- Recovers MP up to 136 power depending on the target's Lv.. -->
+		<!-- Recovers MP up to 136 power depending on the target's level. -->
 		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>655</effectPoint>
@@ -568,7 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="6729" toLevel="1" name="Holy Attack Resistance of Elcadia">
-		<!-- For 10 min., Resistance to Holy attacks +33. -->
+		<!-- For 10 min., Holy Resistance +30. -->
 		<icon>icon.skill1392</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -594,7 +594,7 @@
 		</effects>
 	</skill>
 	<skill id="6730" toLevel="1" name="Greater Battle Heal of Elcadia">
-		<!-- Immediately restores the target's HP with 858 Power. -->
+		<!-- Quickly recovers the target's HP by 858 power. -->
 		<icon>icon.skill1218</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>600</castRange>
@@ -654,7 +654,7 @@
 		</effects>
 	</skill>
 	<skill id="6733" toLevel="1" name="Antharas' Stigma">
-		<!-- Antharas' stigma. After 10 sec., spreads the Stigma Aftermath nearby, which decreases 400 HP per sec. and 150 MP. -->
+		<!-- Antharas' stigma. After 10 sec., spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP. -->
 		<icon>icon.skill5860</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
@@ -697,7 +697,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6735" toLevel="1" name="Petrifies the target.">
-		<!-- Petrified and unable to move temporarily. -->
+		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-1000</effectPoint>
@@ -758,7 +758,7 @@
 		</effects>
 	</skill>
 	<skill id="6738" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Holds the target. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
@@ -826,7 +826,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6743" toLevel="1" name="Dark Wound">
-		<!-- Dark attribute is weakened; inflicted with bleed and -200 HP every sec. -->
+		<!-- Dark attribute is weakened -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -865,7 +865,7 @@
 		</effects>
 	</skill>
 	<skill id="6744" toLevel="1" name="Dark Storm">
-		<!-- Casting Spd. -90% and Atk. Spd. -30%. -->
+		<!-- Casting Spd. decreases by 90% and Atk. Spd. decreases by 30%. -->
 		<icon>icon.skill1386</icon>
 		<operateType>A2</operateType>
 		<mpConsume>25</mpConsume>
@@ -957,7 +957,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6748" toLevel="1" name="Stun Attack">
-		<!-- Inflicts Stun for 5 sec. -->
+		<!-- Stuns for 5 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1168,7 +1168,7 @@
 		</effects>
 	</skill>
 	<skill id="6757" toLevel="1" name="Slow">
-		<!-- Enemy's Speed -30% for 15 sec. -->
+		<!-- Decreases the enemy's Speed by 30% for 15 sec. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1457,7 +1457,7 @@
 		</effects>
 	</skill>
 	<skill id="6769" toLevel="1" name="Petrify">
-		<!-- Petrified and unable to move temporarily. -->
+		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1588,7 +1588,7 @@
 		</effects>
 	</skill>
 	<skill id="6774" toLevel="1" name="Stun Attack">
-		<!-- Inflicts Stun for 10 sec. -->
+		<!-- Attacks and stun the target for 10 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1748,7 +1748,7 @@
 		</effects>
 	</skill>
 	<skill id="6779" toLevel="1" name="Paralysis">
-		<!-- The target is paralyzed. -->
+		<!-- Paralyzed. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->

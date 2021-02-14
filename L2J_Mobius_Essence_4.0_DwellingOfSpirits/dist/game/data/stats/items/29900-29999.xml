@@ -547,7 +547,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="29978" name="Bracelet of Duty - Lv. 1" type="Armor">
-		<!-- A special bracelet, which you can obtain for contribution to the Clan development. Opens up one Talisman slot. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master? in each town. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
+		<!-- A unique bracelet that is given for the contribution to the clan development. Opens up 1 talisman slot. Can be enhanced up to Lv. 5 for Clan Coins by a Grand Master in any village. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -564,7 +564,7 @@
 		</skills>
 	</item>
 	<item id="29979" name="Bracelet of Duty - Lv. 2" type="Armor">
-		<!-- Opens up one Talisman slot. CON +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master? in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<!-- Opens 1 talisman slot. CON +1. Can be enhanced up to Lv. 5 for Clan Coins by a Grand Master in any village. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -581,7 +581,7 @@
 		</skills>
 	</item>
 	<item id="29980" name="Bracelet of Duty - Lv. 3" type="Armor">
-		<!-- Opens up two Talisman slots. CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master? in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<!-- Unlocks 2 talisman slots. CON +1, MEN +1. Can be enhanced up to Lv. 5 for Clan Coins by a Grand Master in any village. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -598,7 +598,7 @@
 		</skills>
 	</item>
 	<item id="29981" name="Bracelet of Duty - Lv. 4" type="Armor">
-		<!-- Opens up two Talisman slots. DEX +1, WIT +1, CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master? in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<!-- Unlocks 2 talisman slots. DEX +1, WIT +1, CON +1, MEN +1. Can be enhanced up to Lv. 5 for Clan Coins by a Grand Master in any village. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -615,7 +615,7 @@
 		</skills>
 	</item>
 	<item id="29982" name="Bracelet of Duty - Lv. 5" type="Armor">
-		<!-- Opens up three Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. Can be enhanced up to Lv. 6 using Clan Coins at Grand Master? in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
+		<!-- Unlocks 3 talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -632,7 +632,7 @@
 		</skills>
 	</item>
 	<item id="29983" name="Silver Coin" type="EtcItem">
-		<!-- With VIP of a certain Lv., such coins drop from the killed monsters. You can use them to by special items in the Game Store. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- A coin that can be found when hunting monsters if you have VIP Lv. 3. Can be used to buy various items from the Game Store. -->
 		<set name="icon" val="BranchIcon.Icon.vip_silver_coin" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -642,7 +642,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29984" name="Rusty Coin" type="EtcItem">
-		<!-- With VIP of a certain Lv., such coins drop from the killed monsters. You can use them to by special items in the Game Store. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- A coin that can be found when hunting monsters if you have VIP Lv. 5. Can be used to buy various items from the Game Store. -->
 		<set name="icon" val="BranchIcon.Icon.vip_gold_coin" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />

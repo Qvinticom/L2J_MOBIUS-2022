@@ -303,7 +303,7 @@
 		</capsuled_items>
 	</item>
 	<item id="80628" name="Angler's Fishing Rod - Stage 5" additionalName="7 days" type="Weapon">
-		<!-- Fishing Time Reduction: 30s. A rod made for Fishermen's Guild Leader Santiago. It has the name of the legendary Angler written on it. Fishing Shot: 1 -->
+		<!-- Fishing time -30 sec. A rod upgraded by the Fishing Guild Leader Santiago himself. Fishing Shots required: 1. -->
 		<set name="icon" val="icon.fishing_rod05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -381,7 +381,7 @@
 			<item id="80817" min="2" max="2" chance="3.52" /> <!-- Emperor's Special Cocktail -->
 			<item id="48830" min="4" max="4" chance="3.52" /> <!-- Freya's Ice Rose -->
 			<item id="80842" min="4" max="4" chance="3.52" /> <!-- Honey Dark Beer -->
-			<item id="48497" min="4" max="4" chance="3.52" /> <!-- Glowing Dragon's Attribute Potion (XP) -->
+			<item id="48497" min="4" max="4" chance="3.52" /> <!-- Glowing Dragon's Attribute Potion - EXP -->
 			<item id="4356" min="1000" max="1000" chance="3.52" /> <!-- Gold Einhasad -->
 			<item id="36514" min="750" max="750" chance="3.22" /> <!-- Elcyum Crystal -->
 			<item id="27673" min="1" max="1" chance="3.32" /> <!-- Freya's Scroll of Storm -->
@@ -392,35 +392,35 @@
 			<item id="47951" min="1" max="1" chance="2.47" /> <!-- Crystal of Determination -->
 			<item id="47952" min="1" max="1" chance="2.47" /> <!-- Crystal of Protection -->
 			<item id="48910" min="1" max="1" chance="2.42" /> <!-- Shillien's Soul Crystal Box -->
-			<item id="36731" min="1" max="1" chance="2.42" /> <!-- Life Stone: Giant's Power -->
+			<item id="36731" min="1" max="1" chance="2.42" /> <!-- Giant's Energy Spirit Stone -->
 			<item id="47396" min="1" max="1" chance="2.42" /> <!-- Nurka's/ Lidia's/ Gustav's Belt Box -->
 			<item id="80964" min="1" max="1" chance="2.42" /> <!-- Energy of Protection -->
 			<item id="46530" min="1" max="1" chance="2.34" /> <!-- Top-grade Love Potion - Party -->
-			<item id="48860" min="1" max="1" chance="2.32" /> <!-- Fallen Angel's Ring Box -->
+			<item id="48860" min="1" max="1" chance="2.32" /> <!-- Fallen Angel's Ring Pack -->
 			<item id="80000" min="300" max="300" chance="2.32" /> <!-- Artifact Fragment -->
 			<item id="36414" min="20" max="20" chance="2.22" /> <!-- Dragon Claw -->
-			<item id="29539" min="1" max="1" chance="2.22" /> <!-- Life Stone: Dragon Power -->
-			<item id="48990" min="1" max="1" chance="2.22" /> <!-- +7 Guard Agathion Charm Box -->
-			<item id="29152" min="1" max="1" chance="2.02" /> <!-- High-grade Zodiac Agathion Box -->
-			<item id="29769" min="1" max="1" chance="2.02" /> <!-- Freya's Vitality Maintaining Rune Pack (30 days) -->
-			<item id="48942" min="1" max="1" chance="2.02" /> <!-- Angel's Earring +8 Box -->
-			<item id="48941" min="1" max="1" chance="2.02" /> <!-- Angel's Necklace +8 Box -->
-			<item id="81156" min="1" max="1" chance="2.02" /> <!-- Angel's Ring +8 Pack -->
-			<item id="29524" min="1" max="1" chance="2.02" /> <!-- Dragon's Earring +3 Box -->
-			<item id="29525" min="1" max="1" chance="2.02" /> <!-- Dragon's Ring +3 Box -->
-			<item id="29526" min="1" max="1" chance="2.02" /> <!-- Dragon's Necklace +3 Box -->
+			<item id="29539" min="1" max="1" chance="2.22" /> <!-- Dragon Power Crystal -->
+			<item id="48990" min="1" max="1" chance="2.22" /> <!-- +7 Guard Agathion Charm Box - Event -->
+			<item id="29152" min="1" max="1" chance="2.02" /> <!-- High Quality Starlight Agathion Pack -->
+			<item id="29769" min="1" max="1" chance="2.02" /> <!-- Freya's Vitality Maintaining Rune Pack - 30-day -->
+			<item id="48942" min="1" max="1" chance="2.02" /> <!-- +8 Angel's Earring Pack -->
+			<item id="48941" min="1" max="1" chance="2.02" /> <!-- +8 Angel's Necklace Pack -->
+			<item id="81156" min="1" max="1" chance="2.02" /> <!-- +8 Angel's Ring Pack -->
+			<item id="29524" min="1" max="1" chance="2.02" /> <!-- +3 Dragon Earring Box -->
+			<item id="29525" min="1" max="1" chance="2.02" /> <!-- +3 Dragon Ring Box -->
+			<item id="29526" min="1" max="1" chance="2.02" /> <!-- +3 Dragon Necklace Box -->
 			<item id="80839" min="1" max="1" chance="1.94" /> <!-- Crystal of Dawn -->
-			<item id="33478" min="1" max="1" chance="1.62" /> <!-- Destruction Scroll Enchant: R-grade Weapon -->
+			<item id="33478" min="1" max="1" chance="1.62" /> <!-- Destruction Scroll: Enchant R-grade Weapon -->
 			<item id="48912" min="1" max="1" chance="1.62" /> <!-- Gran Kain's Scroll: Enchant R-grade Weapon -->
 			<item id="80502" min="1" max="1" chance="1.62" /> <!-- Gran Kain's Scroll: Enchant R-grade Armor -->
-			<item id="48840" min="1" max="1" chance="1.32" /> <!-- Ultimate Lv. 1 Luxurious Jewelry Box -->
-			<item id="39573" min="1" max="1" chance="1.32" /> <!-- Sealed Talisman - Insanity -->
-			<item id="37717" min="1" max="1" chance="1.32" /> <!-- Talisman - Seven Signs -->
-			<item id="39649" min="1" max="1" chance="1.32" /> <!-- Venir Talisman Lv. 16 -->
-			<item id="29069" min="1" max="1" chance="1.32" /> <!-- Sayha Talisman Box Lv. 8 -->
-			<item id="26341" min="1" max="1" chance="1.32" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
-			<item id="47216" min="1" max="1" chance="1.32" /> <!-- Ring of the Truth-Seeker -->
-			<item id="47218" min="1" max="1" chance="1.32" /> <!-- Ruler's Ring of Authority -->
+			<item id="48840" min="1" max="1" chance="1.32" /> <!-- Ultimate Luxurious Jewelry Box Lv. 1 -->
+			<item id="39573" min="1" max="1" chance="1.32" /> <!-- Sealed Talisman of Insanity -->
+			<item id="37717" min="1" max="1" chance="1.32" /> <!-- Talisman of Seven Signs -->
+			<item id="39649" min="1" max="1" chance="1.32" /> <!-- Venir's Talisman Lv. 16 -->
+			<item id="29069" min="1" max="1" chance="1.32" /> <!-- Sayha's Talisman Pack Lv. 8 -->
+			<item id="26341" min="1" max="1" chance="1.32" /> <!-- High-grade Talisman of Abundance Lv. 4 -->
+			<item id="47216" min="1" max="1" chance="1.32" /> <!-- Ruler's Ring of Authority -->
+			<item id="47218" min="1" max="1" chance="1.32" /> <!-- Ring of the Truth-Seeker -->
 			<item id="80903" min="1" max="1" chance="1.1" /> <!-- Zariche's Sealed Box -->
 			<item id="80904" min="1" max="1" chance="1.1" /> <!-- Akamanah's Sealed Box -->
 		</capsuled_items>

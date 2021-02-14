@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6835" name="Circlet of Dion" type="Armor">
-		<!-- Torchlight Circlet. Can be worn by the lord of Dion Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Circlet decorated with a torch. Can be worn by the lord of Dion Castle and their clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -27,7 +27,7 @@
 		</skills>
 	</item>
 	<item id="6837" name="Circlet of Oren" type="Armor">
-		<!-- Tower Circlet. Can be worn by the lord of Oren Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Circlet decorated with a tower. Can be worn by the lord of Oren Castle and their clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -53,7 +53,7 @@
 		</skills>
 	</item>
 	<item id="6838" name="Circlet of Gludio" type="Armor">
-		<!-- Three-Swords Circlet. Can be worn by the lord of Gludio Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Circlet decorated with three swords. Can be worn by the lord of Gludio Castle and their clan members but not by allies. Allows use of Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -79,7 +79,7 @@
 		</skills>
 	</item>
 	<item id="6839" name="Circlet of Giran" type="Armor">
-		<!-- Cross Circlet. Can be worn by the lord of Giran Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Circlet decorated with a cross. Can be worn by the lord of Giran Castle and their clan members but not by allies. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -105,7 +105,7 @@
 		</skills>
 	</item>
 	<item id="6840" name="Circlet of Adena" type="Armor">
-		<!-- Lion Circlet. Can be worn by the lord of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Circlet decorated with a lion head. Can be worn by the lord of Aden Castle and their clan members but not by allies. Allows the use of Residential Skills when equipped. -->
 		<set name="icon" val="icon.accessory_pledge_cap2_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -131,7 +131,7 @@
 		</skills>
 	</item>
 	<item id="6841" name="Lord's Crown" type="Armor">
-		<!-- Lord's Crown. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- A headdress worn by monarchs. -->
 		<set name="icon" val="icon.accessory_crown_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -156,7 +156,7 @@
 		</skills>
 	</item>
 	<item id="6842" name="Wings of Destiny Circlet" type="Armor">
-		<!-- Hair Accessory, only for Heroes. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- A hair accessory exclusively worn by Heroes. -->
 		<set name="icon" val="icon.accessory_hero_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -174,7 +174,7 @@
 		</cond>
 	</item>
 	<item id="6843" name="Cat Ears" type="Armor">
-		<!-- Cat-ear shaped hair accessory. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- Hair accessory shaped like cat ears. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -189,7 +189,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="6845" name="Pirate's Eyepatch" type="Armor">
-		<!-- Eyepatch accessory. Can teleport to the Entrance to the Devil's Isle. Cooldown: 2 hours. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- An eyepatch. Can be used for teleportation to the Devil's Isle. Cooldown time: 2 h. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -202,7 +202,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="6847" name="Recipe: Sealed Tateossian Earring (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Tateossian Earring. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Tateossian Earring. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -215,7 +215,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6849" name="Recipe: Sealed Tateossian Ring (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Tateossian Ring. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Tateossian Ring. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -228,7 +228,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6851" name="Recipe: Sealed Tateossian Necklace (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Tateossian Necklace. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Tateossian Necklace. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -241,7 +241,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6853" name="Recipe: Sealed Imperial Crusader Breastplate (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Breastplate. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Imperial Crusader Breastplate. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -254,7 +254,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6855" name="Recipe: Sealed Imperial Crusader Gaiters (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Gaiters. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Imperial Crusader Gaiters. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -267,7 +267,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6857" name="Recipe: Sealed Imperial Crusader Gauntlets (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Gauntlets. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Imperial Crusader Gauntlets. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -280,7 +280,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6859" name="Recipe: Sealed Imperial Crusader Boots (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Boots. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Imperial Crusader Boots. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -293,7 +293,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6861" name="Recipe: Sealed Imperial Crusader Shield (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Shield. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Imperial Crusader Shield. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -306,7 +306,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6863" name="Recipe: Sealed Imperial Crusader Helmet (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Imperial Crusader Helmet. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Imperial Crusader Helmet. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -319,7 +319,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6865" name="Recipe: Sealed Draconic Leather Armor (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Armor. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Draconic Leather Armor. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -332,7 +332,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6867" name="Recipe: Sealed Draconic Leather Gloves (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Gloves. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Draconic Leather Gloves. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -345,7 +345,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6869" name="Recipe: Sealed Draconic Leather Boots (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Boots. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Draconic Leather Boots. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -358,7 +358,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6871" name="Recipe: Sealed Draconic Leather Helmet (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Helmet. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Imperial Crusader Helmet. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -371,7 +371,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6873" name="Recipe: Sealed Major Arcana Robe (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Major Arcana Robe. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Major Arcana Robe. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -384,7 +384,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6875" name="Recipe: Sealed Major Arcana Gloves (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Major Arcana Gloves. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Major Arcana Gloves. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -397,7 +397,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6877" name="Recipe: Sealed Major Arcana Boots (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Major Arcana Boots. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Major Arcana Boots. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -410,7 +410,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6879" name="Recipe: Sealed Major Arcana Circlet (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Sealed Major Arcana Circlet. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Sealed Major Arcana Circlet. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -423,7 +423,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6881" name="Recipe: Forgotten Blade (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Forgotten Blade. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Forgotten Blade. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -436,7 +436,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6883" name="Recipe: Basalt Battlehammer (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Basalt Battlehammer. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Basalt Battlehammer. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -449,7 +449,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6885" name="Recipe: Imperial Staff (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Imperial Staff. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Imperial Staff. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -462,7 +462,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6887" name="Recipe: Angel Slayer (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Angel Slayer. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Angel Slayer. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -475,7 +475,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6891" name="Recipe: Dragon Hunter Axe (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Dragon Hunter Axe. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Dragon Hunter Axe. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -488,7 +488,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6893" name="Recipe: Saint Spear (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Saint Spear. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Saint Spear. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -501,7 +501,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6895" name="Recipe: Demon Splinter (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Demon Splinter. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Demon Splinter. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -514,7 +514,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6897" name="Recipe: Heaven's Divider (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Heaven's Divider. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Heaven's Divider. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -527,7 +527,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="6899" name="Recipe: Arcana Mace (30%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Arcana Mace. Requires Create Item - Skill Lv. 9. The success rate is 30%. -->
+		<!-- For Dwarves only. A recipe for Arcana Mace. Requires Create Item Lv. 9. The success rate is 30%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

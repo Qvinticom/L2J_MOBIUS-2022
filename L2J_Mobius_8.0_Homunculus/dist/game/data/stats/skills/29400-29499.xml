@@ -9,7 +9,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="29402" toLevel="1" name="Vitality Maintaining Rune">
-		<!-- Maintains Vitality when you have it in the inventory. -->
+		<!-- When in inventory, maintains the Vitality level. -->
 		<icon>icon.ev_charge_run</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -24,7 +24,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="29404" toLevel="1" name="Glowing Dragon's Attribute Potion (XP)">
-		<!-- For $s1 Attribute Attack +$s2, Attribute Resistance +$s3, Acquired XP/ SP +$s4. The effect remains after death. -->
+		<!-- For $s1, Attribute Attack +$s2, Attribute Resistance +$s3, acquired XP/ SP +$s4. The effect remains after death. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -95,7 +95,7 @@
 		</effects>
 	</skill>
 	<skill id="29411" toLevel="10" name="Superior Cat's Eye">
-		<!-- Damage Reflection Resistance +$s1%. With a $s2 chance, reflects debuffs back to the enemy. -->
+		<!-- Damage Reflection Resistance +$s1. With a $s2 chance, reflects debuffs back to the enemy. -->
 		<icon>BranchIcon.Icon.g_bm_jewel_catseye_lv1_lavianrose_high2</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -223,7 +223,7 @@
 		</effects>
 	</skill>
 	<skill id="29415" toLevel="1" name="Vitality Maintaining Rune">
-		<!-- Maintains Vitality when you have it in the inventory. -->
+		<!-- When in inventory, maintains the Vitality level. -->
 		<icon>icon.ev_charge_run</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -233,7 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="29416" toLevel="1" name="Vitality Maintaining Rune">
-		<!-- Maintains Vitality when you have it in the inventory. -->
+		<!-- When in inventory, maintains the Vitality level. -->
 		<icon>icon.ev_charge_run</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -243,7 +243,7 @@
 		</effects>
 	</skill>
 	<skill id="29417" toLevel="1" name="Vitality Maintaining Rune">
-		<!-- Maintains Vitality when you have it in the inventory. -->
+		<!-- When in inventory, maintains the Vitality level. -->
 		<icon>icon.ev_charge_run</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -268,7 +268,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="29423" toLevel="1" name="Heir's Radiance Lv. 5">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 2 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 2 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -377,7 +377,7 @@
 		</effects>
 	</skill>
 	<skill id="29424" toLevel="1" name="Heir's Radiance Lv. 6">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 3 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 3 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -486,7 +486,7 @@
 		</effects>
 	</skill>
 	<skill id="29425" toLevel="1" name="Heir's Radiance Lv. 7">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 4 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 4 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -595,7 +595,7 @@
 		</effects>
 	</skill>
 	<skill id="29426" toLevel="1" name="Heir's Radiance Lv. 5">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 2 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvP damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvP Lv. 2 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -704,7 +704,7 @@
 		</effects>
 	</skill>
 	<skill id="29427" toLevel="1" name="Heir's Radiance Lv. 6">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 3 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvP damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvP Lv. 3 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -813,7 +813,7 @@
 		</effects>
 	</skill>
 	<skill id="29428" toLevel="1" name="Heir's Radiance Lv. 7">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 4 skill.\n\n<When used with Knight's/ Wizard's/ Warrior's Circlet>\nKnight's Circlet: P./ M. Def. +$s7.\nWarrior's Circlet: P. Atk. +$s7.\nWizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvP damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvP Lv. 4 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -922,7 +922,7 @@
 		</effects>
 	</skill>
 	<skill id="29429" toLevel="5" name="Heir's Radiance - PvE">
-		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVE</abnormalType>
@@ -1027,7 +1027,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>29429</skillId> <!-- Heir's Radiance - PvE -->
+				<skillId>29429</skillId> <!-- Heir's Radiance - PvE Lv. 2 -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1043,7 +1043,7 @@
 		</endEffects>
 	</skill>
 	<skill id="29430" toLevel="5" name="Heir's Radiance - PvP">
-		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note!. The effect disappears after logout and is not renewed after death. -->
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVP</abnormalType>
@@ -1168,7 +1168,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>29430</skillId> <!-- Heir's Radiance - PvP -->
+				<skillId>29430</skillId> <!-- Heir's Radiance - PvP Lv. 2 -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1180,7 +1180,7 @@
 		</endEffects>
 	</skill>
 	<skill id="29431" toLevel="5" name="Heir's Radiance - PvE">
-		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVE</abnormalType>
@@ -1285,7 +1285,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>29431</skillId> <!-- Heir's Radiance - PvE -->
+				<skillId>29431</skillId> <!-- Heir's Radiance - PvE Lv. 3 -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1301,7 +1301,7 @@
 		</endEffects>
 	</skill>
 	<skill id="29432" toLevel="5" name="Heir's Radiance - PvP">
-		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVP</abnormalType>
@@ -1426,7 +1426,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>29432</skillId> <!-- Heir's Radiance - PvP -->
+				<skillId>29432</skillId> <!-- Heir's Radiance - PvP Lv. 3 -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1438,7 +1438,7 @@
 		</endEffects>
 	</skill>
 	<skill id="29433" toLevel="5" name="Heir's Radiance - PvE">
-		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVE</abnormalType>
@@ -1543,7 +1543,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>29433</skillId> <!-- Heir's Radiance - PvE -->
+				<skillId>29433</skillId> <!-- Heir's Radiance - PvE Lv. 4 -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1559,7 +1559,7 @@
 		</endEffects>
 	</skill>
 	<skill id="29434" toLevel="5" name="Heir's Radiance - PvP">
-		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore.\n\nNote!\nThe effect disappears after logout and is not renewed after death. -->
+		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
 		<abnormalType>HEIR_PVP</abnormalType>
@@ -1684,7 +1684,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>29434</skillId> <!-- Heir's Radiance - PvP -->
+				<skillId>29434</skillId> <!-- Heir's Radiance - PvP Lv. 4 -->
 				<skillLevel>
 					<value level="1">2</value>
 					<value level="2">3</value>
@@ -1712,11 +1712,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="80235" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80236" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80237" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80238" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80239" count="1" minEnchant="10" maxEnchant="10" />
+						<item id="80235" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Helmet - Heavy armor -->
+						<item id="80236" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Breastplate - Heavy armor -->
+						<item id="80237" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Gaiters - Heavy armor -->
+						<item id="80238" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Gauntlets - Heavy armor -->
+						<item id="80239" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Boots - Heavy armor -->
 					</item>
 				</items>
 			</effect>
@@ -1739,11 +1739,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="80240" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80241" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80242" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80243" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80244" count="1" minEnchant="10" maxEnchant="10" />
+						<item id="80240" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Leather Helmet - Light armor -->
+						<item id="80241" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Leather Armor - Light armor -->
+						<item id="80242" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Leather Leggings - Light armor -->
+						<item id="80243" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Leather Gloves - Light armor -->
+						<item id="80244" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Leather Boots - Light armor -->
 					</item>
 				</items>
 			</effect>
@@ -1766,11 +1766,11 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="80245" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80246" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80247" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80248" count="1" minEnchant="10" maxEnchant="10" />
-						<item id="80249" count="1" minEnchant="10" maxEnchant="10" />
+						<item id="80245" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Circlet - Robe -->
+						<item id="80246" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Tunic - Robe -->
+						<item id="80247" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Stockings - Robe -->
+						<item id="80248" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Gloves - Robe -->
+						<item id="80249" count="1" minEnchant="10" maxEnchant="10" /> <!-- Supreme Leviathan Shoes - Robe -->
 					</item>
 				</items>
 			</effect>
