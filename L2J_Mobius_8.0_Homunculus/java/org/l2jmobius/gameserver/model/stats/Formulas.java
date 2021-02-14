@@ -226,14 +226,14 @@ public class Formulas
 				rate = creature.getStat().getValue(Stat.MAGIC_CRITICAL_RATE);
 				if ((target == null) || !skill.isBad())
 				{
-					return Math.min(rate, 32) > Rnd.get(100);
+					return Math.min(rate, 320) > Rnd.get(1000);
 				}
 				
 				double finalRate = target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE, rate) + target.getStat().getValue(Stat.DEFENCE_MAGIC_CRITICAL_RATE_ADD, 0);
 				if ((creature.getLevel() >= 78) && (target.getLevel() >= 78))
 				{
 					finalRate += Math.sqrt(creature.getLevel()) + ((creature.getLevel() - target.getLevel()) / 25);
-					return Math.min(finalRate, 32) > Rnd.get(100);
+					return Math.min(finalRate, 320) > Rnd.get(1000);
 				}
 				
 				double balanceMod = 1;
@@ -242,7 +242,7 @@ public class Formulas
 					balanceMod = target.isPlayable() ? Config.PVP_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS[creature.getActingPlayer().getClassId().getId()] : Config.PVE_MAGICAL_SKILL_CRITICAL_CHANCE_MULTIPLIERS[creature.getActingPlayer().getClassId().getId()];
 				}
 				
-				return (Math.min(finalRate, 20) * balanceMod) > Rnd.get(100);
+				return (Math.min(finalRate, 200) * balanceMod) > Rnd.get(1000);
 			}
 			
 			// Physical skill critical rate.
