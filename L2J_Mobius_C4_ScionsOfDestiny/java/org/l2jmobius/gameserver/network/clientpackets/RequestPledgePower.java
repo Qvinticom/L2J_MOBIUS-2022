@@ -16,26 +16,22 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
 public class RequestPledgePower extends GameClientPacket
 {
-	static Logger LOGGER = Logger.getLogger(RequestPledgePower.class.getName());
-	
-	private int _rank;
+	private int _clanMemberId;
 	private int _action;
 	private int _privs;
 	
 	@Override
 	protected void readImpl()
 	{
-		_rank = readD();
+		_clanMemberId = readD();
 		_action = readD();
-		if (_action == 2)
+		
+		if (_action == 3)
 		{
 			_privs = readD();
 		}
@@ -54,27 +50,43 @@ public class RequestPledgePower extends GameClientPacket
 			return;
 		}
 		
-		if (_action == 2)
+		if (player.getClan() != null)
 		{
-			if ((player.getClan() != null) && player.isClanLeader())
+			PlayerInstance member = null;
+			if (player.getClan().getClanMember(_clanMemberId) != null)
 			{
-				if (_rank == 9)
-				{
-					// The rights below cannot be bestowed upon Academy members:
-					// Join a clan or be dismissed
-					// Title management, crest management, master management, level management,
-					// bulletin board administration
-					// Clan war, right to dismiss, set functions
-					// Auction, manage taxes, attack/defend registration, mercenary management
-					// => Leaves only CP_CL_VIEW_WAREHOUSE, CP_CH_OPEN_DOOR, CP_CS_OPEN_DOOR?
-					_privs = (_privs & Clan.CP_CL_VIEW_WAREHOUSE) + (_privs & Clan.CP_CH_OPEN_DOOR) + (_privs & Clan.CP_CS_OPEN_DOOR);
-				}
-				player.getClan().setRankPrivs(_rank, _privs);
+				member = player.getClan().getClanMember(_clanMemberId).getPlayerInstance();
 			}
-		}
-		else
-		{
-			player.sendPacket(new ManagePledgePower(getClient().getPlayer().getClan(), _action, _rank));
+			
+			switch (_action)
+			{
+				case 1:
+				{
+					player.sendPacket(new ManagePledgePower(player.getClanPrivileges()));
+					break;
+				}
+				
+				case 2:
+				{
+					
+					if (member != null)
+					{
+						player.sendPacket(new ManagePledgePower(member.getClanPrivileges()));
+					}
+					break;
+				}
+				case 3:
+				{
+					if (player.isClanLeader())
+					{
+						if (member != null)
+						{
+							member.setClanPrivileges(_privs);
+						}
+					}
+					break;
+				}
+			}
 		}
 	}
 }

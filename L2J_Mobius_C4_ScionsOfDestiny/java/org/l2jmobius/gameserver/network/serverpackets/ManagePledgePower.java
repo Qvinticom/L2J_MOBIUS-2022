@@ -16,37 +16,21 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import org.l2jmobius.gameserver.model.clan.Clan;
-
 public class ManagePledgePower extends GameServerPacket
 {
-	private final int _action;
-	private final Clan _clan;
-	private final int _rank;
+	private final int _privs;
 	
-	public ManagePledgePower(Clan clan, int action, int rank)
+	public ManagePledgePower(int privs)
 	{
-		_clan = clan;
-		_action = action;
-		_rank = rank;
+		_privs = privs;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		int privs = 0;
-		if (_action == 1)
-		{
-			privs = _clan.getRankPrivs(_rank);
-		}
-		else
-		{
-			return;
-		}
-		
 		writeC(0x30);
 		writeD(0);
 		writeD(0);
-		writeD(privs);
+		writeD(_privs);
 	}
 }

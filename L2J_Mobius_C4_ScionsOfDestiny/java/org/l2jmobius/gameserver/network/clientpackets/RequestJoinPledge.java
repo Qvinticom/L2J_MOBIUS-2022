@@ -25,13 +25,13 @@ import org.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
 public class RequestJoinPledge extends GameClientPacket
 {
 	private int _target;
-	private int _pledgeType;
+	// private int _pledgeType;
 	
 	@Override
 	protected void readImpl()
 	{
 		_target = readD();
-		_pledgeType = readD();
+		// _pledgeType = readD();
 	}
 	
 	@Override
@@ -51,7 +51,7 @@ public class RequestJoinPledge extends GameClientPacket
 		
 		final PlayerInstance target = (PlayerInstance) World.getInstance().findObject(_target);
 		final Clan clan = player.getClan();
-		if (!clan.checkClanJoinCondition(player, target, _pledgeType))
+		if (!clan.checkClanJoinCondition(player, target, 0))
 		{
 			return;
 		}
@@ -66,6 +66,6 @@ public class RequestJoinPledge extends GameClientPacket
 	
 	public int getPledgeType()
 	{
-		return _pledgeType;
+		return 0;
 	}
 }

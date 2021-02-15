@@ -26,24 +26,24 @@ package org.l2jmobius.gameserver.network.serverpackets;
  */
 public class AskJoinAlly extends GameServerPacket
 {
+	private final int _requestorId;
 	private final String _requestorName;
-	private final int _requestorObjId;
+	private final String _requestorAllyName;
 	
-	/**
-	 * @param requestorObjId
-	 * @param requestorName
-	 */
-	public AskJoinAlly(int requestorObjId, String requestorName)
+	public AskJoinAlly(int requestorId, String requestorName, String requestorAllyName)
 	{
+		_requestorId = requestorId;
 		_requestorName = requestorName;
-		_requestorObjId = requestorObjId;
+		_requestorAllyName = requestorAllyName;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0xa8);
-		writeD(_requestorObjId);
+		writeD(_requestorId);
 		writeS(_requestorName);
+		writeS("");
+		writeS(_requestorAllyName);
 	}
 }

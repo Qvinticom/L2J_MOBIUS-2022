@@ -156,20 +156,20 @@ public class GMViewCharacterInfo extends GameServerPacket
 		writeH(_player.getRecomLeft());
 		writeH(_player.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
 		writeD(_player.getClassId().getId());
-		writeD(0x00); // special effects? circles around player...
+		// writeD(0x00); // special effects? circles around player...
 		writeD(_player.getMaxCp());
 		writeD((int) _player.getCurrentCp());
 		
-		writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
+		// writeC(_player.isRunning() ? 0x01 : 0x00); // changes the Speed display on Status Window
 		
-		writeC(321);
+		// writeC(321);
 		
-		writeD(_player.getPledgeClass()); // changes the text above CP on Status Window
+		// writeD(_player.getPledgeClass()); // changes the text above CP on Status Window
 		
-		writeC(_player.isNoble() ? 0x01 : 0x00);
-		writeC(_player.isHero() ? 0x01 : 0x00);
+		// writeC(_player.isNoble() ? 0x01 : 0x00);
+		// writeC(_player.isHero() ? 0x01 : 0x00);
 		
-		writeD(_player.getAppearance().getNameColor());
-		writeD(_player.getAppearance().getTitleColor());
+		// writeD(_player.getAppearance().getNameColor());
+		// writeD(_player.getAppearance().getTitleColor());
 	}
 }

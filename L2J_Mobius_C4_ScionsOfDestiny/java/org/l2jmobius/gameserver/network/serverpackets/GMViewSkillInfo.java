@@ -46,7 +46,7 @@ public class GMViewSkillInfo extends GameServerPacket
 			writeD(skill.isPassive() ? 1 : 0);
 			writeD(skill.getLevel());
 			writeD(skill.getId());
-			writeC(0x00); // c5
+			// writeC(0x00); // c5
 		}
 	}
 }

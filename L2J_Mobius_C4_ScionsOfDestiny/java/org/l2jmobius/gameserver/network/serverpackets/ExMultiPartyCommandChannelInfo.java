@@ -43,14 +43,14 @@ public class ExMultiPartyCommandChannelInfo extends GameServerPacket
 		writeH(0x30);
 		
 		writeS(_channel.getChannelLeader().getName());
-		writeD(0); // Channel loot
+		// writeD(0); // Channel loot
 		writeD(_channel.getMemberCount());
 		
 		writeD(_channel.getParties().size());
 		for (Party p : _channel.getParties())
 		{
 			writeS(p.getLeader().getName());
-			writeD(p.getPartyLeaderOID());
+			// writeD(p.getPartyLeaderOID());
 			writeD(p.getMemberCount());
 		}
 	}

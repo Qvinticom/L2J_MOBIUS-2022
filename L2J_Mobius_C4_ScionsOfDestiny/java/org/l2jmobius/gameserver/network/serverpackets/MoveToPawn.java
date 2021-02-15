@@ -36,7 +36,10 @@ public class MoveToPawn extends GameServerPacket
 	private final int _x;
 	private final int _y;
 	private final int _z;
-	
+	private final int _tx;
+	private final int _ty;
+	private final int _tz;
+		
 	public MoveToPawn(Creature creature, Creature target, int distance)
 	{
 		_objectId = creature.getObjectId();
@@ -45,6 +48,9 @@ public class MoveToPawn extends GameServerPacket
 		_x = creature.getX();
 		_y = creature.getY();
 		_z = creature.getZ();
+		_tx = target.getX();
+		_ty = target.getY();
+		_tz = target.getZ();
 	}
 	
 	@Override
@@ -59,5 +65,8 @@ public class MoveToPawn extends GameServerPacket
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
+		writeD(_tx);
+		writeD(_ty);
+		writeD(_tz);
 	}
 }
