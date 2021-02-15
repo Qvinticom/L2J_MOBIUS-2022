@@ -61,9 +61,29 @@ public class PartySpelled extends GameServerPacket
 		writeC(0xee);
 		writeD(_creature instanceof SummonInstance ? 2 : _creature instanceof PetInstance ? 1 : 0);
 		writeD(_creature.getObjectId());
-		writeD(_effects.size());
-		for (Effect temp : _effects)
+		
+		// C4 does not support more than 20 effects in party window, so limiting them makes no difference.
+		// This check ignores first effects, so there is space for last effects to be viewable by party members.
+		// It may also help healers be aware of cursed members.
+		int size = 0;
+		if (_effects.size() > 20)
 		{
+			writeD(20);
+			size = _effects.size() - 20;
+		}
+		else
+		{
+			writeD(_effects.size());
+		}
+		
+		for (; size < _effects.size(); size++)
+		{
+			final Effect temp = _effects.get(size);
+			if (temp == null)
+			{
+				continue;
+			}
+			
 			writeD(temp._skillId);
 			writeH(temp._dat);
 			writeD(temp._duration / 1000);
