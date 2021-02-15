@@ -79,6 +79,7 @@ import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
@@ -477,6 +478,9 @@ public class EnterWorld extends GameClientPacket
 		
 		// Send all skills to char
 		player.sendSkillList();
+		
+		// Remain in party after logout fix.
+		player.sendPacket(new PartySmallWindowDeleteAll());
 		
 		// Close lock at login
 		player.setLocked(false);
