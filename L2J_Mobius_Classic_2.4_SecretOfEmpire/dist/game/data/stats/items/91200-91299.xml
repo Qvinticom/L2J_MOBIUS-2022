@@ -613,6 +613,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="51184" level="1" /> <!-- Tranformation: Ninja Assassin -->
+		</skills>
 	</item>
 	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="EtcItem">
 		<!-- Allows you to transform into a Blood Noblesse for 15 min. Remains after death. Cannot be dropped or sold. <Blood Noblesse Energy>P. Atk. +7%, M. Atk. +7%, Acquired XP +10%. In case of successful attack or skill use deals significant M. Damage. Cooldown: 15 min. -->

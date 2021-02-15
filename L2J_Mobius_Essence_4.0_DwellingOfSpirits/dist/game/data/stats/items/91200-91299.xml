@@ -631,6 +631,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<skills>
+			<skill id="51184" level="1" /> <!-- Tranformation: Ninja Assassin -->
+		</skills>
 	</item>
 	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="EtcItem">
 		<!-- Changes the appearance to that of Blood Noblesse. <Transformation effect>. P. Atk. +7%. M. Atk. +7%. Acquired XP +10%. <When triggered>. There is a certain chance to hit with powerful magic after an attack. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
