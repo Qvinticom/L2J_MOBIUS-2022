@@ -406,10 +406,29 @@
 		<set name="icon" val="icon.cocktail_heaven_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="300000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39407" level="1" /> <!-- Horn Melody - Emperor's Special Cocktail -->
+			<skill id="39408" level="1" /> <!-- Drum Melody - Emperor's Special Cocktail -->
+			<skill id="39409" level="1" /> <!-- Pipe Organ Melody - Emperor's Special Cocktail -->
+			<skill id="39410" level="1" /> <!-- Guitar Melody - Emperor's Special Cocktail -->
+			<skill id="39414" level="1" /> <!-- War Drum - Emperor's Special Cocktail -->
+			<skill id="39415" level="1" /> <!-- Marching Drum - Emperor's Special Cocktail -->
+			<skill id="39416" level="1" /> <!-- Soothing Drum - Emperor's Special Cocktail -->
+			<skill id="39413" level="1" /> <!-- Mental Attack Resistance - Emperor's Special Cocktail -->
+			<skill id="39412" level="1" /> <!-- Resistance Debuff - Emperor's Special Cocktail -->
+			<skill id="39411" level="1" /> <!-- Elemental Resistance - Emperor's Special Cocktail -->
+			<skill id="39514" level="1" /> <!-- Fantasia Harmony - Emperor's Special Cocktail -->
+			<skill id="39517" level="1" /> <!-- Fantasia Melody - Emperor's Special Cocktail -->
+		</skills>
 	</item>
 	<item id="80833" name="Golden Pig's Medium Vitality Tonic" type="EtcItem">
 		<!-- Medium Vitality Tonic prepared to celebrate the year of the Golden Pig. 2 out of 4 bars on the vitality gauge are replenished. Cannot be used in the Olympiad. -->
