@@ -378,7 +378,7 @@ public class GeoEngine
 		{
 			return false;
 		}
-		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(ox, oy, oz), new Location(tx, ty, tz), origin.getInstanceWorld()))
+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld()))
 		{
 			return false;
 		}
@@ -450,7 +450,7 @@ public class GeoEngine
 		{
 			return false;
 		}
-		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(ox, oy, oz), new Location(tx, ty, tz), origin.getInstanceWorld()))
+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld()))
 		{
 			return false;
 		}
@@ -810,7 +810,7 @@ public class GeoEngine
 		{
 			return new GeoLocation(gox, goy, goz);
 		}
-		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(gox, goy, goz), new Location(gtx, gty, gtz), instance))
+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(gox, goy, goz, gtx, gty, gtz, instance))
 		{
 			return new GeoLocation(gox, goy, goz);
 		}

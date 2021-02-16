@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.holders.WarpedSpaceHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -52,7 +51,7 @@ public class WarpedSpaceManager
 		_warpedSpace.remove(creature);
 	}
 	
-	public boolean checkForWarpedSpace(Location origin, Location destination, Instance instance)
+	public boolean checkForWarpedSpace(int originX, int originY, int originZ, int destinationX, int destinationY, int destinationZ, Instance instance)
 	{
 		if (_warpedSpace != null)
 		{
@@ -64,8 +63,8 @@ public class WarpedSpaceManager
 					continue;
 				}
 				final int radius = creature.getTemplate().getCollisionRadius();
-				final boolean originInRange = Util.calculateDistance(creature, origin, false, false) <= (holder.getRange() + radius);
-				final boolean destinationInRange = Util.calculateDistance(creature, destination, false, false) <= (holder.getRange() + radius);
+				final boolean originInRange = Util.calculateDistance(creature.getX(), creature.getY(), creature.getZ(), originX, originY, originZ, false, false) <= (holder.getRange() + radius);
+				final boolean destinationInRange = Util.calculateDistance(creature.getX(), creature.getY(), creature.getZ(), destinationX, destinationY, destinationZ, false, false) <= (holder.getRange() + radius);
 				return destinationInRange ? !originInRange : originInRange;
 			}
 		}
