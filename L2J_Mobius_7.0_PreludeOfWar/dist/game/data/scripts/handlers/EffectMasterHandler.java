@@ -99,6 +99,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CpHealPercent", CpHealPercent::new);
 		EffectHandler.getInstance().registerHandler("CpRegen", CpRegen::new);
 		EffectHandler.getInstance().registerHandler("CraftingCritical", CraftingCritical::new);
+		EffectHandler.getInstance().registerHandler("CraftRate", CraftRate::new);
 		EffectHandler.getInstance().registerHandler("CreateCommonItem", CreateCommonItem::new);
 		EffectHandler.getInstance().registerHandler("CreateItem", CreateItem::new);
 		EffectHandler.getInstance().registerHandler("CriticalDamage", CriticalDamage::new);

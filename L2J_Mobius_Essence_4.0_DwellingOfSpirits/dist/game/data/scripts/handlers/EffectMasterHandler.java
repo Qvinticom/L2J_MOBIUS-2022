@@ -97,6 +97,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CpHealOverTime", CpHealOverTime::new);
 		EffectHandler.getInstance().registerHandler("CpHealPercent", CpHealPercent::new);
 		EffectHandler.getInstance().registerHandler("CpRegen", CpRegen::new);
+		EffectHandler.getInstance().registerHandler("CraftRate", CraftRate::new);
 		EffectHandler.getInstance().registerHandler("CriticalDamage", CriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("CriticalDamagePosition", CriticalDamagePosition::new);
 		EffectHandler.getInstance().registerHandler("CriticalRate", CriticalRate::new);

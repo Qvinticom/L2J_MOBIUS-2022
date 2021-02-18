@@ -162,7 +162,7 @@ public class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			offeringBonus = Math.min((offeredAdenaWorth / recipe.getMaxOffering()) * recipe.getMaxOfferingBonus(), recipe.getMaxOfferingBonus());
 		}
 		
-		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus) > Rnd.get(100));
+		final boolean success = player.tryLuck() || ((recipe.getSuccessRate() + offeringBonus + player.getStat().getValue(Stat.CRAFT_RATE, 0)) > Rnd.get(100));
 		final boolean craftingCritical = success && (player.getStat().getValue(Stat.CRAFTING_CRITICAL) > Rnd.get(100));
 		if (success) // Successful craft.
 		{

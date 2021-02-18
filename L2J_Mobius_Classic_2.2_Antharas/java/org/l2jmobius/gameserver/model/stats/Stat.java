@@ -294,7 +294,9 @@ public enum Stat
 	ATTACK_DAMAGE("attackDamage"),
 	
 	IMMOBILE_DAMAGE_BONUS("immobileBonus"),
-	IMMOBILE_DAMAGE_RESIST("immobileResist");
+	IMMOBILE_DAMAGE_RESIST("immobileResist"),
+	
+	CRAFT_RATE("CraftRate");
 	
 	public static final int NUM_STATS = values().length;
 	

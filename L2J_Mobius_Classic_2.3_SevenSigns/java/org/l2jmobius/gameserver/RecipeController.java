@@ -403,7 +403,7 @@ public class RecipeController
 				// handle possible cheaters here
 				// (they click craft then try to get rid of items in order to get free craft)
 			}
-			else if (Rnd.get(100) < _recipeList.getSuccessRate())
+			else if (Rnd.get(100) < (_recipeList.getSuccessRate() + _player.getStat().getValue(Stat.CRAFT_RATE, 0)))
 			{
 				rewardPlayer(); // and immediately puts created item in its place
 				updateMakeInfo(true);
