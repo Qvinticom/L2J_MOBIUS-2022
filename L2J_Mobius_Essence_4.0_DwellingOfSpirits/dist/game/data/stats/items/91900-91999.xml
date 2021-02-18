@@ -550,6 +550,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="50186" level="1" type="ON_EQUIP" /> <!-- Adventurer's Agathion Griffin -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->

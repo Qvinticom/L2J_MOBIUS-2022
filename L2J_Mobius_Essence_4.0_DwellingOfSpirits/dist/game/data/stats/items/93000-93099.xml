@@ -581,11 +581,14 @@
 		<!-- For Adventurer's Agathion Griffin only. Increases M. Def. when the agathion is enchanted. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="93041" name="Adventurer's Cloak" type="Armor">
 		<set name="icon" val="icon.amor_goodness_cloak" />
@@ -597,6 +600,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 	</item>
 	<item id="93042" name="Adventurer's Belt" type="Armor">
 		<!-- Inventory Slots +2, Weight Limit +1000. -->
@@ -610,6 +614,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
@@ -647,21 +652,27 @@
 		<!-- For Adventurer's Cloak only. -->
 		<set name="icon" val="icon.sayha2017_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="93046" name="Scroll: Enchant Adventurer's Belt" type="EtcItem">
 		<!-- For Adventurer's Belt only. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
 	</item>
 	<item id="93047" name="Samurai Long Sword" additionalName="Sealed" type="Weapon">
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
