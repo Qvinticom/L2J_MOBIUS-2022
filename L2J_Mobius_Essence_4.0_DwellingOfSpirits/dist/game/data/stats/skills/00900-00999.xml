@@ -868,11 +868,10 @@
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_PURIFICATION</abnormalType>
 		<affectRange>1000</affectRange>
-		<effectPoint>679</effectPoint>
-		<hitTime>2500</hitTime>
+		<hitTime>1500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>80</magicLevel>
-		<mpConsume>66</mpConsume>
+		<magicLevel>74</magicLevel>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -885,10 +884,6 @@
 				<slot>DEBUFF</slot>
 				<rate>50</rate>
 				<max>5</max>
-			</effect>
-			<effect name="HealEffect">
-				<amount>30</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
 				<amount>-80</amount>
@@ -906,21 +901,18 @@
 		<effectPoint>679</effectPoint>
 		<hitTime>2</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLevel>80</magicLevel>
+		<magicLevel>74</magicLevel>
 		<mpConsume>73</mpConsume>
 		<operateType>T</operateType>
 		<reuseDelay>1</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUAL</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
+			<effect name="ManaDamOverTime">
+				<power>9</power>
+				<ticks>5</ticks>
+			</effect>
 			<effect name="SilentMove">
 				<chance>100</chance>
 			</effect>
@@ -5076,7 +5068,7 @@
 			<value level="3">-500</value>
 		</effectPoint>
 		<effectRange>600</effectRange>
-		<hitTime>500</hitTime>
+		<hitTime>800</hitTime>
 		<magicLevel>
 			<value level="1">40</value>
 			<value level="2">60</value>

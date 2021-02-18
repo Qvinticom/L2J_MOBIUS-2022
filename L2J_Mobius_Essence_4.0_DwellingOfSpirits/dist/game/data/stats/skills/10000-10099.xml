@@ -58,7 +58,7 @@
 		<!-- Strikes the target and nearby enemies with a lightning bolt that inflicts damage with $s1 power. Paralyzes enemies for $s2. Critical. Over-hit. -->
 		<icon>icon.skll10094</icon>
 		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>40</activateRate>
@@ -79,11 +79,11 @@
 			<value level="5">84</value>
 		</magicLevel>
 		<mpConsume>
-			<value level="1">140</value>
-			<value level="2">146</value>
-			<value level="3">152</value>
-			<value level="4">159</value>
-			<value level="5">166</value>
+			<value level="1">94</value>
+			<value level="2">94</value>
+			<value level="3">96</value>
+			<value level="4">97</value>
+			<value level="5">99</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
@@ -91,11 +91,11 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>
-			<value level="1">-4140</value>
-			<value level="2">-4240</value>
-			<value level="3">-4340</value>
-			<value level="4">-4440</value>
-			<value level="5">-4540</value>
+			<value level="1">-6100</value>
+			<value level="2">-6175</value>
+			<value level="3">-6250</value>
+			<value level="4">-6325</value>
+			<value level="5">-6400</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<trait>PARALYZE</trait>
@@ -111,6 +111,8 @@
 					<value level="4">2266</value>
 					<value level="5">2356</value>
 				</power>
+				<criticalChance>15</criticalChance>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>35016;35045;18103</allowedSkills>

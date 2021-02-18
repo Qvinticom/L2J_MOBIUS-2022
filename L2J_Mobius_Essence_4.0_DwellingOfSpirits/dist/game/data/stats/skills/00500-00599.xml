@@ -65,22 +65,22 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>150</castRange>
 		<effectPoint>
-			<value level="1">-234</value>
-			<value level="2">-248</value>
-			<value level="3">-262</value>
-			<value level="4">-275</value>
-			<value level="5">-283</value>
+			<value level="1">-460</value>
+			<value level="2">-470</value>
+			<value level="3">-480</value>
+			<value level="4">-490</value>
+			<value level="5">-500</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1800</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
-			<value level="1">49</value>
-			<value level="2">52</value>
-			<value level="3">55</value>
-			<value level="4">58</value>
-			<value level="5">60</value>
+			<value level="1">76</value>
+			<value level="2">78</value>
+			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
 		</magicLevel>
 		<mpConsume>
 			<value level="1">40</value>
@@ -152,9 +152,9 @@
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
-			<value level="1">-11000</value>
-			<value level="2">-13000</value>
-			<value level="3">-15000</value>
+			<value level="1">-13000</value>
+			<value level="2">-15000</value>
+			<value level="3">-20000</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;300</fanRange>
@@ -1857,9 +1857,8 @@
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
-		<effectPoint>673</effectPoint>
 		<magicLevel>78</magicLevel>
-		<mpConsume>157</mpConsume>
+		<mpConsume>65</mpConsume>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>900000</reuseDelay>
@@ -1867,35 +1866,17 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="RemainCpPer">
-				<amount>80</amount>
-				<percentType>MORE</percentType>
-			</condition>
-		</conditions>
 		<effects>
-			<effect name="Cp">
-				<amount>-95</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxHp">
-				<amount>35</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">

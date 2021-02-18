@@ -1285,8 +1285,12 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
-				<amount>50</amount>
+				<amount>25</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>25</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

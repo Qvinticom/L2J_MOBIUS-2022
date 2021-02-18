@@ -2540,7 +2540,18 @@
 	<skill id="767" toLevel="10" name="Bow Mastery">
 		<!-- P. Atk. +$s1, when using a bow. -->
 		<icon>icon.skill0767</icon>
-		<magicLevel>81</magicLevel>
+		<magicLevel>
+			<value level="1">20</value>
+			<value level="2">30</value>
+			<value level="3">40</value>
+			<value level="4">50</value>
+			<value level="5">60</value>
+			<value level="6">70</value>
+			<value level="7">75</value>
+			<value level="8">80</value>
+			<value level="9">85</value>
+			<value level="10">90</value>
+		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -2619,10 +2630,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="SkillEvasion">
-				<magicType>0</magicType>
-				<amount>60</amount>
-			</effect>
 			<effect name="Speed">
 				<amount>30</amount>
 				<mode>DIFF</mode>
@@ -2634,6 +2641,10 @@
 			<effect name="FatalBlowRate">
 				<amount>10</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>60</amount>
 			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-80</amount>
@@ -2658,21 +2669,21 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="SkillEvasion">
-				<magicType>0</magicType>
-				<amount>10</amount>
-			</effect>
 			<effect name="Speed">
 				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>50</amount>
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="FatalBlowRate">
 				<amount>20</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="SkillEvasion">
+				<magicType>0</magicType>
+				<amount>50</amount>
 			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-80</amount>
@@ -2933,11 +2944,10 @@
 	<skill id="777" toLevel="15" name="Demolition Impact">
 		<!-- Unleashes a destructive shockwave at the target with $s1 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
 		<icon>icon.skill0777</icon>
-		<abnormalLevel>4</abnormalLevel>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
-		<activateRate>70</activateRate>
+		<castRange>40</castRange>
 		<affectRange>500</affectRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-400</value>
 			<value level="2">-405</value>
@@ -2956,14 +2966,44 @@
 			<value level="15">-470</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
-		<fanRange>0;0;500;60</fanRange>
-		<isDebuff>true</isDebuff>
-		<magicLevel>80</magicLevel>
-		<mpConsume>240</mpConsume>
+		<magicLevel>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+			<value level="10">85</value>
+			<value level="11">86</value>
+			<value level="12">87</value>
+			<value level="13">88</value>
+			<value level="14">89</value>
+			<value level="15">90</value>
+		</magicLevel>
+		<mpConsume>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">61</value>
+			<value level="4">62</value>
+			<value level="5">63</value>
+			<value level="6">63</value>
+			<value level="7">64</value>
+			<value level="8">65</value>
+			<value level="9">66</value>
+			<value level="10">66</value>
+			<value level="11">67</value>
+			<value level="12">68</value>
+			<value level="13">69</value>
+			<value level="14">69</value>
+			<value level="15">70</value>
+		</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>75000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<nextAction>ATTACK</nextAction>
 		<conditions>
@@ -2976,17 +3016,27 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>5980</power>
+				<power>
+					<value level="1">4907</value>
+					<value level="2">4976</value>
+					<value level="3">5046</value>
+					<value level="4">5117</value>
+					<value level="5">5186</value>
+					<value level="6">5256</value>
+					<value level="7">5327</value>
+					<value level="8">5397</value>
+					<value level="9">5468</value>
+					<value level="10">5538</value>
+					<value level="11">5608</value>
+					<value level="12">5679</value>
+					<value level="13">5749</value>
+					<value level="14">5821</value>
+					<value level="15">5891</value>
+				</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<pDefMod>0.9</pDefMod>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3412,9 +3462,9 @@
 		<!-- P. Critical Rate +$s1 when using a bow. -->
 		<icon>icon.skill0790</icon>
 		<magicLevel>
-			<value level="1">28</value>
-			<value level="2">40</value>
-			<value level="3">49</value>
+			<value level="1">52</value>
+			<value level="2">66</value>
+			<value level="3">80</value>
 		</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3442,10 +3492,17 @@
 		<activateRate>50</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
+		<castRange>600</castRange>
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>720</coolTime>
-		<effectPoint>-1</effectPoint>
-		<hitTime>1800</hitTime>
+		<effectPoint>
+			<value level="1">-460</value>
+			<value level="2">-470</value>
+			<value level="3">-480</value>
+			<value level="4">-490</value>
+			<value level="5">-500</value>
+		</effectPoint>
+		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3484,10 +3541,17 @@
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>70</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>600</castRange>
-		<effectPoint>-1</effectPoint>
+		<castRange>700</castRange>
+		<effectPoint>
+			<value level="1">-460</value>
+			<value level="2">-470</value>
+			<value level="3">-480</value>
+			<value level="4">-490</value>
+			<value level="5">-500</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>1200</hitTime>
+		<hitTime>1500</hitTime>
+		<coolTime>300</coolTime>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLevel>
 			<value level="1">76</value>
@@ -3496,7 +3560,13 @@
 			<value level="4">82</value>
 			<value level="5">84</value>
 		</magicLevel>
-		<mpConsume>29</mpConsume>
+		<mpConsume>
+			<value level="1">40</value>
+			<value level="2">45</value>
+			<value level="3">50</value>
+			<value level="4">55</value>
+			<value level="5">60</value>
+		</mpConsume>
 		<mpInitialConsume>8</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
