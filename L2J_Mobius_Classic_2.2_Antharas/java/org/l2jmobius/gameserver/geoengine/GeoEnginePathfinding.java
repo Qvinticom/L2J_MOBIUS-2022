@@ -20,84 +20,88 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
-import org.l2jmobius.gameserver.geoengine.pathfinding.Node;
-import org.l2jmobius.gameserver.geoengine.pathfinding.NodeBuffer;
-import org.l2jmobius.gameserver.model.Location;
+import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNode;
+import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
+import org.l2jmobius.gameserver.geoengine.pathfinding.CellNode;
+import org.l2jmobius.gameserver.geoengine.pathfinding.CellNodeBuffer;
+import org.l2jmobius.gameserver.geoengine.pathfinding.NodeLoc;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 
 /**
- * @author Hasha
+ * @author -Nemesiss-
  */
-final class GeoEnginePathfinding extends GeoEngine
+public class GeoEnginePathfinding
 {
-	// pre-allocated buffers
-	private final BufferHolder[] _buffers;
+	private static final Logger LOGGER = Logger.getLogger(GeoEnginePathfinding.class.getName());
+	
+	private BufferInfo[] _buffers;
 	
 	protected GeoEnginePathfinding()
 	{
-		super();
-		
-		final String[] array = Config.PATHFIND_BUFFERS.split(";");
-		_buffers = new BufferHolder[array.length];
-		int count = 0;
-		for (int i = 0; i < array.length; i++)
+		try
 		{
-			final String buf = array[i];
-			final String[] args = buf.split("x");
+			final String[] array = Config.PATHFIND_BUFFERS.split(";");
 			
-			try
+			_buffers = new BufferInfo[array.length];
+			
+			String buf;
+			String[] args;
+			for (int i = 0; i < array.length; i++)
 			{
-				final int size = Integer.parseInt(args[1]);
-				count += size;
-				_buffers[i] = new BufferHolder(Integer.parseInt(args[0]), size);
-			}
-			catch (Exception e)
-			{
-				LOGGER.warning("GeoEnginePathfinding: Can not load buffer setting: " + buf);
+				buf = array[i];
+				args = buf.split("x");
+				if (args.length != 2)
+				{
+					throw new Exception("Invalid buffer definition: " + buf);
+				}
+				
+				_buffers[i] = new BufferInfo(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
 			}
 		}
-		
-		LOGGER.info("GeoEnginePathfinding: Loaded " + count + " node buffers.");
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "CellPathFinding: Problem during buffer init: " + e.getMessage(), e);
+			throw new Error("CellPathFinding: load aborted");
+		}
 	}
 	
-	@Override
-	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, Instance instance)
+	public boolean pathNodesExist(short regionoffset)
 	{
-		// get origin and check existing geo coords
-		final int gox = getGeoX(ox);
-		final int goy = getGeoY(oy);
-		if (!hasGeoPos(gox, goy))
+		return false;
+	}
+	
+	public List<AbstractNodeLoc> findPath(int x, int y, int z, int tx, int ty, int tz, Instance instance)
+	{
+		final int gx = GeoEngine.getInstance().getGeoX(x);
+		final int gy = GeoEngine.getInstance().getGeoY(y);
+		if (!GeoEngine.getInstance().hasGeo(x, y))
 		{
 			return null;
 		}
-		
-		final short goz = getHeightNearest(gox, goy, oz);
-		
-		// get target and check existing geo coords
-		final int gtx = getGeoX(tx);
-		final int gty = getGeoY(ty);
-		if (!hasGeoPos(gtx, gty))
+		final int gz = GeoEngine.getInstance().getHeight(x, y, z);
+		final int gtx = GeoEngine.getInstance().getGeoX(tx);
+		final int gty = GeoEngine.getInstance().getGeoY(ty);
+		if (!GeoEngine.getInstance().hasGeo(tx, ty))
 		{
 			return null;
 		}
-		
-		final short gtz = getHeightNearest(gtx, gty, tz);
-		
-		// Prepare buffer for pathfinding calculations
-		final NodeBuffer buffer = getBuffer(64 + (2 * Math.max(Math.abs(gox - gtx), Math.abs(goy - gty))));
+		final int gtz = GeoEngine.getInstance().getHeight(tx, ty, tz);
+		final CellNodeBuffer buffer = alloc(64 + (2 * Math.max(Math.abs(gx - gtx), Math.abs(gy - gty))));
 		if (buffer == null)
 		{
 			return null;
 		}
 		
-		// find path
-		List<Location> path = null;
+		List<AbstractNodeLoc> path = null;
 		try
 		{
-			final Node result = buffer.findPath(gox, goy, goz, gtx, gty, gtz);
+			final CellNode result = buffer.findPath(gx, gy, gz, gtx, gty, gtz);
+			
 			if (result == null)
 			{
 				return null;
@@ -121,147 +125,177 @@ final class GeoEnginePathfinding extends GeoEngine
 			return path;
 		}
 		
-		// get path list iterator
-		final ListIterator<Location> point = path.listIterator();
+		int currentX, currentY, currentZ;
+		ListIterator<AbstractNodeLoc> middlePoint;
 		
-		// get node A (origin)
-		int nodeAx = gox;
-		int nodeAy = goy;
-		short nodeAz = goz;
+		middlePoint = path.listIterator();
+		currentX = x;
+		currentY = y;
+		currentZ = z;
 		
-		// get node B
-		GeoLocation nodeB = (GeoLocation) point.next();
-		
-		// iterate thought the path to optimize it
-		int count = 0;
-		while (point.hasNext() && (count++ < Config.MAX_ITERATIONS))
+		while (middlePoint.hasNext())
 		{
-			// get node C
-			final GeoLocation nodeC = (GeoLocation) path.get(point.nextIndex());
-			
-			// check movement from node A to node C
-			final GeoLocation loc = checkMove(nodeAx, nodeAy, nodeAz, nodeC.getGeoX(), nodeC.getGeoY(), nodeC.getZ(), instance);
-			if ((loc.getGeoX() == nodeC.getGeoX()) && (loc.getGeoY() == nodeC.getGeoY()))
+			final AbstractNodeLoc locMiddle = middlePoint.next();
+			if (!middlePoint.hasNext())
 			{
-				// can move from node A to node C
-				
-				// remove node B
-				point.remove();
+				break;
+			}
+			
+			final AbstractNodeLoc locEnd = path.get(middlePoint.nextIndex());
+			if (GeoEngine.getInstance().canMoveToTarget(currentX, currentY, currentZ, locEnd.getX(), locEnd.getY(), locEnd.getZ(), instance))
+			{
+				middlePoint.remove();
 			}
 			else
 			{
-				// can not move from node A to node C
-				
-				// set node A (node B is part of path, update A coordinates)
-				nodeAx = nodeB.getGeoX();
-				nodeAy = nodeB.getGeoY();
-				nodeAz = (short) nodeB.getZ();
+				currentX = locMiddle.getX();
+				currentY = locMiddle.getY();
+				currentZ = locMiddle.getZ();
 			}
-			
-			// set node B
-			nodeB = (GeoLocation) point.next();
 		}
 		
 		return path;
 	}
 	
 	/**
-	 * Create list of node locations as result of calculated buffer node tree.
-	 * @param node : the entry point
-	 * @return List<NodeLoc> : list of node location
+	 * Convert geodata position to pathnode position
+	 * @param geo_pos
+	 * @return pathnode position
 	 */
-	private static List<Location> constructPath(Node node)
+	public short getNodePos(int geo_pos)
 	{
-		// create empty list
-		final LinkedList<Location> list = new LinkedList<>();
-		
-		// set direction X/Y
-		int dx = 0;
-		int dy = 0;
-		
-		// get target parent
-		Node target = node;
-		Node parent = target.getParent();
-		
-		// while parent exists
-		int count = 0;
-		while ((parent != null) && (count++ < Config.MAX_ITERATIONS))
-		{
-			// get parent <> target direction X/Y
-			final int nx = parent.getLoc().getGeoX() - target.getLoc().getGeoX();
-			final int ny = parent.getLoc().getGeoY() - target.getLoc().getGeoY();
-			
-			// direction has changed?
-			if ((dx != nx) || (dy != ny))
-			{
-				// add node to the beginning of the list
-				list.addFirst(target.getLoc());
-				
-				// update direction X/Y
-				dx = nx;
-				dy = ny;
-			}
-			
-			// move to next node, set target and get its parent
-			target = parent;
-			parent = target.getParent();
-		}
-		
-		// return list
-		return list;
+		return (short) (geo_pos >> 3); // OK?
 	}
 	
 	/**
-	 * Provides optimize selection of the buffer. When all pre-initialized buffer are locked, creates new buffer.
-	 * @param size : pre-calculated minimal required size
-	 * @return NodeBuffer : buffer
+	 * Convert node position to pathnode block position
+	 * @param node_pos
+	 * @return pathnode block position (0...255)
 	 */
-	private final NodeBuffer getBuffer(int size)
+	public short getNodeBlock(int node_pos)
 	{
-		NodeBuffer current = null;
-		for (BufferHolder holder : _buffers)
+		return (short) (node_pos % 256);
+	}
+	
+	public byte getRegionX(int node_pos)
+	{
+		return (byte) ((node_pos >> 8) + World.TILE_X_MIN);
+	}
+	
+	public byte getRegionY(int node_pos)
+	{
+		return (byte) ((node_pos >> 8) + World.TILE_Y_MIN);
+	}
+	
+	public short getRegionOffset(byte rx, byte ry)
+	{
+		return (short) ((rx << 5) + ry);
+	}
+	
+	/**
+	 * Convert pathnode x to World x position
+	 * @param node_x rx
+	 * @return
+	 */
+	public int calculateWorldX(short node_x)
+	{
+		return World.MAP_MIN_X + (node_x * 128) + 48;
+	}
+	
+	/**
+	 * Convert pathnode y to World y position
+	 * @param node_y
+	 * @return
+	 */
+	public int calculateWorldY(short node_y)
+	{
+		return World.MAP_MIN_Y + (node_y * 128) + 48;
+	}
+	
+	private List<AbstractNodeLoc> constructPath(AbstractNode<NodeLoc> nodeValue)
+	{
+		final LinkedList<AbstractNodeLoc> path = new LinkedList<>();
+		int previousDirectionX = Integer.MIN_VALUE;
+		int previousDirectionY = Integer.MIN_VALUE;
+		int directionX, directionY;
+		
+		AbstractNode<NodeLoc> node = nodeValue;
+		while (node.getParent() != null)
 		{
-			// Find proper size of buffer
-			if (holder._size < size)
+			directionX = node.getLoc().getNodeX() - node.getParent().getLoc().getNodeX();
+			directionY = node.getLoc().getNodeY() - node.getParent().getLoc().getNodeY();
+			
+			// only add a new route point if moving direction changes
+			if ((directionX != previousDirectionX) || (directionY != previousDirectionY))
 			{
-				continue;
+				previousDirectionX = directionX;
+				previousDirectionY = directionY;
+				
+				path.addFirst(node.getLoc());
+				node.setLoc(null);
 			}
 			
-			// Find unlocked NodeBuffer
-			for (NodeBuffer buffer : holder._buffer)
+			node = node.getParent();
+		}
+		
+		return path;
+	}
+	
+	private CellNodeBuffer alloc(int size)
+	{
+		CellNodeBuffer current = null;
+		for (BufferInfo i : _buffers)
+		{
+			if (i.mapSize >= size)
 			{
-				if (!buffer.isLocked())
+				for (CellNodeBuffer buf : i.buffer)
 				{
-					continue;
+					if (buf.lock())
+					{
+						current = buf;
+						break;
+					}
+				}
+				if (current != null)
+				{
+					break;
 				}
 				
-				return buffer;
+				// not found, allocate temporary buffer
+				current = new CellNodeBuffer(i.mapSize);
+				current.lock();
+				if (i.buffer.size() < i.count)
+				{
+					i.buffer.add(current);
+					break;
+				}
 			}
-			
-			// NodeBuffer not found, allocate temporary buffer
-			current = new NodeBuffer(holder._size);
-			current.isLocked();
 		}
 		
 		return current;
 	}
 	
-	/**
-	 * NodeBuffer container with specified size and count of separate buffers.
-	 */
-	private static final class BufferHolder
+	private static final class BufferInfo
 	{
-		final int _size;
-		List<NodeBuffer> _buffer;
+		final int mapSize;
+		final int count;
+		ArrayList<CellNodeBuffer> buffer;
 		
-		public BufferHolder(int size, int count)
+		public BufferInfo(int size, int cnt)
 		{
-			_size = size;
-			_buffer = new ArrayList<>(count);
-			for (int i = 0; i < count; i++)
-			{
-				_buffer.add(new NodeBuffer(size));
-			}
+			mapSize = size;
+			count = cnt;
+			buffer = new ArrayList<>(count);
 		}
+	}
+	
+	public static GeoEnginePathfinding getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final GeoEnginePathfinding INSTANCE = new GeoEnginePathfinding();
 	}
 }

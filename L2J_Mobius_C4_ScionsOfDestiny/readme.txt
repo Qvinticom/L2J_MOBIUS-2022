@@ -6,7 +6,7 @@ System: https://mega.nz/file/c09XTS7Y#MoIzoOZ8q-aAiKuE4XzB4JpJU67Eql61SHD4VhqP9M
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/n0pj5tn0v8z3e8s/L2J_Mobius_C4_ScionsOfDestiny_Geodata.zip
+Geodata: http://www.mediafire.com/file/q0j6uawuq5fjo0k/L2J_Mobius_C4_ScionsOfDestiny_Geodata.zip
 
 
 Prelude: http://legacy.lineage2.com/news/career.html

@@ -12692,7 +12692,7 @@ public class PlayerInstance extends Playable
 		{
 			if (Config.CORRECT_PLAYER_Z)
 			{
-				final int nearestZ = GeoEngine.getInstance().getHeightNearest(getX(), getY(), getZ());
+				final int nearestZ = GeoEngine.getInstance().getNextLowerZ(getX(), getY(), getZ());
 				if (getZ() < nearestZ)
 				{
 					teleToLocation(new Location(getX(), getY(), nearestZ));

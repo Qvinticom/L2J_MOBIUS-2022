@@ -56,6 +56,8 @@ import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
+import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -258,7 +260,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/** Movement data of this Creature */
 	protected MoveData _move;
 	private boolean _cursorKeyMovement = false;
-	private boolean _cursorKeyMovementActive = true;
 	
 	/** This creature's target. */
 	private WorldObject _target;
@@ -3357,7 +3358,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<Location> geoPath;
+		public List<AbstractNodeLoc> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -3966,7 +3967,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				{
 					_move.onGeodataPathIndex = -1;
 					stopMove(getActingPlayer().getLastServerPosition());
-					_cursorKeyMovementActive = false;
 					return false;
 				}
 			}
@@ -4205,10 +4205,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		double dy = (y - curY);
 		double dz = (z - curZ);
 		double distance = Math.hypot(dx, dy);
-		if (!_cursorKeyMovementActive && (distance > 200))
-		{
-			return;
-		}
 		
 		final boolean verticalMovementOnly = _isFlying && (distance == 0) && (dz != 0);
 		if (verticalMovementOnly)
@@ -4338,7 +4334,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				if (((originalDistance - distance) > 30) && !isAfraid() && !isInVehicle)
 				{
 					// Path calculation -- overrides previous movement check
-					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
+					m.geoPath = GeoEnginePathfinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						m.disregardingGeodata = true;
@@ -6706,16 +6702,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public void setCursorKeyMovement(boolean value)
 	{
 		_cursorKeyMovement = value;
-	}
-	
-	public void setCursorKeyMovementActive(boolean value)
-	{
-		_cursorKeyMovementActive = value;
-	}
-	
-	public boolean isCursorKeyMovementActive()
-	{
-		return _cursorKeyMovementActive;
 	}
 	
 	public List<ItemInstance> getFakePlayerDrops()

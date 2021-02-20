@@ -5,7 +5,8 @@ System: https://mega.nz/#!ppkUFIJQ!oat-UGQsf2liToQu19nCljGO5BAUInwfzln-ERBBB28
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/j126h41s6jl9dyn/L2J_Mobius_CT_2.4_Epilogue_Geodata.zip
+Geodata: http://www.mediafire.com/file/q515p4hl6j0ivxm/L2J_Mobius_CT_2.4_Epilogue_Geodata.zip
+
 
 What is done
 -Removed HighFive packets.

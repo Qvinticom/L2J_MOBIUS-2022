@@ -18,18 +18,18 @@ package handlers.admincommandhandlers;
 
 import java.util.List;
 
-import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
+import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminPathNode implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_path_find",
+		"admin_path_find"
 	};
 	
 	@Override
@@ -37,29 +37,28 @@ public class AdminPathNode implements IAdminCommandHandler
 	{
 		if (command.equals("admin_path_find"))
 		{
+			if (!Config.PATHFINDING)
+			{
+				BuilderUtil.sendSysMessage(activeChar, "PathFinding is disabled.");
+				return true;
+			}
 			if (activeChar.getTarget() != null)
 			{
-				final List<Location> path = GeoEngine.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld());
+				final List<AbstractNodeLoc> path = GeoEnginePathfinding.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld());
 				if (path == null)
 				{
-					BuilderUtil.sendSysMessage(activeChar, "No route found or pathfinding disabled.");
+					BuilderUtil.sendSysMessage(activeChar, "No Route!");
+					return true;
 				}
-				else
+				for (AbstractNodeLoc a : path)
 				{
-					for (Location point : path)
-					{
-						BuilderUtil.sendSysMessage(activeChar, "x:" + point.getX() + " y:" + point.getY() + " z:" + point.getZ());
-					}
+					BuilderUtil.sendSysMessage(activeChar, "x:" + a.getX() + " y:" + a.getY() + " z:" + a.getZ());
 				}
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+				BuilderUtil.sendSysMessage(activeChar, "No Target!");
 			}
-		}
-		else
-		{
-			return false;
 		}
 		return true;
 	}

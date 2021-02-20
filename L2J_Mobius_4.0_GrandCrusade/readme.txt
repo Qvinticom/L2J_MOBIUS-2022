@@ -6,7 +6,7 @@ System: https://mega.nz/#!Fk0SAK6L!v3JSzKN6QuNzINgel0wp7zXovh0DOYzqxcm7etQOSLI
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/gxjyde9ji7w0zs7/L2J_Mobius_4.0_GrandCrusade_Geodata.zip
+Geodata: http://www.mediafire.com/file/3wru8ll42xoqzn4/L2J_Mobius_4.0_GrandCrusade_Geodata.zip
 
 
 Working features...
@@ -134,15 +134,6 @@ Customs:
 -Starting location
 -Vote reward
 -Automated database backups
-
-Others:
--Reworked tax system
--Reworked quest system
--Reworked spawn system
--Reworked drop system
--Reworked L2World, L2WorldRegion and L2Object
--Skill system from L2jUnity
--GeoEngine from aCis
 
 TODO:
 -Mystic Tavern instanced zones

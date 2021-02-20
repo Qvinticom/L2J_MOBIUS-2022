@@ -8,7 +8,7 @@ System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/liyo9ibulkp3l9g/L2J_Mobius_Classic_2.3_SevenSigns_Geodata.zip
+Geodata: http://www.mediafire.com/file/0lcde1bxjg7bayz/L2J_Mobius_Classic_2.4_SecretOfEmpire_Geodata.zip
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

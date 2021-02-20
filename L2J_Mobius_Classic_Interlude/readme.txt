@@ -6,7 +6,8 @@ System: https://www.mediafire.com/file/mvergqghqz4jzpq/L2J_Mobius_Classic_Interl
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/5ebydcm5ipckpoa/L2J_Mobius_Classic_Interlude_Geodata_v5.zip
+Geodata: http://www.mediafire.com/file/prx3sls7lts5p1f/L2J_Mobius_Classic_Interlude_Geodata.zip
+
 
 This is a Classic server based on the Grand Crusade client.
 The goal is to make a better approximation of what Classic is to older chronicles, like Interlude.
@@ -16,6 +17,7 @@ Who knows? Maybe some day it will be a pure Interlude version.
 
 A lot of things can go wrong while using this project,
 if you do not know what you are doing, it is best not to use it.
+
 
 Tools that might be helpful (use with Java 1.8)
 L2ClientDat: https://github.com/MobiusDevelopment/l2clientdat

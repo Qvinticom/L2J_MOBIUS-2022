@@ -26,6 +26,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -50,7 +51,7 @@ public class SummonAI extends PlayableAI implements Runnable
 	@Override
 	protected void onIntentionAttack(Creature target)
 	{
-		if (Config.PATHFINDING && (GeoEngine.getInstance().findPath(_actor.getX(), _actor.getY(), _actor.getZ(), target.getX(), target.getY(), target.getZ(), _actor.getInstanceId()) == null))
+		if (Config.PATHFINDING && (GeoEnginePathfinding.getInstance().findPath(_actor.getX(), _actor.getY(), _actor.getZ(), target.getX(), target.getY(), target.getZ(), _actor.getInstanceId()) == null))
 		{
 			return;
 		}

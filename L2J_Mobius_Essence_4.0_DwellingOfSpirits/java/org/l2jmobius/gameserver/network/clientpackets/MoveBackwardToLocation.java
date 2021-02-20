@@ -174,10 +174,6 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		// sort of incompatibility fix.
 		// Validate position packets sends head level.
 		_targetZ += player.getTemplate().getCollisionHeight();
-		if (!player.isCursorKeyMovementActive() && (player.isInFrontOf(new Location(_targetX, _targetY, _targetZ)) || player.isOnSideOf(new Location(_originX, _originY, _originZ))))
-		{
-			player.setCursorKeyMovementActive(true);
-		}
 		
 		if (_movementMode == 1)
 		{
@@ -196,10 +192,6 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 				return;
 			}
 			player.setCursorKeyMovement(true);
-			if (!player.isCursorKeyMovementActive())
-			{
-				return;
-			}
 		}
 		
 		final AdminTeleportType teleMode = player.getTeleMode();

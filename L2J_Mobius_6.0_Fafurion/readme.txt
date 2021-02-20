@@ -8,7 +8,7 @@ System: https://mega.nz/#!xolCkYjD!TpdBo8SwYpPYJN86H_r5AxZljTZAfyj-o2H9cfy2bNc
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: https://www.mediafire.com/file/w6j8cphwoji06is/L2J_Mobius_6.0_Fafurion_Geodata.zip
+Geodata: http://www.mediafire.com/file/dcpw8w5u60alw14/L2J_Mobius_6.0_Fafurion_Geodata.zip
 
 
 Working features...
@@ -152,15 +152,6 @@ Customs:
 -Starting location
 -Vote reward
 -Automated database backups
-
-Others:
--Reworked tax system
--Reworked quest system
--Reworked spawn system
--Reworked drop system
--Reworked L2World, L2WorldRegion and L2Object
--Skill system from L2jUnity
--GeoEngine from aCis
 
 TODO:
 -Mystic Tavern instanced zones

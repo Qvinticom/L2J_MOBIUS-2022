@@ -7,7 +7,7 @@ System: https://mega.nz/#!s8lghARA!f7Hi1Yx5JWrNjT3kMRaGK_StI1Tnrxnhia8kaG8edSs
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/muge7mydml1en8t/L2J_Mobius_1.0_Ertheia_Geodata.zip
+Geodata: http://www.mediafire.com/file/pzykzq2vpy4po2u/L2J_Mobius_1.0_Ertheia_Geodata.zip
 
 
 Working features...
@@ -108,15 +108,6 @@ Customs:
 -Starting location
 -Vote reward
 -Automated database backups
-
-Others:
--Reworked tax system
--Reworked quest system
--Reworked spawn system
--Reworked drop system
--Reworked L2World, L2WorldRegion and L2Object
--Skill system from L2jUnity
--GeoEngine from aCis
 
 TODO:
 -Modify all skill levels/sublevels based on client

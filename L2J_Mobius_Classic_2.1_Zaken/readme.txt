@@ -5,7 +5,8 @@ System: https://mega.nz/#!os8HRShC!5JbEmWEugMyssgE-lWgBxJj_zC63gXX-ogBh-A3arX8
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/cqrcj73pntv82d8/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
+Geodata: http://www.mediafire.com/file/38yzztwmmdq0r07/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
+
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility

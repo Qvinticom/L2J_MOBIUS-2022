@@ -32,6 +32,7 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -941,17 +942,14 @@ public class Config
 	// --------------------------------------------------
 	// GeoEngine
 	// --------------------------------------------------
-	public static String GEODATA_PATH;
-	public static int COORD_SYNCHRONIZE;
-	public static int PART_OF_CHARACTER_HEIGHT;
-	public static int MAX_OBSTACLE_HEIGHT;
+	public static Path GEODATA_PATH;
 	public static boolean PATHFINDING;
 	public static String PATHFIND_BUFFERS;
-	public static int BASE_WEIGHT;
-	public static int DIAGONAL_WEIGHT;
-	public static int HEURISTIC_WEIGHT;
-	public static int OBSTACLE_MULTIPLIER;
-	public static int MAX_ITERATIONS;
+	public static float LOW_WEIGHT;
+	public static float MEDIUM_WEIGHT;
+	public static float HIGH_WEIGHT;
+	public static float DIAGONAL_WEIGHT;
+	public static int COORD_SYNCHRONIZE;
 	public static boolean CORRECT_PLAYER_Z;
 	
 	/** Attribute System */
@@ -2501,17 +2499,14 @@ public class Config
 			
 			// Load GeoEngine config file (if exists)
 			final PropertiesParser GeoEngine = new PropertiesParser(GEOENGINE_CONFIG_FILE);
-			GEODATA_PATH = GeoEngine.getString("GeoDataPath", "./data/geodata/");
-			COORD_SYNCHRONIZE = GeoEngine.getInt("CoordSynchronize", -1);
-			PART_OF_CHARACTER_HEIGHT = GeoEngine.getInt("PartOfCharacterHeight", 75);
-			MAX_OBSTACLE_HEIGHT = GeoEngine.getInt("MaxObstacleHeight", 32);
+			GEODATA_PATH = Paths.get(GeoEngine.getString("GeoDataPath", "./data/geodata"));
 			PATHFINDING = GeoEngine.getBoolean("PathFinding", true);
 			PATHFIND_BUFFERS = GeoEngine.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-			BASE_WEIGHT = GeoEngine.getInt("BaseWeight", 10);
-			DIAGONAL_WEIGHT = GeoEngine.getInt("DiagonalWeight", 14);
-			OBSTACLE_MULTIPLIER = GeoEngine.getInt("ObstacleMultiplier", 10);
-			HEURISTIC_WEIGHT = GeoEngine.getInt("HeuristicWeight", 20);
-			MAX_ITERATIONS = GeoEngine.getInt("MaxIterations", 3500);
+			LOW_WEIGHT = GeoEngine.getFloat("LowWeight", 0.5f);
+			MEDIUM_WEIGHT = GeoEngine.getFloat("MediumWeight", 2);
+			HIGH_WEIGHT = GeoEngine.getFloat("HighWeight", 3);
+			DIAGONAL_WEIGHT = GeoEngine.getFloat("DiagonalWeight", 0.707f);
+			COORD_SYNCHRONIZE = GeoEngine.getInt("CoordSynchronize", -1);
 			CORRECT_PLAYER_Z = GeoEngine.getBoolean("CorrectPlayerZ", false);
 			
 			// Load AllowedPlayerRaces config file (if exists)

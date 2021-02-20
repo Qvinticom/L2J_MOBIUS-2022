@@ -6,7 +6,8 @@ System: https://mega.nz/file/B5sVlTgJ#a19JJWZ7llbAZF9XnU91Z98ZbO_Rb56s9AvQ_QyDz-
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/ega48fmtx35t6iy/L2J_Mobius_CT_2.6_HighFive_Geodata.zip
+Geodata: http://www.mediafire.com/file/92t2tdjni4rux06/L2J_Mobius_CT_2.6_HighFive_Geodata.zip
+
 
 What is done
 -Dropped Python / Javolution / Trove
@@ -29,7 +30,6 @@ What is done
 -Premium System
 -User command expon/expoff
 -Reworked drop system
--GeoEngine from aCis
 -Retail system messages and NPC strings
 -New script loader
 -New ThreadPool
@@ -41,4 +41,4 @@ What is done
 -Faction System (Good vs Evil)
 -Fake players
 -Automated database backups
--Reworked L2World, L2WorldRegion and L2Object
+-Reworked World, WorldRegion and WorldObject

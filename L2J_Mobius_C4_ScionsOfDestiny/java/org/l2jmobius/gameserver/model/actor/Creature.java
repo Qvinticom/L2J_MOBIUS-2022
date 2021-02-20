@@ -43,6 +43,8 @@ import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
+import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.handler.itemhandlers.Potions;
@@ -4293,7 +4295,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		public int _heading;
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<Location> geoPath;
+		public List<AbstractNodeLoc> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -5523,7 +5525,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (((originalDistance - distance) > 30) && !_isAfraid && !isInBoat)
 				{
 					// Path calculation -- overrides previous movement check
-					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
+					m.geoPath = GeoEnginePathfinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						m.disregardingGeodata = true;

@@ -6,7 +6,7 @@ System: https://mega.nz/#!Rx1SCIBC!W5pM7xljB_6UwXaHp_aW8sqY1SJXp5LFa121YGRrb74
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/p6d27anpotr33zl/L2J_Mobius_2.5_Underground_Geodata.zip
+Geodata: http://www.mediafire.com/file/jme7lm3imhu97m5/L2J_Mobius_2.5_Underground_Geodata.zip
 
 
 Working features...
@@ -121,15 +121,6 @@ Customs:
 -Starting location
 -Vote reward
 -Automated database backups
-
-Others:
--Reworked tax system
--Reworked quest system
--Reworked spawn system
--Reworked drop system
--Reworked L2World, L2WorldRegion and L2Object
--Skill system from L2jUnity
--GeoEngine from aCis
 
 TODO:
 -Mystic Tavern instanced zones

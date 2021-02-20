@@ -28,6 +28,8 @@ import java.io.LineNumberReader;
 import java.io.OutputStream;
 import java.math.BigInteger;
 import java.net.UnknownHostException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -961,17 +963,14 @@ public class Config
 	public static boolean LEAVE_BUFFS_ON_DIE;
 	public static boolean ALT_RAIDS_STATS_BONUS;
 	
-	public static String GEODATA_PATH;
-	public static int COORD_SYNCHRONIZE;
-	public static int PART_OF_CHARACTER_HEIGHT;
-	public static int MAX_OBSTACLE_HEIGHT;
+	public static Path GEODATA_PATH;
 	public static boolean PATHFINDING;
 	public static String PATHFIND_BUFFERS;
-	public static int BASE_WEIGHT;
-	public static int DIAGONAL_WEIGHT;
-	public static int HEURISTIC_WEIGHT;
-	public static int OBSTACLE_MULTIPLIER;
-	public static int MAX_ITERATIONS;
+	public static float LOW_WEIGHT;
+	public static float MEDIUM_WEIGHT;
+	public static float HIGH_WEIGHT;
+	public static float DIAGONAL_WEIGHT;
+	public static int COORD_SYNCHRONIZE;
 	public static boolean CORRECT_PLAYER_Z;
 	public static boolean FALL_DAMAGE;
 	public static boolean ALLOW_WATER;
@@ -2559,17 +2558,14 @@ public class Config
 	public static void loadgeodataConfig()
 	{
 		final PropertiesParser geoengineConfig = new PropertiesParser(GEOENGINE_CONFIG_FILE);
-		GEODATA_PATH = geoengineConfig.getString("GeoDataPath", "./data/geodata/");
-		COORD_SYNCHRONIZE = geoengineConfig.getInt("CoordSynchronize", -1);
-		PART_OF_CHARACTER_HEIGHT = geoengineConfig.getInt("PartOfCharacterHeight", 75);
-		MAX_OBSTACLE_HEIGHT = geoengineConfig.getInt("MaxObstacleHeight", 32);
+		GEODATA_PATH = Paths.get(geoengineConfig.getString("GeoDataPath", "./data/geodata"));
 		PATHFINDING = geoengineConfig.getBoolean("PathFinding", true);
 		PATHFIND_BUFFERS = geoengineConfig.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-		BASE_WEIGHT = geoengineConfig.getInt("BaseWeight", 10);
-		DIAGONAL_WEIGHT = geoengineConfig.getInt("DiagonalWeight", 14);
-		OBSTACLE_MULTIPLIER = geoengineConfig.getInt("ObstacleMultiplier", 10);
-		HEURISTIC_WEIGHT = geoengineConfig.getInt("HeuristicWeight", 20);
-		MAX_ITERATIONS = geoengineConfig.getInt("MaxIterations", 3500);
+		LOW_WEIGHT = geoengineConfig.getFloat("LowWeight", 0.5f);
+		MEDIUM_WEIGHT = geoengineConfig.getFloat("MediumWeight", 2);
+		HIGH_WEIGHT = geoengineConfig.getFloat("HighWeight", 3);
+		DIAGONAL_WEIGHT = geoengineConfig.getFloat("DiagonalWeight", 0.707f);
+		COORD_SYNCHRONIZE = geoengineConfig.getInt("CoordSynchronize", -1);
 		CORRECT_PLAYER_Z = geoengineConfig.getBoolean("CorrectPlayerZ", false);
 		FALL_DAMAGE = geoengineConfig.getBoolean("FallDamage", false);
 		ALLOW_WATER = geoengineConfig.getBoolean("AllowWater", false);
