@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.util.PrimeFinder;
 
 /**
@@ -100,7 +101,7 @@ public class IdManager
 			try (Connection con = DatabaseFactory.getConnection();
 				Statement statement = con.createStatement())
 			{
-				final long cleanupStart = System.currentTimeMillis();
+				final long cleanupStart = Chronos.currentTimeMillis();
 				int cleanCount = 0;
 				
 				// Characters
@@ -175,7 +176,7 @@ public class IdManager
 				statement.executeUpdate("UPDATE clanhall SET ownerId=0, paidUntil=0, paid=0 WHERE clanhall.ownerId NOT IN (SELECT clan_id FROM clan_data);");
 				statement.executeUpdate("UPDATE fort SET owner=0 WHERE owner NOT IN (SELECT clan_id FROM clan_data);");
 				
-				LOGGER.info("IdManager: Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " seconds.");
+				LOGGER.info("IdManager: Cleaned " + cleanCount + " elements from database in " + ((Chronos.currentTimeMillis() - cleanupStart) / 1000) + " seconds.");
 			}
 			catch (Exception e)
 			{
@@ -191,7 +192,7 @@ public class IdManager
 			{
 				try (PreparedStatement statement = con.prepareStatement(line))
 				{
-					statement.setLong(1, System.currentTimeMillis());
+					statement.setLong(1, Chronos.currentTimeMillis());
 					cleanCount += statement.executeUpdate();
 				}
 			}

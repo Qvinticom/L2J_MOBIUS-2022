@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.training;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.TrainingHolder;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -52,7 +53,7 @@ public class NotifyTrainingRoomEnd implements IClientIncomingPacket
 		
 		if (holder.isTraining())
 		{
-			holder.setEndTime(System.currentTimeMillis());
+			holder.setEndTime(Chronos.currentTimeMillis());
 			player.setTraingCampInfo(holder);
 			player.enableAllSkills();
 			player.setInvul(false);
@@ -60,7 +61,7 @@ public class NotifyTrainingRoomEnd implements IClientIncomingPacket
 			player.setImmobilized(false);
 			player.teleToLocation(player.getLastLocation());
 			player.sendPacket(ExTrainingZone_Leaving.STATIC_PACKET);
-			holder.setEndTime(System.currentTimeMillis());
+			holder.setEndTime(Chronos.currentTimeMillis());
 			player.setTraingCampInfo(holder);
 		}
 	}

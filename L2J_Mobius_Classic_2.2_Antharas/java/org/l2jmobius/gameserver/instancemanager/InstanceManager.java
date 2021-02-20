@@ -40,6 +40,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.SpawnData;
@@ -521,7 +522,7 @@ public class InstanceManager implements IXmlReader
 			{
 				// Check if instance penalty passed
 				final long time = rs.getLong("time");
-				if (time > System.currentTimeMillis())
+				if (time > Chronos.currentTimeMillis())
 				{
 					// Load params
 					final int charId = rs.getInt("charId");
@@ -556,7 +557,7 @@ public class InstanceManager implements IXmlReader
 		final List<Integer> invalidPenalty = new ArrayList<>(instanceTimes.size());
 		for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 		{
-			if (entry.getValue() <= System.currentTimeMillis())
+			if (entry.getValue() <= Chronos.currentTimeMillis())
 			{
 				invalidPenalty.add(entry.getKey());
 			}
@@ -615,7 +616,7 @@ public class InstanceManager implements IXmlReader
 		
 		// If reenter time is higher then current, delete it
 		final long time = playerData.get(id);
-		if (time <= System.currentTimeMillis())
+		if (time <= Chronos.currentTimeMillis())
 		{
 			deleteInstanceTime(player, id);
 			return -1;

@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -71,7 +72,7 @@ public class MOSKey implements IItemHandler
 			return;
 		}
 		
-		if ((_lastOpen + 1800000) > System.currentTimeMillis()) // 30 * 60 * 1000 = 1800000
+		if ((_lastOpen + 1800000) > Chronos.currentTimeMillis()) // 30 * 60 * 1000 = 1800000
 		{
 			player.sendMessage("You can`t use the key right now.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -90,7 +91,7 @@ public class MOSKey implements IItemHandler
 			DoorData.getInstance().getDoor(23150003).onOpen();
 			DoorData.getInstance().getDoor(23150004).onOpen();
 			player.broadcastPacket(new SocialAction(player.getObjectId(), 3));
-			_lastOpen = System.currentTimeMillis();
+			_lastOpen = Chronos.currentTimeMillis();
 		}
 	}
 	

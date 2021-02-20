@@ -26,6 +26,7 @@ import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -154,7 +155,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 						htmltext = htmltext.replace("%id%", String.valueOf(clanHallAuction.getClanHallId()));
 						htmltext = htmltext.replace("%minBid%", String.valueOf(clanHallAuction.getHighestBid()));
 						htmltext = htmltext.replace("%myBid%", String.valueOf(clanHallAuction.getClanBid(clan)));
-						htmltext = htmltext.replace("%auctionEnd%", builder.appendPattern("dd/MM/yyyy HH").appendLiteral(" hour ").appendPattern("mm").appendLiteral(" minutes").toFormatter().format(Instant.ofEpochMilli(System.currentTimeMillis() + clanHallAuction.getRemaingTime()).atZone(ZoneId.systemDefault())));
+						htmltext = htmltext.replace("%auctionEnd%", builder.appendPattern("dd/MM/yyyy HH").appendLiteral(" hour ").appendPattern("mm").appendLiteral(" minutes").toFormatter().format(Instant.ofEpochMilli(Chronos.currentTimeMillis() + clanHallAuction.getRemaingTime()).atZone(ZoneId.systemDefault())));
 					}
 				}
 				else
@@ -190,7 +191,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 				final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(clanHallAuction.getClanHallId());
 				final Clan owner = clanHall.getOwner();
 				final long remainingTime = clanHallAuction.getRemaingTime();
-				final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
+				final Instant endTime = Instant.ofEpochMilli(Chronos.currentTimeMillis() + remainingTime);
 				
 				final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
 				htmltext = getHtm(player, "ClanHallAuctioneer-bidInfo.html");
@@ -248,7 +249,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 				final ClanHallAuction clanHallAuction = ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHallId);
 				final Clan owner = clanHall.getOwner();
 				final long remainingTime = clanHallAuction.getRemaingTime();
-				final Instant endTime = Instant.ofEpochMilli(System.currentTimeMillis() + remainingTime);
+				final Instant endTime = Instant.ofEpochMilli(Chronos.currentTimeMillis() + remainingTime);
 				final DateTimeFormatterBuilder builder = new DateTimeFormatterBuilder();
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 				html.setHtml(getHtm(player, "ClanHallAuctioneer-info.html"));
@@ -297,7 +298,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 					sb.append("\"><font color=\"ffffaa\">&%");
 					sb.append(clanHall.getResidenceId());
 					sb.append(";[0]</font></a></td><td width=50>");
-					sb.append(DateTimeFormatter.ofPattern("dd/MM/yyyy").format(Instant.ofEpochMilli(System.currentTimeMillis() + auction.getRemaingTime()).atZone(ZoneId.systemDefault())));
+					sb.append(DateTimeFormatter.ofPattern("dd/MM/yyyy").format(Instant.ofEpochMilli(Chronos.currentTimeMillis() + auction.getRemaingTime()).atZone(ZoneId.systemDefault())));
 					sb.append("</td><td width=70 align=right><font color=\"aaffff\">");
 					sb.append(auction.getHighestBid());
 					sb.append("</font></td></tr>");

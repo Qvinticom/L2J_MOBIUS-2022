@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.MountType;
@@ -169,14 +170,14 @@ public class Antharas extends AbstractNpcAI
 				_antharas = (GrandBossInstance) addSpawn(ANTHARAS, loc_x, loc_y, loc_z, heading, false, 0);
 				_antharas.setCurrentHpMp(curr_hp, curr_mp);
 				addBoss(_antharas);
-				_lastAttack = System.currentTimeMillis();
+				_lastAttack = Chronos.currentTimeMillis();
 				startQuestTimer("CHECK_ATTACK", 60000, _antharas, null);
 				startQuestTimer("SPAWN_MINION", 300000, _antharas, null);
 				break;
 			}
 			case DEAD:
 			{
-				final long remain = respawnTime - System.currentTimeMillis();
+				final long remain = respawnTime - Chronos.currentTimeMillis();
 				if (remain > 0)
 				{
 					startQuestTimer("CLEAR_STATUS", remain, null, null);
@@ -272,7 +273,7 @@ public class Antharas extends AbstractNpcAI
 				_antharas.setRandomWalking(false);
 				_antharas.teleToLocation(181323, 114850, -7623, 32542);
 				setStatus(IN_FIGHT);
-				_lastAttack = System.currentTimeMillis();
+				_lastAttack = Chronos.currentTimeMillis();
 				zone.broadcastPacket(new PlaySound("BS02_A"));
 				startQuestTimer("CAMERA_1", 23, _antharas, null);
 				break;
@@ -367,7 +368,7 @@ public class Antharas extends AbstractNpcAI
 			}
 			case "CHECK_ATTACK":
 			{
-				if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis()))
+				if ((npc != null) && ((_lastAttack + 900000) < Chronos.currentTimeMillis()))
 				{
 					setStatus(ALIVE);
 					for (Creature creature : zone.getCharactersInside())
@@ -619,7 +620,7 @@ public class Antharas extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		_lastAttack = System.currentTimeMillis();
+		_lastAttack = Chronos.currentTimeMillis();
 		if (npc.getId() == BOMBER)
 		{
 			if (npc.calculateDistance3D(attacker) < 230)
@@ -765,7 +766,7 @@ public class Antharas extends AbstractNpcAI
 	
 	private void setRespawn(long respawnTime)
 	{
-		GrandBossManager.getInstance().getStatSet(ANTHARAS).set("respawn_time", System.currentTimeMillis() + respawnTime);
+		GrandBossManager.getInstance().getStatSet(ANTHARAS).set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 	}
 	
 	private final void refreshAiParams(PlayerInstance attacker, int damage)

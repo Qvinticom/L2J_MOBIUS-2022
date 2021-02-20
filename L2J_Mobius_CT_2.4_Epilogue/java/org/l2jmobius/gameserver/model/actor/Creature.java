@@ -37,6 +37,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.EmptyQueue;
 import org.l2jmobius.commons.util.Rnd;
@@ -2128,7 +2129,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	{
 		if ((group > 0) && !_reuseTimeStampsItems.isEmpty())
 		{
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			for (TimeStamp ts : _reuseTimeStampsItems.values())
 			{
 				if (ts.getSharedReuseGroup() == group)
@@ -2258,7 +2259,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return;
 		}
-		_disabledSkills.put(skill.getReuseHashCode(), delay > 0 ? System.currentTimeMillis() + delay : Long.MAX_VALUE);
+		_disabledSkills.put(skill.getReuseHashCode(), delay > 0 ? Chronos.currentTimeMillis() + delay : Long.MAX_VALUE);
 	}
 	
 	/**
@@ -2301,7 +2302,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return false;
 		}
-		if (stamp < System.currentTimeMillis())
+		if (stamp < Chronos.currentTimeMillis())
 		{
 			_disabledSkills.remove(hashCode);
 			return false;

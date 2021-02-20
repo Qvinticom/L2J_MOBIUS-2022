@@ -30,6 +30,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
@@ -85,7 +86,7 @@ public class ClanHallAuction
 	
 	public void addBid(Clan clan, long bid)
 	{
-		addBid(clan, bid, System.currentTimeMillis());
+		addBid(clan, bid, Chronos.currentTimeMillis());
 	}
 	
 	public void addBid(Clan clan, long bid, long bidTime)

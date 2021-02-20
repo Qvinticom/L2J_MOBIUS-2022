@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 /**
@@ -42,7 +43,7 @@ public class PlayerAutoSaveTaskManager
 			}
 			_working = true;
 			
-			final long time = System.currentTimeMillis();
+			final long time = Chronos.currentTimeMillis();
 			SEARCH: for (Entry<PlayerInstance, Long> entry : PLAYER_TIMES.entrySet())
 			{
 				if (time > entry.getValue().longValue())
@@ -63,7 +64,7 @@ public class PlayerAutoSaveTaskManager
 	
 	public void add(PlayerInstance player)
 	{
-		PLAYER_TIMES.put(player, System.currentTimeMillis() + Config.CHAR_DATA_STORE_INTERVAL);
+		PLAYER_TIMES.put(player, Chronos.currentTimeMillis() + Config.CHAR_DATA_STORE_INTERVAL);
 	}
 	
 	public void remove(PlayerInstance player)

@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.Containers;
@@ -79,7 +80,7 @@ public class PremiumManager
 		final PlayerInstance player = event.getPlayer();
 		final String accountName = player.getAccountName();
 		loadPremiumData(accountName);
-		final long now = System.currentTimeMillis();
+		final long now = Chronos.currentTimeMillis();
 		final long premiumExpiration = getPremiumExpiration(accountName);
 		player.setPremiumStatus(premiumExpiration > now);
 		if (player.hasPremiumStatus())
@@ -153,7 +154,7 @@ public class PremiumManager
 	public void addPremiumTime(String accountName, int timeValue, TimeUnit timeUnit)
 	{
 		final long addTime = timeUnit.toMillis(timeValue);
-		final long now = System.currentTimeMillis();
+		final long now = Chronos.currentTimeMillis();
 		// new premium task at least from now
 		final long oldPremiumExpiration = Math.max(now, getPremiumExpiration(accountName));
 		final long newPremiumExpiration = oldPremiumExpiration + addTime;

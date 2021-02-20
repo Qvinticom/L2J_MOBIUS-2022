@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -101,13 +102,13 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 			
 		}
 		GlobalVariablesManager.getInstance().set("VarangkaRespawn", respawnTime);
-		if ((respawnTime == 0) || ((respawnTime - System.currentTimeMillis()) < 0))
+		if ((respawnTime == 0) || ((respawnTime - Chronos.currentTimeMillis()) < 0))
 		{
 			startQuestTimer("altarSpawn", 5000, null, null);
 		}
 		else
 		{
-			startQuestTimer("altarSpawn", respawnTime - System.currentTimeMillis(), null, null);
+			startQuestTimer("altarSpawn", respawnTime - Chronos.currentTimeMillis(), null, null);
 		}
 	}
 	
@@ -237,7 +238,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 				_varangkaMinion1 = null;
 				_varangkaMinion2 = null;
 				final long respawn = Rnd.get(14400000, 28800000);
-				GlobalVariablesManager.getInstance().set("VarangkaRespawn", System.currentTimeMillis() + respawn);
+				GlobalVariablesManager.getInstance().set("VarangkaRespawn", Chronos.currentTimeMillis() + respawn);
 				startQuestTimer("altarSpawn", respawn, null, null);
 				takeItems(member, PROTECTION_SOULS_PENDANT, 1);
 				return super.onKill(npc, killer, isSummon);

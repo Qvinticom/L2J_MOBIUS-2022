@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -1125,10 +1126,10 @@ public class DM implements EventTask
 	 */
 	private static void waiter(long interval)
 	{
-		final long startWaiterTime = System.currentTimeMillis();
+		final long startWaiterTime = Chronos.currentTimeMillis();
 		int seconds = (int) (interval / 1000);
 		
-		while (((startWaiterTime + interval) > System.currentTimeMillis()) && !_aborted)
+		while (((startWaiterTime + interval) > Chronos.currentTimeMillis()) && !_aborted)
 		{
 			seconds--; // Here because we don't want to see two time announce at the same time
 			if (_joining || _started || _teleport)
@@ -1197,10 +1198,10 @@ public class DM implements EventTask
 				}
 			}
 			
-			final long startOneSecondWaiterStartTime = System.currentTimeMillis();
+			final long startOneSecondWaiterStartTime = Chronos.currentTimeMillis();
 			
 			// Only the try catch with Thread.sleep(1000) give bad countdown on high wait times
-			while ((startOneSecondWaiterStartTime + 1000) > System.currentTimeMillis())
+			while ((startOneSecondWaiterStartTime + 1000) > Chronos.currentTimeMillis())
 			{
 				try
 				{
@@ -2015,7 +2016,7 @@ public class DM implements EventTask
 	 */
 	public static int getIntervalBetweenMatchs()
 	{
-		final long actualTime = System.currentTimeMillis();
+		final long actualTime = Chronos.currentTimeMillis();
 		final long totalTime = actualTime + _intervalBetweenMatches;
 		final long interval = totalTime - actualTime;
 		final int seconds = (int) (interval / 1000);

@@ -19,6 +19,7 @@ package ai.areas.Rune.RuneCastle.Venom;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
@@ -110,7 +111,7 @@ public class Venom extends AbstractNpcAI
 		setCastleSiegeStartId(this::onSiegeStart, CASTLE);
 		setCastleSiegeFinishId(this::onSiegeFinish, CASTLE);
 		
-		final long currentTime = System.currentTimeMillis();
+		final long currentTime = Chronos.currentTimeMillis();
 		final long startSiegeDate = CastleManager.getInstance().getCastleById(CASTLE).getSiegeDate().getTimeInMillis();
 		if ((currentTime > (startSiegeDate - (HOURS_BEFORE * 360000))) && (currentTime < startSiegeDate))
 		{

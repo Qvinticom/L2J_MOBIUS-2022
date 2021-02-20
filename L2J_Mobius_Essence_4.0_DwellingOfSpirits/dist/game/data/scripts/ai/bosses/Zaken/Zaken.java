@@ -17,6 +17,7 @@
 package ai.bosses.Zaken;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -53,7 +54,7 @@ public class Zaken extends AbstractNpcAI
 		if (status == DEAD)
 		{
 			// load the unlock date and time from DB
-			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 			if (temp > 0)
 			{
 				startQuestTimer("zaken_unlock", temp, null, null);
@@ -97,7 +98,7 @@ public class Zaken extends AbstractNpcAI
 		startQuestTimer("zaken_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
-		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+		info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(ZAKEN, info);
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import org.l2jmobius.commons.util.Chronos;
+
 /**
  * Simple class containing all necessary information to maintain<br>
  * valid time stamps and reuse for skills and items reuse upon re-login.<br>
@@ -32,7 +34,7 @@ public class Timestamp
 	{
 		_skill = skill;
 		_reuse = reuse;
-		_stamp = System.currentTimeMillis() + _reuse;
+		_stamp = Chronos.currentTimeMillis() + _reuse;
 	}
 	
 	public Timestamp(Skill skill, long reuse, long stamp)
@@ -97,7 +99,7 @@ public class Timestamp
 		{
 			return 0;
 		}
-		final long remainingTime = Math.max(_stamp - System.currentTimeMillis(), 0);
+		final long remainingTime = Math.max(_stamp - Chronos.currentTimeMillis(), 0);
 		if (remainingTime == 0)
 		{
 			_stamp = 0;
@@ -115,7 +117,7 @@ public class Timestamp
 		{
 			return false;
 		}
-		final boolean hasNotPassed = System.currentTimeMillis() < _stamp;
+		final boolean hasNotPassed = Chronos.currentTimeMillis() < _stamp;
 		if (!hasNotPassed)
 		{
 			_stamp = 0;

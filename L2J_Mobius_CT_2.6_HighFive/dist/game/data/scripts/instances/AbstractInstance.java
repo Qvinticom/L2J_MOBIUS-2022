@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.InstanceReenterType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -129,7 +130,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		{
 			if (data.getTime() > 0)
 			{
-				time = System.currentTimeMillis() + data.getTime();
+				time = Chronos.currentTimeMillis() + data.getTime();
 				break;
 			}
 			
@@ -139,7 +140,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			calendar.set(Calendar.MINUTE, data.getMinute());
 			calendar.set(Calendar.SECOND, 0);
 			
-			if (calendar.getTimeInMillis() <= System.currentTimeMillis())
+			if (calendar.getTimeInMillis() <= Chronos.currentTimeMillis())
 			{
 				calendar.add(Calendar.DAY_OF_MONTH, 1);
 			}

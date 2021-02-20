@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
@@ -268,7 +269,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		final Instance instance = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
 		world.setInstance(instance);
 		instance.setExitLoc(new Location(player));
-		dungeon.setReEnterTime(System.currentTimeMillis() + 14400000);
+		dungeon.setReEnterTime(Chronos.currentTimeMillis() + 14400000);
 		InstanceManager.getInstance().addWorld(world);
 		ThreadPool.schedule(new spawnNpcs((PAWORLD) world), 10000);
 		for (PlayerInstance partyMember : party.getMembers())
@@ -342,7 +343,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		{
 			return "FortWarden-08.htm";
 		}
-		else if (isEnter && (dungeon.getReEnterTime() > System.currentTimeMillis()))
+		else if (isEnter && (dungeon.getReEnterTime() > Chronos.currentTimeMillis()))
 		{
 			return "FortWarden-09.htm";
 		}

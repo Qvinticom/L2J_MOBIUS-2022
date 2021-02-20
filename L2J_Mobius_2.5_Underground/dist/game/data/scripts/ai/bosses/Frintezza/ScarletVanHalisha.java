@@ -23,6 +23,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -143,11 +144,11 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_CHARGE, 2);
 				}
-				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < System.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_FIELD, 1);
 				}
-				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < System.currentTimeMillis()) && (getRandom(100) < 10))
+				else if (((_lastRangedSkillTime + RANGED_SKILL_MIN_COOLTIME) < Chronos.currentTimeMillis()) && (getRandom(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(FRINTEZZA_DAEMON_MORPH, 1);
 				}
@@ -248,7 +249,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 						case FRINTEZZA_DAEMON_MORPH:
 						case FRINTEZZA_DAEMON_FIELD:
 						{
-							_lastRangedSkillTime = System.currentTimeMillis();
+							_lastRangedSkillTime = Chronos.currentTimeMillis();
 							skillRange = 550;
 							break;
 						}

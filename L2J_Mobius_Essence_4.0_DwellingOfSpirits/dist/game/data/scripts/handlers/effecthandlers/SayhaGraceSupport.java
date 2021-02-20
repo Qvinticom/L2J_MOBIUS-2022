@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -52,19 +53,19 @@ public class SayhaGraceSupport extends AbstractEffect
 		final double rnd = Rnd.nextDouble() * 100;
 		if (rnd <= 0.1) // 4h
 		{
-			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 4));
+			player.setSayhaGraceSupportEndTime(Chronos.currentTimeMillis() + (3600000 * 4));
 		}
 		else if (rnd <= 0.3) // 3h
 		{
-			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 3));
+			player.setSayhaGraceSupportEndTime(Chronos.currentTimeMillis() + (3600000 * 3));
 		}
 		else if (rnd <= 0.6) // 2h
 		{
-			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 2));
+			player.setSayhaGraceSupportEndTime(Chronos.currentTimeMillis() + (3600000 * 2));
 		}
 		else if (rnd <= 1.1) // 1h
 		{
-			player.setSayhaGraceSupportEndTime(System.currentTimeMillis() + (3600000 * 1));
+			player.setSayhaGraceSupportEndTime(Chronos.currentTimeMillis() + (3600000 * 1));
 		}
 	}
 }

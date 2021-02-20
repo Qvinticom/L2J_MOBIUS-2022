@@ -16,6 +16,7 @@
  */
 package ai.bosses.DrChaos;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -68,7 +69,7 @@ public class DrChaos extends AbstractNpcAI
 		// Load the reset date and time for Dr. Chaos from DB.
 		if (status == DEAD)
 		{
-			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
+			final long temp = (info.getLong("respawn_time") - Chronos.currentTimeMillis());
 			if (temp > 0)
 			{
 				startQuestTimer("reset_drchaos", temp, null, null, false);
@@ -98,7 +99,7 @@ public class DrChaos extends AbstractNpcAI
 			_golem.setRunning();
 			
 			// start monitoring Dr. Chaos's inactivity
-			_lastAttackVsGolem = System.currentTimeMillis();
+			_lastAttackVsGolem = Chronos.currentTimeMillis();
 			startQuestTimer("golem_despawn", 60000, _golem, null, true);
 		}
 		// Spawn the regular NPC.
@@ -121,7 +122,7 @@ public class DrChaos extends AbstractNpcAI
 		{
 			if (npc.getId() == CHAOS_GOLEM)
 			{
-				if ((_lastAttackVsGolem + 1800000) < System.currentTimeMillis())
+				if ((_lastAttackVsGolem + 1800000) < Chronos.currentTimeMillis())
 				{
 					// Despawn the war golem.
 					npc.deleteMe();
@@ -163,7 +164,7 @@ public class DrChaos extends AbstractNpcAI
 			golem.broadcastPacket(new PlaySound(1, "Rm03_A", 0, 0, 0, 0, 0));
 			
 			// start monitoring Dr. Chaos's inactivity
-			_lastAttackVsGolem = System.currentTimeMillis();
+			_lastAttackVsGolem = Chronos.currentTimeMillis();
 			startQuestTimer("golem_despawn", 60000, golem, null, true);
 		}
 		// Check every sec if someone is in range, if found, launch one task to decrease the timer.
@@ -249,7 +250,7 @@ public class DrChaos extends AbstractNpcAI
 		
 		// also save the respawn time so that the info is maintained past reboots
 		final StatSet info = GrandBossManager.getInstance().getStatSet(CHAOS_GOLEM);
-		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+		info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 		GrandBossManager.getInstance().setStatSet(CHAOS_GOLEM, info);
 		return null;
 	}

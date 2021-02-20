@@ -32,6 +32,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.data.EventDroplist;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -100,7 +101,7 @@ public class LongTimeEvent extends Quest
 			}
 			else if (_eventPeriod.getStartDate().after(new Date()))
 			{
-				final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
+				final long delay = _eventPeriod.getStartDate().getTime() - Chronos.currentTimeMillis();
 				ThreadPool.schedule(new ScheduleStart(), delay);
 				LOGGER.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
 			}
@@ -323,7 +324,7 @@ public class LongTimeEvent extends Quest
 		}
 		
 		// Add spawns.
-		final Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - System.currentTimeMillis();
+		final Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - Chronos.currentTimeMillis();
 		for (NpcSpawn spawn : _spawnList)
 		{
 			addSpawn(spawn.npcId, spawn.loc.getX(), spawn.loc.getY(), spawn.loc.getZ(), spawn.loc.getHeading(), false, millisToEventEnd, false);

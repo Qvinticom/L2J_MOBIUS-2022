@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets.sessionzones;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -95,7 +96,7 @@ public class ExTimedHuntingZoneEnter implements IClientIncomingPacket
 			player.sendMessage("Your level does not correspond the zone equivalent.");
 		}
 		
-		final long currentTime = System.currentTimeMillis();
+		final long currentTime = Chronos.currentTimeMillis();
 		long endTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + _zoneId, 0);
 		
 		if ((_zoneId == 8) && ((endTime + Config.TIME_LIMITED_ZONE_RESET_WEEKLY) < currentTime))

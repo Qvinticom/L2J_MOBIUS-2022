@@ -25,6 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
@@ -424,7 +425,7 @@ public class BlockChecker
 			// Start up player parameters
 			setUpPlayers();
 			// Set the started time
-			_startedTime = System.currentTimeMillis() + 300000;
+			_startedTime = Chronos.currentTimeMillis() + 300000;
 		}
 	}
 	
@@ -524,7 +525,7 @@ public class BlockChecker
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
 			
-			final int timeLeft = (int) ((_startedTime - System.currentTimeMillis()) / 1000);
+			final int timeLeft = (int) ((_startedTime - Chronos.currentTimeMillis()) / 1000);
 			final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, getBluePoints(), getRedPoints());
 			_holder.broadCastPacketToTeam(changePoints);
 		}

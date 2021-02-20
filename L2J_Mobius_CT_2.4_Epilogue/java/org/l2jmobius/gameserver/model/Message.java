@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
@@ -100,7 +101,7 @@ public class Message
 		_receiverId = receiverId;
 		_subject = subject;
 		_content = text;
-		_expiration = isCod ? System.currentTimeMillis() + (COD_EXPIRATION * 3600000) : System.currentTimeMillis() + (EXPIRATION * 3600000);
+		_expiration = isCod ? Chronos.currentTimeMillis() + (COD_EXPIRATION * 3600000) : Chronos.currentTimeMillis() + (EXPIRATION * 3600000);
 		_hasAttachments = false;
 		_unread = true;
 		_deletedBySender = false;
@@ -118,7 +119,7 @@ public class Message
 		_receiverId = receiverId;
 		_subject = subject;
 		_content = content;
-		_expiration = System.currentTimeMillis() + (EXPIRATION * 3600000);
+		_expiration = Chronos.currentTimeMillis() + (EXPIRATION * 3600000);
 		_reqAdena = 0;
 		_hasAttachments = false;
 		_unread = true;
@@ -138,7 +139,7 @@ public class Message
 		_receiverId = msg.getSenderId();
 		_subject = "";
 		_content = "";
-		_expiration = System.currentTimeMillis() + (EXPIRATION * 3600000);
+		_expiration = Chronos.currentTimeMillis() + (EXPIRATION * 3600000);
 		_unread = true;
 		_deletedBySender = true;
 		_deletedByReceiver = false;

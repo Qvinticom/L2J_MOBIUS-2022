@@ -34,6 +34,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
@@ -790,7 +791,7 @@ public class Hero
 		
 		// Prepare new data
 		final StatSet diaryEntry = new StatSet();
-		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
+		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(Chronos.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", template.getName() + " was defeated");
 		
@@ -811,7 +812,7 @@ public class Hero
 		
 		// Prepare new data
 		final StatSet diaryEntry = new StatSet();
-		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
+		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(Chronos.currentTimeMillis()));
 		diaryEntry.set("date", date);
 		diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
 		
@@ -825,7 +826,7 @@ public class Hero
 			PreparedStatement ps = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)"))
 		{
 			ps.setInt(1, charId);
-			ps.setLong(2, System.currentTimeMillis());
+			ps.setLong(2, Chronos.currentTimeMillis());
 			ps.setInt(3, action);
 			ps.setInt(4, param);
 			ps.execute();

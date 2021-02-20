@@ -21,6 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -81,7 +82,7 @@ public abstract class AbstractOlympiadGame
 	
 	protected boolean makeCompetitionStart()
 	{
-		_startTime = System.currentTimeMillis();
+		_startTime = Chronos.currentTimeMillis();
 		return !_aborted;
 	}
 	

@@ -81,6 +81,7 @@ import org.l2jmobius.gameserver.templates.CharTemplate;
 import org.l2jmobius.gameserver.templates.Item;
 import org.l2jmobius.gameserver.templates.Weapon;
 import org.l2jmobius.gameserver.threadpool.ThreadPool;
+import org.l2jmobius.util.Chronos;
 import org.l2jmobius.util.Rnd;
 
 public class PlayerInstance extends Creature
@@ -435,7 +436,7 @@ public class PlayerInstance extends Creature
 			{
 				_pvpTask = ThreadPool.scheduleAtFixedRate(new pvpTask(), 1000, 1000);
 			}
-			_lastPvpTime = System.currentTimeMillis() + 30000;
+			_lastPvpTime = Chronos.currentTimeMillis() + 30000;
 		}
 		if (_pvpFlag == value)
 		{
@@ -452,7 +453,7 @@ public class PlayerInstance extends Creature
 		@Override
 		public void run()
 		{
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			if (currentTime > _lastPvpTime)
 			{
 				stopPvPFlag();
@@ -1660,7 +1661,7 @@ public class PlayerInstance extends Creature
 	
 	public long getUptime()
 	{
-		return System.currentTimeMillis() - _uptime;
+		return Chronos.currentTimeMillis() - _uptime;
 	}
 	
 	public void onMagicUseTimer(Creature target, Skill skill)

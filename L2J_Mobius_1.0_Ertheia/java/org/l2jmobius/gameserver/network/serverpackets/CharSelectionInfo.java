@@ -27,6 +27,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
@@ -188,7 +189,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeF(charInfoPackage.getMaxHp()); // Maximum HP
 			packet.writeF(charInfoPackage.getMaxMp()); // Maximum MP
 			
-			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
+			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - Chronos.currentTimeMillis()) / 1000) : 0);
 			packet.writeD(charInfoPackage.getClassId());
 			packet.writeD(i == _activeId ? 1 : 0);
 			
@@ -284,7 +285,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		// See if the char must be deleted
 		final long deletetime = chardata.getLong("deletetime");
-		if ((deletetime > 0) && (System.currentTimeMillis() > deletetime))
+		if ((deletetime > 0) && (Chronos.currentTimeMillis() > deletetime))
 		{
 			final Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
 			if (clan != null)

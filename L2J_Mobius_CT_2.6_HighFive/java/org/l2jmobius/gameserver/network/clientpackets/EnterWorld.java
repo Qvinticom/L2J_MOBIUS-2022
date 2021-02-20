@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
@@ -351,7 +352,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.ENABLE_VITALITY && Config.RECOVER_VITALITY_ON_RECONNECT)
 		{
-			final float points = (Config.RATE_RECOVERY_ON_RECONNECT * (System.currentTimeMillis() - player.getLastAccess())) / 60000;
+			final float points = (Config.RATE_RECOVERY_ON_RECONNECT * (Chronos.currentTimeMillis() - player.getLastAccess())) / 60000;
 			if (points > 0)
 			{
 				player.updateVitalityPoints(points, false, true);
@@ -530,7 +531,7 @@ public class EnterWorld implements IClientIncomingPacket
 			DimensionalRiftManager.getInstance().teleportToWaitingRoom(player);
 		}
 		
-		if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
+		if (player.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
 		}

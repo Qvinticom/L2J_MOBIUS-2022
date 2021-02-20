@@ -16,6 +16,7 @@
  */
 package ai.areas.GainakUnderground.Lailly;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -64,7 +65,7 @@ public class Lailly extends AbstractNpcAI
 			case "okay":
 			{
 				final Instance instance = InstanceManager.getInstance().getPlayerInstance(player, false);
-				if ((instance != null) && (instance.getEndTime() > System.currentTimeMillis()))
+				if ((instance != null) && (instance.getEndTime() > Chronos.currentTimeMillis()))
 				{
 					switch (instance.getTemplateId())
 					{

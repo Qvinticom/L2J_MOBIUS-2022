@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -243,7 +244,7 @@ public class Antharas extends Quest
 		{
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ANTHARASOLDID);
 			final Long respawnTime = info.getLong("respawn_time");
-			if ((status == DEAD) && (respawnTime <= System.currentTimeMillis()))
+			if ((status == DEAD) && (respawnTime <= Chronos.currentTimeMillis()))
 			{
 				// the time has already expired while the server was offline. Immediately spawn antharas in his cave.
 				// also, the status needs to be changed to DORMANT
@@ -261,13 +262,13 @@ public class Antharas extends Quest
 				_antharas = (GrandBossInstance) addSpawn(ANTHARASOLDID, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
-				_LastAction = System.currentTimeMillis();
+				_LastAction = Chronos.currentTimeMillis();
 				// Start repeating timer to check for inactivity
 				_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 			}
 			else if (status == DEAD)
 			{
-				ThreadPool.schedule(new UnlockAntharas(ANTHARASOLDID), respawnTime - System.currentTimeMillis());
+				ThreadPool.schedule(new UnlockAntharas(ANTHARASOLDID), respawnTime - Chronos.currentTimeMillis());
 			}
 			else if (status == DORMANT)
 			{
@@ -311,7 +312,7 @@ public class Antharas extends Quest
 				_antharas = (GrandBossInstance) addSpawn(antharasId, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
-				_LastAction = System.currentTimeMillis();
+				_LastAction = Chronos.currentTimeMillis();
 				// Start repeating timer to check for inactivity
 				_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 			}
@@ -319,7 +320,7 @@ public class Antharas extends Quest
 			{
 				final StatSet info = GrandBossManager.getInstance().getStatSet(antharasId);
 				final Long respawnTime = info.getLong("respawn_time");
-				if (respawnTime <= System.currentTimeMillis())
+				if (respawnTime <= Chronos.currentTimeMillis())
 				{
 					// the time has already expired while the server was offline. Immediately spawn antharas in his cave.
 					// also, the status needs to be changed to DORMANT
@@ -328,7 +329,7 @@ public class Antharas extends Quest
 				}
 				else
 				{
-					ThreadPool.schedule(new UnlockAntharas(antharasId), respawnTime - System.currentTimeMillis());
+					ThreadPool.schedule(new UnlockAntharas(antharasId), respawnTime - Chronos.currentTimeMillis());
 				}
 			}
 		}
@@ -457,7 +458,7 @@ public class Antharas extends Quest
 					_antharas.setImmobilized(true);
 					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
 					GrandBossManager.getInstance().setBossStatus(npcId, FIGHTING);
-					_LastAction = System.currentTimeMillis();
+					_LastAction = Chronos.currentTimeMillis();
 					// Start repeating timer to check for inactivity
 					_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 					// Setting 1st time of minions spawn task.
@@ -747,7 +748,7 @@ public class Antharas extends Quest
 		@Override
 		public void run()
 		{
-			final Long temp = (System.currentTimeMillis() - _LastAction);
+			final Long temp = (Chronos.currentTimeMillis() - _LastAction);
 			if (temp > (Config.ANTHARAS_DESPAWN_TIME * 60000))
 			{
 				GrandBossManager.getInstance().setBossStatus(_antharas.getNpcId(), DORMANT);
@@ -918,7 +919,7 @@ public class Antharas extends Quest
 	{
 		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
-			_LastAction = System.currentTimeMillis();
+			_LastAction = Chronos.currentTimeMillis();
 			if (!FWA_OLDANTHARAS && (_mobsSpawnTask == null))
 			{
 				startMinionSpawns(npc.getNpcId());
@@ -963,7 +964,7 @@ public class Antharas extends Quest
 			ThreadPool.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatSet info = GrandBossManager.getInstance().getStatSet(npc.getNpcId());
-			info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
+			info.set("respawn_time", (Chronos.currentTimeMillis() + respawnTime));
 			GrandBossManager.getInstance().setStatSet(npc.getNpcId(), info);
 		}
 		else if (npc.getNpcId() == 29069)

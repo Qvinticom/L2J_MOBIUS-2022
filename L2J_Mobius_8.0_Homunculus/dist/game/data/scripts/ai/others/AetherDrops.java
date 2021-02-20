@@ -22,6 +22,7 @@ import java.util.Calendar;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -100,7 +101,7 @@ public class AetherDrops extends AbstractNpcAI
 			calendar.set(Calendar.MINUTE, 30);
 			
 			cancelQuestTimers("reset");
-			startQuestTimer("reset", calendar.getTimeInMillis() - System.currentTimeMillis(), null, null);
+			startQuestTimer("reset", calendar.getTimeInMillis() - Chronos.currentTimeMillis(), null, null);
 		}
 		else if (event.equals("reset"))
 		{

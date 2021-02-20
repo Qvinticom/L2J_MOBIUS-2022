@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.AnnouncementsTable;
@@ -532,7 +533,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
+		if (player.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_DISMISSED_FROM_A_CLAN_YOU_CANNOT_JOIN_ANOTHER_FOR_24_H);
 		}

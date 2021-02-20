@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -43,7 +44,7 @@ public class TimedHuntingZone extends ZoneType
 		{
 			player.setInsideZone(ZoneId.TIMED_HUNTING, true);
 			
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			final long stormIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 1, 0);
 			final long primevalIsleExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 6, 0);
 			final long goldenAltarExitTime = player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 7, 0);

@@ -16,6 +16,7 @@
  */
 package events.HappyHours;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -39,7 +40,7 @@ public class HappyHours extends LongTimeEvent
 	// Other
 	private static final int MIN_LEVEL = 20;
 	private static final int REWARD_INTERVAL = 60 * 60 * 1000; // 1 hour
-	private static long _lastRewardTime = System.currentTimeMillis();
+	private static long _lastRewardTime = Chronos.currentTimeMillis();
 	
 	private HappyHours()
 	{
@@ -76,9 +77,9 @@ public class HappyHours extends LongTimeEvent
 			{
 				if (isEventPeriod())
 				{
-					if ((System.currentTimeMillis() - (_lastRewardTime + REWARD_INTERVAL)) > 0) // Exploit check - Just in case.
+					if ((Chronos.currentTimeMillis() - (_lastRewardTime + REWARD_INTERVAL)) > 0) // Exploit check - Just in case.
 					{
-						_lastRewardTime = System.currentTimeMillis();
+						_lastRewardTime = Chronos.currentTimeMillis();
 						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Sibi's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
 						final SystemMessage systemMsg = new SystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBIS_COINS);
 						systemMsg.addInt(20);

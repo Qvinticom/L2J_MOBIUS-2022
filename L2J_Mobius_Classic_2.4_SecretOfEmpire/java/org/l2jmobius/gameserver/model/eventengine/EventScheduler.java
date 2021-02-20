@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.StatSet;
 
 import it.sauronsoftware.cron4j.PastPredictor;
@@ -112,7 +113,7 @@ public class EventScheduler
 		
 		final Predictor predictor = new Predictor(_pattern);
 		final long nextSchedule = predictor.nextMatchingTime();
-		final long timeSchedule = nextSchedule - System.currentTimeMillis();
+		final long timeSchedule = nextSchedule - Chronos.currentTimeMillis();
 		if (timeSchedule <= (30 * 1000))
 		{
 			LOGGER.warning("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
@@ -144,10 +145,10 @@ public class EventScheduler
 		{
 			ps.setString(1, _eventManager.getName());
 			ps.setString(2, _name);
-			ps.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
+			ps.setTimestamp(3, new Timestamp(Chronos.currentTimeMillis()));
 			ps.setString(4, _eventManager.getName());
 			ps.setString(5, _name);
-			ps.setTimestamp(6, new Timestamp(System.currentTimeMillis()));
+			ps.setTimestamp(6, new Timestamp(Chronos.currentTimeMillis()));
 			ps.execute();
 			return true;
 		}

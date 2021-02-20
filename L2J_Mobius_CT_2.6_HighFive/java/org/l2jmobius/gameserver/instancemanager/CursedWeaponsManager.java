@@ -36,6 +36,7 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.CursedWeapon;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -337,7 +338,7 @@ public class CursedWeaponsManager
 				final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING);
 				sm.addString(cw.getName());
 				// sm.addItemName(cw.getItemId());
-				sm.addInt((int) ((cw.getEndTime() - System.currentTimeMillis()) / 60000));
+				sm.addInt((int) ((cw.getEndTime() - Chronos.currentTimeMillis()) / 60000));
 				player.sendPacket(sm);
 			}
 		}

@@ -39,6 +39,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ManorMode;
@@ -272,7 +273,7 @@ public class CastleManorManager implements IXmlReader, IStorable
 			}
 		}
 		// Schedule mode change
-		ThreadPool.schedule(this::changeMode, _nextModeChange.getTimeInMillis() - System.currentTimeMillis());
+		ThreadPool.schedule(this::changeMode, _nextModeChange.getTimeInMillis() - Chronos.currentTimeMillis());
 	}
 	
 	public void changeMode()

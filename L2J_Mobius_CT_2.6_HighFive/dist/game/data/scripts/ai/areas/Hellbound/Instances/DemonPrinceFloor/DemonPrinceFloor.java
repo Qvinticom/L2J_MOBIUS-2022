@@ -16,6 +16,7 @@
  */
 package ai.areas.Hellbound.Instances.DemonPrinceFloor;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Party;
@@ -143,7 +144,7 @@ public class DemonPrinceFloor extends AbstractInstance
 			}
 			
 			final Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID);
-			if (System.currentTimeMillis() < reentertime)
+			if (Chronos.currentTimeMillis() < reentertime)
 			{
 				party.broadcastPacket(new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addPcName(partyMember));
 				return false;

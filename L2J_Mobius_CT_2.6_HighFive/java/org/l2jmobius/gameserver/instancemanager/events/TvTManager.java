@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -120,7 +121,7 @@ public class TvTManager
 			Broadcast.toAllOnlinePlayers("TvT Event: Registration opened for " + Config.TVT_EVENT_PARTICIPATION_TIME + " minute(s).");
 			
 			// schedule registration end
-			_task.setStartTime(System.currentTimeMillis() + (60000 * Config.TVT_EVENT_PARTICIPATION_TIME));
+			_task.setStartTime(Chronos.currentTimeMillis() + (60000 * Config.TVT_EVENT_PARTICIPATION_TIME));
 			ThreadPool.execute(_task);
 		}
 	}
@@ -139,7 +140,7 @@ public class TvTManager
 		else
 		{
 			TvTEvent.sysMsgToAllParticipants("TvT Event: Teleporting participants to an arena in " + Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY + " second(s).");
-			_task.setStartTime(System.currentTimeMillis() + (60000 * Config.TVT_EVENT_RUNNING_TIME));
+			_task.setStartTime(Chronos.currentTimeMillis() + (60000 * Config.TVT_EVENT_RUNNING_TIME));
 			ThreadPool.execute(_task);
 		}
 	}
@@ -160,7 +161,7 @@ public class TvTManager
 	{
 		if (_task.nextRun.cancel(false))
 		{
-			_task.setStartTime(System.currentTimeMillis());
+			_task.setStartTime(Chronos.currentTimeMillis());
 			ThreadPool.execute(_task);
 		}
 	}
@@ -186,7 +187,7 @@ public class TvTManager
 		@Override
 		public void run()
 		{
-			final int delay = (int) Math.round((_startTime - System.currentTimeMillis()) / 1000.0);
+			final int delay = (int) Math.round((_startTime - Chronos.currentTimeMillis()) / 1000.0);
 			if (delay > 0)
 			{
 				announce(delay);

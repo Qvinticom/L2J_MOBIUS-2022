@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
@@ -49,7 +50,7 @@ public class GMViewPledgeInfo extends GameServerPacket
 		writeD(_clan.getHideoutId());
 		writeD(0);
 		writeD(_player.getLevel());
-		writeD(_clan.getDissolvingExpiryTime() > System.currentTimeMillis() ? 3 : 0);
+		writeD(_clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis() ? 3 : 0);
 		writeD(0);
 		
 		writeD(_clan.getAllyId()); // c2

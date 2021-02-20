@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -48,7 +49,7 @@ public class ExHomunculusInsert implements IClientIncomingPacket
 		}
 		
 		final int time = player.getVariables().getInt(PlayerVariables.HOMUNCULUS_TIME, 0);
-		if (((System.currentTimeMillis() / 1000) - time) < 86400)
+		if (((Chronos.currentTimeMillis() / 1000) - time) < 86400)
 		{
 			player.sendMessage("Waiting time has not passed.");
 			return;
@@ -76,7 +77,7 @@ public class ExHomunculusInsert implements IClientIncomingPacket
 							player.getVariables().set(PlayerVariables.HOMUNCULUS_STATUS, 2);
 						}
 					}
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_TIME, System.currentTimeMillis() / 1000);
+					player.getVariables().set(PlayerVariables.HOMUNCULUS_TIME, Chronos.currentTimeMillis() / 1000);
 				}
 				else
 				{
@@ -104,7 +105,7 @@ public class ExHomunculusInsert implements IClientIncomingPacket
 							player.getVariables().set(PlayerVariables.HOMUNCULUS_STATUS, 2);
 						}
 					}
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_TIME, System.currentTimeMillis() / 1000);
+					player.getVariables().set(PlayerVariables.HOMUNCULUS_TIME, Chronos.currentTimeMillis() / 1000);
 				}
 				else
 				{
@@ -132,7 +133,7 @@ public class ExHomunculusInsert implements IClientIncomingPacket
 							player.getVariables().set(PlayerVariables.HOMUNCULUS_STATUS, 2);
 						}
 					}
-					player.getVariables().set(PlayerVariables.HOMUNCULUS_TIME, System.currentTimeMillis() / 1000);
+					player.getVariables().set(PlayerVariables.HOMUNCULUS_TIME, Chronos.currentTimeMillis() / 1000);
 				}
 				else
 				{

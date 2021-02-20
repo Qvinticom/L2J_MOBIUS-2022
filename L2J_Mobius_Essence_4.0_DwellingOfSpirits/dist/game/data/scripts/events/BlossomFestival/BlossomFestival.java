@@ -16,6 +16,7 @@
  */
 package events.BlossomFestival;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.LongTimeEvent;
@@ -59,7 +60,7 @@ public class BlossomFestival extends LongTimeEvent
 				
 				synchronized (REWARD_LOCK)
 				{
-					final long currentTime = System.currentTimeMillis();
+					final long currentTime = Chronos.currentTimeMillis();
 					if (player.getVariables().getLong(REWARD_VAR, 0) < currentTime)
 					{
 						player.getVariables().set(REWARD_VAR, currentTime + 86400000); // 24 hours

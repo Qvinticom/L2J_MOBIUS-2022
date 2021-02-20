@@ -21,6 +21,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
@@ -345,7 +346,7 @@ public class Anakim extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(ANAKIM);
 		if (status == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_anakim", time, null, null);
@@ -373,7 +374,7 @@ public class Anakim extends AbstractNpcAI
 			}
 			case "check_activity_task":
 			{
-				if ((_lastAction + 900000) < System.currentTimeMillis())
+				if ((_lastAction + 900000) < Chronos.currentTimeMillis())
 				{
 					GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
 					for (Creature creature : BOSS_ZONE.getCharactersInside())
@@ -550,7 +551,7 @@ public class Anakim extends AbstractNpcAI
 				}
 				_remnants.clear();
 				notifyEvent("spawn_remant", null, null);
-				_lastAction = System.currentTimeMillis();
+				_lastAction = Chronos.currentTimeMillis();
 				startQuestTimer("check_activity_task", 60000, null, null, true);
 			}
 			else if ((_anakimStatus == WAITING) && (npc.getId() == ANAKIM_CUBIC))
@@ -578,7 +579,7 @@ public class Anakim extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isPet)
 	{
-		_lastAction = System.currentTimeMillis();
+		_lastAction = Chronos.currentTimeMillis();
 		if (npc.isMinion() || npc.isRaid())// Anakim and minions
 		{
 			// Anti BUGGERS
@@ -614,7 +615,7 @@ public class Anakim extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(ANAKIM, DEAD);
 			final long respawnTime = getRespawnTime();
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ANAKIM);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(ANAKIM, info);
 			
 			startQuestTimer("unlock_anakim", respawnTime, null, null);
@@ -686,7 +687,7 @@ public class Anakim extends AbstractNpcAI
 		{
 			reenter = day2;
 		}
-		return reenter.getTimeInMillis() - System.currentTimeMillis();
+		return reenter.getTimeInMillis() - Chronos.currentTimeMillis();
 	}
 	
 	public static void main(String[] args)

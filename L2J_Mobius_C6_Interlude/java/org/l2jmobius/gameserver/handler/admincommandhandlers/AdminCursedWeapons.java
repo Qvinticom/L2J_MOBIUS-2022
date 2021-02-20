@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.CursedWeapon;
@@ -238,7 +239,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				else
 				{
 					// end time is equal to dropped one
-					final long endTime = System.currentTimeMillis() + (cursedWeapon.getDuration() * 60000);
+					final long endTime = Chronos.currentTimeMillis() + (cursedWeapon.getDuration() * 60000);
 					cursedWeapon.setEndTime(endTime);
 					
 					final WorldObject target = activeChar.getTarget();

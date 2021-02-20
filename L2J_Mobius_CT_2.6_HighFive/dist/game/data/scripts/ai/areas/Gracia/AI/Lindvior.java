@@ -19,6 +19,7 @@ package ai.areas.Gracia.AI;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.Movie;
@@ -113,7 +114,7 @@ public class Lindvior extends AbstractNpcAI
 		final GregorianCalendar date = new GregorianCalendar();
 		date.set(Calendar.MINUTE, RESET_MIN);
 		date.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
-		if (System.currentTimeMillis() >= date.getTimeInMillis())
+		if (Chronos.currentTimeMillis() >= date.getTimeInMillis())
 		{
 			date.add(Calendar.DAY_OF_WEEK, 1);
 		}
@@ -131,6 +132,6 @@ public class Lindvior extends AbstractNpcAI
 		{
 			date.add(Calendar.DAY_OF_WEEK, 1 + RESET_DAY_1);
 		}
-		return date.getTimeInMillis() - System.currentTimeMillis();
+		return date.getTimeInMillis() - Chronos.currentTimeMillis();
 	}
 }

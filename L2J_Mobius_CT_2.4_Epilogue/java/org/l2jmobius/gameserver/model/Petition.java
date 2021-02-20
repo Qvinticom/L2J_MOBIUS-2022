@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.PetitionState;
 import org.l2jmobius.gameserver.enums.PetitionType;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
@@ -36,7 +37,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class Petition
 {
-	private final long _submitTime = System.currentTimeMillis();
+	private final long _submitTime = Chronos.currentTimeMillis();
 	private final int _id;
 	private final PetitionType _type;
 	private PetitionState _state = PetitionState.PENDING;

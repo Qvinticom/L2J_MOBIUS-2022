@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.instancezone.conditions;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -39,6 +40,6 @@ public class ConditionReenter extends Condition
 	protected boolean test(PlayerInstance player, Npc npc)
 	{
 		final int instanceId = getParameters().getInt("instanceId", getInstanceTemplate().getId());
-		return System.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, instanceId);
+		return Chronos.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, instanceId);
 	}
 }

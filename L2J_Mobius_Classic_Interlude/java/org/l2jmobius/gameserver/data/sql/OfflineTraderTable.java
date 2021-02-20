@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.TradeItem;
@@ -183,7 +184,7 @@ public class OfflineTraderTable
 					final Calendar cal = Calendar.getInstance();
 					cal.setTimeInMillis(time);
 					cal.add(Calendar.DAY_OF_YEAR, Config.OFFLINE_MAX_DAYS);
-					if (cal.getTimeInMillis() <= System.currentTimeMillis())
+					if (cal.getTimeInMillis() <= Chronos.currentTimeMillis())
 					{
 						continue;
 					}

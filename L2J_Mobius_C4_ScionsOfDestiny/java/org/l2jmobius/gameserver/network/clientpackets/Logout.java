@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -134,7 +135,7 @@ public class Logout extends GameClientPacket
 				
 				if (player.getOfflineStartTime() == 0)
 				{
-					player.setOfflineStartTime(System.currentTimeMillis());
+					player.setOfflineStartTime(Chronos.currentTimeMillis());
 				}
 				return;
 			}
@@ -146,7 +147,7 @@ public class Logout extends GameClientPacket
 			
 			if (player.getOfflineStartTime() == 0)
 			{
-				player.setOfflineStartTime(System.currentTimeMillis());
+				player.setOfflineStartTime(Chronos.currentTimeMillis());
 			}
 			return;
 		}

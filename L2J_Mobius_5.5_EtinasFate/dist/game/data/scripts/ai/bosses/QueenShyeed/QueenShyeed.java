@@ -16,6 +16,7 @@
  */
 package ai.bosses.QueenShyeed;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -87,7 +88,7 @@ public class QueenShyeed extends AbstractNpcAI
 	private void spawnShyeed()
 	{
 		final long respawn = GlobalVariablesManager.getInstance().getLong("QueenShyeedRespawn", 0);
-		final long remain = respawn != 0 ? respawn - System.currentTimeMillis() : 0;
+		final long remain = respawn != 0 ? respawn - Chronos.currentTimeMillis() : 0;
 		if (remain > 0)
 		{
 			startQuestTimer("respawn", remain, null, null);
@@ -103,7 +104,7 @@ public class QueenShyeed extends AbstractNpcAI
 	private void startRespawn()
 	{
 		final int respawnTime = RESPAWN - getRandom(RANDOM_RESPAWN);
-		GlobalVariablesManager.getInstance().set("QueenShyeedRespawn", Long.toString(System.currentTimeMillis() + respawnTime));
+		GlobalVariablesManager.getInstance().set("QueenShyeedRespawn", Long.toString(Chronos.currentTimeMillis() + respawnTime));
 		startQuestTimer("respawn", respawnTime, null, null);
 		// MOB_BUFF_ZONE.setEnabled(false);
 		MOB_BUFF_DISPLAY_ZONE.setEnabled(false);

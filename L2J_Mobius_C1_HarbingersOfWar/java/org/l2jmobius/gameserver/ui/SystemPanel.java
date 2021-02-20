@@ -34,6 +34,7 @@ import javax.swing.border.LineBorder;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.util.Chronos;
 import org.l2jmobius.util.Locator;
 
 /**
@@ -43,7 +44,7 @@ public class SystemPanel extends JPanel
 {
 	protected static final Logger LOGGER = Logger.getLogger(SystemPanel.class.getName());
 	
-	protected static final long START_TIME = System.currentTimeMillis();
+	protected static final long START_TIME = Chronos.currentTimeMillis();
 	
 	public SystemPanel()
 	{
@@ -130,7 +131,7 @@ public class SystemPanel extends JPanel
 				}
 				lblConnected.setText("Connected: " + playerCount);
 				lblMaxConnected.setText("Max connected: " + World.MAX_CONNECTED_COUNT);
-				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - START_TIME));
+				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(Chronos.currentTimeMillis() - START_TIME));
 			}
 		}, 1000, 1000);
 	}

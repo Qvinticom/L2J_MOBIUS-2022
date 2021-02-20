@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -137,7 +138,7 @@ public class Ramona extends AbstractNpcAI
 		addAttackId(MP_CONTROL, RAMONA_1, RAMONA_2, RAMONA_3);
 		addSpawnId(RAMONA_1, RAMONA_2, RAMONA_3);
 		
-		final long temp = GlobalVariablesManager.getInstance().getLong(RAMONA_RESPAWN_VAR, 0) - System.currentTimeMillis();
+		final long temp = GlobalVariablesManager.getInstance().getLong(RAMONA_RESPAWN_VAR, 0) - Chronos.currentTimeMillis();
 		if (temp > 0)
 		{
 			_boss = Status.DEAD;
@@ -167,7 +168,7 @@ public class Ramona extends AbstractNpcAI
 					npc.setInvul(false);
 					cancelQuestTimers("SPAWN_MS");
 					startQuestTimer("CHECK_ACTIVITY_TASK", 5000, null, null);
-					_lastAction = System.currentTimeMillis();
+					_lastAction = Chronos.currentTimeMillis();
 				}
 				break;
 			}
@@ -186,7 +187,7 @@ public class Ramona extends AbstractNpcAI
 				startQuestTimer("GENERATOR_2", getRandom(900000, 1200000), null, null);
 				startQuestTimer("GENERATOR_3", getRandom(1500000, 1800000), null, null);
 				startQuestTimer("GENERATOR_4", getRandom(2100000, 2400000), null, null);
-				_lastAction = System.currentTimeMillis();
+				_lastAction = Chronos.currentTimeMillis();
 				startQuestTimer("RAMONA1_SKILL", 6000, _ramona1, null);
 				break;
 			}
@@ -300,7 +301,7 @@ public class Ramona extends AbstractNpcAI
 			}
 			case "CHECK_ACTIVITY_TASK":
 			{
-				if ((_lastAction + 900000) < System.currentTimeMillis())
+				if ((_lastAction + 900000) < Chronos.currentTimeMillis())
 				{
 					for (Creature creature : ZONE.getCharactersInside())
 					{
@@ -396,17 +397,17 @@ public class Ramona extends AbstractNpcAI
 			}
 			case RAMONA_1:
 			{
-				_lastAction = System.currentTimeMillis();
+				_lastAction = Chronos.currentTimeMillis();
 				break;
 			}
 			case RAMONA_2:
 			{
-				_lastAction = System.currentTimeMillis();
+				_lastAction = Chronos.currentTimeMillis();
 				break;
 			}
 			case RAMONA_3:
 			{
-				_lastAction = System.currentTimeMillis();
+				_lastAction = Chronos.currentTimeMillis();
 				break;
 			}
 		}
@@ -540,7 +541,7 @@ public class Ramona extends AbstractNpcAI
 			{
 				_boss = Status.DEAD;
 				final long respawnTime = (Config.RAMONA_SPAWN_INTERVAL + getRandom(-Config.RAMONA_SPAWN_RANDOM, Config.RAMONA_SPAWN_RANDOM)) * 3600000;
-				GlobalVariablesManager.getInstance().set(RAMONA_RESPAWN_VAR, System.currentTimeMillis() + respawnTime);
+				GlobalVariablesManager.getInstance().set(RAMONA_RESPAWN_VAR, Chronos.currentTimeMillis() + respawnTime);
 				startQuestTimer("RAMONA_UNLOCK", respawnTime, null, null);
 				startQuestTimer("END_RAMONA", 90000, null, null);
 				break;
@@ -568,13 +569,13 @@ public class Ramona extends AbstractNpcAI
 			case RAMONA_1:
 			{
 				_boss = Status.IN_FIGHT;
-				_lastAction = System.currentTimeMillis();
+				_lastAction = Chronos.currentTimeMillis();
 				break;
 			}
 			case RAMONA_2:
 			case RAMONA_3:
 			{
-				_lastAction = System.currentTimeMillis();
+				_lastAction = Chronos.currentTimeMillis();
 				break;
 			}
 		}

@@ -25,6 +25,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.holders.PunishmentHolder;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
@@ -69,7 +70,7 @@ public class PunishmentManager
 				final long expirationTime = rset.getLong("expiration");
 				if ((type != null) && (affect != null))
 				{
-					if ((expirationTime > 0) && (System.currentTimeMillis() > expirationTime)) // expired task.
+					if ((expirationTime > 0) && (Chronos.currentTimeMillis() > expirationTime)) // expired task.
 					{
 						expired++;
 					}

@@ -40,6 +40,7 @@ import javax.crypto.Cipher;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.crypt.ScrambledKeyPair;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
@@ -57,7 +58,7 @@ public class LoginController
 		{
 			for (;;)
 			{
-				final long now = System.currentTimeMillis();
+				final long now = Chronos.currentTimeMillis();
 				if (_stopNow)
 				{
 					break;
@@ -322,7 +323,7 @@ public class LoginController
 	 */
 	public void addBanForAddress(InetAddress address, long duration)
 	{
-		_bannedIps.put(address, new BanInfo(address, System.currentTimeMillis() + duration));
+		_bannedIps.put(address, new BanInfo(address, Chronos.currentTimeMillis() + duration));
 	}
 	
 	public boolean isBannedAddress(InetAddress address)
@@ -588,7 +589,7 @@ public class LoginController
 						statement = con.prepareStatement("INSERT INTO accounts (login,password,lastactive,accessLevel,lastIP) values(?,?,?,?,?)");
 						statement.setString(1, user);
 						statement.setString(2, Base64.getEncoder().encodeToString(hash));
-						statement.setLong(3, System.currentTimeMillis());
+						statement.setLong(3, Chronos.currentTimeMillis());
 						statement.setInt(4, 0);
 						statement.setString(5, address.getHostAddress());
 						statement.execute();
@@ -631,7 +632,7 @@ public class LoginController
 				client.setAccessLevel(access);
 				client.setLastServer(lastServer);
 				statement = con.prepareStatement("UPDATE accounts SET lastactive=?, lastIP=? WHERE login=?");
-				statement.setLong(1, System.currentTimeMillis());
+				statement.setLong(1, Chronos.currentTimeMillis());
 				statement.setString(2, address.getHostAddress());
 				statement.setString(3, user);
 				statement.execute();
@@ -716,7 +717,7 @@ public class LoginController
 		{
 			// _ipAddress = address;
 			_count = 1;
-			_lastAttempTime = System.currentTimeMillis();
+			_lastAttempTime = Chronos.currentTimeMillis();
 			_lastPassword = lastPassword;
 		}
 		
@@ -725,7 +726,7 @@ public class LoginController
 			if (!_lastPassword.equals(password))
 			{
 				// check if theres a long time since last wrong try
-				if ((System.currentTimeMillis() - _lastAttempTime) < (300 * 1000))
+				if ((Chronos.currentTimeMillis() - _lastAttempTime) < (300 * 1000))
 				{
 					_count++;
 				}
@@ -735,11 +736,11 @@ public class LoginController
 					_count = 1;
 				}
 				_lastPassword = password;
-				_lastAttempTime = System.currentTimeMillis();
+				_lastAttempTime = Chronos.currentTimeMillis();
 			}
 			else // trying the same password is not brute force
 			{
-				_lastAttempTime = System.currentTimeMillis();
+				_lastAttempTime = Chronos.currentTimeMillis();
 			}
 		}
 		
@@ -768,7 +769,7 @@ public class LoginController
 		
 		public boolean hasExpired()
 		{
-			return (System.currentTimeMillis() > _expiration) && (_expiration > 0);
+			return (Chronos.currentTimeMillis() > _expiration) && (_expiration > 0);
 		}
 	}
 	
@@ -783,7 +784,7 @@ public class LoginController
 				{
 					for (LoginClient client : _clients)
 					{
-						if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) >= System.currentTimeMillis())
+						if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) >= Chronos.currentTimeMillis())
 						{
 							client.close(LoginFailReason.REASON_ACCESS_FAILED);
 						}
@@ -795,7 +796,7 @@ public class LoginController
 					for (Entry<String, LoginClient> e : _loginServerClients.entrySet())
 					{
 						final LoginClient client = e.getValue();
-						if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) >= System.currentTimeMillis())
+						if ((client.getConnectionStartTime() + LOGIN_TIMEOUT) >= Chronos.currentTimeMillis())
 						{
 							client.close(LoginFailReason.REASON_ACCESS_FAILED);
 						}

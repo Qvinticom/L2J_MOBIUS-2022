@@ -21,6 +21,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 
 /**
@@ -42,7 +43,7 @@ public class ItemManaTaskManager
 			}
 			_working = true;
 			
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			for (Entry<ItemInstance, Long> entry : ITEMS.entrySet())
 			{
 				if (currentTime > entry.getValue().longValue())
@@ -61,7 +62,7 @@ public class ItemManaTaskManager
 	{
 		if (!ITEMS.containsKey(item))
 		{
-			ITEMS.put(item, System.currentTimeMillis() + MANA_CONSUMPTION_RATE);
+			ITEMS.put(item, Chronos.currentTimeMillis() + MANA_CONSUMPTION_RATE);
 		}
 	}
 	

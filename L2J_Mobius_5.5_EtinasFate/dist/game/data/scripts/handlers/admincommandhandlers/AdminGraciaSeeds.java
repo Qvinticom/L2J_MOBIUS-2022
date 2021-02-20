@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.Calendar;
 import java.util.StringTokenizer;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -66,7 +67,7 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 		if (GraciaSeedsManager.getInstance().getSoDTimeForNextStateChange() > 0)
 		{
 			final Calendar nextChangeDate = Calendar.getInstance();
-			nextChangeDate.setTimeInMillis(System.currentTimeMillis() + GraciaSeedsManager.getInstance().getSoDTimeForNextStateChange());
+			nextChangeDate.setTimeInMillis(Chronos.currentTimeMillis() + GraciaSeedsManager.getInstance().getSoDTimeForNextStateChange());
 			html.replace("%sodtime%", nextChangeDate.getTime().toString());
 		}
 		else

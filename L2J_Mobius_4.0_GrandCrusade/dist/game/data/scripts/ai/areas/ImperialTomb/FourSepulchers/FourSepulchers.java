@@ -29,6 +29,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -516,7 +517,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		
 		final GlobalVariablesManager vars = GlobalVariablesManager.getInstance();
 		final long var = vars.getLong("FourSepulchers" + npcId, 0) + (TIME_ATTACK * 60 * 1000);
-		if (var > System.currentTimeMillis())
+		if (var > Chronos.currentTimeMillis())
 		{
 			showHtmlFile(player, npcId + "-NE.html", npc, null);
 			return;
@@ -581,7 +582,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 		ThreadPool.schedule(() -> ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers(), TIME_ATTACK * 60 * 1000);
 		
 		// Save attack time
-		vars.set("FourSepulchers" + npcId, System.currentTimeMillis());
+		vars.set("FourSepulchers" + npcId, Chronos.currentTimeMillis());
 		// Init progress
 		STORED_PROGRESS.put(sepulcherId, 1); // start from 1
 		// Start

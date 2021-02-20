@@ -20,6 +20,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -96,7 +97,7 @@ public class QueenAnt extends AbstractNpcAI
 		if (status == DEAD)
 		{
 			// load the unlock date and time for queen ant from DB
-			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 			// if queen ant is locked until a certain time, mark it so and start the unlock timer
 			// the unlock time has not yet expired.
 			if (temp > 0)
@@ -367,7 +368,7 @@ public class QueenAnt extends AbstractNpcAI
 			cancelQuestTimer("heal", null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(QUEEN, info);
 			_nurses.clear();
 			_larva.deleteMe();

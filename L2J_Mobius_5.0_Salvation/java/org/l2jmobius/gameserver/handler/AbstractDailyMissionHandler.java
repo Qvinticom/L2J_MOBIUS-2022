@@ -26,6 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
 import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
@@ -114,7 +115,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			
 			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
 			entry.setStatus(DailyMissionStatus.COMPLETED);
-			entry.setLastCompleted(System.currentTimeMillis());
+			entry.setLastCompleted(Chronos.currentTimeMillis());
 			entry.setRecentlyCompleted(true);
 			storePlayerEntry(entry);
 			

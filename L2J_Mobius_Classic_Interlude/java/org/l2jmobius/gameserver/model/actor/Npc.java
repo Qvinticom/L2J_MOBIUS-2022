@@ -22,6 +22,7 @@ import java.util.logging.Level;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -201,7 +202,7 @@ public class Npc extends Creature
 	public void onRandomAnimation(int animationId)
 	{
 		// Send a packet SocialAction to all PlayerInstance in the _KnownPlayers of the NpcInstance
-		final long now = System.currentTimeMillis();
+		final long now = Chronos.currentTimeMillis();
 		if ((now - _lastSocialBroadcast) > MINIMUM_SOCIAL_INTERVAL)
 		{
 			_lastSocialBroadcast = now;

@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.model.actor.tasks.attackable;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 
 /**
@@ -40,7 +41,7 @@ public class CommandChannelTimer implements Runnable
 			return;
 		}
 		
-		if ((System.currentTimeMillis() - _attackable.getCommandChannelLastAttack()) > Config.LOOT_RAIDS_PRIVILEGE_INTERVAL)
+		if ((Chronos.currentTimeMillis() - _attackable.getCommandChannelLastAttack()) > Config.LOOT_RAIDS_PRIVILEGE_INTERVAL)
 		{
 			_attackable.setCommandChannelTimer(null);
 			_attackable.setFirstCommandChannelAttacked(null);

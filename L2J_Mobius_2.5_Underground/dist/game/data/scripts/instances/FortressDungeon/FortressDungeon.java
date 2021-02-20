@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
@@ -169,7 +170,7 @@ public class FortressDungeon extends AbstractInstance
 	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		// Put re-enter for instance
-		REENETER_HOLDER.put(instance.getTemplateId(), System.currentTimeMillis() + REENTER);
+		REENETER_HOLDER.put(instance.getTemplateId(), Chronos.currentTimeMillis() + REENTER);
 		// Schedule spawn of first raid
 		spawnRaid(instance);
 	}
@@ -197,7 +198,7 @@ public class FortressDungeon extends AbstractInstance
 		else if (REENETER_HOLDER.containsKey(template.getId()))
 		{
 			final long time = REENETER_HOLDER.get(template.getId());
-			if (time > System.currentTimeMillis())
+			if (time > Chronos.currentTimeMillis())
 			{
 				showHtmlFile(groupLeader, "enterRestricted.html");
 				return false;

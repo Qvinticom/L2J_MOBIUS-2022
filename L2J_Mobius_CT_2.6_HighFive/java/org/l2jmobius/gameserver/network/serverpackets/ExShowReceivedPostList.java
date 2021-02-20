@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import java.util.List;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -39,7 +40,7 @@ public class ExShowReceivedPostList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_RECEIVED_POST_LIST.writeId(packet);
-		packet.writeD((int) (System.currentTimeMillis() / 1000));
+		packet.writeD((int) (Chronos.currentTimeMillis() / 1000));
 		if ((_inbox != null) && !_inbox.isEmpty())
 		{
 			packet.writeD(_inbox.size());

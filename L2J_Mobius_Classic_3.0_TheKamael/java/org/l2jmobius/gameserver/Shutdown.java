@@ -23,6 +23,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseBackup;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.BotReportTable;
 import org.l2jmobius.gameserver.data.SchemeBufferTable;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
@@ -534,19 +535,19 @@ public class Shutdown extends Thread
 		
 		protected void restartCounter()
 		{
-			_startTime = System.currentTimeMillis();
+			_startTime = Chronos.currentTimeMillis();
 		}
 		
 		protected long getEstimatedTimeAndRestartCounter()
 		{
-			final long toReturn = System.currentTimeMillis() - _startTime;
+			final long toReturn = Chronos.currentTimeMillis() - _startTime;
 			restartCounter();
 			return toReturn;
 		}
 		
 		protected long getEstimatedTime()
 		{
-			return System.currentTimeMillis() - _startTime;
+			return Chronos.currentTimeMillis() - _startTime;
 		}
 	}
 	

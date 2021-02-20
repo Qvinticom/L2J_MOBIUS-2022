@@ -16,6 +16,7 @@
  */
 package events.FreyaCelebration;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -79,7 +80,7 @@ public class FreyaCelebration extends LongTimeEvent
 		{
 			if (getQuestItemsCount(player, Inventory.ADENA_ID) > 1)
 			{
-				final long currentTime = System.currentTimeMillis();
+				final long currentTime = Chronos.currentTimeMillis();
 				final long reuseTime = player.getVariables().getLong(RESET_VAR, 0);
 				if (currentTime > reuseTime)
 				{

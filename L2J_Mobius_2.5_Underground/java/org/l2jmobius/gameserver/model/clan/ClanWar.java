@@ -22,6 +22,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanWarState;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -54,9 +55,9 @@ public class ClanWar
 	{
 		_attackerClanId = attacker.getId();
 		_attackedClanId = attacked.getId();
-		_startTime = System.currentTimeMillis();
+		_startTime = Chronos.currentTimeMillis();
 		_state = ClanWarState.BLOOD_DECLARATION;
-		_cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
+		_cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - Chronos.currentTimeMillis());
 		attacker.addWar(attacked.getId(), this);
 		attacked.addWar(attacker.getId(), this);
 		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarStart(attacker, attacked));
@@ -79,15 +80,15 @@ public class ClanWar
 		_attackerKillCount.set(attackerKillCount);
 		_attackedKillCount.set(attackedKillCount);
 		_winnerClanId = winnerClan;
-		if ((_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) > System.currentTimeMillis())
+		if ((_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) > Chronos.currentTimeMillis())
 		{
-			_cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
+			_cancelTask = ThreadPool.schedule(this::clanWarTimeout, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - Chronos.currentTimeMillis());
 		}
 		
 		if (_endTime > 0)
 		{
 			final long endTimePeriod = _endTime + (_state == ClanWarState.TIE ? TIME_TO_DELETION_AFTER_CANCELLATION : TIME_TO_DELETION_AFTER_DEFEAT);
-			if (endTimePeriod > System.currentTimeMillis())
+			if (endTimePeriod > Chronos.currentTimeMillis())
 			{
 				ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(_attackerClanId, _attackedClanId), 10000);
 			}
@@ -177,8 +178,8 @@ public class ClanWar
 		winnerClan.broadcastToOnlineMembers(sm);
 		
 		_winnerClanId = winnerClan.getId();
-		_endTime = System.currentTimeMillis();
-		ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(cancelor.getId(), winnerClan.getId()), (_endTime + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
+		_endTime = Chronos.currentTimeMillis();
+		ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(cancelor.getId(), winnerClan.getId()), (_endTime + TIME_TO_DELETION_AFTER_DEFEAT) - Chronos.currentTimeMillis());
 	}
 	
 	public void clanWarTimeout()
@@ -196,8 +197,8 @@ public class ClanWar
 			attackerClan.broadcastToOnlineMembers(sm);
 			
 			_state = ClanWarState.TIE;
-			_endTime = System.currentTimeMillis();
-			ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(attackerClan.getId(), attackedClan.getId()), (_endTime + TIME_TO_DELETION_AFTER_CANCELLATION) - System.currentTimeMillis());
+			_endTime = Chronos.currentTimeMillis();
+			ThreadPool.schedule(() -> ClanTable.getInstance().deleteClanWars(attackerClan.getId(), attackedClan.getId()), (_endTime + TIME_TO_DELETION_AFTER_CANCELLATION) - Chronos.currentTimeMillis());
 		}
 	}
 	

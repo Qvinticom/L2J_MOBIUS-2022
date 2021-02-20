@@ -22,6 +22,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
@@ -712,7 +713,7 @@ public class QuestState
 	public boolean isNowAvailable()
 	{
 		final String val = get("restartTime");
-		return (val != null) && (Long.parseLong(val) <= System.currentTimeMillis());
+		return (val != null) && (Long.parseLong(val) <= Chronos.currentTimeMillis());
 	}
 	
 	/**

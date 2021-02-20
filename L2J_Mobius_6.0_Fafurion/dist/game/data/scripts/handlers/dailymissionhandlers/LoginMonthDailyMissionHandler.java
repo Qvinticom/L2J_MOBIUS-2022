@@ -16,6 +16,7 @@
  */
 package handlers.dailymissionhandlers;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
@@ -61,9 +62,9 @@ public class LoginMonthDailyMissionHandler extends AbstractDailyMissionHandler
 		final long lastCompleted = entry.getLastCompleted();
 		if (lastCompleted == 0) // Initial entry.
 		{
-			entry.setLastCompleted(System.currentTimeMillis());
+			entry.setLastCompleted(Chronos.currentTimeMillis());
 		}
-		else if ((System.currentTimeMillis() - lastCompleted) > 2506000000L) // 2506000000L (29 day) delay.
+		else if ((Chronos.currentTimeMillis() - lastCompleted) > 2506000000L) // 2506000000L (29 day) delay.
 		{
 			entry.setProgress(1);
 			entry.setStatus(DailyMissionStatus.AVAILABLE);

@@ -22,6 +22,7 @@ import java.sql.SQLException;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 
@@ -68,7 +69,7 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 			statement.setString(2, player.getLastPetitionGmName());
 			statement.setInt(3, _rate);
 			statement.setString(4, _message);
-			statement.setLong(5, System.currentTimeMillis());
+			statement.setLong(5, Chronos.currentTimeMillis());
 			statement.execute();
 		}
 		catch (SQLException e)

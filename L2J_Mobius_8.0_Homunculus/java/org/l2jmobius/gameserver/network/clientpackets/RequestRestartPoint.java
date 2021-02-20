@@ -34,8 +34,8 @@ import org.l2jmobius.gameserver.model.quest.Event;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
 import org.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
 import org.l2jmobius.gameserver.model.siege.Castle;
-import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.Castle.CastleFunction;
+import org.l2jmobius.gameserver.model.siege.Fort;
 import org.l2jmobius.gameserver.model.siege.Fort.FortFunction;
 import org.l2jmobius.gameserver.network.GameClient;
 

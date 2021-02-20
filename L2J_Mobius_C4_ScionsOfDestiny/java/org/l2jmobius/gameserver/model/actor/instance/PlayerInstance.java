@@ -38,6 +38,7 @@ import java.util.concurrent.TimeUnit;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
@@ -968,7 +969,7 @@ public class PlayerInstance extends Playable
 		}
 		getFreight().restore();
 		
-		_instanceLoginTime = System.currentTimeMillis();
+		_instanceLoginTime = Chronos.currentTimeMillis();
 	}
 	
 	/**
@@ -984,7 +985,7 @@ public class PlayerInstance extends Playable
 		super.initCharStatusUpdateValues();
 		initPcStatusUpdateValues();
 		
-		_instanceLoginTime = System.currentTimeMillis();
+		_instanceLoginTime = Chronos.currentTimeMillis();
 	}
 	
 	@Override
@@ -3034,7 +3035,7 @@ public class PlayerInstance extends Playable
 	public void setOnlineTime(long time)
 	{
 		_onlineTime = time;
-		_onlineBeginTime = System.currentTimeMillis();
+		_onlineBeginTime = Chronos.currentTimeMillis();
 	}
 	
 	public long getOnlineTime()
@@ -6722,7 +6723,7 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_NORMAL_TIME);
+		setPvpFlagLasts(Chronos.currentTimeMillis() + Config.PVP_NORMAL_TIME);
 		if (getPvpFlag() == 0)
 		{
 			startPvPFlag();
@@ -6759,11 +6760,11 @@ public class PlayerInstance extends Playable
 		{
 			if (checkIfPvP(targetPlayer))
 			{
-				setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
+				setPvpFlagLasts(Chronos.currentTimeMillis() + Config.PVP_PVP_TIME);
 			}
 			else
 			{
-				setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_NORMAL_TIME);
+				setPvpFlagLasts(Chronos.currentTimeMillis() + Config.PVP_NORMAL_TIME);
 			}
 			if (getPvpFlag() == 0)
 			{
@@ -7492,7 +7493,7 @@ public class PlayerInstance extends Playable
 	 */
 	public long getUptime()
 	{
-		return System.currentTimeMillis() - _uptime;
+		return Chronos.currentTimeMillis() - _uptime;
 	}
 	
 	/**
@@ -7813,7 +7814,7 @@ public class PlayerInstance extends Playable
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET online=?, lastAccess=? WHERE charId=?");
 			statement.setInt(1, isOnline() ? 1 : 0);
-			statement.setLong(2, System.currentTimeMillis());
+			statement.setLong(2, Chronos.currentTimeMillis());
 			statement.setInt(3, getObjectId());
 			statement.execute();
 			statement.close();
@@ -7833,7 +7834,7 @@ public class PlayerInstance extends Playable
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET isIn7sDungeon=?, lastAccess=? WHERE charId=?");
 			statement.setInt(1, isIn7sDungeon() ? 1 : 0);
-			statement.setLong(2, System.currentTimeMillis());
+			statement.setLong(2, Chronos.currentTimeMillis());
 			statement.setInt(3, getObjectId());
 			statement.execute();
 			statement.close();
@@ -7940,7 +7941,7 @@ public class PlayerInstance extends Playable
 			statement.setInt(54, isNewbie() ? 1 : 0);
 			statement.setInt(55, isNoble() ? 1 : 0);
 			statement.setLong(56, 0);
-			statement.setLong(57, System.currentTimeMillis());
+			statement.setLong(57, Chronos.currentTimeMillis());
 			statement.setString(58, StringToHex(Integer.toHexString(getAppearance().getNameColor()).toUpperCase()));
 			statement.setString(59, StringToHex(Integer.toHexString(getAppearance().getTitleColor()).toUpperCase()));
 			statement.setInt(60, isAio() ? 1 : 0);
@@ -8008,12 +8009,12 @@ public class PlayerInstance extends Playable
 				player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
 				player.setFirstLog(rset.getInt("first_log"));
 				player.pcBangPoint = rset.getInt("pc_point");
-				if (player.getClanJoinExpiryTime() < System.currentTimeMillis())
+				if (player.getClanJoinExpiryTime() < Chronos.currentTimeMillis())
 				{
 					player.setClanJoinExpiryTime(0);
 				}
 				player.setClanCreateExpiryTime(rset.getLong("clan_create_expiry_time"));
-				if (player.getClanCreateExpiryTime() < System.currentTimeMillis())
+				if (player.getClanCreateExpiryTime() < Chronos.currentTimeMillis())
 				{
 					player.setClanCreateExpiryTime(0);
 				}
@@ -8053,7 +8054,7 @@ public class PlayerInstance extends Playable
 				
 				player.setTitle(rset.getString("title"));
 				player.setFistsWeaponItem(player.findFistsWeaponItem(activeClassId));
-				player.setUptime(System.currentTimeMillis());
+				player.setUptime(Chronos.currentTimeMillis());
 				
 				curHp = rset.getDouble("curHp");
 				curCp = rset.getDouble("curCp");
@@ -8562,7 +8563,7 @@ public class PlayerInstance extends Playable
 			long totalOnlineTime = _onlineTime;
 			if (_onlineBeginTime > 0)
 			{
-				totalOnlineTime += (System.currentTimeMillis() - _onlineBeginTime) / 1000;
+				totalOnlineTime += (Chronos.currentTimeMillis() - _onlineBeginTime) / 1000;
 			}
 			
 			statement.setLong(41, totalOnlineTime);
@@ -8648,7 +8649,7 @@ public class PlayerInstance extends Playable
 			statement = con.prepareStatement(ADD_SKILL_SAVE);
 			int buffIndex = 0;
 			final List<Integer> storedSkills = new ArrayList<>();
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			for (Effect effect : effects)
 			{
 				final int skillId = effect.getSkill().getId();
@@ -9067,7 +9068,7 @@ public class PlayerInstance extends Playable
 		{
 			PreparedStatement statement;
 			ResultSet rset;
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			
 			// Restore Type 0 These skill were still in effect on the character upon logout. Some of which were self casted and might still have had a long reuse delay which also is restored.
 			statement = con.prepareStatement(RESTORE_SKILL_SAVE);
@@ -9712,14 +9713,14 @@ public class PlayerInstance extends Playable
 			final Effect effect = getFirstEffect(skill);
 			
 			// Like L2OFF toogle skills have little delay
-			if ((TOGGLE_USE != 0) && ((TOGGLE_USE + 400) > System.currentTimeMillis()))
+			if ((TOGGLE_USE != 0) && ((TOGGLE_USE + 400) > Chronos.currentTimeMillis()))
 			{
 				TOGGLE_USE = 0;
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
-			TOGGLE_USE = System.currentTimeMillis();
+			TOGGLE_USE = Chronos.currentTimeMillis();
 			if (effect != null)
 			{
 				// fake death exception
@@ -10807,7 +10808,7 @@ public class PlayerInstance extends Playable
 		protected LookingForFishTask(int fishWaitTime, int fishGutsCheck, int fishType, boolean isNoob, boolean isUpperGrade)
 		{
 			_fishGutsCheck = fishGutsCheck;
-			_endTaskTime = System.currentTimeMillis() + fishWaitTime + 10000;
+			_endTaskTime = Chronos.currentTimeMillis() + fishWaitTime + 10000;
 			_fishType = fishType;
 			_isNoob = isNoob;
 			_isUpperGrade = isUpperGrade;
@@ -10816,7 +10817,7 @@ public class PlayerInstance extends Playable
 		@Override
 		public void run()
 		{
-			if (System.currentTimeMillis() >= _endTaskTime)
+			if (Chronos.currentTimeMillis() >= _endTaskTime)
 			{
 				endFishing(false);
 				return;
@@ -14512,7 +14513,7 @@ public class PlayerInstance extends Playable
 	
 	public void restoreCustomStatus()
 	{
-		final long currentTime = System.currentTimeMillis();
+		final long currentTime = Chronos.currentTimeMillis();
 		if (getVariables().getLong("CustomDonatorEnd", 0) > currentTime)
 		{
 			setDonator(true);
@@ -15455,7 +15456,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if ((_fallingTimestamp != 0) && (System.currentTimeMillis() < _fallingTimestamp))
+		if ((_fallingTimestamp != 0) && (Chronos.currentTimeMillis() < _fallingTimestamp))
 		{
 			return true;
 		}
@@ -15503,7 +15504,7 @@ public class PlayerInstance extends Playable
 		
 		// Prevent falling under ground.
 		sendPacket(new ValidateLocation(this));
-		_fallingTimestamp = System.currentTimeMillis() + FALLING_VALIDATION_DELAY;
+		_fallingTimestamp = Chronos.currentTimeMillis() + FALLING_VALIDATION_DELAY;
 		return false;
 	}
 	
@@ -15950,7 +15951,7 @@ public class PlayerInstance extends Playable
 	
 	public void addConfirmDlgRequestTime(int requestId, int time)
 	{
-		_confirmDlgRequests.put(requestId, System.currentTimeMillis() + time + 2000);
+		_confirmDlgRequests.put(requestId, Chronos.currentTimeMillis() + time + 2000);
 	}
 	
 	public Long getConfirmDlgRequestTime(int requestId)
@@ -16102,7 +16103,7 @@ public class PlayerInstance extends Playable
 	
 	public void setLastAttackPacket()
 	{
-		_lastAttackPacket = System.currentTimeMillis();
+		_lastAttackPacket = Chronos.currentTimeMillis();
 	}
 	
 	public void checkItemRestriction()

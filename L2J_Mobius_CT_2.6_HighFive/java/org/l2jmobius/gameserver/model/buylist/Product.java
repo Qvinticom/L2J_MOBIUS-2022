@@ -23,6 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.taskmanager.BuyListTaskManager;
 
@@ -123,7 +124,7 @@ public class Product
 	
 	public void restartRestockTask(long nextRestockTime)
 	{
-		final long remainTime = nextRestockTime - System.currentTimeMillis();
+		final long remainTime = nextRestockTime - Chronos.currentTimeMillis();
 		if (remainTime > 0)
 		{
 			BuyListTaskManager.getInstance().update(this, remainTime);

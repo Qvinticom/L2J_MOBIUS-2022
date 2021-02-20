@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.friend;
 import java.util.Calendar;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -39,7 +40,7 @@ public class ExFriendDetailInfo implements IClientOutgoingPacket
 		_objectId = player.getObjectId();
 		_name = name;
 		_friend = World.getInstance().getPlayer(_name);
-		_lastAccess = _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
+		_lastAccess = _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) Chronos.currentTimeMillis() : (int) (Chronos.currentTimeMillis() - _friend.getLastAccess()) / 1000;
 	}
 	
 	@Override

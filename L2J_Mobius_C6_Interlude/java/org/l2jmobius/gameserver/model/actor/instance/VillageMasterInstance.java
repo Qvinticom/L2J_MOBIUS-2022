@@ -20,6 +20,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.SkillTreeTable;
 import org.l2jmobius.gameserver.data.xml.PlayerTemplateData;
@@ -611,13 +612,13 @@ public class VillageMasterInstance extends FolkInstance
 			return;
 		}
 		
-		if (clan.getDissolvingExpiryTime() > System.currentTimeMillis())
+		if (clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_ALREADY_REQUESTED_THE_DISSOLUTION_OF_YOUR_CLAN);
 			return;
 		}
 		
-		clan.setDissolvingExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_DISSOLVE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+		clan.setDissolvingExpiryTime(Chronos.currentTimeMillis() + (Config.ALT_CLAN_DISSOLVE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 		clan.updateClanInDB();
 		
 		ClanTable.getInstance().scheduleRemoveClan(clan.getClanId());

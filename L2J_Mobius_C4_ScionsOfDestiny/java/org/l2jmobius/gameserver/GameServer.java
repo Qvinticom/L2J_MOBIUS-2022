@@ -33,6 +33,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.mmocore.SelectorConfig;
 import org.l2jmobius.commons.mmocore.SelectorThread;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.DeadlockDetector;
 import org.l2jmobius.commons.util.IPv4Filter;
 import org.l2jmobius.commons.util.Util;
@@ -144,7 +145,7 @@ public class GameServer
 	
 	public GameServer() throws Exception
 	{
-		final long serverLoadStart = System.currentTimeMillis();
+		final long serverLoadStart = Chronos.currentTimeMillis();
 		
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
@@ -485,7 +486,7 @@ public class GameServer
 		LOGGER.info("Used memory: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576) + " MB");
 		
 		Util.printSection("Status");
-		LOGGER.info("Server Loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
+		LOGGER.info("Server Loaded in " + ((Chronos.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		
 		// Load telnet status
 		Util.printSection("Telnet");

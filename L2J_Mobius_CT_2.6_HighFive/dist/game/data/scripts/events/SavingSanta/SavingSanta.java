@@ -22,6 +22,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -324,7 +325,7 @@ public class SavingSanta extends LongTimeEvent
 					{
 						if (_rewardedPlayers.containsKey(pl.getAccountName()))
 						{
-							final long elapsedTimeSinceLastRewarded = System.currentTimeMillis() - _rewardedPlayers.get(pl.getAccountName());
+							final long elapsedTimeSinceLastRewarded = Chronos.currentTimeMillis() - _rewardedPlayers.get(pl.getAccountName());
 							if (elapsedTimeSinceLastRewarded < MIN_TIME_BETWEEN_2_REWARDS)
 							{
 								continue;
@@ -333,7 +334,7 @@ public class SavingSanta extends LongTimeEvent
 						else
 						{
 							final long time = player.getVariables().getLong("LAST_SANTA_REWARD", 0);
-							if ((System.currentTimeMillis() - time) < MIN_TIME_BETWEEN_2_REWARDS)
+							if ((Chronos.currentTimeMillis() - time) < MIN_TIME_BETWEEN_2_REWARDS)
 							{
 								_rewardedPlayers.put(pl.getAccountName(), time);
 								continue;
@@ -343,8 +344,8 @@ public class SavingSanta extends LongTimeEvent
 						final int locy = (int) (pl.getY() + (Math.pow(-1, getRandom(1, 2)) * 50));
 						final int heading = Util.calculateHeadingFrom(locx, locy, pl.getX(), pl.getY());
 						final Npc santa = addSpawn(HOLIDAY_SANTA_ID, locx, locy, pl.getZ(), heading, false, 30000);
-						_rewardedPlayers.put(pl.getAccountName(), System.currentTimeMillis());
-						player.getVariables().set("LAST_SANTA_REWARD", System.currentTimeMillis());
+						_rewardedPlayers.put(pl.getAccountName(), Chronos.currentTimeMillis());
+						player.getVariables().set("LAST_SANTA_REWARD", Chronos.currentTimeMillis());
 						startQuestTimer("SantaRewarding0", 500, santa, pl);
 					}
 				}
@@ -437,7 +438,7 @@ public class SavingSanta extends LongTimeEvent
 		else if (event.equalsIgnoreCase("SantaBlessings") && SANTAS_HELPER_AUTOBUFF)
 		{
 			startQuestTimer("SantaBlessings", 15000, null, null);
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			for (Npc santaHelper1 : _santaHelpers)
 			{
 				for (PlayerInstance plb : World.getInstance().getVisibleObjects(santaHelper1, PlayerInstance.class))

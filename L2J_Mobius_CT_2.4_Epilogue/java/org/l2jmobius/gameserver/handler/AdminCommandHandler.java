@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.enums.PlayerAction;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -115,7 +116,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 			// Admin Commands must run through a long running task, otherwise a command that takes too much time will freeze the server, this way you'll feel only a minor spike.
 			ThreadPool.execute(() ->
 			{
-				final long begin = System.currentTimeMillis();
+				final long begin = Chronos.currentTimeMillis();
 				try
 				{
 					if (Config.GMAUDIT)
@@ -133,7 +134,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 				}
 				finally
 				{
-					final long runtime = System.currentTimeMillis() - begin;
+					final long runtime = Chronos.currentTimeMillis() - begin;
 					if (runtime < 5000)
 					{
 						return;

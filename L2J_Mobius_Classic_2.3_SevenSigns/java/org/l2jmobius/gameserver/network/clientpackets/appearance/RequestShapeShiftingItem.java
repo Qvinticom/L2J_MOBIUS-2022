@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.appearance;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.AppearanceItemData;
 import org.l2jmobius.gameserver.enums.InventorySlot;
 import org.l2jmobius.gameserver.enums.ItemLocation;
@@ -252,7 +253,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		
 		if ((appearanceStone.getType() != AppearanceType.RESTORE) && (appearanceStone.getLifeTime() > 0))
 		{
-			targetItem.getVariables().set(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, System.currentTimeMillis() + appearanceStone.getLifeTime());
+			targetItem.getVariables().set(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, Chronos.currentTimeMillis() + appearanceStone.getLifeTime());
 			targetItem.scheduleVisualLifeTime();
 		}
 		

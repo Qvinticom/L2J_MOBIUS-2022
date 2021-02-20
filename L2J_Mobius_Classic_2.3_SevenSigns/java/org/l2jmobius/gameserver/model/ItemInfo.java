@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Objects;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.AttributeType;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.ensoul.EnsoulOption;
@@ -151,14 +152,14 @@ public class ItemInfo
 		_soulCrystalOptions = item.getSpecialAbilities();
 		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
-		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
+		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - Chronos.currentTimeMillis()) / 1000 : 0;
 	}
 	
 	public ItemInfo(ItemInstance item, int change)
 	{
 		this(item);
 		_change = change;
-		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - System.currentTimeMillis()) / 1000 : 0;
+		_visualExpiration = item.getVisualLifeTime() > 0 ? (item.getVisualLifeTime() - Chronos.currentTimeMillis()) / 1000 : 0;
 	}
 	
 	public ItemInfo(TradeItem item)

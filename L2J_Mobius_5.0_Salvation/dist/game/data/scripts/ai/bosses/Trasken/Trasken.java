@@ -21,6 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -326,7 +327,7 @@ public class Trasken extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(TRASKEN);
 		if (status == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_trasken", time, null, null);
@@ -604,7 +605,7 @@ public class Trasken extends AbstractNpcAI
 				GrandBossManager.getInstance().setBossStatus(TRASKEN, DEAD);
 				final long respawnTime = (Config.TRASKEN_SPAWN_INTERVAL + getRandom(-Config.TRASKEN_SPAWN_RANDOM, Config.TRASKEN_SPAWN_RANDOM)) * 3600000;
 				final StatSet info = GrandBossManager.getInstance().getStatSet(TRASKEN);
-				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+				info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 				GrandBossManager.getInstance().setStatSet(TRASKEN, info);
 				startQuestTimer("unlock_trasken", respawnTime, null, null);
 				break;

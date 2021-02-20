@@ -24,6 +24,8 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.util.Chronos;
+
 /**
  * IPv4 filter.
  * @author Forsaiken
@@ -59,7 +61,7 @@ public class IPv4Filter implements Runnable
 		
 		Flood()
 		{
-			lastAccess = System.currentTimeMillis();
+			lastAccess = Chronos.currentTimeMillis();
 			trys = 0;
 		}
 	}
@@ -74,7 +76,7 @@ public class IPv4Filter implements Runnable
 		}
 		
 		final int h = hash(addr.getAddress());
-		final long current = System.currentTimeMillis();
+		final long current = Chronos.currentTimeMillis();
 		Flood f;
 		synchronized (_ipFloodMap)
 		{
@@ -120,7 +122,7 @@ public class IPv4Filter implements Runnable
 	{
 		while (true)
 		{
-			final long reference = System.currentTimeMillis() - (1000 * 300);
+			final long reference = Chronos.currentTimeMillis() - (1000 * 300);
 			synchronized (_ipFloodMap)
 			{
 				final Iterator<Entry<Integer, Flood>> it = _ipFloodMap.entrySet().iterator();

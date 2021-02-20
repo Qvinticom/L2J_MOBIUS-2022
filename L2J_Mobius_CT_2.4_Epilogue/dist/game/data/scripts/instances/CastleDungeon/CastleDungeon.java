@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.instancemanager.FortManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -194,7 +195,7 @@ public class CastleDungeon extends AbstractInstance
 				return "36403-02.html";
 			}
 			
-			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), CASTLE_DUNGEON.get(npc.getId())))
+			if (Chronos.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), CASTLE_DUNGEON.get(npc.getId())))
 			{
 				return "36403-03.html";
 			}

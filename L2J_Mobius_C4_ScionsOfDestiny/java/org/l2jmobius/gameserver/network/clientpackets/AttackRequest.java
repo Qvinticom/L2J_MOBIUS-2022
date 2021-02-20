@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.events.CTF;
 import org.l2jmobius.gameserver.instancemanager.events.DM;
 import org.l2jmobius.gameserver.instancemanager.events.TvT;
@@ -53,7 +54,7 @@ public class AttackRequest extends GameClientPacket
 			return;
 		}
 		
-		if ((System.currentTimeMillis() - player.getLastAttackPacket()) < 500)
+		if ((Chronos.currentTimeMillis() - player.getLastAttackPacket()) < 500)
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

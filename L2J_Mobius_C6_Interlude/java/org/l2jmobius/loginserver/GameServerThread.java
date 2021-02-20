@@ -34,6 +34,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.crypt.NewCrypt;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import org.l2jmobius.loginserver.network.gameserverpackets.BlowFishKey;
 import org.l2jmobius.loginserver.network.gameserverpackets.ChangeAccessLevel;
@@ -77,7 +78,7 @@ public class GameServerThread extends Thread
 	public void run()
 	{
 		boolean checkTime = true;
-		final long time = System.currentTimeMillis();
+		final long time = Chronos.currentTimeMillis();
 		_connectionIPAddress = _connection.getInetAddress().getHostAddress();
 		if (isBannedGameserverIP(_connectionIPAddress))
 		{
@@ -98,7 +99,7 @@ public class GameServerThread extends Thread
 			boolean checksumOk = false;
 			while (true)
 			{
-				if (((time - System.currentTimeMillis()) > 10000) && checkTime)
+				if (((time - Chronos.currentTimeMillis()) > 10000) && checkTime)
 				{
 					_connection.close();
 					break;

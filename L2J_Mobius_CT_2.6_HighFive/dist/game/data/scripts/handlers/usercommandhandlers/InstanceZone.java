@@ -19,6 +19,7 @@ package handlers.usercommandhandlers;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -65,7 +66,7 @@ public class InstanceZone implements IUserCommandHandler
 		{
 			for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 			{
-				final long remainingTime = (entry.getValue() - System.currentTimeMillis()) / 1000;
+				final long remainingTime = (entry.getValue() - Chronos.currentTimeMillis()) / 1000;
 				if (remainingTime > 60)
 				{
 					if (firstMessage)

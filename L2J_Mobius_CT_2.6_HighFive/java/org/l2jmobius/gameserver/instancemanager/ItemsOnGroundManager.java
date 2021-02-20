@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ItemsAutoDestroy;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -83,7 +84,7 @@ public class ItemsOnGroundManager implements Runnable
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(str))
 			{
-				ps.setLong(1, System.currentTimeMillis());
+				ps.setLong(1, Chronos.currentTimeMillis());
 				ps.execute();
 			}
 			catch (Exception e)

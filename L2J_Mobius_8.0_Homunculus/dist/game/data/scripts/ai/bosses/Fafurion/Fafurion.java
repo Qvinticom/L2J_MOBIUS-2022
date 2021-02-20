@@ -20,6 +20,7 @@ package ai.bosses.Fafurion;
 import java.util.List;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -84,7 +85,7 @@ public class Fafurion extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 		if (status == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("unlock_fafurion", time, null, null);
@@ -449,7 +450,7 @@ public class Fafurion extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, DEAD);
 			final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(FAFURION_GRANDBOSS_ID);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(FAFURION_GRANDBOSS_ID, info);
 			startQuestTimer("unlock_fafurion", respawnTime, null, null);
 			if (_stage < 7)

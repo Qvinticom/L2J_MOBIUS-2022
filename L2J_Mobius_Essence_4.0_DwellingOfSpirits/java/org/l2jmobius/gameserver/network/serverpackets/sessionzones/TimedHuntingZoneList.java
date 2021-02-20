@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets.sessionzones;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -43,7 +44,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_TIME_RESTRICT_FIELD_LIST.writeId(packet);
 		
-		final long currentTime = System.currentTimeMillis();
+		final long currentTime = Chronos.currentTimeMillis();
 		long endTime;
 		packet.writeD(3); // zone count
 		

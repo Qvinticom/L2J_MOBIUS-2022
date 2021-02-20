@@ -28,6 +28,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.SkillTreeData;
 import org.l2jmobius.gameserver.enums.SocialClass;
@@ -138,7 +139,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 					final int level = rs.getInt("level");
 					final long expiration = rs.getLong("expiration");
 					final ResidenceFunction func = new ResidenceFunction(id, level, expiration, this);
-					if ((expiration <= System.currentTimeMillis()) && !func.reactivate())
+					if ((expiration <= Chronos.currentTimeMillis()) && !func.reactivate())
 					{
 						removeFunction(func);
 						continue;

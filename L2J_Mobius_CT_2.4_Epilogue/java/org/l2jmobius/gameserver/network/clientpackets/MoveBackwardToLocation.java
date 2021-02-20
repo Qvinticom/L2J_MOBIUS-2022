@@ -20,6 +20,7 @@ import java.nio.BufferUnderflowException;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.Location;
@@ -76,7 +77,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !player.isGM() && (player.getNotMoveUntil() > System.currentTimeMillis()))
+		if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !player.isGM() && (player.getNotMoveUntil() > Chronos.currentTimeMillis()))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SPEAKING_TO_AN_NPC_ONE_MOMENT_PLEASE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);

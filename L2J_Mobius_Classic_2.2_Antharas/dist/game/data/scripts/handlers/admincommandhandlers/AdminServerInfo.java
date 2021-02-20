@@ -24,6 +24,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -60,7 +61,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%gameTime%", GameTimeController.getInstance().getGameHour() + ":" + GameTimeController.getInstance().getGameMinute());
 			html.replace("%dayNight%", GameTimeController.getInstance().isNight() ? "Night" : "Day");
 			html.replace("%geodata%", Config.PATHFINDING ? "Enabled" : "Disabled");
-			html.replace("%serverTime%", SDF.format(new Date(System.currentTimeMillis())));
+			html.replace("%serverTime%", SDF.format(new Date(Chronos.currentTimeMillis())));
 			html.replace("%serverUpTime%", getServerUpTime());
 			html.replace("%onlineAll%", getPlayersCount("ALL"));
 			html.replace("%offlineTrade%", getPlayersCount("OFF_TRADE"));
@@ -76,7 +77,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 	
 	private String getServerUpTime()
 	{
-		long time = System.currentTimeMillis() - GameServer.dateTimeServerStarted.getTimeInMillis();
+		long time = Chronos.currentTimeMillis() - GameServer.dateTimeServerStarted.getTimeInMillis();
 		
 		final long days = TimeUnit.MILLISECONDS.toDays(time);
 		time -= TimeUnit.DAYS.toMillis(days);

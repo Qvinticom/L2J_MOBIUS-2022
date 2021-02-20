@@ -61,7 +61,7 @@ public class KastiaExceptional extends AbstractInstance
 			case "enterInstance":
 			{
 				/*
-				 * Cannot enter if player finished another Kastia instance. if ((System.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, 299)) || (System.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, 298))) { player.sendPacket(new
+				 * Cannot enter if player finished another Kastia instance. if ((Chronos.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, 299)) || (Chronos.currentTimeMillis() > InstanceManager.getInstance().getInstanceTime(player, 298))) { player.sendPacket(new
 				 * SystemMessage(SystemMessageId.SINCE_C1_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_THIS_DUNGEON).addString(player.getName())); return null; }
 				 */
 				enterInstance(player, npc, TEMPLATE_ID);

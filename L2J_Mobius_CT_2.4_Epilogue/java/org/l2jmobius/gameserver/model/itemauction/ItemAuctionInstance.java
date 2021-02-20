@@ -41,6 +41,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.enums.ItemLocation;
@@ -242,7 +243,7 @@ public class ItemAuctionInstance
 		{
 			case 0:
 			{
-				nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
+				nextAuction = createAuction(Chronos.currentTimeMillis() + START_TIME_SPACE);
 				break;
 			}
 			case 1:
@@ -251,10 +252,10 @@ public class ItemAuctionInstance
 				{
 					case CREATED:
 					{
-						if (auctions[0].getStartingTime() < (System.currentTimeMillis() + START_TIME_SPACE))
+						if (auctions[0].getStartingTime() < (Chronos.currentTimeMillis() + START_TIME_SPACE))
 						{
 							currentAuction = auctions[0];
-							nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
+							nextAuction = createAuction(Chronos.currentTimeMillis() + START_TIME_SPACE);
 						}
 						else
 						{
@@ -265,13 +266,13 @@ public class ItemAuctionInstance
 					case STARTED:
 					{
 						currentAuction = auctions[0];
-						nextAuction = createAuction(Math.max(currentAuction.getEndingTime() + FINISH_TIME_SPACE, System.currentTimeMillis() + START_TIME_SPACE));
+						nextAuction = createAuction(Math.max(currentAuction.getEndingTime() + FINISH_TIME_SPACE, Chronos.currentTimeMillis() + START_TIME_SPACE));
 						break;
 					}
 					case FINISHED:
 					{
 						currentAuction = auctions[0];
-						nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
+						nextAuction = createAuction(Chronos.currentTimeMillis() + START_TIME_SPACE);
 						break;
 					}
 					default:
@@ -286,7 +287,7 @@ public class ItemAuctionInstance
 				Arrays.sort(auctions, Comparator.comparingLong(ItemAuction::getStartingTime).reversed());
 				
 				// just to make sure we won't skip any auction because of little different times
-				final long currentTime = System.currentTimeMillis();
+				final long currentTime = Chronos.currentTimeMillis();
 				
 				for (ItemAuction auction : auctions)
 				{
@@ -308,7 +309,7 @@ public class ItemAuctionInstance
 				
 				if (nextAuction == null)
 				{
-					nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
+					nextAuction = createAuction(Chronos.currentTimeMillis() + START_TIME_SPACE);
 				}
 				break;
 			}
@@ -323,17 +324,17 @@ public class ItemAuctionInstance
 		{
 			if (currentAuction.getAuctionState() == ItemAuctionState.STARTED)
 			{
-				setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(currentAuction), Math.max(currentAuction.getEndingTime() - System.currentTimeMillis(), 0)));
+				setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(currentAuction), Math.max(currentAuction.getEndingTime() - Chronos.currentTimeMillis(), 0)));
 			}
 			else
 			{
-				setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(currentAuction), Math.max(currentAuction.getStartingTime() - System.currentTimeMillis(), 0)));
+				setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(currentAuction), Math.max(currentAuction.getStartingTime() - Chronos.currentTimeMillis(), 0)));
 			}
 			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Schedule current auction " + currentAuction.getAuctionId() + " for instance " + _instanceId);
 		}
 		else
 		{
-			setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(nextAuction), Math.max(nextAuction.getStartingTime() - System.currentTimeMillis(), 0)));
+			setStateTask(ThreadPool.schedule(new ScheduleAuctionTask(nextAuction), Math.max(nextAuction.getStartingTime() - Chronos.currentTimeMillis(), 0)));
 			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Schedule next auction " + nextAuction.getAuctionId() + " on " + DATE_FORMAT.format(new Date(nextAuction.getStartingTime())) + " for instance " + _instanceId);
 		}
 	}
@@ -416,7 +417,7 @@ public class ItemAuctionInstance
 							if (_auction.getScheduledAuctionEndingExtendState() == ItemAuctionExtendState.INITIAL)
 							{
 								_auction.setScheduledAuctionEndingExtendState(ItemAuctionExtendState.EXTEND_BY_5_MIN);
-								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0)));
+								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - Chronos.currentTimeMillis(), 0)));
 								return;
 							}
 							break;
@@ -426,7 +427,7 @@ public class ItemAuctionInstance
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_3_MIN)
 							{
 								_auction.setScheduledAuctionEndingExtendState(ItemAuctionExtendState.EXTEND_BY_3_MIN);
-								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0)));
+								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - Chronos.currentTimeMillis(), 0)));
 								return;
 							}
 							break;
@@ -436,7 +437,7 @@ public class ItemAuctionInstance
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B)
 							{
 								_auction.setScheduledAuctionEndingExtendState(ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B);
-								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0)));
+								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - Chronos.currentTimeMillis(), 0)));
 								return;
 							}
 							break;
@@ -446,7 +447,7 @@ public class ItemAuctionInstance
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A)
 							{
 								_auction.setScheduledAuctionEndingExtendState(ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A);
-								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0)));
+								setStateTask(ThreadPool.schedule(this, Math.max(_auction.getEndingTime() - Chronos.currentTimeMillis(), 0)));
 								return;
 							}
 						}
@@ -570,7 +571,7 @@ public class ItemAuctionInstance
 				return null;
 			}
 			
-			if ((auctionState == ItemAuctionState.FINISHED) && (startingTime < (System.currentTimeMillis() - TimeUnit.MILLISECONDS.convert(Config.ALT_ITEM_AUCTION_EXPIRED_AFTER, TimeUnit.DAYS))))
+			if ((auctionState == ItemAuctionState.FINISHED) && (startingTime < (Chronos.currentTimeMillis() - TimeUnit.MILLISECONDS.convert(Config.ALT_ITEM_AUCTION_EXPIRED_AFTER, TimeUnit.DAYS))))
 			{
 				LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Clearing expired auction: " + auctionId);
 				try (PreparedStatement ps = con.prepareStatement(DELETE_AUCTION_INFO_BY_AUCTION_ID))

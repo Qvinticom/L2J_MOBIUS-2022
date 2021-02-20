@@ -20,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -63,7 +64,7 @@ public class RequestWithdrawalPledge implements IClientIncomingPacket
 		}
 		
 		final Clan clan = player.getClan();
-		clan.removeClanMember(player.getObjectId(), System.currentTimeMillis() + TimeUnit.DAYS.toMillis(Config.ALT_CLAN_JOIN_DAYS));
+		clan.removeClanMember(player.getObjectId(), Chronos.currentTimeMillis() + TimeUnit.DAYS.toMillis(Config.ALT_CLAN_JOIN_DAYS));
 		
 		final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_WITHDRAWN_FROM_THE_CLAN);
 		sm.addString(player.getName());

@@ -23,6 +23,7 @@ import java.util.Calendar;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 
 /**
  * @author MHard
@@ -60,9 +61,9 @@ public abstract class ClanHallSiege
 	public void setNewSiegeDate(long siegeDate, int clanHallId, int hour)
 	{
 		final Calendar tmpDate = Calendar.getInstance();
-		if (siegeDate <= System.currentTimeMillis())
+		if (siegeDate <= Chronos.currentTimeMillis())
 		{
-			tmpDate.setTimeInMillis(System.currentTimeMillis());
+			tmpDate.setTimeInMillis(Chronos.currentTimeMillis());
 			tmpDate.add(Calendar.DAY_OF_MONTH, 3);
 			tmpDate.set(Calendar.DAY_OF_WEEK, 6);
 			tmpDate.set(Calendar.HOUR_OF_DAY, hour);

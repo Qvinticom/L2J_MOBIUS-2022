@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.function.Function;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.DailyMissionData;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -37,7 +38,7 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 {
 	final PlayerInstance _player;
 	private final Collection<DailyMissionDataHolder> _rewards;
-	private static final Function<String, Long> _remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000;
+	private static final Function<String, Long> _remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - Chronos.currentTimeMillis()) / 1000;
 	
 	private final long _dayRemainTime;
 	private final long _weekRemainTime;

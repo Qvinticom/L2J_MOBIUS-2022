@@ -32,6 +32,7 @@ import java.util.concurrent.ScheduledFuture;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.SpawnTable;
@@ -180,7 +181,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 			// XXX _rainbow.siegeEnds();
 			
 			ThreadPool.schedule(new SetFinalAttackers(), _rainbow.getNextSiegeTime());
-			setRegistrationEndString((_rainbow.getNextSiegeTime() + System.currentTimeMillis()) - 3600000);
+			setRegistrationEndString((_rainbow.getNextSiegeTime() + Chronos.currentTimeMillis()) - 3600000);
 			// Teleport out of the arenas is made 2 mins after game ends
 			ThreadPool.schedule(new TeleportBack(), 120000);
 		}

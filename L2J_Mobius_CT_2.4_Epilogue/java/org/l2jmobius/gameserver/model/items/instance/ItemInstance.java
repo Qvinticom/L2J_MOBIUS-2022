@@ -32,6 +32,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.xml.EnchantItemOptionsData;
 import org.l2jmobius.gameserver.data.xml.OptionData;
@@ -186,7 +187,7 @@ public class ItemInstance extends WorldObject
 		_type2 = 0;
 		_dropTime = 0;
 		_mana = _item.getDuration();
-		_time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
+		_time = _item.getTime() == -1 ? -1 : Chronos.currentTimeMillis() + (_item.getTime() * 60 * 1000);
 		_enchantLevel = 0;
 		scheduleLifeTimeTask();
 	}
@@ -210,7 +211,7 @@ public class ItemInstance extends WorldObject
 		setCount(1);
 		_loc = ItemLocation.VOID;
 		_mana = _item.getDuration();
-		_time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
+		_time = _item.getTime() == -1 ? -1 : Chronos.currentTimeMillis() + (_item.getTime() * 60 * 1000);
 		scheduleLifeTimeTask();
 	}
 	
@@ -1539,7 +1540,7 @@ public class ItemInstance extends WorldObject
 		setSpawned(true);
 		setXYZ(x, y, z);
 		
-		setDropTime(System.currentTimeMillis());
+		setDropTime(Chronos.currentTimeMillis());
 		setDropperObjectId(dropper != null ? dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 		
 		// Add the ItemInstance dropped in the world as a visible object
@@ -1762,7 +1763,7 @@ public class ItemInstance extends WorldObject
 	
 	public long getRemainingTime()
 	{
-		return _time - System.currentTimeMillis();
+		return _time - Chronos.currentTimeMillis();
 	}
 	
 	public void endOfLife()

@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ClanHallGrade;
 import org.l2jmobius.gameserver.enums.ClanHallType;
@@ -265,7 +266,7 @@ public class ClanHall extends AbstractResidence
 			
 			final int failDays = getCostFailDay();
 			final long time = failDays > 0 ? (failDays > 8 ? Instant.now().toEpochMilli() : Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(failDays + 1)).toEpochMilli()) : _paidUntil;
-			_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), time - System.currentTimeMillis());
+			_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), time - Chronos.currentTimeMillis());
 		}
 		else
 		{
@@ -310,7 +311,7 @@ public class ClanHall extends AbstractResidence
 	 */
 	public long getNextPayment()
 	{
-		return (_checkPaymentTask != null) ? System.currentTimeMillis() + _checkPaymentTask.getDelay(TimeUnit.MILLISECONDS) : 0;
+		return (_checkPaymentTask != null) ? Chronos.currentTimeMillis() + _checkPaymentTask.getDelay(TimeUnit.MILLISECONDS) : 0;
 	}
 	
 	public Location getOwnerLocation()
@@ -382,7 +383,7 @@ public class ClanHall extends AbstractResidence
 				{
 					_owner.getWarehouse().destroyItem("Clan Hall Lease", Inventory.ADENA_ID, _lease, null, null);
 					setPaidUntil(Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(7)).toEpochMilli());
-					_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
+					_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), _paidUntil - Chronos.currentTimeMillis());
 					updateDB();
 				}
 			}

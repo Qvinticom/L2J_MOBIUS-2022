@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -260,7 +261,7 @@ public class PailakaRuneCastle extends AbstractInstance
 	public void onInstanceCreated(Instance instance, PlayerInstance player)
 	{
 		// Put re-enter for instance
-		REENETER_HOLDER.put(instance.getTemplateId(), System.currentTimeMillis() + REENTER);
+		REENETER_HOLDER.put(instance.getTemplateId(), Chronos.currentTimeMillis() + REENTER);
 		// Schedule spawn of first wave
 		startQuestTimer("SPAWN_NEXT_WAVE", 120000, null, player, false); // 2 minutes
 	}
@@ -280,7 +281,7 @@ public class PailakaRuneCastle extends AbstractInstance
 			else if (REENETER_HOLDER.containsKey(template.getId()))
 			{
 				final long time = REENETER_HOLDER.get(template.getId());
-				if (time > System.currentTimeMillis())
+				if (time > Chronos.currentTimeMillis())
 				{
 					showHtmlFile(groupLeader, "enterRestricted.html");
 					return false;
@@ -309,7 +310,7 @@ public class PailakaRuneCastle extends AbstractInstance
 			else if (REENETER_HOLDER.containsKey(template.getId()))
 			{
 				final long time = REENETER_HOLDER.get(template.getId());
-				if (time > System.currentTimeMillis())
+				if (time > Chronos.currentTimeMillis())
 				{
 					showHtmlFile(groupLeader, "enterRestricted.html");
 					return false;

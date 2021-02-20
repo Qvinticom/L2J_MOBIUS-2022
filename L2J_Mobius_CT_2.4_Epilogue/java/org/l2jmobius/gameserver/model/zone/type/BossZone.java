@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -165,7 +166,7 @@ public class BossZone extends ZoneType
 					// with legal entries, do nothing.
 					if (expirationTime == null) // legal null expirationTime entries
 					{
-						if (GameServer.dateTimeServerStarted.getTimeInMillis() > (System.currentTimeMillis() - _timeInvade))
+						if (GameServer.dateTimeServerStarted.getTimeInMillis() > (Chronos.currentTimeMillis() - _timeInvade))
 						{
 							return;
 						}
@@ -174,7 +175,7 @@ public class BossZone extends ZoneType
 					{
 						// legal non-null logoutTime entries
 						getSettings().getPlayerAllowedReEntryTimes().remove(player.getObjectId());
-						if (expirationTime.longValue() > System.currentTimeMillis())
+						if (expirationTime.longValue() > Chronos.currentTimeMillis())
 						{
 							return;
 						}
@@ -237,7 +238,7 @@ public class BossZone extends ZoneType
 				if (!player.isOnline() && getSettings().getPlayersAllowed().contains(player.getObjectId()))
 				{
 					// mark the time that the player left the zone
-					getSettings().getPlayerAllowedReEntryTimes().put(player.getObjectId(), System.currentTimeMillis() + _timeInvade);
+					getSettings().getPlayerAllowedReEntryTimes().put(player.getObjectId(), Chronos.currentTimeMillis() + _timeInvade);
 				}
 				else
 				{
@@ -404,7 +405,7 @@ public class BossZone extends ZoneType
 		{
 			getSettings().getPlayersAllowed().add(player.getObjectId());
 		}
-		getSettings().getPlayerAllowedReEntryTimes().put(player.getObjectId(), System.currentTimeMillis() + (durationInSec * 1000));
+		getSettings().getPlayerAllowedReEntryTimes().put(player.getObjectId(), Chronos.currentTimeMillis() + (durationInSec * 1000));
 	}
 	
 	public void removePlayer(PlayerInstance player)

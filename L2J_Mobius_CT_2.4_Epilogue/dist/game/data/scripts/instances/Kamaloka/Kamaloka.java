@@ -25,6 +25,7 @@ import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.logging.Level;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -496,7 +497,7 @@ public class Kamaloka extends AbstractInstance
 						continue;
 					}
 					// if found instance still can't be reentered - exit
-					if (System.currentTimeMillis() < entry.getValue())
+					if (Chronos.currentTimeMillis() < entry.getValue())
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 						sm.addPcName(partyMember);

@@ -20,6 +20,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.MountType;
@@ -295,7 +296,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 						{
 							startQuestTimer("STAGE_2_FAILED", 360000, controller, null);
 							manageTimer(world, 360, NpcStringId.BATTLE_END_LIMIT_TIME);
-							controller.getVariables().set("TIMER_END", System.currentTimeMillis() + 360000);
+							controller.getVariables().set("TIMER_END", Chronos.currentTimeMillis() + 360000);
 						}
 						break;
 					}
@@ -688,7 +689,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "SHOW_GLAKIAS_TIMER":
 					{
-						final int time = (int) ((controller.getVariables().getLong("TIMER_END", 0) - System.currentTimeMillis()) / 1000);
+						final int time = (int) ((controller.getVariables().getLong("TIMER_END", 0) - Chronos.currentTimeMillis()) / 1000);
 						manageTimer(world, time, NpcStringId.BATTLE_END_LIMIT_TIME);
 						break;
 					}

@@ -29,6 +29,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.Mentee;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -145,7 +146,7 @@ public class MentorManager
 	{
 		final PlayerInstance player = World.getInstance().getPlayer(mentorId);
 		final PlayerVariables vars = player != null ? player.getVariables() : new PlayerVariables(mentorId);
-		vars.set("Mentor-Penalty-" + mentorId, String.valueOf(System.currentTimeMillis() + penalty));
+		vars.set("Mentor-Penalty-" + mentorId, String.valueOf(Chronos.currentTimeMillis() + penalty));
 	}
 	
 	public long getMentorPenalty(int mentorId)

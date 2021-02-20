@@ -23,6 +23,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.TradeController;
 
 /**
@@ -45,7 +46,7 @@ public class BuyListTaskManager
 			}
 			_workingTimes = true;
 			
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			for (Entry<Integer, Long> entry : REFRESH_TIME.entrySet())
 			{
 				if (currentTime > entry.getValue().longValue())
@@ -101,7 +102,7 @@ public class BuyListTaskManager
 					PENDING_UPDATES.add(time);
 				}
 			}
-			REFRESH_TIME.put(time, System.currentTimeMillis() + (timeValue * 60 * 60 * 1000L));
+			REFRESH_TIME.put(time, Chronos.currentTimeMillis() + (timeValue * 60 * 60 * 1000L));
 		}
 		else
 		{

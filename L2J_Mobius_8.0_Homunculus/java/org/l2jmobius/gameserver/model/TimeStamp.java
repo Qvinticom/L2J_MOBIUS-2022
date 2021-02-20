@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
@@ -52,7 +53,7 @@ public class TimeStamp
 		_id2 = skill.getLevel();
 		_id3 = skill.getSubLevel();
 		_reuse = reuse;
-		_stamp = systime > 0 ? systime : reuse != 0 ? System.currentTimeMillis() + reuse : 0;
+		_stamp = systime > 0 ? systime : reuse != 0 ? Chronos.currentTimeMillis() + reuse : 0;
 		_group = -1;
 	}
 	
@@ -68,7 +69,7 @@ public class TimeStamp
 		_id2 = item.getObjectId();
 		_id3 = 0;
 		_reuse = reuse;
-		_stamp = systime > 0 ? systime : reuse != 0 ? System.currentTimeMillis() + reuse : 0;
+		_stamp = systime > 0 ? systime : reuse != 0 ? Chronos.currentTimeMillis() + reuse : 0;
 		_group = item.getSharedReuseGroup();
 	}
 	
@@ -155,7 +156,7 @@ public class TimeStamp
 		{
 			return 0;
 		}
-		final long remainingTime = Math.max(_stamp - System.currentTimeMillis(), 0);
+		final long remainingTime = Math.max(_stamp - Chronos.currentTimeMillis(), 0);
 		if (remainingTime == 0)
 		{
 			_stamp = 0;
@@ -173,7 +174,7 @@ public class TimeStamp
 		{
 			return false;
 		}
-		final boolean hasNotPassed = System.currentTimeMillis() < _stamp;
+		final boolean hasNotPassed = Chronos.currentTimeMillis() < _stamp;
 		if (!hasNotPassed)
 		{
 			_stamp = 0;

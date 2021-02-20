@@ -16,6 +16,7 @@
  */
 package ai.bosses.Sailren;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -71,7 +72,7 @@ public class Sailren extends AbstractNpcAI
 		addKillId(VELOCIRAPTOR, PTEROSAUR, TREX, SAILREN);
 		addAttackId(VELOCIRAPTOR, PTEROSAUR, TREX, SAILREN);
 		
-		final long remain = GlobalVariablesManager.getInstance().getLong("SailrenRespawn", 0) - System.currentTimeMillis();
+		final long remain = GlobalVariablesManager.getInstance().getLong("SailrenRespawn", 0) - Chronos.currentTimeMillis();
 		if (remain > 0)
 		{
 			STATUS = Status.DEAD;
@@ -118,7 +119,7 @@ public class Sailren extends AbstractNpcAI
 				{
 					takeItems(player, GAZKH, 1);
 					STATUS = Status.IN_FIGHT;
-					_lastAttack = System.currentTimeMillis();
+					_lastAttack = Chronos.currentTimeMillis();
 					for (PlayerInstance member : player.getParty().getMembers())
 					{
 						if (member.isInsideRadius3D(npc, 1000))
@@ -237,7 +238,7 @@ public class Sailren extends AbstractNpcAI
 			}
 			case "CHECK_ATTACK":
 			{
-				if (!zone.getPlayersInside().isEmpty() && ((_lastAttack + 600000) < System.currentTimeMillis()))
+				if (!zone.getPlayersInside().isEmpty() && ((_lastAttack + 600000) < Chronos.currentTimeMillis()))
 				{
 					cancelQuestTimer("TIME_OUT", null, null);
 					notifyEvent("TIME_OUT", null, null);
@@ -257,7 +258,7 @@ public class Sailren extends AbstractNpcAI
 	{
 		if (zone.isCharacterInZone(attacker))
 		{
-			_lastAttack = System.currentTimeMillis();
+			_lastAttack = Chronos.currentTimeMillis();
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -274,7 +275,7 @@ public class Sailren extends AbstractNpcAI
 					STATUS = Status.DEAD;
 					addSpawn(CUBIC, 27644, -6638, -2008, 0, false, 300000);
 					final long respawnTime = RESPAWN * 3600000;
-					GlobalVariablesManager.getInstance().set("SailrenRespawn", System.currentTimeMillis() + respawnTime);
+					GlobalVariablesManager.getInstance().set("SailrenRespawn", Chronos.currentTimeMillis() + respawnTime);
 					cancelQuestTimer("CHECK_ATTACK", null, null);
 					cancelQuestTimer("TIME_OUT", null, null);
 					startQuestTimer("CLEAR_STATUS", respawnTime, null, null);

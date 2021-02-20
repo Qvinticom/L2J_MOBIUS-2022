@@ -20,6 +20,7 @@ import java.time.Instant;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.ResidenceFunctionsData;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -63,9 +64,9 @@ public class ResidenceFunction
 	private void init()
 	{
 		final ResidenceFunctionTemplate template = getTemplate();
-		if ((template != null) && (_expiration > System.currentTimeMillis()))
+		if ((template != null) && (_expiration > Chronos.currentTimeMillis()))
 		{
-			_task = ThreadPool.schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
+			_task = ThreadPool.schedule(this::onFunctionExpiration, _expiration - Chronos.currentTimeMillis());
 		}
 	}
 	
@@ -170,7 +171,7 @@ public class ResidenceFunction
 		
 		if (wh.destroyItem("FunctionFee", item, template.getCost().getCount(), null, this) != null)
 		{
-			_expiration = System.currentTimeMillis() + (template.getDuration().getSeconds() * 1000);
+			_expiration = Chronos.currentTimeMillis() + (template.getDuration().getSeconds() * 1000);
 			init();
 		}
 		return true;

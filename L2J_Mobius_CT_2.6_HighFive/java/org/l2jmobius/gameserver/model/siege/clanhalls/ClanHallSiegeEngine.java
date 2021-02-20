@@ -33,6 +33,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
@@ -86,7 +87,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		_hall = CHSiegeManager.getInstance().getSiegableHall(hallId);
 		_hall.setSiege(this);
 		
-		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
+		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - Chronos.currentTimeMillis() - 3600000);
 		LOGGER.config(_hall.getName() + " siege scheduled for " + _hall.getSiegeDate().getTime() + ".");
 		loadAttackers();
 	}
@@ -401,7 +402,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		
 		onSiegeEnds();
 		
-		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
+		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - Chronos.currentTimeMillis() - 3600000);
 		LOGGER.config("Siege of " + _hall.getName() + " scheduled for " + _hall.getSiegeDate().getTime() + ".");
 		_hall.updateSiegeStatus(SiegeStatus.REGISTERING);
 		unSpawnSiegeGuards();

@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.model.Location;
@@ -75,7 +76,7 @@ public class SoIManager
 		{
 			return 0;
 		}
-		return (GlobalVariablesManager.getInstance().getLong("SoI_opened", 0) * 1000) - System.currentTimeMillis();
+		return (GlobalVariablesManager.getInstance().getLong("SoI_opened", 0) * 1000) - Chronos.currentTimeMillis();
 	}
 	
 	public static void setCurrentStage(int stage)
@@ -111,7 +112,7 @@ public class SoIManager
 		{
 			return;
 		}
-		GlobalVariablesManager.getInstance().set("SoI_opened", (System.currentTimeMillis() + time) / 1000);
+		GlobalVariablesManager.getInstance().set("SoI_opened", (Chronos.currentTimeMillis() + time) / 1000);
 		LOGGER.info("Seed of Infinity Manager: Opening the seed for " + Util.formatTime((int) time / 1000));
 		spawnOpenedSeed();
 		DoorData.getInstance().getDoor(14240102).openMe();

@@ -22,11 +22,12 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
 import org.l2jmobius.gameserver.network.serverpackets.SunRise;
 import org.l2jmobius.gameserver.network.serverpackets.SunSet;
+import org.l2jmobius.util.Chronos;
 
 public class GameTimeController extends Thread
 {
 	private static GameTimeController _instance;
-	private long _gameStartTime = System.currentTimeMillis() - 3600000L;
+	private long _gameStartTime = Chronos.currentTimeMillis() - 3600000L;
 	
 	public static GameTimeController getInstance()
 	{
@@ -45,7 +46,7 @@ public class GameTimeController extends Thread
 	
 	public int getGameTime()
 	{
-		final long time = (System.currentTimeMillis() - _gameStartTime) / 10000L;
+		final long time = (Chronos.currentTimeMillis() - _gameStartTime) / 10000L;
 		return (int) time;
 	}
 	
@@ -58,7 +59,7 @@ public class GameTimeController extends Thread
 			{
 				broadcastToPlayers(new SunRise());
 				Thread.sleep(21600000L);
-				_gameStartTime = System.currentTimeMillis();
+				_gameStartTime = Chronos.currentTimeMillis();
 				broadcastToPlayers(new SunSet());
 				Thread.sleep(3600000L);
 			}

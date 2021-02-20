@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.AuctionManager;
 import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -178,7 +179,7 @@ public class ClanHallAuction
 	public ClanHallAuction(int itemId, Clan clan, long delay, int bid, String name)
 	{
 		_id = itemId;
-		_endDate = System.currentTimeMillis() + delay;
+		_endDate = Chronos.currentTimeMillis() + delay;
 		_itemId = itemId;
 		_itemName = name;
 		_itemType = "ClanHall";
@@ -264,7 +265,7 @@ public class ClanHallAuction
 	 */
 	private void startAutoTask()
 	{
-		final long currentTime = System.currentTimeMillis();
+		final long currentTime = Chronos.currentTimeMillis();
 		long taskDelay = 0;
 		if (_endDate <= currentTime)
 		{
@@ -387,7 +388,7 @@ public class ClanHallAuction
 				statement.setInt(1, bidder.getClanId());
 				statement.setString(2, bidder.getClan().getLeaderName());
 				statement.setInt(3, bid);
-				statement.setLong(4, System.currentTimeMillis());
+				statement.setLong(4, Chronos.currentTimeMillis());
 				statement.setInt(5, _id);
 				statement.setInt(6, bidder.getClanId());
 				statement.execute();
@@ -402,7 +403,7 @@ public class ClanHallAuction
 				statement.setString(4, bidder.getName());
 				statement.setInt(5, bid);
 				statement.setString(6, bidder.getClan().getName());
-				statement.setLong(7, System.currentTimeMillis());
+				statement.setLong(7, Chronos.currentTimeMillis());
 				statement.execute();
 				statement.close();
 				

@@ -47,7 +47,7 @@ public class DlgAnswer extends GameClientPacket
 		}
 		
 		// final Long answerTime = player.getConfirmDlgRequestTime(_requesterId);
-		// if ((_answer == 1) && (answerTime != null) && (System.currentTimeMillis() > answerTime))
+		// if ((_answer == 1) && (answerTime != null) && (Chronos.currentTimeMillis() > answerTime))
 		// {
 		// _answer = 0;
 		// }

@@ -23,6 +23,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.buylist.Product;
 
 /**
@@ -45,7 +46,7 @@ public class BuyListTaskManager
 			}
 			_workingProducts = true;
 			
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			for (Entry<Product, Long> entry : PRODUCTS.entrySet())
 			{
 				if (currentTime > entry.getValue().longValue())

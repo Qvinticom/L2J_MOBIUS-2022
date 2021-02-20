@@ -58,7 +58,7 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 		
 		Flood()
 		{
-			lastAccess = System.currentTimeMillis();
+			lastAccess = Chronos.currentTimeMillis();
 			trys = 0;
 		}
 	}
@@ -68,7 +68,7 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 	{
 		final InetAddress addr = sc.socket().getInetAddress();
 		final int h = hash(addr.getAddress());
-		final long current = System.currentTimeMillis();
+		final long current = Chronos.currentTimeMillis();
 		Flood f;
 		synchronized (_ipFloodMap)
 		{
@@ -114,7 +114,7 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 	{
 		while (true)
 		{
-			final long reference = System.currentTimeMillis() - (1000 * 300);
+			final long reference = Chronos.currentTimeMillis() - (1000 * 300);
 			synchronized (_ipFloodMap)
 			{
 				final Iterator<Entry<Integer, Flood>> it = _ipFloodMap.entrySet().iterator();

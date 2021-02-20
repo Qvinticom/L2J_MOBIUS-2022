@@ -18,6 +18,7 @@ package events.TrainingWithDandy;
 
 import java.util.Calendar;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -66,7 +67,7 @@ public class TrainingWithDandy extends LongTimeEvent
 				{
 					npc.setTarget(player);
 					npc.doCast(DANDY_CH.getSkill());
-					player.getVariables().set(GIVE_DANDI_BUFF_VAR, System.currentTimeMillis());
+					player.getVariables().set(GIVE_DANDI_BUFF_VAR, Chronos.currentTimeMillis());
 					player.broadcastStatusUpdate();
 					htmltext = "33894-2.htm";
 					break;

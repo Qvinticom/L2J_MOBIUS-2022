@@ -22,6 +22,7 @@ import java.sql.SQLException;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -63,7 +64,7 @@ public class RequestSetPledgeCrest extends GameClientPacket
 			return;
 		}
 		
-		if (clan.getDissolvingExpiryTime() > System.currentTimeMillis())
+		if (clan.getDissolvingExpiryTime() > Chronos.currentTimeMillis())
 		{
 			player.sendPacket(SystemMessageId.DURING_THE_GRACE_PERIOD_FOR_DISSOLVING_A_CLAN_THE_REGISTRATION_OR_DELETION_OF_A_CLAN_S_CREST_IS_NOT_ALLOWED);
 			return;

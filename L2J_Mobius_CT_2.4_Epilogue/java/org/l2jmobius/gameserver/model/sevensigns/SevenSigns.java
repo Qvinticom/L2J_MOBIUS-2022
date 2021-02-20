@@ -32,6 +32,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
 import org.l2jmobius.gameserver.model.AutoSpawnHandler;
@@ -497,7 +498,7 @@ public class SevenSigns
 	
 	public long getMilliToPeriodChange()
 	{
-		return (_nextPeriodChange.getTimeInMillis() - System.currentTimeMillis());
+		return (_nextPeriodChange.getTimeInMillis() - Chronos.currentTimeMillis());
 	}
 	
 	protected void setCalendarForNextPeriodChange()

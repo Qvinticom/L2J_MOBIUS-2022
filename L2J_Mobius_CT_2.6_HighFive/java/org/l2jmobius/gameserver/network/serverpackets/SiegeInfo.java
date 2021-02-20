@@ -20,6 +20,7 @@ import java.util.Calendar;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -96,7 +97,7 @@ public class SiegeInfo implements IClientOutgoingPacket
 				packet.writeS(""); // Ally Name
 			}
 			
-			packet.writeD((int) (System.currentTimeMillis() / 1000));
+			packet.writeD((int) (Chronos.currentTimeMillis() / 1000));
 			if (!_castle.isTimeRegistrationOver() && _player.isClanLeader() && (_player.getClanId() == _castle.getOwnerId()))
 			{
 				final Calendar cal = Calendar.getInstance();

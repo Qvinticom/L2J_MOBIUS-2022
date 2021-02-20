@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor.stat;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.enums.ElementalType;
 import org.l2jmobius.gameserver.enums.PartySmallWindowUpdateType;
@@ -477,7 +478,7 @@ public class PlayerStat extends PlayableStat
 	public double getVitalityExpBonus()
 	{
 		final double bonus = (getVitalityPoints() > 0) ? getMul(Stat.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1;
-		if ((bonus == 1) && (getActiveChar().getLimitedSayhaGraceEndTime() > System.currentTimeMillis()))
+		if ((bonus == 1) && (getActiveChar().getLimitedSayhaGraceEndTime() > Chronos.currentTimeMillis()))
 		{
 			return getLimitedSayhaGraceExpBonus();
 		}

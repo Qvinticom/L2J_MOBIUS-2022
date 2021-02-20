@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.EnchantItemData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
@@ -75,7 +76,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			return;
 		}
 		player.setEnchanting(true);
-		player.setActiveEnchantTimestamp(System.currentTimeMillis());
+		player.setActiveEnchantTimestamp(Chronos.currentTimeMillis());
 		player.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
 	}
 }

@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import java.text.SimpleDateFormat;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -49,19 +50,19 @@ public class ClanPenalty implements IUserCommandHandler
 		htmlContent.append("<tr><td width=170>Penalty</td>");
 		htmlContent.append("<td width=100 align=center>Expiration Date</td></tr>");
 		htmlContent.append("</table><table width=270 border=0><tr>");
-		if (player.getClanJoinExpiryTime() > System.currentTimeMillis())
+		if (player.getClanJoinExpiryTime() > Chronos.currentTimeMillis())
 		{
 			htmlContent.append("<td width=170>Unable to join a clan.</td>");
 			htmlContent.append("<td width=100 align=center>" + format.format(player.getClanJoinExpiryTime()) + "</td>");
 			penalty = true;
 		}
-		if (player.getClanCreateExpiryTime() > System.currentTimeMillis())
+		if (player.getClanCreateExpiryTime() > Chronos.currentTimeMillis())
 		{
 			htmlContent.append("<td width=170>Unable to create a clan.</td>");
 			htmlContent.append("<td width=100 align=center>" + format.format(player.getClanCreateExpiryTime()) + "</td>");
 			penalty = true;
 		}
-		if ((player.getClan() != null) && (player.getClan().getCharPenaltyExpiryTime() > System.currentTimeMillis()))
+		if ((player.getClan() != null) && (player.getClan().getCharPenaltyExpiryTime() > Chronos.currentTimeMillis()))
 		{
 			htmlContent.append("<td width=170>Unable to invite a clan member.</td>");
 			htmlContent.append("<td width=100 align=center>");

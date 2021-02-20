@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
@@ -44,7 +45,7 @@ public class DecayTaskManager
 			}
 			_working = true;
 			
-			final long time = System.currentTimeMillis();
+			final long time = Chronos.currentTimeMillis();
 			for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
 			{
 				if (time > entry.getValue().longValue())
@@ -87,7 +88,7 @@ public class DecayTaskManager
 		}
 		
 		// Add to decay schedules.
-		DECAY_SCHEDULES.put(creature, System.currentTimeMillis() + (delay * 1000));
+		DECAY_SCHEDULES.put(creature, Chronos.currentTimeMillis() + (delay * 1000));
 	}
 	
 	/**
@@ -107,7 +108,7 @@ public class DecayTaskManager
 	public long getRemainingTime(Creature creature)
 	{
 		final Long time = DECAY_SCHEDULES.get(creature);
-		return time != null ? time.longValue() - System.currentTimeMillis() : Long.MAX_VALUE;
+		return time != null ? time.longValue() - Chronos.currentTimeMillis() : Long.MAX_VALUE;
 	}
 	
 	@Override
@@ -122,7 +123,7 @@ public class DecayTaskManager
 		ret.append("Tasks dump:");
 		ret.append(Config.EOL);
 		
-		final long time = System.currentTimeMillis();
+		final long time = Chronos.currentTimeMillis();
 		for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
 		{
 			ret.append("Class/Name: ");

@@ -22,6 +22,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.ItemLocation;
 import org.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -42,7 +43,7 @@ public class ItemsAutoDestroy
 	
 	public synchronized void addItem(ItemInstance item)
 	{
-		item.setDropTime(System.currentTimeMillis());
+		item.setDropTime(Chronos.currentTimeMillis());
 		_items.add(item);
 	}
 	
@@ -53,7 +54,7 @@ public class ItemsAutoDestroy
 			return;
 		}
 		
-		final long curtime = System.currentTimeMillis();
+		final long curtime = Chronos.currentTimeMillis();
 		final Iterator<ItemInstance> itemIterator = _items.iterator();
 		while (itemIterator.hasNext())
 		{

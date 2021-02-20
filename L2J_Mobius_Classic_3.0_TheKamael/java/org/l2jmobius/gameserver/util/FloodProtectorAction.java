@@ -21,6 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
@@ -151,7 +152,7 @@ public class FloodProtectorAction
 	 */
 	private void banAccount()
 	{
-		PunishmentManager.getInstance().startPunishment(new PunishmentTask(_client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN, System.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
+		PunishmentManager.getInstance().startPunishment(new PunishmentTask(_client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN, Chronos.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
 		if (LOGGER.isLoggable(Level.WARNING))
 		{
 			log(" banned for flooding ", _config.PUNISHMENT_TIME <= 0 ? "forever" : "for " + (_config.PUNISHMENT_TIME / 60000) + " mins");
@@ -171,7 +172,7 @@ public class FloodProtectorAction
 		final int charId = _client.getPlayer().getObjectId();
 		if (charId > 0)
 		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, System.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
+			PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, Chronos.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
 		}
 		
 		if (LOGGER.isLoggable(Level.WARNING))

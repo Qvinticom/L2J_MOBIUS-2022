@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets.limitshop;
 import java.util.Collection;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
@@ -73,7 +74,7 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			{
 				if (_player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) >= product.getAccountDailyLimit())
 				{
-					if ((_player.getAccountVariables().getLong("LCSTime" + product.getProductionId(), 0) + 86400000) > System.currentTimeMillis())
+					if ((_player.getAccountVariables().getLong("LCSTime" + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
 					{
 						packet.writeD(0x00);
 					}

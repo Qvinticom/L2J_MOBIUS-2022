@@ -16,6 +16,7 @@
  */
 package events.GiftOfVitality;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -94,9 +95,9 @@ public class GiftOfVitality extends LongTimeEvent
 			case "vitality":
 			{
 				final long reuse = player.getVariables().getLong(REUSE, 0);
-				if (reuse > System.currentTimeMillis())
+				if (reuse > Chronos.currentTimeMillis())
 				{
-					final long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
+					final long remainingTime = (reuse - Chronos.currentTimeMillis()) / 1000;
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
@@ -110,7 +111,7 @@ public class GiftOfVitality extends LongTimeEvent
 				{
 					SkillCaster.triggerCast(player, player, GIFT_OF_VITALITY.getSkill());
 					SkillCaster.triggerCast(player, player, JOY_OF_VITALITY.getSkill());
-					player.getVariables().set(REUSE, System.currentTimeMillis() + (HOURS * 3600000));
+					player.getVariables().set(REUSE, Chronos.currentTimeMillis() + (HOURS * 3600000));
 					htmltext = "4306-okvitality.htm";
 				}
 				break;

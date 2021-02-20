@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -108,7 +109,7 @@ public class Beleth extends AbstractNpcAI
 		final int status = GrandBossManager.getInstance().getBossStatus(REAL_BELETH);
 		if (status == DEAD)
 		{
-			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long time = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 			if (time > 0)
 			{
 				startQuestTimer("BELETH_UNLOCK", time, null, null);
@@ -349,7 +350,7 @@ public class Beleth extends AbstractNpcAI
 					c.setImmobilized(false);
 				}
 				
-				_lastAttack = System.currentTimeMillis();
+				_lastAttack = Chronos.currentTimeMillis();
 				startQuestTimer("CHECK_ATTACK", 60000, null, null);
 				startQuestTimer("SPAWN25", 60000, null, null);
 				break;
@@ -507,7 +508,7 @@ public class Beleth extends AbstractNpcAI
 			}
 			case "CHECK_ATTACK":
 			{
-				if ((_lastAttack + 900000) < System.currentTimeMillis())
+				if ((_lastAttack + 900000) < Chronos.currentTimeMillis())
 				{
 					GrandBossManager.getInstance().setBossStatus(REAL_BELETH, ALIVE);
 					for (Creature creature : ZONE.getCharactersInside())
@@ -708,7 +709,7 @@ public class Beleth extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(REAL_BELETH, DEAD);
 			final long respawnTime = (Config.BELETH_SPAWN_INTERVAL + getRandom(-Config.BELETH_SPAWN_RANDOM, Config.BELETH_SPAWN_RANDOM)) * 3600000;
 			final StatSet info = GrandBossManager.getInstance().getStatSet(REAL_BELETH);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(REAL_BELETH, info);
 			startQuestTimer("BELETH_UNLOCK", respawnTime, null, null);
 			deleteAll();

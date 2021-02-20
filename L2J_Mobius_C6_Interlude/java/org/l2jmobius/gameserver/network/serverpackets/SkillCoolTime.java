@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.Timestamp;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -32,7 +33,7 @@ public class SkillCoolTime extends GameServerPacket
 	
 	public SkillCoolTime(PlayerInstance player)
 	{
-		_currentTime = System.currentTimeMillis();
+		_currentTime = Chronos.currentTimeMillis();
 		_reuseTimestamps = player.getReuseTimeStamps();
 	}
 	

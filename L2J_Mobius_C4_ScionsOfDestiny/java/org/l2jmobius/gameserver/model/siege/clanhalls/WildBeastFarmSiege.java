@@ -25,6 +25,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
 import org.l2jmobius.gameserver.data.xml.DoorData;
@@ -509,9 +510,9 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			}
 			final Calendar siegeStart = Calendar.getInstance();
 			siegeStart.setTimeInMillis(getSiegeDate().getTimeInMillis());
-			final long registerTimeRemaining = siegeStart.getTimeInMillis() - System.currentTimeMillis();
+			final long registerTimeRemaining = siegeStart.getTimeInMillis() - Chronos.currentTimeMillis();
 			siegeStart.add(Calendar.HOUR, 1);
-			final long siegeTimeRemaining = siegeStart.getTimeInMillis() - System.currentTimeMillis();
+			final long siegeTimeRemaining = siegeStart.getTimeInMillis() - Chronos.currentTimeMillis();
 			long remaining = registerTimeRemaining;
 			if ((registerTimeRemaining <= 0) && !_registrationPeriod)
 			{
@@ -578,7 +579,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 				cancel();
 				return;
 			}
-			final long timeRemaining = _siegeEndDate.getTimeInMillis() - System.currentTimeMillis();
+			final long timeRemaining = _siegeEndDate.getTimeInMillis() - Chronos.currentTimeMillis();
 			if (timeRemaining <= 0)
 			{
 				endSiege(true);

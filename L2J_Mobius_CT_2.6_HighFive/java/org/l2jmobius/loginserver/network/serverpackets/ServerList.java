@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.IOutgoingPacket;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.loginserver.GameServerTable;
 import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import org.l2jmobius.loginserver.network.LoginClient;
@@ -166,7 +167,7 @@ public class ServerList implements IOutgoingPacket
 					packet.writeC(_charsToDelete.get(servId).length);
 					for (long deleteTime : _charsToDelete.get(servId))
 					{
-						packet.writeD((int) ((deleteTime - System.currentTimeMillis()) / 1000));
+						packet.writeD((int) ((deleteTime - Chronos.currentTimeMillis()) / 1000));
 					}
 				}
 			}

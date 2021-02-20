@@ -21,6 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ClanHallData;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.Location;
@@ -73,7 +74,7 @@ public class ProvisionalHalls extends AbstractNpcAI
 			if (resetTime > 0)
 			{
 				cancelQuestTimers(HALL_RESET_VAR + id);
-				startQuestTimer(HALL_RESET_VAR + id, Math.max(1000, (TWO_WEEKS - (System.currentTimeMillis() - resetTime) - 30000)), null, null);
+				startQuestTimer(HALL_RESET_VAR + id, Math.max(1000, (TWO_WEEKS - (Chronos.currentTimeMillis() - resetTime) - 30000)), null, null);
 			}
 		}
 	}
@@ -126,7 +127,7 @@ public class ProvisionalHalls extends AbstractNpcAI
 					
 					for (int id : CLAN_HALLS.keySet())
 					{
-						if ((GlobalVariablesManager.getInstance().getInt(HALL_OWNER_VAR + id, 0) == 0) && ((GlobalVariablesManager.getInstance().getLong(HALL_TIME_VAR + id, 0) + TWO_WEEKS) < System.currentTimeMillis()))
+						if ((GlobalVariablesManager.getInstance().getInt(HALL_OWNER_VAR + id, 0) == 0) && ((GlobalVariablesManager.getInstance().getLong(HALL_TIME_VAR + id, 0) + TWO_WEEKS) < Chronos.currentTimeMillis()))
 						{
 							player.reduceAdena("ProvisionalHall", HALL_PRICE, player, true);
 							GlobalVariablesManager.getInstance().set(HALL_OWNER_VAR + id, player.getClanId());
@@ -137,7 +138,7 @@ public class ProvisionalHalls extends AbstractNpcAI
 								clanHall.setOwner(player.getClan());
 							}
 							player.sendMessage("Congratulations! You now own a provisional clan hall!");
-							startQuestTimer("RESET_ORCHID_HALL", TWO_WEEKS - (System.currentTimeMillis() - calendar.getTimeInMillis()), null, null);
+							startQuestTimer("RESET_ORCHID_HALL", TWO_WEEKS - (Chronos.currentTimeMillis() - calendar.getTimeInMillis()), null, null);
 							return null;
 						}
 					}
@@ -177,7 +178,7 @@ public class ProvisionalHalls extends AbstractNpcAI
 		else if (event.startsWith(HALL_RESET_VAR))
 		{
 			final String id = event.replace(HALL_RESET_VAR, "");
-			if (((GlobalVariablesManager.getInstance().getLong(HALL_TIME_VAR + id, 0) + TWO_WEEKS) - 60000) <= System.currentTimeMillis())
+			if (((GlobalVariablesManager.getInstance().getLong(HALL_TIME_VAR + id, 0) + TWO_WEEKS) - 60000) <= Chronos.currentTimeMillis())
 			{
 				final int clanId = GlobalVariablesManager.getInstance().getInt(HALL_OWNER_VAR + id, 0);
 				if (clanId > 0)

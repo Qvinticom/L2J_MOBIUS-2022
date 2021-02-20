@@ -22,6 +22,7 @@ import java.util.List;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -89,14 +90,14 @@ public class Valakas extends Quest
 		i_ai3 = 0;
 		i_ai4 = 0;
 		i_quest0 = 0;
-		lastAttackTime = System.currentTimeMillis();
+		lastAttackTime = Chronos.currentTimeMillis();
 		_Zone = GrandBossManager.getInstance().getZone(212852, -114842, -1632);
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
 		final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
 		if (status == DEAD)
 		{
 			// load the unlock date and time for valakas from DB
-			final long temp = (info.getLong("respawn_time") - System.currentTimeMillis());
+			final long temp = (info.getLong("respawn_time") - Chronos.currentTimeMillis());
 			// if valakas is locked until a certain time, mark it so and start the unlock timer
 			// the unlock time has not yet expired. Mark valakas as currently locked. Setup a timer
 			// to fire at the correct time (calculate the time between now and the unlock time,
@@ -172,7 +173,7 @@ public class Valakas extends Quest
 				}
 				
 				final Integer status = GrandBossManager.getInstance().getBossStatus(VALAKAS);
-				temp = (System.currentTimeMillis() - lastAttackTime);
+				temp = (Chronos.currentTimeMillis() - lastAttackTime);
 				if ((status == FIGHTING) && (temp > (Config.VALAKAS_DESPAWN_TIME * 60000))) // 15 mins by default
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -335,7 +336,7 @@ public class Valakas extends Quest
 			final GrandBossInstance valakas = (GrandBossInstance) addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(valakas);
 			
-			lastAttackTime = System.currentTimeMillis();
+			lastAttackTime = Chronos.currentTimeMillis();
 			ThreadPool.schedule(() ->
 			{
 				try
@@ -368,7 +369,7 @@ public class Valakas extends Quest
 		{
 			return null;
 		}
-		lastAttackTime = System.currentTimeMillis();
+		lastAttackTime = Chronos.currentTimeMillis();
 		/*
 		 * if (!Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM && GrandBossManager.getInstance().getBossStatus(VALAKAS) != FIGHTING && !npc.getSpawn().isCustomBossInstance()) { attacker.teleToLocation(150037, -57255, -2976); }
 		 */
@@ -595,7 +596,7 @@ public class Valakas extends Quest
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		final StatSet info = GrandBossManager.getInstance().getStatSet(VALAKAS);
-		info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
+		info.set("respawn_time", (Chronos.currentTimeMillis() + respawnTime));
 		GrandBossManager.getInstance().setStatSet(VALAKAS, info);
 		return super.onKill(npc, killer, isPet);
 	}

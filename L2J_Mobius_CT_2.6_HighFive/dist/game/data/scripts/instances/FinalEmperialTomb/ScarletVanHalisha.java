@@ -23,6 +23,7 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -141,11 +142,11 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				{
 					return SkillData.getInstance().getSkill(5015, 2);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (Rnd.get(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(5019, 1);
 				}
-				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < System.currentTimeMillis()) && (Rnd.get(100) < 10))
+				else if (((_lastRangedSkillTime + _rangedSkillMinCoolTime) < Chronos.currentTimeMillis()) && (Rnd.get(100) < 10))
 				{
 					return SkillData.getInstance().getSkill(5018, 1);
 				}
@@ -249,7 +250,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 						case 5018:
 						case 5019:
 						{
-							_lastRangedSkillTime = System.currentTimeMillis();
+							_lastRangedSkillTime = Chronos.currentTimeMillis();
 							skillRange = 550;
 							break;
 						}

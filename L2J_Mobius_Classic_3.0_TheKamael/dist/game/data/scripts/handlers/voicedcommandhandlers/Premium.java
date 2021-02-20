@@ -19,6 +19,7 @@ package handlers.voicedcommandhandlers;
 import java.text.SimpleDateFormat;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -74,7 +75,7 @@ public class Premium implements IVoicedCommandHandler
 				html.append("<tr><td>Spoil Chance: <font color=\"LEVEL\">x" + (Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER * Config.PREMIUM_RATE_SPOIL_CHANCE) + " <br1></font></td></tr>");
 				html.append("<tr><td>Spoil Amount: <font color=\"LEVEL\">x" + (Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER * Config.PREMIUM_RATE_SPOIL_AMOUNT) + " <br1></font></td></tr>");
 				html.append("<tr><td>Expires: <font color=\"00A5FF\">" + format.format(endDate) + "</font></td></tr>");
-				html.append("<tr><td>Current Date: <font color=\"70FFCA\">" + format.format(System.currentTimeMillis()) + "<br><br></font></td></tr>");
+				html.append("<tr><td>Current Date: <font color=\"70FFCA\">" + format.format(Chronos.currentTimeMillis()) + "<br><br></font></td></tr>");
 				html.append("<tr><td><center>Premium Info & Rules<br></center></td></tr>");
 				html.append("<tr><td><font color=\"70FFCA\">1. Premium accounts CAN NOT BE TRANSFERED.<br1></font></td></tr>");
 				html.append("<tr><td><font color=\"70FFCA\">2. Premium does not effect party members.<br1></font></td></tr>");

@@ -18,6 +18,7 @@ package handlers.dailymissionhandlers;
 
 import java.util.Calendar;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
 import org.l2jmobius.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
@@ -63,7 +64,7 @@ public class LoginWeekendDailyMissionHandler extends AbstractDailyMissionHandler
 		final int currentDay = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 		final long lastCompleted = entry.getLastCompleted();
 		if (((currentDay == Calendar.SATURDAY) || (currentDay == Calendar.SUNDAY)) // Reward only on weekend.
-			&& ((lastCompleted == 0) || ((System.currentTimeMillis() - lastCompleted) > 172800000))) // Initial entry or 172800000 (2 day) delay.
+			&& ((lastCompleted == 0) || ((Chronos.currentTimeMillis() - lastCompleted) > 172800000))) // Initial entry or 172800000 (2 day) delay.
 		{
 			entry.setProgress(1);
 			entry.setStatus(DailyMissionStatus.AVAILABLE);

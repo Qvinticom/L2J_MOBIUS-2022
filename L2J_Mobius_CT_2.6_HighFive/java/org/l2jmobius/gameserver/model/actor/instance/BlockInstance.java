@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.instancemanager.games.BlockChecker;
@@ -145,7 +146,7 @@ public class BlockInstance extends MonsterInstance
 	{
 		eng.increasePlayerPoints(player, team);
 		
-		final int timeLeft = (int) ((eng.getStarterTime() - System.currentTimeMillis()) / 1000);
+		final int timeLeft = (int) ((eng.getStarterTime() - Chronos.currentTimeMillis()) / 1000);
 		final boolean isRed = eng.getHolder().getRedPlayers().contains(player);
 		final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints());
 		final ExCubeGameExtendedChangePoints secretPoints = new ExCubeGameExtendedChangePoints(timeLeft, eng.getBluePoints(), eng.getRedPoints(), isRed, player, eng.getPlayerPoints(player, isRed));

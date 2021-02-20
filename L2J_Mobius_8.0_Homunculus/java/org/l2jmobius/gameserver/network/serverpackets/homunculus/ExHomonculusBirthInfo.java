@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets.homunculus;
 
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -44,7 +45,7 @@ public class ExHomonculusBirthInfo implements IClientOutgoingPacket
 		final int sp = _player.getVariables().getInt(PlayerVariables.HOMUNCULUS_SP, 0);
 		final int vp = _player.getVariables().getInt(PlayerVariables.HOMUNCULUS_VP, 0);
 		final int time = _player.getVariables().getInt(PlayerVariables.HOMUNCULUS_TIME, 0);
-		final long currentTime = System.currentTimeMillis();
+		final long currentTime = Chronos.currentTimeMillis();
 		
 		packet.writeD(status); // 0 = time idle, 1 = time updating, 2 = summon enabled
 		packet.writeD(hp); // hp 100

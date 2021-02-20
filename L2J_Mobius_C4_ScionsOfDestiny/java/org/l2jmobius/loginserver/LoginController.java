@@ -38,6 +38,7 @@ import javax.crypto.Cipher;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 
 /**
@@ -310,7 +311,7 @@ public class LoginController
 						{
 							statement.setString(1, user);
 							statement.setString(2, Base64.getEncoder().encodeToString(hash));
-							statement.setLong(3, System.currentTimeMillis());
+							statement.setLong(3, Chronos.currentTimeMillis());
 							statement.setInt(4, 0);
 							statement.setString(5, address.getHostAddress());
 							statement.execute();
@@ -341,7 +342,7 @@ public class LoginController
 				client.setLastServer(lastServer);
 				try (PreparedStatement statement = con.prepareStatement("UPDATE accounts SET lastactive=?, lastIP=? WHERE login=?"))
 				{
-					statement.setLong(1, System.currentTimeMillis());
+					statement.setLong(1, Chronos.currentTimeMillis());
 					statement.setString(2, address.getHostAddress());
 					statement.setString(3, user);
 					statement.execute();
@@ -379,7 +380,7 @@ public class LoginController
 			if (failedCount >= Config.LOGIN_TRY_BEFORE_BAN)
 			{
 				LOGGER.info("Banning '" + address.getHostAddress() + "' for " + Config.LOGIN_BLOCK_AFTER_BAN + " seconds due to " + failedCount + " invalid user/pass attempts");
-				addBanForAddress(address.getHostAddress(), System.currentTimeMillis() + (Config.LOGIN_BLOCK_AFTER_BAN * 1000));
+				addBanForAddress(address.getHostAddress(), Chronos.currentTimeMillis() + (Config.LOGIN_BLOCK_AFTER_BAN * 1000));
 			}
 		}
 		else
@@ -448,7 +449,7 @@ public class LoginController
 		
 		public boolean hasExpired()
 		{
-			return (System.currentTimeMillis() > _time) && (_time > 0);
+			return (Chronos.currentTimeMillis() > _time) && (_time > 0);
 		}
 	}
 	

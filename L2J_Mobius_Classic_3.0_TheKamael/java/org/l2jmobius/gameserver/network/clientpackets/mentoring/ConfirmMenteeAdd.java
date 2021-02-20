@@ -107,8 +107,8 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		
 		/*
 		 * if ((mentor == null) || (mentee == null)) { return false; } else if (!mentee.isOnline()) { mentor.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE); return false; } else if (!mentor.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
-		 * mentor.sendPacket(SystemMessageId.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR); return false; } else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > System.currentTimeMillis()) { long remainingTime =
-		 * (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) - System.currentTimeMillis()) / 1000; final int days = (int) (remainingTime / 86400); remainingTime = remainingTime % 86400; final int hours = (int) (remainingTime / 3600); remainingTime = remainingTime % 3600; final int
+		 * mentor.sendPacket(SystemMessageId.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR); return false; } else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > Chronos.currentTimeMillis()) { long remainingTime =
+		 * (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) - Chronos.currentTimeMillis()) / 1000; final int days = (int) (remainingTime / 86400); remainingTime = remainingTime % 86400; final int hours = (int) (remainingTime / 3600); remainingTime = remainingTime % 3600; final int
 		 * minutes = (int) (remainingTime / 60); final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_DAY_S_S2_HOUR_S_S3_MINUTE_S); msg.addInt(days); msg.addInt(hours); msg.addInt(minutes); mentor.sendPacket(msg); return false; } else if
 		 * (mentor.getObjectId() == mentee.getObjectId()) { mentor.sendPacket(SystemMessageId.YOU_CANNOT_BECOME_YOUR_OWN_MENTEE); return false; } else if (mentee.getLevel() >= 86) { mentor.sendPacket(new
 		 * SystemMessage(SystemMessageId.S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE).addString(mentee.getName())); return false; } else if (mentee.isSubClassActive()) { mentor.sendPacket(SystemMessageId.INVITATION_CAN_OCCUR_ONLY_WHEN_THE_MENTEE_IS_IN_MAIN_CLASS_STATUS); return false; } // else

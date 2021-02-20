@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.handler.IBypassHandler;
@@ -133,7 +134,7 @@ public class FindPvP implements IBypassHandler
 			player.setSpawnProtection(true);
 			if (!player.isGM())
 			{
-				player.setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
+				player.setPvpFlagLasts(Chronos.currentTimeMillis() + Config.PVP_PVP_TIME);
 				player.startPvPFlag();
 			}
 		}

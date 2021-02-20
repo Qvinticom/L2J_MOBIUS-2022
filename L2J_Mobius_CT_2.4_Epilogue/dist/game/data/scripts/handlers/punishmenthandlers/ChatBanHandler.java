@@ -16,6 +16,7 @@
  */
 package handlers.punishmenthandlers;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.handler.IPunishmentHandler;
 import org.l2jmobius.gameserver.model.World;
@@ -126,7 +127,7 @@ public class ChatBanHandler implements IPunishmentHandler
 	 */
 	private void applyToPlayer(PunishmentTask task, PlayerInstance player)
 	{
-		final long delay = (task.getExpirationTime() - System.currentTimeMillis()) / 1000;
+		final long delay = (task.getExpirationTime() - Chronos.currentTimeMillis()) / 1000;
 		if (delay > 0)
 		{
 			player.sendMessage("You've been chat banned for " + (delay > 60 ? ((delay / 60) + " minutes.") : delay + " seconds."));

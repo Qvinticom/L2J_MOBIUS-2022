@@ -35,6 +35,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.FortUpdater;
 import org.l2jmobius.gameserver.FortUpdater.UpdaterType;
 import org.l2jmobius.gameserver.data.SpawnTable;
@@ -163,7 +164,7 @@ public class Fort extends AbstractResidence
 			{
 				return;
 			}
-			final long currentTime = System.currentTimeMillis();
+			final long currentTime = Chronos.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
 				ThreadPool.schedule(new FunctionTask(cwh), _endDate - currentTime);
@@ -193,7 +194,7 @@ public class Fort extends AbstractResidence
 					if ((_fortOwner.getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
 						final int fee = _endDate == -1 ? _tempFee : _fee;
-						setEndTime(System.currentTimeMillis() + _rate);
+						setEndTime(Chronos.currentTimeMillis() + _rate);
 						dbSave();
 						if (_cwh)
 						{
@@ -580,7 +581,7 @@ public class Fort extends AbstractResidence
 				clan.setFortId(getResidenceId());
 				setOwnerClan(clan);
 				final int runCount = getOwnedTime() / (Config.FS_UPDATE_FRQ * 60);
-				long initial = System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis();
+				long initial = Chronos.currentTimeMillis() - _lastOwnedTime.getTimeInMillis();
 				while (initial > (Config.FS_UPDATE_FRQ * 60000))
 				{
 					initial -= Config.FS_UPDATE_FRQ * 60000;
@@ -786,7 +787,7 @@ public class Fort extends AbstractResidence
 		if (clan != null)
 		{
 			clanId = clan.getId();
-			_lastOwnedTime.setTimeInMillis(System.currentTimeMillis());
+			_lastOwnedTime.setTimeInMillis(Chronos.currentTimeMillis());
 		}
 		else
 		{
@@ -920,12 +921,12 @@ public class Fort extends AbstractResidence
 	
 	public int getOwnedTime()
 	{
-		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) ((System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis()) / 1000);
+		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) ((Chronos.currentTimeMillis() - _lastOwnedTime.getTimeInMillis()) / 1000);
 	}
 	
 	public int getTimeTillRebelArmy()
 	{
-		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) (((_lastOwnedTime.getTimeInMillis() + (Config.FS_MAX_OWN_TIME * 3600000)) - System.currentTimeMillis()) / 1000);
+		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) (((_lastOwnedTime.getTimeInMillis() + (Config.FS_MAX_OWN_TIME * 3600000)) - Chronos.currentTimeMillis()) / 1000);
 	}
 	
 	public long getTimeTillNextFortUpdate()

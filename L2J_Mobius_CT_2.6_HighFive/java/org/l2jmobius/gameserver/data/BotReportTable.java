@@ -39,6 +39,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -125,7 +126,7 @@ public class BotReportTable
 				c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
 				c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
 				
-				if (System.currentTimeMillis() < c.getTimeInMillis())
+				if (Chronos.currentTimeMillis() < c.getTimeInMillis())
 				{
 					c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) - 1);
 				}
@@ -292,7 +293,7 @@ public class BotReportTable
 					return false;
 				}
 				
-				final long reuse = (System.currentTimeMillis() - rcdRep.getLastReporTime());
+				final long reuse = (Chronos.currentTimeMillis() - rcdRep.getLastReporTime());
 				if (reuse < Config.BOTREPORT_REPORT_DELAY)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.FIVE_YEARS_HAVE_PASSED_SINCE_THIS_CHARACTER_S_CREATION);
@@ -303,7 +304,7 @@ public class BotReportTable
 				}
 			}
 			
-			final long curTime = System.currentTimeMillis();
+			final long curTime = Chronos.currentTimeMillis();
 			
 			if (rcd == null)
 			{
@@ -423,12 +424,12 @@ public class BotReportTable
 			c.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour[0]));
 			c.set(Calendar.MINUTE, Integer.parseInt(hour[1]));
 			
-			if (System.currentTimeMillis() > c.getTimeInMillis())
+			if (Chronos.currentTimeMillis() > c.getTimeInMillis())
 			{
 				c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) + 1);
 			}
 			
-			ThreadPool.schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
+			ThreadPool.schedule(new ResetPointTask(), c.getTimeInMillis() - Chronos.currentTimeMillis());
 		}
 		catch (Exception e)
 		{
@@ -470,7 +471,7 @@ public class BotReportTable
 	{
 		if (map.containsKey(objectId))
 		{
-			return (System.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY;
+			return (Chronos.currentTimeMillis() - map.get(objectId)) > Config.BOTREPORT_REPORT_DELAY;
 		}
 		return true;
 	}

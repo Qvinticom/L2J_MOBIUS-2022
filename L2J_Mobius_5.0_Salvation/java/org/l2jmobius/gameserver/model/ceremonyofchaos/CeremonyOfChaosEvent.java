@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import org.l2jmobius.gameserver.enums.QuestSound;
@@ -278,7 +279,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				});
 			}
 		}
-		_battleStartTime = System.currentTimeMillis();
+		_battleStartTime = Chronos.currentTimeMillis();
 		getTimers().addRepeatingTimer("update", 1000, null, null);
 	}
 	
@@ -505,7 +506,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 	
 	private void updateLifeTime(CeremonyOfChaosMember member)
 	{
-		member.setLifeTime(((int) (System.currentTimeMillis() - _battleStartTime) / 1000));
+		member.setLifeTime(((int) (Chronos.currentTimeMillis() - _battleStartTime) / 1000));
 	}
 	
 	public List<CeremonyOfChaosMember> getWinners()

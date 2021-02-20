@@ -32,6 +32,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.SpawnTable;
 import org.l2jmobius.gameserver.data.xml.NpcData;
@@ -193,7 +194,7 @@ public class DBSpawnManager
 			final int respawnMinDelay = (int) (npc.getSpawn().getRespawnMinDelay() * Config.RAID_MIN_RESPAWN_MULTIPLIER);
 			final int respawnMaxDelay = (int) (npc.getSpawn().getRespawnMaxDelay() * Config.RAID_MAX_RESPAWN_MULTIPLIER);
 			final int respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
-			final long respawnTime = System.currentTimeMillis() + respawnDelay;
+			final long respawnTime = Chronos.currentTimeMillis() + respawnDelay;
 			info.set("currentHP", npc.getMaxHp());
 			info.set("currentMP", npc.getMaxMp());
 			info.set("respawnTime", respawnTime);
@@ -235,7 +236,7 @@ public class DBSpawnManager
 		}
 		
 		final int npcId = spawn.getId();
-		final long time = System.currentTimeMillis();
+		final long time = Chronos.currentTimeMillis();
 		SpawnTable.getInstance().addNewSpawn(spawn, false);
 		if ((respawnTime == 0) || (time > respawnTime))
 		{
@@ -257,7 +258,7 @@ public class DBSpawnManager
 		}
 		else
 		{
-			final long spawnTime = respawnTime - System.currentTimeMillis();
+			final long spawnTime = respawnTime - Chronos.currentTimeMillis();
 			_schedules.put(npcId, ThreadPool.schedule(() -> scheduleSpawn(npcId), spawnTime));
 		}
 		

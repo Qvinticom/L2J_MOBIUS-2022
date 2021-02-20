@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.model.World;
@@ -124,7 +125,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		{
 			int hours = 0;
 			int minutes = 0;
-			final long remainingTime = (entry.getValue() - System.currentTimeMillis()) / 1000;
+			final long remainingTime = (entry.getValue() - Chronos.currentTimeMillis()) / 1000;
 			if (remainingTime > 0)
 			{
 				hours = (int) (remainingTime / 3600);

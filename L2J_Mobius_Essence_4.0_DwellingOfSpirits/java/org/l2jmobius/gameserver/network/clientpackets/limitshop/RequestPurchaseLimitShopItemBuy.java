@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets.limitshop;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
@@ -81,7 +82,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		{
 			if (player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) >= product.getAccountDailyLimit())
 			{
-				if ((player.getAccountVariables().getLong("LCSTime" + product.getProductionId(), 0) + 86400000) > System.currentTimeMillis())
+				if ((player.getAccountVariables().getLong("LCSTime" + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
 				{
 					player.sendMessage("You have reached your daily limit."); // TODO: Retail system message?
 					player.removeRequest(PrimeShopRequest.class);
@@ -139,7 +140,7 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Update player variables.
 		if (product.getAccountDailyLimit() > 0)
 		{
-			player.getAccountVariables().set("LCSTime" + product.getProductionId(), System.currentTimeMillis());
+			player.getAccountVariables().set("LCSTime" + product.getProductionId(), Chronos.currentTimeMillis());
 			player.getAccountVariables().set("LCSCount" + product.getProductionId(), player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) + 1);
 		}
 		

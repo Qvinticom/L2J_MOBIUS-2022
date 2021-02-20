@@ -24,6 +24,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
@@ -97,7 +98,7 @@ public class MinionList
 	
 	public void moveMinionToRespawnList(MinionInstance minion)
 	{
-		final Long current = System.currentTimeMillis();
+		final Long current = Chronos.currentTimeMillis();
 		_spawnedMinions.remove(minion);
 		if (_respawnTasks.get(current) == null)
 		{
@@ -144,7 +145,7 @@ public class MinionList
 			return;
 		}
 		
-		final Long current = System.currentTimeMillis();
+		final Long current = Chronos.currentTimeMillis();
 		if (_respawnTasks != null)
 		{
 			for (Entry<Long, Integer> entry : _respawnTasks.entrySet())

@@ -16,6 +16,7 @@
  */
 package quests.Q00307_ControlDeviceOfTheGiants;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -101,7 +102,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					return "32711-09.html";
 				}
-				if ((GlobalVariablesManager.getInstance().getLong("GiantsControlDeviceRespawn", 0) - System.currentTimeMillis()) > 0)
+				if ((GlobalVariablesManager.getInstance().getLong("GiantsControlDeviceRespawn", 0) - Chronos.currentTimeMillis()) > 0)
 				{
 					return "32711-09a.html";
 				}
@@ -168,7 +169,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 							qst.setCond(2, true);
 						}
 					}
-					GlobalVariablesManager.getInstance().set("GiantsControlDeviceRespawn", Long.toString(System.currentTimeMillis() + RESPAWN_DELAY));
+					GlobalVariablesManager.getInstance().set("GiantsControlDeviceRespawn", Long.toString(Chronos.currentTimeMillis() + RESPAWN_DELAY));
 				}
 				break;
 			}

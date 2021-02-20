@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.util;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.OfflineTraderTable;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.World;
@@ -143,7 +144,7 @@ public class OfflineTradeUtil
 		
 		if (player.getOfflineStartTime() == 0)
 		{
-			player.setOfflineStartTime(System.currentTimeMillis());
+			player.setOfflineStartTime(Chronos.currentTimeMillis());
 		}
 		
 		// Store trade on exit, if realtime saving is enabled.

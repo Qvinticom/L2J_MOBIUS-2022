@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.Announcements;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.sql.NpcTable;
@@ -314,12 +315,12 @@ public class Siege
 				player.sendPacket(sound);
 			}
 			
-			LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has finished! " + fmt.format(new Date(System.currentTimeMillis())));
+			LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has finished! " + fmt.format(new Date(Chronos.currentTimeMillis())));
 			if (getCastle().getOwnerId() <= 0)
 			{
 				announceToPlayer("The siege of " + getCastle().getName() + " has ended in a draw.", false);
 				
-				LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has ended in a draw. " + fmt.format(new Date(System.currentTimeMillis())));
+				LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has ended in a draw. " + fmt.format(new Date(Chronos.currentTimeMillis())));
 			}
 			
 			// Removes all flags. Note: Remove flag before teleporting players
@@ -596,7 +597,7 @@ public class Siege
 				player.sendPacket(sound);
 			}
 			
-			LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has started! " + fmt.format(new Date(System.currentTimeMillis())));
+			LOGGER.info("[SIEGE] The siege of " + getCastle().getName() + " has started! " + fmt.format(new Date(Chronos.currentTimeMillis())));
 		}
 	}
 	

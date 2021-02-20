@@ -24,6 +24,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -60,7 +61,7 @@ public class GameTimeController
 	
 	private GameTimeController()
 	{
-		_gameStartTime = System.currentTimeMillis() - 3600000; // offset so that the server starts a day begin
+		_gameStartTime = Chronos.currentTimeMillis() - 3600000; // offset so that the server starts a day begin
 		_gameTicks = 3600000 / MILLIS_IN_TICK; // offset so that the server starts a day begin
 		
 		_timer = new TimerThread();
@@ -177,7 +178,7 @@ public class GameTimeController
 			for (;;)
 			{
 				final int _oldTicks = _gameTicks; // save old ticks value to avoid moving objects 2x in same tick
-				long runtime = System.currentTimeMillis() - _gameStartTime; // from server boot to now
+				long runtime = Chronos.currentTimeMillis() - _gameStartTime; // from server boot to now
 				
 				_gameTicks = (int) (runtime / MILLIS_IN_TICK); // new ticks value (ticks now)
 				
@@ -189,7 +190,7 @@ public class GameTimeController
 					// (will happen very rarely but it will happen ... on garbage collection definitely)
 				}
 				
-				runtime = System.currentTimeMillis() - _gameStartTime - runtime;
+				runtime = Chronos.currentTimeMillis() - _gameStartTime - runtime;
 				
 				// calculate sleep time... time needed to next tick minus time it takes to call moveObjects()
 				final int sleepTime = (1 + MILLIS_IN_TICK) - ((int) runtime % MILLIS_IN_TICK);

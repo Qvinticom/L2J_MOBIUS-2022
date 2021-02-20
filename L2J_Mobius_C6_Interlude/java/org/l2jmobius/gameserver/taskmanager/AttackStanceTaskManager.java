@@ -24,6 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.CubicInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -55,7 +56,7 @@ public class AttackStanceTaskManager
 			}
 			_working = true;
 			
-			final long current = System.currentTimeMillis();
+			final long current = Chronos.currentTimeMillis();
 			try
 			{
 				final Iterator<Entry<Creature, Long>> iterator = _attackStanceTasks.entrySet().iterator();
@@ -111,7 +112,7 @@ public class AttackStanceTaskManager
 				}
 			}
 		}
-		_attackStanceTasks.put(creature, System.currentTimeMillis());
+		_attackStanceTasks.put(creature, Chronos.currentTimeMillis());
 	}
 	
 	/**

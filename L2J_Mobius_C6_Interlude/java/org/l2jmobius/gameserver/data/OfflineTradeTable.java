@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.model.ManufactureItem;
 import org.l2jmobius.gameserver.model.ManufactureList;
@@ -184,7 +185,7 @@ public class OfflineTradeTable
 					final Calendar cal = Calendar.getInstance();
 					cal.setTimeInMillis(time);
 					cal.add(Calendar.DAY_OF_YEAR, Config.OFFLINE_MAX_DAYS);
-					if (cal.getTimeInMillis() <= System.currentTimeMillis())
+					if (cal.getTimeInMillis() <= Chronos.currentTimeMillis())
 					{
 						LOGGER.info("Offline trader with id " + rs.getInt("charId") + " reached OfflineMaxDays, kicked.");
 						continue;

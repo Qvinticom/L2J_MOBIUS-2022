@@ -16,6 +16,7 @@
  */
 package ai.others.PriestOfBlessing;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -110,15 +111,15 @@ public class PriestOfBlessing extends AbstractNpcAI
 			{
 				final String value = player.getVariables().getString("PriestOfBlessing_voice", "");
 				final long reuseTime = value.isEmpty() ? 0 : Long.parseLong(value);
-				if (System.currentTimeMillis() > reuseTime)
+				if (Chronos.currentTimeMillis() > reuseTime)
 				{
 					takeItems(player, Inventory.ADENA_ID, PRICE_VOICE);
 					giveItems(player, NEVIT_VOICE, 1);
-					player.getVariables().set("PriestOfBlessing_voice", Long.toString(System.currentTimeMillis() + (20 * 3600000)));
+					player.getVariables().set("PriestOfBlessing_voice", Long.toString(Chronos.currentTimeMillis() + (20 * 3600000)));
 				}
 				else
 				{
-					final long remainingTime = (reuseTime - System.currentTimeMillis()) / 1000;
+					final long remainingTime = (reuseTime - Chronos.currentTimeMillis()) / 1000;
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
@@ -139,17 +140,17 @@ public class PriestOfBlessing extends AbstractNpcAI
 			{
 				final String value = player.getVariables().getString("PriestOfBlessing_hg_" + index, "");
 				final long reuseTime = value.isEmpty() ? 0 : Long.parseLong(value);
-				if (System.currentTimeMillis() > reuseTime)
+				if (Chronos.currentTimeMillis() > reuseTime)
 				{
 					final int[] hg = HOURGLASSES[index];
 					final int nevitHourglass = hg[getRandom(0, hg.length - 1)];
 					takeItems(player, Inventory.ADENA_ID, priceHourglass);
 					giveItems(player, nevitHourglass, 1);
-					player.getVariables().set("PriestOfBlessing_hg_" + index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
+					player.getVariables().set("PriestOfBlessing_hg_" + index, Long.toString(Chronos.currentTimeMillis() + (20 * 3600000)));
 				}
 				else
 				{
-					final long remainingTime = (reuseTime - System.currentTimeMillis()) / 1000;
+					final long remainingTime = (reuseTime - Chronos.currentTimeMillis()) / 1000;
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);

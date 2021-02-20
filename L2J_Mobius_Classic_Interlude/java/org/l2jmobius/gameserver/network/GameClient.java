@@ -30,6 +30,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.ChannelInboundHandler;
 import org.l2jmobius.commons.network.ICrypt;
 import org.l2jmobius.commons.network.IIncomingPacket;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
@@ -341,7 +342,7 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps2 = con.prepareStatement("UPDATE characters SET deletetime=? WHERE charId=?"))
 			{
-				ps2.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
+				ps2.setLong(1, Chronos.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 				ps2.setInt(2, objectId);
 				ps2.execute();
 			}

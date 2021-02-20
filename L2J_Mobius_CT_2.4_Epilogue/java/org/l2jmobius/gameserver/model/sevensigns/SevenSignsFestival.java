@@ -32,6 +32,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.SpawnTable;
@@ -1229,12 +1230,12 @@ public class SevenSignsFestival implements SpawnListener
 	
 	public void setNextCycleStart()
 	{
-		_nextFestivalCycleStart = System.currentTimeMillis() + Config.ALT_FESTIVAL_CYCLE_LENGTH;
+		_nextFestivalCycleStart = Chronos.currentTimeMillis() + Config.ALT_FESTIVAL_CYCLE_LENGTH;
 	}
 	
 	public void setNextFestivalStart(long milliFromNow)
 	{
-		_nextFestivalStart = System.currentTimeMillis() + milliFromNow;
+		_nextFestivalStart = Chronos.currentTimeMillis() + milliFromNow;
 	}
 	
 	public long getMinsToNextCycle()
@@ -1243,7 +1244,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return -1;
 		}
-		return (_nextFestivalCycleStart - System.currentTimeMillis()) / 60000;
+		return (_nextFestivalCycleStart - Chronos.currentTimeMillis()) / 60000;
 	}
 	
 	public int getMinsToNextFestival()
@@ -1252,7 +1253,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			return -1;
 		}
-		return (int) (((_nextFestivalStart - System.currentTimeMillis()) / 60000) + 1);
+		return (int) (((_nextFestivalStart - Chronos.currentTimeMillis()) / 60000) + 1);
 	}
 	
 	public String getTimeToNextFestivalStr()
@@ -1553,7 +1554,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 			
 			// Update the highest scores and party list.
-			currFestData.set("date", String.valueOf(System.currentTimeMillis()));
+			currFestData.set("date", String.valueOf(Chronos.currentTimeMillis()));
 			currFestData.set("score", offeringScore);
 			currFestData.set("members", Util.implodeString(partyMembers, ","));
 			

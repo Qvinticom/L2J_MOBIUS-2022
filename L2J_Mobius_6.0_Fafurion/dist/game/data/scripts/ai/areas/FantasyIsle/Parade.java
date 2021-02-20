@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.model.Location;
@@ -137,7 +138,7 @@ public class Parade extends AbstractNpcAI
 		// final long diff = timeLeftMilli(8, 0, 0), cycle = 600000;
 		// ThreadPoolManager.scheduleAtFixedRate(new Start(), 180000, cycle);
 		
-		LOGGER.info("Fantasy Isle: Parade starting at " + new SimpleDateFormat("yyyy/MM/dd HH:mm").format(System.currentTimeMillis() + diff) + " and is scheduled each next " + (cycle / 3600000) + " hours.");
+		LOGGER.info("Fantasy Isle: Parade starting at " + new SimpleDateFormat("yyyy/MM/dd HH:mm").format(Chronos.currentTimeMillis() + diff) + " and is scheduled each next " + (cycle / 3600000) + " hours.");
 	}
 	
 	void load()

@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.GameServer;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -137,7 +138,7 @@ public class BossZone extends ZoneType
 				if (expirationTime == null) // legal null expirationTime entries
 				{
 					final long serverStartTime = GameServer.dateTimeServerStarted.getTimeInMillis();
-					if (serverStartTime > (System.currentTimeMillis() - _timeInvade))
+					if (serverStartTime > (Chronos.currentTimeMillis() - _timeInvade))
 					{
 						return;
 					}
@@ -147,7 +148,7 @@ public class BossZone extends ZoneType
 					// legal non-null logoutTime entries
 					_playerAllowedReEntryTimes.remove(creature.getObjectId());
 					
-					if (expirationTime.longValue() > System.currentTimeMillis())
+					if (expirationTime.longValue() > Chronos.currentTimeMillis())
 					{
 						return;
 					}
@@ -204,7 +205,7 @@ public class BossZone extends ZoneType
 			if (!player.isOnline() && _playersAllowed.contains(creature.getObjectId()))
 			{
 				// mark the time that the player left the zone
-				_playerAllowedReEntryTimes.put(creature.getObjectId(), System.currentTimeMillis() + _timeInvade);
+				_playerAllowedReEntryTimes.put(creature.getObjectId(), Chronos.currentTimeMillis() + _timeInvade);
 			}
 		}
 	}
@@ -303,7 +304,7 @@ public class BossZone extends ZoneType
 			{
 				_playersAllowed.add(player.getObjectId());
 			}
-			_playerAllowedReEntryTimes.put(player.getObjectId(), System.currentTimeMillis() + (durationInSec * 1000));
+			_playerAllowedReEntryTimes.put(player.getObjectId(), Chronos.currentTimeMillis() + (durationInSec * 1000));
 		}
 	}
 	

@@ -19,6 +19,7 @@ package ai.others.TrainingCamp;
 import java.util.concurrent.TimeUnit;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -111,7 +112,7 @@ public class TrainingCamp extends AbstractNpcAI
 						player.teleToLocation(TRAINING_LOCATION);
 						player.setImmobilized(true);
 						// @Sdw: Here we are supposed to send ExUserInfoEquipSlot with a fake equip of a SLS, feels ugly to me, not doing it.
-						player.setTraingCampInfo(new TrainingHolder(player.getObjectId(), player.getClassIndex(), player.getLevel(), System.currentTimeMillis(), -1));
+						player.setTraingCampInfo(new TrainingHolder(player.getObjectId(), player.getClassIndex(), player.getLevel(), Chronos.currentTimeMillis(), -1));
 						final long timeRemaining = Config.TRAINING_CAMP_MAX_DURATION - trainingCampDuration;
 						player.sendPacket(new ExTrainingZone_Admission(player.getLevel(), 0, timeRemaining));
 						startQuestTimer("finish", TimeUnit.SECONDS.toMillis(timeRemaining), npc, player);
@@ -203,7 +204,7 @@ public class TrainingCamp extends AbstractNpcAI
 				final TrainingHolder holder = player.getTraingCampInfo();
 				if ((holder != null) && (holder.getObjectId() == player.getObjectId()))
 				{
-					holder.setEndTime(System.currentTimeMillis());
+					holder.setEndTime(Chronos.currentTimeMillis());
 					player.setTraingCampInfo(holder);
 					player.enableAllSkills();
 					player.setInvul(false);

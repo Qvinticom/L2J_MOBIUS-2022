@@ -21,6 +21,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.MailManager;
 import org.l2jmobius.gameserver.model.Message;
 import org.l2jmobius.gameserver.model.World;
@@ -48,7 +49,7 @@ public class MessageDeletionTaskManager
 			
 			Integer msgId;
 			Message msg;
-			final long time = System.currentTimeMillis();
+			final long time = Chronos.currentTimeMillis();
 			for (Entry<Integer, Long> entry : PENDING_MESSAGES.entrySet())
 			{
 				if (time > entry.getValue().longValue())

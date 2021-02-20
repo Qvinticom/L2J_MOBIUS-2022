@@ -18,6 +18,7 @@ package handlers.voicedcommandhandlers;
 
 import java.util.StringTokenizer;
 
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.sql.CharNameTable;
 import org.l2jmobius.gameserver.data.xml.AdminData;
 import org.l2jmobius.gameserver.handler.IVoicedCommandHandler;
@@ -102,7 +103,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 							return false;
 						}
 						
-						PunishmentManager.getInstance().startPunishment(new PunishmentTask(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, System.currentTimeMillis() + (expirationTime * 1000 * 60), "Chat banned by moderator", activeChar.getName()));
+						PunishmentManager.getInstance().startPunishment(new PunishmentTask(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, Chronos.currentTimeMillis() + (expirationTime * 1000 * 60), "Chat banned by moderator", activeChar.getName()));
 						if (expirationTime > 0)
 						{
 							BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " chat banned for " + expirationTime + " minutes.");

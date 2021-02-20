@@ -36,6 +36,7 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -1113,7 +1114,7 @@ public class TerritoryWarManager implements Siegable
 	{
 		final Calendar cal = Calendar.getInstance();
 		final long nextSiegeDate = GlobalVariablesManager.getInstance().getLong(GLOBAL_VARIABLE, 0);
-		if (nextSiegeDate > System.currentTimeMillis())
+		if (nextSiegeDate > Chronos.currentTimeMillis())
 		{
 			cal.setTimeInMillis(nextSiegeDate);
 		}
@@ -1122,7 +1123,7 @@ public class TerritoryWarManager implements Siegable
 			// Let's check if territory war date was in the past.
 			if (cal.before(Calendar.getInstance()))
 			{
-				cal.setTimeInMillis(System.currentTimeMillis());
+				cal.setTimeInMillis(Chronos.currentTimeMillis());
 			}
 			
 			final boolean hasOwnedCastle = CastleManager.getInstance().hasOwnedCastle();

@@ -23,6 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 
@@ -93,7 +94,7 @@ public class GameTimeController extends Thread
 	 */
 	public int getGameTicks()
 	{
-		return (int) ((System.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
+		return (int) ((Chronos.currentTimeMillis() - _referenceTime) / MILLIS_IN_TICK);
 	}
 	
 	/**
@@ -154,7 +155,7 @@ public class GameTimeController extends Thread
 		
 		while (true)
 		{
-			nextTickTime = ((System.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
+			nextTickTime = ((Chronos.currentTimeMillis() / MILLIS_IN_TICK) * MILLIS_IN_TICK) + 100;
 			
 			try
 			{
@@ -165,7 +166,7 @@ public class GameTimeController extends Thread
 				LOGGER.log(Level.WARNING, getClass().getSimpleName(), e);
 			}
 			
-			sleepTime = nextTickTime - System.currentTimeMillis();
+			sleepTime = nextTickTime - Chronos.currentTimeMillis();
 			if (sleepTime > 0)
 			{
 				try

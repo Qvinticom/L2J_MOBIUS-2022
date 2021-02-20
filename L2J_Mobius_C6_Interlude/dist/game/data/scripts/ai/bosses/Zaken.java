@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
@@ -168,7 +169,7 @@ public class Zaken extends Quest
 		if (status == DEAD)
 		{
 			// load the unlock date and time for zaken from DB
-			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 			// if zaken is locked until a certain time, mark it so and start the unlock timer
 			// the unlock time has not yet expired.
 			if (temp > 0)
@@ -847,7 +848,7 @@ public class Zaken extends Quest
 			cancelQuestTimer("1003", npc, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatSet info = GrandBossManager.getInstance().getStatSet(ZAKEN);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(ZAKEN, info);
 		}
 		else if (status == ALIVE)

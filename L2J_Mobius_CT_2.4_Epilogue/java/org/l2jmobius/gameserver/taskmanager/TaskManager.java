@@ -36,6 +36,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskBirthday;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskClanLeaderApply;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskCleanUp;
@@ -100,7 +101,7 @@ public class TaskManager
 		public void run()
 		{
 			task.onTimeElapsed(this);
-			lastActivation = System.currentTimeMillis();
+			lastActivation = Chronos.currentTimeMillis();
 			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1]))
 			{
@@ -254,7 +255,7 @@ public class TaskManager
 				try
 				{
 					final Date desired = DateFormat.getInstance().parse(task.getParams()[0]);
-					final long diff = desired.getTime() - System.currentTimeMillis();
+					final long diff = desired.getTime() - Chronos.currentTimeMillis();
 					if (diff >= 0)
 					{
 						task.scheduled = ThreadPool.schedule(task, diff);
@@ -305,7 +306,7 @@ public class TaskManager
 					return false;
 				}
 				
-				delay = min.getTimeInMillis() - System.currentTimeMillis();
+				delay = min.getTimeInMillis() - Chronos.currentTimeMillis();
 				
 				if (check.after(min) || (delay < 0))
 				{

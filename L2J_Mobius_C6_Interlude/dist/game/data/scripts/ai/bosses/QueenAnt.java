@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.Announcements;
@@ -98,7 +99,7 @@ public class QueenAnt extends Quest
 		{
 			case DEAD:
 			{
-				final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+				final long temp = info.getLong("respawn_time") - Chronos.currentTimeMillis();
 				if (temp > 0)
 				{
 					startQuestTimer("QUEEN_SPAWN", temp, null, null);
@@ -376,7 +377,7 @@ public class QueenAnt extends Quest
 			// cancelQuestTimer("CHECK_QA_ZONE", npc, null);
 			// also save the respawn time so that the info is maintained past reboots
 			final StatSet info = GrandBossManager.getInstance().getStatSet(QUEEN);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			info.set("respawn_time", Chronos.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatSet(QUEEN, info);
 			startQuestTimer("DESPAWN_MINIONS", 10000, null, null);
 		}

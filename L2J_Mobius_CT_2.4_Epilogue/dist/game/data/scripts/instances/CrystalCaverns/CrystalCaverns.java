@@ -23,6 +23,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -549,7 +550,7 @@ public class CrystalCaverns extends AbstractInstance
 				party.broadcastPacket(sm);
 				return false;
 			}
-			if (System.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID))
+			if (Chronos.currentTimeMillis() < InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), TEMPLATE_ID))
 			{
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET);
 				sm.addPcName(partyMember);
@@ -971,9 +972,9 @@ public class CrystalCaverns extends AbstractInstance
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
-				if (((world._dragonClawStart + DRAGONCLAWTIME) <= System.currentTimeMillis()) || (world._dragonClawNeed <= 0))
+				if (((world._dragonClawStart + DRAGONCLAWTIME) <= Chronos.currentTimeMillis()) || (world._dragonClawNeed <= 0))
 				{
-					world._dragonClawStart = System.currentTimeMillis();
+					world._dragonClawStart = Chronos.currentTimeMillis();
 					world._dragonClawNeed = caster.getParty().getMemberCount() - 1;
 				}
 				else
@@ -1002,9 +1003,9 @@ public class CrystalCaverns extends AbstractInstance
 				{
 					return super.onSkillSee(npc, caster, skill, targets, isSummon);
 				}
-				else if (((world.dragonScaleStart + DRAGONSCALETIME) <= System.currentTimeMillis()) || (world.dragonScaleNeed <= 0))
+				else if (((world.dragonScaleStart + DRAGONSCALETIME) <= Chronos.currentTimeMillis()) || (world.dragonScaleNeed <= 0))
 				{
-					world.dragonScaleStart = System.currentTimeMillis();
+					world.dragonScaleStart = Chronos.currentTimeMillis();
 					world.dragonScaleNeed = ((party == null) && caster.isGM()) ? 0 : party != null ? (party.getMemberCount() - 1) : 100;
 				}
 				else
@@ -1765,7 +1766,7 @@ public class CrystalCaverns extends AbstractInstance
 			
 			if (checkConditions(player))
 			{
-				final InstanceWorld instance = new CCWorld(System.currentTimeMillis() + 5400000);
+				final InstanceWorld instance = new CCWorld(Chronos.currentTimeMillis() + 5400000);
 				instance.setInstance(InstanceManager.getInstance().createDynamicInstance(TEMPLATE_ID));
 				InstanceManager.getInstance().addWorld(instance);
 				onEnterInstance(player, instance, true);
@@ -1942,7 +1943,7 @@ public class CrystalCaverns extends AbstractInstance
 					return null;
 				}
 				world.setStatus(30);
-				final long time = world.endTime - System.currentTimeMillis();
+				final long time = world.endTime - Chronos.currentTimeMillis();
 				final Instance baylorInstance = InstanceManager.getInstance().getInstance(world.getInstanceId());
 				baylorInstance.setDuration((int) time);
 				
