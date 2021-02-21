@@ -68,7 +68,7 @@ public class ConditionPlayerCanTakeCastle extends Condition
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			canTakeCastle = false;
 		}
-		else if (!Util.checkIfInRange(skill.getCastRange(), player, effected, true))
+		else if (!Util.checkIfInRange(200, player, effected, true) || (player.getZ() < effected.getZ()) || (Math.abs(player.getZ() - effected.getZ()) > 40))
 		{
 			player.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 			canTakeCastle = false;
