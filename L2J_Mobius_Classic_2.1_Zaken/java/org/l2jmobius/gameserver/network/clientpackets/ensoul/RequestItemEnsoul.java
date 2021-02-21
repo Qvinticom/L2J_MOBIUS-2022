@@ -227,7 +227,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 				success = 1;
 			}
 			
-			iu.addModifiedItem(soulCrystal);
+			iu.addRemovedItem(soulCrystal);
 			iu.addModifiedItem(gemStones);
 			iu.addModifiedItem(item);
 		}
