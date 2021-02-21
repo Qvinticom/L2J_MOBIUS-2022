@@ -4629,7 +4629,7 @@ public class PlayerInstance extends Playable
 		{
 			for (Creature creature : World.getInstance().getVisibleObjects(this, Creature.class))
 			{
-				if (Util.checkIfInRange(creature.getMinShopDistance(), this, creature, true))
+				if ((creature.getMinShopDistance() > 0) && Util.checkIfInRange(creature.getMinShopDistance(), this, creature, true))
 				{
 					sendPacket(new SystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
 					return false;
