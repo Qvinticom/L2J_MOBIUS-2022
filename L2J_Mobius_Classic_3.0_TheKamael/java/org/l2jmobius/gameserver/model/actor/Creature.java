@@ -616,6 +616,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
+		broadcastPacket(mov, true);
+	}
+	
+	public void broadcastPacket(IClientOutgoingPacket mov, boolean includeSelf)
+	{
 		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
 		{
 			if (isVisibleFor(player))

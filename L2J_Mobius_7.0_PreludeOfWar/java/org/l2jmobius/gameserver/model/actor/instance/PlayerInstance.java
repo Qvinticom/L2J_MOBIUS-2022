@@ -4102,14 +4102,17 @@ public class PlayerInstance extends Playable
 	}
 	
 	@Override
-	public void broadcastPacket(IClientOutgoingPacket mov)
+	public void broadcastPacket(IClientOutgoingPacket mov, boolean includeSelf)
 	{
 		if (mov instanceof CharInfo)
 		{
 			new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
 		}
 		
-		sendPacket(mov);
+		if (includeSelf)
+		{
+			sendPacket(mov);
+		}
 		
 		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
 		{

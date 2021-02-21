@@ -88,7 +88,7 @@ public class TrapInstance extends Npc
 	}
 	
 	@Override
-	public void broadcastPacket(IClientOutgoingPacket mov)
+	public void broadcastPacket(IClientOutgoingPacket mov, boolean includeSelf)
 	{
 		World.getInstance().forEachVisibleObject(this, PlayerInstance.class, player ->
 		{
