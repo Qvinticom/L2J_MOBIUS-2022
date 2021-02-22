@@ -24,11 +24,6 @@ import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerAbilityPointsChanged;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -465,12 +460,5 @@ public class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 				qs.setCond(3, true);
 			}
 		}
-	}
-	
-	@RegisterEvent(EventType.ON_PLAYER_ABILITY_POINTS_CHANGED)
-	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private void OnPlayerAbilityPointsChanged(OnPlayerAbilityPointsChanged event)
-	{
-		notifyEvent("SUBQUEST_FINISHED_NOTIFY", null, event.getPlayer());
 	}
 }
