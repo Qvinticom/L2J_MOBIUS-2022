@@ -133,7 +133,12 @@ public class GeoEngine
 	 */
 	private IRegion getRegion(int geoX, int geoY)
 	{
-		return _regions.get(((geoX / IRegion.REGION_CELLS_X) * GEO_REGIONS_Y) + (geoY / IRegion.REGION_CELLS_Y));
+		final int region = ((geoX / IRegion.REGION_CELLS_X) * GEO_REGIONS_Y) + (geoY / IRegion.REGION_CELLS_Y);
+		if ((region < 0) || (region >= _regions.length()))
+		{
+			return null;
+		}
+		return _regions.get(region);
 	}
 	
 	/**
@@ -167,7 +172,12 @@ public class GeoEngine
 	 */
 	public boolean hasGeoPos(int geoX, int geoY)
 	{
-		return getRegion(geoX, geoY).hasGeo();
+		final IRegion region = getRegion(geoX, geoY);
+		if (region == null)
+		{
+			return false;
+		}
+		return region.hasGeo();
 	}
 	
 	/**
@@ -179,7 +189,12 @@ public class GeoEngine
 	 */
 	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
 	{
-		return getRegion(geoX, geoY).checkNearestNswe(geoX, geoY, worldZ, nswe);
+		final IRegion region = getRegion(geoX, geoY);
+		if (region == null)
+		{
+			return true;
+		}
+		return region.checkNearestNswe(geoX, geoY, worldZ, nswe);
 	}
 	
 	/**
