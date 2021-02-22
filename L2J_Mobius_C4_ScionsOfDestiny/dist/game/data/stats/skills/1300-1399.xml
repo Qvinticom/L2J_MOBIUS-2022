@@ -1327,11 +1327,7 @@
 				<add order="0x40" stat="rEvas" val="4" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<add order="0x40" stat="absorbDam" val="5" />
-				<mul order="0x30" stat="cAtk" val="1.2">
-					<and>
-						<player behind="True" />
-					</and>
-				</mul>
+				<mul order="0x30" stat="cAtk" val="1.2" />
 				<mul order="0x30" stat="rCrit" val="1.2">
 					<and>
 						<player behind="True" />
