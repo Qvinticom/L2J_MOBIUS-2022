@@ -76,7 +76,7 @@ public class RequestAuthLogin extends ClientBasePacket
 		
 		final LoginController login = LoginController.getInstance();
 		
-		// ip BANNED due to entering wrong password many times
+		// IP banned due to entering wrong password many times.
 		if (login.isBannedAddress(getClient().getSocket().getInetAddress().getHostAddress()))
 		{
 			getClient().sendPacket(new AccountKicked(AccountKicked.REASON_ILLEGAL_USE));
@@ -90,7 +90,6 @@ public class RequestAuthLogin extends ClientBasePacket
 		}
 		
 		// Account BANNED (must always be checked after isLoginValid)
-		
 		if (getClient().getAccessLevel() < 0)
 		{
 			getClient().sendPacket(new AccountKicked(AccountKicked.REASON_ILLEGAL_USE));

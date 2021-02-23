@@ -105,14 +105,23 @@ public class RequestAuthLogin extends LoginClientPacket
 		
 		final LoginController lc = LoginController.getInstance();
 		final LoginClient client = getClient();
-		final InetAddress address = getClient().getConnection().getInetAddress();
+		
+		final InetAddress address = client.getConnection().getInetAddress();
 		if (address == null)
 		{
 			LOGGER.warning("Socket is not connected: " + client.getAccount());
 			client.close(LoginFailReason.REASON_SYSTEM_ERROR);
 			return;
 		}
-		final AuthLoginResult result = lc.tryAuthLogin(_user, _password, getClient());
+		
+		// IP banned or entering wrong password many times.
+		if (lc.isBannedAddress(address))
+		{
+			client.close(new AccountKicked(AccountKickedReason.REASON_PERMANENTLY_BANNED));
+			return;
+		}
+		
+		final AuthLoginResult result = lc.tryAuthLogin(_user, _password, client);
 		
 		switch (result)
 		{
@@ -123,11 +132,11 @@ public class RequestAuthLogin extends LoginClientPacket
 				client.setSessionKey(lc.assignSessionKeyToClient(_user, client));
 				if (Config.SHOW_LICENCE)
 				{
-					client.sendPacket(new LoginOk(getClient().getSessionKey()));
+					client.sendPacket(new LoginOk(client.getSessionKey()));
 				}
 				else
 				{
-					getClient().sendPacket(new ServerList(getClient()));
+					client.sendPacket(new ServerList(client));
 				}
 				break;
 			}

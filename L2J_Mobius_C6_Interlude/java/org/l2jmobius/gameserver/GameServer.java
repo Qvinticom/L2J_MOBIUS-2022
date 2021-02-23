@@ -35,7 +35,6 @@ import org.l2jmobius.commons.mmocore.SelectorConfig;
 import org.l2jmobius.commons.mmocore.SelectorThread;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.DeadlockDetector;
-import org.l2jmobius.commons.util.IPv4Filter;
 import org.l2jmobius.commons.util.Util;
 import org.l2jmobius.gameserver.cache.CrestCache;
 import org.l2jmobius.gameserver.cache.HtmCache;
@@ -524,7 +523,7 @@ public class GameServer
 		
 		_gamePacketHandler = new GamePacketHandler();
 		
-		_selectorThread = new SelectorThread<>(sc, _gamePacketHandler, _gamePacketHandler, _gamePacketHandler, new IPv4Filter());
+		_selectorThread = new SelectorThread<>(sc, _gamePacketHandler, _gamePacketHandler, _gamePacketHandler);
 		
 		InetAddress bindAddress = null;
 		if (!Config.GAMESERVER_HOSTNAME.equals("*"))

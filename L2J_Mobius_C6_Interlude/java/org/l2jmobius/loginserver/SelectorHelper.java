@@ -26,7 +26,6 @@ import org.l2jmobius.commons.mmocore.IClientFactory;
 import org.l2jmobius.commons.mmocore.IMMOExecutor;
 import org.l2jmobius.commons.mmocore.MMOConnection;
 import org.l2jmobius.commons.mmocore.ReceivablePacket;
-import org.l2jmobius.commons.util.IPv4Filter;
 import org.l2jmobius.loginserver.network.serverpackets.Init;
 
 /**
@@ -35,12 +34,10 @@ import org.l2jmobius.loginserver.network.serverpackets.Init;
 public class SelectorHelper implements IMMOExecutor<LoginClient>, IClientFactory<LoginClient>, IAcceptFilter
 {
 	private final ThreadPoolExecutor _generalPacketsThreadPool;
-	private final IPv4Filter _ipv4filter;
 	
 	public SelectorHelper()
 	{
 		_generalPacketsThreadPool = new ThreadPoolExecutor(4, 6, 15L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
-		_ipv4filter = new IPv4Filter();
 	}
 	
 	@Override
@@ -60,7 +57,6 @@ public class SelectorHelper implements IMMOExecutor<LoginClient>, IClientFactory
 	@Override
 	public boolean accept(SocketChannel sc)
 	{
-		// return !LoginController.getInstance().isBannedAddress(sc.socket().getInetAddress());
-		return _ipv4filter.accept(sc) && !LoginController.getInstance().isBannedAddress(sc.socket().getInetAddress());
+		return !LoginController.getInstance().isBannedAddress(sc.socket().getInetAddress());
 	}
 }

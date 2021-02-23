@@ -139,7 +139,7 @@ public class LoginServer
 		final SelectorHelper sh = new SelectorHelper();
 		try
 		{
-			_selectorThread = new SelectorThread<>(sc, sh, lph, sh, sh);
+			_selectorThread = new SelectorThread<>(sc, sh, lph, sh);
 		}
 		catch (IOException e)
 		{
