@@ -294,6 +294,10 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						{
 							htmltext = "34505-06.html";
 						}
+						else if (qs.isCond(8))
+						{
+							htmltext = "34505-08.html";
+						}
 						break;
 					}
 					case SILVAN:
@@ -301,6 +305,10 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						if (qs.isCond(4))
 						{
 							htmltext = "33178-01.html";
+						}
+						else if (qs.isCond(5))
+						{
+							htmltext = "33178-05.html";
 						}
 						else if (qs.isCond(6))
 						{
