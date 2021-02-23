@@ -43,6 +43,6 @@ public class ExOpenHtml implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/32478.html")));
+		client.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
 	}
 }

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.others.DimensionalMerchant;
+package ai.others.GameAssistant;
 
 import java.util.Collection;
 
@@ -42,9 +42,9 @@ import ai.AbstractNpcAI;
 
 /**
  * Dimensional Merchant AI.
- * @author Mobius
+ * @author Mobius, quangnguyen
  */
-public class DimensionalMerchant extends AbstractNpcAI
+public class GameAssistant extends AbstractNpcAI
 {
 	// NPC
 	private static final int MERCHANT = 32478; // Dimensional Merchant
@@ -98,9 +98,9 @@ public class DimensionalMerchant extends AbstractNpcAI
 	private static final int EX_BUFF_SCROLL = 3247837;
 	private static final int EX_SOULSHOT = 3247838;
 	// Others
-	private static final String COMMAND_BYPASS = "Quest DimensionalMerchant ";
+	private static final String COMMAND_BYPASS = "Quest GameAssistant ";
 	
-	private DimensionalMerchant()
+	private GameAssistant()
 	{
 		addStartNpc(MERCHANT);
 		addFirstTalkId(MERCHANT);
@@ -152,12 +152,12 @@ public class DimensionalMerchant extends AbstractNpcAI
 			}
 			case "back":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/32478.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
 				break;
 			}
 			case "attendance_rewards":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/enhancement.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/enhancement.html")));
 				break;
 			}
 			case "shop":
@@ -168,37 +168,37 @@ public class DimensionalMerchant extends AbstractNpcAI
 			// Bypass
 			case "Chat_Enhancement":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/enhancement.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/enhancement.html")));
 				break;
 			}
 			case "Chat_Events":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/events.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/events.html")));
 				break;
 			}
 			case "Chat_Items":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/items.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/items.html")));
 				break;
 			}
 			case "Chat_RemoveAug":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/removeaug.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/removeaug.html")));
 				break;
 			}
 			case "Chat_SoulCrystals":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/soulcrystals.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/soulcrystals.html")));
 				break;
 			}
 			case "Chat_ItemConversion":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/itemconversion.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/itemconversion.html")));
 				break;
 			}
 			case "Chat_TransferItem":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/transferitem.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/transferitem.html")));
 				break;
 			}
 			case "Chat_Redeem":
@@ -208,57 +208,57 @@ public class DimensionalMerchant extends AbstractNpcAI
 			}
 			case "Chat_Weapons":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/weapons.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/weapons.html")));
 				break;
 			}
 			case "Chat_Cloaks":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/cloaks.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/cloaks.html")));
 				break;
 			}
 			case "Chat_ProtectionCloaks":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/protectioncloaks.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/protectioncloaks.html")));
 				break;
 			}
 			case "Chat_ProtectionCloaks_Black":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/blackprotectioncloaks.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/blackprotectioncloaks.html")));
 				break;
 			}
 			case "Chat_ProtectionCloaks_White":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/whiteprotectioncloaks.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/whiteprotectioncloaks.html")));
 				break;
 			}
 			case "Chat_ProtectionCloaks_Red":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/redprotectcloaks.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/redprotectcloaks.html")));
 				break;
 			}
 			case "Chat_Talismans":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/talismans.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/talismans.html")));
 				break;
 			}
 			case "Chat_Agathions":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/agathions.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/agathions.html")));
 				break;
 			}
 			case "Chat_Pendants":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/pendants.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/pendants.html")));
 				break;
 			}
 			case "Chat_BuffScrolls":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/buffScrolls.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/buffscrolls.html")));
 				break;
 			}
 			case "Chat_Soulshots":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/soulshots.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/soulshots.html")));
 				break;
 			}
 			// Actions
@@ -475,7 +475,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long itemCount = getQuestItemsCount(player, SAYHA_CLOAK_COUPON);
 				if (itemCount < 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				takeItems(player, SAYHA_CLOAK_COUPON, 1);
@@ -487,14 +487,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 1) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -502,13 +502,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(1);
 				player.sendItemList();
 				break;
@@ -518,14 +518,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 2) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -533,13 +533,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(2);
 				player.sendItemList();
 				break;
@@ -549,14 +549,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 3) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -564,13 +564,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(3);
 				player.sendItemList();
 				break;
@@ -580,14 +580,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 4) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -595,13 +595,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(4);
 				player.sendItemList();
 				break;
@@ -611,14 +611,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 5) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -626,13 +626,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(5);
 				player.sendItemList();
 				break;
@@ -642,14 +642,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 6) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -657,13 +657,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(6);
 				player.sendItemList();
 				break;
@@ -673,14 +673,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 7) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -688,13 +688,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(7);
 				player.sendItemList();
 				break;
@@ -704,14 +704,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 8) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -719,13 +719,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(8);
 				player.sendItemList();
 				break;
@@ -735,14 +735,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 9) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -750,13 +750,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(9);
 				player.sendItemList();
 				break;
@@ -766,14 +766,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 10) && (item.getId() == BLACK_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, BLACK_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -781,13 +781,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", BLACK_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", BLACK_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(10);
 				player.sendItemList();
 				break;
@@ -797,7 +797,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long itemCount = getQuestItemsCount(player, SAYHA_CLOAK_COUPON);
 				if (itemCount < 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				takeItems(player, SAYHA_CLOAK_COUPON, 1);
@@ -809,14 +809,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 1) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -824,13 +824,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(1);
 				player.sendItemList();
 				break;
@@ -840,14 +840,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 2) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -855,13 +855,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(2);
 				player.sendItemList();
 				break;
@@ -871,14 +871,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 3) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -886,13 +886,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(3);
 				player.sendItemList();
 				break;
@@ -902,14 +902,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 4) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -917,13 +917,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(4);
 				player.sendItemList();
 				break;
@@ -933,14 +933,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 5) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -948,13 +948,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(5);
 				player.sendItemList();
 				break;
@@ -964,14 +964,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 6) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -979,13 +979,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(6);
 				player.sendItemList();
 				break;
@@ -995,14 +995,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 7) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1010,13 +1010,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(7);
 				player.sendItemList();
 				break;
@@ -1026,14 +1026,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 8) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1041,13 +1041,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(8);
 				player.sendItemList();
 				break;
@@ -1057,14 +1057,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 9) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1072,13 +1072,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(9);
 				player.sendItemList();
 				break;
@@ -1088,14 +1088,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 10) && (item.getId() == WHITE_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, WHITE_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1103,13 +1103,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", WHITE_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", WHITE_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(10);
 				player.sendItemList();
 				break;
@@ -1119,7 +1119,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long itemCount = getQuestItemsCount(player, SAYHA_CLOAK_COUPON);
 				if (itemCount < 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				takeItems(player, SAYHA_CLOAK_COUPON, 1);
@@ -1131,14 +1131,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 1) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1146,13 +1146,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 1);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(1);
 				player.sendItemList();
 				break;
@@ -1162,14 +1162,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 2) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1177,13 +1177,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 2)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 2);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(2);
 				player.sendItemList();
 				break;
@@ -1193,14 +1193,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 3) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1208,13 +1208,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 3)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 3);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(3);
 				player.sendItemList();
 				break;
@@ -1224,14 +1224,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 4) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1239,13 +1239,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 5)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 5);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(4);
 				player.sendItemList();
 				break;
@@ -1255,14 +1255,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 5) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1270,13 +1270,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 10)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 10);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(5);
 				player.sendItemList();
 				break;
@@ -1286,14 +1286,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 6) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1301,13 +1301,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 25)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 25);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(6);
 				player.sendItemList();
 				break;
@@ -1317,14 +1317,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 7) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1332,13 +1332,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 81)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 81);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(7);
 				player.sendItemList();
 				break;
@@ -1348,14 +1348,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 8) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1363,13 +1363,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 200)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 200);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(8);
 				player.sendItemList();
 				break;
@@ -1379,14 +1379,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 9) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1394,13 +1394,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 300)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 300);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(9);
 				player.sendItemList();
 				break;
@@ -1410,14 +1410,14 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final Collection<ItemInstance> cloaks = player.getInventory().getItems(item -> (item.getEnchantLevel() == 10) && (item.getId() == RED_SAYHA_CLOAK));
 				if (cloaks.isEmpty())
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
 				final long itemCount = getQuestItemsCount(player, RED_SAYHA_CLOAK);
 				if (itemCount > 1)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
@@ -1425,13 +1425,13 @@ public class DimensionalMerchant extends AbstractNpcAI
 				final long packageCount = getQuestItemsCount(player, PACKAGE_CLOAK);
 				if (packageCount < 400)
 				{
-					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/no_cloak.html")));
+					player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/no_cloak.html")));
 					return null;
 				}
 				
-				player.destroyItem("DimensionalMerchant", cloak, player, true);
+				player.destroyItem("GameAssistant", cloak, player, true);
 				takeItems(player, PACKAGE_CLOAK, 400);
-				final ItemInstance reward = player.addItem("DimensionalMerchant", RED_SAYHA_CLOAK, 1, null, false);
+				final ItemInstance reward = player.addItem("GameAssistant", RED_SAYHA_CLOAK, 1, null, false);
 				reward.setEnchantLevel(10);
 				player.sendItemList();
 				break;
@@ -1443,7 +1443,7 @@ public class DimensionalMerchant extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/DimensionalMerchant/32478.html")));
+		player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/32478.html")));
 		return null;
 	}
 	
@@ -1460,6 +1460,6 @@ public class DimensionalMerchant extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DimensionalMerchant();
+		new GameAssistant();
 	}
 }
