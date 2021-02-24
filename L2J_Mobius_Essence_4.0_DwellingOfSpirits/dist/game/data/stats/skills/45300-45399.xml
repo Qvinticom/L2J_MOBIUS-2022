@@ -1342,6 +1342,11 @@
 				<amount>200</amount>
 			</condition>
 		</conditions>
+		<selfEffects>
+			<effect name="ModifyDeathPoints">
+				<amount>-200</amount>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1374,9 +1379,6 @@
 				<amount>-40</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ModifyDeathPoints">
-				<amount>-200</amount>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="45313" toLevel="3" name="Burning Field">
@@ -1406,7 +1408,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="DeathPoints">
-				<amount>200</amount>
+				<amount>300</amount>
 			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1425,11 +1427,15 @@
 				<overHit>true</overHit>
 			</effect>
 		</channelingEffects>
-		<effects>
+		<selfEffects>
 			<effect name="ModifyDeathPoints">
-				<amount>-200</amount>
+				<amount>
+					<value level="1">-300</value>
+					<value level="2">-250</value>
+					<value level="3">-200</value>
+				</amount>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="45314" toLevel="3" name="Conflagration">
 		<!-- Burns the body and decreases HP. -->
@@ -1508,7 +1514,7 @@
 				<overHit>true</overHit>
 			</effect>
 		</channelingEffects>
-		<effects>
+		<selfEffects>
 			<effect name="ModifyDeathPoints">
 				<amount>
 					<value level="1">-300</value>
@@ -1516,7 +1522,7 @@
 					<value level="3">-200</value>
 				</amount>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="45317" toLevel="3" name="Congelation">
 		<!-- The target is frozen and unable to move. -->
@@ -1597,7 +1603,7 @@
 				<overHit>true</overHit>
 			</effect>
 		</channelingEffects>
-		<effects>
+		<selfEffects>
 			<effect name="ModifyDeathPoints">
 				<amount>
 					<value level="1">-300</value>
@@ -1605,7 +1611,7 @@
 					<value level="3">-200</value>
 				</amount>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="45320" toLevel="3" name="Hailstorm">
 		<!-- Deals continuous damage. -->
@@ -4608,13 +4614,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpCheckAbnormal">
-				<type>SLEEP</type>
-				<level>1</level>
-				<hasAbnormal>true</hasAbnormal>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -4634,6 +4633,10 @@
 					<value level="14">187</value>
 					<value level="15">190</value>
 				</power>
+			</effect>
+			<effect name="MagicalAttackByAbnormalSlot">
+				<power>500</power>
+				<abnormalType>SLEEP</abnormalType>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>SLEEP,-1</dispel>
@@ -4705,13 +4708,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpCheckAbnormal">
-				<type>SLEEP</type>
-				<level>1</level>
-				<hasAbnormal>true</hasAbnormal>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -4731,6 +4727,10 @@
 					<value level="14">187</value>
 					<value level="15">190</value>
 				</power>
+			</effect>
+			<effect name="MagicalAttackByAbnormalSlot">
+				<power>500</power>
+				<abnormalType>SLEEP</abnormalType>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>SLEEP,-1</dispel>
@@ -4802,13 +4802,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpCheckAbnormal">
-				<type>SLEEP</type>
-				<level>1</level>
-				<hasAbnormal>true</hasAbnormal>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -4828,6 +4821,10 @@
 					<value level="14">187</value>
 					<value level="15">190</value>
 				</power>
+			</effect>
+			<effect name="MagicalAttackByAbnormalSlot">
+				<power>500</power>
+				<abnormalType>SLEEP</abnormalType>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>SLEEP,-1</dispel>
@@ -4899,13 +4896,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpCheckAbnormal">
-				<type>SLEEP</type>
-				<level>1</level>
-				<hasAbnormal>true</hasAbnormal>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -4925,6 +4915,10 @@
 					<value level="14">187</value>
 					<value level="15">190</value>
 				</power>
+			</effect>
+			<effect name="MagicalAttackByAbnormalSlot">
+				<power>500</power>
+				<abnormalType>SLEEP</abnormalType>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>SLEEP,-1</dispel>

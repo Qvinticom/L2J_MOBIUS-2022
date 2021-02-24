@@ -859,6 +859,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39123" level="1" /> <!-- Maliss' HP Recovery Potion -->
+		</skills>
 	</item>
 	<item id="94383" name="Scroll: Enchant Rare Accessories" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->

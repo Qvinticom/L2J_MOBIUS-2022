@@ -10,6 +10,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93545" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Circlet (Light) -->
+		</capsuled_items>
 	</item>
 	<item id="93601" name="+0~+5 Armor Pack - Avadon Circlet (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -21,6 +25,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93546" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Circlet (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93602" name="+0 ~ +5 Armor Pack - Zubei's Helmet (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -32,6 +40,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93547" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Helmet (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93603" name="+0 ~ +5 Armor Pack - Zubei's Helmet (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -43,6 +55,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93548" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Helmet (Light) -->
+		</capsuled_items>
 	</item>
 	<item id="93604" name="+0 ~ +5 Armor Pack - Zubei's Helmet (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -54,6 +70,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93549" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Helmet (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93605" name="+0 ~ +5 Armor Pack - Blue Wolf Helmet (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -65,6 +85,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93550" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Helmet (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93606" name="+0 ~ +5 Armor Pack - Blue Wolf Helmet (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -76,6 +100,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93551" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Helmet (Light) -->
+		</capsuled_items>
 	</item>
 	<item id="93607" name="+0 ~ +5 Armor Pack - Blue Wolf Helmet (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -87,6 +115,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93552" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Helmet (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93608" name="+0 ~ +5 Armor Pack - Doom Helmet (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -98,6 +130,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93553" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Helmet (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93609" name="+0 ~ +5 Armor Pack - Doom Helmet (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -109,6 +145,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93554" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Helmet (Light) -->
+		</capsuled_items>
 	</item>
 	<item id="93610" name="+0 ~ +5 Armor Pack - Doom Helmet (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -120,6 +160,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93555" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Helmet (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93611" name="Random Craft Pack" type="EtcItem">
 		<!-- Double-click to obtain Charging Stone of Random Craft - 1 charge, and 30,000-10,000,000 adena. -->

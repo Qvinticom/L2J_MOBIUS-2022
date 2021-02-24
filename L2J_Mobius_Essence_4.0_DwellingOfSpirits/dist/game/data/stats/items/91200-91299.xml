@@ -108,6 +108,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="back" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54038" level="1" /> <!-- Sayha's Cloak -->
+			<skill id="54039" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Sayha's Cloak +1 -->
+		</skills>
 	</item>
 	<item id="91211" name="White Sayha's Cloak" type="Armor">
 		<!-- A cloak filled with Sayha's energy. Can be enchanted with Sayha's Cloak Enchantment Scrolls. Depending on the enchant value, activates various abilities. -->
@@ -119,6 +133,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="back" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54038" level="1" /> <!-- Sayha's Cloak -->
+			<skill id="54039" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Sayha's Cloak +1 -->
+		</skills>
 	</item>
 	<item id="91212" name="Red Sayha's Cloak" type="Armor">
 		<!-- A cloak filled with Sayha's energy. Can be enchanted with Sayha's Cloak Enchantment Scrolls. Depending on the enchant value, activates various abilities. -->
@@ -130,6 +158,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="back" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="54038" level="1" /> <!-- Sayha's Cloak -->
+			<skill id="54039" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="7" type="ON_ENCHANT" type_value="7" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="8" type="ON_ENCHANT" type_value="8" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="9" type="ON_ENCHANT" type_value="9" /> <!-- Sayha's Cloak +1 -->
+			<skill id="54039" level="10" type="ON_ENCHANT" type_value="10" /> <!-- Sayha's Cloak +1 -->
+		</skills>
 	</item>
 	<item id="91213" name="Sayha's Cloak Enchantment Scroll" type="EtcItem">
 		<!-- Required for enchanting Sayha's Cloak. The maximum enchant value is +10. -->
@@ -139,6 +181,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51142" level="1" /> <!-- Radiant Sayha's Cloak Enchantment Scroll -->
+		</skills>
 	</item>
 	<item id="91214" name="Radiant Sayha's Cloak Enchantment Scroll" type="EtcItem">
 		<!-- Required to enchant Sayha's Cloak. Can be used on a cloak enchanted up to +9. In case of failure the enchanted item doesn't disappear, and its enchant value remains the same. -->
@@ -148,6 +195,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51143" level="1" /> <!-- Radiant Sayha's Cloak Enchantment Scroll -->
+		</skills>
 	</item>
 	<item id="91215" name="Shining Sayha's Cloak Enchantment Scroll" type="EtcItem">
 		<!-- Required to enchant Sayha's Cloak. Can be used on a cloak enchanted up to +7. In case of failure the enchanted item doesn't disappear, and its enchant value remains the same. -->
@@ -157,6 +209,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51144" level="1" /> <!-- Shining Sayha's Cloak Enchantment Scroll -->
+		</skills>
 	</item>
 	<item id="91216" name="+16 Weapon Supply Box (B-grade)" type="EtcItem">
 		<!-- Double-click to obtain a +16 B-grade weapon. -->
@@ -574,26 +631,44 @@
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
 	</item>
-	<item id="91256" name="Baium Doll" type="EtcItem">
+	<item id="91256" name="Baium Doll" additionalName="Lv. 2" type="EtcItem">
 		<!-- <Baium Doll's Sorcery Lv. 2>. Skill Cooldown -3%. P. Def. +12%. M. Def. +12%. Silence Resistance +40%. Fear Resistance +40%. Paralysis Resistance +20%. Knockdown Resistance +20%. Pull Resistance +20%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_baium_doll_30d" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39302" level="2" /> <!-- Baium Doll's Sorcery -->
+		</skills>
 	</item>
-	<item id="91257" name="Queen Ant Doll" type="EtcItem">
+	<item id="91257" name="Queen Ant Doll" additionalName="Lv. 2" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery Lv. 2>. P. Atk. +8%. P. Critical Damage +8%. P. Skill Critical Damage +8%. Max HP +12%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39303" level="2" /> <!-- Queen Ant Doll's Sorcery -->
+		</skills>
 	</item>
-	<item id="91258" name="Orfen Doll" type="EtcItem">
+	<item id="91258" name="Orfen Doll" additionalName="Lv. 2" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery Lv. 2>. M. Atk. +8%. M. Skill Critical Damage +8%. Max MP +12%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_orfen_doll_30d" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39304" level="2" /> <!-- Orfen Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="91259" name="Spirit Transformation Scroll - Singer" type="EtcItem">
 		<!-- For 30 min. transforms you into Singer Spirit. Effect remains after death. Cannot be used in Spirit form. Cooldown: 10 min. Spirit - Singer: you can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality. -->

@@ -1015,6 +1015,13 @@
 		<!-- Max HP +5%. -->
 		<icon>BranchSys2.Icon.br_zaken_cloak_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45021" toLevel="1" name="White Uniform Hat (STR+1 INT+1)">
 		<!-- STR +1, INT +1. -->

@@ -537,6 +537,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40180" level="1" /> <!-- Sayha's Cookie - Event -->
+		</skills>
 	</item>
 	<item id="93849" name="Halloween Mask" type="EtcItem">
 		<!-- Changes appearance to that of one of Halloween Masks. Acquired XP/ SP +30% or 50% for 20 min. The effect remains after death. Cooldown: 1 min. -->

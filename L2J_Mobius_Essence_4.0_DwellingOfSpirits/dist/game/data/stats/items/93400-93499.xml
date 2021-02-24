@@ -318,6 +318,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50353" level="1" /> <!-- Rare Accessory: Valakas' Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">76</stat>
 			<stat type="maxMp">30</stat>
@@ -669,6 +674,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71755" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Samurai Long Sword (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93437" name="+4 ~ +15 Weapon Pack - Demon's Staff" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -680,6 +689,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71757" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Demon's Staff (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93438" name="+4 ~ +15 Weapon Pack - Ecliptic Axe" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -691,6 +704,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93049" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Ecliptic Axe (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93439" name="+4 ~ +15 Weapon Pack - Crystal Dagger" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -702,6 +719,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71758" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Ecliptic Axe (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93440" name="+4 ~ +15 Weapon Pack - Eminence Bow" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -713,6 +734,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71759" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Eminence Bow (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93441" name="+4 ~ +15 Weapon Pack - Orcish Poleaxe" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -724,6 +749,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71760" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Orcish Poleaxe (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93442" name="+4 ~ +15 Weapon Pack - Katana*Katana" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -735,6 +764,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71761" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Katana*Katana (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93443" name="+4 ~ +15 Weapon Pack - Yaksa Mace" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -746,6 +779,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71762" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Yaksa Mace (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93444" name="+4 ~ +15 Weapon Pack - Berserker Blade" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -757,6 +794,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71763" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Berserker Blade (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93445" name="+4 ~ +15 Weapon Pack - Great Pata" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -768,6 +809,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71764" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Great Pata (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93446" name="+4 ~ +15 Weapon Pack - Admiral's Estoc" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -779,6 +824,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71765" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Admiral's Estoc (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93447" name="+4 ~ +15 Weapon Pack - Saber Tooth" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -790,6 +839,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="71766" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Saber Tooth (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93448" name="A-grade Weapon Coupon" type="EtcItem">
 		<!-- Can be exchanged for an A-grade weapon through the Game Assistant. -->
@@ -960,6 +1013,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93422" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Damascus (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93464" name="+4 ~ +15 Weapon Pack - Wizard's Tear" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -971,6 +1028,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93432" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Wizard's Tear (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93465" name="+4 ~ +15 Weapon Pack - Guardian's Sword" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -982,6 +1043,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93431" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Guardian's Sword (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93466" name="+4 ~ +15 Weapon Pack - Bellion Cestus" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -993,6 +1058,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93428" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Bellion Cestus (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93467" name="+4 ~ +15 Weapon Pack - Bow of Peril" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1004,6 +1073,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93429" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Bow of Peril (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93468" name="+4 ~ +15 Weapon Pack - Lance" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1015,6 +1088,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93423" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Lance (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93469" name="+4 ~ +15 Weapon Pack - Staff of Evil Spirits" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1026,6 +1103,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93426" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Staff of Evil Spirits (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93470" name="+4 ~ +15 Weapon Pack - Deadman's Glory" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1037,6 +1118,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93424" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Deadman's Glory (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93471" name="+4 ~ +15 Weapon Pack - Art of Battle Axe" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1048,6 +1133,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93425" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Art of Battle Axe (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93472" name="+4 ~ +15 Weapon Pack - Samurai Long Sword*Samurai Long Sword" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1059,6 +1148,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93430" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Samurai Long Sword*Samurai Long Sword (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93473" name="+4 ~ +15 Weapon Pack - Demon's Dagger" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1070,6 +1163,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93427" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Demon's Dagger (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93474" name="+4 ~ +15 Weapon Pack - Colichemarde" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1081,6 +1178,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93435" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Colichemarde (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93475" name="+4 ~ +15 Weapon Pack - Dismantler" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1092,6 +1193,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93434" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Dismantler (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93476" name="+4 ~ +15 Weapon Pack - Star Buster" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1103,6 +1208,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93433" min="1" max="1" chance="100" minEnchant="4" maxEnchant="15" /> <!-- Star Buster (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93477" name="L-Coins (3000 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain 3000 L-Coins. -->

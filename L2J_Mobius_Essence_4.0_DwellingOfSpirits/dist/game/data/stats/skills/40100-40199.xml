@@ -452,6 +452,24 @@
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>300</reuseDelay>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>35000</value>
+			</effect>
+			<effect name="ModifyMagicLampPoints">
+				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40181" toLevel="1" name="Antharas' Lair's Time Stone">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

@@ -28,8 +28,11 @@
 		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="43200" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91603" min="1" max="1" chance="100" /> <!-- Doll of Border - Frintezza (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="91603" name="Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 1>. STR/ INT +1. DEX/ WIT +1. CON/ MEN +1. Stun Atk. Rate +10%. Paralysis Atk. Rate +10%. For 30 days. Boosts parameters when in inventory. -->
@@ -39,20 +42,38 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="1" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
-	<item id="91604" name="Frintezza Doll" additionalName="Lv. 1" type="EtcItem">
+	<item id="91604" name="Frintezza Doll" additionalName="Lv. 2" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 2>. STR/ INT +1. DEX/ WIT +1. CON/ MEN +1. Skill Power +2%. Atk. Spd. +50. Casting Spd. +50. Speed +2. Boosts parameters when in inventory. Can be upgraded through compounding. -->
 		<set name="icon" val="icon.bm_doll_frintessa_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="2" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
-	<item id="91605" name="Frintezza Doll" additionalName="Lv. 2" type="EtcItem">
+	<item id="91605" name="Frintezza Doll" additionalName="Lv. 3" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 3>. STR/ INT +2. DEX/ WIT +2. CON/ MEN +2. Skill Power +5%. Atk. Spd. +100. Casting Spd. +100. Speed +5. Boosts parameters when in inventory. -->
 		<set name="icon" val="icon.bm_doll_frintessa_30d" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="3" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="91606" name="High Quality Agathion Virgo" additionalName="Fire Dragon" type="Armor">
 		<!-- Agathion Virgo that contains the Fire Dragon's spirit. Equipping it in the main slot summons the agathion. Enables its secondary skills. <Secondary skills>. Increases M. Def. and Silence/ Fear Atk. Rate. When enchanted to +6 and higher, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Earth Dragon) by Pona. -->
@@ -598,17 +619,16 @@
 	<item id="91654" name="Adventurer's Mark Lv. 1" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Rate +5%, MP Recovery Rate +10%. The effect doesn't stack if several identical marks are stored in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
+		<set name="is_tradable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="1" /> <!-- Adventurer's Mark -->
@@ -617,17 +637,16 @@
 	<item id="91655" name="Adventurer's Mark Lv. 2" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Rate +10%, MP Recovery Rate +15%. The effect doesn't stack if several identical marks are stored in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
+		<set name="is_tradable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="2" /> <!-- Adventurer's Mark -->
@@ -636,17 +655,16 @@
 	<item id="91656" name="Adventurer's Mark Lv. 3" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Rate +15%, MP Recovery Rate +20%. The effect doesn't stack if several identical marks are stored in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
+		<set name="is_tradable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="3" /> <!-- Adventurer's Mark -->
@@ -655,17 +673,16 @@
 	<item id="91657" name="Adventurer's Mark Lv. 4" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Rate +20%, MP Recovery Rate +25%. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="handler" val="ItemSkills" />
-		<set name="handler" val="Book" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
+		<set name="is_tradable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="51387" level="4" /> <!-- Adventurer's Mark -->

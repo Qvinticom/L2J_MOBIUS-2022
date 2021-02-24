@@ -22,6 +22,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="45020" level="1" /> <!-- Zaken's Cloak -->
+		</skills>
 	</item>
 	<item id="21754" name="Server Master Magic Pencil" type="Weapon">
 		<!-- Magic on the tip of a pencil. A special item for the Head of the server. -->

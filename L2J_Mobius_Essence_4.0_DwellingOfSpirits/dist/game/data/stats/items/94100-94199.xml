@@ -561,6 +561,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39302" level="1" /> <!-- Baium Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94154" name="Queen Ant Doll Lv. 1" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery Lv. 1>. P. Atk. +2%. P. Critical Damage +3%. P. Skill Critical Damage +3%. Max HP +4%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
@@ -569,6 +575,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39303" level="1" /> <!-- Queen Ant Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94155" name="Orfen Doll Lv. 1" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery Lv. 1>. M. Atk. +2%. M. Skill Critical Damage +3%. Max MP +4%. Boosts parameters when in inventory. Can be upgraded through compounding. -->
@@ -577,6 +589,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39304" level="1" /> <!-- Orfen Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94156" name="Package: Baium Doll Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -588,6 +606,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94153" min="1" max="1" chance="100" /> <!-- Baium Doll Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94157" name="Package: Baium Doll Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -599,6 +621,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91256" min="1" max="1" chance="100" /> <!-- Baium Doll Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="94158" name="Package: Baium Doll Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -610,6 +636,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91423" min="1" max="1" chance="100" /> <!-- Baium Doll Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="94159" name="Package: Queen Ant Doll Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -621,6 +651,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94154" min="1" max="1" chance="100" /> <!-- Queen Ant Doll Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94160" name="Package: Queen Ant Doll Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -632,6 +666,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91257" min="1" max="1" chance="100" /> <!-- Queen Ant Doll Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="94161" name="Package: Queen Ant Doll Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -643,6 +681,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91422" min="1" max="1" chance="100" /> <!-- Queen Ant Doll Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="94162" name="Package: Orfen Doll Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -654,6 +696,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94155" min="1" max="1" chance="100" /> <!-- Orfen Doll Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94163" name="Package: Orfen Doll Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -665,6 +711,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91258" min="1" max="1" chance="100" /> <!-- Orfen Doll Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="94164" name="Package: Orfen Doll Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -676,6 +726,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91424" min="1" max="1" chance="100" /> <!-- Orfen Doll Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="94165" name="PA Lineage 2 Festival Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: A-grade Weapon Coupon, A-grade Armor Coupon. -->

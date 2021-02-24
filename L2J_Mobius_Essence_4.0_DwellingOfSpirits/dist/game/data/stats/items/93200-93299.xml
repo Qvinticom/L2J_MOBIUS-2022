@@ -803,6 +803,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40180" level="1" /> <!-- Sayha's Cookie - Event -->
+		</skills>
 	</item>
 	<item id="93275" name="Random Enhanced Samurai Long Sword Crafting" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -968,6 +973,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="6" maxEnchant="6" /> <!-- Talisman of Speed +6 -->
+		</capsuled_items>
 	</item>
 	<item id="93290" name="Victory Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

@@ -875,6 +875,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93501" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Breastplate (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93557" name="+0 ~ +5 Armor Pack - Blue Wolf Breastplate" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -886,6 +890,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93502" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Breastplate (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93558" name="+0 ~ +5 Armor Pack - Zubei's Gaiters" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -897,6 +905,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93503" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Gaiters (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93559" name="+0~+5 Armor Pack - Avadon Breastplate" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -908,6 +920,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93504" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Breastplate (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93560" name="+0~+5 Armor Pack - Avadon Gaiters" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -919,6 +935,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93505" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Gaiters (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93561" name="+0 ~ +5 Armor Pack - Blue Wolf Gaiters" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -930,6 +950,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93506" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Gaiters (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93562" name="+0 ~ +5 Armor Pack - Doom Plate Armor" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -941,6 +965,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93507" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Plate Armor (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93563" name="+0 ~ +5 Armor Pack - Zubei's Leather Shirt" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -952,6 +980,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93508" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Leather Shirt (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93564" name="+0 ~ +5 Armor Pack - Zubei's Leather Gaiters" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -963,6 +995,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93509" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Leather Gaiters (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93565" name="+0~+5 Armor Pack - Avadon Leather Armor" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -974,6 +1010,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93510" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Leather Armor (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93566" name="+0 ~ +5 Armor Pack - Blue Wolf Leather Armor" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -985,6 +1025,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93511" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Leather Armor (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93567" name="+0 ~ +5 Armor Pack - Doom Leather Armor" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -996,6 +1040,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93512" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Leather Armor (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93568" name="+0~+5 Armor Pack - Zubei's Tunic" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1007,6 +1055,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93513" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Tunic (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93569" name="+0 ~ +5 Armor Pack - Blue Wolf Tunic" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1018,6 +1070,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93514" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Tunic (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93570" name="+0 ~ +5 Armor Pack - Doom Tunic" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1029,6 +1085,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93515" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Tunic (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93571" name="+0~+5 Armor Pack - Zubei's Stockings" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1040,6 +1100,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93516" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Stockings (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93572" name="+0 ~ +5 Armor Pack - Blue Wolf Stockings" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1051,6 +1115,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93517" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Stockings (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93573" name="+0 ~ +5 Armor Pack - Doom Stockings" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1062,6 +1130,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93518" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Stockings (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93574" name="+0~+5 Armor Pack - Avadon Robe" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1073,6 +1145,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93519" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Robe (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93575" name="+0 ~ +5 Armor Pack - Zubei's Gauntlets (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1084,6 +1160,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93520" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Gauntlets (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93576" name="+0 ~ +5 Armor Pack - Zubei's Gauntlets (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1095,6 +1175,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93521" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Gauntlets (Light Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93577" name="+0 ~ +5 Armor Pack - Zubei's Gauntlets (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1106,6 +1190,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93522" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Gauntlets (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93578" name="+0~+5 Armor Pack - Avadon Gloves (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1117,6 +1205,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93523" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Gloves (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93579" name="+0~+5 Armor Pack - Avadon Gloves (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1128,6 +1220,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93524" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Gloves (Light Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93580" name="+0~+5 Armor Pack - Avadon Gloves (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1139,6 +1235,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93525" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Gloves (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93581" name="+0 ~ +5 Armor Pack - Blue Wolf Gloves (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1150,6 +1250,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93526" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Gloves (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93582" name="+0 ~ +5 Armor Pack - Blue Wolf Gloves (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1161,6 +1265,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93527" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Gloves (Light Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93583" name="+0 ~ +5 Armor Pack - Blue Wolf Gloves (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1172,6 +1280,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93528" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Gloves (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93584" name="+0 ~ +5 Armor Pack - Doom Gloves (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1183,6 +1295,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93529" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Gloves (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93585" name="+0 ~ +5 Armor Pack - Doom Gloves (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1194,6 +1310,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93530" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Gloves (Light Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93586" name="+0 ~ +5 Armor Pack - Doom Gloves (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1205,6 +1325,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93531" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Gloves (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93587" name="+0 ~ +5 Armor Pack - Zubei's Boots (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1216,6 +1340,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93532" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Boots (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93588" name="+0 ~ +5 Armor Pack - Zubei's Boots (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1227,6 +1355,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93533" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Boots (Light Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93589" name="+0 ~ +5 Armor Pack - Zubei's Boots (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1238,6 +1370,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93534" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Zubei's Boots (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93590" name="+0~+5 Armor Pack - Avadon Boots (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1249,6 +1385,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93535" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Boots (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93591" name="+0~+5 Armor Pack - Avadon Boots (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1260,6 +1400,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93536" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Boots (Light Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93592" name="+0~+5 Armor Pack - Avadon Boots (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1271,6 +1415,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93537" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Boots (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93593" name="+0 ~ +5 Armor Pack - Blue Wolf Boots (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1282,6 +1430,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93538" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Boots (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93594" name="+0 ~ +5 Armor Pack - Blue Wolf Boots (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1293,6 +1445,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93539" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Boots (Light) -->
+		</capsuled_items>
 	</item>
 	<item id="93595" name="+0 ~ +5 Armor Pack - Blue Wolf Boots (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1304,6 +1460,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93540" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Blue Wolf Boots (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93596" name="+0 ~ +5 Armor Pack - Doom Boots (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1315,6 +1475,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93541" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Boots (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 	<item id="93597" name="+0 ~ +5 Armor Pack - Doom Boots (Light Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1326,6 +1490,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93542" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Boots (Light) -->
+		</capsuled_items>
 	</item>
 	<item id="93598" name="+0 ~ +5 Armor Pack - Doom Boots (Robe)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1337,6 +1505,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93543" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Doom Boots (Robe) -->
+		</capsuled_items>
 	</item>
 	<item id="93599" name="+0~+5 Armor Pack - Avadon Circlet (Heavy Armor)" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -1348,5 +1520,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93544" min="1" max="1" chance="100" maxEnchant="5" /> <!-- Avadon Circlet (Heavy Armor) -->
+		</capsuled_items>
 	</item>
 </list>

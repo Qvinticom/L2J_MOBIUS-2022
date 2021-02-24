@@ -351,6 +351,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50326" level="1" /> <!-- Summon Agathion Ignis -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="93129" name="Agathion Nebula" type="Armor">
 		<!-- Increases all Critical Rate. When enchanted to +5 and higher, decreases Skill Cooldown. Equipping it in the main slot summons Agathion Nebula. Note!. If Agathion Scorpio or Agathion Capricorn are equipped, only Agathion Nebula will be active. -->
@@ -364,6 +368,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50327" level="1" /> <!-- Summon Agathion Nebula -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="93130" name="Agathion Procella" type="Armor">
 		<!-- Increases Atk. Spd./Casting Spd. When enchanted to +5 and higher, decreases Skill MP consumption. Equipping it in the main slot summons Agathion Procella. Note!. If equipped with Agathion Libra or Agathion Sagittarius, only Agathion Procella is active. -->
@@ -377,6 +385,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50328" level="1" /> <!-- Summon Agathion Procella -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="93131" name="Agathion Petram" type="Armor">
 		<!-- Increases P./ M. Def. When enchanted to +5 and higher, increases Silence/ Fear/ Stun Atk. Rate. Equipping it in the main slot summons Agathion Petram. Note!. If Agathion Taurus or Agathion Virgo are equipped, only Agathion Petram will be active. -->
@@ -390,6 +402,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50329" level="1" /> <!-- Summon Agathion Petram -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="93132" name="Agathion Joy" type="Armor">
 		<!-- Increases the acquired XP/ SP bonus from Sayha's Grace. When enchanted to +5 and higher, increases Max HP/ MP/ CP and acquired XP/ SP. Equipping it in the main slot summons Agathion Joy. Note!. If Agathion Gemini is equipped, only Agathion Joy will be active. -->
@@ -403,6 +419,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="51027" level="1" /> <!-- Summon Agathion Joy -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="93133" name="Scroll: Enchant Agathion" type="EtcItem">
 		<!-- Only for agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
@@ -413,6 +433,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="51338" level="1" /> <!-- Scroll: Agathion Enchant Scroll Lv.1 -->
+		</skills>
 	</item>
 	<item id="93134" name="Package: Agathion Ignis" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

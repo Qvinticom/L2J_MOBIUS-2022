@@ -282,38 +282,168 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50451" toLevel="1" name="Queen Ant Power">
-		<!-- For $s1, grants immunity to debuffs that decrease P./ M. Atk. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.accessory_ring_of_queen_ant_i05</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PA_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50452" toLevel="1" name="Core Power">
 		<!-- For $s1, grants immunity to debuffs that decrease P./ M. Def. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.accessory_ring_of_core_i05</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50453" toLevel="1" name="Baium Power">
 		<!-- Damage +10%. for $s1. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.accessory_ring_of_baium_i05</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PA_UP_SPECIAL</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<castRange>700</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50454" toLevel="1" name="Orfen Power">
-		<!-- Inflicts Sleep on the enemy. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.accessory_earring_of_orfen_i05</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="50455" toLevel="1" name="Zaken Power">
 		<!-- Inflicts Silence on the enemy. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.accessory_earring_of_zaken_i05</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>700</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
 	</skill>
 	<skill id="50456" toLevel="1" name="Antharas Power">
 		<!-- Stuns the enemy. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_earring_of_antaras_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50457" toLevel="1" name="Frintezza Power">
 		<!-- Inflicts Fear on the enemy. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_necklace_of_frintessa_i06</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50458" toLevel="1" name="Pirate Earring">

@@ -2,23 +2,56 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="50300" toLevel="1" name="Queen Ant's Stone Breaker">
 		<!-- A blunt weapon containing Queen Ant's Soul and being able to use Queen Ant's power. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.special_weapon_onehandblunt</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50301" toLevel="1" name="Adventurer's Belt">
 		<!-- Inventory Slots +2, Weight Limit +1000. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.belt_i00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>2</amount>
+				<type>INVENTORY_NORMAL</type>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>10000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50302" toLevel="1" name="Adventurer's Cloak">
 		<!-- Max HP/ MP +$s1. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.amor_goodness_cloak</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50303" toLevel="1" name="Enhanced Adventurer's Cloak">
 		<!-- Max HP/ MP +$s1. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.amor_goodness_cloak</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50304" toLevel="1" name="Hat of Glory">
 		<!-- STR +1, INT+1, HP +300. -->
@@ -87,48 +120,423 @@
 	</skill>
 	<skill id="50321" toLevel="11" name="Agathion: Agathion Ignis">
 		<!-- <Effect> P. Atk. +$s1 M. Atk. +$s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.agathion_fire_1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<HOLD>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">2</value>
+					<value level="7">5</value>
+					<value level="8">8</value>
+					<value level="9">14</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+				</HOLD>
+			</effect>
+			<effect name="AttackTrait">
+				<SLEEP>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">2</value>
+					<value level="7">5</value>
+					<value level="8">8</value>
+					<value level="9">14</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+				</SLEEP>
+			</effect>
+			<effect name="AttackTrait">
+				<PARALYZE>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">2</value>
+					<value level="7">5</value>
+					<value level="8">8</value>
+					<value level="9">14</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+				</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50322" toLevel="11" name="Agathion: Agathion Nebula">
 		<!-- <Effect> All Critical Rate +$s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.agathion_water_1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">9</value>
+					<value level="8">12</value>
+					<value level="9">15</value>
+					<value level="10">18</value>
+					<value level="11">22</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="6">-1</value>
+					<value level="7">-2</value>
+					<value level="8">-3</value>
+					<value level="9">-5</value>
+					<value level="10">-7</value>
+					<value level="11">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="6">-1</value>
+					<value level="7">-2</value>
+					<value level="8">-3</value>
+					<value level="9">-5</value>
+					<value level="10">-7</value>
+					<value level="11">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50323" toLevel="11" name="Agathion: Agathion Procella">
 		<!-- <Effect> Atk. Spd. +$s1 Casting Spd. +$s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.agathion_wind_1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+					<value level="9">80</value>
+					<value level="10">110</value>
+					<value level="11">150</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+					<value level="7">30</value>
+					<value level="8">50</value>
+					<value level="9">80</value>
+					<value level="10">110</value>
+					<value level="11">150</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="6">-1</value>
+					<value level="7">-2</value>
+					<value level="8">-4</value>
+					<value level="9">-6</value>
+					<value level="10">-8</value>
+					<value level="11">-12</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="6">-1</value>
+					<value level="7">-2</value>
+					<value level="8">-4</value>
+					<value level="9">-6</value>
+					<value level="10">-8</value>
+					<value level="11">-12</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="6">-1</value>
+					<value level="7">-2</value>
+					<value level="8">-4</value>
+					<value level="9">-6</value>
+					<value level="10">-8</value>
+					<value level="11">-12</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50324" toLevel="11" name="Agathion: Agathion Petram">
 		<!-- <Effect> P. Def. +$s1 M. Def. +$s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.agathion_earth_1</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">20</value>
+					<value level="5">30</value>
+					<value level="6">100</value>
+					<value level="7">150</value>
+					<value level="8">250</value>
+					<value level="9">360</value>
+					<value level="10">420</value>
+					<value level="11">490</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<SHOCK>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">2</value>
+					<value level="7">5</value>
+					<value level="8">8</value>
+					<value level="9">14</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+				</SHOCK>
+			</effect>
+			<effect name="AttackTrait">
+				<DERANGEMENT>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">2</value>
+					<value level="7">5</value>
+					<value level="8">8</value>
+					<value level="9">14</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+				</DERANGEMENT>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="9">2</value>
+					<value level="10">3</value>
+					<value level="11">4</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50325" toLevel="11" name="Agathion: Agathion Joy">
 		<!-- <Effect> When Sayha's Grace is used, acquired XP +$s1 When Sayha's Grace is used, acquired SP +$s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.pleasure_agathion_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">6</value>
+					<value level="6">9</value>
+					<value level="7">9</value>
+					<value level="8">12</value>
+					<value level="9">16</value>
+					<value level="10">20</value>
+					<value level="11">30</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">6</value>
+					<value level="6">9</value>
+					<value level="7">9</value>
+					<value level="8">12</value>
+					<value level="9">16</value>
+					<value level="10">20</value>
+					<value level="11">30</value>
+				</amount>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">5</value>
+					<value level="9">8</value>
+					<value level="10">11</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">5</value>
+					<value level="9">8</value>
+					<value level="10">11</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">5</value>
+					<value level="11">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50326" toLevel="1" name="Summon Agathion Ignis">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>15944</npcId> <!-- Ignis -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50327" toLevel="1" name="Summon Agathion Nebula">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13572</npcId> <!-- Nebula -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50328" toLevel="1" name="Summon Agathion Procella">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13576</npcId> <!-- Procella -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50329" toLevel="1" name="Summon Agathion Petram">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>85</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13580</npcId> <!-- Petram -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50330" toLevel="1" name="Ice Crystal Breastplate">
 		<!-- Ice Crystal Breastplate effect CON +2 STR +1 Overweight limit +1500 M. Def. +15 Max HP +150 Stun Resistance +20% Paralysis Resistance +20% Sleep Resistance +20% Hold Resistance +20% Silence Resistance +20% Fear Resistance +20% -->
@@ -466,8 +874,45 @@
 	</skill>
 	<skill id="50353" toLevel="1" name="Rare Accessory: Valakas' Necklace">
 		<!-- A necklace imbued with fire dragon power. <Effect> P. Atk. +$s1 M. Atk. +$s1 P./ M. Skill Power +$s4 Damage Reflection Resistance +$s5 Skill Cooldown -$s6 Paralysis Atk. Rate +$s2 Paralysis Resistance +$s3 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.accessory_necklace_of_valakas_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>5</amount>
+			</effect>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-4</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="AttackTrait">
+				<PARALYZE>10</PARALYZE>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>10</PARALYZE>
+			</effect>	
+		</effects>
 	</skill>
 	<skill id="50354" toLevel="1" name="Flaming Tunic">
 		<!-- Flaming Tunic effect WIT +1 MEN +1 Weight limit +1500 M. Def. +15 Max MP +200 Stun Resistance +20% Paralysis Resistance +20% Sleep Resistance +20% Hold Resistance +20% Silence Resistance +20% Fear Resistance +20% -->

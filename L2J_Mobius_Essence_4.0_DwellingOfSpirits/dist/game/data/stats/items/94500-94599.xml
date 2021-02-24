@@ -70,6 +70,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="1" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94510" name="Daily Kit: Supplies" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -92,6 +98,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94512" min="1" max="1" chance="100" /> <!-- Package: Frintezza's Doll (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="94512" name="Frintezza's Doll" additionalName="7-day" type="EtcItem">
 		<!-- <Frintezza Doll's Sorcery Lv. 2>. STR/ INT +1. DEX/ WIT +1. CON/ MEN +1. Skill Power +2%. Atk. Spd. +50. Casting Spd. +50. Speed +2. Boosts parameters when in inventory. -->
@@ -101,6 +111,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51297" level="2" /> <!-- Frintezza Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94513" name="Package: Frintezza's Doll Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -112,6 +128,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94509" min="1" max="1" chance="100" /> <!-- Frintezza's Doll Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94514" name="Package: Frintezza's Doll Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -123,6 +143,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91604" min="1" max="1" chance="100" /> <!-- Frintezza's Doll Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="94515" name="Package: Frintezza's Doll Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -134,6 +158,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91605" min="1" max="1" chance="100" /> <!-- Frintezza's Doll Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="94516" name="Pet Rescuer's Gift" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

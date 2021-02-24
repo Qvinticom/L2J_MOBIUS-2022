@@ -131,6 +131,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92408" min="1" max="1" chance="2" /> <!-- Baium's Thunder Breaker -->
+			<item id="92404" min="1" max="1" chance="2" /> <!-- Zaken's Blood Sword -->
+			<item id="92405" min="1" max="1" chance="2" /> <!-- Core's Plasmic Bow -->
+			<item id="92407" min="1" max="1" chance="2" /> <!-- Orfen's Venom Sword -->
+			<item id="92406" min="1" max="1" chance="2" /> <!-- Queen Ant's Stone Spear -->
+			<item id="91690" min="100" max="100" chance="90" /> <!-- Special HP Recovery Potion (Event) -->
+		</capsuled_items>
 	</item>
 	<item id="94612" name="Boss' Weapon Fragment" type="EtcItem">
 		<!-- Can be exchanged for various items through the Game Assistant. <Exchangeable items>. - Baium's Thunder Breaker (100 pcs.). - Zaken's Blood Sword (70 pcs.). - Core's Plasmic Bow (70 pcs.). - Orfen's Venom Sword (50 pcs.). - Queen Ant's Stone Breaker (70 pcs.). - Random Boss' Weapon Pack (1 pc.) -->

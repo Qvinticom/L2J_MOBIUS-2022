@@ -283,6 +283,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90825" min="1" max="1" chance="100" /> <!-- Doll of Border - Baium (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="90823" name="Sealed Doll of Border - Queen Ant" additionalName="30 days" type="EtcItem">
 		<!-- Double-click to obtain Doll of Border - Queen Ant (30-day). -->
@@ -293,6 +297,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90826" min="1" max="1" chance="100" /> <!-- Doll of Border - Queen Ant (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="90824" name="Sealed Doll of Border - Orfen" additionalName="30 days" type="EtcItem">
 		<!-- Double-click to obtain a Doll of Border - Orfen (30-day). -->
@@ -303,6 +311,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90827" min="1" max="1" chance="100" /> <!-- Doll of Border - Orfen (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="90825" name="Doll of Border - Baium" additionalName="30 days" type="EtcItem">
 		<!-- <Baium Doll's Sorcery>. Skill Cooldown -3%. P. Def. +12%. M. Def. +12%. Silence Resistance +40%. Fear Resistance +40%. Paralysis Resistance +20%. Knockdown Resistance +20%. Pull Resistance +20%. Available for 30 d. Boosts parameters when in inventory. -->
@@ -311,6 +323,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39302" level="2" /> <!-- Baium Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="90826" name="Doll of Border - Queen Ant" additionalName="30 days" type="EtcItem">
 		<!-- <Queen Ant Doll's Sorcery>. P. Atk. +8%. P. Critical Damage +8%. P. Skill Critical Damage +8%. Max HP +12%. Available for 30 days. Boosts parameters when in inventory. -->
@@ -319,6 +337,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39303" level="2" /> <!-- Queen Ant Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="90827" name="Doll of Border - Orfen" additionalName="30 days" type="EtcItem">
 		<!-- <Orfen Doll's Sorcery>. M. Atk. +8%. M. Skill Critical Damage +8%. Max MP +12%. For 30 days. Boosts parameters when in inventory. -->
@@ -327,6 +351,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39304" level="2" /> <!-- Orfen Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="90828" name="Transformation Scroll: Dark Knight Lv. 3" type="EtcItem">
 		<!-- Transforms into Dark Knight. <Transformation effect>. P. Atk. in PvP +10%. P. Def. in PvP +10%. Max HP +10%. Max MP +10%. Stun Resistance +10%. Paralysis Resistance +10%. Silence Resistance +10%. Fear Resistance +10%. Duration: 20 min. The effect remains after death. -->

@@ -53,6 +53,19 @@
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50293" level="1" /> <!-- Talisman of Speed -->
+			<skill id="50293" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Talisman of Speed +1 -->
+			<skill id="50293" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Talisman of Speed +2 -->
+			<skill id="50293" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Talisman of Speed +3 -->
+			<skill id="50293" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Talisman of Speed +4 -->
+			<skill id="50293" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Talisman of Speed +5 -->
+			<skill id="50293" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Talisman of Speed +6 -->
+			<skill id="50293" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Talisman of Speed +7 -->
+			<skill id="50293" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Talisman of Speed +8 -->
+			<skill id="50293" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Talisman of Speed +9 -->
+			<skill id="50293" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Talisman of Speed +10 -->
+		</skills>
 	</item>
 	<item id="92404" name="Zaken's Blood Sword" type="Weapon">
 		<set name="icon" val="icon.special_weapon_onehandsword" />
@@ -74,6 +87,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">10</stat>
 		</stats>
+		<skills>
+			<skill id="50297" level="1" /> <!-- Zaken's Blood Sword -->
+		</skills>
 	</item>
 	<item id="92405" name="Core's Plasmic Bow" type="Weapon">
 		<set name="icon" val="icon.weapon_karupis_i00" />
@@ -96,6 +112,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">5</stat>
 		</stats>
+		<skills>
+			<skill id="50299" level="1" /> <!-- Core's Plasmic Bow -->
+		</skills>
 	</item>
 	<item id="92406" name="Queen Ant's Stone Spear" additionalName="Not available" type="Weapon">
 		<set name="icon" val="BranchSys3.Icon.g_melisa_stormer_i00" />
@@ -117,6 +136,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">10</stat>
 		</stats>
+		<skills>
+			<skill id="50296" level="1" /> <!-- Queen Ant's Stone Spear -->
+		</skills>
 	</item>
 	<item id="92407" name="Orfen's Venom Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
@@ -138,6 +160,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">10</stat>
 		</stats>
+		<skills>
+			<skill id="50298" level="1" /> <!-- Orfen's Venom Sword -->
+		</skills>
 	</item>
 	<item id="92408" name="Baium's Thunder Breaker" type="Weapon">
 		<set name="icon" val="icon.weapon_terakan_i00" />
@@ -159,6 +184,9 @@
 			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">5</stat>
 		</stats>
+		<skills>
+			<skill id="50295" level="1" /> <!-- Baium's Thunder Breaker -->
+		</skills>
 	</item>
 	<item id="92409" name="Special Dragon Fruit Lv. 2" type="EtcItem">
 		<!-- Applies a buff when used. <Buff effect>. P. Atk. +15%. M. Atk. +15%. P. Def. +20%. M. Def. +20%. Max HP +30%. Max MP +30%. Max CP +30%. HP Recovery Rate +40%. MP Recovery Rate +40%. P. Critical Rate +20. M. Critical Rate +20. P. Critical Damage +7%. M. Critical Damage +7%. Acquired XP +15%. Acquired SP +15%. A chance to absorb 7% of the inflicted damage as HP. Duration: 20 min. Cooldown: 1 min. The effect remains after death. -->
@@ -296,6 +324,9 @@
 			<stat type="rEvas">8</stat>
 			<stat type="randomDamage">19</stat>
 		</stats>
+		<skills>
+			<skill id="50296" level="1" /> <!-- Queen Ant's Stone Spear -->
+		</skills>
 	</item>
 	<item id="92422" name="Tower of Insolence (1st Floor) Stone of Memory" type="EtcItem">
 		<!-- Teleports to the first floor of the Tower of Insolence. -->
@@ -690,6 +721,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" /> <!-- Talisman of Speed Pack -->
+		</capsuled_items>
 	</item>
 	<item id="92460" name="+1 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -701,6 +736,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="1" maxEnchant="1" /> <!-- Talisman of Speed +1 -->
+		</capsuled_items>
 	</item>
 	<item id="92461" name="+2 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -712,6 +751,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="2" maxEnchant="2" /> <!-- Talisman of Speed +2 -->
+		</capsuled_items>
 	</item>
 	<item id="92462" name="+3 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -723,6 +766,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="3" maxEnchant="3" /> <!-- Talisman of Speed +3 -->
+		</capsuled_items>
 	</item>
 	<item id="92463" name="+4 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -734,6 +781,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="4" maxEnchant="4" /> <!-- Talisman of Speed +4 -->
+		</capsuled_items>
 	</item>
 	<item id="92464" name="+5 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -745,6 +796,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="5" maxEnchant="5" /> <!-- Talisman of Speed +5 -->
+		</capsuled_items>
 	</item>
 	<item id="92465" name="+6 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -756,6 +811,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="6" maxEnchant="6" /> <!-- Talisman of Speed +6 -->
+		</capsuled_items>
 	</item>
 	<item id="92466" name="+7 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -767,6 +826,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="7" maxEnchant="7" /> <!-- Talisman of Speed +7 -->
+		</capsuled_items>
 	</item>
 	<item id="92467" name="+8 Talisman of Speed Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -778,6 +841,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92403" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Talisman of Speed +8 -->
+		</capsuled_items>
 	</item>
 	<item id="92468" name="Venir's Talisman Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -789,6 +856,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91077" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="92469" name="Venir's Talisman Pack Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -800,6 +871,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91078" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="92470" name="Venir's Talisman Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -811,6 +886,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91079" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="92471" name="Venir's Talisman Pack Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -822,6 +901,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91080" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 4 -->
+		</capsuled_items>
 	</item>
 	<item id="92472" name="Venir's Talisman Pack Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -833,6 +916,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91081" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="92473" name="Venir's Talisman Pack Lv. 6" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -844,6 +931,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91082" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 6 -->
+		</capsuled_items>
 	</item>
 	<item id="92474" name="Venir's Talisman Pack Lv. 7" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -855,6 +946,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91083" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 7 -->
+		</capsuled_items>
 	</item>
 	<item id="92475" name="Venir's Talisman Pack Lv. 8" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -866,6 +961,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91084" min="1" max="1" chance="100" /> <!-- Venir's Talisman Pack Lv. 8 -->
+		</capsuled_items>
 	</item>
 	<item id="92476" name="Metal Ingot" type="EtcItem">
 		<!-- Material used by Dwarves for crafting one-handed swords, one-handed blunt weapons, daggers, dual swords and fist weapons. -->

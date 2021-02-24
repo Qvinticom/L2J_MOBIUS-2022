@@ -3,48 +3,270 @@
 	<skill id="35000" toLevel="1" name="Fire Dragon's Blessing">
 		<!-- Buffs/ debuffs remain after death, but Fire Dragon's Blessing disappears. -->
 		<icon>icon.bm_blessing_dragon</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
 		<castRange>400</castRange>
-		<hitTime>3000</hitTime>
-		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="NoblesseBless" />
+		</effects>
 	</skill>
 	<skill id="35001" toLevel="1" name="Fire Dragon's Protection">
 		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain after death, but Fire Dragon's Blessing disappears. -->
 		<icon>icon.bm_salvation_dragon</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<castRange>400</castRange>
-		<hitTime>3000</hitTime>
-		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>3000</hitTime>
+		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResurrectionSpecial">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35002" toLevel="1" name="Earth Dragon's Breath">
 		<!-- For 15 sec., the target's Atk. Spd./ Casting Spd. -30%. -->
 		<icon>icon.bm_dragon_breath</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<activateRate>80</activateRate>
 		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
-		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-190</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>1000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>30</lvlBonusRate>
+		<operateType>A1</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35003" toLevel="1" name="Earth Dragon's Defense">
 		<!-- For 15 sec., P. Def. +3600, M. Def. +3240, Buff Cancel Resistance +80%. -->
 		<icon>icon.bm_dragon_defence</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<reuseDelay>600000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HERO_BUFF</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<effectPoint>438</effectPoint>
+		<hitTime>1000</hitTime>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockMove" />
+			<effect name="PhysicalDefence">
+				<amount>3600</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3240</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-80</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35004" toLevel="1" name="Earth Dragon Pendant">
 		<!-- M. Def. +9. -->
 		<icon>icon.bm_pendant_pvp</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>9</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35005" toLevel="11" name="+1 Earth Dragon Pendant">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.bm_pendant_pvp</icon>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">13</value>
+					<value level="4">14</value>
+					<value level="5">15</value>
+					<value level="6">16</value>
+					<value level="7">17</value>
+					<value level="8">18</value>
+					<value level="9">20</value>
+					<value level="10">21</value>
+					<value level="11">24</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value fromLevel="1" toLevel="3">0</value>
+					<value level="4">100</value>
+					<value level="5">150</value>
+					<value level="6">200</value>
+					<value level="7">300</value>
+					<value level="8">400</value>
+					<value level="9">500</value>
+					<value level="10">500</value>
+					<value level="11">600</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value fromLevel="1" toLevel="3">0</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">90</value>
+					<value level="8">120</value>
+					<value level="9">150</value>
+					<value level="10">150</value>
+					<value level="11">300</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">200</value>
+					<value level="7">300</value>
+					<value level="8">400</value>
+					<value level="9">500</value>
+					<value level="10">500</value>
+					<value level="11">600</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+					<value level="7">10</value>
+					<value level="8">20</value>
+					<value level="9">20</value>
+					<value level="10">20</value>
+					<value level="11">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">10</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35006" toLevel="1" name="Fire Dragon Pendant">
 		<!-- M. Def. +9. -->
@@ -59,7 +281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35007" toLevel="11" name="Fire Dragon Pendant +1">
+	<skill id="35007" toLevel="11" name="+1 Fire Dragon Pendant">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
@@ -78,7 +300,7 @@
 					<value level="8">18</value>
 					<value level="9">20</value>
 					<value level="10">21</value>
-					<value level="11">21</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">24</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -108,7 +330,7 @@
 					<value level="11">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
 				</amount>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PAtk">
 				<amount>
 					<value fromLevel="1" toLevel="4">0</value>
 					<value level="5">10</value>
@@ -117,11 +339,11 @@
 					<value level="8">40</value>
 					<value level="9">50</value>
 					<value level="10">60</value>
-					<value level="11">60</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">80</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="MAtk">
 				<amount>
 					<value fromLevel="1" toLevel="4">0</value>
 					<value level="5">10</value>
@@ -130,19 +352,19 @@
 					<value level="8">40</value>
 					<value level="9">50</value>
 					<value level="10">60</value>
-					<value level="11">60</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">80</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="CriticalDamage">
 				<amount>
 					<value fromLevel="1" toLevel="7">0</value>
 					<value level="8">5</value>
 					<value level="9">5</value>
 					<value level="10">5</value>
-					<value level="11">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">10</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -150,19 +372,38 @@
 					<value level="8">5</value>
 					<value level="9">5</value>
 					<value level="10">5</value>
-					<value level="11">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="11">10</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value fromLevel="1" toLevel="10">0</value>
+					<value level="11">10</value>
+				</amount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="35008" toLevel="1" name="Fire Dragon Resistance">
 		<!-- Debuff Resistance +50%. -->
 		<icon>icon.bm_salvation_dragon</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<reuseDelay>30000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>RESIST_DEBUFF_DISPEL</abnormalType>
 		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-50</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35009" toLevel="1" name="Black Mask Power">
 		<!-- STR +1, INT +1. -->

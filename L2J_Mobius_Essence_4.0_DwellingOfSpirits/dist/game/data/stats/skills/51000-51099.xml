@@ -187,8 +187,19 @@
 	<skill id="51027" toLevel="1" name="Summon Joy Agathion">
 		<!-- Releases the seal of Agathion Joy. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>85</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16056</npcId> <!-- Joy -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51028" toLevel="1" name="Summon Pisces Agathion">
 		<!-- Releases the seal of Agathion Pisces. -->
@@ -601,15 +612,33 @@
 	</skill>
 	<skill id="51047" toLevel="1" name="Scroll: Enchant Agathion">
 		<icon>icon.star_scrl_of_ench_ag</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51048" toLevel="1" name="Quality Agathion Enchant Scroll">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51049" toLevel="1" name="Stable Scroll: Enchant Agathion">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51050" toLevel="1" name="Raid Lucky Charm">
 		<!-- Chance of dropping items and player's death XP penalty -50% when character dies. Cannot be used by chaotic characters. -->

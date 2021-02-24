@@ -381,12 +381,30 @@
 	</skill>
 	<skill id="51142" toLevel="1" name="Sayha's Cloak Enchantment Scroll">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51143" toLevel="1" name="Radiant Sayha's Cloak Enchantment Scroll">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51144" toLevel="1" name="Shining Sayha's Cloak Enchantment Scroll">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51145" toLevel="1" name="+8 B-grade Weapon Pack">
 		<operateType>A1</operateType>

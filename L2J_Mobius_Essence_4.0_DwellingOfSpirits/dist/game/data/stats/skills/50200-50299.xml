@@ -2184,20 +2184,6 @@
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="Speed">
-				<amount>
-					<value level="2">1</value>
-					<value level="3">1</value>
-					<value level="4">1</value>
-					<value level="5">1</value>
-					<value level="6">1</value>
-					<value level="7">2</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">6</value>
-					<value level="11">8</value>
-				</amount>
-			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">5</value>
@@ -2212,6 +2198,7 @@
 					<value level="10">250</value>
 					<value level="11">300</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
@@ -2227,6 +2214,7 @@
 					<value level="10">250</value>
 					<value level="11">300</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MaxHp">
 				<amount>
@@ -2241,15 +2229,31 @@
 					<value level="10">1800</value>
 					<value level="11">2500</value>
 				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="TriggerSkillBySkill">
+			<effect name="Speed">
+				<amount>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">6</value>
+					<value level="11">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<!-- effect name="TriggerSkillBySkill">
 				<isCritical>true</isCritical>
 				<attackerType>Creature</attackerType>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>100</minDamage>
 				<allowWeapons>ALL</allowWeapons>
-				<skillId>50294</skillId> <!-- Energy of Speed -->
+				<skillId>50294</skillId>
 				<castSkillId>50294</castSkillId>
 				<skillLevel>
 					<value level="1">1</value>
@@ -2264,7 +2268,7 @@
 					<value level="10">10</value>
 					<value level="11">11</value>
 				</skillLevel>
-			</effect>
+			</effect> -->
 		</effects>
 	</skill>
 	<skill id="50294" toLevel="11" name="Energy of Speed">
@@ -2339,27 +2343,264 @@
 	</skill>
 	<skill id="50295" toLevel="1" name="Baium's Thunder Breaker">
 		<!-- A dagger containing Baium's Soul. <Level Bonus Effect> P./ M. Atk. are increased depending on level. <Lv. 60-69> P. Atk. +3-5 M. Atk. +2-3 <Lv. 70-79> P. Atk. +8 M. Atk. +5 <Lv. 80-89> P. Atk. +13-50 M. Atk. +8-51 <Lv. 90+> P. Atk. +56 and higher M. Atk. +34 and higher -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.weapon_terakan_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">59</value>
+					<value level="2">64</value>
+					<value level="3">69</value>
+					<value level="4">79</value>
+					<value level="5">80</value>
+					<value level="6">81</value>
+					<value level="7">82</value>
+					<value level="8">83</value>
+					<value level="9">84</value>
+					<value level="10">85</value>
+					<value level="11">86</value>
+					<value level="12">87</value>
+					<value level="13">88</value>
+					<value level="14">89</value>
+					<value level="15">90</value>
+					<value level="16">91</value>
+					<value level="17">92</value>
+					<value level="18">93</value>
+					<value level="19">94</value>
+					<value level="20">95</value>
+					<value level="21">96</value>
+					<value level="22">97</value>
+					<value level="23">98</value>
+					<value level="24">99</value>
+				</level>
+				<stat>PHYSICAL_ATTACK</stat>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">8</value>
+					<value level="5">13</value>
+					<value level="6">16</value>
+					<value level="7">19</value>
+					<value level="8">22</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+					<value level="11">35</value>
+					<value level="12">40</value>
+					<value level="13">45</value>
+					<value level="14">50</value>
+					<value level="15">56</value>
+					<value level="16">62</value>
+					<value level="17">68</value>
+					<value level="18">74</value>
+					<value level="19">80</value>
+					<value level="20">87</value>
+					<value level="21">94</value>
+					<value level="22">101</value>
+					<value level="23">108</value>
+					<value level="24">115</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatAddForLevel">
+				<level>
+					<value level="1">59</value>
+					<value level="2">64</value>
+					<value level="3">69</value>
+					<value level="4">79</value>
+					<value level="5">80</value>
+					<value level="6">81</value>
+					<value level="7">82</value>
+					<value level="8">83</value>
+					<value level="9">84</value>
+					<value level="10">85</value>
+					<value level="11">86</value>
+					<value level="12">87</value>
+					<value level="13">88</value>
+					<value level="14">89</value>
+					<value level="15">90</value>
+					<value level="16">91</value>
+					<value level="17">92</value>
+					<value level="18">93</value>
+					<value level="19">94</value>
+					<value level="20">95</value>
+					<value level="21">96</value>
+					<value level="22">97</value>
+					<value level="23">98</value>
+					<value level="24">99</value>
+				</level>
+				<stat>MAGIC_ATTACK</stat>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">16</value>
+					<value level="10">19</value>
+					<value level="11">22</value>
+					<value level="12">25</value>
+					<value level="13">28</value>
+					<value level="14">31</value>
+					<value level="15">34</value>
+					<value level="16">37</value>
+					<value level="17">40</value>
+					<value level="18">43</value>
+					<value level="19">46</value>
+					<value level="20">50</value>
+					<value level="21">54</value>
+					<value level="22">58</value>
+					<value level="23">62</value>
+					<value level="24">66</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50453</skillId> <!-- Baium Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>SELF</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50453</skillId> <!-- Baium Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50296" toLevel="1" name="Queen Ant's Stone Spear">
 		<!-- A spear containing Queen Ant's Soul and being able to use Queen Ant's power. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.g_melisa_stormer_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50451</skillId> <!-- Queen Ant Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50451</skillId> <!-- Queen Ant Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50297" toLevel="1" name="Zaken's Blood Sword">
 		<!-- A sword containing Zaken's Soul and being able to use Zaken's power. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.special_weapon_onehandsword</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50455</skillId> <!-- Zaken Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50455</skillId> <!-- Zaken Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50298" toLevel="1" name="Orfen's Venom Sword">
-		<!-- A sword containing Orfen's Soul and being able to use Orfen's power. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bm_the_two_handed_sword_of_hero_i01</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50454</skillId> <!-- Orfen Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50454</skillId> <!-- Orfen Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50299" toLevel="1" name="Core's Plasmic Bow">
 		<!-- A bow containing Core's Soul and being able to use Core's power. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.weapon_karupis_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50452</skillId> <!-- Core Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>10</chance>
+				<targetType>ENEMY</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50452</skillId> <!-- Core Power -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 </list>

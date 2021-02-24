@@ -785,13 +785,27 @@
 	<skill id="50185" toLevel="1" name="Summon Agathion Griffin">
 		<!-- Summons Agathion Griffin. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16055</npcId> <!-- Agathion Griffin -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50186" toLevel="1" name="Agathion: Adventurer's Agathion Griffin">
 		<!-- <Effect> P. Def. +$s1. -->
 		<icon>icon.griffin_vehicle</icon>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>5</amount>
@@ -802,6 +816,7 @@
 	<skill id="50187" toLevel="1" name="Jewel: Adventurer's Rough Jewel">
 		<!-- <Effect> Max HP +$s1 -->
 		<icon>icon.etc_crystal_piece_i00</icon>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -813,7 +828,14 @@
 	<skill id="50188" toLevel="1" name="Adventurer's Talisman">
 		<!-- <Effect> M. Def. +$s1 -->
 		<icon>icon.etc_talisman_i07</icon>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50189" toLevel="11" name="Ring: Ring of Insolence">
 		<!-- <Effect> Sleep Resistance +$s1 -->
