@@ -167,7 +167,7 @@ public class Q10974_NewStylishEquipment extends Quest
 					break;
 				}
 			}
-			case "reward":
+			case "30857-09.html":
 			{
 				if (qs.isCond(4))
 				{
