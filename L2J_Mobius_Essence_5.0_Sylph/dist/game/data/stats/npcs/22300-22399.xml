@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="22300" level="80" type="Monster" name="Strong Kima">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="17600" sp="5815" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="34" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="598" max="1397" chance="70" /> <!-- Adena -->
+				<item id="92998" min="1" max="1" chance="2.603" /> <!-- Shining Resources -->
+				<item id="92910" min="1" max="1" chance="2.544" /> <!-- Material: Rags -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="53.26" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="10.62" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.259" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.13" /> <!-- High-grade Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="22301" level="80" type="Monster" name="Big Honeybee">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="17600" sp="5815" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
+			<speed>
+				<walk ground="39" />
+				<run ground="120" />
+			</speed>
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="9.6" />
+			<height normal="24.6" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="598" max="1397" chance="70" /> <!-- Adena -->
+				<item id="92910" min="1" max="1" chance="2.632" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="2.552" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="52.58" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="10.53" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.339" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.056" /> <!-- High-grade Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="22302" level="80" type="Monster" name="Rude Tag" title="Slayer">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="60928" sp="5815" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="29524.8554913295" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
+			<speed>
+				<walk ground="26" />
+				<run ground="120" />
+			</speed>
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="33.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="657" max="1537" chance="70" /> <!-- Adena -->
+				<item id="92998" min="1" max="1" chance="2.889" /> <!-- Shining Resources -->
+				<item id="92910" min="1" max="1" chance="2.834" /> <!-- Material: Rags -->
+				<item id="92999" min="1" max="1" chance="0.75" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.75" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.75" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.3" /> <!-- Material: Unknown Metal -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="0.075" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.075" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="58.85" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="11.29" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="5.859" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="1.19" /> <!-- High-grade Resources -->
+				<item id="92995" min="1" max="1" chance="0.75" /> <!-- Thons -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="22303" level="70" type="Monster" name="Rusty">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="8899" sp="1670" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12526.5895953757" hpRegen="10.5" mp="1454.78547854785" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="80" />
+			</speed>
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="95.0661103846234" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="1" /> <!-- Bow Resistance -->
+			<skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
+				<item id="92909" min="1" max="1" chance="1.085" /> <!-- Material: Pack of Knickknacks -->
+				<item id="92997" min="1" max="1" chance="1.024" /> <!-- Unknown Resources -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="12.98" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="2.747" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.355" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="22304" level="80" type="Monster" name="Giant Rusty">
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<acquire exp="14081" sp="2181" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14762.4277456647" hpRegen="10.5" mp="1811.22112211221" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="80" />
+			</speed>
+			<attack physical="467.58282488453" magical="118.638139627086" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="208.284023668639" magical="96.8617571816353" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4071" level="4" /> <!-- Bow Resistance -->
+			<skill id="4116" level="6" /> <!-- Magic Damage Resistance -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="149" max="349" chance="70" /> <!-- Adena -->
+				<item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+				<item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+				<item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+				<item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+				<item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+				<item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+				<item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+				<item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+			</drop>
+			<spoil>
+				<item id="92996" min="1" max="1" chance="12.69" /> <!-- Old Resources -->
+				<item id="92997" min="1" max="1" chance="2.656" /> <!-- Unknown Resources -->
+				<item id="92998" min="1" max="1" chance="1.325" /> <!-- Shining Resources -->
+				<item id="92995" min="1" max="1" chance="0.3" /> <!-- Thons -->
+				<item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+			</spoil>
+		</dropLists>
+	</npc>
+</list>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc> <!-- Dimensional Merchant / Everywhere -->
+	</npcs>
+	<!-- Exchange Sayha Cloak -->
+	<item>
+		<!-- Sayha's Cloak Coupon -->
+		<ingredient count="1" id="91227" />
+		<!-- Black Sayha's Cloak -->
+		<production count="1" id="91210" />
+	</item>
+	<item>
+		<!-- Sayha's Cloak Coupon -->
+		<ingredient count="1" id="91227" />
+		<!-- White Sayha's Cloak -->
+		<production count="1" id="91211" />
+	</item>
+	<item>
+		<!-- Sayha's Cloak Coupon -->
+		<ingredient count="1" id="91227" />
+		<!-- Red Sayha's Cloak -->
+		<production count="1" id="91212" />
+	</item>
+	<item>
+		<!-- Sayha's Cloak Coupon -->
+		<ingredient count="1" id="91227" />
+		<!-- Sayha's Cloak Enchantment Scroll -->
+		<production count="4" id="91213" />
+	</item>
+</list>

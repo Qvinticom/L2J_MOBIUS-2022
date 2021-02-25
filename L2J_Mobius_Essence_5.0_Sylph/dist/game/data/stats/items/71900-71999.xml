@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="71900" name="Limited Sayha's Blessing" additionalName="1 day" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 1 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="LimitedSayha" />
+	</item>
+	<item id="71901" name="Limited Sayha's Blessing" additionalName="7-day" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect>. Acquired XP +200%. Acquired SP +200%. Adena's drop rate penalty decreased. Duration: 7 d. <font color=eeaa22>(Can be used without Sayha's Grace.)</font> -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_limited_sayha_01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="LimitedSayha" />
+	</item>
+	<item id="71905" name="Silver Strider Rider Scroll" type="EtcItem">
+		<!-- A scroll to learn the skill to mount Silver Strider. -->
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="59708" level="1" /> <!-- Silver Strider Rider Scroll -->
+		</skills>
+	</item>
+	<item id="71906" name="Black Strider Rider Scroll" type="EtcItem">
+		<!-- A scroll to learn the skill to mount Black Strider. -->
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="59709" level="1" /> <!-- Black Strider Rider Scroll -->
+		</skills>
+	</item>
+	<item id="71907" name="Iron Strider Rider Scroll" type="EtcItem">
+		<!-- A scroll to learn the skill to mount Iron Strider. -->
+		<set name="icon" val="icon.etc_transform_warrior_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="59710" level="1" /> <!-- Iron Strider Rider Scroll -->
+		</skills>
+	</item>
+	<item id="71927" name="Ninja" type="Armor">
+		<!-- Ninja Assassin outfit. -->
+		<set name="icon" val="icon.bm2018_ninja_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71928" name="Cowboy" type="Armor">
+		<!-- A cowboy outfit. -->
+		<set name="icon" val="icon.bm2018_cowboy_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71929" name="Steampunk" type="Armor">
+		<!-- A costume in the Steampunk style. -->
+		<set name="icon" val="BranchIcon.Icon.g_bm_costume_steampunk" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71930" name="Qipao" type="Armor">
+		<!-- The qipao garment. -->
+		<set name="icon" val="br_L2Icon.qipao_armor_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71931" name="Traditional Taiwanese Costume (Top)" type="Armor">
+		<!-- The top part of the traditional Taiwanese costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71932" name="Traditional Taiwanese Costume (Bottom)" type="Armor">
+		<!-- The bottom part of the traditional Taiwanese costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_l" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71933" name="Traditional Taiwanese Costume (Gloves)" type="Armor">
+		<!-- Gloves for the traditional Taiwanese costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_g" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71934" name="Traditional Taiwanese Costume (Boots)" type="Armor">
+		<!-- Boots for the traditional Taiwanese costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_b" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71935" name="Traditional Taiwanese Costume (Headgear)" type="Armor">
+		<!-- The headgear for the traditional Taiwanese costume. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_hair" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="71936" name="Spellbook: Ninja" type="EtcItem">
+		<!-- Transforms into Ninja. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
+		<set name="icon" val="icon.si_phanteon_book" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71937" name="Spellbook: Cowboy" type="EtcItem">
+		<!-- Transforms into Cowboy. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
+		<set name="icon" val="icon.si_phanteon_book" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71938" name="Spellbook: Steampunk" type="EtcItem">
+		<!-- Changes the armor appearance to that of Steampunk Outfit. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
+		<set name="icon" val="icon.si_phanteon_book" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71939" name="Spellbook: Qipao" type="EtcItem">
+		<!-- Changes the armor appearance to that of Qipao. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
+		<set name="icon" val="icon.si_phanteon_book" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71940" name="Spellbook: Traditional Taiwanese Costume" type="EtcItem">
+		<!-- Changes the armor appearance to that of Traditional Taiwanese Costume. <Transformation effect>. P. Atk. +2%. M. Atk. +2%. P. Def. +2%. M. Def. +2%. Max HP +5%. Max MP +5%. Speed +4. P. Accuracy +1. M. Accuracy +1. M. Critical Rate +10. Duration: 20 min. <font color=eeaa22><Item consumption>. Elemental Stone (1 pc.)</font>. Cannot be used by Kamaels and Death Knights. -->
+		<set name="icon" val="icon.si_phanteon_book" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LIQUID" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71941" name="Oren Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following rare items: special armor, Majestic Sigil, A-grade Weapon Coupon, A-grade Armor Coupon, Package: Einhasad's Pendant Lv. 1. -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71942" name="Oren Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following rare items: special armor, Majestic Sigil, A-grade Weapon Coupon, A-grade Armor Coupon, Package: Einhasad's Pendant Lv. 1. -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71949" name="Dragon's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Coin (3 pcs.). <Random>. Spellbook: Ultimate Death Knight Transformation. Talisman of Baium. Baium's Ring Lv. 1. Zaken's Earring Lv. 1. Baium's Thunder Breaker. Zaken's Blood Sword. Core's Plasmic Bow. Queen Ant's Stone Breaker. Orfen's Venom Sword. + other items -->
+		<set name="icon" val="icon.bm_dragon_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71950" name="Dragon Coin" type="EtcItem">
+		<!-- Can be exchanged for useful items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_11th_token" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71966" name="XP Bonus Rune" additionalName="7-day" type="EtcItem">
+		<!-- When in inventory, acquired XP/ SP +150%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="71967" name="XP Bonus Rune Pack (7-day)" type="EtcItem">
+		<!-- Double-click to obtain XP Bonus Rune (7-day). -->
+		<set name="icon" val="icon.etc_pi_gift_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71973" name="+3~8 Talisman/ Belt Coupon Box" type="EtcItem">
+		<!-- Double-click to obtain one of the specified items. <font color=eeaa22>The right to the priority logging-in is granted until the last day of the month in which the item has been used.</font> -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71974" name="Mysterious Pack Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain Mysterious Pack Lv. 2 or one of the items: Combat Scroll, Charging Stone of Random Craft, Ring of Core. -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71975" name="Mysterious Pack Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain Mysterious Pack Lv. 3 or one of the items: XP Growth Scroll, Charging Stone of Random Craft, Ring of Queen Ant. Needless packs can be exchanged for various items through Game Assistant. -->
+		<set name="icon" val="icon.npoint_earthworm_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71976" name="Mysterious Pack Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Mysterious Pack Lv. 4 or one of the items: Sayha's Blessing, Charging Stone of Random Craft, Zaken's Earring. -->
+		<set name="icon" val="icon.etc_pi_box_belief_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71977" name="Mysterious Pack Lv. 4" type="EtcItem">
+		<!-- Double-click to obtain Mysterious Pack Lv. 5 or one of the items: Einhasad's Blessing, Dragon Belt, Baium's Ring. -->
+		<set name="icon" val="icon.npoint_valakas_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71978" name="Mysterious Pack Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain one of the following items: Spirit Evolution Stone, A-grade Armor Coupon, Talisman of Baium. -->
+		<set name="icon" val="icon.npoint_tauti_30day_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="71983" name="Sealed Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Spellbook: Ultimate Death Knight Transformation. - Talisman of Baium. - Baium's Thunder Breaker. - Zaken's Blood Sword. - Core's Plasmic Bow. - Queen Ant's Stone Breaker. - Orfen's Venom Sword. - Package: Baium Doll Lv. 1. - Package: Queen Ant Doll Lv. 1. - Package: Orfen Doll Lv. 1. Also you can get other items. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

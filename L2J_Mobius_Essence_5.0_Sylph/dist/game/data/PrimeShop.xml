@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/PrimeShop.xsd">
+	<!-- cat = 1 - Exping, 2 - Supplies, 3 - Cosmetic, 4 - Specials, 5 - Other -->
+	<!-- panelType = 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best -->
+	<!-- recommended = 1 - Top, 2 - Left, 4 - Right -->
+	<!-- paymentType = 0 - Euro, 1 - Adena, 2 - Hero Coin -->
+	<!-- on EU 1 NC coin/Prime point shows as 0.01 euros -->
+	<!-- startSale = unixTime -->
+	<!-- endSale = unixTime -->
+	
+	<!-- Supplies -->
+	<item id="2090029" cat="2" panelType="3" paymentType="0" price="250" recommended="1" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="93628" count="1" /> <!-- L-Coins (1000 pcs.) -->
+	</item>
+	<item id="2090030" cat="2" panelType="2" paymentType="0" price="1499" recommended="1" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="91755" count="1" /> <!-- L-Coins (8000 pcs.) -->
+	</item>
+	<item id="2090028" cat="2" paymentType="0" price="600" recommended="2" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="93483" count="1" /> <!-- Growth Kit: L-Coins -->
+	</item>
+	<item id="2090027" cat="2" paymentType="0" price="999" recommended="4" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0">
+		<item itemId="93484" count="1" /> <!-- Grace Kit: L-Coins -->
+	</item>
+</list>

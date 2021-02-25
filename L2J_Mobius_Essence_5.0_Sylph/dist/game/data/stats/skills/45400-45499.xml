@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="45400" toLevel="1" name="Wild Beat">
+		<!-- Elven mesmerizing music. Forces the enemy to move to you for $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45401" toLevel="1" name="Crazy Waltz">
+		<!-- Elven mesmerizing dance. For $s1, enemies are dazzled and dance on the spot. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45402" toLevel="5" name="Frantic Pace">
+		<!-- Attacks the target with $s1 power. Power +$s2 if the target is affected by Hold. Requires a sword, a blunt weapon, or dual swords. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45403" toLevel="3" name="Harmony">
+		<!-- Max HP $s1 Max MP $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45404" toLevel="2" name="Song of Earth">
+		<!-- Elven earth-praising song. Enchanter P. Def. $s2 M. Def. $s2 Nearby characters P. Def. $s3 M. Def. $s3 Consumes 30 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45405" toLevel="2" name="Hunter's Song">
+		<!-- Elven hunter-praising song. Enchanter All Critical Rate $s2 Nearby characters All Critical Rate $s3 Consumes 30 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45406" toLevel="2" name="Warrior's Dance">
+		<!-- Dark elven battle dance. Enchanter P. Atk. $s2 M. Atk. $s2 Nearby characters P. Atk. $s3 M. Atk. $s3 Consumes 30 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45407" toLevel="2" name="Dance of Fire">
+		<!-- Dark elven fire-praising dance. Enchanter P. Critical Damage $s2 P. Skill Critical Damage $s3 M. Skill Critical Damage $s3 Nearby characters P. Skill Critical Damage $s4 M. Skill Critical Damage $s4 Consumes 30 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45408" toLevel="4" name="Blessed by Sayha">
+		<!-- Sayha's Grace points $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45409" toLevel="1" name="Life Force Harmony">
+		<!-- Max HP $s1 Depending on current amount of HP, the following effects are applied. <HP 0-33%> P. Skill Power $s2 <HP 34-66%> P. Skill MP Consumption $s3 P. Skill Cooldown $s3 <67-100%> Received damage $s4 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45410" toLevel="1" name="Life Force Harmony">
+		<!-- P. Skill Power $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45411" toLevel="1" name="Life Force Harmony">
+		<!-- P. Skill MP Consumption $s1 P. Skill Cooldown $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45412" toLevel="1" name="Life Force Harmony">
+		<!-- Received damage $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45413" toLevel="1" name="Titan Champion">
+		<!-- P. Atk. $s1 P. Critical Rate $s2 P. Critical Damage $s3 P. Skill Critical Rate $s4 P. Skill Critical Damage $s5 Max HP $s5 Speed $s6 Consumes $s7 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45414" toLevel="1" name="Titanic Weapon">
+		<!-- P. Atk. $s1 When the Demolition Impact skill is used: - A chance to deal an extra attack Additional effects when using a two-handed sword: - Attack range increased - P. Atk. $s2 - Atk. Spd. $s3 - P. Accuracy $s4 Requires a sword or a blunt weapon. Consumes $s5 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45415" toLevel="1" name="Demolition Impact">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45416" toLevel="6" name="Titanic Sweep">
+		<!-- Strikes the enemy with $s1 power. Requires a sword/ blunt weapon. Ignores Shield Defense. Critical. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45417" toLevel="6" name="Titanic Break">
+		<!-- Attacks the enemies in front of you with $s1 power and stuns them for $s2. Requires a two-handed sword or two-handed blunt weapon. Ignores Shield Defense. Critical. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45420" toLevel="1" name="Puma Nature">
+		<!-- P. Skill Critical Rate $s1 P. Skill Critical Damage $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45421" toLevel="1" name="Rabbit Nature">
+		<!-- Atk. Spd. $s1 Speed $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45422" toLevel="1" name="Ogre Nature">
+		<!-- Reflects $s1 of the received damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45423" toLevel="6" name="Burning Strike">
+		<!-- Strikes the target with $s1 power. Increases power upon consuming Momentum (up to $s2). Requires a fist weapon. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45424" toLevel="5" name="Burning Assault">
+		<!-- Attacks the enemy with $s1 power. P. Def. $s2 Consumes energy. Requires a fist weapon. Critical. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45425" toLevel="4" name="Armor Break">
+		<!-- Speed $s1. There is a certain chance to remove $s2 piece of enemy's armor. Requires a fist weapon Pet armor cannot be removed. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45435" toLevel="1" name="Totem of the Fallen">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45436" toLevel="1" name="Combo Attack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45438" toLevel="1" name="Combo Attack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45439" toLevel="1" name="Cacophony of War">
+		<!-- Inflicts Fear on nearby enemies for 3 sec. and brands them with a mark. If the marked target is attacked within a certain period of time, it is dead. Requires a fist weapon. Note! Your Speed -30. If there are no targets for killing for a certain period of time, your HP and CP will drop to 1. Consumes 20 Spirit Ore. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45440" toLevel="1" name="Stigma of Death">
+		<!-- When the character using the Cacophony of War skill is attacked, HP and CP drop to 1. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45441" toLevel="1" name="Cacophony of War">
+		<!-- If the marked target is attacked within a certain period of time, it is dead. Requires a fist weapon. Note! Your Speed -30. If there are no targets for killing for a certain period of time, your HP and CP will drop to 1. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45442" toLevel="1" name="Cacophony of War">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45443" toLevel="1" name="Stigma of Death">
+		<!-- Cancels recovery effects for a certain period of time. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45444" toLevel="1" name="Cacophony of War">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45445" toLevel="1" name="Cacophony of War">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>
