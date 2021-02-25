@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="50500" toLevel="10" name="+1 Anakim's Divine Pistols">
+		<!-- A weapon empowered by Anakim's soul. Enables Anakim's power. <When triggered> Anakim's Holy Blast -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50501" toLevel="22" name="Anakim's Holy Blast">
+		<!-- Inflicts magic damage on the enemy with $s1 power. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50502" toLevel="20" name="Anakim's Enhanced Holy Blast">
+		<!-- Inflicts magic damage on the enemy with $s1 power. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50503" toLevel="1" name="Sylphen Ring">
+		<!-- P. Atk. $s1 M. Atk. $s1 P. Def. $s1 M. Def. $s1 MP Recovery Rate $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50504" toLevel="11" name="Clan Cloak">
+		<!-- Max HP $s1 Max MP $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50505" toLevel="3" name="Clan Cloak Progression Support">
+		<!-- When used, for $s1 Pet XP $s2 Removed when your pet is dead or recalled. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50506" toLevel="11" name="Clan Circlet">
+		<!-- Max HP $s1 Max MP $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50507" toLevel="1" name="Shield of Protection">
+		<!-- Max HP $s1 Max MP $s1 Max CP $s1 All received Critical Damage $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50508" toLevel="1" name="Shield of Protection">
+		<!-- <Defense Mode> With a $s1 chance for $s2, when hit: Max HP $s3, instantly recovers HP bonus. HP +$s4 per sec. (Cooldown: 15 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50509" toLevel="10" name="+1 Shield of Protection">
+		<!-- P. Def. $s5 M. Def. $s5 Shield Defense $s5 <Defense Mode> With a $s1 chance for $s2, when hit: Max HP $s3, instantly recovers HP bonus. HP +$s4 per sec. (Cooldown: 15 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50510" toLevel="11" name="Defense Mode">
+		<!-- Max HP $s1, instantly recovers HP bonus. Restores $s2 HP per sec. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50511" toLevel="1" name="Symbol of Defense">
+		<!-- Max HP $s1 Max MP $s1 Max CP $s1 All received Critical Rate $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50512" toLevel="1" name="Symbol of Defense">
+		<!-- <Defense Curse> With a $s1 chance for $s2 after an attack: Enemy's P. Atk. $s3 Enemy's M. Atk. $s3 (Cooldown: 10 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50513" toLevel="10" name="+1 Sigil of Protection">
+		<!-- P. Def. $s4 M. Def. $s4 <Defense Curse> With a $s1 chance for $s2 after an attack: Enemy's P. Atk. $s3 Enemy's M. Atk. $s3 (Cooldown: 10 sec.) -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50514" toLevel="11" name="Defense Curse">
+		<!-- P. Atk. $s1 M. Atk. $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50515" toLevel="1" name="Anakim's Divine Pistols">
+		<!-- A fire gun containing Anakim's Soul. Allows to use Anakim's power. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50516" toLevel="1" name="Adventurer's Pendant">
+		<!-- M. Def. +$s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="50517" toLevel="1" name="Aden Dual Swords">
+		<!-- <Level Bonus Effect> P./ M. Atk. are increased depending on level. <Lv. 40-49> P. Atk. +21 M. Atk. +10 <Lv. 50-59> P. Atk. +41 M. Atk. +20 <Lv. 60-64> P. Atk. +62 M. Atk. +31 <Lv. 65-69> P. Atk. +83 M. Atk. +41 <Lv. 70-74> P. Atk. +103 M. Atk. +51 <Lv. 75+> P. Atk. +124 M. Atk. +61 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

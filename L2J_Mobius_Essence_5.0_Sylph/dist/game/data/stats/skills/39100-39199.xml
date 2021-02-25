@@ -587,13 +587,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="6.6">
-						<item id="900" count="1" /> <!-- Ring of Grace - Not available -->
+						<item id="900" count="1" /> <!-- Ring of Grace - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
-						<item id="869" count="1" /> <!-- Earring of Grace - Not available -->
+						<item id="869" count="1" /> <!-- Earring of Grace - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
-						<item id="931" count="1" /> <!-- Necklace of Grace - Not available -->
+						<item id="931" count="1" /> <!-- Necklace of Grace - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
 						<item id="887" count="1" /> <!-- Adamantite Ring -->
@@ -605,13 +605,13 @@
 						<item id="918" count="1" /> <!-- Adamantite Necklace -->
 					</item>
 					<item chance="6.6">
-						<item id="891" count="1" /> <!-- Sage's Ring - Not available -->
+						<item id="891" count="1" /> <!-- Sage's Ring - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
-						<item id="860" count="1" /> <!-- Sage's Earring - Not available -->
+						<item id="860" count="1" /> <!-- Sage's Earring - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
-						<item id="922" count="1" /> <!-- Sage's Necklace - Not available -->
+						<item id="922" count="1" /> <!-- Sage's Necklace - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
 						<item id="895" count="1" /> <!-- Black Ore Ring -->
@@ -623,13 +623,13 @@
 						<item id="926" count="1" /> <!-- Black Ore Necklace -->
 					</item>
 					<item chance="6.6">
-						<item id="905" count="1" /> <!-- Ring of Blessing - Not available -->
+						<item id="905" count="1" /> <!-- Ring of Blessing - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
-						<item id="874" count="1" /> <!-- Earring of Blessing - Not available -->
+						<item id="874" count="1" /> <!-- Earring of Blessing - Not Available - Not available -->
 					</item>
 					<item chance="6.6">
-						<item id="936" count="1" /> <!-- Necklace of Blessing - Not available -->
+						<item id="936" count="1" /> <!-- Necklace of Blessing - Not Available - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -1022,7 +1022,7 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="39155" toLevel="1" name="Life Control Tower's Scroll of Blessing">
-		<!-- For 60 min., Max HP/ MP +5%, Silence/ Fear/ Paralysis Resistance +15, acquired XP/ SP +30%. The effect remains after death. You can cancel the effect by yourself. -->
+		<!-- Max HP +5% Max MP +5% Paralysis Resistance +15% Silence Resistance +15% Fear Resistance +15% Acquired XP +30% Acquired SP +30% The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.etc_aidcharm_cancel_valbreath_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1030,7 +1030,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39156" toLevel="1" name="Scroll of Heavenly Protection">
-		<!-- For 20 min., Paralysis Resistance +15, Fear/ Silence Resistance +10. -->
+		<!-- Paralysis Resistance +15% Silence Resistance +10% Fear Resistance +10% -->
 		<icon>icon.scroll_of_verification_i08</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1049,7 +1049,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39159" toLevel="1" name="Sayha's Energy">
+	<skill id="39159" toLevel="1" name="Sayha s Energy">
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
@@ -1284,7 +1284,7 @@
 		</effects>
 	</skill>
 	<skill id="39171" toLevel="1" name="Balthus Knights' Mark">
-		<!-- For 1 h., acquired XP/ SP +$s1, HP Recovery Rate +$s2, MP Recovery Rate +$s3. A badge of Balthus Knights grants a chance to obtain Special Supplies. Effect remains after death. -->
+		<!-- P. Atk. $s1 M. Atk. $s1 P. Def. $s1 M. Def. $s1 Acquired XP $s2 Acquired SP $s2 A chance to obtain Special Supplies. The effect remains after death. You can't cancel the effect by yourself. -->
 		<icon>icon.ev_balthus_token</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49784</itemConsumeId>
@@ -1720,7 +1720,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="39180" toLevel="1" name="Low-grade Scroll of Experience">
+	<skill id="39180" toLevel="1" name="XP Scroll: 1K">
 		<!-- 1000 XP. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
@@ -1739,7 +1739,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39181" toLevel="1" name="Average Scroll of Experience">
+	<skill id="39181" toLevel="1" name="XP Scroll: 10K">
 		<!-- 10,000 XP. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
@@ -1758,7 +1758,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39182" toLevel="1" name="Greater Scroll of Experience">
+	<skill id="39182" toLevel="1" name="XP Scroll: 100K">
 		<!-- 100,000 XP. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
@@ -1777,7 +1777,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39183" toLevel="1" name="Top-grade Scroll of Experience">
+	<skill id="39183" toLevel="1" name="XP Scroll: 500K">
 		<!-- 500,000 XP. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
@@ -1796,7 +1796,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39184" toLevel="1" name="Highest-grade Scroll of Experience">
+	<skill id="39184" toLevel="1" name="XP Scroll: 1M">
 		<!-- 1,000,000 XP. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>

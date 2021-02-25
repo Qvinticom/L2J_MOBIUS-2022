@@ -184,7 +184,7 @@
 		</effects>
 	</skill>
 	<skill id="814" toLevel="9" name="Full Swing">
-		<!-- Widely swings a two-handed weapon to attack nearby enemies with $s1 power. Ignores Shield Defense. Requires a two-handed sword/ two-handed blunt weapon. Critical. Over-hit. -->
+		<!-- A powerful strike with the two-handed sword. Attacks the enemy with $s1 power. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0814</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -933,7 +933,7 @@
 		</effects>
 	</skill>
 	<skill id="821" toLevel="8" name="Shadow Step">
-		<!-- Teleports behind the target's back, decreasing their Speed for 10 sec. -->
+		<!-- <Suppression Skill> Teleports behind the target's back. Their Speed $s2 for $s1 -->
 		<icon>icon.skill0821</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
@@ -1034,7 +1034,7 @@
 		</effects>
 	</skill>
 	<skill id="823" toLevel="3" name="Strengthen Golem">
-		<!-- For $s1, summoned golem's P. Atk. +$s2, Atk. Spd. +$s3. -->
+		<!-- For $s1 Servitor's P. Atk. +$s2 Servitor's Atk. Spd. +$s3 -->
 		<icon>icon.skill0823</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1084,7 +1084,7 @@
 		</effects>
 	</skill>
 	<skill id="824" toLevel="3" name="Golem Reinforcement">
-		<!-- For $s1, equips a summoned golem with an additional armor plate. Its P. Def. +$s2, Max HP +$s3. -->
+		<!-- For $s1 Servitor's P. Def. +$s2 Servitor's Max HP +$s3 -->
 		<icon>icon.skill0824</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1189,7 +1189,7 @@
 		</effects>
 	</skill>
 	<skill id="826" toLevel="1" name="Spike">
-		<!-- Thanks to the special Dwarven spells, P. Atk. +10% and additionally +120, Stun Atk. Rate +15%. -->
+		<!-- M. Atk. $s1 P. Atk. $s2 Shock Atk. Rate $s3 -->
 		<icon>icon.skill0826</icon>
 		<magicLevel>49</magicLevel>
 		<operateType>P</operateType>
@@ -1247,7 +1247,7 @@
 		</effects>
 	</skill>
 	<skill id="828" toLevel="1" name="Encase Armor">
-		<!-- Thanks to the special dwarven spells for armor, P. Def. +100. -->
+		<!-- P. Def. $s1 -->
 		<icon>icon.skill0828</icon>
 		<magicLevel>46</magicLevel>
 		<operateType>P</operateType>

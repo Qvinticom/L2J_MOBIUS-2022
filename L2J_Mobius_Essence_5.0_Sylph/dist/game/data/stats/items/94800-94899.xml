@@ -1,0 +1,1231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="94800" name="Kit: Dragon" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.strider_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94801" name="Kit: Hawk" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.thunder_bird_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94802" name="Zaken Doll" additionalName="7-day" type="EtcItem">
+		<!-- <Zaken Doll's Sorcery Lv. 2> Skill Critical Rate +40 HP Recovery +50 Skill Critical Damage +200 Vampiric Rage +2% (with a certain chance) Available for 7 d. Boosts parameters when in inventory. -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="94803" name="Core Doll" additionalName="7-day" type="EtcItem">
+		<!-- <Core Doll's Sorcery Lv. 2> Received Skill Critical Damage -10% Received Skill Critical Rate -5% Shock Resistance +20% Sleep Resistance +20% Knockback Resistance +10% Available for 7 d. Boosts parameters when in inventory. -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="94804" name="Package: Zaken Doll (7-day)" type="EtcItem">
+		<!-- Double-click to obtain the following items. Zaken Doll (7-day) -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94805" name="Package: Core Doll (7-day)" type="EtcItem">
+		<!-- Double-click to obtain the following items. Core Doll (7-day) -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94806" name="Spellbook: Flying Dagger" type="EtcItem">
+		<!-- A spellbook for learning the Flying Dagger skill. <Classes> Adventurer Wind Rider Ghost Hunter <Skill effect> Throws a dagger at the target and infects them, decreasing their Atk. Spd./ Casting Spd./ Speed. -->
+		<set name="icon" val="icon.etc_magic_book_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94807" name="Special Giran Seal" additionalName="Event" type="EtcItem">
+		<!-- Allows creating the listed items at the L-Coin Store. <Items to create> Berserker's Scroll (1 pc.) Spellbook: Ultimate Death Knight Transformation (5 pcs.) Spellbook: Titan Champion (5 pcs.) Spellbook: Cacophony of War (5 pcs.) Spellbook: Pa'agrio's Touch (5 pcs.) Spellbook: Team Building (5 pcs.) -->
+		<set name="icon" val="icon.etc_royal_seal_of_lord_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94808" name="Pack of Seals" type="EtcItem">
+		<!-- Double-click to obtain one of the following items and 1 to 1000 Giran Seals. -->
+		<set name="icon" val="icon.bm_pendant_pvp_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94809" name="Kit: 50 Packs of Seals" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_pendant_pve_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94810" name="Baium's Lair Ticket" additionalName="Event" type="EtcItem">
+		<!-- Required for entering Baium's Lair. -->
+		<set name="icon" val="icon.ticket_of_zaken" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94811" name="Baium Treasure Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94812" name="Baby Shark Outfit" type="Armor">
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="94813" name="White Day Outfit" type="Armor">
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="94814" name="Random Transformation Scroll" additionalName="Event" type="EtcItem">
+		<!-- When used, activates one of the following transformations. <Available transformations> - Dragon Berserker - High Priest - White Day - Teddy Bear - Panda - Cat Duration: 20 min. Cooldown: 10 sec. -->
+		<set name="icon" val="icon.random_transform_00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94815" name="Kit: Growth Supplies" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_level_up_consume_package" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94816" name="Kit: Buff Scrolls" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_buff_scroll_package" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94817" name="Kit: Combat Supplies" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_battle_consume_package" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94818" name="Treasure Chest of Insolence" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94819" name="Big Treasure Chest of Insolence" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_freya_2016_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94820" name="Huge Treasure Chest of Insolence" type="EtcItem">
+		<!-- Double-click to obtain a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_gold_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94821" name="Kit: 100 Treasure Chests of Insolence" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94822" name="Package: +7 Cloak of Protection" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_2018_sayha_cloak_back_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94823" name="Boss' Weapon Pack" additionalName="Sealed" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.zariche_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94824" name="Trix' Treasure Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.bm_dragon_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94825" name="Trix's Big Treasure Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.bm_dragon_shinning_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94826" name="Olympiad Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i11" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94827" name="Boss' Accessory Crafting Kit" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_dragon_present_4" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94828" name="Class Change Coupon" type="EtcItem">
+		<!-- Required for changing your class through Hermin. Note! Talk to Junia in Aden or Giran to teleport to the Additional Services Lab. -->
+		<set name="icon" val="icon.bm_payback_ticket_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94829" name="Scroll: 1,000,000,000 SP" type="EtcItem">
+		<!-- Scroll the replenishes 1,000,000,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94830" name="Ultimate Behemoth Transformation Costume" type="Armor">
+		<!-- NPC only costume -->
+		<set name="icon" val="icon.valkyrie_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+	</item>
+	<item id="94831" name="Aden Mark" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.etc_ancient_adena_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94832" name="Special Spellbook Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94833" name="Aden's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain 2 Aden Marks, a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94834" name="Golden Wheel Guild Coin" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. <Items for exchange> Golden Wheel's Scroll (5 pcs.) Golden Wheel's Transformation Scroll (10 pcs.) Kit: Golden Wheel's Protection (7 pcs.) Kit: Golden Wheel's Random Craft (15 pcs.) Golden Wheel's Shining Kit (25 pcs.) -->
+		<set name="icon" val="icon.ev_golden_wheel_token" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94835" name="Flower Sweets" additionalName="Event" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect> P. Atk. +100 M. Atk. +100 P. Def. +200 M. Def. +200 Max HP +300 Max MP +300 Acquired XP/ SP +10% Duration: 60 min. Cooldown: 1 min. The effect remains after death. -->
+		<set name="icon" val="icon.flower_songpyeon" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94836" name="Kit: Golden Wheel's Protection" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i10" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94837" name="Kit: Golden Wheel's Random Craft" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i09" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94838" name="Random Transformation Scroll" additionalName="Event" type="EtcItem">
+		<!-- When used, activates one of the following transformations. <Available transformations> - Dragon Berserker - Wild Wolf - White Day - Cat Duration: 20 min. Cooldown: 10 sec. The effect remains after death. -->
+		<set name="icon" val="icon.random_transform_00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94839" name="Golden Wheel's Shining Kit" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i11" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94840" name="Breastplate of Protection" type="Armor">
+		<!-- <Properties> STR +2 CON +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t901_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="7700" />
+		<set name="price" val="3562000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">240</stat>
+		</stats>
+	</item>
+	<item id="94841" name="Gaiters of Protection" type="Armor">
+		<!-- <Properties> CON +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t901_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="3320" />
+		<set name="price" val="2226000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">210</stat>
+		</stats>
+	</item>
+	<item id="94842" name="Breastplate of Protection" additionalName="Sealed" type="Armor">
+		<!-- <Properties> STR +2 CON +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t901_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="7700" />
+		<set name="price" val="3562000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">240</stat>
+		</stats>
+	</item>
+	<item id="94843" name="Gaiters of Protection" additionalName="Sealed" type="Armor">
+		<!-- <Properties> CON +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t901_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="3320" />
+		<set name="price" val="2226000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">210</stat>
+		</stats>
+	</item>
+	<item id="94844" name="Leather Armor of Protection" type="Armor">
+		<!-- <Properties> STR +2 DEX +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t902_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4300" />
+		<set name="price" val="3562000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">201</stat>
+		</stats>
+	</item>
+	<item id="94845" name="Leather Leggings of Protection" type="Armor">
+		<!-- <Properties> DEX +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t902_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1480" />
+		<set name="price" val="2226000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">140</stat>
+		</stats>
+	</item>
+	<item id="94846" name="Leather Armor of Protection" additionalName="Sealed" type="Armor">
+		<!-- <Properties> STR +2 DEX +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t902_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="4300" />
+		<set name="price" val="3562000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">201</stat>
+		</stats>
+	</item>
+	<item id="94847" name="Leather Leggings of Protection" additionalName="Sealed" type="Armor">
+		<!-- <Properties> DEX +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t902_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1480" />
+		<set name="price" val="2226000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">140</stat>
+		</stats>
+	</item>
+	<item id="94848" name="Tunic of Protection" type="Armor">
+		<!-- <Properties> WIT +2 MEN +2 Overweight limit +1500 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t903_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="3562000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">138</stat>
+		</stats>
+	</item>
+	<item id="94849" name="Stockings of Protection" type="Armor">
+		<!-- <Properties> WIT +2 Overweight limit +1000 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t903_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="2226000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">90</stat>
+		</stats>
+	</item>
+	<item id="94850" name="Tunic of Protection" additionalName="Sealed" type="Armor">
+		<!-- <Properties> WIT +2 MEN +2 Overweight limit +1500 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t903_u_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="3562000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">138</stat>
+		</stats>
+	</item>
+	<item id="94851" name="Stockings of Protection" additionalName="Sealed" type="Armor">
+		<!-- <Properties> WIT +2 Overweight limit +1000 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
+		<set name="icon" val="icon.armor_t903_l_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="2226000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">90</stat>
+		</stats>
+	</item>
+	<item id="94852" name="Black Coupon" additionalName="Event" type="EtcItem">
+		<!-- Required for purchasing <font color=EEAA22>Stable Enchant Scrolls</font>. <font color=bbaa88><Items to buy></font> - Scroll: Enchant Circlet of Hero - Scroll: Enchant Dragon Belt - Scroll: Enchant Cloak of Protection</font> -->
+		<set name="icon" val="icon.ev_black_ticket" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94853" name="Legendary Dye (STR +4)" additionalName="3rd Class" type="EtcItem">
+		<!-- Required for Legendary STR Symbol. Take it to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. Note! Requires 1 dye for making the symbol. -->
+		<set name="icon" val="BranchSys3.icon1.g_premium_dye_attribute_unholy" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="240000" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94854" name="Legendary Dye (CON +4)" additionalName="3rd Class" type="EtcItem">
+		<!-- Required for Legendary CON Symbol. Take it to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. Note! Requires 1 dye for making the symbol. -->
+		<set name="icon" val="BranchSys3.icon5.g_premium_dye_attribute_fire" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="240000" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94855" name="Legendary Dye (DEX +4)" additionalName="3rd Class" type="EtcItem">
+		<!-- Required for Legendary DEX Symbol. Take it to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. Note! Requires 1 dye for making the symbol. -->
+		<set name="icon" val="BranchSys3.icon3.g_premium_dye_attribute_holy" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="240000" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94856" name="Legendary Dye (INT +4)" additionalName="3rd Class" type="EtcItem">
+		<!-- Required for Legendary INT Symbol. Take it to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. Note! Requires 1 dye for making the symbol. -->
+		<set name="icon" val="BranchSys3.icon2.g_premium_dye_attribute_water" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="240000" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94857" name="Legendary Dye (MEN +4)" additionalName="3rd Class" type="EtcItem">
+		<!-- Required for Legendary MEN Symbol. Take it to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. Note! Requires 1 dye for making the symbol. -->
+		<set name="icon" val="BranchSys3.icon6.g_premium_dye_attribute_wind" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="240000" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94858" name="Legendary Dye (WIT +4)" additionalName="3rd Class" type="EtcItem">
+		<!-- Required for Legendary WIT Symbol. Take it to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. Note! Requires 1 dye for making the symbol. -->
+		<set name="icon" val="BranchSys3.icon4.g_premium_dye_attribute_earth" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="150" />
+		<set name="price" val="240000" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94859" name="Protection Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain Giran Seal, a random item from the list and another one of various items. -->
+		<set name="icon" val="icon.bm_dragon_present_3" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94860" name="Revolver" additionalName="Not available" type="Weapon">
+		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">305</stat>
+			<stat type="mAtk">137</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94861" name="Spellbook: Tranquillity" type="EtcItem">
+		<!-- A spellbook for learning the Tranquillity skill. <Class> Cardinal <Skill effect> Increases party members' max HP. Continuously recovers HP for a short period of time. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94862" name="Spellbook: Exclusion" type="EtcItem">
+		<!-- A spellbook for learning the Exclusion skill. <Class> Eva's Saint <Skill effect> Knocks nearby enemies back. Greatly decreases Atk. Spd./ Casting Spd./ Speed. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94863" name="Spellbook: Dark Disruption" type="EtcItem">
+		<!-- A spellbook for learning the Dark Disruption skill. <Class> Shillien Saint <Skill effect> Greatly decreases Recovery Potions' Effect of the target and nearby enemies. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94864" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Various supplies (i.e. potions and enchant scrolls) - Pet Book/ Accessory - Special armor - Boss' weapon - High-grade A-grade weapon - Rare accessories - Talisman of Baium - Master's Book - Rare spellbook -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94865" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Various supplies (i.e. potions and enchant scrolls) - Pet Book/ Accessory - Special armor - Boss' weapon - High-grade A-grade weapon - Rare accessories - Talisman of Baium - Master's Book - Rare spellbook -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94866" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Various supplies (i.e. potions and enchant scrolls) - Pet Book/ Accessory - Special armor - Boss' weapon - High-grade A-grade weapon - Rare accessories - Talisman of Baium - Master's Book - Rare spellbook -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94867" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Various supplies (i.e. potions and enchant scrolls) - Pet Book/ Accessory - Special armor - Boss' weapon - High-grade A-grade weapon - Rare accessories - Talisman of Baium - Master's Book - Rare spellbook -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94868" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Various supplies (i.e. potions and enchant scrolls) - Pet Book/ Accessory - Special armor - Boss' weapon - High-grade A-grade weapon - Rare accessories - Talisman of Baium - Master's Book - Rare spellbook -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94869" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Various supplies (i.e. potions and enchant scrolls) - Pet Book/ Accessory - Special armor - Boss' weapon - High-grade A-grade weapon - Rare accessories - Talisman of Baium - Master's Book - Rare spellbook -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94870" name="Golden Wheel's Mysterious Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Various supplies (i.e. potions and enchant scrolls) - Pet Book/ Accessory - Special armor - Boss' weapon - High-grade A-grade weapon - Rare accessories - Talisman of Baium - Master's Book - Rare spellbook -->
+		<set name="icon" val="icon.festival_question_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94871" name="Golden Wheel's Coupon" type="EtcItem">
+		<!-- Can be exchanged in the Golden Wheel Guild's secret shop. Applies a buff when used as a scroll. <Effect> P. Atk. +100 M. Atk. +100 P. Def. +200 M. Def. +200 Max HP +300 Max MP +300 Acquired XP/ SP +10% Duration: 60 min. Cooldown: 1 min. The effect remains after death. Can be transformed to Craft points. -->
+		<set name="icon" val="icon.bm_payback_ticket_01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94872" name="Life Control Tower's Scroll of Blessing" additionalName="Event" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect> Max HP +5% Max SP +5% Acquired XP +30% Acquired SP +30% Silence Resistance +15% Fear Resistance +15% Paralysis Resistance +15% Duration: 60 min. Cooldown: 1 min. -->
+		<set name="icon" val="icon.etc_aidcharm_cancel_valbreath_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94873" name="Balthus Knights' Blessed Dragon Belt Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - +5~+7 Blessed Dragon Belt -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94874" name="Balthus Knights' Greater Jewelry Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Zircon Lv. 4-7 - Onyx Lv. 4-7 - Coral Lv. 4-7 - Spinel Lv. 4-7 -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94875" name="Balthus Knights' Enchanted Talisman Pack" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - +6~+8 Talisman of Aden - +6~+8 Talisman of Eva - +6~+8 Talisman of Speed - +6~+8 Talisman of Authority -->
+		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94876" name="Balthus Knights' Boss Doll Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Queen Ant Doll Lv. 1-3 - Baium Doll Lv. 1-3 - Orfen Doll Lv. 1-3 - Frintezza Doll Lv. 1-3 - Zaken Doll Lv. 1-3 - Core Doll Lv. 1-3 -->
+		<set name="icon" val="icon.star_agathion_cube" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94877" name="Balthus Knights' Package: Enhanced Einhasad's Pendant" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. - Einhasad's Pendant Lv. 3-5 -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94878" name="Orb" type="EtcItem">
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="1580" />
+	</item>
+	<item id="94879" name="Potion of Wardship" type="EtcItem">
+		<!-- Sayha's Grace points +10,000, Magic Lamp points +50,000, craft points +3250. Note! The item will be deleted after the scheduled maintenance. -->
+		<set name="icon" val="icon.bless_of_sayha_potion" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94880" name="Wooden Pistols" type="Weapon">
+		<set name="icon" val="icon.shooter_none" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1870" />
+		<set name="price" val="244000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<stats>
+			<stat type="pAtk">64</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94881" name="Brass Pistols" type="Weapon">
+		<set name="icon" val="icon.shooter_d" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1810" />
+		<set name="price" val="1800000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">191</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94882" name="Flint Pistols" type="Weapon">
+		<set name="icon" val="icon.shooter_b_low" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1720" />
+		<set name="price" val="6130000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">323</stat>
+			<stat type="mAtk">91</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94883" name="B-Class Firearms (Low-/ Mid-grade)" additionalName="Not available" type="Weapon">
+		<set name="icon" val="icon.weapon_scallop_jamadhr_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1520" />
+		<set name="price" val="1800000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">397</stat>
+			<stat type="mAtk">102</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94884" name="Volcano" type="Weapon">
+		<set name="icon" val="icon.shooter_b_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1700" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94885" name="Scofield" type="Weapon">
+		<set name="icon" val="icon.shooter_a_low" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1660" />
+		<set name="price" val="20741000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">528</stat>
+			<stat type="mAtk">142</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94886" name="Zephyrus" type="Weapon">
+		<set name="icon" val="icon.shooter_a_high" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1640" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">570</stat>
+			<stat type="mAtk">151</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94887" name="Boss' Firearms" additionalName="Not available" type="Weapon">
+		<set name="icon" val="icon.shooter_boss" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1330" />
+		<set name="price" val="26968400" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">610</stat>
+			<stat type="mAtk">160</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94888" name="Anakim's Divine Pistols" type="Weapon">
+		<set name="icon" val="icon.shooter_boss_anakim" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1640" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">610</stat>
+			<stat type="mAtk">160</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94889" name="Monster's Firearms (Low-grade)" type="Weapon">
+		<set name="icon" val="icon.weapon_chakram_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1440" />
+		<set name="price" val="7830000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">397</stat>
+			<stat type="mAtk">102</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94890" name="Monster's Firearms (High-grade)" type="Weapon">
+		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="MITHRIL" />
+		<set name="weight" val="1390" />
+		<set name="price" val="13100000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="pAtk">400</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94891" name="No-grade Elemental Orb" additionalName="Sealed" type="EtcItem">
+		<!-- An orb infused with the elemental spirit power. <Required for using No-grade firearms.> -->
+		<set name="icon" val="icon.orb_none" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="100000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94892" name="D-grade Elemental Orb" additionalName="Sealed" type="EtcItem">
+		<!-- An orb infused with the elemental spirit power. <Required for using D-grade firearms.> -->
+		<set name="icon" val="icon.orb_d" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="200000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94893" name="C-grade Elemental Orb" additionalName="Sealed" type="EtcItem">
+		<!-- An orb infused with the elemental spirit power. <Required for using C-grade firearms.> -->
+		<set name="icon" val="icon.orb_c" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="C" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="300000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94894" name="B-grade Elemental Orb" additionalName="Sealed" type="EtcItem">
+		<!-- An orb infused with the elemental spirit power. <Required for using B-grade firearms.> -->
+		<set name="icon" val="icon.orb_b" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="500000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94895" name="A-grade Elemental Orb" additionalName="Sealed" type="EtcItem">
+		<!-- An orb infused with the elemental spirit power. <Required for using A-grade firearms.> -->
+		<set name="icon" val="icon.orb_a" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="price" val="1000000" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94896" name="Sylphen Ring" additionalName="Event" type="Armor">
+		<!-- <Properties> P. Atk. +100 M. Atk. +100 P. Def. +100 M. Def. +100 MP Recovery Rate +5 <font color=ff6666><Cannot be enchanted and augmented.></font> <font color=ff6666><Effects of two identical rings do not stack.></font> -->
+		<set name="icon" val="icon.ring_of_sylph_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">32</stat>
+		</stats>
+	</item>
+	<item id="94897" name="Aden Pistols" type="Weapon">
+		<set name="icon" val="icon.shooter_d" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" /> <!-- 25 -->
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1820" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">191</stat>
+			<stat type="mAtk">39</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">400</stat>
+		</stats>
+	</item>
+	<item id="94898" name="Leather Boots" additionalName="Sealed" type="Armor">
+		<set name="icon" val="icon.armor_t09_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1300" />
+		<set name="price" val="20900" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">19</stat>
+		</stats>
+	</item>
+	<item id="94899" name="Bone Helmet" additionalName="Sealed" type="Armor">
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="640" />
+		<set name="price" val="31300" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+</list>

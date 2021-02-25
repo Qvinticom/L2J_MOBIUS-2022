@@ -533,7 +533,7 @@
 		</effects>
 	</skill>
 	<skill id="3608" toLevel="3" name="Set Effect - Apella Heavy Armor">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases P. Critical Damage success rate. -->
+		<!-- Increases Max CP/ CP Recovery Rate, and decreases Death XP Penalty. Increases M. Def. and decreases received P. Critical Rate, when hit. -->
 		<icon>icon.armor_t1004_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -603,7 +603,7 @@
 		</effects>
 	</skill>
 	<skill id="3609" toLevel="3" name="Set Effect - Apella Light Armor">
-		<!-- Increases Max CP/ CP Recovery Rate, decreases the player's death XP penalty. When the character is attacked, increases P. Evasion and decreases Received P. Critical Damage. -->
+		<!-- Increases Max CP/ CP Recovery Rate, and decreases Death XP Penalty. Increases P. Evasion and decreases received P. Critical Damage, when hit. -->
 		<icon>icon.armor_t1005_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -673,7 +673,7 @@
 		</effects>
 	</skill>
 	<skill id="3610" toLevel="3" name="Set Effect - Apella Robe">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases death XP penalty. Increases Speed and P. Def. when attacked. -->
+		<!-- Increases Max CP/ CP Recovery Rate, and decreases Death XP Penalty. Increases Speed and P. Def., when hit. -->
 		<icon>icon.armor_t1006_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -811,7 +811,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3614" toLevel="1" name="Enchant �-grade Heavy Armor">
+	<skill id="3614" toLevel="1" name="Enchant ?-grade Heavy Armor">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>1</magicLevel>
@@ -1365,7 +1365,7 @@
 		</effects>
 	</skill>
 	<skill id="3632" toLevel="1" name="Clan Gate">
-		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
+		<!-- Active skill: Creates a gate that summons clan members. You cannot move while this skill is active. -->
 		<icon>icon.accessory_crown_i00</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1393,7 +1393,7 @@
 		</effects>
 	</skill>
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
-		<!-- Active: Temporarily increases Stun Resistance. -->
+		<!-- Active skill: Temporarily increases Stun Resistance. -->
 		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>

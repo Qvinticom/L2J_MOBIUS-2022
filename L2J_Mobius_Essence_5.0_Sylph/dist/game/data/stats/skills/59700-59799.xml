@@ -26,7 +26,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59705" toLevel="1" name="Ride Silver Strider">
-		<!-- Allows to ride Silver Strider -->
+		<!-- Allows to ride Silver Strider. -->
 		<icon>icon.skill0000</icon>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -55,7 +55,7 @@
 		</effects>
 	</skill>
 	<skill id="59706" toLevel="1" name="Ride Black Strider">
-		<!-- Allows to ride Black Strider -->
+		<!-- Allows to ride Black Strider. -->
 		<icon>icon.skill0000</icon>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -187,12 +187,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59712" toLevel="1" name="Spellbook: Ninja">
-		<!-- Needed to get ninja appearance. -->
+		<!-- Required to get ninja appearance. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59713" toLevel="1" name="Spellbook: Cowboy">
-		<!-- Needed to get cowboy appearance. -->
+		<!-- Required to get cowboy appearance. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -202,37 +202,37 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59715" toLevel="1" name="Spellbook: Qipao">
-		<!-- Needed to change the armor appearance to that of the qipao. -->
+		<!-- Required to change the armor appearance to that of the qipao. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59716" toLevel="1" name="Spellbook: Traditional Taiwanese Costume">
-		<!-- Needed to change the armor appearance to that of the traditional Taiwanese costume. -->
+		<!-- Required to change the armor appearance to that of the traditional Taiwanese costume. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59717" toLevel="1" name="Ninja Appearance">
-		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. and P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> 1 Elemental Stone -->
+		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P. Atk./ M. Atk./ P. Def./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> Spirit Ore (20 pcs.) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59718" toLevel="1" name="Cowboy Appearance">
-		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. and P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> 1 Elemental Stone -->
+		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P. Atk./ M. Atk./ P. Def./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> Spirit Ore (20 pcs.) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59719" toLevel="1" name="Steampunk-styled Appearance">
-		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. and P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> 1 Elemental Stone -->
+		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P. Atk./ M. Atk./ P. Def./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> Spirit Ore (20 pcs.) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59720" toLevel="1" name="Qipao Appearance">
-		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. and P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> 1 Elemental Stone -->
+		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P. Atk./ M. Atk./ P. Def./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> Spirit Ore (20 pcs.) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="59721" toLevel="1" name="Traditional Taiwanese Costume Appearance">
-		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. and P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> 1 Elemental Stone -->
+		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P. Atk./ M. Atk./ P. Def./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> Spirit Ore (20 pcs.) -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -290,13 +290,12 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="59733" toLevel="3" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="59733" toLevel="3" name="New Year Gift">
+		<!-- For 30 min., Atk. Spd./ Casting Spd. +5%, HP/ MP Recovery Rate +5%, Speed +10. Changes the armor appearance to that of Santa Outfit. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="59734" toLevel="3" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="59734" toLevel="3" name="Special Kit">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

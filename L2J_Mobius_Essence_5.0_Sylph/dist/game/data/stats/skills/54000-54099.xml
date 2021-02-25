@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="54000" toLevel="22" name="Agathion: Agathion Taurus">
+	<skill id="54000" toLevel="22" name="Agathion Taurus">
 		<!-- <Effect> P. Def. +$s1. -->
 		<icon>icon.agathion_tau_star_1</icon>
 		<operateType>P</operateType>
@@ -60,7 +60,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54001" toLevel="22" name="Agathion: Agathion Leo">
+	<skill id="54001" toLevel="22" name="Agathion Leo">
 		<!-- <Effect> P. Atk. +$s1 -->
 		<icon>icon.agathion_leo_star_1</icon>
 		<operateType>P</operateType>
@@ -120,7 +120,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54002" toLevel="22" name="Agathion: Agathion Scorpio">
+	<skill id="54002" toLevel="22" name="Agathion Scorpio">
 		<!-- <Effect> P. Critical Rate +$s1 -->
 		<icon>icon.agathion_sco_star_1</icon>
 		<operateType>P</operateType>
@@ -198,7 +198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54003" toLevel="22" name="Agathion: Agathion Sagittarius">
+	<skill id="54003" toLevel="22" name="Agathion Sagittarius">
 		<!-- <Effect> Atk. Spd. +$s1 -->
 		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>P</operateType>
@@ -276,7 +276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54004" toLevel="22" name="Agathion: Agathion Virgo">
+	<skill id="54004" toLevel="22" name="Agathion Virgo">
 		<!-- <Effect> M. Def. +$s1 -->
 		<icon>icon.agathion_virgo_star_1</icon>
 		<operateType>P</operateType>
@@ -336,7 +336,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54005" toLevel="22" name="Agathion: Agathion Aquarius">
+	<skill id="54005" toLevel="22" name="Agathion Aquarius">
 		<!-- <Effect> M. Atk. +$s1 -->
 		<icon>icon.agathion_aqu_star_1</icon>
 		<operateType>P</operateType>
@@ -422,7 +422,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54006" toLevel="22" name="Agathion: Agathion Capricorn">
+	<skill id="54006" toLevel="22" name="Agathion Capricorn">
 		<!-- <Effect> M. Skill Critical Rate +$s1 -->
 		<icon>icon.agathion_capr_star_1</icon>
 		<operateType>P</operateType>
@@ -500,7 +500,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54007" toLevel="22" name="Agathion: Agathion Libra">
+	<skill id="54007" toLevel="22" name="Agathion Libra">
 		<!-- <Effect> Casting Spd. +$s1 -->
 		<icon>icon.agathion_lib_star_1</icon>
 		<operateType>P</operateType>
@@ -578,7 +578,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54008" toLevel="22" name="Agathion: Agathion Gemini">
+	<skill id="54008" toLevel="22" name="Agathion Gemini">
 		<!-- <Effect> When Sayha's Grace is used, acquired XP +$s1 When Sayha's Grace is used, acquired SP +$s1 -->
 		<icon>icon.agathion_gem_star_1</icon>
 		<operateType>P</operateType>
@@ -993,7 +993,7 @@
 		</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="54030" toLevel="11" name="Necklace: Ignis' Necklace">
+	<skill id="54030" toLevel="11" name="Ignis' Necklace">
 		<!-- A necklace imbued with Fire Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_fire_i00</icon>
 		<operateType>P</operateType>
@@ -1031,7 +1031,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54031" toLevel="11" name="Necklace: Nebula's Necklace">
+	<skill id="54031" toLevel="11" name="Nebula's Necklace">
 		<!-- A necklace imbued with Water Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_water_i00</icon>
 		<operateType>P</operateType>
@@ -1069,7 +1069,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54032" toLevel="11" name="Necklace: Procella's Necklace">
+	<skill id="54032" toLevel="11" name="Procella's Necklace">
 		<!-- A necklace imbued with Wind Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>P</operateType>
@@ -1107,7 +1107,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54033" toLevel="11" name="Necklace: Petram's Necklace">
+	<skill id="54033" toLevel="11" name="Petram's Necklace">
 		<!-- A necklace imbued with Earth Spirit. <Effect> Max HP +$s1 -->
 		<icon>icon.elemental_necklace_earth_i00</icon>
 		<operateType>P</operateType>
@@ -1168,7 +1168,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="54038" toLevel="1" name="Sayha's Cloak">
-		<!-- Max HP/ MP +$s1. -->
+		<!-- Max HP +$s1 Max MP +$s1 -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1183,7 +1183,7 @@
 		</effects>
 	</skill>
 	<skill id="54039" toLevel="10" name="Sayha's Cloak +1">
-		<!-- Max HP/ MP +$s1. -->
+		<!-- Max HP +$s1 Max MP +$s1 -->
 		<icon>BranchSys2.br_wing_of_sylphide_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1302,7 +1302,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54040" toLevel="2" name="Sayha's Blink">
+	<skill id="54040" toLevel="2" name="Sayha s Blink">
 		<!-- Cancels the enemy's target and teleports you backwards. -->
 		<icon>icon.sayha2017_blink</icon>
 		<operateType>A1</operateType>
@@ -1389,7 +1389,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54042" toLevel="1" name="Frintezza's Necklace - Special Ability">
+	<skill id="54042" toLevel="1" name="Special Ability: Frintezza's Necklace">
 		<!-- Nearby enemies' P./ M. Skill Cooldown -$s2 for $s1 -->
 		<icon>icon.accessory_necklace_of_frintessa_i05</icon>
 		<operateType>A1</operateType>
@@ -1659,7 +1659,7 @@
 		<icon>icon.bm_ensoul_stone_pvp</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="54047" toLevel="11" name="Talisman: Talisman of Aden">
+	<skill id="54047" toLevel="11" name="Talisman of Aden">
 		<!-- A talisman for the warriors of Aden. -->
 		<icon>icon.bm_ensoul_stone_pvp</icon>
 		<operateType>P</operateType>
@@ -2170,7 +2170,7 @@
 		<icon>icon.r2_belt_i01</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="54082" toLevel="11" name="Belt: Dragon Belt">
+	<skill id="54082" toLevel="11" name="Dragon Belt">
 		<!-- Imbued with dragon power. <Effect> Weight limit $s1 DEX $s2 WIT $s3 -->
 		<icon>icon.r2_belt_i01</icon>
 		<operateType>P</operateType>
@@ -2439,19 +2439,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54083" toLevel="1" name="Lucky Sack">
+	<skill id="54083" toLevel="1" name="Lucky Pouch">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="54084" toLevel="1" name="Lucky Sack">
+	<skill id="54084" toLevel="1" name="Lucky Pouch">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="54085" toLevel="1" name="Golden Lucky Sack">
+	<skill id="54085" toLevel="1" name="Golden Lucky Pouch">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>

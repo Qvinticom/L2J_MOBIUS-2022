@@ -1158,7 +1158,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5851" toLevel="1" name="Stun">
-		<!-- Immobilizes and stuns target. -->
+		<!-- Cannot move due to shock. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1232,7 +1232,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5855" toLevel="2" name="Stun">
-		<!-- Immobilizes and stuns target. -->
+		<!-- Cannot move due to shock. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
@@ -2354,7 +2354,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5894" toLevel="1" name="Mark of Despair">
-		<!-- Significantly decreases P./ M. Def., P. Evasion and Max HP, but P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Damage and P. Critical Rate are increased. -->
+		<!-- The target gets Mark of Despair that significantly decreases P./ M. Def., P. Evasion and Max HP, but P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Damage and P. Critical Rate are increased. -->
 		<icon>icon.skill1337</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>

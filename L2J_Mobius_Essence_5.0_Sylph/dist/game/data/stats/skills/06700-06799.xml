@@ -317,7 +317,7 @@
 		</effects>
 	</skill>
 	<skill id="6719" toLevel="1" name="Guidance of Elcadia">
-		<!-- For 10 min., P. Accuracy +4. -->
+		<!-- For 20 min., P. Accuracy +4. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -696,7 +696,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6735" toLevel="1" name="Petrifies the target.">
+	<skill id="6735" toLevel="1" name="Petrified">
 		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
@@ -1095,7 +1095,7 @@
 		</effects>
 	</skill>
 	<skill id="6754" toLevel="1" name="Bleed">
-		<!-- Inflicted with bleed and -200 HP every sec. -->
+		<!-- Inflicted with Bleed that drains HP constantly. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1456,7 +1456,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="6769" toLevel="1" name="Petrify">
+	<skill id="6769" toLevel="1" name="Petrified">
 		<!-- Petrified and unable to move. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1588,7 +1588,7 @@
 		</effects>
 	</skill>
 	<skill id="6774" toLevel="1" name="Stun Attack">
-		<!-- Attacks and stun the target for 10 sec. -->
+		<!-- Attacks the target stunning them for 10 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1690,7 +1690,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6777" toLevel="1" name="Bleeding Gash">
-		<!-- For 20 sec., slows down Speed and inflicts bleed so that -200 HP every sec. Inflicted with paralysis for 10 sec. -->
+		<!-- Slows enemy's movement for 20 sec., constatly draining HP due to Bleed, then causes paralysis for 10 sec. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>20</abnormalTime>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="209" parentClassId="208">
+		<skill skillName="Ability to Protect" skillId="91" skillLevel="2" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Recover HP" skillId="45176" skillLevel="1" getLevel="20" levelUpSp="1000" />
+		<skill skillName="Recover MP" skillId="45177" skillLevel="1" getLevel="20" levelUpSp="1000" />
+		
+		<skill skillName="Ability to Attack" skillId="77" skillLevel="2" getLevel="25" levelUpSp="5500" />
+		
+		<skill skillName="Critical Chance" skillId="137" skillLevel="1" getLevel="27" levelUpSp="5500" />
+	</skillTree>
+</list>

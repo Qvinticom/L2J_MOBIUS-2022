@@ -518,7 +518,7 @@
 		</effects>
 	</skill>
 	<skill id="5116" toLevel="9" name="Cubic Hold">
-		<!-- Temporarily inflicted with Hold and unable to move. -->
+		<!-- Movement is blocked. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1059,7 +1059,7 @@
 		</effects>
 	</skill>
 	<skill id="5137" toLevel="5" name="Grip of the Cat">
-		<!-- Immobilizes enemy -->
+		<!-- Movement is blocked. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1091,7 +1091,7 @@
 		</effects>
 	</skill>
 	<skill id="5138" toLevel="6" name="Whiplash">
-		<!-- Cannot move for 3 sec. -->
+		<!-- A Magnus's kick. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -1166,7 +1166,7 @@
 		</effects>
 	</skill>
 	<skill id="5140" toLevel="6" name="Dark Curse">
-		<!-- Curse decreases Atk. Spd./ Casting Spd. -->
+		<!-- Casts a curse poisoning nearby enemies. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2005,7 +2005,7 @@
 		</effects>
 	</skill>
 	<skill id="5161" toLevel="15" name="Agility">
-		<!-- When triggered: Increases P. Evasion for a certain amount of time. -->
+		<!-- When triggered: Increases P. Evasion for a certain amount of time -->
 		<icon>icon.skill3080</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>

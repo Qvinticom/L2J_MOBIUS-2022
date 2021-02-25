@@ -1,47 +1,47 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="45400" toLevel="1" name="Wild Beat">
-		<!-- Elven mesmerizing music. Forces the enemy to move to you for $s1 -->
+		<!-- <Paralyzing Skill> Elven mesmerizing music. The effect lasts for $s1 The enemy is unable to move. Forces the target to move to you. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45401" toLevel="1" name="Crazy Waltz">
-		<!-- Elven mesmerizing dance. For $s1, enemies are dazzled and dance on the spot. -->
+		<!-- <Sleep Skill> An elven mesmerizing dance. The effect lasts for $s1 Inflicts Sleep on nearby enemies. Sleeping enemies: they dance on the spot for a while. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45402" toLevel="5" name="Frantic Pace">
-		<!-- Attacks the target with $s1 power. Power +$s2 if the target is affected by Hold. Requires a sword, a blunt weapon, or dual swords. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
+		<!-- Attacks the target with $s1 power. If the target is affected by Hold, Power $s2. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45403" toLevel="3" name="Harmony">
-		<!-- Max HP $s1 Max MP $s2 -->
+		<!-- Max HP $s1 Max MP $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45404" toLevel="2" name="Song of Earth">
-		<!-- Elven earth-praising song. Enchanter P. Def. $s2 M. Def. $s2 Nearby characters P. Def. $s3 M. Def. $s3 Consumes 30 Spirit Ore. -->
+		<!-- Elven earth-praising song. <Enchanter> P. Def. $s1 M. Def. $s1 <Nearby characters> P. Def. $s2 M. Def. $s2 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45405" toLevel="2" name="Hunter's Song">
-		<!-- Elven hunter-praising song. Enchanter All Critical Rate $s2 Nearby characters All Critical Rate $s3 Consumes 30 Spirit Ore. -->
+	<skill id="45405" toLevel="2" name="Song of Hunter">
+		<!-- Elven hunter-praising song. <Enchanter> All Critical Rate $s1 <Nearby characters> All Critical Rate $s2 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45406" toLevel="2" name="Warrior's Dance">
-		<!-- Dark elven battle dance. Enchanter P. Atk. $s2 M. Atk. $s2 Nearby characters P. Atk. $s3 M. Atk. $s3 Consumes 30 Spirit Ore. -->
+	<skill id="45406" toLevel="2" name="Dance of Warrior">
+		<!-- Dark elven battle dance. <Enchanter> P. Atk. $s1 M. Atk. $s1 <Nearby characters> P. Atk. $s2 M. Atk. $s2 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45407" toLevel="2" name="Dance of Fire">
-		<!-- Dark elven fire-praising dance. Enchanter P. Critical Damage $s2 P. Skill Critical Damage $s3 M. Skill Critical Damage $s3 Nearby characters P. Skill Critical Damage $s4 M. Skill Critical Damage $s4 Consumes 30 Spirit Ore. -->
+		<!-- Dark elven fire-praising dance. <Enchanter> P. Critical Damage $s1 P. Skill Critical Damage $s2 M. Skill Critical Damage $s2 <Nearby characters> P. Skill Critical Damage $s3 M. Skill Critical Damage $s3 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45408" toLevel="4" name="Blessed by Sayha">
-		<!-- Sayha's Grace points $s1 -->
+		<!-- Sayha's Grace charging rate $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -66,12 +66,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45413" toLevel="1" name="Titan Champion">
-		<!-- P. Atk. $s1 P. Critical Rate $s2 P. Critical Damage $s3 P. Skill Critical Rate $s4 P. Skill Critical Damage $s5 Max HP $s5 Speed $s6 Consumes $s7 Spirit Ore. -->
+		<!-- P. Atk. $s1 P. Critical Rate $s2 P. Critical Damage $s3 P. Skill Critical Rate $s4 P. Skill Critical Damage $s5 Max HP $s5 Speed $s6 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45414" toLevel="1" name="Titanic Weapon">
-		<!-- P. Atk. $s1 When the Demolition Impact skill is used: - A chance to deal an extra attack Additional effects when using a two-handed sword: - Attack range increased - P. Atk. $s2 - Atk. Spd. $s3 - P. Accuracy $s4 Requires a sword or a blunt weapon. Consumes $s5 Spirit Ore. -->
+		<!-- P. Atk. $s1 When the Demolition Impact skill is used: A chance to deal an extra attack. When using a two-handed sword/ blunt weapon: Attack range increased. P. Atk. $s2 Atk. Spd. $s3 P. Accuracy $s4 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -81,12 +81,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45416" toLevel="6" name="Titanic Sweep">
-		<!-- Strikes the enemy with $s1 power. Requires a sword/ blunt weapon. Ignores Shield Defense. Critical. -->
+		<!-- Attacks the enemy with $s1 power. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45417" toLevel="6" name="Titanic Break">
-		<!-- Attacks the enemies in front of you with $s1 power and stuns them for $s2. Requires a two-handed sword or two-handed blunt weapon. Ignores Shield Defense. Critical. -->
+		<!-- <Shock skill> Attacks enemies at the front with $s1 power, stunning them for $s2 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -106,17 +106,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45423" toLevel="6" name="Burning Strike">
-		<!-- Strikes the target with $s1 power. Increases power upon consuming Momentum (up to $s2). Requires a fist weapon. Ignores Shield Defense. Ignores $s3 of the target's defense. Critical. -->
+		<!-- Attacks the enemy with $s1 power. Increases power upon consuming Momentum. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45424" toLevel="5" name="Burning Assault">
-		<!-- Attacks the enemy with $s1 power. P. Def. $s2 Consumes energy. Requires a fist weapon. Critical. -->
+		<!-- Attacks the target with $s1 power. Recovers Momentum. For $s2, P. Def. $s3 Critical. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45425" toLevel="4" name="Armor Break">
-		<!-- Speed $s1. There is a certain chance to remove $s2 piece of enemy's armor. Requires a fist weapon Pet armor cannot be removed. -->
+		<!-- <Suppression Skill> There is a certain chance to remove $s2 piece of enemy's armor. Speed $s1 Pet armor cannot be removed. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -136,7 +136,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45439" toLevel="1" name="Cacophony of War">
-		<!-- Inflicts Fear on nearby enemies for 3 sec. and brands them with a mark. If the marked target is attacked within a certain period of time, it is dead. Requires a fist weapon. Note! Your Speed -30. If there are no targets for killing for a certain period of time, your HP and CP will drop to 1. Consumes 20 Spirit Ore. -->
+		<!-- <Fear Skill> Inflicts Fear on nearby enemies for 3 sec. and brands them with a mark. If the marked target is attacked within a certain period of time, it is dead. Note! Your Speed -30. If there are no targets for killing for a certain period of time, your HP and CP will drop to 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -146,7 +146,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45441" toLevel="1" name="Cacophony of War">
-		<!-- If the marked target is attacked within a certain period of time, it is dead. Requires a fist weapon. Note! Your Speed -30. If there are no targets for killing for a certain period of time, your HP and CP will drop to 1. -->
+		<!-- If the marked target is attacked within a certain period of time, it is dead. Note! Your Speed -30. If there are no targets for killing for a certain period of time, your HP and CP will drop to 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -167,6 +167,276 @@
 	</skill>
 	<skill id="45445" toLevel="1" name="Cacophony of War">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45446" toLevel="1" name="Pa'agrio's Touch">
+		<!-- For $s1, recovers $s2 HP and $s3 CP of nearby clan members. For $s4: Creates a shield with $s5 HP. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45447" toLevel="1" name="Pa'agrio's Touch - Shield">
+		<!-- The barrier's HP: $s1 Can be activated up to $s2. The barrier disappears when its HP is 0 or after all trigger attempts. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45448" toLevel="1" name="Pa'agrio's Cure">
+		<!-- Recovers HP of nearby clan members. Power $s1. Recovers $s2 CP of nearby clan members. For $s3, recovers $s4 HP and $s5 CP of nearby clan members. Cannot be used with Pa'agrio's Touch and more effective healings. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45449" toLevel="1" name="Debuff Master">
+		<!-- The effect lasts for $s1 Enhances the following skills: Seal of Despair Seal of Silence Infection Seal -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45450" toLevel="20" name="Enhanced Seal of Silence">
+		<!-- <Silence Skill> For $s1 Blocks enemies' skill usage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45451" toLevel="6" name="Enhanced Seal of Despair">
+		<!-- <Suppression skill> For $s1, for enemies: P. Atk. $s2 Atk. Spd. $s3 P. Accuracy $s4 P. Critical Rate $s6 P. Critical Damage $s6 Speed $s5 M. Def. $s3 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45452" toLevel="1" name="Enhanced Infection Seal">
+		<!-- The effect lass for $s1 For a target and nearby clan members, Received Healing $s2 HP Recovery Rate $s3 MP Recovery Rate $s4 HP Recovery Potions' Effect $s5 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45453" toLevel="1" name="Flame Burst">
+		<!-- <Infection skill> Deals magic damage with $s1 power.For $s2, drains enemies' HP/ MP. The amount of drained HP depends on the character's M. Atk. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45454" toLevel="2" name="Flame Burst">
+		<!-- Drains HP/ MP for $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45455" toLevel="1" name="Team Building">
+		<!-- The target is unable to do anything for $s1 In $s2, the target is teleported to the selected place together with their party members. For $s3, creates a shield protecting the teleported party members. Note! The caster cannot move while casting. Cannot be used during sieges. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45456" toLevel="1" name="Shield of Unity">
+		<!-- The barrier's HP: $s1 Can be activated up to $s2. The barrier disappears when its HP is 0 or after all trigger attempts. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45457" toLevel="1" name="Doom Prison">
+		<!-- Unable to do anything. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45458" toLevel="1" name="Blood Chain">
+		<!-- <Drain skill> Attacks enemies with magic. Power $s1. Inflicts the Curse Blood debuff. Makes an additional attack if Curse Blood is applied $s2. Absorbs $s3 of the damage as HP. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45459" toLevel="3" name="Curse Blood">
+		<!-- An effect from the Blood Chain skill. If applied $s1, the target gets additional damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45460" toLevel="1" name="Blood Burst">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45461" toLevel="1" name="Cold Flames">
+		<!-- <Infection skill> Deals magic damage with $s1 power. For $s2, drains enemies' HP/ MP. The amount of drained HP depends on the character's M. Atk. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45462" toLevel="2" name="Cold Flames">
+		<!-- Drains HP/ MP for $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45463" toLevel="1" name="Chant of Healing">
+		<!-- For $s1, recovers $s2 HP and $s3 CP of nearby party members. Cannot be used with Pa'agrio's Touch and more effective healings. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45464" toLevel="1" name="Team Building">
+		<!-- Unable to do anything and use skills. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45465" toLevel="20" name="Seal of Chaos">
+		<!-- P. Accuracy $s1 M. Accuracy $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45466" toLevel="22" name="Seal of Winter">
+		<!-- Atk. Spd. $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45467" toLevel="23" name="Seal of Slow">
+		<!-- Speed $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45468" toLevel="1" name="Infection Seal">
+		<!-- The effect lass for $s1 For a target and nearby clan members, Received Healing $s2 HP Recovery Rate $s3 MP Recovery Rate $s4 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45469" toLevel="2" name="Flame Burst">
+		<!-- Drains HP/ MP for $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45470" toLevel="2" name="Cold Flames">
+		<!-- Drains HP/ MP for $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45471" toLevel="1" name="Glorious Warrior's Elixir Upgrade">
+		<!-- Elixir usage limit $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45472" toLevel="1" name="Glorious Warrior's Special Teleport">
+		<!-- A special teleport is available. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45473" toLevel="1" name="Expand Glorious Warrior's Special Teleports">
+		<!-- My Teleport Locations $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45474" toLevel="1" name="Glorious Warrior's Unique Title Color">
+		<!-- The title color can be changed to <font color="00DCFF">sky blue</font>. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45475" toLevel="1" name="Expand Glorious Warrior's Hair Accessory Slots">
+		<!-- Gives an additional hair accessory slot. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45476" toLevel="4" name="Bow Vulnerability">
+		<!-- Bow Resistance $s1 Shock Resistance $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45477" toLevel="2" name="Flying Dagger">
+		<!-- <Infection skill> Attacks the enemy with $s1 power. For $s2 Target's Atk. Spd. $s3 Target's Casting Spd. $s3 Target's Speed $s4 Drains $s5 HP per sec. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45478" toLevel="8" name="Sonic Focus">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45479" toLevel="8" name="Focus Force">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45480" toLevel="9" name="Lightning Strike">
+		<!-- A lightning strike inflicts Paralysis. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45481" toLevel="5" name="Mass Lightning Strike">
+		<!-- A lightning strike inflicts Paralysis. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45482" toLevel="4" name="Full Knockdown">
+		<!-- Knocked down by a powerful blow. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45483" toLevel="1" name="Expand Glorious Warrior's Magic Lamp">
+		<!-- Magic Lamp limit $s1 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45484" toLevel="45" name="Power Break">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45485" toLevel="45" name="Iron Fist">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45486" toLevel="60" name="Shield Stun">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45487" toLevel="10" name="Shield Bash">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45488" toLevel="9" name="Shield Charge">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45489" toLevel="3" name="Stun Burst">
+		<!-- P. Def. $s1 M. Def. $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45490" toLevel="3" name="Stun Burst">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45491" toLevel="13" name="Quick Spear">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45492" toLevel="12" name="Body Crush">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45493" toLevel="8" name="Armor Crush">
+		<!-- P. Def. $s1 M. Def. $s2 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45494" toLevel="8" name="Armor Crush">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45495" toLevel="48" name="Stun Shot">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45496" toLevel="45" name="Sonic Blaster">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45497" toLevel="55" name="Thunder Storm">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45498" toLevel="55" name="Amazing Thunder Storm">
+		<!-- Cannot move due to shock. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="45499" toLevel="6" name="Titanic Break">
+		<!-- Stuns making unable to move. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

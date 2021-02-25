@@ -116,4 +116,9 @@
 	<class classId="201" name="Death Blade" parentClassId="204" />
 	<class classId="198" name="Death Messenger" parentClassId="201" />
 	<class classId="207" name="Death Knight" parentClassId="198" />
+	<!-- Sylph -->
+	<class classId="208" name="Sylph Gunner" />
+	<class classId="209" name="Sharpshooter" parentClassId="208" />
+	<class classId="210" name="Wind Sniper" parentClassId="209" />
+	<class classId="211" name="Storm Blaster" parentClassId="210" />
 </list>

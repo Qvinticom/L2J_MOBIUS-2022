@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="53001" toLevel="3" name="Critical Creation">
-		<!-- Craft critical success rate +$s1. -->
+		<!-- Critical Craft Success Rate +$s1 (The effect depends on the item type and grade.) -->
 		<icon>icon.skill10701</icon>
 		<magicLevel>
 			<value level="1">76</value>
@@ -23,7 +23,7 @@
 		-->
 	</skill>
 	<skill id="53002" toLevel="3" name="Master of Creation">
-		<!-- Craft success rate +$s1. -->
+		<!-- Craft Success Rate +$s1 -->
 		<icon>icon.skill10312</icon>
 		<magicLevel>
 			<value level="1">78</value>
@@ -43,7 +43,7 @@
 		</effects>
 	</skill>
 	<skill id="53003" toLevel="3" name="Mass Chain Strike">
-		<!-- Pulls a selected target and nearby enemies to you and provokes. -->
+		<!-- <Pull Skill> Pulls the target and nearby enemies. -->
 		<icon>icon.skill53003</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -100,7 +100,7 @@
 		</effects>
 	</skill>
 	<skill id="53004" toLevel="5" name="Critical Vulnerability Decrease">
-		<!-- Chance of receiving damage from a vital point attack -$s1, Received P. Critical Rate -$s2. -->
+		<!-- Received Vital Point Attack Rate -$s1 Received P. Critical Rate -$s2 -->
 		<icon>icon.skill53004</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -125,7 +125,7 @@
 		</effects>
 	</skill>
 	<skill id="53005" toLevel="1" name="Detect Darkness">
-		<!-- Allows to find invisible enemies nearby character. Target can't become invisible and cancel the effect for 2 sec. Requires a bow. -->
+		<!-- Allows to find invisible enemies nearby. The target can't become invisible and cancel this effect for 2 sec. -->
 		<icon>icon.skill53005</icon>
 		<affectRange>300</affectRange>
 		<hitTime>1200</hitTime>
@@ -159,7 +159,7 @@
 		</effects>
 	</skill>
 	<skill id="53006" toLevel="5" name="Bind">
-		<!-- Blocks all the enemy's physical skills for $s1 -->
+		<!-- <Silence Skill> The effect lasts for $s1 Blocks enemy's physical skill usage. -->
 		<icon>icon.skill6320</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -211,14 +211,14 @@
 		</effects>
 	</skill>
 	<skill id="53007" toLevel="3" name="Power Stance">
-		<!-- Temporarily P. Atk. +$s1, Atk. Spd. +$s2. -->
+		<!-- P. Atk. +$s1 Atk. Spd. +$s2 -->
 		<icon>icon.skill0232</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="53008" toLevel="1" name="Children of Eva">
-		<!-- M. Atk. +10, M. Critical Rate +5%, HP Recovery Bonus +5%. -->
+		<!-- M. Atk. +10 M. Critical Rate +5% HP Recovery Rate +5% -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -259,7 +259,7 @@
 		</effects>
 	</skill>
 	<skill id="53010" toLevel="5" name="Knight's Protection">
-		<!-- Shield Defense Rate +$s2, Shield Defense +$s3 for $s1 -->
+		<!-- The effect lasts for $s1 Shield Defense Rate +$s2 Shield Defense +$s3 -->
 		<icon>icon.skill10012</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -315,8 +315,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="53011" toLevel="2" name="Knight's Fortress">
-		<!-- Increases P. Atk. when hit. -->
+	<skill id="53011" toLevel="2" name="Knight s Fortress">
+		<!-- P. Atk. $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1300" toLevel="3" name="Servitor Cure">
-		<!-- Cures servitor of minor bleeding or poisoning. -->
+		<!-- Removes Infection from a servitor. -->
 		<icon>icon.skill1300</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -43,7 +43,7 @@
 		</effects>
 	</skill>
 	<skill id="1301" toLevel="1" name="Servitor Blessing">
-		<!-- Frees servitor of Hold, paralysis and decreased Atk. Spd. or movement effects. -->
+		<!-- Removes Paralysis/ Shock/ Sleep/ Fear/ Imprisonment from a servitor. -->
 		<icon>icon.skill1301</icon>
 		<castRange>600</castRange>
 		<effectPoint>582</effectPoint>
@@ -111,7 +111,7 @@
 		</effects>
 	</skill>
 	<skill id="1304" toLevel="5" name="Advanced Block">
-		<!-- For $s1 Shield Defense +$s2. -->
+		<!-- The effect lasts for $s1 Shield Defense +$s2 -->
 		<icon>icon.skill1304</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -286,7 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="1306" toLevel="18" name="Ritual of Life">
-		<!-- Restores CP by $s1 Power. -->
+		<!-- Restores target's CP by $s1. -->
 		<icon>icon.skill1306</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -491,7 +491,7 @@
 		</effects>
 	</skill>
 	<skill id="1309" toLevel="3" name="Chant of Reflect">
-		<!-- For $s1, reflects magic debuffs with a $s2 chance. Consumes 6 Spirit Ore. -->
+		<!-- Reflects magic debuffs with a $s1 chance. -->
 		<icon>icon.skill1309</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -539,7 +539,7 @@
 		</effects>
 	</skill>
 	<skill id="1310" toLevel="4" name="Chant of Vampire">
-		<!-- For $s1, with a certain chance, absorbs $s2 of the inflicted damage as HP. Consumes 6 Spirit Ore. -->
+		<!-- Absorbs $s1 of the inflicted damage as HP. -->
 		<icon>icon.skill1310</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -580,7 +580,7 @@
 		</effects>
 	</skill>
 	<skill id="1311" toLevel="6" name="Body of Avatar">
-		<!-- Restores $s1 HP, for $s2 Max HP +$s3. Consumes 6 Spirit Ore. -->
+		<!-- Instantly restores $s1 HP. The effect lasts for $s2 Max HP +$s3 -->
 		<icon>icon.skill1311</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1085,7 +1085,7 @@
 		</effects>
 	</skill>
 	<skill id="1331" toLevel="10" name="Summon Feline Queen">
-		<!-- <Summoning Skill> Summons Feline Queen. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Feline Queen. -->
 		<icon>icon.skill1331</icon>
 		<itemConsumeCount>
 			<value level="1">12</value>
@@ -1164,7 +1164,7 @@
 		</effects>
 	</skill>
 	<skill id="1332" toLevel="10" name="Summon Seraphim the Unicorn">
-		<!-- <Summoning Skill> Summons Seraphim the Unicorn. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Seraphim the Unicorn. -->
 		<icon>icon.skill1332</icon>
 		<itemConsumeCount>
 			<value level="1">12</value>
@@ -1256,7 +1256,7 @@
 		</effects>
 	</skill>
 	<skill id="1333" toLevel="10" name="Summon Nightshade">
-		<!-- <Summoning Skill> Summons Nightshade. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Nightshade. -->
 		<icon>icon.skill1333</icon>
 		<itemConsumeCount>
 			<value level="1">12</value>
@@ -1348,7 +1348,7 @@
 		</effects>
 	</skill>
 	<skill id="1334" toLevel="2" name="Summon Cursed Man">
-		<!-- <Summoning Skill> Summons Cursed Man. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Cursed Man. -->
 		<icon>icon.skill1334</icon>
 		<coolTime>500</coolTime>
 		<itemConsumeCount>
@@ -1405,7 +1405,7 @@
 		</effects>
 	</skill>
 	<skill id="1336" toLevel="1" name="Curse of Doom">
-		<!-- Blocks all the enemy's physical and magical skills for $s1 -->
+		<!-- <Silence Skill> The effect lasts for $s1 Blocks enemy's magical/ physical skill usage. -->
 		<icon>icon.skill1336</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1436,7 +1436,7 @@
 		</effects>
 	</skill>
 	<skill id="1337" toLevel="1" name="Curse of Abyss">
-		<!-- For 30 sec., the target's Speed -10%, P. Def. -30%, P. Evasion -6, M. Atk. -30%, Casting Spd. -20% and M. Skill Critical Rate -30%. -->
+		<!-- <Suppression Skill> Curses enemies. For 30 sec., applies the following effect: Speed -10% Casting Spd. -20% P. Def. -30% P. Evasion -6 M. Atk. -30% M. Skill Critical Rate -30% -->
 		<icon>icon.skill1337</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1487,7 +1487,7 @@
 		</effects>
 	</skill>
 	<skill id="1338" toLevel="1" name="Arcane Chaos">
-		<!-- For 30 sec., Buff Cancel Resistance -30%, Debuff Resistance -30%. Drains 24 MP per sec. P. Skill MP Consumption -10%, M. Skill MP Consumption -30%. -->
+		<!-- <Infection Skill> Decreases target's abilities. The effect lasts for 30 sec. Buff Cancel Resistance -30% Debuff Resistance -30% Anomaly Resistance -30% P. Skill MP Consumption +10% M. Skill MP Consumption +30% Constantly consumes MP. -->
 		<icon>icon.skill1338</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1536,7 +1536,7 @@
 		</effects>
 	</skill>
 	<skill id="1339" toLevel="3" name="Fire Vortex">
-		<!-- Creates a vortex that deals fire damage to the enemy with $s1 power. For $s2, enemy's Speed -$s3, Atk. Spd. -$s4, Casting Spd. -$s5. Consumes $s6 MP per sec. Over-hit. -->
+		<!-- <Infection skill> Summons a hurricane imbued with the power of fire. A magical attack. Power $s1. The effect lasts for $s2 Speed -$s3 Atk. Spd. -$s4 Casting Spd. -$s5 Constantly consumes MP. -->
 		<icon>icon.skill1339</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1608,7 +1608,7 @@
 		</effects>
 	</skill>
 	<skill id="1340" toLevel="3" name="Ice Vortex">
-		<!-- Creates a vortex that deals water damage to the enemy with $s1 power. For $s2, enemy's Speed -$s3. Consumes $s4 MP per sec. Over-hit. -->
+		<!-- <Infection skill> Summons a hurricane imbued with the power of water. A magical attack. Power $s1. The effect lasts for $s2 Speed -$s3 Constantly consumes MP. -->
 		<icon>icon.skill1340</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1672,7 +1672,7 @@
 		</effects>
 	</skill>
 	<skill id="1341" toLevel="3" name="Wind Vortex">
-		<!-- Creates a vortex that deals wind damage to the enemy with $s1 power. For $s2, enemy's Atk. Spd. -$s3, Casting Spd. -$s4. Consumes $s5 MP per sec. Over-hit. -->
+		<!-- <Infection skill> Summons a hurricane imbued with the power of wind. A magical attack. Power $s1. The effect lasts for $s2 Atk. Spd. -$s3 Casting Spd. -$s4 Constantly consumes MP. -->
 		<icon>icon.skill1341</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1783,7 +1783,7 @@
 		</effects>
 	</skill>
 	<skill id="1343" toLevel="3" name="Dark Vortex">
-		<!-- Creates a vortex that deals dark damage on the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. For $s3, enemy's P. Critical Rate/ M. Skill Critical Rate -$s4. Consumes $s5 MP per sec. -->
+		<!-- <Infection skill> Summons a hurricane imbued with the power of darkness. A magical attack. Power $s1. Absorbs $s2 of inflicted damage as HP. The effect lasts for $s3 P. Critical Rate -$s4 M. Skill Critical Rate -$s4 Constantly consumes MP. -->
 		<icon>icon.skill1343</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1907,7 +1907,7 @@
 		</effects>
 	</skill>
 	<skill id="1346" toLevel="1" name="Warrior Servitor">
-		<!-- Makes the servitor possessed with an ancient warrior's spirit. For 20 min., Max HP +30%, HP Recovery Rate +20%, P. Atk. +25%, P. Def. +25%, Atk. Spd. +20%, Debuff Resistance +20%. Can be used simultaneously with Final Servitor. -->
+		<!-- For 20 min., makes possessed with an ancient warrior's spirit. <Servitor's Effect> Max HP +30% HP Recovery Rate +20% P. Atk. +25% P. Def. +25% Atk. Spd. +20% Debuff Resistance +20% Anomaly Resistance +20% -->
 		<icon>icon.skill1346</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1953,7 +1953,7 @@
 		</effects>
 	</skill>
 	<skill id="1347" toLevel="1" name="Wizard Servitor">
-		<!-- Makes the servitor possessed with an ancient mage's spirit. For 20 min., MP Recovery Rate +30%, M. Atk. +30%, M. Def. +25%, Casting Spd. +20%, Debuff Resistance +20%, MP Consumption -5%. Can be used simultaneously with Final Servitor. -->
+		<!-- For 20 min., makes the servitor possessed with an ancient mage's spirit. <Servitor's Effect> MP Recovery Rate +30% M. Atk. +30% M. Def. +25% Casting Spd. +20% Skill MP Consumption -5% Debuff Resistance +20% Anomaly Resistance +20% -->
 		<icon>icon.skill1347</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2002,7 +2002,7 @@
 		</effects>
 	</skill>
 	<skill id="1348" toLevel="1" name="Assassin Servitor">
-		<!-- Makes the servitor possessed with an ancient assassin's spirit. For 20 min., P./ M. Accuracy +4, P./ M. Evasion +4, P. Critical Rate/ M. Skill Critical Rate +20%, P. Critical Damage/ M. Skill Critical Damage +25%, Speed +10%, Debuff Resistance +20%. Can be used simultaneously with Final Servitor. -->
+		<!-- For 20 min., makes the servitor possessed with an ancient assassin's spirit. <Servitor's effect> P. Accuracy +4 M. Accuracy +4 P. Evasion +4 M. Evasion +4 P. Critical Rate +20% M. Skill Critical Rate +20% P. Critical Damage +25% M. Skill Critical Damage +25% Speed +10% Debuff Resistance +20% Anomaly Resistance +20% -->
 		<icon>icon.skill1348</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2066,7 +2066,7 @@
 		</effects>
 	</skill>
 	<skill id="1349" toLevel="1" name="Final Servitor">
-		<!-- Makes the servitor possessed with an ancient hero's spirit. For 20 min., Max HP/ MP +20%, P./ M. Accuracy +4, P./ M. Evasion +4, P./ M. Atk. +20%, P./ M. Def. +20%, Atk./ Casting Spd. +15%, P. Critical Rate/ M. Skill Critical Rate +15%, P. Critical Damage/ M. Skill Critical Damage +15%, Debuff Resistance +20%. Can be used simultaneously with Warrior Servitor, Wizard Servitor, or Assassin Servitor. -->
+		<!-- For 20 min., makes the servitor possessed with an ancient hero's spirit. <Servitor's effect> Max HP +20% Max MP +20% P. Accuracy +4 M. Accuracy +4 P. Evasion +4 M. Evasion +4 P. Atk. +20% M. Atk. +20% P. Def. +20% M. Def. +20% Atk. Spd. +15% Casting Spd. +15% P. Critical Rate +15% M. Skill Critical Rate +15% P. Critical Damage +15% M. Skill Critical Damage +15% Debuff Resistance +20% Anomaly Resistance +20% -->
 		<icon>icon.skill1349</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>600</abnormalTime>
@@ -2157,7 +2157,7 @@
 		</effects>
 	</skill>
 	<skill id="1350" toLevel="5" name="Warrior Bane">
-		<!-- For $s1, enemy's P. Atk. -$s2, Speed -$s3. -->
+		<!-- <Suppression Skill> Slows the enemy down. The effect lasts for $s1 P. Atk. $s2 Casting Spd. $s3 -->
 		<icon>icon.skill1350</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2222,7 +2222,7 @@
 		</effects>
 	</skill>
 	<skill id="1351" toLevel="5" name="Mage Bane">
-		<!-- For $s1, enemy's M. Atk. -$s2 and Casting Spd. -$s3. -->
+		<!-- <Suppression Skill> Weakens the enemy. The effect lasts for $s1 M. Atk. $s2 Casting Spd. $s3 -->
 		<icon>icon.skill1351</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2388,7 +2388,7 @@
 		</effects>
 	</skill>
 	<skill id="1355" toLevel="2" name="Prophecy of Water">
-		<!-- For $s1, Max MP +$s2, MP Recovery Rate +$s3, P./ M. Def. +$s4, Atk./ Casting Spd. +$s5, damage to monsters +$s6, Debuff Resistance +$s7, Skill MP Consumption -$s8. Consumes 20 Spirit Ore. -->
+		<!-- Max MP $s1 MP Recovery Rate $s2 P. Def. $s3 M. Def. $s3 Atk. Spd. $s4 Casting Spd. $s4 Skill MP Consumption $s7 PvE damage $s5 Debuff Resistance $s6 Anomaly Resistance $s6 -->
 		<icon>icon.skill1355</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2517,7 +2517,7 @@
 		</effects>
 	</skill>
 	<skill id="1356" toLevel="2" name="Prophecy of Fire">
-		<!-- For $s1, Max HP +$s2, HP Recovery Rate +$s3, P./ M. Def. +$s4, Atk./ Casting Spd. +$s5, damage to monsters +$s6, P. Critical Rate/ M. Skill Critical Rate +$s7, Debuff Resistance +$s8. Consumes 20 Spirit Ore. -->
+		<!-- Max HP $s1 HP Recovery Rate $s2 P. Def. $s3 M. Def. $s3 Atk. Spd. $s4 Casting Spd. $s4 P. Critical Rate $s6 M. Skill Critical Rate $s6 PvE damage $s5 Debuff Resistance $s7 Anomaly Resistance $s7 -->
 		<icon>icon.skill1356</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2636,7 +2636,7 @@
 		</effects>
 	</skill>
 	<skill id="1357" toLevel="2" name="Prophecy of Wind">
-		<!-- For $s1, P./ M. Accuracy +$s2, P./ M. Evasion +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, Speed +$s6, Debuff Resistance +$s7, damage to monsters +$s8. Consumes 20 Spirit Ore. -->
+		<!-- P. Accuracy $s1 M. Accuracy$s1 P. Evasion $s2 M. Evasion $s2 P. Critical Rate $s3 M. Skill Critical Rate $s3 P. Critical Damage $s4 M. Skill Critical Damage $s4 Speed $s5 PvE damage $s7 Debuff Resistance $s6 Anomaly Resistance $s6 -->
 		<icon>icon.skill1357</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2900,7 +2900,7 @@
 		</effects>
 	</skill>
 	<skill id="1362" toLevel="1" name="Chant of Spirit">
-		<!-- For $s1, Buff Cancel Resistance +$s2, Debuff Resistance +$s3. Consumes 6 Spirit Ore. -->
+		<!-- Buff Cancel Resistance $s1 Debuff Resistance $s2 Anomaly Resistance $s2 -->
 		<icon>icon.skill1362</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2932,7 +2932,7 @@
 		</effects>
 	</skill>
 	<skill id="1363" toLevel="2" name="Prophecy of Victory">
-		<!-- For $s1, HP/ MP Recovery Rate +$s2, P./ M. Accuracy +$s3, P./ M. Evasion +$s4, damage to monsters +$s5, Atk./ Casting Spd. +$s6, P. Critical Rate/ M. Skill Critical Rate +$s7, P. Critical Damage/ M. Skill Critical Damage +$s8. Consumes 20 Spirit Ore. -->
+		<!-- HP Recovery Rate $s1 MP Recovery Rate $s1 P. Accuracy $s2 M. Accuracy $s2 P. Evasion $s2 M. Evasion $s2 PvE damage $s3 Atk. Spd. $s4 Casting Spd. $s4 P. Critical Rate $s3 M. Skill Critical Rate $s3 P. Critical Damage $s3 M. Skill Critical Damage $s3 -->
 		<icon>icon.skill1363</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -3117,7 +3117,7 @@
 		</effects>
 	</skill>
 	<skill id="1366" toLevel="6" name="Seal of Despair">
-		<!-- For $s1, for the nearby enemies P. Accuracy -$s2, P. Atk. -$s3, P. Critical Rate -$s4, P. Critical defense -$s5, Speed -$s6, M. Def. -$s7, Atk. Spd. -$s8. -->
+		<!-- <Suppression skill> Duration: $s1 P. Atk. $s2 Atk. Spd. $s3 P. Accuracy $s4 P. Critical Rate $s3 P. Critical Damage $s3 Speed $s5 M. Def. $s3 -->
 		<icon>icon.skill1366</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3208,7 +3208,7 @@
 		</effects>
 	</skill>
 	<skill id="1367" toLevel="1" name="Seal of Disease">
-		<!-- For $s1, Received Healing -$s2 for a target and nearby enemies. -->
+		<!-- The effect lass for $s1 Received Healing $s2 for a target and nearby clan members. -->
 		<icon>icon.skill1367</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3752,7 +3752,7 @@
 		</effects>
 	</skill>
 	<skill id="1382" toLevel="11" name="Mass Curse Gloom">
-		<!-- Curses the target and nearby enemies, their M. Def. -$s1. -->
+		<!-- Curses the target and nearby enemies. M. Def. -$s1 -->
 		<icon>icon.skill1382</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -4165,7 +4165,7 @@
 		</effects>
 	</skill>
 	<skill id="1388" toLevel="3" name="Improve Attack">
-		<!-- P. Atk. +$s2, M. Atk. +$s3 for $s1 Consumes 10 Spirit Ore. -->
+		<!-- The effect lasts for $s1 P. Atk. +$s2 M. Atk. +$s3 -->
 		<icon>icon.skill1388</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4216,7 +4216,7 @@
 		</effects>
 	</skill>
 	<skill id="1389" toLevel="3" name="Improve Defense">
-		<!-- For $s1, P. Def. +$s2, M. Def. +$s3. Consumes 10 Spirit Ore. -->
+		<!-- The effect lasts for $s1 P. Def. +$s2 , M. Def. +$s3 -->
 		<icon>icon.skill1389</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4267,7 +4267,7 @@
 		</effects>
 	</skill>
 	<skill id="1390" toLevel="3" name="Battlefield Glory">
-		<!-- P. Atk. +$s2, M. Atk. +$s3 for $s1 Consumes 10 Spirit Ore. -->
+		<!-- P. Atk. $s1 M. Atk. $s2 -->
 		<icon>icon.skill1390</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4314,7 +4314,7 @@
 		</effects>
 	</skill>
 	<skill id="1391" toLevel="3" name="Hard Skin">
-		<!-- For $s1, P. Def. +$s2, M. Def. +$s3. Consumes 10 Spirit Ore. -->
+		<!-- P. Def. $s1 M. Def. $s2 -->
 		<icon>icon.skill1391</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4361,7 +4361,7 @@
 		</effects>
 	</skill>
 	<skill id="1392" toLevel="4" name="Swap Defense">
-		<!-- M. Def. -$s1, P. Def. +$s2. When activated, constantly spends MP. Note! When Battle Switch, Swap Defense and Convert are used simultaneous, MP Consumption is increased according to the number of active skills. -->
+		<!-- M. Def. $s1 P. Def. $s2 Note! Cannot be used with Convert. -->
 		<icon>icon.skill1392</icon>
 		<operateType>T</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -4407,7 +4407,7 @@
 		</effects>
 	</skill>
 	<skill id="1393" toLevel="4" name="Convert">
-		<!-- Max MP -$s1, Max HP +$s2. When activated, constantly spends MP. Note! When Battle Switch, Swap Defense and Convert are used simultaneous, MP Consumption is increased according to the number of active skills. -->
+		<!-- Max MP $s1 Max HP $s2 Note! Cannot be used with Swap Defense. -->
 		<icon>icon.skill1393</icon>
 		<operateType>T</operateType>
 		<targetType>NONE</targetType>
@@ -4612,7 +4612,7 @@
 		</effects>
 	</skill>
 	<skill id="1396" toLevel="18" name="Magical Backfire">
-		<!-- For $s1, enemy's skill MP Consumption +$s2. -->
+		<!-- For $s1 Target's Skill MP Consumption $s2 -->
 		<icon>icon.skill1396</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

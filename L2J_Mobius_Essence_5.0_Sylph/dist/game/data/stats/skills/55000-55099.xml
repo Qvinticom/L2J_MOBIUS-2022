@@ -279,38 +279,38 @@
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 	</skill>
-	<skill id="55024" toLevel="1" name="VIP Level 1">
-		<!-- The right to VIP 1st level chest. Acquired XP/ SP +3%, item drop rate +3%. -->
+	<skill id="55024" toLevel="1" name="VIP Lv. 1">
+		<!-- You can obtain a daily VIP chest Lv. 1. Acquired XP/ SP +3%, item drop rate +3%. -->
 		<icon>BranchIcon.Icon.g_skill_vip1</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55025" toLevel="1" name="VIP Level 2">
-		<!-- The right to VIP 2nd level chest. Acquired XP/ SP +7%, item drop rate +7%. World chat on any level, number of usage attempts +3. -->
+	<skill id="55025" toLevel="1" name="VIP Lv. 2">
+		<!-- You can obtain a daily VIP chest Lv. 2. Acquired XP/ SP +7%, item drop rate +7%. You can use the world chat at any level (world chat messages +3). -->
 		<icon>BranchIcon.Icon.g_skill_vip2</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55026" toLevel="1" name="VIP Level 3">
-		<!-- The right to VIP 3rd level chest. Acquired XP/ SP +15%, item drop rate +15%. Experience loss and chance to lose items upon death is -10%. World chat on any level, number of usage attempts +3. -->
+	<skill id="55026" toLevel="1" name="VIP Lv. 3">
+		<!-- You can obtain a daily VIP chest Lv. 3. Acquired XP/ SP +15%, item drop rate +15%, Death XP Penalty -10%. You can use the world chat at any level (world chat messages +3). -->
 		<icon>BranchIcon.Icon.g_skill_vip3</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55027" toLevel="1" name="VIP Level 4">
-		<!-- The right to VIP 4th level chest. Acquired XP/ SP +25%, item drop rate +15%. Experience loss and chance to lose items upon death is -15%. World chat on any level, number of usage attempts +5. -->
+	<skill id="55027" toLevel="1" name="VIP Lv. 4">
+		<!-- You can obtain a daily VIP chest Lv. 4. Acquired XP/ SP +25%, item drop rate +15%, Death XP Penalty -15%. You can use the world chat at any level (world chat messages +5). -->
 		<icon>BranchIcon.Icon.g_skill_vip4</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55028" toLevel="1" name="VIP Level 5">
-		<!-- The right to VIP 5th level chest. Acquired XP/ SP +30%, item drop rate +30%. Experience loss and chance to lose items upon death -20%. PvE damage is increased. World chat on any level, number of usage attempts +10. -->
+	<skill id="55028" toLevel="1" name="VIP Lv. 5">
+		<!-- You can obtain a daily VIP chest Lv. 5. Acquired XP/ SP +30%, item drop rate +30%, Death XP Penalty -20%. Increases PvE damage. You can use the world chat at any level (world chat messages +10). -->
 		<icon>BranchIcon.Icon.g_skill_vip5</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55029" toLevel="1" name="VIP Level 6">
-		<!-- The right to VIP 6th level chest. Acquired XP/ SP +30%, item drop rate +30%. Experience loss and chance to lose items upon death -20%. PvE damage is increased, STR/ DEX/ CON/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +10. -->
+	<skill id="55029" toLevel="1" name="VIP Lv. 6">
+		<!-- You can obtain a daily VIP chest Lv. 6. Acquired XP/ SP +30%, item drop rate +30%, Death XP Penalty -20%. Increases PvE damage, STR/ DEX/ CON/ INT/ WIT/ MEN +2. You can use the world chat at any level (world chat messages +10). -->
 		<icon>BranchIcon.Icon.g_skill_vip6</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="55030" toLevel="1" name="VIP Level 7">
-		<!-- The right to VIP 7th level chest. Acquired XP/ SP +30%, item drop rate +30%. Experience loss and chance to lose items upon death -20%. PvE/ PvP damage is increased, STR/ DEX/ CON/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +10. -->
+	<skill id="55030" toLevel="1" name="VIP Lv. 7">
+		<!-- You can obtain a daily VIP chest Lv. 7. Acquired XP/ SP +30%, item drop rate +30%, Death XP Penalty -20%. Increases PvP/ PvE damage, STR/ DEX/ CON/ INT/ WIT/ MEN +2. You can use the world chat at any level (world chat messages +10). -->
 		<icon>BranchIcon.Icon.g_skill_vip7</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -629,13 +629,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100.0">
-						<item id="29575" count="1" /> <!-- Queen Ant's Ring Lv. 1 - Not available -->
+						<item id="29575" count="1" /> <!-- Queen Ant's Ring Lv. 1 - Not Available - Not available -->
 					</item>
 					<item chance="100.0">
-						<item id="29576" count="1" /> <!-- Orfen's Earring Lv. 1 - Not available -->
+						<item id="29576" count="1" /> <!-- Orfen's Earring Lv. 1 - Not Available - Not available -->
 					</item>
 					<item chance="100.0">
-						<item id="29577" count="1" /> <!-- Ring of Core Lv. 1 - Not available -->
+						<item id="29577" count="1" /> <!-- Ring of Core Lv. 1 - Not Available - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -748,65 +748,65 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not Available - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not Available - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="90020" count="1" /> <!-- Best Dye Pack - 3rd Class Transfer -->
+						<item id="90020" count="1" /> <!-- Best Dye Pack - 3rd Class -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not Available - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.083333333333333">
-						<item id="1891" count="1" /> <!-- Old Artisan's Frame - Not available -->
+						<item id="1891" count="1" /> <!-- Artisan's Frame -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1892" count="1" /> <!-- Old Blacksmith's Frame - Not available -->
+						<item id="1892" count="1" /> <!-- Blacksmith's Frame -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1893" count="1" /> <!-- Old Oriharukon - Not available -->
+						<item id="1893" count="1" /> <!-- Oriharukon -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1890" count="1" /> <!-- Old Mithril Alloy - Not available -->
+						<item id="1890" count="1" /> <!-- Mithril Alloy -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1887" count="1" /> <!-- Old Varnish of Purity - Not available -->
+						<item id="1887" count="1" /> <!-- Varnish of Purity -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4041" count="1" /> <!-- Old Mold Hardener - Not available -->
+						<item id="4041" count="1" /> <!-- Mold Hardener -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1875" count="1" /> <!-- Old Stone of Purity - Not available -->
+						<item id="1875" count="1" /> <!-- Stone of Purity -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1888" count="1" /> <!-- Old Synthetic Cokes - Not available -->
+						<item id="1888" count="1" /> <!-- Synthetic Cokes -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4042" count="1" /> <!-- Old Enria - Not available -->
+						<item id="4042" count="1" /> <!-- Enria -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4039" count="1" /> <!-- Old Mold Glue - Not available -->
+						<item id="4039" count="1" /> <!-- Mold Glue -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1874" count="1" /> <!-- Old Oriharukon Ore - Not available -->
+						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1886" count="1" /> <!-- Old Silver Mold - Not available -->
+						<item id="1886" count="1" /> <!-- Silver Mold -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4040" count="1" /> <!-- Old Mold Lubricant - Not available -->
+						<item id="4040" count="1" /> <!-- Mold Lubricant -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1894" count="1" /> <!-- Old Quality Leather - Not available -->
+						<item id="1894" count="1" /> <!-- Quality Leather -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1883" count="1" /> <!-- Old Steel Mold - Not available -->
+						<item id="1883" count="1" /> <!-- Steel Mold -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4043" count="1" /> <!-- Old Asofe - Not available -->
+						<item id="4043" count="1" /> <!-- Asofe -->
 					</item>
 				</items>
 			</effect>
@@ -907,41 +907,41 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not Available - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not Available - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not Available - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not Available - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.777777777777778">
-						<item id="1885" count="1" /> <!-- Old High-grade Suede - Not available -->
+						<item id="1885" count="1" /> <!-- High-grade Suede -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1877" count="1" /> <!-- Old Adamantite Nugget - Not available -->
+						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1881" count="1" /> <!-- Old Bone Powder - Not available -->
+						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1880" count="1" /> <!-- Old Steel - Not available -->
+						<item id="1880" count="1" /> <!-- Steel -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1889" count="1" /> <!-- Old Synthetic Braid - Not available -->
+						<item id="1889" count="1" /> <!-- Synthetic Braid -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1879" count="1" /> <!-- Old Cokes - Not available -->
+						<item id="1879" count="1" /> <!-- Cokes -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 				</items>
 			</effect>
@@ -1012,10 +1012,10 @@
 						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="0.001">
-						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not Available - Not available -->
 					</item>
 					<item chance="0.1">
-						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not Available - Not available -->
 					</item>
 					<!-- Buff Scroll -->
 					<item chance="3.0">
@@ -1028,16 +1028,16 @@
 						<item id="3930" count="1" /> <!-- Scroll: Haste -->
 					</item>
 					<item chance="3.0">
-						<item id="29686" count="1" /> <!-- Scroll: Concentration - Not available -->
+						<item id="29686" count="1" /> <!-- Scroll: Concentration - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier - Not available -->
+						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29690" count="1" /> <!-- Scroll: Blessed Body - Not available -->
+						<item id="29690" count="1" /> <!-- Scroll: Blessed Body - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul - Not available -->
+						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="3928" count="1" /> <!-- Scroll: Focus -->
@@ -1049,44 +1049,44 @@
 						<item id="3932" count="1" /> <!-- Scroll: Empower -->
 					</item>
 					<item chance="3.0">
-						<item id="3935" count="1" /> <!-- Scroll: Shield - Not available -->
+						<item id="3935" count="1" /> <!-- Scroll: Shield - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3933" count="1" /> <!-- Scroll: Might - Not available -->
+						<item id="3933" count="1" /> <!-- Scroll: Might - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="4218" count="1" /> <!-- Scroll: Mana Regeneration -->
 					</item>
 					<!-- Material -->
 					<item chance="2.0">
-						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="2.0">
-						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 					<item chance="2.0">
-						<item id="1884" count="2" /> <!-- Old Cord - Not available -->
+						<item id="1884" count="2" /> <!-- Cord -->
 					</item>
 					<item chance="2.0">
-						<item id="1895" count="2" /> <!-- Old Metallic Fiber - Not available -->
+						<item id="1895" count="2" /> <!-- Metallic Fiber -->
 					</item>
 					<item chance="2.0">
-						<item id="1870" count="2" /> <!-- Old Coal - Not available -->
+						<item id="1870" count="2" /> <!-- Coal -->
 					</item>
 					<item chance="2.0">
-						<item id="1878" count="2" /> <!-- Old Durable Braid - Not available -->
+						<item id="1878" count="2" /> <!-- Durable Braid -->
 					</item>
 					<item chance="2.0">
-						<item id="1865" count="2" /> <!-- Old Varnish - Not available -->
+						<item id="1865" count="2" /> <!-- Varnish -->
 					</item>
 					<item chance="2.0">
-						<item id="1872" count="2" /> <!-- Old Animal Bone - Not available -->
+						<item id="1872" count="2" /> <!-- Animal Bone -->
 					</item>
 				</items>
 			</effect>
@@ -1365,7 +1365,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55060" toLevel="1" name="Griffin's Benediction">
+	<skill id="55060" toLevel="1" name="Griffin s Benediction">
 		<!-- STR +1, INT +1. -->
 		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
 		<magicLevel>1</magicLevel>
@@ -1766,65 +1766,65 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not Available - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not Available - Not available -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="90020" count="1" /> <!-- Best Dye Pack - 3rd Class Transfer -->
+						<item id="90020" count="1" /> <!-- Best Dye Pack - 3rd Class -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not Available - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.083333333333333">
-						<item id="1891" count="1" /> <!-- Old Artisan's Frame - Not available -->
+						<item id="1891" count="1" /> <!-- Artisan's Frame -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1892" count="1" /> <!-- Old Blacksmith's Frame - Not available -->
+						<item id="1892" count="1" /> <!-- Blacksmith's Frame -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1893" count="1" /> <!-- Old Oriharukon - Not available -->
+						<item id="1893" count="1" /> <!-- Oriharukon -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1890" count="1" /> <!-- Old Mithril Alloy - Not available -->
+						<item id="1890" count="1" /> <!-- Mithril Alloy -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1887" count="1" /> <!-- Old Varnish of Purity - Not available -->
+						<item id="1887" count="1" /> <!-- Varnish of Purity -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4041" count="1" /> <!-- Old Mold Hardener - Not available -->
+						<item id="4041" count="1" /> <!-- Mold Hardener -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1875" count="1" /> <!-- Old Stone of Purity - Not available -->
+						<item id="1875" count="1" /> <!-- Stone of Purity -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1888" count="1" /> <!-- Old Synthetic Cokes - Not available -->
+						<item id="1888" count="1" /> <!-- Synthetic Cokes -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4042" count="1" /> <!-- Old Enria - Not available -->
+						<item id="4042" count="1" /> <!-- Enria -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4039" count="1" /> <!-- Old Mold Glue - Not available -->
+						<item id="4039" count="1" /> <!-- Mold Glue -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1874" count="1" /> <!-- Old Oriharukon Ore - Not available -->
+						<item id="1874" count="1" /> <!-- Oriharukon Ore -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1886" count="1" /> <!-- Old Silver Mold - Not available -->
+						<item id="1886" count="1" /> <!-- Silver Mold -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4040" count="1" /> <!-- Old Mold Lubricant - Not available -->
+						<item id="4040" count="1" /> <!-- Mold Lubricant -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1894" count="1" /> <!-- Old Quality Leather - Not available -->
+						<item id="1894" count="1" /> <!-- Quality Leather -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="1883" count="1" /> <!-- Old Steel Mold - Not available -->
+						<item id="1883" count="1" /> <!-- Steel Mold -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="4043" count="1" /> <!-- Old Asofe - Not available -->
+						<item id="4043" count="1" /> <!-- Asofe -->
 					</item>
 				</items>
 			</effect>
@@ -1925,41 +1925,41 @@
 						<item id="70235" count="1" /> <!-- Cherry Juice -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not available -->
+						<item id="29698" count="1" /> <!-- 2nd Class Buff Scroll - Not Available - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not available -->
+						<item id="29695" count="1" /> <!-- Quick Healing Potion - Not Available - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not Available - Not available -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not Available - Not available -->
 					</item>
 					<!-- Material -->
 					<item chance="2.777777777777778">
-						<item id="1885" count="1" /> <!-- Old High-grade Suede - Not available -->
+						<item id="1885" count="1" /> <!-- High-grade Suede -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1877" count="1" /> <!-- Old Adamantite Nugget - Not available -->
+						<item id="1877" count="1" /> <!-- Adamantite Nugget -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1881" count="1" /> <!-- Old Bone Powder - Not available -->
+						<item id="1881" count="1" /> <!-- Coarse Bone Powder -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1880" count="1" /> <!-- Old Steel - Not available -->
+						<item id="1880" count="1" /> <!-- Steel -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1889" count="1" /> <!-- Old Synthetic Braid - Not available -->
+						<item id="1889" count="1" /> <!-- Synthetic Braid -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1879" count="1" /> <!-- Old Cokes - Not available -->
+						<item id="1879" count="1" /> <!-- Cokes -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="2.777777777777778">
-						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 				</items>
 			</effect>
@@ -2030,10 +2030,10 @@
 						<item id="49080" count="1" /> <!-- Rice Cake of Fighting Spirit (Exchangeable) -->
 					</item>
 					<item chance="0.001">
-						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not available -->
+						<item id="70005" count="1" /> <!-- Sealed Rune Lv. 6 - Not Available - Not available -->
 					</item>
 					<item chance="0.1">
-						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not available -->
+						<item id="70000" count="1" /> <!-- Sealed Rune Lv. 1 - Not Available - Not available -->
 					</item>
 					<!-- Buff Scroll -->
 					<item chance="3.0">
@@ -2046,16 +2046,16 @@
 						<item id="3930" count="1" /> <!-- Scroll: Haste -->
 					</item>
 					<item chance="3.0">
-						<item id="29686" count="1" /> <!-- Scroll: Concentration - Not available -->
+						<item id="29686" count="1" /> <!-- Scroll: Concentration - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier - Not available -->
+						<item id="29689" count="1" /> <!-- Scroll: Magic Barrier - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29690" count="1" /> <!-- Scroll: Blessed Body - Not available -->
+						<item id="29690" count="1" /> <!-- Scroll: Blessed Body - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul - Not available -->
+						<item id="29691" count="1" /> <!-- Scroll: Blessed Soul - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="3928" count="1" /> <!-- Scroll: Focus -->
@@ -2067,44 +2067,44 @@
 						<item id="3932" count="1" /> <!-- Scroll: Empower -->
 					</item>
 					<item chance="3.0">
-						<item id="3935" count="1" /> <!-- Scroll: Shield - Not available -->
+						<item id="3935" count="1" /> <!-- Scroll: Shield - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3933" count="1" /> <!-- Scroll: Might - Not available -->
+						<item id="3933" count="1" /> <!-- Scroll: Might - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
-						<item id="3931" count="1" /> <!-- Scroll: Agility - Not available -->
+						<item id="3931" count="1" /> <!-- Scroll: Agility - Not Available - Not available -->
 					</item>
 					<item chance="3.0">
 						<item id="4218" count="1" /> <!-- Scroll: Mana Regeneration -->
 					</item>
 					<!-- Material -->
 					<item chance="2.0">
-						<item id="1882" count="1" /> <!-- Worn Leather - Not available -->
+						<item id="1882" count="1" /> <!-- Leather -->
 					</item>
 					<item chance="2.0">
-						<item id="1876" count="1" /> <!-- Old Mithril Ore - Not available -->
+						<item id="1876" count="1" /> <!-- Mithril Ore -->
 					</item>
 					<item chance="2.0">
-						<item id="1884" count="2" /> <!-- Old Cord - Not available -->
+						<item id="1884" count="2" /> <!-- Cord -->
 					</item>
 					<item chance="2.0">
-						<item id="1895" count="2" /> <!-- Old Metallic Fiber - Not available -->
+						<item id="1895" count="2" /> <!-- Metallic Fiber -->
 					</item>
 					<item chance="2.0">
-						<item id="1870" count="2" /> <!-- Old Coal - Not available -->
+						<item id="1870" count="2" /> <!-- Coal -->
 					</item>
 					<item chance="2.0">
-						<item id="1878" count="2" /> <!-- Old Durable Braid - Not available -->
+						<item id="1878" count="2" /> <!-- Durable Braid -->
 					</item>
 					<item chance="2.0">
-						<item id="1865" count="2" /> <!-- Old Varnish - Not available -->
+						<item id="1865" count="2" /> <!-- Varnish -->
 					</item>
 					<item chance="2.0">
-						<item id="1872" count="2" /> <!-- Old Animal Bone - Not available -->
+						<item id="1872" count="2" /> <!-- Animal Bone -->
 					</item>
 				</items>
 			</effect>

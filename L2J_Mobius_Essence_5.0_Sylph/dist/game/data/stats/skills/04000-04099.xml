@@ -1736,7 +1736,7 @@
 		</effects>
 	</skill>
 	<skill id="4052" toLevel="15" name="Cubic Poison">
-		<!-- Inflicts poison, decreases HP every sec. -->
+		<!-- Inflicts Poison, constantly drains HP. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -1826,7 +1826,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4053" toLevel="16" name="Cubic Weakness">
+	<skill id="4053" toLevel="16" name="Cubic Physical Weakness">
 		<!-- Temporarily P. Atk. -23%. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLevel>3</abnormalLevel>

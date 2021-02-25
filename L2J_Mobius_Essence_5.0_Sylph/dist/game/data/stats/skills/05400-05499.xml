@@ -691,7 +691,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5437" toLevel="2" name="Dissonance">
+	<skill id="5437" toLevel="2" name="Mount">
 		<!-- You ride a mount. Your combat skills are weakened. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLevel>1</magicLevel>
@@ -1310,7 +1310,7 @@
 		</effects>
 	</skill>
 	<skill id="5454" toLevel="1" name="Shadow Bind">
-		<!-- Immobilized. -->
+		<!-- Movement is blocked. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>25</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1491,21 +1491,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5462" toLevel="1" name="Fire Attribute">
+	<skill id="5462" toLevel="1" name="Fire Attack">
 		<!-- Strong against the element of fire. -->
 		<icon>icon.skill4279_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5463" toLevel="1" name="Water Attribute">
+	<skill id="5463" toLevel="1" name="Water Attack">
 		<!-- Strong against the element of water. -->
 		<icon>icon.skill4280_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5464" toLevel="1" name="Wind Attribute">
+	<skill id="5464" toLevel="1" name="Wind Attack">
 		<!-- Strong against the element of wind. -->
 		<icon>icon.skill4281_new</icon>
 		<magicLevel>1</magicLevel>
@@ -1519,14 +1519,14 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5466" toLevel="1" name="Holy Attribute">
+	<skill id="5466" toLevel="1" name="Holy Attacks">
 		<!-- Strong against the holy elemental. -->
 		<icon>icon.skill4275_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5467" toLevel="1" name="Darkness Protection">
+	<skill id="5467" toLevel="1" name="Dark Attack">
 		<!-- Strong against the dark elemental. -->
 		<icon>icon.skill4336_new</icon>
 		<magicLevel>1</magicLevel>
@@ -1733,7 +1733,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5486" toLevel="1" name="Endurance Defense Up">
+	<skill id="5486" toLevel="1" name="Extra Attack">
 		<!-- P. Atk. +100 -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1760,7 +1760,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5488" toLevel="1" name="Counter Critical Damage Up">
-		<!-- P. Critical Damage +80. -->
+		<!-- P. Critical Damage +80 -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -1777,7 +1777,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5489" toLevel="1" name="Counter Critical Rate Up">
-		<!-- P. Critical Rate +80. -->
+		<!-- P. Critical Rate +80 -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>

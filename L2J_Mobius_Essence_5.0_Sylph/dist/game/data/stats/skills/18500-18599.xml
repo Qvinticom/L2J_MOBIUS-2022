@@ -71,7 +71,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18567" toLevel="7" name="Garnet - Special Ability">
+	<skill id="18567" toLevel="7" name="Special Ability: Garnet">
 		<!-- Grants immunity to debuffs for $s1 -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_garnet</value>
@@ -97,7 +97,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18573" toLevel="1" name="Hero's Basics - III">
-		<!-- Acquired XP/ SP +3%. XP -20% if your character dies. -->
+		<!-- Acquired XP/ SP +3%, Death XP Penalty -20%. -->
 		<icon>icon.skill18573</icon>
 		<operateType>P</operateType>
 	</skill>

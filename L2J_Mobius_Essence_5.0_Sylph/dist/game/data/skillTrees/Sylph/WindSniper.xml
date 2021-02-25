@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="210" parentClassId="209">
+		<skill skillName="Weapon Mastery" skillId="141" skillLevel="4" getLevel="40" levelUpSp="100000" />
+		<skill skillName="Armor Mastery" skillId="142" skillLevel="4" getLevel="40" levelUpSp="100000" />
+		
+		<skill skillName="Boost Evasion" skillId="198" skillLevel="1" getLevel="41" levelUpSp="110000" />
+		
+		<skill skillName="Quick Step" skillId="169" skillLevel="1" getLevel="42" levelUpSp="120000" />
+		
+		<skill skillName="Critical Chance" skillId="137" skillLevel="2" getLevel="45" levelUpSp="150000" />
+		<skill skillName="Pirate Transformation" skillId="1800" skillLevel="1" getLevel="45" autoGet="true" />
+		
+		<skill skillName="Quick Step" skillId="169" skillLevel="2" getLevel="50" levelUpSp="220000" />
+		<skill skillName="Recover HP" skillId="45176" skillLevel="2" getLevel="50" levelUpSp="300000" >
+			<item id="57" count="1000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Recover MP" skillId="45177" skillLevel="2" getLevel="50" levelUpSp="300000" >
+			<item id="57" count="1000000" /> <!-- Adena -->
+		</skill>
+		
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="1" getLevel="52" levelUpSp="300000" >
+			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) Lv 1 -->
+		</skill>
+		
+		<skill skillName="Boost Evasion" skillId="198" skillLevel="2" getLevel="55" levelUpSp="450000" />
+		
+		<skill skillName="Dark Assassin Transformation" skillId="1801" skillLevel="1" getLevel="60" autoGet="true" />
+		
+		<skill skillName="Divine Inspiration" skillId="1405" skillLevel="2" getLevel="61" levelUpSp="900000" >
+			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) Lv 2 -->
+		</skill>
+		
+		<skill skillName="White Assassin Transformation" skillId="1802" skillLevel="1" getLevel="70" autoGet="true" />
+	</skillTree>
+</list>

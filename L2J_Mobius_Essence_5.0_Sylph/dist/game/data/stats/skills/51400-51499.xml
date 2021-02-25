@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="51400" toLevel="1" name="Purple Lantern - 2nd Place">
-		<!-- A magic lantern given as a reward for the 2nd place. Prize: XP +30,000,000, SP +810,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A magic lantern given as a reward for the 2nd place. Prize: XP +30,000,000, SP +810,000. Cannot be exchanged, dropped or sold in the private store. Can be stored in the private warehouse. -->
 		<icon>icon.etc_holy_grail_i01</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51401" toLevel="1" name="Blue Lantern - 3rd Place">
-		<!-- A magic lantern given as a reward for the 3rd place. Prize: XP +10,000,000, SP +270,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A magic lantern given as a reward for the 3rd place. Prize: XP +10,000,000, SP +270,000. Cannot be exchanged, dropped or sold in the private store. Can be stored in the private warehouse. -->
 		<icon>icon.etc_holy_grail_i02</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51402" toLevel="1" name="Green Lantern - 4th Place">
-		<!-- A magic lantern given as a reward for the 4th place. Prize: XP +5,000,000, SP +135,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+		<!-- A magic lantern given as a reward for the 4th place. Prize: XP +5,000,000, SP +135,000. Cannot be exchanged, dropped or sold in the private store. Can be stored in the private warehouse. -->
 		<icon>icon.etc_holy_grail_i03</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
@@ -185,10 +185,10 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="51433" toLevel="1" name="High Grade Stable Scroll: Enchant S-grade Weapon">
+	<skill id="51433" toLevel="1" name="High-grade Stable Scroll: Enchant S-grade Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51434" toLevel="1" name="High Grade Stable Scroll: Enchant S-grade Armor">
+	<skill id="51434" toLevel="1" name="High-grade Stable Scroll: Enchant S-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51435" toLevel="1" name="Sayha's Mark">
@@ -197,7 +197,7 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="51436" toLevel="1" name="Sayha's Storm Lv. 3">
+	<skill id="51436" toLevel="1" name="Sayha's Storm Lv. 3 (Event)">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A2</operateType>
@@ -224,7 +224,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51437" toLevel="1" name="Sayha's Storm Lv. 3 (Exchangeable)">
+	<skill id="51437" toLevel="1" name="Sayha's Storm Lv. 3">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.bm_sayha_storm</icon>
 		<operateType>A2</operateType>
@@ -364,21 +364,21 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="51457" toLevel="1" name="Adventurer's Scroll: High Priest Transformation">
-		<!-- Grants the power of High Priest. For $s1 acquired XP/ SP +$s2, P. Atk. +$s3, M. Atk. +$s4. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance restores $s5 HP and $s6 MP of party members. -->
+		<!-- Grants the power of High Priest. For $s1, acquired XP/ SP +$s2, P. Atk. +$s3, M. Atk. +$s4. The transformation effect remains after death. <Special ability> While the transformation is active, with a certain chance recovers $s5 HP and $s6 MP of party members after a successful attack or skill use. -->
 		<icon>icon.bm2018_healer_i01</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51458" toLevel="1" name="Adventurer's Scroll: Valkyrie Transformation">
-		<!-- Grants the power of Valkyrie. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> In case of successful standard attack or skill use, there is a certain chance that enemy will get additional physical damage. The same is for magic skill use and additional magic damage. -->
+		<!-- Grants the power of Valkyrie. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> While the transformation is active, with a certain chance deals additional physical damage to the enemy after a standard attack or P. skill use -->
 		<icon>icon.bm2018_valkyrie_i01</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51459" toLevel="1" name="Adventurer's Scroll: Dragon Berserker Transformation">
-		<!-- Grants the power of Dragon Berserker. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance P. Atk. +$s8, M. Atk. +$s9, P./ M. Critical Damage +$s10, Atk. Spd./ Casting Spd. +$s11, Damage Reflection +$s12. -->
+		<!-- Grants the power of Dragon Berserker. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Atk. Spd./ Casting Spd. +$s5, Speed +$s6, Sayha's Grace Consumption -$s7. The transformation effect remains after death. <Special ability> While the transformation is active, with a certain chance P. Atk. +$s8, M. Atk. +$s9, P./ M. Critical Damage +$s10, Atk. Spd./ Casting Spd. +$s11, Damage Reflection +$s12 after a successful attack or skill use. -->
 		<icon>icon.bm2018_dragon_i01</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>

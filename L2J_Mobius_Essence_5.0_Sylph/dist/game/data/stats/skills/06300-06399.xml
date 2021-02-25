@@ -161,7 +161,7 @@
 		</effects>
 	</skill>
 	<skill id="6306" toLevel="1" name="Solina Strike">
-		<!-- Causes bleeding for 10 sec., draining 139 HP per sec. -->
+		<!-- Inflicts Bleed, constantly drains HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -827,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="6333" toLevel="1" name="Electric Bolt 1">
-		<!-- Causes bleeding for 3 sec., draining 200 HP per sec. -->
+		<!-- Inflicts Bleed, constantly drains HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -978,7 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="6339" toLevel="1" name="Divine Hammer Attack">
-		<!-- Causes bleeding for 3 sec., draining 200 HP per sec. -->
+		<!-- Inflicts Bleed, constantly drains HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1499,7 +1499,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6379" toLevel="1" name="Critical Hit">
-		<!-- Causes bleeding for 15 sec., draining 93 HP per sec. -->
+		<!-- Inflicts Bleed, constantly drains HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1592,7 +1592,7 @@
 		</effects>
 	</skill>
 	<skill id="6382" toLevel="1" name="Bistakon Rolling Claw">
-		<!-- Causes bleeding for 15 sec., draining 93 HP per sec. -->
+		<!-- Inflicts Bleed, constantly drains HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1678,7 +1678,7 @@
 		</effects>
 	</skill>
 	<skill id="6385" toLevel="1" name="Bistakon Critical Claw">
-		<!-- Causes bleeding for 15 sec., draining 95 HP per sec. -->
+		<!-- Inflicts Bleed, constantly drains HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>15</abnormalTime>

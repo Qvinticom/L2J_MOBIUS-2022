@@ -391,7 +391,7 @@
 		</effects>
 	</skill>
 	<skill id="312" toLevel="20" name="Vicious Stance">
-		<!-- P. Critical Damage +$s1. -->
+		<!-- P. Critical Damage +$s1 -->
 		<icon>icon.skill0312</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -446,7 +446,7 @@
 		</effects>
 	</skill>
 	<skill id="313" toLevel="10" name="Snipe">
-		<!-- For $s1, P. Accuracy +$s2, P. Atk. +$s3, P. Critical Rate +$s4, Speed -$s5. Requires a bow. -->
+		<!-- The effect lasts for $s1 When using a bow P. Accuracy +$s2 P. Atk. +$s3 P. Critical Rate +$s4 Speed -$s5 -->
 		<icon>icon.skill0313</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -565,7 +565,7 @@
 		</effects>
 	</skill>
 	<skill id="314" toLevel="19" name="Fatal Counter">
-		<!-- Shoots an agony-inducing arrow at the target with $s1 power. The power of the attack increases as your HP decreases. Requires a bow. Over-hit. -->
+		<!-- Fires an agony-inducing arrow at the target. Inflicts a physical attack with $s1 power. The power of the attack increases as your HP decreases. -->
 		<icon>icon.skill0314</icon>
 		<castRange>700</castRange>
 		<coolTime>1000</coolTime>
@@ -785,7 +785,7 @@
 		</effects>
 	</skill>
 	<skill id="317" toLevel="8" name="Focus Attack">
-		<!-- Attacks a single enemy when equipped with a spear. Additionally, P. Accuracy +$s1 and P. Critical Damage +$s2. -->
+		<!-- When activated Basic attack hit one target. P. Accuracy $s1 P. Critical Damage $s2 -->
 		<icon>icon.skill0317</icon>
 		<magicLevel>
 			<value level="1">46</value>
@@ -1078,7 +1078,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="322" toLevel="6" name="Ultimate Shield">
-		<!-- Shield Defense +$s1. -->
+		<!-- Shield Defense +$s1 -->
 		<icon>icon.skill0322</icon>
 		<magicLevel>
 			<value level="1">64</value>
@@ -1190,7 +1190,7 @@
 		</effects>
 	</skill>
 	<skill id="328" toLevel="1" name="Kamael's Dignity">
-		<!-- Speed +$s1, Atk. Spd. +$s2, Casting Spd. +$s3. -->
+		<!-- A Kamael will. Speed $s1 Atk. Spd. $s2 Casting Spd. $s3 -->
 		<icon>icon.skill0328</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1211,7 +1211,7 @@
 		</effects>
 	</skill>
 	<skill id="329" toLevel="1" name="Pride of Kamael">
-		<!-- Bleed/ Hold/ Sleep/ Stun/ Fear/ Silence/ Poison Resistance +20. -->
+		<!-- A Kamael race power. Infection Resistance $s1 Hold Resistance $s1 Sleep Resistance $s1 Shock Resistance $s1 Fear Resistance $s1 Silence Resistance $s1 -->
 		<icon>icon.skill0329</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1302,7 +1302,7 @@
 		</effects>
 	</skill>
 	<skill id="335" toLevel="1" name="Fortitude">
-		<!-- Stun/ Paralysis Resistance +30. -->
+		<!-- Paralysis Resistance $s1 Shock Resistance $s1 -->
 		<icon>icon.skill0335</icon>
 		<magicLevel>76</magicLevel>
 		<operateType>P</operateType>
@@ -1339,7 +1339,7 @@
 		</effects>
 	</skill>
 	<skill id="337" toLevel="8" name="Arcane Power">
-		<!-- Maximizes spells' efficiency. M. Atk. +$s1, MP Consumption +$s2. Consumes $s3 HP per sec. -->
+		<!-- When activated M. Atk. +$s1 M. Skill MP Consumption +$s2 HP per second -$s3 -->
 		<icon>icon.skill0337</icon>
 		<magicLevel>
 			<value level="1">77</value>
@@ -1485,7 +1485,7 @@
 		</effects>
 	</skill>
 	<skill id="341" toLevel="1" name="Touch of Life">
-		<!-- Grants a divine blessing by sacrificing oneself. Recovers 30% HP. For 2 min., Buff Cancel Resistance +40%, Debuff Resistance +10%, Received Healing +10%. Recovers 30 HP per sec. -->
+		<!-- Grants a divine blessing by sacrificing oneself. Instantly restores 30% HP of the target. For 2 min. Buff Cancel Resistance +40% Debuff Resistance +10% Anomaly Resistance +10% Received Healing +10% Constantly restores HP. -->
 		<icon>icon.skill0341</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1527,7 +1527,7 @@
 		</effects>
 	</skill>
 	<skill id="342" toLevel="1" name="Touch of Death">
-		<!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 3 buffs with 25% probability and consumes 50% CP. For 2 min., Max CP -50% and the Healing power received -10%. Susceptibility to de-buff +10%. -->
+		<!-- Sacrifices oneself to pronounce an Dark curse on the enemy. Cancels up to 3 buffs with a certain chance. Target's CP -50% For 2 min. Max CP -50% Received Healing -10% Debuff Resistance -10% Anomaly Resistance -10% -->
 		<icon>icon.skill0342</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -1577,7 +1577,7 @@
 		</effects>
 	</skill>
 	<skill id="343" toLevel="15" name="Lethal Shot">
-		<!-- Shoots a deadly arrow that pierces the target with $s1 power. Requires a bow. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
+		<!-- Shoots with a deadly arrow. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0343</icon>
 		<castRange>700</castRange>
 		<coolTime>500</coolTime>
@@ -1674,7 +1674,7 @@
 		</effects>
 	</skill>
 	<skill id="344" toLevel="15" name="Lethal Blow">
-		<!-- Attacks the enemy s vital spot with $s1 power. Requires a dagger. Critical. Over-hit. -->
+		<!-- Attacks the target's weak point. Deals physical damage with $s1 power. Critical. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -1770,7 +1770,7 @@
 		</effects>
 	</skill>
 	<skill id="345" toLevel="5" name="Sonic Rage">
-		<!-- Attacks the target with a burst of sword energy. Power is $s1. P. Def. -30%, absorbs Momentum. Requires a sword, blunt weapon, or dual swords. -->
+		<!-- Attacks the target with $s1 power. For $s2, P. Def. $s3 Recovers Momentum. -->
 		<icon>icon.skill0345</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -1838,7 +1838,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="346" toLevel="5" name="Raging Force">
-		<!-- Attacks the target with wind energy. Power is $s1. P. Def. -30%, absorbs Momentum. Requires a fist weapon. -->
+		<!-- Attacks the target with $s1 power. For $s2, P. Def. $s3 Recovers Momentum. Critical. -->
 		<icon>icon.skill0346</icon>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
@@ -1906,7 +1906,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="347" toLevel="9" name="Earthquake">
-		<!-- Swings a spear to attack nearby enemies with $s1 power. Requires a spear. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Attacks nearby enemies with $s1 power. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0347</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1983,7 +1983,7 @@
 		</effects>
 	</skill>
 	<skill id="348" toLevel="15" name="Spoil Crush">
-		<!-- Deals damage with $s1 power to the target, also has a certain chance of stealing items from monsters. Requires a sword, a blunt weapon, or a spear. Ignores Shield Defense. Ignores $s2 of Def. Critical. Over-hit. -->
+		<!-- Deals damage with $s1 power. There is a certain chance of stealing items from monsters. Ignores Shield Defense. Ignores $s2 of Defense. Critical. -->
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -2199,7 +2199,7 @@
 		</effects>
 	</skill>
 	<skill id="352" toLevel="10" name="Shield Bash">
-		<!-- Strikes the target with a shield with $s1 power, stunning them for $s2 Requires a shield. -->
+		<!-- <Shock skill> Attacks the enemy with the shield. Power $s1. Stuns for $s2 -->
 		<icon>icon.skill0352</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2317,7 +2317,7 @@
 		</effects>
 	</skill>
 	<skill id="354" toLevel="1" name="Hamstring Shot">
-		<!-- Shoots an arrow at the enemy with $s1 power. The enemy's Speed -$s3 for $s2 min. Requires a bow. Critical. Over-hit. -->
+		<!-- <Suppression Skill> Shoots an arrow with $s1 power. For $s2, Speed $s3. Critical. -->
 		<icon>icon.skill0354</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2357,7 +2357,7 @@
 		</effects>
 	</skill>
 	<skill id="355" toLevel="1" name="Focus Death">
-		<!-- For $s1, P. Critical Rate -$s2, P. Critical Damage at the front -$s3, Vital Point Attack Rate +$s4, P. Critical Damage after backstab +$s5. Requires a dagger. Note! Only one of the following skills can be used: Focus Death, Focus Chance, or Focus Power. -->
+		<!-- Duration: $s1 P. Critical Rate $s2 Vital Point Attack Rate +$s3 When attacking from the front: P. Critical Damage $s4 When backstabbing: P. Critical Damage $s5 Note! Only one of the following skills can be used: Focus Death, Focus Chance, or Focus Power. -->
 		<icon>icon.skill0355</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2400,7 +2400,7 @@
 		</effects>
 	</skill>
 	<skill id="356" toLevel="1" name="Focus Chance">
-		<!-- For $s1, frontal P. Critical Rate -$s2, Vital Point Attack Rate +$s3, side P. Critical Rate +$s4, P. Critical Damage after backstab +$s5. Requires a dagger. Note! Only one of the following skills can be used: Focus Death, Focus Chance, or Focus Power. -->
+		<!-- Duration: $s1 Vital Point Attack Rate $s2 When attacking from the front: P. Critical Rate $s3 When flanking: P. Critical Rate $s4 When backstabbing: P. Critical Rate $s5 Note! Only one of the following skills can be used: Focus Death, Focus Chance, or Focus Power. -->
 		<icon>icon.skill0356</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2444,7 +2444,7 @@
 		</effects>
 	</skill>
 	<skill id="357" toLevel="1" name="Focus Power">
-		<!-- For $s1, frontal P. Critical Damage -$s2, side P. Critical Damage +$s3, P. Critical Damage after backstab +$s4. Requires a dagger. Note! Only one of the following skills can be used: Focus Death, Focus Chance, or Focus Power. -->
+		<!-- Duration: $s1 When attacking from the front: P. Critical Damage $s2 When flanking: P. Critical Damage $s3 When flanking: P. Critical Damage $s4 Note! Only one of the following skills can be used: Focus Death, Focus Chance, or Focus Power. -->
 		<icon>icon.skill0357</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2484,7 +2484,7 @@
 		</effects>
 	</skill>
 	<skill id="358" toLevel="9" name="Bluff">
-		<!-- Tricks the enemy into showing their back, stunning them for $s1 and making them unwilling to attack you. Requires a dagger. -->
+		<!-- <Shock skill> The effect lasts for $s1 Stuns the target. Tricks the enemy into showing their back. The enemy stops attacking the character. -->
 		<icon>icon.skill0358</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2609,7 +2609,7 @@
 		</effects>
 	</skill>
 	<skill id="361" toLevel="3" name="Stun Burst">
-		<!-- Creates a powerful shockwave that deals damage to the target and nearby enemies with $s1 power. Stuns enemies for $s2, their P. Def. -$s3, M. Def. -$s4. Requires a spear. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- <Shock skill> Attacks nearby enemies with $s1 power. Stuns for $s2 P. Def. $s3 M. Def. $s4 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0361</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2686,7 +2686,7 @@
 		</effects>
 	</skill>
 	<skill id="362" toLevel="8" name="Armor Crush">
-		<!-- Attacks the target with $s1 power. Stuns for $s2, P./ M. Def. -$s3. Requires a sword, a blunt weapon, or a spear. Ignores Shield Defense. Critical Over-hit. -->
+		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 P./ M. Def. -$s3 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0362</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2903,7 +2903,7 @@
 		</effects>
 	</skill>
 	<skill id="367" toLevel="3" name="Dance of Medusa">
-		<!-- Dance that evokes the mirage of Medusa. Petrifies nearby enemies for $s1 -->
+		<!-- <Imprisonment Skill> Dance that evokes the mirage of Medusa. Petrifies nearby enemies for $s1 -->
 		<icon>icon.skill0367</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2964,7 +2964,7 @@
 		</effects>
 	</skill>
 	<skill id="368" toLevel="1" name="Vengeance">
-		<!-- Provokes nearby enemies to switch targets with 8784 Power. For 30 sec., P. Def. +5400, M. Def. +4050, and Buff Cancel Attack Resistance +50%. Speed -40%. Requires a shield. -->
+		<!-- Provokes nearby enemies with 8784 power The effect lasts for 30 sec. P. Def. +5400 M. Def. +4050 Buff Cancel Resistance +50% Speed -40% -->
 		<icon>icon.skill0368</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -3051,7 +3051,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="370" toLevel="5" name="Clan Body">
-		<!-- Clan members' Max HP +$s1. -->
+		<!-- Max HP $s1 -->
 		<icon>icon.skill0370</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3070,7 +3070,7 @@
 		</effects>
 	</skill>
 	<skill id="371" toLevel="5" name="Clan Spirituality">
-		<!-- Clan members' Max CP +$s1. -->
+		<!-- Max CP +$s1 -->
 		<icon>icon.skill0371</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3089,7 +3089,7 @@
 		</effects>
 	</skill>
 	<skill id="372" toLevel="5" name="Clan Soul">
-		<!-- Clan members' Max MP +$s1. -->
+		<!-- Max MP $s1 -->
 		<icon>icon.skill0372</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3108,7 +3108,7 @@
 		</effects>
 	</skill>
 	<skill id="373" toLevel="5" name="Clan Regeneration">
-		<!-- Clan members' HP Recovery Rate +$s1. -->
+		<!-- HP Recovery Rate $s1 -->
 		<icon>icon.skill0373</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3127,7 +3127,7 @@
 		</effects>
 	</skill>
 	<skill id="374" toLevel="5" name="Clan Morale">
-		<!-- Clan members' CP Recovery Bonus +$s1. -->
+		<!-- CP Recovery Rate $s1 -->
 		<icon>icon.skill0374</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3146,7 +3146,7 @@
 		</effects>
 	</skill>
 	<skill id="375" toLevel="5" name="Clan Clarity">
-		<!-- Clan members' MP Recovery Bonus +$s1. -->
+		<!-- MP Recovery Rate $s1 -->
 		<icon>icon.skill0375</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3165,7 +3165,7 @@
 		</effects>
 	</skill>
 	<skill id="376" toLevel="5" name="Clan Might">
-		<!-- Clan members' P. Atk. +$s1. -->
+		<!-- P. Atk. $s1 -->
 		<icon>icon.skill0376</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3184,7 +3184,7 @@
 		</effects>
 	</skill>
 	<skill id="377" toLevel="5" name="Clan Shield">
-		<!-- ?lan members' P. Def. +$s1. -->
+		<!-- P. Def. $s1 -->
 		<icon>icon.skill0377</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3203,7 +3203,7 @@
 		</effects>
 	</skill>
 	<skill id="378" toLevel="5" name="Clan Empower">
-		<!-- ?lan members' M. Atk. +$s1. -->
+		<!-- M. Atk. $s1 -->
 		<icon>icon.skill0378</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3222,7 +3222,7 @@
 		</effects>
 	</skill>
 	<skill id="379" toLevel="5" name="Clan M. Def.">
-		<!-- ?lan members' M. Def. +$s1. -->
+		<!-- M. Def. $s1 -->
 		<icon>icon.skill0379</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3241,7 +3241,7 @@
 		</effects>
 	</skill>
 	<skill id="380" toLevel="5" name="Clan Guidance">
-		<!-- Clan members' P. Accuracy +$s1. -->
+		<!-- P. Accuracy. $s1 -->
 		<icon>icon.skill0380</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3260,7 +3260,7 @@
 		</effects>
 	</skill>
 	<skill id="381" toLevel="5" name="Clan Agility">
-		<!-- Clan members' P. Evasion +$s1. -->
+		<!-- P. Evasion $s1 -->
 		<icon>icon.skill0381</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3429,7 +3429,7 @@
 		</effects>
 	</skill>
 	<skill id="389" toLevel="5" name="Clan Wind Walk">
-		<!-- Clan members' Speed +$s1. -->
+		<!-- Speed $s1 -->
 		<icon>icon.skill0389</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3447,8 +3447,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="390" toLevel="1" name="Clan Luck">
-		<!-- You don't lose items if killed by common or boss monsters. -->
+	<skill id="390" toLevel="1" name="Clan Recovery">
+		<!-- HP Recovery Rate $s1 MP Recovery Rate $s2 -->
 		<icon>icon.skill0390</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3473,7 +3473,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="392" toLevel="5" name="Clan Fortune">
-		<!-- Clan XP Gain +$s1. -->
+		<!-- Acquired XP $s1. -->
 		<icon>icon.skill0390</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -3669,7 +3669,7 @@
 		</effects>
 	</skill>
 	<skill id="397" toLevel="2" name="Light Veil">
-		<!-- Uses collected Light Souls to boost your parameters. <Evolved Wings Lv. 1> P. Atk. +130, Atk. Spd. +30, Casting Spd. +40, Speed +10. P./ M. Def. +5%. With a certain chance, absorbs part of the inflicted damage as MP. -->
+		<!-- Uses collected Light Souls to boost your parameters. <Evolved Wings Lv. 1> P. Atk. +130 Atk. Spd. +30 Casting Spd. +40 P. Def. +5% M. Def. +5% Speed +10 With a certain chance, absorbs part of the inflicted damage as MP. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>			
@@ -3748,7 +3748,7 @@
 		</effects>
 	</skill>
 	<skill id="398" toLevel="2" name="Shadow Veil">
-		<!-- Uses collected Shadow Souls to boost your parameters. <Evolved Wings Lv. 2> P. Atk. +280, Atk. Spd. +80, Casting Spd. +120, Speed +15. Has a certain chance to activate a powerful ability when attacking. -->
+		<!-- Uses collected Shadow Souls to boost your parameters. <Evolved Wings Lv. 2> P. Atk. +280 Atk. Spd. +80 Casting Spd. +120 Speed +15. There is a certain chance to deliver extra attacks when attacking. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>	
@@ -3795,7 +3795,7 @@
 		</effects>
 	</skill>
 	<skill id="399" toLevel="10" name="Heavy Armor Mastery">
-		<!-- When using heavy armor, P. Def. +$s1, Max HP +$s2, Received P. Critical Rate/ Damage -$s3. -->
+		<!-- When using heavy armor P. Def. +$s1 Max HP +$s2 Received P. Critical Rate -$s3 Received P. Critical Damage -$s3 -->
 		<magicLevel>
 			<value level="1">20</value>
 			<value level="2">30</value>

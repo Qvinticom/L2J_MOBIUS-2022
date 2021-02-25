@@ -1373,7 +1373,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4138" toLevel="12" name="Corpse Burst">
+	<skill id="4138" toLevel="12" name="Parasite Burst">
 		<affectRange>200</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2175,7 +2175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4152" toLevel="12" name="Drain Energy">
+	<skill id="4152" toLevel="12" name="Drain HP">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2914,7 +2914,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>6125</skillId> <!-- Paralysis -->
+				<skillId>6125</skillId> <!-- Cubic Paralysis -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
@@ -3000,7 +3000,7 @@
 		</effects>
 	</skill>
 	<skill id="4166" toLevel="18" name="Cubic Stun">
-		<!-- Immobilizes and stuns target. -->
+		<!-- Movement is blocked. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>9</abnormalTime>
@@ -4662,7 +4662,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4193" toLevel="12" name="Drain Energy">
+	<skill id="4193" toLevel="12" name="Life Drain">
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>

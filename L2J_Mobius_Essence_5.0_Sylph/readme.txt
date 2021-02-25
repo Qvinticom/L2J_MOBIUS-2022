@@ -1,10 +1,10 @@
-L2J-Mobius Dwelling of Spirits
-Client: https://drive.google.com/u/0/uc?id=1Xlk2uzmxveJtrvaWXmZ6wBVFjd6E-ws7&export=download
-System: https://mega.nz/file/xl1njaTY#BdVHadGs9bTDyrDE3QgBGvAqkmqSqPtn8hLpcCil1Fs
+L2J-Mobius Sylph
+Client: 
+System: 
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/ctithbrur1cevrd/L2J_Mobius_Essence_4.0_DwellingOfSpirits_Geodata.zip
+Geodata: 
 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
@@ -121,6 +121,9 @@ Fluffy Reinforcement: https://eu.4game.com/patchnotes/lineage2essence/204/
 
 Dwelling of Spirits: https://eu.4game.com/patchnotes/lineage2essence/261/
 -Login support
+
+Sylph: https://eu.4game.com/patchnotes/lineage2essence/281/
+-Sylph creation support
 
 Customs:
 -Newbie Helper NPC location info

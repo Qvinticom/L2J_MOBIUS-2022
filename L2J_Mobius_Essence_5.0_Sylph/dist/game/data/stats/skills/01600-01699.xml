@@ -73,7 +73,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1605" toLevel="3" name="Dual Weapon Defense">
-		<!-- For $s1, P. Skill Evasion +$s2. Requires dual swords. -->
+		<!-- For $s1 P. Skill Evasion $s2 -->
 		<icon>icon.skill1605</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -118,7 +118,7 @@
 		</effects>
 	</skill>
 	<skill id="1606" toLevel="10" name="Quick Spear">
-		<!-- Attacks the enemy with $s1 power stunning them for $s2 Requires a spear. Ignores Shield Defense. Over-hit. -->
+		<!-- <Shock skill> Attacks the target and nearby enemies with $s1 power. Stuns for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill1606</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -209,7 +209,7 @@
 		</effects>
 	</skill>
 	<skill id="1607" toLevel="45" name="Excruciating Strike">
-		<!-- Attacks nearby enemies with $s1 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Ignores $s2 of the target's defense. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. Ignores Shield Defense. Ignores $s2 of Defense. -->
 		<icon>icon.skill1607</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -453,7 +453,7 @@
 		</endEffects>
 	</skill>
 	<skill id="1609" toLevel="4" name="Sword Expert">
-		<!-- Atk. Spd. +$s1, P. Atk. +$s2, P. Accuracy +$s3, when using a two-handed sword. -->
+		<!-- When using a two-handed sword Atk. Spd. +$s1 P. Atk. +$s2 P. Accuracy +$s3 -->
 		<icon>icon.skill1609</icon>
 		<magicLevel>
 			<value level="1">46</value>
@@ -491,7 +491,7 @@
 		</effects>
 	</skill>
 	<skill id="1610" toLevel="29" name="Life Rescue">
-		<!-- For $s1, restores $s2 HP per sec. -->
+		<!-- For $s1 restores $s2 HP to the target in one cycle. -->
 		<icon>icon.skill1610</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -668,7 +668,7 @@
 		</effects>
 	</skill>
 	<skill id="1611" toLevel="6" name="Power Supremacy">
-		<!-- P. Atk. +$s1. Max HP -$s2. -->
+		<!-- When activated P. Atk. +$s1 Max HP +$s2 -->
 		<icon>icon.skill1611</icon>
 		<magicLevel>
 			<value level="1">48</value>
@@ -708,7 +708,7 @@
 		</effects>
 	</skill>
 	<skill id="1612" toLevel="1" name="Slowing Power">
-		<!-- Speed -20% for 15 sec. -->
+		<!-- Speed -20% -->
 		<icon>icon.skill0210</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -736,7 +736,7 @@
 		</effects>
 	</skill>
 	<skill id="1613" toLevel="12" name="Body Crush">
-		<!-- Attacks the enemy with $s1 power, inflicting Stun for $s2. With a certain chance dispels $s3 buff(s) from a stunned target. Requires a sword, blunt weapon, or a spear. Ignores Shield Defense. Over-hit. -->
+		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 With a certain chance, removes up to $s3 buff(s) from the target. Ignores Shield Defense. -->
 		<icon>icon.skill1613</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -838,7 +838,7 @@
 		</effects>
 	</skill>
 	<skill id="1615" toLevel="5" name="Weapon Reinforcement">
-		<!-- For $s1, P. Atk. +$s2 when using a sword, a blunt weapon, or a spear. With a certain chance, target's Atk. Spd./ Casting Spd. -$s3 after an attack. -->
+		<!-- The effect lasts for $s1 When using swords/ blunt weapon/ spears P. Atk. $s2 With a certain chance after an attack For $s3 Atk. Spd. $s4 Casting Spd. $s4 -->
 		<icon>icon.skill1615</icon>
 		<reuseDelay>2000</reuseDelay>
 		<coolTime>500</coolTime>
@@ -921,7 +921,7 @@
 		</effects>
 	</skill>
 	<skill id="1616" toLevel="2" name="Physical Damage">
-		<!-- You were damaged and for 15 sec. Atk. Spd. and Casting Spd. -10%. -->
+		<!-- Atk. Spd. $s1 Casting Spd. $s1 -->
 		<icon>icon.skill1615</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-190</effectPoint>
@@ -947,7 +947,7 @@
 		</effects>
 	</skill>
 	<skill id="1617" toLevel="4" name="Tenacity">
-		<!-- Enhances the body. For $s1, Stun Resistance +$s2. With a certain chance, recovers HP when hit. -->
+		<!-- Enhances the body. Shock Resistance $s1 With a certain chance, recovers HP when damage is taken. -->
 		<icon>icon.skill1617</icon>
 		<reuseDelay>10000</reuseDelay>
 		<coolTime>500</coolTime>
@@ -1040,17 +1040,17 @@
 		</effects>
 	</skill>
 	<skill id="1619" toLevel="8" name="Sonic Focus">
-		<!-- Max Energy $s1. -->
+		<!-- Max Energy $s1 -->
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="1620" toLevel="8" name="Focus Force">
-		<!-- Max Energy $s1. -->
+		<!-- Max Energy $s1 -->
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="1621" toLevel="5" name="Shield of Sacrifice">
-		<!-- <Skill with fixed cooldown> The character sacrifices themselves. Max HP -$s1. For $s2, party members' P. Def. +$s3, M. Def. +$s4, Received Healing +$s5. Requires a shield. -->
+		<!-- <Skill with fixed cooldown> The character sacrifices themselves enhancing party members for $s2. <Caster> Max HP -$s1 <Party Members> P. Def. +$s3 M. Def. +$s4 Received Healing +$s5 -->
 		<icon>icon.skill1621</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1127,7 +1127,7 @@
 		</effects>
 	</skill>
 	<skill id="1622" toLevel="5" name="Blood of Sacrifice">
-		<!-- Sacrifice. Max HP -$s1. -->
+		<!-- Max HP -$s1 -->
 		<icon>icon.skill1621</icon>
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalType>POSSESSION_SPECIAL</abnormalType>
@@ -1154,8 +1154,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1623" toLevel="5" name="Eva's Protection">
-		<!-- <Skill with fixed cooldown> For $s1, P. Def. +$s2, M. Def. +$s3, Speed +$s4. Requires a shield. -->
+	<skill id="1623" toLevel="5" name="Eva s Protection">
+		<!-- <Skill with fixed cooldown> Eva grants her protection. The effect lasts for $s1 P. Def. +$s2 M. Def. +$s3 Speed +$s4 -->
 		<icon>icon.skill1623</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1227,7 +1227,7 @@
 		</effects>
 	</skill>
 	<skill id="1624" toLevel="4" name="Indestructible Sound">
-		<!-- Makes a powerful sword strike with $s1 power, blocking the target for $s2 Target's Received Damage -$s3, blocks target's movements and skills. Requires dual swords. Requires Momentum Lv. 5. Over-hit. -->
+		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 Received damage $s3 Requires Momentum Lv. 5. -->
 		<icon>icon.skill1624</icon>
 		<abnormalLevel>
 			<value level="1">10</value>
@@ -1379,7 +1379,7 @@
 		</effects>
 	</skill>
 	<skill id="1625" toLevel="1" name="Throwing Spear">
-		<!-- Throws a spear at the enemy with $s1 power, immobilizing them for $s2. Requires a spear. Ignores Shield Defense. Over-hit. -->
+		<!-- <Hold skill> Attacks the enemy with $s1 power. Holds for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill1625</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1420,7 +1420,7 @@
 		</effects>
 	</skill>
 	<skill id="1626" toLevel="1" name="Spear Howl">
-		<!-- Strikes the earth with a spear attacking nearby enemies with 2911 power. Removes Speed-increasing buffs. Requires a spear. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks nearby enemies with $s1 power. Cancels target's buffs increasing Speed. Ignores Shield Defense. -->
 		<icon>icon.skill1626</icon>
 		<basicProperty>PHYSICAL</basicProperty>
 		<hitTime>1000</hitTime>
@@ -1457,8 +1457,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1627" toLevel="1" name="Destroyer's Roar">
-		<!-- Inflicts Fear on nearby enemies, their Speed -90%. Requires a sword, a blunt weapon or a two-handed sword. -->
+	<skill id="1627" toLevel="1" name="Destroyer s Roar">
+		<!-- <Fear/ Suppression Skill> For 3 sec., for nearby enemies Fear. Speed - 90%. -->
 		<icon>icon.skill1627</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>7</abnormalTime>
@@ -1501,7 +1501,7 @@
 		</effects>
 	</skill>
 	<skill id="1628" toLevel="4" name="Wide Swing">
-		<!-- For $s1, the number of attacked enemies +$s2. Requires a two-handed sword. -->
+		<!-- The effect lasts for $s1 When using a two-handed sword, a number of targets +$s2 -->
 		<icon>icon.skill1628</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1550,7 +1550,7 @@
 		</effects>
 	</skill>
 	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
-		<!-- Throws a dagger at the enemy with $s1 power, injuring their wrist. Due to the wound, for $s2, there is a chance that the target's skill casting is interrupted. Requires a dagger. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. For the target affected by the skill: There is a certain chance to interrupt spell casting for $s2 because of a deep wound on the wrist. -->
 		<icon>icon.skill1629</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1591,7 +1591,7 @@
 		</effects>
 	</skill>
 	<skill id="1630" toLevel="9" name="Throwing Blood Dagger">
-		<!-- Throws a Bloody Dagger at an enemy with $s1 power. With a certain chance, for $s2, decreases target's HP when they use skills in PvP. Requires a dagger. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. For the target affected by the skill: With a certain chance, for $s2, decreases HP when using skills. -->
 		<icon>icon.skill1630</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1643,7 +1643,7 @@
 		</effects>
 	</skill>
 	<skill id="1631" toLevel="2" name="Clear Movements">
-		<!-- All senses sharpen, and cooldown time of the Hide and Shadow Step skills is reset. Requires a dagger. -->
+		<!-- Hide/ Shadow Step Resets cooldowns. -->
 		<icon>icon.skill10518</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
@@ -1682,7 +1682,7 @@
 		</effects>
 	</skill>
 	<skill id="1632" toLevel="15" name="Deadly Strike">
-		<!-- Attacks the target with $s1 power. For 10 sec., the enemy's P. Def. -23%. Power +50% if the target is affected by Hold. Requires a sword, a blunt weapon, or dual swords. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
+		<!-- Attacks the target with $s1 power. If the target is affected by Hold, Power +50%. For 10 sec. P. Def. -23% Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0986</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>

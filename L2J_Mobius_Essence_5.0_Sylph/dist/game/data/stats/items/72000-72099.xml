@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="72007" name="Dragon's Treasure Chest" type="EtcItem">
-		<!-- Double-click to obtain the following items. <Guaranteed>. Dragon Coin (3 pcs.). <Random>. Spellbook: Ultimate Death Knight Transformation. Talisman of Baium. Baium's Ring Lv. 1. Baium Doll Lv. 1. Baium's Thunder Breaker. Zaken's Blood Sword. Core's Plasmic Bow. Queen Ant's Stone Breaker. Orfen's Venom Sword. + other items -->
+		<!-- Double-click to obtain the following items. <Guaranteed> Dragon Coin (3 pcs.) <Random> Spellbook: Ultimate Death Knight Transformation Talisman of Baium Baium's Ring Lv. 1 Baium Doll Lv. 1 Baium's Thunder Breaker Zaken's Blood Sword Core's Plasmic Bow Queen Ant's Stone Breaker Orfen's Venom Sword + other items -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -23,7 +23,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72016" name="Giran Treasure Chest" type="EtcItem">
-		<!-- Double-click to obtain the following items. <Guaranteed>. - Giran Seal. <Random>. - Spellbook: Ultimate Death Knight Transformation. - Boss' Weapon Pack. - Baium's Ring. - Zaken's Earring. - Queen Ant's Ring. - Orfen's Earring. - Ring of Core. - Spellbook: Divine Beam. - Spellbook: White Guardian. - Ice Crystal Breastplate. - Ice Crystal Gaiters. - Leather Armor of Lightning. - Leather Leggings of Lightning. - Flaming Tunic. - other items -->
+		<!-- Double-click to obtain the following items. <Guaranteed> - Giran Seal <Random> - Spellbook: Ultimate Death Knight Transformation - Boss' Weapon Pack - Baium's Ring - Zaken's Earring - Queen Ant's Ring - Orfen's Earring - Ring of Core - Spellbook: Divine Beam - Spellbook: White Guardian - Ice Crystal Breastplate - Ice Crystal Gaiters - Leather Armor of Lightning - Leather Leggings of Lightning - Flaming Tunic - other items -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -34,7 +34,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="72018" name="Special Kit: Adena" type="EtcItem">
-		<!-- Double-click to obtain following items. - Sayha's Blessing (200 pcs.). - Special HP Recovery Potion (500 pcs.). - Alligator Island's Time Stone (7 pcs.). - Sayha's Storm Lv. 3 (50 pcs.). - Venir's Talisman Fragment (30 pcs.) -->
+		<!-- Double-click to obtain following items. - Sayha's Blessing (200 pcs.) - Special HP Recovery Potion (500 pcs.) - Alligator Island's Time Stone (7 pcs.) - Sayha's Storm Lv. 3 (50 pcs.) - Venir's Talisman Fragment (30 pcs.) -->
 		<set name="icon" val="icon.etc_treasure_box_i09" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -67,7 +67,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="72023" name="Growth Supply Pack - Lv. 60" type="EtcItem">
-		<!-- Double-click to obtain the following items. Required level: 60+. <Guaranteed>. - Scroll: Boost Attack (10 pcs.). - Soulshot Ticket (20 pcs.) -->
+		<!-- Double-click to obtain the following items. Required level: 60+. <Guaranteed> - Scroll: Boost Attack (10 pcs.) - Soulshot Ticket (20 pcs.) -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -78,7 +78,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72024" name="Growth Supply Pack - Lv. 65" type="EtcItem">
-		<!-- Double-click to obtain the following items. Required level: 65+. <Guaranteed>. - Scroll: Boost Defense (10 pcs.). - Soulshot Ticket (20 pcs.) -->
+		<!-- Double-click to obtain the following items. Required level: 65+. <Guaranteed> - Scroll: Boost Defense (10 pcs.) - Soulshot Ticket (20 pcs.) -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -89,7 +89,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72025" name="Growth Supply Pack - Lv. 68" type="EtcItem">
-		<!-- Double-click to obtain the following items. Required level: 68+. <Guaranteed>. - Scroll: Boost Attack (25 pcs.). - Soulshot Ticket (75 pcs.) -->
+		<!-- Double-click to obtain the following items. Required level: 68+. <Guaranteed> - Scroll: Boost Attack (25 pcs.) - Soulshot Ticket (75 pcs.) -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -100,7 +100,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72026" name="Growth Supply Pack - Lv. 71" type="EtcItem">
-		<!-- Double-click to obtain the following items. Required level: 71+. <Guaranteed>. - Scroll: Boost Attack (25 pcs.). - Soulshot Ticket (75 pcs.). - Enchanted B-grade Armor Coupon -->
+		<!-- Double-click to obtain the following items. Required level: 71+. <Guaranteed> - Scroll: Boost Attack (25 pcs.) - Soulshot Ticket (75 pcs.) - Enchanted B-grade Armor Coupon -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -111,7 +111,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72027" name="Growth Supply Pack - Lv. 74" type="EtcItem">
-		<!-- Double-click to obtain the following items. Required level: 74+. <Guaranteed>. - Scroll: Boost Defense (25 pcs.). - Soulshot Ticket (75 pcs.). - Enchanted B-grade Armor Coupon -->
+		<!-- Double-click to obtain the following items. Required level: 74+. <Guaranteed> - Scroll: Boost Defense (25 pcs.) - Soulshot Ticket (75 pcs.) - Enchanted B-grade Armor Coupon -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -122,7 +122,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72028" name="Growth Supply Pack - Lv. 76" type="EtcItem">
-		<!-- Double-click to obtain the following items. Required level: 76+. <Guaranteed>. - Scroll: Boost Attack (25 pcs.). - Soulshot Ticket (75 pcs.). - Enchanted B-grade Armor Coupon -->
+		<!-- Double-click to obtain the following items. Required level: 76+. <Guaranteed> - Scroll: Boost Attack (25 pcs.) - Soulshot Ticket (75 pcs.) - Enchanted B-grade Armor Coupon -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -133,7 +133,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72029" name="Growth Supply Pack - Lv. 79" type="EtcItem">
-		<!-- Double-click to obtain the following items. Required level: 79+. <Guaranteed>. - Enchant Kit: Talisman of Eva (2 pcs.). - Enchant Kit: Talisman of Aden (2 pcs.). - A-grade Armor Coupon -->
+		<!-- Double-click to obtain the following items. Required level: 79+. <Guaranteed> - Enchant Kit: Talisman of Eva (2 pcs.) - Enchant Kit: Talisman of Aden (2 pcs.) - A-grade Armor Coupon -->
 		<set name="icon" val="icon.etc_golden_spice_comp_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -184,7 +184,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72044" name="Boss' Accessory Fragment" type="EtcItem">
-		<!-- Can be exchanged for various items through the Game Assistant. <Exchangeable items>. - Ring of Core (25 fragments). - Queen Ant's Ring (50 fragments). - Orfen's Earring (50 fragments). - Zaken's Earring (60 fragments). - Baium's Ring (180 fragments). - Sparkling Accessory Pack (1 fragment) -->
+		<!-- Can be exchanged for various items through the Game Assistant. <Exchangeable items> - Ring of Core (25 fragments) - Queen Ant's Ring (50 fragments) - Orfen's Earring (50 fragments) - Zaken's Earring (60 fragments) - Baium's Ring (180 fragments) - Sparkling Accessory Pack (1 fragment) -->
 		<set name="icon" val="icon.icon_material_renewal_mineral" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -193,7 +193,7 @@
 		<set name="material" val="LIQUID" />
 	</item>
 	<item id="72067" name="Jewelry Box Lv. 5" type="EtcItem">
-		<!-- Double-click to obtain one of the following items. <Random>. - Amber Lv. 5. - Opal Lv. 5. - Coral Lv. 5. - Onyx Lv. 5. - Spinel Lv. 5. - Zircon Lv. 5. - Moonstone Lv. 5 -->
+		<!-- Double-click to obtain one of the following items. <Random> Amber Lv. 5 Opal Lv. 5 Coral Lv. 5 Onyx Lv. 5 Spinel Lv. 5 Zircon Lv. 5 Moonstone Lv. 5 -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -204,7 +204,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="72073" name="Pack of Seals" type="EtcItem">
-		<!-- Double-click to obtain the specified item. -->
+		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -224,5 +224,294 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+	</item>
+	<item id="72075" name="Special Box of Seals" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_ensoulbox_PvE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72078" name="Anniversary Gift Box" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_ev_draco_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72080" name="Pearly Joy Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="72084" name="Devoted Hero's Circlet" additionalName="1-day" type="Armor">
+		<!-- <Properties> Max HP +600 Max MP +600 Max CP +600 P. Def. +6% M. Def. +6% Received damage -6% <Fatal Critical Strike> With a 10% chance, after an attack, P./ M. Skill Critical Damage +15% for 8 sec. <font color=eeaa22>Occupies the left hair accessory slot.</font> -->
+		<set name="icon" val="icon.accessory_barka_karm_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+	</item>
+	<item id="72085" name="Devoted Hero's Helmet" additionalName="1-day" type="Armor">
+		<!-- <Properties> STR +1 INT +1 Overweight limit +1500 M. Def. +10 HP Recovery Rate +8% MP Recovery Rate +8% P. Atk. +6% M. Atk. +8% CON +1 MEN +1 All received Critical Rate -2% <Benefits of Wisdom> With a 3% chance, recovers 100 MP after an attack. (Cooldown: 5 sec.) -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="pDef">88</stat>
+		</stats>
+	</item>
+	<item id="72086" name="Devoted Hero's Gauntlets" additionalName="1-day" type="Armor">
+		<!-- <Properties> STR +1 INT +1 Overweight limit +1000 Atk. Spd. +10% Casting Spd. +18% Max HP +200 M. Def. +50 With a 2% chance, deals additional damage equivalent to 15% from P. Atk. and shocks the target for 3 sec. Skill Critical Damage +50 -->
+		<set name="icon" val="icon.armor_t96_g_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="pDef">65</stat>
+		</stats>
+	</item>
+	<item id="72087" name="Devoted Hero's Gloves" additionalName="1-day" type="Armor">
+		<!-- <Properties> STR +1 INT +1 Max HP +150 Atk. Spd. +8% Casting Spd. +15% P./ M. Skill Power +2% With a 2% chance, makes the target unable to use skills for 4 sec. With a 2% chance, deals magic damage with 50 power, burning up the target's MP. -->
+		<set name="icon" val="icon.armor_t94_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="540" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="72088" name="Devoted Hero's Boots" additionalName="1-day" type="Armor">
+		<!-- <Properties> STR +1 INT +1 Overweight limit +1000 M. Def. +10 Max HP +200 Speed +8 Increases P./ M. Def. depending on Max HP. Skill Cooldown -1% <Swift Evasion> With a 3% chance when hit, P./ M. Evasion +45, P./ M. Skill Evasion +70% for 30 sec. (active for 5 hits) (Cooldown: 60 sec.) -->
+		<set name="icon" val="icon.armor_t100_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="pDef">59</stat>
+		</stats>
+	</item>
+	<item id="72089" name="Devoted Hero's Pendant" additionalName="1-day" type="Armor">
+		<!-- <Invocation> Increases Speed and recovers HP/ MP for 15 sec. M. Def. +35 Acquired XP/ SP +30% Received damage -20% Atk. Spd. +5% Casting Spd. +5% P. Critical Damage +8% M. Skill Critical Damage +8% P. Atk. +10% M. Atk. +10% -->
+		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="pDef">66</stat>
+		</stats>
+	</item>
+	<item id="72090" name="Devoted Hero's Ring - Queen Ant" additionalName="1-day" type="Armor">
+		<!-- <Properties> P. Atk. +7% M. Atk. +7% P. Critical Damage +10% M. Skill Critical Damage +5% P. Accuracy +3 M. Accuracy +3 Max MP +21 Infection Atk. Rate and Resistance +20% Effects of two identical rings do not stack. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_ring_of_queen_ant_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="mDef">63</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="72091" name="Devoted Hero's Necklace - Frintezza" additionalName="1-day" type="Armor">
+		<!-- <Properties> P. Skill Power +15% M. Skill Power +15% All Critical Rate +5% All Critical Damage +100 Skill Cooldown -8% Max MP +50 Sleep Resistance/ Atk. Rate +20 Damage Reflection +5% Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_necklace_of_frintessa_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="mDef">109</stat>
+			<stat type="maxMp">50</stat>
+		</stats>
+	</item>
+	<item id="72092" name="Devoted Hero's Earring - Zaken" additionalName="1-day" type="Armor">
+		<!-- <Properties> MP Consumption -4% Received Healing +10% HP Recovery Rate +20% Vampiric Rage effect +8% Max MP +34 Infection Atk. Rate and Resistance +20% Shock Atk. Rate and Resistance +15% Silence Atk. Rate and Resistance +15% Fear Atk. Rate and Resistance +15% Effects of two identical earrings do not stack. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="mDef">109</stat>
+			<stat type="maxMp">34</stat>
+		</stats>
+	</item>
+	<item id="72093" name="Devoted Hero's Ring - Baium" additionalName="1-day" type="Armor">
+		<!-- <Properties> P. Skill Power +10% M. Skill Power +10% Atk. Spd. +5% Casting Spd. +5% P. Accuracy +4 M. Accuracy +4 P. Critical Damage +15% M. Skill Critical Damage +10% Max MP +27 Shock Atk. Rate and Resistance +20% Infection Atk. Rate and Resistance +15% Effects of two identical rings do not stack. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_ring_of_baium_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="mDef">75</stat>
+			<stat type="maxMp">27</stat>
+		</stats>
+	</item>
+	<item id="72094" name="Devoted Hero's Earring - Orfen" additionalName="1-day" type="Armor">
+		<!-- <Properties> MP Consumption -5% Received Healing +6% With a certain chance, absorbs some of the inflicted damage as MP. Max MP +31 Silence Atk. Rate and Resistance +15% Fear Atk. Rate and Resistance +15% Hold Atk. Rate and Resistance +20% Effects of two identical earrings do not stack. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_earring_of_orfen_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="mDef">91</stat>
+			<stat type="maxMp">31</stat>
+		</stats>
+	</item>
+	<item id="72095" name="Devoted Hero's Ring - Core" additionalName="1-day" type="Armor">
+		<!-- <Properties> Received P. Damage -6% Received M. Damage -6% P. Evasion +3 M. Evasion +3 Max MP +21 Silence Atk. Rate and Resistance +20% Fear Atk. Rate and Resistance +20% <Ring of Core> Removes all debuffs and anomalies when used. Effects of two identical rings do not stack. Cannot be enchanted. -->
+		<set name="icon" val="icon.accessory_ring_of_core_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="mDef">63</stat>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="72096" name="Devoted Hero's Belt" additionalName="1-day" type="Armor">
+		<!-- <Properties> Weight limit +9000 Inventory slots +8 Max HP +500 Max MP +300 Max CP +800 HP Recovery Potions' Effect +175 MP Recovery Potions' Effect +65 P. Def. +90 M. Def. +90 Atk. Spd. +50 Casting Spd. +50 P./ M. Critical Rate +30 Received Healing +5% Received damage -4% STR/ INT +4 DEX/ WIT +4 CON/ MEN +5 <Active skill: Dragon's Protection Lv. 5> -->
+		<set name="icon" val="icon.dragon_belt_2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="pDef">14</stat>
+		</stats>
+	</item>
+	<item id="72097" name="Devoted Hero's Shield" additionalName="1-day" type="Armor">
+		<!-- <Properties> Max HP +200 Shield Defense +200 All received Critical Rate -8%% <Protective Barrier> For 5 sec. when hit, applies the following buff: P. Def. +20% M. Def. +20% Shield Defense Rate +20% (Probability rate: 2%) (Cooldown: 60 sec.) <Retribution Defense> For 3 sec., reflects 5% of the received damage, when hit (Cooldown: 60 sec.) -->
+		<set name="icon" val="icon.shield_of_revenge" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1180" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="rShld">20</stat>
+			<stat type="sDef">282</stat>
+		</stats>
+	</item>
+	<item id="72098" name="Devoted Hero's Sigil" additionalName="1-day" type="Armor">
+		<!-- <Properties> Max MP +150 Atk. Spd. +45 Casting Spd. +45 All Critical Rate +4% <Fatal Power> For 3 sec. after an attack, Skill Power +3% (Probability rate: 2%) <Fatal Impulse> For 3 sec. after an attack, All Critical Damage +50 (Probability rate: 1%) -->
+		<set name="icon" val="icon.elos_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="1200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+		<stats>
+			<stat type="pDef">56</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="72099" name="Devoted Hero's Doll - Queen Ant" additionalName="1-day" type="EtcItem">
+		<!-- <Queen Ant Doll's Sorcery Lv. 3> P. Atk. +12% P. Critical Damage +10% P. Skill Critical Damage +10% Max HP +15%. Boosts parameters when in inventory. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
 	</item>
 </list>

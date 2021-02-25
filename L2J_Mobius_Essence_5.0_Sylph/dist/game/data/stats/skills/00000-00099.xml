@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1" toLevel="50" name="Rising Attack">
-		<!-- Quickly strikes the target from the bottom up with $s1 power. For $s2, enemy s P. Def. -$s3. Requires dual swords. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Attacks the target with $s1 power. For $s2, P. Def. $s3 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0001</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -248,7 +248,7 @@
 		</effects>
 	</skill>
 	<skill id="2" toLevel="35" name="Confusion">
-		<!-- For 2 sec., inflicts Confusion on the enemy and forces them to flee. -->
+		<!-- <Fear Skill> Confuses the enemy and makes unable to move. -->
 		<icon>icon.skill0002</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>2</abnormalTime>
@@ -419,7 +419,7 @@
 		</effects>
 	</skill>
 	<skill id="3" toLevel="24" name="Power Strike">
-		<!-- Delivers a powerful blow that strikes the target with $s1 power. Requires a sword/ blunt weapon/ spear/ dual swords. Over-hit. -->
+		<!-- Delivers a powerful blow to the target. Power $s1. -->
 		<icon>icon.skill0003</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -551,7 +551,7 @@
 		</effects>
 	</skill>
 	<skill id="4" toLevel="2" name="Fast Run">
-		<!-- For $s1, Speed +$s2. -->
+		<!-- Speed $s1 -->
 		<icon>icon.skill0004</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -589,7 +589,7 @@
 		</effects>
 	</skill>
 	<skill id="5" toLevel="50" name="Double Sonic Slash">
-		<!-- Attacks the enemy with $s1 power. Requires dual swords. Increases power upon consuming up to 3 Momentum. Ignores the enemy s defense. Critical. Over-hit. -->
+		<!-- Inflicts a double strike with the sword. Attacks the enemy with $s1 power. Increases power upon consuming Momentum. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0005</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -825,7 +825,7 @@
 		</effects>
 	</skill>
 	<skill id="6" toLevel="45" name="Sonic Blaster">
-		<!-- Hurls a deadly sound blast with $s1 power. Stuns the target for $s2. Requires dual swords, a sword, or a blunt weapon. Increases power upon consuming Momentum (up to $s3). Over-hit. -->
+		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 Increases power upon consuming Momentum. -->
 		<icon>icon.skill0006</icon>
 		<castRange>600</castRange>
 		<abnormalLevel>1</abnormalLevel>
@@ -1054,7 +1054,7 @@
 		</effects>
 	</skill>
 	<skill id="7" toLevel="31" name="Sonic Storm">
-		<!-- Attacks the target and nearby enemies with $s1 power. Requires a sword, blunt weapon, or dual swords. Increases power upon consuming Momentum (up to $s2). Critical. Over-hit. -->
+		<!-- Attacks the enemy and nearby enemies with $s1 power. Increases power upon consuming Momentum. Critical. -->
 		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1217,7 +1217,7 @@
 		</effects>
 	</skill>
 	<skill id="8" toLevel="8" name="Sonic Focus">
-		<!-- Gathers Momentum. Can be charged up to level $s1. Requires a sword, blunt weapon, or dual swords. -->
+		<!-- Channels Momentum. Can be charged up to Lv. $s1. -->
 		<icon>icon.skill0008</icon>
 		<effectPoint>200</effectPoint>
 		<hitTime>900</hitTime>
@@ -1274,7 +1274,7 @@
 		</effects>
 	</skill>
 	<skill id="9" toLevel="37" name="Sonic Buster">
-		<!-- Hurls a burst of energy at the enemies in the front with $s1 power. Increases power upon consuming Momentum (up to $s2). Consumes $s3 Momentum Stones. Requires a sword, blunt weapon, or dual swords. Critical. Over-hit. -->
+		<!-- Attacks the enemies in front of you with $s1 power. Increases power upon consuming Momentum. Critical. -->
 		<icon>icon.skill0009</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1466,7 +1466,7 @@
 		</effects>
 	</skill>
 	<skill id="10" toLevel="13" name="Summon Storm Cubic">
-		<!-- <Summoning Skill> Summons a Storm Cubic that uses magic to attack the enemy. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning Skill> Summons a Storm Cubic The cubic uses magic to attack the enemy. -->
 		<icon>icon.skill0010</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1561,7 +1561,7 @@
 		</effects>
 	</skill>
 	<skill id="11" toLevel="12" name="Trick">
-		<!-- Causes the enemy to stop attacking. -->
+		<!-- Takes away the enemy's will to attack. -->
 		<icon>icon.skill0011</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1631,7 +1631,7 @@
 		</effects>
 	</skill>
 	<skill id="12" toLevel="14" name="Switch">
-		<!-- Confuses the enemy, causing them to cancel their target. -->
+		<!-- Changes the enemy's targer. -->
 		<icon>icon.skill0012</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1707,7 +1707,7 @@
 		</effects>
 	</skill>
 	<skill id="13" toLevel="1" name="Summon Siege Golem">
-		<!-- <Summoning Skill> Summons Siege Golem. Available only during sieges. Consumes C-grade Crystals (180 pcs.). -->
+		<!-- <Summoning Skill> Summons Siege Golem. Available only during sieges. -->
 		<icon>icon.skill0013</icon>
 		<hitTime>15000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1731,7 +1731,7 @@
 		</effects>
 	</skill>
 	<skill id="15" toLevel="65" name="Slowdown">
-		<!-- Enemy s P./ M. Skill Cooldown +$s2 for $s1. -->
+		<!-- The effect lasts for $s1 P. Skill Cooldown +$s2 M. Skill Cooldown -$s2 -->
 		<icon>icon.skill0015</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1896,7 +1896,7 @@
 		</effects>
 	</skill>
 	<skill id="16" toLevel="24" name="Mortal Blow">
-		<!-- Attacks the target's vital points with $s1 power. Requires a dagger. Over-hit. -->
+		<!-- Attacks the enemy's vital spot. Power $s1. -->
 		<icon>icon.skill0016</icon>
 		<castRange>40</castRange>
 		<affectRange>40</affectRange>
@@ -2028,7 +2028,7 @@
 		</effects>
 	</skill>
 	<skill id="17" toLevel="37" name="Force Burst">
-		<!-- Hurls a burst of energy at the enemies in the front with $s1 power. Increases power upon consuming Momentum (up to $s2). Consumes $s3 Momentum Stones. Requires a fist weapon. Critical. Over-hit. -->
+		<!-- Attacks the enemies in front of you with $s1 power. Increases power upon consuming Momentum. Critical. -->
 		<icon>icon.skill0017</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2382,7 +2382,7 @@
 		</effects>
 	</skill>
 	<skill id="19" toLevel="55" name="Double Shot">
-		<!-- Shoots 2 arrows one by one to attack the enemy with $s1 power. Requires a bow. Critical. Over-hit. -->
+		<!-- Shoots 2 arrows one by one. Attacks the enemy with $s1 power. Critical. -->
 		<icon>icon.skill0019</icon>
 		<castRange>700</castRange>
 		<coolTime>500</coolTime>
@@ -2636,7 +2636,7 @@
 		</effects>
 	</skill>
 	<skill id="21" toLevel="3" name="Recovery">
-		<!-- Cures minor poisoning and bleeding. -->
+		<!-- Elven healing magic. Removes infection from a character. -->
 		<icon>icon.skill0021</icon>
 		<effectPoint>
 			<value level="1">204</value>
@@ -2671,7 +2671,7 @@
 		</effects>
 	</skill>
 	<skill id="22" toLevel="13" name="Summon Vampiric Cubic">
-		<!-- <Summoning Skill> Summons a Vampiric Cubic that uses magic to drain the target's HP and restore its master's HP. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning Skill> Summons a Vampiric Cubic. The cubic uses magic to drain the target's HP and restore its master's HP. -->
 		<icon>icon.skill0022</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2766,7 +2766,7 @@
 		</effects>
 	</skill>
 	<skill id="24" toLevel="40" name="Burst Shot">
-		<!-- Fires an exploding arrow to attack the enemy's surroundings with $s1 power. Requires a bow. Critical. Over-hit. -->
+		<!-- Shoots exploding arrows. Inflicts damage on the target and nearby enemies with $s1 power. Critical. -->
 		<icon>icon.skill0024</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2963,7 +2963,7 @@
 		</effects>
 	</skill>
 	<skill id="25" toLevel="14" name="Summon Mechanic Golem">
-		<!-- <Summoning Skill> Summons Mechanic Golem. Consumes C-grade Crystals ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Mechanic Golem. -->
 		<icon>icon.skill0025</icon>
 		<hitTime>15000</hitTime>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -3131,7 +3131,7 @@
 		</effects>
 	</skill>
 	<skill id="28" toLevel="57" name="Aggression">
-		<!-- <Skill with fixed cooldown> Provokes nearby enemies into attacking you. Power $s1. -->
+		<!-- <Skill with fixed cooldown> Provokes the enemy into attacking you. Power $s1. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -3330,7 +3330,7 @@
 		</effects>
 	</skill>
 	<skill id="29" toLevel="24" name="Iron Punch">
-		<!-- Attacks the enemy with $s1 power. Requires a fist weapon. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. -->
 		<icon>icon.skill0029</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -3460,7 +3460,7 @@
 		</effects>
 	</skill>
 	<skill id="30" toLevel="45" name="Backstab">
-		<!-- Backstabs the enemy with $s1 power. Requires a dagger. Critical. Over-hit. -->
+		<!-- A backstab. Strikes the enemy to a vital spot with $s1 power. Critical. -->
 		<icon>icon.skill0030</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3723,7 +3723,7 @@
 		</effects>
 	</skill>
 	<skill id="33" toLevel="13" name="Summon Phantom Cubic">
-		<!-- <Summoning Skill> Summons a Phantom Cubic that uses magic to decrease the target's P. Atk., P. Def., and Atk. Spd. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning Skill> Summons a Phantom Cubic The cubic uses magic to decrease the target's P. Atk., P. Def., and Atk. Spd. -->
 		<icon>icon.skill0033</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3818,7 +3818,7 @@
 		</effects>
 	</skill>
 	<skill id="34" toLevel="3" name="Bandage">
-		<!-- Cures character's minor bleeding/ poisoning. -->
+		<!-- Removes infection with a $s1 chance. -->
 		<icon>icon.skill0034</icon>
 		<effectPoint>
 			<value level="1">204</value>
@@ -3852,7 +3852,7 @@
 		</effects>
 	</skill>
 	<skill id="35" toLevel="31" name="Force Storm">
-		<!-- Attacks the target and nearby enemies. Power $s1. Requires a fist weapon. Critical. Over-hit. -->
+		<!-- Inflicts damage on the target and nearby enemies with $s1 power. Critical. -->
 		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4017,7 +4017,7 @@
 		</effects>
 	</skill>
 	<skill id="36" toLevel="55" name="Spinning Slasher">
-		<!-- Swings a spear to attack nearby enemies with $s1 power. Requires a spear. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0036</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4296,7 +4296,7 @@
 		</effects>
 	</skill>
 	<skill id="44" toLevel="3" name="Remedy">
-		<!-- Quickly cures character's minor bleeding/ poisoning. -->
+		<!-- Removes infection with a $s1 chance. -->
 		<icon>icon.skill0044</icon>
 		<effectPoint>
 			<value level="1">379</value>
@@ -4336,7 +4336,7 @@
 		</effects>
 	</skill>
 	<skill id="45" toLevel="15" name="Quick Heal">
-		<!-- Recovers HP with $s1 power. Consumes a large amount of MP. -->
+		<!-- Restores HP. Power $s1. -->
 		<icon>icon.skill0045</icon>
 		<effectPoint>
 			<value level="1">200</value>
@@ -4540,7 +4540,7 @@
 		</effects>
 	</skill>
 	<skill id="48" toLevel="55" name="Thunder Storm">
-		<!-- Swings a spear to attack nearby enemies with $s1 power. Inflicts stun for $s2 Requires a spear. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- <Shock skill> Attacks nearby enemies with $s1 power. Stuns for $s2 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0048</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -4808,7 +4808,7 @@
 		</effects>
 	</skill>
 	<skill id="49" toLevel="30" name="Holy Strike">
-		<!-- <Skill with fixed cooldown> Attacks the target with $s1 power. Deals additional damage to demons and undead. Over-hit. -->
+		<!-- <Skill with fixed cooldown> Attacks the target with $s1 power. Deals additional damage to demons and undead. -->
 		<icon>icon.skill0049</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -4960,7 +4960,7 @@
 		</effects>
 	</skill>
 	<skill id="50" toLevel="8" name="Focus Force">
-		<!-- Channels Momentum. Requires a fist weapon. Can be charged up to Lv. $s1. -->
+		<!-- Channels Momentum. Can be charged up to Lv. $s1. -->
 		<icon>icon.skill0050</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
@@ -5035,7 +5035,7 @@
 		</effects>
 	</skill>
 	<skill id="54" toLevel="57" name="Force Blaster">
-		<!-- Discharges a powerful energy beam at the enemy with $s1 power. Requires a fist weapon. Increases power upon consuming up to $s2 Momentum. Critical. Over-hit. -->
+		<!-- Discharges a powerful energy beam at the enemy with $s1 power. Increases power upon consuming Momentum. Critical. -->
 		<icon>icon.skill0054</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -5298,7 +5298,7 @@
 		</effects>
 	</skill>
 	<skill id="56" toLevel="24" name="Power Shot">
-		<!-- Shoots an arrow dealing damage with $s1 power. Requires a bow. Over-hit. -->
+		<!-- Makes a powerful shot. Power $s1. -->
 		<icon>icon.skill0056</icon>
 		<castRange>700</castRange>
 		<coolTime>500</coolTime>
@@ -5428,7 +5428,7 @@
 		</effects>
 	</skill>
 	<skill id="58" toLevel="55" name="Elemental Heal">
-		<!-- Restores the target's HP with $s1 Power. -->
+		<!-- Recovers HP using nature might. Power is $s1. -->
 		<icon>icon.skill0058</icon>
 		<effectPoint>
 			<value level="1">50</value>
@@ -5671,7 +5671,7 @@
 		</effects>
 	</skill>
 	<skill id="60" toLevel="1" name="Fake Death">
-		<!-- Plays dead to keep a monster from attacking. Consumes 10 MP per second. -->
+		<!-- When activated Monsters ignore the character. Constantly consumes MP. -->
 		<icon>icon.skill0060</icon>
 		<magicLevel>40</magicLevel>
 		<mpConsume>200</mpConsume>
@@ -5689,7 +5689,7 @@
 		</effects>
 	</skill>
 	<skill id="61" toLevel="3" name="Elven Spirit">
-		<!-- The Mother Tree's power grants a special protection. Poison Resistance +10% Bleed Resistance +10% -->
+		<!-- The Mother Tree's power grants a special protection. Infection Resistance $s1 Suppression Resistance $s1 -->
 		<icon>icon.skill0061</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -5724,7 +5724,7 @@
 		</effects>
 	</skill>
 	<skill id="65" toLevel="18" name="Horror">
-		<!-- Inflicts Fear on the enemy forcing them to flee for $s1 -->
+		<!-- <Fear Skill> The effect lasts for $s1 Frightens the enemy. -->
 		<icon>icon.skill0065</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -5830,7 +5830,7 @@
 		</effects>
 	</skill>
 	<skill id="67" toLevel="13" name="Summon Life Cubic">
-		<!-- <Summoning skill> Summons Life Cubic that casts regenerating spells on its owner and their party members. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning skill> Summons Life Cubic The cubic casts regenerating spells on its owner and their party members. -->
 		<icon>icon.skill0067</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5925,7 +5925,7 @@
 		</effects>
 	</skill>
 	<skill id="69" toLevel="36" name="Sacrifice">
-		<!-- Consumes your HP to recover $s1 HP of the target. -->
+		<!-- Consumes your HP to recover HP of the target. Power $s1. -->
 		<icon>icon.skill0069</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -6094,7 +6094,7 @@
 		</effects>
 	</skill>
 	<skill id="70" toLevel="60" name="Emergency Rescue">
-		<!-- If HP < 30%, HP Recovery Rate +$s1. -->
+		<!-- If HP < 30% HP Recovery Rate $s1 -->
 		<icon>icon.skill0070</icon>
 		<magicLevel>
 			<value level="1">10</value>
@@ -6229,7 +6229,7 @@
 		</effects>
 	</skill>
 	<skill id="72" toLevel="3" name="Iron Will">
-		<!-- M. Def. +$s1. -->
+		<!-- M. Def. +$s1 -->
 		<icon>icon.skill0072</icon>
 		<magicLevel>
 			<value level="1">43</value>
@@ -6250,7 +6250,7 @@
 		</effects>
 	</skill>
 	<skill id="75" toLevel="1" name="Detect Weakness">
-		<!-- For 20 min., damage to monsters +5%. Consumes 1 Spirit Ore. -->
+		<!-- The effect lasts for $s1 PvE damage $s2 -->
 		<icon>icon.skill0075</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -6314,7 +6314,7 @@
 		</effects>
 	</skill>
 	<skill id="77" toLevel="3" name="Ability to Attack">
-		<!-- P. Atk. +$s1. -->
+		<!-- The body is imbued with magical energy. P. Atk. +$s1 -->
 		<icon>icon.skill0077</icon>
 		<magicLevel>
 			<value level="1">10</value>
@@ -6335,7 +6335,7 @@
 		</effects>
 	</skill>
 	<skill id="78" toLevel="5" name="War Cry">
-		<!-- For $s1, P. Atk. +$s2. -->
+		<!-- The effect lasts for $s1 P. Atk. $s2 -->
 		<icon>icon.skill0078</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6381,7 +6381,7 @@
 		</effects>
 	</skill>
 	<skill id="80" toLevel="1" name="Belief">
-		<!-- Fear/ Silence Resistance +20. -->
+		<!-- Standing on a battlefield, the character is calm and undaunted. Fear Resistance $s1 Hold Resistance $s2 -->
 		<icon>icon.skill0080</icon>
 		<magicLevel>20</magicLevel>
 		<operateType>P</operateType>
@@ -6393,7 +6393,7 @@
 		</effects>
 	</skill>
 	<skill id="81" toLevel="3" name="Punch of Doom">
-		<!-- Strikes the target with $s1 power. Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Strikes the target with the iron fist dealing damage with $s1 power. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0081</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -6443,7 +6443,7 @@
 		</effects>
 	</skill>
 	<skill id="82" toLevel="3" name="Majesty">
-		<!-- For $s1, P. Def. +$s2, Max HP +$s3, P. Evasion -$s4. -->
+		<!-- The effect lasts for $s1 P. Def. +$s2 Max HP +$s3 P. Evasion -$s4 -->
 		<icon>icon.skill0082</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6536,7 +6536,7 @@
 		</effects>
 	</skill>
 	<skill id="84" toLevel="5" name="Poison Blade Dance">
-		<!-- Swords emit a toxic cloud that poisons nearby enemies with $s1 power. Requires dual swords. -->
+		<!-- <Infection Skill> Swords emit a toxic cloud. It poisons nearby enemies with $s1 power. -->
 		<icon>icon.skill0084</icon>
 		<abnormalLevel>
 			<value level="1">6</value>
@@ -6616,7 +6616,7 @@
 		</effects>
 	</skill>
 	<skill id="86" toLevel="3" name="Reflect Damage">
-		<!-- For $s1, reflects $s2 of the received damage back to the enemy. -->
+		<!-- The effect lasts for $s1 Reflects $s2 of the received damage. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -6659,7 +6659,7 @@
 		</effects>
 	</skill>
 	<skill id="87" toLevel="1" name="Struggle">
-		<!-- Character is standing against hardships. CP Recovery Rate +2. -->
+		<!-- The character is standing against hardships. CP Recovery Rate $s1 -->
 		<icon>icon.skill0087</icon>
 		<magicLevel>30</magicLevel>
 		<operateType>P</operateType>
@@ -6695,7 +6695,7 @@
 		</effects>
 	</skill>
 	<skill id="91" toLevel="2" name="Ability to Protect">
-		<!-- P. Def. +$s1. -->
+		<!-- The body is imbued with magical energy. P. Def. +$s1 -->
 		<icon>icon.skill0091</icon>
 		<magicLevel>
 			<value level="1">5</value>
@@ -6714,7 +6714,7 @@
 		</effects>
 	</skill>
 	<skill id="92" toLevel="60" name="Shield Stun">
-		<!-- Strikes the target with a shield with $s1 power, stunning them for $s2 Requires a shield. -->
+		<!-- <Shock skill> Attacks the enemy with the shield. Power $s1. Stuns for $s2 -->
 		<icon>icon.skill0092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -6995,7 +6995,7 @@
 		</effects>
 	</skill>
 	<skill id="94" toLevel="7" name="Rage">
-		<!-- For $s1, P. Atk. +$s2. When using a two-handed sword/ two-handed blunt/ polearm, additionally P. Atk. +$s3. When using a two-handed sword/ two-handed blunt, P. Accuracy +$s4. Requires a sword/ blunt/ polearm/ fist weapon/ dual swords. -->
+		<!-- Power of rage makes the character stronger. When using a sword/ blunt weapon/ spear/ fists/ dual swords P. Atk. $s1 When using a two-handed sword/ two-handed blunt weapon/ polearm Additionally P. Atk. $s2 When using a two-handed sword/ two-handed blunt weapon P. Accuracy $s3 -->
 		<icon>icon.skill0094</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -7103,7 +7103,7 @@
 		</effects>
 	</skill>
 	<skill id="95" toLevel="40" name="Cripple">
-		<!-- For $s1 target s Speed -$s2, Atk./ Casting Spd. -$s3. Requires fist weapon. -->
+		<!-- <Suppression skill> For $s1 Target's Atk. Spd. -$s2 Target's Casting Spd. -$s2 Target's Speed -$s2 -->
 		<icon>icon.skill0095</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -7434,7 +7434,7 @@
 		</effects>
 	</skill>
 	<skill id="96" toLevel="15" name="Bleed">
-		<!-- Throws a dagger to hit the enemy. Power $s1. For $s2, Speed -$s3, inflicts bleeding. Requires a dagger. -->
+		<!-- <Infection Skill> Attacks the enemy with $s1 power. The effect lasts for $s2 Speed $s3 HP constantly -$s4 -->
 		<icon>icon.skill0096</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -7578,7 +7578,7 @@
 		</effects>
 	</skill>
 	<skill id="97" toLevel="25" name="Sanctuary">
-		<!-- Because of holy ground enemies P. Def. -$s2 for $s1. -->
+		<!-- Releases the holy power. The effect lasts for $s1 P. Def. -$s2 -->
 		<icon>icon.skill0097</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -7685,7 +7685,7 @@
 		</effects>
 	</skill>
 	<skill id="98" toLevel="8" name="Symphony">
-		<!-- Attacks the target with $s1 power. For $s2 blocks magical skill usage. Critical. Over-hit. -->
+		<!-- <Silence Skill> Attacks the target with $s1 power. For $s2 blocks magical skill usage. Critical. -->
 		<icon>icon.skill0098</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -7753,7 +7753,7 @@
 		</effects>
 	</skill>
 	<skill id="99" toLevel="2" name="Rapid Shot">
-		<!-- Atk. Spd. +$s1 when using a bow. -->
+		<!-- When using a bow Atk. Spd. +$s1 -->
 		<icon>icon.skill0099</icon>
 		<magicLevel>
 			<value level="1">32</value>

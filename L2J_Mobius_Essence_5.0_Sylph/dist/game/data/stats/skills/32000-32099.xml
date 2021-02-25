@@ -85,7 +85,7 @@
 		<icon>icon.etc_marguene_collection_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32006" toLevel="1" name="Commander's Power">
+	<skill id="32006" toLevel="1" name="Commander s Power">
 		<!-- Inflicts 50 damage. Can be used only in PvP. -->
 		<icon>icon.weapon_shining_knife_i00</icon>
 		<operateType>A1</operateType>
@@ -442,7 +442,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32036" toLevel="1" name="Teleport Stone: Gludin Village">
+	<skill id="32036" toLevel="1" name="Teleport Stone: Gludin">
 		<!-- Teleports to Gludin. Cooldown: 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -469,7 +469,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32037" toLevel="1" name="Teleport Stone: Town of Gludio">
+	<skill id="32037" toLevel="1" name="Teleport Stone: Gludio">
 		<!-- Teleports to Gludio. Cooldown: 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -496,7 +496,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32038" toLevel="1" name="Teleport Stone: Town of Dion">
+	<skill id="32038" toLevel="1" name="Teleport Stone: Dion">
 		<!-- Teleports to Dion. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
@@ -508,13 +508,13 @@
 		<hitTime>20000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="32040" toLevel="1" name="Teleport Stone: Town of Giran">
+	<skill id="32040" toLevel="1" name="Teleport Stone: Giran">
 		<!-- Teleports to Giran. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="32041" toLevel="1" name="Teleport Stone: Town of Oren">
+	<skill id="32041" toLevel="1" name="Teleport Stone: Oren">
 		<!-- Teleports to Oren. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
@@ -526,13 +526,13 @@
 		<hitTime>20000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="32043" toLevel="1" name="Teleport Stone: Hunter's Village">
+	<skill id="32043" toLevel="1" name="Teleport Stone: Hunters' Village">
 		<!-- Teleports to Hunters Village. Cooldown - 60 min. -->
 		<operateType>A1</operateType>
 		<hitTime>20000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
-	<skill id="32044" toLevel="1" name="Teleport: Entrance to Cruma Tower">
+	<skill id="32044" toLevel="1" name="Teleport Stone: Entrance to Cruma Tower">
 		<!-- Teleports to Entrance to Cruma Tower. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -559,7 +559,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32045" toLevel="1" name="Teleport: Entrance to Dragon Valley">
+	<skill id="32045" toLevel="1" name="Teleport Stone: Entrance to Dragon Valley">
 		<!-- Teleports to Entrance to Dragon Valley. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -586,7 +586,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32046" toLevel="1" name="Teleport: Dragon Valley Bridge">
+	<skill id="32046" toLevel="1" name="Teleport Stone: Dragon Valley Bridge">
 		<!-- Teleports to Dragon Valley Bridge. Cooldown - 60 min. -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

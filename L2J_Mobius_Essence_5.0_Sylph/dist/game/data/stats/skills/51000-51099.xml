@@ -178,7 +178,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51026" toLevel="1" name="Summon Aries Agathion">
+	<skill id="51026" toLevel="1" name="Summon Agathion Aries">
 		<!-- Releases the seal of Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -201,7 +201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51028" toLevel="1" name="Summon Pisces Agathion">
+	<skill id="51028" toLevel="1" name="Summon Agathion Pisces">
 		<!-- Releases the seal of Agathion Pisces. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -216,7 +216,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51029" toLevel="1" name="Summon Cancer Agathion">
+	<skill id="51029" toLevel="1" name="Summon Agathion Cancer">
 		<!-- Releases the seal of Agathion Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -400,13 +400,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="70024" count="1" /> <!-- Daily Coin - Not available -->
+						<item id="70024" count="1" /> <!-- Daily Coin - Not Available - Not available -->
 					</item>
 					<item chance="33">
 						<item id="1419" count="1" /> <!-- Proof of Blood -->
 					</item>
 					<item chance="34">
-						<item id="29648" count="1" /> <!-- XP/SP Scroll - Normal - Not available -->
+						<item id="29648" count="1" /> <!-- XP/SP Scroll - Normal - Not Available - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -440,13 +440,13 @@
 						<item id="90012" count="1" /> <!-- Low-grade Life Stone - Weapon -->
 					</item>
 					<item chance="20">
-						<item id="70024" count="2" /> <!-- Daily Coin - Not available -->
+						<item id="70024" count="2" /> <!-- Daily Coin - Not Available - Not available -->
 					</item>
 					<item chance="20">
 						<item id="1419" count="2" /> <!-- Proof of Blood -->
 					</item>
 					<item chance="20">
-						<item id="29648" count="2" /> <!-- XP/SP Scroll - Normal - Not available -->
+						<item id="29648" count="2" /> <!-- XP/SP Scroll - Normal - Not Available - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -477,13 +477,13 @@
 						<item id="90012" count="1" /> <!-- Low-grade Life Stone - Weapon -->
 					</item>
 					<item chance="25">
-						<item id="70024" count="3" /> <!-- Daily Coin - Not available -->
+						<item id="70024" count="3" /> <!-- Daily Coin - Not Available - Not available -->
 					</item>
 					<item chance="25">
-						<item id="29649" count="4" /> <!-- XP/SP Scroll - Medium - Not available -->
+						<item id="29649" count="4" /> <!-- XP/SP Scroll - Medium - Not Available - Not available -->
 					</item>
 					<item chance="25">
-						<item id="29648" count="4" /> <!-- XP/SP Scroll - Normal - Not available -->
+						<item id="29648" count="4" /> <!-- XP/SP Scroll - Normal - Not Available - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -517,7 +517,7 @@
 						<item id="90012" count="1" /> <!-- Low-grade Life Stone - Weapon -->
 					</item>
 					<item chance="11">
-						<item id="70024" count="5" /> <!-- Daily Coin - Not available -->
+						<item id="70024" count="5" /> <!-- Daily Coin - Not Available - Not available -->
 					</item>
 					<item chance="11">
 						<item id="90013" count="1" /> <!-- Mid-grade Life Stone - Weapon -->
@@ -535,7 +535,7 @@
 						<item id="947" count="1" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
 					</item>
 					<item chance="11">
-						<item id="29649" count="1" /> <!-- XP/SP Scroll - Medium - Not available -->
+						<item id="29649" count="1" /> <!-- XP/SP Scroll - Medium - Not Available - Not available -->
 					</item>
 				</items>
 			</effect>
@@ -547,7 +547,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="51043" toLevel="1" name="XP Scroll: 10,000,000">
+	<skill id="51043" toLevel="1" name="XP Scroll: 10M">
 		<!-- XP +10,000,000. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
@@ -566,7 +566,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51044" toLevel="1" name="XP Scroll: 50,000,000">
+	<skill id="51044" toLevel="1" name="XP Scroll: 50M">
 		<!-- XP +50,000,000. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
@@ -585,7 +585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51045" toLevel="1" name="XP Scroll: 100,000,000">
+	<skill id="51045" toLevel="1" name="XP Scroll: 100M">
 		<!-- XP +100,000,000. -->
 		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
@@ -620,7 +620,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="51048" toLevel="1" name="Quality Agathion Enchant Scroll">
+	<skill id="51048" toLevel="1" name="Scroll: Enchant High-grade Agathion">
 		<icon>icon.star_giantscrl_of_ench_ag</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -641,7 +641,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="51050" toLevel="1" name="Raid Lucky Charm">
-		<!-- Chance of dropping items and player's death XP penalty -50% when character dies. Cannot be used by chaotic characters. -->
+		<!-- Death XP Penalty -50%. Cannot be used by chaotic characters. -->
 		<icon>icon.etc_cross_of_einhasad_i00</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -830,7 +830,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="51070" toLevel="3" name="Dragon's Miracle Potion">
-		<!-- Restores Sayha's Grace points. For 20 min., Acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%, Sayha's Grace Consumption -10%. With a certain chance, absorbs 5% of the inflicted damage as HP. Can be stacked up to 3 times. The effect remains after death. -->
+		<!-- Recovers Sayha's Grace points. For 20 min., acquired XP/ SP +20%, P./ M. Atk. +12%, P./ M. Def. +15%, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +5%, HP/ MP/ CP +25%, HP/ MP Recovery Rate +30%, Sayha's Grace Consumption -10%. With a certain chance, absorbs 5% of the inflicted damage as HP. The Dragon's Miracle Potion effect stacks up to 3 times. The effect remains after death. -->
 		<icon>
 			<value level="1">icon.bm_dragon_posion_brave_1</value>
 			<value level="2">icon.bm_dragon_posion_brave_2</value>
@@ -1186,7 +1186,7 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="51099" toLevel="1" name="Transformation into Kat the Cat">
+	<skill id="51099" toLevel="1" name="Transform: Kat the Cat">
 		<!-- Kat the Cat transformation. Max HP/ MP +20%, Acquired XP/ SP +20% while Sayha's Grace is active. The effect remains after death. -->
 		<icon>icon.cat_the_cat_change_0</icon>
 		<operateType>A1</operateType>

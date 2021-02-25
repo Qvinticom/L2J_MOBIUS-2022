@@ -308,7 +308,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="50035" toLevel="1" name="Aqua Arrow">
-		<!-- Attacks with 260 Power added to M. Atk. Freezes the target for 30 sec. -->
+		<!-- Deals magic damage to the target. Power 260. Freezes the target for 30 sec. -->
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
@@ -1059,7 +1059,7 @@
 		</effects>
 	</skill>
 	<skill id="50094" toLevel="6" name="Shadow's Despair">
-		<!-- Nightshade's debuff magic. Nearby enemy's Sleep/ Hold/ Stun/ Mental/ Pull/ Knockdown Resistance -$s1. -->
+		<!-- Nightshade's debuff magic. Nearby enemy's Sleep/ Hold/ Shock/ Paralysis/ Fear/ Silence/ Pull Resistance -$s1. -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<icon>icon.skill50094</icon>

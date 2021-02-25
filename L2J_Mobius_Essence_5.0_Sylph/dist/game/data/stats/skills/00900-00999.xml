@@ -842,14 +842,14 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14918</npcId>
+				<npcId>14918</npcId> <!-- Cat Emperor -->
 				<consumeItemId>1461</consumeItemId> <!-- A-grade Crystal -->
 				<consumeItemCount>1</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="913" toLevel="1" name="Deflect Magic">
-		<!-- M. Damage Resistance +60%. -->
+		<!-- M. Damage Resistance +60% -->
 		<icon>icon.skill0913</icon>
 		<magicLevel>77</magicLevel>
 		<operateType>P</operateType>
@@ -862,7 +862,7 @@
 		</effects>
 	</skill>
 	<skill id="914" toLevel="1" name="Immunity Barrier">
-		<!-- Elven blessing that protects against hostile magic. Grants immunity to $s1 debuff(s). -->
+		<!-- Elven blessing that protects against hostile magic. Grants immunity to $s1 debuff(s) and anomaly state(s). -->
 		<icon>icon.skill0914</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>120</abnormalTime>
@@ -892,7 +892,7 @@
 		</effects>
 	</skill>
 	<skill id="915" toLevel="1" name="Moving Shadows">
-		<!-- Hides yourself in shadows. P. Atk. $s1 Protects from preemptive attacks from monsters. Consumes MP while active. -->
+		<!-- When activated P. Atk. $s1 Prevents preemptive attacks from monsters. Constantly consumes MP. -->
 		<icon>icon.skill0915</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>DANCE_OF_BERSERKER</abnormalType>
@@ -926,7 +926,7 @@
 		</effects>
 	</skill>
 	<skill id="916" toLevel="4" name="Shield Deflect Magic">
-		<!-- For $s1, reflects magical damage back to the enemy caster. Requires a shield. -->
+		<!-- For $s1, transfers magical damage back to the enemy caster. -->
 		<icon>icon.skill0916</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
@@ -966,7 +966,7 @@
 		</effects>
 	</skill>
 	<skill id="917" toLevel="1" name="Final Secret">
-		<!-- P. Skill Power $s1 PvP damage from standard attacks $s2 Bow Resistance $s3 M. Damage Resistance $s3 Duration: $s4 -->
+		<!-- For $s4 P. Skill Power $s1 PvP damage from standard attacks $s2 Bow Resistance $s3 M. Damage Resistance $s3 -->
 		<icon>icon.skill0917</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1003,7 +1003,7 @@
 		</effects>
 	</skill>
 	<skill id="918" toLevel="1" name="Maximum Force Focus">
-		<!-- Immediately increases Momentum to its maximum level. Available if the charge is below 8th level. Requires a fist weapon. -->
+		<!-- Increases Momentum to its maximum level. Available if the charge is below 8th level. -->
 		<icon>icon.skill0918</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
@@ -1030,7 +1030,7 @@
 		</effects>
 	</skill>
 	<skill id="919" toLevel="1" name="Maximum Sonic Focus">
-		<!-- Immediately increases Momentum to its maximum level. Available if the charge is below 8th level. Requires dual swords. -->
+		<!-- Increases Momentum to its maximum level. Available if the charge is below 8th level. -->
 		<icon>icon.skill0919</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
@@ -1240,7 +1240,7 @@
 		</effects>
 	</skill>
 	<skill id="921" toLevel="15" name="Spike Thrust">
-		<!-- Attacks the target with $s1 power. Requires a spear. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
+		<!-- Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0921</icon>
 		<effectPoint>
 			<value level="1">-400</value>
@@ -1335,7 +1335,7 @@
 		</effects>
 	</skill>
 	<skill id="922" toLevel="4" name="Hide">
-		<!-- <Skill with fixed cooldown> Grants invisibility for $s1.The effect is cancelled upon any action except movement. -->
+		<!-- <Skill with fixed cooldown> For $s1 Grants invisibility. Upon any action except movement The effect is cancelled -->
 		<icon>icon.skill0922</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalType>HIDE</abnormalType>
@@ -3581,7 +3581,7 @@
 		</effects>
 	</skill>
 	<skill id="964" toLevel="1" name="Children of Shillien">
-		<!-- M. Atk. +20, MP Recovery Bonus +5%. -->
+		<!-- M. Atk. +20 MP Recovery Rate +5% -->
 		<icon>icon.skill0294</icon>
 		<magicLevel>14</magicLevel>
 		<operateType>P</operateType>
@@ -4384,7 +4384,7 @@
 		</effects>
 	</skill>
 	<skill id="984" toLevel="30" name="Shield Strike">
-		<!-- Attacks the enemy using a shield with $s1 power, and provokes the enemy. Requires a shield. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
+		<!-- Attacks the enemy using a shield with $s1 power, and provokes the enemy. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0984</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -4805,7 +4805,7 @@
 		</effects>
 	</skill>
 	<skill id="990" toLevel="1" name="Death Sting">
-		<!-- Shoots an arrow of death at the enemy with 13,006 power. Additionally, blocks magic skills usage for 3 sec. Requires a bow. Over-hit. -->
+		<!-- <Silence Skill> Shoots an arrow of death at the enemy. Deals physical damage with 13006 power. For 3 sec., blocks magical skill usage. Critical. -->
 		<icon>icon.skill0990</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -4885,7 +4885,7 @@
 		</effects>
 	</skill>
 	<skill id="992" toLevel="8" name="Sonic Mastery">
-		<!-- Absorbs the target's Momentum with a $s1 chance after a regular physical attack and a $s2 chance after a critical physical attack. Requires a sword, a blunt weapon, or dual swords. Absorbs Momentum up to Lv. $s3. -->
+		<!-- With a $s1 chance, absorbs the target's Momentum after a standard attack. After a physical critical attack, the chance to absorb Momentum is $s2. After using physical skills, the chance is $s3. Requires a sword, a blunt weapon or dual swords. Recover Momentum is available up to Lv. $s4. -->
 		<icon>icon.skill0992</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -4984,7 +4984,7 @@
 		</effects>
 	</skill>
 	<skill id="993" toLevel="8" name="Force Mastery">
-		<!-- Has a $s1 chance to absorb the target's Momentum after a standard attack. Has a $s2 chance to absorb the target's Momentum after a physical critical attack. Has a $s3 chance to absorb the target's Momentum after using physical skills. Required a fist weapon. Absorbs Momentum up to Lv. $s4. -->
+		<!-- With a $s1 chance, absorbs the target's Momentum after a standard attack. After a physical critical attack, the chance to absorb Momentum is $s2. After using physical skills, the chance is $s3. Requires a fist weapon. Recover Momentum is available up to Lv. $s4. -->
 		<icon>icon.skill0993</icon>
 		<magicLevel>
 			<value level="1">24</value>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1800" toLevel="1" name="Pirate Transformation">
-		<!-- For 20 min., Max HP/ MP +3%, P./ M. Accuracy +1, P./ M. Atk. and P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +3. <Item consumption> 1 Elemental Stone <Story> This pirate once ruled the ancient lands of Giran. His own crew started a riot, but didn t manage to cope with their captain that became even more powerful with the dark forces. Zaken killed all the remaining rebels and disappeared. -->
+		<!-- For 20 min. Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s2 P. Def. $s2 M. Def. $s2 Atk. Spd. $s2 P. Accuracy $s3 M. Accuracy $s3 M. Skill Critical Rate $s4 Speed $s5 <Story> This pirate once ruled the ancient lands of Giran. His own crew started a riot, but didn t manage to cope with their captain that became even more powerful with the dark forces. Zaken killed all the remaining rebels and disappeared. -->
 		<icon>icon.skill1800</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -70,7 +70,7 @@
 		</effects>
 	</skill>
 	<skill id="1801" toLevel="1" name="Dark Assassin Transformation">
-		<!-- For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. and P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. <Item consumption> 1 Elemental Stone <Story> A powerful organization of assassins founded by Mercenary Captain Sieghardt Ein to carry out secret missions. After creating the Dawn Organization, Sieghardt Ein disappeared without a trace, but the society continues to operate from the shadows. -->
+		<!-- For 20 min. Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s2 P. Def. $s2 M. Def. $s2 Atk. Spd. $s3 P. Accuracy $s4 M. Accuracy $s4 M. Skill Critical Rate $s5 Speed $s6 <Story> A powerful organization of assassins founded by Mercenary Captain Sieghardt Ein to carry out secret missions. After creating the Dawn Organization, Sieghardt Ein disappeared without a trace, but the society continues to operate from the shadows. -->
 		<icon>icon.skill1801</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -139,7 +139,7 @@
 		</effects>
 	</skill>
 	<skill id="1802" toLevel="1" name="White Assassin Transformation">
-		<!-- For 20 min., Max HP/ MP +7%, P./ M. Accuracy +2, P./ M. Atk. +3%, P./ M. Def. +3%, Atk. Spd. +5%, M. Skill Critical Rate +20, Speed +5. <Supply Consumption> Requires 2 Elemental Stones. <Story> Rune noble Erica Ken Weber was the right hand of Sieghardt Ein. She wasn t influenced by the organization of dark assassins. She created an organization of white assassins in her own interests, continuing to be an informer. -->
+		<!-- For 20 min. Max HP $s1 Max MP $s1 P. Atk. $s2 M. Atk. $s2 P. Def. $s2 M. Def. $s2 Atk. Spd. $s3 P. Accuracy $s4 M. Accuracy $s4 M. Skill Critical Rate $s5 Speed $s6 <Story> Rune noble Erica Ken Weber was the right hand of Sieghardt Ein. She wasn t influenced by the organization of dark assassins. She created an organization of white assassins in her own interests, continuing to be an informer. -->
 		<icon>icon.skill1802</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -535,7 +535,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1829" toLevel="4" name="Spell Master">
-		<!-- M. Atk. +$s1, Casting Spd. +$s2. -->
+		<!-- M. Atk. $s1 Casting Spd. $s2 -->
 		<icon>icon.skill1901</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -561,7 +561,7 @@
 		</effects>
 	</skill>
 	<skill id="1830" toLevel="4" name="Spell Master">
-		<!-- M. Atk. +$s1, Casting Spd. +$s2. -->
+		<!-- M. Atk. $s1 Casting Spd. $s2 -->
 		<icon>icon.skill1908</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -582,7 +582,7 @@
 		</effects>
 	</skill>
 	<skill id="1831" toLevel="4" name="Spell Master">
-		<!-- M. Atk. +$s1, Casting Spd. +$s2. -->
+		<!-- M. Atk. $s1 Casting Spd. $s2 -->
 		<icon>icon.skill1911</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -603,7 +603,7 @@
 		</effects>
 	</skill>
 	<skill id="1832" toLevel="4" name="Spell Master">
-		<!-- M. Atk. +$s1, Casting Spd. +$s2. -->
+		<!-- M. Atk. $s1 Casting Spd. $s2 -->
 		<icon>icon.skill1916</icon>
 		<magicLevel>40</magicLevel>
 		<operateType>P</operateType>
@@ -1073,7 +1073,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1867" toLevel="5" name="Clan Exuberance">
-		<!-- Clan members' HP/ MP/ CP Recovery Rate +$s1, Acquired XP/ SP +$s2, Received PvE Damage -$s3, Sayha's Grace Consumption -$s4. -->
+		<!-- HP/ MP/ CP Recovery Rate $s1 Acquired XP/ SP $s2 Received PvE damage $s3 Sayha's Grace Consumption $s4 -->
 		<icon>icon.skill19014</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1121,7 +1121,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="1896" toLevel="4" name="Full Knockdown">
-		<!-- Strikes the target with $s1 power knocking them down for $s2. Requires a sword, blunt weapon, spear, fist weapon, or dual swords. Critical. Ignores Shield Defense. -->
+		<!-- <Knockback skill> Attacks the target with $s1 power, knocking them down for $s2 Ignores Shield Defense. Critical. -->
 		<icon>icon.skill1896</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1192,7 +1192,7 @@
 		</effects>
 	</skill>
 	<skill id="1897" toLevel="15" name="Mass Stigma of Shillien">
-		<!-- By the Shillien's curse, the target's and nearby enemies' Weapon Atk. Resistance -$s2, M. Def. -$s3 for $s1 -->
+		<!-- Debuffs nearby enemies with the Shillien's curse. The effect lasts for $s1 Weapon Resistance -$s2 M. Def. -$s3 -->
 		<icon>icon.skill1897</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1441,7 +1441,7 @@
 		</effects>
 	</skill>
 	<skill id="1898" toLevel="9" name="Shield Charge">
-		<!-- Attacks enemies at the front with $s1 power, stunning them for $s2. Requires a shield. Over-hit. -->
+		<!-- <Shock skill> Attacks the enemy with the shield. Power $s1. Stuns the enemies affected by the skill for $s2 -->
 		<icon>icon.skill1898</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>

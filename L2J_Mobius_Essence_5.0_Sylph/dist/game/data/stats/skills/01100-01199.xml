@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1100" toLevel="2" name="Chill Flame">
-		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per sec. for $s1 -->
+		<!-- <Infection skill> Freezing flame strikes the enemy. Deals continuous damage for $s1 -->
 		<icon>icon.skill1100</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -52,7 +52,7 @@
 		</effects>
 	</skill>
 	<skill id="1101" toLevel="2" name="Blaze Quake">
-		<!-- Ignites nearby enemies, causing loss of $s2 HP per sec. for $s1 -->
+		<!-- <Infection Skill> Sets opponents in range ablaze. Deals continuous damage for $s1 -->
 		<icon>icon.skill1101</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -104,7 +104,7 @@
 		</effects>
 	</skill>
 	<skill id="1102" toLevel="6" name="Aura Sink">
-		<!-- Burns up the enemy's MP with $s1 power. Causes loss of $s3 MP per sec. for $s2 -->
+		<!-- <Infection Skill> Burns up the enemy's MP with $s1 power. Causes loss of $s3 MP per sec. for $s2 -->
 		<icon>icon.skill1102</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -189,7 +189,7 @@
 		</effects>
 	</skill>
 	<skill id="1104" toLevel="22" name="Seal of Winter">
-		<!-- Nearby enemies' Atk. Spd. -$s2 for $s1 -->
+		<!-- When attacking skills are used, there is a certain chance For $s1, target's Atk. Spd. $s2 (Probability: $s3. Atk. Spd.: $s4) Seal of Chaos and Seal of Slow share its cooldown. -->
 		<icon>icon.skill1104</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -312,7 +312,7 @@
 		</effects>
 	</skill>
 	<skill id="1105" toLevel="18" name="Madness">
-		<!-- Confuses the enemy into attacking random targets. -->
+		<!-- Swaps the enemy's target for a random one. -->
 		<icon>icon.skill1105</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -411,7 +411,7 @@
 		</effects>
 	</skill>
 	<skill id="1107" toLevel="2" name="Frost Flame">
-		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per sec. for $s1 -->
+		<!-- <Infection skill> Deadly freezing flame strikes the enemy. Deals continuous damage for $s1 -->
 		<icon>icon.skill1107</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -462,7 +462,7 @@
 		</effects>
 	</skill>
 	<skill id="1108" toLevel="4" name="Seal of Flame">
-		<!-- Ignites nearby enemies, causing loss of $s2 HP per sec. for $s1 -->
+		<!-- <Infection skill> Sets nearby enemies on fire. Deals continuous damage for $s1 -->
 		<icon>icon.skill1108</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -526,7 +526,7 @@
 		</effects>
 	</skill>
 	<skill id="1111" toLevel="18" name="Summon Kat the Cat">
-		<!-- <Summoning Skill> Summons Kat the Cat. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Kat the Cat. -->
 		<icon>icon.skill1111</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -645,7 +645,7 @@
 		</effects>
 	</skill>
 	<skill id="1126" toLevel="42" name="Servitor Recharge">
-		<!-- Recovers the servitor's MP with up to $s1 Power depending on the servitor's level. -->
+		<!-- Recovers servitor's MP. Power $s1. The MP recovery effect depends on servitor's MP. -->
 		<icon>icon.skill1126</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1174,7 +1174,7 @@
 		</effects>
 	</skill>
 	<skill id="1128" toLevel="18" name="Summon Shadow">
-		<!-- <Summoning Skill> Summons Shadow. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Shadow. -->
 		<icon>icon.skill1128</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1312,7 +1312,7 @@
 		</effects>
 	</skill>
 	<skill id="1129" toLevel="8" name="Summon Reanimated Man">
-		<!-- <Summoning Skill> Summons Reanimated Man. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Reanimated Man. -->
 		<icon>icon.skill1129</icon>
 		<hitTime>3500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1383,7 +1383,7 @@
 		</effects>
 	</skill>
 	<skill id="1139" toLevel="2" name="Servitor Magic Shield">
-		<!-- For $s1, servitor's M. Def. +$s2. -->
+		<!-- For $s1s servitor's M. Def. +$s2 -->
 		<icon>icon.skill1139</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -1424,7 +1424,7 @@
 		</effects>
 	</skill>
 	<skill id="1140" toLevel="3" name="Servitor Physical Shield">
-		<!-- For $s1, servitor's P. Def. +$s2. -->
+		<!-- For $s1 servitor's P. Def. +$s2 -->
 		<icon>icon.skill1140</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1470,7 +1470,7 @@
 		</effects>
 	</skill>
 	<skill id="1141" toLevel="2" name="Servitor Haste">
-		<!-- For $s1, servitor's Atk. Spd. +$s2. -->
+		<!-- For $s1 servitor's Atk. Spd. +$s2 -->
 		<icon>icon.skill1141</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1511,7 +1511,7 @@
 		</effects>
 	</skill>
 	<skill id="1144" toLevel="2" name="Servitor Wind Walk">
-		<!-- For $s1, servitor's Speed +$s2. -->
+		<!-- For $s1 servitor's Speed +$s2 -->
 		<icon>icon.skill1144</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1552,7 +1552,7 @@
 		</effects>
 	</skill>
 	<skill id="1145" toLevel="3" name="Servitor Magic Boost">
-		<!-- For $s1, servitor's M. Atk. +$s2. -->
+		<!-- For $s1 servitor's M. Atk. +$s2 -->
 		<icon>icon.skill1145</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1598,7 +1598,7 @@
 		</effects>
 	</skill>
 	<skill id="1146" toLevel="3" name="Mighty Servitor">
-		<!-- For $s1, servitor's P. Atk. +$s2. -->
+		<!-- For $s1 servitor's P. Atk. +$s2 -->
 		<icon>icon.skill1146</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1644,7 +1644,7 @@
 		</effects>
 	</skill>
 	<skill id="1147" toLevel="6" name="Fireball">
-		<!-- Creates a fireball. Inflicts magic damage on the enemy with $s1 power. Casting speed is unchanged. -->
+		<!-- <Fixed cast time skill> Creates a fireball. Inflicts magic damage on the enemy with $s1 power. -->
 		<icon>icon.skill1147</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1688,7 +1688,7 @@
 		</effects>
 	</skill>
 	<skill id="1148" toLevel="30" name="Death Spike">
-		<!-- Throws a bone to inflict damage on the enemy with $s1 power. Consumes one Cursed Bone. -->
+		<!-- Attacks with dark energy. Deals great damage to the enemy with $s1 power. The skill is available after the 3nd class change. Consumes 1 Cursed Bone. -->
 		<icon>icon.skill1148</icon>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1970,7 +1970,7 @@
 		</effects>
 	</skill>
 	<skill id="1154" toLevel="6" name="Summon Corrupted Man">
-		<!-- <Summoning Skill> Summons Corrupted Man. Consumes Spirit Ore ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Corrupted Man. -->
 		<icon>icon.skill1154</icon>
 		<!-- set name="castRange" val="40" / -->
 		<!-- set name="effectRange" val="400" / -->
@@ -2033,7 +2033,7 @@
 		</effects>
 	</skill>
 	<skill id="1155" toLevel="23" name="Corpse Burst">
-		<!-- Detonates a corpse to inflict damage on the nearby enemies with $s1 power added to M. Atk. -->
+		<!-- Detonates a corpse. Deals magic damage to nearby enemies with $s1 power. -->
 		<icon>icon.skill1155</icon>
 		<affectRange>150</affectRange>
 		<castRange>400</castRange>
@@ -2183,7 +2183,7 @@
 		</effects>
 	</skill>
 	<skill id="1156" toLevel="13" name="Forget">
-		<!-- Takes away the enemy's will to attack. -->
+		<!-- The character stops attacking. -->
 		<icon>icon.skill1156</icon>
 		<castRange>600</castRange>
 		<effectRange>900</effectRange>
@@ -2311,7 +2311,7 @@
 		</effects>
 	</skill>
 	<skill id="1159" toLevel="30" name="Curse Death Link">
-		<!-- Transfers your pain to the enemy with $s1 power. The lower your HP, the stronger the skill effect. -->
+		<!-- Transfers your pain to the enemy. Deals magic damage with $s1 power. The lower your HP, the stronger the skill effect. -->
 		<icon>icon.skill1159</icon>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -2490,7 +2490,7 @@
 		</effects>
 	</skill>
 	<skill id="1160" toLevel="17" name="Slow">
-		<!-- For $s1, enemy's Speed -$s2. -->
+		<!-- <Suppression skill> The effect lasts for $s1 The enemy's Speed -$s2 -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -2712,7 +2712,7 @@
 		</effects>
 	</skill>
 	<skill id="1164" toLevel="26" name="Weakness">
-		<!-- For $s1, the enemy's P./ M. Atk. -$s2. -->
+		<!-- Weakens the target. The effect lasts for $s1 P. Atk. -$s2 M. Atk. -$s2 -->
 		<icon>icon.skill1164</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2935,7 +2935,7 @@
 		</effects>
 	</skill>
 	<skill id="1167" toLevel="7" name="Poisonous Cloud">
-		<!-- Creates a venomous cloud. For $s1, poisons the target and enemies around it, taking $s2 HP every sec. -->
+		<!-- <Infection Skill> The effect lasts for $s1 Poisons the target and nearby enemies. -->
 		<icon>icon.skill1167</icon>
 		<abnormalLevel>
 			<value level="1">3</value>
@@ -3019,7 +3019,7 @@
 		</effects>
 	</skill>
 	<skill id="1168" toLevel="10" name="Poison">
-		<!-- Poisons the target, causing them to lose HP every second for $s1 -->
+		<!-- <Infection Skill> The effect lasts for $s1 Poisons the target. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -3118,7 +3118,7 @@
 		</effects>
 	</skill>
 	<skill id="1169" toLevel="16" name="Curse Fear">
-		<!-- Inflicts Fear on the enemy forcing them to flee for $s1 -->
+		<!-- <Fear Skill> The effect lasts for $s1 Frightens the enemy. -->
 		<icon>icon.skill1169</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -3216,7 +3216,7 @@
 		</effects>
 	</skill>
 	<skill id="1170" toLevel="20" name="Anchor">
-		<!-- Slowly strengthens your body for $s1 Paralyzes enemies for $s2 -->
+		<!-- <Paralyzing Skill> For $s2, slowly stiffens the target's body, paralyzing them for $s1 -->
 		<icon>icon.skill1170</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>
@@ -3345,7 +3345,7 @@
 		</endEffects>
 	</skill>
 	<skill id="1171" toLevel="27" name="Blazing Circle">
-		<!-- Spreads ring-shaped flames to inflict fire damage on nearby enemies with $s1 power. -->
+		<!-- A flame wreath hurts nearby enemies. Deals magic damage with $s1 power. -->
 		<icon>icon.skill1171</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3577,7 +3577,7 @@
 		</effects>
 	</skill>
 	<skill id="1174" toLevel="31" name="Frost Wall">
-		<!-- Raises a wall of ice that inflicts Water damage on enemies with $s1 Power added to M. Atk. -->
+		<!-- Summons an ice wall. Attacks enemies in front of the character with magic. Power $s1. -->
 		<icon>icon.skill1174</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3765,7 +3765,7 @@
 		</effects>
 	</skill>
 	<skill id="1175" toLevel="40" name="Aqua Swirl">
-		<!-- Releases a water vortex. Inflicts water damage with $s1 power. -->
+		<!-- Releases a water vortex. Inflicts magic damage with $s1 power. -->
 		<icon>icon.skill1175</icon>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -3952,7 +3952,7 @@
 		</effects>
 	</skill>
 	<skill id="1176" toLevel="23" name="Tempest">
-		<!-- Stirs up a hurricane that inflicts Wind damage on the target and nearby enemies with $s1 power. -->
+		<!-- Creates a furious storm. Inflicts damage on the target and nearby enemies $s1 power. -->
 		<icon>icon.skill1176</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -4099,7 +4099,7 @@
 		</effects>
 	</skill>
 	<skill id="1177" toLevel="5" name="Wind Strike">
-		<!-- Creates a powerful hurricane. Inflicts wind damage on the enemy with $s1 power. -->
+		<!-- Creates a powerful hurricane. Inflicts magic damage on the enemy with $s1 power. -->
 		<icon>icon.skill1177</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -4388,7 +4388,7 @@
 		</effects>
 	</skill>
 	<skill id="1181" toLevel="3" name="Flame Strike">
-		<!-- Launches a flaming swath of energy. Inflicts fire damage on the target and nearby enemies with $s1 power. -->
+		<!-- Launches a flaming swath of energy. Inflicts damage on the target and nearby enemies with $s1 power. -->
 		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -4486,7 +4486,7 @@
 		</effects>
 	</skill>
 	<skill id="1183" toLevel="4" name="Freezing Shackle">
-		<!-- Freezes the enemy with a powerful cold wind, causing loss of $s2 HP per sec. for $s1 -->
+		<!-- <Infection skill> Freezes enemies with cold flames. Deals continuous damage for $s1 -->
 		<icon>icon.skill1183</icon>
 		<abnormalLevel>
 			<value level="1">5</value>
@@ -4549,7 +4549,7 @@
 		</effects>
 	</skill>
 	<skill id="1184" toLevel="10" name="Ice Bolt">
-		<!-- Momentarily freezes the surrounding air, inflicting damage on the enemy with $s1 power. For 30 sec. target's Speed -20%. -->
+		<!-- <Suppression Skill> Momentarily freezes the surrounding air. Inflicts magic damage on the enemy with $s1 power. For 30 sec. target's Speed -20%. -->
 		<icon>icon.skill1184</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

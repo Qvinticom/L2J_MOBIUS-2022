@@ -101,7 +101,7 @@
 		</effects>
 	</skill>
 	<skill id="4701" toLevel="13" name="Cure of Queen">
-		<!-- Has a $s1 chance to remove curses that decrease P. Accuracy, P./ M. Atk., Atk. Spd./ Casting Spd. and Speed from all party members. -->
+		<!-- A special magic of Feline Queen, it can remove curses. Removes Suppression, Accuracy Decrease State and P./ M. Atk. Decrease State from members. (Probability: $s1) -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">541</value>
@@ -379,7 +379,7 @@
 		</effects>
 	</skill>
 	<skill id="4704" toLevel="13" name="Cure of Seraphim">
-		<!-- Has a $s1 chance to remove curses that inflicts Sleep, Hold, Stun, Paralysis and Mental from all party members. -->
+		<!-- Seraphim's magic can remove curses. Removes Paralysis/ Shock/ Sleep/ Hold/ Fear/ Silence from party members. (Probability: $s1) -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">541</value>
@@ -760,7 +760,7 @@
 		</effects>
 	</skill>
 	<skill id="4707" toLevel="13" name="Shade Sacrifice">
-		<!-- Nightshade special HP recovery magic. Sacrifices one's own HP to restore HP of nearby allies. Power $s1 -->
+		<!-- Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power $s1. -->
 		<effectPoint>
 			<value level="1">589</value>
 			<value level="2">700</value>

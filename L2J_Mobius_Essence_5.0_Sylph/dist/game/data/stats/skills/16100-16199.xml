@@ -137,7 +137,7 @@
 		</isMagic>
 	</skill>
 	<skill id="16109" toLevel="1" name="Heavy Armor Rise">
-		<!-- Increases P. Critical Damage. -->
+		<!-- Deals significant P. Critical Damage. -->
 		<icon>icon.m_class_heavy</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -790,7 +790,7 @@
 		</reuseDelay>
 	</skill>
 	<skill id="16167" toLevel="2" name="Increase P. Evasion 1">
-		<!-- P./ M. Evasion strengthened. -->
+		<!-- P./ M. Evasion slightly increased. -->
 		<icon>icon.skill0078</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -813,7 +813,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16172" toLevel="1" name="Poisoned">
-		<!-- HP drops by 75 per sec. due to a poisonous fog. -->
+		<!-- Fog poisoning. -->
 		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="50200" toLevel="10" name="Gem: Onyx">
+	<skill id="50200" toLevel="10" name="Onyx">
 		<!-- Beast Soulshot Damage +$s1 -->
 		<icon>icon.etc_bm_jewel_onyx_i00</icon>
 		<operateType>A2</operateType>
@@ -21,7 +21,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50201" toLevel="10" name="Gem: Onyx">
+	<skill id="50201" toLevel="10" name="Onyx">
 		<!-- Spiritshot Damage +$s1 -->
 		<icon>icon.etc_bm_jewel_onyx_i00</icon>
 		<operateType>A2</operateType>
@@ -42,7 +42,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50202" toLevel="10" name="Gem: Onyx">
+	<skill id="50202" toLevel="10" name="Onyx">
 		<!-- Blessed Spiritshot Damage +$s1 -->
 		<icon>icon.etc_bm_jewel_onyx_i00</icon>
 		<operateType>A2</operateType>
@@ -63,7 +63,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50203" toLevel="10" name="Gem: Onyx">
+	<skill id="50203" toLevel="10" name="Onyx">
 		<!-- Beast Spiritshot Damage +$s1 -->
 		<icon>icon.etc_bm_jewel_onyx_i00</icon>
 		<operateType>A2</operateType>
@@ -84,7 +84,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50204" toLevel="10" name="Gem: Onyx">
+	<skill id="50204" toLevel="10" name="Onyx">
 		<!-- Soulshot damage +$s1 Spiritshot damage +$s1 -->
 		<icon>icon.etc_bm_jewel_onyx_i00</icon>
 		<operateType>P</operateType>
@@ -119,7 +119,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50205" toLevel="10" name="Gem: Spinel - Mana Drain">
+	<skill id="50205" toLevel="10" name="Spinel - Mana Drain">
 		<icon>icon.etc_bm_jewel_garnet_i00</icon>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
@@ -179,7 +179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50206" toLevel="10" name="Gem: Spinel">
+	<skill id="50206" toLevel="10" name="Spinel">
 		<!-- P. Def. +$s1 M. Def. +$s2 CON +$s3 With a certain chance, recovers $s4 MP when using skills. -->
 		<icon>icon.etc_bm_jewel_garnet_i00</icon>
 		<operateType>P</operateType>
@@ -322,7 +322,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50207" toLevel="10" name="Gem: Zircon">
+	<skill id="50207" toLevel="10" name="Zircon">
 		<!-- P. Critical Damage +$s1 M. Skill Critical Damage +$s1 -->
 		<icon>icon.etc_bm_jewel_bloodstone_i00</icon>
 		<operateType>P</operateType>
@@ -370,7 +370,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50208" toLevel="10" name="Gem: Moonstone">
+	<skill id="50208" toLevel="10" name="Moonstone">
 		<!-- When Sayha's Grace is used, acquired XP +$s1 When Sayha's Grace is used, acquired SP +$s1 -->
 		<icon>icon.etc_bm_jewel_moonstone_i00</icon>
 		<operateType>P</operateType>
@@ -555,7 +555,7 @@
 		</effects>
 	</skill>
 	<skill id="50214" toLevel="1" name="A-grade: Majestic Circlet (Light)">
-		<!-- <A-grade equipment effect> CON +1 Overweight limit +1500 M. Def. +10 P. Atk. +4% MP Recovery Rate +5.5% P. Atk. +8% when using a bow -->
+		<!-- <A-grade equipment effect> CON +1 Overweight limit +1500 M. Def. +10 P. Atk. +4% MP Recovery Rate +5.5% P. Atk. +8% when using a bow P. Atk. +8% when using firearms. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -943,7 +943,7 @@
 		</effects>
 	</skill>
 	<skill id="50228" toLevel="1" name="A-grade: Majestic Plate Armor">
-		<!-- <A-grade equipment effect> CON +2 Overweight limit +2500 M. Def. +25 Max HP +200 Stun Resistance +50% -->
+		<!-- <A-grade equipment effect> CON +2 Overweight limit +2500 M. Def. +25 Max HP +200 Shock Resistance +50% -->
 		<icon>icon.armor_t83_ul_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -969,7 +969,7 @@
 		</effects>
 	</skill>
 	<skill id="50229" toLevel="1" name="A-grade: Majestic Robe">
-		<!-- <A-grade equipment effect> WIT +2 Overweight limit +2500 M. Def. +25 Max HP +100 Max MP +120 Stun Resistance +50% -->
+		<!-- <A-grade equipment effect> WIT +2 Overweight limit +2500 M. Def. +25 Max HP +100 Max MP +120 Shock Resistance +50% -->
 		<icon>icon.armor_t85_ul_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -999,7 +999,7 @@
 		</effects>
 	</skill>
 	<skill id="50230" toLevel="1" name="A-grade: Majestic Leather Armor">
-		<!-- <A-grade equipment effect> DEX +2 Overweight limit +2500 M. Def. +25 Max HP +150 Max MP +80 Stun Resistance +50% -->
+		<!-- <A-grade equipment effect> DEX +2 Overweight limit +2500 M. Def. +25 Max HP +150 Max MP +80 Shock Resistance +50% -->
 		<icon>icon.armor_t84_ul_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1426,7 +1426,7 @@
 		</effects>
 	</skill>
 	<skill id="50244" toLevel="1" name="A-grade: Gauntlets of Nightmare (Light)">
-		<!-- <A-grade equipment effect> STR +1 Overweight limit +1000 M. Def. +10 Max HP +50 Atk. Spd. +8% Absorbs 2% of inflicted damage as HP -->
+		<!-- <A-grade equipment effect> STR +1 Overweight limit +1000 M. Def. +10 Max HP +50 Atk. Spd. +8% Absorbs 2% of the inflicted damage as HP. -->
 		<icon>icon.armor_t81_g_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2079,28 +2079,28 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50268" toLevel="1" name="Baium's Soul">
-		<!-- Imbues a weapon with Baium's Soul. <When triggered> Baium's Thunder Bolt -->
+	<skill id="50268" toLevel="1" name="Baium's Thunder Breaker">
+		<!-- Imbued with Baium's Soul. <When triggered> Baium's Thunder Bolt. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50269" toLevel="22" name="Baium's Thunder Bolt">
+	<skill id="50269" toLevel="22" name="Baium s Thunder Bolt">
 		<!-- Inflicts magic damage on the enemy with $s1 power. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50270" toLevel="10" name="Baium's Soul">
-		<!-- Imbues a weapon with Baium's Soul. <When triggered> Baium's Thunder Bolt -->
+	<skill id="50270" toLevel="10" name="+1 Baium's Thunder Breaker">
+		<!-- Imbued with Baium's Soul. <When triggered> Baium's Thunder Bolt. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50271" toLevel="20" name="Baium's Enhanced Thunder Bolt">
+	<skill id="50271" toLevel="20" name="Baium s Enhanced Thunder Bolt">
 		<!-- Inflicts magic damage on the enemy with $s1 power. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50273" toLevel="1" name="Queen Ant's Soul">
-		<!-- Imbues a weapon with Queen Ant's Soul. <When triggered> Queen Ant's Rain of Stones -->
+	<skill id="50273" toLevel="1" name="Queen Ant's Stone Breaker">
+		<!-- Imbued with Queen Ant's Soul. <When triggered> Queen Ant's Rain of Stones. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2109,8 +2109,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50275" toLevel="10" name="Queen Ant's Soul">
-		<!-- Imbues a weapon with Queen Ant's Soul. <When triggered> Queen Ant's Rain of Stones -->
+	<skill id="50275" toLevel="10" name="+1 Queen Ant's Stone Breaker">
+		<!-- Imbued with Queen Ant's Soul. <When triggered> Queen Ant's Rain of Stones. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2119,8 +2119,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50278" toLevel="1" name="Zaken's Soul">
-		<!-- Imbues a weapon with Zaken's Soul. <When triggered> Zaken's Blood Prison -->
+	<skill id="50278" toLevel="1" name="Zaken's Blood Sword">
+		<!-- Imbued with Zaken's Soul. <When triggered> Zaken's Blood Prison. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2129,8 +2129,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50280" toLevel="10" name="Zaken's Soul">
-		<!-- Imbues a weapon with Zaken's Soul. <When triggered> Zaken's Blood Prison -->
+	<skill id="50280" toLevel="10" name="+1 Zaken's Blood Sword">
+		<!-- Imbued with Zaken's Soul. <When triggered> Zaken's Blood Prison. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2139,8 +2139,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50283" toLevel="1" name="Orfen's Soul">
-		<!-- Imbues a weapon with Orfen's Soul. <When triggered> Orfen's Poison Storm -->
+	<skill id="50283" toLevel="1" name="Orfen's Venom Sword">
+		<!-- Imbued with Orfen's Soul. <When triggered> Orfen's Poison Storm. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2149,8 +2149,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50285" toLevel="10" name="Orfen's Soul">
-		<!-- Imbues a weapon with Orfen's Soul. <When triggered> Orfen's Poison Storm -->
+	<skill id="50285" toLevel="10" name="+1 Orfen's Venom Sword">
+		<!-- Imbued with Orfen's Soul. <When triggered> Orfen's Poison Storm. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2159,8 +2159,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50288" toLevel="1" name="Core's Soul">
-		<!-- Imbues a weapon with Core's Soul. <When triggered> Core's Plasmic Shock -->
+	<skill id="50288" toLevel="1" name="Core's Plasmic Bow">
+		<!-- Imbued with Core's Soul. <When triggered> Core's Plasmic Shock. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2169,8 +2169,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50290" toLevel="10" name="Core's Soul">
-		<!-- Imbues a weapon with Core's Soul. <When triggered> Core's Plasmic Shock -->
+	<skill id="50290" toLevel="10" name="+1 Core's Plasmic Bow">
+		<!-- Imbued with Core's Soul. <When triggered> Core's Plasmic Shock. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -2179,8 +2179,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50293" toLevel="11" name="Talisman: Talisman of Speed">
-		<!-- A talisman imbued with speed power. <Effect> P. Def. $s1 M. Def. $s1 -->
+	<skill id="50293" toLevel="11" name="Talisman of Speed">
+		<!-- A talisman imbued with the energy of speed. P. Def. $s1 M. Def. $s1 <Energy of Speed> There are a $s2 chance after a basic attack and $s3 chance after skill using: For 5 sec. Atk. Spd. $s4 Casting Spd. $s4 (Cooldown: 10 sec.) -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2272,7 +2272,7 @@
 		</effects>
 	</skill>
 	<skill id="50294" toLevel="11" name="Energy of Speed">
-		<!-- A character becomes full of speed power. <Effect> Atk. Spd. +$s1 -->
+		<!-- The energy of speed runs through the character's body. Atk. Spd. $s1 Casting Spd. $s1 -->
 		<icon>icon.skill0000</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2342,7 +2342,7 @@
 		</effects>
 	</skill>
 	<skill id="50295" toLevel="1" name="Baium's Thunder Breaker">
-		<!-- A dagger containing Baium's Soul. <Level Bonus Effect> P./ M. Atk. are increased depending on level. <Lv. 60-69> P. Atk. +3-5 M. Atk. +2-3 <Lv. 70-79> P. Atk. +8 M. Atk. +5 <Lv. 80-89> P. Atk. +13-50 M. Atk. +8-51 <Lv. 90+> P. Atk. +56 and higher M. Atk. +34 and higher -->
+		<!-- A dagger containing Baium's Soul. Allows to use Baium's power. <Level Bonus Effect> P./ M. Atk. are increased depending on level. <Lv. 60-69> P. Atk. +3-5 M. Atk. +2-3 <Lv. 70-79> P. Atk. +8 M. Atk. +5 <Lv. 80-89> P. Atk. +13-50 M. Atk. +8-51 <Lv. 90+> P. Atk. +56 and higher M. Atk. +34 and higher -->
 		<icon>icon.weapon_terakan_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2481,7 +2481,7 @@
 		</effects>
 	</skill>
 	<skill id="50296" toLevel="1" name="Queen Ant's Stone Spear">
-		<!-- A spear containing Queen Ant's Soul and being able to use Queen Ant's power. -->
+		<!-- A spear containing Queen Ant's Soul. Allows to use Queen Ant's power. -->
 		<icon>icon.g_melisa_stormer_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2512,7 +2512,7 @@
 		</effects>
 	</skill>
 	<skill id="50297" toLevel="1" name="Zaken's Blood Sword">
-		<!-- A sword containing Zaken's Soul and being able to use Zaken's power. -->
+		<!-- A sword containing Zaken's Soul. Allows to use Zaken's power. -->
 		<icon>icon.special_weapon_onehandsword</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2573,7 +2573,7 @@
 		</effects>
 	</skill>
 	<skill id="50299" toLevel="1" name="Core's Plasmic Bow">
-		<!-- A bow containing Core's Soul and being able to use Core's power. -->
+		<!-- A bow containing Core's Soul. Allows to use Core's power. -->
 		<icon>icon.weapon_karupis_i00</icon>
 		<operateType>P</operateType>
 		<effects>

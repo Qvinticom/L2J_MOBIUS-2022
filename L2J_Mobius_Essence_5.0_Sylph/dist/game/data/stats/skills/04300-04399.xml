@@ -211,7 +211,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4316" toLevel="12" name="Drain Energy">
+	<skill id="4316" toLevel="12" name="Drain HP">
 		<affectRange>150</affectRange>
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
@@ -568,7 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="4325" toLevel="1" name="Adventurer's Vampiric Rage">
-		<!-- For 60 min., with a certain chance, absorbs 9% of the inflicted damage as HP. -->
+		<!-- With a certain chance, absorbs 9% of the inflicted damage as HP. Duration: 60 min. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLevel>5</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -1795,7 +1795,7 @@
 		</effects>
 	</skill>
 	<skill id="4364" toLevel="2" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Poison/ Bleed Resistance +25. -->
+		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Infection Resistance +25%. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1839,7 +1839,7 @@
 		</effects>
 	</skill>
 	<skill id="4365" toLevel="2" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Temporarily increases Hold/ Mental Attack Resistance and lessens the probability of magic cancellation due to damage. -->
+		<!-- Blessing of the Orator of Revelations. Temporarily increases Hold/ Fear/ Silence Resistance and lessens the probability of magic cancellation due to damage. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1879,7 +1879,7 @@
 		</effects>
 	</skill>
 	<skill id="4366" toLevel="1" name="Blessing of Revelations">
-		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Poison/ Bleed Resistance +25. -->
+		<!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Infection Resistance +25%. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -2455,8 +2455,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4389" toLevel="5" name="Fear/Silence Resistance">
-		<!-- Resistant to Silence/ Fear. -->
+	<skill id="4389" toLevel="5" name="Fear Resistance">
+		<!-- Resistant to Fear attacks. -->
 		<icon>icon.skill4389</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>

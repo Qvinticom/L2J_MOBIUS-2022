@@ -8,7 +8,7 @@
 		<castRange>100</castRange>
 	</skill>
 	<skill id="45001" toLevel="25" name="Tyrr's Critical Stun">
-		<!-- <Effect> Has a certain chance to cast Stun on the target after a P. Critical Attack. (Probability: $s1) Requires a polearm. -->
+		<!-- <Effect> After a P. Critical Attack There is a certain chance to stun the target for $s1 (Requires a polearm.) -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_tir_lv00</value>
 			<value level="2">BranchIcon.Icon.g_rune_tir_lv00</value>
@@ -706,7 +706,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45013" toLevel="20" name="Wynn Boost Mana">
+	<skill id="45013" toLevel="20" name="Wynn's Mana Effect Boost">
 		<!-- <Effect> Max MP +$s1 -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_rune_wynn_lv01</value>
@@ -938,7 +938,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45017" toLevel="1" name="Orfen's Earring - Special Ability">
+	<skill id="45017" toLevel="1" name="Special Ability: Orfen's Earring">
 		<!-- Target's MP -$s1 in PvP. -->
 		<icon>icon.accessory_earring_of_orfen_i04</icon>
 		<magicLevel>75</magicLevel>
@@ -991,7 +991,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45018" toLevel="1" name="Zaken's Earring - Special Ability">
+	<skill id="45018" toLevel="1" name="Special Ability: Zaken's Earring">
 		<!-- During PvP, limits the CP, HP, and MP recovery of the target to maximum $s2 for $s1 -->
 		<icon>icon.accessory_earring_of_zaken_i04</icon>
 		<operateType>A1</operateType>
@@ -1024,7 +1024,7 @@
 		</effects>
 	</skill>
 	<skill id="45021" toLevel="1" name="White Uniform Hat (STR+1 INT+1)">
-		<!-- STR +1, INT +1. -->
+		<!-- STR +1 INT +1 -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1044,7 +1044,7 @@
 		</effects>
 	</skill>
 	<skill id="45022" toLevel="1" name="White Uniform Hat (DEX +1 WIT +1)">
-		<!-- DEX +1, and WIT +1. -->
+		<!-- DEX +1 WIT +1. -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1064,7 +1064,7 @@
 		</effects>
 	</skill>
 	<skill id="45023" toLevel="1" name="White Uniform Hat (CON+1 MEN+1)">
-		<!-- CON +1, MEN +1. -->
+		<!-- CON +1 MEN +1 -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1084,7 +1084,7 @@
 		</effects>
 	</skill>
 	<skill id="45024" toLevel="1" name="Napoleon Hat (STR+1 INT+1)">
-		<!-- STR +1, INT +1. -->
+		<!-- STR +1 INT +1 -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1104,7 +1104,7 @@
 		</effects>
 	</skill>
 	<skill id="45025" toLevel="1" name="Napoleon Hat (DEX +1 WIT +1)">
-		<!-- DEX +1, and WIT +1. -->
+		<!-- DEX +1 WIT +1. -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1124,7 +1124,7 @@
 		</effects>
 	</skill>
 	<skill id="45026" toLevel="1" name="Napoleon Hat (CON +1 MEN +1)">
-		<!-- CON +1, MEN +1. -->
+		<!-- CON +1 MEN +1 -->
 		<icon>BranchSys.icon.br_napoleonic_cap_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1144,7 +1144,7 @@
 		</effects>
 	</skill>
 	<skill id="45027" toLevel="1" name="Ninja Hair Accessory (STR+1 INT+1)">
-		<!-- STR +1, INT +1. -->
+		<!-- STR +1 INT +1 -->
 		<icon>BranchSys3.icon1.g_co_ninja_hair</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1164,7 +1164,7 @@
 		</effects>
 	</skill>
 	<skill id="45028" toLevel="1" name="Ninja Hair Accessory (DEX +1 WIT +1)">
-		<!-- DEX +1, and WIT +1. -->
+		<!-- DEX +1 WIT +1. -->
 		<icon>BranchSys3.icon1.g_co_ninja_hair</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1184,7 +1184,7 @@
 		</effects>
 	</skill>
 	<skill id="45029" toLevel="1" name="Ninja Hair Accessory (CON+1 MEN+1)">
-		<!-- CON +1, MEN +1. -->
+		<!-- CON +1 MEN +1 -->
 		<icon>BranchSys3.icon1.g_co_ninja_hair</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1204,7 +1204,7 @@
 		</effects>
 	</skill>
 	<skill id="45030" toLevel="1" name="Warrior's Helmet (STR+1 INT+1)">
-		<!-- STR +1, INT +1. -->
+		<!-- STR +1 INT +1 -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1224,7 +1224,7 @@
 		</effects>
 	</skill>
 	<skill id="45031" toLevel="1" name="Warrior's Helmet (DEX +1 WIT +1)">
-		<!-- DEX +1, and WIT +1. -->
+		<!-- DEX +1 WIT +1. -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1244,7 +1244,7 @@
 		</effects>
 	</skill>
 	<skill id="45032" toLevel="1" name="Warrior's Helmet (CON+1 MEN+1)">
-		<!-- CON +1, MEN +1. -->
+		<!-- CON +1 MEN +1 -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1264,7 +1264,7 @@
 		</effects>
 	</skill>
 	<skill id="45033" toLevel="1" name="First Mate Hat (STR+1 INT+1)">
-		<!-- STR +1, INT +1. -->
+		<!-- STR +1 INT +1 -->
 		<icon>icon.Accessary_middle_ages_i01</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1284,7 +1284,7 @@
 		</effects>
 	</skill>
 	<skill id="45034" toLevel="1" name="First Mate Hat (DEX +1 WIT +1)">
-		<!-- DEX +1, and WIT +1. -->
+		<!-- DEX +1 WIT +1. -->
 		<icon>icon.Accessary_middle_ages_i01</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1304,7 +1304,7 @@
 		</effects>
 	</skill>
 	<skill id="45035" toLevel="1" name="First Mate Hat (CON+1 MEN+1)">
-		<!-- CON +1, MEN +1. -->
+		<!-- CON +1 MEN +1 -->
 		<icon>icon.Accessary_middle_ages_i01</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1324,7 +1324,7 @@
 		</effects>
 	</skill>
 	<skill id="45036" toLevel="1" name="Artisan's Goggles (STR+1 INT+1)">
-		<!-- STR +1, INT +1. -->
+		<!-- STR +1 INT +1 -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1344,7 +1344,7 @@
 		</effects>
 	</skill>
 	<skill id="45037" toLevel="1" name="Artisan's Goggles (DEX +1 WIT +1)">
-		<!-- DEX +1, and WIT +1. -->
+		<!-- DEX +1 WIT +1. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1364,7 +1364,7 @@
 		</effects>
 	</skill>
 	<skill id="45038" toLevel="1" name="Artisan's Goggles (CON+1 MEN+1)">
-		<!-- CON +1, MEN +1. -->
+		<!-- CON +1 MEN +1 -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<basicProperty>NONE</basicProperty>
@@ -1430,7 +1430,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45040" toLevel="6" name="Dragon Pendant Effect Lv. 1">
+	<skill id="45040" toLevel="6" name="Dragon Pendant Lv. 1">
 		<!-- M. Def. +$s1. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>P</operateType>
@@ -1508,7 +1508,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45041" toLevel="6" name="Dragon Pendant Effect Lv. 2">
+	<skill id="45041" toLevel="6" name="Dragon Pendant Lv. 2">
 		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk. Spd./ Casting Spd. +$s4. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>P</operateType>
@@ -1562,12 +1562,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45042" toLevel="6" name="Dragon Pendant Effect Lv. 3">
+	<skill id="45042" toLevel="6" name="Dragon Pendant Lv. 3">
 		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="45043" toLevel="6" name="Dragon Pendant Effect Lv. 4">
+	<skill id="45043" toLevel="6" name="Dragon Pendant Lv. 4">
 		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, P./ M. Atk. +$s6. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
 		<operateType>P</operateType>

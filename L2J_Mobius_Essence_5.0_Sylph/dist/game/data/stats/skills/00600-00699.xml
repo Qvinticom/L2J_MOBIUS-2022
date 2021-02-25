@@ -353,7 +353,7 @@
 		</effects>
 	</skill>
 	<skill id="622" toLevel="2" name="Ultimate Escape">
-		<!-- For $s1, P./ M. Evasion +$s2, P./ M. Skill Evasion +$s3, Speed +$s4. -->
+		<!-- For $s1 P. Evasion +$s2 M. Evasion +$s2 P. Skill Evasion +$s3 M. Skill Evasion +$s3 Speed +$s4 -->
 		<icon>icon.skill0622</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -440,7 +440,7 @@
 		</effects>
 	</skill>
 	<skill id="626" toLevel="5" name="Critical Sense">
-		<!-- P. Critical Rate +$s1, P. Critical Damage +$s2. -->
+		<!-- P. Critical Rate +$s1 P. Critical Damage +$s2 -->
 		<icon>icon.skill0312</icon>
 		<magicLevel>
 			<value level="1">45</value>
@@ -475,7 +475,7 @@
 		</effects>
 	</skill>
 	<skill id="627" toLevel="5" name="Mental Panic">
-		<!-- Inflicts Fear on the enemy for $s1 -->
+		<!-- <Fear Skill> The effect lasts for $s1 Frightens the enemy. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>

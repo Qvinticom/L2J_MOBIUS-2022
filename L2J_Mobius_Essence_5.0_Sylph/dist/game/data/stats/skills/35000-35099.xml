@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="35000" toLevel="1" name="Fire Dragon's Blessing">
-		<!-- Buffs/ debuffs remain after death, but Fire Dragon's Blessing disappears. -->
+		<!-- Buffs, debuffs and anomaly states remain after death. But Fire Dragon's Blessing disappears. -->
 		<icon>icon.bm_blessing_dragon</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -24,7 +24,7 @@
 		</effects>
 	</skill>
 	<skill id="35001" toLevel="1" name="Fire Dragon's Protection">
-		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain after death, but Fire Dragon's Blessing disappears. -->
+		<!-- Resurrects from death fully recovered. Buffs, debuffs and anomaly states remain after death. But Fire Dragon's Blessing disappears. -->
 		<icon>icon.bm_salvation_dragon</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3600</abnormalTime>
@@ -47,7 +47,7 @@
 		</effects>
 	</skill>
 	<skill id="35002" toLevel="1" name="Earth Dragon's Breath">
-		<!-- For 15 sec., the target's Atk. Spd./ Casting Spd. -30%. -->
+		<!-- Decreases target's Atk. Spd. The effect lasts for 15 sec. Atk. Spd. -30% Casting Spd. -30% -->
 		<icon>icon.bm_dragon_breath</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -76,7 +76,7 @@
 		</effects>
 	</skill>
 	<skill id="35003" toLevel="1" name="Earth Dragon's Defense">
-		<!-- For 15 sec., P. Def. +3600, M. Def. +3240, Buff Cancel Resistance +80%. -->
+		<!-- Increases character's protection skills. The effect lasts for 15 sec. P. Def. +3600 M. Def. +3240 Buff Cancel Resistance +80% -->
 		<icon>icon.bm_dragon_defence</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -107,7 +107,7 @@
 		</effects>
 	</skill>
 	<skill id="35004" toLevel="1" name="Earth Dragon Pendant">
-		<!-- M. Def. +9. -->
+		<!-- M. Def. +$s1 -->
 		<icon>icon.bm_pendant_pvp</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -120,7 +120,7 @@
 		</effects>
 	</skill>
 	<skill id="35005" toLevel="11" name="+1 Earth Dragon Pendant">
-		<!-- M. Def. +$s1. -->
+		<!-- M. Def. +$s1 -->
 		<icon>icon.bm_pendant_pvp</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -269,7 +269,7 @@
 		</effects>
 	</skill>
 	<skill id="35006" toLevel="1" name="Fire Dragon Pendant">
-		<!-- M. Def. +9. -->
+		<!-- M. Def. +$s1 -->
 		<icon>icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -281,8 +281,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35007" toLevel="11" name="+1 Fire Dragon Pendant">
-		<!-- M. Def. +$s1. -->
+	<skill id="35007" toLevel="11" name="Fire Dragon Pendant +1">
+		<!-- M. Def. +$s1 -->
 		<icon>icon.bm_pendant_pve</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -478,7 +478,7 @@
 		<reuseDelay>7200000</reuseDelay>
 	</skill>
 	<skill id="35016" toLevel="1" name="Core's Blessing">
-		<!-- Removes all debuffs. -->
+		<!-- Removes debuffs and anomaly states from the target. -->
 		<icon>icon.accessory_ring_of_core_i03</icon>
 		<reuseDelay>120000</reuseDelay>
 		<hitTime>200</hitTime>
@@ -498,7 +498,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35017" toLevel="7" name="Talisman: Talisman of Insolence I">
+	<skill id="35017" toLevel="7" name="Talisman of Insolence I">
 		<!-- <Effect> P. Atk. +14 M. Atk. +22 -->
 		<icon>
 			<value level="1">icon.tallisman_oman_i02</value>
@@ -862,7 +862,7 @@
 		</effects>
 	</skill>
 	<skill id="35022" toLevel="1" name="Chic Silver Chapeau">
-		<!-- STR +1, INT +1. -->
+		<!-- STR +1 INT +1 -->
 		<icon>BranchSys2.icon2.pi_silverchaperon</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1456,7 +1456,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35033" toLevel="3" name="Item Skill: Boost Atk. Spd.">
-		<!-- Active: Atk. Spd. +36. -->
+		<!-- Active skill: Atk. Spd. +36. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 		<hitTime>4000</hitTime>
@@ -1469,7 +1469,7 @@
 		<mpConsume>48</mpConsume>
 	</skill>
 	<skill id="35034" toLevel="3" name="Item Skill: Fast Spell Casting">
-		<!-- Active: Casting Spd. +21. -->
+		<!-- Active skill: Casting Spd. +21. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 		<hitTime>4000</hitTime>
@@ -1482,7 +1482,7 @@
 		<mpConsume>48</mpConsume>
 	</skill>
 	<skill id="35035" toLevel="1" name="Item Skill: Cleanse">
-		<!-- Skill: Removes a debuff. -->
+		<!-- Skill: Cancels a debuff. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>

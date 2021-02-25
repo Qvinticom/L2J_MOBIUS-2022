@@ -186,7 +186,7 @@
 		</effects>
 	</skill>
 	<skill id="6809" toLevel="1" name="Arena Guidance">
-		<!-- For 5 min., P. Accuracy +4. -->
+		<!-- For 20 min., P. Accuracy +4. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLevel>3</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -421,7 +421,7 @@
 		</effects>
 	</skill>
 	<skill id="6815" toLevel="16" name="Deadly Poison">
-		<!-- Poison seeps deeper and for $s1, -$s2 HP every sec. If not treated, the poison will worsen. -->
+		<!-- Poison seeps deeper and drains HP. If not treated, it will worsen. -->
 		<icon>icon.skill6815</icon>
 		<operateType>A2</operateType>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -458,7 +458,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6816" toLevel="16" name="Deadly Bleed">
-		<!-- Bleed becomes deeper and for $s1, -$s2 HP every sec. If not treated, the bleed will worsen. -->
+		<!-- Bleed gets heavier, draining HP constantly. If not treated, it will worsen. -->
 		<icon>icon.skill6816</icon>
 		<operateType>A2</operateType>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -671,7 +671,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6825" toLevel="2" name="Bleed">
-		<!-- For $s1, inflicts bleed and -$s2 HP every sec. -->
+		<!-- Causes Bleed that constantly drains HP. -->
 		<icon>icon.skill0096</icon>
 		<abnormalTime>8</abnormalTime>
 		<activateRate>100</activateRate>
@@ -709,7 +709,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6827" toLevel="1" name="Petrifies the target.">
+	<skill id="6827" toLevel="1" name="Petrified">
 		<!-- Petrified and unable to move for 30 sec. -->
 		<icon>icon.skill4111</icon>
 		<abnormalTime>3</abnormalTime>
@@ -731,7 +731,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6828" toLevel="1" name="Dust Storm">
-		<!-- For 30 sec., Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%. -->
+		<!-- For 30 sec., Atk. Spd./ Casting Spd. -50%. -->
 		<icon>icon.skill1386</icon>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
@@ -768,7 +768,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6830" toLevel="1" name="Bleed">
-		<!-- For 5 sec., inflicts bleed and -100 HP every sec., Received Healing -600%. -->
+		<!-- Causes Bleed for 5 sec., constantly draining HP, Received Healing -600%. -->
 		<icon>icon.skill0096</icon>
 		<abnormalTime>5</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1356,7 +1356,7 @@
 		</effects>
 	</skill>
 	<skill id="6862" toLevel="1" name="Poison">
-		<!-- For 6 sec., inflicts poison and -100 HP every sec. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>6</abnormalTime>
@@ -1386,7 +1386,7 @@
 		</effects>
 	</skill>
 	<skill id="6863" toLevel="1" name="Poison">
-		<!-- For 10 sec., inflicts poison and HP -100 every second. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1427,7 +1427,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6865" toLevel="1" name="Poison">
-		<!-- For 8 sec., inflicts bleed and -100 HP every sec. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLevel>9</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
@@ -1648,7 +1648,7 @@
 		</effects>
 	</skill>
 	<skill id="6875" toLevel="2" name="Poison">
-		<!-- For $s1, inflicts bleed and -$s2 HP every sec. -->
+		<!-- Instantly decreases HP. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
@@ -1817,7 +1817,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6882" toLevel="1" name="Petrifies the target.">
+	<skill id="6882" toLevel="1" name="Petrified">
 		<!-- Momentarily petrifies the target. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1857,7 +1857,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6885" toLevel="3" name="Morale Boost">
-		<!-- The brave who fight together in Dragon Valley receive Paralysis/ Bleed/ Poison/ Stun Resistance +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3. -->
+		<!-- The brave warriors who fight together in Dragon Valley receive Paralysis/ Infection/ Poison/ Shock Resistance +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3. -->
 		<icon>icon.skill6885</icon>
 		<abnormalTime>60</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
@@ -2013,7 +2013,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6889" toLevel="1" name="Range Attack">
+	<skill id="6889" toLevel="1" name="AoE Attack">
 		<castRange>40</castRange>
 		<effectRange>100</effectRange>
 		<hitTime>2000</hitTime>
@@ -2034,7 +2034,7 @@
 		</effects>
 	</skill>
 	<skill id="6890" toLevel="1" name="Bleed">
-		<!-- For 10 sec., inflicts bleed and -100 HP every sec. -->
+		<!-- Causes Bleed that constantly drains HP for 10 sec. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>123</mpConsume>

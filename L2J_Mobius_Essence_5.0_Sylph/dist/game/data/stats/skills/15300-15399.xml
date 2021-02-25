@@ -878,7 +878,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15353" toLevel="1" name="Bleeding Range">
-		<!-- Inflicts bleed dealing 10% damage to nearby enemies. -->
+		<!-- Inflicts Bleed to surrounding enemies. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>300</castRange>
@@ -985,7 +985,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15359" toLevel="1" name="Cornering Attack">
-		<!-- Yokes a target. -->
+		<!-- Yokes a single target. -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

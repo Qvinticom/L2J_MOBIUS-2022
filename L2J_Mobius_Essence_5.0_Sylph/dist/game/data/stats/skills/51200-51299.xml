@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="51200" toLevel="1" name="High Priest Energy">
-		<!-- Grants the power of High Priest. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
+		<!-- Grants the power of High Priest. For 20 min., acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. The transformation effect remains after death. <Special ability> While the transformation is active, with a certain chance recovers 1000 HP and 200 MP to party members after a successful attack or skill use. -->
 		<icon>icon.bm2018_healer_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51201" toLevel="1" name="Blood Noblesse Energy">
-		<!-- Grants the power of Blood Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
+		<!-- Grants the power of Blood Noblesse. For 20 min. , acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. The transformation effect remains after death. <Special ability> While the transformation is active, with a certain chance deals magic damage to the target with 145 power after a successful attack or skill use. -->
 		<icon>icon.bm2018_rednoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="51202" toLevel="1" name="White Noblesse Energy">
-		<!-- Grants the power of White Noblesse. For 20 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. Transformation effect remains after death. <Special ability> During transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
+		<!-- Grants the power of White Noblesse. For 20 min., acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 1 min. The transformation effect remains after death. <Special ability> While the transformation is active, with a certain chance the enemy's M. Def. -23% after a successful attack or skill use. -->
 		<icon>icon.bm2018_whitenoblesse_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -530,34 +530,34 @@
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="51263" toLevel="1" name="High Grade Stable Scroll: Enchant D-grade Weapon">
+	<skill id="51263" toLevel="1" name="High-grade Stable Scroll: Enchant D-grade Weapon">
 		<icon>icon.giant_scrl_of_ench_wp_d</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51264" toLevel="1" name="High Grade Stable Scroll: Enchant D-grade Armor">
+	<skill id="51264" toLevel="1" name="High-grade Stable Scroll: Enchant D-grade Armor">
 		<icon>icon.giant_scrl_of_ench_am_d</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51265" toLevel="1" name="High Grade Stable Scroll: Enchant C-grade Weapon">
+	<skill id="51265" toLevel="1" name="High-grade Stable Scroll: Enchant C-grade Weapon">
 		<icon>icon.giant_scrl_of_ench_wp_c</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51266" toLevel="1" name="High Grade Stable Scroll: Enchant C-grade Armor">
+	<skill id="51266" toLevel="1" name="High-grade Stable Scroll: Enchant C-grade Armor">
 		<icon>icon.giant_scrl_of_ench_am_c</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51267" toLevel="1" name="High Grade Stable Scroll: Enchant B-grade Weapon">
+	<skill id="51267" toLevel="1" name="High-grade Stable Scroll: Enchant B-grade Weapon">
 		<icon>icon.giant_scrl_of_ench_wp_b</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51268" toLevel="1" name="High Grade Stable Scroll: Enchant B-grade Armor">
+	<skill id="51268" toLevel="1" name="High-grade Stable Scroll: Enchant B-grade Armor">
 		<icon>icon.giant_scrl_of_ench_am_b</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51269" toLevel="1" name="High Grade Stable Scroll: Enchant A-grade Weapon">
+	<skill id="51269" toLevel="1" name="High-grade Stable Scroll: Enchant A-grade Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="51270" toLevel="1" name="High Grade Stable Scroll: Enchant A-grade Armor">
+	<skill id="51270" toLevel="1" name="High-grade Stable Scroll: Enchant A-grade Armor">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51271" toLevel="5" name="War Paint">
@@ -803,7 +803,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="51298" toLevel="1" name="Dimensional Barrier">
+	<skill id="51298" toLevel="1" name="Dimensional Warp">
 		<!-- For 15 sec., makes you immune to 10 attacks of enemy. -->
 		<icon>icon.skill11621</icon>
 		<operateType>A1</operateType>

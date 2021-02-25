@@ -41,7 +41,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40208" toLevel="1" name="Anniversary Cake">
-		<!-- For 5 min., party members' P./ M. Atk. +160, Acquired XP/ SP +160%, Max HP/ MP +160, Atk. Spd. +160, Casting Spd. +160, P./ M. Def. +160. -->
+		<!-- For 5 min., party members' P. Atk. +160, M. Atk. +160, acquired XP/ SP +160%, Max HP/ MP +160, Atk. Spd. +160, Casting Spd. +160, P. Def. +160, M. Def. +160. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -89,12 +89,12 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40218" toLevel="1" name="We Play's Potion of Leaping">
+	<skill id="40218" toLevel="1" name="Growth Potion">
 		<!-- XP +7,490,000, SP +200,000. Required level: 60+. Cannot be used by chaotic characters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40219" toLevel="1" name="Scroll: Enchant Attack">
+	<skill id="40219" toLevel="1" name="Scroll: Boost Attack">
 		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -129,12 +129,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="40220" toLevel="1" name="Scroll: Enchant Attack">
+	<skill id="40220" toLevel="1" name="Scroll: Boost Attack">
 		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40221" toLevel="1" name="Scroll: Enchant Protection">
+	<skill id="40221" toLevel="1" name="Scroll: Boost Defense">
 		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -169,7 +169,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="40222" toLevel="1" name="Scroll: Enchant Protection">
+	<skill id="40222" toLevel="1" name="Scroll: Boost Defense">
 		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -190,7 +190,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40226" toLevel="25" name="Special Buff Scroll Lv. 1">
-		<!-- STR/ DEX/ CON +1 INT/ WIT/ MEN +1 The buff is leveling up every hour, also various items are granted. <Rewards> Lv. 1-8: Sayha's Cookie (2 pcs.) Lv. 9-15: Sayha's Storm Lv. 3 (2 pcs.) Lv. 16-20: Soulshot Ticket (10 pcs.) Lv. 21-23: Spirit Ore (100 pcs.) Lv. 24: Charging Stone of Random Craft (2 pcs.) Note! The effect does not remain after death. Items cannot be obtained after death. -->
+		<!-- STR/ DEX/ CON +1 INT/ WIT/ MEN +1 The buff is leveling up every hour, and various items are granted. <Rewards> Lv. 1-8: Sayha's Cookie (2 pcs.) Lv. 9-15: Sayha's Storm Lv. 3 (2 pcs.) Lv. 16-20: Soulshot Ticket (10 pcs.) Lv. 21-23: Spirit Ore (100 pcs.) Lv. 24: Charging Stone of Random Craft (2 pcs.) Note! If the character is dead, no items are given, and the buff's level does not increase. The effect remains after death. You can't cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -203,12 +203,12 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40229" toLevel="1" name="Scroll: Enchant Attack">
+	<skill id="40229" toLevel="1" name="Scroll: Boost Attack">
 		<!-- P. Atk. +800 M. Atk. +800 Max HP +1000 All received Critical Damage -100 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40230" toLevel="1" name="Scroll: Enchant Protection">
+	<skill id="40230" toLevel="1" name="Scroll: Boost Defense">
 		<!-- P. Def. +500 M. Def. +500 Max MP +800 Speed +2 All Critical Rate +30 The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -239,12 +239,12 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40237" toLevel="1" name="Pet Crystal of Experience (Exchangeable)">
+	<skill id="40237" toLevel="1" name="Pet XP Crystal (Exchangeable)">
 		<!-- Pet XP +100,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40238" toLevel="1" name="Pet Crystals of Experience">
+	<skill id="40238" toLevel="1" name="Pet XP Crystal">
 		<!-- Pet XP +100,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -259,7 +259,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40241" toLevel="1" name="Improved Pet Crystals of Experience">
+	<skill id="40241" toLevel="1" name="Improved Pet XP Crystal">
 		<!-- Pet XP +2,000,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -302,13 +302,241 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="40250" toLevel="1" name="Pet Crystals of Experience (Low-grade)">
+	<skill id="40250" toLevel="1" name="Low-grade Pet XP Crystal">
 		<!-- Pet XP +1,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40251" toLevel="1" name="Pet XP Growth Scroll">
 		<!-- Pet XP $s1 Removed when your pet is dead or recalled. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40252" toLevel="1" name="Scroll: Enchant Necklace of Spirits">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40253" toLevel="1" name="Scroll: Enchant Hellbound Ring">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40254" toLevel="1" name="Scroll of Escape: Ivory Tower">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40255" toLevel="1" name="Scroll of Escape: Ivory Tower">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40256" toLevel="1" name="Scroll of Escape: Ivory Tower">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40257" toLevel="1" name="Scroll of Escape: Ivory Tower">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40258" toLevel="1" name="Berserker's Scroll (Exchangeable)">
+		<!-- STR $s1 INT $s1 Atk. Spd. $s2 Casting Spd. $s2 Speed $s3 P. Skill Power $s4 M. Skill Power $s4 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40259" toLevel="1" name="Berserker's Scroll">
+		<!-- STR $s1 INT $s1 Atk. Spd. $s2 Casting Spd. $s2 Speed $s3 P. Skill Power $s4 M. Skill Power $s4 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40260" toLevel="1" name="Random Transformation Scroll">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40261" toLevel="1" name="Scroll: 1,000,000,000 SP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40262" toLevel="1" name="Flower Sweets">
+		<!-- P. Atk. $s1 M. Atk. $s1 P. Def. $s2 M. Def. $s2 Max HP $s3 Max MP $s3 Acquired XP/ SP $s4. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40263" toLevel="1" name="Random Transformation Scroll">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40264" toLevel="3" name="Regeneration">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40265" toLevel="6" name="Blessed Body">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40266" toLevel="6" name="Blessed Soul">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40267" toLevel="3" name="Focus">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40268" toLevel="3" name="Focus">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40269" toLevel="3" name="Death Whisper">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40270" toLevel="2" name="Haste">
+		<!-- For $s1, Atk. Spd. +$s2. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40271" toLevel="3" name="Acumen">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40272" toLevel="3" name="Acumen">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40273" toLevel="3" name="Might">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40274" toLevel="3" name="Might">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40275" toLevel="3" name="Empower">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40276" toLevel="3" name="Empower">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40277" toLevel="3" name="Shield">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40278" toLevel="3" name="Shield">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40279" toLevel="2" name="Magic Barrier">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40280" toLevel="2" name="Wind Walk">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40281" toLevel="2" name="Wind Walk">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40282" toLevel="6" name="Concentration">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40283" toLevel="6" name="Concentration">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40284" toLevel="3" name="Agility">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40285" toLevel="3" name="Agility">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40286" toLevel="3" name="Guidance">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40287" toLevel="1" name="Golden Wheel's Scroll">
+		<!-- P. Atk. $s1 M. Atk. $s1 P. Def. $s2 M. Def. $s2 Max HP $s3 Max MP $s3 Acquired XP/ SP $s4. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40288" toLevel="1" name="Life Control Tower's Scroll of Blessing">
+		<!-- Max HP +5% Max MP +5% Paralysis Resistance +15% Silence Resistance +15% Fear Resistance +15% Acquired XP +30% Acquired SP +30% The effect remains after death. You can cancel the effect by yourself. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40289" toLevel="1" name="Potion of Wardship">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40290" toLevel="25" name="Five-colored Sweets">
+		<!-- When used for +1 hour. STR +1 INT +1 DEX +1 WIT +1 CON +1 MEN +1 Water Attack +$s1 The buff is leveling up every hour. <Rewards> Lv. 1-7: Honey Bean Cakes (Event) 3 pcs. Lv. 8-13: Sayha's Storm Lv. 3 (5 pcs.) Lv. 14-22: Soulshot Ticket (10 pcs.) Lv. 23: Random Transformation Scroll (3 pcs.) Lv. 24: Charging Stone of Random Craft (3 pcs.) Note! Dead characters cannot obtain the gift. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40291" toLevel="1" name="Five-colored Sweets - Reward">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40292" toLevel="1" name="Five-colored Sweets - Reward">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40293" toLevel="1" name="Five-colored Sweets - Reward">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40294" toLevel="1" name="Five-colored Sweets - Reward">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40295" toLevel="1" name="Five-colored Sweets - Reward">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40296" toLevel="1" name="Scroll of Escape: Master Kerkir">
+		<!-- Can be used to teleport to Master Kerkir in the Wind Village. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40297" toLevel="1" name="Scroll of Escape: Grocer Evia">
+		<!-- Can be used to teleport to Grocer Evia in the Wind Village. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40298" toLevel="1" name="Scroll of Escape: High Priest Maximilian">
+		<!-- Can be used to teleport to High Priest Maximilian in Giran. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="40299" toLevel="1" name="Scroll of Escape: Gorgon Flower Garden">
+		<!-- Can be used to teleport to the Gorgon Flower Garden. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

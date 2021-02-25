@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1001" toLevel="12" name="Battle Cry">
-		<!-- P. Atk. +$s1. Continuously consumes MP proportionately to your level. -->
+		<!-- When activated P. Atk. $s1 Constantly consumes MP. -->
 		<icon>icon.skill1001</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -185,7 +185,7 @@
 		</effects>
 	</skill>
 	<skill id="1004" toLevel="3" name="Pa'agrio's Wisdom">
-		<!-- M. Skill Cooldown -$s2 for $s1. Consumes 6 Spirit Ore. -->
+		<!-- Magic Cooldown $s1 -->
 		<icon>icon.skill1004</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -235,7 +235,7 @@
 		</effects>
 	</skill>
 	<skill id="1005" toLevel="3" name="Soul Evasion">
-		<!-- P. Evasion +$s1. -->
+		<!-- P. Evasion +$s1 -->
 		<icon>icon.skill1005</icon>
 		<magicLevel>
 			<value level="1">10</value>
@@ -331,7 +331,7 @@
 		</effects>
 	</skill>
 	<skill id="1008" toLevel="3" name="Pa'agrio's Glory">
-		<!-- For $s1, Received M. Skill Critical Damage +$s2. Consumes 6 Spirit Ore. -->
+		<!-- Received M. Skill Critical Damage $s1 -->
 		<icon>icon.skill1008</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -427,7 +427,7 @@
 		</effects>
 	</skill>
 	<skill id="1010" toLevel="3" name="Spirit Shield">
-		<!-- Claims the power of ancient souls. P. Def. +$s1, M. Def. +$s2. -->
+		<!-- The character gains the power of the ancient gods. P. Def. +$s1 M. Def. +$s2 -->
 		<icon>icon.skill1010</icon>
 		<magicLevel>
 			<value level="1">7</value>
@@ -573,7 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="1012" toLevel="3" name="Cure">
-		<!-- Cures minor poisoning and bleeding. -->
+		<!-- Removes infection from the target. -->
 		<icon>icon.skill1012</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -614,8 +614,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1013" toLevel="39" name="Boost Mana">
-		<!-- For $s1, Max MP +$s2, MP Recovery Rate +$s3. -->
+	<skill id="1013" toLevel="39" name="Mana Effect Boost">
+		<!-- Max MP $s1 MP Recovery Rate $s2 -->
 		<icon>icon.skill1013</icon>
 		<effectRange>900</effectRange>
 		<hitTime>3000</hitTime>
@@ -945,7 +945,7 @@
 		</effects>
 	</skill>
 	<skill id="1016" toLevel="9" name="Resurrection">
-		<!-- <Skill with fixed cooldown> Resurrects a dead party member. -->
+		<!-- <Skill with fixed cooldown> Resurrects a dead party member. XP recovery: $s1 -->
 		<icon>icon.skill1016</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -1023,7 +1023,7 @@
 		</effects>
 	</skill>
 	<skill id="1018" toLevel="3" name="Purify">
-		<!-- Removes immobilizing debuffs from the target. -->
+		<!-- Removes Paralysis/ Shock/ Sleep/ Fear/ Imprisonment from the target. -->
 		<icon>icon.skill1018</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1065,7 +1065,7 @@
 		</effects>
 	</skill>
 	<skill id="1020" toLevel="30" name="Vitalize">
-		<!-- Restores HP and removes debuffs that decrease P./ M. Atk., P./ M. Def., Atk. Spd., Casting Spd. and Speed. Power $s1. -->
+		<!-- Restores the target's HP with $s1 power. Removes debuffs from the target. <Removable Debuffs> P. Atk. is decreased. M. Atk. is decreased. P. Def. is decreased. M. Def. is decreased. -->
 		<icon>icon.skill1020</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1378,7 +1378,7 @@
 		</effects>
 	</skill>
 	<skill id="1028" toLevel="35" name="Might of Heaven">
-		<!-- Summons light of heavens. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. -->
+		<!-- Strikes with holy light. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. -->
 		<icon>icon.skill1028</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1668,8 +1668,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1032" toLevel="3" name="Invigor">
-		<!-- Bleed Resistance +$s1. -->
+	<skill id="1032" toLevel="3" name="Magic Evasion">
+		<!-- M. Evasion $s1 -->
 		<icon>icon.skill1032</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -1688,8 +1688,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1033" toLevel="3" name="Poison Resistance">
-		<!-- Poison Resistance +$s1. -->
+	<skill id="1033" toLevel="3" name="Infection Mitigation">
+		<!-- Infection Resistance -->
 		<icon>icon.skill1033</icon>
 		<magicLevel>
 			<value level="1">60</value>
@@ -1774,7 +1774,7 @@
 		</effects>
 	</skill>
 	<skill id="1035" toLevel="4" name="Mental Shield">
-		<!-- Sleep/ Silence/ Fear/ Hold Resistance +$s1. -->
+		<!-- Hold Resistance $s1 Sleep Resistance $s1 Silence Resistance $s1 Fear Resistance $s1 -->
 		<icon>icon.skill1035</icon>
 		<magicLevel>
 			<value level="1">25</value>
@@ -1984,7 +1984,7 @@
 		</effects>
 	</skill>
 	<skill id="1042" toLevel="14" name="Paralysis">
-		<!-- Paralyzes the target for $s1 -->
+		<!-- <Paralyzing Skill> The effect lasts for $s1 Paralyzes the enemy. -->
 		<icon>icon.skill1042</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -2080,7 +2080,7 @@
 		</effects>
 	</skill>
 	<skill id="1043" toLevel="1" name="Mage's Blessing">
-		<!-- By the holy power M. Atk. +50. -->
+		<!-- The character gains a holy blessing. M. Atk. +50 -->
 		<icon>icon.skill1043</icon>
 		<magicLevel>25</magicLevel>
 		<operateType>P</operateType>
@@ -2092,7 +2092,7 @@
 		</effects>
 	</skill>
 	<skill id="1044" toLevel="6" name="Regeneration">
-		<!-- HP Recovery Rate +$s1. -->
+		<!-- HP Recovery Rate $s1 -->
 		<icon>icon.skill1044</icon>
 		<magicLevel>
 			<value level="1">35</value>
@@ -2119,7 +2119,7 @@
 		</effects>
 	</skill>
 	<skill id="1045" toLevel="12" name="Blessed Body">
-		<!-- For $s1, Max HP +$s2. Consumes 6 Spirit Ore. -->
+		<!-- The effect lasts for $s1 Max HP +$s2 -->
 		<icon>icon.skill1045</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2265,7 +2265,7 @@
 		</effects>
 	</skill>
 	<skill id="1047" toLevel="5" name="Mana Regeneration">
-		<!-- For $s1, MP Recovery Rate +$s2. Consumes $s3 Spirit Ore. -->
+		<!-- The effect lasts for $s1 MP Recovery Rate +$s2 -->
 		<icon>icon.skill1047</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2334,7 +2334,7 @@
 		</effects>
 	</skill>
 	<skill id="1048" toLevel="12" name="Blessed Soul">
-		<!-- For $s1, Max MP +$s2. Consumes 6 Spirit Ore. -->
+		<!-- The effect lasts for $s1 Max MP +$s2 -->
 		<icon>icon.skill1048</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -2882,7 +2882,7 @@
 		</effects>
 	</skill>
 	<skill id="1064" toLevel="16" name="Silence">
-		<!-- Blocks enemy's magic skills for $s1 -->
+		<!-- <Silence Skill> The effect lasts for $s1 Blocks enemy's magical skill usage. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -3092,7 +3092,7 @@
 		</effects>
 	</skill>
 	<skill id="1069" toLevel="60" name="Sleep">
-		<!-- Inflicts sleep on the target for $s1 -->
+		<!-- <Sleep Skill> The effect lasts for $s1 Inflicts Sleep on the target. -->
 		<icon>icon.skill1069</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -3402,7 +3402,7 @@
 		</effects>
 	</skill>
 	<skill id="1072" toLevel="14" name="Sleeping Cloud">
-		<!-- For $s1, casts Sleep on the target and nearby enemies. -->
+		<!-- <Sleep Skill> The effect lasts for $s1 Inflicts Sleep on the target and nearby enemies. -->
 		<icon>icon.skill1072</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -3497,7 +3497,7 @@
 		</effects>
 	</skill>
 	<skill id="1073" toLevel="2" name="Increased Power of Magic">
-		<!-- M. Skill Power +$s1, M. Skill MP Consumption -$s2. -->
+		<!-- Enhances magic skills. M. Skill Power +$s1 M. Skill MP Consumption -$s2 -->
 		<icon>icon.skill1073</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -3796,7 +3796,7 @@
 		</effects>
 	</skill>
 	<skill id="1078" toLevel="18" name="Concentration">
-		<!-- For $s1, Casting Interruption Rate -$s2%. -->
+		<!-- The effect lasts for $s1 Casting Interruption Rate -$s2 -->
 		<icon>icon.skill1078</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4363,7 +4363,7 @@
 		</effects>
 	</skill>
 	<skill id="1087" toLevel="9" name="Agility">
-		<!-- For $s1, P. Evasion +$s2. -->
+		<!-- The effect lasts for $s1 P. Evasion +$s2 -->
 		<icon>icon.skill1087</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4479,8 +4479,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1090" toLevel="10" name="Drain Energy">
-		<!-- <Drain Skill> Deals magic damage to the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
+	<skill id="1090" toLevel="10" name="Life Drain">
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
 		<icon>icon.skill1090</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -4558,7 +4558,7 @@
 		</effects>
 	</skill>
 	<skill id="1092" toLevel="21" name="Fear">
-		<!-- Inflicts Fear on the enemy forcing them to flee for $s1 -->
+		<!-- <Fear Skill> The effect lasts for $s1 Frightens the enemy. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -4676,7 +4676,7 @@
 		</effects>
 	</skill>
 	<skill id="1095" toLevel="5" name="Venom">
-		<!-- For $s1, poisons the target, causing loss of $s2 HP per sec. -->
+		<!-- <Infection Skill> The effect lasts for $s1 Poisons the target. -->
 		<icon>icon.skill1095</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -4745,7 +4745,7 @@
 		</effects>
 	</skill>
 	<skill id="1096" toLevel="18" name="Seal of Chaos">
-		<!-- Nearby enemies' P. Accuracy -$s2 for $s1 -->
+		<!-- When attacking skills are used, there is a certain chance For $s1, target's P./ M. Accuracy $s2 (Probability: $s3. Cooldown: $s4) Seal of Winter and Seal of Slow share its cooldown. -->
 		<icon>icon.skill1096</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -4890,7 +4890,7 @@
 		</effects>
 	</skill>
 	<skill id="1097" toLevel="25" name="Dreaming Spirit">
-		<!-- Inflicts sleep on the target for $s1 -->
+		<!-- <Sleep Skill> The effect lasts for $s1 Inflicts Sleep on the target. -->
 		<icon>icon.skill1097</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -5026,7 +5026,7 @@
 		</effects>
 	</skill>
 	<skill id="1099" toLevel="23" name="Seal of Slow">
-		<!-- Nearby enemies' Speed -$s2 for $s1 -->
+		<!-- When attacking skills are used, there is a certain chance For $s1, target's Speed $s2 (Probability: $s3. Cooldown: $s4) Seal of Chaos and Seal of Winter share its cooldown. -->
 		<icon>icon.skill1099</icon>
 		<abnormalLevel>
 			<value level="1">2</value>

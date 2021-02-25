@@ -1,5 +1,584 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="94700" name="Test - Butterfly Hairpin" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.Accessary_butterfly_hearpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94701" name="Test - Pirate's Eyepatch" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_eye_bandage_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94702" name="Test - Outlaw's Eyepatch" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94703" name="Test - Eyepatch" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.Accessary_one_eye_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94704" name="Test - Party Mask" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.etc_party_mask_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94705" name="Test - Monocle" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_glasses_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94706" name="Talisman of Hellbound Lv. 1" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +100 P. Atk. +50 M. Atk. +50 P. Def. +100 M. Def. +100 Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 1. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94707" name="Talisman of Hellbound Lv. 2" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +200 P. Atk. +100 M. Atk. +100 P. Def. +200 M. Def. +200 P. Accuracy +1 M. Accuracy +1 Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 1. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94708" name="Talisman of Hellbound Lv. 3" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +300 P. Atk. +150 M. Atk. +150 P. Def. +300 M. Def. +300 P. Accuracy +2 M. Accuracy +2 Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 2. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94709" name="Talisman of Hellbound Lv. 4" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +400 P. Atk. +200 M. Atk. +200 P. Def. +400 M. Def. +400 P. Accuracy +3 M. Accuracy +3 Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 3. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94710" name="Talisman of Hellbound Lv. 5" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +500 P. Atk. +250 M. Atk. +250 P. Def. +500 M. Def. +500 Atk. Spd. +35 Casting Spd. +35 P. Accuracy +4 M. Accuracy +4 <When triggered> Deals additional 1000 damage when attacking. Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 4. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94711" name="Talisman of Hellbound Lv. 6" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +700 P. Atk. +300 M. Atk. +300 P. Def. +600 M. Def. +600 Atk. Spd. +50 Casting Spd. +50 Speed +1 P. Accuracy +5 M. Accuracy +5 <When triggered> Deals additional 1500 damage when attacking. Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 5. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94712" name="Talisman of Hellbound Lv. 7" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +1000 P. Atk. +350 M. Atk. +350 P. Def. +700 M. Def. +700 Atk. Spd. +70 Casting Spd. +70 Speed +2 P. Accuracy +6 M. Accuracy +6 Received PvP damage -3% <When triggered> Deals additional 2000 damage when attacking. Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 6. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94713" name="Talisman of Hellbound Lv. 8" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +2000 P. Atk. +400 M. Atk. +400 P. Def. +800 M. Def. +800 Atk. Spd. +100 Casting Spd. +100 Speed +5 P. Accuracy +7 M. Accuracy +7 Received PvP damage -7% Debuff/ Anomaly Resistance +2% <When triggered> Deals additional 3000 damage when attacking. Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 7. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94714" name="Talisman of Hellbound Lv. 9" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +3000 P. Atk. +450 M. Atk. +450 P. Def. +900 M. Def. +900 Atk. Spd. +150 Casting Spd. +150 Speed +7 P. Accuracy +8 M. Accuracy +8 Received PvP damage -12% Debuff/ Anomaly Resistance +5% <When triggered> Deals additional 3000 damage when attacking. Can be upgraded with Talisman of Hellbound Fragment. In case of failure you get Talisman of Hellbound Lv. 8. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94715" name="Talisman of Hellbound Lv. 10" type="Armor">
+		<!-- A talisman containing the energy of Hellbound. <Properties> Max HP +5000 P. Atk. +500 M. Atk. +500 P. Def. +1000 M. Def. +1000 Atk. Spd. +200 Casting Spd. +200 Speed +10 P. Accuracy +10 M. Accuracy +10 Received PvP damage -20% Debuff/ Anomaly Resistance +10% <When triggered> Deals additional 5000 damage when attacking. Effects of two identical talismans do not stack. -->
+		<set name="icon" val="icon.hellbound_talisman_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94716" name="Talisman of Hellbound Fragment" type="EtcItem">
+		<!-- Required for upgrading Talisman of Hellbound. In case of failure the talisman level value goes down 1 level. -->
+		<set name="icon" val="icon.etc_high_gem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94717" name="Hellbound Energy" type="EtcItem">
+		<!-- An item full of Hellbound energy. -->
+		<set name="icon" val="icon.kelbim_piece" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94718" name="Hellbound Ring" type="Armor">
+		<!-- Increases Paralysis Resistance. Effects of two identical items do not stack. -->
+		<set name="icon" val="icon.accessary_ring_of_anguish_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="404000" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">44</stat>
+		</stats>
+	</item>
+	<item id="94719" name="Scroll: Enchant Hellbound Ring" type="EtcItem">
+		<!-- Required for enchanting Hellbound Ring. The maximum enchant value is +10. -->
+		<set name="icon" val="icon.etc_penalty_recovery_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94720" name="Scroll of Escape: Ivory Tower" type="EtcItem">
+		<!-- Teleports to Ivory Tower in order to go to Hellbound. <font color=bbaa88>Travelers of Lv. 85 and higher can go to Hellbound every Saturday from 10:00 a.m. to 10:00 p.m. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94721" name="Scroll of Escape: Ivory Tower" type="EtcItem">
+		<!-- Teleports to Ivory Tower in order to go to Hellbound. <font color=bbaa88>Travelers of Lv. 85 and higher can go to Hellbound every Saturday from 10:00 a.m. to 10:00 p.m. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94722" name="Scroll of Escape: Ivory Tower" type="EtcItem">
+		<!-- Teleports to Ivory Tower in order to go to Hellbound. <font color=bbaa88>Travelers of Lv. 85 and higher can go to Hellbound every Saturday from 10:00 a.m. to 10:00 p.m. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94723" name="Scroll of Escape: Ivory Tower" type="EtcItem">
+		<!-- Teleports to Ivory Tower in order to go to Hellbound. <font color=bbaa88>Travelers of Lv. 85 and higher can go to Hellbound every Saturday from 10:00 a.m. to 10:00 p.m. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94724" name="npc weapon_Two-handed Staff" type="Weapon">
+		<!-- To show Helios Retributer. -->
+		<set name="icon" val="icon.weapon_shaelon_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="990" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">152</stat>
+			<stat type="mAtk">134</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">19</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="94725" name="npc weapon_One-handed Staff" type="Weapon">
+		<!-- To show Specter Caster. -->
+		<set name="icon" val="icon.weapon_alacer_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="weight" val="1570" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">194</stat>
+			<stat type="mAtk">111</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">19</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="94726" name="Talisman of Hellbound Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94727" name="Boss Doll Box Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.ev_charge_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94728" name="Top-grade Grade A Weapon Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94729" name="Master’s Skill Book Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.sayha2017_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94730" name="Dynastic Essence" type="EtcItem">
+		<!-- Allows creating the listed items at the L-Coin Store. <Items to create> Spellbook: Ultimate Death Knight Transformation Spellbook: Titan Champion Spellbook: Cacophony of War Spellbook: Pa'agrio's Touch Spellbook: Team Building -->
+		<set name="icon" val="icon.bm_soul_of_dynasty" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94731" name="Shadai Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.freya_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94732" name="Agathion Spirit Exchange Coupon" type="EtcItem">
+		<!-- Can be exchanged for Agathion Spirit. <font color=eeaa22>Choose the Game Assistant in the menu on the right side of your screen, and click on the Agathion Spirit you want to obtain in the 'Items/ Agathions' tab.</font> -->
+		<set name="icon" val="icon.bm_agathion_ticket_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94733" name="+7 B-grade Weapon Coupon" type="EtcItem">
+		<!-- Can be exchanged for a +7 B-grade weapon. <font color=eeaa22>Choose the Game Assistant in the menu on the right side of your screen, and click on a +7 B-grade weapon you want to obtain in the 'Items/ Weapons and Armor' tab.</font> -->
+		<set name="icon" val="icon.bm_weapon_ticket_b" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94734" name="+4 C-grade Armor Coupon" type="EtcItem">
+		<!-- Can be exchanged for +4 C-grade armor. <font color=eeaa22>Choose the Game Assistant in the menu on the right side of your screen, and click on +4 C-grade armor you want to obtain in the 'Items/ Weapons and Armor' tab.</font> -->
+		<set name="icon" val="icon.bm_armor_ticket_c" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94735" name="Starter Kit" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_starter_package_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94736" name="Settling Kit: Jewel" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_starter_package_jewell_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94737" name="Settling Kit: Agathion" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_starter_package_agathion_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94738" name="Settling Kit: Upgrading" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_starter_package_boosting_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94739" name="+7 Damascus Sword" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94740" name="+7 Wizard's Tear" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94741" name="+7 Guardian's Sword" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_guardians_sword_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94742" name="+7 Bellion Cestus" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94743" name="+7 Bow of Peril" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_hazard_bow_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94744" name="+7 Lance" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_lancia_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94745" name="+7 Staff of Evil Spirits" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94746" name="+7 Deadman's Glory" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_deadmans_glory_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94747" name="+7 Art of Battle Axe" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94748" name="+7 Samurai Long Sword*Samurai Long Sword" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94749" name="+7 Demon's Dagger" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_demons_sword_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94750" name="+7 Colichemarde" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_colichemarde_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94751" name="+7 Dismantler" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_dismantler_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94752" name="+7 Star Buster" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.weapon_star_buster_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94753" name="Orfen's Lair Ticket" additionalName="Event" type="EtcItem">
+		<!-- Required for entering Orfen's Lair. -->
+		<set name="icon" val="icon.ticket_of_zaken" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94754" name="Orfen's Treasure Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94755" name="Half Mask of Glory" type="Armor">
+		<!-- A commemorative reward for reaching Lv. 90. An accessory that hides half of your face. <Effect> All Critical Damage +100 <font color=eeaa22>Available after unlocking the right hair accessory slot.</font> <font color=ff6666><Cannot be enchanted and augmented.> -->
+		<set name="icon" val="icon.accessory_half_face_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="94756" name="Onyx Kit Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_onyx_i00" />
@@ -83,5 +662,360 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="material" val="FISH" />
+	</item>
+	<item id="94763" name="Random Jewel Box Lv. 1-6" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. Amber Lv. 1-6 Opal Lv. 1-6 Coral Lv. 1-6 Onyx Lv. 1-6 Spinel Lv. 1-6 Zircon Lv. 1-6 Moonstone Lv. 1-6 -->
+		<set name="icon" val="icon.bm_pendant_pvp_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94764" name="Stylish Color Title" additionalName="Event" type="EtcItem">
+		<!-- A commemorative reward for reaching Lv. 90. Allows to change the character's title color. Use the '/ resetname' command to return to the default color. The title disappears after joining the clan of Lv. 3 or lower. Characters of Lv. 90+ can choose the <font color="00DCFF">sky-blue</font> color. -->
+		<set name="icon" val="icon.lv_benefit_nick" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94765" name="Lv. 90 Achievement Reward Box" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94766" name="Elite Golden Ticket" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94767" name="Elite Silver Ticket" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged for various items through the Game Assistant. -->
+		<set name="icon" val="icon.bm_masterpiece_silver_ticket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94768" name="Elite Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain Elite Golden Ticket or Elite Silver Ticket and additionally the following items. -->
+		<set name="icon" val="icon.bm_sayhas_talisman_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94769" name="Kit: 100 Elite Treasure Chests" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_masterpiece_gold_ticket_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94770" name="+7 Agathion Ignis Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.agathion_fire_1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94771" name="+7 Agathion Nebula Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.agathion_water_1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94772" name="+7 Agathion Procella Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.agathion_wind_1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94773" name="+7 Agathion Petram Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.agathion_earth_1" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94774" name="+7 Agathion Joy Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.pleasure_agathion_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94775" name="+4 Circlet of Hero Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.accessory_barka_karm_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94776" name="Berserker's Scroll (Exchangeable)" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect> STR +1 INT +1 Atk. Spd. +100 Casting Spd. +100 Speed +5 P. Skill Power +5% M. Skill Power +5% Duration: 20 min. Cooldown: 1 min. -->
+		<set name="icon" val="icon.bereserker_scroll_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94777" name="Berserker's Scroll" type="EtcItem">
+		<!-- Applies a buff when used. <Buff effect> STR +1 INT +1 Atk. Spd. +100 Casting Spd. +100 Speed +5 P. Skill Power +5% M. Skill Power +5% Duration: 20 min. Cooldown: 1 min. -->
+		<set name="icon" val="icon.bereserker_scroll_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94778" name="Ticket to Cruma Tower's Central Control Room" additionalName="Event" type="EtcItem">
+		<!-- Required for entering Cruma Tower's Central Control Room. -->
+		<set name="icon" val="icon.ticket_of_zaken" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94779" name="Core's Treasure Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94780" name="Growth Rune Fragment" type="EtcItem">
+		<!-- Required upgrading Growth Rune through compounding. Note! In case of failure the Growth Rune level is decreased depending on its level. -->
+		<set name="icon" val="icon.star_agathion_cube_peice" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94781" name="Growth Rune Lv. 1" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +1% Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94782" name="Growth Rune Lv. 2" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +2% Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94783" name="Growth Rune Lv. 3" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +3% Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94784" name="Growth Rune Lv. 4" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +4% Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94785" name="Growth Rune Lv. 5" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +5% P. Def. +10 M. Def. +10 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94786" name="Growth Rune Lv. 6" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +6% P. Def. +20 M. Def. +20 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94787" name="Growth Rune Lv. 7" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +7% P. Def. +30 M. Def. +30 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94788" name="Growth Rune Lv. 8" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +8% P. Def. +50 M. Def. +50 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94789" name="Growth Rune Lv. 9" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +9% P. Def. +70 M. Def. +70 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94790" name="Growth Rune Lv. 10" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +10% P. Atk. +100 M. Atk. +100 P. Def. +100 M. Def. +100 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94791" name="Growth Rune Lv. 11" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +11% P. Atk. +120 M. Atk. +120 P. Def. +120 M. Def. +120 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94792" name="Growth Rune Lv. 12" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +12% P. Atk. +150 M. Atk. +150 P. Def. +150 M. Def. +150 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94793" name="Growth Rune Lv. 13" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +13% P. Atk. +180 M. Atk. +180 P. Def. +180 M. Def. +180 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94794" name="Growth Rune Lv. 14" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +14% P. Atk. +210 M. Atk. +210 P. Def. +210 M. Def. +210 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94795" name="Growth Rune Lv. 15" type="EtcItem">
+		<!-- <Properties> Acquired XP/ SP +15% P. Atk. +300 M. Atk. +300 P. Def. +300 M. Def. +300 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
+		<set name="icon" val="icon.pc_cafe_rune_03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="94796" name="Kit: Wolf" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_summon_wolf_r_02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94797" name="Kit: Buffalo" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.buffalo_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94798" name="Kit: Tiger" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.etc_tooth_gragon" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94799" name="Kit: Kookaburra" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.kukaburo_necklace_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

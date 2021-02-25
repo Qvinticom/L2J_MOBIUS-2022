@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="45200" toLevel="24" name="Transcendent Mortal Blow">
-		<!-- Attacks the target's vital points with $s1 power. Requires a dagger. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the enemy's vital spot. Power $s1. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0016</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -65,7 +65,7 @@
 		</conditions>
 	</skill>
 	<skill id="45201" toLevel="24" name="Transcendent Power Shot">
-		<!-- Shoots an arrow dealing damage with $s1 power. Requires a bow. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- A powerful shot. Power $s1. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -129,7 +129,7 @@
 		</conditions>
 	</skill>
 	<skill id="45202" toLevel="24" name="Transcendent Iron Punch">
-		<!-- Attacks the enemy with $s1 power. Requires a fist weapon. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0029</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -193,7 +193,7 @@
 		</conditions>
 	</skill>
 	<skill id="45203" toLevel="50" name="Transcendent Double Sonic Slash">
-		<!-- Attacks the enemy with dual swords with $s1 power. Requires a dual swords. Increases power upon consuming Momentum (up to 3). Ignores the enemy s defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Strikes with the sword three times. Attacks the target with $s1 power. Increases power upon consuming Momentum. Ignores $s2 of the target's defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0005</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -302,7 +302,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45204" toLevel="40" name="Transcendent Triple Sonic Slash">
-		<!-- Attacks the enemy with dual swords with $s1 power. Requires a dual swords. Increases power upon consuming Momentum (up to 3). Ignores the enemy s defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Uses dual swords to attack the target with $s1 power. Increases power upon consuming Momentum. Ignores defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0261</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -391,7 +391,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45205" toLevel="55" name="Transcendent Double Shot">
-		<!-- Shoots 2 arrows in succession to attack the enemy with $s1 power. Requires a bow. Critical. Over-hit. Can be used only in the transcendent instance zones. -->
+		<!-- Shoots 2 arrows one by one. Deals damage with $s1 power. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0019</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -517,7 +517,7 @@
 		</conditions>
 	</skill>
 	<skill id="45206" toLevel="55" name="Transcendent Fatal Strike">
-		<!-- Attacks the target with $s1 power. Requires a sword, a blunt weapon, a spear, or dual swords. Ignores Shield Defense. Ignores $s2 of target's defense. Critical. Over-hit. Can be used only in the transcendent instance zones. -->
+		<!-- A powerful strike. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0190</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -636,7 +636,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45207" toLevel="55" name="Transcendent Deadly Blow">
-		<!-- Attacks the target's vital points with $s1 power. Requires a dagger. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the target's vital point. Deals P. damage with $s1 power. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0263</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -762,7 +762,7 @@
 		</conditions>
 	</skill>
 	<skill id="45208" toLevel="55" name="Transcendent Burning Fist">
-		<!-- Hurls a fiery fist to attack the target with $s1 power. Requires a fist weapon. Ignores Shield Defense. Ignores $s2 of target's defense. Critical. Over-hit. Can be used only in the transcendent instance zones. -->
+		<!-- A powerful blow of the flaming fist. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0280</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -888,7 +888,7 @@
 		</conditions>
 	</skill>
 	<skill id="45209" toLevel="60" name="Transcendent Hurricane Assault">
-		<!-- Strikes the target with $s1 power. Increases power upon consuming Momentum (up to $s2). Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the target with $s1 power. Increases power upon consuming Momentum. Ignores Shield Defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0284</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1024,7 +1024,7 @@
 		</conditions>
 	</skill>
 	<skill id="45210" toLevel="15" name="Transcendent Lethal Shot">
-		<!-- Shoots a deadly arrow with $s1 power. Requires a bow. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Shoots with a deadly arrow. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0343</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1070,7 +1070,7 @@
 		</conditions>
 	</skill>
 	<skill id="45211" toLevel="15" name="Transcendent Lethal Blow">
-		<!-- Attacks the enemy s vital spot with $s1 power. Requires a dagger. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the target's weak point. Deals physical damage with $s1 power. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0344</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1116,7 +1116,7 @@
 		</conditions>
 	</skill>
 	<skill id="45212" toLevel="30" name="Transcendent Tribunal">
-		<!-- Attacks the target with $s1 power. For $s2, enemy s P. Critical Rate -$s3. Requires a sword/ blunt weapon. Ignores Shield Defense. Ignores $s4 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the target with $s1 power. For $s2, the enemy's P. Critical Rate -$s3. Ignores Shield Defense. Ignores $s4 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0400</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1185,7 +1185,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45213" toLevel="30" name="Transcendent Judgment">
-		<!-- Attacks the target with $s1 power. For $s2, enemy s P. Critical Damage -$s3. Requires a sword/ blunt weapon. Ignores Shield Defense. Ignores $s4 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the target with $s1 power. For $s2, the enemy's P. Critical Damage -$s3. Ignores Shield Defense. Ignores $s4 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0401</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1253,8 +1253,8 @@
 			<value level="30">70</value>
 		</mpConsume>
 	</skill>
-	<skill id="45214" toLevel="15" name="Transcendent Spike Thrust">
-		<!-- Attacks the target with $s1 power. Requires a spear. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+	<skill id="45214" toLevel="15" name="Soul Piercing">
+		<!-- There is a certain chance to knock back. -->
 		<icon>icon.skill0921</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1293,7 +1293,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45215" toLevel="30" name="Transcendent Shield Strike">
-		<!-- Attacks the enemy using a shield with $s1 power, and provokes the enemy. Requires a shield. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the enemy using a shield with $s1 power, and provokes the enemy. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0984</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1365,7 +1365,7 @@
 		</conditions>
 	</skill>
 	<skill id="45216" toLevel="15" name="Transcendent Deadly Strike">
-		<!-- Attacks the target with $s1 power. For 10 sec., enemy's P. Def. -23%. If the target is affected by Hold and attacked, power +50%. Requires a sword, blunt weapon, or dual swords. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Attacks the target with $s1 power. If the target is affected by Hold, Power +50%. For 10 sec., P. Def. -23% Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0986</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -1448,7 +1448,7 @@
 		</effects>
 	</skill>
 	<skill id="45217" toLevel="5" name="Transcendent Guard Crush">
-		<!-- Attacks the target with $s1 power. Requires a sword, a blunt weapon, or dual swords. Ignores Shield Defense. Ignores $s2 of target's defense. Critical. Over-hit. Can be used only in the transcendent instance zones. -->
+		<!-- Attacks the enemy with $s1 power. Critical. Ignores Shield Defense. Ignores $s2 of the target's defense. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0496</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1467,35 +1467,35 @@
 		</mpConsume>
 	</skill>
 	<skill id="45218" toLevel="45" name="Transcendent Prominence">
-		<!-- Deals fire damage with $s1 power. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Summons a flame. Deals magic damage to the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45219" toLevel="45" name="Transcendent Hydro Blast">
-		<!-- Summons a powerful water wave to attack the enemy with $s1 power. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Strike the enemy with the rush of water. Inflicts magic damage on the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45220" toLevel="45" name="Transcendent Hurricane">
-		<!-- Summons a hurricane to attack the enemy with $s1 power. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Summons a devastating tornado. Inflicts magic damage on the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45221" toLevel="40" name="Transcendent Blaze">
-		<!-- The enemy's body is set aflame. Inflicts magic damage on the enemy with $s1 power. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- The enemy's body is set aflame. Inflicts magic damage with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45222" toLevel="40" name="Transcendent Aqua Swirl">
-		<!-- Releases a water vortex to attack the enemy with $s1 power. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Releases a water vortex. Deals magic damage to the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45223" toLevel="40" name="Transcendent Twister">
-		<!-- Summons a wind blade. Inflicts magic damage on the enemy with $s1 power. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Summons a wind blade. Inflicts magic damage on the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45224" toLevel="35" name="Transcendent Might of Heaven">
-		<!-- Summons light of the heaven. Deals magic damage with $s1 power and additional damage to demons and undead. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Strikes with holy light. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45225" toLevel="25" name="Transcendent Steal Essence">
-		<!-- <Drain Skill> Deals magic damage to the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. The skill can be used only in the transcendent instance zones. -->
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. Can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45226" toLevel="10" name="Transcendent Soul Smash - Not used">
@@ -1528,7 +1528,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45227" toLevel="8" name="Transcendent Soul Impulse">
-		<!-- <Ultimate skill> Attacks the target from a distance with $s1 power. Requires an ancient sword or a two-handed sword. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- <Ultimate skill> Hits the ground and attacks enemies at the distance. Attacks the enemy with $s1 power. Critical. Ignores Shield Defense. Ignores $s2 of the target's defense. Can be used only in the transcendent instance zones. -->
 		<icon>icon.wizard_danger_warppow</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1552,8 +1552,8 @@
 			<value level="8">63</value>
 		</mpConsume>
 	</skill>
-	<skill id="45228" toLevel="8" name="Transcendent Soul Thrust">
-		<!-- <Ultimate skill> Attacks the opponent 3 times with $s1 power. Requires a rapier. Deals additional magic damage. M. Def. -10%. In PvE knocks the opponents back. Ignores Shield Defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+	<skill id="45228" toLevel="8" name="Transcendent Soul Piercing">
+		<!-- <Ultimate skill> Attacks the enemy three times with $s1 power. There is a certain chance to deliver an extra attack. The effect lasts for 10 sec. Target's M. Def. -10% A chance to knock back monsters after an attack Critical. Ignores Shield Defense. Ignores $s2 of the target's defense. The skill can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0504</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1578,11 +1578,11 @@
 		</mpConsume>
 	</skill>
 	<skill id="45229" toLevel="8" name="Transcendent Soul Spark">
-		<!-- Deals magic damage to the enemy with $s1 power. Requires a rapier. The skill can be used only in the transcendent instance zones. -->
+		<!-- Deals magic damage to the enemy with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45230" toLevel="10" name="Transcendent Twin Shot">
-		<!-- <Ultimate skill> Shoots 2 arrows to attack the enemy with $s1 power. Requires a bow. Ignores target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- <Ultimate skill> Shoots 2 arrows. Attacks the enemy at the front twice with $s1 power. Critical. Ignores Shield Defense. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0507</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1618,11 +1618,11 @@
 		</conditions>
 	</skill>
 	<skill id="45231" toLevel="30" name="Transcendent Death Spike">
-		<!-- Throws a bone to inflict damage on the enemy with $s1 power. Requires one Cursed Bone. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Uses dark energy to attack the enemy. Deals damage with $s1 power. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45232" toLevel="45" name="Transcendent Vampiric Claw">
-		<!-- <Drain Skill> Deals magic damage to the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. The skill can be used only in the transcendent instance zones. -->
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. Can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45233" toLevel="15" name="Transcendent Bleed">
@@ -1697,7 +1697,7 @@
 		</effects>
 	</skill>
 	<skill id="45236" toLevel="2" name="Prophecy of Light">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, P./ M. Def. +$s4, damage to monsters +$s5, Healing Power +$s6, Debuff Resistance +$s7. Consumes 20 Spirit Ore. -->
+		<!-- Max HP $s1 Max MP $s2 P. Def. $s3 M. Def. $s3 Healing Power $s5 Debuff Resistance $s6 Anomaly Resistance $s6 PvE damage $s4 -->
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1791,7 +1791,7 @@
 		</effects>
 	</skill>
 	<skill id="45237" toLevel="4" name="Swap Attack">
-		<!-- M. Atk. -$s1, P. Atk. +$s2. When activated, constantly spends MP. Note! When Battle Switch, Swap Defense and Convert are used simultaneous, MP Consumption is increased according to the number of active skills. -->
+		<!-- M. Atk. $s1 P. Atk. $s2 -->
 		<magicLevel>78</magicLevel>
 		<mpConsume>36</mpConsume>
 		<operateType>T</operateType>
@@ -1823,7 +1823,7 @@
 		</effects>
 	</skill>
 	<skill id="45238" toLevel="4" name="Root Mastery">
-		<!-- Hold Atk. Rate +$s1. -->
+		<!-- Hold Atk. Rate $s1 -->
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">79</value>
@@ -1844,7 +1844,7 @@
 		</effects>
 	</skill>
 	<skill id="45239" toLevel="4" name="Sleep Mastery">
-		<!-- Sleep Atk. Rate +$s1. -->
+		<!-- Sleep Atk. Rate $s1 -->
 		<magicLevel>
 			<value level="1">76</value>
 			<value level="2">79</value>
@@ -1865,7 +1865,7 @@
 		</effects>
 	</skill>
 	<skill id="45240" toLevel="1" name="Einhasad's Blessing">
-		<!-- HP Recovery Rate +5%, MP Recovery Rate +5%. -->
+		<!-- It's an Einhasad's Blessing. HP Recovery Rate +5% MP Recovery Rate +5% -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1881,7 +1881,7 @@
 		</effects>
 	</skill>
 	<skill id="45241" toLevel="15" name="Divine Beam">
-		<!-- A divine beam strikes the target. Inflicts magical damage with $s1 power. When you are attacking the enemy affected by Hold, the debuff is cancelled and an extra attack is triggered. Deals additional damage to demons and undead. <PvP effect> When used against the same target, the damage is decreased for 3 sec. -->
+		<!-- Purifies with holy light. Inflicts magic damage with $s1 power. When the held enemy is attacked Inflicts an additional attack if Hold is canceled. Deals additional damage to demons and undead. -->
 		<castRange>700</castRange>
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1982,7 +1982,7 @@
 		</effects>
 	</skill>
 	<skill id="45242" toLevel="15" name="Mass Dryad Root">
-		<!-- Holds nearby enemies for $s1 -->
+		<!-- <Hold Skill> The effect lasts for $s1 Inflicts Hold on the enemy. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -2081,7 +2081,7 @@
 		</effects>
 	</skill>
 	<skill id="45243" toLevel="15" name="Mass Wind Shackles">
-		<!-- Nearby enemies' Atk. Spd./ Casting Spd. -$s2 for $s1 -->
+		<!-- <Suppression skill> Slows enemies down. The effect lasts for $s1 Atk. Spd. -$s2 Casting Spd. -$s2 -->
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -2215,7 +2215,7 @@
 		</effects>
 	</skill>
 	<skill id="45245" toLevel="1" name="Machine Assistance">
-		<!-- For $s1, an attack has a certain chance to summon a Golem who attacks the enemy. -->
+		<!-- The effect lasts for $s1 An attack has a certain chance to summon a Mechanic Golem who attacks the enemy. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -2263,7 +2263,7 @@
 		</effects>
 	</skill>
 	<skill id="45247" toLevel="10" name="Vampiric Touch">
-		<!-- <Drain Skill> Deals magic damage to the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -2327,7 +2327,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="45249" toLevel="15" name="Earth Tremor">
-		<!-- Releases earth rage to attack the enemy with $s1 power. Requires a sword, a blunt weapon, or a spear. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
+		<!-- A powerful earth strike. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill1922</icon>
 		<effectPoint>
 			<value level="1">-400</value>
@@ -2425,8 +2425,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45250" toLevel="40" name="Drain Energy">
-		<!-- <Drain Skill> Inflicts magical damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
+	<skill id="45250" toLevel="40" name="Drain HP">
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-39</value>
@@ -2653,11 +2653,11 @@
 		</effects>
 	</skill>
 	<skill id="45251" toLevel="1" name="Enhanced Assault">
-		<!-- The Rush skill now stuns a target. The Stun Atk. Rate for Rush Impact is increased. -->
+		<!-- When the Rush skill is used, the stun effect is added (Cooldown: 20 sec.) Increases a chance to stun the enemy after using the Rush Impact skill (Cooldown: 20 sec.) -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45252" toLevel="3" name="Rush">
-		<!-- Charges into the target, if the distance between the target and the character is more than $s1. -->
+		<!-- <Shock skill> Charges into the target. With a certain chance, stuns them. Can be used if the distance between the target and the character is more than $s1. -->
 		<icon>icon.skill0493</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -2672,7 +2672,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45253" toLevel="3" name="Rush Impact">
-		<!-- Rushes forward to attack enemies at the front with $s1 power added to P. Atk. Inflicts stun for $s2 Can be used if the distance to the target is more than $s3. -->
+		<!-- <Shock skill> Rushes forward to attack enemies at the front with $s1 power. Stuns them for $s2 Can be used if the distance to the target is more than $s3. -->
 		<icon>icon.skill0793</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -2687,7 +2687,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45254" toLevel="1" name="Rush">
-		<!-- Cannot move while stunned for 3 sec. -->
+		<!-- Stuns making unable to move. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45255" toLevel="35" name="Freezing Strike">
@@ -3022,7 +3022,7 @@
 		</effects>
 	</skill>
 	<skill id="45257" toLevel="30" name="Dark Strike">
-		<!-- <Skill with fixed cooldown> Inflicts damage with $s1 power. Over-hit. -->
+		<!-- <Skill with fixed cooldown> Attacks the target with $s1 power. -->
 		<icon>icon.skill4336_new</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -3178,27 +3178,27 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45261" toLevel="10" name="Transcendent Divine Strike">
-		<!-- Summons holy light. Deals magic damage with $s1 power and additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
+		<!-- Summons holy light. Inflicts magic damage with $s1 power. Deals additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45262" toLevel="15" name="Transcendent Divine Beam">
-		<!-- A divine beam strikes the target. Inflicts magical damage with $s1 power. When you are attacking the enemy affected by Hold, the debuff is cancelled and an extra attack is triggered. Deals additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
+		<!-- Purifies with holy light. Inflicts magic damage with $s1 power. Inflicts an additional attack if Hold is canceled. Deals additional damage to demons and undead. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45263" toLevel="10" name="Transcendent Vampiric Touch">
-		<!-- <Drain Skill> Deals magic damage to the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. The skill can be used only in the transcendent instance zones. -->
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. Can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45264" toLevel="35" name="Transcendent Frost Bolt">
 		<!-- Freezes the air around the enemy. Inflicts damage on the enemy with $s1 power. For 30 sec., the target's Speed -20%. The skill can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="45265" toLevel="10" name="Transcendent Drain Energy">
-		<!-- <Drain Skill> Deals magic damage to the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. The skill can be used only in the transcendent instance zones. -->
+	<skill id="45265" toLevel="10" name="Transcendent Life Drain">
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. Can be used only in the transcendent instance zones. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="45266" toLevel="15" name="Transcendent Demolition Impact">
-		<!-- Unleashes a destructive shockwave at the target with $s1 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- Unleashes a destructive shockwave. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0777</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -3237,7 +3237,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45267" toLevel="15" name="Transcendent Earth Tremor">
-		<!-- Releases earth rage to attack the enemy with $s1 power. Requires a sword, blunt weapon or a spear. Ignores Shield Defense. Ignores $s2 of target's defense. Critical. Over-hit. The skill can be used only in the transcendent instance zones. -->
+		<!-- A powerful earth strike. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill1922</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -3276,7 +3276,7 @@
 		</mpConsume>
 	</skill>
 	<skill id="45268" toLevel="15" name="Transcendent Spoil Crush">
-		<!-- Attacks the target with $s1 power. Requires a sword, a blunt weapon, or a spear. Ignores Shield Defense. Ignores $s2 of target's defense. Critical. Over-hit. Can be used only in the transcendent instance zones. -->
+		<!-- Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Can be used only in the transcendent instance zones. -->
 		<icon>icon.skill0348</icon>
 		<operateType>A1</operateType>
 		<effectPoint>

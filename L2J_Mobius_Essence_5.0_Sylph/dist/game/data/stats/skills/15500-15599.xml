@@ -58,7 +58,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15509" toLevel="1" name="Laido Destruction">
-		<!-- Powerful attack on enemies near target. -->
+		<!-- Inflicts great damage on the enemies near the target. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -222,7 +222,7 @@
 		<hitTime>100</hitTime>
 	</skill>
 	<skill id="15526" toLevel="1" name="Karamar Breaker">
-		<!-- Powerful attack on enemies near target. -->
+		<!-- Inflicts great damage on the enemies near the target. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -575,7 +575,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15564" toLevel="2" name="Theor's Attack">
-		<!-- P. Atk. On a single enemy. -->
+		<!-- Inflicts physical damage on a single target. -->
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
@@ -583,7 +583,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="15565" toLevel="1" name="Theor's AoE Attack">
+	<skill id="15565" toLevel="1" name="Theor's Range Attack">
 		<!-- AoE P. Atk. On nearby enemies. -->
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>

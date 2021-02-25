@@ -614,8 +614,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4414" toLevel="3" name="Heavy Armor Type">
-		<!-- Strong P. Def. and weak P. Evasion. -->
+	<skill id="4414" toLevel="3" name="Heavy Armor">
+		<!-- Increases P. Def, decreases P. Evasion. -->
 		<icon>
 			<value level="1">icon.skill4312</value>
 			<value level="2">icon.skill0000</value>
@@ -1787,8 +1787,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4435" toLevel="5" name="High Stun Attack Resistance">
-		<!-- Very resistant to Stun. -->
+	<skill id="4435" toLevel="5" name="Greater Shock Resistance">
+		<!-- Highly resistant to Shock. -->
 		<icon>icon.skill4435</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1805,8 +1805,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4436" toLevel="5" name="Greater Poison Resistance">
-		<!-- Very resistant to Poison. -->
+	<skill id="4436" toLevel="5" name="Greater Infection Resistance">
+		<!-- Highly resistant to Infection. -->
 		<icon>icon.skill4436</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1823,8 +1823,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4437" toLevel="5" name="Greater Bleed Resistance">
-		<!-- Highly resistant to Bleed. -->
+	<skill id="4437" toLevel="5" name="Greater Infection Resistance">
+		<!-- Highly resistant to Infection. -->
 		<icon>icon.skill4437</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -1895,8 +1895,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4441" toLevel="5" name="Enhanced Fear/Silence Resistance">
-		<!-- Highly resistant to Silence/ Fear. -->
+	<skill id="4441" toLevel="5" name="Greater Fear Resistance">
+		<!-- Highly resistant to Fear. -->
 		<icon>icon.skill4441</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2067,8 +2067,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4450" toLevel="5" name="Stun Vulnerability">
-		<!-- Vulnerable to Stun. -->
+	<skill id="4450" toLevel="5" name="Shock Vulnerability">
+		<!-- Vulnerable to Shock. -->
 		<icon>icon.skill4450</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2085,8 +2085,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4451" toLevel="5" name="Poison Vulnerability">
-		<!-- Vulnerable to Poison. -->
+	<skill id="4451" toLevel="5" name="Infection Vulnerability">
+		<!-- Vulnerable to Infection. -->
 		<icon>icon.skill4451</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2103,8 +2103,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4452" toLevel="5" name="Bleed Vulnerability">
-		<!-- Vulnerable to Bleed. -->
+	<skill id="4452" toLevel="5" name="Infection Vulnerability">
+		<!-- Vulnerable to Infection. -->
 		<icon>icon.skill4452</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2175,8 +2175,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4456" toLevel="5" name="Fear/Silence Vulnerability">
-		<!-- Fear/Silence vulnerability. -->
+	<skill id="4456" toLevel="5" name="Fear Vulnerability">
+		<!-- Vulnerable to Fear. -->
 		<icon>icon.skill4456</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2781,7 +2781,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4472" toLevel="12" name="Golem Punch">
+	<skill id="4472" toLevel="12" name="Golem Strike">
 		<!-- For powerful Golems that are $s1x stronger. -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2934,8 +2934,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4475" toLevel="1" name="Complete Bleed Resistance">
-		<!-- Completely resistant to Bleed. -->
+	<skill id="4475" toLevel="1" name="Complete Infection Resistance">
+		<!-- Completely resistant to Infection. -->
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>

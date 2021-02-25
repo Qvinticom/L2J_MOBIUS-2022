@@ -153,7 +153,7 @@
 		</effects>
 	</skill>
 	<skill id="54206" toLevel="1" name="Ultimate Death Knight Transformation">
-		<!-- For 20 min., you are transformed into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers. <Appearance effect> P. Atk. +40% P. Critical Damage +40% P. Skill Critical Damage +40% Atk. Spd. +50% Speed +5 Decreases penalty of Received Healing. Increases holy defense. Consumes 50 Spirit Ore. -->
+		<!-- For 20 min., you are transformed into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers. <Appearance effect> P. Atk. +40% P. Critical Damage +40% P. Skill Critical Damage +40% Atk. Spd. +50% Speed +5 Decreases penalty of Received Healing. Increases holy defense. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -350,6 +350,76 @@
 	</skill>
 	<skill id="54213" toLevel="1" name="Mount Air Bike">
 		<!-- Allows to ride Air Bike. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54214" toLevel="1" name="Dragon Berserker Evolver">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54215" toLevel="1" name="High Priest Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54216" toLevel="1" name="Baby Shark Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54217" toLevel="1" name="Panda Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54218" toLevel="1" name="Cat Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54219" toLevel="1" name="Teddy Bear Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54220" toLevel="1" name="Dragon Berserker Evolver">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54221" toLevel="1" name="Wild Wolf Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54222" toLevel="1" name="Valentine Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54223" toLevel="1" name="Transform: Kat the Cat">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54224" toLevel="1" name="Hanbok Transformation">
+		<!-- P. Atk. $s1 M. Atk. $s1 Atk. Spd. $s2 Casting Spd. $s2 P. Critical Rate $s3 Skill Critical Rate $s4 Acquired XP/ SP $s5 Sayha's Grace Consumption $s6 -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54225" toLevel="1" name="Mount Elemental Lyn Draco">
+		<!-- Mounts an Elemental Lyn Draco. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54226" toLevel="1" name="Worthy Warrior Transformation">
+		<!-- For warriors that have taken the 1st-3rd places in rankings among their race. Sylph Power grants unique appearance to a hero. Max HP +300. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="54227" toLevel="1" name="Mount Black Wyvern">
+		<!-- Allows to mount Black Wyvern. When the character is riding Wyvern, weapon/ sigil is unequipped. Only select Buff skills are available while riding the Wyvern. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

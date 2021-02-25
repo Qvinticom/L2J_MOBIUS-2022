@@ -137,12 +137,12 @@
 			<item id="92404" min="1" max="1" chance="2" /> <!-- Zaken's Blood Sword -->
 			<item id="92405" min="1" max="1" chance="2" /> <!-- Core's Plasmic Bow -->
 			<item id="92407" min="1" max="1" chance="2" /> <!-- Orfen's Venom Sword -->
-			<item id="92406" min="1" max="1" chance="2" /> <!-- Queen Ant's Stone Spear -->
-			<item id="91690" min="100" max="100" chance="90" /> <!-- Special HP Recovery Potion (Event) -->
+			<item id="92406" min="1" max="1" chance="2" /> <!-- Queen Ant's Stone Spear - Not Available - Not available -->
+			<item id="91690" min="100" max="100" chance="90" /> <!-- Special HP Recovery Potion - Event -->
 		</capsuled_items>
 	</item>
 	<item id="94612" name="Boss' Weapon Fragment" type="EtcItem">
-		<!-- Can be exchanged for various items through the Game Assistant. <Exchangeable items>. - Baium's Thunder Breaker (100 pcs.). - Zaken's Blood Sword (70 pcs.). - Core's Plasmic Bow (70 pcs.). - Orfen's Venom Sword (50 pcs.). - Queen Ant's Stone Breaker (70 pcs.). - Random Boss' Weapon Pack (1 pc.) -->
+		<!-- Can be exchanged for various items through the Game Assistant. <Exchangeable items> - Baium's Thunder Breaker (80 pcs.) - Zaken's Blood Sword (60 pcs.) - Core's Plasmic Bow (60 pcs.) - Orfen's Venom Sword (60 pcs.) - Queen Ant's Stone Breaker (60 pcs.) - Random Boss' Weapon Pack (1 pc.) -->
 		<set name="icon" val="icon.bm_piece_of_ensoul_stone" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -162,7 +162,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94614" name="Pirate Earring" additionalName="Event" type="Armor">
-		<!-- <Properties>. P. Def. +500. Max MP +34. MP consumption -2%. Damage Reflection +5%. With a certain chance, absorbs 2% of inflicted damage as HP. Cannot be enchanted. -->
+		<!-- <Properties> P. Def. +500 Max MP +34 MP Consumption -2% Damage Reflection +5% With a certain chance, absorbs 2% of inflicted damage as HP. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -177,7 +177,7 @@
 		</stats>
 	</item>
 	<item id="94615" name="Forgotten Primeval Garden's Time Stone" additionalName="Event" type="EtcItem">
-		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Forgotten Primeval Garden -->
+		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone> Forgotten Primeval Garden -->
 		<set name="icon" val="icon.timezone_refill_3" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="5" />
@@ -232,7 +232,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94620" name="Primeval Isle's Time Stone" additionalName="Event" type="EtcItem">
-		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Primeval Isle -->
+		<!-- Prolongs your session zone's raid for 60 min. <Hunting zone> Primeval Isle -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="5" />
@@ -400,7 +400,7 @@
 		<set name="material" val="FISH" />
 	</item>
 	<item id="94635" name="Low-grade Pet XP Crystal" type="EtcItem">
-		<!-- Applies the following effect. <When used>. XP +1,000,000 for a summoned pet. Note!. Can be used only when a pet is summoned. -->
+		<!-- Applies the following effect. <When used> XP +1,000,000 for a summoned pet Note! Can be used only when a pet is summoned. -->
 		<set name="icon" val="icon.r99_soul_stone_piece_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -410,7 +410,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="94636" name="Pet XP Growth Scroll" type="EtcItem">
-		<!-- Applies a buff when used. <Buff effect>. Pet's acquired XP +30%. Duration: 20 min. Cooldown: 1 min. The effect disappears after death or unsummoning. -->
+		<!-- Applies a buff when used. <Buff effect> Pet's acquired XP +30% Duration: 20 min. Cooldown: 1 min. The effect disappears after death or unsummoning. -->
 		<set name="icon" val="icon.scroll_of_kukur_event" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -418,5 +418,655 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+	</item>
+	<item id="94637" name="+9 Talisman of Speed Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_pirate_king_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94638" name="+10 Talisman of Speed Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_pirate_king_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94639" name="Forgotten Primeval Garden Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94640" name="Bee Farm's Kit" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.present_of_destination_event" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94641" name="Pet Creation Coupon" type="EtcItem">
+		<!-- Can be used to create Minion Necklace and Pet Skill Textbook in the Special Craft tab of L-Coin Store. -->
+		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94642" name="Pet Earring" type="Armor">
+		<!-- <Effect for the pet if equipped> Pet's P. Atk. +1000 Pet's M. Atk. +1000 Pet's MP Recovery Rate +2 Pet's basic M. Def. +91 <font color=ff6666>(Effects do not apply if equipped by the character.) (The effects do not stack if two identical items are equipped.)</font> -->
+		<set name="icon" val="BranchSys2.icon.g_accessory_event_earring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">48</stat>
+		</stats>
+	</item>
+	<item id="94643" name="Pet Ring" type="Armor">
+		<!-- <Effect for the pet if equipped> Pet's P. Atk. +1000 Pet's M. Def. +500 Pet's acquired XP +50% Pet's basic M. Def. +65 <font color=ff6666>(Effects do not apply if equipped by the character.) (The effects do not stack if two identical items are equipped.)</font> -->
+		<set name="icon" val="BranchSys2.icon.g_accessory_event_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">26</stat>
+		</stats>
+	</item>
+	<item id="94644" name="Pet Book Box" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.new_user_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94645" name="Zaken Doll Lv. 1" type="EtcItem">
+		<!-- <Zaken Doll's Sorcery Lv. 1> Skill Critical Rate +10 HP Recovery +20 Skill Critical Damage +100 Vampiric Rage +1% (with a certain chance) Boosts parameters when in inventory. Can be upgraded through compounding. -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94646" name="Zaken Doll Lv. 2" type="EtcItem">
+		<!-- <Zaken Doll's Sorcery Lv. 2> Skill Critical Rate +40 HP Recovery +50 Skill Critical Damage +200 Vampiric Rage +2% (with a certain chance) Boosts parameters when in inventory. Can be upgraded through compounding. -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94647" name="Zaken Doll Lv. 3" type="EtcItem">
+		<!-- <Zaken Doll's Sorcery Lv. 3> Skill Critical Rate +60 HP Recovery +80 Skill Critical Damage +300 Vampiric Rage +3% (with a certain chance) Boosts parameters when in inventory. -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94648" name="Core Doll Lv. 1" type="EtcItem">
+		<!-- <Core Doll's Sorcery Lv. 1> Received Skill Critical Damage -5% Received Skill Critical Rate -2% Shock Resistance +10% Sleep Resistance +10% Knockback Resistance +5% Boosts parameters when in inventory. Can be upgraded through compounding. -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94649" name="Core Doll Lv. 2" type="EtcItem">
+		<!-- <Core Doll's Sorcery Lv. 2> Received Skill Critical Damage -10% Received Skill Critical Rate -5% Shock Resistance +20% Sleep Resistance +20% Knockback Resistance +10% Boosts parameters when in inventory. Can be upgraded through compounding. -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94650" name="Core Doll Lv. 3" type="EtcItem">
+		<!-- <Core Doll's Sorcery Lv. 3> Received Skill Critical Damage -15% Received Skill Critical Rate -8% Shock Resistance +30% Sleep Resistance +30% Knockback Resistance +20% Boosts parameters when in inventory. -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94651" name="Package: Zaken Doll Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94652" name="Package: Zaken Doll Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94653" name="Package: Zaken Doll Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_zaken_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94654" name="Package: Core Doll Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94655" name="Package: Core Doll Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94656" name="Package: Core Doll Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_core_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94657" name="Package: Pet Food 2000 pcs." type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="BranchSys3.icon1.g_studentenfutter_germany" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94658" name="Package: Pet's Earring" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="BranchSys2.icon.g_accessory_event_earring" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94659" name="Package: Pet's Ring" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="BranchSys2.icon.g_accessory_event_ring" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94660" name="For monsters_Dragontroop Commander Spear - Not Available" additionalName="Not available" type="Weapon">
+		<!-- The item is not available. Monster weapon. Spear. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="205" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="94661" name="For monsters_Dragontroop Soldier Sword - Not Available" additionalName="Not available" type="Weapon">
+		<!-- The item is not available. Monster weapon. One-handed Sword. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="144" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="94662" name="For monsters_Dragontroop Soldier Shield - Not Available" additionalName="Not available" type="Weapon">
+		<!-- The item is not available. Monster weapon. Shield -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="FIST" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="200" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pDef">25</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="94663" name="For monsters_Dragontroop Wizard Staff - Not Available" additionalName="Not available" type="Weapon">
+		<!-- The item is not available. Monster weapon. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="250" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">125</stat>
+			<stat type="mAtk">186</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">19</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="94664" name="For monsters_Dragontroop Lancer Javeline - Not Available" additionalName="Not available" type="Weapon">
+		<!-- The item is not available. Monster weapon. One-handed Sword. -->
+		<set name="icon" val="icon.etc_ertheia2" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="144" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="94665" name="Queen Ant's Lair Pass" additionalName="Event" type="EtcItem">
+		<!-- Required for entering Queen Ant's Lair. -->
+		<set name="icon" val="icon.ticket_of_zaken" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94666" name="Dragon Valley Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of various items. -->
+		<set name="icon" val="icon.event_orc_coinbox" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94667" name="Queen Ant Treasure Chest" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94668" name="Spellbook: Pa'agrio's Touch" type="EtcItem">
+		<!-- A spellbook for learning the Pa'agrio's Touch skill. <Class> Dominator <Skill effect> Recovers HP/ CP of surrounding clan members. Creates a shield to absorb damage. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94669" name="Spellbook: Pa'agrio's Medicine" type="EtcItem">
+		<!-- A spellbook for learning the Pa'agrio's Medicine skill. <Class> Dominator <Skill effect> Recovers HP/ CP of surrounding clan members. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94670" name="Spellbook: Debuff Master" type="EtcItem">
+		<!-- A spellbook for learning the Debuff Master skill. <Class> Dominator <Skill effect> Temporarily enhances debuff skills. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94671" name="Spellbook: Flame Burst" type="EtcItem">
+		<!-- A spellbook for learning the Flame Burst skill. <Class> Dominator <Skill effect> Brings down a pillar of fire on the surrounding enemies, causing their HP/ MP decrease continuously. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94672" name="Spellbook: Infection Seal" type="EtcItem">
+		<!-- A spellbook for learning the Infection Seal skill. <Class> Dominator <Skill effect> Decreases Received Healing of the enemy clan members. Normal HP recovery is impossible. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94673" name="Spellbook: Team Building" type="EtcItem">
+		<!-- A scroll for learning the Team Building skill. <Class> Doomcryer <Skill effect> The target can't do anything. Teleports the caster and their party members to the target. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94674" name="Spellbook: Blood Bond" type="EtcItem">
+		<!-- A scroll for learning the Blood Bond skill. <Class> Doomcryer <Skill effect> Attacks the target and surrounding enemies with a ring of blood, absorbs their HP. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94675" name="Spellbook: Cold Flames" type="EtcItem">
+		<!-- A scroll for learning the Cold Flames skill. <Class> Doomcryer <Skill effect> Sets the target on fire continuously decreasing its HP/ MP. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94676" name="Spellbook: Chant of Healing" type="EtcItem">
+		<!-- A scroll for learning the Chant of Healing skill. <Class> Doomcryer <Skill effect> Recovers surrounding party members' HP/ CP. -->
+		<set name="icon" val="icon.etc_magic_book_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94677" name="Fire Token" additionalName="Event" type="EtcItem">
+		<!-- An item necessary to learn clan skills. -->
+		<set name="icon" val="icon.etc_jewel_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94678" name="Water Token" additionalName="Event" type="EtcItem">
+		<!-- An item necessary to learn clan skills. -->
+		<set name="icon" val="icon.etc_jewel_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94679" name="Wind Token" additionalName="Event" type="EtcItem">
+		<!-- An item necessary to learn clan skills. -->
+		<set name="icon" val="icon.etc_jewel_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94680" name="Earth Token" additionalName="Event" type="EtcItem">
+		<!-- An item necessary to learn clan skills. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94681" name="Mental Power Token" additionalName="Event" type="EtcItem">
+		<!-- An item necessary to learn clan skills. -->
+		<set name="icon" val="icon.etc_jewel_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94682" name="Necklace of Spirits" type="Armor">
+		<!-- Max enchant value: +10. (Requires Scroll: Enchant Necklace of Spirits.) Boosts the item's parameters after enchanting. Safe enchanting to +1 -->
+		<set name="icon" val="icon.necklace_of_elemental" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">90</stat>
+			<stat type="maxMp">50</stat>
+		</stats>
+	</item>
+	<item id="94683" name="Scroll: Enchant Necklace of Spirits" type="EtcItem">
+		<!-- An item necessary to enchant Necklace of Spirits. -->
+		<set name="icon" val="icon.etc_penalty_recovery_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94684" name="Mark of Unity" additionalName="Event" type="EtcItem">
+		<!-- A proof of the clan's unity. Allows to learn clan skills from High Priest. -->
+		<set name="icon" val="icon.etc_barka_badge_officer_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94685" name="+9 Talisman of Eva Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94686" name="+10 Talisman of Eva Pack" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_pirate_treasure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94687" name="Forgotten Primeval Garden Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94688" name="Sparkling Accessory Pack" type="EtcItem">
+		<!-- Double-click to obtain one of the following items. -->
+		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94689" name="Daily Kit: Growth" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94690" name="Package: Scroll: Boost Attack (10 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.scrl_of_ladies_silver_knife_01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94691" name="Package: Scroll: Boost Defense (10 pcs.)" type="EtcItem">
+		<!-- Double-click to obtain the following items. -->
+		<set name="icon" val="icon.scrl_of_ench_bracelet_lucien_01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94692" name="Test - Lady's Hairpin" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94693" name="Test - Raccoon Ears" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_racoon_ear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94694" name="Test - Maiden's Hairpin" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94695" name="Test - Rabbit Ears" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94696" name="Test - Forget-me-not Hairpin" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94697" name="Test - Daisy Hairpin" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94698" name="Test - Demon Horns" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_hair_cornu_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="94699" name="Test - Single Stem Flower" additionalName="Test" type="Armor">
+		<!-- Test hair accessory. -->
+		<set name="icon" val="icon.accessory_hairpin_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

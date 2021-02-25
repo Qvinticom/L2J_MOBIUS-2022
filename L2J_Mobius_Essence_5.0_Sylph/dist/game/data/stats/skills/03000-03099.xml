@@ -278,7 +278,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3014" toLevel="1" name="Special Ability: Boost Mana">
+	<skill id="3014" toLevel="1" name="Special Ability: Mana Effect Boost">
 		<!-- Increases Max MP. -->
 		<icon>icon.skill0213</icon>
 		<operateType>P</operateType>
@@ -363,7 +363,7 @@
 			<value level="4">566</value>
 		</effectPoint>
 	</skill>
-	<skill id="3018" toLevel="6" name="Special Ability: Back Blow">
+	<skill id="3018" toLevel="6" name="Special Ability: Backstab">
 		<!-- Increases P. Critical Rate when attacking a target from behind. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
@@ -391,7 +391,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3019" toLevel="6" name="Special Ability: Back Blow">
+	<skill id="3019" toLevel="6" name="Special Ability: Backstab">
 		<!-- Increases P. Critical Rate when attacking a target from behind. -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
@@ -2539,8 +2539,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3081" toLevel="15" name="Item Skill: Charm (phys.)">
-		<!-- When triggered: Decreases the target's agression after a regular physical attack. Power $s1 -->
+	<skill id="3081" toLevel="15" name="Item Skill: Charm">
+		<!-- When triggered: Decreases the target's aggression after a regular physical attack. Power $s1 -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -2634,7 +2634,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3083" toLevel="15" name="Item Skill: Slow (phys.)">
+	<skill id="3083" toLevel="15" name="Item Skill: Slow">
 		<!-- When triggered: Momentarily the target's Speed -30% after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2677,7 +2677,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3084" toLevel="10" name="Item Skill: Winter (phys.)">
+	<skill id="3084" toLevel="10" name="Item Skill: Winter">
 		<!-- When triggered: Momentarily the target's Atk. Spd. -23% after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -2966,7 +2966,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3091" toLevel="15" name="Item Skill: Poison (phys.)">
+	<skill id="3091" toLevel="15" name="Item Skill: Poison">
 		<!-- When triggered: Momentarily poisons the target after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3044,7 +3044,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3092" toLevel="15" name="Item Skill: Bleed (phys.)">
+	<skill id="3092" toLevel="15" name="Item Skill: Bleed">
 		<!-- When triggered: Momentarily inflicts Bleed on the target after a regular physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3124,7 +3124,7 @@
 		</effects>
 	</skill>
 	<skill id="3093" toLevel="10" name="Item Skill: Silence">
-		<!-- When triggered: Momentarily blocks the target's M. skills after a regular physical attack. -->
+		<!-- When triggered: Momentarily blocks the target's M. skills after a standard physical attack. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -3242,7 +3242,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3096" toLevel="15" name="Item Skill: Slow (magic)">
+	<skill id="3096" toLevel="15" name="Item Skill: Slow">
 		<!-- When triggered: Momentarily target's Speed -30% when using magic. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
@@ -3286,7 +3286,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3097" toLevel="10" name="Item Skill: Winter (magic)">
+	<skill id="3097" toLevel="10" name="Item Skill: Winter">
 		<!-- When triggered: Momentarily target's Atk. Spd. -23% when using magic. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>

@@ -10,7 +10,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39302" toLevel="3" name="Baium Doll's Sorcery">
-		<!-- A doll imbued with Baium's power. <Effect> Skill Cooldown $s1 P. Def. $s2 M. Def. $s2 Silence Resistance $s3 Fear Resistance $s3 Paralysis Resistance $s4 Knockdown Resistance $s4 Pull Resistance $s4 -->
+		<!-- A doll imbued with Baium's power. <Effect> Skill Cooldown $s1 P. Def. $s2 M. Def. $s2 Silence Resistance $s3 Fear Resistance $s3 Paralysis Resistance $s4 Knockback Resistance $s4 Pull Resistance $s4 -->
 		<icon>icon.bm_baium_doll_30d</icon>
 		<operateType>P</operateType>
 		<stayAfterDeath>true</stayAfterDeath>
@@ -165,7 +165,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="39308" toLevel="1" name="Life Control Tower's Scroll of Blessing">
-		<!-- For 60 min., Max HP/ MP +5%, acquired XP/ SP +30%, Paralysis Resistance +15%, Fear/ Silence Resistance +10%. The effect remains after death. You can cancel the effect by yourself. -->
+		<!-- Max HP +5% Max MP +5% Paralysis Resistance +15% Silence Resistance +15% Fear Resistance +15% Acquired XP +30% Acquired SP +30% The effect remains after death. You can cancel the effect by yourself. -->
 		<icon>icon.etc_aidcharm_cancel_valbreath_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -218,8 +218,8 @@
 		<icon>icon.etc_scroll_of_enchant_armor_i05</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="39318" toLevel="3" name="Item Skill: Silence/Fear">
-		<!-- Fear/ Silence Resistance +$s1. -->
+	<skill id="39318" toLevel="3" name="Item Skill: Fear Resistance">
+		<!-- Fear Resistance $s1 -->
 		<icon>icon.skill11825</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -234,8 +234,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39319" toLevel="3" name="Item Skill: Stun Resistance">
-		<!-- Stun Resistance +$s1. -->
+	<skill id="39319" toLevel="3" name="Item Skill: Shock Resistance">
+		<!-- Shock Resistance $s1 -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -249,7 +249,7 @@
 		</effects>
 	</skill>
 	<skill id="39320" toLevel="3" name="Item Skill: Paralysis Resistance">
-		<!-- Paralysis Resistance +$s1. -->
+		<!-- Paralysis Resistance $s1 -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -262,8 +262,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39321" toLevel="3" name="Item Skill: Bleed Resistance">
-		<!-- Bleed Resistance +$s1. -->
+	<skill id="39321" toLevel="3" name="Item Skill: Infection Resistance">
+		<!-- Infection Resistance -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -276,8 +276,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39322" toLevel="3" name="Item Skill: Poison Resistance">
-		<!-- Poison Resistance +$s1. -->
+	<skill id="39322" toLevel="3" name="Item Skill: Silence Resistance">
+		<!-- Silence Resistance $s1 -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -291,7 +291,7 @@
 		</effects>
 	</skill>
 	<skill id="39323" toLevel="3" name="Item Skill: Hold Resistance">
-		<!-- Hold Resistance +$s1. -->
+		<!-- Hold Resistance $s1 -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -304,7 +304,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39324" toLevel="3" name="Item Skill: XP Gain">
+	<skill id="39324" toLevel="3" name="Item Skill: Acquired XP">
 		<!-- When in inventory, Acquired XP +$s1. -->
 		<icon>icon.skill11825</icon>
 		<operateType>P</operateType>
@@ -342,7 +342,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39328" toLevel="3" name="Arcane Immunity">
-		<!-- Grants immunity to debuffs for a while when damage is taken. -->
+		<!-- Grants immunity to debuffs and anomaly states for a while when damage is taken. -->
 		<icon>icon.skill10106</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -399,7 +399,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="39334" toLevel="1" name="Lucky Fortune">
-		<!-- For 5 min., party member s HP/ MP Recovery Rate +20%, P. Accuracy +4, P. Evasion +4, P./ M. Atk. +15%, Atk./ Casting Spd. +10%, P. Critical Rate/ M. Skill Critical Rate +15%, P. Critical Damage/ M. Skill Critical Damage +15%. -->
+		<!-- For 5 min., a party member s HP/ MP Recovery Rate +20%, P. Accuracy +4, P. Evasion +4, P./ M. Atk. +15%, Atk./ Casting Spd. +10%, P. Critical Rate/ M. Skill Critical Rate +15%, P. Critical Damage/ M. Skill Critical Damage +15%. -->
 		<icon>icon.Accessary_middle_ages_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -536,7 +536,7 @@
 		<mpConsume>1</mpConsume>
 	</skill>
 	<skill id="39348" toLevel="1" name="Vampiric Rage - Event">
-		<!-- For 1 h., with a certain chance, absorbs 9% of the inflicted damage as HP. -->
+		<!-- With a certain chance, absorbs 9% of the inflicted damage as HP. Duration: 1 h. -->
 		<icon>icon.skill1268</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -831,6 +831,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="39370" toLevel="1" name="Lucky Charm">
+		<!-- Death XP Penalty -20%. Cannot be used by chaotic characters. -->
 		<icon>icon.bm_freya_rune</icon>
 		<operateType>P</operateType>
 	</skill>

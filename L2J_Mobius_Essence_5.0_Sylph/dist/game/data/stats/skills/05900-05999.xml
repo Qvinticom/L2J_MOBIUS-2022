@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="5900" toLevel="1" name="Burst of Oblivion">
+	<skill id="5900" toLevel="1" name="Spark of Oblivion">
 		<!-- When receiving damage, the character's target is cancelled, and they can't use skills. -->
 		<icon>icon.skill1481</icon>
 		<abnormalLevel>8</abnormalLevel>
@@ -209,7 +209,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5907" toLevel="2" name="Ritual of Entombment">
-		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
+		<!-- Temporarily inflicts Hold on the target. The target cannot be affected by any additional Hold attacks while the effect is active. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -450,8 +450,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5918" toLevel="10" name="Physical Root Vulnerability">
-		<!-- Physical Root Vulnerability -->
+	<skill id="5918" toLevel="10" name="Hold Vulnerability">
+		<!-- Vulnerable to Hold. -->
 		<magicLevel>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1070,7 +1070,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5944" toLevel="1" name="Energy of Oblivion">
-		<!-- Decreases P. Accuracy. -->
+		<!-- P. Accuracy decreased. -->
 		<icon>icon.skill0107</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>300</abnormalTime>

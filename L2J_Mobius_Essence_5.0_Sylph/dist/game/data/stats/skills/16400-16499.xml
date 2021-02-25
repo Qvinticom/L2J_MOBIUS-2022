@@ -56,7 +56,7 @@
 		<isMagic>6</isMagic>
 	</skill>
 	<skill id="16406" toLevel="1" name="Dimensional Fear">
-		<!-- Inflicts Fear on the target for 5 sec. -->
+		<!-- For 5 sec., inflicts Fear on the target. -->
 		<icon>icon.skill1169</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -102,7 +102,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16411" toLevel="3" name="Trap Stun">
-		<!-- Immobilized. -->
+		<!-- Immobilizes enemy -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -110,7 +110,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16412" toLevel="3" name="Trap Petrify">
-		<!-- Immobilized. -->
+		<!-- Immobilizes enemy -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -118,7 +118,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16413" toLevel="3" name="Trap Poison">
-		<!-- Bites ferociously to infect the target. HP -$s1 per sec. -->
+		<!-- Poison decreases HP. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -126,7 +126,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16414" toLevel="1" name="Peace Zone Cure">
-		<!-- Max HP +10%, Max MP +30%. Skill Cooldown: 10 sec. -->
+		<!-- Max HP +10%, Max MP +30%. Cooldown: 10 sec. -->
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="205" toLevel="59" name="Sword / Blunt Weapon Mastery">
-		<!-- P. Atk. +$s1 when using a sword or a blunt weapon. -->
+		<!-- When using a sword or a blunt weapon P. Atk. +$s1 -->
 		<icon>icon.skill0217</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -83,7 +83,7 @@
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
-				<skillId>5604</skillId> <!-- Sword/Blunt Weapon Mastery -->
+				<skillId>5604</skillId> <!-- Blessing of Stun -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="PAtk"> <!-- Increase while wearing Sword/Blunt -->
@@ -157,7 +157,7 @@
 		</effects>
 	</skill>
 	<skill id="208" toLevel="66" name="Bow Mastery">
-		<!-- P. Atk. +$s1, when using a bow. -->
+		<!-- When using a bow P. Atk. +$s1 -->
 		<icon>icon.skill0208</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -307,7 +307,7 @@
 		</effects>
 	</skill>
 	<skill id="209" toLevel="59" name="Dagger Mastery">
-		<!-- P. Atk. +$s1 when using a dagger. -->
+		<!-- When using a dagger P. Atk. +$s1 -->
 		<icon>icon.skill0209</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -444,7 +444,7 @@
 		</effects>
 	</skill>
 	<skill id="210" toLevel="59" name="Fist Weapon Mastery">
-		<!-- P. Atk. +$s1 when using a fist weapon. -->
+		<!-- When using a fist weapon P. Atk. +$s1 -->
 		<icon>icon.skill0210</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -602,7 +602,7 @@
 		</effects>
 	</skill>
 	<skill id="211" toLevel="10" name="Boost HP">
-		<!-- Max HP +$s1. -->
+		<!-- Max HP +$s1 -->
 		<icon>icon.skill0211</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -637,7 +637,7 @@
 		</effects>
 	</skill>
 	<skill id="212" toLevel="8" name="Fast HP Recovery">
-		<!-- HP Recovery Rate +$s1. -->
+		<!-- HP Recovery Rate +$s1 -->
 		<icon>icon.skill0212</icon>
 		<magicLevel>
 			<value level="1">24</value>
@@ -667,8 +667,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="213" toLevel="8" name="Boost Mana">
-		<!-- Max MP +$s1. -->
+	<skill id="213" toLevel="8" name="Mana Boost">
+		<!-- Max MP +$s1 -->
 		<icon>icon.skill0213</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -699,7 +699,7 @@
 		</effects>
 	</skill>
 	<skill id="214" toLevel="1" name="Mana Recovery">
-		<!-- Increases MP Recovery Bonus when equipped with a robe jacket and robe pants. -->
+		<!-- When equipped with a robe jacket and robe pants MP Recovery Rate $s1 -->
 		<icon>icon.skill0214</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -715,7 +715,7 @@
 		</effects>
 	</skill>
 	<skill id="216" toLevel="59" name="Polearm Mastery">
-		<!-- P. Atk. +$s1 when using a spear. Allows to attack multiple targets. -->
+		<!-- When using a spear P. Atk. +$s1 Basic number of targets +5 -->
 		<icon>icon.skill0216</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -918,7 +918,7 @@
 		</effects>
 	</skill>
 	<skill id="217" toLevel="59" name="Sword / Blunt Weapon Mastery">
-		<!-- P. Atk. +$s1 when using a sword or a blunt weapon. -->
+		<!-- When using a sword or a blunt weapon P. Atk. +$s1 -->
 		<icon>icon.skill0217</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -1055,7 +1055,7 @@
 		</effects>
 	</skill>
 	<skill id="221" toLevel="1" name="Silent Move">
-		<!-- Makes you invisible for monsters. Speed -20%. Consumes MP while active. -->
+		<!-- When activated Protects from preemptive attacks from monsters. Speed -20% Constantly consumes MP. -->
 		<icon>icon.skill0221</icon>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLevel>40</magicLevel>
@@ -1078,7 +1078,7 @@
 		</effects>
 	</skill>
 	<skill id="222" toLevel="4" name="Fury Fists">
-		<!-- Atk. Spd. $s1, when using a fist weapon. -->
+		<!-- When using a fist weapon Atk. Spd. $s1 -->
 		<icon>icon.skill0222</icon>
 		<magicLevel>43</magicLevel>
 		<operateType>T</operateType>
@@ -1098,7 +1098,7 @@
 		</effects>
 	</skill>
 	<skill id="223" toLevel="65" name="Blood Attack">
-		<!-- For $s1, a weapon becomes incredibly sharp and has a certain chance to cause bleeding. Cannot be used with Freezing Weapon. <Bloody Strike> Inflicts Bleed for $s3. Power $s2. -->
+		<!-- Sharpens a weapon. The effect lasts for $s1 Uses Bloody Strike after a physical attack. Cannot be used with Freezing Weapon. <Bloody Strike> Attacks the enemy with $s2 power. For $s3 deals additional damage. -->
 		<icon>icon.skill0223</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1267,7 +1267,7 @@
 		</effects>
 	</skill>
 	<skill id="225" toLevel="3" name="Acrobatic Move">
-		<!-- P. Evasion +$s1 when running. -->
+		<!-- While running P. Evasion +$s1 -->
 		<icon>icon.skill0225</icon>
 		<magicLevel>
 			<value level="1">28</value>
@@ -1289,7 +1289,7 @@
 		</effects>
 	</skill>
 	<skill id="226" toLevel="1" name="Relax">
-		<!-- HP Recovery Rate +5 while sitting. Consumes 1 MP per sec. -->
+		<!-- When activated The character sits down. HP Recovery Rate +5 Constantly consumes MP. -->
 		<icon>icon.skill0226</icon>
 		<magicLevel>5</magicLevel>
 		<mpConsume>2</mpConsume>
@@ -1308,7 +1308,7 @@
 		</effects>
 	</skill>
 	<skill id="227" toLevel="64" name="Light Armor Mastery">
-		<!-- P. Def. +$s1 and P. Evasion +$s2 when equipped with light armor. -->
+		<!-- When using light armor P. Def. +$s1 P. Evasion +$s2 -->
 		<icon>icon.skill0227</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -1547,7 +1547,7 @@
 		</effects>
 	</skill>
 	<skill id="229" toLevel="7" name="Fast Mana Recovery">
-		<!-- MP Recovery Rate +$s1. -->
+		<!-- MP Recovery Rate +$s1 -->
 		<icon>icon.skill0229</icon>
 		<magicLevel>
 			<value level="1">25</value>
@@ -1576,7 +1576,7 @@
 		</effects>
 	</skill>
 	<skill id="230" toLevel="2" name="Sprint">
-		<!-- Atk. Spd. +$s1, Speed +$s2. -->
+		<!-- Atk. Spd. +$s1 Speed +$s2 -->
 		<icon>icon.skill0230</icon>
 		<magicLevel>
 			<value level="1">30</value>
@@ -1602,7 +1602,7 @@
 		</effects>
 	</skill>
 	<skill id="231" toLevel="64" name="Heavy Armor Mastery">
-		<!-- P. Def. +$s1 when equipped with heavy armor. -->
+		<!-- When using heavy armor P. Def. +$s1 -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -1748,7 +1748,7 @@
 		</effects>
 	</skill>
 	<skill id="232" toLevel="66" name="Heavy Armor Mastery">
-		<!-- P. Def. +$s1, Received P. Critical Damage -$s2 when using heavy armor. With a certain chance when receiving damage activates Power Stance, which increases P. Atk. and Atk. Spd. -->
+		<!-- When using heavy armor P. Def. +$s1 Received P. Critical Damage -$s2 Power Stance is used when damage is taken. <Power Stance> P. Atk. is increased -->
 		<icon>icon.skill0232</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -1972,7 +1972,7 @@
 		</effects>
 	</skill>
 	<skill id="233" toLevel="61" name="Light Armor Mastery">
-		<!-- When using light armor, P. Def. +$s1, P. Evasion +$s2, received P. Critical Rate -$s3. -->
+		<!-- When using light armor P. Def. +$s1 P. Evasion +$s2 Received P. Critical Rate -$s3 -->
 		<icon>icon.skill0233</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -2250,7 +2250,7 @@
 		</effects>
 	</skill>
 	<skill id="234" toLevel="55" name="Robe Mastery">
-		<!-- When equipped with a robe, P. Def. +$s1, Max HP +$s2. -->
+		<!-- When using robes P. Def. +$s1 Max HP +$s2 -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
 		<magicLevel>
@@ -2441,7 +2441,7 @@
 		</effects>
 	</skill>
 	<skill id="235" toLevel="55" name="Robe Mastery">
-		<!-- When equipped with a robe, P. Def. +$s1. -->
+		<!-- When using robes P. Def. +$s1 -->
 		<icon>icon.skill0235</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -2569,7 +2569,7 @@
 		</effects>
 	</skill>
 	<skill id="236" toLevel="55" name="Light Armor Mastery">
-		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
+		<!-- When using light armor P. Def. +$s1 Casting Spd. +$s2 Atk. Spd. +$s3 MP Recovery Rate +$s4 -->
 		<icon>icon.skill0236</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -2767,7 +2767,7 @@
 		</effects>
 	</skill>
 	<skill id="245" toLevel="15" name="Wild Sweep">
-		<!-- Attacks multiple enemies with $s1 power. Requires a spear. Over-hit. -->
+		<!-- Attack enemies at the front with $s1 power. -->
 		<icon>icon.skill0245</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
@@ -2925,7 +2925,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="249" toLevel="56" name="Weapon Mastery">
-		<!-- P. Atk. +$s1, M. Atk. +$s2. Casting Spd. is decreased when using a bow or a spear. -->
+		<!-- P. Atk. +$s1 M. Atk. +$s2 When using a bow or a spear, Casting Spd. -30% -->
 		<icon>icon.skill0249</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -3121,7 +3121,7 @@
 		</effects>
 	</skill>
 	<skill id="250" toLevel="56" name="Weapon Mastery">
-		<!-- P. Atk. +$s1, M. Atk. +$s2. Casting Spd. is decreased when using a bow or a spear. -->
+		<!-- P. Atk. +$s1 M. Atk. +$s2 When using a bow or a spear, Casting Spd. -30% -->
 		<icon>icon.skill0250</icon>
 		<magicLevel>
 			<value level="1">1</value>
@@ -3321,7 +3321,7 @@
 		</effects>
 	</skill>
 	<skill id="251" toLevel="59" name="Robe Mastery">
-		<!-- When equipped with a robe, P. Def. +$s1. -->
+		<!-- When using robes P. Def. +$s1 -->
 		<icon>icon.skill0251</icon>
 		<magicLevel>
 			<value level="1">4</value>
@@ -3457,7 +3457,7 @@
 		</effects>
 	</skill>
 	<skill id="252" toLevel="59" name="Light Armor Mastery">
-		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
+		<!-- When using light armor P. Def. +$s1 Casting Spd. +$s2 Atk. Spd. +$s3 MP Recovery Rate +$s4 -->
 		<icon>icon.skill0252</icon>
 		<magicLevel>
 			<value level="1">4</value>
@@ -3621,7 +3621,7 @@
 		</effects>
 	</skill>
 	<skill id="253" toLevel="57" name="Heavy Armor Mastery">
-		<!-- P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3 when equipped with heavy armor. -->
+		<!-- When using heavy armor P. Def. +$s1 Casting Spd. +$s2 Atk. Spd. +$s3 -->
 		<icon>icon.skill0253</icon>
 		<magicLevel>
 			<value level="1">11</value>
@@ -3841,7 +3841,7 @@
 		</effects>
 	</skill>
 	<skill id="255" toLevel="15" name="Enhanced Weapon">
-		<!-- Atk. Spd. +$s1 when using a sword/ blunt weapon/ spear/ dual swords/ fist weapon/ ancient sword/ rapier. -->
+		<!-- Increases the weapon's effectiveness. When using a sword, a blunt weapon, a spear, dual swords, a fist weapon, an ancient sword or a rapier Atk. Spd. $s1 -->
 		<icon>icon.skill0255</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -3919,7 +3919,7 @@
 		</effects>
 	</skill>
 	<skill id="256" toLevel="2" name="Accuracy">
-		<!-- P. Accuracy +3. -->
+		<!-- P. Accuracy +3 -->
 		<icon>icon.skill0256</icon>
 		<magicLevel>
 			<value level="1">24</value>
@@ -3946,7 +3946,7 @@
 		</effects>
 	</skill>
 	<skill id="257" toLevel="59" name="Sword / Blunt Weapon Mastery">
-		<!-- P. Atk. +$s1 when using a sword or a blunt weapon. -->
+		<!-- When using a sword or a blunt weapon P. Atk. +$s1 -->
 		<icon>icon.skill0257</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -4083,7 +4083,7 @@
 		</effects>
 	</skill>
 	<skill id="258" toLevel="47" name="Light Armor Mastery">
-		<!-- When equipped with light armor, P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, and MP Recovery Bonus +$s4. -->
+		<!-- When using light armor P. Def. +$s1 Casting Spd. +$s2 Atk. Spd. +$s3 MP Recovery Rate +$s4 -->
 		<icon>icon.skill0258</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -4220,7 +4220,7 @@
 		</effects>
 	</skill>
 	<skill id="259" toLevel="47" name="Heavy Armor Mastery">
-		<!-- P. Def. +$s1, Casting Spd. +$s2, Atk. Spd. +$s3, P. Atk. +$s4, P. Critical Rate +$s5 when using heavy armor. -->
+		<!-- P. Critical Rate +$s5 When using heavy armor P. Def. +$s1 Casting Spd. +$s2 Atk. Spd. +$s3 P. Atk. +$s4 -->
 		<icon>icon.skill0259</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -4412,7 +4412,7 @@
 		</effects>
 	</skill>
 	<skill id="260" toLevel="45" name="Power Break">
-		<!-- Attacks the enemy with $s1 power, inflicting stun for $s2. Requires a sword, blunt weapon, spear, or dual swords. Ignores Shield Defense. Over-hit. -->
+		<!-- <Shock skill> Attacks the enemy with $s1 power. Stuns for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill0260</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -4642,7 +4642,7 @@
 		</effects>
 	</skill>
 	<skill id="261" toLevel="40" name="Triple Sonic Slash">
-		<!-- Attacks the enemy with dual swords with $s1 power. Requires a dual swords. Increases power upon consuming Momentum (up to 3). Ignores the enemy s defense. Critical. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. Increases power upon consuming Momentum. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0261</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -5009,7 +5009,7 @@
 		</effects>
 	</skill>
 	<skill id="263" toLevel="55" name="Deadly Blow">
-		<!-- Attacks the target's vital points with $s1 power. Requires a dagger. Over-hit. -->
+		<!-- Attacks the target's vital point. Deals P. damage with $s1 power. Critical. -->
 		<icon>icon.skill0263</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -5330,7 +5330,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="267" toLevel="2" name="Hunter's Song">
+	<skill id="267" toLevel="2" name="Song of Hunter">
 		<!-- Elven hunters' song. P. Critical Rate $s1 -->
 		<icon>icon.skill0267</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -5366,7 +5366,7 @@
 		</effects>
 	</skill>
 	<skill id="268" toLevel="2" name="Elven Guard's Protection">
-		<!-- Shield Defense Rate $s1 Debuff Resistance $s2 -->
+		<!-- Shield Defense Rate $s1 Debuff Resistance $s2 Anomaly Resistance $s2 -->
 		<icon>icon.skill0268</icon>
 		<magicLevel>
 			<value level="1">44</value>
@@ -5513,7 +5513,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="274" toLevel="2" name="Warrior's Dance">
+	<skill id="274" toLevel="2" name="Dance of Warrior">
 		<!-- Dark Elven battle dance. P. Atk. $s1 -->
 		<icon>icon.skill0274</icon>
 		<abnormalLevel>
@@ -5625,7 +5625,7 @@
 		</effects>
 	</skill>
 	<skill id="278" toLevel="12" name="Summon Viper Cubic">
-		<!-- <Summoning Skill> Summons a Viper Cubic that uses magic to poison the enemy. Consumes $s1 Spirit Ore. -->
+		<!-- <Summoning Skill> Summons a Viper Cubic The cubic uses magic to poison the enemy. -->
 		<icon>icon.skill0278</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5715,7 +5715,7 @@
 		</effects>
 	</skill>
 	<skill id="279" toLevel="9" name="Lightning Strike">
-		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 power and paralyzes for $s2. Critical. Over-hit. -->
+		<!-- <Paralyzing Skill> A powerful lightning strike. Attacks the target with $s1 power. Paralyzes for $s2 Critical. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -5792,7 +5792,7 @@
 		</effects>
 	</skill>
 	<skill id="280" toLevel="55" name="Burning Fist">
-		<!-- Hurls a fiery fist to attack the target with $s1 power. Requires a fist weapon. Ignores Shield Defense. Ignores $s2 of Def. Critical. Over-hit. -->
+		<!-- A powerful strike of the flaming fist. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0280</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -6050,8 +6050,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="281" toLevel="45" name="Crushing Fist">
-		<!-- Attacks the enemy with $s1 power stunning them for $s2 Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
+	<skill id="281" toLevel="45" name="Iron Fist">
+		<!-- <Shock skill> Attacks the enemy with a powerful blow. Power $s1. Stuns for $s2 Ignores Shield Defense. -->
 		<icon>icon.skill0281</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -6278,7 +6278,7 @@
 		</effects>
 	</skill>
 	<skill id="282" toLevel="1" name="Puma Spirit Totem">
-		<!-- P. Skill Power $s1 Consumes $s2 Spirit Ore. Cannot be used with Rabbit Spirit Totem or Ogre Spirit Totem. -->
+		<!-- P. Skill Power $s1 Cannot be used with Rabbit Spirit Totem or Ogre Spirit Totem. -->
 		<icon>icon.skill0282</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -6320,7 +6320,7 @@
 		</effects>
 	</skill>
 	<skill id="283" toLevel="11" name="Summon Dark Panther">
-		<!-- <Summoning Skill> Summons Dark Panther. Consumes C-grade Crystals ($s1 pcs.). -->
+		<!-- <Summoning Skill> Summons Dark Panther. -->
 		<icon>icon.skill0283</icon>
 		<hitTime>15000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -6391,7 +6391,7 @@
 		</effects>
 	</skill>
 	<skill id="284" toLevel="60" name="Hurricane Assault">
-		<!-- Strikes the target with $s1 power. Increases power upon consuming Momentum (up to $s2). Requires a fist weapon. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power. Increases power upon consuming Momentum. Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0284</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -6668,7 +6668,7 @@
 		</effects>
 	</skill>
 	<skill id="285" toLevel="36" name="Higher Mana Gain">
-		<!-- MP +$s1. Grants bonuses depending on Max MP: <2500+> M. Accuracy +3 <4000+> M. Accuracy +4 <6500+> M. Accuracy +5, M. Skill Critical Rate +1% <10,000+> M. Accuracy +6, M. Skill Critical Rate +3% <15,000+> M. Accuracy +8, M. Skill Critical Rate +5% -->
+		<!-- MP +$s1. Grants bonuses depending on Max MP: <2500+> M. Accuracy +3 <4000+> M. Accuracy +4 <6500+> M. Accuracy +5 M. Skill Critical Rate +1% <10,000+> M. Accuracy +6 M. Skill Critical Rate +3% <15,000+> M. Accuracy +8 M. Skill Critical Rate +5% -->
 		<icon>icon.skill0285</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -7099,7 +7099,7 @@
 		</effects>
 	</skill>
 	<skill id="286" toLevel="11" name="Provoke">
-		<!-- Provokes nearby enemies and for 20 sec. their Sword/ Spear/ Blunt Weapon Resistance -$s1. Requires a sword, a spear or a blunt weapon. -->
+		<!-- Attracts nearby enemies to the character and decreases their Resistance to swords/ blunt weapon/ spears. The effect lasts for $s1 Resistance to swords/ blunt weapon/ spears $s2 -->
 		<icon>icon.skill0286</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
@@ -7212,7 +7212,7 @@
 		</effects>
 	</skill>
 	<skill id="287" toLevel="3" name="Lionheart">
-		<!-- Hold/ Sleep/ Stun/ Buff Cancel/ Paralysis Resistance $s1 Duration: $s2 -->
+		<!-- The effect lasts for 60 sec. Paralysis Resistance $s1 Hold Resistance $s1 Sleep Resistance $s1 Shock Resistance $s1 Buff Cancel Resistance $s2 -->
 		<icon>icon.skill0287</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -7272,7 +7272,7 @@
 		</effects>
 	</skill>
 	<skill id="288" toLevel="5" name="Guard Stance">
-		<!-- P. Def. +$s1, Shield Defense Rate +$s2. -->
+		<!-- P. Def. +$s1 Shield Defense Rate +$s2 -->
 		<icon>icon.skill0288</icon>
 		<magicLevel>
 			<value level="1">40</value>
@@ -7307,7 +7307,7 @@
 		</effects>
 	</skill>
 	<skill id="289" toLevel="17" name="Life Leech">
-		<!-- <Drain Skill> Deals magic damage to the enemy with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
+		<!-- <Drain skill> Inflicts magic damage on the target with $s1 power. Absorbs $s2 of the inflicted damage as HP. -->
 		<icon>icon.skill0289</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -7420,7 +7420,7 @@
 		</effects>
 	</skill>
 	<skill id="290" toLevel="15" name="Final Frenzy">
-		<!-- P. Atk. +$s2 when HP is $s1 and lower. -->
+		<!-- When HP < $s1 P. Atk. +$s2 -->
 		<icon>icon.skill0290</icon>
 		<magicLevel>
 			<value level="1">43</value>
@@ -7466,7 +7466,7 @@
 		</effects>
 	</skill>
 	<skill id="291" toLevel="26" name="Final Fortress">
-		<!-- When HP < $s1, P. Def. +$s2. When triggered, activates Knight s Fortress increasing P. Atk. for some time. -->
+		<!-- When HP < $s1 P. Atk. +$s2 When damage is taken, Knight s Fortress is used. -->
 		<icon>icon.skill0291</icon>
 		<magicLevel>
 			<value level="1">52</value>
@@ -7534,7 +7534,7 @@
 		</effects>
 	</skill>
 	<skill id="292" toLevel="1" name="Bison Spirit Totem">
-		<!-- P. Atk. $s1 Atk. Spd. $s2 P. Def. $s1 P. Critical Rate $s3 Depending on the remaining HP, applies one of the following effects: <31-60% HP> P. Atk. $s4 Atk. Spd. $s1 P. Def. $s5 P. Critical Rate $s6 <0-30% HP> P. Atk. $s7 Atk. Spd. $s1 P. Def. $s4 P. Critical Rate $s8 Duration: $s9 -->
+		<!-- For $s9 P. Atk. $s1 Atk. Spd. $s2 P. Def. $s1 P. Critical Rate $s3 Depending on the remaining HP, applies one of the following effects: <31-60% HP> P. Atk. $s4 Atk. Spd. $s1 P. Def. $s5 P. Critical Rate $s6 <0-30% HP> P. Atk. $s7 Atk. Spd. $s1 P. Def. $s4 P. Critical Rate $s8 -->
 		<icon>icon.skill0292</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -7620,7 +7620,7 @@
 		</effects>
 	</skill>
 	<skill id="293" toLevel="34" name="Two-handed Weapon Mastery">
-		<!-- P. Atk. +$s1 and P. Accuracy +$s2 when using a two-handed sword or a two-handed blunt weapon. -->
+		<!-- When using a two-handed sword or a two-handed blunt weapon P. Atk. +$s1 P. Accuracy +$s2 -->
 		<icon>icon.skill0293</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -7746,7 +7746,7 @@
 		</effects>
 	</skill>
 	<skill id="294" toLevel="1" name="Shadow Sense">
-		<!-- Dark Elves see in the dark perfectly. P. Accuracy +3 at night. -->
+		<!-- Dark Elves see and fight in the dark perfectly. P. Accuracy +3 -->
 		<icon>icon.skill0294</icon>
 		<magicLevel>15</magicLevel>
 		<operateType>P</operateType>
@@ -7759,7 +7759,7 @@
 		</effects>
 	</skill>
 	<skill id="295" toLevel="1" name="Iron Body">
-		<!-- Environment-related damage -40%, Max HP +10%, Max CP +10%. -->
+		<!-- Environment-related damage -40% Max HP +10% Max CP +10% -->
 		<icon>icon.skill0295</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -7780,7 +7780,7 @@
 		</effects>
 	</skill>
 	<skill id="296" toLevel="1" name="Chameleon Rest">
-		<!-- Allows you to sit and rest while being protected from monsters' preemptive attacks. MP will be consumed continuously. -->
+		<!-- When activated The character sits down. Prevents preemptive attacks from monsters. Constantly consumes MP. -->
 		<icon>icon.skill0296</icon>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicLevel>46</magicLevel>
@@ -7796,7 +7796,7 @@
 		</effects>
 	</skill>
 	<skill id="297" toLevel="3" name="Duelist Spirit">
-		<!-- Atk. Spd. +$s1 when using dual swords. -->
+		<!-- When using dual swords Atk. Spd. $s1 -->
 		<icon>icon.skill0297</icon>
 		<magicLevel>
 			<value level="1">64</value>
@@ -7820,7 +7820,7 @@
 		</effects>
 	</skill>
 	<skill id="298" toLevel="1" name="Rabbit Spirit Totem">
-		<!-- Atk. Spd. $s1 Speed $s2 Consumes $s3 Spirit Ore. Cannot be used with Ogre Spirit Totem or Puma Spirit Totem. -->
+		<!-- Atk. Spd. $s1 Speed $s2 Cannot be used with Ogre Spirit Totem/ Puma Spirit Totem. -->
 		<icon>icon.skill0298</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -7860,7 +7860,7 @@
 		</effects>
 	</skill>
 	<skill id="299" toLevel="1" name="Summon Wild Hog Cannon">
-		<!-- <Summoning skill> Summons Wild Hog Cannon. It s a siege weapon that can either move, or inflict ranged attacks. Switching modes takes 30 sec. Can be used only during a siege. Consumes 70 B-grade Crystals. -->
+		<!-- <Summoning skill> Summons Wild Hog Cannon. It s a siege weapon that can either move, or inflict ranged attacks. Switching modes takes 30 sec. Can be used only during a siege. -->
 		<icon>icon.skill0299</icon>
 		<hitTime>15000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

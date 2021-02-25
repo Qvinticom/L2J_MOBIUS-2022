@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10015" toLevel="3" name="Chain Strike">
-		<!-- Pulls a selected target to you and attacks. -->
+		<!-- <Pull Skill> Pulls the enemy. -->
 		<icon>icon.skill10015</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -55,7 +55,7 @@
 		</effects>
 	</skill>
 	<skill id="10094" toLevel="5" name="Mass Lightning Strike">
-		<!-- Strikes the target and nearby enemies with a lightning bolt that inflicts damage with $s1 power. Paralyzes enemies for $s2. Critical. Over-hit. -->
+		<!-- <Paralyzing skill> A powerful lightning strike. Attacks the target and nearby enemies with $s1 power. Paralyzes for $s2 Critical. -->
 		<icon>icon.skll10094</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>

@@ -50,7 +50,7 @@
 		</effects>
 	</skill>
 	<skill id="501" toLevel="5" name="Magic Break">
-		<!-- For $s1, target's M. Atk. -$s2. -->
+		<!-- Weakens target's magical abilities. The effect lasts for $s1 M. Atk. -$s2 -->
 		<icon>icon.skill0501</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1364,7 +1364,7 @@
 		</effects>
 	</skill>
 	<skill id="522" toLevel="4" name="Real Target">
-		<!-- For $s1, Bow Resistance -$s2, Stun Resistance -$s3. -->
+		<!-- Shock Atk. Rate $s1 For 30 sec., with a certain chance after an attack: Target's Bow Resistance $s2, Shock Resistance $s3 -->
 		<icon>icon.skill0522</icon>
 		<abnormalLevel>
 			<value level="1">1</value>
@@ -1618,7 +1618,7 @@
 		</effects>
 	</skill>
 	<skill id="528" toLevel="1" name="Shield of Faith">
-		<!-- For 15 sec., party members' P. Def. +3600 and M. Def. +2700, and absorbs 90% of any damage received by a party member. -->
+		<!-- For 15 sec. Party member's P. Def. +3600 Party member's M. Def. +2700 Delivers 90% of party member's received damage to the caster. -->
 		<icon>icon.skill0528</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1725,7 +1725,7 @@
 		</effects>
 	</skill>
 	<skill id="531" toLevel="2" name="Critical Wound">
-		<!-- Target's Received P. Critical Damage +$s1, Vital Point Attack Resistance -$s2. Requires a dagger. -->
+		<!-- For $s1 Target's Received P. Critical Damage $s2 Target's Received Vital Point Attack Rate $s3 -->
 		<icon>icon.skill0531</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1852,7 +1852,7 @@
 		</effects>
 	</skill>
 	<skill id="536" toLevel="1" name="Over the Body">
-		<!-- P. Atk. $s1 Atk. Spd. $s2 P. Def. $s3 Speed $s3 Duration: $s4 -->
+		<!-- For $s4 P. Atk. $s1 Atk. Spd. $s2 P. Def. $s3 Speed $s3 -->
 		<icon>icon.skill0536</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>60</abnormalTime>

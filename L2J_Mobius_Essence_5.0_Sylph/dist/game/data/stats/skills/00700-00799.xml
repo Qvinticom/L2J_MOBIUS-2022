@@ -2357,7 +2357,7 @@
 		</effects>
 	</skill>
 	<skill id="762" toLevel="1" name="Insane Crusher">
-		<!-- Casts a dark curse and unleashes a powerful strike with 8409 power dealing damage to nearby enemies. Cancels at least one of enemy's buffs, and temporarily decreases their Max CP significantly. Decreases Debuff Resistance and Received Healing. Requires a sword or a blunt weapon. Ignores Shield Defense. Critical. Over-hit. -->
+		<!-- Casts a dark curse and unleashes a powerful strike with 8409 power dealing damage to nearby enemies. There is a certain chance to remove up to 3 buffs from the target. For 60 sec. Max. CP -90% Debuff Resistance -30% Anomaly Resistance -30% Received Healing -30% Ignores Shield Defense. Critical. -->
 		<icon>icon.skill0762</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>60</abnormalTime>
@@ -2538,7 +2538,7 @@
 		</effects>
 	</skill>
 	<skill id="767" toLevel="10" name="Bow Mastery">
-		<!-- P. Atk. +$s1, when using a bow. -->
+		<!-- When using a bow P. Atk. +$s1 -->
 		<icon>icon.skill0767</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -2575,7 +2575,7 @@
 		</effects>
 	</skill>
 	<skill id="768" toLevel="1" name="Exciting Adventure">
-		<!-- For 30 sec., Speed +10, P. Evasion +10, Vital Point Attack Rate +15%, P. Skill Evasion +40%, Buff Cancel Resistance +90%. -->
+		<!-- The effect lasts for $s1 Speed $s2 P. Evasion $s3 Vital Point Attack Rate $s4 P. Skill Evasion $s5 Buff Cancel Resistance $s6 -->
 		<icon>icon.skill0768</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2614,7 +2614,7 @@
 		</effects>
 	</skill>
 	<skill id="769" toLevel="1" name="Wind Riding">
-		<!-- Storms the battleground riding the wind. For 30 sec., Speed +30, P. Evasion +15, Vital Point Attack Rate +10%, P. Skill Evasion +60%, Buff Cancel Resistance +80%. -->
+		<!-- The effect lasts for $s1 Speed $s2 P. Evasion $s3 Vital Point Attack Rate $s4 P. Skill Evasion $s5 Buff Cancel Resistance $s6 -->
 		<icon>icon.skill0769</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2653,7 +2653,7 @@
 		</effects>
 	</skill>
 	<skill id="770" toLevel="1" name="Ghost Walking">
-		<!-- Infiltrates the battleground like a ghost. For 30 sec., Speed +20, P. Evasion +10, Vital Point Attack Rate +20%, P. Skill Evasion +50%, Buff Cancel Resistance +80%. -->
+		<!-- The effect lasts for $s1 Speed $s2 P. Evasion $s3 Vital Point Attack Rate $s4 P. Skill Evasion $s5 Buff Cancel Resistance $s6 -->
 		<icon>icon.skill0770</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -2692,7 +2692,7 @@
 		</effects>
 	</skill>
 	<skill id="771" toLevel="1" name="Flame Hawk">
-		<!-- Fires an arrow imbued with the phoenix energy, attacking the target and enemies at the front with 8049 power. For 10 sec., inflicts 250 additional damage per sec. Ignores Shield Defense. Ignores 10% of the target's defense. Requires a bow. Critical. Over-hit. -->
+		<!-- <Infection Skill> Fires an arrow imbued with the phoenix energy. Attacks the target and enemies at the front with 8049 power. Inflicts additional damage for 10 sec. Ignores Shield Defense. Ignores 10% of the target's defense. Critical. -->
 		<icon>icon.skill0771</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
@@ -2732,7 +2732,7 @@
 		</effects>
 	</skill>
 	<skill id="772" toLevel="1" name="Arrow Rain">
-		<!-- Causes arrows to rain down from the sky, attacking the target and nearby enemies with 7043 power. For 10 sec., inflicts 250 additional damage per sec. Ignores Shield Defense. Ignores 10% of the target's defense. Requires a bow. Critical. Over-hit. -->
+		<!-- <Infection Skill> Causes arrows to rain down from the sky. Attacks the target and nearby enemies with 7043 power. Inflicts additional damage for 10 sec. Ignores Shield Defense. Ignores 10% of the target's defense. Critical. -->
 		<icon>icon.skill0772</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2771,7 +2771,7 @@
 		</effects>
 	</skill>
 	<skill id="773" toLevel="1" name="Ghost Piercing">
-		<!-- Shoots ghost arrows, attacking the target and enemies in the front with 8452 power. For 10 sec., inflicts 300 additional damage per sec. Ignores Shield Defense. Ignores 5% of the target's defense. Requires a bow. Critical. Over-hit. -->
+		<!-- <Infection Skill> Shoots ghost arrows. Attacks the target and enemies at the front with 8452 power. Inflicts additional damage for 10 sec. Ignores Shield Defense. Ignores 5% of the target's defense. Critical. -->
 		<icon>icon.skill0773</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
@@ -2942,7 +2942,7 @@
 		</effects>
 	</skill>
 	<skill id="777" toLevel="15" name="Demolition Impact">
-		<!-- Unleashes a destructive shockwave at the target with $s1 power. Requires a sword or a blunt weapon. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. Over-hit. -->
+		<!-- Unleashes a destructive shockwave. Attacks the target with $s1 power. Ignores Shield Defense. Ignores $s2 of the target's defense. Critical. -->
 		<icon>icon.skill0777</icon>
 		<castRange>40</castRange>
 		<affectRange>500</affectRange>
@@ -3483,7 +3483,7 @@
 		</effects>
 	</skill>
 	<skill id="791" toLevel="5" name="Lightning">
-		<!-- Strikes the target with lightning paralyzing them for $s1 -->
+		<!-- <Paralyzing Skill> The effect lasts for $s1 Paralyzes the enemy. -->
 		<icon>icon.skill0791</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -3533,7 +3533,7 @@
 		</effects>
 	</skill>
 	<skill id="792" toLevel="5" name="Soul Stigma">
-		<!-- Marks the target. For $s1, P. Critical Damage/ M. Skill Critical Damage -$s2. -->
+		<!-- Brands the enemy with a stamp. The effect lasts for $s1 P. Critical Damage -$s2 M. Skill Critical Damage -$s2 -->
 		<icon>icon.skill0792</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -3692,7 +3692,7 @@
 		</effects>
 	</skill>
 	<skill id="794" toLevel="3" name="Enhanced Critical Shot">
-		<!-- P. Critical Rate +$s1. -->
+		<!-- P. Critical Rate +$s1 -->
 		<icon>icon.skill0794</icon>
 		<operateType>P</operateType> <!-- confirm -->
 		<magicCriticalRate>5</magicCriticalRate>

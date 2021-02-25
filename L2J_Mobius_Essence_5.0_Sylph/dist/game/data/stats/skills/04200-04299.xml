@@ -1160,8 +1160,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4225" toLevel="5" name="Stun Resistance">
-		<!-- Resistant to Stun. -->
+	<skill id="4225" toLevel="5" name="Shock Attack Resistance">
+		<!-- Resistance to attacks inflicting Shock. -->
 		<icon>icon.skill4225</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2380,7 +2380,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4256" toLevel="1" name="Stun Resistance">
+	<skill id="4256" toLevel="1" name="Shock Immunity">
+		<!-- Immune to Shock. -->
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2480,7 +2481,7 @@
 		</effects>
 	</skill>
 	<skill id="4259" toLevel="12" name="Toxic Smoke">
-		<!-- Noxious fumes gradually decrease your HP. -->
+		<!-- HP is draining. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>
 			<value level="1">2</value>
@@ -3004,7 +3005,7 @@
 		</effects>
 	</skill>
 	<skill id="4273" toLevel="5" name="Dagger Resistance">
-		<!-- Increases Dagger Attack Resistance. -->
+		<!-- Increases Dagger Resistance. -->
 		<icon>icon.skill4273_new</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3085,8 +3086,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4277" toLevel="5" name="Poison Resistance">
-		<!-- Resistant to Poison. -->
+	<skill id="4277" toLevel="5" name="Infection Resistance">
+		<!-- Resistant to Infection attacks. -->
 		<icon>icon.skill4277</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -3157,8 +3158,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4284" toLevel="5" name="Bleed Resistance">
-		<!-- Resistant to Bleed. -->
+	<skill id="4284" toLevel="5" name="Infection Resistance">
+		<!-- Resistant to Infection attacks. -->
 		<icon>icon.skill4284</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>

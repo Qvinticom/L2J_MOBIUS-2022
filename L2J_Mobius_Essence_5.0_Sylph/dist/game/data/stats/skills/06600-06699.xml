@@ -2590,7 +2590,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
-		<!-- All actions are sealed by Taklacan's special ability. Impossible to dispel. -->
+		<!-- All actions are sealed by Taklacan's special ability. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2609,7 +2609,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6651" toLevel="1" name="Dopagen's Alienation">
-		<!-- All actions are sealed by Dopagen's special ability. Impossible to dispel. -->
+		<!-- All actions are sealed by Dopagen's special ability. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>99</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -2891,7 +2891,7 @@
 		</effects>
 	</skill>
 	<skill id="6670" toLevel="1" name="Feral Vampiric Rage">
-		<!-- For 5 min., recovers as HP 9% of the melee damage inflicted on the enemy with a certain probability. -->
+		<!-- With a certain chance, absorbs 9% of the inflicted damage as HP. Duration: 5 min. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLevel>4</abnormalLevel>
 		<abnormalTime>315</abnormalTime>

@@ -384,7 +384,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="6125" toLevel="1" name="Paralysis">
+	<skill id="6125" toLevel="1" name="Cubic Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -500,7 +500,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6131" toLevel="1" name="Decrease Speed">
-		<!-- Mutant Curse: Speed -8%. -->
+		<!-- Mutant Curse: Immediately target's Speed -10%. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -524,7 +524,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6132" toLevel="1" name="Decrease Atk. Spd.">
-		<!-- Mutant Curse: Atk. Spd. -8%. -->
+		<!-- Mutant Curse: Immediately Atk. Spd. -17%. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>

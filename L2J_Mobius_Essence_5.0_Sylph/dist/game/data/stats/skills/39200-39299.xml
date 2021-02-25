@@ -78,7 +78,7 @@
 		</effects>
 	</skill>
 	<skill id="39205" toLevel="1" name="Dark Assassin Transformation">
-		<!-- You are transformed into Dark Assassin. For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. Effect remains after death. -->
+		<!-- You are transformed into Dark Assassin. For 20 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, M. Skill Critical Rate +10, Speed +4. The effect remains after death. -->
 		<icon>icon.empty_bottle</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>900</abnormalTime>
@@ -211,7 +211,7 @@
 		<reuseDelay>7200000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="39212" toLevel="1" name="Einhasad's Protection">
+	<skill id="39212" toLevel="1" name="Einhasad s Protection">
 		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
@@ -224,7 +224,7 @@
 		<icon>icon.yogi_scroll_of_enchant_weapon_grade_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39214" toLevel="1" name="Savior's Cube">
+	<skill id="39214" toLevel="1" name="Savior s Cube">
 		<icon>icon.etc_crystal_cube_event_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -738,7 +738,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="39233" toLevel="1" name="Glowing  Whale">
+	<skill id="39233" toLevel="1" name="Glowing Whale">
 		<icon>icon.fish_huge_i15</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>

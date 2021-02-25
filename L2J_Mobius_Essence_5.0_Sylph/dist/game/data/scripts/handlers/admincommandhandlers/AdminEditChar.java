@@ -407,10 +407,6 @@ public class AdminEditChar implements IAdminCommandHandler
 							}
 						}
 					}
-					if (player.getRace() == Race.ERTHEIA)
-					{
-						player.getAppearance().setFemale();
-					}
 					// Death Knight checks.
 					if ((classidval > 195) && (classidval < 208))
 					{

@@ -16,7 +16,7 @@
 		</conditions>
 	</skill>
 	<skill id="23298" toLevel="1" name="Flame Hawk">
-		<!-- For 10 sec., inflames the target and inflicts damage of 250 every sec. -->
+		<!-- The flame inflicts damage over time. -->
 		<icon>icon.skill0771</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -42,7 +42,7 @@
 		</effects>
 	</skill>
 	<skill id="23299" toLevel="1" name="Arrow Rain">
-		<!-- For 10 sec., sweeps the target in Cyclone and inflicts damage of 250 every sec. -->
+		<!-- The wind inflicts damage over time. -->
 		<icon>icon.skill0772</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>

@@ -23,7 +23,7 @@
 		</effects>
 	</skill>
 	<skill id="6205" toLevel="19" name="Strider Bite">
-		<!-- Commands the mounted strider to bite the enemies at the front. Attacks the enemy with $s1 Power added to P. Atk., causes bleed for $s2, and makes him consume $s3 HP every sec. Critical. Over-hit. -->
+		<!-- Commands the mounted strider to bite the enemies at the front. Deals damage with $s1 Power, causes Bleed for $s2, constantly draining HP. Critical. Over-hit. -->
 		<abnormalLevel>6</abnormalLevel>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -308,7 +308,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6209" toLevel="4" name="Grade Penalty">
-		<!-- The equipped weapon's grade doesn't match your Lv., so the following penalties are incurred: P. Accuracy -$s1, P. Critical Rate -$s2, P. Critical Damage -$s3, Atk. Spd. -$s4, and P. Atk. -$s5. -->
+		<!-- The equipped weapon's grade doesn't match your level, so the following penalties are incurred: P. Accuracy -$s1, P. Critical Rate -$s2, P. Critical Damage -$s3, Atk. Spd. -$s4, P. Atk. -$s5. -->
 		<icon>
 			<value level="1">icon.skill6209_1</value>
 			<value level="2">icon.skill6209_2</value>
@@ -1112,7 +1112,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6266" toLevel="1" name="Stun">
-		<!-- Immobilizes and stuns a target for 30 sec. -->
+		<!-- Immobilizes and stuns the target for 30 sec. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
@@ -1179,7 +1179,7 @@
 		</effects>
 	</skill>
 	<skill id="6269" toLevel="1" name="Trojan Poison">
-		<!-- Poisons the enemy for 10 sec. and inflicts 345 HP damage per sec. -->
+		<!-- HP decreases from poison momentarily. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLevel>10</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
