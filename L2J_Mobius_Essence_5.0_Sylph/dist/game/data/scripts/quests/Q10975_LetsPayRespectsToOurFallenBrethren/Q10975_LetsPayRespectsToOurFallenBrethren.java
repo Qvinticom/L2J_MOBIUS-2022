@@ -54,7 +54,7 @@ public class Q10975_LetsPayRespectsToOurFallenBrethren extends Quest
 	private static final ItemHolder SAYHA_GUST = new ItemHolder(91776, 9);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 450);
 	// Misc
-	private static final int MIN_LEVEL = 45;
+	private static final int MIN_LEVEL = 52;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10975_LetsPayRespectsToOurFallenBrethren()
@@ -64,7 +64,7 @@ public class Q10975_LetsPayRespectsToOurFallenBrethren extends Quest
 		addTalkId(ORVEN);
 		addKillId(ACHER_OF_DESTRUCTION, GRAVEYARD_LICH, DISMAL_POLE, GRAVEYARD_PREDATOR, DOOM_KNIGHT, DOOM_SCOUT, DOOM_SERVANT, DOOM_GUARD, DOOM_ARCHER, DOOM_TROOPER, DOOM_WARRIOR, GUARD_BUTCHER);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_45_LET_S_PAY_RESPECTS_TO_FALLEN_BRETHREN);
+		setQuestNameNpcStringId(NpcStringId.LV_52_58_LET_S_PAY_RESPECTS_TO_OUR_FALLEN_BRETHREN);
 	}
 	
 	@Override

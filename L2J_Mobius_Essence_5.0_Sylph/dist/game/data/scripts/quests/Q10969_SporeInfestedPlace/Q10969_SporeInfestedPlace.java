@@ -61,7 +61,7 @@ public class Q10969_SporeInfestedPlace extends Quest
 		addTalkId(MAXIMILLIAN, ORVEN);
 		addKillId(GIANT_FUNGUS, GIANT_MONSTER_EYE, DIRE_WYRM, ROTTING_TREE, ROTTING_GOLEM, SPIDER_TRISALIM, TRISALIM_TARANTULA, SPORE_ZOMBIE, EARTH_GUARDIAN_WYRM);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_40_45_SPORE_INFECTED_PLACE);
+		setQuestNameNpcStringId(NpcStringId.LV_40_44_SPORE_INFESTED_PLACE);
 	}
 	
 	@Override
@@ -151,7 +151,7 @@ public class Q10969_SporeInfestedPlace extends Quest
 					{
 						htmltext = "30857.html";
 					}
-					else if (qs.isCond(3) && (player.getLevel() >= 45))
+					else if (qs.isCond(3) && (player.getLevel() >= 44))
 					{
 						htmltext = "30857-04.html";
 					}
@@ -203,7 +203,7 @@ public class Q10969_SporeInfestedPlace extends Quest
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
 			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_IN_THE_SEA_OF_SPORES.getId(), true, qs.getInt(KILL_COUNT_VAR)));
-			holder.add(new NpcLogListHolder(NpcStringId.REACH_LV_45, player.getLevel() > 44 ? 1 : 0));
+			holder.add(new NpcLogListHolder(NpcStringId.REACH_LV_44, player.getLevel() > 43 ? 1 : 0));
 			return holder;
 		}
 		return super.getNpcLogList(player);

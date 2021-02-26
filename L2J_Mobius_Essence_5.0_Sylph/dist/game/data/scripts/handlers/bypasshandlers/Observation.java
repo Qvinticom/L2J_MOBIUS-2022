@@ -135,7 +135,7 @@ public class Observation implements IBypassHandler
 				}
 				else
 				{
-					player.sendPacket(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
+					player.sendPacket(SystemMessageId.SPECTATOR_MODE_IS_ONLY_AVAILABLE_DURING_A_SIEGE);
 				}
 				return true;
 			}

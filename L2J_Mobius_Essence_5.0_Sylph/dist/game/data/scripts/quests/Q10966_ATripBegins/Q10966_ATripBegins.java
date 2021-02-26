@@ -141,7 +141,7 @@ public class Q10966_ATripBegins extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BRACELET_AND_TALISMAN_OF_ADEN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_TALISMAN, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.YOU_VE_GOT_ADVENTURER_S_BRACELET_AND_ADVENTURER_S_TALISMAN_NCOMPLETE_THE_TUTORIAL_AND_TRY_TO_USE_THE_TALISMAN, ExShowScreenMessage.TOP_CENTER, 10000);
 					addExpAndSp(player, 1000000, 27000);
 					giveItems(player, SOE_NOVICE);
 					giveItems(player, TALISMAN_OF_ADEN);

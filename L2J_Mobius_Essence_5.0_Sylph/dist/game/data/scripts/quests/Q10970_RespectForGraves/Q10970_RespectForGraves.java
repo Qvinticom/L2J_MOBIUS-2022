@@ -60,7 +60,7 @@ public class Q10970_RespectForGraves extends Quest
 		addTalkId(ORVEN);
 		addKillId(TAIK_ORC_WATCHMAN, GRAVE_GUARD, TAIK_ORC_SUPPLY_OFFICER, TAIRIM, TORTURED_UNDEAD, SPITEFUL_GHOST_OF_RUINS, SOLDIER_OF_GRIEF, CRUEL_PUNISHER, ROVING_SOUL, SOUL_OF_RUNIS);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_45_RESPECT_FOR_GRAVES);
+		setQuestNameNpcStringId(NpcStringId.LV_45_52_RESPECT_FOR_GRAVES);
 	}
 	
 	@Override

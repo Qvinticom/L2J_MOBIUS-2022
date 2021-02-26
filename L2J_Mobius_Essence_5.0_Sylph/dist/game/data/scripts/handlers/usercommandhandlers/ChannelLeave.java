@@ -44,7 +44,7 @@ public class ChannelLeave implements IUserCommandHandler
 		
 		if (!player.isInParty() || !player.getParty().isLeader(player))
 		{
-			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_LEAVE_A_COMMAND_CHANNEL);
+			player.sendPacket(SystemMessageId.ONLY_THE_PARTY_LEADER_CAN_LEAVE_THE_COMMAND_CHANNEL);
 			return false;
 		}
 		

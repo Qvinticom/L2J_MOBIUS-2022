@@ -51,7 +51,7 @@ public class Q10977_TracesOfBattle extends Quest
 	private static final ItemHolder SAYHA_GUST = new ItemHolder(91776, 9);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 450);
 	// Misc
-	private static final int MIN_LEVEL = 45;
+	private static final int MIN_LEVEL = 64;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10977_TracesOfBattle()
@@ -61,7 +61,7 @@ public class Q10977_TracesOfBattle extends Quest
 		addTalkId(ORVEN);
 		addKillId(GRAVEYARD_WANDERER, ARCHER_OF_GREED, HATAR_RATMAN_THIEF, HATAR_RATMAN_BOSS, HATAR_HANISHEE, DEPRIVE, TAIK_ORC_SUPPLY, VIOLLENT_FARCRAN, FIERCE_GUARD);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_45_TRACES_OF_BATTLE);
+		setQuestNameNpcStringId(NpcStringId.LV_64_70_TRACES_OF_BATTLE);
 	}
 	
 	@Override

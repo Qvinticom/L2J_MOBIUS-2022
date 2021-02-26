@@ -48,7 +48,7 @@ public class Q10968_ThePowerOfTheMagicLamp extends Quest
 		addStartNpc(MAXIMILLIAN);
 		addTalkId(MAXIMILLIAN);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_39_THE_MAGIC_LANTERN_POWER);
+		setQuestNameNpcStringId(NpcStringId.LV_40_THE_MAGIC_LANTERN_POWER);
 	}
 	
 	@Override

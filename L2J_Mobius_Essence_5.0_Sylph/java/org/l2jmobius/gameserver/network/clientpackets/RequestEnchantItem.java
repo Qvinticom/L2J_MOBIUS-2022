@@ -122,7 +122,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		// first validation check - also over enchant check
 		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && ((item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()) || (!(item.getItem().getEnchantLimit() == 0) && (item.getEnchantLevel() == item.getItem().getEnchantLimit())))))
 		{
-			client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			client.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 			player.removeRequest(request.getClass());
 			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 			return;
@@ -163,7 +163,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			// last validation check
 			if ((item.getOwnerId() != player.getObjectId()) || !item.isEnchantable())
 			{
-				client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+				client.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 				player.removeRequest(request.getClass());
 				client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 				return;
@@ -174,7 +174,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 			{
 				case ERROR:
 				{
-					client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
+					client.sendPacket(SystemMessageId.AUGMENTATION_REQUIREMENTS_ARE_NOT_FULFILLED);
 					player.removeRequest(request.getClass());
 					client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
 					break;

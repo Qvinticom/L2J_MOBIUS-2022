@@ -60,6 +60,6 @@ public class ExElementalSpiritChangeType implements IClientIncomingPacket
 		
 		player.changeElementalSpirit(_element);
 		client.sendPacket(new ElementalSpiritInfo(player, _element, _type));
-		client.sendPacket(new SystemMessage(SystemMessageId.S1_WILL_BE_YOUR_ATTRIBUTE_ATTACK_FROM_NOW_ON).addElementalSpirit(_element));
+		client.sendPacket(new SystemMessage(SystemMessageId.S1_WILL_BE_YOUR_ATTACK_ATTRIBUTE_FROM_NOW_ON).addElementalSpirit(_element));
 	}
 }

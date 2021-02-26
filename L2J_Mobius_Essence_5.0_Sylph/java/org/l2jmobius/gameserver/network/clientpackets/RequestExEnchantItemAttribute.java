@@ -216,7 +216,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessageId.S2_ELEMENTAL_POWER_HAS_BEEN_ADDED_SUCCESSFULLY_TO_S1);
+					sm = new SystemMessage(SystemMessageId.S2_ATTRIBUTE_HAS_BEEN_ADDED_TO_S1);
 				}
 				sm.addItemName(item);
 				sm.addAttribute(realElement.getClientId());

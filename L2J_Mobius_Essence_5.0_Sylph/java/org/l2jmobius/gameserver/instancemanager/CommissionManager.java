@@ -301,7 +301,7 @@ public class CommissionManager
 						commissionItem.setSaleEndTask(saleEndTask);
 						_commissionItems.put(commissionItem.getCommissionId(), commissionItem);
 						player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));
-						player.sendPacket(SystemMessageId.THE_ITEM_HAS_BEEN_SUCCESSFULLY_REGISTERED);
+						player.sendPacket(SystemMessageId.THE_ITEM_HAS_BEEN_REGISTERED);
 						player.sendPacket(ExResponseCommissionRegister.SUCCEED);
 						
 					}
@@ -326,7 +326,7 @@ public class CommissionManager
 		final CommissionItem commissionItem = getCommissionItem(commissionId);
 		if (commissionItem == null)
 		{
-			player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
+			player.sendPacket(SystemMessageId.FAILED_TO_CANCEL_THE_SALE);
 			player.sendPacket(ExResponseCommissionDelete.FAILED);
 			return;
 		}
@@ -340,14 +340,14 @@ public class CommissionManager
 		if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3))
 		{
 			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
-			player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
+			player.sendPacket(SystemMessageId.FAILED_TO_CANCEL_THE_SALE);
 			player.sendPacket(ExResponseCommissionDelete.FAILED);
 			return;
 		}
 		
 		if ((_commissionItems.remove(commissionId) == null) || !commissionItem.getSaleEndTask().cancel(false))
 		{
-			player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
+			player.sendPacket(SystemMessageId.FAILED_TO_CANCEL_THE_SALE);
 			player.sendPacket(ExResponseCommissionDelete.FAILED);
 			return;
 		}
@@ -355,12 +355,12 @@ public class CommissionManager
 		if (deleteItemFromDB(commissionId))
 		{
 			player.getInventory().addItem("Commission Cancellation", commissionItem.getItemInstance(), player, null);
-			player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_FOR_THE_ITEM_IS_SUCCESSFUL);
+			player.sendPacket(SystemMessageId.THE_SALE_IS_CANCELLED);
 			player.sendPacket(ExResponseCommissionDelete.SUCCEED);
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
+			player.sendPacket(SystemMessageId.FAILED_TO_CANCEL_THE_SALE);
 			player.sendPacket(ExResponseCommissionDelete.FAILED);
 		}
 	}

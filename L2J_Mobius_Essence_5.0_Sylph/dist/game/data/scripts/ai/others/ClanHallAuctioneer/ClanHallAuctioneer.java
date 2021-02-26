@@ -372,7 +372,7 @@ public class ClanHallAuctioneer extends AbstractNpcAI
 				}
 				else if (clan.getWarehouse().destroyItemByItemId("Clan Hall Auction", Inventory.ADENA_ID, bid, player, null) == null)
 				{
-					player.sendPacket(SystemMessageId.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE);
+					player.sendPacket(SystemMessageId.NOT_ENOUGH_ADENA_IN_THE_CLAN_WAREHOUSE_2);
 					return;
 				}
 				

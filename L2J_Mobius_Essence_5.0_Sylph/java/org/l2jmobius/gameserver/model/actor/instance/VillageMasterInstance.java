@@ -578,7 +578,7 @@ public class VillageMasterInstance extends NpcInstance
 						player.setActiveClass(player.getTotalSubClasses());
 						
 						html.setFile(player, "data/html/villagemaster/SubClass_AddOk.htm");
-						player.sendPacket(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS); // Subclass added.
+						player.sendPacket(SystemMessageId.YOU_HAVE_ACHIEVED_THE_SECOND_CLASS_S1_CONGRATS); // Subclass added.
 					}
 					else
 					{
@@ -690,7 +690,7 @@ public class VillageMasterInstance extends NpcInstance
 						
 						html.setFile(player, "data/html/villagemaster/SubClass_ModifyOk.htm");
 						html.replace("%name%", ClassListData.getInstance().getClass(paramTwo).getClientCode());
-						player.sendPacket(SystemMessageId.THE_NEW_DUAL_CLASS_S1_HAS_BEEN_ADDED_CONGRATS); // Subclass added.
+						player.sendPacket(SystemMessageId.YOU_HAVE_ACHIEVED_THE_SECOND_CLASS_S1_CONGRATS); // Subclass added.
 					}
 					else
 					{

@@ -9297,12 +9297,12 @@ public class PlayerInstance extends Playable
 		}
 		if (_isInDuel || _startingDuel)
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
+			_noDuelReason = SystemMessageId.C1_IS_ALREADY_IN_A_DUEL;
 			return false;
 		}
 		if (_inOlympiadMode || isOnEvent(CeremonyOfChaosEvent.class))
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS;
+			_noDuelReason = SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS_AND_THEREFORE_CANNOT_DUEL;
 			return false;
 		}
 		if (isOnEvent()) // custom event message
@@ -9312,7 +9312,7 @@ public class PlayerInstance extends Playable
 		}
 		if (isCursedWeaponEquipped())
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE;
+			_noDuelReason = SystemMessageId.C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE_AND_CANNOT_PARTICIPATE_IN_A_DUEL;
 			return false;
 		}
 		if (_privateStoreType != PrivateStoreType.NONE)
@@ -9322,7 +9322,7 @@ public class PlayerInstance extends Playable
 		}
 		if (isMounted() || isInBoat())
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER;
+			_noDuelReason = SystemMessageId.C1_IS_RIDING_A_BOAT_FENRIR_OR_STRIDER_AND_THEREFORE_CANNOT_DUEL;
 			return false;
 		}
 		if (isFishing())
@@ -11573,7 +11573,7 @@ public class PlayerInstance extends Playable
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
+				sm = new SystemMessage(SystemMessageId.C1_HAS_DEALT_S3_DAMAGE_TO_C2);
 			}
 			
 			sm.addPcName(this);

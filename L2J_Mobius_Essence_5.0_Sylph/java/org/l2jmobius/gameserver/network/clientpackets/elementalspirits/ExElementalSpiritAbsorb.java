@@ -74,7 +74,7 @@ public class ExElementalSpiritAbsorb implements IClientIncomingPacket
 		final boolean canAbsorb = checkConditions(player, spirit);
 		if (canAbsorb)
 		{
-			client.sendPacket(SystemMessageId.SUCCESFUL_ABSORPTION);
+			client.sendPacket(SystemMessageId.SUCCESSFUL_ABSORPTION);
 			spirit.addExperience(absorbItem.getExperience() * _amount);
 			final UserInfo userInfo = new UserInfo(player);
 			userInfo.addComponentType(UserInfoType.ATT_SPIRITS);

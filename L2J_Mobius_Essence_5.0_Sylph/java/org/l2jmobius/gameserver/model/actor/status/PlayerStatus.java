@@ -250,7 +250,7 @@ public class PlayerStatus extends PlayableStatus
 			if ((fullValue > 0) && !isDOT)
 			{
 				// Send a System Message to the PlayerInstance
-				SystemMessage smsg = new SystemMessage(SystemMessageId.C1_RECEIVES_S3_DAMAGE_FROM_TARGET_C2);
+				SystemMessage smsg = new SystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 				smsg.addString(getActiveChar().getName());
 				
 				// Localisation related.

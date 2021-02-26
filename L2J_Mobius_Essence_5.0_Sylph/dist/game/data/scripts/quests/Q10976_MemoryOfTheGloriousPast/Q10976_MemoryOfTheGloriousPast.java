@@ -50,7 +50,7 @@ public class Q10976_MemoryOfTheGloriousPast extends Quest
 	private static final ItemHolder SAYHA_GUST = new ItemHolder(91776, 9);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 450);
 	// Misc
-	private static final int MIN_LEVEL = 45;
+	private static final int MIN_LEVEL = 58;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10976_MemoryOfTheGloriousPast()
@@ -60,7 +60,7 @@ public class Q10976_MemoryOfTheGloriousPast extends Quest
 		addTalkId(ORVEN);
 		addKillId(VANOR_SILENOS, VANOR_SILENOS_SOLDIER, VANOR_SILENOS_SCOUT, VANOR_SILENOS_WARRIOR, VANOR_SILENOS_SHAMAN, VANOR_SILENOS_CHIEFTAIN, VANOR_MERCENARY_OF_GLORY, GUARD_OF_HONOR);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
-		setQuestNameNpcStringId(NpcStringId.LV_45_MEMORY_OF_THE_GLORIOUS_PAST);
+		setQuestNameNpcStringId(NpcStringId.LV_58_64_MEMORY_OF_THE_GLORIOUS_PAST);
 	}
 	
 	@Override
