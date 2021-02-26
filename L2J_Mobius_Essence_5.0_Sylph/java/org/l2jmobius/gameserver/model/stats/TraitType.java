@@ -88,7 +88,8 @@ public enum TraitType
 	ZONE(3),
 	PSYCHIC(3),
 	EMBRYO_WEAKNESS(2),
-	SPIRIT_WEAKNESS(2);
+	SPIRIT_WEAKNESS(2),
+	PISTOLS(1);
 	
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
 	private static final List<TraitType> _weaknesses = new ArrayList<>();

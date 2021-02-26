@@ -2133,6 +2133,27 @@ public abstract class Inventory extends ItemContainer
 	}
 	
 	/**
+	 * Return the ItemInstance of the bolts needed for these pistols.
+	 * @param pistols : Item designating the pistols
+	 * @return ItemInstance pointing out elemental orb for pistols
+	 */
+	public ItemInstance findElementalOrbForPistols(Item pistols)
+	{
+		ItemInstance orb = null;
+		for (ItemInstance item : getItems())
+		{
+			if (item.isEtcItem() && (item.getItem().getCrystalTypePlus() == pistols.getCrystalTypePlus()) && (item.getEtcItem().getItemType() == EtcItemType.ELEMENTAL_ORB))
+			{
+				orb = item;
+				break;
+			}
+		}
+		
+		// Get the ItemInstance corresponding to the item identifier and return it
+		return orb;
+	}
+	
+	/**
 	 * Get back items in inventory from database
 	 */
 	@Override

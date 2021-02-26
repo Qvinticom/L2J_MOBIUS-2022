@@ -1042,12 +1042,19 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					if (isPlayer())
 					{
 						// Check if there are arrows to use or else cancel the attack.
-						if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW))
+						if (!checkAndEquipAmmunition(weaponItem.getItemType().isPistols() ? EtcItemType.ELEMENTAL_ORB : weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW))
 						{
 							// Cancel the action because the PlayerInstance have no arrow
 							getAI().setIntention(AI_INTENTION_ACTIVE);
 							sendPacket(ActionFailed.STATIC_PACKET);
-							sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+							if (weaponItem.getItemType().isPistols())
+							{
+								sendPacket(SystemMessageId.YOU_CANNOT_ATTACK_BECAUSE_YOU_DON_T_HAVE_AN_ELEMENTAL_ORB);
+							}
+							else
+							{
+								sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+							}
 							return;
 						}
 						

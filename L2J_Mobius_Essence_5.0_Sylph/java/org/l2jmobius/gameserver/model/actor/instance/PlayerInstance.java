@@ -5789,6 +5789,10 @@ public class PlayerInstance extends Playable
 			{
 				arrows = _inventory.findBoltForCrossBow(weapon);
 			}
+			else if (type == EtcItemType.ELEMENTAL_ORB)
+			{
+				arrows = _inventory.findElementalOrbForPistols(weapon);
+			}
 			if (arrows != null)
 			{
 				// Equip arrows needed in left hand
