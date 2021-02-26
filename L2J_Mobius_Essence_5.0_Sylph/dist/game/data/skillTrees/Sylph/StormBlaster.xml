@@ -17,17 +17,96 @@
 			<item id="57" count="5000000" /> <!-- Adena -->
 		</skill>
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="1" getLevel="76" />
-		
+		<skill skillName="Goring Charge" skillId="47001" skillLevel="1" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="21" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Wild Dance" skillId="47019" skillLevel="1" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Elemental Focus" skillId="47021" skillLevel="4" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Elemental Death Whisper" skillId="47022" skillLevel="4" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Elemental Haste" skillId="47023" skillLevel="3" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Elemental Wind Walk" skillId="47024" skillLevel="3" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Elemental Magic Barrier" skillId="47025" skillLevel="3" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Might" skillId="47026" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Shield" skillId="47027" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Acumen" skillId="47028" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Empower" skillId="47029" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Changing" skillId="47045" skillLevel="1" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Care" skillId="47054" skillLevel="2" getLevel="76" levelUpSp="8000000" />
+		<skill skillName="Elemental Wind" skillId="47032" skillLevel="2" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Time Burst" skillId="47062" skillLevel="2" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="8" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="8" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Extra Hit" skillId="47085" skillLevel="1" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Spirit" skillId="47101" skillLevel="3" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Elemental Connection" skillId="47104" skillLevel="4" getLevel="76" levelUpSp="8000000"/>
+		<skill skillName="Mount Elemental Lyn Draco" skillId="54225" skillLevel="1" getLevel="76" levelUpSp="8000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="22" getLevel="77" levelUpSp="10000000" />
+		<skill skillName="Quick Reload" skillId="47083" skillLevel="4" getLevel="77" levelUpSp="10000000" />
+		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="5" getLevel="77" levelUpSp="10000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="23" getLevel="78" levelUpSp="12000000" />
+		<skill skillName="Freezing Wound" skillId="47011" skillLevel="5" getLevel="78" levelUpSp="12000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="9" getLevel="78" levelUpSp="12000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="24" getLevel="79" levelUpSp="15000000" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="9" getLevel="79" levelUpSp="15000000"/>
+
 		<skill skillName="Evolution Power" skillId="45189" skillLevel="1" getLevel="80">
 			<item id="57" count="10000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="2" getLevel="80" />
 		<skill skillName="White Guardian Transformation" skillId="54102" skillLevel="1" getLevel="80">
 			<item id="92401" count="1" /> <!-- Spellbook - White Guardian -->
 		</skill>
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="25" getLevel="80" levelUpSp="18000000" />
+		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="2" getLevel="80" />
+		<skill skillName="Stealthy Swiftness" skillId="47008" skillLevel="1" getLevel="80" levelUpSp="18000000" />
+		<skill skillName="Freezing Wound" skillId="47011" skillLevel="6" getLevel="80" levelUpSp="18000000" />
+		<skill skillName="Dragon Strike" skillId="47041" skillLevel="1" getLevel="80" levelUpSp="18000000" />
+		<skill skillName="Elemental Spirit" skillId="47101" skillLevel="4" getLevel="80" levelUpSp="18000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="26" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="10" getLevel="81" levelUpSp="160000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="27" getLevel="82" levelUpSp="200000000" />
+		<skill skillName="Freezing Wound" skillId="47011" skillLevel="7" getLevel="82" levelUpSp="200000000" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="10" getLevel="82" levelUpSp="200000000"/>
+		<skill skillName="Quick Reload" skillId="47083" skillLevel="5" getLevel="82" levelUpSp="200000000" />
+		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="6" getLevel="82" levelUpSp="200000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="28" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="11" getLevel="83" levelUpSp="240000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="29" getLevel="84" levelUpSp="350000000" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="11" getLevel="84" levelUpSp="350000000"/>
+		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="7" getLevel="84" levelUpSp="3500000000"/>
 		
 		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="3" getLevel="85" />
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="30" getLevel="85" levelUpSp="8400000000" />
+		<skill skillName="Freezing Wound" skillId="47011" skillLevel="8" getLevel="85" levelUpSp="8400000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="12" getLevel="85" levelUpSp="840000000"/>
+		<skill skillName="Elemental Connection" skillId="47104" skillLevel="5" getLevel="85" levelUpSp="840000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="31" getLevel="86" levelUpSp="840000000" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="12" getLevel="86" levelUpSp="840000000"/>
+		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="8" getLevel="86" levelUpSp="840000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="32" getLevel="87" levelUpSp="840000000" />
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="13" getLevel="87" levelUpSp="840000000"/>
+
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="33" getLevel="88" levelUpSp="8400000000" />
+		<skill skillName="Freezing Wound" skillId="47011" skillLevel="9" getLevel="88" levelUpSp="8400000000" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="13" getLevel="88" levelUpSp="8400000000"/>
+		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="9" getLevel="88" levelUpSp="8400000000"/>
 		
-		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="1" getLevel="90" />
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="34" getLevel="89" levelUpSp="8400000000" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="14" getLevel="89" levelUpSp="8400000000"/>
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="14" getLevel="89" levelUpSp="840000000"/>
+		
+		<skill skillName="Blessed by Sayha" skillId="45408" skillLevel="4" getLevel="90" />
+		<skill skillName="Dual Blow" skillId="47002" skillLevel="35" getLevel="90" levelUpSp="8400000000" />
+		<skill skillName="Freezing Wound" skillId="47011" skillLevel="10" getLevel="90" levelUpSp="8400000000" />
+		<skill skillName="Firearm Mastery" skillId="47081" skillLevel="15" getLevel="90" levelUpSp="8400000000"/>
+		<skill skillName="Light Armor Mastery" skillId="227" skillLevel="15" getLevel="90" levelUpSp="840000000"/>
+		<skill skillName="Elemental Recovery" skillId="47105" skillLevel="10" getLevel="90" levelUpSp="8400000000"/>
 	</skillTree>
 </list>
