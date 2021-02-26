@@ -65,7 +65,7 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 		{
 			final int amount = spirit.getExtractAmount();
 			client.sendPacket(new SystemMessage(SystemMessageId.EXTRACTED_S1_S2_SUCCESSFULLY).addItemName(spirit.getExtractItem()).addInt(amount));
-			spirit.resetStage();
+			spirit.reduceLevel();
 			player.addItem("Extract", spirit.getExtractItem(), amount, player, true);
 			
 			final UserInfo userInfo = new UserInfo(player);
@@ -78,7 +78,7 @@ public class ExElementalSpiritExtract implements IClientIncomingPacket
 	
 	private boolean checkConditions(PlayerInstance player, ElementalSpirit spirit)
 	{
-		if (spirit.getExtractAmount() < 1)
+		if ((spirit.getLevel() < 2) || (spirit.getExtractAmount() < 1))
 		{
 			player.sendPacket(SystemMessageId.NOT_ENOUGH_ATTRIBUTE_XP_FOR_EXTRACTION);
 			return false;

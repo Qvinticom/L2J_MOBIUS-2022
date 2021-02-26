@@ -96,6 +96,13 @@ public class ElementalSpirit
 		while (_data.getExperience() > getExperienceToNextLevel());
 	}
 	
+	public void reduceLevel()
+	{
+		_data.setLevel((byte) Math.max(1, _data.getLevel() - 1));
+		_data.setExperience(ElementalSpiritData.getInstance().getSpirit(getType(), getStage()).getMaxExperienceAtLevel((byte) (getLevel() - 1)));
+		resetCharacteristics();
+	}
+	
 	public int getAvailableCharacteristicsPoints()
 	{
 		final int stage = _data.getStage();
@@ -118,7 +125,12 @@ public class ElementalSpirit
 	
 	public int getExtractAmount()
 	{
-		return Math.round(_data.getExperience() / ElementalSpiritData.FRAGMENT_XP_CONSUME);
+		int amount = Math.round(_data.getExperience() / ElementalSpiritData.FRAGMENT_XP_CONSUME);
+		if (getLevel() > 1)
+		{
+			amount += ElementalSpiritData.getInstance().getSpirit(getType(), getStage()).getMaxExperienceAtLevel((byte) (getLevel() - 1)) / ElementalSpiritData.FRAGMENT_XP_CONSUME;
+		}
+		return amount;
 	}
 	
 	public void resetStage()
