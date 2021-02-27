@@ -587,18 +587,18 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22324" level="85" type="Npc" name="Training Dummy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="22324" level="1" type="Monster" name="Training Dummy">
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="34" hpRegen="2" mp="62" mpRegen="0.9" />
+			<attack physical="10.24492" magical="6.99595" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="47.91652" magical="35.06323" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" />
 		<collision>

@@ -25,12 +25,16 @@ import ai.AbstractNpcAI;
  */
 public class TrainingDummy extends AbstractNpcAI
 {
-	// NPC
-	private static final int TRAINING_DUMMY = 22183;
+	// NPCs
+	private static final int[] TRAINING_DUMMIES =
+	{
+		22183,
+		22324
+	};
 	
 	private TrainingDummy()
 	{
-		addSpawnId(TRAINING_DUMMY);
+		addSpawnId(TRAINING_DUMMIES);
 	}
 	
 	@Override
