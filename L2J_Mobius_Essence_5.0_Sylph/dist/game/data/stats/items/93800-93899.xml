@@ -10,6 +10,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93734" min="1" max="1" chance="100" /> <!-- Flaming Stockings (Exchangeable) -->
+		</capsuled_items>
 	</item>
 	<item id="93801" name="Package: Sirra's Blade" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -439,6 +443,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93317" min="1" max="1" chance="100" /> <!-- Leather Armor of Lightning (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93840" name="Package: Leather Leggings of Lightning" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -450,6 +458,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93318" min="1" max="1" chance="100" /> <!-- Leather Leggings of Lightning (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93841" name="Package: Ice Crystal Breastplate" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -461,6 +473,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93141" min="1" max="1" chance="100" /> <!-- Ice Crystal Breastplate (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93842" name="Package: Ice Crystal Gaiters" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -472,6 +488,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93142" min="1" max="1" chance="100" /> <!-- Ice Crystal Gaiters (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93843" name="Package: Flaming Tunic" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -483,6 +503,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93735" min="1" max="1" chance="100" /> <!-- Flaming Tunic (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93844" name="Package: Flaming Stockings" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -494,6 +518,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93736" min="1" max="1" chance="100" /> <!-- Flaming Stockings (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="93845" name="Package: Queen Ant's Ring Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

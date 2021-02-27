@@ -1124,6 +1124,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93315" min="1" max="1" chance="100" /> <!-- Leather Armor of Lightning (Exchangeable) -->
+		</capsuled_items>
 	</item>
 	<item id="93796" name="Package: Leather Leggings of Lightning" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1135,6 +1139,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93316" min="1" max="1" chance="100" /> <!-- Leather Leggings of Lightning (Exchangeable) -->
+		</capsuled_items>
 	</item>
 	<item id="93797" name="Package: Ice Crystal Breastplate" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1146,6 +1154,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93139" min="1" max="1" chance="100" /> <!-- Ice Crystal Breastplate (Exchangeable) -->
+		</capsuled_items>
 	</item>
 	<item id="93798" name="Package: Ice Crystal Gaiters" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1157,6 +1169,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93140" min="1" max="1" chance="100" /> <!-- Ice Crystal Gaiters (Exchangeable) -->
+		</capsuled_items>
 	</item>
 	<item id="93799" name="Package: Flaming Tunic" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1168,5 +1184,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="93733" min="1" max="1" chance="100" /> <!-- Flaming Tunic (Exchangeable) -->
+		</capsuled_items>
 	</item>
 </list>

@@ -502,9 +502,18 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">39</stat>
 		</stats>
+		<skills>
+			<skill id="45040" level="1" /> <!-- Dragon Pendant Effect Lv. 1 -->
+			<skill id="45040" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Pendant Effect Lv. 1 -->
+			<skill id="45040" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Pendant Effect Lv. 1 -->
+			<skill id="45040" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Pendant Effect Lv. 1 -->
+			<skill id="45040" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Pendant Effect Lv. 1 -->
+			<skill id="45040" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Dragon Pendant Effect Lv. 1 -->
+		</skills>
 	</item>
 	<item id="91245" name="Dragon Pendant Lv. 2" type="Armor">
 		<!-- Contains the dragon's energy. Can be enchanted up to +5 with Dragon Varnish. Activates special effects depending on the enchant value. +5 pendant can be upgraded to Lv. 3 by Head Blacksmith Ferris. Required materials: 1500 B-grade Crystals, 10,000,000 adena. -->
@@ -515,9 +524,18 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">48</stat>
 		</stats>
+		<skills>
+			<skill id="45041" level="1" /> <!-- Dragon Pendant Effect Lv. 2 -->
+			<skill id="45041" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Pendant Effect Lv. 2 -->
+			<skill id="45041" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Pendant Effect Lv. 2 -->
+			<skill id="45041" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Pendant Effect Lv. 2 -->
+			<skill id="45041" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Pendant Effect Lv. 2 -->
+			<skill id="45041" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Dragon Pendant Effect Lv. 2 -->
+		</skills>
 	</item>
 	<item id="91246" name="Dragon Pendant Lv. 3" type="Armor">
 		<!-- Contains the dragon's energy. Can be enchanted up to +5 with Dragon Varnish. Activates special effects depending on the enchant value. +5 pendant can be upgraded to Lv. 4 by Head Blacksmith Ferris. Required materials: 5000 B-grade Crystals, 50,000,000 adena. -->
@@ -528,9 +546,18 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">57</stat>
 		</stats>
+		<skills>
+			<skill id="45042" level="1" /> <!-- Dragon Pendant Effect Lv. 3 -->
+			<skill id="45042" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Pendant Effect Lv. 3 -->
+			<skill id="45042" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Pendant Effect Lv. 3 -->
+			<skill id="45042" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Pendant Effect Lv. 3 -->
+			<skill id="45042" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Pendant Effect Lv. 3 -->
+			<skill id="45042" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Dragon Pendant Effect Lv. 3 -->
+		</skills>
 	</item>
 	<item id="91247" name="Dragon Pendant Lv. 4" type="Armor">
 		<!-- Contains the dragon's energy. Can be enchanted up to +5 with Dragon Varnish. Activates special effects depending on the enchant value. +5 pendant can be upgraded to Blessed Dragon Pendant by Veruti in Giran. Required materials: Blessed Land/ Fire Dragon Pendant. -->
@@ -541,9 +568,18 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="pDef">66</stat>
 		</stats>
+		<skills>
+			<skill id="45043" level="1" /> <!-- Dragon Pendant Effect Lv. 4 -->
+			<skill id="45043" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Dragon Pendant Effect Lv. 4 -->
+			<skill id="45043" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Dragon Pendant Effect Lv. 4 -->
+			<skill id="45043" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Dragon Pendant Effect Lv. 4 -->
+			<skill id="45043" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Dragon Pendant Effect Lv. 4 -->
+			<skill id="45043" level="6" type="ON_ENCHANT" type_value="6" /> <!-- Dragon Pendant Effect Lv. 4 -->
+		</skills>
 	</item>
 	<item id="91248" name="Blessed Dragon Pendant" type="Armor">
 		<!-- <Properties>. P. Atk. +20%. M. Atk. +20%. P. Critical Damage +15%. M. Skill Critical Damage +15%. Atk. Spd. +10%. Casting Spd. +10%. Received P. Damage -30%. Received M. Damage -30%. M. Def. +50%. Acquired XP/ SP +30%. Damage Reflection Resistance +20%. <Dragon Meditation>. Increases HP/ MP Recovery Rate and Speed for a certain amount of time. An item imbued with the dragon power. Cannot be enchanted. -->

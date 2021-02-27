@@ -1437,6 +1437,112 @@
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>
+					<value level="1">14</value>
+					<value level="2">15</value>
+					<value level="3">16</value>
+					<value level="4">17</value>
+					<value level="5">18</value>
+					<value level="6">19</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">5</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">3</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="45041" toLevel="6" name="Dragon Pendant Effect Lv. 2">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk. Spd./ Casting Spd. +$s4. -->
+		<icon>icon.bm_pendant_dragon_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
 					<value level="1">20</value>
 					<value level="2">21</value>
 					<value level="3">22</value>
@@ -1454,34 +1560,51 @@
 				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="PvpMagicalSkillDefenceBonus">
 				<amount>
-					<value level="1">10</value>
-					<value level="2">10</value>
-					<value level="3">10</value>
-					<value level="4">10</value>
-					<value level="5">10</value>
+					<value fromLevel="1" toLevel="5">10</value>
 					<value level="6">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>
-					<value level="1">10</value>
-					<value level="2">10</value>
-					<value level="3">10</value>
-					<value level="4">10</value>
-					<value level="5">10</value>
+					<value fromLevel="1" toLevel="5">10</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">10</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">10</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">10</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">10</value>
 					<value level="6">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-					<value level="3">2</value>
-					<value level="4">2</value>
+					<value fromLevel="1" toLevel="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
 				</amount>
@@ -1489,28 +1612,277 @@
 			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-					<value level="3">2</value>
-					<value level="4">2</value>
+					<value fromLevel="1" toLevel="4">2</value>
 					<value level="5">3</value>
 					<value level="6">3</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>5</amount>
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalDamage">
-				<amount>5</amount>
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value level="6">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45041" toLevel="6" name="Dragon Pendant Effect Lv. 2">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk. Spd./ Casting Spd. +$s4. -->
+	<skill id="45042" toLevel="6" name="Dragon Pendant Effect Lv. 3">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5. -->
 		<icon>icon.bm_pendant_dragon_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">27</value>
+					<value level="3">28</value>
+					<value level="4">29</value>
+					<value level="5">30</value>
+					<value level="6">31</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value fromLevel="3" toLevel="6">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value fromLevel="3" toLevel="6">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="3">0</value>
+					<value fromLevel="4" toLevel="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="3">0</value>
+					<value fromLevel="4" toLevel="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="45043" toLevel="6" name="Dragon Pendant Effect Lv. 4">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, P./ M. Atk. +$s6. -->
+		<icon>icon.bm_pendant_dragon_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">33</value>
+					<value level="2">35</value>
+					<value level="3">37</value>
+					<value level="4">39</value>
+					<value level="5">41</value>
+					<value level="6">43</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">20</value>
+					<value fromLevel="5" toLevel="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">20</value>
+					<value fromLevel="5" toLevel="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">20</value>
+					<value fromLevel="5" toLevel="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">20</value>
+					<value fromLevel="5" toLevel="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">20</value>
+					<value fromLevel="5" toLevel="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value fromLevel="1" toLevel="4">20</value>
+					<value fromLevel="5" toLevel="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value fromLevel="1" toLevel="5">5</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value fromLevel="1" toLevel="5">5</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">9</value>
+					<value level="3">9</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">9</value>
+					<value level="3">9</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+					<value level="6">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="4">10</value>
+					<value fromLevel="5" toLevel="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="4">10</value>
+					<value fromLevel="5" toLevel="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value fromLevel="1" toLevel="3">0</value>
+					<value level="4">10</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="45044" toLevel="1" name="Blessed Dragon Pendant">
+		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, P./ M. Atk. +$s6, Damage Reflection Resistance +$s7. -->
+		<icon>icon.bm_pendant_dragon_i01</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence">
@@ -1525,11 +1897,27 @@
 				<amount>30</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="PvpMagicalSkillDefenceBonus">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1562,28 +1950,33 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="45042" toLevel="6" name="Dragon Pendant Effect Lv. 3">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5. -->
-		<icon>icon.bm_pendant_dragon_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="45043" toLevel="6" name="Dragon Pendant Effect Lv. 4">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, P./ M. Atk. +$s6. -->
-		<icon>icon.bm_pendant_dragon_i00</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="45044" toLevel="1" name="Blessed Dragon Pendant">
-		<!-- M. Def. +$s1, Acquired XP/ SP +$s2, Received P./ M. Damage -$s3, Atk./ Casting Spd. +$s4, P. Critical Damage/ M. Skill Critical Damage +$s5, P./ M. Atk. +$s6, Damage Reflection Resistance +$s7. -->
-		<icon>icon.bm_pendant_dragon_i01</icon>
-		<operateType>P</operateType>
-	</skill>
 	<skill id="45045" toLevel="1" name="Dragon Meditation">
 		<!-- For $s1, HP Recovery Rate +$s2, MP Recovery Rate +$s3, Speed +$s4. -->
 		<icon>icon.dragon_invocation</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<reuseDelay>600000</reuseDelay>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>15</abnormalTime>
 		<effectPoint>673</effectPoint>
+		<hitTime>1000</hitTime>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45046" toLevel="1" name="Dragon Barrier">
 		<!-- Creates a barrier that protects against regular attacks, skills and debuffs for 10 sec. -->

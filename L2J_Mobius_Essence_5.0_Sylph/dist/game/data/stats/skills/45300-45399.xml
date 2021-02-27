@@ -1282,8 +1282,8 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
-		<affectLimit>6-12</affectLimit>
-		<affectRange>200</affectRange>
+		<affectRange>400</affectRange>
+		<effectRange>600</effectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
 			<value level="1">-1520</value>
@@ -1395,14 +1395,11 @@
 			<value level="2">85</value>
 			<value level="3">90</value>
 		</magicLevel>
-		<operateType>CA1</operateType>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<affectRange>250</affectRange>
-		<channelingStart>1</channelingStart>
-		<channelingTickInterval>1</channelingTickInterval>
-		<channelingSkillId>45314</channelingSkillId> <!-- Conflagration -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<affectRange>400</affectRange>
+		<effectRange>600</effectRange>
 		<reuseDelay>30000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1416,17 +1413,25 @@
 				</weaponType>
 			</condition>
 		</conditions>
-		<channelingEffects>
+		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">6606</value>
-					<value level="2">6965</value>
-					<value level="3">7508</value>
+					<value level="1">8606</value>
+					<value level="2">10165</value>
+					<value level="3">12508</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-		</channelingEffects>
+			<effect name="CallSkill">
+				<skillId>45314</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 		<selfEffects>
 			<effect name="ModifyDeathPoints">
 				<amount>
@@ -1455,11 +1460,11 @@
 		<effects>
 			<effect name="DamOverTime">
 				<power>
-					<value level="1">107</value>
-					<value level="2">123</value>
-					<value level="3">134</value>
+					<value level="1">8606</value>
+					<value level="2">10165</value>
+					<value level="3">12508</value>
 				</power>
-				<ticks>1</ticks>
+				<ticks>2</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -1482,14 +1487,11 @@
 			<value level="2">85</value>
 			<value level="3">90</value>
 		</magicLevel>
-		<operateType>CA1</operateType>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<affectRange>250</affectRange>
-		<channelingStart>1</channelingStart>
-		<channelingTickInterval>1</channelingTickInterval>
-		<channelingSkillId>45317</channelingSkillId> <!-- Frosting -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<affectRange>400</affectRange>
+		<effectRange>600</effectRange>
 		<reuseDelay>30000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1503,17 +1505,25 @@
 				</weaponType>
 			</condition>
 		</conditions>
-		<channelingEffects>
+		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">1606</value>
-					<value level="2">1965</value>
-					<value level="3">1508</value>
+					<value level="1">8606</value>
+					<value level="2">10165</value>
+					<value level="3">12508</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-		</channelingEffects>
+			<effect name="CallSkill">
+				<skillId>45317</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 		<selfEffects>
 			<effect name="ModifyDeathPoints">
 				<amount>
@@ -1571,14 +1581,11 @@
 			<value level="2">85</value>
 			<value level="3">90</value>
 		</magicLevel>
-		<operateType>CA1</operateType>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<affectRange>250</affectRange>
-		<channelingStart>1</channelingStart>
-		<channelingTickInterval>1</channelingTickInterval>
-		<channelingSkillId>45320</channelingSkillId> <!-- Hailstorm -->
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<affectRange>400</affectRange>
+		<effectRange>600</effectRange>
 		<reuseDelay>30000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1592,7 +1599,7 @@
 				</weaponType>
 			</condition>
 		</conditions>
-		<channelingEffects>
+		<effects>
 			<effect name="PhysicalAttack">
 				<power>
 					<value level="1">8606</value>
@@ -1602,7 +1609,15 @@
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
 			</effect>
-		</channelingEffects>
+			<effect name="CallSkill">
+				<skillId>45320</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</skillLevel>
+			</effect>
+		</effects>
 		<selfEffects>
 			<effect name="ModifyDeathPoints">
 				<amount>
@@ -1631,11 +1646,11 @@
 		<effects>
 			<effect name="DamOverTime">
 				<power>
-					<value level="1">137</value>
-					<value level="2">143</value>
-					<value level="3">156</value>
+					<value level="1">8606</value>
+					<value level="2">10165</value>
+					<value level="3">12508</value>
 				</power>
-				<ticks>1</ticks>
+				<ticks>2</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -1656,6 +1671,7 @@
 		<!-- <Fixed cast time skill> The character's blade is covered with Death Fire. Attacks use Death Fire. <Death Fire> Decreases P./ M. Def. Deals damage over time. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
+		<abnormalVisualEffect>DK_IGNITION_HUMAN_AVE</abnormalVisualEffect>
 		<coolTime>500</coolTime>
 		<effectPoint>650</effectPoint>
 		<hitTime>1500</hitTime>
@@ -1726,6 +1742,7 @@
 		<!-- <Fixed cast time skill> The character's blade is covered with Death Frostbite. Attacks use Death Frostbite. <Death Frostbite> Decreases Speed/ Atk. Spd./ Casting Spd. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
+		<abnormalVisualEffect>DK_IGNITION_ELF_AVE</abnormalVisualEffect>
 		<coolTime>500</coolTime>
 		<effectPoint>650</effectPoint>
 		<hitTime>1500</hitTime>
@@ -1796,6 +1813,7 @@
 		<!-- <Fixed cast time skill> The character's blade is covered with Death Lightning. Attacks use Death Lightning. <Death Lightning> Makes unable to use basic attacks. -->
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
+		<abnormalVisualEffect>DK_IGNITION_DARKELF_AVE</abnormalVisualEffect>
 		<coolTime>500</coolTime>
 		<effectPoint>650</effectPoint>
 		<hitTime>1500</hitTime>

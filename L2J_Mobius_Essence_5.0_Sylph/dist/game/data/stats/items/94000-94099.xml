@@ -1174,6 +1174,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94083" min="1" max="1" chance="100" /> <!-- Helmet of Mana (Exchangeable) -->
+		</capsuled_items>
 	</item>
 	<item id="94088" name="Package: Helmet of Mana" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1185,6 +1189,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94084" min="1" max="1" chance="100" /> <!-- Helmet of Mana (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="94089" name="Package: Boots of Evasion" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1196,6 +1204,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94085" min="1" max="1" chance="100" /> <!-- Boots of Evasion (Exchangeable) -->
+		</capsuled_items>
 	</item>
 	<item id="94090" name="Package: Boots of Evasion" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -1207,6 +1219,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94086" min="1" max="1" chance="100" /> <!-- Boots of Evasion (Sealed) -->
+		</capsuled_items>
 	</item>
 	<item id="94091" name="Aden Adventure Reward Kit - Enhanced" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Cookie, Sayha's Storm Lv. 3 and Enhanced Dice. -->
