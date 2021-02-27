@@ -1935,7 +1935,155 @@
 	<skill id="50352" toLevel="11" name="Talisman of Power">
 		<!-- A powerful talisman. <Effect> P. Def. +$s1 M. Def. +$s1 Max HP +$s2 Max MP +$s3 P. Atk. +$s4 M. Atk. +$s4 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">80</value>
+					<value level="3">110</value>
+					<value level="4">160</value>
+					<value level="5">210</value>
+					<value level="6">290</value>
+					<value level="7">370</value>
+					<value level="8">470</value>
+					<value level="9">570</value>
+					<value level="10">770</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">80</value>
+					<value level="3">110</value>
+					<value level="4">160</value>
+					<value level="5">210</value>
+					<value level="6">290</value>
+					<value level="7">370</value>
+					<value level="8">470</value>
+					<value level="9">570</value>
+					<value level="10">770</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">13</value>
+					<value level="3">16</value>
+					<value level="4">19</value>
+					<value level="5">22</value>
+					<value level="6">27</value>
+					<value level="7">32</value>
+					<value level="8">40</value>
+					<value level="9">48</value>
+					<value level="10">56</value>
+					<value level="11">70</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">13</value>
+					<value level="3">16</value>
+					<value level="4">19</value>
+					<value level="5">22</value>
+					<value level="6">27</value>
+					<value level="7">32</value>
+					<value level="8">40</value>
+					<value level="9">48</value>
+					<value level="10">56</value>
+					<value level="11">70</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">100</value>
+					<value level="3">150</value>
+					<value level="4">200</value>
+					<value level="5">300</value>
+					<value level="6">400</value>
+					<value level="7">500</value>
+					<value level="8">1000</value>
+					<value level="9">1500</value>
+					<value level="10">2500</value>
+					<value level="11">4000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">80</value>
+					<value level="3">130</value>
+					<value level="4">180</value>
+					<value level="5">280</value>
+					<value level="6">380</value>
+					<value level="7">480</value>
+					<value level="8">880</value>
+					<value level="9">1280</value>
+					<value level="10">1780</value>
+					<value level="11">2780</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="4">50</value>
+					<value level="5">100</value>
+					<value level="6">200</value>
+					<value level="7">300</value>
+					<value level="8">300</value>
+					<value level="9">500</value>
+					<value level="10">700</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="4">50</value>
+					<value level="5">100</value>
+					<value level="6">200</value>
+					<value level="7">300</value>
+					<value level="8">300</value>
+					<value level="9">500</value>
+					<value level="10">700</value>
+					<value level="11">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+					<value level="8">8</value>
+					<value level="9">10</value>
+					<value level="10">12</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+					<value level="8">8</value>
+					<value level="9">10</value>
+					<value level="10">12</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50353" toLevel="1" name="Valakas' Necklace">
 		<!-- A necklace imbued with fire dragon power. <Effect> Max MP + $s7 P. Atk. +$s1 M. Atk. +$s1 P./ M. Skill Power +$s4 Damage Reflection Resistance +$s5 Skill Cooldown -$s6 Paralysis Atk. Rate +$s2 Paralysis Resistance +$s3 -->
@@ -3071,7 +3219,15 @@
 				<!-- Fatal Critical Strike -->
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
-				<chance>10</chance> <!-- TODO: Chance increase with skill level -->
+				<chance>
+					<value level="4">5</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">20</value>
+					<value level="8">25</value>
+					<value level="9">30</value>
+					<value level="10">35</value>
+				</chance>
 				<targetType>SELF</targetType>
 				<isCritical>true</isCritical>
 				<skillId>50391</skillId> <!-- Fatal Critical Strike -->
@@ -3081,7 +3237,15 @@
 				<!-- Fatal Critical Strike -->
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
-				<chance>10</chance> <!-- TODO: Chance increase with skill level -->
+				<chance>
+					<value level="4">5</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">20</value>
+					<value level="8">25</value>
+					<value level="9">30</value>
+					<value level="10">35</value>
+				</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<skillId>50391</skillId> <!-- Fatal Critical Strike -->
@@ -3092,7 +3256,15 @@
 				<magicTypes>0;1</magicTypes>
 				<skillId>50391</skillId> <!-- Fatal Critical Strike -->
 				<skillLevel>1</skillLevel>
-				<chance>10</chance> <!-- TODO: Chance increase with skill level -->
+				<chance>
+					<value level="4">5</value>
+					<value level="5">10</value>
+					<value level="6">15</value>
+					<value level="7">20</value>
+					<value level="8">25</value>
+					<value level="9">30</value>
+					<value level="10">35</value>
+				</chance>
 				<targetType>SELF</targetType>
 			</effect>
 		</effects>
