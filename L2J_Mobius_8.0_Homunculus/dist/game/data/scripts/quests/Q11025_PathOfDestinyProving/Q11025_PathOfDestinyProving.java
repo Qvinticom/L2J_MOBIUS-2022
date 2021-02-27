@@ -42,6 +42,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeSetAlarm;
 
+import quests.Q11024_PathOfDestinyBeginning.Q11024_PathOfDestinyBeginning;
+
 /**
  * Path of Destiny - Proving (11025)
  * @URL https://l2wiki.com/Path_of_Destiny_-_Proving
@@ -121,7 +123,8 @@ public class Q11025_PathOfDestinyProving extends Quest
 		addTalkId(TARTI, RAYMOND, TELESHA, MYSTERIOUS_WIZARD, KALLESIN, ZENATH);
 		addKillId(VAMPIRE, CARCASS_BAT, SKELETON_SCOUT, SKELETON_ARCHER, SKELETON_WARRIOR, SPARTOI_SOLDIER, RAGING_SPARTOI, SKELETON_WARRIOR_2, SKELETON_SCOUT_2);
 		registerQuestItems(WIND_SPIRIT_REALM_RELIC, SECRET_MATERIAL, BREATH_OF_DEATH);
-		addCondMinLevel(LEVEL_20, "34505-16.html");
+		// addCondMinLevel(LEVEL_20, "34505-16.html");
+		addCondCompletedQuest(Q11024_PathOfDestinyBeginning.class.getSimpleName(), "34505-16.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_PATH_OF_DESTINY_PROVING);
 	}
 	
@@ -389,6 +392,11 @@ public class Q11025_PathOfDestinyProving extends Quest
 								htmltext = "34505-06.html";
 								break;
 							}
+							case 9:
+							{
+								htmltext = "34505-07.html";
+								break;
+							}
 							case 10:
 							{
 								if (player.getLevel() >= 40)
@@ -420,6 +428,10 @@ public class Q11025_PathOfDestinyProving extends Quest
 						if (qs.isCond(2))
 						{
 							htmltext = "33177-01.html";
+						}
+						else if (qs.isCond(3))
+						{
+							htmltext = "33177-02.html";
 						}
 						else if (qs.isCond(4))
 						{

@@ -394,12 +394,12 @@ public class Q11026_PathOfDestinyConviction extends Quest
 							}
 							case 15:
 							{
-								htmltext = "34505-06.html";
+								htmltext = "34505-07.html";
 								break;
 							}
 							case 16:
 							{
-								htmltext = "34505-06.html";
+								htmltext = "34505-10.html";
 								break;
 							}
 							case 17:
@@ -424,6 +424,11 @@ public class Q11026_PathOfDestinyConviction extends Quest
 								htmltext = "33963-01.html";
 								break;
 							}
+							case 3:
+							{
+								htmltext = "33963-02.html";
+								break;
+							}
 							case 4:
 							{
 								htmltext = "33963-06.html";
@@ -432,6 +437,11 @@ public class Q11026_PathOfDestinyConviction extends Quest
 							case 5:
 							{
 								htmltext = "33963-07.html";
+								break;
+							}
+							case 6:
+							{
+								htmltext = "33963-08.html";
 								break;
 							}
 							case 7:
@@ -446,12 +456,22 @@ public class Q11026_PathOfDestinyConviction extends Quest
 							}
 							case 9:
 							{
-								htmltext = "33963-18.html";
+								htmltext = "33963-14.html";
+								break;
+							}
+							case 10:
+							{
+								htmltext = "33963-17.html";
 								break;
 							}
 							case 11:
 							{
 								htmltext = "33963-19.html";
+								break;
+							}
+							case 12:
+							{
+								htmltext = "33963-20.html";
 								break;
 							}
 							case 13:

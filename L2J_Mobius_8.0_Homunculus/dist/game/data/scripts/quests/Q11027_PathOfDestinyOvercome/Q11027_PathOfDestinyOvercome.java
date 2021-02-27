@@ -522,6 +522,11 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 								htmltext = "30648-01.html";
 								break;
 							}
+							case 3:
+							{
+								htmltext = "30648-02.html";
+								break;
+							}
 							case 4:
 							{
 								htmltext = "30648-06.html";
@@ -530,6 +535,11 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 							case 5:
 							{
 								htmltext = "30648-07.html";
+								break;
+							}
+							case 6:
+							{
+								htmltext = "30648-08.html";
 								break;
 							}
 							case 7:
@@ -542,6 +552,11 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 								htmltext = "30648-13.html";
 								break;
 							}
+							case 9:
+							{
+								htmltext = "30648-14.html";
+								break;
+							}
 							case 10:
 							{
 								htmltext = "30648-18.html";
@@ -550,6 +565,11 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 							case 11:
 							{
 								htmltext = "30648-19.html";
+								break;
+							}
+							case 12:
+							{
+								htmltext = "30648-20.html";
 								break;
 							}
 							case 13:

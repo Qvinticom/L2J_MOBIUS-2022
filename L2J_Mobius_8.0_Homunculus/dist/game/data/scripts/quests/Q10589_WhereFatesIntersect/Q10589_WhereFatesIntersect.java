@@ -31,6 +31,8 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
+import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
+
 /**
  * Where Fates Intersect (10589)
  * @URL https://l2wiki.com/Where_Fates_Intersect
@@ -62,7 +64,6 @@ public class Q10589_WhereFatesIntersect extends Quest
 	private static final boolean PARTY_QUEST = true;
 	private static final int KILLING_COND = 3;
 	private static final int FINISH_COND = 4;
-	private static final int MIN_LEVEL = 85;
 	// Rewards
 	private static final int REWARD_ITEM1 = 80908; // Lv. 95 Achievement Reward Box
 	private static final int REWARD_ITEM1_AMOUNT = 1;
@@ -77,7 +78,7 @@ public class Q10589_WhereFatesIntersect extends Quest
 		addTalkId(TARTI, HERPHAH, VOLLODOS, JOACHIM);
 		addKillId(MONSTERS);
 		registerQuestItems(MONSTER_DROP);
-		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
+		addCondCompletedQuest(Q11027_PathOfDestinyOvercome.class.getSimpleName(), getNoQuestMsg(null));
 	}
 	
 	@Override
