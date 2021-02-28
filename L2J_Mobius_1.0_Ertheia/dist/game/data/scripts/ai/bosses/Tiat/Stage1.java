@@ -518,7 +518,7 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 				{
 					final List<PlayerInstance> players = new ArrayList<>(world.getPlayers());
 					final int deviceCount = world.getParameters().getInt("deviceCount", 0);
-					if ((deviceCount < MAX_DEVICESPAWNEDMOBCOUNT) && !getRandomEntry(players).isDead())
+					if ((deviceCount < MAX_DEVICESPAWNEDMOBCOUNT) && !players.isEmpty() && !getRandomEntry(players).isDead())
 					{
 						world.setParameter("deviceCount", deviceCount + 1);
 						
