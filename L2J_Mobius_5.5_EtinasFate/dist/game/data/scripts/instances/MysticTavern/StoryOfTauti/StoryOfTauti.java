@@ -567,6 +567,10 @@ public class StoryOfTauti extends AbstractInstance
 				case SEAL_ARCHANGEL:
 				{
 					final Npc archangel = world.getNpc(SEAL_ARCHANGEL);
+					if (archangel == null)
+					{
+						return null;
+					}
 					if (world.isStatus(9) && archangel.isScriptValue(0))
 					{
 						archangel.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DO_NOT_LUST_AFTER_WHAT_S_SEALED_HERE_IT_IS_NOT_YOURS);
