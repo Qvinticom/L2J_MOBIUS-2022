@@ -3124,26 +3124,6 @@
 					<item>POLE</item>
 				</weaponType>
 			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="9">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<hpPercent>60</hpPercent>
-			</effect>
-			<effect name="CriticalRate" fromLevel="6" toLevel="9">
-				<amount>100</amount>
-				<mode>DIFF</mode>
-				<hpPercent>60</hpPercent>
-			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="9">
-				<amount>30</amount>
-				<mode>PER</mode>
-				<hpPercent>30</hpPercent>
-			</effect>
-			<effect name="CriticalRate" fromLevel="6" toLevel="9">
-				<amount>300</amount>
-				<mode>DIFF</mode>
-				<hpPercent>30</hpPercent>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="181" toLevel="2" name="Revival">
