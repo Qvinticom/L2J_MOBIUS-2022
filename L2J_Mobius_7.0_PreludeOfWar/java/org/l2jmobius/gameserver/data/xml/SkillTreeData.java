@@ -271,7 +271,10 @@ public class SkillTreeData implements IXmlReader
 										{
 											final int removeSkillId = parseInteger(attrs, "id");
 											skillLearn.addRemoveSkills(removeSkillId);
-											_removeSkillCache.computeIfAbsent(classId, k -> new HashSet<>()).add(removeSkillId);
+											if (!parseBoolean(attrs, "onlyReplaceByLearn", false))
+											{
+												_removeSkillCache.computeIfAbsent(classId, k -> new HashSet<>()).add(removeSkillId);
+											}
 											break;
 										}
 									}
