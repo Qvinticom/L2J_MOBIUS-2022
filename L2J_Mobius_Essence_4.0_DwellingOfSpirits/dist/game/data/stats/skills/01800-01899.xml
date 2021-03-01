@@ -1194,9 +1194,25 @@
 	<skill id="1897" toLevel="15" name="Mass Stigma of Shillien">
 		<!-- By the Shillien's curse, the target's and nearby enemies' Weapon Atk. Resistance -$s2, M. Def. -$s3 for $s1 -->
 		<icon>icon.skill1897</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+			<value level="14">14</value>
+			<value level="15">15</value>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
+		<abnormalType>STIGMA_OF_SILEN</abnormalType>
 		<abnormalVisualEffect>STIGMA_OF_SILEN</abnormalVisualEffect>
 		<activateRate>-1</activateRate>
 		<basicProperty>MAGIC</basicProperty>

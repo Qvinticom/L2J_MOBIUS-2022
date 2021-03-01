@@ -1203,9 +1203,15 @@
 	<skill id="1897" toLevel="5" name="Shilen's Cursed Field">
 		<!-- For $s1, Melee Weapon Resistance of the target and nearby enemies -$s2. -->
 		<icon>icon.skill1897</icon>
-		<abnormalLevel>1</abnormalLevel>
+		<abnormalLevel>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLevel>
 		<abnormalTime>30</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
+		<abnormalType>STIGMA_OF_SILEN</abnormalType>
 		<abnormalVisualEffect>STIGMA_OF_SILEN</abnormalVisualEffect>
 		<activateRate>-1</activateRate>
 		<basicProperty>MAGIC</basicProperty>
