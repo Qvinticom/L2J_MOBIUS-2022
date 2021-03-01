@@ -426,6 +426,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="1" />
+		</cond>		
+		<capsuled_items>
+			<item id="91927" min="1000" max="1000" chance="100"  /> <!-- Soulshots -->
+			<item id="91930" min="350" max="350" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="93421" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95643" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95643" name="Kit: Sylph's New Adventure Lv. 2" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 15+. -->
@@ -436,6 +446,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="15" />
+		</cond>		
+		<capsuled_items>
+			<item id="3031" min="500" max="500" chance="100"  /> <!-- Soulshots -->
+			<item id="94269" min="5" max="5" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="5" max="5" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95644" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95644" name="Kit: Sylph's New Adventure Lv. 3" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 30+. -->
@@ -446,6 +466,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="30" />
+		</cond>		
+		<capsuled_items>
+			<item id="3031" min="500" max="500" chance="100"  /> <!-- Soulshots -->
+			<item id="94269" min="5" max="5" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="5" max="5" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95645" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95645" name="Kit: Sylph's New Adventure Lv. 4" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 40+. -->
@@ -456,6 +486,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="40" />
+		</cond>		
+		<capsuled_items>
+			<item id="90907" min="20" max="20" chance="100"  /> <!-- Soulshots -->
+			<item id="94269" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="10" max="10" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95646" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95646" name="Kit: Sylph's New Adventure Lv. 5" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 45+. -->
@@ -466,6 +506,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="45" />
+		</cond>		
+		<capsuled_items>
+			<item id="93038" min="1" max="1" chance="100"  /> <!-- Soulshots -->
+			<item id="93949" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="10" max="10" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95647" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95647" name="Kit: Sylph's New Adventure Lv. 6" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 50+. -->
@@ -476,6 +527,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="50" />
+		</cond>		
+		<capsuled_items>
+			<item id="93038" min="1" max="1" chance="100"  /> <!-- Soulshots -->
+			<item id="91983" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95648" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95648" name="Kit: Sylph's New Adventure Lv. 7" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 55+. -->
@@ -486,6 +548,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="55" />
+		</cond>		
+		<capsuled_items>
+			<item id="93038" min="1" max="1" chance="100"  /> <!-- Soulshots -->
+			<item id="90907" min="50" max="50" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95649" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95649" name="Kit: Sylph's New Adventure Lv. 8" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 60+. -->
@@ -496,6 +569,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="60" />
+		</cond>	
+		<capsuled_items>
+			<item id="93038" min="1" max="1" chance="100"  /> <!-- Soulshots -->
+			<item id="90404" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="90405" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95650" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95650" name="Kit: Sylph's New Adventure Lv. 9" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 65+. -->
@@ -506,6 +591,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="65" />
+		</cond>		
+		<capsuled_items>
+			<item id="93038" min="1" max="1" chance="100"  /> <!-- Soulshots -->
+			<item id="91689" min="10" max="10" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="91767" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95651" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95651" name="Kit: Sylph's New Adventure Lv. 10" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 70+. -->
@@ -516,6 +613,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="70" />
+		</cond>		
+		<capsuled_items>
+			<item id="93038" min="2" max="2" chance="100"  /> <!-- Soulshots -->
+			<item id="91757" min="5" max="5" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="92020" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95652" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95652" name="Kit: Sylph's New Adventure Lv. 11" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 74+. -->
@@ -526,6 +635,18 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="74" />
+		</cond>
+		<capsuled_items>
+			<item id="93038" min="2" max="2" chance="100"  /> <!-- Soulshots -->
+			<item id="91864" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="90907" min="100" max="100" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->
+			<item id="95653" min="1" max="1" chance="100"/> <!-- Valaka's Necklace -->
+		</capsuled_items>
 	</item>
 	<item id="95653" name="Kit: Sylph's New Adventure Lv. 12" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. Required level: 76+. -->
@@ -536,6 +657,17 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="113" addName="1">
+			<player level="76" />
+		</cond>
+		<capsuled_items>
+			<item id="93038" min="2" max="2" chance="100"  /> <!-- Soulshots -->
+			<item id="92400" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="93303" min="1" max="1" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94269" min="20" max="20" chance="100"/> <!-- Blessed Spiritshots -->
+			<item id="94271" min="20" max="20" chance="100"/> <!-- Valaka's Necklace -->			
+		</capsuled_items>
 	</item>
 	<item id="95654" name="Spellbook: Elemental Care Lv. 2" type="EtcItem">
 		<!-- A spellbook for learning the Elemental Care Lv. 2 skill. <Class> Storm Blaster <Skill effect> Recovers HP when used on allies. Decreases defense when used on enemies. Deals massive damage when used with Dragon Strike. -->

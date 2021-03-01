@@ -1476,6 +1476,42 @@
 		<reward id="92100" count="1" type="ON_SUCCESS" /> <!-- Moonstone (Lv. 6) -->
 		<reward id="94524" count="1" type="ON_FAILURE" /> <!-- Moonstone (Lv. 5) -->
 	</item>
+	<item one="94706" two="94716" chance="60"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94707" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 2 -->
+		<reward id="94706" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 1 -->
+	</item>
+	<item one="94707" two="94716" chance="50"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94708" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 3 -->
+		<reward id="94706" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 1 -->
+	</item>
+	<item one="94708" two="94716" chance="50"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94709" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 4 -->
+		<reward id="94707" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 2 -->
+	</item>
+	<item one="94709" two="94716" chance="40"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94710" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 5 -->
+		<reward id="94708" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 3 -->
+	</item>
+	<item one="94710" two="94716" chance="40"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94711" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 6 -->
+		<reward id="94709" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 4 -->
+	</item>
+	<item one="94711" two="94716" chance="30"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94712" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 7 -->
+		<reward id="94710" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 5 -->
+	</item>
+	<item one="94712" two="94716" chance="30"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94713" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 8 -->
+		<reward id="94711" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 6 -->
+	</item>
+	<item one="94713" two="94716" chance="20"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94714" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 9 -->
+		<reward id="94712" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 7 -->
+	</item>
+	<item one="94714" two="94716" chance="10"> <!-- Talisman of Hellbound / Talisman of Hellbound Fragment  -->
+		<reward id="94715" count="1" type="ON_SUCCESS" /> <!-- Talisman of Hellbound Lv. 10 -->
+		<reward id="94713" count="1" type="ON_FAILURE" /> <!-- Talisman of Hellbound Lv. 8 -->
+	</item>
 	<item one="9589" two="9589" chance="33"> <!-- Talisman Bracelet Lv. 1 / Talisman Bracelet Lv. 1  -->
 		<reward id="9590" count="1" type="ON_SUCCESS" /> <!-- Talisman Bracelet Lv. 2 -->
 		<reward id="9589" count="1" type="ON_FAILURE" /> <!-- Talisman Bracelet Lv. 1 -->
