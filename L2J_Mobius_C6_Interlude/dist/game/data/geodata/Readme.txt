@@ -2,16 +2,14 @@
 GEODATA COMPENDIUM
 ##############################################
 
-Comprehensive guide for geodata, by Tryskell and Hasha.
+Comprehensive guide for geodata.
 
-I	- How to configure it
-		a - Prerequisites
-		b - Make it work
-		c - L2D format
-II	- Addendum
+How to configure it
+	a - Prerequisites
+	b - Make it work
 
 ##############################################
-I - How to configure it
+How to configure it
 ##############################################
 
 ----------------------------------------------
@@ -30,12 +28,3 @@ To make geodata working:
 * open "/config/main/GeoEngine.ini" with your favorite text editor and then edit following config:
   - CoordSynchronize = 2
 * If you do not use any geodata files, the server will automatically change this setting to -1.
-
-----------------------------------------------
-c - L2D format
-----------------------------------------------
-
-* L2D is a new geodata file format. It holds diagonal movement informations, in addition to regular NSWE flags.
-* Heavier file weight (+30%), but the pathfinding algorithms are processed way faster (-35% calculation times).
-* L2D files can be converted from L2OFF/L2J formats without losing any information. Converter is part of the gameserver.
-* Keep in mind to convert new geodata files, once you update your L2OFF/L2J ones.

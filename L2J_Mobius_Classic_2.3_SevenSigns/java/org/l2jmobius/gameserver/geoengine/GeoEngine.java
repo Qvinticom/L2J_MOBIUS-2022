@@ -181,6 +181,17 @@ public class GeoEngine
 	}
 	
 	/**
+	 * Checks the specified position for available geodata.
+	 * @param x the world x
+	 * @param y the world y
+	 * @return {@code true} if there is geodata for the given coordinates, {@code false} otherwise
+	 */
+	public boolean hasGeo(int x, int y)
+	{
+		return hasGeoPos(getGeoX(x), getGeoY(y));
+	}
+	
+	/**
 	 * @param geoX
 	 * @param geoY
 	 * @param worldZ
@@ -275,6 +286,42 @@ public class GeoEngine
 	}
 	
 	/**
+	 * Gets the Z height.
+	 * @param x the world x
+	 * @param y the world y
+	 * @param z the world z
+	 * @return the nearest Z height
+	 */
+	public int getHeight(int x, int y, int z)
+	{
+		return getNearestZ(getGeoX(x), getGeoY(y), z);
+	}
+	
+	/**
+	 * Gets the next lower Z height.
+	 * @param x the world x
+	 * @param y the world y
+	 * @param z the world z
+	 * @return the nearest Z height
+	 */
+	public int getLowerHeight(int x, int y, int z)
+	{
+		return getNextLowerZ(getGeoX(x), getGeoY(y), z);
+	}
+	
+	/**
+	 * Gets the next higher Z height.
+	 * @param x the world x
+	 * @param y the world y
+	 * @param z the world z
+	 * @return the nearest Z height
+	 */
+	public int getHigherHeight(int x, int y, int z)
+	{
+		return getNextHigherZ(getGeoX(x), getGeoY(y), z);
+	}
+	
+	/**
 	 * @param worldX
 	 * @return the geo X
 	 */
@@ -326,18 +373,6 @@ public class GeoEngine
 	public int getWorldZ(int geoZ)
 	{
 		return (geoZ * 16) + WORLD_MIN_Z + 8;
-	}
-	
-	/**
-	 * Gets the Z height.
-	 * @param x the x coordinate
-	 * @param y the y coordinate
-	 * @param z the z coordinate
-	 * @return the nearest Z height
-	 */
-	public int getHeight(int x, int y, int z)
-	{
-		return getNearestZ(getGeoX(x), getGeoY(y), z);
 	}
 	
 	/**
@@ -708,17 +743,6 @@ public class GeoEngine
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Checks the specified position for available geodata.
-	 * @param x the X coordinate
-	 * @param y the Y coordinate
-	 * @return {@code true} if there is geodata for the given coordinates, {@code false} otherwise
-	 */
-	public boolean hasGeo(int x, int y)
-	{
-		return hasGeoPos(getGeoX(x), getGeoY(y));
 	}
 	
 	public static GeoEngine getInstance()

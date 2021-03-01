@@ -3406,6 +3406,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceWorld());
 					x = destiny.getX();
 					y = destiny.getY();
+					z = destiny.getZ();
 					dx = x - curX;
 					dy = y - curY;
 					dz = z - curZ;
@@ -3419,13 +3420,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					m.geoPath = GeoEnginePathfinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
+						if ((isPlayer()) || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((Summon) this).getFollowStatus()))
+						{
+							return;
+						}
+						
 						m.disregardingGeodata = true;
 						
-						// Mobius: Verify destination. Prevents wall collision issues.
-						final Location newDestination = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
-						x = newDestination.getX();
-						y = newDestination.getY();
-						z = newDestination.getZ();
+						x = originalX;
+						y = originalY;
+						z = originalZ;
+						distance = originalDistance;
 					}
 					else
 					{
