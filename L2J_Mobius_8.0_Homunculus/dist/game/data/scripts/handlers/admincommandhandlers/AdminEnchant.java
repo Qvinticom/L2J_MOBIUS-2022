@@ -51,7 +51,12 @@ public class AdminEnchant implements IAdminCommandHandler
 		"admin_seten", // 3
 		"admin_setun", // 0
 		"admin_setba", // 13
-		"admin_setbe",
+		"admin_setbe", // 29
+		"admin_setrb", // 16
+		"admin_setci", // 2
+		"admin_setma", // 3
+		"admin_setbr", // 30
+		"admin_setab", // 37
 		"admin_enchant"
 	};
 	
@@ -124,6 +129,26 @@ public class AdminEnchant implements IAdminCommandHandler
 			else if (command.startsWith("admin_setbe"))
 			{
 				armorType = Inventory.PAPERDOLL_BELT;
+			}
+			else if (command.startsWith("admin_setrb"))
+			{
+				armorType = Inventory.PAPERDOLL_RBRACELET;
+			}
+			else if (command.startsWith("admin_setci"))
+			{
+				armorType = Inventory.PAPERDOLL_HAIR2;
+			}
+			else if (command.startsWith("admin_setma"))
+			{
+				armorType = Inventory.PAPERDOLL_HAIR;
+			}
+			else if (command.startsWith("admin_setbr"))
+			{
+				armorType = Inventory.PAPERDOLL_BROOCH;
+			}
+			else if (command.startsWith("admin_setab"))
+			{
+				armorType = Inventory.PAPERDOLL_ARTIFACT_BOOK;
 			}
 			
 			if (armorType != -1)
