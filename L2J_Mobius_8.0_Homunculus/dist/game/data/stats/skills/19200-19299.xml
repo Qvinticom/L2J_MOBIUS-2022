@@ -125,44 +125,41 @@
 	<skill id="19204" toLevel="1" name="Prophecy of Might">
 		<!-- For $s1, the targeted party member's P. Critical Rate, P./ M. Skill Critical Rate, P. Critical Damage, and P./ M. Skill Critical Damage +$s2. Additionally, activates the Spirit of Iss effect. P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Chant of Bison/ Victories of Pa'agrio. Consumes $s4 Spirit Ore. <The character is targeted automatically> -->
 		<icon>icon.skill19204</icon>
-		<abnormalLevel>1</abnormalLevel>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
-		</abnormalTime>
-		<abnormalType>SONG_WEAPON</abnormalType> <!-- find proper name -->
-		<operateType>A2</operateType>
-		<targetType>MY_PARTY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<affectObject>FRIEND</affectObject>
-		<mpConsume>270</mpConsume>
-		<castRange>400</castRange>
-		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>712</effectPoint>
-		<reuseDelay>300000</reuseDelay>
+		<abnormalType>SONG_WEAPON</abnormalType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<affectRange>1000</affectRange>
 		<itemConsumeCount>10</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A3</operateType>
+		<targetType>MY_PARTY</targetType>
+		<affectScope>PARTY</affectScope>
+		<mpConsume>332</mpConsume>
+		<hitTime>8000</hitTime>
+		<coolTime>300</coolTime>
+		<effectPoint>712</effectPoint>
+		<reuseDelay>600000</reuseDelay>
 		<conditions>
 			<condition name="TargetMyParty">
 				<includeMe>true</includeMe>
 			</condition>
 		</conditions>
-		<effects>
-			<effect name="SkillCriticalDamage">
-				<amount>25</amount>
-				<mode>PER</mode>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>30848</skillId> <!-- Spirit of iss -->
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="SkillCriticalProbability">
+		</selfEffects>
+		<effects>
+			<effect name="CriticalRate">
 				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalRate">
 				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
@@ -174,13 +171,15 @@
 				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
-		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of Iss -->
-				<skillLevel>1</skillLevel>
+			<effect name="PhysicalSkillPower">
+				<amount>25</amount>
+				<mode>PER</mode>
 			</effect>
-		</selfEffects>
+			<effect name="MagicalSkillPower">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19205" toLevel="1" name="Song of Archery">
 		<!-- For $s1, all party members' Bow/ Crossbow Resistance +$s2. Cannot be used with Sage's Dance or Song of Thief. Consumes $s3 Spirit Ore. -->
@@ -245,26 +244,26 @@
 	<skill id="19207" toLevel="1" name="Chant of Bison">
 		<!-- For $s1, all party members' Critical Rate for standard attacks, P./ M. Skill Critical Rate, P./ M. Skill Power +$s2. Additionally, activates the Spirit of Iss effect: P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Prophecy of Might/ Victories of Pa'agrio. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19207</icon>
-		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 15)}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType>
 		<affectRange>1000</affectRange>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>332</mpConsume>
-		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>8000</hitTime>
+		<coolTime>300</coolTime>
 		<effectPoint>712</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<effects>
-			<effect name="SkillCriticalDamage">
+			<effect name="CriticalRate">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -272,15 +271,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MagicCriticalRate">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="SkillCriticalProbability">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -288,11 +279,21 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+		<selfEffects>
 			<effect name="CallSkill">
 				<skillId>30848</skillId> <!-- Spirit of Iss -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="19208" toLevel="9" name="Seal of Suspension">
 		<!-- For $s1, P./ M. Skill Cooldown +$s2 for the target and nearby enemies. Consumes 5 Spirit Ore. -->
@@ -1058,6 +1059,8 @@
 				<allowNormalAttack>true</allowNormalAttack>
 				<allowSkillAttack>true</allowSkillAttack>
 				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
+				<isCritical>false</isCritical>
 			</effect>
 		</effects>
 		<endEffects>
@@ -1122,26 +1125,30 @@
 	<skill id="19231" toLevel="1" name="Song of Assault">
 		<!-- For $s1, all party members P./ M. Atk. and P./ M. Def. +$s2. Additionally, activates the Spirit of Iss effect. P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Crippling Dance. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19231</icon>
-		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1">60</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_OF_WISDOM</abnormalType>
 		<affectRange>1000</affectRange>
-		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>140</mpConsume>
-		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>8000</hitTime>
+		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>300000</reuseDelay>
-		<isMagic>1</isMagic>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>30848</skillId> <!-- Spirit of iss -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="PAtk">
 				<amount>15</amount>
@@ -1151,24 +1158,19 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MagicalDefence">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of Iss -->
-				<skillLevel>1</skillLevel>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19232" toLevel="1" name="Crippling Dance">
 		<!-- For $s1, all party members P./ M. Atk. and P./ M. Def. +$s2. Additionally, activates the Spirit of Iss effect. P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Song of Assault. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19232</icon>
-		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
@@ -1176,18 +1178,23 @@
 		</abnormalTime>
 		<abnormalType>SONG_OF_WISDOM</abnormalType>
 		<affectRange>1000</affectRange>
-		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>140</mpConsume>
-		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>8000</hitTime>
+		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>300000</reuseDelay>
-		<isMagic>1</isMagic>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>30848</skillId> <!-- Spirit of iss -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="PAtk">
 				<amount>15</amount>
@@ -1197,17 +1204,13 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MagicalDefence">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of Iss -->
-				<skillLevel>1</skillLevel>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2602,7 +2605,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 		</abnormalLevel>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>2</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -2628,12 +2631,6 @@
 		<isDebuff>true</isDebuff>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>COUNTER_FLIP,-1</dispel>
-			</effect>
-			<effect name="DisableSkill">
-				<disable>19296</disable>
-			</effect>
 			<effect name="TeleportToTarget" />
 			<effect name="KnockBack">
 				<speed>400</speed>
@@ -2649,6 +2646,11 @@
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>COUNTER_FLIP,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19298" toLevel="10" name="Flash Dagger">
 		<!-- Blinds enemies in front of you making them unable to choose a target for $s1 Requires a dagger or a dual dagger. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
