@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.network.serverpackets.classchange.ExClassChangeS
  * Saga of Legend (10673)
  * @URL https://l2wiki.com/classic/Saga_of_Legend
  * @TODO: Retail htmls.
- * @author Dmitri, Mobius
+ * @author Dmitri, Mobius, Manax
  */
 public class Q10673_SagaOfLegend extends Quest
 {
@@ -51,46 +51,29 @@ public class Q10673_SagaOfLegend extends Quest
 	// Monsters
 	private static final int[] MOBS =
 	{
+		// Cruma Tower 2nd Floor
+		22206, // Premo
+		22207, // Validus
+		22209, // Perum
+		22210, // Torfe
+		22211, // Death Lord
+		20220, // Dicor
+		// Sillent Valley
 		20965, // Chimera Piece 72
-		20970, // Soldier of Ancient Times 73
 		20966, // Mutated Creation 74
-		20971, // Warrior of Ancient Times 74
 		20967, // Creature of the Past 75
-		20973, // Forgotten Ancient People 75
 		20968, // Forgotten Face 75
 		20969, // Giant's Shadow 75
+		20970, // Soldier of Ancient Times 73
+		20971, // Warrior of Ancient Times 74
+		20973, // Forgotten Ancient People 75
 		20972, // Shaman of Ancient Times 75
-		24025, // Bloody Purple 70
-		24046, // Floating Eye Seer 70
-		24032, // Seer 70
-		24041, // Bloody Mourner 71
-		24026, // Clipher 71
-		24042, // Clumsy Wimp 71
-		24047, // Floating Eye Seer 71
-		24033, // Guardian Spirit 71
-		24048, // Immortal Spirit 71
-		24043, // Mysterious Creature 71
-		24050, // Starving Spirit 71
-		24049, // Immortal Spirit 72
-		24034, // Midnight Sairon 72
-		24027, // Sairon 72
-		24052, // Starving Soldier 72
-		24051, // Starving Spirit 72
-		24035, // Daymen 73
-		24028, // Demon Warrior 73
-		24053, // Starving Soldier 73
-		24054, // Starving Warrior 73
-		24036, // Dolores 74
-		24037, // Maiden Doll 74
-		24055, // Starving Warrior 74
-		24030, // Stone Vanul 74
-		24029, // Veil Master 74
-		24044, // Zaken's Treasure Chest 74
-		24045, // Zaken's Treasure Chest 74
-		24031, // Death Flyer 75
-		24040, // Midnight Nightmare 75
-		24039, // Pearl Horror 75
-		24038, // Tor Scorpion 75
+		// Plains Of Lizardmen
+		22151, // Tanta Lizardmen
+		22152, // Tanta Lizardmen Warrior
+		22153, // Tanta Lizardmen Berserker
+		22154, // Tanta Lizardmen Archer
+		22155, // Tanta Lizardmen Summoner
 	};
 	// Rewards
 	private static final int MAGICAL_TABLET = 90045;
@@ -101,6 +84,7 @@ public class Q10673_SagaOfLegend extends Quest
 	private static final int SPELLBOOK_DWARF = 90041; // Spellbook: Mount Kukuru
 	private static final int SPELLBOOK_KAMAEL = 91946; // Spellbook: Mount Griffin
 	private static final int SPELLBOOK_DEATH_KNIGHT = 93383; // Spellbook: Mount Nightmare Steed
+	private static final int SPELLBOOK_SYLPH = 95357; // Spellbook: Mount Elemental Lyn Draco
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	private static final String KILL_COUNT_VAR = "KillCount";
@@ -345,6 +329,11 @@ public class Q10673_SagaOfLegend extends Quest
 				case HUMAN:
 				{
 					giveItems(player, SPELLBOOK_HUMAN, 1);
+					break;
+				}
+				case SYLPH:
+				{
+					giveItems(player, SPELLBOOK_SYLPH, 1);
 					break;
 				}
 			}
