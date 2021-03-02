@@ -96,8 +96,7 @@ public class AetherDrops extends AbstractNpcAI
 		if (event.equals("schedule"))
 		{
 			final Calendar calendar = Calendar.getInstance();
-			calendar.add(Calendar.DAY_OF_YEAR, 1);
-			calendar.set(Calendar.HOUR, 6);
+			calendar.set(Calendar.HOUR_OF_DAY, 6);
 			calendar.set(Calendar.MINUTE, 30);
 			
 			cancelQuestTimers("reset");
