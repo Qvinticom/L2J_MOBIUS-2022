@@ -192,6 +192,14 @@ public class ExRequestClassChange implements IClientIncomingPacket
 						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
 						break;
 					}
+					case SHARPSHOOTER:
+					{
+						player.addItem("ExRequestClassChange", 94892, 1, player, true); // D-Grade Elemental Orb Sealed.
+						player.addItem("ExRequestClassChange", 94897, 1, player, true); // Aden Pistols
+						player.addItem("ExRequestClassChange", 93494, 1, player, true); // Moon Shell Set.
+						player.addItem("ExRequestClassChange", 93496, 1, player, true); // 1st Class Transfer Gift Box.
+						break;
+					}
 				}
 			}
 			
