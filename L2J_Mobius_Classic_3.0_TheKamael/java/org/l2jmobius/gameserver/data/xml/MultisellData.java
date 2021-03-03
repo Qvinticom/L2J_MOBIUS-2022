@@ -100,7 +100,7 @@ public class MultisellData implements IXmlReader
 				{
 					if ("item".equalsIgnoreCase(itemNode.getNodeName()))
 					{
-						int totalPrice = 0;
+						long totalPrice = 0;
 						int lastIngredientId = 0;
 						long lastIngredientCount = 0;
 						entryCounter.incrementAndGet();
