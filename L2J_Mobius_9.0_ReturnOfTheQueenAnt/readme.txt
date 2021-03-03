@@ -1,10 +1,10 @@
-L2J-Mobius Homunculus
-Client: https://drive.google.com/u/0/uc?id=1Xlk2uzmxveJtrvaWXmZ6wBVFjd6E-ws7&export=download
-System: https://mega.nz/file/xl1njaTY#BdVHadGs9bTDyrDE3QgBGvAqkmqSqPtn8hLpcCil1Fs
+L2J-Mobius Return of the Queen Ant
+Client: 
+System: 
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
-Geodata: http://www.mediafire.com/file/muw8zo6v7cl7ujt/L2J_Mobius_8.0_Homunculus_Geodata.zip
+Geodata: 
 
 
 Working features...
@@ -114,6 +114,9 @@ Homunculus: https://eu.4game.com/patchnotes/lineage2/206/
 
 Homunculus Ch. 2: https://eu.4game.com/patchnotes/lineage2/270/
 -New augment system
+
+Return of the Queen Ant: https://eu.4game.com/patchnotes/lineage2/293/
+-Login support
 
 Events:
 -Birth of Draco
