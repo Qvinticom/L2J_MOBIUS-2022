@@ -173,7 +173,7 @@ public class MultisellData implements IXmlReader
 											continue;
 										}
 										
-										totalPrice += item.getReferencePrice();
+										totalPrice += (item.getReferencePrice() * count);
 									}
 									
 									products.add(product);
