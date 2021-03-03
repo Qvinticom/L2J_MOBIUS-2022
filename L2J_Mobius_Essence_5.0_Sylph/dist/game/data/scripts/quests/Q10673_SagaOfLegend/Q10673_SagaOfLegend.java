@@ -84,7 +84,7 @@ public class Q10673_SagaOfLegend extends Quest
 	private static final int SPELLBOOK_DWARF = 90041; // Spellbook: Mount Kukuru
 	private static final int SPELLBOOK_KAMAEL = 91946; // Spellbook: Mount Griffin
 	private static final int SPELLBOOK_DEATH_KNIGHT = 93383; // Spellbook: Mount Nightmare Steed
-	private static final int SPELLBOOK_SYLPH = 95357; // Spellbook: Mount Elemental Lyn Draco
+	private static final int SPELLBOOK_SYLPH = 95367; // Spellbook: Mount Elemental Lyn Draco
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	private static final String KILL_COUNT_VAR = "KillCount";
