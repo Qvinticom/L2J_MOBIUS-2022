@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -93,11 +94,17 @@ public class MultisellData implements IXmlReader
 				final StatSet set = new StatSet(parseAttributes(listNode));
 				final int listId = Integer.parseInt(f.getName().substring(0, f.getName().length() - 4));
 				final List<MultisellEntryHolder> entries = new ArrayList<>(listNode.getChildNodes().getLength());
+				final AtomicInteger entryCounter = new AtomicInteger();
 				
 				forEach(listNode, itemNode ->
 				{
 					if ("item".equalsIgnoreCase(itemNode.getNodeName()))
 					{
+						int totalPrice = 0;
+						int lastIngredientId = 0;
+						long lastIngredientCount = 0;
+						entryCounter.incrementAndGet();
+						
 						final List<ItemChanceHolder> ingredients = new ArrayList<>(1);
 						final List<ItemChanceHolder> products = new ArrayList<>(1);
 						final MultisellEntryHolder entry = new MultisellEntryHolder(ingredients, products);
@@ -113,6 +120,9 @@ public class MultisellData implements IXmlReader
 								if (itemExists(ingredient))
 								{
 									ingredients.add(ingredient);
+									
+									lastIngredientId = id;
+									lastIngredientCount = count;
 								}
 								else
 								{
@@ -153,6 +163,12 @@ public class MultisellData implements IXmlReader
 									}
 									
 									products.add(product);
+									
+									final Item item = ItemTable.getInstance().getTemplate(id);
+									if (item != null)
+									{
+										totalPrice += item.getReferencePrice();
+									}
 								}
 								else
 								{
@@ -166,6 +182,17 @@ public class MultisellData implements IXmlReader
 						if (totalChance > 100)
 						{
 							LOGGER.warning("Products' total chance of " + totalChance + "% exceeds 100% for list: " + listId + " at entry " + entries.size() + 1 + ".");
+						}
+						
+						// Check if buy price is lower than sell price.
+						// Only applies when there is only one ingredient and it is adena.
+						if ((ingredients.size() == 1) && (lastIngredientId == 57) && (lastIngredientCount < totalPrice))
+						{
+							LOGGER.warning("Buy price " + lastIngredientCount + " is less than sell price " + totalPrice + " at entry " + entryCounter.intValue() + " of multisell " + listId + ".");
+							// Adjust price.
+							final ItemChanceHolder ingredient = new ItemChanceHolder(57, 0, totalPrice, (byte) 0, ingredients.get(0).isMaintainIngredient());
+							ingredients.clear();
+							ingredients.add(ingredient);
 						}
 						
 						entries.add(entry);
