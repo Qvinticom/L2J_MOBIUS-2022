@@ -26,14 +26,16 @@ public class TeleportListHolder
 	private final int _y;
 	private final int _z;
 	private final int _price;
+	private final boolean _special;
 	
-	public TeleportListHolder(int locId, int x, int y, int z, int price)
+	public TeleportListHolder(int locId, int x, int y, int z, int price, boolean special)
 	{
 		_locId = locId;
 		_x = x;
 		_y = y;
 		_z = z;
 		_price = price;
+		_special = special;
 	}
 	
 	public int getLocId()
@@ -59,5 +61,10 @@ public class TeleportListHolder
 	public int getPrice()
 	{
 		return _price;
+	}
+	
+	public boolean isSpecial()
+	{
+		return _special;
 	}
 }

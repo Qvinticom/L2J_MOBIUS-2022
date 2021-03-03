@@ -12,6 +12,7 @@
 								<xs:attribute type="xs:integer" name="y" use="required" />
 								<xs:attribute type="xs:integer" name="z" use="required" />
 								<xs:attribute type="xs:integer" name="price" use="required" />
+								<xs:attribute type="xs:boolean" name="special" use="optional" />
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>

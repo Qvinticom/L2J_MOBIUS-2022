@@ -61,7 +61,8 @@ public class TeleportListData implements IXmlReader
 			final int y = set.getInt("y");
 			final int z = set.getInt("z");
 			final int tpPrice = set.getInt("price");
-			_teleports.put(tpId, new TeleportListHolder(tpId, x, y, z, tpPrice));
+			final boolean special = set.getBoolean("special", false);
+			_teleports.put(tpId, new TeleportListHolder(tpId, x, y, z, tpPrice, special));
 		}));
 	}
 	

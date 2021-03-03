@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.holders.TeleportListHolder;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -104,12 +105,29 @@ public class ExRequestTeleport implements IClientIncomingPacket
 			final int price = teleport.getPrice();
 			if (price > 0)
 			{
-				if (player.getAdena() < price)
+				// Check if player has fee.
+				if (teleport.isSpecial())
+				{
+					if (player.getInventory().getInventoryItemCount(Inventory.LCOIN_ID, -1) < price)
+					{
+						player.sendPacket(SystemMessageId.THERE_ARE_NOT_ENOUGH_L_COINS);
+						return;
+					}
+				}
+				else if (player.getAdena() < price)
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 					return;
 				}
-				player.reduceAdena("Teleport", price, player, true);
+				// Reduce items.
+				if (teleport.isSpecial())
+				{
+					player.destroyItemByItemId("Teleport", Inventory.LCOIN_ID, price, player, true);
+				}
+				else
+				{
+					player.reduceAdena("Teleport", price, player, true);
+				}
 			}
 		}
 		
