@@ -3,12 +3,19 @@
 	<skill id="47101" toLevel="4" name="Elemental Spirit">
 		<!-- The spirit power runs through your body. An incarnated Spirit Lv. 1 can be used. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalVisualEffect>
+			<value level="1">H_SY_BOARDA_DECO</value>
+			<value level="2">H_SY_BOARDB_DECO</value>
+			<value level="3">H_SY_BOARDC_DECO</value>
+			<value level="4">H_SY_BOARDD_DECO</value>
+		</abnormalVisualEffect>
 	</skill>
 	<skill id="47104" toLevel="5" name="Elemental Connection">
 		<!-- The character has a strong connection with the spirits. Soulshot damage +$s1 All Critical Rate +$s2 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="47105" toLevel="10" name="Elemental Recovery">
 		<!-- The spirit power helps to regenerate faster. HP Recovery Rate +$s1 MP Recovery Rate +$s2 -->
