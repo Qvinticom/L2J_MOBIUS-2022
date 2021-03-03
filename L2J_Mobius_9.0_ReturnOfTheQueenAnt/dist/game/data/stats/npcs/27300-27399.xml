@@ -1,0 +1,2322 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="27316" level="55" type="Monster" name="Fallen Chieftain Vegus">
+		<race>HUMANOID</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1532.94797687861" hpRegen="6.5" mp="730.693069306931" mpRegen="2.4" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="274.380199324603" magical="71.4860425312335" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="169.444444444444" magical="90.59729502362" />
+		</stats>
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27317" level="70" type="Monster" name="Restrainer of Splendor">
+		<race>DIVINE</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2239.3063583815" hpRegen="7.5" mp="1105.61056105611" mpRegen="2.7" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="360.854301579087" magical="94.4614093480735" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="172.327044025157" magical="111.842482805439" />
+		</stats>
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27320" level="20" type="Monster" name="Timora Orc">
+		<race>HUMANOID</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="313.294797687861" hpRegen="2.5" mp="157.755775577558" mpRegen="1.2" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="35.3642861514816" magical="14.6861740902431" critical="4.75" attackSpeed="253" range="40" />
+			<defence physical="77.0642201834862" magical="38.7561691949011" />
+		</stats>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="27338" level="38" type="Monster" name="Fallen Angel" title="Quest Monster">
+		<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+		</parameters>
+		<race>DIVINE</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="886.435331230284" hpRegen="4.5" mp="447.688564476886" mpRegen="1.8" />
+			<attack physical="215.879265091864" magical="105.836567709516" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="118.897637795276" magical="128.472562655731" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="30" grown="36.5" />
+		</collision>
+	</npc>
+	<npc id="27339" level="35" type="Monster" name="Cruma Marshlands Traitor" title="Quest Monster">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="946" /> <!-- Skeleton Dagger -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="772.239747634069" hpRegen="4.5" mp="402.270884022709" mpRegen="1.8" />
+			<attack physical="178.763440860215" magical="88.6845697509428" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="109.677419354839" magical="117.730162467624" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="6" grown="7" />
+			<height normal="21.5" grown="25.8" />
+		</collision>
+	</npc>
+	<npc id="27340" level="39" type="Monster" name="Tracker">
+		<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="219" /> <!-- Sword Breaker -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="925.552050473186" hpRegen="4.5" mp="463.098134630981" mpRegen="1.8" />
+			<attack physical="229.817708333333" magical="112.910760949221" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="153.125" magical="112.150243309002" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="110" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="13.5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="27341" level="51" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="1" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27342" level="61" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5975" level="2" />
+			<skill name="Skill02_ID" id="5976" level="2" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="2" /> <!-- Dark Attack -->
+			<skill id="5976" level="2" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27343" level="79" type="Monster" name="Shilen's Evil Thoughts">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="IsAggressive" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5975" level="3" />
+			<skill name="Skill02_ID" id="5976" level="3" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<attack physical="929.930814318487" magical="635.022195830619" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
+			<attribute>
+				<attack type="DARK" value="100" />
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" default="100" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5975" level="3" /> <!-- Dark Attack -->
+			<skill id="5976" level="3" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<skill shortRangeId="5976" shortRangeChance="10" />
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="27344" level="51" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="1" />
+			<skill name="Skill03_ID" id="5977" level="1" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
+			<skill id="5977" level="1" /> <!-- Dark Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27345" level="61" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5975" level="2" />
+			<skill name="Skill02_ID" id="5976" level="2" />
+			<skill name="Skill03_ID" id="5977" level="2" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="2" /> <!-- Dark Attack -->
+			<skill id="5976" level="2" /> <!-- Dark Storm -->
+			<skill id="5977" level="2" /> <!-- Dark Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27346" level="79" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<minions name="Privates">
+				<npc id="27399" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="27402" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+			<param name="MoveAroundSocial" value="150" />
+			<param name="MoveAroundSocial1" value="150" />
+			<param name="MoveAroundSocial2" value="150" />
+			<param name="IsAggressive" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="SceneID" value="14" />
+			<skill name="Skill01_ID" id="5975" level="3" />
+			<skill name="Skill02_ID" id="5976" level="3" />
+			<skill name="Skill03_ID" id="5977" level="3" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.44479495268" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.73015873016" magical="593.681327857566" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.5" magical="246.68829413355" />
+			<attribute>
+				<attack type="DARK" value="100" />
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5975" level="3" /> <!-- Dark Attack -->
+			<skill id="5976" level="3" /> <!-- Dark Storm -->
+			<skill id="5977" level="3" /> <!-- Dark Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27348" level="85" type="Monster" name="Guard of the Oracle of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="16" /> <!-- Great Spear -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234.06940063092" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
+			<attack physical="1640.80459770115" magical="753.496942178936" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="362.068965517241" magical="264.750025636006" />
+			<attribute>
+				<attack type="FIRE" value="100" />
+				<defence fire="150" water="40" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4415" level="11" /> <!-- Spear -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5978" level="1" /> <!-- Devil Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="150" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="27350" level="85" type="Monster" name="Guard of the Oracle of Dawn">
+		<race>MERCENARY</race>
+		<sex>MALE</sex>
+		<equipment rhand="5" /> <!-- Mace -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234.06940063092" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
+			<attack physical="1640.80459770115" magical="753.496942178936" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="362.068965517241" magical="264.750025636006" />
+			<attribute>
+				<attack type="FIRE" value="100" />
+				<defence fire="150" water="40" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5978" level="1" /> <!-- Devil Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="150" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="27351" level="85" type="Monster" name="Guard of the Dawn">
+		<parameters>
+			<param name="Fstring_Num" value="19505" />
+		</parameters>
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6" /> <!-- Apprentice's Wand -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234.06940063092" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
+			<attack physical="1640.80459770115" magical="753.496942178936" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="362.068965517241" magical="264.750025636006" />
+			<attribute>
+				<attack type="FIRE" value="100" />
+				<defence fire="150" water="40" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status randomWalk="false" />
+		<skillList>
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="150" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="27352" level="85" type="Monster" name="Guard of the Oracle of Dawn">
+		<race>MERCENARY</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6" /> <!-- Apprentice's Wand -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234.06940063092" hpRegen="8.5" mp="1846.71532846715" mpRegen="3" />
+			<attack physical="1640.80459770115" magical="753.496942178936" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="362.068965517241" magical="264.750025636006" />
+			<attribute>
+				<attack type="FIRE" value="100" />
+				<defence fire="150" water="40" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4415" level="5" /> <!-- One-handed Blunt Weapons -->
+			<skill id="4416" level="23" /> <!-- Mercenaries -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="5978" level="1" /> <!-- Devil Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="150" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="27353" level="51" type="Monster" name="Lilim Butcher">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<skill name="Skill01_ID" id="4067" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="232" lhand="232" /> <!-- Dark Elven Dagger / Dark Elven Dagger -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="5" /> <!-- Blow -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="27354" level="51" type="Monster" name="Lilim Magus">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="Skill03_Type" value="2" />
+			<skill name="Skill01_ID" id="4002" level="5" />
+			<skill name="Skill02_ID" id="4094" level="5" />
+			<skill name="Skill03_ID" id="4046" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="5" /> <!-- Blood Siphon -->
+			<skill id="4046" level="5" /> <!-- Sleep -->
+			<skill id="4094" level="5" /> <!-- Cancellation -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30.6" />
+		</collision>
+	</npc>
+	<npc id="27355" level="51" type="Monster" name="Lilim Knight-Errant">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="1" />
+			<skill name="Skill01_ID" id="4092" level="1" />
+			<skill name="Skill02_ID" id="4032" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="27356" level="85" type="Monster" name="Lilim Marauder">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<skill name="Skill01_ID" id="4067" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="229" lhand="229" /> <!-- Kris / Kris -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2450.05257623554" hpRegen="6.5" mp="1292.24114625574" mpRegen="2.4" />
+			<attack physical="739.087301587302" magical="355.028533931483" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.666666666667" magical="250.067585834009" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="5" /> <!-- Blow -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6034" max="14063" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27357" level="86" type="Monster" name="Lilim Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="Skill03_Type" value="2" />
+			<skill name="Skill01_ID" id="4002" level="5" />
+			<skill name="Skill02_ID" id="4094" level="5" />
+			<skill name="Skill03_ID" id="4046" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2478.87672419125" hpRegen="6.5" mp="1307.44398327052" mpRegen="2.4" />
+			<attack physical="747.782446311858" magical="359.20534021303" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.686274509804" magical="253.009557432056" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="5" /> <!-- Blood Siphon -->
+			<skill id="4046" level="5" /> <!-- Sleep -->
+			<skill id="4094" level="5" /> <!-- Cancellation -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30.6" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3431" max="7996" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+			<spoil>
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="27358" level="87" type="Monster" name="Lilim Knight">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="1" />
+			<skill name="Skill01_ID" id="4092" level="1" />
+			<skill name="Skill02_ID" id="4032" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2507.70087214697" hpRegen="6.5" mp="1322.64682028529" mpRegen="2.4" />
+			<attack physical="756.477591036415" magical="363.382146494576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.705882352941" magical="255.951529030104" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="45" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27359" level="87" type="Monster" name="Lilim Slayer">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<skill name="Skill01_ID" id="4067" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="234" lhand="234" /> <!-- Demon's Dagger / Demon's Dagger -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2507.70087214697" hpRegen="6.5" mp="1322.64682028529" mpRegen="2.4" />
+			<attack physical="756.477591036415" magical="363.382146494576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.705882352941" magical="255.951529030104" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="5" /> <!-- Blow -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27360" level="88" type="Monster" name="Lilim Great Magus">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="Skill03_Type" value="2" />
+			<skill name="Skill01_ID" id="4002" level="5" />
+			<skill name="Skill02_ID" id="4094" level="5" />
+			<skill name="Skill03_ID" id="4046" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2536.52502010268" hpRegen="6.5" mp="1337.84965730007" mpRegen="2.4" />
+			<attack physical="765.172735760971" magical="367.558952776123" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.725490196078" magical="258.893500628151" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="5" /> <!-- Blood Siphon -->
+			<skill id="4046" level="5" /> <!-- Sleep -->
+			<skill id="4094" level="5" /> <!-- Cancellation -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27361" level="89" type="Monster" name="Lilim Royal Knight">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="1" />
+			<skill name="Skill01_ID" id="4092" level="1" />
+			<skill name="Skill02_ID" id="4032" level="5" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2565.34916805839" hpRegen="6.5" mp="1353.05249431484" mpRegen="2.4" />
+			<attack physical="773.867880485528" magical="371.73575905767" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.745098039216" magical="261.835472226198" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="5" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="55" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+			<spoil>
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="27362" level="61" type="Monster" name="Lilim Butcher">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<skill name="Skill01_ID" id="4067" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="232" lhand="232" /> <!-- Dark Elven Dagger / Dark Elven Dagger -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="6" /> <!-- Blow -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="27363" level="61" type="Monster" name="Lilim Magus">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="Skill03_Type" value="2" />
+			<skill name="Skill01_ID" id="4002" level="6" />
+			<skill name="Skill02_ID" id="4094" level="6" />
+			<skill name="Skill03_ID" id="4046" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="6" /> <!-- Blood Siphon -->
+			<skill id="4046" level="6" /> <!-- Sleep -->
+			<skill id="4094" level="6" /> <!-- Cancellation -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30.6" />
+		</collision>
+	</npc>
+	<npc id="27364" level="61" type="Monster" name="Lilim Knight-Errant">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="1" />
+			<skill name="Skill01_ID" id="4092" level="1" />
+			<skill name="Skill02_ID" id="4032" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="27365" level="85" type="Monster" name="Lilim Marauder">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<skill name="Skill01_ID" id="4067" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="229" lhand="229" /> <!-- Kris / Kris -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2766.66494285567" hpRegen="7.5" mp="1486.11277305785" mpRegen="2.7" />
+			<attack physical="963.79781420765" magical="456.549226082857" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.07650273224" magical="257.668222248813" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="6" /> <!-- Blow -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6034" max="14063" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27366" level="86" type="Monster" name="Lilim Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="Skill03_Type" value="2" />
+			<skill name="Skill01_ID" id="4002" level="6" />
+			<skill name="Skill02_ID" id="4094" level="6" />
+			<skill name="Skill03_ID" id="4046" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2799.21394218338" hpRegen="7.5" mp="1503.59645274088" mpRegen="2.7" />
+			<attack physical="975.136612021858" magical="461.920393448538" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="356.218579234973" magical="260.699613098799" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="6" /> <!-- Blood Siphon -->
+			<skill id="4046" level="6" /> <!-- Sleep -->
+			<skill id="4094" level="6" /> <!-- Cancellation -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30.6" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3431" max="7996" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+			<spoil>
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="27367" level="87" type="Monster" name="Lilim Knight">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="1" />
+			<skill name="Skill01_ID" id="4092" level="1" />
+			<skill name="Skill02_ID" id="4032" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2831.76294151109" hpRegen="7.5" mp="1521.08013242392" mpRegen="2.7" />
+			<attack physical="986.475409836066" magical="467.291560814218" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="360.360655737705" magical="263.731003948785" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="45" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27368" level="87" type="Monster" name="Lilim Slayer">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<skill name="Skill01_ID" id="4067" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="234" lhand="234" /> <!-- Demon's Dagger / Demon's Dagger -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2831.76294151109" hpRegen="7.5" mp="1521.08013242392" mpRegen="2.7" />
+			<attack physical="986.475409836066" magical="467.291560814218" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="360.360655737705" magical="263.731003948785" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="6" /> <!-- Blow -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27369" level="88" type="Monster" name="Lilim Great Magus">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="Skill03_Type" value="2" />
+			<skill name="Skill01_ID" id="4002" level="6" />
+			<skill name="Skill02_ID" id="4094" level="6" />
+			<skill name="Skill03_ID" id="4046" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2864.31194083881" hpRegen="7.5" mp="1538.56381210695" mpRegen="2.7" />
+			<attack physical="997.814207650273" magical="472.662728179899" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="364.502732240437" magical="266.762394798771" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="6" /> <!-- Blood Siphon -->
+			<skill id="4046" level="6" /> <!-- Sleep -->
+			<skill id="4094" level="6" /> <!-- Cancellation -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27370" level="89" type="Monster" name="Lilim Royal Knight">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="1" />
+			<skill name="Skill01_ID" id="4092" level="1" />
+			<skill name="Skill02_ID" id="4032" level="6" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2896.86094016652" hpRegen="7.5" mp="1556.04749178998" mpRegen="2.7" />
+			<attack physical="1009.15300546448" magical="478.03389554558" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="368.644808743169" magical="269.793785648758" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- Spirit Puma -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="55" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+			<spoil>
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="27371" level="79" type="Monster" name="Lilim Butcher">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<param name="Ditect_PC" value="1000268" />
+			<param name="Dying_Message" value="5864" />
+			<skill name="Skill01_ID" id="4067" level="4" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="232" lhand="232" /> <!-- Dark Elven Dagger / Dark Elven Dagger -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.05047318612" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.35021952043" magical="594.257846664031" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.983308787433" magical="246.79206410566" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="4" /> <!-- Blow -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="27372" level="79" type="Monster" name="Lilim Magus">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="IsAggressive" value="1" />
+			<param name="Skill03_Type" value="2" />
+			<param name="Skill04_Type" value="2" />
+			<param name="Ditect_PC" value="1000208" />
+			<param name="Dying_Message" value="1000247" />
+			<skill name="Skill01_ID" id="4002" level="4" />
+			<skill name="Skill02_ID" id="4002" level="4" />
+			<skill name="Skill03_ID" id="4094" level="4" />
+			<skill name="Skill04_ID" id="4046" level="4" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.05047318612" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.35021952043" magical="594.257846664031" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.983308787433" magical="246.79206410566" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="4" /> <!-- Blood Siphon -->
+			<skill id="4046" level="4" /> <!-- Sleep -->
+			<skill id="4094" level="4" /> <!-- Cancellation -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30.6" />
+		</collision>
+	</npc>
+	<npc id="27373" level="79" type="Monster" name="Lilim Knight-Errant">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="IsAggressive" value="1" />
+			<param name="Skill01_Target" value="2" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Ditect_PC" value="1000108" />
+			<param name="Dying_Message" value="1000270" />
+			<skill name="Skill01_ID" id="4032" level="4" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.05047318612" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.35021952043" magical="594.257846664031" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.983308787433" magical="246.79206410566" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="45" />
+		</collision>
+	</npc>
+	<npc id="27374" level="79" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="MoveAroundSocial" value="150" />
+			<param name="MoveAroundSocial1" value="150" />
+			<param name="MoveAroundSocial2" value="150" />
+			<param name="IsAggressive" value="1" />
+			<param name="Aggressive_Time" value="1" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="1" />
+			<skill name="Skill03_ID" id="5977" level="1" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.05047318612" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.35021952043" magical="594.257846664031" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.983308787433" magical="246.79206410566" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="1" /> <!-- Blow -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
+			<skill id="5977" level="1" /> <!-- Dark Strike -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27375" level="79" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="IsAggressive" value="1" />
+			<param name="Aggressive_Time" value="1" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="1" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.05047318612" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.35021952043" magical="594.257846664031" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.983308787433" magical="246.79206410566" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="1" /> <!-- Blood Siphon -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="27376" level="87" type="Monster" name="Lilim Knight">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="IsAggressive" value="1" />
+			<param name="Skill01_Target" value="2" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Ditect_PC" value="1000108" />
+			<param name="Dying_Message" value="1000270" />
+			<skill name="Skill01_ID" id="4032" level="4" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3443.71381224294" hpRegen="8.5" mp="1807.75508946996" mpRegen="3" />
+			<attack physical="1413.30973542124" magical="654.435856452794" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="365.601871702616" magical="271.783665534081" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="11" />
+			<height normal="45" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27377" level="87" type="Monster" name="Lilim Slayer">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<param name="IsAggressive" value="1" />
+			<param name="Ditect_PC" value="1000222" />
+			<param name="Dying_Message" value="8564" />
+			<skill name="Skill01_ID" id="4067" level="4" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="234" lhand="234" /> <!-- Demon's Dagger / Demon's Dagger -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3443.71381224294" hpRegen="8.5" mp="1807.75508946996" mpRegen="3" />
+			<attack physical="1413.30973542124" magical="654.435856452794" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="365.601871702616" magical="271.783665534081" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="36" />
+				<run ground="190" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4067" level="4" /> <!-- Blow -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27378" level="88" type="Monster" name="Lilim Great Magus">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="110" />
+			<param name="MoveAroundSocial2" value="110" />
+			<param name="IsAggressive" value="1" />
+			<param name="Skill03_Type" value="2" />
+			<param name="Skill04_Type" value="2" />
+			<param name="Ditect_PC" value="1000208" />
+			<param name="Dying_Message" value="1000247" />
+			<skill name="Skill01_ID" id="4002" level="4" />
+			<skill name="Skill02_ID" id="4002" level="4" />
+			<skill name="Skill03_ID" id="4094" level="4" />
+			<skill name="Skill04_ID" id="4046" level="4" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3483.29672962504" hpRegen="8.5" mp="1828.53388360179" mpRegen="3" />
+			<attack physical="1429.55467490884" magical="661.958107676389" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="369.804192067013" magical="274.907615712634" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="140" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4002" level="4" /> <!-- Blood Siphon -->
+			<skill id="4046" level="4" /> <!-- Sleep -->
+			<skill id="4094" level="4" /> <!-- Cancellation -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- R-grade Gemstone -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="27379" level="89" type="Monster" name="Lilim Royal Knight">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="IsAggressive" value="1" />
+			<param name="Skill01_Target" value="2" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="Ditect_PC" value="1000268" />
+			<param name="Dying_Message" value="1000270" />
+			<skill name="Skill01_ID" id="4032" level="4" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3522.87964700715" hpRegen="8.5" mp="1849.31267773363" mpRegen="3" />
+			<attack physical="1445.79961439644" magical="669.480358899984" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="374.006512431411" magical="278.031565891186" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="60" dark="120" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="4" /> <!-- Power Strike -->
+			<skill id="4072" level="1" /> <!-- Stun -->
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="55" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shillien's Energy -->
+			</drop>
+			<spoil>
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Weapon Augmenting Stone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="27380" level="76" type="Monster" name="Reckless Water Spirit" title="Quest Monster">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2758.04416403785" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
+			<attack physical="1137.87878787879" magical="528.427762146419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="324.067117455547" magical="237.266468538078" />
+			<attribute>
+				<attack type="WATER" value="80" />
+				<defence fire="-280" water="435" wind="65" earth="65" holy="65" dark="65" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="60" />
+			</speed>
+			<hitTime>350</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="27381" level="76" type="Monster" name="Reckless Wind Spirit" title="Quest Monster">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2758.04416403785" hpRegen="8.5" mp="1540.14598540146" mpRegen="3" />
+			<attack physical="1137.87878787879" magical="528.427762146419" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="324.067117455547" magical="237.266468538078" />
+			<attribute>
+				<attack type="WIND" value="100" />
+				<defence fire="90" water="90" wind="450" earth="-280" holy="90" dark="90" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="60" />
+			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="27382" level="51" type="Monster" name="Power of Seal Isolation">
+		<parameters>
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5980" level="1" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5980" level="1" /> <!-- Release Seal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27383" level="61" type="Monster" name="Power of Seal Isolation">
+		<parameters>
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5980" level="2" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5980" level="2" /> <!-- Release Seal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27384" level="79" type="Monster" name="Seal Device" title="Emperor Shunaiman's">
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.05047318612" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.59092174882" magical="594.422097036243" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="331.983308787433" magical="246.79206410566" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<skillList>
+			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
+			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
+			<skill id="4411" level="4" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="5980" level="1" /> <!-- Release Seal -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>8</sNpcPropHpRate>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="21" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="27392" level="65" type="Monster" name="Bloody Axe Subordinate">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="69" lhand="19" /> <!-- Bastard Sword / Small Shield -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2193.05993690852" hpRegen="7.5" mp="1188.15896188159" mpRegen="2.7" />
+			<attack physical="804.65367965368" magical="378.90274609333" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="272.077922077922" magical="199.07100199071" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="110" />
+			</speed>
+			<hitTime>630</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="14" grown="16" />
+			<height normal="27" grown="32" />
+		</collision>
+	</npc>
+	<npc id="27393" level="50" type="Monster" name="Headless Knight">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="135" /> <!-- Samurai Long Sword -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1686.96918223732" hpRegen="7.5" mp="913.968432216607" mpRegen="2.7" />
+			<attack physical="618.964368964369" magical="291.463650841023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="209.290709290709" magical="153.131539992854" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="110" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="31" grown="38" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
+				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater MEN Dye <MEN +3 INT -3> -->
+				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Weapon Augmenting Stone -->
+			</drop>
+			<spoil>
+				<item id="36880" min="1" max="1" chance="9" /> <!-- Recipe: Thread - Downgrade -->
+			</spoil>
+			<lucky>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket Lv. 1 -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="27394" level="51" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27395" level="61" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="2" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="2" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27396" level="79" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+			<skill name="Skill01_ID" id="5975" level="3" />
+			<skill name="Skill02_ID" id="5976" level="3" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.44479495268" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.73015873016" magical="593.681327857566" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.5" magical="246.68829413355" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="170" water="170" wind="170" earth="170" holy="120" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5975" level="3" /> <!-- Dark Attack -->
+			<skill id="5976" level="3" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="27397" level="51" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="1" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.03154574132" hpRegen="6.5" mp="775.344687753447" mpRegen="2.4" />
+			<attack physical="443.452380952381" magical="213.01712035889" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205" magical="150.040551500406" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="1" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27398" level="61" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<skill name="Skill01_ID" id="5975" level="1" />
+			<skill name="Skill02_ID" id="5976" level="2" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1985.48895899054" hpRegen="7.5" mp="1066.50446066504" mpRegen="2.7" />
+			<attack physical="691.666666666667" magical="327.641209306521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.666666666667" magical="184.914841849148" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="19" /> <!-- Misc. -->
+			<skill id="5975" level="1" /> <!-- Dark Attack -->
+			<skill id="5976" level="2" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="27399" level="79" type="Monster" name="Shilen's Evil Thoughts">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="Skill01_Probablity" value="1000" />
+			<param name="Skill02_Probablity" value="1000" />
+			<skill name="Skill01_ID" id="5975" level="3" />
+			<skill name="Skill02_ID" id="5976" level="3" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3127.44479495268" hpRegen="8.5" mp="1641.52473641525" mpRegen="3" />
+			<attack physical="1283.73015873016" magical="593.681327857566" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.5" magical="246.68829413355" />
+			<attribute>
+				<attack type="DARK" value="200" />
+				<defence fire="170" water="170" wind="170" earth="170" holy="120" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="5975" level="3" /> <!-- Dark Attack -->
+			<skill id="5976" level="3" /> <!-- Dark Storm -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="14" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+</list>

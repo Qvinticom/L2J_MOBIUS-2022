@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list isChanceMultisell="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>32024</npc> <!-- Mulia (Clan Trader) -->
+		<npc>32025</npc> <!-- Ilia (Clan Trader) -->
+	</npcs>
+	<item>
+		<ingredient id="48418" count="1" /> <!-- Authority Ornament -->
+		<ingredient id="35564" count="1" /> <!-- Ruler's Authority -->
+		<production id="48417" count="1" chance="0" /> <!-- Enhanced Ruler's Authority -->
+		<production id="48417" count="1" chance="15" /> <!-- Enhanced Ruler's Authority -->
+		<production id="35564" count="1" chance="85" /> <!-- Ruler's Authority -->
+	</item>
+</list>

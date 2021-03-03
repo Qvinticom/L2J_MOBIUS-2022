@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="3" parentClassId="1">
+		<skill skillName="Novice Feral Ogre Cry" skillId="30642" skillLevel="1" getLevel="40" levelUpSp="30" />
+		<skill skillName="Novice Thunder Spear" skillId="30661" skillLevel="1" getLevel="40" levelUpSp="30" />
+		<skill skillName="Novice Mega Strike" skillId="30616" skillLevel="1" getLevel="40" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Novice Power Bomber" skillId="30641" skillLevel="1" getLevel="40" levelUpSp="30" />
+		<skill skillName="Novice Armor Destruction" skillId="30615" skillLevel="1" getLevel="40" levelUpSp="4">
+			<removeSkill id="30798" /> <!-- Power Strike -->
+		</skill>
+		<skill skillName="Intermediate Polearm Mastery" skillId="30703" skillLevel="1" getLevel="40" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30709" skillLevel="1" getLevel="40" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30701" skillLevel="1" getLevel="40" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Dual Weapon Mastery" skillId="30702" skillLevel="1" getLevel="40" levelUpSp="30">
+			<removeSkill id="30633" /> <!-- Dual Weapon Mastery -->
+			<removeSkill id="30632" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Force Mastery" skillId="30710" skillLevel="1" getLevel="40" levelUpSp="30" />
+		<skill skillName="Intermediate Heavy Armor Mastery" skillId="30708" skillLevel="1" getLevel="40" levelUpSp="30">
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+		</skill>
+	</skillTree>
+</list>

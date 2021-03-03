@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="Hellbound">
+		<group>
+			<npc id="31590" x="-28198" y="255795" z="-2192" heading="32767" respawnTime="60sec" /> <!-- Devianne -->
+			<npc id="31595" x="-29217" y="257439" z="-2160" heading="53418" respawnTime="60sec" /> <!-- Leona Blackbird -->
+			<npc id="31619" x="-28954" y="257423" z="-2160" heading="47600" respawnTime="60sec" /> <!-- Erica Ken Weber -->
+			<npc id="32294" x="-29057" y="256091" z="-2192" heading="65444" respawnTime="60sec" /> <!-- Budenka -->
+			<npc id="32298" x="-28613" y="254914" z="-2192" heading="10472" respawnTime="60sec" /> <!-- Hude -->
+			<npc id="32356" x="-28204" y="255481" z="-2192" heading="36015" respawnTime="60sec" /> <!-- Jude -->
+			<npc id="33433" x="-29188" y="256723" z="-2160" heading="16532" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29303" y="256760" z="-2160" heading="16212" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29247" y="256757" z="-2160" heading="16592" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29303" y="256799" z="-2160" heading="16212" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29246" y="256835" z="-2160" heading="16592" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29187" y="256873" z="-2160" heading="16532" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29188" y="256795" z="-2160" heading="16532" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29187" y="256833" z="-2160" heading="16532" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29188" y="256759" z="-2160" heading="16532" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29247" y="256721" z="-2160" heading="16592" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29244" y="256873" z="-2160" heading="16592" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29244" y="256796" z="-2160" heading="16592" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29305" y="256722" z="-2160" heading="16212" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29302" y="256877" z="-2160" heading="16212" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29302" y="256840" z="-2160" heading="16212" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33433" x="-29252" y="257024" z="-2160" heading="50832" respawnTime="60sec" /> <!-- Guard -->
+			<npc id="33813" x="-27809" y="254932" z="-2192" heading="24352" respawnTime="60sec" /> <!-- -->
+			<npc id="33813" x="-27807" y="255000" z="-2192" heading="40204" respawnTime="60sec" /> <!-- -->
+			<npc id="33902" x="-27711" y="254412" z="-2192" respawnTime="60sec" /> <!-- Warp Gate -->
+			<npc id="33903" x="-28385" y="254258" z="-2192" heading="11076" respawnTime="60sec" /> <!-- Philline -->
+			<npc id="33901" x="-28009" y="253706" z="-2200" respawnTime="60sec" /> <!-- Wormhole -->
+			<npc id="34230" x="-29304" y="257276" z="-2160" heading="59261" respawnTime="60sec" /> <!-- Sporcha -->
+		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="33897" x="-27838" y="254965" z="-2192" heading="32767" respawnTime="60sec" /> <!-- Theorn -->
+		</group>
+	</spawn>
+</list>

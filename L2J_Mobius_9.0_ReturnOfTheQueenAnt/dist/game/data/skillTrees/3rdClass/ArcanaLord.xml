@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="96" parentClassId="14">
+		<skill skillName="Novice Blessing of the Giants" skillId="30657" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Mark of Fire" skillId="30626" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30621" /> <!-- Novice Elemental Crash -->
+		</skill>
+		<skill skillName="Novice Mark of Weakness" skillId="30656" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Mark of Trick" skillId="30756" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Mark of Plague" skillId="30755" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Summon Feline Queen" skillId="30668" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Novice Summon Feline Queen" skillId="30668" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Mark Retriever" skillId="30757" skillLevel="1" getLevel="76" levelUpSp="100" />
+		<skill skillName="Novice Invoke" skillId="30625" skillLevel="1" getLevel="76" levelUpSp="4">
+			<removeSkill id="30797" /> <!-- Wind Strike -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30731" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Light Armor Mastery" skillId="30731" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Robe Mastery" skillId="30730" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Robe Mastery" skillId="30730" skillLevel="2" getLevel="76" levelUpSp="100">
+			<removeSkill id="30630" /> <!-- Light Armor Mastery -->
+			<removeSkill id="30631" /> <!-- Robe Mastery -->
+			<removeSkill id="30629" /> <!-- Heavy Armor Mastery -->
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30729" skillLevel="1" getLevel="76" levelUpSp="30">
+			<removeSkill id="30637" /> <!-- Weapon Mastery -->
+		</skill>
+		<skill skillName="Intermediate Weapon Mastery" skillId="30729" skillLevel="2" getLevel="76" levelUpSp="100" />
+		<skill skillName="Intermediate Summon Mastery" skillId="30732" skillLevel="1" getLevel="76" levelUpSp="30" />
+		<skill skillName="Intermediate Summon Mastery" skillId="30732" skillLevel="2" getLevel="76" levelUpSp="100" />
+	</skillTree>
+</list>

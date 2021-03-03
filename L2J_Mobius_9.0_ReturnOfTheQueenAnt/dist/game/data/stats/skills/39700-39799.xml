@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39700" toLevel="1" name="+14 Krishna Dual Swords Pack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39701" toLevel="1" name="+14 Krishna Dual Daggers Pack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39702" toLevel="1" name="+14 Krishna Dual Blunt Weapon Pack">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39703" toLevel="1" name="Vitality Maintaining Rune - 30 d.">
+		<!-- When in inventory, maintains the Vitality level. -->
+		<icon>icon.ev_charge_run</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39704" toLevel="1" name="Scroll: Enchant Anhel's Protection">
+		<!-- A scroll to enchant Anhel's Protection. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39705" toLevel="1" name="Faeron's Protector Scroll">
+		<!-- All stats +1, acquired XP/ SP +5%. The effect remains after death and main/ dual class changing. Deleted when entering the Olympiad or Ceremony of Chaos. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

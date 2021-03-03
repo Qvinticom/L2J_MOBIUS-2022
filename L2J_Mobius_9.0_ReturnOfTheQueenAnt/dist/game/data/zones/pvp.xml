@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+	<!-- PVP Zones -->
+	<zone name="dion_monster_pvp" type="ArenaZone" shape="NPoly" minZ="-3596" maxZ="0"> <!-- [20_23] -->
+		<node X="11947" Y="183019" />
+		<node X="12937" Y="183019" />
+		<node X="12943" Y="184010" />
+		<node X="11941" Y="184010" />
+	</zone>
+	<zone name="gludin_pvp" type="ArenaZone" shape="NPoly" minZ="-3752" maxZ="-352"> <!-- [17_22] -->
+		<node X="-88411" Y="141732" />
+		<node X="-87429" Y="141733" />
+		<node X="-87429" Y="142708" />
+		<node X="-88408" Y="142708" />
+	</zone>
+	<zone name="giran_pvp_battle" type="ArenaZone" shape="NPoly" minZ="-3850" maxZ="-350"> <!-- [22_22] -->
+		<node X="72493" Y="142263" />
+		<node X="73493" Y="142264" />
+		<node X="73493" Y="143261" />
+		<node X="72495" Y="143258" />
+	</zone>
+	<zone name="colosseum_battle1" type="ArenaZone" shape="NPoly" minZ="-3498" maxZ="-3298"> <!-- [24_19] -->
+		<node X="151252" Y="45918" />
+		<node X="151219" Y="46182" />
+		<node X="150677" Y="46786" />
+		<node X="148334" Y="46788" />
+		<node X="147748" Y="46166" />
+		<node X="147744" Y="45916" />
+		<node X="148238" Y="45301" />
+		<node X="150781" Y="45307" />
+	</zone>
+	<zone name="colosseum_battle2" type="ArenaZone" shape="NPoly" minZ="-3498" maxZ="-3298"> <!-- [24_19] -->
+		<node X="151236" Y="47268" />
+		<node X="151255" Y="47520" />
+		<node X="150785" Y="48132" />
+		<node X="148258" Y="48126" />
+		<node X="147712" Y="47532" />
+		<node X="147728" Y="47294" />
+		<node X="148278" Y="46707" />
+		<node X="150697" Y="46709" />
+	</zone>
+	<zone name="colosseum_battle3" type="ArenaZone" shape="NPoly" minZ="-3587" maxZ="-3387"> <!-- [24_19] -->
+		<node X="148047" Y="46276" />
+		<node X="150955" Y="46276" />
+		<node X="150956" Y="47052" />
+		<node X="148049" Y="47053" />
+	</zone>
+	<zone name="zarich_akamanah_pvp" type="ArenaZone" shape="NPoly" minZ="-3800" maxZ="-3400"> <!-- [22_18] -->
+		<node X="65704" Y="29064" />
+		<node X="66851" Y="29402" />
+		<node X="68488" Y="26840" />
+		<node X="68427" Y="25227" />
+		<node X="67400" Y="22952" />
+		<node X="65720" Y="23000" />
+	</zone>
+	<zone name="lilith_pvp" type="ArenaZone" shape="NPoly" minZ="-3752" maxZ="-9000"> <!-- Lilith -->
+		<node X="-5510" Y="20236" />
+		<node X="-5538" Y="20297" />
+		<node X="-5483" Y="22637" />
+		<node X="-5497" Y="22638" />
+		<node X="-7906" Y="22602" />
+		<node X="-7892" Y="22626" />
+		<node X="-7773" Y="20268" />
+		<node X="-7857" Y="20321" />
+	</zone>
+	<zone name="anakim_pvp" type="ArenaZone" shape="NPoly" minZ="-6000" maxZ="-4000"> <!-- Anakim -->
+		<node X="183938" Y="-13697" />
+		<node X="186190" Y="-13692" />
+		<node X="186176" Y="-8513" />
+		<node X="183920" Y="-8513" />
+	</zone>
+	<zone name="ishka_pvp" type="ArenaZone" shape="NPoly" minZ="-3000" maxZ="-9000"> <!-- Lord Ishka -->
+		<node X="127449" Y="112036" />
+		<node X="129562" Y="112206" />
+		<node X="130773" Y="113128" />
+		<node X="129560" Y="113032" />
+		<node X="131096" Y="113704" />
+		<node X="131864" Y="114088" />
+		<node X="132392" Y="114136" />
+		<node X="132568" Y="114696" />
+		<node X="131032" Y="115800" />
+		<node X="129736" Y="115912" />
+		<node X="128248" Y="116984" />
+		<node X="126248" Y="115736" />
+		<node X="125718" Y="115778" />
+		<node X="125570" Y="114264" />
+	</zone>
+	<zone name="orfen_pvp_zone" type="ArenaZone" shape="NPoly" minZ="-3000" maxZ="-9000"> <!-- Orfen -->
+		<node X="45013" Y="18215" />
+		<node X="44231" Y="19158" />
+		<node X="43394" Y="19085" />
+		<node X="42811" Y="19415" />
+		<node X="41233" Y="18279" />
+		<node X="41201" Y="16209" />
+		<node X="42206" Y="14964" />
+		<node X="43587" Y="14710" />
+		<node X="44718" Y="14492" />
+		<node X="45719" Y="15273" />
+		<node X="45949" Y="16706" />
+		<node X="45500" Y="17749" />
+	</zone>
+	<zone name="baium_pvp" type="ArenaZone" shape="NPoly" minZ="10061" maxZ="11061"> <!-- Baium -->
+		<node X="111074" Y="16177" />
+		<node X="114562" Y="12623" />
+		<node X="118194" Y="15790" />
+		<node X="114825" Y="19589" />
+	</zone>
+</list>
