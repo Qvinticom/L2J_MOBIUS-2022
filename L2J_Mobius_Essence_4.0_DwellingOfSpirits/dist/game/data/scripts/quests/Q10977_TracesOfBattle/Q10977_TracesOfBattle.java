@@ -177,7 +177,8 @@ public class Q10977_TracesOfBattle extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_ON_THE_PLAINS_OF_GLORY.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_ON_THE_WAR_TORN_PLAINS.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.LEVEL_70_ACCOMPLISHED, player.getLevel() > 69 ? 1 : 0));
 			return holder;
 		}
 		return super.getNpcLogList(player);

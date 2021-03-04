@@ -11656,6 +11656,9 @@ public class NpcStringId
 	@ClientString(id = 529603, message = "|Lv. 81-99| Seven Signs, One Who Seeks the Power of the Seal (Completed)")
 	public static NpcStringId LV_81_99_SEVEN_SIGNS_ONE_WHO_SEEKS_THE_POWER_OF_THE_SEAL_COMPLETED;
 	
+	@ClientString(id = 529806, message = "Level 70 accomplished")
+	public static NpcStringId LEVEL_70_ACCOMPLISHED;
+	
 	@ClientString(id = 529901, message = "How to Stand Up For Yourself")
 	public static NpcStringId HOW_TO_STAND_UP_FOR_YOURSELF;
 	
