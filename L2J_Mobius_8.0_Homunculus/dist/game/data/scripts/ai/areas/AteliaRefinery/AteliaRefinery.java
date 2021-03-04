@@ -16,6 +16,7 @@
  */
 package ai.areas.AteliaRefinery;
 
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
@@ -28,6 +29,14 @@ public class AteliaRefinery extends AbstractNpcAI
 {
 	// NPC
 	private static final int ATELIA_REFINERY_TELEPORT_DEVICE = 34441;
+	// Teleport Locations
+	private static final Location[] TELE_LOCATIONS =
+	{
+		new Location(-59493, 52620, -8610), // Entrance
+		new Location(-56096, 49688, -8729), // First Area
+		new Location(-56160, 45406, -8847), // Second Area
+		new Location(-56140, 41067, -8965), // Third Area
+	};
 	// Special Mobs
 	private static final int HARKE = 24161;
 	private static final int ERGALION = 24162;
@@ -67,29 +76,28 @@ public class AteliaRefinery extends AbstractNpcAI
 		String htmltext = null;
 		switch (event)
 		{
+			case "entrance":
+			{
+				player.teleToLocation(TELE_LOCATIONS[0]);
+				htmltext = "34441-01.html";
+				break;
+			}
 			case "first_area":
 			{
-				player.teleToLocation(-59493, 52620, -8610);
+				player.teleToLocation(TELE_LOCATIONS[1]);
+				htmltext = "34441-01.html";
 				break;
 			}
 			case "second_area":
 			{
-				player.teleToLocation(-56096, 49688, -8729);
+				player.teleToLocation(TELE_LOCATIONS[2]);
+				htmltext = "34441-01.html";
 				break;
 			}
 			case "third_area":
 			{
-				player.teleToLocation(-56160, 45406, -8847);
-				break;
-			}
-			case "fourth_area":
-			{
-				player.teleToLocation(-56140, 41067, -8965);
-				break;
-			}
-			case "fifth_area":
-			{
-				player.teleToLocation(-251728, 178576, -8928);
+				player.teleToLocation(TELE_LOCATIONS[3]);
+				htmltext = "34441-01.html";
 				break;
 			}
 		}
