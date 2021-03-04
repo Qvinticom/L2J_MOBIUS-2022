@@ -411,7 +411,32 @@
 	<skill id="54225" toLevel="1" name="Mount Elemental Lyn Draco">
 		<!-- Mounts an Elemental Lyn Draco. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLevel>1</abnormalLevel>
+		<excludedFromCheck>true</excludedFromCheck>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<magicLevel>76</magicLevel>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>220</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>220</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54226" toLevel="1" name="Worthy Warrior Transformation">
 		<!-- For warriors that have taken the 1st-3rd places in rankings among their race. Sylph Power grants unique appearance to a hero. Max HP +300. -->
