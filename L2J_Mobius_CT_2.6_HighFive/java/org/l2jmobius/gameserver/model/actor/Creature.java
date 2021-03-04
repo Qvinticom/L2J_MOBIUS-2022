@@ -4341,10 +4341,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					m.geoPath = GeoEnginePathfinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
-						if ((isPlayer()) || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((Summon) this).getFollowStatus()))
-						{
-							return;
-						}
+						// if ((isPlayer()) || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((Summon) this).getFollowStatus()))
+						// {
+						// return;
+						// }
 						
 						m.disregardingGeodata = true;
 						
