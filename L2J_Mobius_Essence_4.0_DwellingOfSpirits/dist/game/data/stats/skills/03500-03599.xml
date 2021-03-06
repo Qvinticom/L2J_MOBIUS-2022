@@ -1338,7 +1338,7 @@
 	<skill id="3555" toLevel="3" name="Set Effect - Draconic Leather Armor, 2-piece">
 		<!-- Overweight limit +5759, Max MP +289. -->
 		<icon>icon.armor_t89_ul_i00</icon>
-				<magicLevel>1</magicLevel>
+		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -1458,209 +1458,11 @@
 		<!-- <Effect> Bleed Resistance +1% Bleed Atk. Rate +1% -->
 		<icon>
 			<value level="1">icon.accessory_earring_of_antaras_i00</value>
-			<value level="2">icon.accessory_earring_of_antaras_i00</value>
-			<value level="3">icon.accessory_earring_of_antaras_i00</value>
-			<value level="4">icon.accessory_earring_of_antaras_i00</value>
-			<value level="5">icon.accessory_earring_of_antaras_i00</value>
-			<value level="6">icon.accessory_earring_of_antaras_i00</value>
-			<value level="7">icon.accessory_earring_of_antaras_i00</value>
-			<value level="8">icon.accessory_earring_of_antaras_i00</value>
-			<value level="9">icon.accessory_earring_of_antaras_i00</value>
-			<value level="10">icon.accessory_earring_of_antaras_i00</value>
-			<value level="11">icon.accessory_earring_of_antaras_i00</value>
-			<value level="12">icon.accessory_earring_of_antaras_i00</value>
-			<value level="13">icon.accessory_earring_of_antaras_i01</value>
-			<value level="14">icon.accessory_earring_of_antaras_i02</value>
-			<value level="15">icon.accessory_earring_of_antaras_i04</value>
+			<value level="2">icon.accessory_earring_of_antaras_i01</value>
+			<value level="3">icon.accessory_earring_of_antaras_i02</value>
+			<value level="4">icon.accessory_earring_of_antaras_i04</value>
 		</icon>
-		<magicLevel>75</magicLevel>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="AttackTrait">
-				<BLEED>
-					<value level="1">1</value>
-					<value level="2">1</value>
-					<value level="3">1</value>
-					<value level="4">1</value>
-					<value level="5">6</value>
-					<value level="6">8</value>
-					<value level="7">10</value>
-					<value level="8">10</value>
-					<value level="9">10</value>
-					<value level="10">10</value>
-					<value level="11">10</value>
-					<value level="12">10</value>
-					<value level="13">20</value>
-					<value level="14">30</value>
-					<value level="15">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</BLEED>
-				<DERANGEMENT>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-					<value level="11">5</value>
-					<value level="12">5</value>
-					<value level="13">10</value>
-					<value level="14">20</value>
-					<value level="15">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</DERANGEMENT>
-				<SHOCK>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-					<value level="11">5</value>
-					<value level="12">5</value>
-					<value level="13">10</value>
-					<value level="14">20</value>
-					<value level="15">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</SHOCK>
-			</effect>
-			<effect name="DefenceTrait">
-				<BLEED>
-					<value level="1">1</value>
-					<value level="2">1</value>
-					<value level="3">1</value>
-					<value level="4">1</value>
-					<value level="5">6</value>
-					<value level="6">8</value>
-					<value level="7">10</value>
-					<value level="8">10</value>
-					<value level="9">10</value>
-					<value level="10">10</value>
-					<value level="11">10</value>
-					<value level="12">10</value>
-					<value level="13">20</value>
-					<value level="14">30</value>
-					<value level="15">30</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</BLEED>
-				<DERANGEMENT>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-					<value level="11">5</value>
-					<value level="12">5</value>
-					<value level="13">10</value>
-					<value level="14">20</value>
-					<value level="15">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</DERANGEMENT>
-				<SHOCK>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">5</value>
-					<value level="11">5</value>
-					<value level="12">5</value>
-					<value level="13">10</value>
-					<value level="14">20</value>
-					<value level="15">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</SHOCK>
-			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">0</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">2</value>
-					<value level="13">3</value>
-					<value level="14">6</value>
-					<value level="15">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<chance>80</chance>
-			</effect>
-			<effect name="HealEffect">
-				<amount>
-					<value level="9">2</value>
-					<value level="10">2</value>
-					<value level="11">2</value>
-					<value level="12">6</value>
-					<value level="13">10</value>
-					<value level="14">15</value>
-					<value level="15">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<mode>PER</mode>
-			</effect>			
-			<effect name="MagicMpCost">
-				<amount>
-					<value level="10">-1</value>
-					<value level="11">-1</value>
-					<value level="12">-3</value>
-					<value level="13">-4</value>
-					<value level="14">-6</value>
-					<value level="15">-6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>
-					<value level="10">-1</value>
-					<value level="11">-1</value>
-					<value level="12">-3</value>
-					<value level="13">-4</value>
-					<value level="14">-6</value>
-					<value level="15">-6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="DamageShieldResist">
-				<amount>
-					<value level="13">7</value>
-					<value level="14">15</value>
-					<value level="15">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="14">1</value>
-					<value level="15">1</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<stat>CON</stat>								
-			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="14">1</value>
-					<value level="15">1</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</amount>
-				<stat>MEN</stat>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="3559" toLevel="11" name="Damaged Zaken's Earring">
 		<!-- Bleed Resistance +1%. -->
@@ -1788,13 +1590,13 @@
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
-					<value level="4">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">20</value>
 				</DERANGEMENT>
 				<HOLD>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
-					<value level="4">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">30</value>
 				</HOLD>
 			</effect>
 			<effect name="AttackTrait">
@@ -1802,13 +1604,13 @@
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
-					<value level="4">15</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">20</value>
 				</DERANGEMENT>
 				<HOLD>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
-					<value level="4">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">30</value>
 				</HOLD>
 			</effect>
 			<effect name="HealEffect">
@@ -1816,7 +1618,7 @@
 					<value level="1">2</value>
 					<value level="2">4</value>
 					<value level="3">6</value>
-					<value level="4">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1825,7 +1627,7 @@
 					<value level="1">2</value>
 					<value level="2">3</value>
 					<value level="3">5</value>
-					<value level="4">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1913,10 +1715,10 @@
 		<effects>
 			<effect name="AttackTrait">
 				<POISON>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">8</value>
+					<value level="4">10</value>
 				</POISON>
 			</effect>
 			<effect name="DefenceTrait">
@@ -1924,7 +1726,7 @@
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
-					<value level="4">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">30</value>
 				</POISON>
 			</effect>
 			<effect name="Accuracy">
@@ -1932,7 +1734,7 @@
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
-					<value level="4">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">5</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1941,7 +1743,7 @@
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
-					<value level="4">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">5</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1950,7 +1752,7 @@
 					<value level="1">4</value>
 					<value level="2">6</value>
 					<value level="3">10</value>
-					<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1959,7 +1761,7 @@
 					<value level="1">4</value>
 					<value level="2">6</value>
 					<value level="3">10</value>
-					<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1968,7 +1770,7 @@
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">10</value>
-					<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1977,7 +1779,7 @@
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">10</value>
-					<value level="4">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1995,28 +1797,37 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">15</value>
+					<value level="3">21</value>
+					<value level="4">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="AttackTrait">
 				<DERANGEMENT>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
-					<value level="4">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">20</value>
 				</DERANGEMENT>
 			</effect>
 			<effect name="DefenceTrait">
-				<DERANGEMENT>
+				<SLEEP>
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">20</value>
-					<value level="4">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-				</DERANGEMENT>
+					<value level="4">20</value>
+				</SLEEP>
 			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
-					<value level="4">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">5</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2025,7 +1836,7 @@
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
-					<value level="4">3</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">5</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2034,7 +1845,7 @@
 					<value level="1">2</value>
 					<value level="2">4</value>
 					<value level="3">6</value>
-					<value level="4">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
@@ -2044,7 +1855,7 @@
 					<value level="1">2</value>
 					<value level="2">4</value>
 					<value level="3">6</value>
-					<value level="4">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
@@ -2054,7 +1865,7 @@
 					<value level="1">2</value>
 					<value level="2">4</value>
 					<value level="3">6</value>
-					<value level="4">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2063,7 +1874,7 @@
 					<value level="1">2</value>
 					<value level="2">4</value>
 					<value level="3">6</value>
-					<value level="4">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2072,7 +1883,7 @@
 					<value level="1">2</value>
 					<value level="2">4</value>
 					<value level="3">6</value>
-					<value level="4">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="4">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2611,7 +2422,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-		<effect name="MaxHp">
+			<effect name="MaxHp">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>

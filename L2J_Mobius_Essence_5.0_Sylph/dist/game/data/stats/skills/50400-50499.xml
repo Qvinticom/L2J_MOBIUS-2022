@@ -233,23 +233,436 @@
 	</skill>
 	<skill id="50441" toLevel="4" name="Antharas' Earring">
 		<!-- An earring imbued with the Earth Dragon's power. <Effect> Max MP $s1 Bleed Atk. Rate $s2 Stun Atk. Rate $s3 Silence Atk. Rate $s4 Fear Atk. Rate $s5 Bleed Resistance $s6 Stun Resistance $s7 Silence Resistance $s8 Fear Resistance $s9 Received Healing $s10 Skill MP Consumption $s11 Absorbs $s12 of the inflicted damage as HP. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>
+			<value level="1">icon.accessory_earring_of_antaras_i00</value>
+			<value level="2">icon.accessory_earring_of_antaras_i01</value>
+			<value level="3">icon.accessory_earring_of_antaras_i02</value>
+			<value level="4">icon.accessory_earring_of_antaras_i04</value>
+		</icon>
+		<magicLevel>75</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="AttackTrait">
+				<BLEED>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+				</BLEED>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</DERANGEMENT>
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</SHOCK>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+				</BLEED>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</DERANGEMENT>
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</SHOCK>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">6</value>
+					<value level="4">10</value>
+				</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-4</value>
+					<value level="3">-6</value>
+					<value level="4">-15</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-4</value>
+					<value level="3">-6</value>
+					<value level="4">-15</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">7</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</amount>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50442" toLevel="4" name="Zaken's Earring">
 		<!-- An earring imbued with Zaken's power. <Effect> Max MP $s1 Bleed Atk. Rate $s2 Stun Atk. Rate $s3 Silence Atk. Rate $s4 Fear Atk. Rate $s5 Bleed Resistance $s6 Stun Resistance $s7 Silence Resistance $s8 Fear Resistance $s9 Received Healing $s10 HP Recovery Rate $s11 MP Consumption $s12 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">22</value>
+					<value level="2">28</value>
+					<value level="3">34</value>
+					<value level="4">45</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</BLEED>
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</SHOCK>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</DERANGEMENT>
+			</effect>
+			<effect name="AttackTrait">
+				<BLEED>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</BLEED>
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</SHOCK>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</DERANGEMENT>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpDrain">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">8</value>
+					<value level="4">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-4</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-4</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-4</value>
+					<value level="4">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50443" toLevel="4" name="Baium's Ring">
 		<!-- A ring imbued with power of Baium. <Effect> Max MP $s1 Atk. Spd. $s2 Casting Spd. $s3 P. Accuracy $s4 M. Accuracy $s5 Skill Power $s6 Bleed Atk. Rate $s7 Stun Atk. Rate $s8 Bleed Resistance $s9 Stun Resistance $s10 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>
+			<value level="1">icon.accessory_ring_of_baium_i01</value>
+			<value level="2">icon.accessory_ring_of_baium_i02</value>
+			<value level="3">icon.accessory_ring_of_baium_i03</value>
+			<value level="4">icon.accessory_ring_of_baium_i04</value>
+		</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">21</value>
+					<value level="3">27</value>
+					<value level="4">35</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SkillPowerAdd">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+					<value level="4">20</value>
+				</amount>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</amount>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+				</amount>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</BLEED>
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</SHOCK>
+			</effect>
+			<effect name="AttackTrait">
+				<BLEED>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+				</BLEED>
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+				</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50444" toLevel="6" name="Queen Ant's Ring">
 		<!-- A ring imbued with Queen Ant's power. <Effect> Max MP $s1 P. Accuracy $s2 M. Accuracy $s3 P. Atk. $s4 M. Atk. $s5 Infection Atk. Rate $s6 Infection Resistance $s7 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">9</value>
+					<value level="2">15</value>
+					<value level="3">21</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">6</value>
+					<value level="6">10</value>
+				</amount>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">6</value>
+					<value level="6">10</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">9</value>
+					<value level="5">11</value>
+					<value level="6">15</value>
+				</amount>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">9</value>
+					<value level="5">11</value>
+					<value level="6">15</value>
+				</amount>
+			</effect>
+			<effect name="CriticalDamage" fromLevel="3" toLevel="6">
+				<amount>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+			</effect>
+			<effect name="MagicCriticalDamage" fromLevel="3" toLevel="6">
+				<amount>
+					<value level="3">5</value>
+					<value level="4">10</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+				</POISON>
+			</effect>
+			<effect name="AttackTrait">
+				<POISON>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+				</POISON>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50445" toLevel="6" name="Ring of Core">
 		<!-- A ring imbued with Core's power. <Effect> Max MP $s1 P. Evasion $s2 M. Evasion $s3 P. Def. $s4 M. Def. $s5 Received damage $s6 Silence Atk. Rate $s7 Fear Atk. Rate $s8 Silence Resistance $s9 Fear Resistance $s10 -->
