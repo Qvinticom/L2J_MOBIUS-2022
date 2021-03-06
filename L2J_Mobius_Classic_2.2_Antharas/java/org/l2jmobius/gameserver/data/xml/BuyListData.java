@@ -126,7 +126,16 @@ public class BuyListData implements IXmlReader
 								final long restockDelay = parseLong(attrs, "restock_delay", -1L);
 								final long count = parseLong(attrs, "count", -1L);
 								final int baseTax = parseInteger(attrs, "baseTax", defaultBaseTax);
-								buyList.addProduct(new Product(buyListId, item, price, restockDelay, count, baseTax));
+								final int sellPrice = item.getReferencePrice() / 2;
+								if (Config.CORRECT_PRICES && (price > -1) && (sellPrice > price) && (buyList.getNpcsAllowed() != null))
+								{
+									LOGGER.warning("Buy price " + price + " is less than sell price " + sellPrice + " for ItemID:" + itemId + " of buylist " + buyList.getListId() + ".");
+									buyList.addProduct(new Product(buyListId, item, sellPrice, restockDelay, count, baseTax));
+								}
+								else
+								{
+									buyList.addProduct(new Product(buyListId, item, price, restockDelay, count, baseTax));
+								}
 							}
 							else
 							{

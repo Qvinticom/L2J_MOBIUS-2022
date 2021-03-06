@@ -216,6 +216,7 @@ public class Config
 	public static int WYVERN_SPEED;
 	public static int STRIDER_SPEED;
 	public static boolean ALLOW_WYVERN_UPGRADER;
+	public static boolean CORRECT_PRICES;
 	public static String NONDROPPABLE_ITEMS;
 	public static List<Integer> LIST_NONDROPPABLE_ITEMS = new ArrayList<>();
 	public static String PET_RENT_NPC;
@@ -1404,6 +1405,7 @@ public class Config
 		WYVERN_SPEED = generalConfig.getInt("WyvernSpeed", 100);
 		STRIDER_SPEED = generalConfig.getInt("StriderSpeed", 80);
 		ALLOW_WYVERN_UPGRADER = generalConfig.getBoolean("AllowWyvernUpgrader", false);
+		CORRECT_PRICES = generalConfig.getBoolean("CorrectPrices", true);
 		ENABLE_AIO_SYSTEM = generalConfig.getBoolean("EnableAioSystem", true);
 		ALLOW_AIO_NCOLOR = generalConfig.getBoolean("AllowAioNameColor", true);
 		AIO_NCOLOR = Integer.decode("0x" + generalConfig.getString("AioNameColor", "88AA88"));

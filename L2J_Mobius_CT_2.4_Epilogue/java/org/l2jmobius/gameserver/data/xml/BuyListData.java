@@ -142,11 +142,11 @@ public class BuyListData implements IXmlReader
 							final Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
-								if ((price > -1) && (item.getReferencePrice() > price) && (buyList.getNpcsAllowed() != null))
+								final int sellPrice = item.getReferencePrice() / 2;
+								if (Config.CORRECT_PRICES && (price > -1) && (sellPrice > price) && (buyList.getNpcsAllowed() != null))
 								{
-									LOGGER.warning("Item price is too low. BuyList:" + buyList.getListId() + " ItemID:" + itemId + " File:" + f.getName());
-									LOGGER.warning("Setting price to reference price " + item.getReferencePrice() + " instead of " + price + ".");
-									buyList.addProduct(new Product(buyList.getListId(), item, item.getReferencePrice(), restockDelay, count));
+									LOGGER.warning("Buy price " + price + " is less than sell price " + sellPrice + " for ItemID:" + itemId + " of buylist " + buyList.getListId() + ".");
+									buyList.addProduct(new Product(buyList.getListId(), item, sellPrice, restockDelay, count));
 								}
 								else
 								{

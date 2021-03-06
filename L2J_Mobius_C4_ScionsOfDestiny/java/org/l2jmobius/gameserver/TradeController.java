@@ -84,10 +84,11 @@ public class TradeController
 						limitedItem = true;
 					}
 					
-					if (!rset1.getString("npc_id").equals("gm") && (price < (item.getReferencePrice() / 2)))
+					final int sellPrice = item.getReferencePrice() / 2;
+					if (Config.CORRECT_PRICES && (price < sellPrice) && !rset1.getString("npc_id").equals("gm"))
 					{
-						LOGGER.warning("TradeList " + buy1.getListId() + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
-						price = item.getReferencePrice();
+						LOGGER.warning("Buy price " + price + " is less than sell price " + sellPrice + " for ItemID:" + itemId + " of buylist " + buy1.getListId() + ".");
+						price = sellPrice;
 					}
 					
 					item.setPriceToSell(price);

@@ -173,7 +173,7 @@ public class MultisellData implements IXmlReader
 											continue;
 										}
 										
-										totalPrice += (item.getReferencePrice() * count);
+										totalPrice += ((item.getReferencePrice() / 2) * count);
 									}
 									
 									products.add(product);
@@ -194,7 +194,7 @@ public class MultisellData implements IXmlReader
 						
 						// Check if buy price is lower than sell price.
 						// Only applies when there is only one ingredient and it is adena.
-						if ((ingredients.size() == 1) && (lastIngredientId == 57) && (lastIngredientCount < totalPrice))
+						if (Config.CORRECT_PRICES && (ingredients.size() == 1) && (lastIngredientId == 57) && (lastIngredientCount < totalPrice))
 						{
 							LOGGER.warning("Buy price " + lastIngredientCount + " is less than sell price " + totalPrice + " at entry " + entryCounter.intValue() + " of multisell " + listId + ".");
 							// Adjust price.

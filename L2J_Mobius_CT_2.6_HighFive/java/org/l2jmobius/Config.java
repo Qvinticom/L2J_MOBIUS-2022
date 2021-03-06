@@ -538,6 +538,7 @@ public class Config
 	public static int MAX_NPC_ANIMATION;
 	public static int MIN_MONSTER_ANIMATION;
 	public static int MAX_MONSTER_ANIMATION;
+	public static boolean CORRECT_PRICES;
 	public static boolean ENABLE_FALLING_DAMAGE;
 	public static boolean GRIDS_ALWAYS_ON;
 	public static int GRID_NEIGHBOR_TURNON_TIME;
@@ -2212,6 +2213,7 @@ public class Config
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
 			ENABLE_PRIME_SHOP = General.getBoolean("EnablePrimeShop", false);
 			PRIME_SHOP_ITEM_ID = General.getInt("PrimeShopItemId", -1);
+			CORRECT_PRICES = General.getBoolean("CorrectPrices", true);
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 			
 			// Load FloodProtector config file
