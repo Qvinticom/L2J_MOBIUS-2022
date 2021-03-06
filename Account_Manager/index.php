@@ -137,7 +137,7 @@ $error = "";
 									$to = $email;
 									$subject = 'Your recovered Password';
 									$message = 'Use this password to login '. $password_rnd;
-									$headers = 'From :'. $admin;
+									$headers = 'From:'. $admin;
 									if (mail($to, $subject, $message, $headers)){
 										$update = "UPDATE `accounts` SET `password`='".$password."' WHERE `login`='".$account."'";
 										$resultupdate = $conn->query($update);
