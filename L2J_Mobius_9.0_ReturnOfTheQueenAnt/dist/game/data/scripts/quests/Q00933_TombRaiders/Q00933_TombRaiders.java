@@ -20,6 +20,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
@@ -64,7 +65,7 @@ public class Q00933_TombRaiders extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		switch (event)
 		{
@@ -81,7 +82,7 @@ public class Q00933_TombRaiders extends Quest
 				{
 					addExpAndSp(player, 20700253956096L, 1450359376);
 					giveItems(player, BENUSTA_REWARD_BOX, 1);
-					qs.exitQuest(true, true);
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
 				}
 				break;
@@ -99,24 +100,41 @@ public class Q00933_TombRaiders extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "34552-01.htm";
+				if (npc.getId() == SEARCH_TEAM_TELEPORTER)
+				{
+					htmltext = "34552-01.htm";
+				}
 				break;
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(2))
+				if (npc.getId() == LEOPARD)
 				{
-					htmltext = "32594-03.htm";
-				}
-				else
-				{
-					htmltext = "32594-06.htm";
+					if (qs.isCond(2))
+					{
+						htmltext = "32594-03.htm";
+					}
+					else
+					{
+						htmltext = "32594-06.htm";
+					}
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				if (npc.getId() == SEARCH_TEAM_TELEPORTER)
+				{
+					if (qs.isNowAvailable())
+					{
+						qs.setState(State.CREATED);
+						htmltext = "34552-01.htm";
+					}
+					else
+					{
+						htmltext = getAlreadyCompletedMsg(player, QuestType.DAILY);
+					}
+				}
 				break;
 			}
 		}
