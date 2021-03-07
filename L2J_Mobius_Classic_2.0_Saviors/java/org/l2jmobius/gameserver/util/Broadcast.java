@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.util;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.cache.RelationCache;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.World;
@@ -82,25 +83,26 @@ public class Broadcast
 				if ((mov instanceof CharInfo) && (creature.isPlayer()))
 				{
 					final int relation = ((PlayerInstance) creature).getRelation(player);
-					final Integer oldrelation = creature.getKnownRelations().get(player.getObjectId());
-					if ((oldrelation != null) && (oldrelation != relation))
+					final boolean isAutoAttackable = creature.isAutoAttackable(player);
+					final RelationCache oldrelation = creature.getKnownRelations().get(player.getObjectId());
+					if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
 					{
 						final RelationChanged rc = new RelationChanged();
-						rc.addRelation((PlayerInstance) creature, relation, creature.isAutoAttackable(player));
+						rc.addRelation((PlayerInstance) creature, relation, isAutoAttackable);
 						if (creature.hasSummon())
 						{
 							final Summon pet = creature.getPet();
 							if (pet != null)
 							{
-								rc.addRelation(pet, relation, creature.isAutoAttackable(player));
+								rc.addRelation(pet, relation, isAutoAttackable);
 							}
 							if (creature.hasServitors())
 							{
-								creature.getServitors().values().forEach(s -> rc.addRelation(s, relation, creature.isAutoAttackable(player)));
+								creature.getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable));
 							}
 						}
 						player.sendPacket(rc);
-						creature.getKnownRelations().put(player.getObjectId(), relation);
+						creature.getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
 					}
 				}
 			}

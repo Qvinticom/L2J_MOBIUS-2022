@@ -56,6 +56,7 @@ import org.l2jmobius.gameserver.ai.CreatureAI.IntentionCommand;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.ai.PlayerAI;
 import org.l2jmobius.gameserver.ai.SummonAI;
+import org.l2jmobius.gameserver.cache.RelationCache;
 import org.l2jmobius.gameserver.cache.WarehouseCacheManager;
 import org.l2jmobius.gameserver.communitybbs.BB.Forum;
 import org.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
@@ -1769,25 +1770,26 @@ public class PlayerInstance extends Playable
 			}
 			
 			final int relation = getRelation(player);
-			final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-			if ((oldrelation == null) || (oldrelation != relation))
+			final boolean isAutoAttackable = isAutoAttackable(player);
+			final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
+			if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
 			{
 				final RelationChanged rc = new RelationChanged();
-				rc.addRelation(this, relation, isAutoAttackable(player));
+				rc.addRelation(this, relation, isAutoAttackable);
 				if (hasSummon())
 				{
 					final Summon pet = _pet;
 					if (pet != null)
 					{
-						rc.addRelation(pet, relation, isAutoAttackable(player));
+						rc.addRelation(pet, relation, isAutoAttackable);
 					}
 					if (hasServitors())
 					{
-						getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+						getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable));
 					}
 				}
 				player.sendPacket(rc);
-				getKnownRelations().put(player.getObjectId(), relation);
+				getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
 			}
 		});
 	}
@@ -4158,25 +4160,26 @@ public class PlayerInstance extends Playable
 				
 				// Update relation.
 				final int relation = getRelation(player);
-				final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-				if ((oldrelation == null) || (oldrelation != relation))
+				final boolean isAutoAttackable = isAutoAttackable(player);
+				final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
+				if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
 				{
 					final RelationChanged rc = new RelationChanged();
-					rc.addRelation(this, relation, isAutoAttackable(player));
+					rc.addRelation(this, relation, isAutoAttackable);
 					if (hasSummon())
 					{
 						final Summon pet = getPet();
 						if (pet != null)
 						{
-							rc.addRelation(pet, relation, isAutoAttackable(player));
+							rc.addRelation(pet, relation, isAutoAttackable);
 						}
 						if (hasServitors())
 						{
-							getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+							getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable));
 						}
 					}
 					player.sendPacket(rc);
-					getKnownRelations().put(player.getObjectId(), relation);
+					getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
 				}
 			}
 		});
@@ -6347,24 +6350,25 @@ public class PlayerInstance extends Playable
 			}
 			
 			final int relation = getRelation(player);
-			final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-			if ((oldrelation == null) || (oldrelation != relation))
+			final boolean isAutoAttackable = isAutoAttackable(player);
+			final RelationCache oldrelation = getKnownRelations().get(player.getObjectId());
+			if ((oldrelation == null) || (oldrelation.getRelation() != relation) || (oldrelation.isAutoAttackable() != isAutoAttackable))
 			{
 				final RelationChanged rc = new RelationChanged();
-				rc.addRelation(this, relation, isAutoAttackable(player));
+				rc.addRelation(this, relation, isAutoAttackable);
 				if (hasSummon())
 				{
 					if (_pet != null)
 					{
-						rc.addRelation(_pet, relation, isAutoAttackable(player));
+						rc.addRelation(_pet, relation, isAutoAttackable);
 					}
 					if (hasServitors())
 					{
-						getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+						getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable));
 					}
 				}
 				player.sendPacket(rc);
-				getKnownRelations().put(player.getObjectId(), relation);
+				getKnownRelations().put(player.getObjectId(), new RelationCache(relation, isAutoAttackable));
 			}
 		});
 	}

@@ -49,6 +49,7 @@ import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.cache.RelationCache;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.data.xml.TransformData;
@@ -269,7 +270,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private final AtomicInteger _abnormalShieldBlocks = new AtomicInteger();
 	
-	private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
+	private final Map<Integer, RelationCache> _knownRelations = new ConcurrentHashMap<>();
 	
 	private CreatureContainer _seenCreatures;
 	
@@ -5305,7 +5306,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		super.setXYZ(newX, newY, newZ);
 	}
 	
-	public Map<Integer, Integer> getKnownRelations()
+	public Map<Integer, RelationCache> getKnownRelations()
 	{
 		return _knownRelations;
 	}
