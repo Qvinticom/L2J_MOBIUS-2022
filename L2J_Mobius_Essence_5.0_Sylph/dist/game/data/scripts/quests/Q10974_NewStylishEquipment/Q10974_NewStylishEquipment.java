@@ -42,7 +42,8 @@ public class Q10974_NewStylishEquipment extends Quest
 	private static final ItemHolder ENCHANT_SCROLL_ADVENTURER_CLOAK = new ItemHolder(93045, 1);
 	
 	// Reward
-	private static final ItemHolder FIRE_DRAGON_PENDANT = new ItemHolder(49467, 1);
+	private static final ItemHolder ADVENTURER_PENDANT = new ItemHolder(95690, 1);
+	private static final ItemHolder SAYHA_GUST = new ItemHolder(91776, 2);
 	// Misc
 	private static final int MIN_LEVEL = 40;
 	
@@ -70,6 +71,7 @@ public class Q10974_NewStylishEquipment extends Quest
 			case "30857-00.htm":
 			case "30857-01.htm":
 			case "30857-02.htm":
+			case "30857-09.html":
 			{
 				htmltext = event;
 				break;
@@ -167,12 +169,14 @@ public class Q10974_NewStylishEquipment extends Quest
 					break;
 				}
 			}
-			case "30857-09.html":
+			case "reward":
 			{
 				if (qs.isCond(4))
 				{
-					giveItems(player, FIRE_DRAGON_PENDANT);
+					giveItems(player, ADVENTURER_PENDANT);
+					giveItems(player, SAYHA_GUST);
 					qs.exitQuest(false, true);
+					htmltext = "30857-10.html";
 				}
 				break;
 			}

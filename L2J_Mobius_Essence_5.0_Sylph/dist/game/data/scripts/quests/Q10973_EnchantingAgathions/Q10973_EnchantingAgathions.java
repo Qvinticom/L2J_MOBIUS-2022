@@ -24,6 +24,8 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
 
+import quests.Q10292_SecretGarden.Q10292_SecretGarden;
+
 /**
  * @author Mobius, quangnguyen
  */
@@ -43,6 +45,7 @@ public class Q10973_EnchantingAgathions extends Quest
 		addStartNpc(RAYMOND);
 		addTalkId(RAYMOND);
 		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
+		addCondCompletedQuest(Q10292_SecretGarden.class.getSimpleName(), "30289-02.html");
 		setQuestNameNpcStringId(NpcStringId.LV_35_ENCHANT_AGATHION);
 	}
 	
@@ -59,7 +62,7 @@ public class Q10973_EnchantingAgathions extends Quest
 		switch (event)
 		{
 			case "30289.htm":
-			case "30289-00.html":
+			case "30289-00.htm":
 			case "30289-01.htm":
 			{
 				htmltext = event;
@@ -88,7 +91,7 @@ public class Q10973_EnchantingAgathions extends Quest
 					}
 					if (foundEnchant)
 					{
-						addExpAndSp(player, 100000, 0);
+						addExpAndSp(player, 0, 10000);
 						qs.exitQuest(false, true);
 						htmltext = event;
 						break;

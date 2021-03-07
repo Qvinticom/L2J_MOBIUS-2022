@@ -23,26 +23,30 @@ import quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest;
 import quests.Q00255_Tutorial.Q00255_Tutorial;
 import quests.Q00502_BrothersBoundInChains.Q00502_BrothersBoundInChains;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
+import quests.Q10290_ATripBegins.Q10290_ATripBegins;
+import quests.Q10291_MoreExperience.Q10291_MoreExperience;
+import quests.Q10292_SecretGarden.Q10292_SecretGarden;
+import quests.Q10293_DeathMysteries.Q10293_DeathMysteries;
+import quests.Q10294_SporeInfestedPlace.Q10294_SporeInfestedPlace;
+import quests.Q10295_RespectforGraves.Q10295_RespectforGraves;
+import quests.Q10296_LetsPayRespectsToOurFallenBrethren.Q10296_LetsPayRespectsToOurFallenBrethren;
+import quests.Q10297_MemoryOfTheGloriousPast.Q10297_MemoryOfTheGloriousPast;
+import quests.Q10298_TracesOfBattle.Q10298_TracesOfBattle;
+import quests.Q10299_GetIncrediblePower.Q10299_GetIncrediblePower;
 import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
+import quests.Q10954_SayhaChildren.Q10954_SayhaChildren;
+import quests.Q10955_NewLifeLessons.Q10955_NewLifeLessons;
+import quests.Q10956_WeSylphs.Q10956_WeSylphs;
 import quests.Q10957_TheLifeOfADeathKnight.Q10957_TheLifeOfADeathKnight;
 import quests.Q10958_ExploringNewOpportunities.Q10958_ExploringNewOpportunities;
 import quests.Q10959_ChallengingYourDestiny.Q10959_ChallengingYourDestiny;
 import quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining;
 import quests.Q10962_NewHorizons.Q10962_NewHorizons;
-import quests.Q10964_SecretGarden.Q10964_SecretGarden;
-import quests.Q10965_DeathMysteries.Q10965_DeathMysteries;
-import quests.Q10966_ATripBegins.Q10966_ATripBegins;
-import quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer;
 import quests.Q10968_ThePowerOfTheMagicLamp.Q10968_ThePowerOfTheMagicLamp;
-import quests.Q10969_SporeInfestedPlace.Q10969_SporeInfestedPlace;
-import quests.Q10970_RespectForGraves.Q10970_RespectForGraves;
 import quests.Q10971_TalismanEnchant.Q10971_TalismanEnchant;
 import quests.Q10972_CombiningGems.Q10972_CombiningGems;
 import quests.Q10973_EnchantingAgathions.Q10973_EnchantingAgathions;
 import quests.Q10974_NewStylishEquipment.Q10974_NewStylishEquipment;
-import quests.Q10975_LetsPayRespectsToOurFallenBrethren.Q10975_LetsPayRespectsToOurFallenBrethren;
-import quests.Q10976_MemoryOfTheGloriousPast.Q10976_MemoryOfTheGloriousPast;
-import quests.Q10977_TracesOfBattle.Q10977_TracesOfBattle;
 import quests.Q10978_MissingPets.Q10978_MissingPets;
 import quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling;
 import quests.Q10982_SpiderHunt.Q10982_SpiderHunt;
@@ -69,15 +73,24 @@ public class QuestMasterHandler
 		Q00502_BrothersBoundInChains.class,
 		Q00662_AGameOfCards.class,
 		Q10673_SagaOfLegend.class,
+		Q10290_ATripBegins.class,
+		Q10291_MoreExperience.class,
+		Q10292_SecretGarden.class,
+		Q10293_DeathMysteries.class,
+		Q10294_SporeInfestedPlace.class,
+		Q10295_RespectforGraves.class,
+		Q10296_LetsPayRespectsToOurFallenBrethren.class,
+		Q10297_MemoryOfTheGloriousPast.class,
+		Q10298_TracesOfBattle.class,
+		Q10299_GetIncrediblePower.class,
+		Q10954_SayhaChildren.class,
+		Q10955_NewLifeLessons.class,
+		Q10956_WeSylphs.class,
 		Q10957_TheLifeOfADeathKnight.class,
 		Q10958_ExploringNewOpportunities.class,
 		Q10959_ChallengingYourDestiny.class,
 		Q10961_EffectiveTraining.class,
 		Q10962_NewHorizons.class,
-		Q10964_SecretGarden.class,
-		Q10965_DeathMysteries.class,
-		Q10966_ATripBegins.class,
-		Q10967_CulturedAdventurer.class,
 		Q10981_UnbearableWolvesHowling.class,
 		Q10982_SpiderHunt.class,
 		Q10983_TroubledForest.class,
@@ -89,15 +102,10 @@ public class QuestMasterHandler
 		Q10989_DangerousPredators.class,
 		Q10990_PoisonExtraction.class,
 		Q10968_ThePowerOfTheMagicLamp.class,
-		Q10969_SporeInfestedPlace.class,
-		Q10970_RespectForGraves.class,
 		Q10971_TalismanEnchant.class,
 		Q10972_CombiningGems.class,
 		Q10973_EnchantingAgathions.class,
 		Q10974_NewStylishEquipment.class,
-		Q10975_LetsPayRespectsToOurFallenBrethren.class,
-		Q10976_MemoryOfTheGloriousPast.class,
-		Q10977_TracesOfBattle.class,
 		Q10978_MissingPets.class,
 	};
 	
