@@ -25,6 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CreatureAI;
+import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
@@ -95,7 +96,8 @@ public class CreatureFollowTaskManager
 					}
 					
 					final int followRange = range == -1 ? Rnd.get(50, 100) : range;
-					if (!creature.isInsideRadius(followTarget, followRange, true, false))
+					final int followRangeWithCollision = followRange + creature.getTemplate().getCollisionRadius() + ((Creature) followTarget).getTemplate().getCollisionRadius();
+					if (!creature.isInsideRadius(followTarget, followRangeWithCollision, true, false))
 					{
 						if (!creature.isInsideRadius(followTarget, 3000, true, false))
 						{
@@ -108,6 +110,10 @@ public class CreatureFollowTaskManager
 							return;
 						}
 						ai.moveToPawn(followTarget, followRange);
+					}
+					else
+					{
+						ThreadPool.execute(() -> ai.notifyEvent(CtrlEvent.EVT_ARRIVED));
 					}
 				}
 				else

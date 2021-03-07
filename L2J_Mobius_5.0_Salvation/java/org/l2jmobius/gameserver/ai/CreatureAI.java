@@ -29,7 +29,6 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -67,8 +66,6 @@ import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class CreatureAI extends AbstractAI
 {
-	private static final Logger LOGGER = Logger.getLogger(CreatureAI.class.getName());
-	
 	public static class IntentionCommand
 	{
 		protected final CtrlIntention _crtlIntention;
@@ -474,9 +471,9 @@ public class CreatureAI extends AbstractAI
 		
 		// Set the AI pick up target
 		setTarget(object);
-		if ((object.getX() == 0) && (object.getY() == 0)) // TODO: Find the drop&spawn bug
+		if ((object.getX() == 0) && (object.getY() == 0))
 		{
-			LOGGER.warning("Object in coords 0,0 - using a temporary fix");
+			// LOGGER.warning("Object in coords 0,0 - using a temporary fix");
 			object.setXYZ(getActor().getX(), getActor().getY(), getActor().getZ() + 5);
 		}
 		
@@ -884,7 +881,7 @@ public class CreatureAI extends AbstractAI
 	{
 		if (worldPosition == null)
 		{
-			LOGGER.warning("maybeMoveToPosition: worldPosition == NULL!");
+			// LOGGER.warning("maybeMoveToPosition: worldPosition == NULL!");
 			return false;
 		}
 		
@@ -954,7 +951,7 @@ public class CreatureAI extends AbstractAI
 		// Get the distance between the current position of the Creature and the target (x,y)
 		if (target == null)
 		{
-			LOGGER.warning("maybeMoveToPawn: target == NULL!");
+			// LOGGER.warning("maybeMoveToPawn: target == NULL!");
 			return false;
 		}
 		if (offsetValue < 0)
@@ -974,7 +971,7 @@ public class CreatureAI extends AbstractAI
 			if (isFollowing())
 			{
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 30))
+				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 100))
 				{
 					return true;
 				}

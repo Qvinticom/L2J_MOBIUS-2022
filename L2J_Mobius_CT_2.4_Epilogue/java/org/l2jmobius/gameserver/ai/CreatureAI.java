@@ -971,7 +971,7 @@ public class CreatureAI extends AbstractAI
 			return true;
 		}
 		
-		if (getFollowTarget() != null)
+		if (isFollowing())
 		{
 			stopFollow();
 		}
@@ -1019,10 +1019,10 @@ public class CreatureAI extends AbstractAI
 		if (!_actor.isInsideRadius2D(target, offsetWithCollision))
 		{
 			// Caller should be Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp
-			if (getFollowTarget() != null)
+			if (isFollowing())
 			{
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 30))
+				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 100))
 				{
 					return true;
 				}
@@ -1077,7 +1077,7 @@ public class CreatureAI extends AbstractAI
 			return true;
 		}
 		
-		if (getFollowTarget() != null)
+		if (isFollowing())
 		{
 			stopFollow();
 		}

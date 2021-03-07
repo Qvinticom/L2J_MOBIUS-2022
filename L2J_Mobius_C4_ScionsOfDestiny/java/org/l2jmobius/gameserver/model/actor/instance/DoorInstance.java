@@ -92,7 +92,7 @@ public class DoorInstance extends Creature
 		}
 		
 		@Override
-		public void moveTo(int x, int y, int z, int offset)
+		public void moveTo(WorldObject target, int x, int y, int z, int offset)
 		{
 		}
 		

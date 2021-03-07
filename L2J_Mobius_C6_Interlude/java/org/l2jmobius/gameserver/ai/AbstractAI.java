@@ -476,7 +476,7 @@ abstract class AbstractAI implements Ctrl
 			}
 			
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
-			_accessor.moveTo(pawn.getX(), pawn.getY(), pawn.getZ(), offset);
+			_accessor.moveTo(pawn, pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			
 			// Mobius: Solves moving to wrong Z when not using geodata,
 			// but probably is not accurate and you should use geodata.
