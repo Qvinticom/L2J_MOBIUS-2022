@@ -822,7 +822,14 @@ public class SkillCaster implements Runnable
 				if (!ignoreTargetType)
 				{
 					final WorldObject objTarget = skill.getTarget(creature, false, false, false);
-					if ((objTarget != null) && objTarget.isCreature())
+					
+					// Avoid triggering skills on invalid targets.
+					if (objTarget == null)
+					{
+						return;
+					}
+					
+					if (objTarget.isCreature())
 					{
 						currentTarget = objTarget;
 					}
