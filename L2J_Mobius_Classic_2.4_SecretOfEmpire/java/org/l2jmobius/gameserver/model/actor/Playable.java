@@ -119,11 +119,12 @@ public abstract class Playable extends Creature
 			setDead(true);
 		}
 		
-		abortAttack();
-		abortCast();
-		
 		// Set target to null and cancel Attack or Cast
 		setTarget(null);
+		
+		// Abort casting after target has been cancelled.
+		abortAttack();
+		abortCast();
 		
 		// Stop movement
 		stopMove(null);
