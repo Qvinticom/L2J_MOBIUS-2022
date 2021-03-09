@@ -606,18 +606,19 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22325" level="85" type="Npc" name="Diffloe">
+	<npc id="22325" level="3" type="Monster" name="Diffloe">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="75" sp="3" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="61" hpRegen="2" mp="47.0397404703974" mpRegen="0.9" />
+			<attack physical="10.0732600732601" magical="7.5514315231404" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="47.2527472527472" magical="33.8671871518587" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -625,18 +626,19 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22326" level="85" type="Npc" name="Apis">
+	<npc id="22326" level="5" type="Monster" name="Apis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="91" sp="4" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="85" hpRegen="2" mp="69.7485806974858" mpRegen="0.9" />
+			<attack physical="12.6646403242148" magical="10.5445708750751" random="50" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="52.1276595744681" magical="37.9631067626098" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -644,18 +646,19 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22327" level="85" type="Npc" name="Echinu">
+	<npc id="22327" level="5" type="Monster" name="Echinu">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="91" sp="4" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="85" hpRegen="2" mp="84.3471208434712" mpRegen="0.9" />
+			<attack physical="15.625" magical="11.7434156523754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="56.25" magical="41.3963233306299" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -663,18 +666,19 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22328" level="85" type="Npc" name="Volatu">
+	<npc id="22328" level="15" type="Monster" name="Volatu">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="235" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="261" hpRegen="2" mp="100.567721005677" mpRegen="0.9" />
+			<attack physical="17.9018976011457" magical="12.8239333168738" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="59.8751897453196" magical="43.7729132392134" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -682,18 +686,19 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22329" level="85" type="Npc" name="Photoroni">
+	<npc id="22329" level="15" type="Monster" name="Photoroni">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="235" sp="13" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="261" hpRegen="2" mp="108.67802108678" mpRegen="0.9" />
+			<attack physical="19.6197564618617" magical="14.1072371222234" random="50" critical="4" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="62.6262626262626" magical="45.8764449032089" evasion="10" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
@@ -701,18 +706,19 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="22330" level="85" type="Npc" name="Ales">
+	<npc id="22330" level="17" type="Monster" name="Ales">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="284" sp="15" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="298" hpRegen="2.5" mp="124.087591240876" mpRegen="1.2" />
+			<attack physical="23.5737859500236" magical="16.4975710452675" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="66.3366336633663" magical="48.98300048983" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
