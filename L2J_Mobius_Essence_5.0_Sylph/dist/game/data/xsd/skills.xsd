@@ -754,6 +754,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="adjustLevel" type="xs:boolean" />
 															<xs:element name="UNDEAD_WEAKNESS">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
