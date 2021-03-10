@@ -1175,6 +1175,21 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
+															<xs:element name="PISTOLS">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:byte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="castSkillId" type="xs:unsignedShort" />
 															<xs:element name="escapeType" type="xs:string" />
 															<xs:element name="criticalLimit" type="xs:unsignedShort" />
@@ -1437,6 +1452,8 @@
 															</xs:element>
 															<xs:element name="pAtkSpeedMode" />
 															<xs:element name="transformationId" type="xs:unsignedShort" />
+															<xs:element name="closeSkill" type="xs:unsignedShort" />
+															<xs:element name="rangeSkill" type="xs:unsignedShort" />
 															<xs:element name="distance" type="xs:unsignedByte" />
 															<xs:element name="speed" type="xs:unsignedShort" />
 															<xs:element name="knockDown" type="xs:boolean" />
