@@ -10,6 +10,9 @@
 		<icon>icon.belt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="EnlargeSlot">
 				<amount>2</amount>

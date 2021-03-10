@@ -376,14 +376,19 @@
 		<!-- Applies a buff when used. <Buff effect>. Magic Lamp charging rate +100%. Duration: 60 min. Cooldown: 1 min. Required level: 1-75. -->
 		<set name="icon" val="icon.bm_soul_of_shilen" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<cond msgId="1902">
 			<player levelRange="1;75" />
 		</cond>
+		<skills>
+			<skill id="54069" level="1" /> <!-- Magic Fire (Event) -->
+		</skills>
 	</item>
 	<item id="92034" name="Reinforced Jewel Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

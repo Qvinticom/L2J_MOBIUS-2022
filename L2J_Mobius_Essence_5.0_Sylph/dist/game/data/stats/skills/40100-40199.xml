@@ -9,6 +9,21 @@
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93074</itemConsumeId> <!-- Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>10000000</xp>
+				<sp>270000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40102" toLevel="1" name="Green Lantern - 4th Place">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -141,21 +156,81 @@
 		<!-- <Reward for achieving the 1st place in the Large Magic Lamp event> XP +1,200,000,000, SP +32,400,000. Can be exchanged by the Game Assistant for the Lit Red Lantern (transferable to other characters on the account). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91668</itemConsumeId> <!-- Red Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>100000000</xp>
+				<sp>2700000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40122" toLevel="1" name="High-grade Purple Lantern">
 		<!-- <Reward for achieving the 2nd place in the Large Magic Lamp event> XP +360,000,000, SP +9,720,000. Can be exchanged by the Game Assistant for the Lit Purple Lantern (transferable to other characters on the account). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91669</itemConsumeId> <!-- Red Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>30000000</xp>
+				<sp>810000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40123" toLevel="1" name="High-grade Blue Lantern">
 		<!-- <Reward for achieving the 3rd place in the Large Magic Lamp event> XP +120,000,000, SP +3,240,000. Can be exchanged by the Game Assistant for the Lit Blue Lantern (transferable to other characters on the account). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91670</itemConsumeId> <!-- Red Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>10000000</xp>
+				<sp>270000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40124" toLevel="1" name="High-grade Green Lantern">
 		<!-- <Reward for achieving the 4th place in the Large Magic Lamp event> XP +60,000,000, SP +1,620,000. Can be exchanged by the Game Assistant for the Lit Green Lantern (transferable to other characters on the account). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91671</itemConsumeId> <!-- Red Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>5000000</xp>
+				<sp>135000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40125" toLevel="1" name="High-grade Lit Red Lantern">
 		<!-- <Reward for achieving the 1st place in the Big Magic Lamp event> XP +1,200,000,000, SP +32,400,000. Cannot be transferred to higher-level characters. -->

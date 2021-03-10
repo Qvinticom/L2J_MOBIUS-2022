@@ -430,13 +430,14 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="reuse_delay" val="1500" />
 		<stats>
 			<stat type="pAtk">179</stat>
 			<stat type="mAtk">51</stat>
 			<stat type="rCrit">1.2</stat>
 			<stat type="pAtkSpd">227</stat>
-			<stat type="pAtkRange">40</stat>
 			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
 	<item id="93031" name="Aden Club" type="Weapon">
@@ -641,15 +642,16 @@
 		<!-- For Adventurer's Agathion Griffin only. Increases M. Def. when the agathion is enchanted. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag_2" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
-			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
+			<skill id="40089" level="1" /> <!-- Scroll: Enchant Adventurer's Agathion Griffin -->
 		</skills>
 	</item>
 	<item id="93041" name="Adventurer's Cloak" type="Armor">
@@ -693,6 +695,8 @@
 		<!-- For Adventurer's Sheep Hat. When enchanted, M. Def. +2. -->
 		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -721,6 +725,8 @@
 		<!-- For Adventurer's Cloak only. -->
 		<set name="icon" val="icon.sayha2017_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -736,6 +742,8 @@
 		<!-- For Adventurer's Belt only. -->
 		<set name="icon" val="icon.etc_training_scroll_kalie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1163,6 +1171,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50140" level="1" /> <!-- Red Lantern - 1st Place -->
+		</skills>
 	</item>
 	<item id="93069" name="Purple Lantern" additionalName="2nd Place" type="EtcItem">
 		<!-- XP +30,000,000, SP +810,000. Cannot be exchanged for the lit lantern. -->
@@ -1173,6 +1185,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50141" level="1" /> <!-- Purple Lantern - 2nd Place -->
+		</skills>
 	</item>
 	<item id="93070" name="Blue Lantern" additionalName="3rd Place" type="EtcItem">
 		<!-- XP +10,000,000, SP +270,000. Cannot be exchanged for the lit lantern. -->
@@ -1183,6 +1199,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50142" level="1" /> <!-- Blue Lantern - 3rd Place -->
+		</skills>
 	</item>
 	<item id="93071" name="Green Lantern" additionalName="4th Place" type="EtcItem">
 		<!-- XP +5,000,000, SP +135,000. Cannot be exchanged for the lit lantern. -->
@@ -1193,6 +1213,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50143" level="1" /> <!-- Green Lantern - 4th Place -->
+		</skills>
 	</item>
 	<item id="93072" name="Star Candy (Event)" type="EtcItem">
 		<!-- Sayha's Grace points +10,000. -->

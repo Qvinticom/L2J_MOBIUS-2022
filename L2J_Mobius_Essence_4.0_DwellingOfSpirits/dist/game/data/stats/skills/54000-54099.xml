@@ -1953,9 +1953,16 @@
 	<skill id="54069" toLevel="1" name="Magic Fire (Event)">
 		<!-- Magic Lamp charging rate +100%. -->
 		<icon>icon.bm_soul_of_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalType>MAGIC_LAMP_RATE</abnormalType>
+		<abnormalTime>3600</abnormalTime>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
+		<effects>
+			<effect name="MagicLampExpRate">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54070" toLevel="1" name="Sayha's Buff Scroll - Event">
 		<!-- A magic scroll which allows getting various buffs. -->

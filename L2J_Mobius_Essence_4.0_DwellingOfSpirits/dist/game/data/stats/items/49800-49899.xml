@@ -575,11 +575,20 @@
 		<!-- Applies a buff when used. <Buff effect>. Sayha's Grace Consumption +100%. Acquired XP +100%. Acquired SP +100%. Duration: 20 min. Cooldown: 1 min. The effect remains after death. <font color=eeaa22>(Requires 35,000+ Sayha's Grace points.)</font> -->
 		<set name="icon" val="icon.skill11137" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1902">
+			<player levelRange="1;75" />
+		</cond>
+		<skills>
+			<skill id="54068" level="1" /> <!-- Sayha's Gust -->
+		</skills>
 	</item>
 	<item id="49852" name="Secret Book of Baggins’ Enchantments - IV" type="EtcItem">
 		<!-- Prevents Talisman of Insolence from degrading to Lv. 2 in case of failure when enchanting it to Lv. 4. -->
