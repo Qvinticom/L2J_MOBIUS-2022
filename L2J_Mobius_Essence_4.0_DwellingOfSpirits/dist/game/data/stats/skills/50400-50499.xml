@@ -711,9 +711,14 @@
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>5</max>
+			</effect>
 			<effect name="PAtk">
 				<amount>-50</amount>
 				<mode>PER</mode>
@@ -745,6 +750,11 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>5</max>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-50</amount>
 				<mode>PER</mode>
@@ -817,7 +827,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions" />
