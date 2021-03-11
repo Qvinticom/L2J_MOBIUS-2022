@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="12000" toLevel="1" name="Heavy Hit">
+	<skill id="12000" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -553,13 +553,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17838" count="1" /> <!-- Bound Requiem Shooter -->
+						<item id="17838" count="1" /> <!-- Bound Requiem Guardian -->
 					</item>
 					<item chance="1">
-						<item id="17974" count="1" /> <!-- Blessed Requiem Shooter -->
+						<item id="17974" count="1" /> <!-- Blessed Requiem Guardian -->
 					</item>
 					<item chance="4">
-						<item id="17297" count="1" /> <!-- Requiem Shooter -->
+						<item id="17297" count="1" /> <!-- Requiem Guardian -->
 					</item>
 				</items>
 			</effect>
@@ -692,7 +692,7 @@
 						<item id="17842" count="1" /> <!-- Bound Requiem Dual Sword -->
 					</item>
 					<item chance="1">
-						<item id="17978" count="1" /> <!-- Blessed Requiem Dual Sword -->
+						<item id="17978" count="1" /> <!-- Blessed Requiem Dual Swords -->
 					</item>
 					<item chance="4">
 						<item id="17301" count="1" /> <!-- Requiem Dual Swords -->
@@ -726,7 +726,7 @@
 						<item id="17843" count="1" /> <!-- Bound Requiem Dual Dagger -->
 					</item>
 					<item chance="1">
-						<item id="17979" count="1" /> <!-- Blessed Requiem Dual Dagger -->
+						<item id="17979" count="1" /> <!-- Blessed Requiem Dual Daggers -->
 					</item>
 					<item chance="4">
 						<item id="17302" count="1" /> <!-- Requiem Dual Daggers -->
@@ -760,7 +760,7 @@
 						<item id="17844" count="1" /> <!-- Bound Requiem Dual Blunt Weapon -->
 					</item>
 					<item chance="1">
-						<item id="17980" count="1" /> <!-- Blessed Requiem Dual Blunt Weapon -->
+						<item id="17980" count="1" /> <!-- Blessed Requiem Dual Blunt Weapons -->
 					</item>
 					<item chance="4">
 						<item id="17303" count="1" /> <!-- Requiem Dual Blunt Weapons -->
@@ -1709,13 +1709,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17872" count="1" /> <!-- Bound Apocalypse Shooter -->
+						<item id="17872" count="1" /> <!-- Bound Apocalypse Guardian -->
 					</item>
 					<item chance="1">
-						<item id="18008" count="1" /> <!-- Blessed Apocalypse Shooter -->
+						<item id="18008" count="1" /> <!-- Blessed Apocalypse Guardian -->
 					</item>
 					<item chance="4">
-						<item id="17331" count="1" /> <!-- Apocalypse Shooter -->
+						<item id="17331" count="1" /> <!-- Apocalypse Guardian -->
 					</item>
 				</items>
 			</effect>
@@ -2865,13 +2865,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="95">
-						<item id="17906" count="1" /> <!-- Bound Specter Shooter -->
+						<item id="17906" count="1" /> <!-- Bound Specter Guardian -->
 					</item>
 					<item chance="1">
-						<item id="18042" count="1" /> <!-- Blessed Specter Shooter -->
+						<item id="18042" count="1" /> <!-- Blessed Specter Guardian -->
 					</item>
 					<item chance="4">
-						<item id="17389" count="1" /> <!-- Specter Shooter -->
+						<item id="17389" count="1" /> <!-- Specter Guardian -->
 					</item>
 				</items>
 			</effect>

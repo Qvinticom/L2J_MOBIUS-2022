@@ -254,7 +254,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39515" toLevel="1" name="Fantasia Harmony - Ceremony of Chaos">
+	<skill id="39515" toLevel="1" name="Fantasia Harmony - Chaos Arena">
 		<!-- For PA. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, Critical Damage for standard attacks +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
 		<icon>icon.soul_spirit1</icon>
 		<operateType>A2</operateType>
@@ -347,17 +347,17 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39520" toLevel="3" name="Emperor's Special Cocktail">
-		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39521" toLevel="1" name="PA Emperor's Special Cocktail">
-		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="39522" toLevel="1" name="Emperor's Special Cocktail">
-		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
@@ -590,7 +590,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39539" toLevel="1" name="+5 Warrior's Circlet Box">
-		<!-- Obtain a +5 Circlet of Authority. -->
+		<!-- Obtain a +5 Warrior's Circlet. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -739,7 +739,7 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39561" toLevel="1" name="Effect of Security">
-		<!-- The effect for characters on accaunt using security service. P./ M. Def. +$s1, Attribute Resistance +$s2. -->
+		<!-- Granted for using the account protection feature. P./ M. Def. +$s1, Attribute Resistance +$s2. -->
 		<icon>icon.security_buff</icon>
 		<operateType>A1</operateType>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
@@ -837,7 +837,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39569" toLevel="1" name="Emperor's Special Cocktail">
-		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 	</skill>

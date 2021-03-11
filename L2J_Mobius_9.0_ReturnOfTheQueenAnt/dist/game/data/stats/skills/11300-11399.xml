@@ -1908,7 +1908,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11348" toLevel="8" name="Servitor Death Whisper">
+	<skill id="11348" toLevel="8" name="Final Servitor's Death Whisper">
 		<!-- For $s1, all servitors' Critical Damage for standard attacks +$s2. -->
 		<icon>icon.skill11348</icon>
 		<abnormalLevel>
@@ -2234,7 +2234,7 @@
 		</effects>
 	</skill>
 	<skill id="11352" toLevel="4" name="Arcane Ability">
-		<!-- Atk. Spd., P. Def. +$s1, and PvP Damage -$s2. -->
+		<!-- Atk. Spd./ P. Def. +$s1, received PvP damage -$s2. -->
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
 		<magicLevel>
@@ -3269,7 +3269,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11373" toLevel="11" name="Summon Dark Crusader">
+	<skill id="11373" toLevel="11" name="Summon Soul Specter">
 		<!-- Summons Dark Crusader. Consumes $s1 summon points. -->
 		<icon>icon.skill11373</icon>
 		<magicLevel>
@@ -3659,7 +3659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11380" toLevel="6" name="Power Stump">
+	<skill id="11380" toLevel="6" name="Power Stamp">
 		<!-- Deals physical damage to nearby enemies with $s1 power lifting them in the air. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30006</icon>
 		<abnormalLevel>1</abnormalLevel>

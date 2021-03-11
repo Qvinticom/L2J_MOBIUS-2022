@@ -27,7 +27,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39204" toLevel="2" name="Mysterious Weapon Enchant Scroll">
+	<skill id="39204" toLevel="2" name="Scroll: Enchant Mysterious Weapon">
 		<!-- A Mysterious Weapon Enchant Scroll. If enchantment fails, the weapon will be destroyed. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -96,13 +96,13 @@
 		<reuseDelay>500</reuseDelay>
 	</skill>
 	<skill id="39207" toLevel="1" name="Red Libra's Fortune Scroll">
-		<!-- For 30 min., damage +5%, Vitality bonus +50%. -->
+		<!-- For 30 min., damage +$s1, Acquired XP/ SP +$s2. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39208" toLevel="17" name="Red Libra's Adena Gift Box">
+	<skill id="39208" toLevel="17" name="Red Libra's +7 Agathion Charm Gift Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -208,7 +208,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39213" toLevel="1" name="Royal Santiago's Soup">
+	<skill id="39213" toLevel="1" name="Royal Santiago s Soup">
 		<!-- P./ M. Atk., Atk./ Casting Spd., Max HP/ MP +$s1 for 10 min. -->
 		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A2</operateType>
@@ -488,7 +488,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39225" toLevel="4" name="Masia's Guard Special Ability">
+	<skill id="39225" toLevel="4" name="Primary Skill: Agathion Masia's Guard">
 		<!-- As the agathion grows, Fixed Damage Resistance is increased. -->
 		<icon>icon.agathion_masia_guard_1</icon>
 		<operateType>P</operateType>

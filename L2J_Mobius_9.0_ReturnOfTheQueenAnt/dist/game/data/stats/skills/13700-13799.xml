@@ -254,7 +254,7 @@
 		</effects>
 	</skill>
 	<skill id="13704" toLevel="12" name="Item Skill: Power Multi Shot">
-		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. -->
+		<!-- Attacks the target and nearby enemies. Power $s1. -->
 		<icon>icon.skill3123</icon>
 		<magicLevel> <!-- Guessed -->
 			<value level="1">46</value>
@@ -2249,7 +2249,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13736" toLevel="9" name="Item Skill: XP Gain">
+	<skill id="13736" toLevel="9" name="Item Skill: Acquired XP">
 		<!-- Increases XP Gain by $s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2668,7 +2668,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13750" toLevel="9" name="Item Skill: SP Bonus">
+	<skill id="13750" toLevel="9" name="Item Skill: Acquired SP">
 		<!-- Increases SP Gain by $s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>

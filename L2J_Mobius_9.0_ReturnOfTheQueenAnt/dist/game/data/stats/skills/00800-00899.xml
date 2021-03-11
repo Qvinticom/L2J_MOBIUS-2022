@@ -1202,7 +1202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="819" toLevel="1" name="Evasion Chance">
+	<skill id="819" toLevel="1" name="Evasion Rate">
 		<!-- During Evasion, increases the rate of successfully striking the enemy's vital organs. -->
 		<icon>icon.skill0819</icon>
 		<magicLevel>74</magicLevel>
@@ -2193,7 +2193,7 @@
 		</effects>
 	</skill>
 	<skill id="849" toLevel="1" name="Dion Territory Benefaction">
-		<!-- DEX +1, and WIT +1. -->
+		<!-- DEX +1, WIT +1. -->
 		<icon>icon.weapon_fort_flag_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -2713,7 +2713,7 @@
 		</effects>
 	</skill>
 	<skill id="869" toLevel="9" name="Mercenary Power Strike">
-		<!-- Delivers a powerful blow that strikes the target with $s1 Power added to P. Atk. -->
+		<!-- Delivers a powerful blow that strikes the target with $s1 power. -->
 		<icon>icon.skill0003</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>

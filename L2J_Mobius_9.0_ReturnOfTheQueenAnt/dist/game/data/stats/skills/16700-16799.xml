@@ -264,7 +264,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16720" toLevel="1" name="Resistance Debuff - Residence">
+	<skill id="16720" toLevel="1" name="Debuff Resistance - Residence">
 		<!-- For $s1, Infection/ Obstruction/ Stupor/ Confusion Resistance +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
@@ -274,7 +274,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16721" toLevel="1" name="Mental Attack Resistance - Residence">
+	<skill id="16721" toLevel="1" name="Mental Resistance - Residence">
 		<!-- For $s1, Buff Cancel Resistance/ Debuff Resistance +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
@@ -1493,7 +1493,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16781" toLevel="1" name="Ring of Corruption">
-		<!-- Makkum rotates the device on his back to create a ring-shaped zone of corruption around himself. In the zone of corruption, users suffer $s1 damage per second, and speed is reduced by $s2. -->
+		<!-- Makkum rotates the device on his back to create a ring-shaped zone of corruption around himself. All targets in the area suffer $s1 damage per sec., and their Speed -$s2. -->
 		<icon>icon.skill11023</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1688,7 +1688,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16796" toLevel="1" name="Robe of Embryo">
-		<!-- For 10 sec., 80% of the physical damage inflicted on the enemy is recovered as HP at a certain probability. -->
+		<!-- For 10 sec., 80% of the inflicted physical damage is recovered as HP with a certain probability. -->
 		<icon>icon.skill1507</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>

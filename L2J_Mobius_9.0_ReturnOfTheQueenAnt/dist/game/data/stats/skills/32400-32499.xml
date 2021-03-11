@@ -281,7 +281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="32415" toLevel="1" name="Olympiad Harmony">
+	<skill id="32415" toLevel="1" name="Olympiad's Harmony">
 		<!-- A common buff for all Olympiad participants. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Critical Damage for standard attacks +$s5, M. Skill Critical Damage +$s6, Atk. Spd./ Casting Spd. +$s7, Attribute Attack +$s8, P. Def. +$s9, M. Def. +$s10, Shield Defense/ Shield Defense Rate +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13, received Critical Rate from standard attacks/ M. skills -$s14. -->
 		<icon>icon.olympiad_buff</icon>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
@@ -432,7 +432,7 @@
 		<castRange>900</castRange>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="32422" toLevel="1" name="Olympiad Harmony">
+	<skill id="32422" toLevel="1" name="Olympiad's Harmony">
 		<!-- A common buff for all Olympiad participants. For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Skill Critical Rate +$s4, Critical Damage for standard attacks +$s5, M. Skill Critical Damage +$s6, Atk. Spd./ Casting Spd. +$s7, Attribute Attack +$s8, P. Def. +$s9, M. Def. +$s10, Shield Defense/ Shield Defense Rate +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13, received Critical Rate from standard attacks/ M. skills -$s14. -->
 		<icon>icon.olympiad_buff</icon>
 		<operateType>A1</operateType>
@@ -492,7 +492,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32429" toLevel="1" name="Dark Arrow Rain">
-		<!-- Powerful Physical Attack Around Target (Archer Type) -->
+		<!-- Powerful AoE Physical Attack (Archer Type) -->
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<hitTime>3000</hitTime>
@@ -508,7 +508,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32431" toLevel="1" name="Blood Arrow Burst">
-		<!-- Powerful Physical Attack Around Target (Archer Type) -->
+		<!-- Powerful AoE Physical Attack (Archer Type) -->
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<hitTime>3000</hitTime>
@@ -755,14 +755,14 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="32459" toLevel="1" name="Screaming Death">
-		<!-- Physical range attack. -->
+		<!-- Physical AoE attack. -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32460" toLevel="1" name="Endless Pain">
-		<!-- Physical range attack. -->
+		<!-- Physical AoE attack. -->
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
 		<hitTime>1500</hitTime>
@@ -1173,7 +1173,7 @@
 		</effects>
 	</skill>
 	<skill id="32480" toLevel="1" name="Scale Floor">
-		<!-- Decreases P. Atk./ M. Atk./ Speed of nearby enemies by $s1. -->
+		<!-- Decreases P. Atk./ M. Atk./ Speed of nearby enemies for $s1 -->
 		<icon>icon.skill32498</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1346,7 +1346,7 @@
 		</effects>
 	</skill>
 	<skill id="32486" toLevel="1" name="Orfen Slasher">
-		<!-- Orfen's Normal Physical Range Attack -->
+		<!-- Orfen's Physical AoE Attack -->
 		<castRange>300</castRange>
 		<hitTime>1300</hitTime>
 		<coolTime>500</coolTime>
@@ -1367,7 +1367,7 @@
 		</effects>
 	</skill>
 	<skill id="32487" toLevel="1" name="Orfen Fatal Slasher">
-		<!-- Orfen's Powerful Physical Range Attack -->
+		<!-- Orfen's Powerful Physical AoE Attack -->
 		<castRange>300</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
@@ -1388,7 +1388,7 @@
 		</effects>
 	</skill>
 	<skill id="32488" toLevel="1" name="Orfen Energy Scatter">
-		<!-- Orfen's Normal Magic Range Attack -->
+		<!-- Orfen's Magic AoE Attack -->
 		<castRange>300</castRange>
 		<hitTime>1300</hitTime>
 		<coolTime>500</coolTime>

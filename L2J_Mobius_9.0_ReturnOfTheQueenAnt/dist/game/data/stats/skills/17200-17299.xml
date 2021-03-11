@@ -90,19 +90,19 @@
 		</effects>
 	</skill>
 	<skill id="17204" toLevel="1" name="Scroll: 100,000 SP">
-		<!-- Restores 100,000 SP. -->
+		<!-- SP +100,000. -->
 		<icon>icon.etc_sp_scroll1_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="17205" toLevel="1" name="Scroll: 1,000,000 SP">
-		<!-- Restores 1,000,000 SP. -->
+		<!-- SP +1,000,000. -->
 		<icon>icon.etc_sp_scroll2_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="17206" toLevel="1" name="Scroll: 10,000,000 SP">
-		<!-- Restores 10,000,000 SP. -->
+		<!-- SP +10,000,000. -->
 		<icon>icon.etc_sp_scroll3_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -195,7 +195,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17220" toLevel="1" name="Valiant Scroll">
-		<!-- Increases P. Atk. +10%, M. Atk. +21%, P. Def. +15%, M. Def. +15%, Max HP, MP, and CP +15%, and applied time +30 min. Does not disappear upon death. -->
+		<!-- For 30 min., P. Atk. +10%, M. Atk. +21%, P. Def. +15%, M. Def. +15%, Max HP/ MP/ CP +15%. Does not disappear after death. -->
 		<icon>icon.etc_cave_page_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -250,7 +250,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="17222" toLevel="2" name="Hero's SP Scroll (Experienced)">
+	<skill id="17222" toLevel="2" name="Hero's SP Scroll (Veteran)">
 		<icon>icon.etc_sp_scroll2_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -419,7 +419,7 @@
 	<skill id="17262" toLevel="1" name="Leona's Gift">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17263" toLevel="1" name="Hero's Quick HP Replenishing Potion">
+	<skill id="17263" toLevel="1" name="Hero s Quick HP Replenishing Potion">
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>1</magicLevel>
@@ -768,7 +768,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17294" toLevel="1" name="PA - Knight's Harmony">
+	<skill id="17294" toLevel="1" name="Knight's Harmony - PA">
 		<!-- For PA. For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense Rate +$s6, and Shield Defense +$s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -816,7 +816,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17295" toLevel="1" name="PA - Warrior's Harmony">
+	<skill id="17295" toLevel="1" name="Warrior's Harmony - PA">
 		<!-- For PA. For $s1, P. Atk. +$s2, Critical Rate for standard attacks +$s3, Critical Damage for standard attacks +$s4, Atk. Spd. +$s5. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -872,7 +872,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17296" toLevel="1" name="PA - Wizard's Harmony">
+	<skill id="17296" toLevel="1" name="Wizard's Harmony - PA">
 		<!-- PA only. For $s1, M. Atk. +$s2, M. Skill Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>

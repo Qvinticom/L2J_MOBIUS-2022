@@ -716,7 +716,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23212" toLevel="85" name="Flame Strike">
-		<!-- Hurls a fireball that causes a burning trail. Power $s1 -->
+		<!-- Sets the closest area on fire and hurls a fireball. Power $s1 -->
 		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1405,7 +1405,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23235" toLevel="1" name="Singer and Dancer Agathion Special Skill: Hunter's Song">
+	<skill id="23235" toLevel="1" name="Singer and Dancer Agathion Special Skill: Song of Hunter">
 		<!-- Increases critical attack rate by 100% for 2 min. Cooldown 20 min. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A2</operateType>

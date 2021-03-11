@@ -27,7 +27,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35102" toLevel="1" name="Dragon Mage- Balthus">
+	<skill id="35102" toLevel="1" name="Dragon Mage - Balthus">
 		<!-- Max HP/ MP/ CP +30% and Casting Spd. +30%. -->
 		<icon>icon.skill5860</icon>
 		<operateType>P</operateType>
@@ -1238,7 +1238,7 @@
 		<effectPoint>780</effectPoint>
 	</skill>
 	<skill id="35146" toLevel="1" name="Festival Fairy's Growth Scroll">
-		<!-- When used, for $s1 Vitality bonus +$s2. -->
+		<!-- For $s1, Vitality bonus +$s2. -->
 		<icon>icon.etc_charm_of_luck_i00</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1319,22 +1319,22 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35155" toLevel="5" name="Enchant Effect: Clan Cloak - War Lv. 1">
-		<!-- MEN $s1. -->
+		<!-- MEN $s1 -->
 		<icon>icon.alliance_cloak_pvp01</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35156" toLevel="5" name="Enchant Effect: Clan Cloak - War Lv. 2">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Debuff Resistance +$s9. -->
+		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Debuff Resistance +$s9 -->
 		<icon>icon.alliance_cloak_pvp02</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35157" toLevel="5" name="Enchant Effect: Clan Cloak - War Lv. 3">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Debuff Resistance +$s9, Recovery Potions' Effect +$s10. -->
+		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Debuff Resistance +$s9, Recovery Potions' Effect +$s10 -->
 		<icon>icon.alliance_cloak_pvp03</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35158" toLevel="5" name="Enchant Effect: Clan Cloak - War Lv. 4">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Debuff Resistance +$s9, Recovery Potions' Effect +$s10, received PvP Damage -$s11. -->
+		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Debuff Resistance +$s9, Recovery Potions' Effect +$s10, received PvP damage -$s11 -->
 		<icon>icon.alliance_cloak_pvp04</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1349,22 +1349,22 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35160" toLevel="5" name="Enchant Effect: Clan Cloak - War Lv. 2">
-		<!-- MEN $s1. -->
+		<!-- MEN $s1 -->
 		<icon>icon.alliance_cloak_pve01</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35161" toLevel="5" name="Enchant Effect: Clan Cloak - Combat Lv. 2">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Acquired XP/ SP +$s9 in Vitality state -->
+		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, acquired XP/ SP in the Vitality state +$s9 -->
 		<icon>icon.alliance_cloak_pve02</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35162" toLevel="5" name="Enchant Effect: Clan Cloak - Combat Lv. 3">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, Acquired XP/ SP +$s9 in Vitality state, Max HP +$s10 -->
+		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, acquired XP/ SP in the Vitality state +$s9, Max HP +$s10 -->
 		<icon>icon.alliance_cloak_pve03</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35163" toLevel="5" name="Enchant Effect: Clan Cloak - Combat Lv. 4">
-		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, acquired XP/ SP in Vitality state +$s9, Max HP +$s10, received PvE Damage -$s11. -->
+		<!-- STR $s1, DEX $s2, CON $s3, INT $s4, WIT $s5, MEN $s6, LUC $s7, CHA $s8, acquired XP/ SP in the Vitality state +$s9, Max HP +$s10, received PvE damage -$s11 -->
 		<icon>icon.alliance_cloak_pve04</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -2407,7 +2407,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35191" toLevel="1" name="Legend Infinity Shaper Special Ability">
+	<skill id="35191" toLevel="1" name="Special Ability: Legend's Infinity Shaper">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -2498,7 +2498,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35192" toLevel="1" name="Legend Infinity Cutter Special Ability">
+	<skill id="35192" toLevel="1" name="Special Ability: Legend's Infinity Cutter">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -2589,7 +2589,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35193" toLevel="1" name="Legend Infinity Slasher Special Ability">
+	<skill id="35193" toLevel="1" name="Special Ability: Legend's Infinity Slasher">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -2680,7 +2680,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35194" toLevel="1" name="Legend Infinity Avenger Special Ability">
+	<skill id="35194" toLevel="1" name="Special Ability: Legend's Infinity Avenger">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -2771,7 +2771,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35195" toLevel="1" name="Legend Infinity Fighter Special Ability">
+	<skill id="35195" toLevel="1" name="Special Ability: Legend's Infinity Fighter">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -2862,7 +2862,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35196" toLevel="1" name="Legend Infinity Stormer Special Ability">
+	<skill id="35196" toLevel="1" name="Special Ability: Legend's Infinity Stormer">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -2951,7 +2951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35197" toLevel="1" name="Legend Infinity Thrower Special Ability">
+	<skill id="35197" toLevel="1" name="Special Ability: Legend's Infinity Thrower">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -3042,7 +3042,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35198" toLevel="1" name="Legend Infinity Shooter Special Ability">
+	<skill id="35198" toLevel="1" name="Special Ability: Legend's Infinity Guardian">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_infinity_shooter_i01</icon>
 		<operateType>P</operateType>
@@ -3131,7 +3131,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35199" toLevel="1" name="Legend Infinity Buster Special Ability">
+	<skill id="35199" toLevel="1" name="Special Ability: Legend's Infinity Buster">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>

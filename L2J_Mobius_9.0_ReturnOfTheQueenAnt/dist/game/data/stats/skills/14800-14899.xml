@@ -45,7 +45,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14801" toLevel="1" name="Resistance Debuff - GM's Blessing">
+	<skill id="14801" toLevel="1" name="Debuff Resistance - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Infection/ Obstruction/ Stupor/ Confusion Resistance +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
@@ -86,7 +86,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14802" toLevel="1" name="Mental Attack Resistance - GM's Blessing">
+	<skill id="14802" toLevel="1" name="Mental Resistance - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to buff-canceling/ debuff attacks +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
@@ -636,7 +636,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14830" toLevel="9" name="Gratitude Burst">
+	<skill id="14830" toLevel="9" name="Gray Explosion">
 		<!-- Attacks nearby targets with a reverent heart with $s1 power. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>

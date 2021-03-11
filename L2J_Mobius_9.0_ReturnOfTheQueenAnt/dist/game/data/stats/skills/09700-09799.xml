@@ -237,7 +237,7 @@
 		</effects>
 	</skill>
 	<skill id="9714" toLevel="1" name="Heroes' Power">
-		<!-- Use to obtain Shooter Imbued with Heroes' Power (2-hr). Needs Scroll Imbued with Heroes' Power. -->
+		<!-- Double-click to obtain Hero's Power Guardian (2-hour). (It can only be used if you have Hero's Power Scroll.) -->
 		<icon>icon.etc_kalie_hero_scroll</icon>
 		<itemConsumeId>36221</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -383,7 +383,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9721" toLevel="1" name="Boss Accessory Pack">
+	<skill id="9721" toLevel="1" name="Boss' Accessory Pack">
 		<itemConsumeId>36234</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>

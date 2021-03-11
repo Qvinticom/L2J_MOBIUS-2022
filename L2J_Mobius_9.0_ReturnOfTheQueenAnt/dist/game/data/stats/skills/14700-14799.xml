@@ -385,7 +385,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLevel>1</magicLevel>
 	</skill>
-	<skill id="14736" toLevel="1" name="Light Heal">
+	<skill id="14736" toLevel="1" name="Holy Cure">
 		<!-- Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP. -->
 		<icon>icon.skill11755</icon>
 		<castRange>600</castRange>
@@ -1750,7 +1750,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14789" toLevel="1" name="Resistance Debuff - GM's Blessing">
+	<skill id="14789" toLevel="1" name="Debuff Resistance - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Infection/ Obstruction/ Stupor/ Confusion Resistance +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
@@ -1791,7 +1791,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14790" toLevel="1" name="Mental Attack Resistance - GM's Blessing">
+	<skill id="14790" toLevel="1" name="Mental Resistance - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to buff-canceling/ debuff attacks +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>

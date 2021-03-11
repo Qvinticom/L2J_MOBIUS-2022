@@ -441,7 +441,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="32930" toLevel="1" name="More Adena">
-		<!-- Amount of received adena is increased by $s1. -->
+		<!-- For $s1, the amount of received adena is increased. -->
 		<icon>icon.buff_inc_adena</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -539,7 +539,7 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
 	</skill>
-	<skill id="32941" toLevel="1" name="Magical Attack">
+	<skill id="32941" toLevel="1" name="Magic Attack">
 		<!-- Ranged Magic-type Monsters' Powerful Single Target Physical Attack Skill -->
 		<icon>icon.skill1417</icon>
 		<operateType>A1</operateType>
@@ -636,7 +636,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32959" toLevel="1" name="Mass Stun">
+	<skill id="32959" toLevel="1" name="AoE Stun">
 		<!-- Attacks nearby enemies and stuns them for $s1 Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -731,7 +731,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32978" toLevel="1" name="Critical Krofins' Death">
-		<!-- Because of Krofins' Poison, makes target lose $s2 HP for $s1 -->
+		<!-- Krofins' poison makes the target lose $s2 HP for $s1 -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -830,11 +830,11 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32998" toLevel="1" name="Adena Boost_Test">
-		<!-- Amount of received adena is increased by $s1. -->
+		<!-- For $s1, the amount of received adena is increased. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="32999" toLevel="3" name="Chuchu's Basic Skill">
+	<skill id="32999" toLevel="3" name="Chuchu's Basic Ability">
 		<!-- Restores Vitality when killing monsters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>

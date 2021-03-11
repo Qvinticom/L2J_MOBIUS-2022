@@ -892,7 +892,7 @@
 		</effects>
 	</skill>
 	<skill id="10011" toLevel="10" name="Shield Impact">
-		<!-- Attacks enemies at the front with $s1 power and pushes them away for a short distance. There is a chance to cancel enemies' targets. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
+		<!-- Attacks enemies at the front with $s1 power and knocks them down. There is a chance to cancel enemies' targets. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill10012</icon>
 		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
@@ -2985,7 +2985,7 @@
 		</effects>
 	</skill>
 	<skill id="10044" toLevel="10" name="Superior Elemental Mastery">
-		<!-- Attribute Resistance +$s1. STR +$s2. -->
+		<!-- Attribute Resistance +$s1. Additionally, STR +$s2. -->
 		<icon>icon.skill10044</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>
@@ -4953,7 +4953,7 @@
 		</effects>
 	</skill>
 	<skill id="10076" toLevel="4" name="Grand Othellot's Wave">
-		<!-- P./ M. Def. +$s1, Shield Defense +$s2, Attribute Resistance +$s3, and Skill Cooldown -$s4. If Shield Block is cast as well, Eva's Presence is activated on allies. -->
+		<!-- P./ M. Def. +$s1, Shield Defense +$s2, Attribute Resistance +$s3, Skill Cooldown -$s4. Additionally, when using shielding skills, allies are granted the Eva's Presence effect. -->
 		<icon>icon.skill10076</icon>
 		<operateType>P</operateType>
 		<magicLevel>

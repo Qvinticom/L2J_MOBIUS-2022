@@ -1252,7 +1252,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4621" toLevel="12" name="Drain Energy">
+	<skill id="4621" toLevel="12" name="Drain HP">
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1315,7 +1315,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4622" toLevel="12" name="Drain Energy">
+	<skill id="4622" toLevel="12" name="Drain HP">
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1378,7 +1378,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4623" toLevel="12" name="Drain Energy">
+	<skill id="4623" toLevel="12" name="Drain HP">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -1702,7 +1702,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4629" toLevel="12" name="Drain Energy">
+	<skill id="4629" toLevel="12" name="Drain HP">
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
@@ -2385,7 +2385,7 @@
 		</effects>
 	</skill>
 	<skill id="4639" toLevel="3" name="Acumen+Empower+Berserker">
-		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5 -->
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Speed +$s5, P. Def. $s6, M. Def. $s7. -->
 		<abnormalLevel>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3811,7 +3811,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4664" toLevel="12" name="Drain Energy">
+	<skill id="4664" toLevel="12" name="Drain HP">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3886,7 +3886,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4665" toLevel="12" name="Drain Energy">
+	<skill id="4665" toLevel="12" name="Drain HP">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3961,7 +3961,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4666" toLevel="12" name="Drain Energy">
+	<skill id="4666" toLevel="12" name="Drain HP">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -4036,7 +4036,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4667" toLevel="12" name="Drain Energy">
+	<skill id="4667" toLevel="12" name="Drain HP">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4111,7 +4111,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4668" toLevel="12" name="Drain Energy">
+	<skill id="4668" toLevel="12" name="Drain HP">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4186,7 +4186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4669" toLevel="12" name="Drain Energy">
+	<skill id="4669" toLevel="12" name="Drain HP">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>

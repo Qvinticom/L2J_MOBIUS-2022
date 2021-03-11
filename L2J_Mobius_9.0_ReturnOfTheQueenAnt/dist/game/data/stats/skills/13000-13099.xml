@@ -1487,7 +1487,7 @@
 		</effects>
 	</skill>
 	<skill id="13036" toLevel="1" name="Holy Resistance">
-		<!-- Increases Holy Resistance by 5. -->
+		<!-- Holy Resistance +5. -->
 		<icon>icon.skill4337</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1565,7 +1565,7 @@
 		</effects>
 	</skill>
 	<skill id="13042" toLevel="1" name="Holy Resistance">
-		<!-- Increases Holy Resistance by 10. -->
+		<!-- Holy Resistance +10. -->
 		<icon>icon.skill4337</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1883,7 +1883,7 @@
 			<effect name="EnableCloak" />
 		</effects>
 	</skill>
-	<skill id="13064" toLevel="4" name="Set Effect - Immortal Heavy Armor, 2-piece (Defense)">
+	<skill id="13064" toLevel="4" name="Set Effect - Immortal Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t501_u_i00</icon>
 		<operateType>P</operateType>
@@ -1996,7 +1996,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13065" toLevel="4" name="Set Effect - Immortal Heavy Armor, 2-piece (Attack)">
+	<skill id="13065" toLevel="4" name="Set Effect - Immortal Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t501_u_i00</icon>
 		<operateType>P</operateType>
@@ -2105,7 +2105,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13066" toLevel="4" name="Set Effect - Twilight Heavy Armor, 2-piece (Defense)">
+	<skill id="13066" toLevel="4" name="Set Effect - Twilight Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t601_u_i00</icon>
 		<operateType>P</operateType>
@@ -2231,7 +2231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13067" toLevel="4" name="Set Effect - Twilight Heavy Armor, 2-piece (Attack)">
+	<skill id="13067" toLevel="4" name="Set Effect - Twilight Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t601_u_i00</icon>
 		<operateType>P</operateType>
@@ -2374,7 +2374,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13068" toLevel="4" name="Set Effect - Seraph Heavy Armor, 2-piece (Defense)">
+	<skill id="13068" toLevel="4" name="Set Effect - Seraph Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t401_u_i00</icon>
 		<operateType>P</operateType>
@@ -2500,7 +2500,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13069" toLevel="4" name="Set Effect - Seraph Heavy Armor, 2-piece (Attack)">
+	<skill id="13069" toLevel="4" name="Set Effect - Seraph Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t401_u_i00</icon>
 		<operateType>P</operateType>
@@ -2622,7 +2622,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13070" toLevel="4" name="Set Effect - Eternal Heavy Armor, 2-piece (Defense)">
+	<skill id="13070" toLevel="4" name="Set Effect - Eternal Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t701_u_i00</icon>
 		<operateType>P</operateType>
@@ -2748,7 +2748,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13071" toLevel="4" name="Set Effect - Eternal Heavy Armor, 2-piece (Attack)">
+	<skill id="13071" toLevel="4" name="Set Effect - Eternal Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t701_u_i00</icon>
 		<operateType>P</operateType>
@@ -2865,7 +2865,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13072" toLevel="4" name="Set Effect - R99 Rare Heavy Armor, 2-piece (Defense)">
+	<skill id="13072" toLevel="4" name="Set Effect - R99 Rare Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
@@ -2990,7 +2990,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13073" toLevel="4" name="Set Effect - R99 Rare Heavy Armor, 2-piece (Attack)">
+	<skill id="13073" toLevel="4" name="Set Effect - R99 Rare Heavy Armor, 2-piece">
 		<!-- STR +$s1, CON +$s2. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
@@ -3121,7 +3121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13074" toLevel="4" name="Set Effect - Immortal Light Armor, 2-piece (Assassin)">
+	<skill id="13074" toLevel="4" name="Set Effect - Immortal Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t502_u_i00</icon>
 		<operateType>P</operateType>
@@ -3233,7 +3233,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13075" toLevel="4" name="Set Effect - Immortal Light Armor, 2-piece (Enchant)">
+	<skill id="13075" toLevel="4" name="Set Effect - Immortal Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t502_u_i00</icon>
 		<operateType>P</operateType>
@@ -3366,7 +3366,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13076" toLevel="4" name="Set Effect - Twilight Light Armor, 2-piece (Assassin)">
+	<skill id="13076" toLevel="4" name="Set Effect - Twilight Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t602_u_i00</icon>
 		<operateType>P</operateType>
@@ -3481,7 +3481,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13077" toLevel="4" name="Set Effect - Twilight Light Armor, 2-piece (Enchant)">
+	<skill id="13077" toLevel="4" name="Set Effect - Twilight Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t602_u_i00</icon>
 		<operateType>P</operateType>
@@ -3641,7 +3641,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13078" toLevel="4" name="Set Effect - Seraph Light Armor, 2-piece (Assassin)">
+	<skill id="13078" toLevel="4" name="Set Effect - Seraph Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t402_u_i00</icon>
 		<operateType>P</operateType>
@@ -3766,7 +3766,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13079" toLevel="4" name="Set Effect - Seraph Light Armor, 2-piece (Enchant)">
+	<skill id="13079" toLevel="4" name="Set Effect - Seraph Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t402_u_i00</icon>
 		<operateType>P</operateType>
@@ -3923,7 +3923,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13080" toLevel="4" name="Set Effect - Eternal Light Armor, 2-piece (Assassin)">
+	<skill id="13080" toLevel="4" name="Set Effect - Eternal Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t702_u_i00</icon>
 		<operateType>P</operateType>
@@ -4043,7 +4043,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13081" toLevel="4" name="Set Effect - Eternal Light Armor, 2-piece (Enchant)">
+	<skill id="13081" toLevel="4" name="Set Effect - Eternal Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t702_u_i00</icon>
 		<operateType>P</operateType>
@@ -4194,7 +4194,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13082" toLevel="4" name="Set Effect - R99 Rare Light Armor, 2-piece (Assassin)">
+	<skill id="13082" toLevel="4" name="Set Effect - R99 Rare Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t702_u_i00</icon>
 		<operateType>P</operateType>
@@ -4320,7 +4320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13083" toLevel="4" name="Set Effect - R99 Rare Light Armor, 2-piece (Enchant)">
+	<skill id="13083" toLevel="4" name="Set Effect - R99 Rare Light Armor, 2-piece">
 		<!-- STR +$s1, DEX +$s2. -->
 		<icon>icon.armor_t702_u_i00</icon>
 		<operateType>P</operateType>
@@ -4462,7 +4462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13084" toLevel="4" name="Set Effect - Immortal Robe, 2-piece (Magic)">
+	<skill id="13084" toLevel="4" name="Set Effect - Immortal Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t503_u_i00</icon>
 		<operateType>P</operateType>
@@ -4573,7 +4573,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13085" toLevel="4" name="Set Effect - Immortal Robe, 2-piece (Recovery)">
+	<skill id="13085" toLevel="4" name="Set Effect - Immortal Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t503_u_i00</icon>
 		<operateType>P</operateType>
@@ -4700,7 +4700,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13086" toLevel="4" name="Set Effect - Twilight Robe, 2-piece (Magic)">
+	<skill id="13086" toLevel="4" name="Set Effect - Twilight Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t603_u_i00</icon>
 		<operateType>P</operateType>
@@ -4815,7 +4815,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13087" toLevel="4" name="Set Effect - Twilight Robe, 2-piece (Recovery)">
+	<skill id="13087" toLevel="4" name="Set Effect - Twilight Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t603_u_i00</icon>
 		<operateType>P</operateType>
@@ -4946,7 +4946,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13088" toLevel="4" name="Set Effect - Seraph Robe, 2-piece (Magic)">
+	<skill id="13088" toLevel="4" name="Set Effect - Seraph Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t403_u_i00</icon>
 		<operateType>P</operateType>
@@ -5061,7 +5061,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13089" toLevel="4" name="Set Effect - Seraph Robe, 2-piece (Recovery)">
+	<skill id="13089" toLevel="4" name="Set Effect - Seraph Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t403_u_i00</icon>
 		<operateType>P</operateType>
@@ -5201,7 +5201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13090" toLevel="4" name="Set Effect - Eternal Robe, 2-piece (Magic)">
+	<skill id="13090" toLevel="4" name="Set Effect - Eternal Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t703_u_i00</icon>
 		<operateType>P</operateType>
@@ -5325,7 +5325,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13091" toLevel="4" name="Set Effect - Eternal Robe, 2-piece (Recovery)">
+	<skill id="13091" toLevel="4" name="Set Effect - Eternal Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t703_u_i00</icon>
 		<operateType>P</operateType>
@@ -5464,7 +5464,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13092" toLevel="4" name="Set Effect - R99 Rare Robe, 2-piece (Magic)">
+	<skill id="13092" toLevel="4" name="Set Effect - R99 Rare Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t703_u_i00</icon>
 		<operateType>P</operateType>
@@ -5578,7 +5578,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13093" toLevel="4" name="Set Effect - R99 Rare Robe, 2-piece (Recovery)">
+	<skill id="13093" toLevel="4" name="Set Effect - R99 Rare Robe, 2-piece">
 		<!-- INT +$s1, CON +$s2. -->
 		<icon>icon.armor_t703_u_i00</icon>
 		<operateType>P</operateType>

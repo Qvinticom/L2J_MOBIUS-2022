@@ -30,7 +30,7 @@
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpCheckSkill">
-				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
+				<skillId>17701</skillId> <!-- Topaz - Spirit Hit -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -395,7 +395,7 @@
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpCheckSkill">
-				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
+				<skillId>17701</skillId> <!-- Topaz - Spirit Hit -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -685,7 +685,7 @@
 		</effects>
 	</skill>
 	<skill id="27829" toLevel="3" name="Vital Stone Augment">
-		<!-- Vitality Bonus +$s1. -->
+		<!-- Vitality bonus +$s1. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -1131,7 +1131,7 @@
 		<isMagic>4</isMagic>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="27865" toLevel="24" name="Blessing of Bliss Lv. 1">
+	<skill id="27865" toLevel="24" name="Blessing of Bliss">
 		<!-- You can obtain the reward in $s1 h. There are $s2 buff levels. When the Lv. 1 buff expires, the Lv. 2 one applies, and so on. The effect remains after death, dual class/ subclass change, and after teleporting to the Olympiad and the Ceremony of Chaos. Note! If you're dead when the buff expired, you won't get a reward and a new buff. Also you must have free space in your inventory. -->
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>A1</operateType>
@@ -1361,14 +1361,14 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
+				<skillId>27886</skillId> <!-- Elmoreden Spirit Hit -->
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="11" toLevel="14">
 				<chance>40</chance>
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
+				<skillId>27886</skillId> <!-- Elmoreden Spirit Hit -->
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="15" toLevel="18">
@@ -1376,7 +1376,7 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
+				<skillId>27886</skillId> <!-- Elmoreden Spirit Hit -->
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="19" toLevel="20">
@@ -1384,7 +1384,7 @@
 				<targetType>ENEMY</targetType>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<skillId>27886</skillId> <!-- Elmoreden Spirit Shot -->
+				<skillId>27886</skillId> <!-- Elmoreden Spirit Hit -->
 				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -2209,7 +2209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27886" toLevel="4" name="Elmoreden Spirit Shot">
+	<skill id="27886" toLevel="4" name="Elmoreden Spirit Hit">
 		<!-- Ignores the target's CP and inflicts $s1 damage in PvP. -->
 		<icon>icon.skill0049</icon>
 		<operateType>A1</operateType>

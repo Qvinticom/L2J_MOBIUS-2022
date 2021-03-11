@@ -6,7 +6,7 @@
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpCheckSkill">
-				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
+				<skillId>17701</skillId> <!-- Topaz - Spirit Hit -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -372,7 +372,7 @@
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpCheckSkill">
-				<skillId>17701</skillId> <!-- Topaz - Spiritshot -->
+				<skillId>17701</skillId> <!-- Topaz - Spirit Hit -->
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
@@ -780,7 +780,7 @@
 	<skill id="35031" toLevel="1" name="Extra Pass: Altar of Shillien">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="35032" toLevel="1" name="Summon Virgo Agathion">
+	<skill id="35032" toLevel="1" name="Summon Agathion Virgo">
 		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -795,7 +795,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35033" toLevel="1" name="Summon Virgo Agathion">
+	<skill id="35033" toLevel="1" name="Summon Agathion Virgo">
 		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -810,7 +810,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35034" toLevel="1" name="Summon Capricorn Agathion">
+	<skill id="35034" toLevel="1" name="Summon Agathion Capricorn">
 		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -825,7 +825,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35035" toLevel="1" name="Summon Libra Agathion">
+	<skill id="35035" toLevel="1" name="Summon Agathion Libra">
 		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -840,7 +840,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35036" toLevel="1" name="Summon Aries Agathion">
+	<skill id="35036" toLevel="1" name="Summon Agathion Aries">
 		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -855,7 +855,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35037" toLevel="1" name="Summon Taurus Agathion">
+	<skill id="35037" toLevel="1" name="Summon Agathion Taurus">
 		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -870,7 +870,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35038" toLevel="1" name="Summon Leo Agathion">
+	<skill id="35038" toLevel="1" name="Summon Agathion Leo">
 		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -885,7 +885,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35039" toLevel="1" name="Summon Gemini Agathion">
+	<skill id="35039" toLevel="1" name="Summon Agathion Gemini">
 		<!-- Summons Agathion Gemini. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -900,7 +900,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35040" toLevel="1" name="Summon Scorpio Agathion">
+	<skill id="35040" toLevel="1" name="Summon Agathion Scorpio">
 		<!-- Summons Agathion Scorpio. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -915,7 +915,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35041" toLevel="1" name="Summon Aquarius Agathion">
+	<skill id="35041" toLevel="1" name="Summon Agathion Aquarius">
 		<!-- Summons Agathion Aquarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -930,7 +930,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35042" toLevel="1" name="Summon Pisces Agathion">
+	<skill id="35042" toLevel="1" name="Summon Agathion Pisces">
 		<!-- Summons Agathion Pisces. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -945,7 +945,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35043" toLevel="1" name="Summon Sagittarius Agathion">
+	<skill id="35043" toLevel="1" name="Summon Agathion Sagittarius">
 		<!-- Summons Agathion Sagittarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -960,7 +960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35044" toLevel="1" name="Summon Cancer Agathion">
+	<skill id="35044" toLevel="1" name="Summon Agathion Cancer">
 		<!-- Summons Agathion Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -1911,7 +1911,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35054" toLevel="22" name="Agathion Pisces' Unique Ability">
+	<skill id="35054" toLevel="22" name="Secondary Skill: Agathion Pisces">
 		<!-- Casting Spd. is increased, when the agathion grows. -->
 		<icon>icon.agathion_pis_star_1</icon>
 		<operateType>P</operateType>
@@ -2533,7 +2533,7 @@
 		</effects>
 	</skill>
 	<skill id="35067" toLevel="8" name="Primary Skill: Agathion Sagittarius">
-		<!-- Dagger Attack Resistance is increased, when the agathion grows. -->
+		<!-- Dagger Resistance is increased, when the agathion grows. -->
 		<icon>icon.agathion_sag_star_1</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2651,7 +2651,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="35077" toLevel="1" name="Lantern Agathion's Gift">
+	<skill id="35077" toLevel="1" name="Agathion Chorong's Gift">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35078" toLevel="1" name="Elementary Seed Bracelet">
@@ -3061,7 +3061,7 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="35093" toLevel="1" name="Summon Agathion Lantern">
+	<skill id="35093" toLevel="1" name="Summon Agathion Chorong">
 		<!-- Summons an agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="35200" toLevel="1" name="Legend Infinity Caster Special Ability">
+	<skill id="35200" toLevel="1" name="Special Ability: Legend's Infinity Caster">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -76,7 +76,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35201" toLevel="1" name="Legend Infinity Retributer Special Ability">
+	<skill id="35201" toLevel="1" name="Special Ability: Legend's Infinity Retributer">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -150,7 +150,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35202" toLevel="1" name="Legend Infinity Dual Sword Special Ability">
+	<skill id="35202" toLevel="1" name="Special Ability: Legend's Infinity Dual Swords">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
@@ -224,7 +224,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35203" toLevel="1" name="Legend Infinity Dual Dagger Special Ability">
+	<skill id="35203" toLevel="1" name="Special Ability: Legend's Infinity Dual Daggers">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_r_dualdagger_i01</icon>
 		<operateType>P</operateType>
@@ -298,7 +298,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35204" toLevel="1" name="Legend Infinity Dual Blunt Weapon Special Ability">
+	<skill id="35204" toLevel="1" name="Special Ability: Legend's Infinity Dual Blunt Weapons">
 		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
 		<icon>icon.weapon_r_dualblunt_i01</icon>
 		<operateType>P</operateType>
@@ -499,7 +499,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="35211" toLevel="11" name="Angel's Necklace">
-		<!-- Angel's Necklace. Enchanting adds special effects. -->
+		<!-- Infection/ Confusion Resistance +$s1. -->
 		<icon>icon.elemental_necklace_wind_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -669,7 +669,7 @@
 		</effects>
 	</skill>
 	<skill id="35213" toLevel="11" name="Angel's Earring">
-		<!-- Enchanting the earring activates special effects. -->
+		<!-- Stupor/ Confusion Resistance +$s1. -->
 		<icon>icon.accessary_angel_of_earing</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2272,7 +2272,7 @@
 		</effects>
 	</skill>
 	<skill id="35227" toLevel="1" name="Artifact Set Effect Lv. 1">
-		<!-- Damage +$s1, Received Damage -$s2. -->
+		<!-- Damage +$s1, received damage -$s2. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2313,7 +2313,7 @@
 		</effects>
 	</skill>
 	<skill id="35228" toLevel="1" name="Artifact Set Effect Lv. 2">
-		<!-- Damage +$s1, Received Damage -$s2. -->
+		<!-- Damage +$s1, received damage -$s2. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2354,7 +2354,7 @@
 		</effects>
 	</skill>
 	<skill id="35229" toLevel="1" name="Artifact Set Effect Lv. 3">
-		<!-- Damage +$s1, received damage -$s2, all stats +$s3. -->
+		<!-- Damage +$s1, received damage -$s2, all stats $s3. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3760,7 +3760,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35284" toLevel="1" name="Enhancement Effect: Krishna Shooter">
+	<skill id="35284" toLevel="1" name="Enhancement Effect: Krishna Guardian">
 		<!-- P. Skill Critical Damage +$s1, P. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_crossbow_i00</icon>
 		<operateType>P</operateType>
@@ -4406,7 +4406,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35296" toLevel="1" name="Krishna Cutter Special Ability">
+	<skill id="35296" toLevel="1" name="Special Ability: Krishna Cutter">
 		<!-- P. Accuracy +$s1, Critical Rate for standard attacks +$s2. -->
 		<icon>icon.weapon_r110_onehand_sword_i00</icon>
 		<operateType>P</operateType>
@@ -4423,7 +4423,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35297" toLevel="1" name="Krishna Slasher Special Ability">
+	<skill id="35297" toLevel="1" name="Special Ability: Krishna Slasher">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.weapon_r110_twohand_sword_i00</icon>
 		<operateType>P</operateType>
@@ -4436,7 +4436,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35298" toLevel="1" name="Krishna Avenger Special Ability">
+	<skill id="35298" toLevel="1" name="Special Ability: Krishna Avenger">
 		<!-- P. Accuracy +$s1, P./ M. Skill Power +$s2. -->
 		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
 		<operateType>P</operateType>
@@ -4457,7 +4457,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35299" toLevel="1" name="Krishna Shaper Special Ability">
+	<skill id="35299" toLevel="1" name="Special Ability: Krishna Shaper">
 		<!-- P. Accuracy +$s1, P. Skill Critical Damage +$s2. -->
 		<icon>icon.weapon_r110_dagger_i00</icon>
 		<operateType>P</operateType>

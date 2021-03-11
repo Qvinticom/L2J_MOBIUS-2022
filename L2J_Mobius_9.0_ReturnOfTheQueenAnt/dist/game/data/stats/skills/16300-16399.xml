@@ -155,7 +155,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16326" toLevel="1" name="Phoenix Rush">
-		<!-- Rush toward enemy and inflict damage. -->
+		<!-- Rushes towards the enemy inflicting damage. -->
 		<icon>icon.skill6041</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -497,8 +497,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16357" toLevel="3" name="Dimensional Barrier">
-		<!-- Increases the monster's P./ M. Atk. and P./ M. Def. -->
+	<skill id="16357" toLevel="3" name="Dimensional Warp">
+		<!-- Increases the monster's P. Atk., M. Atk., P. Def. and M. Def. -->
 		<icon>icon.skill0335</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -507,17 +507,17 @@
 		<icon>icon.skill0329</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16359" toLevel="1" name="Dimensional Warp Hold">
+	<skill id="16359" toLevel="1" name="Dimensional Warp: Hold">
 		<!-- Resistance to Hold. -->
 		<icon>icon.skill0387</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16360" toLevel="1" name="Dimensional Warp Paralysis">
+	<skill id="16360" toLevel="1" name="Dimensional Warp: Paralysis">
 		<!-- Resistance to Paralysis. -->
 		<icon>icon.skill19005</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16361" toLevel="1" name="Dimensional Warp Stun">
+	<skill id="16361" toLevel="1" name="Dimensional Warp: Stun">
 		<!-- Resistance to Stun. -->
 		<icon>icon.skill19004</icon>
 		<operateType>P</operateType>
@@ -527,12 +527,12 @@
 		<icon>icon.skill_tough_spirit</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16363" toLevel="1" name="Dimensioal Warp Aerial Yoke">
+	<skill id="16363" toLevel="1" name="Dimensional Warp: Aerial Yoke">
 		<!-- Resistance to Aerial Yoke. -->
 		<icon>icon.skill_heavy_heart</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16364" toLevel="1" name="Dimensional Warp Pull/ Danger Zone">
+	<skill id="16364" toLevel="1" name="Dimensional Warp: Pull / Danger Zone">
 		<!-- Resistance to Pull/ Danger Zone. -->
 		<icon>icon.skill0388</icon>
 		<operateType>P</operateType>
@@ -608,7 +608,7 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16372" toLevel="2" name="Dimensional Spike">
-		<!-- Attacks target with 200 Power added to M. Atk. -->
+		<!-- Deals magic damage to the target. Power 200. -->
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>

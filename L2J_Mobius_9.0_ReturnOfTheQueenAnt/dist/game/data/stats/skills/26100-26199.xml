@@ -322,7 +322,7 @@
 		</effects>
 	</skill>
 	<skill id="26118" toLevel="12" name="Healing Light">
-		<!-- Restores all party members' HP/ MP/ CP and has a chance of dispelling their debuffs. -->
+		<!-- Recovers party members' HP/ MP/ CP and has a chance of dispelling their debuffs. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_aug_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -931,7 +931,7 @@
 							<item id="18075" count="1" /> <!-- Blessed Helios Thrower -->
 						</item>
 						<item chance="7.14285">
-							<item id="18076" count="1" /> <!-- Blessed Helios Shooter -->
+							<item id="18076" count="1" /> <!-- Blessed Helios Guardian -->
 						</item>
 						<item chance="7.14285">
 							<item id="18077" count="1" /> <!-- Blessed Helios Buster -->
@@ -1041,13 +1041,13 @@
 	<skill id="26137" toLevel="1" name="Luck Box 3">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26138" toLevel="1" name="Low Quality Agathion Virgo Box">
+	<skill id="26138" toLevel="1" name="Low-grade Agathion Virgo Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26139" toLevel="1" name="Mid-grade Agathion Virgo Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26140" toLevel="1" name="High Quality Agathion Virgo Box">
+	<skill id="26140" toLevel="1" name="High-grade Agathion Virgo Box">
 		<itemConsumeId>24153</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1078,13 +1078,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26141" toLevel="1" name="Low Quality Agathion Capricorn Box">
+	<skill id="26141" toLevel="1" name="Low-grade Agathion Capricorn Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26142" toLevel="1" name="Mid-grade Agathion Capricorn Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26143" toLevel="1" name="High Quality Agathion Capricorn Box">
+	<skill id="26143" toLevel="1" name="High-grade Agathion Capricorn Box">
 		<itemConsumeId>24156</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1115,13 +1115,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26144" toLevel="1" name="Low Quality Agathion Libra Box">
+	<skill id="26144" toLevel="1" name="Low-grade Agathion Libra Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26145" toLevel="1" name="Mid-grade Agathion Libra Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26146" toLevel="1" name="High Quality Agathion Libra Box">
+	<skill id="26146" toLevel="1" name="High-grade Agathion Libra Box">
 		<itemConsumeId>24159</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1152,13 +1152,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26147" toLevel="1" name="Low Quality Agathion Aries Box">
+	<skill id="26147" toLevel="1" name="Low-grade Agathion Aries Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26148" toLevel="1" name="Mid-grade Agathion Aries Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26149" toLevel="1" name="High Quality Agathion Aries Box">
+	<skill id="26149" toLevel="1" name="High-grade Agathion Aries Box">
 		<itemConsumeId>24162</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1189,13 +1189,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26150" toLevel="1" name="Low Quality Agathion Taurus Box">
+	<skill id="26150" toLevel="1" name="Low-grade Agathion Taurus Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26151" toLevel="1" name="Mid-grade Agathion Taurus Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26152" toLevel="1" name="High Quality Agathion Taurus Box">
+	<skill id="26152" toLevel="1" name="High-grade Agathion Taurus Box">
 		<itemConsumeId>24165</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1226,13 +1226,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26153" toLevel="1" name="Low Quality Agathion Leo Box">
+	<skill id="26153" toLevel="1" name="Low-grade Agathion Leo Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26154" toLevel="1" name="Mid-grade Agathion Leo Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26155" toLevel="1" name="High Quality Agathion Leo Box">
+	<skill id="26155" toLevel="1" name="High-grade Agathion Leo Box">
 		<itemConsumeId>24168</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1263,13 +1263,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26156" toLevel="1" name="Low Quality Agathion Gemini Box">
+	<skill id="26156" toLevel="1" name="Low-grade Agathion Gemini Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26157" toLevel="1" name="Mid-grade Agathion Gemini Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26158" toLevel="1" name="High Quality Agathion Gemini Box">
+	<skill id="26158" toLevel="1" name="High-grade Agathion Gemini Box">
 		<itemConsumeId>24171</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1300,13 +1300,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26159" toLevel="1" name="Low Quality Agathion Scorpion Box">
+	<skill id="26159" toLevel="1" name="Low-grade Agathion Scorpio Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26160" toLevel="1" name="Mid-grade Agathion Scorpio Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26161" toLevel="1" name="High Quality Agathion Scorpion Box">
+	<skill id="26161" toLevel="1" name="High-grade Agathion Scorpio Box">
 		<itemConsumeId>24174</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1337,13 +1337,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26162" toLevel="1" name="Low Quality Agathion Aquarius Box">
+	<skill id="26162" toLevel="1" name="Low-grade Agathion Aquarius Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26163" toLevel="1" name="Mid-grade Agathion Aquarius Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26164" toLevel="1" name="High Quality Agathion Aquarius Box">
+	<skill id="26164" toLevel="1" name="High-grade Agathion Aquarius Box">
 		<itemConsumeId>24177</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1374,13 +1374,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26165" toLevel="1" name="Low Quality Agathion Pisces Box">
+	<skill id="26165" toLevel="1" name="Low-grade Agathion Pisces Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26166" toLevel="1" name="Mid-grade Agathion Pisces Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26167" toLevel="1" name="High Quality Agathion Pisces Box">
+	<skill id="26167" toLevel="1" name="High-grade Agathion Pisces Box">
 		<itemConsumeId>24180</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1411,13 +1411,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26168" toLevel="1" name="Low Quality Agathion Sagittarius Box">
+	<skill id="26168" toLevel="1" name="Low-grade Agathion Sagittarius Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26169" toLevel="1" name="Mid-grade Agathion Sagittarius Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26170" toLevel="1" name="High Quality Agathion Sagittarius Box">
+	<skill id="26170" toLevel="1" name="High-grade Agathion Sagittarius Box">
 		<itemConsumeId>24183</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -1448,13 +1448,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26171" toLevel="1" name="Low Quality Agathion Cancer Box">
+	<skill id="26171" toLevel="1" name="Low-grade Agathion Cancer Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26172" toLevel="1" name="Mid-grade Agathion Cancer Box">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26173" toLevel="1" name="High Quality Agathion Cancer Box">
+	<skill id="26173" toLevel="1" name="High-grade Agathion Cancer Box">
 		<itemConsumeId>24186</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>

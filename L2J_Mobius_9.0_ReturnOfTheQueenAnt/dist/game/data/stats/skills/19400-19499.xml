@@ -269,7 +269,7 @@
 		</effects>
 	</skill>
 	<skill id="19409" toLevel="1" name="Curse Gloom">
-		<!-- For $s1, M. Def. and Attribute Resistance -$s2 and -$s3, respectively. -->
+		<!-- For $s1, M. Def. -$s2, Attribute Resistance -$s3. -->
 		<icon>icon.skill1263</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
@@ -752,7 +752,7 @@
 		</effects>
 	</skill>
 	<skill id="19425" toLevel="1" name="Immune Derangement">
-		<!-- Casts owned Elemental Resistance, Debuff Resistance, and Mental Attack Resistance, all at once. -->
+		<!-- Casts owned Elemental Resistance, Debuff Resistance, and Mental Resistance, all at once. -->
 		<icon>icon.skill19425</icon>
 		<operateType>A1</operateType>
 		<effectPoint>696</effectPoint>

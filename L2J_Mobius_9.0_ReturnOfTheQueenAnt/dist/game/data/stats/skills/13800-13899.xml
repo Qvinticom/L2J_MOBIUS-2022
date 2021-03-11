@@ -567,19 +567,19 @@
 		<effectPoint>-1</effectPoint>
 		<hitTime>5000</hitTime>
 	</skill>
-	<skill id="13822" toLevel="1" name="Stronghold I Teleport">
+	<skill id="13822" toLevel="1" name="Teleport to Stronghold I">
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="13823" toLevel="1" name="Stronghold II Teleport">
+	<skill id="13823" toLevel="1" name="Teleport to Stronghold II">
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="13824" toLevel="1" name="Stronghold III Teleport">
+	<skill id="13824" toLevel="1" name="Teleport to Stronghold III">
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
@@ -722,7 +722,7 @@
 		</effects>
 	</skill>
 	<skill id="13831" toLevel="1" name="Christmas Talisman - Debuff Resistance">
-		<!-- For 15 sec., blocks 5 debuff attacks when used. -->
+		<!-- For 15 sec., blocks up to 5 debuffs when used. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -1329,7 +1329,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13844" toLevel="13" name="Shadow Shooter">
+	<skill id="13844" toLevel="13" name="Shadow Guardian">
 		<!-- Atk. Spd. +$s1. -->
 		<icon>
 			<value level="1">icon.weapon_shadow_crossbow</value>

@@ -366,7 +366,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39411" toLevel="3" name="Elemental Resistance - Emperor's Special Cocktail">
+	<skill id="39411" toLevel="3" name="Attribute Resistance - Emperor's Special Cocktail">
 		<!-- For $s1, Attribute Resistance +$s2. The effect remains after death. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A2</operateType>
@@ -422,7 +422,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39412" toLevel="3" name="Resistance Debuff - Emperor's Special Cocktail">
+	<skill id="39412" toLevel="3" name="Debuff Resistance - Emperor's Special Cocktail">
 		<!-- For $s1, Infection/ Obstruction/ Stupor/ Confusion Resistance +$s2. The effect remains after death. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A2</operateType>
@@ -466,7 +466,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39413" toLevel="3" name="Mental Attack Resistance - Emperor's Special Cocktail">
+	<skill id="39413" toLevel="3" name="Mental Resistance - Emperor's Special Cocktail">
 		<!-- For $s1, Buff Cancel/ Debuff Resistance +$s2. The effect remains after death. -->
 		<icon>icon.cocktail_heaven_i00</icon>
 		<operateType>A2</operateType>
@@ -806,7 +806,7 @@
 							<item id="48966" count="1" /> <!-- Artifact - Vampiric Rage - Support -->
 						</item>
 						<item chance="25">
-							<item id="48965" count="1" /> <!-- Artifact - XP - Support -->
+							<item id="48965" count="1" /> <!-- Artifact - Acquired XP - Support -->
 						</item>
 					</value>
 					<value level="4">
@@ -1008,7 +1008,7 @@
 						<item id="48966" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Vampiric Rage - Support -->
 					</item>
 					<item chance="25">
-						<item id="48965" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - XP - Support -->
+						<item id="48965" count="1" minEnchant="1" maxEnchant="1" /> <!-- Artifact - Acquired XP - Support -->
 					</item>
 				</items>
 			</effect>
@@ -1024,7 +1024,7 @@
 						<item id="48966" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Vampiric Rage - Support -->
 					</item>
 					<item chance="25">
-						<item id="48965" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - XP - Support -->
+						<item id="48965" count="1" minEnchant="3" maxEnchant="3" /> <!-- Artifact - Acquired XP - Support -->
 					</item>
 				</items>
 			</effect>
@@ -1192,7 +1192,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="39445" toLevel="1" name="Hero's Treasure Chest">
+	<skill id="39445" toLevel="1" name="Hero's Trophy Pack">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1277,7 +1277,7 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="39465" toLevel="1" name="15th Anniversary Transformation">
+	<skill id="39465" toLevel="1" name="Anniversary Celebration Transformation">
 		<!-- Transforms you into a Snow Man, Scarecrow Jack, Tin Golem, Tow, Lure Tow, Heavy Tow, Warm Tow, White Dog, Pink Dog, or Golden Dog for $s1 <Alt + left click> to delete the buff. -->
 		<icon>icon.skill11540</icon>
 		<operateType>A1</operateType>
@@ -1729,8 +1729,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39495" toLevel="1" name="For reducing the Dye Recharge Gauge speed">
-		<!-- Reduces the Dye Recharge Gauge's consumption rate -->
+	<skill id="39495" toLevel="1" name="Dye Gauge Recharge - Slowing Down">
+		<!-- Reduces the Dye Gauge's consumption rate. -->
 		<operateType>P</operateType>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
 	</skill>

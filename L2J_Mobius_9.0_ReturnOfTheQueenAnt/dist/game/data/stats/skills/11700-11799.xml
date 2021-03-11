@@ -74,7 +74,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11749" toLevel="1" name="Heavy Hit">
+	<skill id="11749" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -103,7 +103,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11750" toLevel="1" name="Heavy Hit">
+	<skill id="11750" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>DA1</operateType>
@@ -3070,7 +3070,7 @@
 		</effects>
 	</skill>
 	<skill id="11791" toLevel="3" name="Aeore's Defense Mastery">
-		<!-- When using a sigil, MP Recovery Rate +$s1, Healing Power +$s2, M. Skill Power +$s3. When using a magic sword or a one-hand staff, M. Atk. +$s4. Additionally, INT $s5. -->
+		<!-- INT $s1. Grants additional effects when a sigil and a magic sword/ one-handed staff are equipped. When using a sigil, MP Recovery Rate +$s2, Healing Power +$s3, M. Skill Power +$s4. When using a magic sword or a one-handed staff, M. Atk. +$s5. -->
 		<icon>icon.skill11791</icon>
 		<operateType>P</operateType>
 		<magicLevel>85</magicLevel>

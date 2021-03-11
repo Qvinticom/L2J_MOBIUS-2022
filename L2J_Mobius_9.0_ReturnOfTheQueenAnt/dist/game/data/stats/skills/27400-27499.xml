@@ -261,7 +261,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27432" toLevel="1" name="Shadow Shooter Box">
+	<skill id="27432" toLevel="1" name="Shadow Guardian Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>26443</itemConsumeId>
@@ -281,7 +281,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="46323" count="1" minEnchant="1" maxEnchant="9" /> <!-- Shadow Shooter -->
+						<item id="46323" count="1" minEnchant="1" maxEnchant="9" /> <!-- Shadow Guardian -->
 					</item>
 				</items>
 			</effect>

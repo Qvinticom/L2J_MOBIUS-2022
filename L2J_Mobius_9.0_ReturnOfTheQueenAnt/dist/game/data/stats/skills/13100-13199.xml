@@ -385,7 +385,7 @@
 		<magicLevel>55</magicLevel>
 	</skill>
 	<skill id="13129" toLevel="4" name="Set Effect - Twilight Heavy Armor, 2-piece (Defense)">
-		<!-- CON +$s1, STR -$s2, Atk. Spd. +$s3. HP +$s4. -->
+		<!-- CON +$s1, STR -$s2, Atk. Spd. +$s3, Max HP +$s4. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -650,8 +650,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13146" toLevel="1" name="Infinity Shaper Special Ability">
-		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
+	<skill id="13146" toLevel="1" name="Special Ability: Infinity Shaper">
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
 		<icon>icon.weapon_the_dagger_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -695,7 +695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13147" toLevel="1" name="Infinity Cutter Special Ability">
+	<skill id="13147" toLevel="1" name="Special Ability: Infinity Cutter">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, Skill Cooldown -$s5. -->
 		<icon>icon.weapon_the_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -751,7 +751,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13148" toLevel="1" name="Infinity Slasher Special Ability">
+	<skill id="13148" toLevel="1" name="Special Ability: Infinity Slasher">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, Critical Damage for standard attacks +$s5. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -796,7 +796,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13149" toLevel="1" name="Infinity Avenger Special Ability">
+	<skill id="13149" toLevel="1" name="Special Ability: Infinity Avenger">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, Skill Cooldown -$s5. -->
 		<icon>icon.weapon_the_axe_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -852,7 +852,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13150" toLevel="1" name="Infinity Fighter Special Ability">
+	<skill id="13150" toLevel="1" name="Special Ability: Infinity Fighter">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, Critical Damage for standard attacks +$s5. -->
 		<icon>icon.weapon_the_fist_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -897,7 +897,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13151" toLevel="1" name="Infinity Stormer Special Ability">
+	<skill id="13151" toLevel="1" name="Special Ability: Infinity Stormer">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, Critical Damage for standard attacks +$s5. -->
 		<icon>icon.weapon_the_pole_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -942,8 +942,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13152" toLevel="1" name="Infinity Thrower Special Ability">
-		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
+	<skill id="13152" toLevel="1" name="Special Ability: Infinity Thrower">
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
 		<icon>icon.weapon_the_bow_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -987,8 +987,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13153" toLevel="1" name="Infinity Shooter Special Ability">
-		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
+	<skill id="13153" toLevel="1" name="Special Ability: Infinity Guardian">
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
 		<icon>icon.weapon_infinity_shooter_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1032,7 +1032,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13154" toLevel="1" name="Infinity Buster Special Ability">
+	<skill id="13154" toLevel="1" name="Special Ability: Infinity Buster">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Casting Spd. +$s3, M. Skill Power +$s4, M. Skill Critical Damage +$s5. -->
 		<icon>icon.weapon_infinity_sword_i01</icon>
 		<operateType>P</operateType>
@@ -1077,7 +1077,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13155" toLevel="1" name="Infinity Caster Special Ability">
+	<skill id="13155" toLevel="1" name="Special Ability: Infinity Caster">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Casting Spd. +$s3, M. Skill Power +$s4, M. Skill Critical Damage +$s5. -->
 		<icon>icon.weapon_the_mace_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -1122,7 +1122,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13156" toLevel="1" name="Infinity Retributer Special Ability">
+	<skill id="13156" toLevel="1" name="Special Ability: Infinity Retributer">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, M. Skill Power +$s4, M. Skill Critical Damage +$s5. -->
 		<icon>icon.weapon_the_staff_of_hero_i01</icon>
 		<operateType>P</operateType>
@@ -1167,7 +1167,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13157" toLevel="1" name="Infinity Dual Sword Special Ability">
+	<skill id="13157" toLevel="1" name="Special Ability: Infinity Dual Swords">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, Critical Damage for standard attacks +$s5. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
@@ -1212,8 +1212,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13158" toLevel="1" name="Infinity Dual Dagger Special Ability">
-		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
+	<skill id="13158" toLevel="1" name="Special Ability: Infinity Dual Daggers">
+		<!-- PvP damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Skill Critical Damage +$s5. -->
 		<icon>icon.weapon_r_dualdagger_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1257,7 +1257,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13159" toLevel="1" name="Infinity Dual Blunt Weapon Special Ability">
+	<skill id="13159" toLevel="1" name="Special Ability: Infinity Dual Blunt Weapons">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, Critical Damage for standard attacks +$s5. -->
 		<icon>icon.weapon_r_dualblunt_i01</icon>
 		<operateType>P</operateType>

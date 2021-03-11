@@ -251,7 +251,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11247" toLevel="1" name="Heavy Hit">
+	<skill id="11247" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
@@ -282,7 +282,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11248" toLevel="1" name="Heavy Hit">
+	<skill id="11248" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -313,7 +313,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11249" toLevel="1" name="Heavy Hit">
+	<skill id="11249" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -343,7 +343,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11250" toLevel="1" name="Heavy Hit">
+	<skill id="11250" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -3587,7 +3587,7 @@
 		</effects>
 	</skill>
 	<skill id="11299" toLevel="2" name="Servitor Balance Life">
-		<!-- Balances you and your servitor's HP. -->
+		<!-- Balances you and your servitor's HP, and recovers $s1 HP for $s1 -->
 		<icon>icon.skill11299</icon>
 		<affectRange>1000</affectRange>
 		<operateType>

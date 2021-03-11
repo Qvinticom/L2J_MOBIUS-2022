@@ -426,7 +426,7 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="9623" toLevel="1" name="Innocent Heejin Teleport: Town of Aden">
+	<skill id="9623" toLevel="1" name="Innocent Heejin's Teleport: Aden">
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -724,7 +724,7 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="9636" toLevel="1" name="Dandy Hyuk Teleport: Town of Aden">
+	<skill id="9636" toLevel="1" name="Dandy Hyuk's Teleport: Aden">
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -1672,7 +1672,7 @@
 						<item id="30250" count="1" /> <!-- Blessed Helios Thrower - Damage Up + Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30255" count="1" /> <!-- Blessed Helios Shooter - Haste + Focus -->
+						<item id="30255" count="1" /> <!-- Blessed Helios Guardian - Haste + Focus -->
 					</item>
 				</items>
 			</effect>
@@ -1765,7 +1765,7 @@
 						<item id="35199" count="1" /> <!-- Bloody Helios Thrower -->
 					</item>
 					<item chance="9">
-						<item id="35200" count="1" /> <!-- Bloody Helios Shooter -->
+						<item id="35200" count="1" /> <!-- Bloody Helios Guardian -->
 					</item>
 					<item chance="9">
 						<item id="35201" count="1" /> <!-- Bloody Helios Buster -->
@@ -1815,7 +1815,7 @@
 						<item id="35101" count="1" /> <!-- Dark Helios Thrower -->
 					</item>
 					<item chance="9">
-						<item id="35102" count="1" /> <!-- Dark Helios Shooter -->
+						<item id="35102" count="1" /> <!-- Dark Helios Guardian -->
 					</item>
 					<item chance="9">
 						<item id="35103" count="1" /> <!-- Dark Helios Buster -->

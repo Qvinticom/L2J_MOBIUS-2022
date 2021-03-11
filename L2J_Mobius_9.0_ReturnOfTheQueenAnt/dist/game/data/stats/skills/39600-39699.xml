@@ -96,7 +96,7 @@
 	<skill id="39611" toLevel="1" name="Assassin Suit Appearance Stone">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39612" toLevel="1" name="Santiago's Sea Wind Scroll">
+	<skill id="39612" toLevel="1" name="Santiago s Sea Wind Scroll">
 		<!-- For 10 min., Vitality Consumption +$s1 and Acquired XP/ SP +$s2 while hunting. Cooldown: 9 min. Cannot be stacked with Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
@@ -164,7 +164,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39618" toLevel="1" name="Time Stone of Abandoned Coal Mines">
+	<skill id="39618" toLevel="1" name="Abandoned Coal Mines' Time Stone">
 		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -531,7 +531,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39642" toLevel="1" name="+14 Blessed Helios Shooter Pack">
+	<skill id="39642" toLevel="1" name="+14 Blessed Helios Guardian Pack">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -668,8 +668,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39668" toLevel="1" name="Lilly's Special Anniversary Transformation Candy">
-		<!-- An anniversary present from Lilly. Changes appearance to that of Jester Outfit. The effect is removed in the Olympiad and Ceremony of Chaos. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+	<skill id="39668" toLevel="1" name="Special Transformation Candy">
+		<!-- An anniversary present. Double-click to change the armor appearance to that of Jester Outfit. The effect is removed in the Olympiad and the Ceremony of Chaos. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -746,13 +746,13 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39676" toLevel="3" name="White Day Chocolate 56%">
+	<skill id="39676" toLevel="3" name="Valentine's Day Chocolate 56%">
 		<!-- For 10 min., CON/ MEN/ DEX/ WIT +1, Attribute Attack/ Resistance +5, Speed +5, Vitality bonus +5%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39677" toLevel="6" name="Enchant Effect: Improved Artifact Book">
-		<!-- Unlocks slots for 3 sets of artifacts. <Enchant Effect> Speed +$s1 Acquired XP/ SP +$s2 LUC/ CHA +$s3 -->
+		<!-- Unlocks slots for 3 artifact sets. <Enchant effect> Speed +$s1 Acquired XP/ SP +$s2 LUC/ CHA +$s3 -->
 		<icon>icon.artifact_book_01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -846,7 +846,7 @@
 		</effects>
 	</skill>
 	<skill id="39678" toLevel="11" name="Enchant Effect: Unique Artifact Book">
-		<!-- Unlocks slots for 3 sets of artifacts. <Enchant Effect> Speed +$s1 Acquired XP/ SP +$s2 LUC/ CHA +$s3 Attribute Resistance +$s4 Attribute Attack +$s5 -->
+		<!-- Unlocks slots for 3 artifact sets. <Enchant effect> Speed +$s1 Acquired XP/ SP +$s2 LUC/ CHA +$s3 Attribute Resistance +$s4 Attribute Attack +$s5 -->
 		<icon>icon.artifact_book_02</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1108,7 +1108,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39683" toLevel="1" name="Elysian Style Candy - White Daily">
+	<skill id="39683" toLevel="1" name="Elysian Style Candy - White Day">
 		<!-- Appearance changed by wearing the Blue Dynasty Armor. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1123,7 +1123,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="39685" toLevel="1" name="Scroll: Festival Fairy's Spring Energy">
+	<skill id="39685" toLevel="1" name="Festival Fairy's Energy Scroll">
 		<!-- A scroll prepared by Festival Fairy. It is imbued with Aden's energy. For 10 min., acquired XP/ SP +$s1. The effect disappears after the main/ dual class change, but remains after death. Cooldown: 9 min. Required level: 1-110. The effect does not stack with those of Freya's Frozen Scroll and Freya's Scroll of Storm. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1168,7 +1168,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39696" toLevel="1" name="+14 Krishna Shooter Pack">
+	<skill id="39696" toLevel="1" name="+14 Krishna Guardian Pack">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

@@ -1041,7 +1041,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5237" toLevel="1" name="Speed Down">
+	<skill id="5237" toLevel="1" name="Speed Reduction">
 		<!-- Decreases Speed. Effect 2. -->
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>1200</abnormalTime>
@@ -1063,7 +1063,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5238" toLevel="1" name="Freezing">
+	<skill id="5238" toLevel="1" name="Frosting">
 		<!-- Instantly freezes and immobilizes. -->
 		<icon>icon.skill1174</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1989,7 +1989,7 @@
 		</effects>
 	</skill>
 	<skill id="5256" toLevel="1" name="Announcement of Death">
-		<!-- Announcement of Death. Dead after 30 sec. -->
+		<!-- You'll be dead in 30 sec. -->
 		<icon>icon.skill5239</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>30</abnormalTime>

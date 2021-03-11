@@ -93,7 +93,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35604" toLevel="2" name="Dragon Augmentation - P. Critical Damage">
+	<skill id="35604" toLevel="2" name="Dragon Augmentation - Standard Attack Critical Damage">
 		<!-- Dragon Augmentation - Critical Damage for standard attacks +$s1. -->
 		<icon>icon.renewal_mineral_dragon</icon>
 		<operateType>P</operateType>
@@ -222,7 +222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35611" toLevel="11" name="Enchantment Effect: Navari's Mask">
+	<skill id="35611" toLevel="11" name="Enchant Effect: Navari s Mask">
 		<!-- Attribute Attack/ Resistance +$s1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -460,7 +460,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35612" toLevel="11" name="Enchantment Effect: Angel's Ring">
+	<skill id="35612" toLevel="11" name="Enchant Effect: Angel's Ring">
 		<!-- Obstruction Resistance +$s1. -->
 	<!-- Obstruction Resistance +10% -->
 		<icon>icon.skill0000</icon>
@@ -1000,7 +1000,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35624" toLevel="6" name="Enchantment Effect: Expert's Mask">
+	<skill id="35624" toLevel="6" name="Enchant Effect: Expert s Mask">
 		<!-- CHA +$s1. -->
 		<icon>icon.explorer_mask</icon>
 		<operateType>P</operateType>
@@ -1186,7 +1186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35625" toLevel="12" name="Enchantment Effect: Atlas' Earring">
+	<skill id="35625" toLevel="12" name="Enchant Effect: Atlas  Earring">
 		<!-- Stupor Resistance +$s1. -->
 		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
 		<operateType>P</operateType>
@@ -1525,7 +1525,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35627" toLevel="11" name="Top-grade La Vie En Rose's Brooch">
+	<skill id="35627" toLevel="11" name="Superior La Vie En Rose's Brooch">
 		<!-- Inventory Slots +$s1, all stats +$s2, Damage Reflection Resistance +$s3, Vitality bonus +$s4, Fixed Damage Resistance +$s5, Received damage when immobilized -$s6. After a standard attack or skill use, has a certain chance to inflict La Vie En Rose s Shining Blessing for 15 sec. (P./ M. Atk. +$s7). -->
 		<icon>icon.bm_brooch_6slot_lavianrose_5</icon>
 		<operateType>P</operateType>
@@ -1796,7 +1796,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35628" toLevel="2" name="La Vie En Rose's Blessing">
+	<skill id="35628" toLevel="2" name="La Vie En Rose s Blessing">
 		<!-- For 15 sec., P./ M. Atk. +$s1. -->
 		<icon>icon.bm_brooch_6slot_lavianrose_4</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -2085,7 +2085,7 @@
 		</effects>
 	</skill>
 	<skill id="35636" toLevel="1" name="Set Effect - Blessed Exalted Heavy Armor">
-		<!-- P. Atk. +8%, P. Def. +10%, M. Def. +10%, STR +3, CON +2, P./ M. Skill Power +8%, Skill Cooldown -3%. -->
+		<!-- A set effect that is activated when all 5 pieces of Blessed Exalted Heavy Armor are used. -->
 		<icon>icon.m_class_heavy</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2140,7 +2140,7 @@
 		</effects>
 	</skill>
 	<skill id="35637" toLevel="1" name="Set Effect - Blessed Exalted Light Armor">
-		<!-- P. Atk. +8%, Speed +14, STR +3, CON +2, Attribute Resistance +35, P./ M. Skill Power +8%, P. Critical Damage/ P. Skill Critical Damage +2%, Skill Cooldown -3%. -->
+		<!-- A set effect that is activated when all 5 pieces of Blessed Exalted Light Armor are used. -->
 		<icon>icon.m_class_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2223,7 +2223,7 @@
 		</effects>
 	</skill>
 	<skill id="35638" toLevel="1" name="Set Effect - Blessed Exalted Robe">
-		<!-- Max HP/ MP +10%, M. Atk. +10%, INT +3, CON +2, P./ M. Skill Power +8%, Skill MP Consumption -7%, Skill Cooldown -3%. -->
+		<!-- A set effect that is activated when all 5 pieces of Blessed Exalted Robe are used. -->
 		<icon>icon.m_class_robe</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -3389,7 +3389,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35688" toLevel="3" name="Top Armor Augmentation: P. Evasion">
+	<skill id="35688" toLevel="3" name="Upper Armor Augmentation: P. Evasion">
 		<!-- P. Evasion +1 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3404,7 +3404,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35689" toLevel="3" name="Top Armor Augmentation: M. Evasion">
+	<skill id="35689" toLevel="3" name="Upper Armor Augmentation: M. Evasion">
 		<!-- M. Evasion +1 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3419,7 +3419,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35690" toLevel="9" name="Top Armor Augmentation: P. Def.">
+	<skill id="35690" toLevel="9" name="Upper Armor Augmentation: P. Def.">
 		<!-- P. Def. +282 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3454,7 +3454,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35691" toLevel="9" name="Top Armor Augmentation: M. Def.">
+	<skill id="35691" toLevel="9" name="Upper Armor Augmentation: M. Def.">
 		<!-- M. Def. +151 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3489,7 +3489,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35692" toLevel="8" name="Top Armor Augmentation: Attribute Resistance">
+	<skill id="35692" toLevel="8" name="Upper Armor Augmentation: Attribute Resistance">
 		<!-- Attribute Resistance +4 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3574,7 +3574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35693" toLevel="2" name="Top Armor Augmentation: Received PvE Damage Decrease">
+	<skill id="35693" toLevel="2" name="Upper Armor Augmentation: Received PvE Damage Decrease">
 		<!-- Received PvE damage -1% -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3605,7 +3605,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35694" toLevel="2" name="Top Armor Augmentation: Received PvP Damage Decrease">
+	<skill id="35694" toLevel="2" name="Upper Armor Augmentation: Received PvP Damage Decrease">
 		<!-- Received PvP damage -1% -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3633,7 +3633,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35695" toLevel="3" name="Top Armor Augmentation: P. Accuracy">
+	<skill id="35695" toLevel="3" name="Upper Armor Augmentation: P. Accuracy">
 		<!-- P. Accuracy +1 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3646,7 +3646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35696" toLevel="3" name="Top Armor Augmentation: M. Accuracy">
+	<skill id="35696" toLevel="3" name="Upper Armor Augmentation: M. Accuracy">
 		<!-- M. Accuracy +1 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3659,7 +3659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35697" toLevel="9" name="Top Armor Augmentation: P. Atk.">
+	<skill id="35697" toLevel="9" name="Upper Armor Augmentation: P. Atk.">
 		<!-- P. Atk. +763 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3694,7 +3694,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35698" toLevel="9" name="Top Armor Augmentation: M. Atk.">
+	<skill id="35698" toLevel="9" name="Upper Armor Augmentation: M. Atk.">
 		<!-- M. Atk. +443 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>
@@ -3729,7 +3729,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35699" toLevel="8" name="Top Armor Augmentation: Attribute Attack">
+	<skill id="35699" toLevel="8" name="Upper Armor Augmentation: Attribute Attack">
 		<!-- Attribute Attack +4 -->
 		<icon>icon.armor_t902_u_i00</icon>
 		<operateType>P</operateType>

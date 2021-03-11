@@ -467,7 +467,7 @@
 		</effects>
 	</skill>
 	<skill id="32233" toLevel="1" name="Teasle Howling">
-		<!-- Range attack within a 160-degree radius in front. -->
+		<!-- Aoe attack within a 160-degree radius in front. -->
 		<icon>icon.skill0771</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -1091,7 +1091,7 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="32266" toLevel="24" name="Green's Elysium Vital Research Lv. 1">
-		<!-- Volunteered for Green's research. Gathering Mother Nature's energy recovers some Vitality $s1 time(s) per h. Also you will get Anniversary Coins. Maximum buff level: $s2. -->
+		<!-- Volunteered for Green's research. Gathering Mother Nature's energy recovers some Vitality $s1 time(s) per h. Maximum buff level: $s2). -->
 		<icon>icon.ev_libra_green_buff1</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
@@ -1142,7 +1142,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32272" toLevel="1" name="Earthquake">
-		<!-- Powerful Attack to Targets Within Range -->
+		<!-- Powerful AoE Attack -->
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>

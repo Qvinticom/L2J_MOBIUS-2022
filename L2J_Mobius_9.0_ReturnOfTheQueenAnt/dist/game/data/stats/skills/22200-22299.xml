@@ -701,7 +701,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22229" toLevel="1" name="Aden Homemade Cookie">
-		<!-- For 60 min., increases Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 2, Standard Attack Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and increases P. Def. when hit by a critical attack. Decreases Speed by 15%. Additionally increases Standard Attack Critical Damage for party members equipped with bow, crossbow or melee weapons when they receive more than a certain amount of damage. Buffs persist after death. -->
+		<!-- For 60 min., Max MP +20%, HP Recovery Rate +20%, M. Critical Rate +20, Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%. Increases P. Def. when hit by a critical attack. Speed -15%. Additionally increases Critical Damage for party members equipped with bow, crossbow or melee weapons when they receive a certain amount of damage. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -2331,7 +2331,7 @@
 						<item id="10225" count="1" /> <!-- Icarus Wingblade -->
 					</item>
 					<item chance="2.47">
-						<item id="10226" count="1" /> <!-- Icarus Shooter -->
+						<item id="10226" count="1" /> <!-- Icarus Crossbow -->
 					</item>
 					<item chance="2.47">
 						<item id="10415" count="1" /> <!-- Icarus Dual Swords -->
@@ -2376,7 +2376,7 @@
 						<item id="13468" count="1" /> <!-- Vesper Pincer -->
 					</item>
 					<item chance="1.56">
-						<item id="13469" count="1" /> <!-- Vesper Shooter -->
+						<item id="13469" count="1" /> <!-- Vesper Guardian -->
 					</item>
 					<item chance="1.56">
 						<item id="13470" count="1" /> <!-- Vesper Nagan -->

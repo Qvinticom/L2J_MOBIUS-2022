@@ -479,7 +479,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9521" toLevel="1" name="Draco's Blessing (3-h.)">
+	<skill id="9521" toLevel="1" name="Draco's Blessing (3-hour)">
 		<!-- For 3 h., Acquired XP/ SP+200%. -->
 		<icon>icon.etc_ev_draco_exp_up</icon>
 		<operateType>A2</operateType>
@@ -527,7 +527,7 @@
 			<condition name="TargetMyPledge" />
 		</conditions>
 	</skill>
-	<skill id="9523" toLevel="1" name="Mysterious Scroll">
+	<skill id="9523" toLevel="1" name="Mysterious Incantation">
 		<!-- Suddenly teleported to town due to a mysterious curse. -->
 		<icon>icon.skill1570</icon>
 		<operateType>A2</operateType>
@@ -877,7 +877,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9545" toLevel="1" name="Ceremony of Chaos - Horn Melody">
+	<skill id="9545" toLevel="1" name="Horn Melody - Chaos Arena">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -919,7 +919,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9546" toLevel="1" name="Ceremony of Chaos - Drum Melody">
+	<skill id="9546" toLevel="1" name="Drum Melody - Chaos Arena">
 		<!-- For $s1, Critical Rate for standard attacks +$s2, Critical Damage for standard attacks +$s3, M. Skill Critical Rate +$s4, Received Critical Damage from standard attacks -$s5. Also has a chance to increase P. Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -1008,7 +1008,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9547" toLevel="1" name="Ceremony of Chaos - Pipe Organ Melody">
+	<skill id="9547" toLevel="1" name="Pipe Organ Melody - Chaos Arena">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4. With a certain chance, absorbs $s5 of the inflicted damage as HP. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1054,7 +1054,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9548" toLevel="1" name="Ceremony of Chaos - Guitar Melody">
+	<skill id="9548" toLevel="1" name="Guitar Melody - Chaos Arena">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and all Skill MP Consumption -$s4. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1117,7 +1117,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9549" toLevel="1" name="Ceremony of Chaos - Harp Melody">
+	<skill id="9549" toLevel="1" name="Harp Melody - Chaos Arena">
 		<!-- For 7 min., P. Accuracy +5, P./ M. Evasion +5, and Speed +34. Received Critical Damage from standard attacks -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1163,7 +1163,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9550" toLevel="1" name="Ceremony of Chaos - Lute Melody">
+	<skill id="9550" toLevel="1" name="Lute Melody - Chaos Arena">
 		<!-- For 7 min., Atk. Spd. +34%, and Casting Spd. +31%. Has a chance of applying 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1201,7 +1201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9551" toLevel="1" name="Knight's Harmony - Ceremony of Chaos">
+	<skill id="9551" toLevel="1" name="Knight's Harmony - Chaos Arena">
 		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, Critical Damage for standard attacks +$s5, Shield Defense Rate +$s6, Shield Defense +$s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -1251,7 +1251,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9552" toLevel="1" name="Warrior's Harmony - Ceremony of Chaos">
+	<skill id="9552" toLevel="1" name="Warrior's Harmony - Chaos Arena">
 		<!-- For $s1, P. Atk. +$s2, Critical Rate for standard attacks +$s3, Critical Damage for standard attacks +$s4, Atk. Spd. +$s5. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -1305,7 +1305,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9553" toLevel="1" name="Wizard's Harmony - Ceremony of Chaos">
+	<skill id="9553" toLevel="1" name="Wizard's Harmony - Chaos Arena">
 		<!-- For $s1, M. Atk. +$s2, M. Skill Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -2005,7 +2005,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9583" toLevel="1" name="Fondest Heart">
+	<skill id="9583" toLevel="1" name="Immortal Love">
 		<!-- Letter containing the fond heart of Vulcan, the Blacksmith of Flame. You can use it at the ruined Dwarven Village. -->
 		<operateType>A1</operateType>
 		<castRange>100</castRange>

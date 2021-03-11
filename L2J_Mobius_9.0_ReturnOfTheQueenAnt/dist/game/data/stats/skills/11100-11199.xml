@@ -2576,7 +2576,7 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="11138" toLevel="1" name="Soul Bomber">
+	<skill id="11138" toLevel="1" name="Spirit Bomb">
 		<!-- Detonates the soul in the selected location to deal great damage to nearby enemies. Increases their Received PvP Damage. The higher the level of the debuff, the greater the effect. The character is invincible while concentrating. Consumes $s1 Spirit Ore. The skill cooldown is fixed. -->
 		<icon>icon.skill11138</icon>
 		<affectRange>250</affectRange> <!-- Guessed -->
@@ -3642,7 +3642,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11185" toLevel="10" name="Superior MP Boost">
+	<skill id="11185" toLevel="10" name="Superior Mana Boost">
 		<!-- Max MP +$s1. INT +$s2. -->
 		<icon>icon.skill0213</icon>
 		<magicLevel>

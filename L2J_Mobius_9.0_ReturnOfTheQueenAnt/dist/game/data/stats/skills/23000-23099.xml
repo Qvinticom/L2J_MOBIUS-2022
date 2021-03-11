@@ -1499,7 +1499,7 @@
 		</effects>
 	</skill>
 	<skill id="23069" toLevel="1" name="Threatening Roar">
-		<!-- Spirit's power: Decreases Speed and Atk. Spd. by 80% for 10 sec. -->
+		<!-- Spirit's power: For 10 sec., Speed/ Atk. Spd. -80%. -->
 		<icon>icon.skill1289</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1540,7 +1540,7 @@
 		</effects>
 	</skill>
 	<skill id="23070" toLevel="1" name="Red Fire">
-		<!-- Spirit's power: Cannot damage the spirit for 10 sec. Exclusive use for the Reckless Fire Spirit. -->
+		<!-- Spirit's power: The Spirit is invulnerable for 6 sec. Only for Fire Spirits. -->
 		<icon>icon.skill0211</icon>
 		<abnormalLevel>2</abnormalLevel>
 		<abnormalTime>10</abnormalTime>
@@ -1570,7 +1570,7 @@
 		</conditions>
 	</skill>
 	<skill id="23071" toLevel="1" name="Blue Fire">
-		<!-- Spirit's power: Cannot damage the spirit for 8 sec. Exclusive use for the Fire Spirit. -->
+		<!-- Spirit's power: The Spirit is invulnerable for 5 sec. Only for Fire Spirits. -->
 		<icon>icon.skill0213</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>8</abnormalTime>
@@ -1677,7 +1677,7 @@
 		</conditions>
 	</skill>
 	<skill id="23075" toLevel="1" name="Flame Shock">
-		<!-- Spirit's power: Loses the target. -->
+		<!-- Spirit's power: the target is lost. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLevel>85</magicLevel>

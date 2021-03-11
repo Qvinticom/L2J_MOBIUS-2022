@@ -409,7 +409,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3018" toLevel="6" name="Special Ability: Back Blow">
+	<skill id="3018" toLevel="6" name="Special Ability: Backstab">
 		<!-- Critical Rate for standard attacks after backstab +$s1. -->
 		<icon>
 			<value level="1">icon.skill1077</value>
@@ -444,7 +444,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3019" toLevel="6" name="Special Ability: Back Blow">
+	<skill id="3019" toLevel="6" name="Special Ability: Backstab">
 		<!-- Critical Rate for standard attacks after backstab +$s1. -->
 		<icon>
 			<value level="1">icon.ensoul_big_old</value>
@@ -1112,7 +1112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3035" toLevel="6" name="Special Ability: Mighty Mortal">
+	<skill id="3035" toLevel="6" name="Special Ability: Mortal Strike">
 		<!-- Increases success rate of attacks targeting the enemy's vital parts by $s1. -->
 		<icon>
 			<value level="1">icon.ensoul_big_old</value>
@@ -2491,7 +2491,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3063" toLevel="2" name="Special Ability: Back Blow">
+	<skill id="3063" toLevel="2" name="Special Ability: Backstab">
 		<!-- Increases Critical Rate for standard attacks after backstab. PvP damage +$s1. -->
 		<icon>
 			<value level="1">icon.ensoul_big_old</value>
@@ -2842,7 +2842,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3074" toLevel="2" name="Special Ability: Magic Silence">
+	<skill id="3074" toLevel="2" name="Special Ability: Silence">
 		<!-- Temporarily blocks the ability to use magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -2871,7 +2871,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="3075" toLevel="2" name="Special Property: Paralysis">
+	<skill id="3075" toLevel="2" name="Special Ability: Paralysis">
 		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
@@ -2975,7 +2975,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3078" toLevel="6" name="Special Ability: Magic Silence">
+	<skill id="3078" toLevel="6" name="Special Ability: Silence">
 		<!-- Temporarily blocks the ability to use magic skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
@@ -3008,7 +3008,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="3079" toLevel="6" name="Special Property: Paralysis">
+	<skill id="3079" toLevel="6" name="Special Ability: Paralysis">
 		<!-- You are stunned and immobilized. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>

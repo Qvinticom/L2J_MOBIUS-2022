@@ -150,7 +150,7 @@
 		</abnormalTime>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of iss -->
+				<skillId>30848</skillId> <!-- Spirit of Iss -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
@@ -242,7 +242,7 @@
 		</effects>
 	</skill>
 	<skill id="19207" toLevel="1" name="Chant of Bison">
-		<!-- For $s1, all party members' Critical Rate for standard attacks, P./ M. Skill Critical Rate, P./ M. Skill Power +$s2. Additionally, activates the Spirit of Iss effect: P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Prophecy of Might/ Victories of Pa'agrio. Consumes $s4 Spirit Ore. -->
+		<!-- For $s1, all party members' Critical Rate for standard attacks, P./ M. Skill Critical Rate +$s2, P./ M. Skill Power +$s2. Additionally, activates the Spirit of Iss effect: P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Prophecy of Might/ Victories of Pa'agrio. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19207</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -1145,7 +1145,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of iss -->
+				<skillId>30848</skillId> <!-- Spirit of Iss -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
@@ -1191,7 +1191,7 @@
 		<reuseDelay>300000</reuseDelay>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of iss -->
+				<skillId>30848</skillId> <!-- Spirit of Iss -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
@@ -1260,7 +1260,7 @@
 		</effects>
 	</skill>
 	<skill id="19236" toLevel="3" name="Guardian's Elemental Cover">
-		<!-- Attribute Resistance +$s1 -->
+		<!-- Attribute Resistance +$s1. -->
 		<icon>icon.skill1352</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1617,7 +1617,7 @@
 		</effects>
 	</skill>
 	<skill id="19250" toLevel="1" name="Guardian's Spirit">
-		<!-- Attribute Resistance +$s1 -->
+		<!-- Attribute Resistance +$s1. -->
 		<icon>icon.skill10044</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2403,7 +2403,7 @@
 		</effects>
 	</skill>
 	<skill id="19290" toLevel="2" name="Vitality of the Exalted">
-		<!-- Vitality Bonus +$s1. -->
+		<!-- Vitality bonus +$s1. -->
 		<icon>icon.s_vitality_of_honors1</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>

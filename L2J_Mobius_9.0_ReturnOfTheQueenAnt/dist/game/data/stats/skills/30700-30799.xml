@@ -1193,7 +1193,7 @@
 		</effects>
 	</skill>
 	<skill id="30723" toLevel="2" name="Intermediate Sword / Blunt Weapon Mastery">
-		<!-- P. Atk. +$s1 and additionally +$s2, Atk. Spd. +$s3, Critical Damage for standard attacks +$s4, when using a sword or a blunt weapon. -->
+		<!-- P. Atk. +$s1 and additionally +$s2, Atk. Spd. +$s3, Critical Damage for standard attacks +$s4, when using a sword or a blunt weapon. Has a chance to activate Physical Pose after a standard attack. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2491,7 +2491,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30752" toLevel="1" name="Novice Resistance Debuff">
+	<skill id="30752" toLevel="1" name="Novice Debuff Resistance">
 		<!-- Confusion/ Stupor/ Obstruction/ Infection Resistance +$s2 for $s1 -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
@@ -2539,8 +2539,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30753" toLevel="1" name="Novice Mental Attack Resistance">
-		<!-- For $s1, a party member's Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
+	<skill id="30753" toLevel="1" name="Novice Mental Resistance">
+		<!-- For $s1, party members' resistance to buff-canceling attacks/ debuffs +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -4147,7 +4147,7 @@
 		</effects>
 	</skill>
 	<skill id="30781" toLevel="4" name="Mortal Strike">
-		<!-- For $s1, Vital Point Attack Rate +$s2. Requires a dagger. -->
+		<!-- For $s1, Vital Point Attack Rate +$s2. Requires a dagger or dual daggers. -->
 		<icon>icon.skill0410</icon>
 		<operateType>A2</operateType>
 		<isMagic>22</isMagic>

@@ -839,7 +839,7 @@
 		</effects>
 	</skill>
 	<skill id="32735" toLevel="2" name="Sword Earthquake">
-		<!-- Strikes downward, causing great damage and Stun. -->
+		<!-- Strikes downward, causing great damage and stunning. -->
 		<icon>
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill0003</value>
@@ -1407,14 +1407,14 @@
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32778" toLevel="1" name="Resistance Debuff">
+	<skill id="32778" toLevel="1" name="Debuff Resistance">
 		<!-- For $s1, Infection/ Obstruction/ Stupor/ Confusion Resistance +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32779" toLevel="1" name="Mental Attack Resistance">
+	<skill id="32779" toLevel="1" name="Mental Resistance">
 		<!-- For $s1, Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
@@ -1519,14 +1519,14 @@
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32794" toLevel="1" name="Resistance Debuff">
+	<skill id="32794" toLevel="1" name="Debuff Resistance">
 		<!-- For $s1, Infection/ Obstruction/ Stupor/ Confusion Resistance +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="32795" toLevel="1" name="Mental Attack Resistance">
+	<skill id="32795" toLevel="1" name="Mental Resistance">
 		<!-- For $s1, Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>

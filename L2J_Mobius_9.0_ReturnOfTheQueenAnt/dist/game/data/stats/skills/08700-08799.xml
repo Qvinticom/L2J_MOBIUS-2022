@@ -1006,7 +1006,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8750" toLevel="1" name="Infinity Cutter Special Ability">
+	<skill id="8750" toLevel="1" name="Special Ability: Infinity Cutter">
 		<!-- Decreases enemy's P. Def. after a critical attack. Also increases Max HP/ MP/ CP, Shield Defense Rate and PvP Damage. Reflects some of the received damage back to the enemy. -->
 		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1014,7 +1014,7 @@
 		<magicLevel>85</magicLevel>
 	</skill>
 	<skill id="8751" toLevel="1" name="Decrease P. Def.">
-		<!-- Temporarily reduces P. Def. Effect 3. -->
+		<!-- Temporarily decreases P. Def. Effect 3. -->
 		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1030,7 +1030,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8752" toLevel="1" name="Infinity Avenger Special Ability">
+	<skill id="8752" toLevel="1" name="Special Ability: Infinity Avenger">
 		<!-- Blinds and confuses the enemy after a critical attack. Also increases Max HP/ MP/ CP, Shield Defense Rate and PvP Damage. Reflects some of the received damage back to the enemy. -->
 		<icon>icon.weapon_the_axe_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1045,14 +1045,14 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8754" toLevel="1" name="Infinity Slasher Special Ability">
+	<skill id="8754" toLevel="1" name="Special Ability: Infinity Slasher">
 		<!-- Increases Critical Rate/ Damage for standard attacks, Max HP/ MP, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_the_two_handed_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="8755" toLevel="1" name="Infinity Crusher Special Ability">
+	<skill id="8755" toLevel="1" name="Special Ability: Infinity Crusher">
 		<!-- Stuns the enemy after a critical attack. Increases Max HP/ CP, Atk. Spd. and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_the_hammer_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1079,7 +1079,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8757" toLevel="1" name="Infinity Dual Special Ability">
+	<skill id="8757" toLevel="1" name="Special Ability: Infinity Duals">
 		<!-- Blocks enemy's ability to use physical skills after a critical attack. Increases Max HP/ MP/ CP, Critical Rate for standard attacks, and PvP damage. Reflects debuff attack back on enemy. -->
 		<icon>icon.weapon_the_dualsword_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1106,7 +1106,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8759" toLevel="1" name="Infinity Fighter Special Ability">
+	<skill id="8759" toLevel="1" name="Special Ability: Infinity Fighter">
 		<!-- Inflicts Stun on the enemy after a critical attack. Increases Maximum HP/ MP/ CP, P. Evasion, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_the_fist_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1133,7 +1133,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8761" toLevel="1" name="Infinity Dagger Special Ability">
+	<skill id="8761" toLevel="1" name="Special Ability: Infinity Dagger">
 		<!-- Blocks enemy's magic skills after a critical attack. Increases Max MP/ CP, Atk. Spd., MP Recovery Rate, Critical Rate for standard attacks from behind. Absorbs some of the inflicted damage as HP. Increases PvP Damage. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1160,7 +1160,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8763" toLevel="1" name="Infinity Stormer Special Ability">
+	<skill id="8763" toLevel="1" name="Special Ability: Infinity Stormer">
 		<!-- After a critical attack, removes one or more of the enemy's buffs. Increases Max HP/ CP, Atk. Spd., P. Accuracy, and PvP Damage. Reflects debuffs back to the enemy. Increases the number of targets attacked with a spear. -->
 		<icon>icon.weapon_the_pole_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1175,7 +1175,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8765" toLevel="1" name="Infinity Thrower Special Ability">
+	<skill id="8765" toLevel="1" name="Special Ability: Infinity Thrower">
 		<!-- Decreases enemy s Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
 		<icon>icon.weapon_the_bow_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1201,7 +1201,7 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="8767" toLevel="1" name="Infinity Retributer Special Ability">
+	<skill id="8767" toLevel="1" name="Special Ability: Infinity Retributer">
 		<!-- HP Recovery Rate +100% when using a good magic. Increases Max HP/ CP, M. Atk., M. Skill Critical Damage and PvP Damage. Decreases MP Consumption and cancel rate after magic use. -->
 		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1217,7 +1217,7 @@
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8769" toLevel="1" name="Infinity Magic Special Ability">
+	<skill id="8769" toLevel="1" name="Special Ability: Infinity Magic">
 		<!-- Regenerates HP by 100% when using a good magic. Increases Max MP, Max CP, Casting Spd, MP Recovery Rate, and damage inflicted during PvP. -->
 		<icon>icon.weapon_the_mace_of_hero_i00</icon>
 		<operateType>P</operateType>
@@ -1233,21 +1233,21 @@
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8771" toLevel="1" name="Infinity Rapier Special Ability">
+	<skill id="8771" toLevel="1" name="Special Ability: Infinity Rapier">
 		<!-- Decreases enemy's P. Def. after a critical attack. Increases Max HP/ MP/ CP and PvP Damage. Reflects some of the received damage back to the enemy. In addition, when a critical hit occurs after a standard attack, there is a chance that the capacity of a party member's skills will be maximized. -->
 		<icon>icon.weapon_infinity_rapier_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="8772" toLevel="1" name="Infinity Sword Special Ability">
+	<skill id="8772" toLevel="1" name="Special Ability: Infinity Sword">
 		<!-- Increases Critical Rate/ Damage for standard attacks, Max HP/ MP, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_infinity_sword_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
 	</skill>
-	<skill id="8773" toLevel="1" name="Infinity Shooter Special Ability">
+	<skill id="8773" toLevel="1" name="Special Ability: Infinity Guardian">
 		<!-- Decreases enemy s Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
 		<icon>icon.weapon_infinity_shooter_i00</icon>
 		<operateType>P</operateType>

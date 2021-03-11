@@ -150,7 +150,7 @@
 						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Guardian Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
@@ -199,7 +199,7 @@
 						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Guardian Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
@@ -248,7 +248,7 @@
 						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Guardian Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
@@ -297,7 +297,7 @@
 						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Guardian Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
@@ -346,7 +346,7 @@
 						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Guardian Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
@@ -395,7 +395,7 @@
 						<item id="35332" count="1" /> <!-- Corroded Helios Stormer Fragment -->
 					</item>
 					<item chance="1.5">
-						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Guardian Fragment -->
 					</item>
 					<item chance="1.5">
 						<item id="35333" count="1" /> <!-- Corroded Helios Thrower Fragment -->
@@ -546,7 +546,7 @@
 						<item id="35327" count="1" /> <!-- Corroded Helios Shaper Fragment -->
 					</item>
 					<item chance="1.8">
-						<item id="35334" count="1" /> <!-- Corroded Helios Shooter Fragment -->
+						<item id="35334" count="1" /> <!-- Corroded Helios Guardian Fragment -->
 					</item>
 					<item chance="1.8">
 						<item id="35329" count="1" /> <!-- Corroded Helios Slasher Fragment -->
@@ -1499,7 +1499,7 @@
 		</effects>
 	</skill>
 	<skill id="18649" toLevel="1" name="Freya's Vital Rune">
-		<!-- Bonus Acquired XP in Vitality state is boosted by $s1 when in your inventory (Does not apply to Boss Monsters) -->
+		<!-- Vitality bonus +$s1, Vitality Consumption -$s2. -->
 		<icon>icon.bm_freya_vital_rune</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1512,7 +1512,7 @@
 		</effects>
 	</skill>
 	<skill id="18650" toLevel="2" name="PA Talisman - Attribute Resistance">
-		<!-- Attribute Resistance +$s1, when equipped. -->
+		<!-- Attribute Resistance +$s1, when the talisman is equipped. -->
 		<icon>
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
 			<value level="2">icon.npoint_talisman_stat</value>
@@ -1644,7 +1644,7 @@
 		</effects>
 	</skill>
 	<skill id="18658" toLevel="1" name="Craft Effect - Earth">
-		<!-- M. Def. +$s1. -->
+		<!-- M. Def. +$s1 -->
 		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>P</operateType>
 		<effects>

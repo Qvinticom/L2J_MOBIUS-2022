@@ -667,7 +667,7 @@
 		<effectPoint>-1000</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16549" toLevel="1" name="Freeze - Eternal Ice">
+	<skill id="16549" toLevel="1" name="Freeze">
 		<!-- Frozen and unable to move. -->
 		<icon>icon.skill6274</icon>
 		<operateType>A2</operateType>
@@ -885,7 +885,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16563" toLevel="1" name="Dragonclaw Iron Punch">
-		<!-- The opponent is attacked with formidable might. -->
+		<!-- Launches a powerful blow at the enemy. -->
 		<icon>icon.skill0029</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
@@ -985,8 +985,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="16572" toLevel="1" name="Seal Archangel's Wrath">
-		<!-- Seal Archangel's Wrath causes Action Prohibit state -->
+	<skill id="16572" toLevel="1" name="Sealed Archangel's Wrath">
+		<!-- You are immobilized by Sealed Archangel. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>3</abnormalTime>
@@ -1060,7 +1060,7 @@
 		<effectPoint>-1000</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16576" toLevel="1" name="Freeze - Eternal Ice">
+	<skill id="16576" toLevel="1" name="Freeze">
 		<!-- Frozen and unable to move. -->
 		<icon>icon.skill6274</icon>
 		<operateType>A2</operateType>

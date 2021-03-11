@@ -361,7 +361,7 @@
 		</effects>
 	</skill>
 	<skill id="210" toLevel="45" name="Fist Weapon Mastery">
-		<!-- Increases P. Atk. by $s1 when using a fist weapon. -->
+		<!-- P. Atk. +$s1 when using a fist weapon. -->
 		<icon>icon.skill0210</icon>
 		<magicLevel>
 			<value level="1">20</value>
@@ -534,7 +534,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="213" toLevel="8" name="Boost Mana">
+	<skill id="213" toLevel="8" name="Mana Boost">
 		<!-- Max MP +$s1. -->
 		<icon>icon.skill0213</icon>
 		<magicLevel>
@@ -4684,7 +4684,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="269" toLevel="1" name="Hunter's Song">
+	<skill id="269" toLevel="1" name="Song of Hunter">
 		<!-- All party members' Critical Rate for standard attacks +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. -->
 		<icon>icon.skill0269</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -4736,7 +4736,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="271" toLevel="1" name="Warrior's Dance">
+	<skill id="271" toLevel="1" name="Dance of Warrior">
 		<!-- All party members' P. Atk. +$s2 for $s1 Song/ dance MP Consumption is increased if other song/ dance effects are active. Requires dual swords. -->
 		<icon>icon.skill0271</icon>
 		<abnormalLevel>1</abnormalLevel>

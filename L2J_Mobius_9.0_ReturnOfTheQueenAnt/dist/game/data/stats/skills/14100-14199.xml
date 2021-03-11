@@ -51,7 +51,7 @@
 		</effects>
 	</skill>
 	<skill id="14101" toLevel="4" name="Wood Downward Strike">
-		<!-- Speed is decreased by $s1. -->
+		<!-- Speed -$s1. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -403,7 +403,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14111" toLevel="1" name="Teredor Range Attack">
+	<skill id="14111" toLevel="1" name="Teredor AoE Attack">
 		<icon>icon.skill1230</icon>
 		<operateType>A1</operateType>
 		<mpConsume>77</mpConsume>

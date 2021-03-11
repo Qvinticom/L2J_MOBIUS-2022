@@ -731,7 +731,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6828" toLevel="1" name="Dust Storm">
-		<!-- For 30 sec., Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%. -->
+		<!-- For 30 sec., Atk. Spd./ Casting Spd. -50%. -->
 		<icon>icon.skill1386</icon>
 		<abnormalTime>10</abnormalTime>
 		<activateRate>80</activateRate>
@@ -2041,7 +2041,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6889" toLevel="1" name="Range Attack">
+	<skill id="6889" toLevel="1" name="AoE Attack">
 		<castRange>40</castRange>
 		<effectRange>100</effectRange>
 		<hitTime>2000</hitTime>

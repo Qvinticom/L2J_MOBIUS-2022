@@ -1978,7 +1978,7 @@
 		</effects>
 	</skill>
 	<skill id="1975" toLevel="1" name="Dual Certification - Berserker's Rage">
-		<!-- P. Atk. +27% for 15 sec. The skill cooldown is fixed. -->
+		<!-- For 15 sec., P. Atk. +27%. The skill cooldown is fixed. -->
 		<icon>icon.dual_t_atkup</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -2018,7 +2018,7 @@
 		</effects>
 	</skill>
 	<skill id="1977" toLevel="1" name="Dual Certification - Master's Rage">
-		<!-- For 15 min., P./ M. Skill Power +27%. The skill cooldown is fixed. -->
+		<!-- For 15 sec., P./ M. Skill Power +27%. The skill cooldown is fixed. -->
 		<icon>icon.dual_t_skup</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>15</abnormalTime>
@@ -2554,7 +2554,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="1998" toLevel="1" name="Dual Certification - Vital">
-		<!-- Vitality Bonus +$s1. -->
+		<!-- Vitality bonus +$s1. -->
 		<icon>icon.skill10336</icon>
 		<operateType>P</operateType>
 		<excludedFromCheck>true</excludedFromCheck>

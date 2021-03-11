@@ -402,7 +402,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="28259" toLevel="8" name="Sin of Greed">
-		<!-- P. Skill Critical Rate is increased when the agathion is upgraded. -->
+		<!-- P. Skill Critical Rate is increased, when the agathion grows. -->
 		<icon>BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -552,13 +552,13 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="28287" toLevel="1" name="Lv. 4 Jewel Box">
+	<skill id="28287" toLevel="1" name="Jewel Box Lv. 4">
 		<!-- Double click to obtain 1 Level 4 La Vie En Rose Gem. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="28288" toLevel="1" name="Lv. 5 Jewel Box">
+	<skill id="28288" toLevel="1" name="Jewel Box Lv. 5">
 		<!-- Double click to obtain 1 Level 5 La Vie En Rose Gem. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>

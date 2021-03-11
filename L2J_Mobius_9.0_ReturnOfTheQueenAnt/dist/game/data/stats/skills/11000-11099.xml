@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="11000" toLevel="1" name="Heavy Hit">
+	<skill id="11000" toLevel="1" name="Extra Hit">
 		<!-- Attacks long-range enemies. Hurls arrows like rain near target to inflict damage with 19158 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. -->
 		<icon>icon.skill10317</icon>
 		<operateType>A1</operateType>
@@ -5316,7 +5316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11072" toLevel="1" name="Elemental Spike/ Elemental Crash - Additional Effect">
+	<skill id="11072" toLevel="1" name="Elemental Spike / Elemental Crash - Additional Effect">
 		<!-- Using Elemental Spike decreases the target's corresponding Attribute Resistance. Using Elemental Crash activates additional effects. -->
 		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>

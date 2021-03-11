@@ -34,7 +34,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="29406" toLevel="1" name="Emperor's Special Cocktail">
-		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Attack Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
+		<!-- For 60 min., grants Horn Melody, Guitar Melody, Pipe Organ Melody, Drum Melody Lv. 5, Fantasia Harmony Lv. 2, War Drum, Marching Drum, Soothing Drum, Fantasia Melody, Attribute Resistance, Debuff Resistance, and Mental Resistance. The effect can be cancelled by pressing Alt + Mouse Left Click. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -267,8 +267,18 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="29421" toLevel="1" name="Mysterious Attribute Potion">
+		<!-- Attribute Attack +150, PvE damage +10%. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="29422" toLevel="1" name="Freya's Growth Rune">
+		<!-- Acquired XP/ SP +$s1, all basic stats +$s2, P./ M. Def. +$s3. Not for pets or servitors. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="29423" toLevel="1" name="Heir's Radiance Lv. 5">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 2 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, received area damage and received Skill Critical Damage -$s4, all stats +$s5, P./ M. Skill Power +$s9, all Critical Damage +$s9, PvE damage +$s6, received damage from Dragon's weapons -$s7. Enables the Heir's Radiance - PvE Lv. 2 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s8. Warrior's Circlet: P. Atk. +$s8. Wizard's Circlet: M. Atk. +$s8. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -377,7 +387,7 @@
 		</effects>
 	</skill>
 	<skill id="29424" toLevel="1" name="Heir's Radiance Lv. 6">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 3 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, received area damage and received Skill Critical Damage -$s4, all stats +$s5, P./ M. Skill Power +$s9, all Critical Damage +$s9, PvE damage +$s6, received damage from Dragon's weapons -$s7. Enables the Heir's Radiance - PvE Lv. 3 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s8. Warrior's Circlet: P. Atk. +$s8. Wizard's Circlet: M. Atk. +$s8. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -486,7 +496,7 @@
 		</effects>
 	</skill>
 	<skill id="29425" toLevel="1" name="Heir's Radiance Lv. 7">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvE damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvE Lv. 4 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, received area damage and received Skill Critical Damage -$s4, all stats +$s5, P./ M. Skill Power +$s9, all Critical Damage +$s9, PvE damage +$s6, received damage from Dragon's weapons -$s7. Enables the Heir's Radiance - PvE Lv. 4 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s8. Warrior's Circlet: P. Atk. +$s8. Wizard's Circlet: M. Atk. +$s8. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -595,7 +605,7 @@
 		</effects>
 	</skill>
 	<skill id="29426" toLevel="1" name="Heir's Radiance Lv. 5">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvP damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvP Lv. 2 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, received area damage and received Skill Critical Damage -$s4, all stats +$s5, P./ M. Skill Power +$s9, all Critical Damage +$s9, PvP damage +$s6, received damage from Dragon's weapons -$s7. Enables the Heir's Radiance - PvP Lv. 2 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s8. Warrior's Circlet: P. Atk. +$s8. Wizard's Circlet: M. Atk. +$s8. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -704,7 +714,7 @@
 		</effects>
 	</skill>
 	<skill id="29427" toLevel="1" name="Heir's Radiance Lv. 6">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvP damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvP Lv. 3 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, received area damage and received Skill Critical Damage -$s4, all stats +$s5, P./ M. Skill Power +$s9, all Critical Damage +$s9, PvP damage +$s6, received damage from Dragon's weapons -$s7. Enables the Heir's Radiance - PvP Lv. 3 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s8. Warrior's Circlet: P. Atk. +$s8. Wizard's Circlet: M. Atk. +$s8. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -813,7 +823,7 @@
 		</effects>
 	</skill>
 	<skill id="29428" toLevel="1" name="Heir's Radiance Lv. 7">
-		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, all stats +$s4, P./ M. Skill Power +$s8, all Critical Damage +$s8, PvP damage +$s5, received damage from Dragon's weapons -$s6. Enables the Heir's Radiance - PvP Lv. 4 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s7. Warrior's Circlet: P. Atk. +$s7. Wizard's Circlet: M. Atk. +$s7. -->
+		<!-- When equipped, Attribute Attack +$s1, Attribute Resistance +$s1, Debuff Resistance +$s2, Max HP +$s3, received area damage and received Skill Critical Damage -$s4, all stats +$s5, P./ M. Skill Power +$s9, all Critical Damage +$s9, PvP damage +$s6, received damage from Dragon's weapons -$s7. Enables the Heir's Radiance - PvP Lv. 4 skill. <When used with Knight's/ Wizard's/ Warrior's Circlet> Knight's Circlet: P./ M. Def. +$s8. Warrior's Circlet: P. Atk. +$s8. Wizard's Circlet: M. Atk. +$s8. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -921,7 +931,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="29429" toLevel="5" name="Heir's Radiance - PvE">
+	<skill id="29429" toLevel="5" name="Heir's Radiance - PvE Lv. 2">
 		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
@@ -1042,7 +1052,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="29430" toLevel="5" name="Heir's Radiance - PvP">
+	<skill id="29430" toLevel="5" name="Heir's Radiance - PvP Lv. 2">
 		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
@@ -1179,7 +1189,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="29431" toLevel="5" name="Heir's Radiance - PvE">
+	<skill id="29431" toLevel="5" name="Heir's Radiance - PvE Lv. 3">
 		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
@@ -1300,7 +1310,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="29432" toLevel="5" name="Heir's Radiance - PvP">
+	<skill id="29432" toLevel="5" name="Heir's Radiance - PvP Lv. 3">
 		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
@@ -1437,7 +1447,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="29433" toLevel="5" name="Heir's Radiance - PvE">
+	<skill id="29433" toLevel="5" name="Heir's Radiance - PvE Lv. 4">
 		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvE Damage -$s5. When the effect expires, the enhanced Heir's Radiance - PvE effect activates recovering 35,000 Vitality points. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
@@ -1558,7 +1568,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="29434" toLevel="5" name="Heir's Radiance - PvP">
+	<skill id="29434" toLevel="5" name="Heir's Radiance - PvP Lv. 4">
 		<!-- For 1 h., P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, M. Def. +$s4, Received PvP Damage -$s5, Recovery Potions' Effect +$s6. When the effect expires, the enhanced Heir's Radiance - PvP effect activates. Consumes 1000 Spirit Ore. Note! The effect disappears after logout and is not renewed after death. -->
 		<icon>BranchIcon.icon.g_bm_ring_of_light</icon>
 		<operateType>A2</operateType>
@@ -1695,8 +1705,18 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="29437" toLevel="1" name="+10 Limited Leviathan Heavy Armor Pack Lv. 1">
-		<!-- Double-click to acquire Limited Leviathan Heavy Armor Set that has been enchanted to +10. -->
+	<skill id="29435" toLevel="1" name="+18 Supreme Krishna Weapon Pack">
+		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +18. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="29436" toLevel="1" name="+20 Supreme Krishna Weapon Pack">
+		<!-- Double-click to obtain a Supreme Krishna weapon enchanted to +20. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="29437" toLevel="1" name="+10 Supreme Leviathan Heavy Armor Set Pack">
+		<!-- Double-click to obtain Supreme Leviathan heavy armor set enchanted to +10. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1722,8 +1742,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="29438" toLevel="1" name="+10 Limited Leviathan Light Armor Pack Lv. 1">
-		<!-- Double-click to acquire Limited Leviathan Light Armor Set that has been enchanted to +10. -->
+	<skill id="29438" toLevel="1" name="+10 Supreme Leviathan Light Armor Set Pack">
+		<!-- Double-click to obtain Supreme Leviathan light armor set enchanted to +10. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1749,8 +1769,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="29439" toLevel="1" name="+10 Limited Leviathan Robe Pack Lv. 1">
-		<!-- Double-click to acquire Limited Leviathan Robe Set that has been enchanted to +10. -->
+	<skill id="29439" toLevel="1" name="+10 Supreme Leviathan Robe Set Pack">
+		<!-- Double-click to obtain Supreme Leviathan robe set enchanted to +10. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1775,5 +1795,19 @@
 				</items>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="29440" toLevel="1" name="Freya's Ice Rose - Event">
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P./ M. Atk. and P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, Speed +$s5, Attribute Attack/ Resistance +$s6, damage +$s7, P./ M. Skill Power +$s8, acquired XP/ SP +$s9, received damage -$s10, Skill MP Consumption -$s11. The effect remains after death. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="29441" toLevel="1" name="Lucky Gift Coupon (1-hour)">
+		<!-- For $s1, PvE damage +10%, Attribute Resistance +20, acquired XP +10%. Allows to take part in the raffle. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="29442" toLevel="1" name="Freya's Lucky Pouch">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

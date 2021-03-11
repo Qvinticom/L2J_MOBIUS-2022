@@ -551,7 +551,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30505" toLevel="12" name="Pressure Punch">
+	<skill id="30505" toLevel="12" name="Gravity Shock">
 		<!-- Attacks nearby enemies with $s1 power added to P. Atk, causing them to tumble toward you. Requires a fist weapon. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown). -->
 		<icon>icon.skill30505</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -967,7 +967,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30511" toLevel="7" name="Air Light">
+	<skill id="30511" toLevel="7" name="Gravity Power">
 		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill30511</icon>
 		<abnormalLevel>1</abnormalLevel>
@@ -1528,7 +1528,7 @@
 				<targetType>TARGET</targetType>
 				<affectScope>SINGLE</affectScope>
 				<minDamage>100</minDamage>
-				<skillId>30521</skillId> <!-- Damage Up -->
+				<skillId>30521</skillId> <!-- Reliable Hit -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="IgnoreDeath" />
@@ -1571,7 +1571,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="30521" toLevel="1" name="Damage Up">
+	<skill id="30521" toLevel="1" name="Reliable Hit">
 		<!-- Increases standard attack damage x 5. -->
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>

@@ -590,7 +590,7 @@
 				<affectType>CASTER</affectType>
 			</condition>
 			<condition name="OpSkill">
-				<skillId>819</skillId> <!-- Evasion Chance -->
+				<skillId>819</skillId> <!-- Evasion Rate -->
 				<skillLevel>1</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
@@ -602,7 +602,7 @@
 		</conditions>
 		<effects>
 			<effect name="SetSkill">
-				<skillId>819</skillId> <!-- Evasion Chance -->
+				<skillId>819</skillId> <!-- Evasion Rate -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>

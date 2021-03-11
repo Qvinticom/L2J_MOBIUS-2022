@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17701" toLevel="20" name="Topaz - Spiritshot">
-		<!-- Interrupts the target's skill casting. In PvP ignores enemy's CP and deals fixed $s1 damage. -->
+	<skill id="17701" toLevel="20" name="Topaz - Spirit Hit">
+		<!-- Interrupts the target's skill casting. In PvP ignores the enemy's CP and deals fixed $s1 damage. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
 			<value level="2">icon.etc_bm_jewel_topaz_i00</value>
@@ -1191,7 +1191,7 @@
 		</effects>
 	</skill>
 	<skill id="17740" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Shooter (1-h.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Take it to Dandy to obtain Lindvior Guardian (1-hour). (Dandy's Scroll: Release Seal is required.) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->

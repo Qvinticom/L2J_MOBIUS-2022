@@ -367,7 +367,7 @@
 		<effectPoint>-687</effectPoint>
 	</skill>
 	<skill id="16836" toLevel="1" name="Devil's Highway">
-		<!-- Inflicts damage on the enemies in the specified range and absorbs 25% of the damage as your HP. Additionally, for 20 sec., target's M. Atk. and M. Def. -30%, P. Def., Casting Spd., Critical Rate for standard attacks, M. Skill Critical Rate, Speed -8% and P. Accuracy -12. -->
+		<!-- Inflicts damage on the target and nearby enemies and absorbs 25% of the damage as your HP. Additionally, for 20 sec., target's M. Atk. and M. Def. -30%, P. Def., Casting Spd., Critical Rate for standard attacks, M. Skill Critical Rate, Speed -8% and P. Accuracy -12. -->
 		<icon>icon.skill11048</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -534,7 +534,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16844" toLevel="1" name="Mind of Steel">
+	<skill id="16844" toLevel="1" name="Steel Mind">
 		<!-- P. Atk. +15%, Critical Damage for standard attacks +10%, P. Skill Critical Damage +10%, Speed +50, Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression Resistance +90%. Inflicts additional damage 5 times stronger than the standard attack. HP does not decrease below 1 and recovers by 30% when the effect expires. -->
 		<icon>icon.skill30520</icon>
 		<operateType>A1</operateType>
@@ -693,7 +693,7 @@
 		<coolTime>400</coolTime>
 		<effectPoint>-700</effectPoint>
 	</skill>
-	<skill id="16860" toLevel="1" name="Encourage">
+	<skill id="16860" toLevel="1" name="Encouragement">
 		<!-- Encourages the subordinates near you to boost their attack. -->
 		<icon>icon.skill11544</icon>
 		<operateType>A1</operateType>
@@ -1014,7 +1014,7 @@
 		<effectPoint>-96</effectPoint>
 	</skill>
 	<skill id="16884" toLevel="1" name="Blood To Flesh">
-		<!-- Sucks HP out of one selected enemy to recover your HP. -->
+		<!-- Recovers HP by selecting an enemy and draining their HP. -->
 		<icon>icon.skill11030</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

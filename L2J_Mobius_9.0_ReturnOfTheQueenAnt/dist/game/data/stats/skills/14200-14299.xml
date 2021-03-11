@@ -1166,7 +1166,7 @@
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>4578</skillId> <!-- Petrify -->
+				<skillId>4578</skillId> <!-- Petrifies the target. -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
@@ -1935,7 +1935,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14272" toLevel="1" name="Powerful Blow">
+	<skill id="14272" toLevel="1" name="Forceful Blow">
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>

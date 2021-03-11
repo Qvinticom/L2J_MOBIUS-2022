@@ -666,7 +666,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="23329" toLevel="1" name="Lantern Agathion's Gift1">
+	<skill id="23329" toLevel="1" name="Agathion Chorong's Gift 1">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -687,7 +687,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23330" toLevel="1" name="Lantern Agathion's Gift2">
+	<skill id="23330" toLevel="1" name="Agathion Chorong's Gift 2">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -708,7 +708,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23331" toLevel="1" name="Lantern Agathion's Gift3">
+	<skill id="23331" toLevel="1" name="Agathion Chorong's Gift 3">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -729,7 +729,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23332" toLevel="1" name="Lantern Agathion's Gift4">
+	<skill id="23332" toLevel="1" name="Agathion Chorong's Gift 4">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -751,7 +751,7 @@
 		</effects>
 	</skill>
 	<skill id="23333" toLevel="1" name="Agathion's New Year's Wish">
-		<!-- Through the power of Agathion Lantern, Vitality is maintained and not consumed. -->
+		<!-- Through the power of Agathion Chorong, Vitality is not consumed. -->
 		<icon>icon.etc_pi_gift_box_i03</icon>
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
@@ -775,8 +775,8 @@
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 	</skill>
-	<skill id="23334" toLevel="1" name="Lantern Agathion Cute Trick">
-		<!-- Able to see the summoned Lantern's perform cute tricks. -->
+	<skill id="23334" toLevel="1" name="Agathion Chorong's Cute Trick">
+		<!-- You can see cute tricks of the summoned Chorong. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>

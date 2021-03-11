@@ -581,7 +581,7 @@
 		</effects>
 	</skill>
 	<skill id="3608" toLevel="3" name="Apella Heavy Armor Set">
-		<!-- Increases Max CP/ CP Recovery Bonus, and decreases the skill player's death XP penalty. Increases one's own M. Def. when attacked. Decreases Critical Damage success rate. -->
+		<!-- Increases Max CP/ CP Recovery Rate, decreases XP Penalty when killed by an experienced player. Increases Magic Resistance and decreases received P. Critical Rate, when attacked. -->
 		<icon>icon.armor_t1004_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -651,7 +651,7 @@
 		</effects>
 	</skill>
 	<skill id="3609" toLevel="3" name="Apella Light Armor Set">
-		<!-- Increases Max CP/ CP Recovery Rate, decreases the player's death XP penalty in PvP. When the character is attacked, increases P. Evasion and decreases Received Critical Damage. -->
+		<!-- Increases Max CP/ CP Recovery Rate, decreases Death XP Penalty in PvP. Increases P. Evasion and decreases received Critical Damage, when attacked. -->
 		<icon>icon.armor_t1005_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -721,7 +721,7 @@
 		</effects>
 	</skill>
 	<skill id="3610" toLevel="3" name="Apella Robe Set">
-		<!-- Increases Max CP/ CP Recovery Rate, decreases the player's death XP penalty in PvP. When the character is attacked, increases Speed and P. Def. -->
+		<!-- Increases Max CP/ CP Recovery Rate, decreases Death XP Penalty in PvP. Increases Speed and P. Def., when attacked. -->
 		<icon>icon.armor_t1006_ul_i00</icon>
 		<magicLevel>1</magicLevel>
 		<operateType>P</operateType>
@@ -859,7 +859,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3614" toLevel="1" name="Enchant ?grade Heavy Armor">
+	<skill id="3614" toLevel="1" name="Enchant ?-grade Heavy Armor">
 		<!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
 		<icon>icon.skill0231</icon>
 		<magicLevel>1</magicLevel>
@@ -1557,7 +1557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3634" toLevel="1" name="Infinity Sword Special Ability">
+	<skill id="3634" toLevel="1" name="Special Ability: Infinity Sword">
 		<!-- Increases Critical Rate/ Damage for standard attacks, Max HP/ MP, and PvP Damage. Reflects debuffs back to the enemy. -->
 		<icon>icon.weapon_infinity_sword_i00</icon>
 		<magicLevel>80</magicLevel>
@@ -1603,7 +1603,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3635" toLevel="1" name="Infinity Shooter Special Ability">
+	<skill id="3635" toLevel="1" name="Special Ability: Infinity Crossbow">
 		<!-- Decreases enemy s Speed after a critical attack. Increases Max MP/ CP and PvP Damage. Decreases Skill Cooldown and MP Consumption. -->
 		<icon>icon.weapon_infinity_shooter_i00</icon>
 		<magicLevel>80</magicLevel>

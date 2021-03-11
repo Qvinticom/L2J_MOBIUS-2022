@@ -1018,7 +1018,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="30822" toLevel="1" name="Victories of Pa'agrio">
-		<!-- For $s1, all party members' Critical Rate for standard attacks, P./ M. Skill Critical Rate, P./ M. Skill Power +$s2. Additionally, activates the Spirit of Iss effect: P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Prophecy of Might/ Chant of Bison. Consumes $s4 Spirit Ore. -->
+		<!-- For $s1, all party members' Critical Rate for standard attacks, P./ M. Skill Critical Rate +$s2, P./ M. Skill Power +$s2. Additionally, activates the Spirit of Iss effect: P./ M. Atk. and P./ M. Def. +$s3. Cannot be used with Prophecy of Might/ Chant of Bison. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill1414</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>300</abnormalTime>
@@ -1041,7 +1041,7 @@
 		<affectObject>FRIEND</affectObject>
 		<selfEffects>
 			<effect name="CallSkill">
-				<skillId>30848</skillId> <!-- Spirit of iss -->
+				<skillId>30848</skillId> <!-- Spirit of Iss -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
@@ -1725,7 +1725,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30832" toLevel="1" name="Basic Mental Attack Resistance">
+	<skill id="30832" toLevel="1" name="Basic Mental Resistance">
 		<!-- For $s1, Buff Cancel Resistance/ Debuff Resistance +$s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill11824</icon>
 		<abnormalLevel>5</abnormalLevel>
@@ -2056,7 +2056,7 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Playable</attackerType>
-				<skillId>30851</skillId> <!-- Armor Breaker -->
+				<skillId>30851</skillId> <!-- Armor Crack -->
 				<chance>2</chance>
 				<targetType>ENEMY_ONLY</targetType>
 				<isCritical>false</isCritical>
@@ -2064,7 +2064,7 @@
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
-				<skillId>30851</skillId> <!-- Armor Breaker -->
+				<skillId>30851</skillId> <!-- Armor Crack -->
 				<chance>2</chance>
 				<targetType>ENEMY_ONLY</targetType>
 				<isCritical>false</isCritical>
@@ -2720,7 +2720,7 @@
 		</effects>
 	</skill>
 	<skill id="30863" toLevel="1" name="Golem's Spirit">
-		<!-- For $s1, P. Atk. +$s2, P. Skill Power +$s3. There is a certain chance to deal damage equal to $s4 of the target's HP after a standard attack. Consumes $s5 Soulstone(s). -->
+		<!-- For $s1, P. Atk. +$s2, P. Skill Power +$s3. There is a certain chance to deal damage equal to $s4 of the target's HP after a standard attack. Cannot be used with Golem Power. Consumes $s5 Soulstone(s). -->
 		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2900,7 +2900,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="30870" toLevel="1" name="Air Light_Test">
+	<skill id="30870" toLevel="1" name="Gravity Power_Test">
 		<!-- For $s1, P. Atk. +$s2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2967,6 +2967,11 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="30875" toLevel="1" name="Sonic Star Range Specifics (Test)">
+		<!-- A test ranged skill. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="30882" toLevel="1" name="Improved Dual Certification - P. Atk.">
 		<!-- Weapon P. Atk. +$s1. -->
 		<icon>icon.skill30882</icon>
@@ -2988,7 +2993,7 @@
 		-->
 	</skill>
 	<skill id="30884" toLevel="1" name="Improved Dual Certification - Vital">
-		<!-- Vitality Bonus +$s1. -->
+		<!-- Vitality bonus +$s1. -->
 		<icon>icon.skill30884</icon>
 		<operateType>P</operateType>
 		<effects>

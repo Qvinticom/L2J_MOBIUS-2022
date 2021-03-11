@@ -145,7 +145,7 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="32613" toLevel="1" name="Rush">
-		<!-- Charges at the enemy and inflicts physical damage. -->
+		<!-- Rushes towards the enemy inflicting P. damage. -->
 		<icon>icon.skill0484</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -325,7 +325,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="32632" toLevel="2" name="Queen Krosha Brilliance">
+	<skill id="32632" toLevel="2" name="Queen Krosha Brilliance Protect">
 		<!-- Amplifies Queen Krosha's power to increase P./ M. Def. by 100%. -->
 		<icon>
 			<value level="1">icon.skill0000</value>
@@ -566,7 +566,7 @@
 		<castRange>900</castRange>
 	</skill>
 	<skill id="32658" toLevel="1" name="Orc's Passion - Reward">
-		<!-- Acquire either Vitality Replenishing Star Candy, Freya's Wind Scroll (Event), or Glowing Dragon's Attribute Potion XP (Event). -->
+		<!-- Double-click to obtain one of the following items: Vitality Replenishing Star Candy, Freya's Frozen Scroll (Event), Glowing Dragon's Attribute Potion (XP, Event). -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -1232,7 +1232,7 @@
 		</effects>
 	</skill>
 	<skill id="32690" toLevel="1" name="Rush">
-		<!-- Charges at the enemy and inflicts physical damage. -->
+		<!-- Rushes towards the enemy inflicting P. damage. -->
 		<icon>icon.skill0484</icon>
 		<operateType>DA1</operateType>
 		<isDebuff>true</isDebuff>

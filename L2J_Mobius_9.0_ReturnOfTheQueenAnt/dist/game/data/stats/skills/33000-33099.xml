@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="33000" toLevel="3" name="Tana's Basic Skill">
+	<skill id="33000" toLevel="3" name="Tana's Basic Ability">
 		<!-- With a certain chance, P. Atk. +1% after a standard attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="33001" toLevel="3" name="Pallo's Basic Skill">
+	<skill id="33001" toLevel="3" name="Pallo's Basic Ability">
 		<!-- With a certain chance, Def. +1% when hit. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="33002" toLevel="3" name="Ayri's Basic Skill">
+	<skill id="33002" toLevel="3" name="Ayri's Basic Ability">
 		<!-- With a certain chance, Skill Power +1% when using skills. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="33003" toLevel="3" name="Churing's Basic Skill">
-		<!-- With a certain chance, M. Atk. +1% after a magical attack. -->
+	<skill id="33003" toLevel="3" name="Churing's Basic Ability">
+		<!-- With a certain chance, M. Atk. +1% after a magic attack. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="33004" toLevel="3" name="Chuchu Lv. 1 - Link Lv. 1">
+	<skill id="33004" toLevel="3" name="Chuchu Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -51,7 +51,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33005" toLevel="3" name="Tana Lv. 1 - Link Lv. 1">
+	<skill id="33005" toLevel="3" name="Tana Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -82,7 +82,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33006" toLevel="3" name="Pallo Lv. 1 - Link Lv. 1">
+	<skill id="33006" toLevel="3" name="Pallo Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -113,7 +113,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33007" toLevel="3" name="Ayri Lv. 1 - Link Lv. 1">
+	<skill id="33007" toLevel="3" name="Ayri Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -144,7 +144,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33008" toLevel="3" name="Churing Lv. 1 - Link Lv. 1">
+	<skill id="33008" toLevel="3" name="Churing Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -175,7 +175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33009" toLevel="3" name="Chuchu Lv. 2 - Link Lv. 1">
+	<skill id="33009" toLevel="3" name="Chuchu Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -198,7 +198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33010" toLevel="3" name="Tana Lv. 2 - Link Lv. 1">
+	<skill id="33010" toLevel="3" name="Tana Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -221,7 +221,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33011" toLevel="3" name="Pallo Lv. 2 - Link Lv. 1">
+	<skill id="33011" toLevel="3" name="Pallo Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -244,7 +244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33012" toLevel="3" name="Ayri Lv. 2 - Link Lv. 1">
+	<skill id="33012" toLevel="3" name="Ayri Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -267,7 +267,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33013" toLevel="3" name="Churing Lv. 2 - Link Lv. 1">
+	<skill id="33013" toLevel="3" name="Churing Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -290,7 +290,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33014" toLevel="3" name="Chuchu Lv. 3 - Link Lv. 1">
+	<skill id="33014" toLevel="3" name="Chuchu Lv. 3 - Bond Lv. 1">
 		<!-- Vitality Bonus +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -304,7 +304,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33015" toLevel="3" name="Tana Lv. 3 - Link Lv. 1">
+	<skill id="33015" toLevel="3" name="Tana Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +10. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -318,7 +318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33016" toLevel="3" name="Pallo Lv. 3 - Link Lv. 1">
+	<skill id="33016" toLevel="3" name="Pallo Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Resistance +10. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -373,7 +373,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33017" toLevel="3" name="Ayri Lv. 3 - Link Lv. 1">
+	<skill id="33017" toLevel="3" name="Ayri Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +10. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -387,7 +387,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33018" toLevel="3" name="Churing Lv. 3 - Link Lv. 1">
+	<skill id="33018" toLevel="3" name="Churing Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +10. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -401,7 +401,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33019" toLevel="3" name="Chuchu Lv. 4 - Link Lv. 1">
+	<skill id="33019" toLevel="3" name="Chuchu Lv. 4 - Bond Lv. 1">
 		<!-- Acquired XP/ SP +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -422,7 +422,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33020" toLevel="3" name="Tana Lv. 4 - Link Lv. 1">
+	<skill id="33020" toLevel="3" name="Tana Lv. 4 - Bond Lv. 1">
 		<!-- P. Atk. +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -437,7 +437,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33021" toLevel="3" name="Pallo Lv. 4 - Link Lv. 1">
+	<skill id="33021" toLevel="3" name="Pallo Lv. 4 - Bond Lv. 1">
 		<!-- P./ M. Def. +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -460,7 +460,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33022" toLevel="3" name="Ayri Lv. 4 - Link Lv. 1">
+	<skill id="33022" toLevel="3" name="Ayri Lv. 4 - Bond Lv. 1">
 		<!-- P./ M. Skill Power +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -483,7 +483,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33023" toLevel="3" name="Churing Lv. 4 - Link Lv. 1">
+	<skill id="33023" toLevel="3" name="Churing Lv. 4 - Bond Lv. 1">
 		<!-- M. Atk. +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -498,7 +498,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33024" toLevel="3" name="Chuchu Lv. 5 - Link Lv. 1">
+	<skill id="33024" toLevel="3" name="Chuchu Lv. 5 - Bond Lv. 1">
 		<!-- Adena drop rate +3% if you have Vitality. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -513,7 +513,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33025" toLevel="3" name="Tana Lv. 5 - Link Lv. 1">
+	<skill id="33025" toLevel="3" name="Tana Lv. 5 - Bond Lv. 1">
 		<!-- Critical Damage for standard attacks +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -528,7 +528,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33026" toLevel="3" name="Pallo Lv. 5 - Link Lv. 1">
+	<skill id="33026" toLevel="3" name="Pallo Lv. 5 - Bond Lv. 1">
 		<!-- All received Critical Damage -1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -559,7 +559,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33027" toLevel="3" name="Ayri Lv. 5 - Link Lv. 1">
+	<skill id="33027" toLevel="3" name="Ayri Lv. 5 - Bond Lv. 1">
 		<!-- Skill Cooldown -1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -593,7 +593,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33028" toLevel="3" name="Churing Lv. 5 - Link Lv. 1">
+	<skill id="33028" toLevel="3" name="Churing Lv. 5 - Bond Lv. 1">
 		<!-- M. Skill Critical Damage +1%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -608,7 +608,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33029" toLevel="3" name="Water Chuchu Lv. 1 - Link Lv. 1">
+	<skill id="33029" toLevel="3" name="Water Chuchu Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -639,7 +639,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33030" toLevel="3" name="Water Tana Lv. 1 - Link Lv. 1">
+	<skill id="33030" toLevel="3" name="Water Tana Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -670,7 +670,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33031" toLevel="3" name="Water Pallo Lv. 1 - Link Lv. 1">
+	<skill id="33031" toLevel="3" name="Water Pallo Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -701,7 +701,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33032" toLevel="3" name="Water Ayri Lv. 1 - Link Lv. 1">
+	<skill id="33032" toLevel="3" name="Water Ayri Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -732,7 +732,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33033" toLevel="3" name="Water Churing Lv. 1 - Link Lv. 1">
+	<skill id="33033" toLevel="3" name="Water Churing Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +2. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -763,7 +763,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33034" toLevel="3" name="Water Chuchu Lv. 2 - Link Lv. 1">
+	<skill id="33034" toLevel="3" name="Water Chuchu Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -786,7 +786,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33035" toLevel="3" name="Water Tana Lv. 2 - Link Lv. 1">
+	<skill id="33035" toLevel="3" name="Water Tana Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -809,7 +809,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33036" toLevel="3" name="Water Pallo Lv. 2 - Link Lv. 1">
+	<skill id="33036" toLevel="3" name="Water Pallo Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -832,7 +832,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33037" toLevel="3" name="Water Ayri Lv. 2 - Link Lv. 1">
+	<skill id="33037" toLevel="3" name="Water Ayri Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -855,7 +855,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33038" toLevel="3" name="Water Churing Lv. 2 - Link Lv. 1">
+	<skill id="33038" toLevel="3" name="Water Churing Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -878,7 +878,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33039" toLevel="3" name="Water Chuchu Lv. 3 - Link Lv. 1">
+	<skill id="33039" toLevel="3" name="Water Chuchu Lv. 3 - Bond Lv. 1">
 		<!-- Vitality Bonus +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -892,7 +892,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33040" toLevel="3" name="Water Tana Lv. 3 - Link Lv. 1">
+	<skill id="33040" toLevel="3" name="Water Tana Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +20. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -906,7 +906,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33041" toLevel="3" name="Water Pallo Lv. 3 - Link Lv. 1">
+	<skill id="33041" toLevel="3" name="Water Pallo Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Resistance +20. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -961,7 +961,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33042" toLevel="3" name="Water Ayri Lv. 3 - Link Lv. 1">
+	<skill id="33042" toLevel="3" name="Water Ayri Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +20. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -975,7 +975,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33043" toLevel="3" name="Water Churing Lv. 3 - Link Lv. 1">
+	<skill id="33043" toLevel="3" name="Water Churing Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +20. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -989,7 +989,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33044" toLevel="3" name="Water Chuchu Lv. 4 - Link Lv. 1">
+	<skill id="33044" toLevel="3" name="Water Chuchu Lv. 4 - Bond Lv. 1">
 		<!-- Acquired XP/ SP +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1010,7 +1010,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33045" toLevel="3" name="Water Tana Lv. 4 - Link Lv. 1">
+	<skill id="33045" toLevel="3" name="Water Tana Lv. 4 - Bond Lv. 1">
 		<!-- P. Atk. +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1025,7 +1025,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33046" toLevel="3" name="Water Pallo Lv. 4 - Link Lv. 1">
+	<skill id="33046" toLevel="3" name="Water Pallo Lv. 4 - Bond Lv. 1">
 		<!-- P./ M. Def. +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1048,7 +1048,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33047" toLevel="3" name="Water Ayri Lv. 4 - Link Lv. 1">
+	<skill id="33047" toLevel="3" name="Water Ayri Lv. 4 - Bond Lv. 1">
 		<!-- P./ M. Skill Power +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1071,7 +1071,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33048" toLevel="3" name="Water Churing Lv. 4 - Link Lv. 1">
+	<skill id="33048" toLevel="3" name="Water Churing Lv. 4 - Bond Lv. 1">
 		<!-- M. Atk. +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1086,7 +1086,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33049" toLevel="3" name="Water Chuchu Lv. 5 - Link Lv. 1">
+	<skill id="33049" toLevel="3" name="Water Chuchu Lv. 5 - Bond Lv. 1">
 		<!-- Adena drop rate +4% if you have Vitality. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1101,7 +1101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33050" toLevel="3" name="Water Tana Lv. 5 - Link Lv. 1">
+	<skill id="33050" toLevel="3" name="Water Tana Lv. 5 - Bond Lv. 1">
 		<!-- Critical Damage for standard attacks +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1116,7 +1116,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33051" toLevel="3" name="Water Pallo Lv. 5 - Link Lv. 1">
+	<skill id="33051" toLevel="3" name="Water Pallo Lv. 5 - Bond Lv. 1">
 		<!-- All received Critical Damage -2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1147,7 +1147,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33052" toLevel="3" name="Water Ayri Lv. 5 - Link Lv. 1">
+	<skill id="33052" toLevel="3" name="Water Ayri Lv. 5 - Bond Lv. 1">
 		<!-- Skill Cooldown -2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1181,7 +1181,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33053" toLevel="3" name="Water Churing Lv. 5 - Link Lv. 1">
+	<skill id="33053" toLevel="3" name="Water Churing Lv. 5 - Bond Lv. 1">
 		<!-- M. Skill Critical Damage +2%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1196,7 +1196,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33054" toLevel="3" name="Luminous Chuchu Lv. 1 - Link Lv. 1">
+	<skill id="33054" toLevel="3" name="Luminous Chuchu Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +3. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1227,7 +1227,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33055" toLevel="3" name="Luminous Tana Lv. 1 - Link Lv. 1">
+	<skill id="33055" toLevel="3" name="Luminous Tana Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +3. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1258,7 +1258,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33056" toLevel="3" name="Luminous Pallo Lv. 1 - Link Lv. 1">
+	<skill id="33056" toLevel="3" name="Luminous Pallo Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +3. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1289,7 +1289,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33057" toLevel="3" name="Luminous Ayri Lv. 1 - Link Lv. 1">
+	<skill id="33057" toLevel="3" name="Luminous Ayri Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +3. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1320,7 +1320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33058" toLevel="3" name="Luminous Churing Lv. 1 - Link Lv. 1">
+	<skill id="33058" toLevel="3" name="Luminous Churing Lv. 1 - Bond Lv. 1">
 		<!-- CON/ MEN +3. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1351,7 +1351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33059" toLevel="3" name="Luminous Chuchu Lv. 2 - Link Lv. 1">
+	<skill id="33059" toLevel="3" name="Luminous Chuchu Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1374,7 +1374,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33060" toLevel="3" name="Luminous Tana Lv. 2 - Link Lv. 1">
+	<skill id="33060" toLevel="3" name="Luminous Tana Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1397,7 +1397,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33061" toLevel="3" name="Luminous Pallo Lv. 2 - Link Lv. 1">
+	<skill id="33061" toLevel="3" name="Luminous Pallo Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1420,7 +1420,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33062" toLevel="3" name="Luminous Ayri Lv. 2 - Link Lv. 1">
+	<skill id="33062" toLevel="3" name="Luminous Ayri Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1443,7 +1443,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33063" toLevel="3" name="Luminous Churing Lv. 2 - Link Lv. 1">
+	<skill id="33063" toLevel="3" name="Luminous Churing Lv. 2 - Bond Lv. 1">
 		<!-- Max HP/ MP +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1466,7 +1466,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33064" toLevel="3" name="Luminous Chuchu Lv. 3 - Link Lv. 1">
+	<skill id="33064" toLevel="3" name="Luminous Chuchu Lv. 3 - Bond Lv. 1">
 		<!-- Vitality Bonus +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1480,7 +1480,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33065" toLevel="3" name="Luminous Tana Lv. 3 - Link Lv. 1">
+	<skill id="33065" toLevel="3" name="Luminous Tana Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +30. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1494,7 +1494,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33066" toLevel="3" name="Luminous Pallo Lv. 3 - Link Lv. 1">
+	<skill id="33066" toLevel="3" name="Luminous Pallo Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Resistance +30. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1549,7 +1549,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33067" toLevel="3" name="Luminous Ayri Lv. 3 - Link Lv. 1">
+	<skill id="33067" toLevel="3" name="Luminous Ayri Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +30. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1563,7 +1563,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33068" toLevel="3" name="Luminous Churing Lv. 3 - Link Lv. 1">
+	<skill id="33068" toLevel="3" name="Luminous Churing Lv. 3 - Bond Lv. 1">
 		<!-- Attribute Attack +30. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1577,7 +1577,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33069" toLevel="3" name="Luminous Chuchu Lv. 4 - Link Lv. 1">
+	<skill id="33069" toLevel="3" name="Luminous Chuchu Lv. 4 - Bond Lv. 1">
 		<!-- Acquired XP/ SP +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1598,7 +1598,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33070" toLevel="3" name="Luminous Tana Lv. 4 - Link Lv. 1">
+	<skill id="33070" toLevel="3" name="Luminous Tana Lv. 4 - Bond Lv. 1">
 		<!-- P. Atk. +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1613,7 +1613,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33071" toLevel="3" name="Luminous Pallo Lv. 4 - Link Lv. 1">
+	<skill id="33071" toLevel="3" name="Luminous Pallo Lv. 4 - Bond Lv. 1">
 		<!-- P./ M. Def. +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1636,7 +1636,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33072" toLevel="3" name="Luminous Ayri Lv. 4 - Link Lv. 1">
+	<skill id="33072" toLevel="3" name="Luminous Ayri Lv. 4 - Bond Lv. 1">
 		<!-- P./ M. Skill Power +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1659,7 +1659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33073" toLevel="3" name="Luminous Churing Lv. 4 - Link Lv. 1">
+	<skill id="33073" toLevel="3" name="Luminous Churing Lv. 4 - Bond Lv. 1">
 		<!-- M. Atk. +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1674,7 +1674,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33074" toLevel="3" name="Luminous Chuchu Lv. 5 - Link Lv. 1">
+	<skill id="33074" toLevel="3" name="Luminous Chuchu Lv. 5 - Bond Lv. 1">
 		<!-- Adena drop rate +5% if you have Vitality. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1689,7 +1689,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33075" toLevel="3" name="Luminous Tana Lv. 5 - Link Lv. 1">
+	<skill id="33075" toLevel="3" name="Luminous Tana Lv. 5 - Bond Lv. 1">
 		<!-- Critical Damage for standard attacks +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1704,7 +1704,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33076" toLevel="3" name="Luminous Pallo Lv. 5 - Link Lv. 1">
+	<skill id="33076" toLevel="3" name="Luminous Pallo Lv. 5 - Bond Lv. 1">
 		<!-- All received Critical Damage -3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1735,7 +1735,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33077" toLevel="3" name="Luminous Ayri Lv. 5 - Link Lv. 1">
+	<skill id="33077" toLevel="3" name="Luminous Ayri Lv. 5 - Bond Lv. 1">
 		<!-- Skill Cooldown -3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1769,7 +1769,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="33078" toLevel="3" name="Luminous Churing Lv. 5 - Link Lv. 1">
+	<skill id="33078" toLevel="3" name="Luminous Churing Lv. 5 - Bond Lv. 1">
 		<!-- M. Skill Critical Damage +3%. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
@@ -1819,8 +1819,8 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="33086" toLevel="2" name="Dragon Scale">
-		<!-- Because of the power of Dragon Scale, P./ M. Def. are increased. -->
+	<skill id="33086" toLevel="2" name="Antharas' Claw">
+		<!-- Antharas' power imbues his claws. P./ M. Atk. are increased. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

@@ -432,7 +432,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10749" toLevel="1" name="Heavy Hit">
+	<skill id="10749" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -462,7 +462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10750" toLevel="1" name="Heavy Hit">
+	<skill id="10750" toLevel="1" name="Extra Hit">
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3131,7 +3131,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10793" toLevel="1" name="Flash">
+	<skill id="10793" toLevel="1" name="Blaze">
 		<!-- Cancels the targeting of nearby enemies. For $s1 Speed +$s2. Prevents you from being targeted. -->
 		<icon>icon.skill10793</icon>
 		<operateType>A2</operateType>
