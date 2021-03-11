@@ -18,6 +18,7 @@ package quests.Q10971_TalismanEnchant;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -32,7 +33,9 @@ public class Q10971_TalismanEnchant extends Quest
 	// NPC
 	private static final int CAPTAIN_BATHIS = 30332;
 	// Item
-	private static final int TALISMAN_OF_ADEN = 91745;
+	private static final ItemHolder TALISMAN_OF_ADEN = new ItemHolder(91745, 1);
+	private static final ItemHolder TALISMAN_OF_ADEN_ENCHANT = new ItemHolder(91756, 1);
+	
 	// Misc
 	private static final int MIN_LEVEL = 25;
 	
@@ -69,6 +72,15 @@ public class Q10971_TalismanEnchant extends Quest
 			{
 				qs.startQuest();
 				player.sendPacket(new ExTutorialShowId(47));
+				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
+				if (player.getInventory().getItemsByItemId(TALISMAN_OF_ADEN.getId()).isEmpty())
+				{
+					giveItems(player, TALISMAN_OF_ADEN);
+				}
+				if (player.getInventory().getItemsByItemId(TALISMAN_OF_ADEN_ENCHANT.getId()).isEmpty())
+				{
+					giveItems(player, TALISMAN_OF_ADEN_ENCHANT);
+				}
 				htmltext = event;
 				break;
 			}
@@ -88,7 +100,7 @@ public class Q10971_TalismanEnchant extends Quest
 		else if (qs.isStarted())
 		{
 			boolean foundEnchant = false;
-			SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(TALISMAN_OF_ADEN))
+			SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(TALISMAN_OF_ADEN.getId()))
 			{
 				if (item.getEnchantLevel() > 0)
 				{

@@ -77,8 +77,15 @@ public class Q10974_NewStylishEquipment extends Quest
 			case "30857-03.htm":
 			{
 				qs.startQuest();
-				giveItems(player, ENCHANT_SCROLL_ADVENTURER_SHEEP_HAT);
-				giveItems(player, ADVENTURER_SHEEP_HAT);
+				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
+				if (player.getInventory().getItemsByItemId(ADVENTURER_SHEEP_HAT.getId()).isEmpty())
+				{
+					giveItems(player, ADVENTURER_SHEEP_HAT);
+				}
+				if (player.getInventory().getItemsByItemId(ENCHANT_SCROLL_ADVENTURER_SHEEP_HAT.getId()).isEmpty())
+				{
+					giveItems(player, ENCHANT_SCROLL_ADVENTURER_SHEEP_HAT);
+				}
 				htmltext = event;
 				break;
 			}
@@ -108,8 +115,15 @@ public class Q10974_NewStylishEquipment extends Quest
 			case "30857-05.html":
 			{
 				qs.startQuest();
-				giveItems(player, ENCHANT_SCROLL_ADVENTURER_BELT);
-				giveItems(player, ADVENTURER_BELT);
+				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
+				if (player.getInventory().getItemsByItemId(ADVENTURER_BELT.getId()).isEmpty())
+				{
+					giveItems(player, ADVENTURER_BELT);
+				}
+				if (player.getInventory().getItemsByItemId(ENCHANT_SCROLL_ADVENTURER_BELT.getId()).isEmpty())
+				{
+					giveItems(player, ENCHANT_SCROLL_ADVENTURER_BELT);
+				}
 				htmltext = event;
 				break;
 			}
@@ -139,8 +153,15 @@ public class Q10974_NewStylishEquipment extends Quest
 			case "30857-07.html":
 			{
 				qs.startQuest();
-				giveItems(player, ENCHANT_SCROLL_ADVENTURER_CLOAK);
-				giveItems(player, ADVENTURER_CLOAK);
+				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
+				if (player.getInventory().getItemsByItemId(ADVENTURER_CLOAK.getId()).isEmpty())
+				{
+					giveItems(player, ADVENTURER_CLOAK);
+				}
+				if (player.getInventory().getItemsByItemId(ENCHANT_SCROLL_ADVENTURER_CLOAK.getId()).isEmpty())
+				{
+					giveItems(player, ENCHANT_SCROLL_ADVENTURER_CLOAK);
+				}
 				htmltext = event;
 				break;
 			}

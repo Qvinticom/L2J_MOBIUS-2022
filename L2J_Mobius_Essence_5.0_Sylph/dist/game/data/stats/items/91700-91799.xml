@@ -303,12 +303,23 @@
 	</item>
 	<item id="91725" name="Scroll of Escape: Abandoned Camp" type="EtcItem">
 		<!-- Can be used to teleport to the Abandoned Camp. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i04" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_stackable" val="true" />
+        <set name="icon" val="icon.etc_scroll_of_return_i04" />
+        <set name="default_action" val="SKILL_REDUCE" />
+        <set name="material" val="PAPER" />
+        <set name="weight" val="30" />
+        <set name="price" val="35000" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="commissionItemType" val="SCROLL_OTHER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_dropable" val="false" />
+        <cond addName="1" msgId="113">
+            <player flyMounted="false" />
+        </cond>
+        <skills>
+            <skill id="51441" level="1" /> <!-- Scroll of Escape: Master Kerkir -->
+        </skills>
 	</item>
 	<item id="91726" name="Scroll of Escape: Windmill Hill" type="EtcItem">
 		<!-- Can be used to teleport to the Windmill Hill. -->
@@ -321,12 +332,23 @@
 	</item>
 	<item id="91727" name="Scroll of Escape: Ruins of Agony" type="EtcItem">
 		<!-- Can be used to teleport to the Ruins of Agony. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i04" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_stackable" val="true" />
+        <set name="icon" val="icon.etc_scroll_of_return_i04" />
+        <set name="default_action" val="SKILL_REDUCE" />
+        <set name="material" val="PAPER" />
+        <set name="weight" val="30" />
+        <set name="price" val="35000" />
+        <set name="is_stackable" val="true" />
+        <set name="is_oly_restricted" val="true" />
+        <set name="handler" val="ItemSkills" />
+        <set name="commissionItemType" val="SCROLL_OTHER" />
+        <set name="is_tradable" val="false" />
+        <set name="is_dropable" val="false" />
+        <cond addName="1" msgId="113">
+            <player flyMounted="false" />
+        </cond>
+        <skills>
+            <skill id="51443" level="1" /> <!-- Scroll of Escape: Ruins of Agony -->
+        </skills>
 	</item>
 	<item id="91728" name="Reinforced Spear Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

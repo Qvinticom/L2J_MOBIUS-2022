@@ -276,7 +276,29 @@
 	</skill>
 	<skill id="51441" toLevel="1" name="Scroll of Escape: Abandoned Camp">
 		<!-- A magical scroll that teleports to the Abandoned Camp. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
-		<operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>91725</itemConsumeId>
+        <magicLevel>1</magicLevel>
+        <operateType>A1</operateType>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <conditions>
+            <condition name="OpAlignment">
+                <affectType>CASTER</affectType>
+                <alignment>LAWFUL</alignment>
+            </condition>
+            <condition name="OpCanEscape" />
+        </conditions>
+        <effects>
+            <effect name="Teleport">
+                <x>-46868</x>
+                <y>148086</y>
+                <z>-2968</z>
+            </effect>
+        </effects>
 	</skill>
 	<skill id="51442" toLevel="1" name="Scroll of Escape: Windmill Hill">
 		<!-- A magical scroll that teleports to the Windmill Hill. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
@@ -284,7 +306,29 @@
 	</skill>
 	<skill id="51443" toLevel="1" name="Scroll of Escape: Ruins of Agony">
 		<!-- A magical scroll that teleports to the Ruins of Agony. Cannot be exchanged, dropped, or sold. Can be stored in the warehouse. -->
-		<operateType>A1</operateType>
+        <hitTime>500</hitTime>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <itemConsumeCount>1</itemConsumeCount>
+        <itemConsumeId>91727</itemConsumeId>
+        <magicLevel>1</magicLevel>
+        <operateType>A1</operateType>
+        <magicCriticalRate>5</magicCriticalRate>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <conditions>
+            <condition name="OpAlignment">
+                <affectType>CASTER</affectType>
+                <alignment>LAWFUL</alignment>
+            </condition>
+            <condition name="OpCanEscape" />
+        </conditions>
+        <effects>
+            <effect name="Teleport">
+                <x>-42307</x>
+                <y>120810</y>
+                <z>-3368</z>
+            </effect>
+        </effects>
 	</skill>
 	<skill id="51444" toLevel="1" name="Reinforced Spear Chest">
 		<icon>icon.etc_treasure_box_i04</icon>

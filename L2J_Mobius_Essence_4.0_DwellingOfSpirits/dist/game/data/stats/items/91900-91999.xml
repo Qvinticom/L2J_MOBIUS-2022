@@ -578,9 +578,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="120" />
+		<set name="enchant_limit" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+        <set name="enchant_enabled" val="true" />
 		<set name="bodypart" val="deco1" />
 	</item>
 	<item id="91938" name="Primeval Isle's Prolongating Stone" type="EtcItem">

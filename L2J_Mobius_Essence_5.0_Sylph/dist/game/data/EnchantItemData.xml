@@ -101,7 +101,7 @@
 	</enchant>
 
 	<!-- Talisman of Aden -->
-	<enchant id="91756" maxEnchant="10">
+	<enchant id="91756" maxEnchant="10" safeEnchant="1">
 		<item id="91745" />
 	</enchant>
 
@@ -151,6 +151,11 @@
 	<!-- Adventurer's Belt -->
 	<enchant id="93046" maxEnchant="10" safeEnchant="3">
 		<item id="93042" />
+	</enchant>
+
+	<!-- Adventurer's Talisman -->
+	<enchant id="95688" maxEnchant="10" safeEnchant="1">
+		<item id="91937" />
 	</enchant>
 
 	<!-- Cloak of Protection -->
