@@ -437,4 +437,673 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="81741" name="Enhanced Benusta's Reward Box" type="EtcItem">
+		<!-- Double-click to obtain a rare item or adena. -->
+		<set name="icon" val="icon.etc_treasure_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81742" name="Hero's Treasure Chest" type="EtcItem">
+		<!-- A chest with hero's treasures. Double-click to obtain a rare item. -->
+		<set name="icon" val="BranchSys.icon.br_fortuna_box_s_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81743" name="Soul Crystal Box Lv. 6" additionalName="Event" type="EtcItem">
+		<!-- Double-click to obtain Kain's, Mermoden's, Leona's, Pantheon's, or Lionel's Soul Crystal Lv. 6. -->
+		<set name="icon" val="icon.etc_treasure_box_i08" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81744" name="Shining Artifact Pack" type="EtcItem">
+		<!-- Artifact Crystal Pack. Double click to obtain a Artifact Crystal and, with a certain chance, a rare item. -->
+		<set name="icon" val="icon.bm_pirate_battle_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81745" name="+1 Shining Artifact Pack" additionalName="Balance" type="EtcItem">
+		<!-- Double-click to obtain a balance artifact enchanted to +1. -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81746" name="+3 Shining Artifact Pack" additionalName="Balance" type="EtcItem">
+		<!-- Double-click to obtain a balance artifact enchanted to +3. -->
+		<set name="icon" val="icon.bm_artifact_a_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81747" name="Royal Honey Dark Beer" type="EtcItem">
+		<!-- For 30 min. all basic stats +3, Vitality bonus +50%, P./ M. Def. +15%.\n\nThe effect remains after death. Cooldown: 5 min.\nCannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_royal_black_beer" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81748" name="Recipe: Ancient Book: Divine Inspiration (Beginner) (60%)" type="EtcItem">
+		<!-- For Tyrr Maestro only. A recipe for Ancient Book: Divine Inspiration (Beginner). Requires Create Item Lv. 15. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1200000" />
+	</item>
+	<item id="81749" name="Recipe: Ancient Book: Divine Inspiration (Intermediate) (60%)" type="EtcItem">
+		<!-- For Tyrr Maestro only. A recipe for Ancient Book: Divine Inspiration (Intermediate). Requires Create Item Lv. 15. The success rate is 60%. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="1200000" />
+	</item>
+	<item id="81750" name="First Time Lv. 120 Gift" additionalName="Dan from the Sieghardt server" type="EtcItem">
+		<!-- Dan from the Sieghardt server was the first player in the history of Lineage 2 to reach Lv. 120.\nTo commemorate this event every player is awarded a special gift.\nDouble-click to receive a large amount of supplies. -->
+		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81751" name="Ruler's Authority - Chaos" additionalName="Lv. 3" type="Armor">
+		<!-- The energy of chaos that consumes light. Max HP/ MP/ CP +3%, weight limit +25,600, damage +12%, received damage -12%, Damage Reflection Resistance +15%, Fixed Damage Resistance +15%, All received Critical Damage -15%, inventory slots +36, Attribute Resistance +30. -->
+		<set name="icon" val="icon.grankain_powerbelt3" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="brooch" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="440" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">150</stat>
+		</stats>
+	</item>
+	<item id="81752" name="Gran Kain's Scroll: Enchant Superior Kaliel's Bracelet" type="EtcItem">
+		<!-- For Superior Kaliel's Bracelet enchanted to +7 or higher. Through Gran Kain's power, in case of failure, the item is not crystallized, and its enchant value remains the same. -->
+		<set name="icon" val="icon.bm_shilen_scrl_of_ench_rbracelet" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81753" name="Einhasad's Anniversary Box" type="EtcItem">
+		<!-- A box prepared on the occasion of minting of Einhasad's Golden Coins. Double-click to obtain one rare item with a certain chance. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81754" name="Aden Unity Support Box" additionalName="Lv. 1" type="EtcItem">
+		<!-- A gift box prepared by Anhel to unite Aden warriors.\nDouble-click to receive a large amount of supplies. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81755" name="Aden Unity Support Box" additionalName="Lv. 2" type="EtcItem">
+		<!-- A gift box prepared by Anhel to unite Aden warriors.\nDouble-click to receive a large amount of supplies. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81756" name="Aden Unity Support Box" additionalName="Lv. 3" type="EtcItem">
+		<!-- A gift box prepared by Anhel to unite Aden warriors.\nDouble-click to receive a Krishna Weapon or Leviathan Armor with a certain chance as well as a large amount of supplies. -->
+		<set name="icon" val="icon.ev_2018_xmas_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81757" name="Water Dragon's Scroll Bundle" type="EtcItem">
+		<!-- A bundle of scroll used by the warriors of Water Dragon's Legion that live in the Corroded Fields. Double-click to randomly receive a PA Scroll of Storm. -->
+		<set name="icon" val="br_cashtex.item.br_cash_fighter_buff_set_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81758" name="Water Dragon's Elite Supplies" type="EtcItem">
+		<!-- Supplies of the elite warriors of Water Dragon's Legion that live in the Corroded Fields. Double-click to obtain a Talisman of Insanity, an Accessory Augmenting Stone and a Forgotten Spellbook Chapter 1 with a certain chance as well as other supplies and materials. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81759" name="Glowing Royal Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
+		<!-- When used, Attribute Attack +100, Attribute Resistance +100, acquired XP/ SP +50% for 30 min.\n\nThe effect remains after death. Cooldown: 5 min.\nCannot be used in the Olympiad. -->
+		<set name="icon" val="icon.bm_dragon_posion_special" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81760" name="Enhanced Talisman of Protection Lv. 1" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +5000, M. Def. +3250, Attribute Resistance +160.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81761" name="Enhanced Talisman of Protection Lv. 2" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +5960, M. Def. +3874, Attribute Resistance +170.\nReceived. M. damage -5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81762" name="Enhanced Talisman of Protection Lv. 3" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +6920, M. Def. +4498, Attribute Resistance +180.\nReceived. M. damage -5%.\nDagger Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81763" name="Enhanced Talisman of Protection Lv. 4" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +7880, M. Def. +5122, Attribute Resistance +190.\nReceived. M. damage -5%.\nDagger/ Bow/ Crossbow Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81764" name="Enhanced Talisman of Protection Lv. 5" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +8840, M. Def. +5746, Attribute Resistance +200.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81765" name="Enhanced Talisman of Protection Lv. 6" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +9992, M. Def. +6495, Attribute Resistance +220.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81766" name="Enhanced Talisman of Protection Lv. 7" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +11,144, M. Def. +7244, Attribute Resistance +240.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81767" name="Enhanced Talisman of Protection Lv. 8" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +12,296, M. Def. +7993, Attribute Resistance +260.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\nReceived Critical Damage from standard attacks -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81768" name="Enhanced Talisman of Protection Lv. 9" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +13,448, M. Def. +8742, Attribute Resistance +280.\nReceived. M. damage -5%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +5%.\nReceived Critical Rate from standard attacks -10%, Received P./ M. Skill Critical Rate -10%.\nReceived Critical Damage from standard attacks and P./ M. skills -10%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence.\n\n<Enchanting>\nUse Shining Energy of Protection. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81769" name="Enhanced Talisman of Protection Lv. 10" type="Armor">
+		<!-- Applies the following effects.\nP. Def. +14,600, M. Def. +9491, Attribute Resistance +300.\nReceived. M. damage -7%.\nDagger/ Sword/ Spear/ Fists/ Bow/ Crossbow Resistance +7%.\nReceived Critical Rate from standard attacks -15%, Received P./ M. Skill Critical Rate -15%.\nReceived Critical Damage from standard attacks and P./ M. skills -15%.\n\nEffects of two identical talismans do not stack, the higher-level talisman takes precedence. -->
+		<set name="icon" val="icon.bm_defend_talisman_upgrade" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81770" name="Shining Energy of Defense" type="EtcItem">
+		<!-- A compound material for upgrading Enhanced Talisman of Protection Lv. 9 or lower. In case of failure, Energy of Protection is consumed, but the Talisman of Protection remains intact. -->
+		<set name="icon" val="icon.defend_talisman_energy_upgrade" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81771" name="Einhasad's Blue Box" type="EtcItem">
+		<!-- A box prepared on the occasion of minting of Einhasad's Golden Coins. Double-click to obtain one rare item with a certain chance. -->
+		<set name="icon" val="icon.bm_dragon_present_5" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81772" name="Soulshot/ Spiritshot Ticket" additionalName="Event" type="EtcItem">
+		<!-- Can be exchanged by the Larra for Soulshots and Blessed Spiritshots. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81773" name="Beach Swimsuit" type="Armor">
+		<!-- Swimsuit for the beach.\nNote!\nDisplayed incorrectly on Ertheia. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81774" name="Alluring Swimsuit" type="Armor">
+		<!-- Alluring swimsuit with exquisite prints.\nNote!\nDisplayed incorrectly on Ertheia. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81775" name="Seductive Swimsuit" type="Armor">
+		<!-- Seductive swimsuit with exquisite prints.\nNote!\nDisplayed incorrectly on Ertheia. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_swimsuit_event_03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81776" name="Beach Swimsuit Appearance Stone" additionalName="Event" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Beach Swimsuit. Modified armor can be restored to its original appearance with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81777" name="Alluring Swimsuit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Alluring Swimsuit. Modified armor can be restored to its original appearance with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81778" name="Seductive Swimsuit Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Seductive Swimsuit. Modified armor can be restored to its original appearance with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.lcon.g_scrl_change_co_swimsuit_01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81779" name="Bag of Shining Gold" type="EtcItem">
+		<!-- A bag full of valuable presents. Double-click to obtain one rare item with a certain chance. -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81780" name="Baby Shark Doo Doo Doo Outfit" type="Armor">
+		<!-- Baby Shark Doo Doo Doo Outfit -->
+		<set name="icon" val="icon.armor_t2000_ul_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+		</stats>
+	</item>
+	<item id="81781" name="Baby Shark Doo Doo Doo Appearance Stone" additionalName="Event" type="EtcItem">
+		<!-- Changes the appearance of the entire armor to that of Baby Shark Doo Doo Doo Outfit. Modified armor can be restored to its original appearance with Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81782" name="Watermelon Seed" additionalName="Event" type="EtcItem">
+		<!-- You get a fresh Watermelon.\nIf the Watermelon is crashed, there is a certain chance to obtain a buff and Ice Box. The effect duration and a number of Ice Boxes depend on the Watermelon size. -->
+		<set name="icon" val="icon.event_watermelon_seed_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81783" name="Ice Box" additionalName="Event" type="EtcItem">
+		<!-- It can help to survive the hot summer time.\nDouble-click to obtain supplies and equipment. -->
+		<set name="icon" val="icon.ev_2020_summer_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="81784" name="Blessed Angel's Necklace" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\nThe item can be changed.\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
+	<item id="81785" name="Blessed Angel's Necklace" additionalName="Assault Lv. 1" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +1%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
+	<item id="81786" name="Blessed Angel's Necklace" additionalName="Assault Lv. 2" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +2%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
+	<item id="81787" name="Blessed Angel's Necklace" additionalName="Assault Lv. 3" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +5%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
+	<item id="81788" name="Blessed Angel's Earring" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\nThe item can be changed.\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81789" name="Blessed Angel's Earring" additionalName="Security Lv. 1" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +1%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81790" name="Blessed Angel's Earring" additionalName="Security Lv. 2" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +2%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81791" name="Blessed Angel's Earring" additionalName="Security Lv. 3" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5.\nWhen enchanted, increases CHA/ LUC, Confusion Resistance/ Atk. Rate, Stupor Resistance/ Atk. Rate, Received Healing, Vampiric Rage effect, increases Power of standard attacks and P./ M. skills, also decreases Skill MP Consumption and Received P./ M. Critical Damage.\nThe effects doesn't stack if both Angel's Earring and Blessed Atlas' Earring are equipped.\n\n<Special effects>\nP./ M. Def. +5%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_accessary_angel_of_earing" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">151</stat>
+		</stats>
+	</item>
+	<item id="81792" name="Blessed Angel's Ring" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate/ Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage, and P./ M. Skill Power.\nWhen equipped both Angel's Ring and Blessed Angel's Ring, the effects do not stack.\nThe item can be changed.\n\n<Enchanting>Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81793" name="Blessed Angel's Ring" additionalName="Elements Lv. 1" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +10\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81794" name="Blessed Angel's Ring" additionalName="Elements Lv. 2" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +20\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81795" name="Blessed Angel's Ring" additionalName="Elements Lv. 3" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Obstruction Atk. Rate and Resistance, Attribute Resistance, Critical Damage for standard attacks, P./ M. Skill Critical Damage and P./ M. Skill Power.\nThe effects of Angel's Ring and Blessed Angel's Ring do not stack, if equipped simultaneously.\n\n<Special effect>\nAttribute Attack/ Resistance +50\n\n<Enchanting> Use Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_new_ring_of_hero" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<stats>
+			<stat type="mDef">101</stat>
+		</stats>
+	</item>
+	<item id="81796" name="Blessed Angel's Necklace" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\nThe item can be changed.\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
+	<item id="81797" name="Blessed Angel's Necklace" additionalName="Assault Lv. 1" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +1.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +1%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
+	<item id="81798" name="Blessed Angel's Necklace" additionalName="Assault Lv. 2" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +2.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +2%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
+	<item id="81799" name="Blessed Angel's Necklace" additionalName="Assault Lv. 3" type="Armor">
+		<!-- When enchanted, the effect of common Angel's Accessories is applied, but the enchant value is treated as +5.\nWhen enchanted, increases CHA/ LUC, Infection Resistance/ Atk. Rate, Confusion Resistance/ Atk. Rate, Speed, Damage Reflection, Damage Reflection, P. Atk./ M. Atk./ P. Def./ M. Def. and Skill Power, also decreases Skill Cooldowns.\n\n<Special effects>\nP./ M. Atk. +5%\n\n<Enchanting>\nUse Scroll: Enchant Angel Accessory.\nCan be augmented. -->
+		<set name="icon" val="icon.bless_elemental_necklace_wind_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">202</stat>
+		</stats>
+	</item>
 </list>
