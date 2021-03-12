@@ -19,9 +19,11 @@ package org.l2jmobius.gameserver.model.actor;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.logging.Level;
@@ -317,6 +319,18 @@ public class Attackable extends Npc
 		return true;
 	}
 	
+	static class PartyContainer
+	{
+		Party party;
+		long damage = 0L;
+		
+		public PartyContainer(Party party, long damage)
+		{
+			this.party = party;
+			this.damage = damage;
+		}
+	}
+	
 	/**
 	 * Distribute Exp and SP rewards to PlayerInstance (including Summon owner) that hit the Attackable and to their Party members.<br>
 	 * Actions:<br>
@@ -338,43 +352,101 @@ public class Attackable extends Npc
 			
 			// NOTE: Concurrent-safe map is used because while iterating to verify all conditions sometimes an entry must be removed.
 			final Map<PlayerInstance, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
+			
 			PlayerInstance maxDealer = null;
 			long maxDamage = 0;
 			long totalDamage = 0;
+			
 			// While Iterating over This Map Removing Object is Not Allowed
 			// Go through the _aggroList of the Attackable
 			for (AggroInfo info : _aggroList.values())
 			{
 				// Get the Creature corresponding to this attacker
 				final PlayerInstance attacker = info.getAttacker().getActingPlayer();
-				if (attacker != null)
+				if (attacker == null)
 				{
-					// Get damages done by this attacker
-					final long damage = info.getDamage();
-					
-					// Prevent unwanted behavior
-					if (damage > 1)
+					continue;
+				}
+				
+				// Get damages done by this attacker
+				final long damage = info.getDamage();
+				
+				// Prevent unwanted behavior
+				if (damage > 1)
+				{
+					// Check if damage dealer isn't too far from this (killed monster)
+					if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, attacker, true))
 					{
-						// Check if damage dealer isn't too far from this (killed monster)
-						if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, attacker, true))
-						{
-							continue;
-						}
-						
-						totalDamage += damage;
-						
-						// Calculate real damages (Summoners should get own damage plus summon's damage)
-						final DamageDoneInfo reward = rewards.computeIfAbsent(attacker, DamageDoneInfo::new);
-						reward.addDamage(damage);
-						
-						if (reward.getDamage() > maxDamage)
-						{
-							maxDealer = attacker;
-							maxDamage = reward.getDamage();
-						}
+						continue;
+					}
+					
+					totalDamage += damage;
+					
+					// Calculate real damages (Summoners should get own damage plus summon's damage)
+					final DamageDoneInfo reward = rewards.computeIfAbsent(attacker, DamageDoneInfo::new);
+					reward.addDamage(damage);
+					
+					if (reward.getDamage() > maxDamage)
+					{
+						maxDealer = attacker;
+						maxDamage = reward.getDamage();
 					}
 				}
 			}
+			
+			final List<PartyContainer> damagingParties = new ArrayList<>();
+			for (AggroInfo info : _aggroList.values())
+			{
+				final Creature attacker = info.getAttacker();
+				if (attacker == null)
+				{
+					continue;
+				}
+				
+				long totalMemberDamage = 0;
+				final Party party = attacker.getParty();
+				if (party == null)
+				{
+					continue;
+				}
+				
+				Optional<PartyContainer> partyContainerStream = Optional.empty();
+				for (int i = 0, damagingPartiesSize = damagingParties.size(); i < damagingPartiesSize; i++)
+				{
+					final PartyContainer p = damagingParties.get(i);
+					if (p.party == party)
+					{
+						partyContainerStream = Optional.of(p);
+						break;
+					}
+				}
+				
+				final PartyContainer container = partyContainerStream.orElse(new PartyContainer(party, 0L));
+				final List<PlayerInstance> members = party.getMembers();
+				for (PlayerInstance e : members)
+				{
+					final AggroInfo memberAggro = _aggroList.get(e);
+					if (memberAggro == null)
+					{
+						continue;
+					}
+					
+					if (memberAggro.getDamage() > 1)
+					{
+						totalMemberDamage += memberAggro.getDamage();
+					}
+				}
+				container.damage = totalMemberDamage;
+				
+				if (partyContainerStream.isEmpty())
+				{
+					damagingParties.add(container);
+				}
+			}
+			
+			final PartyContainer mostDamageParty;
+			damagingParties.sort(Comparator.comparingLong(c -> c.damage));
+			mostDamageParty = damagingParties.size() > 0 ? damagingParties.get(0) : null;
 			
 			// Calculate raidboss points
 			if (_isRaid && !_isRaidMinion)
@@ -431,11 +503,17 @@ public class Attackable extends Npc
 				}
 			}
 			
-			// Manage Base, Quests and Sweep drops of the Attackable
-			doItemDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
-			
-			// Manage drop of Special Events created by GM for a defined period
-			doEventDrop(lastAttacker);
+			if ((mostDamageParty != null) && (mostDamageParty.damage > maxDamage))
+			{
+				PlayerInstance leader = mostDamageParty.party.getLeader();
+				doItemDrop(leader);
+				doEventDrop(leader);
+			}
+			else
+			{
+				doItemDrop((maxDealer != null) && maxDealer.isOnline() ? maxDealer : lastAttacker);
+				doEventDrop(lastAttacker);
+			}
 			
 			if (!getMustRewardExpSP())
 			{
