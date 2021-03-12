@@ -6509,9 +6509,6 @@ public class PlayerInstance extends Playable
 					player.setPledgeType(rset.getInt("subpledge"));
 					// player.setApprentice(rset.getInt("apprentice"));
 					
-					// Set Hero status if it applies.
-					player.setHero(Hero.getInstance().isHero(objectId));
-					
 					if (clanId > 0)
 					{
 						player.setClan(ClanTable.getInstance().getClan(clanId));
@@ -6601,6 +6598,9 @@ public class PlayerInstance extends Playable
 					player.setApprentice(rset.getInt("apprentice"));
 					player.setSponsor(rset.getInt("sponsor"));
 					player.setLvlJoinedAcademy(rset.getInt("lvl_joined_academy"));
+					
+					// Set Hero status if it applies.
+					player.setHero(Hero.getInstance().isHero(objectId));
 					
 					CursedWeaponsManager.getInstance().checkPlayer(player);
 					
