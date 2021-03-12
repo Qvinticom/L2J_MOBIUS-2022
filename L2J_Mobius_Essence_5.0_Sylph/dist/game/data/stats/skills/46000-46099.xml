@@ -2,8 +2,16 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="46033" toLevel="1" name="1st Place in the List of Ranks for Level Among Sylphs">
 		<!-- Bonus for 1st place in the list of ranks for level among Sylphs. Soulshot Damage +10% -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.race_ranking_1</icon>
+		<magicLevel>40</magicLevel>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ShotsBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="46034" toLevel="1" name="Flag Power - Hunter">
 		<!-- Flag power for hunters. Paralyzes nearby enemies. -->

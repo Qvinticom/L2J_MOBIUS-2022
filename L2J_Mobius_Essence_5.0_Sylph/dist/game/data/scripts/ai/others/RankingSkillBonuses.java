@@ -43,6 +43,7 @@ public class RankingSkillBonuses extends AbstractNpcAI
 	private static final Skill ORC_LEVEL_RANKING_1ST_CLASS = SkillData.getInstance().getSkill(60009, 1);
 	private static final Skill DWARF_LEVEL_RANKING_1ST_CLASS = SkillData.getInstance().getSkill(60010, 1);
 	private static final Skill KAMAEL_LEVEL_RANKING_1ST_CLASS = SkillData.getInstance().getSkill(60011, 1);
+	private static final Skill SYLPH_LEVEL_RANKING_1ST_CLASS = SkillData.getInstance().getSkill(46033, 1);
 	private static final Skill SERVER_RANKING_BENEFIT_1 = SkillData.getInstance().getSkill(60012, 1);
 	private static final Skill SERVER_RANKING_BENEFIT_2 = SkillData.getInstance().getSkill(60013, 1);
 	private static final Skill SERVER_RANKING_BENEFIT_3 = SkillData.getInstance().getSkill(60014, 1);
@@ -53,6 +54,7 @@ public class RankingSkillBonuses extends AbstractNpcAI
 	private static final Skill ORC_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54209, 1);
 	private static final Skill DWARF_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54212, 1);
 	private static final Skill KAMAEL_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54205, 1);
+	private static final Skill SYLPH_LEVEL_TRANSFORM_CLASS = SkillData.getInstance().getSkill(54226, 1);
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
@@ -80,6 +82,7 @@ public class RankingSkillBonuses extends AbstractNpcAI
 		player.getEffectList().stopSkillEffects(true, ORC_LEVEL_TRANSFORM_CLASS);
 		player.getEffectList().stopSkillEffects(true, DWARF_LEVEL_TRANSFORM_CLASS);
 		player.getEffectList().stopSkillEffects(true, KAMAEL_LEVEL_TRANSFORM_CLASS);
+		player.getEffectList().stopSkillEffects(true, SYLPH_LEVEL_TRANSFORM_CLASS);
 		player.removeSkill(SERVER_RANKING_BENEFIT_1);
 		player.removeSkill(SERVER_RANKING_BENEFIT_2);
 		player.removeSkill(SERVER_RANKING_BENEFIT_3);
@@ -145,6 +148,11 @@ public class RankingSkillBonuses extends AbstractNpcAI
 					KAMAEL_LEVEL_RANKING_1ST_CLASS.applyEffects(player, player);
 					break;
 				}
+				case SYLPH:
+				{
+					SYLPH_LEVEL_RANKING_1ST_CLASS.applyEffects(player, player);
+					break;
+				}
 			}
 			player.addSkill(RACE_RANKING_BENEFIT, false);
 		}
@@ -184,6 +192,11 @@ public class RankingSkillBonuses extends AbstractNpcAI
 				case KAMAEL:
 				{
 					player.addSkill(KAMAEL_LEVEL_TRANSFORM_CLASS, false);
+					break;
+				}
+				case SYLPH:
+				{
+					player.addSkill(SYLPH_LEVEL_TRANSFORM_CLASS, false);
 					break;
 				}
 			}
