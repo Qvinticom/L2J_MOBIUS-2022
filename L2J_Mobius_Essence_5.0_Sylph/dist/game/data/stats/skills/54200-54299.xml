@@ -440,8 +440,32 @@
 	</skill>
 	<skill id="54226" toLevel="1" name="Worthy Warrior Transformation">
 		<!-- For warriors that have taken the 1st-3rd places in rankings among their race. Sylph Power grants unique appearance to a hero. Max HP +300. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+        <icon>icon.skill0000</icon>
+        <abnormalVisualEffect>RANKER_DECO_SYLPH</abnormalVisualEffect>
+        <abnormalLevel>1</abnormalLevel>
+        <abnormalTime>1200</abnormalTime>
+        <abnormalType>CHANGEBODY</abnormalType>
+        <blockedInOlympiad>true</blockedInOlympiad>
+        <operateType>A2</operateType>
+        <effectPoint>1</effectPoint>
+        <basicProperty>NONE</basicProperty>
+        <magicCriticalRate>5</magicCriticalRate>
+        <specialLevel>-1</specialLevel>
+        <hitCancelTime>0</hitCancelTime>
+        <irreplacableBuff>true</irreplacableBuff>
+        <isMagic>2</isMagic>
+        <hitTime>1000</hitTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="MaxHp">
+                <amount>300</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="Transformation">
+                <transformationId>387</transformationId>
+            </effect>
+        </effects>
 	</skill>
 	<skill id="54227" toLevel="1" name="Mount Black Wyvern">
 		<!-- Allows to mount Black Wyvern. When the character is riding Wyvern, weapon/ sigil is unequipped. Only select Buff skills are available while riding the Wyvern. -->
