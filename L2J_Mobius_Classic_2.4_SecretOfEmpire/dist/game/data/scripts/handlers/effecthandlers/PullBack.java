@@ -76,7 +76,7 @@ public class PullBack extends AbstractEffect
 		if (GeoEngine.getInstance().canMoveToTarget(effected.getX(), effected.getY(), effected.getZ(), effector.getX(), effector.getY(), effector.getZ(), effector.getInstanceWorld()))
 		{
 			effected.broadcastPacket(new FlyToLocation(effected, effector, _type, _speed, _delay, _animationSpeed));
-			effected.setXYZ(effector);
+			effected.setXYZ(effector.getX(), effector.getY(), GeoEngine.getInstance().getHeight(effector.getX(), effector.getY(), effector.getZ()) + 10);
 			effected.broadcastPacket(new ValidateLocation(effected), false);
 			effected.revalidateZone(true);
 		}
