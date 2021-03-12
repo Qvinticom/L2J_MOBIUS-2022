@@ -79,7 +79,7 @@ public class PcBody implements ITargetTypeHandler
 				}
 				
 				// check target is not in a active siege zone
-				if (target.isPlayer() && target.isInsideZone(ZoneId.SIEGE) && !target.getActingPlayer().isInSiege())
+				if (target.isPlayer() && target.isInsideZone(ZoneId.SIEGE))
 				{
 					if (sendMessage)
 					{
