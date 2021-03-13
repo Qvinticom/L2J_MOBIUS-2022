@@ -179,7 +179,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>500</coolTime>
 		<hitTime>2300</hitTime>
-		<nextAction>ATTACK</nextAction>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<reuseDelay>1500</reuseDelay>
 		<operateType>A1</operateType>
@@ -1889,7 +1888,7 @@
 			<condition name="OpCheckAbnormal">
 				<type>ELEMENTAL_SPIRIT</type>
 				<level>2</level>
-				<hasAbnormal>false</hasAbnormal>
+				<hasAbnormal>true</hasAbnormal>
 			</condition>
 		</conditions>
 		<effects>
@@ -2151,7 +2150,7 @@
 			<condition name="OpCheckAbnormal">
 				<type>ELEMENTAL_SPIRIT</type>
 				<level>4</level>
-				<hasAbnormal>false</hasAbnormal>
+				<hasAbnormal>true</hasAbnormal>
 			</condition>
 		</conditions>
 		<effects>
@@ -2179,7 +2178,7 @@
 			<condition name="OpCheckAbnormal">
 				<type>ELEMENTAL_SPIRIT</type>
 				<level>3</level>
-				<hasAbnormal>false</hasAbnormal>
+				<hasAbnormal>true</hasAbnormal>
 			</condition>
 		</conditions>
 		<effects>
