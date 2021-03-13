@@ -97,6 +97,7 @@ public class GameAssistant extends AbstractNpcAI
 	private static final int EX_PENDANT = 3247836;
 	private static final int EX_BUFF_SCROLL = 3247837;
 	private static final int EX_SOULSHOT = 3247838;
+	private static final int EX_ENCHANTS = 3247839;
 	// Others
 	private static final String COMMAND_BYPASS = "Quest GameAssistant ";
 	
@@ -259,6 +260,11 @@ public class GameAssistant extends AbstractNpcAI
 			case "Chat_Soulshots":
 			{
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/soulshots.html")));
+				break;
+			}
+			case "Chat_Enchants":
+			{
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/enchants.html")));
 				break;
 			}
 			// Actions
@@ -468,6 +474,11 @@ public class GameAssistant extends AbstractNpcAI
 			case "Ex_Soulshot":
 			{
 				MultisellData.getInstance().separateAndSend(EX_SOULSHOT, player, null, false);
+				break;
+			}
+			case "Ex_Enchants":
+			{
+				MultisellData.getInstance().separateAndSend(EX_ENCHANTS, player, null, false);
 				break;
 			}
 			case "exc_black_sayha_cloak":
