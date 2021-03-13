@@ -45,6 +45,7 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 	private static final int BLESSING_OF_THE_EXALTED = 45926;
 	private static final int SUMMON_BATTLE_POTION = 45927;
 	private static final int FATE_OF_THE_EXALTED = 46036;
+	private static final int FAVOR_OF_THE_EXALTED = 45870;
 	// Misc
 	private static final int MIN_LEVEL = 102;
 	private static final int MIN_COMPLETE_LEVEL = 103;
@@ -231,6 +232,7 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 					giveItems(player, BLESSING_OF_THE_EXALTED, 1);
 					giveItems(player, SUMMON_BATTLE_POTION, 1);
 					giveItems(player, FATE_OF_THE_EXALTED, 1);
+					giveItems(player, FAVOR_OF_THE_EXALTED, 1);
 					// Give Exalted status here?
 					// https://l2wiki.com/Noblesse
 					player.setNobleLevel(2);
