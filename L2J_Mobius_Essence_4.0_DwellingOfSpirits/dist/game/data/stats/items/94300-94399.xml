@@ -12,10 +12,26 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SIGIL" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">56</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+		<skills>
+			<skill id="50432" level="1" /> <!-- A-grade: Sigil of Inevitability -->
+			<skill id="50433" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Sigil of Inevitability -->
+			<skill id="50433" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Sigil of Inevitability -->
+		</skills>
 	</item>
 	<item id="94301" name="Shield of Vengeance" type="Armor">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
@@ -27,13 +43,27 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1180" />
 		<set name="price" val="3355000" />
-		<set name="commissionItemType" val="SHIELD" />
 		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="rEvas">-9</stat>
 			<stat type="rShld">20</stat>
 			<stat type="sDef">282</stat>
 		</stats>
+		<skills>
+			<skill id="50436" level="1" /> <!-- A-grade: Shield of Vengeance -->
+			<skill id="50437" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Shield of Vengeance -->
+		</skills>
 	</item>
 	<item id="94302" name="Shield of Vengeance" additionalName="Sealed" type="Armor">
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i02" />
@@ -48,11 +78,26 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="lhand" />
+		<set name="commissionItemType" val="SHIELD" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
 			<stat type="sDef">282</stat>
 		</stats>
+		<skills>
+			<skill id="50436" level="1" /> <!-- A-grade: Shield of Vengeance -->
+			<skill id="50437" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Shield of Vengeance -->
+			<skill id="50437" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Shield of Vengeance -->
+		</skills>
 	</item>
 	<item id="94303" name="Life Stone - Circlet" type="EtcItem">
 		<!-- Augments Circlet of Hero. Adena required. -->
@@ -174,6 +219,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94299" min="1" max="3" chance="100" /> <!-- Sigil of Inevitability -->
+		</capsuled_items>
 	</item>
 	<item id="94316" name="Package: Sigil of Inevitability" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -185,6 +234,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94300" min="1" max="3" chance="100" /> <!-- Sigil of Inevitability - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94317" name="Package: Shield of Vengeance" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -196,6 +249,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94301" min="1" max="3" chance="100" /> <!-- Shield of Vengeance -->
+		</capsuled_items>
 	</item>
 	<item id="94318" name="Package: Shield of Vengeance" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -207,6 +264,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94302" min="1" max="3" chance="100" /> <!-- Shield of Vengeance - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94319" name="Spellbook: Sword Symphony" type="EtcItem">
 		<!-- A spellbook for learning the Sword Symphony skill. <Classes>. Swordsinger. <Skill effect>. 1) Increases the attack range. 2) There is a certain chance to decrease received damage. 3) Increases Speed and Skill Evasion after a critical attack or successful evasion. -->
@@ -595,6 +656,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94263" min="1" max="3" chance="100" /> <!-- Stun Gauntlets -->
+		</capsuled_items>
 	</item>
 	<item id="94358" name="Package: Stun Gauntlets" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -606,6 +671,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94264" min="1" max="3" chance="100" /> <!-- Stun Gauntlets - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="94359" name="For Monster Only (Crossbow)" type="Weapon">
 		<!-- Monster weapon. Bow -->

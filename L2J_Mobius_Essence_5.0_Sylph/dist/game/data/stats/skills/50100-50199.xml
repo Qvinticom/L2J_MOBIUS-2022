@@ -496,9 +496,9 @@
 		</conditions>
 		<effects>
 			<effect name="Teleport">
-				<x>-14524</x>
-				<y>121123</y>
-				<z>-2996</z>
+				<x>-14433</x>
+				<y>121261</y>
+				<z>-3003</z>
 			</effect>
 		</effects>
 	</skill>
@@ -855,27 +855,68 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50187" toLevel="1" name="Adventurer's Rough Jewel">
+	<skill id="50187" toLevel="2" name="Adventurer's Rough Jewel">
 		<!-- <Effect> Max HP +$s1 -->
 		<icon>icon.etc_crystal_piece_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="50188" toLevel="1" name="Adventurer's Talisman">
+	<skill id="50188" toLevel="2" name="Adventurer's Talisman">
 		<!-- A talisman for adventurers. -->
 		<icon>icon.etc_talisman_i07</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="MagicalDefence">
-				<amount>5</amount>
-				<mode>PER</mode>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">100</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

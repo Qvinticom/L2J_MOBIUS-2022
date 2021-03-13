@@ -1138,6 +1138,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50187" level="2" /> <!-- Adventurer's Rough Jewel -->
+		</skills>
 	</item>
 	<item id="93066" name="Top-grade Candy Ingredients" additionalName="Event" type="EtcItem">
 		<!-- After charging, craft points +50,000. -->
