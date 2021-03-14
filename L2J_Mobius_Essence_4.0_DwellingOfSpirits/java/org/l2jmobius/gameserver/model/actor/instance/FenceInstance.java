@@ -160,4 +160,10 @@ public class FenceInstance extends WorldObject
 	{
 		return _yMax;
 	}
+	
+	@Override
+	public boolean isFence()
+	{
+		return true;
+	}
 }

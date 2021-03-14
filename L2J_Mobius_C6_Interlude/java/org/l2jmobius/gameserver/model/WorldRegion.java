@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.data.sql.SpawnTable;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.spawn.Spawn;
 import org.l2jmobius.gameserver.model.zone.ZoneManager;
@@ -45,6 +46,7 @@ public class WorldRegion
 	
 	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
 	private final List<DoorInstance> _doors = new ArrayList<>(1);
+	private final List<FenceInstance> _fences = new ArrayList<>(1);
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
@@ -241,7 +243,7 @@ public class WorldRegion
 		
 		_active = value;
 		
-		// turn the AI on or off to match the region's activation.
+		// Turn the AI on or off to match the region's activation.
 		switchAI(value);
 	}
 	
@@ -305,8 +307,7 @@ public class WorldRegion
 	
 	/**
 	 * Add the WorldObject in the WorldObjectHashSet(WorldObject) _visibleObjects containing WorldObject visible in this WorldRegion<br>
-	 * If WorldObject is a PlayerInstance, Add the PlayerInstance in the WorldObjectHashSet(PlayerInstance) _allPlayable containing PlayerInstance of all player in game in this WorldRegion<br>
-	 * Assert : object.getCurrentWorldRegion() == this
+	 * If WorldObject is a PlayerInstance, Add the PlayerInstance in the WorldObjectHashSet(PlayerInstance) _allPlayable containing PlayerInstance of all player in game in this WorldRegion
 	 * @param object
 	 */
 	public void addVisibleObject(WorldObject object)
@@ -325,6 +326,13 @@ public class WorldRegion
 				_surroundingRegions[i].addDoor((DoorInstance) object);
 			}
 		}
+		else if (object.isFence())
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].addFence((FenceInstance) object);
+			}
+		}
 		
 		// If this is the first player to enter the region, activate self and neighbors.
 		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)
@@ -334,9 +342,7 @@ public class WorldRegion
 	}
 	
 	/**
-	 * Remove the WorldObject from the WorldObjectHashSet(WorldObject) _visibleObjects in this WorldRegion<br>
-	 * If WorldObject is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _allPlayable of this WorldRegion<br>
-	 * Assert : object.getCurrentWorldRegion() == this || object.getCurrentWorldRegion() == null
+	 * Remove the WorldObject from the WorldObjectHashSet(WorldObject) _visibleObjects in this WorldRegion. If WorldObject is a PlayerInstance, remove it from the WorldObjectHashSet(PlayerInstance) _allPlayable of this WorldRegion
 	 * @param object
 	 */
 	public void removeVisibleObject(WorldObject object)
@@ -357,7 +363,14 @@ public class WorldRegion
 		{
 			for (int i = 0; i < _surroundingRegions.length; i++)
 			{
-				removeDoor((DoorInstance) object);
+				_surroundingRegions[i].removeDoor((DoorInstance) object);
+			}
+		}
+		else if (object.isFence())
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].removeFence((FenceInstance) object);
 			}
 		}
 		
@@ -412,6 +425,24 @@ public class WorldRegion
 	public List<DoorInstance> getDoors()
 	{
 		return _doors;
+	}
+	
+	public synchronized void addFence(FenceInstance fence)
+	{
+		if (!_fences.contains(fence))
+		{
+			_fences.add(fence);
+		}
+	}
+	
+	private synchronized void removeFence(FenceInstance fence)
+	{
+		_fences.remove(fence);
+	}
+	
+	public List<FenceInstance> getFences()
+	{
+		return _fences;
 	}
 	
 	public String getName()

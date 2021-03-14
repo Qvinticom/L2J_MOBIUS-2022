@@ -460,6 +460,11 @@ public abstract class WorldObject
 		return false;
 	}
 	
+	public boolean isFence()
+	{
+		return false;
+	}
+	
 	public boolean isBoat()
 	{
 		return false;

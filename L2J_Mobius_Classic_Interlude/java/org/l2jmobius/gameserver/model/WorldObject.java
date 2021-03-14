@@ -412,6 +412,15 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 		return false;
 	}
 	
+	/**
+	 * Verifies if this object is a fence.
+	 * @return {@code true} if object is Fence, {@code false} otherwise
+	 */
+	public boolean isFence()
+	{
+		return false;
+	}
+	
 	public void setTargetable(boolean targetable)
 	{
 		if (_isTargetable != targetable)

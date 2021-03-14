@@ -17,12 +17,9 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -33,7 +30,6 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.FenceState;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
@@ -47,7 +43,6 @@ public class FenceData
 	
 	private static final int MAX_Z_DIFF = 100;
 	
-	private final Map<WorldRegion, List<FenceInstance>> _regions = new ConcurrentHashMap<>();
 	private final Map<Integer, FenceInstance> _fences = new ConcurrentHashMap<>();
 	
 	protected FenceData()
@@ -126,21 +121,12 @@ public class FenceData
 	
 	private void addFence(FenceInstance fence)
 	{
-		final Location point = new Location(fence.getX(), fence.getY(), fence.getZ());
 		_fences.put(fence.getObjectId(), fence);
-		_regions.computeIfAbsent(World.getInstance().getRegion(point), key -> new ArrayList<>()).add(fence);
 	}
 	
 	public void removeFence(FenceInstance fence)
 	{
 		_fences.remove(fence.getObjectId());
-		
-		final Location point = new Location(fence.getX(), fence.getY(), fence.getZ());
-		final List<FenceInstance> fencesInRegion = _regions.get(World.getInstance().getRegion(point));
-		if (fencesInRegion != null)
-		{
-			fencesInRegion.remove(fence);
-		}
 	}
 	
 	public Map<Integer, FenceInstance> getFences()
@@ -155,12 +141,19 @@ public class FenceData
 	
 	public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz)
 	{
-		final Predicate<FenceInstance> filter = fence ->
+		final WorldRegion region = World.getInstance().getRegion(x, y);
+		final List<FenceInstance> fences = region != null ? region.getFences() : null;
+		if ((fences == null) || fences.isEmpty())
+		{
+			return false;
+		}
+		
+		for (FenceInstance fence : fences)
 		{
 			// Check if fence is geodata enabled.
 			if (!fence.getState().isGeodataEnabled())
 			{
-				return false;
+				continue;
 			}
 			
 			final int xMin = fence.getXMin();
@@ -169,40 +162,30 @@ public class FenceData
 			final int yMax = fence.getYMax();
 			if ((x < xMin) && (tx < xMin))
 			{
-				return false;
+				continue;
 			}
 			if ((x > xMax) && (tx > xMax))
 			{
-				return false;
+				continue;
 			}
 			if ((y < yMin) && (ty < yMin))
 			{
-				return false;
+				continue;
 			}
 			if ((y > yMax) && (ty > yMax))
 			{
-				return false;
+				continue;
 			}
-			if ((x > xMin) && (tx > xMin) && (x < xMax) && (tx < xMax))
+			if ((x > xMin) && (tx > xMin) && (x < xMax) && (tx < xMax) && (y > yMin) && (ty > yMin) && (y < yMax) && (ty < yMax))
 			{
-				if ((y > yMin) && (ty > yMin) && (y < yMax) && (ty < yMax))
-				{
-					return false;
-				}
+				continue;
 			}
-			
-			if (crossLinePart(xMin, yMin, xMax, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMin, xMax, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMax, xMin, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMin, yMax, xMin, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax))
+			if ((crossLinePart(xMin, yMin, xMax, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMin, xMax, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMax, xMin, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMin, yMax, xMin, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax)) && (z > (fence.getZ() - MAX_Z_DIFF)) && (z < (fence.getZ() + MAX_Z_DIFF)))
 			{
-				if ((z > (fence.getZ() - MAX_Z_DIFF)) && (z < (fence.getZ() + MAX_Z_DIFF)))
-				{
-					return true;
-				}
+				return true;
 			}
-			
-			return false;
-		};
-		
-		return _regions.getOrDefault(World.getInstance().getRegion(new Location(x, y, z)), Collections.emptyList()).stream().anyMatch(filter);
+		}
+		return false;
 	}
 	
 	private boolean crossLinePart(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double xMin, double yMin, double xMax, double yMax)

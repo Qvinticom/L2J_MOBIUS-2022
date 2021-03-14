@@ -25,6 +25,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
+import org.l2jmobius.gameserver.model.actor.instance.FenceInstance;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 import org.l2jmobius.gameserver.util.UnboundArrayList;
 
@@ -34,6 +35,8 @@ public class WorldRegion
 	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
 	/** List containing doors in this world region. */
 	private final List<DoorInstance> _doors = new ArrayList<>(1);
+	/** List containing fences in this world region. */
+	private final List<FenceInstance> _fences = new ArrayList<>(1);
 	/** Array containing nearby regions forming this world region's effective area. */
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
@@ -241,6 +244,13 @@ public class WorldRegion
 				_surroundingRegions[i].addDoor((DoorInstance) object);
 			}
 		}
+		else if (object.isFence())
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].addFence((FenceInstance) object);
+			}
+		}
 		
 		// If this is the first player to enter the region, activate self and neighbors.
 		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)
@@ -271,7 +281,14 @@ public class WorldRegion
 		{
 			for (int i = 0; i < _surroundingRegions.length; i++)
 			{
-				removeDoor((DoorInstance) object);
+				_surroundingRegions[i].removeDoor((DoorInstance) object);
+			}
+		}
+		else if (object.isFence())
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].removeFence((FenceInstance) object);
 			}
 		}
 		
@@ -302,6 +319,24 @@ public class WorldRegion
 	public List<DoorInstance> getDoors()
 	{
 		return _doors;
+	}
+	
+	public synchronized void addFence(FenceInstance fence)
+	{
+		if (!_fences.contains(fence))
+		{
+			_fences.add(fence);
+		}
+	}
+	
+	private synchronized void removeFence(FenceInstance fence)
+	{
+		_fences.remove(fence);
+	}
+	
+	public List<FenceInstance> getFences()
+	{
+		return _fences;
 	}
 	
 	public void setSurroundingRegions(WorldRegion[] regions)

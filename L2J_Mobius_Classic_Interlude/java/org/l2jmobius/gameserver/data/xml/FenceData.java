@@ -17,12 +17,9 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -45,7 +42,6 @@ public class FenceData implements IXmlReader
 	
 	private static final int MAX_Z_DIFF = 100;
 	
-	private final Map<WorldRegion, List<FenceInstance>> _regions = new ConcurrentHashMap<>();
 	private final Map<Integer, FenceInstance> _fences = new ConcurrentHashMap<>();
 	
 	protected FenceData()
@@ -104,18 +100,11 @@ public class FenceData implements IXmlReader
 	private void addFence(FenceInstance fence)
 	{
 		_fences.put(fence.getObjectId(), fence);
-		_regions.computeIfAbsent(World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
 	}
 	
 	public void removeFence(FenceInstance fence)
 	{
 		_fences.remove(fence.getObjectId());
-		
-		final List<FenceInstance> fencesInRegion = _regions.get(World.getInstance().getRegion(fence));
-		if (fencesInRegion != null)
-		{
-			fencesInRegion.remove(fence);
-		}
 	}
 	
 	public Map<Integer, FenceInstance> getFences()
@@ -130,19 +119,26 @@ public class FenceData implements IXmlReader
 	
 	public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance)
 	{
-		final Predicate<FenceInstance> filter = fence ->
+		final WorldRegion region = World.getInstance().getRegion(x, y);
+		final List<FenceInstance> fences = region != null ? region.getFences() : null;
+		if ((fences == null) || fences.isEmpty())
+		{
+			return false;
+		}
+		
+		for (FenceInstance fence : fences)
 		{
 			// Check if fence is geodata enabled.
 			if (!fence.getState().isGeodataEnabled())
 			{
-				return false;
+				continue;
 			}
 			
 			// Check if fence is within the instance we search for.
 			final int instanceId = (instance == null) ? 0 : instance.getId();
 			if (fence.getInstanceId() != instanceId)
 			{
-				return false;
+				continue;
 			}
 			
 			final int xMin = fence.getXMin();
@@ -151,34 +147,30 @@ public class FenceData implements IXmlReader
 			final int yMax = fence.getYMax();
 			if ((x < xMin) && (tx < xMin))
 			{
-				return false;
+				continue;
 			}
 			if ((x > xMax) && (tx > xMax))
 			{
-				return false;
+				continue;
 			}
 			if ((y < yMin) && (ty < yMin))
 			{
-				return false;
+				continue;
 			}
 			if ((y > yMax) && (ty > yMax))
 			{
-				return false;
+				continue;
 			}
 			if ((x > xMin) && (tx > xMin) && (x < xMax) && (tx < xMax) && (y > yMin) && (ty > yMin) && (y < yMax) && (ty < yMax))
 			{
-				return false;
+				continue;
 			}
 			if ((crossLinePart(xMin, yMin, xMax, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMin, xMax, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMax, xMin, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMin, yMax, xMin, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax)) && (z > (fence.getZ() - MAX_Z_DIFF)) && (z < (fence.getZ() + MAX_Z_DIFF)))
 			{
 				return true;
 			}
-			
-			return false;
-		};
-		
-		final WorldRegion region = World.getInstance().getRegion(x, y); // Should never be null.
-		return (region != null) && _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
+		}
+		return false;
 	}
 	
 	private boolean crossLinePart(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double xMin, double yMin, double xMax, double yMax)
