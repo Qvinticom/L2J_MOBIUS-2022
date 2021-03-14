@@ -1219,12 +1219,27 @@
 	<skill id="30519" toLevel="1" name="Warped Space">
 		<!-- Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon. -->
 		<icon>icon.skill30519</icon>
-		<operateType>A1</operateType>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ROOT_PHYSICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>150</affectRange>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<magicLevel>98</magicLevel>
 		<mpConsume>772</mpConsume>
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-707</effectPoint>
 		<reuseDelay>600000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>HOLD</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1233,9 +1248,9 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="SummonNpc">
-				<npcId>13432</npcId> <!-- Gravity Core -->
-				<npcCount>1</npcCount>
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
 			</effect>
 		</effects>
 	</skill>

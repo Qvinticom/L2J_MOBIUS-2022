@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.geoengine.geodata.Cell;
 import org.l2jmobius.gameserver.geoengine.geodata.IRegion;
 import org.l2jmobius.gameserver.geoengine.geodata.NullRegion;
 import org.l2jmobius.gameserver.geoengine.geodata.Region;
-import org.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -634,10 +633,6 @@ public class GeoEngine
 		{
 			return new Location(x, y, getHeight(x, y, z));
 		}
-		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(x, y, z, tx, ty, tz, instance))
-		{
-			return new Location(x, y, getHeight(x, y, z));
-		}
 		
 		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
 		// First point is guaranteed to be available.
@@ -701,10 +696,6 @@ public class GeoEngine
 			return false;
 		}
 		if (FenceData.getInstance().checkIfFenceBetween(fromX, fromY, fromZ, toX, toY, toZ, instance))
-		{
-			return false;
-		}
-		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(fromX, fromY, fromZ, toX, toY, toZ, instance))
 		{
 			return false;
 		}
