@@ -17,11 +17,9 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -31,11 +29,13 @@ import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
+import org.l2jmobius.gameserver.model.instancezone.Instance;
 
 /**
  * Loads doors.
@@ -46,7 +46,6 @@ public class DoorData implements IXmlReader
 	private static final Map<String, Set<Integer>> _groups = new HashMap<>();
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
 	private final Map<Integer, StatSet> _templates = new HashMap<>();
-	private final Map<Integer, List<DoorInstance>> _regions = new HashMap<>();
 	
 	protected DoorData()
 	{
@@ -58,7 +57,6 @@ public class DoorData implements IXmlReader
 	{
 		_doors.clear();
 		_groups.clear();
-		_regions.clear();
 		parseDatapackFile("data/Doors.xml");
 	}
 	
@@ -88,7 +86,7 @@ public class DoorData implements IXmlReader
 			}
 		}
 		
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _doors.size() + " door templates for " + _regions.size() + " regions.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _doors.size() + " doors.");
 	}
 	
 	public void insertCollisionData(StatSet set)
@@ -125,7 +123,7 @@ public class DoorData implements IXmlReader
 		final DoorInstance door = new DoorInstance(template);
 		door.setCurrentHp(door.getMaxHp());
 		door.spawnMe(template.getX(), template.getY(), template.getZ());
-		putDoor(door, MapRegionManager.getInstance().getMapRegionLocId(door));
+		_doors.put(door.getId(), door);
 	}
 	
 	public StatSet getDoorTemplate(int doorId)
@@ -136,17 +134,6 @@ public class DoorData implements IXmlReader
 	public DoorInstance getDoor(int doorId)
 	{
 		return _doors.get(doorId);
-	}
-	
-	public void putDoor(DoorInstance door, int region)
-	{
-		_doors.put(door.getId(), door);
-		
-		if (!_regions.containsKey(region))
-		{
-			_regions.put(region, new ArrayList<>());
-		}
-		_regions.get(region).add(door);
 	}
 	
 	public static void addDoorGroup(String groupName, int doorId)
@@ -180,36 +167,39 @@ public class DoorData implements IXmlReader
 		return checkIfDoorsBetween(x, y, z, tx, ty, tz, instanceId, false);
 	}
 	
-	/**
-	 * GodKratos: TODO: remove GeoData checks from door table and convert door nodes to Geo zones
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param tx
-	 * @param ty
-	 * @param tz
-	 * @param instanceId
-	 * @param doubleFaceCheck
-	 * @return {@code boolean}
-	 */
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId, boolean doubleFaceCheck)
 	{
-		Collection<DoorInstance> allDoors;
-		if ((instanceId > 0) && (InstanceManager.getInstance().getInstance(instanceId) != null))
+		final Collection<DoorInstance> doors;
+		if (instanceId < 1)
 		{
-			allDoors = InstanceManager.getInstance().getInstance(instanceId).getDoors();
+			final WorldRegion region = World.getInstance().getRegion(x, y);
+			if (region != null)
+			{
+				doors = region.getDoors();
+			}
+			else
+			{
+				doors = null;
+			}
 		}
 		else
 		{
-			allDoors = _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
+			final Instance instance = InstanceManager.getInstance().getInstance(instanceId);
+			if (instance != null)
+			{
+				doors = instance.getDoors();
+			}
+			else
+			{
+				doors = null;
+			}
 		}
-		
-		if (allDoors == null)
+		if ((doors == null) || doors.isEmpty())
 		{
 			return false;
 		}
 		
-		for (DoorInstance doorInst : allDoors)
+		for (DoorInstance doorInst : doors)
 		{
 			// check dead and open
 			if (doorInst.isDead() || doorInst.isOpen() || !doorInst.checkCollision() || (doorInst.getX(0) == 0))

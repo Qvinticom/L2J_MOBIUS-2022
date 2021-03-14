@@ -17,12 +17,10 @@
 package org.l2jmobius.gameserver.data.xml;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -33,9 +31,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import org.l2jmobius.commons.util.IXmlReader;
-import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.DoorTemplate;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -52,7 +51,6 @@ public class DoorData implements IXmlReader
 	private final Map<String, Set<Integer>> _groups = new HashMap<>();
 	private final Map<Integer, DoorInstance> _doors = new HashMap<>();
 	private final Map<Integer, StatSet> _templates = new HashMap<>();
-	private final Map<Integer, List<DoorInstance>> _regions = new HashMap<>();
 	
 	protected DoorData()
 	{
@@ -64,7 +62,6 @@ public class DoorData implements IXmlReader
 	{
 		_doors.clear();
 		_groups.clear();
-		_regions.clear();
 		parseDatapackFile("data/DoorData.xml");
 	}
 	
@@ -72,7 +69,7 @@ public class DoorData implements IXmlReader
 	public void parseDocument(Document doc, File f)
 	{
 		forEach(doc, "list", listNode -> forEach(listNode, "door", doorNode -> spawnDoor(parseDoor(doorNode))));
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _doors.size() + " Door Templates for " + _regions.size() + " regions.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _doors.size() + " doors.");
 	}
 	
 	public StatSet parseDoor(Node doorNode)
@@ -151,7 +148,7 @@ public class DoorData implements IXmlReader
 		// Register the door
 		_templates.put(door.getId(), set);
 		_doors.put(door.getId(), door);
-		_regions.computeIfAbsent(MapRegionManager.getInstance().getMapRegionLocId(door), key -> new ArrayList<>()).add(door);
+		
 		return door;
 	}
 	
@@ -213,27 +210,31 @@ public class DoorData implements IXmlReader
 		return checkIfDoorsBetween(x, y, z, tx, ty, tz, instance, false);
 	}
 	
-	/**
-	 * GodKratos: TODO: remove GeoData checks from door table and convert door nodes to Geo zones
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param tx
-	 * @param ty
-	 * @param tz
-	 * @param instance
-	 * @param doubleFaceCheck
-	 * @return {@code boolean}
-	 */
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean doubleFaceCheck)
 	{
-		final Collection<DoorInstance> allDoors = (instance != null) ? instance.getDoors() : _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
-		if (allDoors == null)
+		final Collection<DoorInstance> doors;
+		if (instance == null)
+		{
+			final WorldRegion region = World.getInstance().getRegion(x, y);
+			if (region != null)
+			{
+				doors = region.getDoors();
+			}
+			else
+			{
+				doors = null;
+			}
+		}
+		else
+		{
+			doors = instance.getDoors();
+		}
+		if ((doors == null) || doors.isEmpty())
 		{
 			return false;
 		}
 		
-		for (DoorInstance doorInst : allDoors)
+		for (DoorInstance doorInst : doors)
 		{
 			// check dead and open
 			if (doorInst.isDead() || doorInst.isOpen() || !doorInst.checkCollision() || (doorInst.getX(0) == 0))

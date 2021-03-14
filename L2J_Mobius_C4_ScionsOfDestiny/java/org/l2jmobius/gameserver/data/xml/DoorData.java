@@ -31,6 +31,8 @@ import org.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatSet;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.templates.CreatureTemplate;
 import org.l2jmobius.gameserver.model.residences.ClanHall;
@@ -239,22 +241,15 @@ public class DoorData implements IXmlReader
 	
 	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz)
 	{
-		int region;
-		try
-		{
-			region = MapRegionData.getInstance().getMapRegion(x, y);
-		}
-		catch (Exception e)
+		final WorldRegion region = World.getInstance().getRegion(x, y);
+		final Collection<DoorInstance> doors = region != null ? region.getDoors() : null;
+		if ((doors == null) || doors.isEmpty())
 		{
 			return false;
 		}
 		
-		for (DoorInstance doorInst : DOORS.values())
+		for (DoorInstance doorInst : doors)
 		{
-			if (doorInst.getMapRegion() != region)
-			{
-				continue;
-			}
 			if (doorInst.getXMax() == 0)
 			{
 				continue;

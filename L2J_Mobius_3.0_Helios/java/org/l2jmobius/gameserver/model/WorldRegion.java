@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
@@ -23,6 +24,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.taskmanager.RandomAnimationTaskManager;
 import org.l2jmobius.gameserver.util.UnboundArrayList;
 
@@ -30,6 +32,8 @@ public class WorldRegion
 {
 	/** List containing visible objects in this world region. */
 	private final UnboundArrayList<WorldObject> _visibleObjects = new UnboundArrayList<>();
+	/** List containing doors in this world region. */
+	private final List<DoorInstance> _doors = new ArrayList<>(1);
 	/** Array containing nearby regions forming this world region's effective area. */
 	private WorldRegion[] _surroundingRegions;
 	private final int _regionX;
@@ -230,6 +234,14 @@ public class WorldRegion
 		
 		_visibleObjects.addIfAbsent(object);
 		
+		if (object.isDoor())
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].addDoor((DoorInstance) object);
+			}
+		}
+		
 		// If this is the first player to enter the region, activate self and neighbors.
 		if (object.isPlayable() && !_active && !Config.GRIDS_ALWAYS_ON)
 		{
@@ -255,6 +267,14 @@ public class WorldRegion
 		
 		_visibleObjects.remove(object);
 		
+		if (object.isDoor())
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				removeDoor((DoorInstance) object);
+			}
+		}
+		
 		if (object.isPlayable() && areNeighborsEmpty() && !Config.GRIDS_ALWAYS_ON)
 		{
 			startDeactivation();
@@ -264,6 +284,24 @@ public class WorldRegion
 	public List<WorldObject> getVisibleObjects()
 	{
 		return _visibleObjects;
+	}
+	
+	public synchronized void addDoor(DoorInstance door)
+	{
+		if (!_doors.contains(door))
+		{
+			_doors.add(door);
+		}
+	}
+	
+	private synchronized void removeDoor(DoorInstance door)
+	{
+		_doors.remove(door);
+	}
+	
+	public List<DoorInstance> getDoors()
+	{
+		return _doors;
 	}
 	
 	public void setSurroundingRegions(WorldRegion[] regions)
