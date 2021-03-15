@@ -20,7 +20,7 @@ Index: dist/game/GeoDataConverter.sh
 +
 Index: dist/game/config/GeoEngine.ini
 ===================================================================
---- dist/game/config/GeoEngine.ini	(revision 8397)
+--- dist/game/config/GeoEngine.ini	(revision 8409)
 +++ dist/game/config/GeoEngine.ini	(working copy)
 @@ -1,6 +1,10 @@
  # =================================================================
@@ -85,7 +85,7 @@ Index: dist/game/config/GeoEngine.ini
  # =================================================================
 Index: dist/game/data/scripts/handlers/admincommandhandlers/AdminGeodata.java
 ===================================================================
---- dist/game/data/scripts/handlers/admincommandhandlers/AdminGeodata.java	(revision 8397)
+--- dist/game/data/scripts/handlers/admincommandhandlers/AdminGeodata.java	(revision 8409)
 +++ dist/game/data/scripts/handlers/admincommandhandlers/AdminGeodata.java	(working copy)
 @@ -55,9 +55,8 @@
  				final int worldX = activeChar.getX();
@@ -113,7 +113,7 @@ Index: dist/game/data/scripts/handlers/admincommandhandlers/AdminGeodata.java
  					BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoEngine.getInstance().getHeight(worldX, worldY, worldZ));
 Index: dist/game/data/scripts/handlers/admincommandhandlers/AdminPathNode.java
 ===================================================================
---- dist/game/data/scripts/handlers/admincommandhandlers/AdminPathNode.java	(revision 8397)
+--- dist/game/data/scripts/handlers/admincommandhandlers/AdminPathNode.java	(revision 8409)
 +++ dist/game/data/scripts/handlers/admincommandhandlers/AdminPathNode.java	(working copy)
 @@ -18,11 +18,11 @@
  
@@ -174,7 +174,7 @@ Index: dist/game/data/scripts/handlers/admincommandhandlers/AdminPathNode.java
  	
 Index: java/org/l2jmobius/Config.java
 ===================================================================
---- java/org/l2jmobius/Config.java	(revision 8397)
+--- java/org/l2jmobius/Config.java	(revision 8409)
 +++ java/org/l2jmobius/Config.java	(working copy)
 @@ -32,7 +32,6 @@
  import java.net.UnknownHostException;
@@ -184,7 +184,7 @@ Index: java/org/l2jmobius/Config.java
  import java.nio.file.Paths;
  import java.time.Duration;
  import java.util.ArrayList;
-@@ -927,14 +926,17 @@
+@@ -966,14 +965,17 @@
  	// --------------------------------------------------
  	// GeoEngine
  	// --------------------------------------------------
@@ -208,7 +208,7 @@ Index: java/org/l2jmobius/Config.java
  	public static boolean CORRECT_PLAYER_Z;
  	
  	/** Attribute System */
-@@ -2468,14 +2470,17 @@
+@@ -2568,14 +2570,17 @@
  			
  			// Load GeoEngine config file (if exists)
  			final PropertiesParser GeoEngine = new PropertiesParser(GEOENGINE_CONFIG_FILE);
@@ -234,9 +234,9 @@ Index: java/org/l2jmobius/Config.java
  			// Load AllowedPlayerRaces config file (if exists)
 Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/GeoEngine.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/GeoEngine.java	(revision 8435)
 +++ java/org/l2jmobius/gameserver/geoengine/GeoEngine.java	(working copy)
-@@ -16,101 +16,91 @@
+@@ -16,100 +16,90 @@
   */
  package org.l2jmobius.gameserver.geoengine;
  
@@ -269,7 +269,6 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
 +import org.l2jmobius.gameserver.geoengine.geodata.GeoFormat;
 +import org.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
 +import org.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
- import org.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
  import org.l2jmobius.gameserver.model.Location;
  import org.l2jmobius.gameserver.model.World;
  import org.l2jmobius.gameserver.model.WorldObject;
@@ -389,7 +388,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
  		if (loaded == 0)
  		{
  			if (Config.PATHFINDING)
-@@ -124,627 +114,832 @@
+@@ -123,619 +113,820 @@
  				LOGGER.info("GeoEngine: Forcing CoordSynchronize setting to -1.");
  			}
  		}
@@ -901,10 +900,6 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
 -			throw new RuntimeException("Multiple directions!");
 +			return false;
  		}
-+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld()))
-+		{
-+			return false;
-+		}
  		
 -		if (checkNearestNsweAntiCornerCut(prevX, prevY, prevGeoZ, nswe))
 +		// get origin and check existing geo coordinates
@@ -990,10 +985,6 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
 +			return false;
 +		}
 +		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld()))
-+		{
-+			return false;
-+		}
-+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld()))
 +		{
 +			return false;
 +		}
@@ -1363,8 +1354,13 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
 -			return new Location(x, y, getHeight(x, y, z));
 +			return true;
  		}
--		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(x, y, z, tx, ty, tz, instance))
-+		
+ 		
+-		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
+-		// First point is guaranteed to be available.
+-		pointIter.next();
+-		int prevX = pointIter.x();
+-		int prevY = pointIter.y();
+-		int prevZ = z;
 +		// perform geodata check
 +		final GeoLocation loc = checkMove(gox, goy, goz, gtx, gty, gtz, instance);
 +		return (loc.getGeoX() == gtx) && (loc.getGeoY() == gty);
@@ -1385,36 +1381,19 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
 +	{
 +		// Mobius: Double check for doors before normal checkMove to avoid exploiting key movement.
 +		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instance, false))
- 		{
--			return new Location(x, y, getHeight(x, y, z));
++		{
 +			return new Location(ox, oy, oz);
- 		}
++		}
 +		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instance))
 +		{
 +			return new Location(ox, oy, oz);
 +		}
  		
--		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
--		// First point is guaranteed to be available.
--		pointIter.next();
--		int prevX = pointIter.x();
--		int prevY = pointIter.y();
--		int prevZ = z;
+-		while (pointIter.next())
 +		// get origin and check existing geo coordinates
 +		final int gox = getGeoX(ox);
 +		final int goy = getGeoY(oy);
 +		if (!hasGeoPos(gox, goy))
-+		{
-+			return new Location(tx, ty, tz);
-+		}
- 		
--		while (pointIter.next())
-+		final short goz = getHeightNearest(gox, goy, oz);
-+		
-+		// get target and check existing geo coordinates
-+		final int gtx = getGeoX(tx);
-+		final int gty = getGeoY(ty);
-+		if (!hasGeoPos(gtx, gty))
  		{
 -			final int curX = pointIter.x();
 -			final int curY = pointIter.y();
@@ -1437,10 +1416,12 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
  		}
  		
 -		if (hasGeoPos(prevX, prevY) && (prevZ != tz))
-+		final short gtz = getHeightNearest(gtx, gty, tz);
++		final short goz = getHeightNearest(gox, goy, oz);
 +		
-+		// target coordinates reached
-+		if ((gox == gtx) && (goy == gty) && (goz == gtz))
++		// get target and check existing geo coordinates
++		final int gtx = getGeoX(tx);
++		final int gty = getGeoY(ty);
++		if (!hasGeoPos(gtx, gty))
  		{
 -			// Different floors, return start location.
 -			return new Location(x, y, z);
@@ -1448,6 +1429,14 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
  		}
  		
 -		return new Location(tx, ty, tz);
++		final short gtz = getHeightNearest(gtx, gty, tz);
++		
++		// target coordinates reached
++		if ((gox == gtx) && (goy == gty) && (goz == gtz))
++		{
++			return new Location(tx, ty, tz);
++		}
++		
 +		// perform geodata check
 +		return checkMove(gox, goy, goz, gtx, gty, gtz, instance);
  	}
@@ -1502,12 +1491,6 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
  		}
 -		if (FenceData.getInstance().checkIfFenceBetween(fromX, fromY, fromZ, toX, toY, toZ, instance))
 +		if (FenceData.getInstance().checkIfFenceBetween(gox, goy, goz, gtx, gty, gtz, instance))
- 		{
--			return false;
-+			return new GeoLocation(gox, goy, goz);
- 		}
--		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(fromX, fromY, fromZ, toX, toY, toZ, instance))
-+		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(gox, goy, goz, gtx, gty, gtz, instance))
  		{
 -			return false;
 +			return new GeoLocation(gox, goy, goz);
@@ -1669,7 +1652,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
  	public static GeoEngine getInstance()
  	{
  		return SingletonHolder.INSTANCE;
-@@ -752,6 +947,6 @@
+@@ -743,6 +934,6 @@
  	
  	private static class SingletonHolder
  	{
@@ -1681,7 +1664,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/GeoEngine.java
 \ No newline at end of file
 Index: java/org/l2jmobius/gameserver/geoengine/GeoEnginePathfinding.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/GeoEnginePathfinding.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/GeoEnginePathfinding.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/GeoEnginePathfinding.java	(working copy)
 @@ -20,88 +20,84 @@
  import java.util.LinkedList;
@@ -3370,7 +3353,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/BlockNull.java
 \ No newline at end of file
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/Cell.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/Cell.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/Cell.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/Cell.java	(nonexistent)
 @@ -1,48 +0,0 @@
 -/*
@@ -3423,7 +3406,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/Cell.java
 -}
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/ComplexBlock.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/ComplexBlock.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/ComplexBlock.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/ComplexBlock.java	(nonexistent)
 @@ -1,77 +0,0 @@
 -/*
@@ -3505,7 +3488,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/ComplexBlock.java
 -}
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/FlatBlock.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/FlatBlock.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/FlatBlock.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/FlatBlock.java	(nonexistent)
 @@ -1,56 +0,0 @@
 -/*
@@ -3760,7 +3743,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/GeoStructure.java
 \ No newline at end of file
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/IBlock.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/IBlock.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/IBlock.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/IBlock.java	(nonexistent)
 @@ -1,42 +0,0 @@
 -/*
@@ -3865,7 +3848,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/IGeoObject.java
 +}
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/IRegion.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/IRegion.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/IRegion.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/IRegion.java	(nonexistent)
 @@ -1,47 +0,0 @@
 -/*
@@ -3917,7 +3900,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/IRegion.java
 -}
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/MultilayerBlock.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/MultilayerBlock.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/MultilayerBlock.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/MultilayerBlock.java	(nonexistent)
 @@ -1,183 +0,0 @@
 -/*
@@ -4105,7 +4088,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/MultilayerBlock.java
 -}
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/NullRegion.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/NullRegion.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/NullRegion.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/NullRegion.java	(nonexistent)
 @@ -1,55 +0,0 @@
 -/*
@@ -4165,7 +4148,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/NullRegion.java
 -}
 Index: java/org/l2jmobius/gameserver/geoengine/geodata/Region.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/geodata/Region.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/geodata/Region.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/geodata/Region.java	(nonexistent)
 @@ -1,92 +0,0 @@
 -/*
@@ -4262,7 +4245,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/geodata/Region.java
 -}
 Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNode.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNode.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNode.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNode.java	(nonexistent)
 @@ -1,87 +0,0 @@
 -/*
@@ -4355,7 +4338,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNode.java
 \ No newline at end of file
 Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNodeLoc.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNodeLoc.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNodeLoc.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNodeLoc.java	(nonexistent)
 @@ -1,33 +0,0 @@
 -/*
@@ -4393,7 +4376,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/AbstractNodeLoc.java
 -}
 Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNode.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNode.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNode.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNode.java	(nonexistent)
 @@ -1,67 +0,0 @@
 -/*
@@ -4466,7 +4449,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNode.java
 \ No newline at end of file
 Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNodeBuffer.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNodeBuffer.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNodeBuffer.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/pathfinding/CellNodeBuffer.java	(nonexistent)
 @@ -1,348 +0,0 @@
 -/*
@@ -5225,7 +5208,7 @@ Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/NodeBuffer.java
 \ No newline at end of file
 Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/NodeLoc.java
 ===================================================================
---- java/org/l2jmobius/gameserver/geoengine/pathfinding/NodeLoc.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/geoengine/pathfinding/NodeLoc.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/geoengine/pathfinding/NodeLoc.java	(nonexistent)
 @@ -1,183 +0,0 @@
 -/*
@@ -5413,9 +5396,9 @@ Index: java/org/l2jmobius/gameserver/geoengine/pathfinding/NodeLoc.java
 -}
 Index: java/org/l2jmobius/gameserver/model/actor/Creature.java
 ===================================================================
---- java/org/l2jmobius/gameserver/model/actor/Creature.java	(revision 8399)
+--- java/org/l2jmobius/gameserver/model/actor/Creature.java	(revision 8428)
 +++ java/org/l2jmobius/gameserver/model/actor/Creature.java	(working copy)
-@@ -66,8 +66,6 @@
+@@ -65,8 +65,6 @@
  import org.l2jmobius.gameserver.enums.TeleportWhereType;
  import org.l2jmobius.gameserver.enums.UserInfoType;
  import org.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -5424,7 +5407,7 @@ Index: java/org/l2jmobius/gameserver/model/actor/Creature.java
  import org.l2jmobius.gameserver.instancemanager.IdManager;
  import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
  import org.l2jmobius.gameserver.instancemanager.QuestManager;
-@@ -2577,7 +2575,7 @@
+@@ -2566,7 +2564,7 @@
  		
  		public boolean disregardingGeodata;
  		public int onGeodataPathIndex;
@@ -5433,7 +5416,7 @@ Index: java/org/l2jmobius/gameserver/model/actor/Creature.java
  		public int geoPathAccurateTx;
  		public int geoPathAccurateTy;
  		public int geoPathGtx;
-@@ -3466,7 +3464,7 @@
+@@ -3443,7 +3441,7 @@
  				if (((originalDistance - distance) > 30) && !isControlBlocked() && !isInVehicle)
  				{
  					// Path calculation -- overrides previous movement check
@@ -5444,9 +5427,9 @@ Index: java/org/l2jmobius/gameserver/model/actor/Creature.java
  						if (isPlayer() && !_isFlying && !isInWater)
 Index: java/org/l2jmobius/gameserver/model/actor/instance/PlayerInstance.java
 ===================================================================
---- java/org/l2jmobius/gameserver/model/actor/instance/PlayerInstance.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/model/actor/instance/PlayerInstance.java	(revision 8424)
 +++ java/org/l2jmobius/gameserver/model/actor/instance/PlayerInstance.java	(working copy)
-@@ -12704,7 +12704,7 @@
+@@ -12746,7 +12746,7 @@
  		{
  			if (Config.CORRECT_PLAYER_Z)
  			{
@@ -5457,7 +5440,7 @@ Index: java/org/l2jmobius/gameserver/model/actor/instance/PlayerInstance.java
  					teleToLocation(new Location(getX(), getY(), nearestZ));
 Index: java/org/l2jmobius/gameserver/util/GeoUtils.java
 ===================================================================
---- java/org/l2jmobius/gameserver/util/GeoUtils.java	(revision 8397)
+--- java/org/l2jmobius/gameserver/util/GeoUtils.java	(revision 8409)
 +++ java/org/l2jmobius/gameserver/util/GeoUtils.java	(working copy)
 @@ -19,7 +19,7 @@
  import java.awt.Color;
