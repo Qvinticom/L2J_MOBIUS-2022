@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.instance.CabaleBufferInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FestivalGuideInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FolkInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
 
 public class NpcKnownList extends CreatureKnownList
 {
@@ -44,7 +43,7 @@ public class NpcKnownList extends CreatureKnownList
 		// Broadcast correct walking NPC position.
 		if (getActiveObject().isNpc() && (object instanceof Creature) && object.isPlayer() && getActiveChar().isMoving() && !getActiveChar().isInCombat())
 		{
-			((Creature) object).broadcastPacket(new CharMoveToLocation(getActiveChar()));
+			((Creature) object).broadcastMoveToLocation();
 		}
 		return true;
 	}

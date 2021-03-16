@@ -92,7 +92,6 @@ import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.RadarControl;
-import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -149,7 +148,7 @@ public class NpcInstance extends Creature
 		if ((now - _lastSocialBroadcast) > MINIMUM_SOCIAL_INTERVAL)
 		{
 			_lastSocialBroadcast = now;
-			broadcastPacket(new SocialAction(getObjectId(), animationId));
+			broadcastSocialAction(animationId);
 		}
 	}
 	
@@ -704,7 +703,7 @@ public class NpcInstance extends Creature
 					}
 					
 					// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance to display a social action of the NpcInstance on their client
-					broadcastPacket(new SocialAction(getObjectId(), Rnd.get(8)));
+					broadcastSocialAction(Rnd.get(8));
 					// Open a chat window on client with the text of the NpcInstance
 					if (isEventMob)
 					{
@@ -993,7 +992,7 @@ public class NpcInstance extends Creature
 						}
 						
 						// Send a Server->Client packet SocialAction to the all PlayerInstance on the _knownPlayer of the NpcInstance to display a social action of the NpcInstance on their client
-						broadcastPacket(new SocialAction(getObjectId(), Rnd.get(8)));
+						broadcastSocialAction(Rnd.get(8));
 						// Open a chat window on client with the text of the NpcInstance
 						if (isEventMob)
 						{

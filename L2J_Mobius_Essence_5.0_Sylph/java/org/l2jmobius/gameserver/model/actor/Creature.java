@@ -653,6 +653,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		});
 	}
 	
+	public void broadcastMoveToLocation()
+	{
+		final WorldRegion region = getWorldRegion();
+		if ((region != null) && region.isActive())
+		{
+			broadcastPacket(new MoveToLocation(this));
+		}
+	}
+	
+	public void broadcastSocialAction(int id)
+	{
+		final WorldRegion region = getWorldRegion();
+		if ((region != null) && region.isActive())
+		{
+			broadcastPacket(new SocialAction(getObjectId(), id));
+		}
+	}
+	
 	/**
 	 * @return true if hp update should be done, false if not
 	 */
@@ -3149,7 +3167,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		m._moveTimestamp = gameTicks;
 		
 		// Send a Server->Client packet MoveToLocation to the actor and all known PlayerInstance.
-		broadcastPacket(new MoveToLocation(this));
+		broadcastMoveToLocation();
 		if (distFraction > 1)
 		{
 			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
@@ -3646,7 +3664,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// to destination by GameTimeController
 		
 		// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-		broadcastPacket(new MoveToLocation(this));
+		broadcastMoveToLocation();
 		return true;
 	}
 	
@@ -4889,11 +4907,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public boolean isAffected(EffectFlag flag)
 	{
 		return _effectList.isAffected(flag);
-	}
-	
-	public void broadcastSocialAction(int id)
-	{
-		broadcastPacket(new SocialAction(getObjectId(), id));
 	}
 	
 	public Team getTeam()

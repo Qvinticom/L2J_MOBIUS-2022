@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.model.actor.instance.DoppelgangerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
-import org.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 
 public class DoppelgangerAI extends CreatureAI
 {
@@ -261,7 +260,7 @@ public class DoppelgangerAI extends CreatureAI
 			// Doppelgangers always send MoveToLocation packet.
 			if (sendPacket)
 			{
-				_actor.broadcastPacket(new MoveToLocation(_actor));
+				_actor.broadcastMoveToLocation();
 			}
 		}
 		else

@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -493,17 +494,21 @@ abstract class AbstractAI implements Ctrl
 			{
 				if (_actor.isOnGeodataPath())
 				{
-					_actor.broadcastPacket(new CharMoveToLocation(_actor));
+					_actor.broadcastMoveToLocation();
 					_clientMovingToPawnOffset = 0;
 				}
 				else if (sendPacket)
 				{
-					_actor.broadcastPacket(new MoveToPawn(_actor, (Creature) pawn, offset));
+					final WorldRegion region = _actor.getWorldRegion();
+					if ((region != null) && region.isActive())
+					{
+						_actor.broadcastPacket(new MoveToPawn(_actor, (Creature) pawn, offset));
+					}
 				}
 			}
 			else
 			{
-				_actor.broadcastPacket(new CharMoveToLocation(_actor));
+				_actor.broadcastMoveToLocation();
 			}
 		}
 		else
@@ -532,7 +537,7 @@ abstract class AbstractAI implements Ctrl
 			_accessor.moveTo(x, y, z);
 			
 			// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-			_actor.broadcastPacket(new CharMoveToLocation(_actor));
+			_actor.broadcastMoveToLocation();
 		}
 		else
 		{

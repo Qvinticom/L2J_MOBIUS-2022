@@ -126,6 +126,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PartySpelled;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
+import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -385,6 +386,24 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 			
 			player.sendPacket(mov);
+		}
+	}
+	
+	public void broadcastMoveToLocation()
+	{
+		final WorldRegion region = getWorldRegion();
+		if ((region != null) && region.isActive())
+		{
+			broadcastPacket(new CharMoveToLocation(this));
+		}
+	}
+	
+	public void broadcastSocialAction(int id)
+	{
+		final WorldRegion region = getWorldRegion();
+		if ((region != null) && region.isActive())
+		{
+			broadcastPacket(new SocialAction(getObjectId(), id));
 		}
 	}
 	
@@ -5751,7 +5770,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
 		
 		// Send a Server->Client packet CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
-		broadcastPacket(new CharMoveToLocation(this));
+		broadcastMoveToLocation();
 		return true;
 	}
 	
