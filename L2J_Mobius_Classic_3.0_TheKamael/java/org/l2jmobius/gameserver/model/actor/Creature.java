@@ -224,7 +224,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	private boolean _allSkillsDisabled;
 	
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
-	protected byte _zoneValidateCounter = 4;
+	protected final Location _lastZoneValidateLocation = new Location(getX(), getY(), getZ());
 	
 	private final StampedLock _attackLock = new StampedLock();
 	
@@ -3151,23 +3151,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	public void revalidateZone(boolean force)
 	{
-		// This function is called too often from movement code
-		if (force)
+		// This function is called too often from movement code.
+		if (!force && (calculateDistance3D(_lastZoneValidateLocation) < (isNpc() && !isInCombat() ? Config.MAX_DRIFT_RANGE : 100)))
 		{
-			_zoneValidateCounter = 4;
+			return;
 		}
-		else
-		{
-			_zoneValidateCounter--;
-			if (_zoneValidateCounter < 0)
-			{
-				_zoneValidateCounter = 4;
-			}
-			else
-			{
-				return;
-			}
-		}
+		_lastZoneValidateLocation.setXYZ(this);
 		
 		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
 		if (region != null)

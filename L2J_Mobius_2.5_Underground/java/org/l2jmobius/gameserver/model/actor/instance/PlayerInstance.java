@@ -1791,23 +1791,12 @@ public class PlayerInstance extends Playable
 			return;
 		}
 		
-		// This function is called too often from movement code
-		if (force)
+		// This function is called too often from movement code.
+		if (!force && (calculateDistance3D(_lastZoneValidateLocation) < 100))
 		{
-			_zoneValidateCounter = 4;
+			return;
 		}
-		else
-		{
-			_zoneValidateCounter--;
-			if (_zoneValidateCounter < 0)
-			{
-				_zoneValidateCounter = 4;
-			}
-			else
-			{
-				return;
-			}
-		}
+		_lastZoneValidateLocation.setXYZ(this);
 		
 		ZoneManager.getInstance().getRegion(this).revalidateZones(this);
 		

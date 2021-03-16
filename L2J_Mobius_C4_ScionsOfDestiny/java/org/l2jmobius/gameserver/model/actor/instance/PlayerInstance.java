@@ -115,6 +115,7 @@ import org.l2jmobius.gameserver.model.Timestamp;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.WorldRegion;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Playable;
@@ -304,7 +305,6 @@ public class PlayerInstance extends Playable
 	private long _pvpFlagLasts;
 	private byte _siegeState = 0;
 	private int _curWeightPenalty = 0;
-	private byte _zoneValidateCounter = 4;
 	private boolean _isIn7sDungeon = false;
 	private int _heroConsecutiveKillCount = 0;
 	private boolean _isPvpHero = false;
@@ -1720,35 +1720,25 @@ public class PlayerInstance extends Playable
 	public void revalidateZone(boolean force)
 	{
 		// Cannot validate if not in a world region (happens during teleport)
-		if (getWorldRegion() == null)
+		final WorldRegion region = getWorldRegion();
+		if (region == null)
 		{
 			return;
 		}
+		
+		// This function is called too often from movement code.
+		if (!force && (getDistanceSq(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < 10000))
+		{
+			return;
+		}
+		_lastZoneValidateLocation.setXYZ(getX(), getY(), getZ());
+		
+		region.revalidateZones(this);
 		
 		if (Config.ALLOW_WATER)
 		{
 			checkWaterState();
 		}
-		
-		// This function is called very often from movement code
-		if (force)
-		{
-			_zoneValidateCounter = 4;
-		}
-		else
-		{
-			_zoneValidateCounter--;
-			if (_zoneValidateCounter < 0)
-			{
-				_zoneValidateCounter = 4;
-			}
-			else
-			{
-				return;
-			}
-		}
-		
-		getWorldRegion().revalidateZones(this);
 	}
 	
 	/**

@@ -200,6 +200,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	private boolean _blocked;
 	private boolean _meditated;
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
+	protected final Location _lastZoneValidateLocation = new Location(getX(), getY(), getZ());
 	private boolean _advanceFlag = false;
 	private int _advanceMultiplier = 1;
 	
@@ -584,8 +585,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		revalidateZone(true);
 	}
 	
-	protected byte _zoneValidateCounter = 4;
-	
 	/**
 	 * Revalidate zone.
 	 * @param force the force
@@ -598,23 +597,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			return;
 		}
 		
-		// This function is called too often from movement code
-		if (force)
+		// This function is called too often from movement code.
+		if (!force && (getDistanceSq(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < (isNpc() && !isInCombat() ? Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE : 10000)))
 		{
-			_zoneValidateCounter = 4;
+			return;
 		}
-		else
-		{
-			_zoneValidateCounter--;
-			if (_zoneValidateCounter < 0)
-			{
-				_zoneValidateCounter = 4;
-			}
-			else
-			{
-				return;
-			}
-		}
+		_lastZoneValidateLocation.setXYZ(getX(), getY(), getZ());
+		
 		region.revalidateZones(this);
 	}
 	
