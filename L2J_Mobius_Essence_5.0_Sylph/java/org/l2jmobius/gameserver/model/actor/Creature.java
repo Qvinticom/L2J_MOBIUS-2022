@@ -2908,7 +2908,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	public boolean isCastingNow(Predicate<SkillCaster> filter)
 	{
-		return _skillCasters.values().stream().anyMatch(filter);
+		for (SkillCaster skillCaster : _skillCasters.values())
+		{
+			if (filter.test(skillCaster))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -3926,9 +3933,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	private void onAttackFinish(Attack attack)
 	{
 		// Recharge any active auto-soulshot tasks for current creature after the attack has successfully hit.
-		if (attack.getHits().stream().anyMatch(h -> !h.isMiss()))
+		for (Hit hit : attack.getHits())
 		{
-			rechargeShots(true, false, false);
+			if (!hit.isMiss())
+			{
+				rechargeShots(true, false, false);
+				break;
+			}
 		}
 		
 		// Notify that this character is ready to act for the next attack
