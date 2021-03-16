@@ -19,22 +19,20 @@ package org.l2jmobius.gameserver.model.zone.type;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.SkillData;
 import org.l2jmobius.gameserver.enums.InstanceType;
-import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
-import org.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**
- * another type of damage zone with skills
+ * Another type of damage zone with skills.
  * @author kerberos
  */
 public class EffectZone extends ZoneType
@@ -45,6 +43,7 @@ public class EffectZone extends ZoneType
 	protected boolean _bypassConditions;
 	private boolean _isShowDangerIcon;
 	protected Map<Integer, Integer> _skills;
+	private volatile Future<?> _task;
 	
 	public EffectZone(int id)
 	{
@@ -55,18 +54,6 @@ public class EffectZone extends ZoneType
 		setTargetType(InstanceType.Playable); // default only playable
 		_bypassConditions = false;
 		_isShowDangerIcon = true;
-		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-		if (settings == null)
-		{
-			settings = new TaskZoneSettings();
-		}
-		setSettings(settings);
-	}
-	
-	@Override
-	public TaskZoneSettings getSettings()
-	{
-		return (TaskZoneSettings) super.getSettings();
 	}
 	
 	@Override
@@ -144,13 +131,15 @@ public class EffectZone extends ZoneType
 	{
 		if (_skills != null)
 		{
-			if (getSettings().getTask() == null)
+			Future<?> task = _task;
+			if (task == null)
 			{
 				synchronized (this)
 				{
-					if (getSettings().getTask() == null)
+					task = _task;
+					if (task == null)
 					{
-						getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+						_task = task = ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse);
 					}
 				}
 			}
@@ -183,9 +172,10 @@ public class EffectZone extends ZoneType
 			}
 		}
 		
-		if (getCharactersInside().isEmpty() && (getSettings().getTask() != null))
+		if (getCharactersInside().isEmpty() && (_task != null))
 		{
-			getSettings().clear();
+			_task.cancel(true);
+			_task = null;
 		}
 	}
 	
@@ -240,7 +230,7 @@ public class EffectZone extends ZoneType
 		return _skills.get(skillId);
 	}
 	
-	private final class ApplySkill implements Runnable
+	private class ApplySkill implements Runnable
 	{
 		protected ApplySkill()
 		{
@@ -253,25 +243,34 @@ public class EffectZone extends ZoneType
 		@Override
 		public void run()
 		{
-			if (isEnabled())
+			if (!isEnabled())
 			{
-				getCharactersInside().forEach(character ->
+				return;
+			}
+			
+			if (getCharactersInside().isEmpty())
+			{
+				_task.cancel(false);
+				_task = null;
+				return;
+			}
+			
+			for (Creature character : getCharactersInside())
+			{
+				if ((character != null) && character.isPlayer() && !character.isDead() && (Rnd.get(100) < _chance))
 				{
-					if ((character != null) && !character.isDead() && (Rnd.get(100) < _chance))
+					for (Entry<Integer, Integer> e : _skills.entrySet())
 					{
-						for (Entry<Integer, Integer> e : _skills.entrySet())
+						final Skill skill = SkillData.getInstance().getSkill(e.getKey().intValue(), e.getValue().intValue());
+						if ((skill != null) && (_bypassConditions || skill.checkCondition(character, character)))
 						{
-							final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
-							if ((skill != null) && (_bypassConditions || skill.checkCondition(character, character)))
+							if (character.getAffectedSkillLevel(skill.getId()) < skill.getLevel())
 							{
-								if (character.getAffectedSkillLevel(skill.getId()) < skill.getLevel())
-								{
-									skill.activateSkill(character, character);
-								}
+								skill.activateSkill(character, character);
 							}
 						}
 					}
-				});
+				}
 			}
 		}
 	}

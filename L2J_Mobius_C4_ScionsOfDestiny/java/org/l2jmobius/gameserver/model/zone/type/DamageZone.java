@@ -20,7 +20,6 @@ import java.util.concurrent.Future;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
@@ -30,7 +29,10 @@ import org.l2jmobius.gameserver.model.zone.ZoneType;
 public class DamageZone extends ZoneType
 {
 	private int _damagePerSec;
-	private Future<?> _task;
+	
+	private final int _startTask;
+	private final int _reuseTask;
+	private volatile Future<?> _task;
 	
 	public DamageZone(int id)
 	{
@@ -38,6 +40,10 @@ public class DamageZone extends ZoneType
 		
 		// Setup default damage
 		_damagePerSec = 100;
+		
+		// Setup default start / reuse time
+		_startTask = 10;
+		_reuseTask = 5000;
 	}
 	
 	@Override
@@ -56,16 +62,25 @@ public class DamageZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if (_task == null)
+		Future<?> task = _task;
+		if ((task == null) && (_damagePerSec != 0))
 		{
-			_task = ThreadPool.scheduleAtFixedRate(new ApplyDamage(this), 10, 1000);
+			
+			synchronized (this)
+			{
+				task = _task;
+				if (task == null)
+				{
+					_task = task = ThreadPool.scheduleAtFixedRate(new ApplyDamage(), _startTask, _reuseTask);
+				}
+			}
 		}
 	}
 	
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (getCharactersInside().isEmpty())
+		if (getCharactersInside().isEmpty() && (_task != null))
 		{
 			_task.cancel(true);
 			_task = null;
@@ -77,23 +92,27 @@ public class DamageZone extends ZoneType
 		return _damagePerSec;
 	}
 	
-	class ApplyDamage implements Runnable
+	private class ApplyDamage implements Runnable
 	{
-		private final DamageZone _dmgZone;
-		
-		ApplyDamage(DamageZone zone)
+		protected ApplyDamage()
 		{
-			_dmgZone = zone;
 		}
 		
 		@Override
 		public void run()
 		{
-			for (Creature temp : _dmgZone.getCharactersInside())
+			if (getCharactersInside().isEmpty())
 			{
-				if ((temp != null) && !temp.isDead() && (temp instanceof PlayerInstance))
+				_task.cancel(false);
+				_task = null;
+				return;
+			}
+			
+			for (Creature character : getCharactersInside())
+			{
+				if ((character != null) && character.isPlayer() && !character.isDead())
 				{
-					temp.reduceCurrentHp(_dmgZone.getDamagePerSecond(), null);
+					character.reduceCurrentHp(getDamagePerSecond(), null);
 				}
 			}
 		}

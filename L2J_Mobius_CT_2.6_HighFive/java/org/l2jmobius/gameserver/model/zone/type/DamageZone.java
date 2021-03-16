@@ -16,16 +16,15 @@
  */
 package org.l2jmobius.gameserver.model.zone.type;
 
+import java.util.concurrent.Future;
+
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
-import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.siege.Castle;
 import org.l2jmobius.gameserver.model.stats.Stat;
-import org.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
-import org.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
@@ -42,6 +41,7 @@ public class DamageZone extends ZoneType
 	
 	private int _startTask;
 	private int _reuseTask;
+	private volatile Future<?> _task;
 	
 	public DamageZone(int id)
 	{
@@ -58,19 +58,8 @@ public class DamageZone extends ZoneType
 		// no castle by default
 		_castleId = 0;
 		_castle = null;
+		
 		setTargetType(InstanceType.Playable); // default only playabale
-		AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-		if (settings == null)
-		{
-			settings = new TaskZoneSettings();
-		}
-		setSettings(settings);
-	}
-	
-	@Override
-	public TaskZoneSettings getSettings()
-	{
-		return (TaskZoneSettings) super.getSettings();
 	}
 	
 	@Override
@@ -105,22 +94,26 @@ public class DamageZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if ((getSettings().getTask() != null) || ((_damageHPPerSec == 0) && (_damageMPPerSec == 0)))
+		Future<?> task = _task;
+		if ((task == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0)))
 		{
-			return;
-		}
-		
-		final PlayerInstance player = creature.getActingPlayer();
-		if ((getCastle() != null) && (!getCastle().getSiege().isInProgress() || (player == null) || (player.getSiegeState() == 2)))
-		{
-			return;
-		}
-		
-		synchronized (this)
-		{
-			if (getSettings().getTask() == null)
+			final PlayerInstance player = creature.getActingPlayer();
+			final Castle castle = getCastle();
+			if (castle != null) // Castle zone
 			{
-				getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
+				if (!(castle.getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2))) // Siege and no defender
+				{
+					return;
+				}
+			}
+			
+			synchronized (this)
+			{
+				task = _task;
+				if (task == null)
+				{
+					_task = task = ThreadPool.scheduleAtFixedRate(new ApplyDamage(), _startTask, _reuseTask);
+				}
 			}
 		}
 	}
@@ -128,9 +121,10 @@ public class DamageZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if (getCharactersInside().isEmpty() && (getSettings().getTask() != null))
+		if (getCharactersInside().isEmpty() && (_task != null))
 		{
-			getSettings().clear();
+			_task.cancel(true);
+			_task = null;
 		}
 	}
 	
@@ -153,15 +147,13 @@ public class DamageZone extends ZoneType
 		return _castle;
 	}
 	
-	private final class ApplyDamage implements Runnable
+	private class ApplyDamage implements Runnable
 	{
-		private final DamageZone _dmgZone;
 		private final Castle _castle;
 		
-		protected ApplyDamage(DamageZone zone)
+		protected ApplyDamage()
 		{
-			_dmgZone = zone;
-			_castle = zone.getCastle();
+			_castle = getCastle();
 		}
 		
 		@Override
@@ -172,40 +164,49 @@ public class DamageZone extends ZoneType
 				return;
 			}
 			
+			if (getCharactersInside().isEmpty())
+			{
+				_task.cancel(false);
+				_task = null;
+				return;
+			}
+			
 			boolean siege = false;
+			
 			if (_castle != null)
 			{
 				siege = _castle.getSiege().isInProgress();
 				// castle zones active only during siege
 				if (!siege)
 				{
-					_dmgZone.getSettings().clear();
+					_task.cancel(false);
+					_task = null;
 					return;
 				}
 			}
 			
-			for (Creature temp : _dmgZone.getCharactersInside())
+			for (Creature character : getCharactersInside())
 			{
-				if ((temp != null) && !temp.isDead())
+				if ((character != null) && character.isPlayer() && !character.isDead())
 				{
 					if (siege)
 					{
 						// during siege defenders not affected
-						final PlayerInstance player = temp.getActingPlayer();
+						final PlayerInstance player = character.getActingPlayer();
 						if ((player != null) && player.isInSiege() && (player.getSiegeState() == 2))
 						{
 							continue;
 						}
 					}
 					
-					final double multiplier = 1 + (temp.calcStat(Stat.DAMAGE_ZONE_VULN, 0, null, null) / 100);
+					final double multiplier = 1 + (character.calcStat(Stat.DAMAGE_ZONE_VULN, 0, null, null) / 100);
 					if (getHPDamagePerSecond() != 0)
 					{
-						temp.reduceCurrentHp(_dmgZone.getHPDamagePerSecond() * multiplier, temp, null);
+						character.reduceCurrentHp(getHPDamagePerSecond() * multiplier, character, null);
 					}
 					if (getMPDamagePerSecond() != 0)
 					{
-						temp.reduceCurrentMp(_dmgZone.getMPDamagePerSecond() * multiplier);
+						character.reduceCurrentMp(getMPDamagePerSecond() * multiplier);
 					}
 				}
 			}

@@ -24,17 +24,14 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Rnd;
-import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.Playable;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 
 /**
- * another type of damage zone with skills
+ * Another type of damage zone with skills.
  * @author kerberos
  */
 public class EffectZone extends ZoneType
@@ -46,8 +43,8 @@ public class EffectZone extends ZoneType
 	private int _reuse;
 	boolean _enabled;
 	private boolean _isShowDangerIcon;
-	private Future<?> _task;
 	protected Map<Integer, Integer> _skills;
+	private volatile Future<?> _task;
 	
 	public EffectZone(int id)
 	{
@@ -74,14 +71,19 @@ public class EffectZone extends ZoneType
 				_initialDelay = Integer.parseInt(value);
 				break;
 			}
+			case "reuse":
+			{
+				_reuse = Integer.parseInt(value);
+				break;
+			}
 			case "defaultStatus":
 			{
 				_enabled = Boolean.parseBoolean(value);
 				break;
 			}
-			case "reuse":
+			case "showDangerIcon":
 			{
-				_reuse = Integer.parseInt(value);
+				_isShowDangerIcon = Boolean.parseBoolean(value);
 				break;
 			}
 			case "skillIdLvl":
@@ -93,7 +95,7 @@ public class EffectZone extends ZoneType
 					final String[] skillSplit = skill.split("-");
 					if (skillSplit.length != 2)
 					{
-						LOGGER.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skill, "\""));
+						LOGGER.warning(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skill + "\"");
 					}
 					else
 					{
@@ -105,22 +107,16 @@ public class EffectZone extends ZoneType
 						{
 							if (!skill.isEmpty())
 							{
-								LOGGER.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skillSplit[0], "\"", skillSplit[1]));
+								LOGGER.warning(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skillSplit[0] + "\"" + skillSplit[1]);
 							}
 						}
 					}
 				}
 				break;
 			}
-			case "showDangerIcon":
-			{
-				_isShowDangerIcon = Boolean.parseBoolean(value);
-				break;
-			}
 			default:
 			{
 				super.setParameter(name, value);
-				break;
 			}
 		}
 	}
@@ -128,18 +124,23 @@ public class EffectZone extends ZoneType
 	@Override
 	protected void onEnter(Creature creature)
 	{
-		if ((_skills != null) && (_task == null))
+		if (_skills != null)
 		{
-			synchronized (this)
+			Future<?> task = _task;
+			if (task == null)
 			{
-				if (_task == null)
+				synchronized (this)
 				{
-					_task = ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse);
+					task = _task;
+					if (task == null)
+					{
+						_task = task = ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse);
+					}
 				}
 			}
 		}
 		
-		if ((creature instanceof PlayerInstance) && _isShowDangerIcon)
+		if (creature.isPlayer() && _isShowDangerIcon)
 		{
 			creature.setInsideZone(ZoneId.DANGER_AREA, true);
 		}
@@ -148,7 +149,7 @@ public class EffectZone extends ZoneType
 	@Override
 	protected void onExit(Creature creature)
 	{
-		if ((creature instanceof PlayerInstance) && _isShowDangerIcon)
+		if (creature.isPlayer() && _isShowDangerIcon)
 		{
 			creature.setInsideZone(ZoneId.DANGER_AREA, false);
 		}
@@ -158,11 +159,6 @@ public class EffectZone extends ZoneType
 			_task.cancel(true);
 			_task = null;
 		}
-	}
-	
-	protected Skill getSkill(int skillId, int skillLevel)
-	{
-		return SkillTable.getInstance().getSkill(skillId, skillLevel);
 	}
 	
 	public int getChance()
@@ -226,9 +222,9 @@ public class EffectZone extends ZoneType
 		_enabled = value;
 	}
 	
-	class ApplySkill implements Runnable
+	private class ApplySkill implements Runnable
 	{
-		ApplySkill()
+		protected ApplySkill()
 		{
 			if (_skills == null)
 			{
@@ -239,35 +235,30 @@ public class EffectZone extends ZoneType
 		@Override
 		public void run()
 		{
-			if (_enabled)
+			if (!isEnabled())
 			{
-				for (Creature temp : getCharactersInside())
+				return;
+			}
+			
+			if (getCharactersInside().isEmpty())
+			{
+				_task.cancel(false);
+				_task = null;
+				return;
+			}
+			
+			for (Creature character : getCharactersInside())
+			{
+				if ((character != null) && character.isPlayer() && !character.isDead() && (Rnd.get(100) < _chance))
 				{
-					if ((temp != null) && !temp.isDead())
+					for (Entry<Integer, Integer> e : _skills.entrySet())
 					{
-						if (!(temp instanceof Playable))
+						final Skill skill = SkillTable.getInstance().getSkill(e.getKey().intValue(), e.getValue().intValue());
+						if ((skill != null) && skill.checkCondition(character, character, false))
 						{
-							continue;
-						}
-						
-						if (Rnd.get(100) < _chance)
-						{
-							for (Entry<Integer, Integer> e : _skills.entrySet())
+							if (character.getFirstEffect(e.getKey()) == null)
 							{
-								final Skill skill = getSkill(e.getKey(), e.getValue());
-								if (skill == null)
-								{
-									LOGGER.warning("ATTENTION: Skill " + e.getKey() + " cannot be loaded.. Verify Skill definition into data/stats/skill folder...");
-									continue;
-								}
-								
-								if (skill.checkCondition(temp, temp, false))
-								{
-									if (temp.getFirstEffect(e.getKey()) == null)
-									{
-										skill.getEffects(temp, temp);
-									}
-								}
+								skill.getEffects(character, character);
 							}
 						}
 					}
