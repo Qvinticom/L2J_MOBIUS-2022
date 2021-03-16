@@ -632,7 +632,7 @@ public class CubicInstance
 				}
 			}
 			
-			skill.getEffects(activeCubic.getOwner(), target);
+			skill.applyEffects(activeCubic.getOwner(), target);
 		}
 	}
 	
@@ -685,7 +685,7 @@ public class CubicInstance
 					}
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						skill.getEffects(activeCubic.getOwner(), target);
+						skill.applyEffects(activeCubic.getOwner(), target);
 					}
 				}
 				
@@ -716,7 +716,7 @@ public class CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						skill.getEffects(activeCubic.getOwner(), target);
+						skill.applyEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}
@@ -724,7 +724,7 @@ public class CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						skill.getEffects(activeCubic.getOwner(), target);
+						skill.applyEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}
@@ -755,7 +755,7 @@ public class CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						skill.getEffects(activeCubic.getOwner(), target);
+						skill.applyEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}
@@ -767,7 +767,7 @@ public class CubicInstance
 						{
 							target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeCubic.getOwner(), (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 						}
-						skill.getEffects(activeCubic.getOwner(), target);
+						skill.applyEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}

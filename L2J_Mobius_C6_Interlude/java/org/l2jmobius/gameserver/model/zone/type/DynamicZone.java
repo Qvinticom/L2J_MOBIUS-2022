@@ -62,7 +62,7 @@ public class DynamicZone extends ZoneType
 				((PlayerInstance) creature).sendMessage("You have entered a temporary zone!");
 			}
 			
-			_skill.getEffects(_owner, creature, false, false, false);
+			_skill.applyEffects(_owner, creature, false, false, false);
 		}
 		catch (NullPointerException e)
 		{
@@ -126,6 +126,6 @@ public class DynamicZone extends ZoneType
 	@Override
 	protected void onReviveInside(Creature creature)
 	{
-		_skill.getEffects(_owner, creature, false, false, false);
+		_skill.applyEffects(_owner, creature, false, false, false);
 	}
 }

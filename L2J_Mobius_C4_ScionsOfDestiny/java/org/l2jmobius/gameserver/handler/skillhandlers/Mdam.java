@@ -92,7 +92,7 @@ public class Mdam implements ISkillHandler
 					if (target.reflectSkill(skill))
 					{
 						creature.stopSkillEffects(skill.getId());
-						skill.getEffects(null, creature, false, sps, bss);
+						skill.applyEffects(null, creature, false, sps, bss);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -101,7 +101,7 @@ public class Mdam implements ISkillHandler
 					{
 						// Like L2OFF must remove the first effect only if the second effect is successful
 						target.stopSkillEffects(skill.getId());
-						skill.getEffects(creature, target, false, sps, bss);
+						skill.applyEffects(creature, target, false, sps, bss);
 					}
 					else
 					{
@@ -132,7 +132,7 @@ public class Mdam implements ISkillHandler
 			// Replace old effect with new one.
 			effect.exit(false);
 		}
-		skill.getEffectsSelf(creature);
+		skill.applySelfEffects(creature);
 		
 		if (skill.isSuicideAttack())
 		{

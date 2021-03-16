@@ -113,7 +113,7 @@ public class Blow implements ISkillHandler
 					target.stopSkillEffects(skill.getId());
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill);
 						target.sendPacket(sm);
@@ -272,7 +272,7 @@ public class Blow implements ISkillHandler
 				{
 					effect.exit(false);
 				}
-				skill.getEffectsSelf(creature);
+				skill.applySelfEffects(creature);
 			}
 		}
 		

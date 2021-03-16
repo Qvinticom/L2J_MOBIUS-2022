@@ -212,7 +212,7 @@ public class ChestInstance extends MonsterInstance
 		final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
 		if (creature.getFirstEffect(skill) == null)
 		{
-			skill.getEffects(this, creature, false, false, false);
+			skill.applyEffects(this, creature, false, false, false);
 			broadcastPacket(new MagicSkillUse(this, creature, skill.getId(), skillLevel, skill.getHitTime(), 0));
 			return true;
 		}

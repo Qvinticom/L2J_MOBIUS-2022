@@ -217,7 +217,7 @@ public class Continuous implements ISkillHandler
 				continue;
 			}
 			
-			skill.getEffects(creature, target, ss, sps, bss);
+			skill.applyEffects(creature, target, ss, sps, bss);
 			
 			if (skill.getSkillType() == SkillType.AGGDEBUFF)
 			{
@@ -263,7 +263,7 @@ public class Continuous implements ISkillHandler
 			}
 		}
 		
-		skill.getEffectsSelf(creature);
+		skill.applySelfEffects(creature);
 	}
 	
 	@Override

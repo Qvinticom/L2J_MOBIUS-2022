@@ -169,7 +169,7 @@ public class Q501_ProofOfClanAlliance extends Quest
 			st.takeItems(SYMBOL_OF_LOYALTY, 1);
 			st.takeItems(SYMBOL_OF_LOYALTY, 1);
 			st.giveItems(ANTIDOTE_RECIPE_LIST, 1);
-			SkillTable.getInstance().getSkill(4082, 1).getEffects(npc, player);
+			SkillTable.getInstance().getSkill(4082, 1).applyEffects(npc, player);
 			startQuestTimer("poison", 60000, npc, player, true);
 			st.playSound(QuestState.SOUND_MIDDLE);
 		}

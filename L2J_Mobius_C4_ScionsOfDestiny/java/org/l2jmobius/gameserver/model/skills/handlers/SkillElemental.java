@@ -122,7 +122,7 @@ public class SkillElemental extends Skill
 			
 			// activate attacked effects, if any
 			target.stopSkillEffects(getId());
-			getEffects(creature, target, false, sps, bss);
+			applyEffects(creature, target, false, sps, bss);
 		}
 		
 		if (bss)

@@ -237,7 +237,7 @@ public class Continuous implements ISkillHandler
 				final DuelManager dm = DuelManager.getInstance();
 				if (dm != null)
 				{
-					final Effect[] effects = skill.getEffects(creature, target, ss, sps, bss);
+					final Effect[] effects = skill.applyEffects(creature, target, ss, sps, bss);
 					if (effects != null)
 					{
 						for (Effect buff : effects)
@@ -252,7 +252,7 @@ public class Continuous implements ISkillHandler
 			}
 			else
 			{
-				skill.getEffects(creature, target, ss, sps, bss);
+				skill.applyEffects(creature, target, ss, sps, bss);
 			}
 			
 			if (skill.getSkillType() == SkillType.AGGDEBUFF)
@@ -299,7 +299,7 @@ public class Continuous implements ISkillHandler
 			}
 		}
 		
-		skill.getEffectsSelf(creature);
+		skill.applySelfEffects(creature);
 	}
 	
 	@Override

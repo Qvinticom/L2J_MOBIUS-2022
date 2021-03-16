@@ -154,6 +154,6 @@ public class SkillChargeDmg extends Skill
 			seffect.exit(false);
 		}
 		// cast self effect if any
-		getEffectsSelf(caster);
+		applySelfEffects(caster);
 	}
 }

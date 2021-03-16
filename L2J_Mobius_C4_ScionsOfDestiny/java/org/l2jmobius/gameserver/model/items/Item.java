@@ -591,7 +591,7 @@ public abstract class Item
 			{
 				target.removeEffect(target.getFirstEffect(skill.getId()));
 			}
-			for (Effect e : skill.getEffects(caster, target, false, false, false))
+			for (Effect e : skill.applyEffects(caster, target, false, false, false))
 			{
 				effects.add(e);
 			}

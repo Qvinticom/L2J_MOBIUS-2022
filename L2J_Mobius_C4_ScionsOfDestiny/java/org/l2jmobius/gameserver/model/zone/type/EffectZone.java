@@ -258,7 +258,7 @@ public class EffectZone extends ZoneType
 						{
 							if (character.getFirstEffect(e.getKey()) == null)
 							{
-								skill.getEffects(character, character);
+								skill.applyEffects(character, character);
 							}
 						}
 					}

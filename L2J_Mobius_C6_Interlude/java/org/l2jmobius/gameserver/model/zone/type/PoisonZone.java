@@ -164,7 +164,7 @@ public class PoisonZone extends ZoneType
 						}
 						else
 						{
-							skill.getEffects(temp, temp, false, false, false);
+							skill.applyEffects(temp, temp, false, false, false);
 						}
 					}
 				}

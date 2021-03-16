@@ -61,7 +61,7 @@ public class ForceBuff
 			final Skill force = SkillTable.getInstance().getSkill(_forceId, _forceLevel);
 			if (force != null)
 			{
-				force.getEffects(_caster, _target, false, false, false);
+				force.applyEffects(_caster, _target, false, false, false);
 			}
 			else
 			{

@@ -151,7 +151,7 @@ public class Pdam implements ISkillHandler
 					{
 						creature.stopSkillEffects(skill.getId());
 						
-						skill.getEffects(null, creature, ss, sps, bss);
+						skill.applyEffects(null, creature, ss, sps, bss);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill.getId());
 						creature.sendPacket(sm);
@@ -159,7 +159,7 @@ public class Pdam implements ISkillHandler
 					else if (f.calcSkillSuccess(creature, target, skill, soul, false, false)) // activate attacked effects, if any
 					{
 						// Like L2OFF must remove the first effect if the second effect lands
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(skill.getId());
 						target.sendPacket(sm);
@@ -316,12 +316,12 @@ public class Pdam implements ISkillHandler
 				else if (skill.getId() == 345) // Sonic Rage
 				{
 					final Skill dummy = SkillTable.getInstance().getSkill(8, 7); // Lv7 Sonic Focus
-					dummy.getEffects(creature, creature, ss, sps, bss);
+					dummy.applyEffects(creature, creature, ss, sps, bss);
 				}
 				else if (skill.getId() == 346) // Raging Force
 				{
 					final Skill dummy = SkillTable.getInstance().getSkill(50, 7); // Lv7 Focused Force
-					dummy.getEffects(creature, creature, ss, sps, bss);
+					dummy.applyEffects(creature, creature, ss, sps, bss);
 				}
 			}
 			// self Effect :]
@@ -331,7 +331,7 @@ public class Pdam implements ISkillHandler
 				// Replace old effect with new one.
 				effect.exit(false);
 			}
-			skill.getEffectsSelf(creature);
+			skill.applySelfEffects(creature);
 		}
 		
 		if (skill.isMagic())

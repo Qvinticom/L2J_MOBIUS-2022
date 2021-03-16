@@ -68,7 +68,7 @@ public class SkillSignet extends Skill
 				z = wordPosition.getZ();
 			}
 		}
-		getEffects(caster, effectPoint, false, false, false);
+		applyEffects(caster, effectPoint, false, false, false);
 		effectPoint.setInvul(true);
 		effectPoint.spawnMe(x, y, z);
 	}

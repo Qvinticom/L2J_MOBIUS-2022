@@ -1152,7 +1152,7 @@ public class VanHalter extends Quest
 			{
 				if (pc.getFirstEffect(bleed) == null)
 				{
-					bleed.getEffects(tr, pc, false, false, false);
+					bleed.applyEffects(tr, pc, false, false, false);
 					tr.broadcastPacket(new MagicSkillUse(tr, pc, bleed.getId(), 12, 1, 1));
 				}
 				

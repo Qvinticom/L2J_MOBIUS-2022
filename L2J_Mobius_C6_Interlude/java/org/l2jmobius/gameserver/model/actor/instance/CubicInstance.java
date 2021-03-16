@@ -707,7 +707,7 @@ public class CubicInstance
 			if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
 			{
 				final DuelManager dm = DuelManager.getInstance();
-				for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
+				for (Effect debuff : skill.applyEffects(activeCubic.getOwner(), target))
 				{
 					if (debuff != null)
 					{
@@ -717,7 +717,7 @@ public class CubicInstance
 			}
 			else
 			{
-				skill.getEffects(activeCubic.getOwner(), target);
+				skill.applyEffects(activeCubic.getOwner(), target);
 			}
 		}
 	}
@@ -771,7 +771,7 @@ public class CubicInstance
 					}
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						skill.getEffects(activeCubic.getOwner(), target);
+						skill.applyEffects(activeCubic.getOwner(), target);
 					}
 				}
 				
@@ -806,7 +806,7 @@ public class CubicInstance
 						if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
 						{
 							final DuelManager dm = DuelManager.getInstance();
-							for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
+							for (Effect debuff : skill.applyEffects(activeCubic.getOwner(), target))
 							{
 								if (debuff != null)
 								{
@@ -816,7 +816,7 @@ public class CubicInstance
 						}
 						else
 						{
-							skill.getEffects(activeCubic.getOwner(), target);
+							skill.applyEffects(activeCubic.getOwner(), target);
 						}
 					}
 					break;
@@ -829,7 +829,7 @@ public class CubicInstance
 						if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
 						{
 							final DuelManager dm = DuelManager.getInstance();
-							for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
+							for (Effect debuff : skill.applyEffects(activeCubic.getOwner(), target))
 							{
 								if (debuff != null)
 								{
@@ -839,7 +839,7 @@ public class CubicInstance
 						}
 						else
 						{
-							skill.getEffects(activeCubic.getOwner(), target);
+							skill.applyEffects(activeCubic.getOwner(), target);
 						}
 					}
 					break;
@@ -875,7 +875,7 @@ public class CubicInstance
 						if ((target instanceof PlayerInstance) && ((PlayerInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((PlayerInstance) target).getDuelId()))
 						{
 							final DuelManager dm = DuelManager.getInstance();
-							for (Effect debuff : skill.getEffects(activeCubic.getOwner(), target))
+							for (Effect debuff : skill.applyEffects(activeCubic.getOwner(), target))
 							{
 								if (debuff != null)
 								{
@@ -885,7 +885,7 @@ public class CubicInstance
 						}
 						else
 						{
-							skill.getEffects(activeCubic.getOwner(), target);
+							skill.applyEffects(activeCubic.getOwner(), target);
 						}
 					}
 					break;
@@ -898,7 +898,7 @@ public class CubicInstance
 						{
 							target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeCubic.getOwner(), (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 						}
-						skill.getEffects(activeCubic.getOwner(), target);
+						skill.applyEffects(activeCubic.getOwner(), target);
 					}
 					break;
 				}

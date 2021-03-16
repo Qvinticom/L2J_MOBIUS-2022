@@ -78,7 +78,7 @@ public class ClanGate implements ISkillHandler
 		{
 			effect.exit(false);
 		}
-		skill.getEffectsSelf(player);
+		skill.applySelfEffects(player);
 	}
 	
 	private class RemoveClanGate implements Runnable

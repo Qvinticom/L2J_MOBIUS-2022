@@ -88,7 +88,7 @@ public class SkillChargeEffect extends Skill
 		{
 			for (WorldObject target : targets)
 			{
-				getEffects(creature, (Creature) target, false, false, false);
+				applyEffects(creature, (Creature) target, false, false, false);
 			}
 		}
 		if (creature instanceof PlayerInstance)

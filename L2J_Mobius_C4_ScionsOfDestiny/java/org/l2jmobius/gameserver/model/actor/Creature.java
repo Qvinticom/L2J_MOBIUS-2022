@@ -6141,7 +6141,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 						abortAttack();
 						abortCast();
 						getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						skill.getEffects(target, this, false, false, false);
+						skill.applyEffects(target, this, false, false, false);
 						if (this instanceof Summon)
 						{
 							final Summon src = ((Summon) this);
@@ -6150,7 +6150,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								src.getOwner().abortAttack();
 								src.getOwner().abortCast();
 								src.getOwner().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-								skill.getEffects(target, src.getOwner(), false, false, false);
+								skill.applyEffects(target, src.getOwner(), false, false, false);
 							}
 						}
 					}
@@ -7894,7 +7894,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								abortAttack();
 								abortCast();
 								getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-								tempSkill.getEffects(creature, this, false, false, false);
+								tempSkill.applyEffects(creature, this, false, false, false);
 								if (this instanceof Summon)
 								{
 									final Summon src = ((Summon) this);
@@ -7903,7 +7903,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 										src.getOwner().abortAttack();
 										src.getOwner().abortCast();
 										src.getOwner().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-										tempSkill.getEffects(creature, src.getOwner(), false, false, false);
+										tempSkill.applyEffects(creature, src.getOwner(), false, false, false);
 									}
 								}
 							}
@@ -7917,7 +7917,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 							final Skill tempSkill = SkillTable.getInstance().getSkill(4515, 1);
 							if (tempSkill != null)
 							{
-								tempSkill.getEffects(creature, this, false, false, false);
+								tempSkill.applyEffects(creature, this, false, false, false);
 							}
 							else
 							{

@@ -52,7 +52,7 @@ public class SkillSeed extends Skill
 			final EffectSeed oldEffect = (EffectSeed) target.getFirstEffect(getId());
 			if (oldEffect == null)
 			{
-				getEffects(caster, target, false, false, false);
+				applyEffects(caster, target, false, false, false);
 			}
 			else
 			{

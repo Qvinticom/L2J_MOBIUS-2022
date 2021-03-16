@@ -2657,12 +2657,12 @@ public abstract class Skill
 		return (_effectTemplates != null) && (_effectTemplates.length > 0);
 	}
 	
-	public Effect[] getEffects(Creature effector, Creature effected)
+	public Effect[] applyEffects(Creature effector, Creature effected)
 	{
-		return getEffects(effector, effected, false, false, false);
+		return applyEffects(effector, effected, false, false, false);
 	}
 	
-	public Effect[] getEffects(Creature effector, Creature effected, boolean ss, boolean sps, boolean bss)
+	public Effect[] applyEffects(Creature effector, Creature effected, boolean ss, boolean sps, boolean bss)
 	{
 		if (isPassive())
 		{
@@ -2723,7 +2723,7 @@ public abstract class Skill
 		return effects.toArray(new Effect[effects.size()]);
 	}
 	
-	public Effect[] getEffectsSelf(Creature effector)
+	public Effect[] applySelfEffects(Creature effector)
 	{
 		if (isPassive())
 		{

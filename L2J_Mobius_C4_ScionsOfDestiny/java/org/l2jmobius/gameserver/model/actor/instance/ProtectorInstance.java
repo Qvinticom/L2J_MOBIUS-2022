@@ -82,7 +82,7 @@ public class ProtectorInstance extends NpcInstance
 			if (player.getFirstEffect(skill) == null)
 			{
 				final int objId = _caster.getObjectId();
-				skill.getEffects(_caster, player, false, false, false);
+				skill.applyEffects(_caster, player, false, false, false);
 				broadcastPacket(new MagicSkillUse(_caster, player, skillId, skillLevel, Config.PROTECTOR_SKILLTIME, 0));
 				broadcastPacket(new CreatureSay(objId, ChatType.GENERAL, getName(), Config.PROTECTOR_MESSAGE));
 				return true;
@@ -103,7 +103,7 @@ public class ProtectorInstance extends NpcInstance
 			if (player.getFirstEffect(skill) == null)
 			{
 				final int objId = _caster.getObjectId();
-				skill.getEffects(_caster, player, false, false, false);
+				skill.applyEffects(_caster, player, false, false, false);
 				broadcastPacket(new MagicSkillUse(_caster, player, skillId, skillLevel, Config.PROTECTOR_SKILLTIME, 0));
 				broadcastPacket(new CreatureSay(objId, ChatType.GENERAL, getName(), Config.PROTECTOR_MESSAGE));
 				return true;

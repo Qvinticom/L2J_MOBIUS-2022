@@ -42,6 +42,6 @@ public class SkillSignetCasttime extends Skill
 			return;
 		}
 		
-		getEffectsSelf(caster);
+		applySelfEffects(caster);
 	}
 }

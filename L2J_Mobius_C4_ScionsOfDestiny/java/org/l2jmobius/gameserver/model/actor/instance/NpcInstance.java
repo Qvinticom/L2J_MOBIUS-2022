@@ -1930,7 +1930,7 @@ public class NpcInstance extends Creature
 		if (skill != null)
 		{
 			broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
-			skill.getEffects(this, player);
+			skill.applyEffects(this, player);
 		}
 		
 		player.setCurrentCp(player.getMaxCp());
@@ -2003,7 +2003,7 @@ public class NpcInstance extends Creature
 				else
 				{
 					broadcastPacket(new MagicSkillUse(this, player, skill.getId(), skill.getLevel(), 0, 0));
-					skill.getEffects(this, player);
+					skill.applyEffects(this, player);
 				}
 			}
 		}

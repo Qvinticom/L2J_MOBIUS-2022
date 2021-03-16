@@ -91,9 +91,9 @@ public class SkillCharge extends Skill
 			}
 			return;
 		}
-		getEffects(caster, caster, false, false, false);
+		applyEffects(caster, caster, false, false, false);
 		
 		// cast self effect if any
-		getEffectsSelf(caster);
+		applySelfEffects(caster);
 	}
 }

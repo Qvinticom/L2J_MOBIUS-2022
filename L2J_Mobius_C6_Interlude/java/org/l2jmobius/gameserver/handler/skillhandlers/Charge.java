@@ -46,7 +46,7 @@ public class Charge implements ISkillHandler
 				continue;
 			}
 			final PlayerInstance target = (PlayerInstance) target1;
-			skill.getEffects(creature, target, false, false, false);
+			skill.applyEffects(creature, target, false, false, false);
 		}
 		// self Effect :]
 		
@@ -56,7 +56,7 @@ public class Charge implements ISkillHandler
 			// Replace old effect with new one.
 			effect.exit(false);
 		}
-		skill.getEffectsSelf(creature);
+		skill.applySelfEffects(creature);
 	}
 	
 	@Override

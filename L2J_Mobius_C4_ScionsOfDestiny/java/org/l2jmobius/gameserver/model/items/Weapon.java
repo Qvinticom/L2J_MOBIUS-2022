@@ -343,7 +343,7 @@ public class Weapon extends Item
 			{
 				target.getFirstEffect(skill.getId()).exit(false);
 			}
-			for (Effect e : skill.getEffects(caster, target, false, false, false))
+			for (Effect e : skill.applyEffects(caster, target, false, false, false))
 			{
 				effects.add(e);
 			}

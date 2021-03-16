@@ -46,7 +46,7 @@ public class CancelSkillRestoreTask implements Runnable
 			{
 				continue;
 			}
-			skill.getEffects(_player, _player);
+			skill.applyEffects(_player, _player);
 		}
 	}
 }

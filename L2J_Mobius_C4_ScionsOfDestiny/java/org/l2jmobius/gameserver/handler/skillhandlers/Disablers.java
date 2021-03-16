@@ -105,7 +105,7 @@ public class Disablers implements ISkillHandler
 				{
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 					}
 					else
 					{
@@ -119,7 +119,7 @@ public class Disablers implements ISkillHandler
 				case FAKE_DEATH:
 				{
 					// stun/fakedeath is not mdef dependant, it depends on lvl difference, target CON and power of stun
-					skill.getEffects(creature, target, ss, sps, bss);
+					skill.applyEffects(creature, target, ss, sps, bss);
 					break;
 				}
 				case STUN:
@@ -145,7 +145,7 @@ public class Disablers implements ISkillHandler
 					}
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 					}
 					else if (creature instanceof PlayerInstance)
 					{
@@ -165,7 +165,7 @@ public class Disablers implements ISkillHandler
 					}
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 					}
 					else if (creature instanceof PlayerInstance)
 					{
@@ -185,7 +185,7 @@ public class Disablers implements ISkillHandler
 					}
 					if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 					}
 					else if (creature instanceof PlayerInstance)
 					{
@@ -209,7 +209,7 @@ public class Disablers implements ISkillHandler
 								e.exit(false);
 							}
 						}
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 					}
 					else if (creature instanceof PlayerInstance)
 					{
@@ -224,7 +224,7 @@ public class Disablers implements ISkillHandler
 						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, creature, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 					}
 					// TODO [Nemesiss] should this have 100% chance?
-					skill.getEffects(creature, target, ss, sps, bss);
+					skill.applyEffects(creature, target, ss, sps, bss);
 					break;
 				}
 				case AGGREDUCE:
@@ -232,7 +232,7 @@ public class Disablers implements ISkillHandler
 					// these skills needs to be rechecked
 					if (target instanceof Attackable)
 					{
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 						final double aggdiff = ((Attackable) target).getHating(creature) - target.calcStat(Stat.AGGRESSION, ((Attackable) target).getHating(creature), target, skill);
 						if (skill.getPower() > 0)
 						{
@@ -263,7 +263,7 @@ public class Disablers implements ISkillHandler
 								attackable.setWalking();
 							}
 						}
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 					}
 					else if (Formulas.getInstance().calcSkillSuccess(creature, target, skill, ss, sps, bss))
 					{
@@ -279,7 +279,7 @@ public class Disablers implements ISkillHandler
 								targ.setWalking();
 							}
 						}
-						skill.getEffects(creature, target, ss, sps, bss);
+						skill.applyEffects(creature, target, ss, sps, bss);
 					}
 					else if (creature instanceof PlayerInstance)
 					{
@@ -754,7 +754,7 @@ public class Disablers implements ISkillHandler
 			// Replace old effect with new one.
 			effect.exit(false);
 		}
-		skill.getEffectsSelf(creature);
+		skill.applySelfEffects(creature);
 	}
 	
 	private void negateEffect(Creature target, SkillType type, double power)

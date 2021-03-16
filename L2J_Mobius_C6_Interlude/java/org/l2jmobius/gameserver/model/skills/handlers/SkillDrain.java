@@ -122,7 +122,7 @@ public class SkillDrain extends Skill
 					if (target.reflectSkill(this))
 					{
 						creature.stopSkillEffects(getId());
-						getEffects(null, creature, false, sps, bss);
+						applyEffects(null, creature, false, sps, bss);
 						final SystemMessage sm = new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU);
 						sm.addSkillName(getId());
 						creature.sendPacket(sm);
@@ -133,7 +133,7 @@ public class SkillDrain extends Skill
 						target.stopSkillEffects(getId());
 						if (Formulas.getInstance().calcSkillSuccess(creature, target, this, false, sps, bss))
 						{
-							getEffects(creature, target, false, sps, bss);
+							applyEffects(creature, target, false, sps, bss);
 						}
 						else
 						{
@@ -172,7 +172,7 @@ public class SkillDrain extends Skill
 			effect.exit(false);
 		}
 		// cast self effect if any
-		getEffectsSelf(creature);
+		applySelfEffects(creature);
 	}
 	
 	public void useCubicSkill(CubicInstance activeCubic, List<Creature> targets)

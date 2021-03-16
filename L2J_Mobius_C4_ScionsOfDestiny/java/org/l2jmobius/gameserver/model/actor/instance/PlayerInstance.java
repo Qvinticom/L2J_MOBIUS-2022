@@ -2876,7 +2876,7 @@ public class PlayerInstance extends Playable
 				{
 					// stop old toggle skill effect, and give new toggle skill effect back
 					toggleEffect.exit(false);
-					sk.getEffects(this, this, false, false, false);
+					sk.applyEffects(this, this, false, false, false);
 				}
 			}
 			
@@ -9095,7 +9095,7 @@ public class PlayerInstance extends Playable
 				if (activateEffects)
 				{
 					final Skill skill = SkillTable.getInstance().getSkill(skillId, skillLevel);
-					skill.getEffects(this, this, false, false, false);
+					skill.applyEffects(this, this, false, false, false);
 					for (Effect effect : getAllEffects())
 					{
 						if (effect.getSkill().getId() == skillId)

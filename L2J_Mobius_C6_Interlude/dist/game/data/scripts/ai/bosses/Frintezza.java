@@ -884,7 +884,7 @@ public class Frintezza extends Quest
 			final Skill skill = SkillTable.getInstance().getSkill(5017, 1);
 			if (skill != null)
 			{
-				skill.getEffects(_weakScarlet, _weakScarlet, false, false, false);
+				skill.applyEffects(_weakScarlet, _weakScarlet, false, false, false);
 			}
 			
 			startQuestTimer("morph_end", 6000, _weakScarlet, null);
@@ -976,7 +976,7 @@ public class Frintezza extends Quest
 			final Skill skill = SkillTable.getInstance().getSkill(5017, 1);
 			if (skill != null)
 			{
-				skill.getEffects(_strongScarlet, _strongScarlet, false, false, false);
+				skill.applyEffects(_strongScarlet, _strongScarlet, false, false, false);
 			}
 			
 			startQuestTimer("morph_end", 9000, _strongScarlet, null);
@@ -1155,7 +1155,7 @@ public class Frintezza extends Quest
 				{
 					if ((creature instanceof PlayerInstance) && (Rnd.get(100) < 80))
 					{
-						skill.getEffects(_frintezza, creature, false, false, false);
+						skill.applyEffects(_frintezza, creature, false, false, false);
 						creature.sendPacket(new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU).addSkillName(5008, 4));
 					}
 				}
@@ -1173,7 +1173,7 @@ public class Frintezza extends Quest
 						creature.setImmobilized(true);
 						creature.setParalyzed(true);
 						creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						skill.getEffects(_frintezza, creature, false, false, false);
+						skill.applyEffects(_frintezza, creature, false, false, false);
 						creature.startAbnormalEffect(Creature.ABNORMAL_EFFECT_DANCE_STUNNED);
 						creature.sendPacket(new SystemMessage(SystemMessageId.THE_EFFECTS_OF_S1_FLOW_THROUGH_YOU).addSkillName(5008, 5));
 					}
