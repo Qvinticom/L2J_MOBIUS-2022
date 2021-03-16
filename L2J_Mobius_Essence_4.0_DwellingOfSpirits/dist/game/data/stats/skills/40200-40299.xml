@@ -72,7 +72,13 @@
 	<skill id="40214" toLevel="1" name="Scroll of Blessing">
 		<!-- Turns a weapon into a blessed one. -->
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40215" toLevel="1" name="Random Teleport">
 		<!-- Teleports to any place in the Black Anvil Guild Camp at random. Can be used only in the Black Anvil Guild Camp. -->
@@ -86,8 +92,13 @@
 	</skill>
 	<skill id="40217" toLevel="1" name="Scroll of Blessing">
 		<!-- Turns a weapon into a blessed one. -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40218" toLevel="1" name="We Play's Potion of Leaping">
 		<!-- XP +7,490,000, SP +200,000. Required level: 60+. Cannot be used by chaotic characters. -->
@@ -226,18 +237,43 @@
 	<skill id="40233" toLevel="1" name="Scroll: Enchant Rare Accessories (Exchangeable)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40234" toLevel="1" name="Scroll: Enchant Rare Accessories">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40235" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories (Exchangeable)">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40236" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40237" toLevel="1" name="Pet Crystal of Experience (Exchangeable)">
 		<!-- Pet XP +100,000,000. -->

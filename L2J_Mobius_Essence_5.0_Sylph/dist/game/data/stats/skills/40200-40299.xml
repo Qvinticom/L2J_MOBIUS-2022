@@ -72,7 +72,13 @@
 	<skill id="40214" toLevel="1" name="Scroll of Blessing">
 		<!-- Turns a weapon into a blessed one. -->
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40215" toLevel="1" name="Random Teleport">
 		<!-- Teleports to any place in the Black Anvil Guild Camp at random. Can be used only in the Black Anvil Guild Camp. -->
@@ -86,8 +92,13 @@
 	</skill>
 	<skill id="40217" toLevel="1" name="Scroll of Blessing">
 		<!-- Turns a weapon into a blessed one. -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40218" toLevel="1" name="Growth Potion">
 		<!-- XP +7,490,000, SP +200,000. Required level: 60+. Cannot be used by chaotic characters. -->
@@ -226,18 +237,43 @@
 	<skill id="40233" toLevel="1" name="Scroll: Enchant Rare Accessories (Exchangeable)">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40234" toLevel="1" name="Scroll: Enchant Rare Accessories">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40235" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories (Exchangeable)">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40236" toLevel="1" name="Blessed Scroll: Enchant Rare Accessories">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40237" toLevel="1" name="Pet XP Crystal (Exchangeable)">
 		<!-- Pet XP +100,000,000. -->
@@ -522,87 +558,106 @@
 	</skill>
 	<skill id="40296" toLevel="1" name="Scroll of Escape: Master Kerkir">
 		<!-- Can be used to teleport to Master Kerkir in the Wind Village. -->
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>95586</itemConsumeId>
-        <magicLevel>1</magicLevel>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpAlignment">
-                <affectType>CASTER</affectType>
-                <alignment>LAWFUL</alignment>
-            </condition>
-            <condition name="OpCanEscape" />
-        </conditions>
-        <effects>
-            <effect name="Teleport">
-                <x>102609</x>
-                <y>56031</y>
-                <z>-4032</z>
-            </effect>
-        </effects>
+		<icon>icon.skill0000</icon>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>95586</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+		    <condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+		    </condition>
+		    <condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+		    <effect name="Teleport">
+				<x>102609</x>
+				<y>56031</y>
+				<z>-4032</z>
+		    </effect>
+		</effects>
 	</skill>
 	<skill id="40297" toLevel="1" name="Scroll of Escape: Grocer Evia">
 		<!-- Can be used to teleport to Grocer Evia in the Wind Village. -->
-
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>95587</itemConsumeId>
-        <magicLevel>1</magicLevel>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpAlignment">
-                <affectType>CASTER</affectType>
-                <alignment>LAWFUL</alignment>
-            </condition>
-            <condition name="OpCanEscape" />
-        </conditions>
-        <effects>
-            <effect name="Teleport">
-                <x>105091</x>
-                <y>57525</y>
-                <z>-3928</z>
-            </effect>
-        </effects>
+		<icon>icon.skill0000</icon>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>95587</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+		    <condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+		    </condition>
+		    <condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+		    <effect name="Teleport">
+				<x>105091</x>
+				<y>57525</y>
+				<z>-3928</z>
+		    </effect>
+		</effects>
 	</skill>
 	<skill id="40298" toLevel="1" name="Scroll of Escape: High Priest Maximilian">
 		<!-- Can be used to teleport to High Priest Maximilian in Giran. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95595</itemConsumeId> <!-- Scroll of Escape: High Priest Maximilian -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>86868</x>
+				<y>148637</y>
+				<z>-3400</z>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="95588" toLevel="1" name="Scroll of Escape: Gorgon Flower Garden">
+	<skill id="40299" toLevel="1" name="Scroll of Escape: Gorgon Flower Garden">
 		<!-- Can be used to teleport to the Gorgon Flower Garden. -->
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>95588</itemConsumeId>
-        <magicLevel>1</magicLevel>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpAlignment">
-                <affectType>CASTER</affectType>
-                <alignment>LAWFUL</alignment>
-            </condition>
-            <condition name="OpCanEscape" />
-        </conditions>
-        <effects>
-            <effect name="Teleport">
-                <x>105068</x>
-                <y>57525</y>
-                <z>-3936</z>
-            </effect>
-        </effects>
-
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95588</itemConsumeId> <!-- Scroll of Escape: Gorgon Flower Garden -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>106615</x>
+				<y>138612</y>
+				<z>-3536</z>
+			</effect>
+		</effects>
 	</skill>
 </list>

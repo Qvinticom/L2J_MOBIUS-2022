@@ -83,11 +83,20 @@
 	<item id="94208" name="Scroll of Blessing" additionalName="Event" type="EtcItem">
 		<!-- When used, blesses your weapon. -->
 		<set name="icon" val="icon.bless_scroll" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="40217" level="1" /> <!-- Scroll of Blessing -->
+		</skills>
 	</item>
 	<item id="94209" name="Life Stone Lv. 1 - Weapon" additionalName="Event" type="EtcItem">
 		<!-- Augments weapons. Adena required. -->

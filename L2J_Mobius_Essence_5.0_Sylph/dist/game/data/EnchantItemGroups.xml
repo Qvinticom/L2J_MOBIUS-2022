@@ -36,20 +36,51 @@
 		<current enchant="30-65535" chance="0" />
 	</enchantRateGroup>
 	
-	<!-- Evolved Agathion enchant group. -->
-	<enchantRateGroup name="AGATHION_CHARM">
-		<current enchant="0-4" chance="66.67" />
-		<current enchant="5-6" chance="33" />
-		<current enchant="7-10" chance="20" />
-		<current enchant="11-65535" chance="0" />
+	<!-- Spirits Agathion enchant group. -->
+	<enchantRateGroup name="SPIRITS_AGATHION">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="65" />
+		<current enchant="4" chance="50" />
+		<current enchant="5" chance="35" />
+		<current enchant="6" chance="24" />
+		<current enchant="7" chance="18" />
+		<current enchant="8" chance="14" />
+		<current enchant="9" chance="8" />
 	</enchantRateGroup>
 	
-	<!-- Brooch enchant group. -->
-	<enchantRateGroup name="BROOCH_GROUP">
-		<current enchant="0-4" chance="66.67" />
-		<current enchant="5-6" chance="33" />
-		<current enchant="7-10" chance="20" />
-		<current enchant="11-65535" chance="0" />
+	<!-- Zodiac Agathion enchant group. -->
+	<enchantRateGroup name="ZODIACS_AGATHION">
+		<current enchant="0-2" chance="100" />
+		<current enchant="3" chance="65" />
+		<current enchant="4" chance="50" />
+		<current enchant="5" chance="35" />
+		<current enchant="6" chance="12" />
+		<current enchant="7" chance="9" />
+		<current enchant="8" chance="7" />
+		<current enchant="9" chance="4" />
+	</enchantRateGroup>
+	
+	<!-- Rare Accessories enchant group. -->
+	<enchantRateGroup name="RARE_ACCESSORIES_GROUP">
+		<current enchant="0" chance="100" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="30" />
+		<current enchant="4" chance="20" />
+	</enchantRateGroup>
+	
+	<!-- Dragon Belt enchant group. -->
+	<enchantRateGroup name="DRAGON_BELT_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="35" />
+		<current enchant="4" chance="30" />
+		<current enchant="5" chance="28" />
+		<current enchant="6" chance="26" />
+		<current enchant="7" chance="24" />
+		<current enchant="8" chance="22" />
+		<current enchant="9" chance="20" />
 	</enchantRateGroup>
 
 	<!-- Default scrolls enchanting route line. -->
@@ -75,14 +106,6 @@
 			<item slot="rbracelet" /> <!-- Bracelet -->
 			<item slot="lbracelet" /> <!-- Evolved Agathion Bracelet -->
 		</enchantRate>
-		<!-- Agathion Charm -->
-		<enchantRate group="AGATHION_CHARM">
-			<item slot="agathion" /> <!-- Agathion Charm -->
-		</enchantRate>
-		<!-- Brooch -->
-		<enchantRate group="BROOCH_GROUP">
-			<item slot="brooch" /> <!-- Brooch -->
-		</enchantRate>
 		<!-- Bind only full armor group to to full armor slot items. -->
 		<enchantRate group="FULL_ARMOR_GROUP">
 			<item slot="fullarmor" /> <!-- Full Armor: Full armor pants are included. -->
@@ -96,6 +119,24 @@
 		<enchantRate group="MAGE_WEAPON_GROUP">
 			<item slot="rhand" magicWeapon="true" /> <!-- Right hand: Weapons, Magic weapon -->
 			<item slot="lrhand" magicWeapon="true" /> <!-- Two hands: Weapons, Magic weapon -->
+		</enchantRate>
+		<!-- Rare Accessories -->
+		<enchantRate group="RARE_ACCESSORIES_GROUP">
+			<item slot="neck" /> <!-- Neck: Necklaces -->
+			<item slot="rear;lear" /> <!-- Right ear, Left ear: Earrings -->
+			<item slot="rfinger;lfinger" /> <!-- Right finger, Left finger: Rings -->
+		</enchantRate>
+		<!-- Dragon Belt -->
+		<enchantRate group="DRAGON_BELT_GROUP">
+			<item slot="belt" /> <!-- Belt: Belts -->
+		</enchantRate>
+		<!-- Spirits Agathion -->
+		<enchantRate group="SPIRITS_AGATHION">
+			<item slot="agathion" /> <!-- Agathion: agathion -->
+		</enchantRate>
+		<!-- Zodiacs Agathion -->
+		<enchantRate group="ZODIACS_AGATHION">
+			<item slot="agathion" /> <!-- Agathion: agathion -->
 		</enchantRate>
 	</enchantScrollGroup>
 </list>

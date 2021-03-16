@@ -351,9 +351,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="50326" level="1" /> <!-- Summon Agathion Ignis -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="50321" level="1" /> <!-- Agathion Ignis -->
+			<skill id="50321" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Agathion Ignis -->
+			<skill id="50321" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Agathion Ignis -->
+			<skill id="50321" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Agathion Ignis -->
+			<skill id="50321" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Agathion Ignis -->
+			<skill id="50321" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Agathion Ignis -->
+			<skill id="50321" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Agathion Ignis -->
+			<skill id="50321" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Agathion Ignis -->
+			<skill id="50321" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Agathion Ignis -->
+			<skill id="50321" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Agathion Ignis -->
+			<skill id="50321" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Ignis -->
 		</skills>
 	</item>
 	<item id="93129" name="Agathion Nebula" type="Armor">
@@ -368,9 +380,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="50327" level="1" /> <!-- Summon Agathion Nebula -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="50322" level="1" /> <!-- Agathion Nebula -->
+			<skill id="50322" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Agathion Nebula -->
+			<skill id="50322" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Agathion Nebula -->
+			<skill id="50322" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Agathion Nebula -->
+			<skill id="50322" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Agathion Nebula -->
+			<skill id="50322" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Agathion Nebula -->
+			<skill id="50322" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Agathion Nebula -->
+			<skill id="50322" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Agathion Nebula -->
+			<skill id="50322" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Agathion Nebula -->
+			<skill id="50322" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Agathion Nebula -->
+			<skill id="50322" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Nebula -->
 		</skills>
 	</item>
 	<item id="93130" name="Agathion Procella" type="Armor">
@@ -385,9 +409,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="50328" level="1" /> <!-- Summon Agathion Procella -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="50323" level="1" /> <!-- Agathion Procella -->
+			<skill id="50323" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Agathion Procella -->
+			<skill id="50323" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Agathion Procella -->
+			<skill id="50323" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Agathion Procella -->
+			<skill id="50323" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Agathion Procella -->
+			<skill id="50323" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Agathion Procella -->
+			<skill id="50323" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Agathion Procella -->
+			<skill id="50323" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Agathion Procella -->
+			<skill id="50323" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Agathion Procella -->
+			<skill id="50323" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Agathion Procella -->
+			<skill id="50323" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Procella -->
 		</skills>
 	</item>
 	<item id="93131" name="Agathion Petram" type="Armor">
@@ -402,9 +438,21 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="50329" level="1" /> <!-- Summon Agathion Petram -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="50324" level="1" /> <!-- Agathion Petram -->
+			<skill id="50324" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Agathion Petram -->
+			<skill id="50324" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Agathion Petram -->
+			<skill id="50324" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Agathion Petram -->
+			<skill id="50324" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Agathion Petram -->
+			<skill id="50324" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Agathion Petram -->
+			<skill id="50324" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Agathion Petram -->
+			<skill id="50324" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Agathion Petram -->
+			<skill id="50324" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Agathion Petram -->
+			<skill id="50324" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Agathion Petram -->
+			<skill id="50324" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Petram -->
 		</skills>
 	</item>
 	<item id="93132" name="Agathion Joy" type="Armor">
@@ -419,14 +467,27 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
 			<skill id="51027" level="1" /> <!-- Summon Agathion Joy -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="50325" level="1" /> <!-- Agathion Joy -->
+			<skill id="50325" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Agathion Joy -->
+			<skill id="50325" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Agathion Joy -->
+			<skill id="50325" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Agathion Joy -->
+			<skill id="50325" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Agathion Joy -->
+			<skill id="50325" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Agathion Joy -->
+			<skill id="50325" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Agathion Joy -->
+			<skill id="50325" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Agathion Joy -->
+			<skill id="50325" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Agathion Joy -->
+			<skill id="50325" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Agathion Joy -->
+			<skill id="50325" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Agathion Joy -->
 		</skills>
 	</item>
 	<item id="93133" name="Scroll: Enchant Agathion" type="EtcItem">
 		<!-- Only for agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
+		<set name="etcitem_type" val="ENCHT_AM" /> 	<!-- BLESS_ENCHT_AM -->
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

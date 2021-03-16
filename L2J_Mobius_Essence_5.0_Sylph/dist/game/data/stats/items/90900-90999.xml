@@ -1109,7 +1109,12 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<skills>
-			<skill id="50441" level="1" /> <!-- Antharas' Earring -->
+			<skill id="50449" level="1" /> <!-- Antharas' Earring -->
+			<skill id="50449" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Antharas' Earring -->
+			<skill id="50449" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Antharas' Earring -->
+			<skill id="50449" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Antharas' Earring -->
+			<skill id="50449" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Antharas' Earring -->
+			<skill id="50449" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Antharas' Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">74</stat>
@@ -1125,6 +1130,7 @@
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rear;lear" />
+		<set name="enchant_enabled" val="true" />
 		<stats>
 			<stat type="mDef">50</stat>
 		</stats>

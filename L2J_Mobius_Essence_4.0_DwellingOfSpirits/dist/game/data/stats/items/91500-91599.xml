@@ -457,8 +457,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="true" />
 		<skills>
-			<skill id="54041" level="1" /> <!-- Frintezza's Necklace -->
+			<skill id="50450" level="1" /> <!-- Frintezza's Necklace -->
+			<skill id="50450" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Frintezza's Necklace -->
+			<skill id="50450" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Frintezza's Necklace -->
+			<skill id="50450" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Frintezza's Necklace -->
+			<skill id="50450" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Frintezza's Necklace -->
+			<skill id="50450" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Frintezza's Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">83</stat>
