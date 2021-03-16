@@ -155,6 +155,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -3816,6 +3817,22 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 			else
 			{
+				// Avoid arrows dealing damage when the target hides behind something.
+				if ((weapon != null) && weapon.getItemType().isRanged() && !GeoEngine.getInstance().canSeeTarget(this, target))
+				{
+					if (target.isPlayer())
+					{
+						final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_C1_S_ATTACK);
+						sm.addString(getName());
+						target.sendPacket(sm);
+					}
+					if (isPlayer())
+					{
+						sendPacket(SystemMessageId.YOU_HAVE_MISSED);
+					}
+					continue;
+				}
+				
 				onHitTarget(target, weapon, hit);
 			}
 		}
