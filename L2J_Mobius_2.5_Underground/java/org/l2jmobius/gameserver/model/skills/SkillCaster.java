@@ -276,7 +276,10 @@ public class SkillCaster implements Runnable
 			caster.getAI().clientStopMoving(null);
 			
 			// Also replace other intentions with idle. (Mainly done for AI_INTENTION_MOVE_TO).
-			caster.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			if (caster.isPlayer())
+			{
+				caster.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			}
 		}
 		
 		// Reduce talisman mana on skill use
