@@ -28,6 +28,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
  * @version $Revision: 1.1.4.8 $ $Date: 2005/04/06 16:13:24 $
@@ -45,7 +46,7 @@ public class GameTimeController
 	protected static long _gameStartTime;
 	protected static boolean _isNight = false;
 	
-	private static List<Creature> _movingObjects = new ArrayList<>();
+	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
 	
 	protected static TimerThread _timer;
 	private final ScheduledFuture<?> _timerWatcher;
@@ -94,17 +95,14 @@ public class GameTimeController
 	 * All Creature in movement are identified in <b>movingObjects</b> of GameTimeController.
 	 * @param creature The Creature to add to movingObjects of GameTimeController
 	 */
-	public synchronized void registerMovingObject(Creature creature)
+	public void registerMovingObject(Creature creature)
 	{
 		if (creature == null)
 		{
 			return;
 		}
 		
-		if (!_movingObjects.contains(creature))
-		{
-			_movingObjects.add(creature);
-		}
+		_movingObjects.addIfAbsent(creature);
 	}
 	
 	/**
@@ -119,39 +117,34 @@ public class GameTimeController
 	 * <li>If movement is finished, the Creature is removed from movingObjects</li>
 	 * <li>Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject then notify AI with EVT_ARRIVED</li>
 	 */
-	protected synchronized void moveObjects()
+	protected void moveObjects()
 	{
-		// Get all Creature from the ArrayList movingObjects and put them into a table
-		final Creature[] chars = _movingObjects.toArray(new Creature[_movingObjects.size()]);
-		
-		// Create an ArrayList to contain all Creature that are arrived to destination
-		List<Creature> ended = null;
-		
-		// Go throw the table containing Creature in movement
-		for (Creature creature : chars)
+		List<Creature> finished = null;
+		for (int i = 0; i < _movingObjects.size(); i++)
 		{
-			// Update the position of the Creature and return True if the movement is finished
-			final boolean end = creature.updatePosition(_gameTicks);
-			
-			// If movement is finished, the Creature is removed from movingObjects and added to the ArrayList ended
-			if (end)
+			final Creature creature = _movingObjects.get(i);
+			if (creature == null)
 			{
-				_movingObjects.remove(creature);
-				if (ended == null)
+				continue;
+			}
+			
+			if (creature.updatePosition(_gameTicks))
+			{
+				if (finished == null)
 				{
-					ended = new ArrayList<>();
+					finished = new ArrayList<>();
 				}
-				
-				ended.add(creature);
+				finished.add(creature);
 			}
 		}
 		
-		// Create a task to update the _knownObject and _knowPlayers of each Creature that finished its movement and of their already known WorldObject
-		// then notify AI with EVT_ARRIVED
-		// TODO: maybe a general TP is needed for that kinda stuff (all knownlist updates should be done in a TP anyway).
-		if (ended != null)
+		if (finished != null)
 		{
-			ThreadPool.execute(new MovingObjectArrived(ended));
+			for (int i = 0; i < finished.size(); i++)
+			{
+				_movingObjects.remove(finished.get(i));
+			}
+			ThreadPool.execute(new MovingObjectArrived(finished));
 		}
 	}
 	
@@ -235,24 +228,25 @@ public class GameTimeController
 	 */
 	class MovingObjectArrived implements Runnable
 	{
-		private final List<Creature> _ended;
+		private final List<Creature> _finished;
 		
-		MovingObjectArrived(List<Creature> ended)
+		MovingObjectArrived(List<Creature> finished)
 		{
-			_ended = ended;
+			_finished = finished;
 		}
 		
 		@Override
 		public void run()
 		{
-			for (Creature creature : _ended)
+			for (int i = 0; i < _finished.size(); i++)
 			{
 				try
 				{
+					final Creature creature = _finished.get(i);
 					creature.getKnownList().updateKnownObjects();
 					creature.getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
 				}
-				catch (NullPointerException e)
+				catch (Exception e)
 				{
 				}
 			}

@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver;
 
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,6 +26,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
  * Game Time controller class.
@@ -44,7 +45,7 @@ public class GameTimeController extends Thread
 	
 	private static GameTimeController _instance;
 	
-	private final Set<Creature> _movingObjects = ConcurrentHashMap.newKeySet();
+	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
 	private final long _referenceTime;
 	
 	private GameTimeController()
@@ -108,10 +109,7 @@ public class GameTimeController extends Thread
 			return;
 		}
 		
-		if (!_movingObjects.contains(creature))
-		{
-			_movingObjects.add(creature);
-		}
+		_movingObjects.addIfAbsent(creature);
 	}
 	
 	/**
@@ -130,7 +128,32 @@ public class GameTimeController extends Thread
 	 */
 	private void moveObjects()
 	{
-		_movingObjects.removeIf(Creature::updatePosition);
+		List<Creature> finished = null;
+		for (int i = 0; i < _movingObjects.size(); i++)
+		{
+			final Creature creature = _movingObjects.get(i);
+			if (creature == null)
+			{
+				continue;
+			}
+			
+			if (creature.updatePosition())
+			{
+				if (finished == null)
+				{
+					finished = new ArrayList<>();
+				}
+				finished.add(creature);
+			}
+		}
+		
+		if (finished != null)
+		{
+			for (int i = 0; i < finished.size(); i++)
+			{
+				_movingObjects.remove(finished.get(i));
+			}
+		}
 	}
 	
 	public void stopTimer()

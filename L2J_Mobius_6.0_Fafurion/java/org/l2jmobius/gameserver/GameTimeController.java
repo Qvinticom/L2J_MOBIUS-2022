@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -28,6 +30,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.UnboundArrayList;
 
 /**
  * Game Time controller class.
@@ -47,8 +50,8 @@ public class GameTimeController extends Thread
 	
 	private static GameTimeController _instance;
 	
-	private final Set<Creature> _movingObjects = ConcurrentHashMap.newKeySet();
-	private final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
+	private static final UnboundArrayList<Creature> _movingObjects = new UnboundArrayList<>();
+	private static final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
 	private GameTimeController()
@@ -112,10 +115,7 @@ public class GameTimeController extends Thread
 			return;
 		}
 		
-		if (!_movingObjects.contains(creature))
-		{
-			_movingObjects.add(creature);
-		}
+		_movingObjects.addIfAbsent(creature);
 	}
 	
 	/**
@@ -134,7 +134,32 @@ public class GameTimeController extends Thread
 	 */
 	private void moveObjects()
 	{
-		_movingObjects.removeIf(Creature::updatePosition);
+		List<Creature> finished = null;
+		for (int i = 0; i < _movingObjects.size(); i++)
+		{
+			final Creature creature = _movingObjects.get(i);
+			if (creature == null)
+			{
+				continue;
+			}
+			
+			if (creature.updatePosition())
+			{
+				if (finished == null)
+				{
+					finished = new ArrayList<>();
+				}
+				finished.add(creature);
+			}
+		}
+		
+		if (finished != null)
+		{
+			for (int i = 0; i < finished.size(); i++)
+			{
+				_movingObjects.remove(finished.get(i));
+			}
+		}
 	}
 	
 	public void stopTimer()
