@@ -276,7 +276,7 @@ public class SkillCaster implements Runnable
 			caster.getAI().clientStopMoving(null);
 			
 			// Also replace other intentions with idle. (Mainly done for AI_INTENTION_MOVE_TO).
-			if (caster.isPlayer())
+			if (caster.isPlayer() && !_skill.isBad())
 			{
 				caster.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
