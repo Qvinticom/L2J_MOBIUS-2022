@@ -37,6 +37,13 @@ public class ServitorAttack implements IPlayerActionHandler
 			{
 				if (summon.canAttack(player.getTarget(), ctrlPressed))
 				{
+					// Prevent spamming next target and attack to increase attack speed.
+					if (summon.isAttackingNow())
+					{
+						summon.abortAttack();
+						summon.abortCast();
+					}
+					
 					summon.doAttack(player.getTarget());
 				}
 			}
