@@ -41,9 +41,9 @@ public class NpcKnownList extends CreatureKnownList
 		}
 		
 		// Broadcast correct walking NPC position.
-		if (getActiveObject().isNpc() && (object instanceof Creature) && object.isPlayer() && getActiveChar().isMoving() && !getActiveChar().isInCombat())
+		if (object.isPlayer() && getActiveChar().isMoving() && !getActiveChar().isInCombat())
 		{
-			((Creature) object).broadcastMoveToLocation();
+			getActiveChar().broadcastMoveToLocation();
 		}
 		return true;
 	}
