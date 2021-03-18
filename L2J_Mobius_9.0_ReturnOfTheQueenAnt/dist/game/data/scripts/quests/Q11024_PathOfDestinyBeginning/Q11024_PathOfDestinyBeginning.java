@@ -153,7 +153,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 			{
 				if (qs.isCond(8))
 				{
-					htmltext = event;
+					htmltext = "34505-08.html";
 					player.sendPacket(new ExTutorialShowId(102)); // Class Transfer
 				}
 				break;
@@ -308,7 +308,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						}
 						else if (qs.isCond(5))
 						{
-							htmltext = "33178-05.html";
+							htmltext = "33178-03.html";
 						}
 						else if (qs.isCond(6))
 						{

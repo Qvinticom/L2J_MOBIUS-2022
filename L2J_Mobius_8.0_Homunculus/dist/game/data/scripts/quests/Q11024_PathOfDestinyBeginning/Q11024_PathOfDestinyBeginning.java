@@ -308,7 +308,7 @@ public class Q11024_PathOfDestinyBeginning extends Quest
 						}
 						else if (qs.isCond(5))
 						{
-							htmltext = "33178-05.html";
+							htmltext = "33178-03.html";
 						}
 						else if (qs.isCond(6))
 						{
