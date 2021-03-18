@@ -42,6 +42,8 @@
 		<skills>
 			<skill id="55712" level="1" /> <!-- Activates 5 jewel slots. -->
 			<skill id="55713" level="1" /> <!-- Inventory Slot +12. -->
+			<skill id="13650" level="1" type="ON_EQUIP" /> <!-- Brooch Lv. 4 On. -->
+			<skill id="13651" level="1" type="ON_UNEQUIP" /> <!-- Brooch Lv. 4 Off. -->
 		</skills>
 	</item>
 	<item id="91304" name="Brooch" additionalName="Lv. 5" type="Armor">
@@ -57,6 +59,8 @@
 		<skills>
 			<skill id="59153" level="1" /> <!-- Activates 6 jewel slots. -->
 			<skill id="59154" level="1" /> <!-- Inventory Slot +15. -->
+			<skill id="13648" level="1" type="ON_EQUIP" /> <!-- Brooch Lv. 5 On. -->
+			<skill id="13649" level="1" type="ON_UNEQUIP" /> <!-- Brooch Lv. 5 Off. -->
 		</skills>
 	</item>
 	<item id="91305" name="Greater Topaz" additionalName="Lv. 1" type="Armor">

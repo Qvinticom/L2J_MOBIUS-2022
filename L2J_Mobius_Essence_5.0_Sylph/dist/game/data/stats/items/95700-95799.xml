@@ -6,6 +6,19 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="1875000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40347" level="1" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+		</skills>
 	</item>
 	<item id="95701" name="Cursed Scroll: Enchant B-grade Armor (Exchangeable)" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -13,6 +26,19 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="300000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40348" level="1" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+		</skills>
 	</item>
 	<item id="95702" name="Cursed Scroll: Enchant C-grade Weapon (Exchangeable)" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -20,6 +46,19 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="412500" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40349" level="1" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+		</skills>
 	</item>
 	<item id="95703" name="Cursed Scroll: Enchant C-grade Armor (Exchangeable)" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -27,6 +66,19 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="56250" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40350" level="1" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
+		</skills>
 	</item>
 	<item id="95704" name="Cursed Scroll: Enchant D-grade Weapon (Exchangeable)" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -34,6 +86,19 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="187500" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40351" level="1" /> <!-- Cursed Scroll: Enchant D-grade Weapon -->
+		</skills>
 	</item>
 	<item id="95705" name="Cursed Scroll: Enchant D-grade Armor (Exchangeable)" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -41,6 +106,19 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="22500" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40352" level="1" /> <!-- Cursed Scroll: Enchant D-grade Armor -->
+		</skills>
 	</item>
 	<item id="95706" name="Cursed Scroll: Enchant B-grade Weapon" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -52,6 +130,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40347" level="1" /> <!-- Cursed Scroll: Enchant B-grade Weapon -->
+		</skills>
 	</item>
 	<item id="95707" name="Cursed Scroll: Enchant B-grade Armor" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -63,6 +150,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40348" level="1" /> <!-- Cursed Scroll: Enchant B-grade Armor -->
+		</skills>
 	</item>
 	<item id="95708" name="Cursed Scroll: Enchant C-grade Weapon" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -73,6 +169,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40349" level="1" /> <!-- Cursed Scroll: Enchant C-grade Weapon -->
+		</skills>
 	</item>
 	<item id="95709" name="Cursed Scroll: Enchant C-grade Armor" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -83,6 +188,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40350" level="1" /> <!-- Cursed Scroll: Enchant C-grade Armor -->
+		</skills>
 	</item>
 	<item id="95710" name="Cursed Scroll: Enchant D-grade Weapon" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -93,6 +207,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40351" level="1" /> <!-- Cursed Scroll: Enchant D-grade Weapon -->
+		</skills>
 	</item>
 	<item id="95711" name="Cursed Scroll: Enchant D-grade Armor" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -103,6 +226,15 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40352" level="1" /> <!-- Cursed Scroll: Enchant D-grade Armor -->
+		</skills>
 	</item>
 	<item id="95712" name="Spellbook: Mount Black Wyvern" type="EtcItem">
 		<!-- Double-click to learn how to ride Black Wyvern. -->

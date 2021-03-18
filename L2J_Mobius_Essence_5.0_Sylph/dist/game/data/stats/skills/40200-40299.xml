@@ -350,11 +350,23 @@
 	</skill>
 	<skill id="40252" toLevel="1" name="Scroll: Enchant Necklace of Spirits">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40253" toLevel="1" name="Scroll: Enchant Hellbound Ring">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40254" toLevel="1" name="Scroll of Escape: Ivory Tower">
 		<icon>icon.skill0000</icon>
@@ -530,6 +542,23 @@
 	<skill id="40289" toLevel="1" name="Potion of Wardship">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>10000</value>
+			</effect>
+			<effect name="ModifyMagicLampPoints">
+				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40290" toLevel="25" name="Five-colored Sweets">
 		<!-- When used for +1 hour. STR +1 INT +1 DEX +1 WIT +1 CON +1 MEN +1 Water Attack +$s1 The buff is leveling up every hour. <Rewards> Lv. 1-7: Honey Bean Cakes (Event) 3 pcs. Lv. 8-13: Sayha's Storm Lv. 3 (5 pcs.) Lv. 14-22: Soulshot Ticket (10 pcs.) Lv. 23: Random Transformation Scroll (3 pcs.) Lv. 24: Charging Stone of Random Craft (3 pcs.) Note! Dead characters cannot obtain the gift. -->

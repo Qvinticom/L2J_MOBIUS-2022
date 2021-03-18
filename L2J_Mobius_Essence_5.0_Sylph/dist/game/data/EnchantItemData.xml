@@ -60,6 +60,26 @@
 	<enchant id="33813" targetGrade="C" maxEnchant="16" />
 	<enchant id="33812" targetGrade="D" maxEnchant="16" />
 
+	<!-- Cursed Scrolls: Enchant Weapon -->
+	<enchant id="93257" targetGrade="A" />
+	<enchant id="93270" targetGrade="A" />
+	<enchant id="95700" targetGrade="B" />
+	<enchant id="95706" targetGrade="B" />
+	<enchant id="95702" targetGrade="C" />
+	<enchant id="95708" targetGrade="C" />
+	<enchant id="95704" targetGrade="D" />
+	<enchant id="95710" targetGrade="D" />
+
+	<!-- Cursed Scrolls: Enchant Armor -->
+	<enchant id="93258" targetGrade="A" />
+	<enchant id="93271" targetGrade="A" />
+	<enchant id="95701" targetGrade="B" />
+	<enchant id="95707" targetGrade="B" />
+	<enchant id="95703" targetGrade="C" />
+	<enchant id="95709" targetGrade="C" />
+	<enchant id="95705" targetGrade="D" />
+	<enchant id="95711" targetGrade="D" />
+
 	<!-- Fire Dragon Pendant -->
 	<enchant id="49469" maxEnchant="10" safeEnchant="3">
 		<item id="49467" />
@@ -300,5 +320,10 @@
 		<item id="48055" /> <!-- Agathion Scorpio -->
 		<item id="48056" /> <!-- Agathion Aquarius -->
 		<item id="48058" /> <!-- Agathion Sagittarius -->
+	</enchant>
+
+	<!-- Enchannt Hellbound Ring -->
+	<enchant id="94719" maxEnchant="10">
+		<item id="94718" /> <!-- Hellbound Ring -->
 	</enchant>
 </list>

@@ -422,6 +422,8 @@
 		<skills>
 			<skill id="55510" level="1" /> <!-- Activates 4 jewel slots. -->
 			<skill id="55511" level="1" /> <!-- Inventory Slot +12. -->
+			<skill id="13652" level="1" type="ON_EQUIP" /> <!-- Brooch Lv. 3 On. -->
+			<skill id="13653" level="1" type="ON_UNEQUIP" /> <!-- Brooch Lv. 3 Off. -->
 		</skills>
 	</item>
 	<item id="90935" name="Greater Jewel Box" additionalName="Lv. 4" type="EtcItem">

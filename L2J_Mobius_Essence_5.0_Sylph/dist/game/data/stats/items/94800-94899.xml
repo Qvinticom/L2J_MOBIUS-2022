@@ -29,6 +29,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50463" level="2" /> <!-- Zaken Doll's Sorcery Lv. 2 -->
+		</skills>
 	</item>
 	<item id="94803" name="Core Doll" additionalName="7-day" type="EtcItem">
 		<!-- <Core Doll's Sorcery Lv. 2> Received Skill Critical Damage -10% Received Skill Critical Rate -5% Shock Resistance +20% Sleep Resistance +20% Knockback Resistance +10% Available for 7 d. Boosts parameters when in inventory. -->
@@ -39,6 +44,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50464" level="2" /> <!-- Core Doll's Sorcery Lv. 2 -->
+		</skills>
 	</item>
 	<item id="94804" name="Package: Zaken Doll (7-day)" type="EtcItem">
 		<!-- Double-click to obtain the following items. Zaken Doll (7-day) -->
@@ -49,6 +59,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94803" min="1" max="1" chance="100" /> <!-- Zaken Doll (7-Day) -->
+		</capsuled_items>
 	</item>
 	<item id="94805" name="Package: Core Doll (7-day)" type="EtcItem">
 		<!-- Double-click to obtain the following items. Core Doll (7-day) -->
@@ -59,6 +73,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94802" min="1" max="1" chance="100" /> <!-- Core Doll (7-Day) -->
+		</capsuled_items>
 	</item>
 	<item id="94806" name="Spellbook: Flying Dagger" type="EtcItem">
 		<!-- A spellbook for learning the Flying Dagger skill. <Classes> Adventurer Wind Rider Ghost Hunter <Skill effect> Throws a dagger at the target and infects them, decreasing their Atk. Spd./ Casting Spd./ Speed. -->
@@ -397,6 +415,20 @@
 		<stats>
 			<stat type="pDef">240</stat>
 		</stats>
+		<skills>
+			<skill id="50475" level="1" /> <!-- A-grade: Breastplate of Protection -->
+			<skill id="50476" level="1" /> <!-- Breastplate of Protection -->
+			<skill id="50477" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Breastplate of Protection -->
+		</skills>
 	</item>
 	<item id="94841" name="Gaiters of Protection" type="Armor">
 		<!-- <Properties> CON +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -414,6 +446,20 @@
 		<stats>
 			<stat type="pDef">210</stat>
 		</stats>
+		<skills>
+			<skill id="50478" level="1" /> <!-- A-grade: Gaiters of Protection -->
+			<skill id="50479" level="1" /> <!-- Gaiters of Protection -->
+			<skill id="50480" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Gaiters of Protection -->
+		</skills>
 	</item>
 	<item id="94842" name="Breastplate of Protection" additionalName="Sealed" type="Armor">
 		<!-- <Properties> STR +2 CON +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -433,6 +479,20 @@
 		<stats>
 			<stat type="pDef">240</stat>
 		</stats>
+		<skills>
+			<skill id="50475" level="1" /> <!-- A-grade: Breastplate of Protection -->
+			<skill id="50476" level="1" /> <!-- Breastplate of Protection -->
+			<skill id="50477" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Breastplate of Protection -->
+			<skill id="50477" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Breastplate of Protection -->
+		</skills>
 	</item>
 	<item id="94843" name="Gaiters of Protection" additionalName="Sealed" type="Armor">
 		<!-- <Properties> CON +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -452,6 +512,20 @@
 		<stats>
 			<stat type="pDef">210</stat>
 		</stats>
+		<skills>
+			<skill id="50478" level="1" /> <!-- A-grade: Gaiters of Protection -->
+			<skill id="50479" level="1" /> <!-- Gaiters of Protection -->
+			<skill id="50480" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Gaiters of Protection -->
+			<skill id="50480" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Gaiters of Protection -->
+		</skills>
 	</item>
 	<item id="94844" name="Leather Armor of Protection" type="Armor">
 		<!-- <Properties> STR +2 DEX +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -469,6 +543,20 @@
 		<stats>
 			<stat type="pDef">201</stat>
 		</stats>
+		<skills>
+			<skill id="50483" level="1" /> <!-- A-grade: Leather Armor of Protection -->
+			<skill id="50484" level="1" /> <!-- Leather Armor of Protection -->
+			<skill id="50485" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Leather Armor of Protection -->
+		</skills>
 	</item>
 	<item id="94845" name="Leather Leggings of Protection" type="Armor">
 		<!-- <Properties> DEX +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -486,6 +574,20 @@
 		<stats>
 			<stat type="pDef">140</stat>
 		</stats>
+		<skills>
+			<skill id="50486" level="1" /> <!-- A-grade: Leather Leggings of Protection -->
+			<skill id="50487" level="1" /> <!-- Leather Leggings of Protection -->
+			<skill id="50488" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Leather Leggings of Protection -->
+		</skills>
 	</item>
 	<item id="94846" name="Leather Armor of Protection" additionalName="Sealed" type="Armor">
 		<!-- <Properties> STR +2 DEX +2 Overweight limit +1500 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -505,6 +607,20 @@
 		<stats>
 			<stat type="pDef">201</stat>
 		</stats>
+		<skills>
+			<skill id="50483" level="1" /> <!-- A-grade: Leather Armor of Protection -->
+			<skill id="50484" level="1" /> <!-- Leather Armor of Protection -->
+			<skill id="50485" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Leather Armor of Protection -->
+			<skill id="50485" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Leather Armor of Protection -->
+		</skills>
 	</item>
 	<item id="94847" name="Leather Leggings of Protection" additionalName="Sealed" type="Armor">
 		<!-- <Properties> DEX +2 Overweight limit +1000 Paralysis Resistance +25% Shock Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -524,6 +640,20 @@
 		<stats>
 			<stat type="pDef">140</stat>
 		</stats>
+		<skills>
+			<skill id="50486" level="1" /> <!-- A-grade: Leather Leggings of Protection -->
+			<skill id="50487" level="1" /> <!-- Leather Leggings of Protection -->
+			<skill id="50488" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Leather Leggings of Protection -->
+			<skill id="50488" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Leather Leggings of Protection -->
+		</skills>
 	</item>
 	<item id="94848" name="Tunic of Protection" type="Armor">
 		<!-- <Properties> WIT +2 MEN +2 Overweight limit +1500 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -541,6 +671,20 @@
 		<stats>
 			<stat type="pDef">138</stat>
 		</stats>
+		<skills>
+			<skill id="50490" level="1" /> <!-- A-grade: Tunic of Protection -->
+			<skill id="50491" level="1" /> <!-- Tunic of Protection -->
+			<skill id="50492" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Tunic of Protection -->
+		</skills>
 	</item>
 	<item id="94849" name="Stockings of Protection" type="Armor">
 		<!-- <Properties> WIT +2 Overweight limit +1000 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -558,6 +702,20 @@
 		<stats>
 			<stat type="pDef">90</stat>
 		</stats>
+		<skills>
+			<skill id="50493" level="1" /> <!-- A-grade: Stockings of Protection -->
+			<skill id="50494" level="1" /> <!-- Stockings of Protection -->
+			<skill id="50495" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Stockings of Protection -->
+		</skills>
 	</item>
 	<item id="94850" name="Tunic of Protection" additionalName="Sealed" type="Armor">
 		<!-- <Properties> WIT +2 MEN +2 Overweight limit +1500 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -578,6 +736,20 @@
 		<stats>
 			<stat type="pDef">138</stat>
 		</stats>
+		<skills>
+			<skill id="50490" level="1" /> <!-- A-grade: Tunic of Protection -->
+			<skill id="50491" level="1" /> <!-- Tunic of Protection -->
+			<skill id="50492" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Tunic of Protection -->
+			<skill id="50492" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Tunic of Protection -->
+		</skills>
 	</item>
 	<item id="94851" name="Stockings of Protection" additionalName="Sealed" type="Armor">
 		<!-- <Properties> WIT +2 Overweight limit +1000 Shock Resistance +25% Paralysis Resistance +25% Sleep Resistance +25% Hold Resistance +25% Silence Resistance +25% Fear Resistance +25% -->
@@ -598,6 +770,20 @@
 		<stats>
 			<stat type="pDef">90</stat>
 		</stats>
+		<skills>
+			<skill id="50493" level="1" /> <!-- A-grade: Stockings of Protection -->
+			<skill id="50494" level="1" /> <!-- Stockings of Protection -->
+			<skill id="50495" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +1 Stockings of Protection -->
+			<skill id="50495" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +1 Stockings of Protection -->
+		</skills>
 	</item>
 	<item id="94852" name="Black Coupon" additionalName="Event" type="EtcItem">
 		<!-- Required for purchasing <font color=EEAA22>Stable Enchant Scrolls</font>. <font color=bbaa88><Items to buy></font> - Scroll: Enchant Circlet of Hero - Scroll: Enchant Dragon Belt - Scroll: Enchant Cloak of Protection</font> -->
@@ -892,6 +1078,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40289" level="1" /> <!-- Potion of Wardship -->
+		</skills>
 	</item>
 	<item id="94880" name="Wooden Pistols" type="Weapon">
 		<set name="icon" val="icon.shooter_none" />
@@ -1217,6 +1407,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
+		<set name="enchant_enabled" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1820" />
 		<set name="soulshots" val="2" />

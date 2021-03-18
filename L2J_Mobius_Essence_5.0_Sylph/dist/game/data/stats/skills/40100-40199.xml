@@ -60,21 +60,45 @@
 	</skill>
 	<skill id="40109" toLevel="1" name="Blessed Scroll: Enchant A-grade Weapon">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40110" toLevel="1" name="Blessed Scroll: Enchant A-grade Armor">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40111" toLevel="1" name="Cursed Scroll: Enchant A-grade Weapon">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40112" toLevel="1" name="Cursed Scroll: Enchant A-grade Armor">
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="40113" toLevel="1" name="Sayha s Cookie">
+	<skill id="40113" toLevel="1" name="Sayha's Cookie">
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

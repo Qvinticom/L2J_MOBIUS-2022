@@ -82,6 +82,20 @@
 		<current enchant="8" chance="22" />
 		<current enchant="9" chance="20" />
 	</enchantRateGroup>
+	
+	<!-- Hellbound Ring enchant group. -->
+	<enchantRateGroup name="HELLBOUND_RING_GROUP">
+		<current enchant="0" chance="60" />
+		<current enchant="1" chance="50" />
+		<current enchant="2" chance="40" />
+		<current enchant="3" chance="35" />
+		<current enchant="4" chance="30" />
+		<current enchant="5" chance="28" />
+		<current enchant="6" chance="26" />
+		<current enchant="7" chance="24" />
+		<current enchant="8" chance="22" />
+		<current enchant="9" chance="20" />
+	</enchantRateGroup>
 
 	<!-- Default scrolls enchanting route line. -->
 	<enchantScrollGroup id="0">
@@ -129,6 +143,10 @@
 		<!-- Dragon Belt -->
 		<enchantRate group="DRAGON_BELT_GROUP">
 			<item slot="belt" /> <!-- Belt: Belts -->
+		</enchantRate>
+		<!-- Hellbound Ring -->
+		<enchantRate group="HELLBOUND_RING_GROUP">
+			<item slot="rfinger;lfinger" /> <!-- Right finger, Left finger: Rings -->
 		</enchantRate>
 		<!-- Spirits Agathion -->
 		<enchantRate group="SPIRITS_AGATHION">

@@ -172,6 +172,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="13654" level="1" type="ON_EQUIP" /> <!-- Brooch Lv. 2 On. -->
+			<skill id="13655" level="1" type="ON_UNEQUIP" /> <!-- Brooch Lv. 2 Off. -->
 			<skill id="55469" level="1" /> <!-- Activates 3 jewel slots. -->
 			<skill id="55470" level="2" /> <!-- Inventory Slot +9. -->
 		</skills>

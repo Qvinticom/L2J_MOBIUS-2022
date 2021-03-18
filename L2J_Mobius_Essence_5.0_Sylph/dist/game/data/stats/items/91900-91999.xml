@@ -574,6 +574,7 @@
 	<item id="91937" name="Adventurer's Talisman" type="Armor">
 		<!-- M. Def. +5%. Effects of two identical talismans do not stack. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
+		<set name="bodypart" val="talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -582,8 +583,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-        <set name="enchant_enabled" val="true" />
-		<set name="bodypart" val="deco1" />
+		<set name="enchant_enabled" val="true" />
+		<set name="enchant_enabled" val="true" />
+		<set name="is_freightable" val="false" />
 	</item>
 	<item id="91938" name="Primeval Isle's Prolongating Stone" type="EtcItem">
 		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Primeval Isle -->
@@ -753,6 +755,20 @@
 		<set name="weight" val="150" />
 		<set name="price" val="616000" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="50189" level="1" /> <!-- Ring of Insolence -->
+			<skill id="50189" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Ring of Insolence -->
+			<skill id="50189" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Ring of Insolence -->
+			<skill id="50189" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Ring of Insolence -->
+			<skill id="50189" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Ring of Insolence -->
+			<skill id="50189" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Ring of Insolence -->
+			<skill id="50189" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Ring of Insolence -->
+			<skill id="50189" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Ring of Insolence -->
+			<skill id="50189" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Ring of Insolence -->
+			<skill id="50189" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Ring of Insolence -->
+			<skill id="50189" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Ring of Insolence -->
+		</skills>
 		<stats>
 			<stat type="mDef">40</stat>
 		</stats>
@@ -767,6 +783,20 @@
 		<set name="weight" val="150" />
 		<set name="price" val="924000" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="true" />
+		<skills>
+			<skill id="50190" level="1" /> <!-- Dragon Valley's Earring -->
+			<skill id="50190" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Dragon Valley's Earring -->
+			<skill id="50190" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Dragon Valley's Earring -->
+			<skill id="50190" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Dragon Valley's Earring -->
+			<skill id="50190" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Dragon Valley's Earring -->
+			<skill id="50190" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Dragon Valley's Earring -->
+			<skill id="50190" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Dragon Valley's Earring -->
+			<skill id="50190" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Dragon Valley's Earring -->
+			<skill id="50190" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Dragon Valley's Earring -->
+			<skill id="50190" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Dragon Valley's Earring -->
+			<skill id="50190" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Dragon Valley's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -1030,6 +1060,13 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="50167" level="1" /> <!-- Scroll: Enchant Ring of Insolence -->
+		</skills>
 	</item>
 	<item id="91967" name="Scroll: Enchant Dragon Valley's Earring" type="EtcItem">
 		<!-- Required for enchanting Dragon Valley's Earring. The maximum enchant value is +10. -->
@@ -1038,6 +1075,13 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="50168" level="1" /> <!-- Scroll: Enchant Dragon Valley's Earring -->
+		</skills>
 	</item>
 	<item id="91968" name="Enhanced Warrior's Rapier Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

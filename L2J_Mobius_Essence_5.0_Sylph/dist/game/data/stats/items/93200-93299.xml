@@ -624,14 +624,38 @@
 		<set name="icon" val="icon.etc_cursed_scrl_of_ench_wp_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40111" level="1" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+		</skills>
 	</item>
 	<item id="93258" name="Cursed Scroll: Enchant A-grade Armor (Exchangeable)" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
 		<set name="icon" val="icon.etc_cursed_scrl_of_ench_am_a_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40112" level="1" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+		</skills>
 	</item>
 	<item id="93259" name="Reinforced Jewel Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -760,6 +784,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="40111" level="1" /> <!-- Cursed Scroll: Enchant A-grade Weapon -->
+		</skills>
 	</item>
 	<item id="93271" name="Cursed Scroll: Enchant A-grade Armor" type="EtcItem">
 		<!-- When used, enchant value -1. <font color=eeaa22>Only for items enchanted to +2 and higher.</font> -->
@@ -771,6 +803,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="CURSED_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40112" level="1" /> <!-- Cursed Scroll: Enchant A-grade Armor -->
+		</skills>
 	</item>
 	<item id="93272" name="Buff Expansion Book Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

@@ -129,7 +129,8 @@ public class RequestEnchantItem implements IClientIncomingPacket
 		}
 		
 		// fast auto-enchant cheat check
-		if ((request.getTimestamp() == 0) || ((Chronos.currentTimeMillis() - request.getTimestamp()) < 2000))
+		// Lowered value to 500 (from 2000) On Essence, some enchantments are much faster than normal ones.
+		if ((request.getTimestamp() == 0) || ((Chronos.currentTimeMillis() - request.getTimestamp()) < 500))
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " use autoenchant program ", Config.DEFAULT_PUNISH);
 			player.removeRequest(request.getClass());
@@ -195,6 +196,10 @@ public class RequestEnchantItem implements IClientIncomingPacket
 							{
 								item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
 							}
+						}
+						else if (scrollTemplate.isCursed())
+						{
+							item.setEnchantLevel(item.getEnchantLevel() - 1);
 						}
 						else
 						{

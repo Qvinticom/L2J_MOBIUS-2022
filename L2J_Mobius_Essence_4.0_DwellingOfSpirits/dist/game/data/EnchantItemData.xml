@@ -60,6 +60,14 @@
 	<enchant id="33813" targetGrade="C" maxEnchant="16" />
 	<enchant id="33812" targetGrade="D" maxEnchant="16" />
 
+	<!-- Cursed Scrolls: Enchant Weapon -->
+	<enchant id="93257" targetGrade="A" />
+	<enchant id="93270" targetGrade="A" />
+
+	<!-- Cursed Scrolls: Enchant Armor -->
+	<enchant id="93258" targetGrade="A" />
+	<enchant id="93271" targetGrade="A" />
+
 	<!-- Fire Dragon Pendant -->
 	<enchant id="49469" maxEnchant="10" safeEnchant="3">
 		<item id="49467" />
@@ -152,11 +160,6 @@
 	<!-- Adventurer's Belt -->
 	<enchant id="93046" maxEnchant="10" safeEnchant="3">
 		<item id="93042" />
-	</enchant>
-
-	<!-- Adventurer's Talisman -->
-	<enchant id="95688" maxEnchant="10" safeEnchant="1">
-		<item id="91937" />
 	</enchant>
 
 	<!-- Cloak of Protection -->

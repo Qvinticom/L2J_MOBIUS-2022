@@ -241,13 +241,34 @@
 		<stats>
 			<stat type="mDef">44</stat>
 		</stats>
+		<skills>
+			<skill id="50468" level="1" /> <!-- Hellbound Ring -->
+			<skill id="50468" level="1" type="ON_ENCHANT" type_value="1" /> <!-- +1 Hellbound Ring -->
+			<skill id="50468" level="2" type="ON_ENCHANT" type_value="2" /> <!-- +2 Hellbound Ring -->
+			<skill id="50468" level="3" type="ON_ENCHANT" type_value="3" /> <!-- +3 Hellbound Ring -->
+			<skill id="50468" level="4" type="ON_ENCHANT" type_value="4" /> <!-- +4 Hellbound Ring -->
+			<skill id="50468" level="5" type="ON_ENCHANT" type_value="5" /> <!-- +5 Hellbound Ring -->
+			<skill id="50468" level="6" type="ON_ENCHANT" type_value="6" /> <!-- +6 Hellbound Ring -->
+			<skill id="50468" level="7" type="ON_ENCHANT" type_value="7" /> <!-- +7 Hellbound Ring -->
+			<skill id="50468" level="8" type="ON_ENCHANT" type_value="8" /> <!-- +8 Hellbound Ring -->
+			<skill id="50468" level="9" type="ON_ENCHANT" type_value="9" /> <!-- +9 Hellbound Ring -->
+			<skill id="50468" level="10" type="ON_ENCHANT" type_value="10" /> <!-- +10 Hellbound Ring -->
+		</skills>
 	</item>
 	<item id="94719" name="Scroll: Enchant Hellbound Ring" type="EtcItem">
 		<!-- Required for enchanting Hellbound Ring. The maximum enchant value is +10. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="40253" level="1" /> <!-- Scroll: Enchant Hellbound Ring -->
+		</skills>
 	</item>
 	<item id="94720" name="Scroll of Escape: Ivory Tower" type="EtcItem">
 		<!-- Teleports to Ivory Tower in order to go to Hellbound. <font color=bbaa88>Travelers of Lv. 85 and higher can go to Hellbound every Saturday from 10:00 a.m. to 10:00 p.m. -->
@@ -345,6 +366,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94706" min="1" max="1" chance="50" /> <!-- Talisman of Hellbound Lv. 1 -->
+			<item id="94707" min="1" max="1" chance="20" /> <!-- Talisman of Hellbound Lv. 2 -->
+			<item id="94708" min="1" max="1" chance="15" /> <!-- Talisman of Hellbound Lv. 3 -->
+			<item id="94709" min="1" max="1" chance="10" /> <!-- Talisman of Hellbound Lv. 4 -->
+			<item id="94710" min="1" max="1" chance="5" /> <!-- Talisman of Hellbound Lv. 5 -->
+		</capsuled_items>
 	</item>
 	<item id="94727" name="Boss Doll Box Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -892,6 +921,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="1" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94782" name="Growth Rune Lv. 2" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +2% Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -901,6 +935,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="2" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94783" name="Growth Rune Lv. 3" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +3% Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -910,6 +949,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="3" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94784" name="Growth Rune Lv. 4" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +4% Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -919,6 +963,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="4" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94785" name="Growth Rune Lv. 5" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +5% P. Def. +10 M. Def. +10 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -928,6 +977,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="5" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94786" name="Growth Rune Lv. 6" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +6% P. Def. +20 M. Def. +20 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -937,6 +991,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="6" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94787" name="Growth Rune Lv. 7" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +7% P. Def. +30 M. Def. +30 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -947,6 +1006,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="7" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94788" name="Growth Rune Lv. 8" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +8% P. Def. +50 M. Def. +50 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -957,6 +1021,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="8" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94789" name="Growth Rune Lv. 9" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +9% P. Def. +70 M. Def. +70 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -967,6 +1036,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="9" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94790" name="Growth Rune Lv. 10" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +10% P. Atk. +100 M. Atk. +100 P. Def. +100 M. Def. +100 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -977,6 +1051,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="10" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94791" name="Growth Rune Lv. 11" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +11% P. Atk. +120 M. Atk. +120 P. Def. +120 M. Def. +120 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -987,6 +1066,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="11" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94792" name="Growth Rune Lv. 12" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +12% P. Atk. +150 M. Atk. +150 P. Def. +150 M. Def. +150 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -997,6 +1081,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="12" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94793" name="Growth Rune Lv. 13" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +13% P. Atk. +180 M. Atk. +180 P. Def. +180 M. Def. +180 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -1007,6 +1096,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="13" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94794" name="Growth Rune Lv. 14" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +14% P. Atk. +210 M. Atk. +210 P. Def. +210 M. Def. +210 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -1017,6 +1111,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="14" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94795" name="Growth Rune Lv. 15" type="EtcItem">
 		<!-- <Properties> Acquired XP/ SP +15% P. Atk. +300 M. Atk. +300 P. Def. +300 M. Def. +300 Boosts parameters when in inventory. Can be upgraded through compounding with Growth Rune Fragment. -->
@@ -1027,6 +1126,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50470" level="15" /> <!-- Growth Rune -->
+		</skills>
 	</item>
 	<item id="94796" name="Kit: Wolf" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

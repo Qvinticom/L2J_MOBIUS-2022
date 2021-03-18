@@ -40,6 +40,7 @@ public class EnchantScroll extends AbstractEnchantItem
 	private final boolean _isBlessedDown;
 	private final boolean _isSafe;
 	private final boolean _isGiant;
+	private final boolean _isCursed;
 	private final int _scrollGroupId;
 	private Set<Integer> _items;
 	
@@ -49,11 +50,12 @@ public class EnchantScroll extends AbstractEnchantItem
 		_scrollGroupId = set.getInt("scrollGroupId", 0);
 		
 		final ItemType type = getItem().getItemType();
-		_isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.ENCHT_WP) || (type == EtcItemType.GIANT_ENCHT_WP);
+		_isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.ENCHT_WP) || ((type == EtcItemType.GIANT_ENCHT_WP) || (type == EtcItemType.CURSED_ENCHT_WP));
 		_isBlessed = (type == EtcItemType.BLESS_ENCHT_AM) || (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP) || (type == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM) || (type == EtcItemType.BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP);
 		_isBlessedDown = (type == EtcItemType.BLESS_ENCHT_AM_DOWN);
 		_isSafe = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_WP);
 		_isGiant = (type == EtcItemType.GIANT_ENCHT_AM) || (type == EtcItemType.GIANT_ENCHT_WP);
+		_isCursed = (type == EtcItemType.CURSED_ENCHT_AM) || (type == EtcItemType.CURSED_ENCHT_WP);
 	}
 	
 	@Override
@@ -89,6 +91,11 @@ public class EnchantScroll extends AbstractEnchantItem
 	public boolean isGiant()
 	{
 		return _isGiant;
+	}
+	
+	public boolean isCursed()
+	{
+		return _isCursed;
 	}
 	
 	/**
@@ -162,6 +169,11 @@ public class EnchantScroll extends AbstractEnchantItem
 				}
 				final Set<Integer> scrollItems = scroll.getItems();
 				if ((scrollItems != null) && scrollItems.contains(itemToEnchant.getId()))
+				{
+					return false;
+				}
+				
+				if (scroll.isCursed() && (itemToEnchant.getEnchantLevel() <= 2))
 				{
 					return false;
 				}

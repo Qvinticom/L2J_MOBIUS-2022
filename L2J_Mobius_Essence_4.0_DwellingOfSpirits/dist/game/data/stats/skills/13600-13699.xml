@@ -3,6 +3,8 @@
 	<skill id="13648" toLevel="1" name="Put on Lv. 5 Brooch">
 		<!-- Brooch shines and radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i06</icon>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalVisualEffect>AVE_BROOCH_B</abnormalVisualEffect>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
@@ -10,10 +12,19 @@
 		<!-- Bright light fades. -->
 		<operateType>P</operateType>
 		<effectPoint>1</effectPoint>
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>AVE_BROOCH_B,10</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13650" toLevel="1" name="Put on Lv. 4 Brooch">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalVisualEffect>AVE_BROOCH</abnormalVisualEffect>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
@@ -21,10 +32,19 @@
 		<!-- Bright light fades. -->
 		<operateType>P</operateType>
 		<effectPoint>1</effectPoint>
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>AVE_BROOCH,10</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13652" toLevel="1" name="Put on Lv. 3 Brooch">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalVisualEffect>AVE_BROOCH</abnormalVisualEffect>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
@@ -32,10 +52,22 @@
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>AVE_BROOCH,10</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13654" toLevel="1" name="Brooch Lv. 2 On">
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalVisualEffect>AVE_BROOCH</abnormalVisualEffect>
+		<stayAfterDeath>true</stayAfterDeath>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
@@ -43,6 +75,13 @@
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>AVE_BROOCH,10</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13656" toLevel="1" name="Brooch Lv. 1">
 		<!-- <Effect> 2 jewels can be equipped. -->

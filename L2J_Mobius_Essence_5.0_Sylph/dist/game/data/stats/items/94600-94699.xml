@@ -301,6 +301,19 @@
 		<stats>
 			<stat type="pDef">14</stat>
 		</stats>
+		<skills>
+			<skill id="50459" level="1" /> <!-- Blessed Dragon Belt -->
+			<skill id="50459" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Blessed Dragon Belt -->
+			<skill id="50459" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Blessed Dragon Belt -->
+			<skill id="50459" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Blessed Dragon Belt -->
+			<skill id="50459" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Blessed Dragon Belt -->
+			<skill id="50459" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Blessed Dragon Belt -->
+			<skill id="50459" level="7" type="ON_ENCHANT" type_value="6" /> <!-- +6 Blessed Dragon Belt -->
+			<skill id="50459" level="8" type="ON_ENCHANT" type_value="7" /> <!-- +7 Blessed Dragon Belt -->
+			<skill id="50459" level="9" type="ON_ENCHANT" type_value="8" /> <!-- +8 Blessed Dragon Belt -->
+			<skill id="50459" level="10" type="ON_ENCHANT" type_value="9" /> <!-- +9 Blessed Dragon Belt -->
+			<skill id="50459" level="11" type="ON_ENCHANT" type_value="10" /> <!-- +10 Blessed Dragon Belt -->
+		</skills>
 	</item>
 	<item id="94622" name="Kit: Dragon Belt" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -554,6 +567,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50463" level="1" /> <!-- Zaken Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94646" name="Zaken Doll Lv. 2" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 2> Skill Critical Rate +40 HP Recovery +50 Skill Critical Damage +200 Vampiric Rage +2% (with a certain chance) Boosts parameters when in inventory. Can be upgraded through compounding. -->
@@ -561,6 +579,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50463" level="2" /> <!-- Zaken Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94647" name="Zaken Doll Lv. 3" type="EtcItem">
 		<!-- <Zaken Doll's Sorcery Lv. 3> Skill Critical Rate +60 HP Recovery +80 Skill Critical Damage +300 Vampiric Rage +3% (with a certain chance) Boosts parameters when in inventory. -->
@@ -568,6 +591,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50463" level="3" /> <!-- Zaken Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94648" name="Core Doll Lv. 1" type="EtcItem">
 		<!-- <Core Doll's Sorcery Lv. 1> Received Skill Critical Damage -5% Received Skill Critical Rate -2% Shock Resistance +10% Sleep Resistance +10% Knockback Resistance +5% Boosts parameters when in inventory. Can be upgraded through compounding. -->
@@ -577,6 +605,11 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50464" level="1" /> <!-- Core Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94649" name="Core Doll Lv. 2" type="EtcItem">
 		<!-- <Core Doll's Sorcery Lv. 2> Received Skill Critical Damage -10% Received Skill Critical Rate -5% Shock Resistance +20% Sleep Resistance +20% Knockback Resistance +10% Boosts parameters when in inventory. Can be upgraded through compounding. -->
@@ -584,6 +617,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50464" level="2" /> <!-- Core Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94650" name="Core Doll Lv. 3" type="EtcItem">
 		<!-- <Core Doll's Sorcery Lv. 3> Received Skill Critical Damage -15% Received Skill Critical Rate -8% Shock Resistance +30% Sleep Resistance +30% Knockback Resistance +20% Boosts parameters when in inventory. -->
@@ -591,6 +629,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="50464" level="3" /> <!-- Core Doll's Sorcery -->
+		</skills>
 	</item>
 	<item id="94651" name="Package: Zaken Doll Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -601,6 +644,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94645" min="1" max="1" chance="100" /> <!-- Zaken Doll Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94652" name="Package: Zaken Doll Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -611,6 +658,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94646" min="1" max="1" chance="100" /> <!-- Zaken Doll Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="94653" name="Package: Zaken Doll Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -621,6 +672,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94647" min="1" max="1" chance="100" /> <!-- Zaken Doll Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="94654" name="Package: Core Doll Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -631,6 +686,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94648" min="1" max="1" chance="100" /> <!-- Core Doll Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="94655" name="Package: Core Doll Lv. 2" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -641,6 +700,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94649" min="1" max="1" chance="100" /> <!-- Core Doll Lv. 2 -->
+		</capsuled_items>
 	</item>
 	<item id="94656" name="Package: Core Doll Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -651,6 +714,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94650" min="1" max="1" chance="100" /> <!-- Core Doll Lv. 3 -->
+		</capsuled_items>
 	</item>
 	<item id="94657" name="Package: Pet Food 2000 pcs." type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
