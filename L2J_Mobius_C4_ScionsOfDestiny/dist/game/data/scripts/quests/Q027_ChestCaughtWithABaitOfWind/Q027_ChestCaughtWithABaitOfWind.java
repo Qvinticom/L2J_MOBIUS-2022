@@ -28,7 +28,7 @@ public class Q027_ChestCaughtWithABaitOfWind extends Quest
 {
 	// NPCs
 	private static final int LANOSCO = 31570;
-	private static final int SHALING = 31442;
+	private static final int SHALING = 31434;
 	
 	// Items
 	private static final int LARGE_BLUE_TREASURE_CHEST = 6500;

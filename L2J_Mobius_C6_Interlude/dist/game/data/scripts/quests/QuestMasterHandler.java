@@ -42,7 +42,7 @@ import quests.Q020_BringUpWithLove.Q020_BringUpWithLove;
 import quests.Q021_HiddenTruth.Q021_HiddenTruth;
 import quests.Q022_TragedyInVonHellmannForest.Q022_TragedyInVonHellmannForest;
 import quests.Q023_LidiasHeart.Q023_LidiasHeart;
-import quests.Q024_InhabitantsOfTheForrestOfTheDead.Q024_InhabitantsOfTheForrestOfTheDead;
+import quests.Q024_InhabitantsOfTheForestOfTheDead.Q024_InhabitantsOfTheForestOfTheDead;
 import quests.Q025_HidingBehindTheTruth.Q025_HidingBehindTheTruth;
 import quests.Q027_ChestCaughtWithABaitOfWind.Q027_ChestCaughtWithABaitOfWind;
 import quests.Q028_ChestCaughtWithABaitOfIcyAir.Q028_ChestCaughtWithABaitOfIcyAir;
@@ -394,7 +394,7 @@ public class QuestMasterHandler
 		Q021_HiddenTruth.class,
 		Q022_TragedyInVonHellmannForest.class,
 		Q023_LidiasHeart.class,
-		Q024_InhabitantsOfTheForrestOfTheDead.class,
+		Q024_InhabitantsOfTheForestOfTheDead.class,
 		Q025_HidingBehindTheTruth.class,
 		Q027_ChestCaughtWithABaitOfWind.class,
 		Q028_ChestCaughtWithABaitOfIcyAir.class,

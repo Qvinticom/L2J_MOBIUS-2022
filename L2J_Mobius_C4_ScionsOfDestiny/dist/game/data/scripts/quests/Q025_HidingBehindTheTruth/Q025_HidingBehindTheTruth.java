@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
-import quests.Q024_InhabitantsOfTheForrestOfTheDead.Q024_InhabitantsOfTheForrestOfTheDead;
+import quests.Q024_InhabitantsOfTheForestOfTheDead.Q024_InhabitantsOfTheForestOfTheDead;
 
 /**
  * @author Mobius
@@ -240,7 +240,7 @@ public class Q025_HidingBehindTheTruth extends Quest
 		{
 			if (npcId == BENEDICT)
 			{
-				final QuestState qs2 = player.getQuestState(Q024_InhabitantsOfTheForrestOfTheDead.class.getSimpleName());
+				final QuestState qs2 = player.getQuestState(Q024_InhabitantsOfTheForestOfTheDead.class.getSimpleName());
 				if (qs2 != null)
 				{
 					if ((qs2.getState() == State.COMPLETED) && (player.getLevel() >= 66))

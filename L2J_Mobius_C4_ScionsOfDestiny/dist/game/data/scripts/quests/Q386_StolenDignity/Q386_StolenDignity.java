@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -27,196 +28,284 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Adapted from FirstTeam Interlude
+ * Adapted for StayOnly from python.
  */
 public class Q386_StolenDignity extends Quest
 {
 	private static final int ROMP = 30843;
-	private static final int STOLEN_INFERIUM_ORE = 6363;
-	private static final int REQUIRED_STOLEN_INFERIUM_ORE = 100;
-	private static final Map<Integer, Integer> DROP_CHANCES = new HashMap<>();
+	private static final int STOLEN_INFERNIUM_ORE = 6363;
+	private static final Map<Integer, Integer> CHANCES = new HashMap<>();
 	static
 	{
-		DROP_CHANCES.put(20670, 14);
-		DROP_CHANCES.put(20671, 14);
-		DROP_CHANCES.put(20954, 11);
-		DROP_CHANCES.put(20956, 13);
-		DROP_CHANCES.put(20958, 13);
-		DROP_CHANCES.put(20959, 13);
-		DROP_CHANCES.put(20960, 11);
-		DROP_CHANCES.put(20964, 13);
-		DROP_CHANCES.put(20969, 19);
-		DROP_CHANCES.put(20967, 18);
-		DROP_CHANCES.put(20970, 18);
-		DROP_CHANCES.put(20971, 18);
-		DROP_CHANCES.put(20974, 28);
-		DROP_CHANCES.put(20975, 28);
-		DROP_CHANCES.put(21001, 14);
-		DROP_CHANCES.put(21003, 18);
-		DROP_CHANCES.put(21005, 14);
-		DROP_CHANCES.put(21020, 16);
-		DROP_CHANCES.put(21021, 15);
-		DROP_CHANCES.put(21259, 15);
-		DROP_CHANCES.put(21089, 13);
-		DROP_CHANCES.put(21108, 19);
-		DROP_CHANCES.put(21110, 18);
-		DROP_CHANCES.put(21113, 25);
-		DROP_CHANCES.put(21114, 23);
-		DROP_CHANCES.put(21116, 25);
+		CHANCES.put(20970, 208000);
+		CHANCES.put(20971, 299000);
+		CHANCES.put(20958, 170000);
+		CHANCES.put(20960, 149000);
+		CHANCES.put(20963, 199000);
+		CHANCES.put(20670, 202000);
+		CHANCES.put(21114, 352000);
+		CHANCES.put(20959, 273000);
+		CHANCES.put(21020, 478000);
+		CHANCES.put(21258, 487000);
+		CHANCES.put(21003, 173000);
+		CHANCES.put(20969, 205000);
+		CHANCES.put(21108, 245000);
+		CHANCES.put(21005, 211000);
+		CHANCES.put(21116, 487000);
+		CHANCES.put(21113, 370000);
+		CHANCES.put(20954, 184000);
+		CHANCES.put(20671, 211000);
+		CHANCES.put(21110, 260000);
+		CHANCES.put(20967, 257000);
+		CHANCES.put(20956, 216000);
+		CHANCES.put(21021, 234000);
+		CHANCES.put(21259, 487000);
+		CHANCES.put(20974, 440000);
+		CHANCES.put(20975, 390000);
+		CHANCES.put(21001, 214000);
 	}
-	protected static final Map<Integer, Bingo> BINGOS = new HashMap<>();
-	// @formatter:off
-	protected static final int[][] REWARDS_WIN =
+	private static final int[] REWARDS = new int[]
 	{
-		{5529, 10}, {5532, 10}, {5533, 10}, {5534, 10}, {5535, 10}, {5536, 10}, {5537, 10}, {5538, 10}, {5539, 10}, {5541, 10}, {5542, 10},
-		{5543, 10}, {5544, 10}, {5545, 10}, {5546, 10}, {5547, 10}, {5548, 10}, {8331, 10}, {8341, 10}, {8342, 10}, {8346, 10}, {8349, 10},
-		{8712, 10}, {8713, 10}, {8714, 10}, {8715, 10}, {8716, 10}, {8717, 10}, {8718, 10}, {8719, 10}, {8720, 10}, {8721, 10}, {8722, 10}
+		5529,
+		5532,
+		5533,
+		5534,
+		5535,
+		5536,
+		5537,
+		5538,
+		5539,
+		5541,
+		5542,
+		5543,
+		5544,
+		5545,
+		5546,
+		5547,
+		5548,
+		8331,
+		8341,
+		8342,
+		8349,
+		8346
 	};
-	protected static final int[][] REWARDS_LOSE =
+	public static final int[][] MATRICE_3X3_LINES = new int[][]
 	{
-		{5529, 4}, {5532, 4}, {5533, 4}, {5534, 4}, {5535, 4}, {5536, 4}, {5537, 4}, {5538, 4}, {5539, 4}, {5541, 4}, {5542, 4},
-		{5543, 4}, {5544, 4}, {5545, 4}, {5546, 4}, {5547, 4}, {5548, 4}, {8331, 4}, {8341, 4}, {8342, 4}, {8346, 4}, {8349, 4},
-		{8712, 4}, {8713, 4}, {8714, 4}, {8715, 4}, {8716, 4}, {8717, 4}, {8718, 4}, {8719, 4}, {8720, 4}, {8721, 4}, {8722, 4}
+		{
+			1,
+			2,
+			3
+		},
+		{
+			4,
+			5,
+			6
+		},
+		{
+			7,
+			8,
+			9
+		},
+		{
+			1,
+			4,
+			7
+		},
+		{
+			2,
+			5,
+			8
+		},
+		{
+			3,
+			6,
+			9
+		},
+		{
+			1,
+			5,
+			9
+		},
+		{
+			3,
+			5,
+			7
+		}
 	};
-	// @formatter:on
 	
 	public Q386_StolenDignity()
 	{
 		super(386, "Stolen Dignity");
-		
 		addStartNpc(ROMP);
 		addTalkId(ROMP);
-		for (int killId : DROP_CHANCES.keySet())
-		{
-			addKillId(killId);
-		}
-	}
-	
-	@Override
-	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return event;
-		}
-		
-		if ("warehouse_keeper_romp_q0386_05.htm".equalsIgnoreCase(event))
-		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
-		}
-		else if ("warehouse_keeper_romp_q0386_08.htm".equalsIgnoreCase(event))
-		{
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
-		}
-		else if ("game".equalsIgnoreCase(event))
-		{
-			if (st.getQuestItemsCount(STOLEN_INFERIUM_ORE) < REQUIRED_STOLEN_INFERIUM_ORE)
-			{
-				return "warehouse_keeper_romp_q0386_11.htm";
-			}
-			st.takeItems(STOLEN_INFERIUM_ORE, REQUIRED_STOLEN_INFERIUM_ORE);
-			final int char_obj_id = st.getPlayer().getObjectId();
-			if (BINGOS.containsKey(char_obj_id))
-			{
-				BINGOS.remove(char_obj_id);
-			}
-			final Bingo bingo = new Bingo(st);
-			BINGOS.put(char_obj_id, bingo);
-			return bingo.getDialog("");
-		}
-		else if (event.contains("choice-"))
-		{
-			final int char_obj_id = st.getPlayer().getObjectId();
-			if (!BINGOS.containsKey(char_obj_id))
-			{
-				return null;
-			}
-			final Bingo bingo = BINGOS.get(char_obj_id);
-			return bingo.Select(event.replaceFirst("choice-", ""));
-		}
-		return event;
+		addKillId(CHANCES.keySet());
 	}
 	
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
-		final String htmltext = getNoQuestMsg();
-		final QuestState st = player.getQuestState(getName());
+		String htmltext = getNoQuestMsg();
+		QuestState st = player.getQuestState("Q386_StolenDignity");
 		if (st == null)
 		{
 			return htmltext;
 		}
+		switch (st.getState())
+		{
+			case State.CREATED:
+			{
+				htmltext = player.getLevel() < 58 ? "30843-04.htm" : "30843-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				htmltext = st.getQuestItemsCount(6363) < 100 ? "30843-06.htm" : "30843-07.htm";
+			}
+		}
 		
-		if (st.getState() != 1)
+		return htmltext;
+	}
+	
+	@Override
+	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
+	{
+		String htmltext = event;
+		QuestState st = player.getQuestState("Q386_StolenDignity");
+		if (st == null)
 		{
-			return (st.getQuestItemsCount(STOLEN_INFERIUM_ORE) < REQUIRED_STOLEN_INFERIUM_ORE) ? "warehouse_keeper_romp_q0386_06.htm" : "warehouse_keeper_romp_q0386_07.htm";
+			return event;
 		}
-		if (st.getPlayer().getLevel() < 58)
+		
+		if (event.equals("30843-05.htm"))
 		{
+			st.setState(State.STARTED);
+			st.set("cond", "1");
+			st.set("state", "1");
+			st.playSound("ItemSound.quest_accept");
+		}
+		else if (event.equals("30843-08.htm"))
+		{
+			st.playSound("ItemSound.quest_giveup");
 			st.exitQuest(true);
-			return "warehouse_keeper_romp_q0386_04.htm";
 		}
-		return "warehouse_keeper_romp_q0386_01.htm";
+		else if (event.equals("30843-12.htm"))
+		{
+			if (st.getQuestItemsCount(6363) < 100)
+			{
+				htmltext = "30843-11.htm";
+			}
+			else
+			{
+				st.set("board", StringUtil.scrambleString("123456789"));
+				st.takeItems(6363, 100);
+			}
+		}
+		else if (event.startsWith("select_1-"))
+		{
+			st.set("playerArray", event.substring(9));
+			htmltext = fillBoard(st, getHtmlText("30843-13.htm"));
+		}
+		else
+		{
+			String number;
+			String playerArray;
+			if (event.startsWith("select_2-"))
+			{
+				number = event.substring(9);
+				playerArray = (String) st.get("playerArray");
+				if (playerArray.contains(number))
+				{
+					htmltext = fillBoard(st, getHtmlText("30843-" + (13 + (2 * playerArray.length())) + ".htm"));
+				}
+				else
+				{
+					st.set("playerArray", playerArray.concat(number));
+					htmltext = fillBoard(st, getHtmlText("30843-" + (12 + (2 * playerArray.length())) + ".htm"));
+				}
+			}
+			else if (event.startsWith("select_3-"))
+			{
+				number = event.substring(9);
+				playerArray = (String) st.get("playerArray");
+				if (playerArray.contains(number))
+				{
+					htmltext = fillBoard(st, getHtmlText("30843-25.htm"));
+				}
+				else
+				{
+					String playerChoice = playerArray.concat(number);
+					String[] board = ((String) st.get("board")).split("");
+					int winningLines = 0;
+					int[][] var11 = MATRICE_3X3_LINES;
+					int var12 = var11.length;
+					
+					for (int var13 = 0; var13 < var12; ++var13)
+					{
+						int[] map = var11[var13];
+						boolean won = true;
+						int[] var16 = map;
+						int var17 = map.length;
+						
+						for (int var18 = 0; var18 < var17; ++var18)
+						{
+							int index = var16[var18];
+							won &= playerChoice.contains(board[index - 1]);
+						}
+						
+						if (won)
+						{
+							++winningLines;
+						}
+					}
+					
+					if (winningLines == 3)
+					{
+						htmltext = getHtmlText("30843-22.htm");
+						st.rewardItems(REWARDS[Rnd.get(REWARDS.length)], 4);
+					}
+					else if (winningLines == 0)
+					{
+						htmltext = getHtmlText("30843-24.htm");
+						st.rewardItems(REWARDS[Rnd.get(REWARDS.length)], 10);
+					}
+					else
+					{
+						htmltext = getHtmlText("30843-23.htm");
+					}
+					
+					for (int i = 1; i < 10; ++i)
+					{
+						htmltext = htmltext.replace("<?Cell" + i + "?>", board[i - 1]);
+						htmltext = htmltext.replace("<?FontColor" + i + "?>", playerChoice.contains(board[i - 1]) ? "ff0000" : "ffffff");
+					}
+				}
+			}
+		}
+		
+		return htmltext;
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final PlayerInstance partyMember = getRandomPartyMemberState(player, npc, State.STARTED);
+		if (partyMember == null)
 		{
 			return null;
 		}
-		
-		final Integer chance = DROP_CHANCES.get(npc.getNpcId());
-		if ((chance != null) && (Rnd.get(100) < chance))
-		{
-			st.giveItems(STOLEN_INFERIUM_ORE, 1);
-		}
+		partyMember.getQuestState(getName()).dropItems(STOLEN_INFERNIUM_ORE, 1, 0, CHANCES.get(npc.getNpcId()));
 		return null;
 	}
 	
-	public static class Bingo extends ai.others.Bingo
+	private static final String fillBoard(QuestState st, String htmltext)
 	{
-		protected static final String MSG_BEGIN = "I've arranged the numbers 1 through 9 on the grid. Don't peek!<br>Let me have the " + REQUIRED_STOLEN_INFERIUM_ORE + " Infernium Ores. Too many players try to run away without paying when it becomes obvious that they're losing...<br>OK, select six numbers between 1 and 9. Choose the %choicenum% number.";
-		protected static final String MSG_AGAIN = "You've already chosen that number. Make your %choicenum% choice again.";
-		protected static final String MSG_ZERO_LINES = "Wow! How unlucky can you get? Your choices are highlighted in red below. As you can see, your choices didn't make a single line! Losing this badly is actually quite rare!<br>You look so sad, I feel bad for you... Wait here...<br>.<br>.<br>.<br>Take this... I hope it will bring you better luck in the future.";
-		protected static final String MSG_THREE_LINES = "Excellent! As you can see, you've formed three lines! Congratulations! As promised, I'll give you some unclaimed merchandise from the warehouse. Wait here...<br>.<br>.<br>.<br>Whew, it's dusty! OK, here you go. Do you like it?";
-		protected static final String MSG_LOSE = "Oh, too bad. Your choices didn't form three lines. You should try again... Your choices are highlighted in red.";
-		private static final String TEMPLATE_CHOICE = "<a action=\"bypass -h Quest Q386_StolenDignity choice-%n%\">%n%</a>&nbsp;&nbsp;&nbsp;&nbsp;  ";
-		
-		private final QuestState _qs;
-		
-		public Bingo(QuestState qs)
+		String result = htmltext;
+		String playerArray = (String) st.get("playerArray");
+		String[] board = ((String) st.get("board")).split("");
+		for (int i = 1; i < 10; ++i)
 		{
-			super(TEMPLATE_CHOICE);
-			_qs = qs;
+			result = result.replace("<?Cell" + i + "?>", playerArray.contains(board[i - 1]) ? board[i - 1] : "?");
 		}
-		
-		@Override
-		protected String getFinal()
-		{
-			final String result = super.getFinal();
-			if (lines == 3)
-			{
-				reward(REWARDS_WIN);
-			}
-			else if (lines == 0)
-			{
-				reward(REWARDS_LOSE);
-			}
-			BINGOS.remove(_qs.getPlayer().getObjectId());
-			return result;
-		}
-		
-		private void reward(int[][] rew)
-		{
-			final int[] r = rew[Rnd.get(rew.length)];
-			_qs.giveItems(r[0], r[1]);
-		}
+		return result;
 	}
 }

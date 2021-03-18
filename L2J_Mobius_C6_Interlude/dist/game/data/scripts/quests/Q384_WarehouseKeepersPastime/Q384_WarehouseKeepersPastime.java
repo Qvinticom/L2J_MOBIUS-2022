@@ -68,48 +68,48 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		CHANCES.put(20605, 150000); // Weird Drake
 	}
 	
-	private static final int[][] INDEX_MAP =
+	private static final int[][] MATRICE_3X3_LINES = new int[][]
 	{
 		{
 			1,
 			2,
 			3
-		}, // line 1
+		},
 		{
 			4,
 			5,
 			6
-		}, // line 2
+		},
 		{
 			7,
 			8,
 			9
-		}, // line 3
+		},
 		{
 			1,
 			4,
 			7
-		}, // column 1
+		},
 		{
 			2,
 			5,
 			8
-		}, // column 2
+		},
 		{
 			3,
 			6,
 			9
-		}, // column 3
+		},
 		{
 			1,
 			5,
 			9
-		}, // diagonal 1
+		},
 		{
 			3,
 			5,
 			7
-		}, // diagonal 2
+		}
 	};
 	
 	private static final int[][] _rewards_10_win =
@@ -302,10 +302,10 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		else if (event.startsWith("select_3-")) // pick #6
 		{
 			// Stores the current event for future use.
-			final String number = event.substring(9);
+			String number = event.substring(9);
 			
 			// Restore the player array.
-			final String playerArray = st.getString("playerArray");
+			String playerArray = st.getString("playerArray");
 			
 			// Verify if the given number is already on the player array, if yes, it's invalid, otherwise calculate reward.
 			if (Util.contains(playerArray.split(""), number))
@@ -315,23 +315,28 @@ public class Q384_WarehouseKeepersPastime extends Quest
 			else
 			{
 				// No need to store the String on player db, but still need to update it.
-				final String[] playerChoice = playerArray.concat(number).split("");
+				String playerChoice = playerArray.concat(number);
 				
 				// Transform the generated board (9 string length) into a 2d matrice (3x3 int).
-				final String[] board = st.getString("board").split("");
+				String[] board = ((String) st.get("board")).split("");
 				
 				// test for all line combination
 				int winningLines = 0;
-				for (int[] map : INDEX_MAP)
+				int[][] var12 = MATRICE_3X3_LINES;
+				int var13 = var12.length;
+				int var14;
+				for (var14 = 0; var14 < var13; ++var14)
 				{
-					// test line combination
+					int[] map = var12[var14];
 					boolean won = true;
-					for (int index : map)
-					{
-						won &= Util.contains(playerChoice, board[index]);
-					}
+					int[] var17 = map;
+					int var18 = map.length;
 					
-					// cut the loop, when you won
+					for (int var19 = 0; var19 < var18; ++var19)
+					{
+						int index = var17[var19];
+						won &= playerChoice.contains(board[index - 1]);
+					}
 					if (won)
 					{
 						winningLines++;
@@ -377,8 +382,8 @@ public class Q384_WarehouseKeepersPastime extends Quest
 				
 				for (int i = 1; i < 10; i++)
 				{
-					htmltext = htmltext.replace("<?Cell" + i + "?>", board[i]);
-					htmltext = htmltext.replace("<?FontColor" + i + "?>", (Util.contains(playerChoice, board[i])) ? "ff0000" : "ffffff");
+					htmltext = htmltext.replace("<?Cell" + i + "?>", board[i - 1]);
+					htmltext = htmltext.replace("<?FontColor" + i + "?>", playerChoice.contains(board[i - 1]) ? "ff0000" : "ffffff");
 				}
 			}
 		}
@@ -390,7 +395,7 @@ public class Q384_WarehouseKeepersPastime extends Quest
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
 		String htmltext = getNoQuestMsg();
-		final QuestState st = player.getQuestState(getName());
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -399,21 +404,27 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = (player.getLevel() < 40) ? "30182-04.htm" : "30182-01.htm";
+			{
+				htmltext = player.getLevel() < 40 ? "30182-04.htm" : "30182-01.htm";
 				break;
-			
+			}
 			case State.STARTED:
+			{
 				switch (npc.getNpcId())
 				{
-					case CLIFF:
-						htmltext = (st.getQuestItemsCount(MEDAL) < 10) ? "30182-06.htm" : "30182-07.htm";
+					case 30182:
+					{
+						htmltext = st.getQuestItemsCount(5964) < 10 ? "30182-06.htm" : "30182-07.htm";
 						break;
-					
-					case BAXT:
-						htmltext = (st.getQuestItemsCount(MEDAL) < 10) ? "30685-01.htm" : "30685-02.htm";
+					}
+					case 30685:
+					{
+						htmltext = st.getQuestItemsCount(5964) < 10 ? "30685-01.htm" : "30685-02.htm";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		
 		return htmltext;
@@ -427,20 +438,18 @@ public class Q384_WarehouseKeepersPastime extends Quest
 		{
 			return null;
 		}
-		
 		partyMember.getQuestState(getName()).dropItems(MEDAL, 1, 0, CHANCES.get(npc.getNpcId()));
-		
 		return null;
 	}
 	
 	private static final String fillBoard(QuestState st, String htmltext)
 	{
-		final String[] playerArray = st.getString("playerArray").split("");
-		final String[] board = st.getString("board").split("");
 		String result = htmltext;
-		for (int i = 1; i < 10; i++)
+		String playerArray = (String) st.get("playerArray");
+		String[] board = ((String) st.get("board")).split("");
+		for (int i = 1; i < 10; ++i)
 		{
-			result = result.replace("<?Cell" + i + "?>", (Util.contains(playerArray, board[i])) ? board[i] : "?");
+			result = result.replace("<?Cell" + i + "?>", playerArray.contains(board[i - 1]) ? board[i - 1] : "?");
 		}
 		return result;
 	}

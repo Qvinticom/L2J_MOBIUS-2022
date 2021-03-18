@@ -16,179 +16,322 @@
  */
 package quests.Q022_TragedyInVonHellmannForest;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
-import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.QuestTimer;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.util.Util;
 
 import quests.Q021_HiddenTruth.Q021_HiddenTruth;
 
 public class Q022_TragedyInVonHellmannForest extends Quest
 {
 	// NPCs
-	private static final int WELL = 31527;
-	private static final int TIFAREN = 31334;
 	private static final int INNOCENTIN = 31328;
+	private static final int TIFAREN = 31334;
+	private static final int WELL = 31527;
 	private static final int GHOST_OF_PRIEST = 31528;
 	private static final int GHOST_OF_ADVENTURER = 31529;
-	
+	// Mobs
+	private static final int[] MOBS =
+	{
+		21553, // Trampled Man
+		21554, // Trampled Man
+		21555, // Slaughter Executioner
+		21556, // Slaughter Executioner
+		21561, // Sacrificed Man
+	};
+	private static final int SOUL_OF_WELL = 27217;
 	// Items
 	private static final int CROSS_OF_EINHASAD = 7141;
 	private static final int LOST_SKULL_OF_ELF = 7142;
 	private static final int LETTER_OF_INNOCENTIN = 7143;
-	private static final int GREEN_JEWEL_OF_ADVENTURER = 7144;
-	private static final int RED_JEWEL_OF_ADVENTURER = 7145;
+	private static final int JEWEL_OF_ADVENTURER_1 = 7144;
+	private static final int JEWEL_OF_ADVENTURER_2 = 7145;
 	private static final int SEALED_REPORT_BOX = 7146;
 	private static final int REPORT_BOX = 7147;
-	
-	// Monsters
-	private static final int SOUL_OF_WELL = 27217;
-	
-	private NpcInstance _ghostOfPriestInstance = null;
-	private NpcInstance _soulOfWellInstance = null;
+	// Misc
+	private static final int MIN_LEVEL = 63;
+	private static final Location PRIEST_LOC = new Location(38354, -49777, -1128);
+	private static final Location SOUL_WELL_LOC = new Location(34706, -54590, -2054);
+	private static int _tifarenOwner = 0;
+	private static NpcInstance _soulWellNpc = null;
 	
 	public Q022_TragedyInVonHellmannForest()
 	{
 		super(22, "Tragedy in von Hellmann Forest");
 		
-		registerQuestItems(LOST_SKULL_OF_ELF, REPORT_BOX, SEALED_REPORT_BOX, LETTER_OF_INNOCENTIN, RED_JEWEL_OF_ADVENTURER, GREEN_JEWEL_OF_ADVENTURER);
-		
-		addStartNpc(TIFAREN, INNOCENTIN);
-		addTalkId(INNOCENTIN, TIFAREN, GHOST_OF_PRIEST, GHOST_OF_ADVENTURER, WELL);
-		
+		addKillId(MOBS);
+		addKillId(SOUL_OF_WELL);
 		addAttackId(SOUL_OF_WELL);
-		addKillId(SOUL_OF_WELL, 21553, 21554, 21555, 21556, 21561);
+		addStartNpc(TIFAREN);
+		addTalkId(INNOCENTIN, TIFAREN, WELL, GHOST_OF_PRIEST, GHOST_OF_ADVENTURER);
+		registerQuestItems(LOST_SKULL_OF_ELF, CROSS_OF_EINHASAD, REPORT_BOX, JEWEL_OF_ADVENTURER_1, JEWEL_OF_ADVENTURER_2, SEALED_REPORT_BOX);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, NpcInstance npc, PlayerInstance player)
 	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = player.getQuestState(getName());
+		String htmltext = null;
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (event.equals("31334-03.htm"))
+		switch (event)
 		{
-			final QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
-			if ((st2 != null) && st2.isCompleted() && (player.getLevel() >= 63))
+			case "31529-02.htm":
+			case "31529-04.htm":
+			case "31529-05.htm":
+			case "31529-06.htm":
+			case "31529-07.htm":
+			case "31529-09.htm":
+			case "31529-13.htm":
+			case "31529-13a.htm":
+			case "31528-02.htm":
+			case "31528-05.htm":
+			case "31528-06.htm":
+			case "31528-07.htm":
+			case "31328-13.htm":
+			case "31328-06.htm":
+			case "31328-05.htm":
+			case "31328-02.htm":
+			case "31328-07.htm":
+			case "31328-08.htm":
+			case "31328-14.htm":
+			case "31328-15.htm":
+			case "31328-16.htm":
+			case "31328-17.htm":
+			case "31328-18.htm":
+			case "31334-12.htm":
 			{
-				htmltext = "31334-02.htm";
+				htmltext = event;
+				break;
 			}
-		}
-		else if (event.equals("31334-04.htm"))
-		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound(QuestState.SOUND_ACCEPT);
-		}
-		else if (event.equals("31334-07.htm"))
-		{
-			if (!st.hasQuestItems(CROSS_OF_EINHASAD))
+			case "31334-02.htm":
 			{
-				st.set("cond", "2");
+				if (qs.isCreated())
+				{
+					final QuestState qs2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
+					if ((player.getLevel() >= MIN_LEVEL) && (qs2 != null) && qs2.isCompleted())
+					{
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = "31334-03.htm";
+					}
+				}
+				break;
 			}
-			else
+			case "31334-04.htm":
 			{
-				htmltext = "31334-06.htm";
+				if (qs.isCreated())
+				{
+					qs.setState(State.STARTED);
+					qs.set("cond", "1");
+					qs.playSound(QuestState.SOUND_ACCEPT);
+					htmltext = event;
+				}
+				break;
 			}
-		}
-		else if (event.equals("31334-08.htm"))
-		{
-			if (st.hasQuestItems(CROSS_OF_EINHASAD))
+			case "31334-07.htm":
 			{
-				st.set("cond", "4");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(CROSS_OF_EINHASAD, 1);
+				if (!qs.hasQuestItems(CROSS_OF_EINHASAD))
+				{
+					qs.set("cond", "2");
+					htmltext = event;
+				}
+				else
+				{
+					htmltext = "31334-06.htm";
+					qs.set("cond", "3");
+				}
+				break;
 			}
-			else
+			case "31334-08.htm":
 			{
-				st.set("cond", "2");
-				htmltext = "31334-07.htm";
+				if (qs.getInt("cond") == 3)
+				{
+					qs.set("cond", "4");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					htmltext = event;
+				}
+				break;
 			}
-		}
-		else if (event.equals("31334-13.htm"))
-		{
-			if (_ghostOfPriestInstance != null)
+			case "31334-13.htm":
 			{
-				st.set("cond", "6");
-				htmltext = "31334-14.htm";
+				final int cond = qs.getInt("cond");
+				if (((5 <= cond) && (cond <= 7)) && qs.hasQuestItems(CROSS_OF_EINHASAD))
+				{
+					if (_tifarenOwner == 0)
+					{
+						_tifarenOwner = player.getObjectId();
+						final NpcInstance ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
+						ghost2.setScriptValue(player.getObjectId());
+						startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2, player);
+						ghost2.broadcastNpcSay("Did you call me, " + player.getName() + "?");
+						if (((cond == 5) || (cond == 6)) && qs.hasQuestItems(LOST_SKULL_OF_ELF))
+						{
+							qs.takeItems(LOST_SKULL_OF_ELF, -1);
+							qs.set("cond", "7");
+							qs.playSound(QuestState.SOUND_MIDDLE);
+						}
+						htmltext = event;
+					}
+					else
+					{
+						qs.set("cond", "6");
+						htmltext = "31334-14.htm";
+					}
+				}
+				break;
 			}
-			else
+			case "31528-04.htm":
 			{
-				st.set("cond", "7");
-				st.playSound(QuestState.SOUND_MIDDLE);
-				st.takeItems(LOST_SKULL_OF_ELF, 1);
-				_ghostOfPriestInstance = addSpawn(GHOST_OF_PRIEST, 38418, -49894, -1104, 0, false, 120000);
-				_ghostOfPriestInstance.broadcastNpcSay("Did you call me, " + player.getName() + "?");
-				startQuestTimer("ghost_cleanup", 118000, null, player, false);
+				if (npc.getScriptValue() == player.getObjectId())
+				{
+					qs.playSound(QuestState.SOUND_ACCEPT);
+					htmltext = event;
+				}
+				break;
 			}
-		}
-		else if (event.equals("31528-08.htm"))
-		{
-			st.set("cond", "8");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			
-			cancelQuestTimer("ghost_cleanup", null, player);
-			
-			if (_ghostOfPriestInstance != null)
+			case "31528-08.htm":
 			{
-				_ghostOfPriestInstance.deleteMe();
-				_ghostOfPriestInstance = null;
+				final QuestTimer qt = getQuestTimer("DESPAWN_GHOST2", npc, player);
+				if ((qt != null) && (npc.getScriptValue() == player.getObjectId()))
+				{
+					qt.cancel();
+					npc.setScriptValue(0);
+					startQuestTimer("DESPAWN_GHOST2", 1000 * 3, npc, player);
+					qs.set("cond", "8");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					htmltext = event;
+				}
+				break;
 			}
-		}
-		else if (event.equals("31328-10.htm"))
-		{
-			st.set("cond", "9");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.giveItems(LETTER_OF_INNOCENTIN, 1);
-		}
-		else if (event.equals("31529-12.htm"))
-		{
-			st.set("cond", "10");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(LETTER_OF_INNOCENTIN, 1);
-			st.giveItems(GREEN_JEWEL_OF_ADVENTURER, 1);
-		}
-		else if (event.equals("31527-02.htm"))
-		{
-			if (_soulOfWellInstance == null)
+			case "DESPAWN_GHOST2":
 			{
-				_soulOfWellInstance = addSpawn(SOUL_OF_WELL, 34860, -54542, -2048, 0, false, 0);
-				
-				// Attack player.
-				((Attackable) _soulOfWellInstance).addDamageHate(player, 0, 99999);
-				_soulOfWellInstance.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				_tifarenOwner = 0;
+				if (npc.getScriptValue() != 0)
+				{
+					npc.broadcastNpcSay("I_M_CONFUSED_MAYBE_IT_S_TIME_TO_GO_BACK");
+				}
+				npc.deleteMe();
+				break;
 			}
-		}
-		else if (event.equals("attack_timer"))
-		{
-			st.set("cond", "11");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(GREEN_JEWEL_OF_ADVENTURER, 1);
-			st.giveItems(RED_JEWEL_OF_ADVENTURER, 1);
-		}
-		else if (event.equals("31328-13.htm"))
-		{
-			st.set("cond", "15");
-			st.playSound(QuestState.SOUND_MIDDLE);
-			st.takeItems(REPORT_BOX, 1);
-		}
-		else if (event.equals("31328-21.htm"))
-		{
-			st.set("cond", "16");
-			st.playSound(QuestState.SOUND_MIDDLE);
-		}
-		else if (event.equals("ghost_cleanup"))
-		{
-			_ghostOfPriestInstance.broadcastNpcSay("I'm confused! Maybe it's time to go back.");
-			_ghostOfPriestInstance = null;
-			return null;
+			case "31328-03.htm":
+			{
+				if (qs.getInt("cond") == 8)
+				{
+					
+					qs.takeItems(CROSS_OF_EINHASAD, -1);
+					htmltext = event;
+				}
+				break;
+			}
+			case "31328-09.htm":
+			{
+				if (qs.getInt("cond") == 8)
+				{
+					qs.giveItems(LETTER_OF_INNOCENTIN, 1);
+					qs.set("cond", "9");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					htmltext = event;
+				}
+				break;
+			}
+			case "31328-11.htm":
+			{
+				if ((qs.getInt("cond") == 14) && qs.hasQuestItems(REPORT_BOX))
+				{
+					qs.takeItems(REPORT_BOX, -1);
+					qs.set("cond", "15");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					htmltext = event;
+				}
+				break;
+			}
+			case "31328-19.htm":
+			{
+				if (qs.getInt("cond") == 15)
+				{
+					qs.set("cond", "16");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					htmltext = event;
+				}
+				break;
+			}
+			case "31527-02.htm":
+			{
+				if ((qs.getInt("cond") == 10) && (_soulWellNpc == null))
+				{
+					_soulWellNpc = addSpawn(SOUL_OF_WELL, SOUL_WELL_LOC, true, 0);
+					startQuestTimer("activateSoulOfWell", 90000, _soulWellNpc, player);
+					startQuestTimer("despawnSoulOfWell", 120000, _soulWellNpc, player);
+					_soulWellNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+					
+					htmltext = event;
+				}
+				else
+				{
+					htmltext = "31527-03.htm";
+				}
+				break;
+			}
+			case "activateSoulOfWell":
+			{
+				// this enables onAttack ELSE IF block which allows the player to proceed the quest
+				npc.setScriptValue(1);
+				break;
+			}
+			case "despawnSoulOfWell":
+			{
+				// if the player fails to proceed the quest in 2 minutes, the soul is unspawned
+				if (!npc.isDead())
+				{
+					_soulWellNpc = null;
+				}
+				npc.deleteMe();
+				break;
+			}
+			case "31529-03.htm":
+			{
+				if ((qs.getInt("cond") == 9) && qs.hasQuestItems(LETTER_OF_INNOCENTIN))
+				{
+					qs.set("memoState", "8");
+					htmltext = event;
+				}
+				break;
+			}
+			case "31529-08.htm":
+			{
+				if (qs.getInt("memoState") == 8)
+				{
+					qs.set("memoState", "9");
+					htmltext = event;
+				}
+				break;
+			}
+			case "31529-11.htm":
+			{
+				if (qs.getInt("memoState") == 9)
+				{
+					qs.giveItems(JEWEL_OF_ADVENTURER_1, 1);
+					qs.set("cond", "10");
+					qs.playSound(QuestState.SOUND_MIDDLE);
+					qs.set("memoState", "10");
+					htmltext = event;
+				}
+				break;
+			}
 		}
 		return htmltext;
 	}
@@ -196,271 +339,323 @@ public class Q022_TragedyInVonHellmannForest extends Quest
 	@Override
 	public String onTalk(NpcInstance npc, PlayerInstance player)
 	{
+		final QuestState qs = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg();
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		switch (npc.getNpcId())
 		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-				switch (npc.getNpcId())
+			case TIFAREN:
+			{
+				switch (qs.getInt("cond"))
 				{
-					case INNOCENTIN:
-						final QuestState st2 = player.getQuestState(Q021_HiddenTruth.class.getSimpleName());
-						if ((st2 != null) && st2.isCompleted())
+					case 0:
+					{
+						if (qs.isCreated())
 						{
-							if (!st.hasQuestItems(CROSS_OF_EINHASAD))
-							{
-								htmltext = "31328-01.htm";
-								st.giveItems(CROSS_OF_EINHASAD, 1);
-								st.playSound(QuestState.SOUND_ITEMGET);
-							}
-							else
-							{
-								htmltext = "31328-01b.htm";
-							}
+							htmltext = "31334-01.htm";
+						}
+						else if (qs.isCompleted())
+						{
+							htmltext = getAlreadyCompletedMsg();
 						}
 						break;
-					
-					case TIFAREN:
-						htmltext = "31334-01.htm";
+					}
+					case 1:
+					case 3:
+					{
+						htmltext = "31334-05.htm";
 						break;
-				}
-				break;
-			
-			case State.STARTED:
-				final int cond = st.getInt("cond");
-				switch (npc.getNpcId())
-				{
-					case TIFAREN:
-						if ((cond == 1) || (cond == 2) || (cond == 3))
+					}
+					case 4:
+					case 5:
+					{
+						if (qs.hasQuestItems(CROSS_OF_EINHASAD))
 						{
-							htmltext = "31334-05.htm";
-						}
-						else if (cond == 4)
-						{
-							htmltext = "31334-09.htm";
-						}
-						else if ((cond == 5) || (cond == 6))
-						{
-							if (st.hasQuestItems(LOST_SKULL_OF_ELF))
-							{
-								htmltext = (_ghostOfPriestInstance == null) ? "31334-10.htm" : "31334-11.htm";
-							}
-							else
+							if (!qs.hasQuestItems(LOST_SKULL_OF_ELF))
 							{
 								htmltext = "31334-09.htm";
-								st.set("cond", "4");
+							}
+							else if (_tifarenOwner == 0)
+							{
+								htmltext = "31334-10.htm";
+							}
+							else
+							{
+								htmltext = "31334-11.htm";
 							}
 						}
-						else if (cond == 7)
+						break;
+					}
+					case 6:
+					case 7:
+					{
+						if (qs.hasQuestItems(CROSS_OF_EINHASAD))
 						{
-							htmltext = (_ghostOfPriestInstance != null) ? "31334-15.htm" : "31334-17.htm";
+							if (_tifarenOwner == 0)
+							{
+								htmltext = "31334-17.htm";
+							}
+							else if (_tifarenOwner == player.getObjectId())
+							{
+								htmltext = "31334-15.htm";
+							}
+							else
+							{
+								htmltext = "31334-16.htm";
+								qs.set("cond", "6");
+							}
 						}
-						else if (cond > 7)
+						break;
+					}
+					case 8:
+					{
+						if (qs.hasQuestItems(CROSS_OF_EINHASAD))
 						{
 							htmltext = "31334-18.htm";
 						}
 						break;
-					
-					case INNOCENTIN:
-						if (cond < 3)
+					}
+				}
+				break;
+			}
+			case GHOST_OF_PRIEST:
+			{
+				if (npc.getScriptValue() == player.getObjectId())
+				{
+					htmltext = "31528-01.htm";
+				}
+				else
+				{
+					htmltext = "31528-03.htm";
+				}
+				break;
+			}
+			case INNOCENTIN:
+			{
+				switch (qs.getInt("cond"))
+				{
+					case 2:
+					{
+						if (!qs.hasQuestItems(CROSS_OF_EINHASAD))
 						{
-							if (!st.hasQuestItems(CROSS_OF_EINHASAD))
-							{
-								htmltext = "31328-01.htm";
-								st.set("cond", "3");
-								st.playSound(QuestState.SOUND_ITEMGET);
-								st.giveItems(CROSS_OF_EINHASAD, 1);
-							}
-							else
-							{
-								htmltext = "31328-01b.htm";
-							}
+							qs.giveItems(CROSS_OF_EINHASAD, 1);
+							qs.set("cond", "3");
+							htmltext = "31328-01.htm";
 						}
-						else if (cond == 3)
+						break;
+					}
+					case 3:
+					{
+						if (qs.hasQuestItems(CROSS_OF_EINHASAD))
+						{
+							htmltext = "31328-01b.htm";
+						}
+						break;
+					}
+					case 8:
+					{
+						if (qs.hasQuestItems(CROSS_OF_EINHASAD))
 						{
 							htmltext = "31328-02.htm";
 						}
-						else if (cond == 8)
+						else
 						{
-							htmltext = "31328-03.htm";
-						}
-						else if (cond == 9)
-						{
-							htmltext = "31328-11.htm";
-						}
-						else if (cond == 14)
-						{
-							if (st.hasQuestItems(REPORT_BOX))
-							{
-								htmltext = "31328-12.htm";
-							}
-							else
-							{
-								st.set("cond", "13");
-							}
-						}
-						else if (cond == 15)
-						{
-							htmltext = "31328-14.htm";
-						}
-						else if (cond == 16)
-						{
-							htmltext = (player.getLevel() < 64) ? "31328-23.htm" : "31328-22.htm";
-							st.exitQuest(false);
-							st.playSound(QuestState.SOUND_FINISH);
+							htmltext = "31328-04.htm";
 						}
 						break;
-					
-					case GHOST_OF_PRIEST:
-						if (cond == 7)
+					}
+					case 9:
+					{
+						htmltext = "31328-09a.htm";
+						break;
+					}
+					case 14:
+					{
+						if (qs.hasQuestItems(REPORT_BOX))
 						{
-							htmltext = "31528-01.htm";
-						}
-						else if (cond == 8)
-						{
-							htmltext = "31528-08.htm";
+							htmltext = "31328-10.htm";
 						}
 						break;
-					
-					case GHOST_OF_ADVENTURER:
-						if (cond == 9)
+					}
+					case 15:
+					{
+						htmltext = "31328-12.htm";
+						break;
+					}
+					case 16:
+					{
+						qs.rewardExpAndSp(345966, 31578);
+						qs.exitQuest(false);
+						if (player.getLevel() >= MIN_LEVEL)
 						{
-							if (st.hasQuestItems(LETTER_OF_INNOCENTIN))
+							htmltext = "31328-20.htm";
+						}
+						else
+						{
+							htmltext = "31328-21.htm";
+						}
+						break;
+					}
+				}
+				break;
+			}
+			case WELL:
+			{
+				switch (qs.getInt("cond"))
+				{
+					case 10:
+					{
+						if (qs.hasQuestItems(JEWEL_OF_ADVENTURER_1))
+						{
+							htmltext = "31527-01.htm";
+							
+						}
+						break;
+					}
+					case 12:
+					{
+						if (qs.hasQuestItems(JEWEL_OF_ADVENTURER_2) && !qs.hasQuestItems(SEALED_REPORT_BOX))
+						{
+							qs.giveItems(SEALED_REPORT_BOX, 1);
+							qs.set("cond", "13");
+							htmltext = "31527-04.htm";
+						}
+						break;
+					}
+					case 13:
+					case 14:
+					case 15:
+					case 16:
+					{
+						htmltext = "31527-05.htm";
+						break;
+					}
+				}
+				break;
+			}
+			case GHOST_OF_ADVENTURER:
+			{
+				switch (qs.getInt("cond"))
+				{
+					case 9:
+					{
+						if (qs.hasQuestItems(LETTER_OF_INNOCENTIN))
+						{
+							switch (qs.getInt("memoState"))
 							{
-								htmltext = "31529-01.htm";
-							}
-							else
-							{
-								htmltext = "31529-10.htm";
-								st.set("cond", "8");
+								case 0:
+								{
+									htmltext = "31529-01.htm";
+									break;
+								}
+								case 8:
+								{
+									htmltext = "31529-03a.htm";
+									break;
+								}
+								case 9:
+								{
+									htmltext = "31529-10.htm";
+									break;
+								}
+								default:
+								{
+									break;
+								}
 							}
 						}
-						else if (cond == 10)
+						break;
+					}
+					case 10:
+					{
+						if (qs.hasQuestItems(JEWEL_OF_ADVENTURER_1))
 						{
+							final int id = qs.getInt("memoState");
+							if (id == 10)
+							{
+								htmltext = "31529-12.htm";
+							}
+							else if (id == 11)
+							{
+								htmltext = "31529-14.htm";
+							}
+						}
+						break;
+					}
+					case 11:
+					{
+						if (qs.hasQuestItems(JEWEL_OF_ADVENTURER_2) && !qs.hasQuestItems(SEALED_REPORT_BOX))
+						{
+							htmltext = "31529-15.htm";
+							qs.set("cond", "12");
+						}
+						break;
+					}
+					case 13:
+					{
+						if (qs.hasQuestItems(JEWEL_OF_ADVENTURER_2) && qs.hasQuestItems(SEALED_REPORT_BOX))
+						{
+							qs.giveItems(REPORT_BOX, 1);
+							qs.takeItems(SEALED_REPORT_BOX, -1);
+							qs.takeItems(JEWEL_OF_ADVENTURER_2, -1);
+							qs.set("cond", "14");
 							htmltext = "31529-16.htm";
 						}
-						else if (cond == 11)
-						{
-							if (st.hasQuestItems(RED_JEWEL_OF_ADVENTURER))
-							{
-								htmltext = "31529-17.htm";
-								st.set("cond", "12");
-								st.playSound(QuestState.SOUND_MIDDLE);
-								st.takeItems(RED_JEWEL_OF_ADVENTURER, 1);
-							}
-							else
-							{
-								htmltext = "31529-09.htm";
-								st.set("cond", "10");
-							}
-						}
-						else if (cond == 12)
+						break;
+					}
+					case 14:
+					{
+						if (qs.hasQuestItems(REPORT_BOX))
 						{
 							htmltext = "31529-17.htm";
 						}
-						else if (cond == 13)
-						{
-							if (st.hasQuestItems(SEALED_REPORT_BOX))
-							{
-								htmltext = "31529-18.htm";
-								st.set("cond", "14");
-								st.playSound(QuestState.SOUND_MIDDLE);
-								st.takeItems(SEALED_REPORT_BOX, 1);
-								st.giveItems(REPORT_BOX, 1);
-							}
-							else
-							{
-								htmltext = "31529-10.htm";
-								st.set("cond", "12");
-							}
-						}
-						else if (cond > 13)
-						{
-							htmltext = "31529-19.htm";
-						}
 						break;
-					
-					case WELL:
-						if (cond == 10)
-						{
-							htmltext = "31527-01.htm";
-						}
-						else if (cond == 11)
-						{
-							htmltext = "31527-03.htm";
-						}
-						else if (cond == 12)
-						{
-							htmltext = "31527-04.htm";
-							st.set("cond", "13");
-							st.playSound(QuestState.SOUND_MIDDLE);
-							st.giveItems(SEALED_REPORT_BOX, 1);
-						}
-						else if (cond > 12)
-						{
-							htmltext = "31527-05.htm";
-						}
-						break;
+					}
 				}
 				break;
-			
-			case State.COMPLETED:
-				htmltext = getAlreadyCompletedMsg();
-				break;
+			}
 		}
-		
 		return htmltext;
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isPet)
+	public String onAttack(NpcInstance npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		final QuestState st = attacker.getQuestState(getName());
-		if ((st == null) || !st.isStarted() || isPet)
+		final QuestState qs = attacker.getQuestState(getName());
+		if ((qs != null) && (qs.getInt("cond") == 10) && qs.hasQuestItems(JEWEL_OF_ADVENTURER_1))
 		{
-			return null;
+			if (qs.getInt("memoState") == 10)
+			{
+				qs.set("memoState", "11");
+			}
+			else if (npc.isScriptValue(1))
+			{
+				qs.takeItems(JEWEL_OF_ADVENTURER_1, -1);
+				qs.giveItems(JEWEL_OF_ADVENTURER_2, 1);
+				qs.set("cond", "11");
+			}
 		}
-		
-		if (getQuestTimer("attack_timer", null, attacker) != null)
-		{
-			return null;
-		}
-		
-		if (st.getInt("cond") == 10)
-		{
-			startQuestTimer("attack_timer", 20000, null, attacker, false);
-		}
-		
-		return null;
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, PlayerInstance player, boolean isPet)
+	public String onKill(NpcInstance npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState st = checkPlayerState(player, npc, State.STARTED);
-		if (st == null)
+		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
 		{
-			return null;
-		}
-		
-		if (npc.getNpcId() != SOUL_OF_WELL)
-		{
-			if ((st.getInt("cond") == 4) && st.dropItems(LOST_SKULL_OF_ELF, 1, 1, 100000))
+			if (npc.getNpcId() == SOUL_OF_WELL)
 			{
-				st.set("cond", "5");
+				_soulWellNpc = null;
+			}
+			else
+			{
+				final QuestState qs = killer.getQuestState(getName());
+				if ((qs != null) && (qs.getInt("cond") == 4) && qs.hasQuestItems(CROSS_OF_EINHASAD) && !qs.hasQuestItems(LOST_SKULL_OF_ELF) && (Rnd.get(100) < 10))
+				{
+					qs.giveItems(LOST_SKULL_OF_ELF, 1);
+					qs.set("cond", "5");
+				}
 			}
 		}
-		else
-		{
-			cancelQuestTimer("attack_timer", null, player);
-			_soulOfWellInstance = null;
-		}
-		
-		return null;
+		return super.onKill(npc, killer, isSummon);
 	}
 }

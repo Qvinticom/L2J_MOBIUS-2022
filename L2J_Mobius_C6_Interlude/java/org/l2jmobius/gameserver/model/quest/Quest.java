@@ -874,6 +874,18 @@ public class Quest extends ManagedScript
 	}
 	
 	/**
+	 * Add this quest to the list of quests that the passed mob will respond to for Kill Events.
+	 * @param killIds A serie of ids.
+	 */
+	public void addKillId(Collection<Integer> killIds)
+	{
+		for (int killId : killIds)
+		{
+			addEventId(killId, EventType.ON_KILL);
+		}
+	}
+	
+	/**
 	 * Add this quest to the list of quests that the passed npc will respond to for Talk Events.
 	 * @param talkId : ID of the NPC
 	 * @return int : ID of the NPC

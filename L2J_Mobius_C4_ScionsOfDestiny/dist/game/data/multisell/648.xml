@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Quest 648_AnIceMerchantsDream: exchange Silver Ice and Black Ice Crystals -->
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+
+	<!-- Crafted Leather for 23 Silver Ice Crystals -->
+	<item id="1">
+		<ingredient id="8077" count="23" />
+		<production id="1894" count="1" />
+	</item>
+
+	<!-- Coarse Bone Powder for Pet for 6 Silver Ice Crystals -->
+	<item id="2">
+		<ingredient id="8077" count="6" />
+		<production id="1881" count="1" />
+	</item>
+
+	<!-- Steel for 8 Silver Ice Crystals -->
+	<item id="3">
+		<ingredient id="8077" count="8" />
+		<production id="1880" count="1" />
+	</item>
+
+	<!-- Scroll: Enchant Weapon (Grade A) for 1800 Black Ice Crystals -->
+	<item id="4">
+		<ingredient id="8078" count="1800" />
+		<production id="729" count="1" />
+	</item>
+
+	<!-- Scroll: Enchant Armor (Grade A) for 240 Black Ice Crystals -->
+	<item id="5">
+		<ingredient id="8078" count="240" />
+		<production id="730" count="1" />
+	</item>
+
+	<!-- Scroll: Enchant Weapon (Grade B) for 500 Black Ice Crystals -->
+	<item id="6">
+		<ingredient id="8078" count="500" />
+		<production id="947" count="1" />
+	</item>
+
+	<!-- Scroll: Enchant Armor (Grade B) for 80 Black Ice Crystals -->
+	<item id="7">
+		<ingredient id="8078" count="80" />
+		<production id="948" count="1" />
+	</item>
+</list>

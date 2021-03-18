@@ -64,7 +64,8 @@ public class Book implements IItemHandler
 		7109,
 		7110,
 		7111,
-		7112
+		7112,
+		8059
 	};
 	
 	@Override

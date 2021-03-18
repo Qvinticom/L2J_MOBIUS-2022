@@ -215,6 +215,10 @@ public class Q023_LidiasHeart extends Quest
 						{
 							htmltext = "31328-08.htm";
 						}
+						else if (cond == 5)
+						{
+							htmltext = "31328-10.htm";
+						}
 						else if (cond > 5)
 						{
 							htmltext = "31328-21.htm";

@@ -274,7 +274,7 @@ public class Q120_PavelsResearch extends Quest
 			{
 				qs.set("cond", "15");
 				qs.playSound("ItemSound.quest_middle");
-				qs.giveItems(REPORT, 1);
+				qs.giveItems(REPORT2, 1);
 				npc.broadcastPacket(new MagicSkillUse(npc, qs.getPlayer(), 5073, 5, 1500, 0));
 				break;
 			}
@@ -657,7 +657,7 @@ public class Q120_PavelsResearch extends Quest
 			{
 				htmltext = "32044-06.htm";
 			}
-			else if (cond == 22)
+			else if (cond > 21)
 			{
 				htmltext = "32044-18.htm";
 			}

@@ -28,6 +28,7 @@ import org.l2jmobius.gameserver.model.quest.State;
 
 public class Q004_LongliveThePaagrioLord extends Quest
 {
+	private static final int NAKUSIN = 30578;
 	private static final Map<Integer, Integer> NPC_GIFTS = new HashMap<>();
 	static
 	{
@@ -99,7 +100,8 @@ public class Q004_LongliveThePaagrioLord extends Quest
 			case State.STARTED:
 				final int cond = st.getInt("cond");
 				final int npcId = npc.getNpcId();
-				if (npcId == 30578)
+				
+				if (npcId == NAKUSIN)
 				{
 					if (cond == 1)
 					{
@@ -123,12 +125,13 @@ public class Q004_LongliveThePaagrioLord extends Quest
 					final int i = NPC_GIFTS.get(npcId);
 					if (st.hasQuestItems(i))
 					{
-						htmltext = npcId + "-02.htm";
+						htmltext = "30585-02.htm";
 					}
 					else
 					{
 						st.giveItems(i, 1);
-						htmltext = npcId + "-01.htm";
+						htmltext = "30585-01.htm";
+						
 						int count = 0;
 						for (int item : NPC_GIFTS.values())
 						{

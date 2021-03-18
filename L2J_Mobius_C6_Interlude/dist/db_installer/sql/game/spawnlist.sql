@@ -38050,3 +38050,7 @@ INSERT INTO `spawnlist` VALUES
 (NULL,'goddard_castle_npc',1,'35654',147232,-49328,-2240,0,0,16384,60,0,0),
 (NULL,'rune_castle_npc',1,'35655',10280,-48766,-546,0,0,182,60,0,0),
 (NULL,'schuttgart_castle_npc',1,'35656',77320,-153372,-512,0,0,16384,60,0,0);
+
+-- Dr. Chaos Secret Bookshelf --
+INSERT INTO `spawnlist` VALUES 
+(NULL,'dr_chaos_bookshelf', 1, '32045', 96313, -110455, -3340, 0, 0, 50600, 60, 0, 0);
