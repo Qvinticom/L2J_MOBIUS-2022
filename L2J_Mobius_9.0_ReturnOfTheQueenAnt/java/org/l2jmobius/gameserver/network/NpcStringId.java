@@ -38590,11 +38590,11 @@ public class NpcStringId
 	@ClientString(id = 1803406, message = "See? There's nothing you and I can't do when we're together!")
 	public static NpcStringId SEE_THERE_S_NOTHING_YOU_AND_I_CAN_T_DO_WHEN_WE_RE_TOGETHER;
 	
-	@ClientString(id = 1803407, message = "The challenge for the Throne of Heroes will begin shortly. Please get ready.")
-	public static NpcStringId THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_WILL_BEGIN_SHORTLY_PLEASE_GET_READY;
+	@ClientString(id = 1803407, message = "The challenge for the Throne of Heroes - Goldberg will begin shortly.\nPlease get ready, heroes!")
+	public static NpcStringId THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_GOLDBERG_WILL_BEGIN_SHORTLY_PLEASE_GET_READY;
 	
-	@ClientString(id = 1803408, message = "The first challenge will begin in 10 seconds.")
-	public static NpcStringId THE_FIRST_CHALLENGE_WILL_BEGIN_IN_10_SECONDS;
+	@ClientString(id = 1803408, message = "The fighting against Goldberg will begin in 10 seconds.")
+	public static NpcStringId THE_FIGHTING_AGAINST_GOLDBERG_WILL_BEGIN_IN_10_SECONDS;
 	
 	@ClientString(id = 1803409, message = "5 seconds")
 	public static NpcStringId FIVE_SECONDS;
@@ -38611,41 +38611,41 @@ public class NpcStringId
 	@ClientString(id = 1803413, message = "1 second")
 	public static NpcStringId ONE_SECOND_2;
 	
-	@ClientString(id = 1803414, message = "The first challenge begins.")
-	public static NpcStringId THE_FIRST_CHALLENGE_BEGINS;
+	@ClientString(id = 1803414, message = "Goldberg appears.")
+	public static NpcStringId GOLDBERG_APPEARS;
 	
 	@ClientString(id = 1803415, message = "Darion frees himself from the restraints that suppressed him and reveals his true power.")
 	public static NpcStringId DARION_FREES_HIMSELF_FROM_THE_RESTRAINTS_THAT_SUPPRESSED_HIM_AND_REVEALS_HIS_TRUE_POWER;
 	
-	@ClientString(id = 1803416, message = "The first challenge has been completed successfully. The second challenge will begin shortly.")
-	public static NpcStringId THE_FIRST_CHALLENGE_HAS_BEEN_COMPLETED_SUCCESSFULLY_THE_SECOND_CHALLENGE_WILL_BEGIN_SHORTLY;
+	@ClientString(id = 1803416, message = "The challenge for the Throne of Heroes - Mary Reed will begin shortly.\nPlease get ready, heroes!")
+	public static NpcStringId THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_MARY_REED_WILL_BEGIN_SHORTLY;
 	
-	@ClientString(id = 1803417, message = "The second challenge will begin in 10 seconds.")
-	public static NpcStringId THE_SECOND_CHALLENGE_WILL_BEGIN_IN_10_SECONDS;
+	@ClientString(id = 1803417, message = "The fighting against Mary Reed will begin in 10 seconds.")
+	public static NpcStringId THE_FIGHTING_AGAINST_MARY_REED_WILL_BEGIN_IN_10_SECONDS;
 	
-	@ClientString(id = 1803418, message = "The second challenge will begin.")
-	public static NpcStringId THE_SECOND_CHALLENGE_WILL_BEGIN;
+	@ClientString(id = 1803418, message = "Mary Reed greets heroes.")
+	public static NpcStringId MARY_REED_GREETS_HEROES;
 	
-	@ClientString(id = 1803419, message = "Goldberg will summon his minions in 5 seconds.")
-	public static NpcStringId GOLDBERG_WILL_SUMMON_HIS_MINIONS_IN_5_SECONDS;
+	@ClientString(id = 1803419, message = "Goldberg summons his minions.")
+	public static NpcStringId GOLDBERG_SUMMONS_HIS_MINIONS;
 	
 	@ClientString(id = 1803420, message = "Goldberg brings out all of the power within him.")
 	public static NpcStringId GOLDBERG_BRINGS_OUT_ALL_OF_THE_POWER_WITHIN_HIM;
 	
-	@ClientString(id = 1803421, message = "The second challenge has been completed successfully. The third challenge will begin shortly.")
-	public static NpcStringId THE_SECOND_CHALLENGE_HAS_BEEN_COMPLETED_SUCCESSFULLY_THE_THIRD_CHALLENGE_WILL_BEGIN_SHORTLY;
+	@ClientString(id = 1803421, message = "The challenge for the Throne of Heroes - Tauti will begin shortly.\nPlease get ready, heroes!")
+	public static NpcStringId THE_CHALLENGE_FOR_THE_THRONE_OF_HEROES_TAUTI_WILL_BEGIN_SHORTLY;
 	
-	@ClientString(id = 1803422, message = "The third challenge will begin in 10 seconds.")
-	public static NpcStringId THE_THIRD_CHALLENGE_WILL_BEGIN_IN_10_SECONDS;
+	@ClientString(id = 1803422, message = "The fighting against Tauti will begin in 10 seconds.")
+	public static NpcStringId THE_FIGHTING_AGAINST_TAUTI_WILL_BEGIN_IN_10_SECONDS;
 	
-	@ClientString(id = 1803423, message = "The third challenge will begin.")
-	public static NpcStringId THE_THIRD_CHALLENGE_WILL_BEGIN;
+	@ClientString(id = 1803423, message = "Tauti is ready to fight.")
+	public static NpcStringId TAUTI_IS_READY_TO_FIGHT;
 	
-	@ClientString(id = 1803424, message = "The third challenge has been completed successfully. The fourth challenge will begin in a moment.")
-	public static NpcStringId THE_THIRD_CHALLENGE_HAS_BEEN_COMPLETED_SUCCESSFULLY_THE_FOURTH_CHALLENGE_WILL_BEGIN_IN_A_MOMENT;
+	@ClientString(id = 1803424, message = "Mary Reed, they are just insects. Haha! Show them your true power!")
+	public static NpcStringId MARY_REED_THEY_ARE_JUST_INSECTS_HAHA_SHOW_THEM_YOUR_TRUE_POWER;
 	
-	@ClientString(id = 1803425, message = "Zaken summons monsters from another world.")
-	public static NpcStringId ZAKEN_SUMMONS_MONSTERS_FROM_ANOTHER_WORLD;
+	@ClientString(id = 1803425, message = "Do you think you can evade my strike? Take that!")
+	public static NpcStringId DO_YOU_THINK_YOU_CAN_EVADE_MY_STRIKE_TAKE_THAT;
 	
 	@ClientString(id = 1803426, message = "Your blood is mine!")
 	public static NpcStringId YOUR_BLOOD_IS_MINE;
@@ -38656,11 +38656,11 @@ public class NpcStringId
 	@ClientString(id = 1803428, message = "Zaken reveals his hidden power.")
 	public static NpcStringId ZAKEN_REVEALS_HIS_HIDDEN_POWER;
 	
-	@ClientString(id = 1803429, message = "Tiat summons his minions.")
-	public static NpcStringId TIAT_SUMMONS_HIS_MINIONS;
+	@ClientString(id = 1803429, message = "Mary Reed, these brats are pretty strong. I shall rest up a bit.")
+	public static NpcStringId MARY_REED_THESE_BRATS_ARE_PRETTY_STRONG_I_SHALL_REST_UP_A_BIT;
 	
-	@ClientString(id = 1803430, message = "Tiat reveals his dignity.")
-	public static NpcStringId TIAT_REVEALS_HIS_DIGNITY;
+	@ClientString(id = 1803430, message = "Mary Reed, these brats are pretty strong. Watch out!")
+	public static NpcStringId MARY_REED_THESE_BRATS_ARE_PRETTY_STRONG_WATCH_OUT;
 	
 	@ClientString(id = 1803431, message = "Tauti summons his mechanical contraption.")
 	public static NpcStringId TAUTI_SUMMONS_HIS_MECHANICAL_CONTRAPTION;
@@ -38716,8 +38716,8 @@ public class NpcStringId
 	@ClientString(id = 1803448, message = "Antharas has suffered critical injuries.")
 	public static NpcStringId ANTHARAS_HAS_SUFFERED_CRITICAL_INJURIES;
 	
-	@ClientString(id = 1803449, message = "Mary Reed summons her minions.")
-	public static NpcStringId MARY_REED_SUMMONS_HER_MINIONS;
+	@ClientString(id = 1803449, message = "Zaken! Your time has come! Kill them all!")
+	public static NpcStringId MARY_REED_SUMMONS_ZAKEN;
 	
 	@ClientString(id = 1803450, message = "Mary Reed reveals her true power.")
 	public static NpcStringId MARY_REED_REVEALS_HER_TRUE_POWER;

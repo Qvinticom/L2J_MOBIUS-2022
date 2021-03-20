@@ -2925,7 +2925,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26250" level="105" type="RaidBoss" name="Goldberg">
+	<npc id="26250" level="115" type="RaidBoss" name="Goldberg">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="999279716400" sp="899342325" raidPoints="21" />
@@ -2939,6 +2939,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
+			<clanList>
+				<clan>GOLDBERG_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="37.5" />
 			<height normal="64.5" />
@@ -2948,32 +2953,8 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="46492" min="1" max="1" chance="4.198" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
-				<item id="46477" min="1" max="1" chance="4.146" /> <!-- Leona's Soul Crystal Lv. 4 -->
-				<item id="46507" min="1" max="1" chance="4.131" /> <!-- Lionel's Soul Crystal Lv. 4 -->
-				<item id="46493" min="1" max="1" chance="3.963" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
-				<item id="46478" min="1" max="1" chance="3.923" /> <!-- Leona's Soul Crystal Lv. 5 -->
-				<item id="46508" min="1" max="1" chance="3.904" /> <!-- Lionel's Soul Crystal Lv. 5 -->
-				<item id="46509" min="1" max="1" chance="3.286" /> <!-- Lionel's Soul Crystal Lv. 6 -->
-				<item id="46494" min="1" max="1" chance="3.211" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
-				<item id="46479" min="1" max="1" chance="3.184" /> <!-- Leona's Soul Crystal Lv. 6 -->
-				<item id="46462" min="1" max="1" chance="2.852" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
-				<item id="46447" min="1" max="1" chance="2.787" /> <!-- Kain's Soul Crystal Lv. 4 -->
-				<item id="46463" min="1" max="1" chance="2.661" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
-				<item id="46448" min="1" max="1" chance="2.569" /> <!-- Kain's Soul Crystal Lv. 5 -->
-				<item id="46449" min="1" max="1" chance="2.134" /> <!-- Kain's Soul Crystal Lv. 6 -->
-				<item id="46464" min="1" max="1" chance="2.103" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
-				<item id="46510" min="1" max="1" chance="1.219" /> <!-- Lionel's Soul Crystal Lv. 7 -->
-				<item id="46480" min="1" max="1" chance="1.182" /> <!-- Leona's Soul Crystal Lv. 7 -->
-				<item id="46495" min="1" max="1" chance="1.171" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
-				<item id="46465" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
-				<item id="46450" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal Lv. 7 -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="26251" level="85" type="Npc" name="Handy Cannon Gunner">
+	<npc id="26251" level="115" type="Monster" name="Handy Cannon Gunner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2986,13 +2967,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>GOLDBERG_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="26252" level="85" type="Npc" name="Anchor Warrior">
+	<npc id="26252" level="115" type="Monster" name="Anchor Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3005,13 +2991,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>GOLDBERG_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="26253" level="85" type="Npc" name="Operator">
+	<npc id="26253" level="115" type="Monster" name="Operator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3024,13 +3015,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>GOLDBERG_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="26254" level="85" type="Npc" name="Axe Warrior">
+	<npc id="26254" level="115" type="Monster" name="Axe Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3043,7 +3039,12 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>GOLDBERG_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -3052,7 +3053,7 @@
 	<npc id="26255" level="108" type="RaidBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3766456368864" sp="3389803344" />
+		<acquire exp="3766456368864" sp="3389803344" raidPoints="21" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="123163664.15391" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
 			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3063,6 +3064,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
+			<clanList>
+				<clan>ZAKEN_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="49.5" />
@@ -3072,32 +3078,8 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="46492" min="1" max="1" chance="8.27" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
-				<item id="46477" min="1" max="1" chance="8.221" /> <!-- Leona's Soul Crystal Lv. 4 -->
-				<item id="46507" min="1" max="1" chance="8.219" /> <!-- Lionel's Soul Crystal Lv. 4 -->
-				<item id="46478" min="1" max="1" chance="7.889" /> <!-- Leona's Soul Crystal Lv. 5 -->
-				<item id="46493" min="1" max="1" chance="7.844" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
-				<item id="46508" min="1" max="1" chance="7.827" /> <!-- Lionel's Soul Crystal Lv. 5 -->
-				<item id="46479" min="1" max="1" chance="6.392" /> <!-- Leona's Soul Crystal Lv. 6 -->
-				<item id="46494" min="1" max="1" chance="6.386" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
-				<item id="46509" min="1" max="1" chance="6.376" /> <!-- Lionel's Soul Crystal Lv. 6 -->
-				<item id="46462" min="1" max="1" chance="5.554" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
-				<item id="46447" min="1" max="1" chance="5.533" /> <!-- Kain's Soul Crystal Lv. 4 -->
-				<item id="46448" min="1" max="1" chance="5.261" /> <!-- Kain's Soul Crystal Lv. 5 -->
-				<item id="46463" min="1" max="1" chance="5.246" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
-				<item id="46464" min="1" max="1" chance="4.405" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
-				<item id="46449" min="1" max="1" chance="4.329" /> <!-- Kain's Soul Crystal Lv. 6 -->
-				<item id="46480" min="1" max="1" chance="2.319" /> <!-- Leona's Soul Crystal Lv. 7 -->
-				<item id="46495" min="1" max="1" chance="2.268" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
-				<item id="46510" min="1" max="1" chance="2.234" /> <!-- Lionel's Soul Crystal Lv. 7 -->
-				<item id="46450" min="1" max="1" chance="1.516" /> <!-- Kain's Soul Crystal Lv. 7 -->
-				<item id="46465" min="1" max="1" chance="1.503" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="26256" level="85" type="Npc" name="Devil Guardian">
+	<npc id="26256" level="108" type="Monster" name="Devil Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3110,13 +3092,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ZAKEN_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="26257" level="85" type="Npc" name="Devil Spearshooter">
+	<npc id="26257" level="108" type="Monster" name="Devil Spearshooter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3130,13 +3117,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ZAKEN_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="26258" level="85" type="Npc" name="Devil Warrior">
+	<npc id="26258" level="108" type="Monster" name="Devil Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3149,13 +3141,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ZAKEN_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="26259" level="85" type="Npc" name="Devil Dolores">
+	<npc id="26259" level="108" type="Monster" name="Devil Dolores">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3168,13 +3165,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ZAKEN_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="26260" level="85" type="Npc" name="Blader">
+	<npc id="26260" level="108" type="Monster" name="Blader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3187,35 +3189,46 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>ZAKEN_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26261" level="108" type="Monster" name="Tiat">
-		<race>DRAGON</race>
+	<npc id="26261" level="108" type="RaidBoss" name="Tiat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3766456368864" sp="3389803344" raidPoints="21" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="81988388.9122218" hpRegen="10.5" mp="54532.967032967" mpRegen="3.6" />
+			<vitals hp="126889330.100" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="80" />
 				<run ground="300" />
 			</speed>
-			<attack physical="700940.567009664" magical="819.655878366979" critical="4.75" attackSpeed="253" range="40" />
-			<defence physical="12373.6040609137" magical="3595.38938219141" />
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
-		</skillList>
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
+			<clanList>
+				<clan>TIAT_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="55" />
 			<height normal="104" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 		<dropLists>
 			<drop>
 				<item id="46507" min="1" max="1" chance="8.331" /> <!-- Lionel's Soul Crystal Lv. 4 -->
@@ -3241,12 +3254,13 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="26262" level="85" type="Npc" name="Dragontroop Spellshifter">
+	<npc id="26262" level="108" type="Monster" name="Dragontroop Spellshifter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
 				<walk ground="43" />
 				<run ground="230" />
@@ -3254,38 +3268,50 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>TIAT_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="29" />
 			<height normal="49.9" />
 		</collision>
 	</npc>
-	<npc id="26263" level="85" type="Npc" name="Dragontroop Royal Guard Captain">
+	<npc id="26263" level="108" type="Monster" name="Dragontroop Royal Guard Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
-				<walk ground="100" />
+				<walk ground="43" />
 				<run ground="230" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>TIAT_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="40" />
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26264" level="85" type="Npc" name="Dragontroop Lancer">
+	<npc id="26264" level="108" type="Monster" name="Dragontroop Lancer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="13843" />
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
 				<walk ground="89" />
 				<run ground="230" />
@@ -3293,18 +3319,24 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>TIAT_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="25" />
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="26265" level="85" type="Npc" name="Dragontroop Berserker">
+	<npc id="26265" level="108" type="Monster" name="Dragontroop Berserker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="230" />
@@ -3312,13 +3344,18 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>TIAT_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="50" />
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26266" level="108" type="RaidBoss" name="Tauti">
+	<npc id="26266" level="125" type="RaidBoss" name="Tauti">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="3766456368864" sp="3389803344" raidPoints="21" />
@@ -3341,37 +3378,13 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="46477" min="1" max="1" chance="8.345" /> <!-- Leona's Soul Crystal Lv. 4 -->
-				<item id="46492" min="1" max="1" chance="8.344" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
-				<item id="46507" min="1" max="1" chance="8.31" /> <!-- Lionel's Soul Crystal Lv. 4 -->
-				<item id="46493" min="1" max="1" chance="7.825" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
-				<item id="46478" min="1" max="1" chance="7.817" /> <!-- Leona's Soul Crystal Lv. 5 -->
-				<item id="46508" min="1" max="1" chance="7.772" /> <!-- Lionel's Soul Crystal Lv. 5 -->
-				<item id="46509" min="1" max="1" chance="6.486" /> <!-- Lionel's Soul Crystal Lv. 6 -->
-				<item id="46494" min="1" max="1" chance="6.481" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
-				<item id="46479" min="1" max="1" chance="6.373" /> <!-- Leona's Soul Crystal Lv. 6 -->
-				<item id="46447" min="1" max="1" chance="5.637" /> <!-- Kain's Soul Crystal Lv. 4 -->
-				<item id="46462" min="1" max="1" chance="5.557" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
-				<item id="46448" min="1" max="1" chance="5.34" /> <!-- Kain's Soul Crystal Lv. 5 -->
-				<item id="46463" min="1" max="1" chance="5.246" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
-				<item id="46449" min="1" max="1" chance="4.292" /> <!-- Kain's Soul Crystal Lv. 6 -->
-				<item id="46464" min="1" max="1" chance="4.277" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
-				<item id="46510" min="1" max="1" chance="2.317" /> <!-- Lionel's Soul Crystal Lv. 7 -->
-				<item id="46480" min="1" max="1" chance="2.262" /> <!-- Leona's Soul Crystal Lv. 7 -->
-				<item id="46495" min="1" max="1" chance="2.254" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
-				<item id="46450" min="1" max="1" chance="1.587" /> <!-- Kain's Soul Crystal Lv. 7 -->
-				<item id="46465" min="1" max="1" chance="1.539" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="26267" level="108" type="RaidBoss" name="Mary Reed">
+	<npc id="26267" level="120" type="RaidBoss" name="Mary Reed">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="3766456368864" sp="3389803344" raidPoints="21" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="81988388.9122218" hpRegen="470.5528213" mp="54532.967032967" mpRegen="3.3" />
+			<vitals hp="123163664.15391" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
 			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
@@ -3380,6 +3393,11 @@
 			</speed>
 		</stats>
 		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
+			<clanList>
+				<clan>MARY_REED_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="22" />
 			<height normal="62" />
@@ -3389,37 +3407,14 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="46507" min="1" max="1" chance="8.336" /> <!-- Lionel's Soul Crystal Lv. 4 -->
-				<item id="46492" min="1" max="1" chance="8.324" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
-				<item id="46477" min="1" max="1" chance="8.315" /> <!-- Leona's Soul Crystal Lv. 4 -->
-				<item id="46493" min="1" max="1" chance="7.873" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
-				<item id="46508" min="1" max="1" chance="7.846" /> <!-- Lionel's Soul Crystal Lv. 5 -->
-				<item id="46478" min="1" max="1" chance="7.835" /> <!-- Leona's Soul Crystal Lv. 5 -->
-				<item id="46509" min="1" max="1" chance="6.504" /> <!-- Lionel's Soul Crystal Lv. 6 -->
-				<item id="46479" min="1" max="1" chance="6.502" /> <!-- Leona's Soul Crystal Lv. 6 -->
-				<item id="46494" min="1" max="1" chance="6.379" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
-				<item id="46462" min="1" max="1" chance="5.62" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
-				<item id="46447" min="1" max="1" chance="5.542" /> <!-- Kain's Soul Crystal Lv. 4 -->
-				<item id="46463" min="1" max="1" chance="5.269" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
-				<item id="46448" min="1" max="1" chance="5.223" /> <!-- Kain's Soul Crystal Lv. 5 -->
-				<item id="46464" min="1" max="1" chance="4.364" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
-				<item id="46449" min="1" max="1" chance="4.355" /> <!-- Kain's Soul Crystal Lv. 6 -->
-				<item id="46510" min="1" max="1" chance="2.315" /> <!-- Lionel's Soul Crystal Lv. 7 -->
-				<item id="46495" min="1" max="1" chance="2.307" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
-				<item id="46480" min="1" max="1" chance="2.253" /> <!-- Leona's Soul Crystal Lv. 7 -->
-				<item id="46465" min="1" max="1" chance="1.604" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
-				<item id="46450" min="1" max="1" chance="1.485" /> <!-- Kain's Soul Crystal Lv. 7 -->
-			</drop>
-		</dropLists>
 	</npc>
-	<npc id="26268" level="85" type="Npc" name="Shield Master">
+	<npc id="26268" level="120" type="Monster" name="Shield Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -3427,18 +3422,24 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>MARY_REED_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="26269" level="85" type="Npc" name="Spear Master">
+	<npc id="26269" level="120" type="Monster" name="Spear Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -3446,19 +3447,25 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>MARY_REED_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="18" />
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="26270" level="85" type="Npc" name="Bow Master">
+	<npc id="26270" level="120" type="Monster" name="Bow Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -3466,18 +3473,24 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>MARY_REED_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="26.5" />
 		</collision>
 	</npc>
-	<npc id="26271" level="85" type="Npc" name="Magic Master">
+	<npc id="26271" level="120" type="Monster" name="Magic Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="12968700048" sp="11664000" />	
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="174624069" hpRegen="10.5" mp="235500" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -3485,7 +3498,12 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<ai type="BALANCED" clanHelpRange="4500" aggroRange="450">
+			<clanList>
+				<clan>MARY_REED_TOH</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="33.5" />

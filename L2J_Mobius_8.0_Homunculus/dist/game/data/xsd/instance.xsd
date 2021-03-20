@@ -142,6 +142,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:token">
 												<xs:enumeration value="CommandChannel" />
+												<xs:enumeration value="CommandChannelLeaderSameClan" />
 												<xs:enumeration value="CommandChannelLeader" />
 												<xs:enumeration value="Party" />
 												<xs:enumeration value="PartyLeader" />
