@@ -502,6 +502,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39186" level="1" /> <!-- Sayha's Blessing Chest -->
+		</skills>
 	</item>
 	<item id="49845" name="Sayha's Blessing" type="EtcItem">
 		<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
@@ -512,6 +516,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="50149" level="1" /> <!-- Sayha's Blessing -->
+		</skills>
 	</item>
 	<item id="49846" name="Sayha's Silver Light Blessing" type="EtcItem">
 		<!-- Sayha's Grace points +70,000. -->
@@ -522,6 +534,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="39192" level="1" /> <!-- Sayha's Silver Light Blessing -->
+		</skills>
 	</item>
 	<item id="49847" name="Sayha's Golden Light Blessing" type="EtcItem">
 		<!-- Sayha's Grace points +105,000. -->
@@ -532,6 +552,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="39193" level="1" /> <!-- Sayha's Golden Light Blessing -->
+		</skills>
 	</item>
 	<item id="49848" name="Fire Dragon Pendant Chest +10" type="EtcItem">
 		<!-- Double-click to obtain Fire Dragon Pendant +10. -->

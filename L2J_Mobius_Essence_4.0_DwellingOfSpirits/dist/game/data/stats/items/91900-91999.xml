@@ -1124,6 +1124,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="50163" level="1" /> <!-- Star Candy -->
+		</skills>
 	</item>
 	<item id="91972" name="Heavenly Rift Ticket" type="EtcItem">
 		<!-- Coupon for entering the Heavenly Rift from the Dimensional Vortex on the 1st floor of the Tower of Insolence. -->

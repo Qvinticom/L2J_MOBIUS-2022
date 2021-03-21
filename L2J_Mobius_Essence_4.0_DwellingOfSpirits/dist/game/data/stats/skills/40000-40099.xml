@@ -605,61 +605,157 @@
 		<!-- Craft points +100. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40076" toLevel="1" name="Craft Points +500">
 		<!-- Craft points +500. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>500</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40077" toLevel="1" name="Craft Points +1,000">
 		<!-- Craft points +1,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>1000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40078" toLevel="1" name="Craft Points +3,000">
 		<!-- Craft points +3,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>3000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40079" toLevel="1" name="Craft Points +5,000">
 		<!-- Craft points +5,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>5000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40080" toLevel="1" name="Craft Points +10,000">
 		<!-- Craft points +10,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>10000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40081" toLevel="1" name="Craft Points +30,000">
 		<!-- Craft points +30,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>30000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40082" toLevel="1" name="Craft Points +50,000">
 		<!-- Craft points +50,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>50000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40083" toLevel="1" name="Craft Points +100,000">
 		<!-- Craft points +100,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>100000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40084" toLevel="1" name="Craft Points +300,000">
 		<!-- Craft points +300,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>300000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40085" toLevel="1" name="Craft Points +500,000">
 		<!-- Craft points +500,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>500000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40086" toLevel="1" name="Craft Points +1,000,000">
 		<!-- Craft points +1,000,000. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ModifyCraftPoints">
+				<amount>1000000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40087" toLevel="1" name="Einhasad's Blessing Scroll">
 		<!-- For 20 min., acquired XP/ SP +50%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->

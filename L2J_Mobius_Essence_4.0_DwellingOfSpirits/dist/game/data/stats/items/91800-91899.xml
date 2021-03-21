@@ -441,6 +441,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91641" min="10" max="10" chance="100" /> <!-- Sayha's Blessing -->
+		</capsuled_items>
 	</item>
 	<item id="91836" name="Sayha's Effect Chest" type="EtcItem">
 		<!-- Double-click to obtain 20 Sayha's Buff Scrolls. There is a small chance to obtain an additional item. -->
@@ -613,6 +617,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="50127" level="1" /> <!-- Piggy's Star Candy -->
+		</skills>
 	</item>
 	<item id="91853" name="Old Home's Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain Special Dragon Fruit and Special Dragon's Miracle Potion. There is a chance to obtain Old Home's Golden/ Silver Chest. -->

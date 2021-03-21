@@ -31,9 +31,26 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40103" toLevel="1" name="Star Candy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>140000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40104" toLevel="1" name="Sayha's Storm Lv. 3 (Event)">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +200%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->
