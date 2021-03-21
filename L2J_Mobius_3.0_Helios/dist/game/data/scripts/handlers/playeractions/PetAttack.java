@@ -48,13 +48,6 @@ public class PetAttack implements IPlayerActionHandler
 		}
 		else if (pet.canAttack(player.getTarget(), ctrlPressed))
 		{
-			// Prevent spamming next target and attack to increase attack speed.
-			if (pet.isAttackingNow())
-			{
-				pet.abortAttack();
-				pet.abortCast();
-			}
-			
 			pet.doAttack(player.getTarget());
 		}
 	}

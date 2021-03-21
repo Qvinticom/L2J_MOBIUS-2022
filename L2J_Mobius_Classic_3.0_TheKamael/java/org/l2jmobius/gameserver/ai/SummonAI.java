@@ -44,6 +44,20 @@ public class SummonAI extends PlayableAI implements Runnable
 	private volatile boolean _isDefending;
 	private Future<?> _avoidTask = null;
 	
+	// Fix: Infinite Atk. Spd. exploit
+	private IntentionCommand _nextIntention = null;
+	
+	private void saveNextIntention(CtrlIntention intention, Object arg0, Object arg1)
+	{
+		_nextIntention = new IntentionCommand(intention, arg0, arg1);
+	}
+	
+	@Override
+	public IntentionCommand getNextIntention()
+	{
+		return _nextIntention;
+	}
+	
 	public SummonAI(Summon summon)
 	{
 		super(summon);
@@ -111,6 +125,14 @@ public class SummonAI extends PlayableAI implements Runnable
 		}
 		
 		clientStopMoving(null);
+		
+		// Fix: Infinite Atk. Spd. exploit
+		if (_actor.isAttackingNow())
+		{
+			saveNextIntention(AI_INTENTION_ATTACK, attackTarget, null);
+			return;
+		}
+		
 		_actor.doAutoAttack(attackTarget);
 	}
 	
