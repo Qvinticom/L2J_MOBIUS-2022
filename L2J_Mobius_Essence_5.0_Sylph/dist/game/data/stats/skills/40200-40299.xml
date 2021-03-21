@@ -301,34 +301,179 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40242" toLevel="1" name="Sayha's Blessing Scroll">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<hitTime>4000</hitTime>
+		<abnormalTime>1200</abnormalTime>
+		<itemConsumeId>94559</itemConsumeId> <!-- Sayha's Blessing Scroll - Event -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLevel>1</abnormalLevel>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLevel>1</magicLevel>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>40243</skillId> <!-- Sayha's Blessing Scroll - Stats -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>40244</skillId> <!-- Sayha's Blessing Scroll - Recovery Potions' Effect -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>40245</skillId> <!-- Sayha's Blessing Scroll - MP Recovery -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>40246</skillId> <!-- Sayha's Blessing Scroll - Atk./ Def. -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>40247</skillId> <!-- Sayha's Blessing Scroll - Atk. Spd./ Casting Spd. -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="40243" toLevel="1" name="Sayha's Blessing Scroll - Stats">
 		<!-- All stats +1. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<operateType>A2</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40244" toLevel="1" name="Sayha's Blessing Scroll - Recovery Potions' Effect">
 		<!-- HP Recovery Potion Effect +50. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<operateType>A2</operateType>
+		<effects>
+			<effect name="AdditionalPotionHp">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40245" toLevel="1" name="Sayha's Blessing Scroll - MP Recovery">
 		<!-- MP Recovery +10. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<operateType>A2</operateType>
+		<effects>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40246" toLevel="1" name="Sayha's Blessing Scroll - Atk./ Def.">
 		<!-- P. Atk. +150 M. Atk. +150 P. Def. +150 M. Def. +150 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<operateType>A2</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40247" toLevel="1" name="Sayha's Blessing Scroll - Atk. Spd./ Casting Spd.">
 		<!-- Atk. Spd. +100 Casting Spd. +100. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>1200</abnormalTime>
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<operateType>A2</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40248" toLevel="1" name="Primeval Garden's Time Stone">
 		<icon>icon.skill0000</icon>

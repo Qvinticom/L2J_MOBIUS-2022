@@ -446,6 +446,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51452" level="1" /> <!-- Scroll of Escape: High Priest Raymond -->
+		</skills>
 	</item>
 	<item id="91737" name="Brooch Lv. 1" additionalName="15 days" type="Armor">
 		<!-- Available for 15 days. Opens up 2 jewel slots. -->
@@ -801,6 +805,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="54050" level="1" /> <!-- Scroll of Escape: High Priest Orven -->
+		</skills>
 	</item>
 	<item id="91769" name="Shining Savior's Earring" additionalName="1 day" type="Armor">
 		<!-- Available for 1 d. Acquired XP/ SP +2%, Max HP +50, Max MP +30, Fear/ Stun/ Silence Resistance +4%. Grants Vampiric Rage effect. Effects of two identical earrings do not stack. -->
@@ -1127,6 +1135,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40103" level="1" /> <!-- Star Candy -->
+		</skills>
 	</item>
 	<item id="91796" name="Lucky Sack" additionalName="Event" type="EtcItem">
 		<!-- Lakfi-Lakfi's gift to celebrate the departing year of the Golden Pig. Double-click to obtain the Lakfi-Lakfi's Oink buff and a random reward. -->

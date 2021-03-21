@@ -181,6 +181,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91641" min="2" max="2" chance="100" /> <!-- Sayha's Blessing -->
+		</capsuled_items>
 	</item>
 	<item id="92017" name="Scroll: Enchant Talisman of Eva" type="EtcItem">
 		<!-- Required for enchanting Talisman of Eva. -->

@@ -1069,6 +1069,7 @@
 	<item id="93999" name="Sayha's Blessing Cube (5000 pcs.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (100 pcs.) once a day. -->
 		<set name="icon" val="icon.special_cube_i00" />
+		<set name="etcitem_type" val="ELIXIR" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

@@ -212,6 +212,20 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>30000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50128" toLevel="1" name="Old Home's Treasure Chest">
 		<operateType>A1</operateType>
@@ -593,6 +607,26 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>10000</value>
+			</effect>
+			<effect name="ModifyMagicLampPoints">
+				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50164" toLevel="1" name="Enhanced Warrior's Rapier Chest">
 		<operateType>A1</operateType>

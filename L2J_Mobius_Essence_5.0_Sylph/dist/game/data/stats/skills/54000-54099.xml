@@ -1798,6 +1798,26 @@
 	<skill id="54050" toLevel="1" name="Scroll of Escape: High Priest Orven">
 		<!-- A magical scroll that relocates you to High Priest Orven in Aden. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>91768</itemConsumeId> <!-- Scroll of Escape: High Priest Orven -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>147465</x>
+				<y>22668</y>
+				<z>-1984</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54051" toLevel="1" name="Magic Lamp Charging Potion (1-hour)">
 		<!-- Magic Lamp charging rate +20%. -->
@@ -2490,6 +2510,30 @@
 	</skill>
 	<skill id="54090" toLevel="1" name="Star Candy">
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>500</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>10000</value>
+			</effect>
+			<effect name="ModifyMagicLampPoints">
+				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54091" toLevel="5" name="Lakfi-Lakfi's Energy">
 		<!-- STR/ INT/ CON/ MEN/ DEX/ WIT +1. When the buff is cancelled, you obtain a gift from Lakfi-Lakfi. Note! The gift can't be obtained if your character is dead or if there is no free space in your inventory. You can't get the next level buff if your character is dead. -->

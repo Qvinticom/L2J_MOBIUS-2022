@@ -958,6 +958,26 @@
 	<skill id="39150" toLevel="1" name="Sayha's Holy Water">
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>20000</value>
+			</effect>
+			<effect name="ModifyMagicLampPoints">
+				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39151" toLevel="1" name="A-grade Armor Pack">
 		<icon>icon.etc_treasure_box_i07</icon>
@@ -1049,9 +1069,29 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="39159" toLevel="1" name="Sayha s Energy">
+	<skill id="39159" toLevel="1" name="Sayha's Energy">
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>35000</value>
+			</effect>
+			<effect name="ModifyMagicLampPoints">
+				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39160" toLevel="1" name="Emperor Baium's Secret Treasures">
 		<icon>icon.npoint_valakas_30day_box</icon>
@@ -1831,6 +1871,35 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49844</itemConsumeId> <!-- Sayha's Blessing Chest -->
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="80">
+						<item id="49845" count="1" /> <!-- Sayha's Blessing -->
+					</item>
+					<item chance="15">
+						<item id="49846" count="1" /> <!-- Sayha's Silver Light Blessing -->
+					</item>
+					<item chance="5">
+						<item id="49847" count="1" /> <!-- Sayha's Golden Light Blessing -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39187" toLevel="1" name="A-grade Accessory Pack">
 		<icon>icon.etc_treasure_box_i04</icon>
@@ -1884,10 +1953,38 @@
 	<skill id="39192" toLevel="1" name="Sayha's Silver Light Blessing">
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>70000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39193" toLevel="1" name="Sayha's Golden Light Blessing">
 		<operateType>A1</operateType>
 		<reuseDelay>600000</reuseDelay>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>105000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39194" toLevel="1" name="Sayha's Storm Lv. 1">
 		<!-- For 20 min., Sayha's Grace Consumption +100%, acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. You can cancel the effect by yourself. -->

@@ -809,6 +809,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91641" min="2" max="2" chance="100" /> <!-- Sayha's Blessing -->
+		</capsuled_items>
 	</item>
 	<item id="94171" name="Agathion Bracelet Pack Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

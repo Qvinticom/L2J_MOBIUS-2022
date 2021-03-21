@@ -33,6 +33,8 @@ import quests.Q10296_LetsPayRespectsToOurFallenBrethren.Q10296_LetsPayRespectsTo
 import quests.Q10297_MemoryOfTheGloriousPast.Q10297_MemoryOfTheGloriousPast;
 import quests.Q10298_TracesOfBattle.Q10298_TracesOfBattle;
 import quests.Q10299_GetIncrediblePower.Q10299_GetIncrediblePower;
+import quests.Q10300_ExploringTheCrumaTower.Q10300_ExploringTheCrumaTower;
+import quests.Q10301_NotSoSilentValley.Q10301_NotSoSilentValley;
 import quests.Q10673_SagaOfLegend.Q10673_SagaOfLegend;
 import quests.Q10954_SayhaChildren.Q10954_SayhaChildren;
 import quests.Q10955_NewLifeLessons.Q10955_NewLifeLessons;
@@ -83,6 +85,8 @@ public class QuestMasterHandler
 		Q10297_MemoryOfTheGloriousPast.class,
 		Q10298_TracesOfBattle.class,
 		Q10299_GetIncrediblePower.class,
+		Q10300_ExploringTheCrumaTower.class,
+		Q10301_NotSoSilentValley.class,
 		Q10954_SayhaChildren.class,
 		Q10955_NewLifeLessons.class,
 		Q10956_WeSylphs.class,

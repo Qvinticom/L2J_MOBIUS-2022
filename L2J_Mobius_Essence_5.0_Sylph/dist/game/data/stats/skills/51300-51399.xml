@@ -469,6 +469,26 @@
 	</skill>
 	<skill id="51377" toLevel="1" name="Sayha's Blessing (Event)">
 		<operateType>A1</operateType>
+		<magicLevel>1</magicLevel>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<conditions>
+			<condition name="CanUseVitalityIncreaseItem">
+				<amount>35000</amount>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SayhaGraceSupport" />
+			<effect name="VitalityPointUp">
+				<value>35000</value>
+			</effect>
+			<effect name="ModifyMagicLampPoints">
+				<amount>50000</amount>
+			</effect>
+			<effect name="ModifyCraftPoints">
+				<amount>3250</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51378" toLevel="1" name="Anniversary Gift Box">
 		<operateType>A1</operateType>

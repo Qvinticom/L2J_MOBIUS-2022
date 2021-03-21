@@ -1444,6 +1444,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91641" min="1000" max="1000" chance="100" /> <!-- Sayha's Blessing -->
+		</capsuled_items>
 	</item>
 	<item id="92397" name="Sayha's Blessing - Lv. 1-75" additionalName="Event" type="EtcItem">
 		<!-- Sayha's Grace points +35,000. Reqiured level: 1-75. -->
@@ -1454,9 +1458,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
 		<cond msgId="1902">
 			<player levelRange="1;75" />
 		</cond>
+		<skills>
+			<skill id="50149" level="1" /> <!-- Sayha's Blessing -->
+		</skills>
 	</item>
 	<item id="92398" name="Sayha's Blessing (Event)" type="EtcItem">
 		<!-- Sayha's Grace points +35,000. -->
@@ -1467,6 +1479,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="51377" level="1" /> <!-- Sayha's Blessing -->
+		</skills>
 	</item>
 	<item id="92399" name="Primeval Garden's Time Stone (Exchangeable)" type="EtcItem">
 		<!-- Prolongs your Session Zone's raid for 60 min. <Hunting Zone>. Forgotten Primeval Garden -->
