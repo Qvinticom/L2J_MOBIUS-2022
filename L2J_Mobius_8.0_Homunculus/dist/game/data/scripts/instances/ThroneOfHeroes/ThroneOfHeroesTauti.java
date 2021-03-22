@@ -104,31 +104,31 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 			case "ANNOUNCE_5":
 			{
 				showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_4", 2000, null, player);
+				startQuestTimer("ANNOUNCE_4", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_4":
 			{
 				showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_3", 2000, null, player);
+				startQuestTimer("ANNOUNCE_3", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_3":
 			{
 				showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_2", 2000, null, player);
+				startQuestTimer("ANNOUNCE_2", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_2":
 			{
 				showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_1", 2000, null, player);
+				startQuestTimer("ANNOUNCE_1", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_1":
 			{
 				showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("SPAWN_TAUTI", 2000, null, player);
+				startQuestTimer("SPAWN_TAUTI", 1000, null, player);
 				break;
 			}
 			case "SPAWN_TAUTI":
@@ -137,12 +137,6 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 				world.spawnGroup("TAUTI");
 				break;
 			}
-			// case "SPAWN_TAUTI_MINIONS":
-			// {
-			// showOnScreenMsg(world, NpcStringId.TAUTI_SUMMONS_HIS_MECHANICAL_CONTRAPTION, ExShowScreenMessage.TOP_CENTER, 5000, true);
-			// world.spawnGroup("TAUTI_MINIONS");
-			// break;
-			// }
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -154,19 +148,17 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 		if (isInInstance(world))
 		{
 			final int hpPer = npc.getCurrentHpPercent();
-			final int maxHp = npc.getMaxHp();
 			if (npc.getId() == TAUTI)
 			{
-				if ((hpPer < (maxHp * 0.50)) && npc.isScriptValue(0))
+				if ((hpPer <= 50) && world.isStatus(0))
 				{
-					// startQuestTimer("SPAWN_TAUTI_MINIONS", 10000, npc, null);
 					showOnScreenMsg(world, TAUTI_MESSAGES[getRandom(2)], ExShowScreenMessage.TOP_CENTER, 5000, true);
-					npc.setScriptValue(1);
+					world.setStatus(1);
 				}
-				else if ((hpPer < (maxHp * 0.30)) && npc.isScriptValue(1))
+				else if ((hpPer <= 30) && world.isStatus(1))
 				{
 					showOnScreenMsg(world, TAUTI_MESSAGES[getRandom(2)], ExShowScreenMessage.TOP_CENTER, 5000, true);
-					npc.setScriptValue(2);
+					world.setStatus(2);
 				}
 			}
 		}
@@ -181,26 +173,25 @@ public class ThroneOfHeroesTauti extends AbstractInstance
 		{
 			if (npc.getId() == TAUTI)
 			{
-				// Despawn minions and stop timer
-				// cancelQuestTimer("SPAWN_TAUTI_MINIONS", npc, killer);
-				// world.getAliveNpcs(TAUTI_MINIONS).forEach(beast -> beast.doDie(null));
-				
 				// Spawn treasure chests
 				boolean eightCCMembersOrMore = ((killer.getCommandChannel() != null) && (killer.getCommandChannel().getMemberCount() >= 8));
 				if (killer.isGM() || eightCCMembersOrMore)
 				{
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
 				}
 				else
 				{
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
 				}
 				// Finish instance
 				world.finishInstance(2);
-				// Set clan variable
-				killer.getClan().getVariables().set("TOH_DONE", Chronos.currentTimeMillis());
-				killer.getClan().getVariables().storeMe();
+				if (!killer.isGM())
+				{
+					// Set clan variable
+					killer.getClan().getVariables().set("TOH_DONE", Chronos.currentTimeMillis());
+					killer.getClan().getVariables().storeMe();
+				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

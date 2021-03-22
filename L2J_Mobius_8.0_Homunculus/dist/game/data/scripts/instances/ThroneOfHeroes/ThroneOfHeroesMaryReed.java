@@ -17,7 +17,6 @@
 package instances.ThroneOfHeroes;
 
 import org.l2jmobius.commons.util.Chronos;
-import org.l2jmobius.commons.util.CommonUtil;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
@@ -36,14 +35,8 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	private static final int ROIENTAL = 34571;
 	// Monsters
 	private static final int MARY_REED = 26267;
-	private static final int[] MARY_REED_MINIONS =
-	{
-		// add Zaken as minion
-		26268, // Shield Master -->
-		26269, // Spear Master -->
-		26270, // Bow Master -->
-		26271 // Magic Master -->
-	};
+	private static final int MARY_REED_MINION_ZAKEN = 26255;
+	
 	// Throne's Treasure Chest Mary Reed
 	private static final int TREASURE_CHEST = 26456;
 	
@@ -54,7 +47,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 	private static final int TEMPLATE_ID = 308;
 	
 	// Npc Dialogs
-	private static final NpcStringId[] MINIONS_MESSAGES =
+	private static final NpcStringId[] ZAKEN_MESSAGES =
 	{
 		NpcStringId.MARY_REED_THEY_ARE_JUST_INSECTS_HAHA_SHOW_THEM_YOUR_TRUE_POWER,
 		NpcStringId.MARY_REED_THESE_BRATS_ARE_PRETTY_STRONG_I_SHALL_REST_UP_A_BIT,
@@ -68,7 +61,7 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 		addInstanceCreatedId(TEMPLATE_ID);
 		addStartNpc(ROIENTAL);
 		addTalkId(ROIENTAL);
-		addAttackId(MARY_REED);
+		addAttackId(MARY_REED, MARY_REED_MINION_ZAKEN);
 		addKillId(MARY_REED);
 	}
 	
@@ -114,31 +107,31 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 			case "ANNOUNCE_5":
 			{
 				showOnScreenMsg(world, NpcStringId.FIVE_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_4", 2000, null, player);
+				startQuestTimer("ANNOUNCE_4", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_4":
 			{
 				showOnScreenMsg(world, NpcStringId.FOUR_SECONDS, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_3", 2000, null, player);
+				startQuestTimer("ANNOUNCE_3", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_3":
 			{
 				showOnScreenMsg(world, NpcStringId.THREE_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_2", 2000, null, player);
+				startQuestTimer("ANNOUNCE_2", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_2":
 			{
 				showOnScreenMsg(world, NpcStringId.TWO_SECONDS_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("ANNOUNCE_1", 2000, null, player);
+				startQuestTimer("ANNOUNCE_1", 1000, null, player);
 				break;
 			}
 			case "ANNOUNCE_1":
 			{
 				showOnScreenMsg(world, NpcStringId.ONE_SECOND_2, ExShowScreenMessage.TOP_CENTER, 1000, true);
-				startQuestTimer("SPAWN_MARY_REED", 2000, null, player);
+				startQuestTimer("SPAWN_MARY_REED", 1000, null, player);
 				break;
 			}
 			case "SPAWN_MARY_REED":
@@ -147,10 +140,16 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 				world.spawnGroup("MARY_REED");
 				break;
 			}
-			case "SPAWN_MARY_REED_MINIONS":
+			case "ANNOUNCE_MARY_REED_SPAWNS_ZAKEN":
 			{
 				showOnScreenMsg(world, NpcStringId.MARY_REED_SUMMONS_ZAKEN, ExShowScreenMessage.TOP_CENTER, 5000, true);
-				world.spawnGroup("MARY_REED_MINIONS");
+				startQuestTimer("MARY_REED_SPAWNS_ZAKEN", 10000, null, player);
+				break;
+			}
+			case "MARY_REED_SPAWNS_ZAKEN":
+			{
+				showOnScreenMsg(world, NpcStringId.ZAKEN_YOUR_TIME_HAS_COME, ExShowScreenMessage.TOP_CENTER, 5000, true);
+				world.spawnGroup("MARY_REED_MINION_ZAKEN");
 				break;
 			}
 		}
@@ -164,23 +163,22 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 		if (isInInstance(world))
 		{
 			final int hpPer = npc.getCurrentHpPercent();
-			final int maxHp = npc.getMaxHp();
 			if (npc.getId() == MARY_REED)
 			{
-				if ((hpPer < (maxHp * 0.50)) && npc.isScriptValue(0))
+				if ((hpPer <= 50) && world.isStatus(0))
 				{
-					startQuestTimer("SPAWN_MARY_REED_MINIONS", 10000, npc, null);
-					npc.setScriptValue(1);
+					startQuestTimer("ANNOUNCE_MARY_REED_SPAWNS_ZAKEN", 10000, npc, null);
+					world.setStatus(1);
 				}
-				else if ((hpPer < (maxHp * 0.30)) && npc.isScriptValue(1))
+				else if ((hpPer <= 30) && world.isStatus(1))
 				{
 					showOnScreenMsg(world, NpcStringId.DO_YOU_THINK_YOU_CAN_EVADE_MY_STRIKE_TAKE_THAT, ExShowScreenMessage.TOP_CENTER, 5000, true);
-					npc.setScriptValue(2);
+					world.setStatus(2);
 				}
 			}
-			else if (CommonUtil.contains(MARY_REED_MINIONS, npc.getId()) && world.getNpc(MARY_REED).isScriptValue(2))
+			else if ((npc.getId() == MARY_REED_MINION_ZAKEN) && world.isStatus(2))
 			{
-				showOnScreenMsg(world, MINIONS_MESSAGES[getRandom(4)], ExShowScreenMessage.TOP_CENTER, 5000, true);
+				showOnScreenMsg(world, ZAKEN_MESSAGES[getRandom(4)], ExShowScreenMessage.TOP_CENTER, 5000, true);
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -195,25 +193,28 @@ public class ThroneOfHeroesMaryReed extends AbstractInstance
 			if (npc.getId() == MARY_REED)
 			{
 				// Despawn minions and stop timer
-				cancelQuestTimer("SPAWN_MARY_REED_MINIONS", npc, killer);
-				world.getAliveNpcs(MARY_REED_MINIONS).forEach(beast -> beast.doDie(null));
+				cancelQuestTimer("ANNOUNCE_MARY_REED_SPAWNS_ZAKEN", npc, killer);
+				world.getAliveNpcs(MARY_REED_MINION_ZAKEN).forEach(beast -> beast.doDie(null));
 				
 				// Spawn treasure chests
 				boolean eightCCMembersOrMore = ((killer.getCommandChannel() != null) && (killer.getCommandChannel().getMemberCount() >= 8));
 				if (killer.isGM() || eightCCMembersOrMore)
 				{
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
 				}
 				else
 				{
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
 				}
 				// Finish instance
 				world.finishInstance(2);
-				// Set clan variable
-				killer.getClan().getVariables().set("TOH_DONE", Chronos.currentTimeMillis());
-				killer.getClan().getVariables().storeMe();
+				if (!killer.isGM())
+				{
+					// Set clan variable
+					killer.getClan().getVariables().set("TOH_DONE", Chronos.currentTimeMillis());
+					killer.getClan().getVariables().storeMe();
+				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

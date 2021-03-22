@@ -4,8 +4,7 @@
 	<time duration="60" empty="1" />
 	<locations>
 		<enter type="FIXED">
-			<location x="11722" y="-85014" z="-10972" /> <!-- battle location -->
-			<!-- <location x="11715" y="-84303" z="-11030" /> behind the door -->
+			<location x="11722" y="-85014" z="-10972" heading="52300" /> <!-- battle location -->
 		</enter>
 		<exit type="ORIGIN" />
 	</locations>
@@ -39,10 +38,10 @@
 			<npc id="26250" x="11704" y="-86511" z="-10929" heading="0" /> <!-- Goldberg -->
 		</group>
 		<group name="GOLDBERG_MINIONS" spawnByDefault="false">
-			<npc id="26251" x="11797" y="-86046" z="-10964" heading="0" respawnTime="1min" /> <!-- Handy Cannon Gunner -->
-			<npc id="26252" x="11704" y="-86904" z="-10964" heading="0" respawnTime="1min" /> <!-- Anchor Warrior -->
-			<npc id="26253" x="11303" y="-86510" z="-10964" heading="0" respawnTime="1min" /> <!-- Operator -->
-			<npc id="26254" x="12136" y="-86488" z="-10964" heading="0" respawnTime="1min" /> <!-- Axe Warrior -->
+			<npc id="26251" x="11797" y="-86046" z="-10964" heading="0" /> <!-- Handy Cannon Gunner -->
+			<npc id="26252" x="11704" y="-86904" z="-10964" heading="0" /> <!-- Anchor Warrior -->
+			<npc id="26253" x="11303" y="-86510" z="-10964" heading="0" /> <!-- Operator -->
+			<npc id="26254" x="12136" y="-86488" z="-10964" heading="0" /> <!-- Axe Warrior -->
 		</group>
 	</spawnlist>
 </instance>

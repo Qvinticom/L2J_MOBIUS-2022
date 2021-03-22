@@ -3050,7 +3050,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="26255" level="108" type="RaidBoss" name="Zaken">
+	<npc id="26255" level="120" type="RaidBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="3766456368864" sp="3389803344" raidPoints="21" />
@@ -3066,7 +3066,7 @@
 		<status attackable="true" />
 		<ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
 			<clanList>
-				<clan>ZAKEN_TOH</clan>
+				<clan>MARY_REED_TOH</clan>
 			</clanList>
 		</ai>
 		<collision>

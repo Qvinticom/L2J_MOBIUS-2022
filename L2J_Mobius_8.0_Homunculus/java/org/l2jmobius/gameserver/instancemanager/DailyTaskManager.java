@@ -19,7 +19,9 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -67,6 +69,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetRecommends();
 		resetWorldChatPoints();
 		resetTrainingCamp();
+		resetThroneOfHeroes();
 	}
 	
 	@ScheduleTarget
@@ -250,6 +253,41 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	private void resetDailyMissionRewards()
 	{
 		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
+	}
+	
+	public void resetThroneOfHeroes()
+	{
+		// Update data for offline players.
+		try (Connection con = DatabaseFactory.getConnection())
+		{
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM clan_variables WHERE var=?"))
+			{
+				ps.setString(1, "TOH_DONE");
+				ps.execute();
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not reset Throne of Heroes Reenter: " + e);
+		}
+		
+		// Update data for online players.
+		final Set<Clan> clans = new HashSet<>();
+		for (PlayerInstance player : World.getInstance().getPlayers())
+		{
+			final Clan clan = player.getClan();
+			if (clan != null)
+			{
+				clans.add(clan);
+			}
+		}
+		for (Clan clan : clans)
+		{
+			clan.getVariables().remove("TOH_DONE");
+			clan.getVariables().storeMe();
+		}
+		
+		LOGGER.info("Throne of Heroes Entry has been resetted.");
 	}
 	
 	public static DailyTaskManager getInstance()

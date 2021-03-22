@@ -152,18 +152,17 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 		if (isInInstance(world))
 		{
 			final int hpPer = npc.getCurrentHpPercent();
-			final int maxHp = npc.getMaxHp();
 			if (npc.getId() == GOLDBERG)
 			{
-				if ((hpPer < (maxHp * 0.50)) && npc.isScriptValue(0))
+				if ((hpPer <= 50) && world.isStatus(0))
 				{
 					startQuestTimer("SPAWN_GOLDBERG_MINIONS", 10000, npc, null);
-					npc.setScriptValue(1);
+					world.setStatus(1);
 				}
-				else if ((hpPer < (maxHp * 0.30)) && npc.isScriptValue(1))
+				else if ((hpPer <= 30) && world.isStatus(1))
 				{
 					showOnScreenMsg(world, NpcStringId.GOLDBERG_BRINGS_OUT_ALL_OF_THE_POWER_WITHIN_HIM, ExShowScreenMessage.TOP_CENTER, 5000, true);
-					npc.setScriptValue(2);
+					world.setStatus(2);
 				}
 			}
 		}
@@ -186,18 +185,21 @@ public class ThroneOfHeroesGoldberg extends AbstractInstance
 				boolean eightCCMembersOrMore = ((killer.getCommandChannel() != null) && (killer.getCommandChannel().getMemberCount() >= 8));
 				if (killer.isGM() || eightCCMembersOrMore)
 				{
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
 				}
 				else
 				{
-					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true);
+					addSpawn(TREASURE_CHEST, killer.getX() + getRandom(-150, 150), killer.getY() + getRandom(-150, 150), killer.getZ() + 10, 0, false, 0, true, world.getId());
 				}
 				// Finish instance
 				world.finishInstance(2);
-				// Set clan variable
-				killer.getClan().getVariables().set("TOH_DONE", Chronos.currentTimeMillis());
-				killer.getClan().getVariables().storeMe();
+				if (!killer.isGM())
+				{
+					// Set clan variable
+					killer.getClan().getVariables().set("TOH_DONE", Chronos.currentTimeMillis());
+					killer.getClan().getVariables().storeMe();
+				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

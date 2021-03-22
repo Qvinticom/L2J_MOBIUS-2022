@@ -4,8 +4,7 @@
 	<time duration="60" empty="1" />
 	<locations>
 		<enter type="FIXED">
-			<location x="11722" y="-85014" z="-10972" /> <!-- battle location -->
-			<!-- <location x="11715" y="-84303" z="-11030" /> behind the door -->
+			<location x="11722" y="-85014" z="-10972" heading="52300" /> <!-- battle location -->
 		</enter>
 		<exit type="ORIGIN" />
 	</locations>
@@ -38,11 +37,8 @@
 		<group name="MARY_REED" spawnByDefault="false">
 			<npc id="26267" x="11704" y="-86511" z="-10929" heading="0" /> <!-- Mary Reed -->
 		</group>
-		<group name="MARY_REED_MINIONS" spawnByDefault="false">
-			<npc id="26268" x="11797" y="-86046" z="-10964" heading="0" respawnTime="1min" /> <!-- Shield Master -->
-			<npc id="26269" x="11704" y="-86904" z="-10964" heading="0" respawnTime="1min" /> <!-- Spear Master -->
-			<npc id="26270" x="11303" y="-86510" z="-10964" heading="0" respawnTime="1min" /> <!-- Bow Master -->
-			<npc id="26271" x="12136" y="-86488" z="-10964" heading="0" respawnTime="1min" /> <!-- Magic Master -->
+		<group name="MARY_REED_MINION_ZAKEN" spawnByDefault="false">
+			<npc id="26255" x="11797" y="-86046" z="-10964" heading="0" /> <!-- Zaken -->
 		</group>
 	</spawnlist>
 </instance>

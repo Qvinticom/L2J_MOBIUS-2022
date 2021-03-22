@@ -38717,7 +38717,7 @@ public class NpcStringId
 	public static NpcStringId ANTHARAS_HAS_SUFFERED_CRITICAL_INJURIES;
 	
 	@ClientString(id = 1803449, message = "Zaken! Your time has come! Kill them all!")
-	public static NpcStringId MARY_REED_SUMMONS_ZAKEN;
+	public static NpcStringId ZAKEN_YOUR_TIME_HAS_COME;
 	
 	@ClientString(id = 1803450, message = "Mary Reed reveals her true power.")
 	public static NpcStringId MARY_REED_REVEALS_HER_TRUE_POWER;
@@ -39082,8 +39082,8 @@ public class NpcStringId
 	@ClientString(id = 1803599, message = "The fourth challenge begins.")
 	public static NpcStringId THE_FOURTH_CHALLENGE_BEGINS;
 	
-	@ClientString(id = 1803600, message = "The fourth challenge has been completed successfully.")
-	public static NpcStringId THE_FOURTH_CHALLENGE_HAS_BEEN_COMPLETED_SUCCESSFULLY;
+	@ClientString(id = 1803600, message = "Mary Reed summons Zaken.\nZaken will be here very soon.")
+	public static NpcStringId MARY_REED_SUMMONS_ZAKEN;
 	
 	@ClientString(id = 1803601, message = "Ekimus summons his minions.")
 	public static NpcStringId EKIMUS_SUMMONS_HIS_MINIONS;
