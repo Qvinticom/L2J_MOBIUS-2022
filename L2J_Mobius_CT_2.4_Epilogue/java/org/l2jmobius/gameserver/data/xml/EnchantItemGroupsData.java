@@ -122,9 +122,9 @@ public class EnchantItemGroupsData implements IXmlReader
 										{
 											rateGroup.setMagicWeapon(parseBoolean(attrs, "magicWeapon"));
 										}
-										if (attrs.getNamedItem("id") != null)
+										if (attrs.getNamedItem("itemId") != null)
 										{
-											rateGroup.setItemId(parseInteger(attrs, "id"));
+											rateGroup.setItemId(parseInteger(attrs, "itemId"));
 										}
 									}
 								}
