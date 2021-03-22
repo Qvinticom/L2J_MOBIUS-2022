@@ -172,11 +172,6 @@ public class EnchantScroll extends AbstractEnchantItem
 				{
 					return false;
 				}
-				
-				if (scroll.isCursed() && (itemToEnchant.getEnchantLevel() <= 2))
-				{
-					return false;
-				}
 			}
 		}
 		return super.isValid(itemToEnchant, supportItem);
