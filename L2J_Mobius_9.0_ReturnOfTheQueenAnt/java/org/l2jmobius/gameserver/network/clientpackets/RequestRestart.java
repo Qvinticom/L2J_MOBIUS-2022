@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.ConnectionState;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
@@ -57,18 +58,24 @@ public class RequestRestart implements IClientIncomingPacket
 			return;
 		}
 		
+		// Unregister from olympiad.
+		if (OlympiadManager.getInstance().isRegistered(player))
+		{
+			OlympiadManager.getInstance().unRegisterNoble(player);
+		}
+		
 		LOGGER_ACCOUNTING.info("Logged out, " + client);
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{
 			Disconnection.of(client, player).storeMe().deleteMe();
 		}
 		
-		// return the client to the authed status
+		// Return the client to the authenticated status.
 		client.setConnectionState(ConnectionState.AUTHENTICATED);
 		
 		client.sendPacket(RestartResponse.TRUE);
 		
-		// send char list
+		// Send character list.
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
 		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());

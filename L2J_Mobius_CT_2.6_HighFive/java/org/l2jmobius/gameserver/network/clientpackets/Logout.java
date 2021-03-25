@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -54,8 +55,14 @@ public class Logout implements IClientIncomingPacket
 			return;
 		}
 		
-		// Remove player from Boss Zone
+		// Remove player from boss zone.
 		player.removeFromBossZone();
+		
+		// Unregister from olympiad.
+		if (OlympiadManager.getInstance().isRegistered(player))
+		{
+			OlympiadManager.getInstance().unRegisterNoble(player);
+		}
 		
 		LOGGER_ACCOUNTING.info("Logged out, " + client);
 		if (!OfflineTradeUtil.enteredOfflineMode(player))

@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -52,6 +53,12 @@ public class Logout implements IClientIncomingPacket
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
+		}
+		
+		// Unregister from olympiad.
+		if (OlympiadManager.getInstance().isRegistered(player))
+		{
+			OlympiadManager.getInstance().unRegisterNoble(player);
 		}
 		
 		LOGGER_ACCOUNTING.info("Logged out, " + client);
