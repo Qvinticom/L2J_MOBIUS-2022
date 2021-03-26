@@ -189,8 +189,7 @@ public class SkillData implements IXmlReader
 	public List<Skill> getSiegeSkills(boolean addNoble, boolean hasCastle)
 	{
 		final List<Skill> temp = new LinkedList<>();
-		temp.add(_skills.get(getSkillHashCode(CommonSkill.IMPRIT_OF_LIGHT.getId(), 1)));
-		temp.add(_skills.get(getSkillHashCode(CommonSkill.IMPRIT_OF_DARKNESS.getId(), 1)));
+		temp.add(_skills.get(getSkillHashCode(CommonSkill.SEAL_OF_RULER.getId(), 1)));
 		temp.add(_skills.get(getSkillHashCode(247, 1))); // Build Headquarters
 		if (addNoble)
 		{
