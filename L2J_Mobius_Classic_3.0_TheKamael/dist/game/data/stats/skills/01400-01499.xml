@@ -2732,7 +2732,29 @@
 	<skill id="1448" toLevel="1" name="Blink">
 		<!-- Teleports to the back. -->
 		<icon>icon.skill1448</icon>
+		<coolTime>200</coolTime>
+		<hitTime>100</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLevel>32</magicLevel>
+		<mpConsume>20</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpBlink">
+				<direction>BACK</direction>
+				<range>400</range>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Blink">
+				<angle>0</angle>
+				<range>400</range>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1449" toLevel="1" name="Transfer Soul">
 		<!-- Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. -->
