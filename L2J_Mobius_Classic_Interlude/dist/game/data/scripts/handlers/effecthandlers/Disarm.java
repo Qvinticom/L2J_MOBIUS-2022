@@ -16,13 +16,18 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.l2jmobius.gameserver.model.StatSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
+import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
 /**
  * Disarm effect implementation.
@@ -30,6 +35,8 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class Disarm extends AbstractEffect
 {
+	private static final Map<Integer, Integer> _disarmedPlayers = new ConcurrentHashMap<>();
+	
 	public Disarm(StatSet params)
 	{
 	}
@@ -47,12 +54,55 @@ public class Disarm extends AbstractEffect
 	}
 	
 	@Override
-	public void continuousInstant(Creature effector, Creature effected, Skill skill, ItemInstance item)
+	public void onStart(Creature effector, Creature effected, Skill skill, ItemInstance item)
 	{
 		final PlayerInstance player = effected.getActingPlayer();
-		if (player != null)
+		if (player == null)
 		{
-			player.disarmWeapons();
+			return;
 		}
+		
+		final ItemInstance itemToDisarm = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		if (itemToDisarm == null)
+		{
+			return;
+		}
+		
+		final int slot = player.getInventory().getSlotFromItem(itemToDisarm);
+		player.getInventory().unEquipItemInBodySlot(slot);
+		
+		final InventoryUpdate iu = new InventoryUpdate();
+		iu.addModifiedItem(itemToDisarm);
+		player.sendInventoryUpdate(iu);
+		player.broadcastUserInfo();
+		
+		_disarmedPlayers.put(player.getObjectId(), itemToDisarm.getObjectId());
+	}
+	
+	@Override
+	public void onExit(Creature effector, Creature effected, Skill skill)
+	{
+		final PlayerInstance player = effected.getActingPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		final Integer itemObjectId = _disarmedPlayers.remove(effected.getObjectId());
+		if (itemObjectId == null)
+		{
+			return;
+		}
+		
+		final ItemInstance item = player.getInventory().getItemByObjectId(itemObjectId);
+		if (item == null)
+		{
+			return;
+		}
+		
+		player.getInventory().equipItem(item);
+		final InventoryUpdate iu = new InventoryUpdate();
+		iu.addModifiedItem(item);
+		player.sendInventoryUpdate(iu);
 	}
 }
