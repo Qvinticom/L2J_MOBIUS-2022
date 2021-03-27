@@ -585,6 +585,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40121" level="1" /> <!-- Highr-Grade Red Lantern -->
+		</skills>
 	</item>
 	<item id="93339" name="High-grade Purple Lantern" additionalName="2nd place" type="EtcItem">
 		<!-- Reward for achieving the 2nd place in the Big Magic Lamp event. XP +360,000,000, SP +9,720,000. -->
@@ -595,6 +599,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40122" level="1" /> <!-- Highr-Grade Purple Lantern -->
+		</skills>
 	</item>
 	<item id="93340" name="High-grade Blue Lantern" additionalName="3rd place" type="EtcItem">
 		<!-- Reward for achieving the 3rd place in the Big Magic Lamp event. XP +120,000,000, SP +3,240,000. -->
@@ -605,6 +613,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40123" level="1" /> <!-- Highr-Grade Blue Lantern -->
+		</skills>
 	</item>
 	<item id="93341" name="High-grade Green Lantern" additionalName="4th place" type="EtcItem">
 		<!-- Reward for achieving the 4th place in the Big Magic Lamp event. XP +60,000,000, SP +1,620,000. -->
@@ -615,6 +627,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40124" level="1" /> <!-- Highr-Grade Green Lantern -->
+		</skills>
 	</item>
 	<item id="93342" name="High-grade Lit Red Lantern" additionalName="1st place" type="EtcItem">
 		<!-- Reward for achieving the 1st place in the Big Magic Lamp event. XP +1,200,000,000, SP +32,400,000. Cannot be transferred to higher-level characters. -->
@@ -626,6 +642,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40125" level="1" /> <!-- Highr-Grade Red Lantern -->
+		</skills>
 	</item>
 	<item id="93343" name="High-grade Lit Purple Lantern" additionalName="2nd place" type="EtcItem">
 		<!-- Reward for achieving the 2nd place in the Big Magic Lamp event. XP +360,000,000, SP +9,720,000. Cannot be transferred to higher-level characters. -->
@@ -637,6 +657,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40126" level="1" /> <!-- Highr-Grade Purple Lantern -->
+		</skills>
 	</item>
 	<item id="93344" name="High-grade Lit Blue Lantern" additionalName="3rd place" type="EtcItem">
 		<!-- <Reward for achieving the 3rd place in the Big Magic Lamp event>. XP +120,000,000, SP +3,240,00. Cannot be transferred to higher-level characters. -->
@@ -648,6 +672,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40127" level="1" /> <!-- Highr-Grade Blue Lantern -->
+		</skills>
 	</item>
 	<item id="93345" name="High-grade Lit Green Lantern" additionalName="4th place" type="EtcItem">
 		<!-- Reward for achieving the 4th place in the Big Magic Lamp event. XP +60,000,000, SP +1,620,000. Cannot be transferred to higher-level characters. -->
@@ -659,6 +687,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40128" level="1" /> <!-- Highr-Grade Green Lantern -->
+		</skills>
 	</item>
 	<item id="93346" name="Deton's Request Lv. 1" type="EtcItem">
 		<!-- A request issued by Deton to eliminate monsters in the Plains of the Lizardmen, Dragon Valley and the Tower of Insolence. Characters of Lv. 70+ can receive the request by double-clicking the item. -->

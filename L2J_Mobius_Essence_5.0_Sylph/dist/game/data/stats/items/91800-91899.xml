@@ -690,6 +690,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="51399" level="1" /> <!-- Red Lantern - 1st Place -->
+		</skills>
 	</item>
 	<item id="91859" name="Lit Purple Lantern" additionalName="2nd place" type="EtcItem">
 		<!-- Magic lantern given as a reward for achieving the 2nd place. XP +30,000,000, SP +810,000. Cannot be transferred to higher-level characters. -->
@@ -701,6 +705,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="51400" level="1" /> <!-- Purple Lantern - 2nd Place -->
+		</skills>
 	</item>
 	<item id="91860" name="Lit Blue Lantern" additionalName="3rd place" type="EtcItem">
 		<!-- Magic lantern given as a reward for achieving the 3rd place. XP +10,000,000, SP +270,000. Cannot be transferred to higher-level characters. -->
@@ -712,6 +719,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="51401" level="1" /> <!-- Blue Lantern - 3rd Place -->
+		</skills>
 	</item>
 	<item id="91861" name="Lit Green Lantern" additionalName="4th place" type="EtcItem">
 		<!-- Magic lantern given as a reward for achieving the 4th place. XP +5,000,000, SP +135,000. Cannot be transferred to higher-level characters. -->
@@ -723,6 +733,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="51402" level="1" /> <!-- Red Lantern - 4th Place -->
+		</skills>
 	</item>
 	<item id="91862" name="Dragon Belt" type="Armor">
 		<!-- Belt imbued with the dragon's power. Can be enchanted up to +10. -->
@@ -967,6 +980,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1530" />
 		<set name="price" val="967000" />
@@ -990,6 +1004,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1530" />
 		<set name="price" val="644000" />
@@ -1013,6 +1028,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1530" />
 		<set name="price" val="409000" />
@@ -1264,6 +1280,7 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="1800000" />
@@ -1286,6 +1303,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="1400000" />
@@ -1308,6 +1326,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="967000" />
@@ -1330,6 +1349,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
+		<set name="crystal_count" val="1170" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="644000" />

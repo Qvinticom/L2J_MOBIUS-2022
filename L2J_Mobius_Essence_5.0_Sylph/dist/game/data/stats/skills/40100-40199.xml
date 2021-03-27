@@ -1,16 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="40100" toLevel="1" name="Purple Lantern - 2nd Place">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+ 		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91669</itemConsumeId> <!-- Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>30000000</xp>
+				<sp>810000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40101" toLevel="1" name="Blue Lantern - 3rd Place">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>93074</itemConsumeId> <!-- Blue Lantern -->
+		<itemConsumeId>91670</itemConsumeId> <!-- Blue Lantern -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLevel>1</magicLevel>
@@ -26,9 +39,23 @@
 		</effects>
 	</skill>
 	<skill id="40102" toLevel="1" name="Green Lantern - 4th Place">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+ 		<icon>icon.skill0000</icon>
+ 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91671</itemConsumeId> <!-- Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>5000000</xp>
+				<sp>135000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40103" toLevel="1" name="Star Candy">
 		<icon>icon.skill0000</icon>
@@ -198,7 +225,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91668</itemConsumeId> <!-- Red Lantern -->
+		<itemConsumeId>93338</itemConsumeId> <!-- High-Grade Red Lantern -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLevel>1</magicLevel>
@@ -208,8 +235,8 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="GiveExpAndSp">
-				<xp>100000000</xp>
-				<sp>2700000</sp>
+				<xp>1200000000</xp>
+				<sp>32400000</sp>
 			</effect>
 		</effects>
 	</skill>
@@ -218,7 +245,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91669</itemConsumeId> <!-- Red Lantern -->
+		<itemConsumeId>93339</itemConsumeId> <!-- High-Grade Purple Lantern -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLevel>1</magicLevel>
@@ -228,8 +255,8 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="GiveExpAndSp">
-				<xp>30000000</xp>
-				<sp>810000</sp>
+				<xp>360000000</xp>
+				<sp>9720000</sp>
 			</effect>
 		</effects>
 	</skill>
@@ -238,7 +265,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91670</itemConsumeId> <!-- Red Lantern -->
+		<itemConsumeId>93340</itemConsumeId> <!-- High-Grade Blue Lantern -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLevel>1</magicLevel>
@@ -248,8 +275,8 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="GiveExpAndSp">
-				<xp>10000000</xp>
-				<sp>270000</sp>
+				<xp>120000000</xp>
+				<sp>3240000</sp>
 			</effect>
 		</effects>
 	</skill>
@@ -258,7 +285,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>91671</itemConsumeId> <!-- Red Lantern -->
+		<itemConsumeId>93341</itemConsumeId> <!-- High-Grade Green Lantern -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLevel>1</magicLevel>
@@ -268,8 +295,8 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="GiveExpAndSp">
-				<xp>5000000</xp>
-				<sp>135000</sp>
+				<xp>60000000</xp>
+				<sp>1620000</sp>
 			</effect>
 		</effects>
 	</skill>
@@ -277,21 +304,81 @@
 		<!-- <Reward for achieving the 1st place in the Big Magic Lamp event> XP +1,200,000,000, SP +32,400,000. Cannot be transferred to higher-level characters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93342</itemConsumeId> <!-- High-Grade Red Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>1200000000</xp>
+				<sp>32400000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40126" toLevel="1" name="High-grade Lit Purple Lantern">
 		<!-- <Reward for achieving the 2nd place in the Big Magic Lamp event> XP +360,000,000, SP +9,720,000. Cannot be transferred to higher-level characters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93343</itemConsumeId> <!-- High-Grade Purple Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>360000000</xp>
+				<sp>9720000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40127" toLevel="1" name="High-grade Lit Blue Lantern">
 		<!-- <Reward for achieving the 3rd place in the Big Magic Lamp event> XP +120,000,000, SP +3,240,000. Cannot be transferred to higher-level characters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93344</itemConsumeId> <!-- High-Grade Blue Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>120000000</xp>
+				<sp>3240000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40128" toLevel="1" name="High-grade Lit Green Lantern">
 		<!-- <Reward for achieving the 4th place in the Big Magic Lamp event> XP +60,000,000, SP +1,620,000. Cannot be transferred to higher-level characters. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>93345</itemConsumeId> <!-- High-Grade Green Lantern -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>60000000</xp>
+				<sp>1620000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40129" toLevel="1" name="Lucky Enchant Stone: A-grade Weapon - Event">
 		<icon>icon.skill0000</icon>

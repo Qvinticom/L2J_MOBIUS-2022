@@ -796,6 +796,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40099" level="1" /> <!-- Red Lantern - 1st Place -->
+		</skills>
 	</item>
 	<item id="91669" name="Purple Lantern" additionalName="2nd place" type="EtcItem">
 		<!-- <Reward for achieving the 2nd place in the Magic Lamp event>. XP +30,000,000, SP +810,000. Can be exchanged by the Game Assistant for the Lit Purple Lantern (transferable to other characters on the account). -->
@@ -806,6 +810,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40100" level="1" /> <!-- Purple Lantern - 2nd Place -->
+		</skills>
 	</item>
 	<item id="91670" name="Blue Lantern" additionalName="3rd place" type="EtcItem">
 		<!-- <Reward for achieving the 3rd place in the Magic Lamp event>. XP +10,000,000, SP +270,000. Can be exchanged by the Game Assistant for the Lit Blue Lantern (transferable to other characters on the account). -->
@@ -816,6 +824,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40101" level="1" /> <!-- Blue Lantern - 3rd Place -->
+		</skills>
 	</item>
 	<item id="91671" name="Green Lantern" additionalName="4th place" type="EtcItem">
 		<!-- <Reward for achieving the 4th place in the Magic Lamp event>. XP +5,000,000, SP +135,000. Can be exchanged by the Game Assistant for the Lit Green Lantern (transferable to other characters on the account). -->
@@ -826,6 +838,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40102" level="1" /> <!-- Green Lantern - 4th Place -->
+		</skills>
 	</item>
 	<item id="91672" name="Adena Fortune Box" type="EtcItem">
 		<!-- Double-click to obtain random amount of adena. -->

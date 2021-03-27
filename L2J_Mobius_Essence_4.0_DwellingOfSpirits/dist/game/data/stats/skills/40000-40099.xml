@@ -939,8 +939,22 @@
 		</effects>
 	</skill>
 	<skill id="40099" toLevel="1" name="Red Lantern - 1st Place">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91668</itemConsumeId>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLevel>1</magicLevel>
+		<isMagic>2</isMagic>
+		<reuseDelay>500</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>100000000</xp>
+				<sp>2700000</sp>
+			</effect>
+		</effects>
 	</skill>
 </list>
