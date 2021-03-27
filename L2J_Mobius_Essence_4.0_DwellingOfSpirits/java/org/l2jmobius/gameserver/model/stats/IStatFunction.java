@@ -65,7 +65,7 @@ public interface IStatFunction
 	default double calcWeaponBaseValue(Creature creature, Stat stat)
 	{
 		final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
-		double baseValue = creature.isTransformed() ? creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue) : baseTemplateValue;
+		double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
 		if (creature.isPet())
 		{
 			final PetInstance pet = (PetInstance) creature;
@@ -85,7 +85,7 @@ public interface IStatFunction
 	default double calcWeaponPlusBaseValue(Creature creature, Stat stat)
 	{
 		final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
-		double baseValue = creature.isTransformed() ? creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue) : baseTemplateValue;
+		double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
 		
 		if (creature.isPlayable())
 		{
