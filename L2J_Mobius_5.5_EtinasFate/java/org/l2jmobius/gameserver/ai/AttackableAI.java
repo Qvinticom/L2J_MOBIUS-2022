@@ -685,6 +685,13 @@ public class AttackableAI extends CreatureAI
 			return;
 		}
 		
+		// Actor should be able to see target.
+		if (!GeoEngine.getInstance().canSeeTarget(_actor, target))
+		{
+			moveTo(target);
+			return;
+		}
+		
 		final int collision = npc.getTemplate().getCollisionRadius();
 		
 		// Handle all WorldObject of its Faction inside the Faction Range

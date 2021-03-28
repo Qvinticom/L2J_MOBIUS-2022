@@ -479,15 +479,12 @@ abstract class AbstractAI implements Ctrl
 			// Calculate movement data for a move to location action and add the actor to movingObjects of GameTimeController
 			_accessor.moveTo(_actor.isPlayable() ? pawn : null, pawn.getX(), pawn.getY(), pawn.getZ(), offset);
 			
-			// Mobius: Solves moving to wrong Z when not using geodata,
-			// but probably is not accurate and you should use geodata.
-			// _accessor.moveTo(pawn.getX(), pawn.getY(), _actor.getZ(), offset);
-			
-			if (!_actor.isMoving())
-			{
-				_actor.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			// May result to make monsters stop moving.
+			// if (!_actor.isMoving())
+			// {
+			// _actor.sendPacket(ActionFailed.STATIC_PACKET);
+			// return;
+			// }
 			
 			// Send a Server->Client packet MoveToPawn/CharMoveToLocation to the actor and all PlayerInstance in its _knownPlayers
 			if (pawn instanceof Creature)

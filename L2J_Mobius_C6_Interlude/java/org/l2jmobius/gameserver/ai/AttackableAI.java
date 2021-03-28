@@ -667,8 +667,8 @@ public class AttackableAI extends CreatureAI
 			}
 		}
 		
-		final Creature originalAttackTarget = getAttackTarget();
 		// Check if target is dead or if timeout is expired to stop this attack
+		final Creature originalAttackTarget = getAttackTarget();
 		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead() || ((originalAttackTarget instanceof PlayerInstance) && (((PlayerInstance) originalAttackTarget).isInOfflineMode() || !((PlayerInstance) originalAttackTarget).isOnline())) || (_attackTimeout < GameTimeController.getGameTicks()))
 		{
 			// Stop hating this target after the attack timeout or if target is dead
@@ -681,6 +681,13 @@ public class AttackableAI extends CreatureAI
 			setIntention(AI_INTENTION_ACTIVE);
 			
 			_actor.setWalking();
+			return;
+		}
+		
+		// Actor should be able to see target.
+		if (!GeoEngine.getInstance().canSeeTarget(_actor, originalAttackTarget))
+		{
+			moveTo(originalAttackTarget.getX(), originalAttackTarget.getY(), originalAttackTarget.getZ());
 			return;
 		}
 		
