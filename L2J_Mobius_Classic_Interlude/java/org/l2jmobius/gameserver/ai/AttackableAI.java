@@ -21,11 +21,10 @@ import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static org.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import java.lang.ref.WeakReference;
-import java.util.Comparator;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Logger;
-import java.util.stream.Stream;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -1131,35 +1130,64 @@ public class AttackableAI extends CreatureAI
 		
 		// Check current target first.
 		final int range = insideCastRange ? skill.getCastRange() + getActiveChar().getTemplate().getCollisionRadius() : 2000; // TODO need some forget range
-		Stream<Creature> stream;
+		
+		final List<Creature> result = new ArrayList<>();
 		if (isBad)
 		{
-			//@formatter:off
-			stream = npc.getAggroList().values().stream()
-					.map(AggroInfo::getAttacker)
-					.filter(c -> checkSkillTarget(skill, c))
-					.sorted(Comparator.<Creature>comparingInt(npc::getHating).reversed());
-			//@formatter:on
+			for (AggroInfo aggro : npc.getAggroList().values())
+			{
+				if (checkSkillTarget(skill, aggro.getAttacker()))
+				{
+					result.add(aggro.getAttacker());
+				}
+			}
 		}
 		else
 		{
-			stream = World.getInstance().getVisibleObjectsInRange(npc, Creature.class, range, c -> checkSkillTarget(skill, c)).stream();
+			for (Creature creature : World.getInstance().getVisibleObjectsInRange(npc, Creature.class, range))
+			{
+				if (checkSkillTarget(skill, creature))
+				{
+					result.add(creature);
+				}
+			}
 			
 			// Maybe add self to the list of targets since getVisibleObjects doesn't return yourself.
 			if (checkSkillTarget(skill, npc))
 			{
-				stream = Stream.concat(stream, Stream.of(npc));
+				result.add(npc);
 			}
 			
 			// For heal skills sort by hp missing.
 			if (skill.hasEffectType(EffectType.HEAL))
 			{
-				stream = stream.sorted(Comparator.comparingInt(Creature::getCurrentHpPercent));
+				int searchValue = Integer.MAX_VALUE;
+				Creature creature = null;
+				
+				for (Creature c : result)
+				{
+					final int hpPer = c.getCurrentHpPercent();
+					if (hpPer < searchValue)
+					{
+						searchValue = hpPer;
+						creature = c;
+					}
+				}
+				
+				if (creature != null)
+				{
+					return creature;
+				}
 			}
 		}
 		
 		// Return any target.
-		return stream.findFirst().orElse(null);
+		if (!result.isEmpty())
+		{
+			return result.get(Rnd.get(result.size()));
+		}
+		
+		return null;
 	}
 	
 	private Creature targetReconsider(boolean randomTarget)
@@ -1167,24 +1195,57 @@ public class AttackableAI extends CreatureAI
 		final Attackable npc = getActiveChar();
 		if (randomTarget)
 		{
-			Stream<Creature> stream = npc.getAggroList().values().stream().map(AggroInfo::getAttacker).filter(this::checkTarget);
+			final List<Creature> result = new ArrayList<>();
+			for (AggroInfo aggro : npc.getAggroList().values())
+			{
+				if (checkTarget(aggro.getAttacker()))
+				{
+					result.add(aggro.getAttacker());
+				}
+			}
 			
-			// If npc is aggressive, add characters within aggro range too
+			// If npc is aggressive, add characters within aggro range too.
 			if (npc.isAggressive())
 			{
-				stream = Stream.concat(stream, World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream());
+				for (Creature creature : World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange()))
+				{
+					if (checkTarget(creature))
+					{
+						result.add(creature);
+					}
+				}
 			}
-			return stream.findAny().orElse(null);
+			
+			if (!result.isEmpty())
+			{
+				return result.get(Rnd.get(result.size()));
+			}
 		}
 		
-		//@formatter:off
-		return npc.getAggroList().values().stream()
-			.filter(a -> checkTarget(a.getAttacker()))
-			.sorted(Comparator.comparingInt(AggroInfo::getHate))
-			.map(AggroInfo::getAttacker)
-			.findFirst()
-			.orElse(npc.isAggressive() ? World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
-		//@formatter:on
+		int searchValue = Integer.MIN_VALUE;
+		Creature creature = null;
+		for (AggroInfo aggro : npc.getAggroList().values())
+		{
+			searchValue = aggro.getHate();
+			if (checkTarget(aggro.getAttacker()) && (aggro.getHate() > searchValue))
+			{
+				searchValue = aggro.getHate();
+				creature = aggro.getAttacker();
+			}
+		}
+		
+		if ((creature == null) && npc.isAggressive())
+		{
+			for (Creature nearby : World.getInstance().getVisibleObjectsInRange(npc, Creature.class, npc.getAggroRange()))
+			{
+				if (checkTarget(nearby))
+				{
+					return nearby;
+				}
+			}
+		}
+		
+		return null;
 	}
 	
 	/**
