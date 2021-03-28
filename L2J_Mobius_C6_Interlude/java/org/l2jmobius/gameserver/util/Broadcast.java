@@ -165,7 +165,7 @@ public class Broadcast
 		
 		for (PlayerInstance player : creature.getKnownList().getKnownPlayers().values())
 		{
-			if ((player != null) && (creature.getDistanceSq(player) <= radiusSq))
+			if ((player != null) && (creature.calculateDistanceSq3D(player) <= radiusSq))
 			{
 				player.sendPacket(mov);
 			}

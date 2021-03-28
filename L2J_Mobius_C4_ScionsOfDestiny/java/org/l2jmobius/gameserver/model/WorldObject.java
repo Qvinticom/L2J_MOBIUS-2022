@@ -475,6 +475,94 @@ public abstract class WorldObject
 		return false;
 	}
 	
+	/**
+	 * Calculates 2D distance between this WorldObject and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistance2D(int x, int y, int z)
+	{
+		return Math.sqrt(Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2));
+	}
+	
+	/**
+	 * Calculates the 2D distance between this WorldObject and given WorldObject.
+	 * @param object the target object
+	 * @return distance between object and given object.
+	 */
+	public double calculateDistance2D(WorldObject object)
+	{
+		return calculateDistance2D(object.getX(), object.getY(), object.getZ());
+	}
+	
+	/**
+	 * Calculates the 3D distance between this WorldObject and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistance3D(int x, int y, int z)
+	{
+		return Math.sqrt(Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2) + Math.pow(z - getZ(), 2));
+	}
+	
+	/**
+	 * Calculates 3D distance between this WorldObject and given location.
+	 * @param loc the location object
+	 * @return distance between object and given location.
+	 */
+	public double calculateDistance3D(Location loc)
+	{
+		return calculateDistance3D(loc.getX(), loc.getY(), loc.getZ());
+	}
+	
+	/**
+	 * Calculates the non squared 2D distance between this WorldObject and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistanceSq2D(int x, int y, int z)
+	{
+		return Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2);
+	}
+	
+	/**
+	 * Calculates the non squared 2D distance between this WorldObject and given WorldObject.
+	 * @param object the target object
+	 * @return distance between object and given object.
+	 */
+	public double calculateDistanceSq2D(WorldObject object)
+	{
+		return calculateDistanceSq2D(object.getX(), object.getY(), object.getZ());
+	}
+	
+	/**
+	 * Calculates the non squared 3D distance between this WorldObject and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistanceSq3D(int x, int y, int z)
+	{
+		return Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2) + Math.pow(z - getZ(), 2);
+	}
+	
+	/**
+	 * Calculates the non squared 3D distance between this WorldObject and given WorldObject.
+	 * @param object the target object
+	 * @return distance between object and given object.
+	 */
+	public double calculateDistanceSq3D(WorldObject object)
+	{
+		return calculateDistanceSq3D(object.getX(), object.getY(), object.getZ());
+	}
+	
 	@Override
 	public String toString()
 	{

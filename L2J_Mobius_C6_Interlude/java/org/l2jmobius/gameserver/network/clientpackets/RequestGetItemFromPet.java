@@ -77,7 +77,7 @@ public class RequestGetItemFromPet extends GameClientPacket
 			return;
 		}
 		
-		if (player.getDistanceSq(pet) > 40000) // 200*200
+		if (player.calculateDistanceSq3D(pet) > 40000) // 200*200
 		{
 			player.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 			sendPacket(ActionFailed.STATIC_PACKET);

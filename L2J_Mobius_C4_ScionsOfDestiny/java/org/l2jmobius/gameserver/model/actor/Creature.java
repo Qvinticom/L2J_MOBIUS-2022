@@ -617,7 +617,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		// This function is called too often from movement code.
-		if (!force && (getDistanceSq(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < (isNpc() && !isInCombat() ? Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE : 10000)))
+		if (!force && (calculateDistanceSq3D(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < (isNpc() && !isInCombat() ? Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE : 10000)))
 		{
 			return;
 		}
@@ -5795,88 +5795,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		
 		return result;
-	}
-	
-	/**
-	 * Return the distance between the current position of the Creature and the target (x,y).
-	 * @param x X position of the target
-	 * @param y Y position of the target
-	 * @return the plan distance
-	 * @deprecated use getPlanDistanceSq(int x, int y, int z)
-	 */
-	@Deprecated
-	public double getDistance(int x, int y)
-	{
-		final double dx = x - getX();
-		final double dy = y - getY();
-		return Math.sqrt((dx * dx) + (dy * dy));
-	}
-	
-	/**
-	 * Return the distance between the current position of the Creature and the target (x,y).
-	 * @param x X position of the target
-	 * @param y Y position of the target
-	 * @param z the z
-	 * @return the plan distance
-	 * @deprecated use getPlanDistanceSq(int x, int y, int z)
-	 */
-	@Deprecated
-	public double getDistance(int x, int y, int z)
-	{
-		final double dx = x - getX();
-		final double dy = y - getY();
-		final double dz = z - getZ();
-		return Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
-	}
-	
-	/**
-	 * Return the squared distance between the current position of the Creature and the given object.
-	 * @param object WorldObject
-	 * @return the squared distance
-	 */
-	public double getDistanceSq(WorldObject object)
-	{
-		return getDistanceSq(object.getX(), object.getY(), object.getZ());
-	}
-	
-	/**
-	 * Return the squared distance between the current position of the Creature and the given x, y, z.
-	 * @param x X position of the target
-	 * @param y Y position of the target
-	 * @param z Z position of the target
-	 * @return the squared distance
-	 */
-	public double getDistanceSq(int x, int y, int z)
-	{
-		final double dx = x - getX();
-		final double dy = y - getY();
-		final double dz = z - getZ();
-		return (dx * dx) + (dy * dy) + (dz * dz);
-	}
-	
-	/**
-	 * Return the squared plan distance between the current position of the Creature and the given object.<br>
-	 * (check only x and y, not z)
-	 * @param object WorldObject
-	 * @return the squared plan distance
-	 */
-	public double getPlanDistanceSq(WorldObject object)
-	{
-		return getPlanDistanceSq(object.getX(), object.getY());
-	}
-	
-	/**
-	 * Return the squared plan distance between the current position of the Creature and the given x, y, z.<br>
-	 * (check only x and y, not z)
-	 * @param x X position of the target
-	 * @param y Y position of the target
-	 * @return the squared plan distance
-	 */
-	public double getPlanDistanceSq(int x, int y)
-	{
-		final double dx = x - getX();
-		final double dy = y - getY();
-		return (dx * dx) + (dy * dy);
 	}
 	
 	/**

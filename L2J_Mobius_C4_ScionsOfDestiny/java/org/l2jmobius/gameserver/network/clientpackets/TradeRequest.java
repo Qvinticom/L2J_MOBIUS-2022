@@ -187,7 +187,7 @@ public class TradeRequest extends GameClientPacket
 			return;
 		}
 		
-		if (player.getDistanceSq(partner) > 22500) // 150
+		if (player.calculateDistanceSq3D(partner) > 22500) // 150
 		{
 			player.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);

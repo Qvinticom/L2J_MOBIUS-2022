@@ -1418,7 +1418,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_vanHalter) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{
 							_vanHalter.broadcastPacket(new SpecialCamera(_vanHalter.getObjectId(), 50, 90, 0, 0, 15000));
 						}
@@ -1437,7 +1437,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(5)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(5)) <= DISTANCE)
 						{
 							_cameraMarker.get(5).broadcastPacket(new SpecialCamera(_cameraMarker.get(5).getObjectId(), 1842, 100, -3, 0, 15000));
 						}
@@ -1456,7 +1456,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(5)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(5)) <= DISTANCE)
 						{
 							_cameraMarker.get(5).broadcastPacket(new SpecialCamera(_cameraMarker.get(5).getObjectId(), 1861, 97, -10, 1500, 15000));
 						}
@@ -1475,7 +1475,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(4)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(4)) <= DISTANCE)
 						{
 							_cameraMarker.get(4).broadcastPacket(new SpecialCamera(_cameraMarker.get(4).getObjectId(), 1876, 97, 12, 0, 15000));
 						}
@@ -1494,7 +1494,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(4)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(4)) <= DISTANCE)
 						{
 							_cameraMarker.get(4).broadcastPacket(new SpecialCamera(_cameraMarker.get(4).getObjectId(), 1839, 94, 0, 1500, 15000));
 						}
@@ -1513,7 +1513,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(3)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(3)) <= DISTANCE)
 						{
 							_cameraMarker.get(3).broadcastPacket(new SpecialCamera(_cameraMarker.get(3).getObjectId(), 1872, 94, 15, 0, 15000));
 						}
@@ -1532,7 +1532,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(3)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(3)) <= DISTANCE)
 						{
 							_cameraMarker.get(3).broadcastPacket(new SpecialCamera(_cameraMarker.get(3).getObjectId(), 1839, 92, 0, 1500, 15000));
 						}
@@ -1551,7 +1551,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(2)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(2)) <= DISTANCE)
 						{
 							_cameraMarker.get(2).broadcastPacket(new SpecialCamera(_cameraMarker.get(2).getObjectId(), 1872, 92, 15, 0, 15000));
 						}
@@ -1570,7 +1570,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(2)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(2)) <= DISTANCE)
 						{
 							_cameraMarker.get(2).broadcastPacket(new SpecialCamera(_cameraMarker.get(2).getObjectId(), 1839, 90, 5, 1500, 15000));
 						}
@@ -1589,7 +1589,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(1)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(1)) <= DISTANCE)
 						{
 							_cameraMarker.get(1).broadcastPacket(new SpecialCamera(_cameraMarker.get(1).getObjectId(), 1872, 90, 5, 0, 15000));
 						}
@@ -1608,7 +1608,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_cameraMarker.get(1)) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_cameraMarker.get(1)) <= DISTANCE)
 						{
 							_cameraMarker.get(1).broadcastPacket(new SpecialCamera(_cameraMarker.get(1).getObjectId(), 2002, 90, 2, 1500, 15000));
 						}
@@ -1627,7 +1627,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_vanHalter) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{
 							_vanHalter.broadcastPacket(new SpecialCamera(_vanHalter.getObjectId(), 50, 90, 10, 0, 15000));
 						}
@@ -1679,7 +1679,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_vanHalter) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{
 							_vanHalter.broadcastPacket(new SpecialCamera(_vanHalter.getObjectId(), 100, 90, 15, 1500, 15000));
 						}
@@ -1698,7 +1698,7 @@ public class VanHalter extends Quest
 					// Set camera.
 					for (PlayerInstance pc : _vanHalter.getKnownList().getKnownPlayers().values())
 					{
-						if (pc.getPlanDistanceSq(_vanHalter) <= DISTANCE)
+						if (pc.calculateDistanceSq2D(_vanHalter) <= DISTANCE)
 						{
 							_vanHalter.broadcastPacket(new SpecialCamera(_vanHalter.getObjectId(), 5200, 90, -10, 9500, 6000));
 						}

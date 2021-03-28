@@ -521,7 +521,7 @@ public class AttackableAI extends CreatureAI
 				_actor.setWalking();
 			}
 			
-			if (_actor.getPlanDistanceSq(((MinionInstance) _actor).getLeader()) > (offset * offset))
+			if (_actor.calculateDistanceSq2D(((MinionInstance) _actor).getLeader()) > (offset * offset))
 			{
 				int x1;
 				int y1;
@@ -556,7 +556,7 @@ public class AttackableAI extends CreatureAI
 				z1 = p[2];
 				
 				// Calculate the distance between the current position of the Creature and the target (x,y)
-				final double distance2 = _actor.getPlanDistanceSq(x1, y1);
+				final double distance2 = _actor.calculateDistanceSq2D(x1, y1, z1);
 				if (distance2 > (Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE))
 				{
 					npc.setReturningToSpawnPoint(true);
@@ -810,7 +810,7 @@ public class AttackableAI extends CreatureAI
 		if ((weapon != null) && (weapon.getItemType() == WeaponType.BOW))
 		{
 			// Micht: kepping this one otherwise we should do 2 sqrt
-			final double distance2 = _actor.getPlanDistanceSq(originalAttackTarget.getX(), originalAttackTarget.getY());
+			final double distance2 = _actor.calculateDistanceSq2D(originalAttackTarget);
 			if (Math.sqrt(distance2) <= (60 + combinedCollision))
 			{
 				final int chance = 5;
@@ -861,7 +861,7 @@ public class AttackableAI extends CreatureAI
 			setAttackTarget(hated);
 		}
 		// We should calculate new distance cuz mob can have changed the target
-		dist2 = _actor.getPlanDistanceSq(hated.getX(), hated.getY());
+		dist2 = _actor.calculateDistanceSq2D(hated);
 		if (hated.isMoving())
 		{
 			range += 50;

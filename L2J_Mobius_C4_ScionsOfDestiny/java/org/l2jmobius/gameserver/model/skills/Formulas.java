@@ -1166,7 +1166,6 @@ public class Formulas
 		return (creature.calcStat(Stat.REGENERATE_CP_RATE, init, null, null) * cpRegenMultiplier) + cpRegenBonus;
 	}
 	
-	@SuppressWarnings("deprecation")
 	public static final double calcFestivalRegenModifier(PlayerInstance player)
 	{
 		final int[] festivalInfo = SevenSignsFestival.getInstance().getFestivalForPlayer(player);
@@ -1191,7 +1190,7 @@ public class Formulas
 		}
 		
 		// Check the distance between the player and the player spawn point, in the center of the arena.
-		final double distToCenter = player.getDistance(festivalCenter[0], festivalCenter[1]);
+		final double distToCenter = player.calculateDistance2D(festivalCenter[0], festivalCenter[1], 0);
 		return 1.0 - (distToCenter * 0.0005); // Maximum Decreased Regen of ~ -65%;
 	}
 	

@@ -1727,7 +1727,7 @@ public class PlayerInstance extends Playable
 		}
 		
 		// This function is called too often from movement code.
-		if (!force && (getDistanceSq(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < 10000))
+		if (!force && (calculateDistanceSq3D(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < 10000))
 		{
 			return;
 		}
