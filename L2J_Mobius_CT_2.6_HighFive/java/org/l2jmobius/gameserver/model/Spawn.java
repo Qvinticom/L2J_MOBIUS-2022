@@ -31,14 +31,16 @@ import org.l2jmobius.gameserver.data.NpcPersonalAIData;
 import org.l2jmobius.gameserver.data.xml.NpcData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.WalkingManager;
+import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
+import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -386,27 +388,41 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			newlocz = getZ();
 		}
 		
-		// If random spawn system is enabled
-		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS)
+		final boolean monsterCheck = npc.isMonster() && !npc.isQuestMonster() && !WalkingManager.getInstance().isTargeted(npc) && (getInstanceId() == 0) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !npc.isFlying() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId());
+		
+		// If random spawn system is enabled.
+		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS && monsterCheck)
 		{
 			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
-			
-			if (npc.isMonster() && !npc.isQuestMonster() && !WalkingManager.getInstance().isTargeted(npc) && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId()))
+			if (GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()))
 			{
 				newlocx = randX;
 				newlocy = randY;
 			}
 		}
 		
-		// Correct Z of monsters. Do not correct Z of flying NPCs.
-		if (npc.isMonster() && !npc.isFlying())
+		// Correct Z of monsters.
+		if (monsterCheck)
 		{
-			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz) + 64;
-			// Do not correct Z distances greater than 300.
-			if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true, false) < 300)
+			// Do not correct Z when in water zone.
+			WaterZone water = null;
+			for (ZoneType zone : ZoneManager.getInstance().getZones(newlocx, newlocy, newlocz))
 			{
-				newlocz = geoZ;
+				if (zone instanceof WaterZone)
+				{
+					water = (WaterZone) zone;
+					break;
+				}
+			}
+			if (water == null)
+			{
+				final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz) + 64;
+				// Do not correct Z distances greater than 300.
+				if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true, false) < 300)
+				{
+					newlocz = geoZ;
+				}
 			}
 		}
 		

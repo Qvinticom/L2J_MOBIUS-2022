@@ -24,6 +24,8 @@ import java.util.logging.Logger;
 import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.sql.TerritoryTable;
+import org.l2jmobius.gameserver.data.xml.WalkerRouteData;
+import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -31,6 +33,8 @@ import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.quest.EventType;
 import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -442,14 +446,29 @@ public class Spawn
 			newlocz = _locZ;
 		}
 		
-		// Correct Z of monsters. Do not correct Z of flying NPCs.
-		if (npc.isMonster() && !npc.isFlying())
+		final boolean monsterCheck = npc.isMonster() && (WalkerRouteData.getInstance().getRouteForNpc(npc.getNpcId()) == null) && (getInstanceId() == 0) && !npc.isRaid() && !npc.isMinion() && !npc.isFlying();
+		
+		// Correct Z of monsters.
+		if (monsterCheck)
 		{
-			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz) + 64;
-			// Do not correct Z distances greater than 300.
-			if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true) < 300)
+			// Do not correct Z when in water zone.
+			WaterZone water = null;
+			for (ZoneType zone : ZoneData.getInstance().getZones(newlocx, newlocy, newlocz))
 			{
-				newlocz = geoZ;
+				if (zone instanceof WaterZone)
+				{
+					water = (WaterZone) zone;
+					break;
+				}
+			}
+			if (water == null)
+			{
+				final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz) + 64;
+				// Do not correct Z distances greater than 300.
+				if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true) < 300)
+				{
+					newlocz = geoZ;
+				}
 			}
 		}
 		
