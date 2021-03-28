@@ -108,18 +108,10 @@ public class GeoEngine
 		LOGGER.info("GeoEngine: Loaded " + loaded + " geodata files.");
 		
 		// Avoid wrong configs when no files are loaded.
-		if (loaded == 0)
+		if ((loaded == 0) && Config.PATHFINDING)
 		{
-			if (Config.PATHFINDING)
-			{
-				Config.PATHFINDING = false;
-				LOGGER.info("GeoEngine: Forcing PathFinding setting to false.");
-			}
-			if (Config.COORD_SYNCHRONIZE == 2)
-			{
-				Config.COORD_SYNCHRONIZE = -1;
-				LOGGER.info("GeoEngine: Forcing CoordSynchronize setting to -1.");
-			}
+			Config.PATHFINDING = false;
+			LOGGER.info("GeoEngine: Forcing PathFinding setting to false.");
 		}
 	}
 	

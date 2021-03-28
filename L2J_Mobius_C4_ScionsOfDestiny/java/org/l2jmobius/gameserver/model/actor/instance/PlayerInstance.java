@@ -12688,12 +12688,6 @@ public class PlayerInstance extends Playable
 	@Override
 	public boolean updatePosition(int gameTicks)
 	{
-		// Disables custom movement for PlayerInstance when Old Synchronization is selected
-		if (Config.COORD_SYNCHRONIZE == -1)
-		{
-			return super.updatePosition(gameTicks);
-		}
-		
 		// Get movement data
 		final MoveData m = _move;
 		if (_move == null)
@@ -15471,14 +15465,6 @@ public class PlayerInstance extends Playable
 		}
 		if (_fallingDamageTask != null)
 		{
-			if (Config.CORRECT_PLAYER_Z)
-			{
-				final int nearestZ = GeoEngine.getInstance().getHigherHeight(getX(), getY(), getZ());
-				if (getZ() < nearestZ)
-				{
-					teleToLocation(new Location(getX(), getY(), nearestZ), false);
-				}
-			}
 			_fallingDamageTask.cancel(true);
 		}
 		_fallingDamageTask = ThreadPool.schedule(() ->

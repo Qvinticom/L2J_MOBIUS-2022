@@ -16,12 +16,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.DoorData;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import org.l2jmobius.gameserver.network.serverpackets.ValidateLocationInVehicle;
 
 public class ValidatePosition extends GameClientPacket
 {
@@ -29,8 +28,6 @@ public class ValidatePosition extends GameClientPacket
 	private int _y;
 	private int _z;
 	private int _heading;
-	@SuppressWarnings("unused")
-	private int _data;
 	
 	@Override
 	protected void readImpl()
@@ -39,7 +36,7 @@ public class ValidatePosition extends GameClientPacket
 		_y = readD();
 		_z = readD();
 		_heading = readD();
-		_data = readD();
+		readD(); // vehicle id
 	}
 	
 	@Override
@@ -65,23 +62,12 @@ public class ValidatePosition extends GameClientPacket
 		double diffSq;
 		if (player.isInBoat())
 		{
-			if (Config.COORD_SYNCHRONIZE == 2)
-			{
-				dx = _x - player.getBoatPosition().getX();
-				dy = _y - player.getBoatPosition().getY();
-				// dz = _z - player.getInVehiclePosition().getZ();
-				diffSq = ((dx * dx) + (dy * dy));
-				if (diffSq > 250000)
-				{
-					sendPacket(new ValidateLocationInVehicle(player));
-				}
-			}
 			return;
 		}
 		
 		if (player.isFalling(_z))
 		{
-			return; // disable validations during fall to avoid "jumping"
+			return; // Disable validations during fall to avoid "jumping".
 		}
 		
 		dx = _x - realX;
@@ -89,13 +75,6 @@ public class ValidatePosition extends GameClientPacket
 		dz = _z - realZ;
 		diffSq = ((dx * dx) + (dy * dy));
 		
-		// Zoey76: TODO: Implement or cleanup.
-		// Party party = player.getParty();
-		// if ((party != null) && (player.getLastPartyPositionDistance(_x, _y, _z) > 150))
-		// {
-		// player.setLastPartyPosition(_x, _y, _z);
-		// party.broadcastToPartyMembers(player, new PartyMemberPosition(player));
-		// }
 		if (player.isFlying() || player.isInsideZone(ZoneId.WATER))
 		{
 			player.setXYZ(realX, realY, _z);
@@ -104,40 +83,8 @@ public class ValidatePosition extends GameClientPacket
 				player.sendPacket(new ValidateLocation(player));
 			}
 		}
-		else if (diffSq < 360000) // if too large, messes observation
+		else if (diffSq < 360000) // If too large, messes observation.
 		{
-			if (Config.COORD_SYNCHRONIZE == -1) // Only Z coordinate synched to server, mainly used when no geodata but can be used also with geodata
-			{
-				player.setXYZ(realX, realY, _z);
-				return;
-			}
-			if (Config.COORD_SYNCHRONIZE == 1) // Trusting also client x,y coordinates (should not be used with geodata)
-			{
-				if (!player.isMoving() || !player.validateMovementHeading(_heading)) // Heading changed on client = possible obstacle
-				{
-					// character is not moving, take coordinates from client
-					if (diffSq < 2500)
-					{
-						player.setXYZ(realX, realY, _z);
-					}
-					else
-					{
-						player.setXYZ(_x, _y, _z);
-					}
-				}
-				else
-				{
-					player.setXYZ(realX, realY, _z);
-				}
-				
-				player.setHeading(_heading);
-				return;
-			}
-			// Sync 2 (or other),
-			// intended for geodata. Sends a validation packet to client
-			// when too far from server calculated true coordinate.
-			// Due to geodata/zone errors, some Z axis checks are made. (maybe a temporary solution)
-			// Important: this code part must work together with Creature.updatePosition
 			if ((diffSq > 250000) || (Math.abs(dz) > 200))
 			{
 				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - player.getClientZ()) < 800))
@@ -147,13 +94,28 @@ public class ValidatePosition extends GameClientPacket
 				}
 				else
 				{
-					if (player.isFalling(_z))
-					{
-						player.setXYZ(realX, realY, _z);
-					}
 					player.sendPacket(new ValidateLocation(player));
 				}
 			}
+		}
+		
+		// Check out of sync.
+		if (player.calculateDistance3D(_x, _y, _z) > player.getStat().getMoveSpeed())
+		{
+			if (player.isFalling(_z))
+			{
+				final int nearestZ = GeoEngine.getInstance().getHigherHeight(_x, _y, _z);
+				if (player.getZ() < nearestZ)
+				{
+					player.setXYZ(_x, _y, nearestZ);
+					player.stopMove(null);
+				}
+			}
+			else
+			{
+				player.setXYZ(_x, _y, _z);
+			}
+			player.sendPacket(new ValidateLocation(player));
 		}
 		
 		player.setClientX(_x);

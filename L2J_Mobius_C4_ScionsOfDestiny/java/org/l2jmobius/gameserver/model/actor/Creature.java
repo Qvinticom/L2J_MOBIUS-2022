@@ -5078,32 +5078,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		double dy;
 		double dz;
 		double distFraction;
-		// the only method that can modify x,y while moving (otherwise _move would/should be set null)
-		if (Config.COORD_SYNCHRONIZE == 1)
+		// Save temporary values to avoid rounding errors.
+		if (target != null)
 		{
-			if (target != null)
-			{
-				dx = target.getX() - xPrev;
-				dy = target.getY() - yPrev;
-			}
-			else
-			{
-				dx = m._xDestination - xPrev;
-				dy = m._yDestination - yPrev;
-			}
+			dx = target.getX() - m._xAccurate;
+			dy = target.getY() - m._yAccurate;
 		}
-		else // otherwise we need saved temporary values to avoid rounding errors
+		else
 		{
-			if (target != null)
-			{
-				dx = target.getX() - m._xAccurate;
-				dy = target.getY() - m._yAccurate;
-			}
-			else
-			{
-				dx = m._xDestination - m._xAccurate;
-				dy = m._yDestination - m._yAccurate;
-			}
+			dx = m._xDestination - m._xAccurate;
+			dy = m._yDestination - m._yAccurate;
 		}
 		
 		// Z coordinate will follow client values

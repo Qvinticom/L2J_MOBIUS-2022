@@ -16,26 +16,21 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.xml.DoorData;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
-/**
- * @version $Revision: 1.13.4.7 $ $Date: 2005/03/27 15:29:30 $
- */
 public class ValidatePosition implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
 	private int _z;
 	private int _heading;
-	private int _data; // vehicle id
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
@@ -44,7 +39,7 @@ public class ValidatePosition implements IClientIncomingPacket
 		_y = packet.readD();
 		_z = packet.readD();
 		_heading = packet.readD();
-		_data = packet.readD();
+		packet.readD(); // vehicle id
 		return true;
 	}
 	
@@ -69,55 +64,20 @@ public class ValidatePosition implements IClientIncomingPacket
 		int dy;
 		int dz;
 		double diffSq;
-		if (player.isInBoat())
+		if (player.isInVehicle())
 		{
-			if (Config.COORD_SYNCHRONIZE == 2)
-			{
-				dx = _x - player.getInVehiclePosition().getX();
-				dy = _y - player.getInVehiclePosition().getY();
-				// dz = _z - player.getInVehiclePosition().getZ();
-				diffSq = ((dx * dx) + (dy * dy));
-				if (diffSq > 250000)
-				{
-					client.sendPacket(new GetOnVehicle(player.getObjectId(), _data, player.getInVehiclePosition()));
-				}
-			}
-			return;
-		}
-		if (player.isInAirShip())
-		{
-			// Zoey76: TODO: Implement or cleanup.
-			// if (Config.COORD_SYNCHRONIZE == 2)
-			// {
-			// dx = _x - player.getInVehiclePosition().getX();
-			// dy = _y - player.getInVehiclePosition().getY();
-			// dz = _z - player.getInVehiclePosition().getZ();
-			// diffSq = ((dx * dx) + (dy * dy));
-			// if (diffSq > 250000)
-			// {
-			// sendPacket(new GetOnVehicle(player.getObjectId(), _data, player.getInBoatPosition()));
-			// }
-			// }
 			return;
 		}
 		
 		if (player.isFalling(_z))
 		{
-			return; // disable validations during fall to avoid "jumping"
+			return; // Disable validations during fall to avoid "jumping".
 		}
 		
 		dx = _x - realX;
 		dy = _y - realY;
 		dz = _z - realZ;
 		diffSq = ((dx * dx) + (dy * dy));
-		
-		// Zoey76: TODO: Implement or cleanup.
-		// Party party = player.getParty();
-		// if ((party != null) && (player.getLastPartyPositionDistance(_x, _y, _z) > 150))
-		// {
-		// player.setLastPartyPosition(_x, _y, _z);
-		// party.broadcastToPartyMembers(player, new PartyMemberPosition(player));
-		// }
 		
 		// Don't allow flying transformations outside gracia area!
 		if (player.isFlyingMounted() && (_x > World.GRACIA_MAX_X))
@@ -133,40 +93,8 @@ public class ValidatePosition implements IClientIncomingPacket
 				player.sendPacket(new ValidateLocation(player));
 			}
 		}
-		else if (diffSq < 360000) // if too large, messes observation
+		else if (diffSq < 360000) // If too large, messes observation.
 		{
-			if (Config.COORD_SYNCHRONIZE == -1) // Only Z coordinate synched to server, mainly used when no geodata but can be used also with geodata
-			{
-				player.setXYZ(realX, realY, _z);
-				return;
-			}
-			if (Config.COORD_SYNCHRONIZE == 1) // Trusting also client x,y coordinates (should not be used with geodata)
-			{
-				if (!player.isMoving() || !player.validateMovementHeading(_heading)) // Heading changed on client = possible obstacle
-				{
-					// character is not moving, take coordinates from client
-					if (diffSq < 2500)
-					{
-						player.setXYZ(realX, realY, _z);
-					}
-					else
-					{
-						player.setXYZ(_x, _y, _z);
-					}
-				}
-				else
-				{
-					player.setXYZ(realX, realY, _z);
-				}
-				
-				player.setHeading(_heading);
-				return;
-			}
-			// Sync 2 (or other),
-			// intended for geodata. Sends a validation packet to client
-			// when too far from server calculated true coordinate.
-			// Due to geodata/zone errors, some Z axis checks are made. (maybe a temporary solution)
-			// Important: this code part must work together with Creature.updatePosition
 			if ((diffSq > 250000) || (Math.abs(dz) > 200))
 			{
 				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - player.getClientZ()) < 800))
@@ -176,13 +104,28 @@ public class ValidatePosition implements IClientIncomingPacket
 				}
 				else
 				{
-					if (player.isFalling(_z))
-					{
-						player.setXYZ(realX, realY, _z);
-					}
 					player.sendPacket(new ValidateLocation(player));
 				}
 			}
+		}
+		
+		// Check out of sync.
+		if (player.calculateDistance3D(_x, _y, _z) > player.getStat().getMoveSpeed())
+		{
+			if (player.isFalling(_z))
+			{
+				final int nearestZ = GeoEngine.getInstance().getHigherHeight(_x, _y, _z);
+				if (player.getZ() < nearestZ)
+				{
+					player.setXYZ(_x, _y, nearestZ);
+					player.stopMove(null);
+				}
+			}
+			else
+			{
+				player.setXYZ(_x, _y, _z);
+			}
+			player.sendPacket(new ValidateLocation(player));
 		}
 		
 		player.setClientX(_x);

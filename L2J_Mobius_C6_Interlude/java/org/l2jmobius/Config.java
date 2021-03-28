@@ -971,8 +971,6 @@ public class Config
 	public static float MEDIUM_WEIGHT;
 	public static float HIGH_WEIGHT;
 	public static float DIAGONAL_WEIGHT;
-	public static int COORD_SYNCHRONIZE;
-	public static boolean CORRECT_PLAYER_Z;
 	public static boolean FALL_DAMAGE;
 	public static boolean ALLOW_WATER;
 	
@@ -2567,8 +2565,6 @@ public class Config
 		MEDIUM_WEIGHT = geoengineConfig.getFloat("MediumWeight", 2);
 		HIGH_WEIGHT = geoengineConfig.getFloat("HighWeight", 3);
 		DIAGONAL_WEIGHT = geoengineConfig.getFloat("DiagonalWeight", 0.707f);
-		COORD_SYNCHRONIZE = geoengineConfig.getInt("CoordSynchronize", -1);
-		CORRECT_PLAYER_Z = geoengineConfig.getBoolean("CorrectPlayerZ", false);
 		FALL_DAMAGE = geoengineConfig.getBoolean("FallDamage", false);
 		ALLOW_WATER = geoengineConfig.getBoolean("AllowWater", false);
 	}

@@ -12692,14 +12692,6 @@ public class PlayerInstance extends Playable
 		}
 		if (_fallingDamageTask != null)
 		{
-			if (Config.CORRECT_PLAYER_Z)
-			{
-				final int nearestZ = GeoEngine.getInstance().getHigherHeight(getX(), getY(), getZ());
-				if (getZ() < nearestZ)
-				{
-					teleToLocation(new Location(getX(), getY(), nearestZ));
-				}
-			}
 			_fallingDamageTask.cancel(true);
 		}
 		_fallingDamageTask = ThreadPool.schedule(() ->

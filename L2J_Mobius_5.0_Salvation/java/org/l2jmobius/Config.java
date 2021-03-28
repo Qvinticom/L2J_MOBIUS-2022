@@ -943,8 +943,6 @@ public class Config
 	public static float MEDIUM_WEIGHT;
 	public static float HIGH_WEIGHT;
 	public static float DIAGONAL_WEIGHT;
-	public static int COORD_SYNCHRONIZE;
-	public static boolean CORRECT_PLAYER_Z;
 	
 	/** Attribute System */
 	public static int S_WEAPON_STONE;
@@ -2496,8 +2494,6 @@ public class Config
 			MEDIUM_WEIGHT = GeoEngine.getFloat("MediumWeight", 2);
 			HIGH_WEIGHT = GeoEngine.getFloat("HighWeight", 3);
 			DIAGONAL_WEIGHT = GeoEngine.getFloat("DiagonalWeight", 0.707f);
-			COORD_SYNCHRONIZE = GeoEngine.getInt("CoordSynchronize", -1);
-			CORRECT_PLAYER_Z = GeoEngine.getBoolean("CorrectPlayerZ", false);
 			
 			// Load AllowedPlayerRaces config file (if exists)
 			final PropertiesParser AllowedPlayerRaces = new PropertiesParser(CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE);
