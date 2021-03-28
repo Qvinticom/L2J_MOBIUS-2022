@@ -710,7 +710,7 @@ public class AttackableAI extends CreatureAI
 			}
 			
 			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
-			final Location moveLoc = _actor.isFlying() ? new Location(x1, y1, z1) : GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceId());
+			final Location moveLoc = _actor.isFlying() ? new Location(x1, y1, z1) : GeoEngine.getInstance().getValidLocation(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceId());
 			moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
 		}
 	}
@@ -941,7 +941,7 @@ public class AttackableAI extends CreatureAI
 						final int newZ = npc.getZ() + 30;
 						
 						// Mobius: Verify destination. Prevents wall collision issues and fixes monsters not avoiding obstacles.
-						moveTo(GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()));
+						moveTo(GeoEngine.getInstance().getValidLocation(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()));
 					}
 					return;
 				}

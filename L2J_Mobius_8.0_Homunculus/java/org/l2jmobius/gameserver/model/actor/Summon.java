@@ -106,7 +106,7 @@ public abstract class Summon extends Playable
 		final int x = owner.getX();
 		final int y = owner.getY();
 		final int z = owner.getZ();
-		final Location location = GeoEngine.getInstance().canMoveToTargetLoc(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z, owner.getInstanceWorld());
+		final Location location = GeoEngine.getInstance().getValidLocation(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z, getInstanceWorld());
 		setXYZInvisible(location.getX(), location.getY(), location.getZ());
 	}
 	

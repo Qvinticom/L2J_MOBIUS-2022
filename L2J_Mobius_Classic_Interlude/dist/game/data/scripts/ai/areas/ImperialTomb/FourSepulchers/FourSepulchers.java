@@ -298,7 +298,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), npc.getSpawn().getLocation().getX() + getRandom(-400, 400), npc.getSpawn().getLocation().getY() + getRandom(-400, 400), npc.getZ(), npc.getInstanceWorld());
+					final Location destination = GeoEngine.getInstance().getValidLocation(npc.getX(), npc.getY(), npc.getZ(), npc.getSpawn().getLocation().getX() + getRandom(-400, 400), npc.getSpawn().getLocation().getY() + getRandom(-400, 400), npc.getZ(), npc.getInstanceWorld());
 					if (Util.calculateDistance(npc, npc.getSpawn().getLocation(), false, false) < 600)
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);

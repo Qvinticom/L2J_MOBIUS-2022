@@ -82,7 +82,7 @@ public class RollingDice implements IItemHandler
 			final int x = player.getX() + x1;
 			final int y = player.getY() + y1;
 			final int z = player.getZ();
-			final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(player.getX(), player.getY(), player.getZ(), x, y, z, player.getInstanceId());
+			final Location destination = GeoEngine.getInstance().getValidLocation(player.getX(), player.getY(), player.getZ(), x, y, z, player.getInstanceId());
 			Broadcast.toSelfAndKnownPlayers(player, new Dice(player.getObjectId(), item.getItemId(), number, destination.getX(), destination.getY(), destination.getZ()));
 			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_HAS_ROLLED_S2);

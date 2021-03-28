@@ -620,7 +620,7 @@ public class Antharas extends Quest
 						final int ry = Rnd.get(112400, 116000);
 						final int rdt = ((_antharas.getX() - rx) * (_antharas.getX() - rx)) + ((_antharas.getY() - ry) * (_antharas.getY() - ry));
 						final Location randomLocation = new Location(rx, ry, -7704);
-						if (GeoEngine.getInstance().canSeeTarget(_antharas, randomLocation) && (rdt < dt))
+						if (GeoEngine.getInstance().canSeeLocation(_antharas, randomLocation) && (rdt < dt))
 						{
 							x = rx;
 							y = ry;

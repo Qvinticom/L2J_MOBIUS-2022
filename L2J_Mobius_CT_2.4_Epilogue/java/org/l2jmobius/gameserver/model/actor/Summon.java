@@ -29,7 +29,6 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
@@ -107,7 +106,7 @@ public abstract class Summon extends Playable
 		final int x = owner.getX();
 		final int y = owner.getY();
 		final int z = owner.getZ();
-		final Location location = GeoEngine.getInstance().canMoveToTargetLoc(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z, owner.getInstanceId());
+		final Location location = GeoEngine.getInstance().getValidLocation(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z, owner.getInstanceId());
 		setXYZInvisible(location.getX(), location.getY(), location.getZ());
 	}
 	
@@ -646,7 +645,7 @@ public abstract class Summon extends Playable
 			return false;
 		}
 		
-		if ((this != target) && skill.isPhysical() && Config.PATHFINDING && (GeoEnginePathfinding.getInstance().findPath(getX(), getY(), getZ(), target.getX(), target.getY(), target.getZ(), getInstanceId()) == null))
+		if ((this != target) && skill.isPhysical() && Config.PATHFINDING && (GeoEngine.getInstance().findPath(getX(), getY(), getZ(), target.getX(), target.getY(), target.getZ(), getInstanceId()) == null))
 		{
 			sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 			return false;

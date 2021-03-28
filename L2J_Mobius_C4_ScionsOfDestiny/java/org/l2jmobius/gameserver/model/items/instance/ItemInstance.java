@@ -1045,7 +1045,7 @@ public class ItemInstance extends WorldObject
 		int z = zValue;
 		if (Config.PATHFINDING && (dropper != null))
 		{
-			final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
+			final Location dropDest = GeoEngine.getInstance().getValidLocation(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
 			if ((dropDest != null) && (dropDest.getX() != 0) && (dropDest.getY() != 0))
 			{
 				x = dropDest.getX();

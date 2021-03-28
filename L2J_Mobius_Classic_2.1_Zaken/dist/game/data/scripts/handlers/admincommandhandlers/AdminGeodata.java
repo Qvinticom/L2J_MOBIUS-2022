@@ -55,8 +55,8 @@ public class AdminGeodata implements IAdminCommandHandler
 				final int worldX = activeChar.getX();
 				final int worldY = activeChar.getY();
 				final int worldZ = activeChar.getZ();
-				final int geoX = GeoEngine.getInstance().getGeoX(worldX);
-				final int geoY = GeoEngine.getInstance().getGeoY(worldY);
+				final int geoX = GeoEngine.getGeoX(worldX);
+				final int geoY = GeoEngine.getGeoY(worldY);
 				
 				if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 				{
@@ -73,8 +73,8 @@ public class AdminGeodata implements IAdminCommandHandler
 				final int worldX = activeChar.getX();
 				final int worldY = activeChar.getY();
 				final int worldZ = activeChar.getZ();
-				final int geoX = GeoEngine.getInstance().getGeoX(worldX);
-				final int geoY = GeoEngine.getInstance().getGeoY(worldY);
+				final int geoX = GeoEngine.getGeoX(worldX);
+				final int geoY = GeoEngine.getGeoY(worldY);
 				
 				if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 				{
@@ -133,8 +133,8 @@ public class AdminGeodata implements IAdminCommandHandler
 			}
 			case "admin_geomap":
 			{
-				final int x = ((activeChar.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-				final int y = ((activeChar.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+				final int x = ((activeChar.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+				final int y = ((activeChar.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 				BuilderUtil.sendSysMessage(activeChar, "GeoMap: " + x + "_" + y + " (" + ((x - World.TILE_ZERO_COORD_X) * World.TILE_SIZE) + "," + ((y - World.TILE_ZERO_COORD_Y) * World.TILE_SIZE) + " to " + ((((x - World.TILE_ZERO_COORD_X) * World.TILE_SIZE) + World.TILE_SIZE) - 1) + "," + ((((y - World.TILE_ZERO_COORD_Y) * World.TILE_SIZE) + World.TILE_SIZE) - 1) + ")");
 				break;
 			}

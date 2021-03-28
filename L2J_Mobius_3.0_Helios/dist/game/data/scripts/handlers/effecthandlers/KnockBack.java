@@ -179,7 +179,7 @@ public class KnockBack extends AbstractEffect
 			final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));
 			final int y = (int) (effected.getY() + (_distance * Math.sin(radians)));
 			final int z = effected.getZ();
-			final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
+			final Location loc = GeoEngine.getInstance().getValidLocation(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 			
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			effected.broadcastPacket(new FlyToLocation(effected, loc, _type, _speed, _delay, _animationSpeed));

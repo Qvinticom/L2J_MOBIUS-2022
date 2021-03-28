@@ -234,12 +234,12 @@ public class DoorData implements IXmlReader
 		}
 	}
 	
-	public boolean checkIfDoorsBetween(Location start, Location end)
+	public boolean checkIfDoorsBetween(Location start, Location end, int instanceId)
 	{
-		return checkIfDoorsBetween(start.getX(), start.getY(), start.getZ(), end.getX(), end.getY(), end.getZ());
+		return checkIfDoorsBetween(start.getX(), start.getY(), start.getZ(), end.getX(), end.getY(), end.getZ(), instanceId);
 	}
 	
-	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz)
+	public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId)
 	{
 		final WorldRegion region = World.getInstance().getRegion(x, y);
 		final Collection<DoorInstance> doors = region != null ? region.getDoors() : null;
@@ -248,9 +248,9 @@ public class DoorData implements IXmlReader
 			return false;
 		}
 		
-		for (DoorInstance doorInst : doors)
+		for (DoorInstance door : doors)
 		{
-			if (doorInst.getXMax() == 0)
+			if ((door.getXMax() == 0) || (door.getInstanceId() != instanceId))
 			{
 				continue;
 			}
@@ -259,32 +259,32 @@ public class DoorData implements IXmlReader
 			// heavy approximation disabling some shooting angles especially near 2-piece doors
 			// but most calculations should stop short
 			// phase 1, x
-			if (((x <= doorInst.getXMax()) && (tx >= doorInst.getXMin())) || ((tx <= doorInst.getXMax()) && (x >= doorInst.getXMin())))
+			if (((x <= door.getXMax()) && (tx >= door.getXMin())) || ((tx <= door.getXMax()) && (x >= door.getXMin())))
 			{
 				// phase 2, y
-				if (((y <= doorInst.getYMax()) && (ty >= doorInst.getYMin())) || ((ty <= doorInst.getYMax()) && (y >= doorInst.getYMin())))
+				if (((y <= door.getYMax()) && (ty >= door.getYMin())) || ((ty <= door.getYMax()) && (y >= door.getYMin())))
 				{
 					// phase 3, basically only z remains but now we calculate it with another formula (by rage)
 					// in some cases the direct line check (only) in the beginning isn't sufficient,
 					// when char z changes a lot along the path
-					if ((doorInst.getStatus().getCurrentHp() > 0) && !doorInst.isOpen())
+					if ((door.getStatus().getCurrentHp() > 0) && !door.isOpen())
 					{
-						final int px1 = doorInst.getXMin();
-						final int py1 = doorInst.getYMin();
-						final int pz1 = doorInst.getZMin();
-						final int px2 = doorInst.getXMax();
-						final int py2 = doorInst.getYMax();
-						final int pz2 = doorInst.getZMax();
+						final int px1 = door.getXMin();
+						final int py1 = door.getYMin();
+						final int pz1 = door.getZMin();
+						final int px2 = door.getXMax();
+						final int py2 = door.getYMax();
+						final int pz2 = door.getZMax();
 						final int l = tx - x;
 						final int m = ty - y;
 						final int n = tz - z;
-						final int dk = ((doorInst.getA() * l) + (doorInst.getB() * m) + (doorInst.getC() * n));
+						final int dk = ((door.getA() * l) + (door.getB() * m) + (door.getC() * n));
 						if (dk == 0)
 						{
 							continue; // Parallel
 						}
 						
-						final float p = (float) ((doorInst.getA() * x) + (doorInst.getB() * y) + (doorInst.getC() * z) + doorInst.getD()) / dk;
+						final float p = (float) ((door.getA() * x) + (door.getB() * y) + (door.getC() * z) + door.getD()) / dk;
 						final int fx = (int) (x - (l * p));
 						final int fy = (int) (y - (m * p));
 						final int fz = (int) (z - (n * p));

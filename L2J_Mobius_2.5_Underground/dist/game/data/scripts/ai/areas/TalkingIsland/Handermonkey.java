@@ -46,7 +46,7 @@ public class Handermonkey extends AbstractNpcAI
 			{
 				final int x = npc.getSpawn().getX() + (getRandom(-100, 100));
 				final int y = npc.getSpawn().getY() + (getRandom(-100, 100));
-				final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x, y, npc.getZ(), npc.getInstanceWorld());
+				final Location loc = GeoEngine.getInstance().getValidLocation(npc.getX(), npc.getY(), npc.getZ(), x, y, npc.getZ(), npc.getInstanceWorld());
 				addMoveToDesire(npc, loc, 0);
 			}
 			else

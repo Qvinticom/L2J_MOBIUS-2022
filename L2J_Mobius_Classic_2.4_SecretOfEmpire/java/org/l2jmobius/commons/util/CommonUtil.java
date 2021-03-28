@@ -591,6 +591,17 @@ public class CommonUtil
 		return formatter.format(value);
 	}
 	
+	/**
+	 * @param numToTest : The number to test.
+	 * @param min : The minimum limit.
+	 * @param max : The maximum limit.
+	 * @return the number or one of the limit (mininum / maximum).
+	 */
+	public static int limit(int numToTest, int min, int max)
+	{
+		return (numToTest > max) ? max : ((numToTest < min) ? min : numToTest);
+	}
+	
 	public static boolean isNullOrEmpty(CharSequence value)
 	{
 		return isNull(value) || (value.length() == 0);

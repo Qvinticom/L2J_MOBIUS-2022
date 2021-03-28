@@ -28,9 +28,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
-/**
- * @version $Revision: 1.21.2.5.2.7 $ $Date: 2005/03/27 15:29:32 $
- */
 public class World
 {
 	private static final Logger LOGGER = Logger.getLogger(World.class.getName());
@@ -38,32 +35,31 @@ public class World
 	public static volatile int MAX_CONNECTED_COUNT = 0;
 	public static volatile int OFFLINE_TRADE_COUNT = 0;
 	
-	public static final int SHIFT_BY = 12;
+	/** Bit shift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 11 divides one tile to 16x16 regions. */
+	public static final int SHIFT_BY = 11;
 	
-	// Geodata min/max tiles
-	public static final int TILE_X_MIN = 16;
-	public static final int TILE_X_MAX = 26;
-	public static final int TILE_Y_MIN = 10;
-	public static final int TILE_Y_MAX = 25;
-	
-	// Map dimensions
 	public static final int TILE_SIZE = 32768;
-	public static final int MAP_MIN_X = (TILE_X_MIN - 20) * TILE_SIZE;
-	public static final int MAP_MAX_X = (TILE_X_MAX - 19) * TILE_SIZE;
-	public static final int MAP_MIN_Y = (TILE_Y_MIN - 18) * TILE_SIZE;
-	public static final int MAP_MAX_Y = (TILE_Y_MAX - 17) * TILE_SIZE;
 	
-	/** calculated offset used so top left region is 0,0. */
-	public static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
+	/** Map dimensions. */
+	public static final int TILE_X_MIN = 16;
+	public static final int TILE_Y_MIN = 10;
+	public static final int TILE_X_MAX = 26;
+	public static final int TILE_Y_MAX = 25;
+	public static final int TILE_ZERO_COORD_X = 20;
+	public static final int TILE_ZERO_COORD_Y = 18;
+	public static final int WORLD_X_MIN = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;
+	public static final int WORLD_Y_MIN = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
 	
-	/** The Constant OFFSET_Y. */
-	public static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
+	public static final int WORLD_X_MAX = ((TILE_X_MAX - TILE_ZERO_COORD_X) + 1) * TILE_SIZE;
+	public static final int WORLD_Y_MAX = ((TILE_Y_MAX - TILE_ZERO_COORD_Y) + 1) * TILE_SIZE;
 	
-	/** number of regions. */
-	private static final int REGIONS_X = (MAP_MAX_X >> SHIFT_BY) + OFFSET_X;
+	/** Calculated offset used so top left region is 0,0 */
+	public static final int OFFSET_X = Math.abs(WORLD_X_MIN >> SHIFT_BY);
+	public static final int OFFSET_Y = Math.abs(WORLD_Y_MIN >> SHIFT_BY);
 	
-	/** The Constant REGIONS_Y. */
-	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
+	/** Number of regions. */
+	private static final int REGIONS_X = (WORLD_X_MAX >> SHIFT_BY) + OFFSET_X;
+	private static final int REGIONS_Y = (WORLD_Y_MAX >> SHIFT_BY) + OFFSET_Y;
 	
 	/** HashMap(String Player name, PlayerInstance) containing all the players in game. */
 	private static Map<String, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();

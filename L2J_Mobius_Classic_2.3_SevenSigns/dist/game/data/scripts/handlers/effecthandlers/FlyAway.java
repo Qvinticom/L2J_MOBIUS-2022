@@ -57,7 +57,7 @@ public class FlyAway extends AbstractEffect
 		final int y = (int) (effector.getY() - (nRadius * (dy / distance)));
 		final int z = effector.getZ();
 		
-		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
+		final Location destination = GeoEngine.getInstance().getValidLocation(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		effected.setXYZ(destination);

@@ -41,6 +41,7 @@ import org.l2jmobius.commons.enums.ServerMode;
 import org.l2jmobius.commons.util.ClassMasterSettings;
 import org.l2jmobius.commons.util.PropertiesParser;
 import org.l2jmobius.commons.util.StringUtil;
+import org.l2jmobius.gameserver.enums.GeoType;
 import org.l2jmobius.gameserver.model.olympiad.OlympiadPeriod;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
@@ -931,12 +932,17 @@ public class Config
 	public static boolean ALT_RAIDS_STATS_BONUS;
 	
 	public static Path GEODATA_PATH;
+	public static GeoType GEODATA_TYPE;
 	public static boolean PATHFINDING;
 	public static String PATHFIND_BUFFERS;
-	public static float LOW_WEIGHT;
-	public static float MEDIUM_WEIGHT;
-	public static float HIGH_WEIGHT;
-	public static float DIAGONAL_WEIGHT;
+	public static int MOVE_WEIGHT;
+	public static int MOVE_WEIGHT_DIAG;
+	public static int OBSTACLE_WEIGHT;
+	public static int HEURISTIC_WEIGHT;
+	public static int HEURISTIC_WEIGHT_DIAG;
+	public static int MAX_ITERATIONS;
+	public static int PART_OF_CHARACTER_HEIGHT;
+	public static int MAX_OBSTACLE_HEIGHT;
 	public static boolean FALL_DAMAGE;
 	public static boolean ALLOW_WATER;
 	
@@ -2494,12 +2500,17 @@ public class Config
 	{
 		final PropertiesParser geoengineConfig = new PropertiesParser(GEOENGINE_CONFIG_FILE);
 		GEODATA_PATH = Paths.get(geoengineConfig.getString("GeoDataPath", "./data/geodata"));
+		GEODATA_TYPE = Enum.valueOf(GeoType.class, geoengineConfig.getString("GeoDataType", "L2J"));
 		PATHFINDING = geoengineConfig.getBoolean("PathFinding", true);
-		PATHFIND_BUFFERS = geoengineConfig.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-		LOW_WEIGHT = geoengineConfig.getFloat("LowWeight", 0.5f);
-		MEDIUM_WEIGHT = geoengineConfig.getFloat("MediumWeight", 2);
-		HIGH_WEIGHT = geoengineConfig.getFloat("HighWeight", 3);
-		DIAGONAL_WEIGHT = geoengineConfig.getFloat("DiagonalWeight", 0.707f);
+		PATHFIND_BUFFERS = geoengineConfig.getString("PathFindBuffers", "500x10;1000x10;3000x5;5000x3;10000x3");
+		MOVE_WEIGHT = geoengineConfig.getInt("MoveWeight", 10);
+		MOVE_WEIGHT_DIAG = geoengineConfig.getInt("MoveWeightDiag", 14);
+		OBSTACLE_WEIGHT = geoengineConfig.getInt("ObstacleWeight", 30);
+		HEURISTIC_WEIGHT = geoengineConfig.getInt("HeuristicWeight", 12);
+		HEURISTIC_WEIGHT_DIAG = geoengineConfig.getInt("HeuristicWeightDiag", 18);
+		MAX_ITERATIONS = geoengineConfig.getInt("MaxIterations", 3500);
+		PART_OF_CHARACTER_HEIGHT = geoengineConfig.getInt("PartOfCharacterHeight", 75);
+		MAX_OBSTACLE_HEIGHT = geoengineConfig.getInt("MaxObstacleHeight", 32);
 		FALL_DAMAGE = geoengineConfig.getBoolean("FallDamage", false);
 		ALLOW_WATER = geoengineConfig.getBoolean("AllowWater", false);
 	}

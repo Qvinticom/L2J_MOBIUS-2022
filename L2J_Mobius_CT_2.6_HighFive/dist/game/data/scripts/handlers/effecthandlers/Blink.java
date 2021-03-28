@@ -68,7 +68,7 @@ public class Blink extends AbstractEffect
 		final int x = effected.getX() + x1;
 		final int y = effected.getY() + y1;
 		final int z = effected.getZ();
-		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
+		final Location destination = GeoEngine.getInstance().getValidLocation(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.DUMMY));
 		effected.abortAttack();

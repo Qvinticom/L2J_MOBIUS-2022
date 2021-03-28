@@ -57,8 +57,8 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 		{
 			case "admin_geomap_missing_htmls":
 			{
-				final int x = ((activeChar.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-				final int y = ((activeChar.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+				final int x = ((activeChar.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+				final int y = ((activeChar.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 				final int topLeftX = (x - World.TILE_ZERO_COORD_X) * World.TILE_SIZE;
 				final int topLeftY = (y - World.TILE_ZERO_COORD_Y) * World.TILE_SIZE;
 				final int bottomRightX = (((x - World.TILE_ZERO_COORD_X) * World.TILE_SIZE) + World.TILE_SIZE) - 1;

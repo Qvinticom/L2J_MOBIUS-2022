@@ -65,19 +65,19 @@ public class World
 	public static final int TILE_Y_MAX = 26;
 	public static final int TILE_ZERO_COORD_X = 20;
 	public static final int TILE_ZERO_COORD_Y = 18;
-	public static final int MAP_MIN_X = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;
-	public static final int MAP_MIN_Y = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
+	public static final int WORLD_X_MIN = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;
+	public static final int WORLD_Y_MIN = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
 	
-	public static final int MAP_MAX_X = ((TILE_X_MAX - TILE_ZERO_COORD_X) + 1) * TILE_SIZE;
-	public static final int MAP_MAX_Y = ((TILE_Y_MAX - TILE_ZERO_COORD_Y) + 1) * TILE_SIZE;
+	public static final int WORLD_X_MAX = ((TILE_X_MAX - TILE_ZERO_COORD_X) + 1) * TILE_SIZE;
+	public static final int WORLD_Y_MAX = ((TILE_Y_MAX - TILE_ZERO_COORD_Y) + 1) * TILE_SIZE;
 	
 	/** Calculated offset used so top left region is 0,0 */
-	public static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
-	public static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
+	public static final int OFFSET_X = Math.abs(WORLD_X_MIN >> SHIFT_BY);
+	public static final int OFFSET_Y = Math.abs(WORLD_Y_MIN >> SHIFT_BY);
 	
 	/** Number of regions. */
-	private static final int REGIONS_X = (MAP_MAX_X >> SHIFT_BY) + OFFSET_X;
-	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
+	private static final int REGIONS_X = (WORLD_X_MAX >> SHIFT_BY) + OFFSET_X;
+	private static final int REGIONS_Y = (WORLD_Y_MAX >> SHIFT_BY) + OFFSET_Y;
 	
 	/** Map containing all the players in game. */
 	private static final Map<Integer, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
@@ -783,9 +783,6 @@ public class World
 		}
 	}
 	
-	/**
-	 * @return the current instance of World
-	 */
 	public static World getInstance()
 	{
 		return SingletonHolder.INSTANCE;

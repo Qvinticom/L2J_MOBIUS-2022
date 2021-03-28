@@ -134,11 +134,11 @@ public class Fishing implements ISkillHandler
 		if ((water != null))
 		{
 			final Location waterLocation = new Location(x, y, water.getWaterZ() - 50);
-			if ((aimingTo != null) && GeoEngine.getInstance().canSeeTarget(player, waterLocation))
+			if ((aimingTo != null) && GeoEngine.getInstance().canSeeLocation(player, waterLocation))
 			{
 				z = water.getWaterZ() + 10;
 			}
-			else if ((aimingTo != null) && GeoEngine.getInstance().canSeeTarget(player, waterLocation))
+			else if ((aimingTo != null) && GeoEngine.getInstance().canSeeLocation(player, waterLocation))
 			{
 				z = aimingTo.getWaterZ() + 10;
 			}

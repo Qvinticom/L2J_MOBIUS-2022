@@ -94,15 +94,15 @@ public class ZoneManager implements IXmlReader
 	private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();
 	
 	private static final int SHIFT_BY = 15;
-	private static final int OFFSET_X = Math.abs(World.MAP_MIN_X >> SHIFT_BY);
-	private static final int OFFSET_Y = Math.abs(World.MAP_MIN_Y >> SHIFT_BY);
+	private static final int OFFSET_X = Math.abs(World.WORLD_X_MIN >> SHIFT_BY);
+	private static final int OFFSET_Y = Math.abs(World.WORLD_Y_MIN >> SHIFT_BY);
 	
 	private final Map<Class<? extends ZoneType>, ConcurrentHashMap<Integer, ? extends ZoneType>> _classZones = new ConcurrentHashMap<>();
 	private final Map<String, SpawnTerritory> _spawnTerritories = new ConcurrentHashMap<>();
 	private final AtomicInteger _lastDynamicId = new AtomicInteger(300000);
 	private List<ItemInstance> _debugItems;
 	
-	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
+	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.WORLD_X_MAX >> SHIFT_BY) + OFFSET_X + 1][(World.WORLD_Y_MAX >> SHIFT_BY) + OFFSET_Y + 1];
 	
 	/**
 	 * Instantiates a new zone manager.

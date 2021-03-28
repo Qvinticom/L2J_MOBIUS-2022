@@ -16,70 +16,62 @@
  */
 package org.l2jmobius.gameserver.geoengine;
 
-import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteOrder;
-import java.nio.channels.FileChannel.MapMode;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.concurrent.atomic.AtomicReferenceArray;
-import java.util.logging.Level;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.DoorData;
 import org.l2jmobius.gameserver.data.xml.FenceData;
-import org.l2jmobius.gameserver.geoengine.geodata.Cell;
-import org.l2jmobius.gameserver.geoengine.geodata.IRegion;
-import org.l2jmobius.gameserver.geoengine.geodata.NullRegion;
-import org.l2jmobius.gameserver.geoengine.geodata.Region;
+import org.l2jmobius.gameserver.enums.GeoType;
+import org.l2jmobius.gameserver.enums.MoveDirectionType;
+import org.l2jmobius.gameserver.geoengine.geodata.ABlock;
+import org.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
+import org.l2jmobius.gameserver.geoengine.geodata.BlockFlat;
+import org.l2jmobius.gameserver.geoengine.geodata.BlockMultilayer;
+import org.l2jmobius.gameserver.geoengine.geodata.BlockNull;
+import org.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
+import org.l2jmobius.gameserver.geoengine.pathfinding.NodeBuffer;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.util.GeoUtils;
-import org.l2jmobius.gameserver.util.LinePointIterator;
-import org.l2jmobius.gameserver.util.LinePointIterator3D;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.util.Util;
 
-/**
- * @author -Nemesiss-, HorridoJoho
- */
 public class GeoEngine
 {
-	private static final Logger LOGGER = Logger.getLogger(GeoEngine.class.getName());
-	
-	private static final int WORLD_MIN_X = -655360;
-	private static final int WORLD_MIN_Y = -589824;
-	private static final int WORLD_MIN_Z = -16384;
-	
-	/** Regions in the world on the x axis */
-	public static final int GEO_REGIONS_X = 32;
-	/** Regions in the world on the y axis */
-	public static final int GEO_REGIONS_Y = 32;
-	/** Region in the world */
-	public static final int GEO_REGIONS = GEO_REGIONS_X * GEO_REGIONS_Y;
-	
-	/** Blocks in the world on the x axis */
-	public static final int GEO_BLOCKS_X = GEO_REGIONS_X * IRegion.REGION_BLOCKS_X;
-	/** Blocks in the world on the y axis */
-	public static final int GEO_BLOCKS_Y = GEO_REGIONS_Y * IRegion.REGION_BLOCKS_Y;
-	/** Blocks in the world */
-	public static final int GEO_BLOCKS = GEO_REGIONS * IRegion.REGION_BLOCKS;
-	
-	/** The regions array */
-	private final AtomicReferenceArray<IRegion> _regions = new AtomicReferenceArray<>(GEO_REGIONS);
+	protected static final Logger LOGGER = Logger.getLogger(GeoEngine.class.getName());
 	
 	private static final String FILE_NAME_FORMAT = "%d_%d.l2j";
-	private static final int ELEVATED_SEE_OVER_DISTANCE = 2;
-	private static final int MAX_SEE_OVER_HEIGHT = 48;
 	
-	protected GeoEngine()
+	private final ABlock[][] _blocks;
+	private final BlockNull _nullBlock;
+	
+	// Pre-allocated buffers.
+	private final BufferHolder[] _buffers;
+	
+	public GeoEngine()
 	{
 		LOGGER.info("GeoEngine: Initializing...");
-		for (int i = 0; i < _regions.length(); i++)
-		{
-			_regions.set(i, NullRegion.INSTANCE);
-		}
 		
+		// Initialize block container.
+		_blocks = new ABlock[GeoStructure.GEO_BLOCKS_X][GeoStructure.GEO_BLOCKS_Y];
+		
+		// Load null block.
+		_nullBlock = new BlockNull();
+		
+		// Initialize multilayer temporarily buffer.
+		BlockMultilayer.initialize();
+		
+		// Load geo files according to geoengine config setup.
 		int loaded = 0;
 		try
 		{
@@ -90,22 +82,51 @@ public class GeoEngine
 					final Path geoFilePath = Config.GEODATA_PATH.resolve(String.format(FILE_NAME_FORMAT, regionX, regionY));
 					if (Files.exists(geoFilePath))
 					{
-						try (RandomAccessFile raf = new RandomAccessFile(geoFilePath.toFile(), "r"))
+						// Region file is load-able, try to load it.
+						if (loadGeoBlocks(regionX, regionY))
 						{
-							_regions.set((regionX * GEO_REGIONS_Y) + regionY, new Region(raf.getChannel().map(MapMode.READ_ONLY, 0, raf.length()).load().order(ByteOrder.LITTLE_ENDIAN)));
 							loaded++;
 						}
+					}
+					else
+					{
+						// Region file is not load-able, load null blocks.
+						loadNullBlocks(regionX, regionY);
 					}
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "GeoEngine: Failed to load geodata!", e);
+			LOGGER.warning("GeoEngine: Failed to load geodata! " + e);
 			System.exit(1);
 		}
-		
 		LOGGER.info("GeoEngine: Loaded " + loaded + " geodata files.");
+		
+		// Release multilayer block temporarily buffer.
+		BlockMultilayer.release();
+		
+		String[] array = Config.PATHFIND_BUFFERS.split(";");
+		_buffers = new BufferHolder[array.length];
+		
+		int count = 0;
+		for (int i = 0; i < array.length; i++)
+		{
+			String buf = array[i];
+			String[] args = buf.split("x");
+			
+			try
+			{
+				int size = Integer.parseInt(args[1]);
+				count += size;
+				_buffers[i] = new BufferHolder(Integer.parseInt(args[0]), size);
+			}
+			catch (Exception e)
+			{
+				LOGGER.warning("Could not load buffer setting:" + buf + ". " + e);
+			}
+		}
+		LOGGER.info("Loaded " + count + " node buffers.");
 		
 		// Avoid wrong configs when no files are loaded.
 		if ((loaded == 0) && Config.PATHFINDING)
@@ -116,616 +137,913 @@ public class GeoEngine
 	}
 	
 	/**
-	 * @param geoX
-	 * @param geoY
-	 * @return the region
+	 * Provides optimize selection of the buffer. When all pre-initialized buffer are locked, creates new buffer and log this situation.
+	 * @param size : pre-calculated minimal required size
+	 * @return NodeBuffer : buffer
 	 */
-	private IRegion getRegion(int geoX, int geoY)
+	private NodeBuffer getBuffer(int size)
 	{
-		final int region = ((geoX / IRegion.REGION_CELLS_X) * GEO_REGIONS_Y) + (geoY / IRegion.REGION_CELLS_Y);
-		if ((region < 0) || (region >= _regions.length()))
+		NodeBuffer current = null;
+		for (BufferHolder holder : _buffers)
 		{
-			return null;
-		}
-		return _regions.get(region);
-	}
-	
-	/**
-	 * @param filePath
-	 * @param regionX
-	 * @param regionY
-	 * @throws IOException
-	 */
-	public void loadRegion(Path filePath, int regionX, int regionY) throws IOException
-	{
-		final int regionOffset = (regionX * GEO_REGIONS_Y) + regionY;
-		try (RandomAccessFile raf = new RandomAccessFile(filePath.toFile(), "r"))
-		{
-			_regions.set(regionOffset, new Region(raf.getChannel().map(MapMode.READ_ONLY, 0, raf.length()).load().order(ByteOrder.LITTLE_ENDIAN)));
-		}
-	}
-	
-	/**
-	 * @param regionX
-	 * @param regionY
-	 */
-	public void unloadRegion(int regionX, int regionY)
-	{
-		_regions.set((regionX * GEO_REGIONS_Y) + regionY, NullRegion.INSTANCE);
-	}
-	
-	/**
-	 * @param geoX
-	 * @param geoY
-	 * @return if geodata exist
-	 */
-	public boolean hasGeoPos(int geoX, int geoY)
-	{
-		final IRegion region = getRegion(geoX, geoY);
-		if (region == null)
-		{
-			return false;
-		}
-		return region.hasGeo();
-	}
-	
-	/**
-	 * Checks the specified position for available geodata.
-	 * @param x the world x
-	 * @param y the world y
-	 * @return {@code true} if there is geodata for the given coordinates, {@code false} otherwise
-	 */
-	public boolean hasGeo(int x, int y)
-	{
-		return hasGeoPos(getGeoX(x), getGeoY(y));
-	}
-	
-	/**
-	 * @param geoX
-	 * @param geoY
-	 * @param worldZ
-	 * @param nswe
-	 * @return the nearest nswe check
-	 */
-	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
-	{
-		final IRegion region = getRegion(geoX, geoY);
-		if (region == null)
-		{
-			return true;
-		}
-		return region.checkNearestNswe(geoX, geoY, worldZ, nswe);
-	}
-	
-	/**
-	 * @param geoX
-	 * @param geoY
-	 * @param worldZ
-	 * @param nswe
-	 * @return the nearest nswe anti-corner cut
-	 */
-	public boolean checkNearestNsweAntiCornerCut(int geoX, int geoY, int worldZ, int nswe)
-	{
-		boolean can = true;
-		if ((nswe & Cell.NSWE_NORTH_EAST) == Cell.NSWE_NORTH_EAST)
-		{
-			can = checkNearestNswe(geoX, geoY - 1, worldZ, Cell.NSWE_EAST) && checkNearestNswe(geoX + 1, geoY, worldZ, Cell.NSWE_NORTH);
-		}
-		if (can && ((nswe & Cell.NSWE_NORTH_WEST) == Cell.NSWE_NORTH_WEST))
-		{
-			can = checkNearestNswe(geoX, geoY - 1, worldZ, Cell.NSWE_WEST) && checkNearestNswe(geoX, geoY - 1, worldZ, Cell.NSWE_NORTH);
-		}
-		if (can && ((nswe & Cell.NSWE_SOUTH_EAST) == Cell.NSWE_SOUTH_EAST))
-		{
-			can = checkNearestNswe(geoX, geoY + 1, worldZ, Cell.NSWE_EAST) && checkNearestNswe(geoX + 1, geoY, worldZ, Cell.NSWE_SOUTH);
-		}
-		if (can && ((nswe & Cell.NSWE_SOUTH_WEST) == Cell.NSWE_SOUTH_WEST))
-		{
-			can = checkNearestNswe(geoX, geoY + 1, worldZ, Cell.NSWE_WEST) && checkNearestNswe(geoX - 1, geoY, worldZ, Cell.NSWE_SOUTH);
-		}
-		return can && checkNearestNswe(geoX, geoY, worldZ, nswe);
-	}
-	
-	/**
-	 * @param geoX
-	 * @param geoY
-	 * @param worldZ
-	 * @return the nearest Z value
-	 */
-	public int getNearestZ(int geoX, int geoY, int worldZ)
-	{
-		final IRegion region = getRegion(geoX, geoY);
-		if (region == null)
-		{
-			return worldZ;
-		}
-		return region.getNearestZ(geoX, geoY, worldZ);
-	}
-	
-	/**
-	 * @param geoX
-	 * @param geoY
-	 * @param worldZ
-	 * @return the next lower Z value
-	 */
-	public int getNextLowerZ(int geoX, int geoY, int worldZ)
-	{
-		final IRegion region = getRegion(geoX, geoY);
-		if (region == null)
-		{
-			return worldZ;
-		}
-		return region.getNextLowerZ(geoX, geoY, worldZ);
-	}
-	
-	/**
-	 * @param geoX
-	 * @param geoY
-	 * @param worldZ
-	 * @return the next higher Z value
-	 */
-	public int getNextHigherZ(int geoX, int geoY, int worldZ)
-	{
-		final IRegion region = getRegion(geoX, geoY);
-		if (region == null)
-		{
-			return worldZ;
-		}
-		return region.getNextHigherZ(geoX, geoY, worldZ);
-	}
-	
-	/**
-	 * Gets the Z height.
-	 * @param x the world x
-	 * @param y the world y
-	 * @param z the world z
-	 * @return the nearest Z height
-	 */
-	public int getHeight(int x, int y, int z)
-	{
-		return getNearestZ(getGeoX(x), getGeoY(y), z);
-	}
-	
-	/**
-	 * Gets the next lower Z height.
-	 * @param x the world x
-	 * @param y the world y
-	 * @param z the world z
-	 * @return the nearest Z height
-	 */
-	public int getLowerHeight(int x, int y, int z)
-	{
-		return getNextLowerZ(getGeoX(x), getGeoY(y), z);
-	}
-	
-	/**
-	 * Gets the next higher Z height.
-	 * @param x the world x
-	 * @param y the world y
-	 * @param z the world z
-	 * @return the nearest Z height
-	 */
-	public int getHigherHeight(int x, int y, int z)
-	{
-		return getNextHigherZ(getGeoX(x), getGeoY(y), z);
-	}
-	
-	/**
-	 * @param worldX
-	 * @return the geo X
-	 */
-	public int getGeoX(int worldX)
-	{
-		return (worldX - WORLD_MIN_X) / 16;
-	}
-	
-	/**
-	 * @param worldY
-	 * @return the geo Y
-	 */
-	public int getGeoY(int worldY)
-	{
-		return (worldY - WORLD_MIN_Y) / 16;
-	}
-	
-	/**
-	 * @param worldZ
-	 * @return the geo Z
-	 */
-	public int getGeoZ(int worldZ)
-	{
-		return (worldZ - WORLD_MIN_Z) / 16;
-	}
-	
-	/**
-	 * @param geoX
-	 * @return the world X
-	 */
-	public int getWorldX(int geoX)
-	{
-		return (geoX * 16) + WORLD_MIN_X + 8;
-	}
-	
-	/**
-	 * @param geoY
-	 * @return the world Y
-	 */
-	public int getWorldY(int geoY)
-	{
-		return (geoY * 16) + WORLD_MIN_Y + 8;
-	}
-	
-	/**
-	 * @param geoZ
-	 * @return the world Z
-	 */
-	public int getWorldZ(int geoZ)
-	{
-		return (geoZ * 16) + WORLD_MIN_Z + 8;
-	}
-	
-	/**
-	 * Can see target. Doors as target always return true. Checks doors between.
-	 * @param cha the character
-	 * @param target the target
-	 * @return {@code true} if the character can see the target (LOS), {@code false} otherwise
-	 */
-	public boolean canSeeTarget(WorldObject cha, WorldObject target)
-	{
-		if (target.isDoor())
-		{
-			// Can always see doors.
-			return true;
-		}
-		return canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceId(), target.getX(), target.getY(), target.getZ(), target.getInstanceId());
-	}
-	
-	/**
-	 * Can see target. Checks doors between.
-	 * @param cha the character
-	 * @param worldPosition the world position
-	 * @return {@code true} if the character can see the target at the given world position, {@code false} otherwise
-	 */
-	public boolean canSeeTarget(WorldObject cha, Location worldPosition)
-	{
-		return canSeeTarget(cha.getX(), cha.getY(), cha.getZ(), cha.getInstanceId(), worldPosition.getX(), worldPosition.getY(), worldPosition.getZ());
-	}
-	
-	/**
-	 * Can see target. Checks doors between.
-	 * @param x the x coordinate
-	 * @param y the y coordinate
-	 * @param z the z coordinate
-	 * @param instanceId
-	 * @param tx the target's x coordinate
-	 * @param ty the target's y coordinate
-	 * @param tz the target's z coordinate
-	 * @param tInstanceId the target's instanceId
-	 * @return
-	 */
-	public boolean canSeeTarget(int x, int y, int z, int instanceId, int tx, int ty, int tz, int tInstanceId)
-	{
-		return (instanceId != tInstanceId) ? false : canSeeTarget(x, y, z, instanceId, tx, ty, tz);
-	}
-	
-	/**
-	 * Can see target. Checks doors between.
-	 * @param x the x coordinate
-	 * @param y the y coordinate
-	 * @param z the z coordinate
-	 * @param instanceId
-	 * @param tx the target's x coordinate
-	 * @param ty the target's y coordinate
-	 * @param tz the target's z coordinate
-	 * @return {@code true} if there is line of sight between the given coordinate sets, {@code false} otherwise
-	 */
-	public boolean canSeeTarget(int x, int y, int z, int instanceId, int tx, int ty, int tz)
-	{
-		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz))
-		{
-			return false;
-		}
-		return canSeeTarget(x, y, z, tx, ty, tz);
-	}
-	
-	/**
-	 * @param prevX
-	 * @param prevY
-	 * @param prevGeoZ
-	 * @param curX
-	 * @param curY
-	 * @param nswe
-	 * @return the LOS Z value
-	 */
-	private int getLosGeoZ(int prevX, int prevY, int prevGeoZ, int curX, int curY, int nswe)
-	{
-		if ((((nswe & Cell.NSWE_NORTH) != 0) && ((nswe & Cell.NSWE_SOUTH) != 0)) || (((nswe & Cell.NSWE_WEST) != 0) && ((nswe & Cell.NSWE_EAST) != 0)))
-		{
-			throw new RuntimeException("Multiple directions!");
-		}
-		
-		if (checkNearestNsweAntiCornerCut(prevX, prevY, prevGeoZ, nswe))
-		{
-			return getNearestZ(curX, curY, prevGeoZ);
-		}
-		
-		return getNextHigherZ(curX, curY, prevGeoZ);
-	}
-	
-	/**
-	 * Can see target. Does not check doors between.
-	 * @param xValue the x coordinate
-	 * @param yValue the y coordinate
-	 * @param zValue the z coordinate
-	 * @param txValue the target's x coordinate
-	 * @param tyValue the target's y coordinate
-	 * @param tzValue the target's z coordinate
-	 * @return {@code true} if there is line of sight between the given coordinate sets, {@code false} otherwise
-	 */
-	public boolean canSeeTarget(int xValue, int yValue, int zValue, int txValue, int tyValue, int tzValue)
-	{
-		int x = xValue;
-		int y = yValue;
-		int tx = txValue;
-		int ty = tyValue;
-		
-		int geoX = getGeoX(x);
-		int geoY = getGeoY(y);
-		int tGeoX = getGeoX(tx);
-		int tGeoY = getGeoY(ty);
-		
-		int z = getNearestZ(geoX, geoY, zValue);
-		int tz = getNearestZ(tGeoX, tGeoY, tzValue);
-		
-		// Fastpath.
-		if ((geoX == tGeoX) && (geoY == tGeoY))
-		{
-			if (hasGeoPos(tGeoX, tGeoY))
-			{
-				return z == tz;
-			}
-			return true;
-		}
-		
-		if (tz > z)
-		{
-			int tmp = tx;
-			tx = x;
-			x = tmp;
-			
-			tmp = ty;
-			ty = y;
-			y = tmp;
-			
-			tmp = tz;
-			tz = z;
-			z = tmp;
-			
-			tmp = tGeoX;
-			tGeoX = geoX;
-			geoX = tmp;
-			
-			tmp = tGeoY;
-			tGeoY = geoY;
-			geoY = tmp;
-		}
-		
-		final LinePointIterator3D pointIter = new LinePointIterator3D(geoX, geoY, z, tGeoX, tGeoY, tz);
-		// First point is guaranteed to be available, skip it, we can always see our own position.
-		pointIter.next();
-		int prevX = pointIter.x();
-		int prevY = pointIter.y();
-		final int prevZ = pointIter.z();
-		int prevGeoZ = prevZ;
-		int ptIndex = 0;
-		while (pointIter.next())
-		{
-			final int curX = pointIter.x();
-			final int curY = pointIter.y();
-			
-			if ((curX == prevX) && (curY == prevY))
+			// Find proper size of buffer.
+			if (holder._size < size)
 			{
 				continue;
 			}
 			
-			final int beeCurZ = pointIter.z();
-			int curGeoZ = prevGeoZ;
-			
-			// Check if the position has geodata.
-			if (hasGeoPos(curX, curY))
+			// Find unlocked NodeBuffer.
+			for (NodeBuffer buffer : holder._buffer)
 			{
-				final int beeCurGeoZ = getNearestZ(curX, curY, beeCurZ);
-				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY); // .computeDirection(prevX, prevY, curX, curY);
-				curGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, curX, curY, nswe);
-				int maxHeight;
-				if (ptIndex < ELEVATED_SEE_OVER_DISTANCE)
+				if (!buffer.isLocked())
 				{
-					maxHeight = z + MAX_SEE_OVER_HEIGHT;
-				}
-				else
-				{
-					maxHeight = beeCurZ + MAX_SEE_OVER_HEIGHT;
+					continue;
 				}
 				
-				boolean canSeeThrough = false;
-				if ((curGeoZ <= maxHeight) && (curGeoZ <= beeCurGeoZ))
+				return buffer;
+			}
+			
+			LOGGER.warning("Creating new NodeBuffer " + size + " size, as no buffer empty or out of size.");
+			
+			// NodeBuffer not found, allocate temporary buffer.
+			current = new NodeBuffer(holder._size);
+			current.isLocked();
+		}
+		
+		return current;
+	}
+	
+	/**
+	 * Loads geodata from a file. When file does not exist, is corrupted or not consistent, loads none geodata.
+	 * @param regionX : Geodata file region X coordinate.
+	 * @param regionY : Geodata file region Y coordinate.
+	 * @return boolean : True, when geodata file was loaded without problem.
+	 */
+	private boolean loadGeoBlocks(int regionX, int regionY)
+	{
+		final String filename = String.format(Config.GEODATA_TYPE.getFilename(), regionX, regionY);
+		final String filepath = Config.GEODATA_PATH + "\\" + filename;
+		
+		// Standard load.
+		try (RandomAccessFile raf = new RandomAccessFile(filepath, "r");
+			FileChannel fc = raf.getChannel())
+		{
+			// Initialize file buffer.
+			MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size()).load();
+			buffer.order(ByteOrder.LITTLE_ENDIAN);
+			
+			// Load 18B header for L2OFF geodata (1st and 2nd byte...region X and Y).
+			if (Config.GEODATA_TYPE == GeoType.L2OFF)
+			{
+				for (int i = 0; i < 18; i++)
 				{
-					if ((nswe & Cell.NSWE_NORTH_EAST) == Cell.NSWE_NORTH_EAST)
+					buffer.get();
+				}
+			}
+			
+			// Get block indexes.
+			final int blockX = (regionX - World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
+			final int blockY = (regionY - World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
+			
+			// Loop over region blocks.
+			for (int ix = 0; ix < GeoStructure.REGION_BLOCKS_X; ix++)
+			{
+				for (int iy = 0; iy < GeoStructure.REGION_BLOCKS_Y; iy++)
+				{
+					if (Config.GEODATA_TYPE == GeoType.L2J)
 					{
-						final int northGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY - 1, Cell.NSWE_EAST);
-						final int eastGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX + 1, prevY, Cell.NSWE_NORTH);
-						canSeeThrough = (northGeoZ <= maxHeight) && (eastGeoZ <= maxHeight) && (northGeoZ <= getNearestZ(prevX, prevY - 1, beeCurZ)) && (eastGeoZ <= getNearestZ(prevX + 1, prevY, beeCurZ));
-					}
-					else if ((nswe & Cell.NSWE_NORTH_WEST) == Cell.NSWE_NORTH_WEST)
-					{
-						final int northGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY - 1, Cell.NSWE_WEST);
-						final int westGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX - 1, prevY, Cell.NSWE_NORTH);
-						canSeeThrough = (northGeoZ <= maxHeight) && (westGeoZ <= maxHeight) && (northGeoZ <= getNearestZ(prevX, prevY - 1, beeCurZ)) && (westGeoZ <= getNearestZ(prevX - 1, prevY, beeCurZ));
-					}
-					else if ((nswe & Cell.NSWE_SOUTH_EAST) == Cell.NSWE_SOUTH_EAST)
-					{
-						final int southGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY + 1, Cell.NSWE_EAST);
-						final int eastGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX + 1, prevY, Cell.NSWE_SOUTH);
-						canSeeThrough = (southGeoZ <= maxHeight) && (eastGeoZ <= maxHeight) && (southGeoZ <= getNearestZ(prevX, prevY + 1, beeCurZ)) && (eastGeoZ <= getNearestZ(prevX + 1, prevY, beeCurZ));
-					}
-					else if ((nswe & Cell.NSWE_SOUTH_WEST) == Cell.NSWE_SOUTH_WEST)
-					{
-						final int southGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX, prevY + 1, Cell.NSWE_WEST);
-						final int westGeoZ = getLosGeoZ(prevX, prevY, prevGeoZ, prevX - 1, prevY, Cell.NSWE_SOUTH);
-						canSeeThrough = (southGeoZ <= maxHeight) && (westGeoZ <= maxHeight) && (southGeoZ <= getNearestZ(prevX, prevY + 1, beeCurZ)) && (westGeoZ <= getNearestZ(prevX - 1, prevY, beeCurZ));
+						// Get block type.
+						final byte type = buffer.get();
+						
+						// Load block according to block type.
+						switch (type)
+						{
+							case GeoStructure.TYPE_FLAT_L2J_L2OFF:
+							{
+								_blocks[blockX + ix][blockY + iy] = new BlockFlat(buffer, Config.GEODATA_TYPE);
+								break;
+							}
+							case GeoStructure.TYPE_COMPLEX_L2J:
+							{
+								_blocks[blockX + ix][blockY + iy] = new BlockComplex(buffer);
+								break;
+							}
+							case GeoStructure.TYPE_MULTILAYER_L2J:
+							{
+								_blocks[blockX + ix][blockY + iy] = new BlockMultilayer(buffer, Config.GEODATA_TYPE);
+								break;
+							}
+							default:
+							{
+								throw new IllegalArgumentException("Unknown block type: " + type);
+							}
+						}
 					}
 					else
 					{
-						canSeeThrough = true;
+						// Get block type.
+						final short type = buffer.getShort();
+						
+						// Load block according to block type.
+						switch (type)
+						{
+							case GeoStructure.TYPE_FLAT_L2J_L2OFF:
+							{
+								_blocks[blockX + ix][blockY + iy] = new BlockFlat(buffer, Config.GEODATA_TYPE);
+								break;
+							}
+							case GeoStructure.TYPE_COMPLEX_L2OFF:
+							{
+								_blocks[blockX + ix][blockY + iy] = new BlockComplex(buffer);
+								break;
+							}
+							default:
+							{
+								_blocks[blockX + ix][blockY + iy] = new BlockMultilayer(buffer, Config.GEODATA_TYPE);
+								break;
+							}
+						}
 					}
 				}
+			}
+			
+			// Check data consistency.
+			if (buffer.remaining() > 0)
+			{
+				LOGGER.warning("Region file " + filename + " can be corrupted, remaining " + buffer.remaining() + " bytes to read.");
+			}
+			
+			// Loading was successful.
+			return true;
+		}
+		catch (Exception e)
+		{
+			// An error occured while loading, load null blocks.
+			LOGGER.warning("Error loading " + filename + " region file. " + e);
+			
+			// Replace whole region file with null blocks.
+			loadNullBlocks(regionX, regionY);
+			
+			// Loading was not successful.
+			return false;
+		}
+	}
+	
+	/**
+	 * Loads null blocks. Used when no region file is detected or an error occurs during loading.
+	 * @param regionX : Geodata file region X coordinate.
+	 * @param regionY : Geodata file region Y coordinate.
+	 */
+	private void loadNullBlocks(int regionX, int regionY)
+	{
+		// Get block indexes.
+		final int blockX = (regionX - World.TILE_X_MIN) * GeoStructure.REGION_BLOCKS_X;
+		final int blockY = (regionY - World.TILE_Y_MIN) * GeoStructure.REGION_BLOCKS_Y;
+		
+		// Load all null blocks.
+		for (int ix = 0; ix < GeoStructure.REGION_BLOCKS_X; ix++)
+		{
+			for (int iy = 0; iy < GeoStructure.REGION_BLOCKS_Y; iy++)
+			{
+				_blocks[blockX + ix][blockY + iy] = _nullBlock;
+			}
+		}
+	}
+	
+	/**
+	 * Converts world X to geodata X.
+	 * @param worldX
+	 * @return int : Geo X
+	 */
+	public static int getGeoX(int worldX)
+	{
+		return (worldX - World.WORLD_X_MIN) >> 4;
+	}
+	
+	/**
+	 * Converts world Y to geodata Y.
+	 * @param worldY
+	 * @return int : Geo Y
+	 */
+	public static int getGeoY(int worldY)
+	{
+		return (worldY - World.WORLD_Y_MIN) >> 4;
+	}
+	
+	/**
+	 * Converts geodata X to world X.
+	 * @param geoX
+	 * @return int : World X
+	 */
+	public static int getWorldX(int geoX)
+	{
+		return (geoX << 4) + World.WORLD_X_MIN + 8;
+	}
+	
+	/**
+	 * Converts geodata Y to world Y.
+	 * @param geoY
+	 * @return int : World Y
+	 */
+	public static int getWorldY(int geoY)
+	{
+		return (geoY << 4) + World.WORLD_Y_MIN + 8;
+	}
+	
+	/**
+	 * Returns block of geodata on given coordinates.
+	 * @param geoX : Geodata X
+	 * @param geoY : Geodata Y
+	 * @return {@link ABlock} : Block of geodata.
+	 */
+	public ABlock getBlock(int geoX, int geoY)
+	{
+		final int x = geoX / GeoStructure.BLOCK_CELLS_X;
+		if ((x < 0) || (x >= GeoStructure.GEO_BLOCKS_X))
+		{
+			return null;
+		}
+		final int y = geoY / GeoStructure.BLOCK_CELLS_Y;
+		if ((y < 0) || (y >= GeoStructure.GEO_BLOCKS_Y))
+		{
+			return null;
+		}
+		return _blocks[x][y];
+	}
+	
+	/**
+	 * Check if geo coordinates has geo.
+	 * @param geoX : Geodata X
+	 * @param geoY : Geodata Y
+	 * @return boolean : True, if given geo coordinates have geodata
+	 */
+	public boolean hasGeoPos(int geoX, int geoY)
+	{
+		final ABlock block = getBlock(geoX, geoY);
+		return (block != null) && block.hasGeoPos();
+	}
+	
+	/**
+	 * Returns the height of cell, which is closest to given coordinates.
+	 * @param geoX : Cell geodata X coordinate.
+	 * @param geoY : Cell geodata Y coordinate.
+	 * @param worldZ : Cell world Z coordinate.
+	 * @return short : Cell geodata Z coordinate, closest to given coordinates.
+	 */
+	public short getHeightNearest(int geoX, int geoY, int worldZ)
+	{
+		final ABlock block = getBlock(geoX, geoY);
+		if (block == null)
+		{
+			return (short) worldZ;
+		}
+		return block.getHeightNearest(geoX, geoY, worldZ);
+	}
+	
+	/**
+	 * Returns the NSWE flag byte of cell, which is closes to given coordinates.
+	 * @param geoX : Cell geodata X coordinate.
+	 * @param geoY : Cell geodata Y coordinate.
+	 * @param worldZ : Cell world Z coordinate.
+	 * @return short : Cell NSWE flag byte coordinate, closest to given coordinates.
+	 */
+	public byte getNsweNearest(int geoX, int geoY, int worldZ)
+	{
+		final ABlock block = getBlock(geoX, geoY);
+		if (block == null)
+		{
+			return GeoStructure.CELL_FLAG_ALL;
+		}
+		return block.getNsweNearest(geoX, geoY, worldZ);
+	}
+	
+	/**
+	 * Check if world coordinates has geo.
+	 * @param worldX : World X
+	 * @param worldY : World Y
+	 * @return boolean : True, if given world coordinates have geodata
+	 */
+	public boolean hasGeo(int worldX, int worldY)
+	{
+		return hasGeoPos(getGeoX(worldX), getGeoY(worldY));
+	}
+	
+	/**
+	 * Returns closest Z coordinate according to geodata.
+	 * @param loc : The location used as reference.
+	 * @return short : nearest Z coordinates according to geodata
+	 */
+	public short getHeight(Location loc)
+	{
+		return getHeightNearest(getGeoX(loc.getX()), getGeoY(loc.getY()), loc.getZ());
+	}
+	
+	/**
+	 * Returns closest Z coordinate according to geodata.
+	 * @param worldX : world x
+	 * @param worldY : world y
+	 * @param worldZ : world z
+	 * @return short : nearest Z coordinates according to geodata
+	 */
+	public short getHeight(int worldX, int worldY, int worldZ)
+	{
+		return getHeightNearest(getGeoX(worldX), getGeoY(worldY), worldZ);
+	}
+	
+	/**
+	 * Check line of sight from {@link WorldObject} to {@link WorldObject}.<br>
+	 * @param object : The origin object.
+	 * @param target : The target object.
+	 * @return True, when object can see target.
+	 */
+	public boolean canSeeTarget(WorldObject object, WorldObject target)
+	{
+		// Can always see doors.
+		if (target.isDoor())
+		{
+			return true;
+		}
+		
+		if (object.getInstanceId() != target.getInstanceId())
+		{
+			return false;
+		}
+		
+		if (DoorData.getInstance().checkIfDoorsBetween(object.getX(), object.getY(), object.getZ(), target.getX(), target.getY(), target.getZ(), object.getInstanceId()))
+		{
+			return false;
+		}
+		
+		if (FenceData.getInstance().checkIfFenceBetween(object.getX(), object.getY(), object.getZ(), target.getX(), target.getY(), target.getZ(), object.getInstanceId()))
+		{
+			return false;
+		}
+		
+		// Get object's and target's line of sight height (if relevant).
+		// Note: real creature height = collision height * 2
+		double oheight = 0;
+		if (object instanceof Creature)
+		{
+			oheight += (((Creature) object).getTemplate().getCollisionHeight() * 2 * Config.PART_OF_CHARACTER_HEIGHT) / 100;
+		}
+		
+		double theight = 0;
+		if (target instanceof Creature)
+		{
+			theight += (((Creature) target).getTemplate().getCollisionHeight() * 2 * Config.PART_OF_CHARACTER_HEIGHT) / 100;
+		}
+		
+		return canSee(object.getX(), object.getY(), object.getZ(), oheight, target.getX(), target.getY(), target.getZ(), theight) && canSee(target.getX(), target.getY(), target.getZ(), theight, object.getX(), object.getY(), object.getZ(), oheight);
+	}
+	
+	/**
+	 * Check line of sight from {@link WorldObject} to {@link Location}.<br>
+	 * Note: The check uses {@link Location}'s real Z coordinate (e.g. point above ground), not its geodata representation.
+	 * @param object : The origin object.
+	 * @param position : The target position.
+	 * @return True, when object can see position.
+	 */
+	public boolean canSeeLocation(WorldObject object, Location position)
+	{
+		// Get object and location coordinates.
+		int ox = object.getX();
+		int oy = object.getY();
+		int oz = object.getZ();
+		int tx = position.getX();
+		int ty = position.getY();
+		int tz = position.getZ();
+		
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, object.getInstanceId()))
+		{
+			return false;
+		}
+		
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, object.getInstanceId()))
+		{
+			return false;
+		}
+		
+		// Get object's line of sight height (if relevant).
+		// Note: real creature height = collision height * 2
+		double oheight = 0;
+		if (object instanceof Creature)
+		{
+			oheight += (((Creature) object).getTemplate().getCollisionHeight() * 2 * Config.PART_OF_CHARACTER_HEIGHT) / 100;
+		}
+		
+		// Perform geodata check.
+		return canSee(ox, oy, oz, oheight, tx, ty, tz, 0) && canSee(tx, ty, tz, 0, ox, oy, oz, oheight);
+	}
+	
+	/**
+	 * Simple check for origin to target visibility.<br>
+	 * @param ox : Origin X coordinate.
+	 * @param oy : Origin Y coordinate.
+	 * @param oz : Origin Z coordinate.
+	 * @param oheight : The height of origin, used as start point.
+	 * @param tx : Target X coordinate.
+	 * @param ty : Target Y coordinate.
+	 * @param tz : Target Z coordinate.
+	 * @param theight : The height of target, used as end point.
+	 * @return True, when origin can see target.
+	 */
+	public boolean canSee(int ox, int oy, int oz, double oheight, int tx, int ty, int tz, double theight)
+	{
+		// Get origin geodata coordinates.
+		int gox = getGeoX(ox);
+		int goy = getGeoY(oy);
+		ABlock block = getBlock(gox, goy);
+		if ((block == null) || !block.hasGeoPos())
+		{
+			return true; // No Geodata found.
+		}
+		
+		// Get target geodata coordinates.
+		final int gtx = getGeoX(tx);
+		final int gty = getGeoY(ty);
+		
+		// Check being on same cell and layer (index).
+		// Note: Get index must use origin height increased by cell height, the method returns index to height exclusive self.
+		int index = block.getIndexBelow(gox, goy, oz + GeoStructure.CELL_HEIGHT);
+		if (index < 0)
+		{
+			return false;
+		}
+		
+		if ((gox == gtx) && (goy == gty))
+		{
+			return index == block.getIndexBelow(gtx, gty, tz + GeoStructure.CELL_HEIGHT);
+		}
+		
+		// Get ground and nswe flag.
+		int groundZ = block.getHeight(index);
+		int nswe = block.getNswe(index);
+		
+		// Get delta coordinates, slope of line (XY, XZ) and direction data.
+		final int dx = tx - ox;
+		final int dy = ty - oy;
+		final double dz = (tz + theight) - (oz + oheight);
+		final double m = (double) dy / dx;
+		final double mz = dz / Math.sqrt((dx * dx) + (dy * dy));
+		final MoveDirectionType mdt = MoveDirectionType.getDirection(gtx - gox, gty - goy);
+		
+		// Get cell grid coordinates.
+		int gridX = ox & 0xFFFFFFF0;
+		int gridY = oy & 0xFFFFFFF0;
+		
+		// Run loop.
+		byte dir;
+		while ((gox != gtx) || (goy != gty))
+		{
+			// Calculate intersection with cell's X border.
+			int checkX = gridX + mdt.getOffsetX();
+			int checkY = (int) (oy + (m * (checkX - ox)));
+			
+			if ((mdt.getStepX() != 0) && (getGeoY(checkY) == goy))
+			{
+				// Set next cell in X direction.
+				gridX += mdt.getStepX();
+				gox += mdt.getSignumX();
+				dir = mdt.getDirectionX();
+			}
+			else
+			{
+				// Calculate intersection with cell's Y border.
+				checkY = gridY + mdt.getOffsetY();
+				checkX = (int) (ox + ((checkY - oy) / m));
+				checkX = Util.limit(checkX, gridX, gridX + 15);
 				
-				if (!canSeeThrough)
-				{
-					return false;
-				}
+				// Set next cell in Y direction.
+				gridY += mdt.getStepY();
+				goy += mdt.getSignumY();
+				dir = mdt.getDirectionY();
 			}
 			
-			prevX = curX;
-			prevY = curY;
-			prevGeoZ = curGeoZ;
-			++ptIndex;
+			// Get block of the next cell.
+			block = getBlock(gox, goy);
+			if ((block == null) || !block.hasGeoPos())
+			{
+				return true; // No Geodata found.
+			}
+			
+			// Get line of sight height (including Z slope).
+			double losz = oz + oheight + Config.MAX_OBSTACLE_HEIGHT;
+			losz += mz * Math.sqrt(((checkX - ox) * (checkX - ox)) + ((checkY - oy) * (checkY - oy)));
+			
+			// Check line of sight going though wall (vertical check).
+			
+			// Get index of particular layer, based on last iterated cell conditions.
+			boolean canMove = (nswe & dir) != 0;
+			if (canMove)
+			{
+				// No wall present, get next cell below current cell.
+				index = block.getIndexBelow(gox, goy, groundZ + GeoStructure.CELL_IGNORE_HEIGHT);
+			}
+			else
+			{
+				// Wall present, get next cell above current cell.
+				index = block.getIndexAbove(gox, goy, groundZ - (2 * GeoStructure.CELL_HEIGHT));
+			}
+			
+			// Next cell's does not exist (no geodata with valid condition), return fail.
+			if (index < 0)
+			{
+				return false;
+			}
+			
+			// Get next cell's layer height.
+			int z = block.getHeight(index);
+			
+			// Perform sine of sight check (next cell is above line of sight line), return fail.
+			if (z > losz)
+			{
+				return false;
+			}
+			
+			// Next cell is accessible, update z and NSWE.
+			groundZ = z;
+			nswe = block.getNswe(index);
 		}
 		
+		// Iteration is completed, no obstacle is found.
 		return true;
 	}
 	
 	/**
-	 * Move check.
-	 * @param x the x coordinate
-	 * @param y the y coordinate
-	 * @param zValue the z coordinate
-	 * @param tx the target's x coordinate
-	 * @param ty the target's y coordinate
-	 * @param tzValue the target's z coordinate
-	 * @param instanceId the instance id
-	 * @return the last Location (x,y,z) where player can walk - just before wall
+	 * Check movement from coordinates to coordinates.<br>
+	 * Note: The Z coordinates are supposed to be already validated geodata coordinates.
+	 * @param ox : Origin X coordinate.
+	 * @param oy : Origin Y coordinate.
+	 * @param oz : Origin Z coordinate.
+	 * @param tx : Target X coordinate.
+	 * @param ty : Target Y coordinate.
+	 * @param tz : Target Z coordinate.
+	 * @param instanceId
+	 * @return True, when target coordinates are reachable from origin coordinates.
 	 */
-	public Location canMoveToTargetLoc(int x, int y, int zValue, int tx, int ty, int tzValue, int instanceId)
+	public boolean canMoveToTarget(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
-		final int geoX = getGeoX(x);
-		final int geoY = getGeoY(y);
-		final int z = getNearestZ(geoX, geoY, zValue);
-		final int tGeoX = getGeoX(tx);
-		final int tGeoY = getGeoY(ty);
-		final int tz = getNearestZ(tGeoX, tGeoY, tzValue);
-		
-		if (DoorData.getInstance().checkIfDoorsBetween(x, y, z, tx, ty, tz))
+		// Door checks.
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instanceId))
 		{
-			return new Location(x, y, getHeight(x, y, z));
-		}
-		if (FenceData.getInstance().checkIfFenceBetween(x, y, z, tx, ty, tz))
-		{
-			return new Location(x, y, getHeight(x, y, z));
+			return false;
 		}
 		
-		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
-		// First point is guaranteed to be available.
-		pointIter.next();
-		int prevX = pointIter.x();
-		int prevY = pointIter.y();
-		int prevZ = z;
-		
-		while (pointIter.next())
+		// Fence checks.
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instanceId))
 		{
-			final int curX = pointIter.x();
-			final int curY = pointIter.y();
-			final int curZ = getNearestZ(curX, curY, prevZ);
+			return false;
+		}
+		
+		// Get geodata coordinates.
+		int gox = getGeoX(ox);
+		int goy = getGeoY(oy);
+		ABlock block = getBlock(gox, goy);
+		if ((block == null) || !block.hasGeoPos())
+		{
+			return true; // No Geodata found.
+		}
+		int goz = getHeightNearest(gox, goy, oz);
+		final int gtx = getGeoX(tx);
+		final int gty = getGeoY(ty);
+		
+		// Check movement within same cell.
+		if ((gox == gtx) && (goy == gty))
+		{
+			return goz == getHeight(tx, ty, tz);
+		}
+		
+		// Get nswe flag.
+		int nswe = getNsweNearest(gox, goy, goz);
+		
+		// Get delta coordinates, slope of line and direction data.
+		final int dx = tx - ox;
+		final int dy = ty - oy;
+		final double m = (double) dy / dx;
+		final MoveDirectionType mdt = MoveDirectionType.getDirection(gtx - gox, gty - goy);
+		
+		// Get cell grid coordinates.
+		int gridX = ox & 0xFFFFFFF0;
+		int gridY = oy & 0xFFFFFFF0;
+		
+		// Run loop.
+		byte dir;
+		int nx = gox;
+		int ny = goy;
+		while ((gox != gtx) || (goy != gty))
+		{
+			// Calculate intersection with cell's X border.
+			int checkX = gridX + mdt.getOffsetX();
+			int checkY = (int) (oy + (m * (checkX - ox)));
 			
-			if (hasGeoPos(prevX, prevY))
+			if ((mdt.getStepX() != 0) && (getGeoY(checkY) == goy))
 			{
-				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
-				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
-				{
-					// Can't move, return previous location.
-					return new Location(getWorldX(prevX), getWorldY(prevY), prevZ);
-				}
+				// Set next cell is in X direction.
+				gridX += mdt.getStepX();
+				nx += mdt.getSignumX();
+				dir = mdt.getDirectionX();
+			}
+			else
+			{
+				// Calculate intersection with cell's Y border.
+				checkY = gridY + mdt.getOffsetY();
+				checkX = (int) (ox + ((checkY - oy) / m));
+				checkX = Util.limit(checkX, gridX, gridX + 15);
+				
+				// Set next cell in Y direction.
+				gridY += mdt.getStepY();
+				ny += mdt.getSignumY();
+				dir = mdt.getDirectionY();
 			}
 			
-			prevX = curX;
-			prevY = curY;
-			prevZ = curZ;
+			// Check point heading into obstacle, if so return current point.
+			if ((nswe & dir) == 0)
+			{
+				return false;
+			}
+			
+			block = getBlock(nx, ny);
+			if ((block == null) || !block.hasGeoPos())
+			{
+				return true; // No Geodata found.
+			}
+			
+			// Check next point for extensive Z difference, if so return current point.
+			final int i = block.getIndexBelow(nx, ny, goz + GeoStructure.CELL_IGNORE_HEIGHT);
+			if (i < 0)
+			{
+				return false;
+			}
+			
+			// Update current point's coordinates and nswe.
+			gox = nx;
+			goy = ny;
+			goz = block.getHeight(i);
+			nswe = block.getNswe(i);
 		}
 		
-		if (hasGeoPos(prevX, prevY) && (prevZ != tz))
-		{
-			// Different floors, return start location.
-			return new Location(x, y, z);
-		}
-		
-		return new Location(tx, ty, tz);
+		// When origin Z is target Z, the move is successful.
+		return goz == getHeight(tx, ty, tz);
 	}
 	
 	/**
-	 * Checks if its possible to move from one location to another.
-	 * @param fromX the X coordinate to start checking from
-	 * @param fromY the Y coordinate to start checking from
-	 * @param fromZvalue the Z coordinate to start checking from
-	 * @param toX the X coordinate to end checking at
-	 * @param toY the Y coordinate to end checking at
-	 * @param toZvalue the Z coordinate to end checking at
-	 * @param instanceId the instance
-	 * @return {@code true} if the character at start coordinates can move to end coordinates, {@code false} otherwise
+	 * Check movement from origin to target coordinates. Returns last available point in the checked path.<br>
+	 * Target X and Y reachable and Z is on same floor:
+	 * <ul>
+	 * <li>Location of the target with corrected Z value from geodata.</li>
+	 * </ul>
+	 * Target X and Y reachable but Z is on another floor:
+	 * <ul>
+	 * <li>Location of the origin with corrected Z value from geodata.</li>
+	 * </ul>
+	 * Target X and Y not reachable:
+	 * <ul>
+	 * <li>Last accessible location in destination to target.</li>
+	 * </ul>
+	 * @param ox : Origin X coordinate.
+	 * @param oy : Origin Y coordinate.
+	 * @param oz : Origin Z coordinate.
+	 * @param tx : Target X coordinate.
+	 * @param ty : Target Y coordinate.
+	 * @param tz : Target Z coordinate.
+	 * @param instanceId
+	 * @return The {@link Location} representing last point of movement (e.g. just before wall).
 	 */
-	public boolean canMoveToTarget(int fromX, int fromY, int fromZvalue, int toX, int toY, int toZvalue, int instanceId)
+	public Location getValidLocation(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
-		final int geoX = getGeoX(fromX);
-		final int geoY = getGeoY(fromY);
-		final int fromZ = getNearestZ(geoX, geoY, fromZvalue);
-		final int tGeoX = getGeoX(toX);
-		final int tGeoY = getGeoY(toY);
-		final int toZ = getNearestZ(tGeoX, tGeoY, toZvalue);
-		
-		if (DoorData.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ))
+		// Door checks.
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instanceId))
 		{
-			return false;
-		}
-		if (FenceData.getInstance().checkIfFenceBetween(fromX, fromY, fromZ, toX, toY, toZ))
-		{
-			return false;
+			return new Location(ox, oy, oz);
 		}
 		
-		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
-		// First point is guaranteed to be available.
-		pointIter.next();
-		int prevX = pointIter.x();
-		int prevY = pointIter.y();
-		int prevZ = fromZ;
-		
-		while (pointIter.next())
+		// Fence checks.
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instanceId))
 		{
-			final int curX = pointIter.x();
-			final int curY = pointIter.y();
-			final int curZ = getNearestZ(curX, curY, prevZ);
+			return new Location(ox, oy, oz);
+		}
+		
+		// Get geodata coordinates.
+		int gox = getGeoX(ox);
+		int goy = getGeoY(oy);
+		ABlock block = getBlock(gox, goy);
+		if ((block == null) || !block.hasGeoPos())
+		{
+			return new Location(tx, ty, tz); // No Geodata found.
+		}
+		final int gtx = getGeoX(tx);
+		final int gty = getGeoY(ty);
+		final int gtz = getHeightNearest(gtx, gty, tz);
+		int goz = getHeightNearest(gox, goy, oz);
+		int nswe = getNsweNearest(gox, goy, goz);
+		
+		// Get delta coordinates, slope of line and direction data.
+		final int dx = tx - ox;
+		final int dy = ty - oy;
+		final double m = (double) dy / dx;
+		final MoveDirectionType mdt = MoveDirectionType.getDirection(gtx - gox, gty - goy);
+		
+		// Get cell grid coordinates.
+		int gridX = ox & 0xFFFFFFF0;
+		int gridY = oy & 0xFFFFFFF0;
+		
+		// Run loop.
+		byte dir;
+		int nx = gox;
+		int ny = goy;
+		while ((gox != gtx) || (goy != gty))
+		{
+			// Calculate intersection with cell's X border.
+			int checkX = gridX + mdt.getOffsetX();
+			int checkY = (int) (oy + (m * (checkX - ox)));
 			
-			if (hasGeoPos(prevX, prevY))
+			if ((mdt.getStepX() != 0) && (getGeoY(checkY) == goy))
 			{
-				final int nswe = GeoUtils.computeNswe(prevX, prevY, curX, curY);
-				if (!checkNearestNsweAntiCornerCut(prevX, prevY, prevZ, nswe))
-				{
-					return false;
-				}
+				// Set next cell is in X direction.
+				gridX += mdt.getStepX();
+				nx += mdt.getSignumX();
+				dir = mdt.getDirectionX();
+			}
+			else
+			{
+				// Calculate intersection with cell's Y border.
+				checkY = gridY + mdt.getOffsetY();
+				checkX = (int) (ox + ((checkY - oy) / m));
+				checkX = Util.limit(checkX, gridX, gridX + 15);
+				
+				// Set next cell in Y direction.
+				gridY += mdt.getStepY();
+				ny += mdt.getSignumY();
+				dir = mdt.getDirectionY();
 			}
 			
-			prevX = curX;
-			prevY = curY;
-			prevZ = curZ;
+			// Check target cell is out of geodata grid (world coordinates).
+			if ((nx < 0) || (nx >= GeoStructure.GEO_CELLS_X) || (ny < 0) || (ny >= GeoStructure.GEO_CELLS_Y))
+			{
+				return new Location(checkX, checkY, goz);
+			}
+			
+			// Check point heading into obstacle, if so return current (border) point.
+			if ((nswe & dir) == 0)
+			{
+				return new Location(checkX, checkY, goz);
+			}
+			
+			block = getBlock(nx, ny);
+			if ((block == null) || !block.hasGeoPos())
+			{
+				return new Location(tx, ty, tz); // No Geodata found.
+			}
+			
+			// Check next point for extensive Z difference, if so return current (border) point.
+			final int i = block.getIndexBelow(nx, ny, goz + GeoStructure.CELL_IGNORE_HEIGHT);
+			if (i < 0)
+			{
+				return new Location(checkX, checkY, goz);
+			}
+			
+			// Update current point's coordinates and nswe.
+			gox = nx;
+			goy = ny;
+			goz = block.getHeight(i);
+			nswe = block.getNswe(i);
 		}
 		
-		if (hasGeoPos(prevX, prevY) && (prevZ != toZ))
-		{
-			// Different floors.
-			return false;
-		}
-		
-		return true;
+		// Compare Z coordinates:
+		// If same, path is okay, return target point and fix its Z geodata coordinate.
+		// If not same, path is does not exist, return origin point.
+		return goz == gtz ? new Location(tx, ty, gtz) : new Location(ox, oy, oz);
 	}
 	
+	/**
+	 * Returns the list of location objects as a result of complete path calculation.
+	 * @param ox : origin x
+	 * @param oy : origin y
+	 * @param oz : origin z
+	 * @param tx : target x
+	 * @param ty : target y
+	 * @param tz : target z
+	 * @param instanceId
+	 * @return {@code List<Location>} : complete path from nodes
+	 */
+	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
+	{
+		// Get origin and check existing geo coords.
+		int gox = getGeoX(ox);
+		int goy = getGeoY(oy);
+		if (!hasGeoPos(gox, goy))
+		{
+			return Collections.emptyList();
+		}
+		
+		int goz = getHeightNearest(gox, goy, oz);
+		
+		// Get target and check existing geo coords.
+		int gtx = getGeoX(tx);
+		int gty = getGeoY(ty);
+		if (!hasGeoPos(gtx, gty))
+		{
+			return Collections.emptyList();
+		}
+		
+		int gtz = getHeightNearest(gtx, gty, tz);
+		
+		// Prepare buffer for pathfinding calculations.
+		NodeBuffer buffer = getBuffer(300 + (10 * (Math.abs(gox - gtx) + Math.abs(goy - gty) + Math.abs(goz - gtz))));
+		if (buffer == null)
+		{
+			return Collections.emptyList();
+		}
+		
+		// Find path.
+		List<Location> path = null;
+		try
+		{
+			path = buffer.findPath(gox, goy, goz, gtx, gty, gtz);
+			if (path.isEmpty())
+			{
+				return Collections.emptyList();
+			}
+		}
+		catch (Exception e)
+		{
+			return Collections.emptyList();
+		}
+		finally
+		{
+			buffer.free();
+		}
+		
+		// Check path.
+		if (path.size() < 3)
+		{
+			return path;
+		}
+		
+		// Get path list iterator.
+		ListIterator<Location> point = path.listIterator();
+		
+		// Get node A (origin).
+		int nodeAx = ox;
+		int nodeAy = oy;
+		int nodeAz = goz;
+		
+		// Get node B.
+		Location nodeB = point.next();
+		
+		// Iterate thought the path to optimize it.
+		while (point.hasNext())
+		{
+			// Get node C.
+			Location nodeC = path.get(point.nextIndex());
+			
+			// Check movement from node A to node C.
+			if (canMoveToTarget(nodeAx, nodeAy, nodeAz, nodeC.getX(), nodeC.getY(), nodeC.getZ(), instanceId))
+			{
+				// Can move from node A to node C.
+				// Remove node B.
+				point.remove();
+			}
+			else
+			{
+				// Can not move from node A to node C.
+				// Set node A (node B is part of path, update A coordinates).
+				nodeAx = nodeB.getX();
+				nodeAy = nodeB.getY();
+				nodeAz = nodeB.getZ();
+			}
+			
+			// Set node B.
+			nodeB = point.next();
+		}
+		
+		return path;
+	}
+	
+	/**
+	 * NodeBuffer container with specified size and count of separate buffers.
+	 */
+	private static class BufferHolder
+	{
+		final int _size;
+		final List<NodeBuffer> _buffer;
+		
+		public BufferHolder(int size, int count)
+		{
+			_size = size;
+			_buffer = new ArrayList<>(count);
+			
+			for (int i = 0; i < count; i++)
+			{
+				_buffer.add(new NodeBuffer(size));
+			}
+		}
+	}
+	
+	/**
+	 * Returns the instance of the {@link GeoEngine}.
+	 * @return {@link GeoEngine} : The instance.
+	 */
 	public static GeoEngine getInstance()
 	{
 		return SingletonHolder.INSTANCE;

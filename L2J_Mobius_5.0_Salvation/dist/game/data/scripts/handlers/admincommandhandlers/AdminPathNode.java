@@ -19,9 +19,9 @@ package handlers.admincommandhandlers;
 import java.util.List;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
-import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -44,13 +44,13 @@ public class AdminPathNode implements IAdminCommandHandler
 			}
 			if (activeChar.getTarget() != null)
 			{
-				final List<AbstractNodeLoc> path = GeoEnginePathfinding.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld());
+				final List<Location> path = GeoEngine.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld());
 				if (path == null)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "No Route!");
 					return true;
 				}
-				for (AbstractNodeLoc a : path)
+				for (Location a : path)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "x:" + a.getX() + " y:" + a.getY() + " z:" + a.getZ());
 				}

@@ -44,8 +44,6 @@ import org.l2jmobius.gameserver.data.xml.MapRegionData;
 import org.l2jmobius.gameserver.data.xml.ZoneData;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
-import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.handler.itemhandlers.Potions;
@@ -4306,7 +4304,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		public int _heading;
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<AbstractNodeLoc> geoPath;
+		public List<Location> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -5513,8 +5511,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				final int originalX = x;
 				final int originalY = y;
 				final int originalZ = z;
-				final int gtx = (originalX - World.MAP_MIN_X) >> 4;
-				final int gty = (originalY - World.MAP_MIN_Y) >> 4;
+				final int gtx = (originalX - World.WORLD_X_MIN) >> 4;
+				final int gty = (originalY - World.WORLD_Y_MIN) >> 4;
 				if (isOnGeodataPath())
 				{
 					// try
@@ -5532,7 +5530,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 				
 				// Temporary fix for character outside world region errors (should not happen)
-				if ((curX < World.MAP_MIN_X) || (curX > World.MAP_MAX_X) || (curY < World.MAP_MIN_Y) || (curY > World.MAP_MAX_Y))
+				if ((curX < World.WORLD_X_MIN) || (curX > World.WORLD_X_MAX) || (curY < World.WORLD_Y_MIN) || (curY > World.WORLD_Y_MAX))
 				{
 					LOGGER.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
 					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
@@ -5557,7 +5555,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					&& !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
 				{
 					// location different if destination wasn't reached (or just z coord is different)
-					final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
+					final Location destiny = GeoEngine.getInstance().getValidLocation(curX, curY, curZ, x, y, z, getInstanceId());
 					x = destiny.getX();
 					y = destiny.getY();
 					z = destiny.getZ();
@@ -5571,7 +5569,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				if (((originalDistance - distance) > 30) && !_isAfraid && !isInBoat)
 				{
 					// Path calculation -- overrides previous movement check
-					m.geoPath = GeoEnginePathfinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
+					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						if (isPlayer() && !_isFlying && !isInWater)

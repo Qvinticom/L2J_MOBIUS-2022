@@ -57,8 +57,6 @@ import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.enums.TeleportWhereType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
-import org.l2jmobius.gameserver.geoengine.GeoEnginePathfinding;
-import org.l2jmobius.gameserver.geoengine.pathfinding.AbstractNodeLoc;
 import org.l2jmobius.gameserver.instancemanager.IdManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -3378,7 +3376,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<AbstractNodeLoc> geoPath;
+		public List<Location> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -4338,8 +4336,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				final int originalX = x;
 				final int originalY = y;
 				final int originalZ = z;
-				final int gtx = (originalX - World.MAP_MIN_X) >> 4;
-				final int gty = (originalY - World.MAP_MIN_Y) >> 4;
+				final int gtx = (originalX - World.WORLD_X_MIN) >> 4;
+				final int gty = (originalY - World.WORLD_Y_MIN) >> 4;
 				if (isOnGeodataPath())
 				{
 					try
@@ -4362,7 +4360,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					&& !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
 				{
 					// location different if destination wasn't reached (or just z coord is different)
-					final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
+					final Location destiny = GeoEngine.getInstance().getValidLocation(curX, curY, curZ, x, y, z, getInstanceId());
 					x = destiny.getX();
 					y = destiny.getY();
 					z = destiny.getZ();
@@ -4376,7 +4374,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				if (((originalDistance - distance) > 30) && !isAfraid() && !isInVehicle)
 				{
 					// Path calculation -- overrides previous movement check
-					m.geoPath = GeoEnginePathfinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
+					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						if (isPlayer() && !_isFlying && !isInWater)

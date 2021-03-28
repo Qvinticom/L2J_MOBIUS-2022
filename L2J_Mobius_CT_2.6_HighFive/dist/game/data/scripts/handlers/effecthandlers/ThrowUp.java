@@ -93,7 +93,7 @@ public class ThrowUp extends AbstractEffect
 		final int x = info.getEffector().getX() - (int) (offset * cos);
 		final int y = info.getEffector().getY() - (int) (offset * sin);
 		final int z = info.getEffected().getZ();
-		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
+		final Location destination = GeoEngine.getInstance().getValidLocation(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
 		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), destination, FlyType.THROW_UP));
 		// TODO: Review.
 		info.getEffected().setXYZ(destination);

@@ -236,7 +236,7 @@ public class Fishing extends AbstractEffect
 		
 		// always use water zone, fishing zone high z is high in the air...
 		final int baitZ = waterZone.getWaterZ();
-		if (!GeoEngine.getInstance().canSeeTarget(player, new Location(baitX, baitY, baitZ)))
+		if (!GeoEngine.getInstance().canSeeLocation(player, new Location(baitX, baitY, baitZ)))
 		{
 			return Integer.MIN_VALUE;
 		}

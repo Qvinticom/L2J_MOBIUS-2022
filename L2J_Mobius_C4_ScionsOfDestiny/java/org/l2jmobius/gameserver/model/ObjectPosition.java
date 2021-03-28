@@ -99,23 +99,23 @@ public class ObjectPosition
 	public void setXYZInvisible(int x, int y, int z)
 	{
 		int correctX = x;
-		if (correctX > World.MAP_MAX_X)
+		if (correctX > World.WORLD_X_MAX)
 		{
-			correctX = World.MAP_MAX_X - 5000;
+			correctX = World.WORLD_X_MAX - 5000;
 		}
-		if (correctX < World.MAP_MIN_X)
+		if (correctX < World.WORLD_X_MIN)
 		{
-			correctX = World.MAP_MIN_X + 5000;
+			correctX = World.WORLD_X_MIN + 5000;
 		}
 		
 		int correctY = y;
-		if (correctY > World.MAP_MAX_Y)
+		if (correctY > World.WORLD_Y_MAX)
 		{
-			correctY = World.MAP_MAX_Y - 5000;
+			correctY = World.WORLD_Y_MAX - 5000;
 		}
-		if (correctY < World.MAP_MIN_Y)
+		if (correctY < World.WORLD_Y_MIN)
 		{
-			correctY = World.MAP_MIN_Y + 5000;
+			correctY = World.WORLD_Y_MIN + 5000;
 		}
 		
 		setWorldPosition(correctX, correctY, z);
@@ -181,15 +181,6 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Sets the x.
-	 * @param value the new x
-	 */
-	public void setX(int value)
-	{
-		getWorldPosition().setX(value);
-	}
-	
-	/**
 	 * Return the y position of the WorldObject.
 	 * @return the y
 	 */
@@ -199,30 +190,12 @@ public class ObjectPosition
 	}
 	
 	/**
-	 * Sets the y.
-	 * @param value the new y
-	 */
-	public void setY(int value)
-	{
-		getWorldPosition().setY(value);
-	}
-	
-	/**
 	 * Return the z position of the WorldObject.
 	 * @return the z
 	 */
 	public int getZ()
 	{
 		return getWorldPosition().getZ();
-	}
-	
-	/**
-	 * Sets the z.
-	 * @param value the new z
-	 */
-	public void setZ(int value)
-	{
-		getWorldPosition().setZ(value);
 	}
 	
 	/**

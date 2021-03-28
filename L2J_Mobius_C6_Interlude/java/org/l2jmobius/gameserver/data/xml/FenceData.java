@@ -139,7 +139,7 @@ public class FenceData
 		return _fences.get(objectId);
 	}
 	
-	public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz)
+	public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz, int instanceId)
 	{
 		final WorldRegion region = World.getInstance().getRegion(x, y);
 		final List<FenceInstance> fences = region != null ? region.getFences() : null;
@@ -151,7 +151,7 @@ public class FenceData
 		for (FenceInstance fence : fences)
 		{
 			// Check if fence is geodata enabled.
-			if (!fence.getState().isGeodataEnabled())
+			if (!fence.getState().isGeodataEnabled() || (fence.getInstanceId() != instanceId))
 			{
 				continue;
 			}

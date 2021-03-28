@@ -16,30 +16,30 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.Objects;
+
+import org.l2jmobius.commons.util.Point2D;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 
 /**
- * Location data transfer object.<br>
- * Contains coordinates data, heading and instance Id.
- * @author Zoey76
+ * A datatype used to retain a 3D (x/y/z/heading) point. It got the capability to be set and cleaned.
  */
-public class Location implements IPositionable
+public class Location extends Point2D implements IPositionable
 {
-	protected int _x;
-	protected int _y;
-	protected int _z;
-	private int _heading;
+	protected volatile int _z;
+	protected volatile int _heading;
 	
 	public Location(int x, int y, int z)
 	{
-		this(x, y, z, 0);
+		super(x, y);
+		_z = z;
+		_heading = 0;
 	}
 	
 	public Location(int x, int y, int z, int heading)
 	{
-		_x = x;
-		_y = y;
+		super(x, y);
 		_z = z;
 		_heading = heading;
 	}
@@ -51,9 +51,8 @@ public class Location implements IPositionable
 	
 	public Location(StatSet set)
 	{
-		_x = set.getInt("x");
-		_y = set.getInt("y");
-		_z = set.getInt("z");
+		super(set.getInt("x", 0), set.getInt("y", 0));
+		_z = set.getInt("z", 0);
 		_heading = set.getInt("heading", 0);
 	}
 	
@@ -144,6 +143,25 @@ public class Location implements IPositionable
 		_y = loc.getY();
 		_z = loc.getZ();
 		_heading = loc.getHeading();
+	}
+	
+	@Override
+	public void clean()
+	{
+		super.clean();
+		_z = 0;
+	}
+	
+	@Override
+	public Location clone()
+	{
+		return new Location(_x, _y, _z);
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		return (31 * super.hashCode()) + Objects.hash(_z);
 	}
 	
 	@Override

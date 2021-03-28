@@ -88,8 +88,8 @@ public class AdminZone implements IAdminCommandHandler
 	{
 		final int x = activeChar.getX();
 		final int y = activeChar.getY();
-		final int rx = ((x - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-		final int ry = ((y - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+		final int rx = ((x - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+		final int ry = ((y - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 		final NpcHtmlMessage html = new NpcHtmlMessage(0);
 		html.setFile("data/html/admin/zone.htm");
 		

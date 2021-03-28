@@ -114,8 +114,8 @@ public class SpawnTable
 			}
 			
 			// XML file for spawn
-			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 			final File spawnFile = new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			
 			// Write info to XML
@@ -192,8 +192,8 @@ public class SpawnTable
 		
 		if (update)
 		{
-			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 			final File spawnFile = spawn.getNpcSpawnTemplate() != null ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFile() : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 			try

@@ -114,7 +114,7 @@ public class ValidatePosition implements IClientIncomingPacket
 		{
 			if (player.isFalling(_z))
 			{
-				final int nearestZ = GeoEngine.getInstance().getHigherHeight(_x, _y, _z);
+				final int nearestZ = GeoEngine.getInstance().getHeight(_x, _y, _z);
 				if (player.getZ() < nearestZ)
 				{
 					player.setXYZ(_x, _y, nearestZ);

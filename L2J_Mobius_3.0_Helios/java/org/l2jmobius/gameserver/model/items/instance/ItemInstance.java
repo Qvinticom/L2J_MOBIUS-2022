@@ -1507,7 +1507,7 @@ public class ItemInstance extends WorldObject
 		if (dropper != null)
 		{
 			final Instance instance = dropper.getInstanceWorld();
-			final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, instance);
+			final Location dropDest = GeoEngine.getInstance().getValidLocation(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, instance);
 			x = dropDest.getX();
 			y = dropDest.getY();
 			z = dropDest.getZ();

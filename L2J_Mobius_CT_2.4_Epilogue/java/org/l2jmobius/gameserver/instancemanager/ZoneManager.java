@@ -91,15 +91,15 @@ public class ZoneManager implements IXmlReader
 	private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();
 	
 	private static final int SHIFT_BY = 15;
-	private static final int OFFSET_X = Math.abs(World.MAP_MIN_X >> SHIFT_BY);
-	private static final int OFFSET_Y = Math.abs(World.MAP_MIN_Y >> SHIFT_BY);
+	private static final int OFFSET_X = Math.abs(World.WORLD_X_MIN >> SHIFT_BY);
+	private static final int OFFSET_Y = Math.abs(World.WORLD_Y_MIN >> SHIFT_BY);
 	
 	private final Map<Class<? extends ZoneType>, ConcurrentHashMap<Integer, ? extends ZoneType>> _classZones = new ConcurrentHashMap<>();
 	private final Map<String, NpcSpawnTerritory> _spawnTerritories = new ConcurrentHashMap<>();
 	private final AtomicInteger _lastDynamicId = new AtomicInteger(300000);
 	private List<ItemInstance> _debugItems;
 	
-	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.MAP_MAX_X >> SHIFT_BY) + OFFSET_X + 1][(World.MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y + 1];
+	private final ZoneRegion[][] _zoneRegions = new ZoneRegion[(World.WORLD_X_MAX >> SHIFT_BY) + OFFSET_X + 1][(World.WORLD_Y_MAX >> SHIFT_BY) + OFFSET_Y + 1];
 	
 	/**
 	 * Instantiates a new zone manager.
@@ -178,7 +178,6 @@ public class ZoneManager implements IXmlReader
 		String zoneType;
 		String zoneShape;
 		final List<int[]> rs = new ArrayList<>();
-		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -195,7 +194,6 @@ public class ZoneManager implements IXmlReader
 					if ("zone".equalsIgnoreCase(d.getNodeName()))
 					{
 						attrs = d.getAttributes();
-						
 						attribute = attrs.getNamedItem("type");
 						if (attribute != null)
 						{
@@ -244,7 +242,6 @@ public class ZoneManager implements IXmlReader
 						
 						minZ = parseInteger(attrs, "minZ");
 						maxZ = parseInteger(attrs, "maxZ");
-						
 						zoneType = parseString(attrs, "type");
 						zoneShape = parseString(attrs, "shape");
 						
@@ -366,7 +363,6 @@ public class ZoneManager implements IXmlReader
 								attrs = cd.getAttributes();
 								final String name = attrs.getNamedItem("name").getNodeValue();
 								final String val = attrs.getNamedItem("val").getNodeValue();
-								
 								temp.setParameter(name, val);
 							}
 							else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (temp instanceof ZoneRespawn))
@@ -383,7 +379,6 @@ public class ZoneManager implements IXmlReader
 								attrs = cd.getAttributes();
 								final String race = attrs.getNamedItem("name").getNodeValue();
 								final String point = attrs.getNamedItem("point").getNodeValue();
-								
 								((RespawnZone) temp).addRaceRespawnPoint(race, point);
 							}
 						}
@@ -410,7 +405,6 @@ public class ZoneManager implements IXmlReader
 								final int bx = ((x + 1) - OFFSET_X) << SHIFT_BY;
 								final int ay = (y - OFFSET_Y) << SHIFT_BY;
 								final int by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
-								
 								if (temp.getZone().intersectsRectangle(ax, bx, ay, by))
 								{
 									_zoneRegions[x][y].getZones().put(temp.getId(), temp);
@@ -463,7 +457,7 @@ public class ZoneManager implements IXmlReader
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classZones.size() + " zone classes and " + getSize() + " zones.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawnTerritories.size() + " NPC spawn territoriers.");
 		final OptionalInt maxId = _classZones.values().stream().flatMap(map -> map.keySet().stream()).mapToInt(Integer.class::cast).filter(value -> value < 300000).max();
-		LOGGER.info(getClass().getSimpleName() + ": Last static id: " + maxId.getAsInt());
+		LOGGER.info(getClass().getSimpleName() + ": Last static id " + maxId.getAsInt() + ".");
 	}
 	
 	/**

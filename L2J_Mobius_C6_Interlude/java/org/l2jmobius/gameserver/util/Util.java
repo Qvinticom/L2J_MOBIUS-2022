@@ -578,4 +578,15 @@ public class Util
 	{
 		return map.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 	}
+	
+	/**
+	 * @param numToTest : The number to test.
+	 * @param min : The minimum limit.
+	 * @param max : The maximum limit.
+	 * @return the number or one of the limit (mininum / maximum).
+	 */
+	public static int limit(int numToTest, int min, int max)
+	{
+		return (numToTest > max) ? max : ((numToTest < min) ? min : numToTest);
+	}
 }

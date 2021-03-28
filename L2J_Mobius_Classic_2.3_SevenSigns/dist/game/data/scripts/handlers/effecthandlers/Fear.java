@@ -100,7 +100,7 @@ public class Fear extends AbstractEffect
 		final int posY = (int) (effected.getY() + (FEAR_RANGE * Math.sin(radians)));
 		final int posZ = effected.getZ();
 		
-		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), posX, posY, posZ, effected.getInstanceWorld());
+		final Location destination = GeoEngine.getInstance().getValidLocation(effected.getX(), effected.getY(), effected.getZ(), posX, posY, posZ, effected.getInstanceWorld());
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 	}
 }

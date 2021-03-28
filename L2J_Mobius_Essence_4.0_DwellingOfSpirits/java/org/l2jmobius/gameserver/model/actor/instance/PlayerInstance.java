@@ -14381,8 +14381,8 @@ public class PlayerInstance extends Playable
 	
 	public boolean isInTimedHuntingZone(int zoneId, int locX, int locY)
 	{
-		final int x = ((locX - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-		final int y = ((locY - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+		final int x = ((locX - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+		final int y = ((locY - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 		
 		switch (zoneId)
 		{

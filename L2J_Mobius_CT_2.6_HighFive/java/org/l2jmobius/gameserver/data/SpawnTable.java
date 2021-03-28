@@ -400,8 +400,8 @@ public class SpawnTable implements IXmlReader
 			}
 			
 			// XML file for spawn
-			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 			final File spawnFile = new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			
 			// Write info to XML
@@ -476,8 +476,8 @@ public class SpawnTable implements IXmlReader
 		
 		if (update)
 		{
-			final int x = ((spawn.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
-			final int y = ((spawn.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+			final int x = ((spawn.getX() - World.WORLD_X_MIN) >> 15) + World.TILE_X_MIN;
+			final int y = ((spawn.getY() - World.WORLD_Y_MIN) >> 15) + World.TILE_Y_MIN;
 			final int npcSpawnTemplateId = spawn.getNpcSpawnTemplateId();
 			final File spawnFile = npcSpawnTemplateId > 0 ? new File(_spawnTemplates.get(npcSpawnTemplateId)) : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");

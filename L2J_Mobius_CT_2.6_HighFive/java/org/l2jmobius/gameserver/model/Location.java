@@ -16,30 +16,35 @@
  */
 package org.l2jmobius.gameserver.model;
 
+import java.util.Objects;
+
+import org.l2jmobius.commons.util.Point2D;
 import org.l2jmobius.gameserver.model.interfaces.ILocational;
 import org.l2jmobius.gameserver.model.interfaces.IPositionable;
 
 /**
- * Location data transfer object.<br>
- * Contains coordinates data, heading and instance Id.
- * @author Zoey76
+ * A datatype used to retain a 3D (x/y/z/heading/instanceId) point. It got the capability to be set and cleaned.
  */
-public class Location implements IPositionable
+public class Location extends Point2D implements IPositionable
 {
-	protected int _x;
-	protected int _y;
-	protected int _z;
-	private int _heading;
-	private int _instanceId;
+	protected volatile int _z;
+	protected volatile int _heading;
+	protected volatile int _instanceId;
 	
 	public Location(int x, int y, int z)
 	{
-		this(x, y, z, 0, 0);
+		super(x, y);
+		_z = z;
+		_heading = 0;
+		_instanceId = 0;
 	}
 	
 	public Location(int x, int y, int z, int heading)
 	{
-		this(x, y, z, heading, 0);
+		super(x, y);
+		_z = z;
+		_heading = heading;
+		_instanceId = 0;
 	}
 	
 	public Location(WorldObject obj)
@@ -49,11 +54,18 @@ public class Location implements IPositionable
 	
 	public Location(int x, int y, int z, int heading, int instanceId)
 	{
-		_x = x;
-		_y = y;
+		super(x, y);
 		_z = z;
 		_heading = heading;
 		_instanceId = instanceId;
+	}
+	
+	public Location(StatSet set)
+	{
+		super(set.getInt("x", 0), set.getInt("y", 0));
+		_z = set.getInt("z", 0);
+		_heading = set.getInt("heading", 0);
+		_instanceId = set.getInt("instanceId", 0);
 	}
 	
 	/**
@@ -167,14 +179,34 @@ public class Location implements IPositionable
 	}
 	
 	@Override
+	public void clean()
+	{
+		super.clean();
+		_z = 0;
+		_instanceId = 0;
+	}
+	
+	@Override
+	public Location clone()
+	{
+		return new Location(_x, _y, _z);
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		return (31 * super.hashCode()) + Objects.hash(_z);
+	}
+	
+	@Override
 	public boolean equals(Object obj)
 	{
-		if (!(obj instanceof Location))
+		if (obj instanceof Location)
 		{
-			return false;
+			final Location loc = (Location) obj;
+			return (getX() == loc.getX()) && (getY() == loc.getY()) && (getZ() == loc.getZ()) && (getHeading() == loc.getHeading()) && (getInstanceId() == loc.getInstanceId());
 		}
-		final Location loc = (Location) obj;
-		return (getX() == loc.getX()) && (getY() == loc.getY()) && (getZ() == loc.getZ()) && (getHeading() == loc.getHeading()) && (getInstanceId() == loc.getInstanceId());
+		return false;
 	}
 	
 	@Override

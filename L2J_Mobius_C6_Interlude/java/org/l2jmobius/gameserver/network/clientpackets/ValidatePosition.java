@@ -104,7 +104,7 @@ public class ValidatePosition extends GameClientPacket
 		{
 			if (player.isFalling(_z))
 			{
-				final int nearestZ = GeoEngine.getInstance().getHigherHeight(_x, _y, _z);
+				final int nearestZ = GeoEngine.getInstance().getHeight(_x, _y, _z);
 				if (player.getZ() < nearestZ)
 				{
 					player.setXYZ(_x, _y, nearestZ);
@@ -124,7 +124,7 @@ public class ValidatePosition extends GameClientPacket
 		player.setClientHeading(_heading); // No real need to validate heading.
 		
 		// Mobius: Check for possible door logout and move over exploit. Also checked at MoveBackwardToLocation.
-		if (!DoorData.getInstance().checkIfDoorsBetween(realX, realY, realZ, _x, _y, _z))
+		if (!DoorData.getInstance().checkIfDoorsBetween(realX, realY, realZ, _x, _y, _z, player.getInstanceId()))
 		{
 			player.setLastServerPosition(realX, realY, realZ);
 		}

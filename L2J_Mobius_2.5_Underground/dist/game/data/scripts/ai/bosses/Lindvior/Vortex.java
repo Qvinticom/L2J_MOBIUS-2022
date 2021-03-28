@@ -63,7 +63,7 @@ public class Vortex extends AbstractNpcAI
 						final int x = (int) (attackers.getX() + (600 * Math.cos(radians)));
 						final int y = (int) (attackers.getY() + (600 * Math.sin(radians)));
 						final int z = attackers.getZ();
-						final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(attackers.getX(), attackers.getY(), attackers.getZ(), x, y, z, attackers.getInstanceWorld());
+						final Location loc = GeoEngine.getInstance().getValidLocation(attackers.getX(), attackers.getY(), attackers.getZ(), x, y, z, attackers.getInstanceWorld());
 						attackers.broadcastPacket(new FlyToLocation(attackers, x, y, z, FlyToLocation.FlyType.THROW_UP, 800, 800, 800));
 						attackers.setXYZ(loc);
 						attackers.broadcastPacket(new ValidateLocation(attackers));
