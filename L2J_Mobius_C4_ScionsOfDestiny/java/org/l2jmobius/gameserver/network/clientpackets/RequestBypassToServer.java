@@ -252,7 +252,7 @@ public class RequestBypassToServer extends GameClientPacket
 					
 					final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 					if ((Config.ALLOW_CLASS_MASTERS && Config.ALLOW_REMOTE_CLASS_MASTERS && (object instanceof ClassMasterInstance)) //
-						|| ((object instanceof NpcInstance) && (endOfId > 0) && player.isInsideRadius(object, NpcInstance.INTERACTION_DISTANCE, false, false)))
+						|| ((object instanceof NpcInstance) && (endOfId > 0) && player.isInsideRadius2D(object, NpcInstance.INTERACTION_DISTANCE)))
 					{
 						((NpcInstance) object).onBypassFeedback(player, _command.replace("npc_" + object.getObjectId() + "_", ""));
 					}
@@ -320,7 +320,7 @@ public class RequestBypassToServer extends GameClientPacket
 					if ((object instanceof NpcInstance) && (player.getLastQuestNpcObject() != object.getObjectId()))
 					{
 						final WorldObject lastQuestNpc = World.getInstance().findObject(player.getLastQuestNpcObject());
-						if ((lastQuestNpc == null) || !player.isInsideRadius(lastQuestNpc, NpcInstance.INTERACTION_DISTANCE, false, false))
+						if ((lastQuestNpc == null) || !player.isInsideRadius2D(lastQuestNpc, NpcInstance.INTERACTION_DISTANCE))
 						{
 							player.setLastQuestNpcObject(object.getObjectId());
 						}

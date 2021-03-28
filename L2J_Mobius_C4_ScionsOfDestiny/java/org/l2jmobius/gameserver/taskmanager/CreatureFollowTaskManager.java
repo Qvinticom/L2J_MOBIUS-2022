@@ -97,9 +97,9 @@ public class CreatureFollowTaskManager
 					
 					final int followRange = range == -1 ? Rnd.get(50, 100) : range;
 					final int followRangeWithCollision = followRange + creature.getTemplate().getCollisionRadius() + ((Creature) followTarget).getTemplate().getCollisionRadius();
-					if (!creature.isInsideRadius(followTarget, followRangeWithCollision, true, false))
+					if (!creature.isInsideRadius3D(followTarget, followRangeWithCollision))
 					{
-						if (!creature.isInsideRadius(followTarget, 3000, true, false))
+						if (!creature.isInsideRadius3D(followTarget, 3000))
 						{
 							// If the target is too far (maybe also teleported).
 							if (creature.isSummon())

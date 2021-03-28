@@ -113,7 +113,7 @@ public class SiegeGuardInstance extends Attackable
 	 */
 	public void returnHome()
 	{
-		if (!isInsideRadius(_homeX, _homeY, 40, false))
+		if (!isInsideRadius2D(_homeX, _homeY, _homeZ, 40))
 		{
 			setReturningToSpawnPoint(true);
 			clearAggroList();

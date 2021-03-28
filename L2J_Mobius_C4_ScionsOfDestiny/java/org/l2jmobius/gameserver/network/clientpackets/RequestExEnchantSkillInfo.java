@@ -67,7 +67,7 @@ public class RequestExEnchantSkillInfo extends GameClientPacket
 			return;
 		}
 		
-		if (!player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
+		if (!player.isInsideRadius2D(trainer, NpcInstance.INTERACTION_DISTANCE) && !player.isGM())
 		{
 			return;
 		}

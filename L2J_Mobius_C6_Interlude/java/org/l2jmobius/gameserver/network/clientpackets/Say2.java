@@ -433,7 +433,7 @@ public class Say2 extends GameClientPacket
 				}
 				for (PlayerInstance plr : player.getKnownList().getKnownPlayers().values())
 				{
-					if ((plr != null) && player.isInsideRadius(plr, 1250, false, true))
+					if ((plr != null) && player.isInsideRadius2D(plr, 1250))
 					{
 						// Like L2OFF if player is blocked can't read the message
 						if (!plr.getBlockList().isInBlockList(player))

@@ -348,7 +348,7 @@ public class AdminEffects implements IAdminCommandHandler
 				final int teamVal = Integer.parseInt(val);
 				for (PlayerInstance player : activeChar.getKnownList().getKnownPlayers().values())
 				{
-					if (activeChar.isInsideRadius(player, 400, false, true))
+					if (activeChar.isInsideRadius2D(player, 400))
 					{
 						player.setTeam(0);
 						
@@ -416,7 +416,7 @@ public class AdminEffects implements IAdminCommandHandler
 								final int radius = Integer.parseInt(target);
 								for (WorldObject object : activeChar.getKnownList().getKnownObjects().values())
 								{
-									if (activeChar.isInsideRadius(object, radius, false, false))
+									if (activeChar.isInsideRadius2D(object, radius))
 									{
 										performSocial(social, object, activeChar);
 									}
@@ -506,7 +506,7 @@ public class AdminEffects implements IAdminCommandHandler
 								final int radius = Integer.parseInt(target);
 								for (WorldObject object : activeChar.getKnownList().getKnownObjects().values())
 								{
-									if (activeChar.isInsideRadius(object, radius, false, false))
+									if (activeChar.isInsideRadius2D(object, radius))
 									{
 										performAbnormal(abnormal, object);
 									}

@@ -73,7 +73,7 @@ public class ProtectorInstance extends NpcInstance
 		// Cast for Player
 		private boolean handleCast(PlayerInstance player, int skillId, int skillLevel)
 		{
-			if (player.isGM() || player.isDead() || !player.isSpawned() || !isInsideRadius(player, Config.PROTECTOR_RADIUS_ACTION, false, false))
+			if (player.isGM() || player.isDead() || !player.isSpawned() || !isInsideRadius2D(player, Config.PROTECTOR_RADIUS_ACTION))
 			{
 				return false;
 			}
@@ -94,7 +94,7 @@ public class ProtectorInstance extends NpcInstance
 		// Cast for pet
 		private boolean handleCastonPet(Summon player, int skillId, int skillLevel)
 		{
-			if (player.isDead() || !player.isSpawned() || !isInsideRadius(player, Config.PROTECTOR_RADIUS_ACTION, false, false))
+			if (player.isDead() || !player.isSpawned() || !isInsideRadius2D(player, Config.PROTECTOR_RADIUS_ACTION))
 			{
 				return false;
 			}

@@ -113,7 +113,7 @@ public class RaidBossInstance extends MonsterInstance
 				rbLockRange = Config.RBS_SPECIFIC_LOCK_RAGE.get(bossSpawn.getNpcId());
 			}
 			
-			if ((rbLockRange != -1) && !isInsideRadius(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), rbLockRange, true, false))
+			if ((rbLockRange != -1) && !isInsideRadius3D(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), rbLockRange))
 			{
 				teleToLocation(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), true);
 				// healFull(); // Prevents minor exploiting with it

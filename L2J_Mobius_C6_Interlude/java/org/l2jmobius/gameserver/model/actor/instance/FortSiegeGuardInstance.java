@@ -108,7 +108,7 @@ public class FortSiegeGuardInstance extends Attackable
 		{
 			return;
 		}
-		if (!isInsideRadius(getSpawn().getX(), getSpawn().getY(), 40, false))
+		if (!isInsideRadius2D(getSpawn().getX(), getSpawn().getY(), getSpawn().getZ(), 40))
 		{
 			setReturningToSpawnPoint(true);
 			clearAggroList();

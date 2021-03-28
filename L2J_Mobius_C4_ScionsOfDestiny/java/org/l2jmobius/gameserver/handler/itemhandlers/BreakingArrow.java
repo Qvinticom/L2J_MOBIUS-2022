@@ -50,7 +50,7 @@ public class BreakingArrow implements IItemHandler
 			return;
 		}
 		final GrandBossInstance frintezza = (GrandBossInstance) target;
-		if (!player.isInsideRadius(frintezza, 500, false, false))
+		if (!player.isInsideRadius2D(frintezza, 500))
 		{
 			player.sendMessage("The purpose is inaccessible");
 			player.sendPacket(ActionFailed.STATIC_PACKET);

@@ -142,7 +142,7 @@ public class StaticObjectInstance extends WorldObject
 			player.sendPacket(new MyTargetSelected(getObjectId(), 0));
 			
 			// Calculate the distance between the PlayerInstance and the NpcInstance
-			if (!player.isInsideRadius(this, INTERACTION_DISTANCE, false, false))
+			if (!player.isInsideRadius2D(this, INTERACTION_DISTANCE))
 			{
 				// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);

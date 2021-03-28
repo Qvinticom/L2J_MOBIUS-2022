@@ -247,7 +247,7 @@ public class QueenAnt extends Quest
 				for (int i = 0; i < _minions.size(); i++)
 				{
 					final Attackable mob = _minions.get(i);
-					if ((mob != null) && !mob.isInsideRadius(npc.getX(), npc.getY(), 700, false))/* !_Zone.isInsideZone(mob)) */
+					if ((mob != null) && !mob.isInsideRadius2D(npc.getX(), npc.getY(), npc.getZ(), 700)) /* !_Zone.isInsideZone(mob)) */
 					{
 						mob.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 					}
@@ -407,7 +407,7 @@ public class QueenAnt extends Quest
 	
 	public void getIntoPosition(MonsterInstance nurse, MonsterInstance caller)
 	{
-		if (!nurse.isInsideRadius(caller, 300, false, false))
+		if (!nurse.isInsideRadius2D(caller, 300))
 		{
 			nurse.getAI().moveToPawn(caller, 300);
 		}

@@ -540,7 +540,7 @@ public class DoorInstance extends Creature
 		}
 		else if ((player.getClan() != null) && (_clanHall != null) && (player.getClanId() == _clanHall.getOwnerId()))
 		{
-			if (!isInsideRadius(player, NpcInstance.INTERACTION_DISTANCE, false, false))
+			if (!isInsideRadius2D(player, NpcInstance.INTERACTION_DISTANCE))
 			{
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
 			}

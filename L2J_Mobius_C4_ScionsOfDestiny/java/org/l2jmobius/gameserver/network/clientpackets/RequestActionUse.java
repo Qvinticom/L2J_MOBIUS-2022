@@ -122,7 +122,7 @@ public class RequestActionUse extends GameClientPacket
 				{
 					break;
 				}
-				if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius(target, StaticObjectInstance.INTERACTION_DISTANCE, false, false))
+				if ((target != null) && !player.isSitting() && (target instanceof StaticObjectInstance) && (((StaticObjectInstance) target).getType() == 1) && (CastleManager.getInstance().getCastle(target) != null) && player.isInsideRadius2D(target, StaticObjectInstance.INTERACTION_DISTANCE))
 				{
 					final ChairSit cs = new ChairSit(player, ((StaticObjectInstance) target).getStaticObjectId());
 					player.sendPacket(cs);

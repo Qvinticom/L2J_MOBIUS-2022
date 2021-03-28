@@ -75,7 +75,7 @@ public class RequestAquireSkill extends GameClientPacket
 		}
 		
 		final int npcid = trainer.getNpcId();
-		if (!player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false) && !player.isGM())
+		if (!player.isInsideRadius2D(trainer, NpcInstance.INTERACTION_DISTANCE) && !player.isGM())
 		{
 			return;
 		}

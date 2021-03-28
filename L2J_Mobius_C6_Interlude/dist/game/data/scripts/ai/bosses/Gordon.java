@@ -171,7 +171,7 @@ public class Gordon extends Quest
 						{
 							for (PlayerInstance pc : chars)
 							{
-								if (pc.isCursedWeaponEquipped() && pc.isInsideRadius(npc, 5000, false, false))
+								if (pc.isCursedWeaponEquipped() && pc.isInsideRadius2D(npc, 5000))
 								{
 									npc.setRunning();
 									((Attackable) npc).addDamageHate(pc, 0, 9999);

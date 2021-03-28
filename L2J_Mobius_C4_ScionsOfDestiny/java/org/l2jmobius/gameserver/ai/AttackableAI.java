@@ -148,7 +148,7 @@ public class AttackableAI extends CreatureAI
 		}
 		
 		// Check if the target isn't dead, is in the Aggro range and is at the same height
-		if (target.isAlikeDead() || !me.isInsideRadius(target, me.getAggroRange(), false, false) || (Math.abs(_actor.getZ() - target.getZ()) > 300))
+		if (target.isAlikeDead() || !me.isInsideRadius2D(target, me.getAggroRange()) || (Math.abs(_actor.getZ() - target.getZ()) > 300))
 		{
 			return false;
 		}
@@ -419,7 +419,7 @@ public class AttackableAI extends CreatureAI
 				
 				if ((obj instanceof PlayerInstance) || (obj instanceof Summon))
 				{
-					if (!target.isAlikeDead() && !npc.isInsideRadius(obj, npc.getAggroRange(), true, false))
+					if (!target.isAlikeDead() && !npc.isInsideRadius3D(obj, npc.getAggroRange()))
 					{
 						final PlayerInstance targetPlayer = obj instanceof PlayerInstance ? (PlayerInstance) obj : ((Summon) obj).getOwner();
 						for (Quest quest : npc.getTemplate().getEventQuests(EventType.ON_AGGRO_RANGE_ENTER))
@@ -571,7 +571,7 @@ public class AttackableAI extends CreatureAI
 			}
 			else
 			{
-				if ((Config.MONSTER_RETURN_DELAY > 0) && (npc instanceof MonsterInstance) && !npc.isAlikeDead() && !npc.isDead() && (npc.getSpawn() != null) && !npc.isInsideRadius(npc.getSpawn().getX(), npc.getSpawn().getY(), Config.MAX_DRIFT_RANGE, false))
+				if ((Config.MONSTER_RETURN_DELAY > 0) && (npc instanceof MonsterInstance) && !npc.isAlikeDead() && !npc.isDead() && (npc.getSpawn() != null) && !npc.isInsideRadius2D(npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), Config.MAX_DRIFT_RANGE))
 				{
 					((MonsterInstance) _actor).returnHome();
 				}
@@ -606,7 +606,7 @@ public class AttackableAI extends CreatureAI
 		if (Config.AGGRO_DISTANCE_CHECK_ENABLED && _actor.isMonster() && !(_actor instanceof NpcWalkerInstance) && !(_actor instanceof GrandBossInstance))
 		{
 			final Spawn spawn = ((NpcInstance) _actor).getSpawn();
-			if ((spawn != null) && !_actor.isInsideRadius(spawn.getX(), spawn.getY(), spawn.getZ(), (_actor.isRaid() ? Config.AGGRO_DISTANCE_CHECK_RAID_RANGE : Config.AGGRO_DISTANCE_CHECK_RANGE), true, false))
+			if ((spawn != null) && !_actor.isInsideRadius3D(spawn.getX(), spawn.getY(), spawn.getZ(), (_actor.isRaid() ? Config.AGGRO_DISTANCE_CHECK_RAID_RANGE : Config.AGGRO_DISTANCE_CHECK_RANGE)))
 			{
 				if ((Config.AGGRO_DISTANCE_CHECK_RAIDS || !_actor.isRaid()) && (Config.AGGRO_DISTANCE_CHECK_INSTANCES || (_actor.getInstanceId() == 0)))
 				{
@@ -700,7 +700,7 @@ public class AttackableAI extends CreatureAI
 					}
 					
 					// Check if the WorldObject is inside the Faction Range of the actor
-					if ((_actor.getAttackByList() != null) && _actor.isInsideRadius(npc, npc.getFactionRange(), true, false) && (npc.getAI() != null) && _actor.getAttackByList().contains(originalAttackTarget))
+					if ((_actor.getAttackByList() != null) && _actor.isInsideRadius3D(npc, npc.getFactionRange()) && (npc.getAI() != null) && _actor.getAttackByList().contains(originalAttackTarget))
 					{
 						if ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE))
 						{
@@ -773,7 +773,7 @@ public class AttackableAI extends CreatureAI
 		{
 			for (WorldObject nearby : _actor.getKnownList().getKnownObjects().values())
 			{
-				if ((nearby instanceof Attackable) && _actor.isInsideRadius(nearby, collision, false, false) && (nearby != originalAttackTarget))
+				if ((nearby instanceof Attackable) && _actor.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget))
 				{
 					int newX = combinedCollision + Rnd.get(40);
 					if (Rnd.nextBoolean())
@@ -794,7 +794,7 @@ public class AttackableAI extends CreatureAI
 						newY = originalAttackTarget.getY() - newY;
 					}
 					
-					if (!_actor.isInsideRadius(newX, newY, collision, false))
+					if (!_actor.isInsideRadius2D(newX, newY, originalAttackTarget.getZ(), collision))
 					{
 						final int newZ = _actor.getZ() + 30;
 						if (!Config.PATHFINDING || GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), newX, newY, newZ, _actor.getInstanceId()))

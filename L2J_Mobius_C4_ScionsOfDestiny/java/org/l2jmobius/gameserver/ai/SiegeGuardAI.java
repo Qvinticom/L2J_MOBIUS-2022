@@ -127,14 +127,14 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		if (currentTarget instanceof Summon)
 		{
 			final PlayerInstance owner = ((Summon) currentTarget).getOwner();
-			if (_actor.isInsideRadius(owner, 1000, true, false))
+			if (_actor.isInsideRadius3D(owner, 1000))
 			{
 				currentTarget = owner;
 			}
 		}
 		
 		// Check if the target is a PlayerInstance and if the target isn't in silent move mode AND too far (>100)
-		if ((currentTarget instanceof PlayerInstance) && ((PlayerInstance) currentTarget).isSilentMoving() && !_actor.isInsideRadius(currentTarget, 250, false, false))
+		if ((currentTarget instanceof PlayerInstance) && ((PlayerInstance) currentTarget).isSilentMoving() && !_actor.isInsideRadius2D(currentTarget, 250))
 		{
 			return false;
 		}
@@ -600,7 +600,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 			}
 			
 			// Check if the WorldObject is inside the Faction Range of the actor
-			if ((npc.getAI() != null) && ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE)) && actor.isInsideRadius(npc, npc.getFactionRange(), false, true) && target.isInsideRadius(npc, npc.getFactionRange(), false, true))
+			if ((npc.getAI() != null) && ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE)) && actor.isInsideRadius2D(npc, npc.getFactionRange()) && target.isInsideRadius2D(npc, npc.getFactionRange()))
 			{
 				if (Config.PATHFINDING)
 				{

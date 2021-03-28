@@ -193,14 +193,14 @@ public class DoorAI extends CreatureAI
 			
 			for (SiegeGuardInstance guard : _door.getKnownSiegeGuards())
 			{
-				if ((guard != null) && (guard.getAI() != null) && _actor.isInsideRadius(guard, guard.getFactionRange(), false, true) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
+				if ((guard != null) && (guard.getAI() != null) && _actor.isInsideRadius2D(guard, guard.getFactionRange()) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
 				{
 					guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
 				}
 			}
 			for (FortSiegeGuardInstance guard : _door.getKnownFortSiegeGuards())
 			{
-				if ((guard != null) && (guard.getAI() != null) && _actor.isInsideRadius(guard, guard.getFactionRange(), false, true) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
+				if ((guard != null) && (guard.getAI() != null) && _actor.isInsideRadius2D(guard, guard.getFactionRange()) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
 				{
 					guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
 				}

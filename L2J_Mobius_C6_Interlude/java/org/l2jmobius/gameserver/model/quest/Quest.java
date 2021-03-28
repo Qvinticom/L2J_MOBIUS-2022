@@ -271,7 +271,7 @@ public class Quest extends ManagedScript
 		{
 			// The sponsor is online, retrieve player instance and check distance.
 			final PlayerInstance sponsor = member.getPlayerInstance();
-			if ((sponsor != null) && player.isInsideRadius(sponsor, Config.ALT_PARTY_RANGE, true, false))
+			if ((sponsor != null) && player.isInsideRadius3D(sponsor, Config.ALT_PARTY_RANGE))
 			{
 				return true;
 			}
@@ -306,7 +306,7 @@ public class Quest extends ManagedScript
 		{
 			// The apprentice is online, retrieve player instance and check distance.
 			final PlayerInstance academic = member.getPlayerInstance();
-			if ((academic != null) && player.isInsideRadius(academic, Config.ALT_PARTY_RANGE, true, false))
+			if ((academic != null) && player.isInsideRadius3D(academic, Config.ALT_PARTY_RANGE))
 			{
 				return academic;
 			}
@@ -1268,7 +1268,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Player is in range?
-		if (!player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, false))
+		if (!player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
 			return null;
 		}
@@ -1305,7 +1305,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Player is in range?
-		if (!player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, false))
+		if (!player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
 			return null;
 		}
@@ -1479,7 +1479,7 @@ public class Quest extends ManagedScript
 			if (qs != null)
 			{
 				final Object sVar = qs.get(var);
-				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
+				if ((sVar != null) && ((String) sVar).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE))
 				{
 					candidates.add(partyMember);
 				}
@@ -1594,7 +1594,7 @@ public class Quest extends ManagedScript
 		for (PlayerInstance partyMember : party.getPartyMembers())
 		{
 			temp = partyMember.getQuestState(getName());
-			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius(target, Config.ALT_PARTY_RANGE, true, false))
+			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE))
 			{
 				candidates.add(partyMember);
 			}
@@ -1782,7 +1782,7 @@ public class Quest extends ManagedScript
 	public QuestState getClanLeaderQuestState(PlayerInstance player, NpcInstance npc)
 	{
 		// If player is the leader, retrieves directly the qS and bypass others checks
-		if (player.isClanLeader() && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, false))
+		if (player.isClanLeader() && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
 			return player.getQuestState(getName());
 		}
@@ -1807,7 +1807,7 @@ public class Quest extends ManagedScript
 		}
 		
 		// Verify if the player is on the radius of the leader. If true, send leader's quest state.
-		if (leader.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, false))
+		if (leader.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
 			return leader.getQuestState(getName());
 		}

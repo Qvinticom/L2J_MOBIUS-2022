@@ -179,7 +179,7 @@ public class RequestDropItem extends GameClientPacket
 			return;
 		}
 		
-		if (!player.isInsideRadius(_x, _y, 150, false) || (Math.abs(_z - player.getZ()) > 50))
+		if (!player.isInsideRadius2D(_x, _y, _z, 150) || (Math.abs(_z - player.getZ()) > 50))
 		{
 			player.sendPacket(SystemMessageId.THAT_IS_TOO_FAR_FROM_YOU_TO_DISCARD);
 			return;

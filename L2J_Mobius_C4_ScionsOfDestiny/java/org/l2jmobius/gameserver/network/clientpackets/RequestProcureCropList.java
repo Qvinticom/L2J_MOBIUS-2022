@@ -88,7 +88,7 @@ public class RequestProcureCropList extends GameClientPacket
 			target = player.getLastFolkNPC();
 		}
 		
-		if (!player.isGM() && ((target == null) || !(target instanceof ManorManagerInstance) || !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false)))
+		if (!player.isGM() && ((target == null) || !(target instanceof ManorManagerInstance) || !player.isInsideRadius2D(target, NpcInstance.INTERACTION_DISTANCE)))
 		{
 			return;
 		}

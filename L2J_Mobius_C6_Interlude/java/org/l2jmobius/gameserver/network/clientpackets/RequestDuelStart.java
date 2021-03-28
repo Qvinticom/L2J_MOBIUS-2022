@@ -71,7 +71,7 @@ public class RequestDuelStart extends GameClientPacket
 			return;
 		}
 		// Players may not be too far apart
-		else if (!player.isInsideRadius(targetChar, 250, false, false))
+		else if (!player.isInsideRadius2D(targetChar, 250))
 		{
 			final SystemMessage msg = new SystemMessage(SystemMessageId.S1_CANNOT_RECEIVE_A_DUEL_CHALLENGE_BECAUSE_S1_IS_TOO_FAR_AWAY);
 			msg.addString(targetChar.getName());

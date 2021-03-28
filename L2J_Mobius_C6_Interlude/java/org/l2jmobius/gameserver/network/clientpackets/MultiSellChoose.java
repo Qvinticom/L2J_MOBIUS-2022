@@ -89,7 +89,7 @@ public class MultiSellChoose extends GameClientPacket
 		final NpcInstance merchant = player.getTarget() instanceof NpcInstance ? (NpcInstance) player.getTarget() : null;
 		
 		// Possible fix to Multisell Radius
-		if ((merchant == null) || !player.isInsideRadius(merchant, NpcInstance.INTERACTION_DISTANCE, false, false))
+		if ((merchant == null) || !player.isInsideRadius2D(merchant, NpcInstance.INTERACTION_DISTANCE))
 		{
 			player.setMultiSellId(-1);
 			return;

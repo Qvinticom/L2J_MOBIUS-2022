@@ -73,7 +73,7 @@ public class MonsterInstance extends Attackable
 		ThreadPool.schedule(() ->
 		{
 			final Spawn mobSpawn = getSpawn();
-			if (!isInCombat() && !isAlikeDead() && !isDead() && (mobSpawn != null) && !isInsideRadius(mobSpawn.getX(), mobSpawn.getY(), Config.MAX_DRIFT_RANGE, false))
+			if (!isInCombat() && !isAlikeDead() && !isDead() && (mobSpawn != null) && !isInsideRadius2D(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ(), Config.MAX_DRIFT_RANGE))
 			{
 				teleToLocation(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ(), false);
 			}
@@ -132,7 +132,7 @@ public class MonsterInstance extends Attackable
 			for (MinionInstance minion : _minionList.getSpawnedMinions())
 			{
 				// Get actual coords of the minion and check to see if it's too far away from this MonsterInstance
-				if (!isInsideRadius(minion, 200, false, false))
+				if (!isInsideRadius2D(minion, 200))
 				{
 					// Get the coords of the master to use as a base to move the minion to
 					final int masterX = getX();

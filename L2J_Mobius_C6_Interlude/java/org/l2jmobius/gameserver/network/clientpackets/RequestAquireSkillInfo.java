@@ -57,7 +57,7 @@ public class RequestAquireSkillInfo extends GameClientPacket
 			return;
 		}
 		
-		if (!player.isGM() && !player.isInsideRadius(trainer, NpcInstance.INTERACTION_DISTANCE, false, false))
+		if (!player.isGM() && !player.isInsideRadius2D(trainer, NpcInstance.INTERACTION_DISTANCE))
 		{
 			return;
 		}

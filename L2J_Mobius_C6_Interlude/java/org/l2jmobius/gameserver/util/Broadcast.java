@@ -122,7 +122,7 @@ public class Broadcast
 				continue;
 			}
 			
-			if (creature.isInsideRadius(player, radius, false, false))
+			if (creature.isInsideRadius2D(player, radius))
 			{
 				player.sendPacket(mov);
 			}

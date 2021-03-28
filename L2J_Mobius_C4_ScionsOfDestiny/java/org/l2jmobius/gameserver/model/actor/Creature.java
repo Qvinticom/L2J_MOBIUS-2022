@@ -380,7 +380,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	{
 		for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 		{
-			if (!isInsideRadius(player, radius, true, false))
+			if (!isInsideRadius3D(player, radius))
 			{
 				continue;
 			}
@@ -1841,7 +1841,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			mostHated = ((Attackable) this)._mostHated;
 		}
 		
-		if ((mostHated != null) && isInsideRadius(mostHated, 200, false, false))
+		if ((mostHated != null) && isInsideRadius2D(mostHated, 200))
 		{
 			calculateRewards(mostHated);
 		}
@@ -5798,63 +5798,59 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Check if this object is inside the given radius around the given object. Warning: doesn't cover collision radius!
-	 * @param object the target
-	 * @param radius the radius around the target
-	 * @param checkZ should we check Z axis also
-	 * @param strictCheck true if (distance < radius), false if (distance <= radius)
-	 * @return true is the Creature is inside the radius.
+	 * Check if this object is inside the given 2D radius around the given WorldObject.
+	 * @param object the target object
+	 * @param radius the radius around the object
+	 * @return true if the Creature is inside the radius.
 	 */
-	public boolean isInsideRadius(WorldObject object, int radius, boolean checkZ, boolean strictCheck)
+	public boolean isInsideRadius2D(WorldObject object, int radius)
 	{
-		if (object != null)
+		if (object == null)
 		{
-			return isInsideRadius(object.getX(), object.getY(), object.getZ(), radius, checkZ, strictCheck);
+			return false;
 		}
-		return false;
+		return isInsideRadius2D(object.getX(), object.getY(), object.getZ(), radius);
 	}
 	
 	/**
-	 * Check if this object is inside the given plan radius around the given point. Warning: doesn't cover collision radius!
-	 * @param x X position of the target
-	 * @param y Y position of the target
-	 * @param radius the radius around the target
-	 * @param strictCheck true if (distance < radius), false if (distance <= radius)
-	 * @return true is the Creature is inside the radius.
-	 */
-	public boolean isInsideRadius(int x, int y, int radius, boolean strictCheck)
-	{
-		return isInsideRadius(x, y, 0, radius, false, strictCheck);
-	}
-	
-	/**
-	 * Check if this object is inside the given radius around the given point.
+	 * Check if this object is inside the given 2D radius around the given point.
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @param z Z position of the target
 	 * @param radius the radius around the target
-	 * @param checkZ should we check Z axis also
-	 * @param strictCheck true if (distance < radius), false if (distance <= radius)
-	 * @return true is the Creature is inside the radius.
+	 * @return true if the Creature is inside the radius.
 	 */
-	public boolean isInsideRadius(int x, int y, int z, int radius, boolean checkZ, boolean strictCheck)
+	public boolean isInsideRadius2D(int x, int y, int z, int radius)
 	{
-		final double dx = x - getX();
-		final double dy = y - getY();
-		final double dz = z - getZ();
-		if (strictCheck)
+		return calculateDistanceSq2D(x, y, z) < (radius * radius);
+	}
+	
+	/**
+	 * Check if this object is inside the given 3D radius around the given WorldObject.
+	 * @param object the target object
+	 * @param radius the radius around the object
+	 * @return true if the Creature is inside the radius.
+	 */
+	public boolean isInsideRadius3D(WorldObject object, int radius)
+	{
+		if (object == null)
 		{
-			if (checkZ)
-			{
-				return ((dx * dx) + (dy * dy) + (dz * dz)) < (radius * radius);
-			}
-			return ((dx * dx) + (dy * dy)) < (radius * radius);
+			return false;
 		}
-		if (checkZ)
-		{
-			return ((dx * dx) + (dy * dy) + (dz * dz)) <= (radius * radius);
-		}
-		return ((dx * dx) + (dy * dy)) <= (radius * radius);
+		return isInsideRadius3D(object.getX(), object.getY(), object.getZ(), radius);
+	}
+	
+	/**
+	 * Check if this object is inside the given 3D radius around the given point.
+	 * @param x X position of the target
+	 * @param y Y position of the target
+	 * @param z Z position of the target
+	 * @param radius the radius around the target
+	 * @return true if the Creature is inside the radius.
+	 */
+	public boolean isInsideRadius3D(int x, int y, int z, int radius)
+	{
+		return calculateDistanceSq3D(x, y, z) < (radius * radius);
 	}
 	
 	/**
@@ -6050,7 +6046,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 								}
 								
 								// max allowed rage into take cursed is 3000
-								if ((bossInstance != null) && bossInstance.isInsideRadius(this, 3000, false, false))
+								if ((bossInstance != null) && bossInstance.isInsideRadius2D(this, 3000))
 								{
 									toBeCursed = true;
 								}
@@ -7801,7 +7797,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 									}
 									
 									// max allowed rage into take cursed is 3000
-									if ((bossInstance != null/* && alive */) && bossInstance.isInsideRadius(this, 3000, false, false))
+									if ((bossInstance != null/* && alive */) && bossInstance.isInsideRadius2D(this, 3000))
 									{
 										toBeCursed = true;
 									}
@@ -8055,7 +8051,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 					if (spMob instanceof NpcInstance)
 					{
 						final NpcInstance npcMob = (NpcInstance) spMob;
-						if (npcMob.isInsideRadius(caster, 1000, true, true) && npcMob.hasAI() && (npcMob.getAI().getIntention() == AI_INTENTION_ATTACK))
+						if (npcMob.isInsideRadius3D(caster, 1000) && npcMob.hasAI() && (npcMob.getAI().getIntention() == AI_INTENTION_ATTACK))
 						{
 							final WorldObject npcTarget = npcMob.getTarget();
 							for (WorldObject target : targets)

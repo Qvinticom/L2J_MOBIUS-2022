@@ -172,7 +172,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		if (currentTarget instanceof Summon)
 		{
 			final PlayerInstance owner = ((Summon) currentTarget).getOwner();
-			if (_actor.isInsideRadius(owner, 1000, true, false))
+			if (_actor.isInsideRadius3D(owner, 1000))
 			{
 				currentTarget = owner;
 			}
@@ -182,7 +182,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 		if (currentTarget instanceof PlayerInstance)
 		{
 			// Check if the target isn't in silent move mode AND too far (>100)
-			if (((PlayerInstance) currentTarget).isSilentMoving() && !_actor.isInsideRadius(currentTarget, 250, false, false))
+			if (((PlayerInstance) currentTarget).isSilentMoving() && !_actor.isInsideRadius2D(currentTarget, 250))
 			{
 				return false;
 			}
@@ -533,7 +533,7 @@ public class FortSiegeGuardAI extends CreatureAI implements Runnable
 				// && _actor.getAttackByList().contains(getAttackTarget())
 					&& ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE))
 					// limiting aggro for siege guards
-					&& target.isInsideRadius(npc, 1500, true, false) && GeoEngine.getInstance().canSeeTarget(npc, target))
+					&& target.isInsideRadius3D(npc, 1500) && GeoEngine.getInstance().canSeeTarget(npc, target))
 				{
 					// Notify the WorldObject AI with EVT_AGGRESSION
 					final CreatureAI ai = npc.getAI();

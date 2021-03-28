@@ -114,7 +114,7 @@ public class RequestPackageSend extends GameClientPacket
 		}
 		
 		final FolkInstance manager = player.getLastFolkNPC();
-		if (((manager == null) || !player.isInsideRadius(manager, NpcInstance.INTERACTION_DISTANCE, false, false)) && !player.isGM())
+		if (((manager == null) || !player.isInsideRadius2D(manager, NpcInstance.INTERACTION_DISTANCE)) && !player.isGM())
 		{
 			return;
 		}

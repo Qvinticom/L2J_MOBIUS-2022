@@ -88,7 +88,7 @@ public class SendWareHouseDepositList extends GameClientPacket
 		}
 		
 		final FolkInstance manager = player.getLastFolkNPC();
-		if ((manager == null) || !player.isInsideRadius(manager, NpcInstance.INTERACTION_DISTANCE, false, false))
+		if ((manager == null) || !player.isInsideRadius2D(manager, NpcInstance.INTERACTION_DISTANCE))
 		{
 			return;
 		}

@@ -136,7 +136,7 @@ public class RequestWearItem extends GameClientPacket
 		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null // No target (ie GM Shop)
 		) || (!(target instanceof MerchantInstance) && !(target instanceof MercManagerInstance)) // Target not a merchant and not mercmanager
-			|| !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false)))
+			|| !player.isInsideRadius2D(target, NpcInstance.INTERACTION_DISTANCE)))
 		{
 			return; // Distance is too far
 		}

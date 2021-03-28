@@ -59,7 +59,7 @@ public class PaganKeys implements IItemHandler
 			return;
 		}
 		final DoorInstance door = (DoorInstance) target;
-		if (!player.isInsideRadius(door, INTERACTION_DISTANCE, false, false))
+		if (!player.isInsideRadius2D(door, INTERACTION_DISTANCE))
 		{
 			player.sendMessage("Too far.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);

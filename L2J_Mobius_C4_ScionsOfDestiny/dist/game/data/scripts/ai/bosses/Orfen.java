@@ -214,7 +214,7 @@ public class Orfen extends Quest
 					npc.teleToLocation(43577, 15985, -4396, false);
 					startQuestTimer("ORFEN_REFRESH", 10000, npc, null);
 				}
-				else if (npc.isInsideRadius(attacker, 1000, false, false) && !npc.isInsideRadius(attacker, 300, false, false) && (Rnd.get(10) == 0))
+				else if (npc.isInsideRadius2D(attacker, 1000) && !npc.isInsideRadius2D(attacker, 300) && (Rnd.get(10) == 0))
 				{
 					attacker.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 					npc.setTarget(attacker);

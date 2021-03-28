@@ -121,7 +121,7 @@ public class GuardNoHTMLInstance extends Attackable
 	 */
 	public void returnHome()
 	{
-		if (!isInsideRadius(_homeX, _homeY, 150, false))
+		if (!isInsideRadius2D(_homeX, _homeY, _homeZ, 150))
 		{
 			clearAggroList();
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_homeX, _homeY, _homeZ, 0));
@@ -184,7 +184,7 @@ public class GuardNoHTMLInstance extends Attackable
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}
 		else // Calculate the distance between the PlayerInstance and the NpcInstance
-		if (!isInsideRadius(player, INTERACTION_DISTANCE, false, false))
+		if (!isInsideRadius2D(player, INTERACTION_DISTANCE))
 		{
 			// Set the PlayerInstance Intention to AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);

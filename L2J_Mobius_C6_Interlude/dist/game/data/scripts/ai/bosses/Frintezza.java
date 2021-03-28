@@ -1497,7 +1497,7 @@ public class Frintezza extends Quest
 											{
 												continue;
 											}
-											if (!member.isInsideRadius(npc, 700, false, false))
+											if (!member.isInsideRadius2D(npc, 700))
 											{
 												continue;
 											}
@@ -1533,7 +1533,7 @@ public class Frintezza extends Quest
 									{
 										continue;
 									}
-									if (!member.isInsideRadius(npc, 700, false, false))
+									if (!member.isInsideRadius2D(npc, 700))
 									{
 										continue;
 									}
@@ -1559,7 +1559,7 @@ public class Frintezza extends Quest
 								}
 							}
 						}
-						else if (player.isInsideRadius(npc, 700, false, false))
+						else if (player.isInsideRadius2D(npc, 700))
 						{
 							synchronized (_playersInside)
 							{
@@ -1587,7 +1587,7 @@ public class Frintezza extends Quest
 									{
 										continue;
 									}
-									if (!member.isInsideRadius(npc, 700, false, false))
+									if (!member.isInsideRadius2D(npc, 700))
 									{
 										continue;
 									}

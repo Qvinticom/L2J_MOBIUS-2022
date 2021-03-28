@@ -950,7 +950,7 @@ public class CreatureAI extends AbstractAI
 			offsetWithCollision += ((Creature) target).getTemplate().getCollisionRadius();
 		}
 		
-		if (!_actor.isInsideRadius(target, offsetWithCollision, false, false))
+		if (!_actor.isInsideRadius2D(target, offsetWithCollision))
 		{
 			final Creature follow = getFollowTarget();
 			
@@ -970,14 +970,14 @@ public class CreatureAI extends AbstractAI
 					}
 				}
 				// if the target is too far (maybe also teleported)
-				if (!_actor.isInsideRadius(target, 2000, false, false))
+				if (!_actor.isInsideRadius2D(target, 2000))
 				{
 					stopFollow();
 					setIntention(AI_INTENTION_IDLE);
 					return true;
 				}
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius(target, offsetWithCollision + 100, false, false))
+				if (!_actor.isInsideRadius2D(target, offsetWithCollision + 100))
 				{
 					return true;
 				}

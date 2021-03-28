@@ -122,7 +122,7 @@ public class GuardInstance extends Attackable
 	 */
 	public void returnHome()
 	{
-		if (!isInsideRadius(_homeX, _homeY, 150, false))
+		if (!isInsideRadius2D(_homeX, _homeY, _homeZ, 150))
 		{
 			clearAggroList();
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_homeX, _homeY, _homeZ, 0));

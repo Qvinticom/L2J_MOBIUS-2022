@@ -284,7 +284,7 @@ public class ControllableMobAI extends AttackableAI
 						continue;
 					}
 					
-					if (_actor.isInsideRadius(npc, npc.getFactionRange(), false, true) && (Math.abs(getAttackTarget().getZ() - npc.getZ()) < 200))
+					if (_actor.isInsideRadius2D(npc, npc.getFactionRange()) && (Math.abs(getAttackTarget().getZ() - npc.getZ()) < 200))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getAttackTarget(), 1);
 					}
@@ -384,7 +384,7 @@ public class ControllableMobAI extends AttackableAI
 			return false;
 		}
 		
-		if (target.isAlikeDead() || !me.isInsideRadius(target, me.getAggroRange(), false, false) || (Math.abs(_actor.getZ() - target.getZ()) > 100))
+		if (target.isAlikeDead() || !me.isInsideRadius2D(target, me.getAggroRange()) || (Math.abs(_actor.getZ() - target.getZ()) > 100))
 		{
 			return false;
 		}

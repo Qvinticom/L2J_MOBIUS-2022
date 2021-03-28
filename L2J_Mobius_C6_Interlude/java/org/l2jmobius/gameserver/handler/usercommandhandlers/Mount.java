@@ -68,7 +68,7 @@ public class Mount implements IUserCommandHandler
 				// A pet cannot be ridden while player is in battle.
 				player.sendPacket(new SystemMessage(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE));
 			}
-			else if (!player.isInsideRadius(pet, 60, true, false))
+			else if (!player.isInsideRadius3D(pet, 60))
 			{
 				player.sendMessage("Too far away from strider to mount.");
 				return false;

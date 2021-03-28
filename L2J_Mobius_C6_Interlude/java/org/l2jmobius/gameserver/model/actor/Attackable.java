@@ -396,7 +396,7 @@ public class Attackable extends NpcInstance
 			return false;
 		}
 		
-		if (target.isAlikeDead() || !isInsideRadius(target, getAggroRange(), false, false) || (Math.abs(getZ() - target.getZ()) > 100))
+		if (target.isAlikeDead() || !isInsideRadius2D(target, getAggroRange()) || (Math.abs(getZ() - target.getZ()) > 100))
 		{
 			return false;
 		}

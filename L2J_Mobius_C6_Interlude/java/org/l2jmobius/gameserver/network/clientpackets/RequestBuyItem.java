@@ -114,7 +114,7 @@ public class RequestBuyItem extends GameClientPacket
 		final WorldObject target = player.getTarget();
 		if (!player.isGM() && ((target == null // No target (ie GM Shop)
 		) || (!(target instanceof MerchantInstance) && !(target instanceof FishermanInstance) && !(target instanceof MercManagerInstance) && !(target instanceof ClanHallManagerInstance) && !(target instanceof CastleChamberlainInstance)) // Target not a merchant, fisherman or mercmanager
-			|| !player.isInsideRadius(target, NpcInstance.INTERACTION_DISTANCE, false, false) // Distance is too far
+			|| !player.isInsideRadius2D(target, NpcInstance.INTERACTION_DISTANCE) // Distance is too far
 		))
 		{
 			return;

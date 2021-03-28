@@ -589,7 +589,7 @@ public class NpcInstance extends Creature
 		{
 			return false;
 		}
-		else if (!isInsideRadius(player, INTERACTION_DISTANCE, false, false))
+		else if (!isInsideRadius2D(player, INTERACTION_DISTANCE))
 		{
 			return false;
 		}
