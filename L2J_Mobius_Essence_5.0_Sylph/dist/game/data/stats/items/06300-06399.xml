@@ -1017,6 +1017,7 @@
 		<set name="spiritshots" val="4" />
 		<set name="enchant_enabled" val="true" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1070,6 +1071,7 @@
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="4" />
 		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1096,6 +1098,7 @@
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="4" />
 		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1122,6 +1125,7 @@
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="4" />
 		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<stats>
 			<stat type="pAtk">342</stat>
 			<stat type="mAtk">132</stat>
@@ -1145,6 +1149,7 @@
 		<set name="soulshots" val="4" />
 		<set name="spiritshots" val="4" />
 		<set name="enchant_enabled" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<stats>
 			<stat type="pAtk">342</stat>
 			<stat type="mAtk">132</stat>
