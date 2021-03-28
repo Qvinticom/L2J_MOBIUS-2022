@@ -3991,7 +3991,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			final double distance = Math.hypot(dx, dy);
 			if (_cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
-				|| (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
+				|| (distance > 3000) // Stop movement when player has clicked far away and intersected with an obstacle.
+				|| ((getWorldRegion() != null) && !getWorldRegion().getDoors().isEmpty())) // Check for nearby doors.
 			{
 				final double angle = Util.convertHeadingToDegree(getHeading());
 				final double radian = Math.toRadians(angle);
