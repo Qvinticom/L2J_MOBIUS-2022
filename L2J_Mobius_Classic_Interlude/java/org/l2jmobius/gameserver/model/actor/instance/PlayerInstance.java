@@ -6041,15 +6041,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean dismount()
 	{
-		WaterZone water = null;
-		for (ZoneType zone : ZoneManager.getInstance().getZones(getX(), getY(), getZ() - 300))
-		{
-			if (zone instanceof WaterZone)
-			{
-				water = (WaterZone) zone;
-			}
-		}
-		if (water == null)
+		if (ZoneManager.getInstance().getZone(getX(), getY(), getZ() - 300, WaterZone.class) == null)
 		{
 			if (!isInWater() && (getZ() > 10000))
 			{
