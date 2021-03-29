@@ -125,6 +125,7 @@ public class NpcInstance extends Creature
 	public boolean _isCTF_throneSpawn = false;
 	public boolean _isCTF_Flag = false;
 	private boolean _isInTown = false;
+	private final boolean _isQuestMonster = getTemplate().isQuestMonster();
 	public String _CTF_FlagTeamName;
 	private int _isSpoiledBy = 0;
 	private long _lastSocialBroadcast = 0;
@@ -1122,6 +1123,15 @@ public class NpcInstance extends Creature
 			getCastle();
 		}
 		return _isInTown;
+	}
+	
+	/**
+	 * Checks if the NPC is a Quest Monster.
+	 * @return {@code true} if the NPC is a Quest Monster, {@code false} otherwise.
+	 */
+	public boolean isQuestMonster()
+	{
+		return _isQuestMonster;
 	}
 	
 	/**

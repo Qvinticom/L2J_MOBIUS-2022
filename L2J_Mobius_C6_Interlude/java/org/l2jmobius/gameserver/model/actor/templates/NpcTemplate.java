@@ -62,6 +62,7 @@ public class NpcTemplate extends CreatureTemplate
 	private final boolean _serverSideName;
 	private final String _title;
 	private final boolean _serverSideTitle;
+	private final boolean _isQuestMonster;
 	private final String _sex;
 	private final byte _level;
 	private final int _rewardExp;
@@ -140,8 +141,9 @@ public class NpcTemplate extends CreatureTemplate
 		_type = set.getString("type");
 		_name = set.getString("name");
 		_serverSideName = set.getBoolean("serverSideName");
-		_title = set.getString("title");
+		_title = set.getString("title", "");
 		_serverSideTitle = set.getBoolean("serverSideTitle");
+		_isQuestMonster = _title.contains("Quest");
 		_sex = set.getString("sex");
 		_level = set.getByte("level");
 		_rewardExp = set.getInt("rewardExp");
@@ -524,6 +526,11 @@ public class NpcTemplate extends CreatureTemplate
 	public boolean isServerSideTitle()
 	{
 		return _serverSideTitle;
+	}
+	
+	public boolean isQuestMonster()
+	{
+		return _isQuestMonster;
 	}
 	
 	public String getSex()

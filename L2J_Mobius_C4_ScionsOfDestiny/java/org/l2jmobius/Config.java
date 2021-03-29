@@ -95,6 +95,7 @@ public class Config
 	private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/custom/AutoPotions.ini";
 	private static final String CUSTOM_CUSTOM_MAIL_MANAGER_CONFIG_FILE = "./config/custom/CustomMailManager.ini";
 	private static final String MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE = "./config/custom/MerchantZeroSellPrice.ini";
+	private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/custom/RandomSpawns.ini";
 	private static final String OFFLINE_CONFIG_FILE = "./config/custom/Offline.ini";
 	private static final String OTHER_CONFIG_FILE = "./config/custom/Other.ini";
 	private static final String SCHEME_BUFFER_CONFIG_FILE = "./config/custom/SchemeBuffer.ini";
@@ -478,6 +479,11 @@ public class Config
 	public static int CUSTOM_MAIL_MANAGER_DELAY;
 	
 	public static boolean MERCHANT_ZERO_SELL_PRICE;
+	
+	public static boolean ENABLE_RANDOM_MONSTER_SPAWNS;
+	public static int MOB_MIN_SPAWN_RANGE;
+	public static int MOB_MAX_SPAWN_RANGE;
+	public static List<Integer> MOBS_LIST_NOT_RANDOM;
 	
 	public static boolean ALLOW_WEDDING;
 	public static int WEDDING_PRICE;
@@ -1705,6 +1711,23 @@ public class Config
 	{
 		final PropertiesParser merchantZeroSellPriceConfig = new PropertiesParser(MERCHANT_ZERO_SELL_PRICE_CONFIG_FILE);
 		MERCHANT_ZERO_SELL_PRICE = merchantZeroSellPriceConfig.getBoolean("MerchantZeroSellPrice", false);
+	}
+	
+	public static void loadRandomSpawnsConfig()
+	{
+		final PropertiesParser randomSpawnsConfig = new PropertiesParser(CUSTOM_RANDOM_SPAWNS_CONFIG_FILE);
+		ENABLE_RANDOM_MONSTER_SPAWNS = randomSpawnsConfig.getBoolean("EnableRandomMonsterSpawns", false);
+		MOB_MAX_SPAWN_RANGE = randomSpawnsConfig.getInt("MaxSpawnMobRange", 150);
+		MOB_MIN_SPAWN_RANGE = MOB_MAX_SPAWN_RANGE * -1;
+		if (ENABLE_RANDOM_MONSTER_SPAWNS)
+		{
+			final String[] mobsIds = randomSpawnsConfig.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
+			MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
+			for (String id : mobsIds)
+			{
+				MOBS_LIST_NOT_RANDOM.add(Integer.parseInt(id));
+			}
+		}
 	}
 	
 	public static void loadWeddingConfig()
@@ -3140,6 +3163,7 @@ public class Config
 			loadAutoPotionsConfig();
 			loadCustomMailManagerConfig();
 			loadMerchantZeroPriceConfig();
+			loadRandomSpawnsConfig();
 			loadWeddingConfig();
 			loadRebirthConfig();
 			loadBankingConfig();
