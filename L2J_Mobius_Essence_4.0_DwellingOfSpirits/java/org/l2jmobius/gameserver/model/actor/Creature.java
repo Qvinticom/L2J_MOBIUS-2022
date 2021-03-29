@@ -2327,7 +2327,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		else
 		{
-			_title = value;
+			_title = isPlayer() && (value.length() > 21) ? value.substring(0, 20) : value;
 		}
 	}
 	
