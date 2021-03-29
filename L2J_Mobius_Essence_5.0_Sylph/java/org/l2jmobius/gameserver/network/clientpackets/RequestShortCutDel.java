@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
@@ -53,16 +54,21 @@ public class RequestShortCutDel implements IClientIncomingPacket
 			return;
 		}
 		
+		// Store shortcut reference id.
+		final Shortcut shortcut = player.getShortCut(_slot, _page);
+		final int id = shortcut == null ? -1 : shortcut.getId();
+		
+		// Delete the shortcut.
 		player.deleteShortCut(_slot, _page);
 		
 		// Remove auto used ids.
 		if (_slot > 263)
 		{
-			AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, _id);
+			AutoUseTaskManager.getInstance().removeAutoSupplyItem(player, id);
 		}
 		else
 		{
-			AutoUseTaskManager.getInstance().removeAutoSkill(player, _id);
+			AutoUseTaskManager.getInstance().removeAutoSkill(player, id);
 		}
 	}
 }
