@@ -37,7 +37,6 @@ import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.model.zone.type.WaterZone;
 import org.l2jmobius.gameserver.taskmanager.RespawnTaskManager;
 import org.l2jmobius.gameserver.util.Util;
@@ -371,8 +370,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		int newlocy = 0;
 		int newlocz = -10000;
 		
-		// If Locx and Locy are not defined, the NpcInstance must be spawned in an area defined by location or spawn territory
-		// New method
+		// If Locx and Locy are not defined, the NpcInstance must be spawned in an area defined by location or spawn territory.
 		if (_spawnTemplate != null)
 		{
 			final Location loc = _spawnTemplate.getSpawnLocation();
@@ -394,10 +392,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			newlocz = getZ();
 		}
 		
-		final boolean monsterCheck = npc.isMonster() && !npc.isQuestMonster() && !WalkingManager.getInstance().isTargeted(npc) && (getInstanceId() == 0) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !npc.isFlying() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId());
+		// Check if npc is in water.
+		final WaterZone water = ZoneManager.getInstance().getZone(newlocx, newlocy, newlocz, WaterZone.class);
 		
 		// If random spawn system is enabled.
-		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS && monsterCheck)
+		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS && npc.isMonster() && !npc.isQuestMonster() && !WalkingManager.getInstance().isTargeted(npc) && (getInstanceId() == 0) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !npc.isFlying() && (water == null) && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId()))
 		{
 			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
@@ -409,26 +408,13 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		}
 		
 		// Correct Z of monsters.
-		if (monsterCheck)
+		if (!npc.isFlying() && (water == null))
 		{
-			// Do not correct Z when in water zone.
-			WaterZone water = null;
-			for (ZoneType zone : ZoneManager.getInstance().getZones(newlocx, newlocy, newlocz))
+			// Do not correct Z distances greater than 300.
+			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
+			if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true, true) < 300)
 			{
-				if (zone instanceof WaterZone)
-				{
-					water = (WaterZone) zone;
-					break;
-				}
-			}
-			if (water == null)
-			{
-				final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz) + 64;
-				// Do not correct Z distances greater than 300.
-				if (Util.calculateDistance(newlocx, newlocy, newlocz, newlocx, newlocy, geoZ, true, false) < 300)
-				{
-					newlocz = geoZ;
-				}
+				newlocz = geoZ;
 			}
 		}
 		

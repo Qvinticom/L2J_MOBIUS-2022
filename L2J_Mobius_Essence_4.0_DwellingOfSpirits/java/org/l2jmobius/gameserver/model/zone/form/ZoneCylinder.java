@@ -143,6 +143,6 @@ public class ZoneCylinder extends ZoneForm
 		final int x = (int) ((_rad * r * Math.cos(q)) + _x);
 		final int y = (int) ((_rad * r * Math.sin(q)) + _y);
 		
-		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
+		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, (_z1 + _z2) / 2));
 	}
 }

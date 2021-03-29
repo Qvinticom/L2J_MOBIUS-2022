@@ -678,7 +678,7 @@ public class ZoneManager implements IXmlReader
 	 * @return zone from given coordinates
 	 */
 	@SuppressWarnings("unchecked")
-	private <T extends ZoneType> T getZone(int x, int y, int z, Class<T> type)
+	public <T extends ZoneType> T getZone(int x, int y, int z, Class<T> type)
 	{
 		for (ZoneType zone : getRegion(x, y).getZones().values())
 		{

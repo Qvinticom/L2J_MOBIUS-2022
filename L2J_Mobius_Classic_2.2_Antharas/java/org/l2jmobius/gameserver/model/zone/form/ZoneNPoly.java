@@ -127,7 +127,7 @@ public class ZoneNPoly extends ZoneForm
 			y = Rnd.get(minY, maxY);
 		}
 		
-		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
+		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, (_z1 + _z2) / 2));
 	}
 	
 	public int[] getX()
