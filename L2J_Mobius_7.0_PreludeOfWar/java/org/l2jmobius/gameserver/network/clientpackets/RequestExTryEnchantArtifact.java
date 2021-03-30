@@ -121,13 +121,13 @@ public class RequestExTryEnchantArtifact implements IClientIncomingPacket
 		}
 		
 		int minIngridientEnchant = -1;
-		if (enchantLevel <= 2)
+		if (enchantLevel <= 3)
 		{
 			minIngridientEnchant = 0;
 		}
 		else if (enchantLevel <= 6)
 		{
-			minIngridientEnchant = 2;
+			minIngridientEnchant = 1;
 		}
 		else if (enchantLevel <= 9)
 		{
