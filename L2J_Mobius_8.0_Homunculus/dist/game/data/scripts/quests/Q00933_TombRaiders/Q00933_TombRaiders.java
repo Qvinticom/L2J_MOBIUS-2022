@@ -21,18 +21,23 @@ import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.enums.QuestType;
+import org.l2jmobius.gameserver.instancemanager.ZoneManager;
+import org.l2jmobius.gameserver.model.Party;
+import org.l2jmobius.gameserver.model.actor.Creature; // Imports belov needed for onEnterZone
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.zone.ZoneType;
+import org.l2jmobius.gameserver.model.zone.type.ScriptZone;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
 /**
  * Tomb Raiders (933)
  * @URL https://l2wiki.com/Tomb_Raiders
- * @author Sero
+ * @author Sero, retail like modifications by Neith and CostyKiller
  */
 public class Q00933_TombRaiders extends Quest
 {
@@ -49,10 +54,13 @@ public class Q00933_TombRaiders extends Quest
 	private static final int BENUSTA_REWARD_BOX = 81151;
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
+	// Zone
+	private static final ScriptZone QUEST_ZONE = ZoneManager.getInstance().getZoneById(93300, ScriptZone.class); // Session Zone - Imperial Tomb
 	
 	public Q00933_TombRaiders()
 	{
 		super(933);
+		addEnterZoneId(QUEST_ZONE.getId());
 		addStartNpc(SEARCH_TEAM_TELEPORTER);
 		addTalkId(SEARCH_TEAM_TELEPORTER, LEOPARD);
 		addKillId(TOMB_GUARDIAN, TOMB_RAIDER, TOMB_WATCHER, TOMB_SOULTAKER, TOMB_PATROL);
@@ -142,29 +150,53 @@ public class Q00933_TombRaiders extends Quest
 	}
 	
 	@Override
+	public String onEnterZone(Creature creature, ZoneType zone)
+	{
+		if (creature.isPlayer())
+		{
+			final QuestState qs = getQuestState(creature.getActingPlayer(), true);
+			if ((qs != null) && qs.isCreated())
+			{
+				qs.startQuest();
+			}
+		}
+		return super.onEnterZone(creature, zone);
+	}
+	
+	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		final Party party = killer.getParty();
+		if (party != null)
 		{
-			final int killCount = qs.getInt(KILL_COUNT_VAR);
-			if (killCount < 150)
-			{
-				qs.set(KILL_COUNT_VAR, killCount + 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
-			}
-			else
-			{
-				qs.setCond(2);
-				qs.unset(KILL_COUNT_VAR);
-			}
+			party.getMembers().forEach(p -> processKill(npc, p));
+		}
+		else
+		{
+			processKill(npc, killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	// TODO:
-	// public String onEnterZone(Creature creature, ZoneType zone)
+	private void processKill(Npc npc, PlayerInstance killer)
+	{
+		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
+		if (qs != null)
+		{
+			final PlayerInstance player = qs.getPlayer();
+			int killCount = qs.getInt(KILL_COUNT_VAR);
+			if (killCount < 150)
+			{
+				qs.set(KILL_COUNT_VAR, killCount + 1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			if (killCount >= 150)
+			{
+				qs.setCond(2, true);
+			}
+			sendNpcLogList(player);
+		}
+	}
 	
 	@Override
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
