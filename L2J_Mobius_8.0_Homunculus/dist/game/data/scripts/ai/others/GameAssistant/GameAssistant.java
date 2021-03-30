@@ -238,39 +238,47 @@ public class GameAssistant extends AbstractNpcAI
 	{
 		String htmltext = null;
 		final int circletId = CIRCLET_EXCHANGE.get(event);
+		final Collection<ItemInstance> circletNum = player.getInventory().getAllItemsByItemId(circletId);
 		final Collection<ItemInstance> enchCircletNum = player.getInventory().getAllItemsByItemId(circletId, 5);
-		switch (enchCircletNum.size())
+		if (circletNum.size() == enchCircletNum.size())
 		{
-			case 0:
-			default:
+			switch (enchCircletNum.size())
 			{
-				htmltext = "32478-21b.html";
-				break;
-			}
-			case 1:
-			{
-				switch (circletId)
+				case 0:
+				default:
 				{
-					case 48202: // Warrior's Circlet
-					case 48205: // Wizard's Circlet
-					case 48208: // Knight's Circlet
-					{
-						takeItems(player, circletId, 1);
-						giveItems(player, NOBLE_UPG_STONE, 1);
-						break;
-					}
-					case 48203: // Noble Warrior's Circlet
-					case 48206: // Noble Wizard's Circlet
-					case 48209: // Noble Knight's Circlet
-					{
-						takeItems(player, circletId, 1);
-						giveItems(player, RADIANT_UPG_STONE, 1);
-						break;
-					}
+					htmltext = "32478-21b.html";
+					break;
 				}
-				htmltext = "32478-21a.html";
-				break;
+				case 1:
+				{
+					switch (circletId)
+					{
+						case 48202: // Warrior's Circlet
+						case 48205: // Wizard's Circlet
+						case 48208: // Knight's Circlet
+						{
+							takeItems(player, circletId, 1);
+							giveItems(player, NOBLE_UPG_STONE, 1);
+							break;
+						}
+						case 48203: // Noble Warrior's Circlet
+						case 48206: // Noble Wizard's Circlet
+						case 48209: // Noble Knight's Circlet
+						{
+							takeItems(player, circletId, 1);
+							giveItems(player, RADIANT_UPG_STONE, 1);
+							break;
+						}
+					}
+					htmltext = "32478-21a.html";
+					break;
+				}
 			}
+		}
+		else
+		{
+			htmltext = "32478-21b.html";
 		}
 		return htmltext;
 	}
