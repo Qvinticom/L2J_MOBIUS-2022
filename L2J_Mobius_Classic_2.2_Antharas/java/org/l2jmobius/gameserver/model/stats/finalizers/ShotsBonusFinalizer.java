@@ -41,7 +41,7 @@ public class ShotsBonusFinalizer implements IStatFunction
 			final ItemInstance weapon = player.getActiveWeaponInstance();
 			if ((weapon != null) && weapon.isEnchanted())
 			{
-				baseValue += (weapon.getEnchantLevel() * 0.7) / 100;
+				baseValue += (weapon.getEnchantLevel() * 0.3) / 100;
 			}
 			if (player.getActiveRubyJewel() != null)
 			{
