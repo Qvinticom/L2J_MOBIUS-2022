@@ -462,7 +462,7 @@ public class Spawn
 		}
 		
 		// Correct Z of monsters.
-		if (!npc.isFlying() && (water == null))
+		if (npc.isMonster() && !npc.isFlying() && (water == null))
 		{
 			// Do not correct Z distances greater than 300.
 			final int geoZ = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
