@@ -44,7 +44,7 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		_active = packet.readC() == 1;
 		_pickUp = packet.readC() == 1;
 		_nextTargetMode = packet.readH();
-		_longRange = packet.readC() == 0;
+		_longRange = packet.readC() != 0;
 		_potionPercent = packet.readD();
 		packet.readD(); // 272
 		_respectfulHunting = packet.readC() == 1;
@@ -68,9 +68,13 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 			return;
 		}
 		
+		player.getAutoPlaySettings().setPickup(_pickUp);
+		player.getAutoPlaySettings().setLongRange(_longRange);
+		player.getAutoPlaySettings().setRespectfulHunting(_respectfulHunting);
+		
 		if (_active)
 		{
-			AutoPlayTaskManager.getInstance().doAutoPlay(player, _pickUp, _longRange, _respectfulHunting);
+			AutoPlayTaskManager.getInstance().doAutoPlay(player);
 		}
 		else
 		{
