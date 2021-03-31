@@ -16,6 +16,7 @@
  */
 package org.l2jmobius.gameserver.geoengine;
 
+import java.io.File;
 import java.io.RandomAccessFile;
 import java.nio.ByteOrder;
 import java.nio.MappedByteBuffer;
@@ -182,7 +183,7 @@ public class GeoEngine
 	private boolean loadGeoBlocks(int regionX, int regionY)
 	{
 		final String filename = String.format(Config.GEODATA_TYPE.getFilename(), regionX, regionY);
-		final String filepath = Config.GEODATA_PATH + "\\" + filename;
+		final String filepath = Config.GEODATA_PATH + File.separator + filename;
 		
 		// Standard load.
 		try (RandomAccessFile raf = new RandomAccessFile(filepath, "r");
