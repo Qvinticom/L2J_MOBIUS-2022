@@ -107,7 +107,34 @@
 	</skill>
 	<skill id="52022" toLevel="1" name="Sylph Blessing">
 		<!-- Atk. Spd. $s1 Casting Spd. $s1 Speed $s2 Soulshot Damage $s3 Spiritshot Damage $s3 Acquired XP/ SP $s4 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.ev_sylph_bless</icon>
+		<isMagic>4</isMagic>
+		<effectPoint>1</effectPoint>
+		<stayAfterDeath>true</stayAfterDeath>
+		<operateType>AU</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ShotsBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 </list>

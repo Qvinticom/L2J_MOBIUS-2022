@@ -949,7 +949,12 @@
 		<set name="enchant_enabled" val="true" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
-			<skill id="50443" level="1" /> <!-- Baium's Ring -->
+			<skill id="50446" level="1" /> <!-- Baium's Ring -->
+			<skill id="50446" level="2" type="ON_ENCHANT" type_value="1" /> <!-- +1 Baium's Ring -->
+			<skill id="50446" level="3" type="ON_ENCHANT" type_value="2" /> <!-- +2 Baium's Ring -->
+			<skill id="50446" level="4" type="ON_ENCHANT" type_value="3" /> <!-- +3 Baium's Ring -->
+			<skill id="50446" level="5" type="ON_ENCHANT" type_value="4" /> <!-- +4 Baium's Ring -->
+			<skill id="50446" level="6" type="ON_ENCHANT" type_value="5" /> <!-- +5 Baium's Ring -->
 		</skills>
 		<stats>
 			<stat type="mDef">32</stat>

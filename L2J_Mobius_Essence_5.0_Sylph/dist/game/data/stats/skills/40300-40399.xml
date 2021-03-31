@@ -19,6 +19,26 @@
 		<!-- Can be used to teleport to the Death Pass. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95589</itemConsumeId> <!-- Scroll of Escape: Death Pass -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>70576</x>
+				<y>128047</y>
+				<z>-3752</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40304" toLevel="1" name="Scroll of Escape: Death Pass">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -44,11 +64,51 @@
 		<!-- Can be used to teleport to the Sea of Spores. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95590</itemConsumeId> <!-- Scroll of Escape: Sea of Spores -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>64328</x>
+				<y>26803</y>
+				<z>-3768</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40309" toLevel="1" name="Scroll of Escape: Cemetery">
 		<!-- Can be used to teleport to the Cemetery. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95591</itemConsumeId> <!-- Scroll of Escape: Cemetery -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>172204</x>
+				<y>20322</y>
+				<z>-3328</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40310" toLevel="1" name="Scroll of Escape: Cemetery">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -69,6 +129,26 @@
 		<!-- Can be used to teleport to the Fields of Massacre. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95592</itemConsumeId> <!-- Scroll of Escape: Fields of Massacre -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>179446</x>
+				<y>-7811</y>
+				<z>-3528</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40314" toLevel="1" name="Scroll of Escape: Fields of Massacre">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -94,6 +174,26 @@
 		<!-- Can be used to teleport to the Plains of Glory. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95593</itemConsumeId> <!-- Scroll of Escape: Plains of Glory -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>131435</x>
+				<y>24184</y>
+				<z>-3728</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40319" toLevel="1" name="Scroll of Escape: Plains of Glory">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -119,6 +219,26 @@
 		<!-- Can be used to teleport to the War-Torn Plains. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>95594</itemConsumeId> <!-- Scroll of Escape: War-Torn Plains -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>159618</x>
+				<y>21160</y>
+				<z>-3688</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40324" toLevel="1" name="Scroll of Escape: War-Torn Plains">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -156,9 +276,28 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40331" toLevel="1" name="Scroll of Escape: Ruins of Agony">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>91727</itemConsumeId> <!-- Scroll of Escape: Ruins of Agony -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-46166</x>
+				<y>108893</y>
+				<z>-3792</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="40332" toLevel="1" name="Scroll of Escape: Ruins of Agony">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -191,14 +330,14 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="40338" toLevel="1" name="Scroll: Enchant Adventurer's Talisman">
-        <icon>icon.giant_item_equip</icon>
-        <operateType>A1</operateType>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <magicLevel>1</magicLevel>
-        <magicCriticalRate>5</magicCriticalRate>
-        <hitCancelTime>0</hitCancelTime>
-        <targetType>ITEM</targetType>
-        <affectScope>SINGLE</affectScope>
+		<icon>icon.giant_item_equip</icon>
+		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>1</magicLevel>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="40339" toLevel="1" name="17th Anniversary Blessing">
 		<!-- <font color="00DCFF"><Great discounts for death penalty recovery cost.></font> Lost item recovery price is $s1 XP recovery price is $s2 -->

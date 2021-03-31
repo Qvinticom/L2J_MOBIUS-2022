@@ -1115,6 +1115,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="51413" level="1" /> <!-- Blessed Scroll of Escape (Event) -->
+		</skills>
 	</item>
 	<item id="91690" name="Maliss' HP Recovery Potion" additionalName="Event" type="EtcItem">
 		<!-- Momentarily recovers 500 HP. If HP is full, CP is recovered. -->

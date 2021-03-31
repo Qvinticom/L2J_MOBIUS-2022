@@ -112,8 +112,23 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51413" toLevel="1" name="Blessed Scroll of Escape (Event)">
-		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91689</itemConsumeId> <!-- Blessed Scroll of Escape (Event) -->
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51414" toLevel="1" name="Maliss' HP Recovery Potion (Event)">
 		<icon>icon.etc_bm_hero_red_potion</icon>
@@ -318,29 +333,29 @@
 	</skill>
 	<skill id="51441" toLevel="1" name="Scroll of Escape: Abandoned Camp">
 		<!-- A magical scroll that teleports to the Abandoned Camp. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>91725</itemConsumeId>
-        <magicLevel>1</magicLevel>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpAlignment">
-                <affectType>CASTER</affectType>
-                <alignment>LAWFUL</alignment>
-            </condition>
-            <condition name="OpCanEscape" />
-        </conditions>
-        <effects>
-            <effect name="Teleport">
-                <x>-46868</x>
-                <y>148086</y>
-                <z>-2968</z>
-            </effect>
-        </effects>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91725</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-46857</x>
+				<y>148096</y>
+				<z>-2968</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51442" toLevel="1" name="Scroll of Escape: Windmill Hill">
 		<!-- A magical scroll that teleports to the Windmill Hill. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
@@ -348,29 +363,29 @@
 	</skill>
 	<skill id="51443" toLevel="1" name="Scroll of Escape: Ruins of Agony">
 		<!-- A magical scroll that teleports to the Ruins of Agony. Cannot be exchanged, dropped, or sold. Can be stored in the warehouse. -->
-        <hitTime>500</hitTime>
-        <isMagic>2</isMagic> <!-- Static Skill -->
-        <itemConsumeCount>1</itemConsumeCount>
-        <itemConsumeId>91727</itemConsumeId>
-        <magicLevel>1</magicLevel>
-        <operateType>A1</operateType>
-        <magicCriticalRate>5</magicCriticalRate>
-        <targetType>SELF</targetType>
-        <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="OpAlignment">
-                <affectType>CASTER</affectType>
-                <alignment>LAWFUL</alignment>
-            </condition>
-            <condition name="OpCanEscape" />
-        </conditions>
-        <effects>
-            <effect name="Teleport">
-                <x>-42307</x>
-                <y>120810</y>
-                <z>-3368</z>
-            </effect>
-        </effects>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>91727</itemConsumeId>
+		<magicLevel>1</magicLevel>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-42307</x>
+				<y>120810</y>
+				<z>-3368</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51444" toLevel="1" name="Reinforced Spear Chest">
 		<icon>icon.etc_treasure_box_i04</icon>
@@ -423,6 +438,26 @@
 	<skill id="51452" toLevel="1" name="Scroll of Escape: High Priest Raymond">
 		<!-- A magical scroll that relocates you to the High Priest Raymond in Gludio. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>91736</itemConsumeId> <!-- Scroll of Escape: High Priest Raymond -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-12828</x>
+				<y>121713</y>
+				<z>-2952</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51453" toLevel="1" name="Exuberance Amulet">
 		<!-- Acquired XP/ SP +20%, STR +1, CON +1, DEX +1, INT +1, WIT +1, MEN +1. -->

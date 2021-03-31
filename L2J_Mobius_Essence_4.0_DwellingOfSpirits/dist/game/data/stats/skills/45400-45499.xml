@@ -42,8 +42,19 @@
 	</skill>
 	<skill id="45408" toLevel="4" name="Blessed by Sayha">
 		<!-- Sayha's Grace points $s1 -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.ev_magic_flame_game_wind1</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicLampExpRate">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">20</value>
+					<value level="3">50</value>
+					<value level="4">100</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45409" toLevel="1" name="Life Force Harmony">
 		<!-- Max HP $s1 Depending on current amount of HP, the following effects are applied. <HP 0-33%> P. Skill Power $s2 <HP 34-66%> P. Skill MP Consumption $s3 P. Skill Cooldown $s3 <67-100%> Received damage $s4 -->

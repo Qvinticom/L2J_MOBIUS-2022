@@ -781,6 +781,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94840" min="1" max="1" chance="100" /> <!-- Breastplate of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="95335" name="Package: Gaiters of Protection" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -791,6 +795,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94841" min="1" max="1" chance="100" /> <!-- Gaiters of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="95336" name="Package: Breastplate of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -801,6 +809,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94842" min="1" max="1" chance="100" /> <!-- Breastplate of Protection - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95337" name="Package: Gaiters of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -811,6 +823,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94843" min="1" max="1" chance="100" /> <!-- Gaiters of Protection - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95338" name="Package: Leather Armor of Protection" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -821,6 +837,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94844" min="1" max="1" chance="100" /> <!-- Leather Armor of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="95339" name="Package: Leather Leggings of Protection" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -831,6 +851,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94845" min="1" max="1" chance="100" /> <!-- Leather Leggings of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="95340" name="Package: Leather Armor of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -841,6 +865,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94846" min="1" max="1" chance="100" /> <!-- Leather Armor of Protection - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95341" name="Package: Leather Leggings of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -851,6 +879,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94847" min="1" max="1" chance="100" /> <!-- Leather Leggings of Protection - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95342" name="Package: Tunic of Protection" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -861,6 +893,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94848" min="1" max="1" chance="100" /> <!-- Tunic of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="95343" name="Package: Stockings of Protection" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -871,6 +907,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94849" min="1" max="1" chance="100" /> <!-- Stockings of Protection -->
+		</capsuled_items>
 	</item>
 	<item id="95344" name="Package: Tunic of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -881,6 +921,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94850" min="1" max="1" chance="100" /> <!-- Tunic of Protection - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95345" name="Package: Stockings of Protection" additionalName="Sealed" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -891,6 +935,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="94851" min="1" max="1" chance="100" /> <!-- Stockings of Protection - Sealed -->
+		</capsuled_items>
 	</item>
 	<item id="95346" name="Spellbook: Meteor" type="EtcItem">
 		<!-- A spellbook for learning the Meteor skill. <Classes> Archmage Soultaker Mystic Muse Storm Screamer <Skill effect> Deals massive damage to the target and nearby enemies from a distance. -->

@@ -78,28 +78,274 @@
 	</skill>
 	<skill id="50305" toLevel="1" name="Gloves of Silence">
 		<!-- Gloves of Silence effect STR +1 INT +1 Max HP +150 Atk. Spd. +8% Casting Spd. +15% -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t94_g_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="MaxHp">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50306" toLevel="1" name="Enchant Effect: Gloves of Silence">
 		<!-- Gloves imbued with power of silence. Has a $s1 chance to silence the target making unable to use skills for $s2. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t94_g_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50308</skillId> <!-- Force of Silence -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50308</skillId> <!-- Force of Silence -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50309</skillId> <!-- Gloves of Silence: When triggered -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>1</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50309</skillId> <!-- Gloves of Silence: When triggered -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50307" toLevel="10" name="Enchant Effect: Gloves of Silence">
 		<!-- Gloves imbued with power of silence. Has a $s1 chance to silence the target making unable to use skills for $s2. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t94_g_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">6</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50308</skillId> <!-- Force of Silence -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">6</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50308</skillId> <!-- Force of Silence -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">6</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50309</skillId> <!-- Gloves of Silence: When triggered -->
+				<skillLevel>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">6</value>
+				</skillLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minDamage>1</minDamage>
+				<chance>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">4</value>
+					<value level="8">6</value>
+					<value level="9">8</value>
+					<value level="10">10</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<isCritical>true</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>50309</skillId> <!-- Gloves of Silence: When triggered -->
+				<skillLevel>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">5</value>
+					<value level="10">6</value>
+				</skillLevel>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">7</value>
+					<value level="9">10</value>
+					<value level="10">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value fromLevel="1" toLevel="4">0</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">5</value>
+					<value level="8">7</value>
+					<value level="9">10</value>
+					<value level="10">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50308" toLevel="1" name="Force of Silence">
 		<!-- Skills are unusable for $s1. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.armor_t94_g_i01</icon>
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>4</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
+		<effectPoint>-300</effectPoint>
+		<effectRange>1100</effectRange>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+		</effects>
 	</skill>
 	<skill id="50309" toLevel="6" name="Gloves of Silence: When triggered">
 		<!-- Has a certain chance to deal magic damage with $s1 power and decrease the target's MP. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t94_g_i01</icon>
+		<castRange>900</castRange>
+		<effectPoint>-300</effectPoint>
+		<effectRange>1100</effectRange>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<basicProperty>MAGIC</basicProperty>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">90</value>
+					<value level="4">110</value>
+					<value level="5">130</value>
+					<value level="6">165</value>
+				</amount>
+			</effect>
+			<effect name="MagicalAttackMp">
+				<power>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">90</value>
+					<value level="4">110</value>
+					<value level="5">130</value>
+					<value level="6">165</value>
+				</power>
+				<critical>true</critical>
+				<criticalLimit>1450</criticalLimit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50310" toLevel="1" name="Shield: Effect">
 		<!-- <Shield effect> Received P./ M. Critical Rate -$s1 Max HP +$s2 -->
@@ -580,7 +826,7 @@
 		<icon>icon.armor_t94_u_i01</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
@@ -590,7 +836,7 @@
 				<skillId>50336</skillId> <!-- Frozen Blessing -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>3</chance>
@@ -627,7 +873,7 @@
 		<icon>icon.armor_t94_u_i01</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>
@@ -659,7 +905,7 @@
 					<value level="10">7</value>
 				</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>
@@ -2169,7 +2415,7 @@
 		<icon>icon.armor_t96_u_i03</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>1</chance>
@@ -2179,7 +2425,7 @@
 				<skillId>50360</skillId> <!-- Flame Shield -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>1</chance>
@@ -2216,7 +2462,7 @@
 		<icon>icon.armor_t96_u_i03</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>
@@ -2248,7 +2494,7 @@
 					<value level="10">7</value>
 				</skillLevel>
 			</effect>
-			<effect name="TriggerSkillByAttack">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>
@@ -2410,7 +2656,7 @@
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>1</chance>
-				<targetType>SELF</targetType>
+				<targetType>ENEMY</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>50362</skillId> <!-- Flame Weakness -->
@@ -2420,7 +2666,7 @@
 				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>1</chance>
-				<targetType>SELF</targetType>
+				<targetType>ENEMY</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>50362</skillId> <!-- Flame Weakness -->
@@ -2448,7 +2694,7 @@
 					<value level="9">9</value>
 					<value level="10">10</value>
 				</chance>
-				<targetType>SELF</targetType>
+				<targetType>ENEMY</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>50362</skillId> <!-- Flame Weakness -->
@@ -2480,7 +2726,7 @@
 					<value level="9">9</value>
 					<value level="10">10</value>
 				</chance>
-				<targetType>SELF</targetType>
+				<targetType>ENEMY</targetType>
 				<isCritical>true</isCritical>
 				<allowWeapons>ALL</allowWeapons>
 				<skillId>50362</skillId> <!-- Flame Weakness -->

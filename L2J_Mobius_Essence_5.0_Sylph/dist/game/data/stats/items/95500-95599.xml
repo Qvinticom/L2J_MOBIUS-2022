@@ -791,7 +791,7 @@
 	</item>
 	<item id="95586" name="Scroll of Escape: Master Kerkir" type="EtcItem">
 		<!-- Can be used to teleport to Master Kerkir in the Wind Village. -->
-        <set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
         <set name="default_action" val="SKILL_REDUCE" />
         <set name="material" val="PAPER" />
         <set name="weight" val="30" />
@@ -811,7 +811,7 @@
 	</item>
 	<item id="95587" name="Scroll of Escape: Grocer Evia" type="EtcItem">
 		<!-- Can be used to teleport to Grocer Evia in the Wind Village. -->
-        <set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
         <set name="default_action" val="SKILL_REDUCE" />
         <set name="material" val="PAPER" />
         <set name="weight" val="30" />
@@ -831,7 +831,7 @@
 	</item>
 	<item id="95588" name="Scroll of Escape: Gorgon Flower Garden" type="EtcItem">
 		<!-- Can be used to teleport to the Gorgon Flower Garden. -->
-        <set name="icon" val="icon.etc_scroll_of_return_i04" />
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
         <set name="default_action" val="SKILL_REDUCE" />
         <set name="material" val="PAPER" />
         <set name="weight" val="30" />
@@ -858,6 +858,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40303" level="1" /> <!-- Scroll of Escape: Death Pass -->
+		</skills>
 	</item>
 	<item id="95590" name="Scroll of Escape: Sea of Spores" type="EtcItem">
 		<!-- Can be used to teleport to the Sea of Spores. -->
@@ -868,6 +872,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40308" level="1" /> <!-- Scroll of Escape: Sea of Spores -->
+		</skills>
 	</item>
 	<item id="95591" name="Scroll of Escape: Cemetery" type="EtcItem">
 		<!-- Can be used to teleport to the Cemetery. -->
@@ -878,6 +886,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40308" level="1" /> <!-- Scroll of Escape: Cemetery -->
+		</skills>
 	</item>
 	<item id="95592" name="Scroll of Escape: Fields of Massacre" type="EtcItem">
 		<!-- Can be used to teleport to the Fields of Massacre. -->
@@ -888,6 +900,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40313" level="1" /> <!-- Scroll of Escape: Fields of Massacre -->
+		</skills>
 	</item>
 	<item id="95593" name="Scroll of Escape: Plains of Glory" type="EtcItem">
 		<!-- Can be used to teleport to the Plains of Glory. -->
@@ -898,6 +914,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40318" level="1" /> <!-- Scroll of Escape: Plains of Glory -->
+		</skills>
 	</item>
 	<item id="95594" name="Scroll of Escape: War-Torn Plains" type="EtcItem">
 		<!-- Can be used to teleport to the War-Torn Plains. -->
@@ -908,6 +928,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40323" level="1" /> <!-- Scroll of Escape: War-Torn Plains -->
+		</skills>
 	</item>
 	<item id="95595" name="Scroll of Escape: High Priest Maximilian" type="EtcItem">
 		<!-- Can be used to teleport to High Priest Maximilian in Giran. -->
@@ -918,6 +942,10 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="40298" level="1" /> <!-- Scroll of Escape: High Priest Maximilian -->
+		</skills>
 	</item>
 	<item id="95596" name="Scroll: Enchant Dragon Belt" type="EtcItem">
 		<!-- Required for enchanting Dragon Belt. <font color=eeaa22><Can be used for enchanting up to +9.></font> <font color=ff6666><In case of failure the item's enchant value remains the same.></font> -->
