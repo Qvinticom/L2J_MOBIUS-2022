@@ -67,110 +67,206 @@
 	<item id="92908" name="Material: Lump of Wood" type="EtcItem">
 		<!-- Craft points +100. -->
 		<set name="icon" val="icon.etc_branch_gold_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40075" level="1" /> <!-- Craft points +100 -->
+		</skills>
 	</item>
 	<item id="92909" name="Material: Pack of Knickknacks" type="EtcItem">
 		<!-- Craft points +500. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40076" level="1" /> <!-- Craft points +500 -->
+		</skills>
 	</item>
 	<item id="92910" name="Material: Rags" type="EtcItem">
 		<!-- Craft points +1000. -->
 		<set name="icon" val="icon.etc_suede_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40077" level="1" /> <!-- Craft points +1000 -->
+		</skills>
 	</item>
 	<item id="92911" name="Material: Leather Scraps" type="EtcItem">
 		<!-- Craft points +3000. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40078" level="1" /> <!-- Craft points +3000 -->
+		</skills>
 	</item>
 	<item id="92912" name="Material: Plain Fabric" type="EtcItem">
 		<!-- Craft points +5000. -->
 		<set name="icon" val="icon.etc_skein_white_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40079" level="1" /> <!-- Craft points +5000 -->
+		</skills>
 	</item>
 	<item id="92913" name="Material: Unknown Metal" type="EtcItem">
 		<!-- Craft points +10,000. -->
 		<set name="icon" val="icon.etc_lump_gray_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40080" level="1" /> <!-- Craft points +10000 -->
+		</skills>
 	</item>
 	<item id="92914" name="Material: Sack Shreds" type="EtcItem">
 		<!-- Craft points +30,000. -->
 		<set name="icon" val="icon.etc_coal_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40081" level="1" /> <!-- Craft points +30000 -->
+		</skills>
 	</item>
 	<item id="92915" name="Material: Bag of Low-grade Stuff" type="EtcItem">
 		<!-- Craft points +50,000. -->
 		<set name="icon" val="icon.etc_charcoal_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40082" level="1" /> <!-- Craft points +50000 -->
+		</skills>
 	</item>
 	<item id="92916" name="Material: Animal Spirit" type="EtcItem">
 		<!-- Craft points +100,000. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40083" level="1" /> <!-- Craft points +100000 -->
+		</skills>
 	</item>
 	<item id="92917" name="Material: Metal Ingot" type="EtcItem">
 		<!-- Craft points +300,000. -->
 		<set name="icon" val="icon.etc_silver_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40084" level="1" /> <!-- Craft points +300000 -->
+		</skills>
 	</item>
 	<item id="92918" name="Material: Blacksmith's Power" type="EtcItem">
 		<!-- Craft points +500,000. -->
 		<set name="icon" val="icon.etc_oriharukon_ore_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40085" level="1" /> <!-- Craft points +500000 -->
+		</skills>
 	</item>
 	<item id="92919" name="Material: Blacksmith's High-grade Power" type="EtcItem">
 		<!-- Craft points +1,000,000. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="40086" level="1" /> <!-- Craft points +1000000 -->
+		</skills>
 	</item>
 	<item id="92920" name="Lilith' Soul Crystal Lv. 11" additionalName="Rare" type="EtcItem">
 		<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith. <Soul Crystal properties>. - HP Recovery Rate +11. - P. Atk. +11%. - Recovers 900 HP after standard attacks and using attacking skills. -->
@@ -1508,6 +1604,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40087" level="1" /> <!-- Einhasad's Blessing Scroll -->
+		</skills>
 	</item>
 	<item id="92992" name="Full Buff Pack" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Buff Scroll (72 pcs.), Battle Scroll (72 pcs.), Sayha's Storm Lv. 3 (72 pcs.), Einhasad's Blessing Scroll (72 pcs.), Mysterious Talisman Pack (2 pcs.). -->

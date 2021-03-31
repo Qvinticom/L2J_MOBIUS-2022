@@ -2237,6 +2237,7 @@
 								<xs:element name="isSuicideAttack" type="xs:boolean" />
 								<xs:element name="abnormalInstant" type="xs:boolean" />
 								<xs:element name="withoutAction" type="xs:boolean" />
+								<xs:element name="isRecoveryHerb" type="xs:boolean" />
 								<xs:element name="blockActionUseSkill" type="xs:boolean" />
 								<xs:element name="deleteAbnormalOnLeave" type="xs:boolean" />
 								<xs:element name="startEffects">

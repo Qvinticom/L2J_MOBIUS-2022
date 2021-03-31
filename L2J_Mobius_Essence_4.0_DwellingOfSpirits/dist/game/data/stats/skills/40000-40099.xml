@@ -604,10 +604,16 @@
 	<skill id="40075" toLevel="1" name="Craft Points +100">
 		<!-- Craft points +100. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>100</amount>
@@ -617,10 +623,16 @@
 	<skill id="40076" toLevel="1" name="Craft Points +500">
 		<!-- Craft points +500. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>500</amount>
@@ -630,10 +642,16 @@
 	<skill id="40077" toLevel="1" name="Craft Points +1,000">
 		<!-- Craft points +1,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>1000</amount>
@@ -643,10 +661,16 @@
 	<skill id="40078" toLevel="1" name="Craft Points +3,000">
 		<!-- Craft points +3,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>3000</amount>
@@ -656,10 +680,16 @@
 	<skill id="40079" toLevel="1" name="Craft Points +5,000">
 		<!-- Craft points +5,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>5000</amount>
@@ -669,10 +699,16 @@
 	<skill id="40080" toLevel="1" name="Craft Points +10,000">
 		<!-- Craft points +10,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>10000</amount>
@@ -682,10 +718,16 @@
 	<skill id="40081" toLevel="1" name="Craft Points +30,000">
 		<!-- Craft points +30,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>30000</amount>
@@ -695,10 +737,16 @@
 	<skill id="40082" toLevel="1" name="Craft Points +50,000">
 		<!-- Craft points +50,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>50000</amount>
@@ -708,10 +756,16 @@
 	<skill id="40083" toLevel="1" name="Craft Points +100,000">
 		<!-- Craft points +100,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>100000</amount>
@@ -721,10 +775,16 @@
 	<skill id="40084" toLevel="1" name="Craft Points +300,000">
 		<!-- Craft points +300,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>300000</amount>
@@ -734,10 +794,16 @@
 	<skill id="40085" toLevel="1" name="Craft Points +500,000">
 		<!-- Craft points +500,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>500000</amount>
@@ -747,10 +813,16 @@
 	<skill id="40086" toLevel="1" name="Craft Points +1,000,000">
 		<!-- Craft points +1,000,000. -->
 		<icon>icon.skill0000</icon>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLevel>40</magicLevel>
 		<operateType>A1</operateType>
-		<magicLevel>1</magicLevel>
-		<staticReuse>true</staticReuse>
+		<reuseDelay>2000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isRecoveryHerb>true</isRecoveryHerb>
 		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ModifyCraftPoints">
 				<amount>1000000</amount>
