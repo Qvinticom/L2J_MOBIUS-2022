@@ -3236,8 +3236,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-		    <effect name="TriggerSkillByAttack">
-			    <attackerType>Creature</attackerType>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
 				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>SELF</targetType>

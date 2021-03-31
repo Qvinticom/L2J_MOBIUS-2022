@@ -165,12 +165,12 @@
 			</condition>
 		</conditions>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47003</closeSkill>
-                <rangeSkill>47004</rangeSkill>
-                <distance>100</distance>
-            </effect>
-        </effects>
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47003</closeSkill>
+				<rangeSkill>47004</rangeSkill>
+				<distance>100</distance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47003" toLevel="35" name="Dual Blow">
 		<icon>icon.double_impact</icon>
@@ -458,12 +458,12 @@
 			</condition>
 		</conditions>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47006</closeSkill>
-                <rangeSkill>47007</rangeSkill>
-                <distance>100</distance>
-            </effect>
-        </effects>
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47006</closeSkill>
+				<rangeSkill>47007</rangeSkill>
+				<distance>100</distance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47006" toLevel="35" name="Triple Blow">
 		<icon>icon.triple_impact</icon>
@@ -602,12 +602,12 @@
 			</condition>
 		</conditions>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47009</closeSkill>
-                <rangeSkill>47010</rangeSkill>
-                <distance>100</distance>
-            </effect>
-        </effects>
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47009</closeSkill>
+				<rangeSkill>47010</rangeSkill>
+				<distance>100</distance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47009" toLevel="1" name="Stealthy Swiftness">
 		<icon>icon.silent_blitz</icon>
@@ -710,16 +710,16 @@
 			</condition>
 		</conditions>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47012</closeSkill>
-                <rangeSkill>47013</rangeSkill>
-                <distance>100</distance>
-            </effect>
-            <effect name="CallSkill">
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47012</closeSkill>
+				<rangeSkill>47013</rangeSkill>
+				<distance>100</distance>
+			</effect>
+			<effect name="CallSkill">
 				<skillId>47014</skillId> <!-- Freezing Effect -->
 				<skillLevel>1</skillLevel>
 			</effect>
-        </effects>
+		</effects>
 	</skill>
 	<skill id="47012" toLevel="10" name="Freezing Wound">
 		<icon>icon.freezing_wound</icon>
@@ -914,16 +914,16 @@
 			</condition>
 		</conditions>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47016</closeSkill>
-                <rangeSkill>47017</rangeSkill>
-                <distance>100</distance>
-            </effect>
-            <effect name="CallSkill">
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47016</closeSkill>
+				<rangeSkill>47017</rangeSkill>
+				<distance>100</distance>
+			</effect>
+			<effect name="CallSkill">
 				<skillId>47018</skillId> <!-- Freezing Effect -->
 				<skillLevel>1</skillLevel>
 			</effect>
-        </effects>
+		</effects>
 	</skill>
 	<skill id="47016" toLevel="10" name="Transcendent Freezing Wound">
 		<icon>icon.freezing_wound</icon>
@@ -1689,12 +1689,12 @@
 			</condition>
 		</conditions>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47042</closeSkill>
-                <rangeSkill>47043</rangeSkill>
-                <distance>100</distance>
-            </effect>
-        </effects>
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47042</closeSkill>
+				<rangeSkill>47043</rangeSkill>
+				<distance>100</distance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47042" toLevel="2" name="Elemental Restoration">
 		<!-- Spirit power restores HP/ MP. -->
@@ -1933,12 +1933,12 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47042</closeSkill>
-                <rangeSkill>47043</rangeSkill>
-                <distance>100</distance>
-            </effect>
-        </effects>
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47042</closeSkill>
+				<rangeSkill>47043</rangeSkill>
+				<distance>100</distance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47052" toLevel="1" name="Elemental Changing Lv. 2">
 		<!-- Applies different effects depending on spirit's mood. <<font color="00FF00">Allies </font>> <Elemental Blessing> Anomaly Resistance +$s1 Received damage -$s2 <<font color="FF0000">Enemies</font>> <Elemental Weakness> Anomaly Resistance -$s3 Received damage +$s4 -->
@@ -1958,12 +1958,12 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-            <effect name="TriggerSkillByDualRange">
-                <closeSkill>47047</closeSkill>
-                <rangeSkill>47046</rangeSkill>
-                <distance>100</distance>
-            </effect>
-        </effects>
+			<effect name="TriggerSkillByDualRange">
+				<closeSkill>47047</closeSkill>
+				<rangeSkill>47046</rangeSkill>
+				<distance>100</distance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="47053" toLevel="1" name="Elemental Guard Lv. 2">
 		<!-- Guarding spirits decrease received damage. Resistance to All Weapons +$s1 All Skill Evasion +$s2 -->

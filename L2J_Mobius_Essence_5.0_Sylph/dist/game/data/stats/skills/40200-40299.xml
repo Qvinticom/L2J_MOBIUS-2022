@@ -743,18 +743,18 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-		    <condition name="OpAlignment">
+			<condition name="OpAlignment">
 				<affectType>CASTER</affectType>
 				<alignment>LAWFUL</alignment>
-		    </condition>
-		    <condition name="OpCanEscape" />
+			</condition>
+			<condition name="OpCanEscape" />
 		</conditions>
 		<effects>
-		    <effect name="Teleport">
+			<effect name="Teleport">
 				<x>102609</x>
 				<y>56031</y>
 				<z>-4032</z>
-		    </effect>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="40297" toLevel="1" name="Scroll of Escape: Grocer Evia">
@@ -770,18 +770,18 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-		    <condition name="OpAlignment">
+			<condition name="OpAlignment">
 				<affectType>CASTER</affectType>
 				<alignment>LAWFUL</alignment>
-		    </condition>
-		    <condition name="OpCanEscape" />
+			</condition>
+			<condition name="OpCanEscape" />
 		</conditions>
 		<effects>
-		    <effect name="Teleport">
+			<effect name="Teleport">
 				<x>105091</x>
 				<y>57525</y>
 				<z>-3928</z>
-		    </effect>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="40298" toLevel="1" name="Scroll of Escape: High Priest Maximilian">
