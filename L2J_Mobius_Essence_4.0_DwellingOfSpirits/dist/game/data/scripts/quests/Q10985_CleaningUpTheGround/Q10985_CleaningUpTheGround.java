@@ -84,6 +84,7 @@ public class Q10985_CleaningUpTheGround extends Quest
 		{
 			case "TELEPORT_TO_HUNTING_GROUND":
 			{
+				giveStoryBuffReward(npc, player);
 				player.teleToLocation(8945, 3529, -2504);
 				break;
 			}
@@ -102,6 +103,7 @@ public class Q10985_CleaningUpTheGround extends Quest
 					giveItems(player, RING_NOVICE);
 					giveItems(player, EARRING_NOVICE);
 					giveItems(player, NECKLACE_NOVICE);
+					giveStoryBuffReward(npc, player);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;
@@ -166,6 +168,7 @@ public class Q10985_CleaningUpTheGround extends Quest
 				{
 					if (qs.isCond(1))
 					{
+
 						htmltext = "30600-02.htm";
 					}
 					break;

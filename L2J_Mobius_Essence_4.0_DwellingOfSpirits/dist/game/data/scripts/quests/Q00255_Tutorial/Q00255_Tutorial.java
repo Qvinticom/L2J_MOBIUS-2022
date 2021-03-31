@@ -283,6 +283,7 @@ public class Q00255_Tutorial extends Quest
 						takeItems(player, BLUE_GEM, -1);
 						giveItems(player, SCROLL_OF_ESCAPE);
 						giveItems(player, WIND_WALK_POTION);
+						giveStoryBuffReward(npc, player);
 						if (player.isMageClass() && (player.getRace() != Race.ORC))
 						{
 							giveItems(player, SPIRITSHOT_REWARD);

@@ -85,6 +85,7 @@ public class Q10961_EffectiveTraining extends Quest
 		{
 			case "TELEPORT_TO_HUNTING_GROUND":
 			{
+				giveStoryBuffReward(npc, player);
 				player.teleToLocation(-120020, 55668, -1560);
 				break;
 			}
@@ -103,6 +104,7 @@ public class Q10961_EffectiveTraining extends Quest
 					giveItems(player, RING_NOVICE);
 					giveItems(player, EARRING_NOVICE);
 					giveItems(player, NECKLACE_NOVICE);
+					giveStoryBuffReward(npc, player);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;

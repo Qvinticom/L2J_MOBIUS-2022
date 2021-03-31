@@ -83,6 +83,7 @@ public class Q10983_TroubledForest extends Quest
 		{
 			case "TELEPORT_TO_HUNTING_GROUND":
 			{
+				giveStoryBuffReward(npc, player);
 				player.teleToLocation(52746, 49932, -3480);
 				break;
 			}
@@ -101,6 +102,7 @@ public class Q10983_TroubledForest extends Quest
 					giveItems(player, RING_NOVICE);
 					giveItems(player, EARRING_NOVICE);
 					giveItems(player, NECKLACE_NOVICE);
+					giveStoryBuffReward(npc, player);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;

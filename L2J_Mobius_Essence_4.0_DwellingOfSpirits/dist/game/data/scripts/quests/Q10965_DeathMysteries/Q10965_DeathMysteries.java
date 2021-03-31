@@ -131,6 +131,7 @@ public class Q10965_DeathMysteries extends Quest
 					giveItems(player, BLUE_LANTERNT);
 					giveItems(player, MAGIC_LAMP_CHARGING_POTION);
 					giveItems(player, SCROLL_OF_ENCHANT_ADEN_WEAPON);
+					giveStoryBuffReward(npc, player);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;
@@ -193,6 +194,7 @@ public class Q10965_DeathMysteries extends Quest
 				{
 					if (qs.isCond(1))
 					{
+						giveStoryBuffReward(npc, player);
 						htmltext = "30289-01.htm";
 					}
 					break;
@@ -201,6 +203,7 @@ public class Q10965_DeathMysteries extends Quest
 				{
 					if (qs.isCond(1))
 					{
+						giveStoryBuffReward(npc, player);
 						htmltext = "30120.html";
 					}
 					else if (qs.isCond(3))

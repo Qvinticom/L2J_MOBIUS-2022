@@ -84,6 +84,7 @@ public class Q10989_DangerousPredators extends Quest
 		{
 			case "TELEPORT_TO_HUNTING_GROUND":
 			{
+				giveStoryBuffReward(npc, player);
 				player.teleToLocation(115960, -174659, -960);
 				break;
 			}
@@ -102,6 +103,7 @@ public class Q10989_DangerousPredators extends Quest
 					giveItems(player, RING_NOVICE);
 					giveItems(player, EARRING_NOVICE);
 					giveItems(player, NECKLACE_NOVICE);
+					giveStoryBuffReward(npc, player);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;

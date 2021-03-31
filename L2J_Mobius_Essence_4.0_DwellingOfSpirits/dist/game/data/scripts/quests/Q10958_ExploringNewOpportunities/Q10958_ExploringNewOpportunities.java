@@ -94,6 +94,7 @@ public class Q10958_ExploringNewOpportunities extends Quest
 			{
 				if (qs.isCond(1))
 				{
+					giveStoryBuffReward(npc, player);
 					player.teleToLocation(TRAINING_GROUNDS);
 				}
 				break;
@@ -108,6 +109,7 @@ public class Q10958_ExploringNewOpportunities extends Quest
 					giveItems(player, RING_NOVICE);
 					giveItems(player, EARRING_NOVICE);
 					giveItems(player, NECKLACE_NOVICE);
+					giveStoryBuffReward(npc, player);
 					addExpAndSp(player, 260000, 6000);
 					qs.exitQuest(false, true);
 				}

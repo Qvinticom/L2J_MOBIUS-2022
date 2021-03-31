@@ -103,6 +103,7 @@ public class Q10982_SpiderHunt extends Quest
 			}
 			case "TELEPORT_TO_HUNTING_GROUND":
 			{
+				giveStoryBuffReward(npc, player);
 				player.teleToLocation(-117409, 227185, -2896);
 				break;
 			}
@@ -120,6 +121,7 @@ public class Q10982_SpiderHunt extends Quest
 					giveItems(player, SPIRIT_ORE);
 					giveItems(player, HP_POTS);
 					giveItems(player, XP_GROWTH_SCROLL);
+					giveStoryBuffReward(npc, player);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);

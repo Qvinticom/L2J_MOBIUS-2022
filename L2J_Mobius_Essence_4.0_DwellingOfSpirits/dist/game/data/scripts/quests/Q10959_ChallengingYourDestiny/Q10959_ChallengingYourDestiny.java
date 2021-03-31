@@ -101,6 +101,7 @@ public class Q10959_ChallengingYourDestiny extends Quest
 			{
 				if (qs.isCond(1))
 				{
+					giveStoryBuffReward(npc, player);
 					player.teleToLocation(TRAINING_GROUNDS);
 				}
 				break;
@@ -114,6 +115,7 @@ public class Q10959_ChallengingYourDestiny extends Quest
 					giveItems(player, SOE_NOVICE);
 					giveItems(player, XP_GROWTH_SCROLL);
 					giveItems(player, HP_POTION_REWARD);
+					giveStoryBuffReward(npc, player);
 					addExpAndSp(player, 600000, 13500);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{

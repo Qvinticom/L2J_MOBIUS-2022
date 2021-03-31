@@ -121,6 +121,7 @@ public class Q10964_SecretGarden extends Quest
 					giveItems(player, TRAVELER_AGATHION_SUMMON_BRACELET);
 					giveItems(player, TRAVELER_AGATHION_GRIFFIN);
 					giveItems(player, SCROLL_ENCHANT_ADEN_WEAPON);
+					giveStoryBuffReward(npc, player);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;
@@ -183,6 +184,7 @@ public class Q10964_SecretGarden extends Quest
 				{
 					if (qs.isCond(1))
 					{
+						giveStoryBuffReward(npc, player);
 						htmltext = "30332-01.htm";
 					}
 					break;
@@ -191,6 +193,7 @@ public class Q10964_SecretGarden extends Quest
 				{
 					if (qs.isCond(1))
 					{
+						giveStoryBuffReward(npc, player);
 						htmltext = "30289.html";
 					}
 					else if (qs.isCond(3))
