@@ -566,7 +566,7 @@ public class GeoEngine
 		
 		// Check being on same cell and layer (index).
 		// Note: Get index must use origin height increased by cell height, the method returns index to height exclusive self.
-		int index = block.getIndexBelow(gox, goy, oz + GeoStructure.CELL_HEIGHT);
+		int index = block.getIndexNearest(gox, goy, oz + GeoStructure.CELL_HEIGHT); // getIndexBelow
 		if (index < 0)
 		{
 			return false;
@@ -574,7 +574,7 @@ public class GeoEngine
 		
 		if ((gox == gtx) && (goy == gty))
 		{
-			return index == block.getIndexBelow(gtx, gty, tz + GeoStructure.CELL_HEIGHT);
+			return index == block.getIndexNearest(gtx, gty, tz + GeoStructure.CELL_HEIGHT); // getIndexBelow
 		}
 		
 		// Get ground and nswe flag.
