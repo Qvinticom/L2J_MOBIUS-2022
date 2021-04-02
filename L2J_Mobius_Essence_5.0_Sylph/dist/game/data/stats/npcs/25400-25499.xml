@@ -598,7 +598,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="25412" level="80" type="RaidBoss" name="Necrosentinel Royal Guard" title="Raid Boss">
+	<npc id="25412" level="80" type="RaidBoss" name="Crody" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25413" count="3" respawnTime="360" weightPoint="1" />
@@ -861,7 +861,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25418" level="80" type="RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
+	<npc id="25418" level="80" type="RaidBoss" name="Craven" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25419" count="3" respawnTime="360" weightPoint="1" />
@@ -952,10 +952,6 @@
 	</npc>
 	<npc id="25420" level="65" type="RaidBoss" name="Orfen's Handmaiden" title="Raid Boss">
 		<parameters>
-			<minions name="Privates">
-				<npc id="25421" count="3" respawnTime="360" weightPoint="1" />
-				<npc id="25422" count="1" respawnTime="360" weightPoint="1" />
-			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="DDMagic_a" id="4196" level="4" />
 			<skill name="SelfRangeDebuff_a" id="4189" level="4" />
@@ -1914,7 +1910,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25441" level="80" type="RaidBoss" name="Evil Spirit Cyrion" title="Raid Boss">
+	<npc id="25441" level="80" type="RaidBoss" name="Cyrion" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25442" count="4" respawnTime="360" weightPoint="1" />
@@ -2885,7 +2881,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="25460" level="80" type="RaidBoss" name="Deadman Ereve" title="Raid Boss">
+	<npc id="25460" level="80" type="RaidBoss" name="Ereve" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25461" count="2" respawnTime="360" weightPoint="1" />
@@ -3542,7 +3538,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25473" level="55" type="RaidBoss" name="Grave Robber Kim" title="Raid Boss">
+	<npc id="25473" level="55" type="RaidBoss" name="Great Spirit Kim" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25474" count="3" respawnTime="360" weightPoint="1" />
@@ -3627,7 +3623,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25475" level="80" type="RaidBoss" name="Ghost Knight Kabed" title="Raid Boss">
+	<npc id="25475" level="80" type="RaidBoss" name="Kabed" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25476" count="3" respawnTime="360" weightPoint="1" />
@@ -3758,7 +3754,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25478" level="80" type="RaidBoss" name="Shilen's Priest Hisilrome" title="Raid Boss">
+	<npc id="25478" level="80" type="RaidBoss" name="Shillien's Priest Hisilrome" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25479" count="3" respawnTime="360" weightPoint="1" />

@@ -698,7 +698,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25217" level="75" type="RaidBoss" name="Cursed Clara" title="Raid Boss">
+	<npc id="25217" level="75" type="RaidBoss" name="Cursed Kele" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25218" count="3" respawnTime="360" weightPoint="1" />
@@ -1782,7 +1782,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25241" level="80" type="RaidBoss" name="Harit Hero Tamash" title="Raid Boss">
+	<npc id="25241" level="80" type="RaidBoss" name="Hero Tamash" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25242" count="3" respawnTime="360" weightPoint="1" />
@@ -2478,7 +2478,7 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="25255" level="80" type="RaidBoss" name="Gargoyle Lord Tiphon" title="Raid Boss">
+	<npc id="25255" level="80" type="RaidBoss" name="Tiphon" title="Raid Boss">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfBuff_a" id="4175" level="6" />
