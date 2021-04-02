@@ -106,6 +106,9 @@ public class Q10290_ATripBegins extends Quest
 			case "30256-01.html":
 			case "30256-02.html":
 			case "30332-01.html":
+			case "30332.htm":
+			case "30332-01.htm":
+			case "30332-02.htm":
 			{
 				htmltext = event;
 				break;
@@ -117,6 +120,13 @@ public class Q10290_ATripBegins extends Quest
 				break;
 			}
 			case "34211-03.html":
+			{
+				qs.startQuest();
+				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.USING_THE_GATEKEEPER));
+				htmltext = event;
+				break;
+			}
+			case "30332-03.htm":
 			{
 				qs.startQuest();
 				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.USING_THE_GATEKEEPER));
@@ -228,11 +238,11 @@ public class Q10290_ATripBegins extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						htmltext = "30332-03.htm";
+						htmltext = "30332.htm";
 					}
 					else if (qs.isCond(2))
 					{
-						htmltext = "30332-04.html";
+						htmltext = "30332-04.htm";
 					}
 					else if (qs.isCond(3))
 					{

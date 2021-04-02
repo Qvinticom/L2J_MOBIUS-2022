@@ -33,8 +33,8 @@ public class Q10971_TalismanEnchant extends Quest
 	// NPC
 	private static final int CAPTAIN_BATHIS = 30332;
 	// Item
-	private static final ItemHolder TALISMAN_OF_ADEN = new ItemHolder(91745, 1);
-	private static final ItemHolder TALISMAN_OF_ADEN_ENCHANT = new ItemHolder(91756, 1);
+	private static final ItemHolder ADVENTURERS_TALISMAN = new ItemHolder(91937, 1);
+	private static final ItemHolder SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN = new ItemHolder(95688, 1);
 	
 	// Misc
 	private static final int MIN_LEVEL = 25;
@@ -73,13 +73,13 @@ public class Q10971_TalismanEnchant extends Quest
 				qs.startQuest();
 				player.sendPacket(new ExTutorialShowId(47));
 				// TODO: Find a better way to do this: Tempfix for not giving items when already have them in inventory (bugging abort and re-accepting).
-				if (player.getInventory().getItemsByItemId(TALISMAN_OF_ADEN.getId()).isEmpty())
+				if (player.getInventory().getItemsByItemId(ADVENTURERS_TALISMAN.getId()).isEmpty())
 				{
-					giveItems(player, TALISMAN_OF_ADEN);
+					giveItems(player, ADVENTURERS_TALISMAN);
 				}
-				if (player.getInventory().getItemsByItemId(TALISMAN_OF_ADEN_ENCHANT.getId()).isEmpty())
+				if (player.getInventory().getItemsByItemId(SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN.getId()).isEmpty())
 				{
-					giveItems(player, TALISMAN_OF_ADEN_ENCHANT);
+					giveItems(player, SCROLL_OF_ENCHANT_ADVENTURERS_TALISMAN);
 				}
 				htmltext = event;
 				break;
@@ -100,7 +100,7 @@ public class Q10971_TalismanEnchant extends Quest
 		else if (qs.isStarted())
 		{
 			boolean foundEnchant = false;
-			SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(TALISMAN_OF_ADEN.getId()))
+			SEARCH: for (ItemInstance item : player.getInventory().getItemsByItemId(ADVENTURERS_TALISMAN.getId()))
 			{
 				if (item.getEnchantLevel() > 0)
 				{
