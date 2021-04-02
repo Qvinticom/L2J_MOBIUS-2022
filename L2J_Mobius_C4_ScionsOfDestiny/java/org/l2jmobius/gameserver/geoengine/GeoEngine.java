@@ -51,8 +51,6 @@ public class GeoEngine
 {
 	protected static final Logger LOGGER = Logger.getLogger(GeoEngine.class.getName());
 	
-	private static final String FILE_NAME_FORMAT = "%d_%d.l2j";
-	
 	private final ABlock[][] _blocks;
 	private final BlockNull _nullBlock;
 	
@@ -80,7 +78,7 @@ public class GeoEngine
 			{
 				for (int regionY = World.TILE_Y_MIN; regionY <= World.TILE_Y_MAX; regionY++)
 				{
-					final Path geoFilePath = Config.GEODATA_PATH.resolve(String.format(FILE_NAME_FORMAT, regionX, regionY));
+					final Path geoFilePath = Config.GEODATA_PATH.resolve(String.format(Config.GEODATA_TYPE.getFilename(), regionX, regionY));
 					if (Files.exists(geoFilePath))
 					{
 						// Region file is load-able, try to load it.
