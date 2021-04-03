@@ -910,320 +910,458 @@
 	<item id="90368" name="Shiny Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90369" min="1" max="1" chance="9.90" /> 
+			<item id="90370" min="1" max="1" chance="9.90" /> 
+			<item id="90371" min="1" max="1" chance="9.90" /> 
+			<item id="90372" min="1" max="1" chance="9.90" /> 
+			<item id="90373" min="1" max="1" chance="9.90" /> 
+			<item id="90374" min="1" max="1" chance="9.90" /> 
+			<item id="90375" min="1" max="1" chance="9.90" /> 
+			<item id="90376" min="1" max="1" chance="9.90" /> 
+			<item id="90936" min="1" max="1" chance="9.90" /> 
+			<item id="90940" min="1" max="1" chance="9.90" /> 
+			<item id="91367" min="1" max="1" chance="9.90" /> 
+		</capsuled_items>
 	</item>
 	<item id="90369" name="Topaz Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90313" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90370" name="Garnet Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90318" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90371" name="Jade Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90323" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90372" name="Ruby Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90328" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90373" name="Sapphire Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90333" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90374" name="Diamond Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90338" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90375" name="Pearl Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90343" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90376" name="Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90353" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90377" name="Lv. 3 Topaz Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90315" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90378" name="Lv. 4 Topaz Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90316" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90379" name="Lv. 5 Topaz Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90317" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90380" name="Lv. 3 Garnet Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90320" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90381" name="Lv. 4 Garnet Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90321" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90382" name="Lv. 5 Garnet Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90322" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90383" name="Lv. 3 Jade Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90325" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90384" name="Lv. 4 Jade Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90326" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90385" name="Lv. 4 Jade Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_jade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90327" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90386" name="Lv. 3 Ruby Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90330" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90387" name="Lv. 4 Ruby Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90331" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90388" name="Lv. 5 Ruby Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90332" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90389" name="Lv. 3 Sapphire Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
-		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90335" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90390" name="Lv. 4 Sapphire Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90336" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90391" name="Lv. 5 Sapphire Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90337" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90392" name="Lv. 3 Diamond Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90340" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90393" name="Lv. 4 Diamond Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90341" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90394" name="Lv. 5 Diamond Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90342" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90395" name="Lv. 3 Pearl Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90340" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90396" name="Lv. 4 Pearl Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90345" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90397" name="Lv. 5 Pearl Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90346" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90398" name="Lv. 3 Vital Stone Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90355" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90399" name="Lv. 4 Vital Stone Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90356" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 </list>

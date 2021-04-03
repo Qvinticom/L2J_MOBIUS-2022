@@ -721,11 +721,26 @@
 	<item id="91355" name="Radiant Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
 		<set name="icon" val="icon.bm_2018_jewelbox_random" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90369" min="1" max="1" chance="9.90" /> 
+			<item id="90370" min="1" max="1" chance="9.90" /> 
+			<item id="90371" min="1" max="1" chance="9.90" /> 
+			<item id="90372" min="1" max="1" chance="9.90" /> 
+			<item id="90373" min="1" max="1" chance="9.90" /> 
+			<item id="90374" min="1" max="1" chance="9.90" /> 
+			<item id="90375" min="1" max="1" chance="9.90" /> 
+			<item id="90376" min="1" max="1" chance="9.90" /> 
+			<item id="90936" min="1" max="1" chance="9.90" /> 
+			<item id="90940" min="1" max="1" chance="9.90" /> 
+			<item id="91367" min="1" max="1" chance="9.90" /> 
+		</capsuled_items>
 	</item>
 	<item id="91356" name="Jewel Power" type="EtcItem">
 		<!-- Required for upgrading a jewel. Can be exchanged for Shining Ore through the Game Assistant. -->
@@ -864,6 +879,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91357" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="91368" name="Emerald Jewelry Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -874,6 +893,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91359" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="91369" name="Emerald Jewelry Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -884,6 +907,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91360" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="91370" name="Emerald Jewelry Box Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain Emerald Lv. 5. -->
@@ -894,6 +921,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91361" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="91371" name="Radiant Brooch Fragment" type="EtcItem">
 		<!-- Take it along with Brooch Lv. 4 to the Game Assistant to exchange for Brooch Lv. 5. -->

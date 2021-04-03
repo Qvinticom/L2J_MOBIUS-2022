@@ -437,83 +437,115 @@
 	</item>
 	<item id="90936" name="Aquamarine Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
-		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
+		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90924" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90937" name="Aquamarine Box Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90926" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90938" name="Aquamarine Box Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90927" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90939" name="Aquamarine Box Lv. 5" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90928" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90940" name="Cat's Eye Chest" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90929" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90941" name="Lv. 3 Cat's Eye Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90931" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90942" name="Lv. 4 Cat's Eye Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90932" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90943" name="Lv. 5 Cat's Eye Jewelry Box" type="EtcItem">
 		<!-- Double-click to obtain Cat's Eye Lv. 5. -->
 		<set name="icon" val="icon.bm_jewelbox_red_catseye_lavianrose" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="FISH" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="90933" min="1" max="1" chance="100"/> 
+		</capsuled_items>
 	</item>
 	<item id="90944" name="Shining Brooch Fragment" type="EtcItem">
 		<!-- Two fragments along with a Brooch can be exchanged by the Game Assistant for a higher-level Brooch. <Required Items>. Brooch Lv. 3: Brooch Lv. 2, Shining Brooch Fragments (2 pcs.). Brooch Lv. 4: Brooch Lv. 3, Shining Brooch Fragments (3 pcs.). -->
