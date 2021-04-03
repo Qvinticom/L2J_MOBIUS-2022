@@ -88,14 +88,18 @@ public class LCoinShopData implements IXmlReader
 							
 							final int id = parseInteger(attrs, "id");
 							final int category = parseInteger(attrs, "category");
-							final int[] ingredientIds = new int[3];
+							final int[] ingredientIds = new int[5];
 							ingredientIds[0] = 0;
 							ingredientIds[1] = 0;
 							ingredientIds[2] = 0;
-							final long[] ingredientQuantities = new long[3];
+							ingredientIds[3] = 0;
+							ingredientIds[4] = 0;
+							final long[] ingredientQuantities = new long[5];
 							ingredientQuantities[0] = 0;
 							ingredientQuantities[1] = 0;
 							ingredientQuantities[2] = 0;
+							ingredientQuantities[3] = 0;
+							ingredientQuantities[4] = 0;
 							int productionId = 0;
 							int accountDailyLimit = 0;
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
@@ -122,9 +126,17 @@ public class LCoinShopData implements IXmlReader
 									{
 										ingredientIds[1] = ingredientId;
 									}
-									else
+									else if (ingredientIds[2] == 0)
 									{
 										ingredientIds[2] = ingredientId;
+									}
+									else if (ingredientIds[3] == 0)
+									{
+										ingredientIds[3] = ingredientId;
+									}
+									else
+									{
+										ingredientIds[4] = ingredientId;
 									}
 									
 									if (ingredientQuantities[0] == 0)
@@ -135,9 +147,17 @@ public class LCoinShopData implements IXmlReader
 									{
 										ingredientQuantities[1] = ingredientQuantity;
 									}
-									else
+									else if (ingredientQuantities[2] == 0)
 									{
 										ingredientQuantities[2] = ingredientQuantity;
+									}
+									else if (ingredientQuantities[3] == 0)
+									{
+										ingredientQuantities[3] = ingredientQuantity;
+									}
+									else
+									{
+										ingredientQuantities[4] = ingredientQuantity;
 									}
 								}
 								else if ("production".equalsIgnoreCase(b.getNodeName()))
