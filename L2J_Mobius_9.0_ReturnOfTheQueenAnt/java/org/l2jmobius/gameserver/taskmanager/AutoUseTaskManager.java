@@ -204,6 +204,10 @@ public class AutoUseTaskManager
 								player.doCast(skill);
 								player.setTarget(savedTarget);
 							}
+							else if (player.isMageClass())
+							{
+								player.useMagic(skill, null, false, false);
+							}
 							else
 							{
 								player.doCast(skill);
