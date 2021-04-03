@@ -57,13 +57,13 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			packet.writeD(product.getIngredientIds()[0]);
 			packet.writeD(product.getIngredientIds()[1]);
 			packet.writeD(product.getIngredientIds()[2]);
-			packet.writeD(product.getIngredientIds()[3]);
-			packet.writeD(product.getIngredientIds()[4]);
+			packet.writeD(product.getIngredientIds()[3]); // 306
+			packet.writeD(product.getIngredientIds()[4]); // 306
 			packet.writeQ(product.getIngredientQuantities()[0]);
 			packet.writeQ(product.getIngredientQuantities()[1]);
 			packet.writeQ(product.getIngredientQuantities()[2]);
-			packet.writeQ(product.getIngredientQuantities()[3]);
-			packet.writeQ(product.getIngredientQuantities()[4]);
+			packet.writeQ(product.getIngredientQuantities()[3]); // 306
+			packet.writeQ(product.getIngredientQuantities()[4]); // 306
 			
 			packet.writeH(0x00); // ?
 			packet.writeH(0x00); // ? 306
