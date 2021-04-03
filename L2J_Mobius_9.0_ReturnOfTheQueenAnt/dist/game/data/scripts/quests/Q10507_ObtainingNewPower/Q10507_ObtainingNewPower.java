@@ -16,13 +16,18 @@
  */
 package quests.Q10507_ObtainingNewPower;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10879_ExaltedGuideToPower.Q10879_ExaltedGuideToPower;
 
@@ -40,6 +45,7 @@ public class Q10507_ObtainingNewPower extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 107;
 	private static final int MIN_COMPLETE_LEVEL = 110;
+	private static final int REACH_LV_110 = NpcStringId.REACH_LV_110.getId();
 	private static final int PROOF_OF_STRENGTH_NEEDED = 160000;
 	// Monsters
 	private static final int[] MONSTERS =
@@ -233,6 +239,23 @@ public class Q10507_ObtainingNewPower extends Quest
 			{
 				qs.setCond(2, true);
 			}
+			sendNpcLogList(player);
 		}
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			if (player.getLevel() >= MIN_COMPLETE_LEVEL)
+			{
+				holder.add(new NpcLogListHolder(REACH_LV_110, true, 1));
+			}
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 }

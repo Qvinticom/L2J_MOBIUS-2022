@@ -16,12 +16,17 @@
  */
 package quests.Q10879_ExaltedGuideToPower;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10873_ExaltedReachingAnotherLevel.Q10873_ExaltedReachingAnotherLevel;
 
@@ -38,11 +43,12 @@ public class Q10879_ExaltedGuideToPower extends Quest
 	private static final int PROOF_OF_PRIDE = 80827;
 	private static final int LIONEL_MISSION_LIST_5 = 47834;
 	// Rewards
-	private static final int DIGNITY_OF_THE_EXALTED = 47853;
-	private static final int VITALITY_OF_THE_EXALTED = 47855;
+	private static final int DIGNITY_OF_THE_EXALTED_LV5 = 47853;
+	private static final int VITALITY_OF_THE_EXALTED_LV2 = 47855;
 	// Misc
 	private static final int MIN_LEVEL = 105;
 	private static final int MIN_COMPLETE_LEVEL = 107;
+	private static final int REACH_LV_107 = NpcStringId.REACH_LV_107.getId();
 	private static final int PROOF_OF_PRIDE_NEEDED = 80000;
 	// Monsters
 	private static final int[] MONSTERS =
@@ -210,8 +216,8 @@ public class Q10879_ExaltedGuideToPower extends Quest
 			{
 				if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
-					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
-					giveItems(player, VITALITY_OF_THE_EXALTED, 1);
+					giveItems(player, DIGNITY_OF_THE_EXALTED_LV5, 1);
+					giveItems(player, VITALITY_OF_THE_EXALTED_LV2, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -282,6 +288,23 @@ public class Q10879_ExaltedGuideToPower extends Quest
 			{
 				qs.setCond(2, true);
 			}
+			sendNpcLogList(player);
 		}
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			if (player.getLevel() >= MIN_COMPLETE_LEVEL)
+			{
+				holder.add(new NpcLogListHolder(REACH_LV_107, true, 1));
+			}
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 }

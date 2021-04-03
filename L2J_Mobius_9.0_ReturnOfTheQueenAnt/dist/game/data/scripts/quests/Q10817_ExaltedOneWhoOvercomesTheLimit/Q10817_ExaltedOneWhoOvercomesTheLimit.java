@@ -16,6 +16,9 @@
  */
 package quests.Q10817_ExaltedOneWhoOvercomesTheLimit;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -23,9 +26,11 @@ import org.l2jmobius.gameserver.enums.ClassId;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimit;
 
@@ -42,15 +47,16 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 	private static final int PROOF_OF_RESISTANCE = 80823;
 	private static final int LIONEL_MISSION_LIST_2 = 45632;
 	// Rewards
-	private static final int SPELLBOOK_DIGNITY_OF_THE_EXALTED = 45923;
+	private static final int SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV2 = 45923;
 	private static final int SPELLBOOK_BELIEF_OF_THE_EXALTED = 45925;
-	private static final int SPELLBOOK_FAVOR_OF_THE_EXALTED = 45928;
-	private static final int EXALSTED_WEAPON_UPGRADE_STONE = 81200;
+	private static final int SPELLBOOK_FAVOR_OF_THE_EXALTED_LV1 = 45928;
+	private static final int EXALTED_WEAPON_UPGRADE_STONE = 81200;
 	private static final int SECOND_EXALTED_QUEST_REWARD_P = 81209;
 	private static final int SECOND_EXALTED_QUEST_REWARD_M = 81210;
 	// Misc
 	private static final int MIN_LEVEL = 101;
 	private static final int MIN_COMPLETE_LEVEL = 102;
+	private static final int REACH_LV_102 = NpcStringId.REACH_LV_102.getId();
 	private static final int PROOF_OF_RESISTANCE_NEEDED = 40000;
 	// Monsters
 	private static final int[] MONSTERS =
@@ -207,7 +213,7 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "33907-07.html");
 		addCondCompletedQuest(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName(), "33907-02.html");
-		registerQuestItems(LIONEL_MISSION_LIST_2, PROOF_OF_RESISTANCE_NEEDED);
+		registerQuestItems(LIONEL_MISSION_LIST_2, PROOF_OF_RESISTANCE);
 	}
 	
 	@Override
@@ -244,10 +250,10 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			{
 				if (qs.isCond(2) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
 				{
-					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED, 1);
+					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED_LV2, 1);
 					giveItems(player, SPELLBOOK_BELIEF_OF_THE_EXALTED, 1);
-					giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED, 1);
-					giveItems(player, EXALSTED_WEAPON_UPGRADE_STONE, 1);
+					giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED_LV1, 1);
+					giveItems(player, EXALTED_WEAPON_UPGRADE_STONE, 1);
 					
 					switch (race)
 					{
@@ -468,7 +474,23 @@ public class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			{
 				qs.setCond(2, true);
 			}
+			sendNpcLogList(player);
 		}
 	}
 	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			if (player.getLevel() >= MIN_COMPLETE_LEVEL)
+			{
+				holder.add(new NpcLogListHolder(REACH_LV_102, true, 1));
+			}
+			return holder;
+		}
+		return super.getNpcLogList(player);
+	}
 }

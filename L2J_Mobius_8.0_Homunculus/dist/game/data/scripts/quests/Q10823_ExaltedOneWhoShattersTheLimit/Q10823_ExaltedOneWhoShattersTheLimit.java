@@ -16,12 +16,17 @@
  */
 package quests.Q10823_ExaltedOneWhoShattersTheLimit;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
 
@@ -41,14 +46,15 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 	private static final int EXALTED_CLOAK = 37763;
 	private static final int OBTAIN_EXALTED_STATUS = 45638;
 	private static final int EXALTED_TIARA = 45644;
-	private static final int DIGNITY_OF_THE_EXALTED = 45924;
+	private static final int DIGNITY_OF_THE_EXALTED_LV3 = 45924;
 	private static final int BLESSING_OF_THE_EXALTED = 45926;
 	private static final int SUMMON_BATTLE_POTION = 45927;
 	private static final int FATE_OF_THE_EXALTED = 46036;
-	private static final int FAVOR_OF_THE_EXALTED = 45870;
+	private static final int FAVOR_OF_THE_EXALTED_LV2 = 45870;
 	// Misc
 	private static final int MIN_LEVEL = 102;
 	private static final int MIN_COMPLETE_LEVEL = 103;
+	private static final int REACH_LV_103 = NpcStringId.REACH_LV_103.getId();
 	private static final int PROOF_OF_PREPARATION_NEEDED = 40000;
 	// Monsters
 	private static final int[] MONSTERS =
@@ -228,11 +234,11 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 					giveItems(player, EXALTED_CLOAK, 1);
 					giveItems(player, OBTAIN_EXALTED_STATUS, 1);
 					giveItems(player, EXALTED_TIARA, 1);
-					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
+					giveItems(player, DIGNITY_OF_THE_EXALTED_LV3, 1);
 					giveItems(player, BLESSING_OF_THE_EXALTED, 1);
 					giveItems(player, SUMMON_BATTLE_POTION, 1);
 					giveItems(player, FATE_OF_THE_EXALTED, 1);
-					giveItems(player, FAVOR_OF_THE_EXALTED, 1);
+					giveItems(player, FAVOR_OF_THE_EXALTED_LV2, 1);
 					// Give Exalted status here?
 					// https://l2wiki.com/Noblesse
 					player.setNobleLevel(2);
@@ -301,6 +307,23 @@ public class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 			{
 				qs.setCond(2, true);
 			}
+			sendNpcLogList(player);
 		}
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			if (player.getLevel() >= MIN_COMPLETE_LEVEL)
+			{
+				holder.add(new NpcLogListHolder(REACH_LV_103, true, 1));
+			}
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 }
