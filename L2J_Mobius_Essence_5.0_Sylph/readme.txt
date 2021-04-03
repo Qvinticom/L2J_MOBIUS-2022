@@ -1,6 +1,6 @@
 L2J-Mobius Sylph
 Client: https://drive.google.com/u/0/uc?id=1GnsteyccQgKftHmpgtpuw4UEfVuqt4F0&export=download
-System: https://mega.nz/file/w1cG1JjI#WuXvqpHnxvikuv-KhkyQ4KlyYjhGXAXOzduRIa5jUnE
+System: https://mega.nz/file/NwUT2a5b#eksp5_8M6PuocLqbSz57lWeKKgw3RZp_lLiRFh55l1M
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
