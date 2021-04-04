@@ -418,7 +418,7 @@ public class AdminTeleport implements IAdminCommandHandler
 						}
 					}
 					
-					activeChar.teleToLocation(x, y, z, false);
+					activeChar.teleToLocation(x, y, z);
 					showTeleportWindow(activeChar);
 					
 					return true;
@@ -482,7 +482,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void teleportTo(PlayerInstance activeChar, int x, int y, int z)
 	{
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		activeChar.teleToLocation(x, y, z, false);
+		activeChar.teleToLocation(x, y, z);
 		BuilderUtil.sendSysMessage(activeChar, "You have been teleported to " + x + " " + y + " " + z);
 	}
 	
@@ -548,7 +548,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			final int y = player.getY();
 			final int z = player.getZ();
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			activeChar.teleToLocation(x, y, z, true);
+			activeChar.teleToLocation(x, y, z);
 			BuilderUtil.sendSysMessage(activeChar, "You have teleported to character " + player.getName() + ".");
 		}
 	}

@@ -890,7 +890,7 @@ public abstract class Summon extends Playable
 	public void onTeleported()
 	{
 		super.onTeleported();
-		sendPacket(new TeleportToLocation(this, getX(), getY(), getZ(), getHeading()));
+		sendPacket(new TeleportToLocation(this, getX(), getY(), getZ(), getHeading(), false));
 	}
 	
 	@Override

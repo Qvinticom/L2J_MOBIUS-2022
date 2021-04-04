@@ -5727,7 +5727,7 @@ public class PlayerInstance extends Playable
 						sendMessage("You will be revived and teleported to team spot in " + (Config.TVT_REVIVE_DELAY / 1000) + " seconds!");
 						ThreadPool.schedule(() ->
 						{
-							teleToLocation((TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, (TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)), false);
+							teleToLocation((TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, (TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)));
 							doRevive();
 						}, Config.TVT_REVIVE_DELAY);
 					}
@@ -5739,7 +5739,7 @@ public class PlayerInstance extends Playable
 						sendMessage("You will be revived and teleported to team spot in " + (Config.TVT_REVIVE_DELAY / 1000) + " seconds!");
 						ThreadPool.schedule(() ->
 						{
-							teleToLocation(TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)), false);
+							teleToLocation(TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)));
 							doRevive();
 							broadcastPacket(new SocialAction(getObjectId(), 15));
 						}, Config.TVT_REVIVE_DELAY);
@@ -5756,7 +5756,7 @@ public class PlayerInstance extends Playable
 						}
 						ThreadPool.schedule(() ->
 						{
-							teleToLocation(CTF._teamsX.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsY.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsZ.get(CTF._teams.indexOf(_teamNameCTF)), false);
+							teleToLocation(CTF._teamsX.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsY.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsZ.get(CTF._teams.indexOf(_teamNameCTF)));
 							doRevive();
 						}, 20000);
 					}
@@ -5781,7 +5781,7 @@ public class PlayerInstance extends Playable
 						ThreadPool.schedule(() ->
 						{
 							final Location ploc = DM.getPlayersSpawnLocation();
-							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ(), false);
+							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ());
 							doRevive();
 						}, Config.DM_REVIVE_DELAY);
 					}
@@ -5794,7 +5794,7 @@ public class PlayerInstance extends Playable
 						ThreadPool.schedule(() ->
 						{
 							final Location ploc = DM.getPlayersSpawnLocation();
-							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ(), false);
+							teleToLocation(ploc.getX(), ploc.getY(), ploc.getZ());
 							doRevive();
 						}, 20000);
 					}
@@ -10958,7 +10958,7 @@ public class PlayerInstance extends Playable
 		sendPacket(new ObservationMode(x, y, z));
 		getKnownList().removeAllKnownObjects(); // reinit knownlist
 		setXYZ(x, y, z);
-		teleToLocation(x, y, z, false);
+		teleToLocation(x, y, z);
 		broadcastUserInfo();
 	}
 	
@@ -11004,7 +11004,7 @@ public class PlayerInstance extends Playable
 		_wasInvisible = getAppearance().isInvisible();
 		getAppearance().setInvisible();
 		
-		teleToLocation(x, y, z, false);
+		teleToLocation(x, y, z);
 		sendPacket(new ExOlympiadMode(3, this));
 		broadcastUserInfo();
 	}
@@ -12674,7 +12674,7 @@ public class PlayerInstance extends Playable
 		if (getTrainedBeast() != null)
 		{
 			getTrainedBeast().getAI().stopFollow();
-			getTrainedBeast().teleToLocation(getPosition().getX() + Rnd.get(-100, 100), getPosition().getY() + Rnd.get(-100, 100), getPosition().getZ(), false);
+			getTrainedBeast().teleToLocation(getPosition().getX() + Rnd.get(-100, 100), getPosition().getY() + Rnd.get(-100, 100), getPosition().getZ());
 			getTrainedBeast().getAI().startFollow(this);
 		}
 		

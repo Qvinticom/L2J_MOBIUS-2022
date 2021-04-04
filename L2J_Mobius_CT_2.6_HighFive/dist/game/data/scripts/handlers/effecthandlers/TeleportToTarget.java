@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -87,7 +86,6 @@ public class TeleportToTarget extends AbstractEffect
 		creature.broadcastPacket(new FlyToLocation(creature, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
 		creature.abortAttack();
 		creature.abortCast();
-		creature.setXYZ(loc);
-		creature.broadcastPacket(new ValidateLocation(creature));
+		creature.teleToLocationInstant(loc);
 	}
 }

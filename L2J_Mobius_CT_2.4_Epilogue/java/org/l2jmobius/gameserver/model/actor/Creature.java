@@ -680,8 +680,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param headingValue
 	 * @param instanceId
 	 * @param randomOffset
+	 * @param instant
 	 */
-	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, int instanceId, int randomOffset)
+	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, int instanceId, int randomOffset, boolean instant)
 	{
 		int x = xValue;
 		int y = yValue;
@@ -713,7 +714,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		z += 5;
 		
 		// Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
-		broadcastPacket(new TeleportToLocation(this, x, y, z, heading));
+		broadcastPacket(new TeleportToLocation(this, x, y, z, heading, instant));
 		
 		// remove the object from its old location
 		decayMe();
@@ -738,57 +739,67 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	public void teleToLocation(int x, int y, int z, int heading, int instanceId, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, heading, instanceId, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(x, y, z, heading, instanceId, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading, int instanceId)
 	{
-		teleToLocation(x, y, z, heading, instanceId, 0);
+		teleToLocation(x, y, z, heading, instanceId, 0, false);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, heading, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(x, y, z, heading, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading)
 	{
-		teleToLocation(x, y, z, heading, -1, 0);
+		teleToLocation(x, y, z, heading, -1, 0, false);
 	}
 	
 	public void teleToLocation(int x, int y, int z, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, 0, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(x, y, z, 0, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
 	}
 	
 	public void teleToLocation(int x, int y, int z)
 	{
-		teleToLocation(x, y, z, 0, -1, 0);
+		teleToLocation(x, y, z, 0, -1, 0, false);
 	}
 	
 	public void teleToLocation(ILocational loc, int randomOffset)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), randomOffset);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), randomOffset, false);
 	}
 	
 	public void teleToLocation(ILocational loc, int instanceId, int randomOffset)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instanceId, randomOffset);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instanceId, randomOffset, false);
 	}
 	
 	public void teleToLocation(ILocational loc, boolean randomOffset)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
 	}
 	
 	public void teleToLocation(ILocational loc)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), 0);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), 0, false);
 	}
 	
 	public void teleToLocation(TeleportWhereType teleportWhere)
 	{
 		teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, teleportWhere), true);
+	}
+	
+	public void teleToLocationInstant(ILocational loc)
+	{
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), getHeading() /* Use the current heading */, getInstanceId(), 0, true);
+	}
+	
+	public void teleToLocationInstant(int x, int y, int z)
+	{
+		teleToLocation(x, y, z, getHeading(), getInstanceId(), 0, true);
 	}
 	
 	private boolean canUseRangeWeapon()

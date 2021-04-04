@@ -1013,7 +1013,7 @@ public class TvT implements EventTask
 					{
 						if (player.isOnline())
 						{
-							player.teleToLocation(_npcX, _npcY, _npcZ, false);
+							player.teleToLocation(_npcX, _npcY, _npcZ);
 						}
 						else
 						{
@@ -2596,8 +2596,8 @@ public class TvT implements EventTask
 				playerToKick.setTitle(playerToKick._originalTitleTvT);
 				playerToKick.broadcastUserInfo();
 				playerToKick.sendMessage("You have been kicked from the TvT.");
-				playerToKick.teleToLocation(_npcX, _npcY, _npcZ, false);
-				playerToKick.teleToLocation((_npcX + Rnd.get(201)) - 100, (_npcY + Rnd.get(201)) - 100, _npcZ, false);
+				playerToKick.teleToLocation(_npcX, _npcY, _npcZ);
+				playerToKick.teleToLocation((_npcX + Rnd.get(201)) - 100, (_npcY + Rnd.get(201)) - 100, _npcZ);
 			}
 		}
 	}

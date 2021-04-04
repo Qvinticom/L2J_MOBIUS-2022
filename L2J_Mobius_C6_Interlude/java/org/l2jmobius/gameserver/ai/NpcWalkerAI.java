@@ -115,8 +115,8 @@ public class NpcWalkerAI extends CreatureAI implements Runnable
 		final int destinationX = _route.get(_currentPos).getMoveX();
 		final int destinationY = _route.get(_currentPos).getMoveY();
 		final int destinationZ = _route.get(_currentPos).getMoveZ();
+		getActor().teleToLocation(destinationX, destinationY, destinationZ);
 		
-		getActor().teleToLocation(destinationX, destinationY, destinationZ, false);
 		super.onEvtArrivedBlocked(location);
 	}
 	

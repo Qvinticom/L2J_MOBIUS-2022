@@ -312,7 +312,7 @@ public class IceFairySirra extends Quest
 		{
 			for (PlayerInstance pc : player.getParty().getPartyMembers())
 			{
-				pc.teleToLocation(113533, -126159, -3488, false);
+				pc.teleToLocation(113533, -126159, -3488);
 				if (_freyasZone == null)
 				{
 					LOGGER.warning("IceFairySirraManager: Failed to load zone");

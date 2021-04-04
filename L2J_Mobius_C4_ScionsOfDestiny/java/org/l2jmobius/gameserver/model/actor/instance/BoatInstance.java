@@ -209,7 +209,7 @@ public class BoatInstance extends Creature
 						}
 						else
 						{
-							player.teleToLocation(pathA.ntx, pathA.nty, pathA.ntz, false);
+							player.teleToLocation(pathA.ntx, pathA.nty, pathA.ntz);
 						}
 					}
 				}
@@ -242,7 +242,7 @@ public class BoatInstance extends Creature
 						}
 						else
 						{
-							player.teleToLocation(pathB.ntx, pathB.nty, pathB.ntz, false);
+							player.teleToLocation(pathB.ntx, pathB.nty, pathB.ntz);
 						}
 					}
 				}

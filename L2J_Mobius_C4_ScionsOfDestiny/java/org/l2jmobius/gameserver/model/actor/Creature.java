@@ -347,7 +347,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		if ((pet != null) && (pos != null))
 		{
 			pet.setFollowStatus(false);
-			pet.teleToLocation(pos.getX() + Rnd.get(-100, 100), pos.getY() + Rnd.get(-100, 100), pos.getZ(), false);
+			pet.teleToLocation(pos.getX() + Rnd.get(-100, 100), pos.getY() + Rnd.get(-100, 100), pos.getZ());
 			pet.setFollowStatus(true);
 		}
 	}
@@ -540,8 +540,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param yValue the y
 	 * @param zValue the z
 	 * @param allowRandomOffset the allow random offset
+	 * @param instant
 	 */
-	public void teleToLocation(int xValue, int yValue, int zValue, boolean allowRandomOffset)
+	public void teleToLocation(int xValue, int yValue, int zValue, boolean allowRandomOffset, boolean instant)
 	{
 		if (Config.TW_DISABLE_GK)
 		{
@@ -587,7 +588,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		z += 5;
 		
 		// Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
-		broadcastPacket(new TeleportToLocation(this, x, y, z));
+		broadcastPacket(new TeleportToLocation(this, x, y, z, getHeading(), instant));
 		
 		// remove the object from its old location
 		decayMe();
@@ -602,26 +603,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		revalidateZone(true);
 	}
 	
-	/**
-	 * Revalidate zone.
-	 * @param force the force
-	 */
-	public void revalidateZone(boolean force)
+	public void teleToLocation(int x, int y, int z, boolean allowRandomOffset)
 	{
-		final WorldRegion region = getWorldRegion();
-		if (region == null)
-		{
-			return;
-		}
-		
-		// This function is called too often from movement code.
-		if (!force && (calculateDistanceSq3D(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < (isNpc() && !isInCombat() ? Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE : 10000)))
-		{
-			return;
-		}
-		_lastZoneValidateLocation.setXYZ(getX(), getY(), getZ());
-		
-		region.revalidateZones(this);
+		teleToLocation(x, y, z, allowRandomOffset, false);
 	}
 	
 	/**
@@ -669,6 +653,38 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public void teleToLocation(TeleportWhereType teleportWhere)
 	{
 		teleToLocation(MapRegionData.getInstance().getTeleToLocation(this, teleportWhere), true);
+	}
+	
+	public void teleToLocationInstant(Location loc)
+	{
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), false, true);
+	}
+	
+	public void teleToLocationInstant(int x, int y, int z)
+	{
+		teleToLocation(x, y, z, false, true);
+	}
+	
+	/**
+	 * Revalidate zone.
+	 * @param force the force
+	 */
+	public void revalidateZone(boolean force)
+	{
+		final WorldRegion region = getWorldRegion();
+		if (region == null)
+		{
+			return;
+		}
+		
+		// This function is called too often from movement code.
+		if (!force && (calculateDistanceSq3D(_lastZoneValidateLocation.getX(), _lastZoneValidateLocation.getY(), _lastZoneValidateLocation.getZ()) < (isNpc() && !isInCombat() ? Config.MAX_DRIFT_RANGE * Config.MAX_DRIFT_RANGE : 10000)))
+		{
+			return;
+		}
+		_lastZoneValidateLocation.setXYZ(getX(), getY(), getZ());
+		
+		region.revalidateZones(this);
 	}
 	
 	/**
@@ -6512,7 +6528,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			{
 				LOGGER.warning("Player " + getName() + " at bad coords: (x: " + getX() + ", y: " + getY() + ", z: " + getZ() + ").");
 				((PlayerInstance) this).sendMessage("Error with your coordinates! Please reboot your game fully!");
-				((PlayerInstance) this).teleToLocation(80753, 145481, -3532, false); // Near Giran luxury shop
+				((PlayerInstance) this).teleToLocation(80753, 145481, -3532); // Near Giran luxury shop
 			}
 			else
 			{

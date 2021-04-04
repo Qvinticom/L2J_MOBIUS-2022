@@ -75,7 +75,7 @@ public class MonsterInstance extends Attackable
 			final Spawn mobSpawn = getSpawn();
 			if (!isInCombat() && !isAlikeDead() && !isDead() && (mobSpawn != null) && !isInsideRadius2D(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ(), Config.MAX_DRIFT_RANGE))
 			{
-				teleToLocation(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ(), false);
+				teleToLocation(mobSpawn.getX(), mobSpawn.getY(), mobSpawn.getZ());
 			}
 		}, Config.MONSTER_RETURN_DELAY * 1000);
 	}

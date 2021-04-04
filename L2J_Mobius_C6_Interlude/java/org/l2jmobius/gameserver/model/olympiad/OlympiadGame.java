@@ -376,24 +376,24 @@ class OlympiadGame
 			_playerOne.setTarget(null);
 			_playerTwo.setTarget(null);
 			
-			_playerOne.teleToLocation(_stadiumPort[0] + 900, _stadiumPort[1], _stadiumPort[2], false);
+			_playerOne.teleToLocation(_stadiumPort[0] + 900, _stadiumPort[1], _stadiumPort[2]);
 			// teleport summon to
 			if (_playerOne.getPet() != null)
 			{
 				final Summon summon = _playerOne.getPet();
 				if (summon instanceof SummonInstance)
 				{
-					summon.teleToLocation(_stadiumPort[0] + 900, _stadiumPort[1], _stadiumPort[2], false);
+					summon.teleToLocation(_stadiumPort[0] + 900, _stadiumPort[1], _stadiumPort[2]);
 				}
 			}
-			_playerTwo.teleToLocation(_stadiumPort[0] - 900, _stadiumPort[1], _stadiumPort[2], false);
+			_playerTwo.teleToLocation(_stadiumPort[0] - 900, _stadiumPort[1], _stadiumPort[2]);
 			// teleport summon to
 			if (_playerTwo.getPet() != null)
 			{
 				final Summon summon = _playerTwo.getPet();
 				if (summon instanceof SummonInstance)
 				{
-					summon.teleToLocation(_stadiumPort[0] - 900, _stadiumPort[1], _stadiumPort[2], false);
+					summon.teleToLocation(_stadiumPort[0] - 900, _stadiumPort[1], _stadiumPort[2]);
 				}
 			}
 			

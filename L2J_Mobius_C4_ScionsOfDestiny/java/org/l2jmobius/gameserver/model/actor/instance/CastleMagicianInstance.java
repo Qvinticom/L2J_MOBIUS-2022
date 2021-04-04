@@ -107,7 +107,7 @@ public class CastleMagicianInstance extends NpcInstance
 						return;
 					}
 					
-					player.teleToLocation(clanLeader.getX(), clanLeader.getY(), clanLeader.getZ(), false);
+					player.teleToLocation(clanLeader.getX(), clanLeader.getY(), clanLeader.getZ());
 					return;
 				}
 				final String filename = "data/html/castlemagician/magician-nogate.htm";

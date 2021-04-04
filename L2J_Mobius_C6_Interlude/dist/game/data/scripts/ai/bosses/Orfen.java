@@ -183,7 +183,7 @@ public class Orfen extends Quest
 				npc.getSpawn().setX(55024);
 				npc.getSpawn().setY(17368);
 				npc.getSpawn().setZ(-5412);
-				npc.teleToLocation(55024, 17368, -5412, false);
+				npc.teleToLocation(55024, 17368, -5412);
 				break;
 			}
 			default:
@@ -211,7 +211,7 @@ public class Orfen extends Quest
 					npc.getSpawn().setX(43577);
 					npc.getSpawn().setY(15985);
 					npc.getSpawn().setZ(-4396);
-					npc.teleToLocation(43577, 15985, -4396, false);
+					npc.teleToLocation(43577, 15985, -4396);
 					startQuestTimer("ORFEN_REFRESH", 10000, npc, null);
 				}
 				else if (npc.isInsideRadius2D(attacker, 1000) && !npc.isInsideRadius2D(attacker, 300) && (Rnd.get(10) == 0))

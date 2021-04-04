@@ -1001,7 +1001,7 @@ public class DM implements EventTask
 					{
 						if (player.isOnline())
 						{
-							player.teleToLocation(_npcX, _npcY, _npcZ, false);
+							player.teleToLocation(_npcX, _npcY, _npcZ);
 						}
 						else
 						{

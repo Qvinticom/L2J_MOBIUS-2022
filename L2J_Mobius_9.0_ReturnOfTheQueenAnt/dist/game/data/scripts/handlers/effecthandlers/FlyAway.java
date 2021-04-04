@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * Throw Up effect implementation.
@@ -60,8 +59,6 @@ public class FlyAway extends AbstractEffect
 		final Location destination = GeoEngine.getInstance().getValidLocation(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
-		effected.setXYZ(destination);
-		effected.broadcastPacket(new ValidateLocation(effected));
-		effected.revalidateZone(true);
+		effected.teleToLocationInstant(destination);
 	}
 }

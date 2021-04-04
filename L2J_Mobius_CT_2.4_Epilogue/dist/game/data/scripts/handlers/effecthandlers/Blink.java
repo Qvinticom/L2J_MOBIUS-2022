@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -73,7 +72,6 @@ public class Blink extends AbstractEffect
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.DUMMY));
 		effected.abortAttack();
 		effected.abortCast();
-		effected.setXYZ(destination);
-		effected.broadcastPacket(new ValidateLocation(effected));
+		effected.teleToLocationInstant(destination);
 	}
 }

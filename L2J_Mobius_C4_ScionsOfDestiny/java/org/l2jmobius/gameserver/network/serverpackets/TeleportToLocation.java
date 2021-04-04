@@ -18,10 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.gameserver.model.WorldObject;
 
-/**
- * format dddd sample 0000: 3a 69 08 10 48 02 c1 00 00 f7 56 00 00 89 ea ff :i..H.....V..... 0010: ff 0c b2 d8 61 ....a
- * @version $Revision: 1.3.2.1.2.3 $ $Date: 2005/03/27 15:29:39 $
- */
 public class TeleportToLocation extends GameServerPacket
 {
 	private final int _targetObjId;
@@ -29,29 +25,16 @@ public class TeleportToLocation extends GameServerPacket
 	private final int _y;
 	private final int _z;
 	private final int _heading;
+	private final boolean _instant;
 	
-	/**
-	 * @param obj
-	 * @param x
-	 * @param y
-	 * @param z
-	 */
-	public TeleportToLocation(WorldObject obj, int x, int y, int z)
-	{
-		_targetObjId = obj.getObjectId();
-		_x = x;
-		_y = y;
-		_z = z;
-		_heading = obj.getPosition().getHeading();
-	}
-	
-	public TeleportToLocation(WorldObject obj, int x, int y, int z, int heading)
+	public TeleportToLocation(WorldObject obj, int x, int y, int z, int heading, boolean instant)
 	{
 		_targetObjId = obj.getObjectId();
 		_x = x;
 		_y = y;
 		_z = z;
 		_heading = heading;
+		_instant = instant;
 	}
 	
 	@Override
@@ -62,7 +45,7 @@ public class TeleportToLocation extends GameServerPacket
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
-		writeD(0x00); // isValidation ??
-		writeD(_heading); // nYaw
+		writeD(_instant ? 0x01 : 0x00);
+		writeD(_heading);
 	}
 }

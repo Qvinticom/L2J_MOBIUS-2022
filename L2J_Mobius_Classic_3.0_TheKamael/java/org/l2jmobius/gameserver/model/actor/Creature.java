@@ -759,8 +759,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param zValue
 	 * @param headingValue
 	 * @param instanceValue
+	 * @param instant
 	 */
-	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, Instance instanceValue)
+	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, Instance instanceValue, boolean instant)
 	{
 		int x = xValue;
 		int y = yValue;
@@ -809,7 +810,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		z += 5;
 		
 		// Send teleport packet to player and visible players
-		broadcastPacket(new TeleportToLocation(this, x, y, z, heading));
+		broadcastPacket(new TeleportToLocation(this, x, y, z, heading, instant));
 		
 		// remove the object from its old location
 		decayMe();
@@ -842,17 +843,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	public void teleToLocation(int x, int y, int z)
 	{
-		teleToLocation(x, y, z, 0, getInstanceWorld());
+		teleToLocation(x, y, z, 0, getInstanceWorld(), false);
 	}
 	
 	public void teleToLocation(int x, int y, int z, Instance instance)
 	{
-		teleToLocation(x, y, z, 0, instance);
+		teleToLocation(x, y, z, 0, instance, false);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading)
 	{
-		teleToLocation(x, y, z, heading, getInstanceWorld());
+		teleToLocation(x, y, z, heading, getInstanceWorld(), false);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset)
@@ -879,7 +880,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			x += Rnd.get(-randomOffset, randomOffset);
 			y += Rnd.get(-randomOffset, randomOffset);
 		}
-		teleToLocation(x, y, z, heading, instance);
+		teleToLocation(x, y, z, heading, instance, false);
 	}
 	
 	public void teleToLocation(ILocational loc)
@@ -889,7 +890,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	public void teleToLocation(ILocational loc, Instance instance)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instance);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instance, false);
 	}
 	
 	public void teleToLocation(ILocational loc, int randomOffset)
@@ -920,6 +921,16 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public void teleToLocation(TeleportWhereType teleportWhere, Instance instance)
 	{
 		teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, teleportWhere), true, instance);
+	}
+	
+	public void teleToLocationInstant(ILocational loc)
+	{
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), getHeading() /* Use the current heading */, getInstanceWorld(), true);
+	}
+	
+	public void teleToLocationInstant(int x, int y, int z)
+	{
+		teleToLocation(x, y, z, getHeading(), getInstanceWorld(), true);
 	}
 	
 	/**
