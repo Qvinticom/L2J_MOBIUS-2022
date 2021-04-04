@@ -1,393 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/LCoinShop.xsd">
-	<product id="70" category="0">
-		<ingredient id="91663" count="200" /> <!-- L-Coin -->
-		<production id="93740" /> <!-- Giran Seal Pack -->
-	</product>
-	<!--
-	<product id="71" category="0">
-		<ingredient id="91663" count="100" /> L-Coin
-		<production id="94167" /> Hero's Shining Pack
-	</product>
-	<product id="72" category="1">
-		<ingredient id="91663" count="500" /> L-Coin
-		<production id="94303" /> Life Stone - Circlet
-	</product>
-	<product id="73" category="1">
-		<ingredient id="91663" count="200" /> L-Coin
-		<production id="94188" /> Life Stone Lv. 2 - Armor
-	</product>
-	<product id="74" category="1">
-		<ingredient id="91663" count="200" /> L-Coin
-		<production id="94186" /> Life Stone Lv. 2 - Weapon
-	</product>
-	<product id="75" category="1">
-		<ingredient id="91663" count="200" /> L-Coin
-		<production id="93100" /> Life Stone Lv. 2 - Shield/ Sigil
-	</product>
-	<product id="76" category="0">
-		<ingredient id="91663" count="1000" /> Adena
-		<production id="94450" accountDailyLimit="1" /> Augustina's Support Box Lv. 1
-	</product>
-	<product id="77" category="0">
-		<ingredient id="91663" count="300000" /> Adena
-		<production id="94457" accountDailyLimit="1" /> Augustina's Support Box Lv. 2
-	</product>
-	-->
-	<product id="1" category="1">
-		<ingredient id="91663" count="200" /> <!-- L-Coin -->
-		<production id="90694" /> <!-- Sealed Soul Crystal Lv. 1 -->
-	</product>
-	<product id="2" category="1">
+	<!-- Cat 0 -->
+	<product id="2" category="0">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="9589" /> <!-- Talisman Bracelet Lv. 1 -->
 	</product>	
-	<product id="3" category="1">
+	<product id="3" category="0">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="90311" /> <!-- Brooch Lv. 1 -->
 	</product>
-	<product id="4" category="1">
-		<ingredient id="91663" count="600" /> <!-- L-Coin -->
-		<production id="92034" /> <!-- Reinforced Jewel Box -->
-	</product>
-	<product id="5" category="1">
-		<ingredient id="91663" count="600" /> <!-- L-Coin -->
-		<production id="91767" /> <!-- Enchant Kit: Talisman of Aden -->
-	</product>
-	<product id="6" category="1">
-		<ingredient id="91663" count="600" /> <!-- L-Coin -->
-		<production id="92020" /> <!-- Enchant Kit: Talisman of Eva -->
-	</product>
-	<product id="7" category="1">
-		<ingredient id="91663" count="600" /> <!-- L-Coin -->
-		<production id="91864" /> <!-- Dragon Belt Pack -->
-	</product>
-	<product id="57" category="1">
-		<ingredient id="91663" count="600" /> <!-- L-Coin -->
-		<production id="93303" /> <!-- Package: Cloak of Protection -->
-	</product>
-	<product id="32" category="1">
-		<ingredient id="91663" count="1500" /> <!-- L-Coin -->
-		<production id="729" /> <!-- Scroll: Enchant A-grade Weapon (Exchangeable) -->
-	</product>
-	<product id="31" category="1">
-		<ingredient id="91663" count="600" /> <!-- L-Coin -->
-		<production id="947" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
-	</product>
-	<product id="30" category="1">
+	<product id="140" category="0">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
-		<production id="951" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
+		<production id="90888" /> <!-- Agathion Bracelet Lv. 1 -->
 	</product>
-	<product id="28" category="1">
-		<ingredient id="91663" count="350" /> <!-- L-Coin -->
-		<production id="730" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
-	</product>
-	<product id="27" category="1">
+	<product id="27" category="0">
 		<ingredient id="91663" count="100" /> <!-- L-Coin -->
 		<production id="948" /> <!-- Scroll: Enchant B-grade Armor (Exchangeable) -->
 	</product>
-	<product id="26" category="1">
+	<product id="28" category="0">
+		<ingredient id="91663" count="350" /> <!-- L-Coin -->
+		<production id="730" /> <!-- Scroll: Enchant A-grade Armor (Exchangeable) -->
+	</product>
+	<product id="30" category="0">
+		<ingredient id="91663" count="200" /> <!-- L-Coin -->
+		<production id="951" /> <!-- Scroll: Enchant C-grade Weapon (Exchangeable) -->
+	</product>
+	<product id="31" category="0">
+		<ingredient id="91663" count="600" /> <!-- L-Coin -->
+		<production id="947" /> <!-- Scroll: Enchant B-grade Weapon (Exchangeable) -->
+	</product>
+	<product id="32" category="0">
+		<ingredient id="91663" count="1500" /> <!-- L-Coin -->
+		<production id="729" /> <!-- Scroll: Enchant A-grade Weapon (Exchangeable) -->
+	</product>
+	<product id="26" category="0">
 		<ingredient id="91663" count="50" /> <!-- L-Coin -->
 		<production id="952" /> <!-- Scroll: Enchant C-grade Armor (Exchangeable) -->
 	</product>
-	<product id="8" category="2">
+	<!-- Cat 1 -->
+	<product id="9" category="1">
+		<ingredient id="91663" count="2000" /> <!-- L-Coin -->
+		<production id="71899" /> <!-- Limited Sayha's Blessing (30 Day) -->
+	</product>
+	<product id="8" category="1">
 		<ingredient id="91663" count="120" /> <!-- L-Coin -->
 		<production id="71900" /> <!-- Limited Sayha's Blessing (1 Day) -->
 	</product>
-	<!--
-	<product id="9" category="2">
-		<ingredient id="91663" count="2000" /> L-Coin
-		<production id="71899" /> Limited Sayha's Blessing (30 Day)
-	</product>
-	-->
-	<product id="11" category="2">
+	<product id="11" category="1">
 		<ingredient id="91663" count="20" /> <!-- L-Coin -->
 		<production id="91641" /> <!-- Sayha's Blessing -->
 	</product>
-	<product id="12" category="2">
+	<product id="12" category="1">
 		<ingredient id="91663" count="6" /> <!-- L-Coin -->
 		<production id="90907" /> <!-- Soulshot Ticket -->
 	</product>
-	<product id="13" category="2">
+	<product id="13" category="1">
 		<ingredient id="91663" count="20" /> <!-- L-Coin -->
 		<production id="49674" /> <!-- XP Growth Scroll -->
 	</product>
-	<product id="14" category="2">
+	<product id="14" category="1">
 		<ingredient id="91663" count="6" /> <!-- L-Coin -->
 		<production id="91690" /> <!-- Special HP Recovery Potion -->
 	</product>
-	<!--
-	<product id="15" category="2">
-		<ingredient id="91663" count="20" /> L-Coin
-		<production id="91689" /> Blessed Scroll of Escape
+	<product id="15" category="1">
+		<ingredient id="91663" count="20" /> <!-- L-Coin -->
+		<production id="91689" /> <!-- Blessed Scroll of Escape -->
 	</product>
-	-->
-	<product id="16" category="2">
+	<product id="16" category="1">
 		<ingredient id="91663" count="300" /> <!-- L-Coin -->
 		<production id="90404" /> <!-- My Teleport Book -->
 	</product>
-	<product id="17" category="2">
+	<product id="17" category="1">
 		<ingredient id="91663" count="20" /> <!-- L-Coin -->
 		<production id="90405" /> <!-- My Teleport Scroll -->
 	</product>
-	<product id="18" category="2">
+	<product id="18" category="1">
 		<ingredient id="91663" count="50" /> <!-- L-Coin -->
 		<production id="91996" /> <!-- Scroll of Escape Pack: Tower of Insolence (Floors 1-7) -->
 	</product>
-	<product id="19" category="2">
+	<product id="19" category="1">
 		<ingredient id="91663" count="100" /> <!-- L-Coin -->
 		<production id="92973" /> <!-- Scroll of Escape Pack: Tower of Insolence (Floors 8-12) -->
 	</product>
-	<!--
-	<product id="20" category="3">
-		<ingredient id="91663" count="300" /> L-Coin
-		<production id="92400" accountDailyLimit="1" /> Forgotten Primeval Garden's Time Stone
+	<!-- Cat 2 -->
+	<product id="58" category="2">
+		<ingredient id="91663" count="600" /> <!-- L-Coin -->
+		<production id="93948" accountDailyLimit="1" /> <!-- Extra Pass: Transcendent Instance Zone -->
 	</product>
-	-->
-	<product id="21" category="3">
+	<product id="20" category="2">
+		<ingredient id="91663" count="300" /> <!-- L-Coin -->
+		<production id="92400" accountDailyLimit="1" /> <!-- Forgotten Primeval Garden's Time Stone -->
+	</product>
+	<product id="21" category="2">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="91983" accountDailyLimit="1" /> <!-- Primeval Isle's Time Stone -->
 	</product>
-	<!--
-	<product id="22" category="3">
-		<ingredient id="91663" count="200" /> L-Coin
-		<production id="93704" accountDailyLimit="1" /> Alligator Island's Time Stone
-	</product>
-	<product id="58" category="3">
-		<ingredient id="91663" count="600" /> L-Coin
-		<production id="93948" accountDailyLimit="1" /> Extra Pass: Transcendent Instance Zone
-	</product>
-	-->
-	<product id="33" category="3">
-		<ingredient id="91663" count="2000" /> <!-- L-Coin -->
-		<production id="92004" /> <!-- Inventory Expansion Ticket Lv. 1 -->
-	</product>
-	<product id="34" category="3">
-		<ingredient id="91663" count="2000" /> <!-- L-Coin -->
-		<production id="92005" /> <!-- Inventory Expansion Ticket Lv. 2 -->
-	</product>
-	<product id="35" category="3">
-		<ingredient id="91663" count="2000" /> <!-- L-Coin -->
-		<production id="92006" /> <!-- Inventory Expansion Ticket Lv. 3 -->
-	</product>
-	<product id="36" category="3">
-		<ingredient id="91663" count="4000" /> <!-- L-Coin -->
-		<production id="8618" /> <!-- Buff Expansion Book Lv. 1 -->
-	</product>
-	<product id="37" category="3">
-		<ingredient id="91663" count="4000" /> <!-- L-Coin -->
-		<production id="8619" /> <!-- Buff Expansion Book Lv. 2 -->
-	</product>
-	<product id="38" category="3">
-		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
-		<production id="32253" /> <!-- Infinite Mithril Quiver -->
-	</product>
-	<product id="39" category="3">
-		<ingredient id="91663" count="1000" /> <!-- L-Coin -->
-		<production id="32252" /> <!-- Infinite Silver Quiver -->
-	</product>
-	<product id="40" category="3">
-		<ingredient id="91663" count="400" /> <!-- L-Coin -->
-		<production id="32251" /> <!-- Infinite Steel Quiver -->
-	</product>
-	<product id="41" category="3">
+	<product id="22" category="2">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
-		<production id="32250" /> <!-- Infinite Bone Quiver -->
+		<production id="93704" accountDailyLimit="1" /> <!-- Alligator Island's Time Stone -->
 	</product>
-	<product id="42" category="4">
+	<!-- Cat 3 -->
+	<product id="49" category="3">
+		<ingredient id="57" count="50000" /> <!-- Adena -->
+		<production id="91641" accountDailyLimit="30" /> <!-- Sayha's Blessing -->
+	</product>
+	<product id="69" category="3">
+		<ingredient id="57" count="30000" /> <!-- Adena -->
+		<production id="91690" accountDailyLimit="100" /> <!-- Special HP Recovery Potion -->
+	</product>
+	<product id="59" category="3">
+		<ingredient id="57" count="30000000" /> <!-- Adena -->
+		<production id="94208" accountDailyLimit="1" /> <!-- Scroll of Blessing -->
+	</product>
+	<product id="68" category="3">
+		<ingredient id="57" count="150000" /> <!-- Adena -->
+		<production id="94377" accountDailyLimit="10" /> <!-- Supply Pouch -->
+	</product>
+	<product id="146" category="3">
+		<ingredient id="57" count="5000000" /> <!-- Adena -->
+		<production id="94781" /> <!-- Growth Rune Lv. 1 -->
+	</product>
+	<product id="147" category="3">
 		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="94780" accountDailyLimit="2" /> <!-- Growth Rune Fragment -->
+	</product>
+	<product id="148" category="3">
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="94690" accountDailyLimit="3" /> <!-- Package: Scroll: Boost Attack (10 pcs.) -->
+	</product>
+	<product id="149" category="3">
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="94691" accountDailyLimit="3" /> <!-- Package: Scroll: Boost Defense (10 pcs.) -->
+	</product>
+	<product id="150" category="3">
+		<ingredient id="57" count="500000" /> <!-- Adena -->
+		<production id="94777" accountDailyLimit="6" /> <!-- Berserker's Scroll -->
+	</product>
+	<!-- Cat 4 -->
+	<product id="183" category="4">
+		<ingredient id="91663" count="400" /> <!-- L-Coin -->
+		<production id="94778" accountDailyLimit="1" /> <!-- Ticket to Cruma Tower's Central Control Room -->
+	</product>
+	<product id="182" category="4">
+		<ingredient id="91663" count="200" /> <!-- L-Coin -->
+		<production id="94731" /> <!-- Shadai Treasure Chest -->
+	</product>
+	<product id="180" category="4">
+		<ingredient id="91663" count="500" /> <!-- L-Coin -->
+		<production id="94689" accountDailyLimit="3" /> <!-- Daily Kit: Growth -->
+	</product>
+	<product id="70" category="4">
+		<ingredient id="91663" count="200" /> <!-- L-Coin -->
+		<production id="93740" /> <!-- Giran Seal Pack -->
+	</product>
+	<product id="160" category="4">
+		<ingredient id="91663" count="4000" /> <!-- L-Coin -->
+		<production id="94735" /> <!-- Starter Kit -->
+	</product>
+	<product id="161" category="4">
+		<ingredient id="91663" count="6000" /> <!-- L-Coin -->
+		<production id="94736" accountDailyLimit="1" /> <!-- Settling Kit: Jewel -->
+	</product>
+	<product id="162" category="4">
+		<ingredient id="91663" count="6000" /> <!-- L-Coin -->
+		<production id="94737" accountDailyLimit="1" /> <!-- Settling Kit: Agathion -->
+	</product>
+	<product id="163" category="4">
+		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
+		<production id="94738" accountDailyLimit="3" /> <!-- Settling Kit: Upgrading -->
+	</product>
+	<product id="164" category="4">
+		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
+		<production id="95681" accountDailyLimit="1" /> <!-- Premium Growth Kit -->
+	</product>
+	<product id="168" category="4">
+		<ingredient id="57" count="2000000" /> <!-- Adena -->
 		<production id="91767" accountDailyLimit="1" /> <!-- Enchant Kit: Talisman of Aden -->
 	</product>
-	<product id="43" category="4">
+	<product id="169" category="4">
 		<ingredient id="57" count="1000000" /> <!-- Adena -->
-		<production id="92020" accountDailyLimit="1" /> <!-- Enchant Kit: Talisman of Eva -->
+		<production id="93926" accountDailyLimit="1" /> <!-- Enchant Package: Ring of Insolence -->
 	</product>
-	<product id="47" category="4">
+	<product id="170" category="4">
 		<ingredient id="57" count="1000000" /> <!-- Adena -->
-		<production id="91864" accountDailyLimit="1" /> <!-- Dragon Belt Pack -->
+		<production id="93927" accountDailyLimit="1" /> <!-- Enchant Package: Dragon Valley's Earring -->
 	</product>
-	<!--
-	<product id="59" category="4">
-		<ingredient id="57" count="30000000" /> Adena
-		<production id="94208" accountDailyLimit="1" /> Scroll of Blessing
+	<product id="171" category="4">
+		<ingredient id="57" count="3000000" /> <!-- Adena -->
+		<production id="93038" accountDailyLimit="1" /> <!-- Scroll: Enchant Aden Weapon -->
 	</product>
-	<product id="49" category="4">
-		<ingredient id="57" count="50000" /> Adena
-		<production id="91641" accountDailyLimit="30" /> Sayha's Blessing
-	</product>
-	-->
-	<product id="60" category="4">
+	<product id="172" category="4">
 		<ingredient id="57" count="100000" /> <!-- Adena -->
-		<production id="94271" accountDailyLimit="30" /> <!-- Scroll: Enchant Protection -->
+		<production id="95724" accountDailyLimit="20" /> <!-- Daily Enchant Scroll Pack -->
 	</product>
-	<product id="61" category="4">
-		<ingredient id="57" count="100000" /> <!-- Adena -->
-		<production id="94269" accountDailyLimit="30" /> <!-- Scroll: Enchant Attack -->
+	<product id="173" category="4">
+		<ingredient id="57" count="500000" /> <!-- Adena -->
+		<production id="91983" accountDailyLimit="4" /> <!-- Primeval Isle's Time Stone -->
 	</product>
-	<!--
-	<product id="68" category="4">
-		<ingredient id="57" count="150000" /> Adena
-		<production id="94377" accountDailyLimit="10" /> Supply Pouch
+	<product id="174" category="4">
+		<ingredient id="57" count="1000000" /> <!-- Adena -->
+		<production id="91689" /> <!-- Blessed Scroll of Escape -->
 	</product>
-	<product id="69" category="4">
-		<ingredient id="57" count="30000" /> Adena
-		<production id="91690" accountDailyLimit="100" /> Special HP Recovery Potion
-	</product>
-	<product id="1001" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Sirra's Blade (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94573" /> Package: +5 Sirra's Blade
-	</product>
-	<product id="1002" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Sword of Ipos (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94574" /> Package: +5 Sword of Ipos
-	</product>
-	<product id="1003" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Barakiel's Axe (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94575" /> Package: +5 Barakiel's Axe
-	</product>
-	<product id="1004" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Behemoth' Tuning Fork (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94576" /> Package: +5 Behemoth' Tuning Fork
-	</product>
-	<product id="1005" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Naga's Storm (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94577" /> Package: +5 Naga's Storm
-	</product>
-	<product id="1006" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Tiphon's Spear (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94578" /> Package: +5 Tiphon's Spear
-	</product>
-	<product id="1007" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Shyeed's Bow (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94579" /> Package: +5 Shyeed's Bow
-	</product>
-	<product id="1008" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Sobekk's Hurricane (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94580" /> Package: +5 Sobekk's Hurricane
-	</product>
-	<product id="1009" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Themis' Tongue (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94581" /> Package: +5 Themis' Tongue
-	</product>
-	<product id="1010" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Cabrio's Hand (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94582" /> Package: +5 Cabrio's Hand
-	</product>
-	<product id="1011" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Daimon Crystal (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94583" /> Package: +5 Daimon Crystal
-	</product>
-	<product id="1012" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Tallum Blade*Damascus (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94584" /> Package: +5 Tallum Blade*Damascus
-	</product>
-	<product id="1013" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Eclair Bijou (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94585" /> Package: +5 Eclair Bijou
-	</product>
-	<product id="1014" category="1"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Durendal (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="41" /> Giran Seal
-		<production id="94586" /> Package: +5 Durendal
-	</product>
-	<product id="1016" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Armor of Nightmare (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94587" /> Package: +5 Armor of Nightmare (Heavy) Armor
-	</product>
-	<product id="1017" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Helm of Nightmare (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94588" /> Package: +5 Helm of Nightmare (Heavy) Armor
-	</product>
-	<product id="1018" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Gauntlets of Nightmare (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94589" /> Package: +5 Gauntlets of Nightmare (Heavy) Armor
-	</product>
-	<product id="1019" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Boots of Nightmare (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94590" /> Package: +5 Boots of Nightmare (Heavy) Armor
-	</product>
-	<product id="1020" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Plate Armor (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94591" /> Package: +5 Majestic Plate Armor (Heavy) Armor
-	</product>
-	<product id="1021" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Circlet (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94592" /> Package: +5 Majestic Circlet (Heavy) Armor
-	</product>
-	<product id="1022" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Gauntlets (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94593" /> Package: +5 Majestic Gauntlets (Heavy) Armor
-	</product>
-	<product id="1023" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Boots (Heavy) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94594" /> Package: +5 Majestic Boots (Heavy) Armor
-	</product>
-	<product id="1024" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Leather Armor of Nightmare (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94595" /> Package: +5 Leather Armor of Nightmare (Light) Armor
-	</product>
-	<product id="1025" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Helm of Nightmare (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94596" /> Package: +5 Helm of Nightmare (Light) Armor
-	</product>
-	<product id="1026" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Gauntlets of Nightmare (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94597" /> Package: +5 Gauntlets of Nightmare (Light) Armor
-	</product>
-	<product id="1027" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Boots of Nightmare (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94598" /> Package: +5 Boots of Nightmare (Light) Armor
-	</product>
-	<product id="1028" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Leather Armor (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94599" /> Package: +5 Majestic Leather Armor (Light) Armor
-	</product>
-	<product id="1029" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Circlet (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94600" /> Package: +5 Majestic Circlet (Light) Armor
-	</product>
-	<product id="1030" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Gauntlets (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94601" /> Package: +5 Majestic Gauntlets (Light) Armor
-	</product>
-	<product id="1031" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Boots (Light) Armor (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94602" /> Package: +5 Majestic Boots (Light) Armor
-	</product>
-	<product id="1032" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Robe of Nightmare (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94603" /> Package: +5 Robe of Nightmare (Robe)
-	</product>
-	<product id="1033" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Helm of Nightmare (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94604" /> Package: +5 Helm of Nightmare (Robe)
-	</product>
-	<product id="1034" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Gauntlets of Nightmare (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94605" /> Package: +5 Gauntlets of Nightmare (Robe)
-	</product>
-	<product id="1035" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Boots of Nightmare (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94606" /> Package: +5 Boots of Nightmare (Robe)
-	</product>
-	<product id="1036" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Robe (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94607" /> Package: +5 Majestic Robe (Robe)
-	</product>
-	<product id="1037" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Circlet (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94608" /> Package: +5 Majestic Circlet (Robe)
-	</product>
-	<product id="1038" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Gauntlets (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94609" /> Package: +5 Majestic Gauntlets (Robe)
-	</product>
-	<product id="1039" category="2"> TODO: It has a 33% chance of giving the item, or 33% chance of giving a Package: Majestic Boots (Robe) (+0) and 33% chance of giving 6 Giran Seals
-		<ingredient id="92314" count="31" /> Giran Seal
-		<production id="94610" /> Package: +5 Majestic Boots (Robe)
-	</product>
-	<product id="1040" category="3"> TODO: It has a 50% chance of giving the item, or 50% chance of giving 7 Elixir Powders
-		<ingredient id="1" count="10" /> Elixir Powder. TODO: I don't have the ID for this item.
-		<production id="94314" /> Elixir
-	</product>
-	-->
 </list>
