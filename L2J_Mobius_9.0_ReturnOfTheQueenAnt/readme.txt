@@ -1,6 +1,6 @@
 L2J-Mobius Return of the Queen Ant
 Client: https://drive.google.com/u/0/uc?id=1GnsteyccQgKftHmpgtpuw4UEfVuqt4F0&export=download
-System: https://mega.nz/file/U9MnmKJS#VmR1Gs-o9ZfTWQRRXm3Qfkw24_qHHdzstxwxl54FBYk
+System: https://mega.nz/file/xp8yzATI#Sg9PAFn6J8RhsgbdOxjb4V1k_qWjBxNIJuS_dT6vO1Y
 
 JDK: http://www.mediafire.com/file/cgh3zupv80qdwv4/bellsoft-jdk15.0.2%252B10-windows-amd64.msi
 Eclipse: http://www.mediafire.com/file/h0gmazpv9hm6gjp/eclipse-java-2020-12-R-win32-x86_64.zip
