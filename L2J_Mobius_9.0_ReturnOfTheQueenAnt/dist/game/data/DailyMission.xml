@@ -12,18 +12,6 @@
 			<item id="81053" count="1" />
 		</items>
 	</reward>
-	<reward id="1102" name="Hunt elite monsters" requiredCompletion="80" isOneTime="false">
-		<!-- Kill 80 elite monsters -->
-		<handler name="boss">
-			<param name="minLevel">105</param>
-			<param name="maxLevel">255</param>
-		</handler>
-		<items>
-			<item id="-200" count="280" /> <!-- Clan Reputation -->
-			<item id="-300" count="1500" /> <!-- Fame -->
-			<item id="81053" count="1" />
-		</items>
-	</reward>
 	<reward id="1103" name="Field Raid Hunt" requiredCompletion="8" isOneTime="false">
 		<!-- Defeat any of the field raid bosses 8 times: Avenger Alusion, Avenger Graff Demon Venoma, Fiend Sarboth Watcher Tristan, Watcher Setheth Berserker Zetahl, Berserker Tabris Ferocious Valac, Arrogant Lebruum Witch Moira, Mad Cullan Akrikhin Charon, Scorpion King Votan -->
 		<handler name="monster">
@@ -136,6 +124,32 @@
 			<item id="81053" count="1" />
 		</items>
 	</reward>
+	<reward id="1113" name="Hunting in a Group Instance Zone" requiredCompletion="3" isOneTime="false">
+		<!-- Defeat any of the bosses in the following group instance zones of any difficulty level 3 times: Crystal Prison (Baylor), Nightmare Kamaloka, Ashen Shadow Camp, Krofin's Nest -->
+		<handler name="monster">
+			<!-- <param name="ids"> </param> --> <!-- TODO: Add correct monster ids. -->
+			<param name="minLevel">105</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" />
+		</items>
+	</reward>
+	<reward id="1114" name="Hunting in the Otherworldly Atelia Refinery" requiredCompletion="800" isOneTime="false">
+		<!-- Defeat 800 in the Otherworldly Atelia Refinery. -->
+		<handler name="monster">
+			<!-- <param name="ids"></param> --> <!-- TODO: Add correct monster ids. -->
+			<param name="minLevel">112</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> <!-- Clan Reputation -->
+			<item id="-300" count="1500" /> <!-- Fame -->
+			<item id="81053" count="1" />
+		</items>
+	</reward>
 	<reward id="2101" name="Field Boss I" requiredCompletion="3" isOneTime="false">
 		<!-- Defeat any of the field raid bosses 3 times: Baium Orfen Lilith Anakim Ishka -->
 		<handler name="monster">
@@ -172,24 +186,22 @@
 			<item id="-300" count="2500" /> <!-- Fame -->
 		</items>
 	</reward>
-	<!--
 	<reward id="2105" name="Dimensional Siege: Successful Attack" requiredCompletion="1" isOneTime="false">
-		Join a dimensional castle siege and achieve 1 win as a sieger.
+		<!-- Join a dimensional castle siege and achieve 1 win as a sieger. -->
 		<handler name="siege" />
 		<items>
-			<item id="-200" count="250" /> Clan Reputation
-			<item id="-300" count="2500" /> Fame
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
 		</items>
 	</reward>
 	<reward id="2106" name="Dimensional Siege: Successful Defense" requiredCompletion="1" isOneTime="false">
-		Join a dimensional castle siege and achieve 1 win as a defender.
+		<!-- Join a dimensional castle siege and achieve 1 win as a defender. -->
 		<handler name="siege" />
 		<items>
-			<item id="-200" count="250" /> Clan Reputation
-			<item id="-300" count="2500" /> Fame
+			<item id="-200" count="250" /> <!-- Clan Reputation -->
+			<item id="-300" count="2500" /> <!-- Fame -->
 		</items>
 	</reward>
-	-->
 	<reward id="2107" name="Olympiad Winner" requiredCompletion="15" isOneTime="false">
 		<!-- Achieve 15 wins in the Olympiad. -->
 		<handler name="olympiad" />
@@ -221,8 +233,8 @@
 			<item id="-200" count="350" /> <!-- Clan Reputation -->
 			<item id="-300" count="3500" /> <!-- Fame -->
 		</items>
-	</reward>
-	<reward id="3001" name="Reach Main Class Lv. 99" requiredCompletion="99" isMainClassOnly="true" isDualClassOnly="false">
+	</reward>	
+	<reward id="3201" name="Main Class - Basic Enhancement 1" requiredCompletion="99" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 99 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">99</param>
@@ -233,7 +245,7 @@
 			<item id="45811" count="1" />
 		</items>
 	</reward>
-	<reward id="3002" name="Reach Main Class Lv. 100" requiredCompletion="100" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3202" name="Main Class - Basic Enhancement 2" requiredCompletion="100" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 100 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">100</param>
@@ -244,7 +256,7 @@
 			<item id="45812" count="1" />
 		</items>
 	</reward>
-	<reward id="3003" name="Reach Main Class Lv. 101" requiredCompletion="101" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3203" name="Main Class - Initial Growth 1" requiredCompletion="101" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 101 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">101</param>
@@ -255,7 +267,7 @@
 			<item id="45813" count="1" />
 		</items>
 	</reward>
-	<reward id="3004" name="Reach Main Class Lv. 102" requiredCompletion="102" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3204" name="Main Class - Initial Growth 2" requiredCompletion="102" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 102 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">102</param>
@@ -266,7 +278,7 @@
 			<item id="45814" count="1" />
 		</items>
 	</reward>
-	<reward id="3005" name="Reach Main Class Lv. 103" requiredCompletion="103" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3205" name="Main Class - Initial Growth 3" requiredCompletion="103" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 103 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">103</param>
@@ -277,7 +289,7 @@
 			<item id="45815" count="1" />
 		</items>
 	</reward>
-	<reward id="3006" name="Reach Main Class Lv. 104" requiredCompletion="104" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3206" name="Main Class - Initial Growth 4" requiredCompletion="104" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 104 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">104</param>
@@ -288,7 +300,7 @@
 			<item id="45816" count="1" />
 		</items>
 	</reward>
-	<reward id="3007" name="Reach Main Class Lv. 105" requiredCompletion="105" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3207" name="Main Class - Initial Growth 5" requiredCompletion="105" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 105 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">105</param>
@@ -299,7 +311,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3008" name="Reach Main Class Lv. 106" requiredCompletion="106" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3208" name="Main Class - First Challenge 1" requiredCompletion="106" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 106 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">106</param>
@@ -310,7 +322,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3009" name="Reach Main Class Lv. 107" requiredCompletion="107" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3209" name="Main Class - First Challenge 2" requiredCompletion="107" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 107 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">107</param>
@@ -321,7 +333,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3010" name="Reach Main Class Lv. 108" requiredCompletion="108" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3210" name="Main Class - First Challenge 3" requiredCompletion="108" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 108 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">108</param>
@@ -332,7 +344,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3011" name="Reach Main Class Lv. 109" requiredCompletion="109" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3211" name="Main Class - First Challenge 4" requiredCompletion="109" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 109 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">109</param>
@@ -343,7 +355,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3012" name="Reach Main Class Lv. 110" requiredCompletion="110" isMainClassOnly="true" isDualClassOnly="false">
+	<reward id="3212" name="Main Class - Path of Ascetic 1" requiredCompletion="110" isMainClassOnly="true" isDualClassOnly="false">
 		<!-- Reach Lv. 110 for your main class while in a clan. -->
 		<handler name="level">
 			<param name="level">110</param>
@@ -354,7 +366,117 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3013" name="Reach Dual Class Lv. 99" requiredCompletion="99" isDualClassOnly="true">
+	<reward id="3213" name="Main Class - Path of Ascetic 2" requiredCompletion="111" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 111 while in a clan. -->
+		<handler name="level">
+			<param name="level">111</param>
+		</handler>
+		<items>
+			<item id="-200" count="3000" /> <!-- Clan Reputation -->
+			<item id="-300" count="30000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3214" name="Main Class - Path of Ascetic 3" requiredCompletion="112" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 112 while in a clan. -->
+		<handler name="level">
+			<param name="level">112</param>
+		</handler>
+		<items>
+			<item id="-200" count="3300" /> <!-- Clan Reputation -->
+			<item id="-300" count="33000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3215" name="Main Class - Path of Ascetic 4" requiredCompletion="113" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 113 while in a clan. -->
+		<handler name="level">
+			<param name="level">113</param>
+		</handler>
+		<items>
+			<item id="-200" count="3600" /> <!-- Clan Reputation -->
+			<item id="-300" count="36000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3216" name="Main Class - Path of Ascetic 5" requiredCompletion="114" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 114 while in a clan. -->
+		<handler name="level">
+			<param name="level">114</param>
+		</handler>
+		<items>
+			<item id="-200" count="3900" /> <!-- Clan Reputation -->
+			<item id="-300" count="39000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3217" name="Path of Patience 1" requiredCompletion="115" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 115 while in a clan. -->
+		<handler name="level">
+			<param name="level">115</param>
+		</handler>
+		<items>
+			<item id="-200" count="4200" /> <!-- Clan Reputation -->
+			<item id="-300" count="42000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3218" name="Path of Patience 2" requiredCompletion="116" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 116 while in a clan. -->
+		<handler name="level">
+			<param name="level">116</param>
+		</handler>
+		<items>
+			<item id="-200" count="4500" /> <!-- Clan Reputation -->
+			<item id="-300" count="45000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3219" name="Path of Patience 3" requiredCompletion="117" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 117 while in a clan. -->
+		<handler name="level">
+			<param name="level">117</param>
+		</handler>
+		<items>
+			<item id="-200" count="4800" /> <!-- Clan Reputation -->
+			<item id="-300" count="48000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3220" name="Path of Patience 4" requiredCompletion="118" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 118 while in a clan. -->
+		<handler name="level">
+			<param name="level">118</param>
+		</handler>
+		<items>
+			<item id="-200" count="5100" /> <!-- Clan Reputation -->
+			<item id="-300" count="51000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3221" name="Path of Patience 5" requiredCompletion="119" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 119 while in a clan. -->
+		<handler name="level">
+			<param name="level">119</param>
+		</handler>
+		<items>
+			<item id="-200" count="5400" /> <!-- Clan Reputation -->
+			<item id="-300" count="54000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3222" name="Fruits of Patience" requiredCompletion="120" isMainClassOnly="true" isDualClassOnly="false">
+		<!-- Reach Main Class Lv. 120 while in a clan. -->
+		<handler name="level">
+			<param name="level">120</param>
+		</handler>
+		<items>
+			<item id="-200" count="5700" /> <!-- Clan Reputation -->
+			<item id="-300" count="57000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3223" name="Dual Class - Basic Enhancement 1" requiredCompletion="99" isDualClassOnly="true">
 		<!-- Reach Lv. 99 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">99</param>
@@ -365,7 +487,7 @@
 			<item id="45811" count="1" />
 		</items>
 	</reward>
-	<reward id="3014" name="Reach Dual Class Lv. 100" requiredCompletion="100" isDualClassOnly="true">
+	<reward id="3224" name="Dual Class - Basic Enhancement 2" requiredCompletion="100" isDualClassOnly="true">
 		<!-- Reach Lv. 100 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">100</param>
@@ -376,7 +498,7 @@
 			<item id="45812" count="1" />
 		</items>
 	</reward>
-	<reward id="3015" name="Reach Dual Class Lv. 101" requiredCompletion="101" isDualClassOnly="true">
+	<reward id="3225" name="Dual Class - Initial Growth 1" requiredCompletion="101" isDualClassOnly="true">
 		<!-- Reach Lv. 101 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">101</param>
@@ -387,7 +509,7 @@
 			<item id="45813" count="1" />
 		</items>
 	</reward>
-	<reward id="3016" name="Reach Dual Class Lv. 102" requiredCompletion="102" isDualClassOnly="true">
+	<reward id="3226" name="Dual Class - Initial Growth 2" requiredCompletion="102" isDualClassOnly="true">
 		<!-- Reach Lv. 102 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">102</param>
@@ -398,7 +520,7 @@
 			<item id="45814" count="1" />
 		</items>
 	</reward>
-	<reward id="3017" name="Reach Dual Class Lv. 103" requiredCompletion="103" isDualClassOnly="true">
+	<reward id="3227" name="Dual Class - Initial Growth 3" requiredCompletion="103" isDualClassOnly="true">
 		<!-- Reach Lv. 103 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">103</param>
@@ -409,7 +531,7 @@
 			<item id="45815" count="1" />
 		</items>
 	</reward>
-	<reward id="3018" name="Reach Dual Class Lv. 104" requiredCompletion="104" isDualClassOnly="true">
+	<reward id="3228" name="Dual Class - Initial Growth 4" requiredCompletion="104" isDualClassOnly="true">
 		<!-- Reach Lv. 104 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">104</param>
@@ -420,7 +542,7 @@
 			<item id="45816" count="1" />
 		</items>
 	</reward>
-	<reward id="3019" name="Reach Dual Class Lv. 105" requiredCompletion="105" isDualClassOnly="true">
+	<reward id="3229" name="Dual Class - Initial Growth 5" requiredCompletion="105" isDualClassOnly="true">
 		<!-- Reach Lv. 105 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">105</param>
@@ -431,7 +553,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3020" name="Reach Dual Class Lv. 106" requiredCompletion="106" isDualClassOnly="true">
+	<reward id="3230" name="Dual Class - First Challenge 1" requiredCompletion="106" isDualClassOnly="true">
 		<!-- Reach Lv. 106 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">106</param>
@@ -442,7 +564,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3021" name="Reach Dual Class Lv. 107" requiredCompletion="107" isDualClassOnly="true">
+	<reward id="3231" name="Dual Class - First Challenge 2" requiredCompletion="107" isDualClassOnly="true">
 		<!-- Reach Lv. 107 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">107</param>
@@ -453,7 +575,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3022" name="Reach Dual Class Lv. 108" requiredCompletion="108" isDualClassOnly="true">
+	<reward id="3232" name="Dual Class - First Challenge 3" requiredCompletion="108" isDualClassOnly="true">
 		<!-- Reach Lv. 108 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">108</param>
@@ -464,7 +586,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3023" name="Reach Dual Class Lv. 109" requiredCompletion="109" isDualClassOnly="true">
+	<reward id="3233" name="Dual Class - First Challenge 4" requiredCompletion="109" isDualClassOnly="true">
 		<!-- Reach Lv. 109 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">109</param>
@@ -475,7 +597,7 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<reward id="3024" name="Reach Dual Class Lv. 110" requiredCompletion="110" isDualClassOnly="true">
+	<reward id="3234" name="Dual Class - Path of Ascetic 1" requiredCompletion="110" isDualClassOnly="true">
 		<!-- Reach Lv. 110 for your dual class while in a clan. -->
 		<handler name="level">
 			<param name="level">110</param>
@@ -486,7 +608,118 @@
 			<item id="47715" count="1" />
 		</items>
 	</reward>
-	<!--
+	<reward id="3235" name="Dual Class - Path of Ascetic 2" requiredCompletion="111" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 111 while in a clan. -->
+		<handler name="level">
+			<param name="level">111</param>
+		</handler>
+		<items>
+			<item id="-200" count="3000" /> <!-- Clan Reputation -->
+			<item id="-300" count="30000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3236" name="Dual Class - Path of Ascetic 3" requiredCompletion="112" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 112 while in a clan. -->
+		<handler name="level">
+			<param name="level">112</param>
+		</handler>
+		<items>
+			<item id="-200" count="3300" /> <!-- Clan Reputation -->
+			<item id="-300" count="33000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3237" name="Dual Class - Path of Ascetic 4" requiredCompletion="113" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 113 while in a clan. -->
+		<handler name="level">
+			<param name="level">113</param>
+		</handler>
+		<items>
+			<item id="-200" count="3600" /> <!-- Clan Reputation -->
+			<item id="-300" count="36000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3238" name="Dual Class - Path of Ascetic 5" requiredCompletion="114" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 114 while in a clan. -->
+		<handler name="level">
+			<param name="level">114</param>
+		</handler>
+		<items>
+			<item id="-200" count="3900" /> <!-- Clan Reputation -->
+			<item id="-300" count="39000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3239" name="Dual Class - Path of Patience 1" requiredCompletion="115" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 115 while in a clan. -->
+		<handler name="level">
+			<param name="level">115</param>
+		</handler>
+		<items>
+			<item id="-200" count="4200" /> <!-- Clan Reputation -->
+			<item id="-300" count="42000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3240" name="Dual Class - Path of Patience 2" requiredCompletion="116" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 116 while in a clan. -->
+		<handler name="level">
+			<param name="level">116</param>
+		</handler>
+		<items>
+			<item id="-200" count="4500" /> <!-- Clan Reputation -->
+			<item id="-300" count="45000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3241" name="Dual Class - Path of Patience 3" requiredCompletion="117" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 117 while in a clan. -->
+		<handler name="level">
+			<param name="level">117</param>
+		</handler>
+		<items>
+			<item id="-200" count="4800" /> <!-- Clan Reputation -->
+			<item id="-300" count="48000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3242" name="Dual Class - Path of Patience 4" requiredCompletion="118" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 118 while in a clan. -->
+		<handler name="level">
+			<param name="level">118</param>
+		</handler>
+		<items>
+			<item id="-200" count="5100" /> <!-- Clan Reputation -->
+			<item id="-300" count="51000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3243" name="Dual Class - Path of Patience 5" requiredCompletion="119" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 119 while in a clan. -->
+		<handler name="level">
+			<param name="level">119</param>
+		</handler>
+		<items>
+			<item id="-200" count="5400" /> <!-- Clan Reputation -->
+			<item id="-300" count="54000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	<reward id="3244" name="Dual Class - Fruits of Patience" requiredCompletion="120" isDualClassOnly="true">
+		<!-- Reach Dual Class Lv. 120 while in a clan. -->
+		<handler name="level">
+			<param name="level">120</param>
+		</handler>
+		<items>
+			<item id="-200" count="5700" /> <!-- Clan Reputation -->
+			<item id="-300" count="57000" /> <!-- Fame -->
+			<item id="47715" count="1" />
+		</items>
+	</reward>
+	
+	<!-- 
 	<reward id="3025" name="Obtain Noblesse status" requiredCompletion="1">
 		Obtain the Noblesse status while in a clan.
 		<handler name="noble">
@@ -510,6 +743,7 @@
 		</items>
 	</reward>
 	-->
+		
 	<reward id="3027" name="Monster Hunting: First Steps" requiredCompletion="20000">
 		<!-- Hunt 20,000 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) -->
 		<handler name="monster">
@@ -979,226 +1213,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="3082" name="Reach Main Class Lv. 111" requiredCompletion="111" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 111 while in a clan. -->
-		<handler name="level">
-			<param name="level">111</param>
-		</handler>
-		<items>
-			<item id="-200" count="3000" /> <!-- Clan Reputation -->
-			<item id="-300" count="30000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3083" name="Reach Main Class Lv. 112" requiredCompletion="112" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 112 while in a clan. -->
-		<handler name="level">
-			<param name="level">112</param>
-		</handler>
-		<items>
-			<item id="-200" count="3300" /> <!-- Clan Reputation -->
-			<item id="-300" count="33000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3084" name="Reach Main Class Lv. 113" requiredCompletion="113" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 113 while in a clan. -->
-		<handler name="level">
-			<param name="level">113</param>
-		</handler>
-		<items>
-			<item id="-200" count="3600" /> <!-- Clan Reputation -->
-			<item id="-300" count="36000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3085" name="Reach Main Class Lv. 114" requiredCompletion="114" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 114 while in a clan. -->
-		<handler name="level">
-			<param name="level">114</param>
-		</handler>
-		<items>
-			<item id="-200" count="3900" /> <!-- Clan Reputation -->
-			<item id="-300" count="39000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3086" name="Reach Main Class Lv. 115" requiredCompletion="115" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 115 while in a clan. -->
-		<handler name="level">
-			<param name="level">115</param>
-		</handler>
-		<items>
-			<item id="-200" count="4200" /> <!-- Clan Reputation -->
-			<item id="-300" count="42000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3087" name="Reach Main Class Lv. 116" requiredCompletion="116" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 116 while in a clan. -->
-		<handler name="level">
-			<param name="level">116</param>
-		</handler>
-		<items>
-			<item id="-200" count="4500" /> <!-- Clan Reputation -->
-			<item id="-300" count="45000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3088" name="Reach Main Class Lv. 117" requiredCompletion="117" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 117 while in a clan. -->
-		<handler name="level">
-			<param name="level">117</param>
-		</handler>
-		<items>
-			<item id="-200" count="4800" /> <!-- Clan Reputation -->
-			<item id="-300" count="48000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3089" name="Reach Main Class Lv. 118" requiredCompletion="118" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 118 while in a clan. -->
-		<handler name="level">
-			<param name="level">118</param>
-		</handler>
-		<items>
-			<item id="-200" count="5100" /> <!-- Clan Reputation -->
-			<item id="-300" count="51000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3090" name="Reach Main Class Lv. 119" requiredCompletion="119" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 119 while in a clan. -->
-		<handler name="level">
-			<param name="level">119</param>
-		</handler>
-		<items>
-			<item id="-200" count="5400" /> <!-- Clan Reputation -->
-			<item id="-300" count="54000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3091" name="Reach Main Class Lv. 120" requiredCompletion="120" isMainClassOnly="true" isDualClassOnly="false">
-		<!-- Reach Main Class Lv. 120 while in a clan. -->
-		<handler name="level">
-			<param name="level">120</param>
-		</handler>
-		<items>
-			<item id="-200" count="5700" /> <!-- Clan Reputation -->
-			<item id="-300" count="57000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3092" name="Reach Dual Class Lv. 111" requiredCompletion="111" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 111 while in a clan. -->
-		<handler name="level">
-			<param name="level">111</param>
-		</handler>
-		<items>
-			<item id="-200" count="3000" /> <!-- Clan Reputation -->
-			<item id="-300" count="30000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3093" name="Reach Dual Class Lv. 112" requiredCompletion="112" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 112 while in a clan. -->
-		<handler name="level">
-			<param name="level">112</param>
-		</handler>
-		<items>
-			<item id="-200" count="3300" /> <!-- Clan Reputation -->
-			<item id="-300" count="33000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3094" name="Reach Dual Class Lv. 113" requiredCompletion="113" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 113 while in a clan. -->
-		<handler name="level">
-			<param name="level">113</param>
-		</handler>
-		<items>
-			<item id="-200" count="3600" /> <!-- Clan Reputation -->
-			<item id="-300" count="36000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3095" name="Reach Dual Class Lv. 114" requiredCompletion="114" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 114 while in a clan. -->
-		<handler name="level">
-			<param name="level">114</param>
-		</handler>
-		<items>
-			<item id="-200" count="3900" /> <!-- Clan Reputation -->
-			<item id="-300" count="39000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3096" name="Reach Dual Class Lv. 115" requiredCompletion="115" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 115 while in a clan. -->
-		<handler name="level">
-			<param name="level">115</param>
-		</handler>
-		<items>
-			<item id="-200" count="4200" /> <!-- Clan Reputation -->
-			<item id="-300" count="42000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3097" name="Reach Dual Class Lv. 116" requiredCompletion="116" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 116 while in a clan. -->
-		<handler name="level">
-			<param name="level">116</param>
-		</handler>
-		<items>
-			<item id="-200" count="4500" /> <!-- Clan Reputation -->
-			<item id="-300" count="45000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3098" name="Reach Dual Class Lv. 117" requiredCompletion="117" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 117 while in a clan. -->
-		<handler name="level">
-			<param name="level">117</param>
-		</handler>
-		<items>
-			<item id="-200" count="4800" /> <!-- Clan Reputation -->
-			<item id="-300" count="48000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3099" name="Reach Dual Class Lv. 118" requiredCompletion="118" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 118 while in a clan. -->
-		<handler name="level">
-			<param name="level">118</param>
-		</handler>
-		<items>
-			<item id="-200" count="5100" /> <!-- Clan Reputation -->
-			<item id="-300" count="51000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3100" name="Reach Dual Class Lv. 119" requiredCompletion="119" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 119 while in a clan. -->
-		<handler name="level">
-			<param name="level">119</param>
-		</handler>
-		<items>
-			<item id="-200" count="5400" /> <!-- Clan Reputation -->
-			<item id="-300" count="54000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
-	<reward id="3101" name="Reach Dual Class Lv. 120" requiredCompletion="120" isDualClassOnly="true">
-		<!-- Reach Dual Class Lv. 120 while in a clan. -->
-		<handler name="level">
-			<param name="level">120</param>
-		</handler>
-		<items>
-			<item id="-200" count="5700" /> <!-- Clan Reputation -->
-			<item id="-300" count="57000" /> <!-- Fame -->
-			<item id="47715" count="1" />
-		</items>
-	</reward>
+	
 	<!--
 	<reward id="4101" name="Power of Freya's Scroll" requiredCompletion="24" isOneTime="false">
 		Use any of the following scrolls 24 times: Freya's Frozen Scroll Freya's Frozen Scroll (Event) Freya's Scroll of Storm Freya's Scroll of Storm (Event) PA Scroll of Storm
@@ -1266,7 +1281,81 @@
 			<item id="-300" count="250" /> Fame
 		</items>
 	</reward>
-	<reward id="4109" name="Mentee training" requiredCompletion="2" isOneTime="false">
+	<reward id="4108" name="Use a Time Stone in a Session Zone" requiredCompletion="8" isOneTime="false">
+		Use any of the following items 3 times. Abandoned Coal Mines' Time Stone, Storm Isle's Time Stone, Primeval Isle's Time Stone, Golden Altar's Time Stone
+		<handler name="useitem">
+			<param name="minLevel">100</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="25" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+		</items>
+	</reward>
+	<reward id="4110" name="Hunting at lunchtime" requiredCompletion="300" isOneTime="false">
+		Kill 300 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) Available daily from 11:30 a.m. till 2:30 p.m. The quest progress is saved.
+		<handler name="monster">
+			<param name="minLevel">101</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="30" /> Clan Reputation
+			<item id="-300" count="300" /> Fame
+			<item id="81455" count="2" /> Special Clan Reward Lv. 1
+		</items>
+	</reward>
+	<reward id="4111" name="Evening hunt!" requiredCompletion="300" isOneTime="false" >
+		Kill 300 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.) Available daily from 5:30 p.m. till 8:30 p.m. The quest progress is saved.
+		<handler name="monster">
+			<param name="minLevel">101</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="30" /> Clan Reputation
+			<item id="-300" count="300" /> Fame
+			<item id="81455" count="2" /> Special Clan Reward Lv. 1
+		</items>
+	</reward>
+	<reward id="4112" name="Hunting in the Corroded Fields" requiredCompletion="900" isOneTime="false">
+		Kill 900 monsters in the Corroded Fields.
+		<handler name="monster">
+		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="minLevel">100</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="280" /> Clan Reputation
+			<item id="-300" count="1500" /> Fame
+			<item id="81053" count="1" /> Vitality
+		</items>
+	</reward>
+	<reward id="4113" name="Great Hunt" requiredCompletion="1800" isOneTime="false">
+		Fight fire with fire! Kill 1800 monsters in any hunting zone. (A monster kill counts only when XP is gained from it.)
+		<handler name="useitem">
+		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="minLevel">105</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="35" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+			<item id="81782" count="1" /> Watermelon Seed
+		</items>
+	</reward>
+	<reward id="4114" name="Great Hunt in Group Instance Zones" requiredCompletion="3" isOneTime="false">
+		Fight fire with fire! Defeat any of the bosses in the following group instance zones of any difficulty level 3 times: Crystal Prison (Baylor), Nightmare Kamaloka, Ashen Shadow Camp, Krofin's Nest
+		<handler name="useitem">
+		 <param name="ids"></param> TODO: Add correct monster ids. 
+			<param name="minLevel">105</param>
+			<param name="maxLevel">255</param>
+		</handler>
+		<items>
+			<item id="-200" count="35" /> Clan Reputation
+			<item id="-300" count="250" /> Fame
+			<item id="81782" count="1" /> Watermelon Seed
+		</items>
+	</reward>
+	<reward id="4115" name="Mentee training" requiredCompletion="2" isOneTime="false">
 		Train 2 Mentees. (Mentorship lasts until the Mentee reaches Lv. 105.) To add a Mentee open the Friend Manager window (Alt+Y) and open the Mentorship tab.
 		<handler name="mentor">
 			<param name="minLevel">85</param>
