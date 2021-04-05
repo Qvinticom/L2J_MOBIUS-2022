@@ -130,8 +130,8 @@ public class Q10981_UnbearableWolvesHowling extends Quest
 			{
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
-				killer.sendPacket(new ExShowScreenMessage("You hunted all monsters.#Use the Scroll of Escape in you inventory to return to Trader Jackson", 5000));
 				giveItems(killer, SOE_TO_JACKSON);
+				showOnScreenMsg(killer, NpcStringId.YOU_VE_KILLED_ALL_THE_MONSTERS_NUSE_THE_SCROLL_OF_ESCAPE_IN_YOUR_INVENTORY_TO_RETURN_TO_ARMOR_MERCHANT_JACKSON, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
