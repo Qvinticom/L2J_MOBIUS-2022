@@ -38,9 +38,10 @@ public class Zaken extends AbstractNpcAI
 	// NPC
 	private static final int ZAKEN = 29022;
 	// Location
-	private static final int ZAKEN_X = 52207;
-	private static final int ZAKEN_Y = 217230;
-	private static final int ZAKEN_Z = -3341;
+	private static final int ZAKEN_X = 42675;
+	private static final int ZAKEN_Y = 207567;
+	private static final int ZAKEN_Z = -3752;
+	private static final int ZAKEN_HEADING = 7835;
 	// Misc
 	private static final byte ALIVE = 0;
 	private static final byte DEAD = 1;
@@ -82,7 +83,7 @@ public class Zaken extends AbstractNpcAI
 	
 	private void spawnBoss()
 	{
-		final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, 0, false, 0);
+		final GrandBossInstance zaken = (GrandBossInstance) addSpawn(ZAKEN, ZAKEN_X, ZAKEN_Y, ZAKEN_Z, ZAKEN_HEADING, false, 0);
 		GrandBossManager.getInstance().setBossStatus(ZAKEN, ALIVE);
 		GrandBossManager.getInstance().addBoss(zaken);
 		zaken.broadcastPacket(new PlaySound(1, "BS01_A", 1, zaken.getObjectId(), zaken.getX(), zaken.getY(), zaken.getZ()));
