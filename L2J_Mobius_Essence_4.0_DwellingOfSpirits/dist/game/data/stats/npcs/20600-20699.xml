@@ -4155,7 +4155,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="1000" clanHelpRange="0" isAggressive="false">
 			<clanList>
 				<clan>ORC</clan>
 			</clanList>
@@ -4924,7 +4924,7 @@
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+		<ai aggroRange="450" clanHelpRange="0" isAggressive="false">
 			<clanList>
 				<clan>ALL</clan>
 			</clanList>
