@@ -23,19 +23,25 @@ public class LCoinShopProductHolder
 {
 	private final int _id;
 	private final int _category;
+	private final int _minLevel;
+	private final int _maxLevel;
 	private final int[] _ingredientIds;
 	private final long[] _ingredientQuantities;
 	private final int _productionId;
 	private final int _accountDailyLimit;
+	private final int _accountBuyLimit;
 	
-	public LCoinShopProductHolder(int id, int category, int[] ingredientIds, long[] ingredientQuantities, int productionId, int accountDailyLimit)
+	public LCoinShopProductHolder(int id, int category, int minLevel, int maxLevel, int[] ingredientIds, long[] ingredientQuantities, int productionId, int accountDailyLimit, int accountBuyLimit)
 	{
 		_id = id;
 		_category = category;
+		_minLevel = minLevel;
+		_maxLevel = maxLevel;
 		_ingredientIds = ingredientIds;
 		_ingredientQuantities = ingredientQuantities;
 		_productionId = productionId;
 		_accountDailyLimit = accountDailyLimit;
+		_accountBuyLimit = accountBuyLimit;
 	}
 	
 	public int getId()
@@ -46,6 +52,16 @@ public class LCoinShopProductHolder
 	public int getCategory()
 	{
 		return _category;
+	}
+	
+	public int getMinLevel()
+	{
+		return _minLevel;
+	}
+	
+	public int getMaxLevel()
+	{
+		return _maxLevel;
 	}
 	
 	public int[] getIngredientIds()
@@ -66,5 +82,10 @@ public class LCoinShopProductHolder
 	public int getAccountDailyLimit()
 	{
 		return _accountDailyLimit;
+	}
+	
+	public int getAccountBuyLimit()
+	{
+		return _accountBuyLimit;
 	}
 }

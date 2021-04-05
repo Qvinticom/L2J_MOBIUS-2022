@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -68,6 +69,12 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 			return;
 		}
 		
+		if ((player.getLevel() < product.getMinLevel()) || (player.getLevel() > product.getMaxLevel()))
+		{
+			player.sendPacket(SystemMessageId.YOUR_LEVEL_CANNOT_PURCHASE_THIS_ITEM);
+			return;
+		}
+		
 		if (player.hasItemRequest() || player.hasRequest(PrimeShopRequest.class))
 		{
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
@@ -77,19 +84,28 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Add request.
 		player.addRequest(new PrimeShopRequest(player));
 		
-		// Check account daily limit.
-		if (product.getAccountDailyLimit() > 0)
+		// Check limits.
+		if (product.getAccountDailyLimit() > 0) // Sale period.
 		{
-			if (player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) >= product.getAccountDailyLimit())
+			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountDailyLimit())
 			{
-				if ((player.getAccountVariables().getLong("LCSTime" + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
+				if ((player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
 				{
 					player.sendMessage("You have reached your daily limit."); // TODO: Retail system message?
 					player.removeRequest(PrimeShopRequest.class);
 					return;
 				}
 				// Reset limit.
-				player.getAccountVariables().set("LCSCount" + product.getProductionId(), 0);
+				player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0);
+			}
+		}
+		else if (product.getAccountBuyLimit() > 0) // Count limit.
+		{
+			if (player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountBuyLimit())
+			{
+				player.sendMessage("You cannot buy any more of this item."); // TODO: Retail system message?
+				player.removeRequest(PrimeShopRequest.class);
+				return;
 			}
 		}
 		
@@ -137,11 +153,15 @@ public class RequestPurchaseLimitShopItemBuy implements IClientIncomingPacket
 		// Reward.
 		player.addItem("LCoinShop", product.getProductionId(), _amount, player, true);
 		
-		// Update player variables.
+		// Update account variables.
 		if (product.getAccountDailyLimit() > 0)
 		{
-			player.getAccountVariables().set("LCSTime" + product.getProductionId(), Chronos.currentTimeMillis());
-			player.getAccountVariables().set("LCSCount" + product.getProductionId(), player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) + 1);
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + product.getProductionId(), Chronos.currentTimeMillis());
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) + 1);
+		}
+		else if (product.getAccountBuyLimit() > 0)
+		{
+			player.getAccountVariables().set(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) + 1);
 		}
 		
 		// Remove request.

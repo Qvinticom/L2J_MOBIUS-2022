@@ -23,6 +23,7 @@ import org.l2jmobius.commons.util.Chronos;
 import org.l2jmobius.gameserver.data.xml.LCoinShopData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.LCoinShopProductHolder;
+import org.l2jmobius.gameserver.model.variables.AccountVariables;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -75,27 +76,38 @@ public class ExPurchaseLimitShopItemListNew implements IClientOutgoingPacket
 			packet.writeC(-1); // ?
 			packet.writeC(-1); // ?
 			
-			// Sale period.
-			if (product.getAccountDailyLimit() > 0)
+			// Check limits.
+			if (product.getAccountDailyLimit() > 0) // Sale period.
 			{
-				if (_player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0) >= product.getAccountDailyLimit())
+				if (_player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountDailyLimit())
 				{
-					if ((_player.getAccountVariables().getLong("LCSTime" + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
+					if ((_player.getAccountVariables().getLong(AccountVariables.LCOIN_SHOP_PRODUCT_TIME + product.getProductionId(), 0) + 86400000) > Chronos.currentTimeMillis())
 					{
 						packet.writeD(0x00);
 					}
 					else // Reset limit.
 					{
-						_player.getAccountVariables().remove("LCSCount" + product.getProductionId());
+						_player.getAccountVariables().remove(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId());
 						packet.writeD(product.getAccountDailyLimit());
 					}
 				}
 				else
 				{
-					packet.writeD(product.getAccountDailyLimit() - _player.getAccountVariables().getInt("LCSCount" + product.getProductionId(), 0));
+					packet.writeD(product.getAccountDailyLimit() - _player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0));
 				}
 			}
-			else // No account daily limit.
+			else if (product.getAccountBuyLimit() > 0) // Count limit.
+			{
+				if (_player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0) >= product.getAccountBuyLimit())
+				{
+					packet.writeD(0x00);
+				}
+				else
+				{
+					packet.writeD(product.getAccountBuyLimit() - _player.getAccountVariables().getInt(AccountVariables.LCOIN_SHOP_PRODUCT_COUNT + product.getProductionId(), 0));
+				}
+			}
+			else // No account limits.
 			{
 				packet.writeD(0x01);
 			}

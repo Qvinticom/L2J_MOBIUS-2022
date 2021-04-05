@@ -88,6 +88,8 @@ public class LCoinShopData implements IXmlReader
 							
 							final int id = parseInteger(attrs, "id");
 							final int category = parseInteger(attrs, "category");
+							final int minLevel = parseInteger(attrs, "minLevel", 1);
+							final int maxLevel = parseInteger(attrs, "maxLevel", 999);
 							final int[] ingredientIds = new int[5];
 							ingredientIds[0] = 0;
 							ingredientIds[1] = 0;
@@ -102,6 +104,7 @@ public class LCoinShopData implements IXmlReader
 							ingredientQuantities[4] = 0;
 							int productionId = 0;
 							int accountDailyLimit = 0;
+							int accountBuyLimit = 0;
 							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
 							{
 								attrs = b.getAttributes();
@@ -164,6 +167,7 @@ public class LCoinShopData implements IXmlReader
 								{
 									productionId = parseInteger(attrs, "id");
 									accountDailyLimit = parseInteger(attrs, "accountDailyLimit", 0);
+									accountBuyLimit = parseInteger(attrs, "accountBuyLimit", 0);
 									
 									final Item item = ItemTable.getInstance().getTemplate(productionId);
 									if (item == null)
@@ -174,7 +178,7 @@ public class LCoinShopData implements IXmlReader
 								}
 							}
 							
-							_products.add(new LCoinShopProductHolder(id, category, ingredientIds, ingredientQuantities, productionId, accountDailyLimit));
+							_products.add(new LCoinShopProductHolder(id, category, minLevel, maxLevel, ingredientIds, ingredientQuantities, productionId, accountDailyLimit, accountBuyLimit));
 						}
 					}
 				}

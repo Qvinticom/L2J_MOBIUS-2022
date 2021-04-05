@@ -20,7 +20,8 @@
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
 											<xs:attribute type="xs:int" name="id" use="optional"/>
-											<xs:attribute type="xs:long" name="accountDailyLimit" use="optional"/>
+											<xs:attribute type="xs:int" name="accountDailyLimit" use="optional"/>
+											<xs:attribute type="xs:int" name="accountBuyLimit" use="optional"/>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -28,6 +29,8 @@
 						</xs:sequence>
 						<xs:attribute type="xs:int" name="id" use="optional"/>
 						<xs:attribute type="xs:byte" name="category" use="optional"/>
+						<xs:attribute type="xs:int" name="minLevel" use="optional"/>
+						<xs:attribute type="xs:int" name="maxLevel" use="optional"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
