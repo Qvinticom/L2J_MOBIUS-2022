@@ -55,7 +55,7 @@ public class Q10295_RespectforGraves extends Quest
 	private static final ItemHolder SAYHA_GUST = new ItemHolder(91776, 9);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
-	private static final int MIN_LEVEL = 42;
+	private static final int MIN_LEVEL = 45;
 	private static final int MAX_LEVEL = 52;
 	
 	public Q10295_RespectforGraves()
