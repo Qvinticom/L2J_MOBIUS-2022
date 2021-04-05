@@ -143,7 +143,7 @@ public class Q10955_NewLifeLessons extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						htmltext = "34210-01.html";
+						htmltext = "34210-03a.html";
 					}
 					else if (qs.isCond(2))
 					{
