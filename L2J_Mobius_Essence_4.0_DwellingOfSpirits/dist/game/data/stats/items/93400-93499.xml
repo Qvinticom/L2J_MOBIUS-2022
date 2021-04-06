@@ -883,6 +883,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" chance="20"/>
+			<item id="92405" min="1" max="1" chance="20"/>
+			<item id="92407" min="1" max="1" chance="20"/>
+			<item id="92421" min="1" max="1" chance="20"/>
+			<item id="92408" min="1" max="1" chance="20"/>
+		</capsuled_items>
 	</item>
 	<item id="93452" name="Scroll of Escape: Fortress" type="EtcItem">
 		<!-- Magical scroll that transports you to your Fortress. If you don't have a Fortress, it will relocate you to the nearest village. -->

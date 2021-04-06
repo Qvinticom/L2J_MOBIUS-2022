@@ -325,6 +325,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="10" max="10" chance="100" /> <!-- Dragon Belt Pack -->
+			<item id="94623" min="1" max="1" chance="100" /> <!-- Belt Craft Coupon -->
+		</capsuled_items>
 	</item>
 	<item id="94623" name="Belt Craft Coupon" type="EtcItem">
 		<!-- Can be used to create Dragon Belt in the Special Craft tab of L-Coin Store. -->
@@ -345,6 +350,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="1" maxEnchant="1" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94625" name="+2 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -355,7 +364,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="STEEL" /><set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="2" maxEnchant="2" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
+
 	</item>
 	<item id="94626" name="+3 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -367,6 +380,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="3" maxEnchant="3" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94627" name="+4 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -378,6 +395,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94628" name="+5 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -389,6 +410,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94629" name="+6 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -400,6 +425,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94630" name="+7 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -411,6 +440,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94631" name="+8 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -422,6 +455,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="8" maxEnchant="8" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94632" name="+9 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -433,6 +470,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="9" maxEnchant="9" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94633" name="+10 Blessed Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -444,6 +485,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="1" max="1" minEnchant="10" maxEnchant="10" chance="100" /> <!-- Blessed Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94634" name="Tag's Supplies" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->

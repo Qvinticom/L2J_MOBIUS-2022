@@ -1073,6 +1073,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91864" min="10" max="10" chance="100" /> <!-- Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="93381" name="Enchant Kit: Talisman of Aden (10 pcs.)" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

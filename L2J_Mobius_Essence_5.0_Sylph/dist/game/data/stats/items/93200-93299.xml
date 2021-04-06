@@ -697,6 +697,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92405" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92407" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92421" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92408" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+		</capsuled_items>
 	</item>
 	<item id="93263" name="+5 Top-grade A-grade Weapon Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain one of the following items. -->
@@ -995,6 +1003,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="92404" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92405" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92407" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92421" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+			<item id="92408" min="1" max="1" minEnchant="5" maxEnchant="5" chance="20" />
+		</capsuled_items>
 	</item>
 	<item id="93288" name="+6 Talisman of Eva Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->

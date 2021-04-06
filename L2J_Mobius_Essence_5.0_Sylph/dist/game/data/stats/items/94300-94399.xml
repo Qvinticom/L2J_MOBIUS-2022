@@ -528,6 +528,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91862" min="1" max="1" minEnchant="4" maxEnchant="4" chance="100" /> <!-- Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94346" name="+5 Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -539,6 +543,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91862" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94347" name="+6 Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -550,6 +558,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91862" min="1" max="1" minEnchant="6" maxEnchant="6" chance="100" /> <!-- Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94348" name="+7 Dragon Belt Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
@@ -561,6 +573,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="91862" min="1" max="1" minEnchant="7" maxEnchant="7" chance="100" /> <!-- Dragon Belt -->
+		</capsuled_items>
 	</item>
 	<item id="94349" name="+4 Talisman of Eva Pack" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
