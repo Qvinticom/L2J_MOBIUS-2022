@@ -540,9 +540,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 * @param yValue the y
 	 * @param zValue the z
 	 * @param allowRandomOffset the allow random offset
-	 * @param instant
 	 */
-	public void teleToLocation(int xValue, int yValue, int zValue, boolean allowRandomOffset, boolean instant)
+	public void teleToLocation(int xValue, int yValue, int zValue, boolean allowRandomOffset)
 	{
 		if (Config.TW_DISABLE_GK)
 		{
@@ -560,15 +559,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 			}
 		}
 		
-		// Stop movement
+		// Abort any client actions, casting and remove target.
 		stopMove(null, false);
 		abortAttack();
 		abortCast();
-		
-		setTeleporting(true);
 		setTarget(null);
 		
-		// Remove from world regions zones
+		setTeleporting(true);
+		
+		// Remove from world regions zones.
 		final WorldRegion region = getWorldRegion();
 		if (region != null)
 		{
@@ -577,6 +576,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		
+		// Remove the object from its old location.
+		decayMe();
+		
+		// Adjust position a bit.
 		int x = xValue;
 		int y = yValue;
 		int z = zValue;
@@ -587,25 +590,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 		}
 		z += 5;
 		
-		// Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
-		broadcastPacket(new TeleportToLocation(this, x, y, z, getHeading(), instant));
+		// Send teleport packet where needed.
+		broadcastPacket(new TeleportToLocation(this, x, y, z, getHeading()));
 		
-		// remove the object from its old location
-		decayMe();
-		
-		// Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion
+		// Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.
 		getPosition().setXYZ(x, y, z);
-		if (!(this instanceof PlayerInstance))
+		
+		if (!isPlayer())
 		{
 			onTeleported();
 		}
 		
 		revalidateZone(true);
-	}
-	
-	public void teleToLocation(int x, int y, int z, boolean allowRandomOffset)
-	{
-		teleToLocation(x, y, z, allowRandomOffset, false);
 	}
 	
 	/**
@@ -653,16 +649,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	public void teleToLocation(TeleportWhereType teleportWhere)
 	{
 		teleToLocation(MapRegionData.getInstance().getTeleToLocation(this, teleportWhere), true);
-	}
-	
-	public void teleToLocationInstant(Location loc)
-	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), false, true);
-	}
-	
-	public void teleToLocationInstant(int x, int y, int z)
-	{
-		teleToLocation(x, y, z, false, true);
 	}
 	
 	/**

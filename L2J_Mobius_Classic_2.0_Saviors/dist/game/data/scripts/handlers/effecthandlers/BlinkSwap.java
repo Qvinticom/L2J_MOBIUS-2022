@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * This Blink effect switches the location of the caster and the target.<br>
@@ -54,12 +55,15 @@ public class BlinkSwap extends AbstractEffect
 		effector.broadcastPacket(new FlyToLocation(effector, effectedLoc, FlyType.DUMMY));
 		effector.abortAttack();
 		effector.abortCast();
-		effector.teleToLocationInstant(effectedLoc);
+		effector.setXYZ(effectedLoc);
+		effector.broadcastPacket(new ValidateLocation(effector));
 		
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		effected.broadcastPacket(new FlyToLocation(effected, effectorLoc, FlyType.DUMMY));
 		effected.abortAttack();
 		effected.abortCast();
-		effected.teleToLocationInstant(effectorLoc);
+		effected.setXYZ(effectorLoc);
+		effected.broadcastPacket(new ValidateLocation(effected));
+		effected.revalidateZone(true);
 	}
 }

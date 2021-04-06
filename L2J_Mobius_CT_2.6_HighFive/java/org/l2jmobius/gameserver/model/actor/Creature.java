@@ -681,55 +681,56 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param headingValue
 	 * @param instanceId
 	 * @param randomOffset
-	 * @param instant
 	 */
-	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, int instanceId, int randomOffset, boolean instant)
+	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, int instanceId, int randomOffset)
 	{
 		int x = xValue;
 		int y = yValue;
 		int z = zValue;
 		int heading = headingValue;
 		
-		setInstanceId(instanceId);
-		
+		// Prepare creature for teleport.
 		if (_isPendingRevive)
 		{
 			doRevive();
 		}
 		
+		// Abort any client actions, casting and remove target.
 		stopMove(null);
 		abortAttack();
 		abortCast();
+		setTarget(null);
 		
 		setTeleporting(true);
-		setTarget(null);
 		
 		getAI().setIntention(AI_INTENTION_ACTIVE);
 		
+		// Remove the object from its old location.
+		decayMe();
+		
+		// Adjust position a bit.
 		if (Config.OFFSET_ON_TELEPORT_ENABLED && (randomOffset > 0))
 		{
 			x += Rnd.get(-randomOffset, randomOffset);
 			y += Rnd.get(-randomOffset, randomOffset);
 		}
-		
 		z += 5;
 		
-		// Send a Server->Client packet TeleportToLocationt to the Creature AND to all PlayerInstance in the _KnownPlayers of the Creature
-		broadcastPacket(new TeleportToLocation(this, x, y, z, heading, instant));
+		// Send teleport packet where needed.
+		broadcastPacket(new TeleportToLocation(this, x, y, z, heading));
 		
-		// remove the object from its old location
-		decayMe();
+		// Change instance id.
+		setInstanceId(instanceId);
 		
-		// Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion
+		// Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.
 		setXYZ(x, y, z);
-		
-		// temporary fix for heading on teleports
+		// Also adjust heading.
 		if (heading != 0)
 		{
 			setHeading(heading);
 		}
 		
-		// allow recall of the detached characters
+		// Allow recall of the detached characters.
 		if (!isPlayer() || ((getActingPlayer().getClient() != null) && getActingPlayer().getClient().isDetached()))
 		{
 			onTeleported();
@@ -740,67 +741,57 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	public void teleToLocation(int x, int y, int z, int heading, int instanceId, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, heading, instanceId, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
+		teleToLocation(x, y, z, heading, instanceId, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading, int instanceId)
 	{
-		teleToLocation(x, y, z, heading, instanceId, 0, false);
+		teleToLocation(x, y, z, heading, instanceId, 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, heading, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
+		teleToLocation(x, y, z, heading, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading)
 	{
-		teleToLocation(x, y, z, heading, -1, 0, false);
+		teleToLocation(x, y, z, heading, -1, 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z, boolean randomOffset)
 	{
-		teleToLocation(x, y, z, 0, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
+		teleToLocation(x, y, z, 0, -1, (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(int x, int y, int z)
 	{
-		teleToLocation(x, y, z, 0, -1, 0, false);
+		teleToLocation(x, y, z, 0, -1, 0);
 	}
 	
 	public void teleToLocation(ILocational loc, int randomOffset)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), randomOffset, false);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), randomOffset);
 	}
 	
 	public void teleToLocation(ILocational loc, int instanceId, int randomOffset)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instanceId, randomOffset, false);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instanceId, randomOffset);
 	}
 	
 	public void teleToLocation(ILocational loc, boolean randomOffset)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0, false);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), (randomOffset) ? Config.MAX_OFFSET_ON_TELEPORT : 0);
 	}
 	
 	public void teleToLocation(ILocational loc)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), 0, false);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), loc.getInstanceId(), 0);
 	}
 	
 	public void teleToLocation(TeleportWhereType teleportWhere)
 	{
 		teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, teleportWhere), true);
-	}
-	
-	public void teleToLocationInstant(ILocational loc)
-	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), getHeading() /* Use the current heading */, getInstanceId(), 0, true);
-	}
-	
-	public void teleToLocationInstant(int x, int y, int z)
-	{
-		teleToLocation(x, y, z, getHeading(), getInstanceId(), 0, true);
 	}
 	
 	private boolean canUseRangeWeapon()

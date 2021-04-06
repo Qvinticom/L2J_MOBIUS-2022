@@ -627,13 +627,13 @@ public class Duel
 		final Location spawn1 = spawns.get(Rnd.get(spawns.size() / 2));
 		for (PlayerInstance temp : _playerA.getParty().getMembers())
 		{
-			temp.teleToLocation(spawn1.getX(), spawn1.getY(), spawn1.getZ(), 0, _duelInstanceId, 0, false);
+			temp.teleToLocation(spawn1.getX(), spawn1.getY(), spawn1.getZ(), 0, _duelInstanceId, 0);
 		}
 		
 		final Location spawn2 = spawns.get(Rnd.get(spawns.size() / 2, spawns.size()));
 		for (PlayerInstance temp : _playerB.getParty().getMembers())
 		{
-			temp.teleToLocation(spawn2.getX(), spawn2.getY(), spawn2.getZ(), 0, _duelInstanceId, 0, false);
+			temp.teleToLocation(spawn2.getX(), spawn2.getY(), spawn2.getZ(), 0, _duelInstanceId, 0);
 		}
 	}
 	

@@ -121,10 +121,6 @@ public class ValidatePosition implements IClientIncomingPacket
 					player.stopMove(null);
 				}
 			}
-			else
-			{
-				player.setXYZ(_x, _y, _z);
-			}
 			player.sendPacket(new ValidateLocation(player));
 		}
 		

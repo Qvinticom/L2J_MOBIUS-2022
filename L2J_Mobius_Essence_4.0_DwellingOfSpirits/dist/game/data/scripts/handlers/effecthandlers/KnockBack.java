@@ -33,6 +33,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -140,7 +141,9 @@ public class KnockBack extends AbstractEffect
 			{
 				effected.setHeading(Util.calculateHeadingFrom(effected, effector));
 			}
-			effected.teleToLocationInstant(loc);
+			effected.setXYZ(loc);
+			effected.broadcastPacket(new ValidateLocation(effected));
+			effected.revalidateZone(true);
 		}
 	}
 }

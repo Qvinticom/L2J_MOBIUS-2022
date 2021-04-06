@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * Throw Up effect implementation.
@@ -94,6 +95,7 @@ public class ThrowUp extends AbstractEffect
 		final int z = info.getEffected().getZ();
 		final Location destination = GeoEngine.getInstance().getValidLocation(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
 		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), destination, FlyType.THROW_UP));
-		info.getEffected().teleToLocationInstant(destination);
+		info.getEffected().setXYZ(destination);
+		info.getEffected().broadcastPacket(new ValidateLocation(info.getEffected()));
 	}
 }

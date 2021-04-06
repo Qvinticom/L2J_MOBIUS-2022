@@ -758,9 +758,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param zValue
 	 * @param headingValue
 	 * @param instanceValue
-	 * @param instant
 	 */
-	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, Instance instanceValue, boolean instant)
+	public void teleToLocation(int xValue, int yValue, int zValue, int headingValue, Instance instanceValue)
 	{
 		int x = xValue;
 		int y = yValue;
@@ -785,7 +784,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			}
 		}
 		
-		// Prepare creature for teleport
+		// Prepare creature for teleport.
 		if (_isPendingRevive)
 		{
 			doRevive();
@@ -805,54 +804,54 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		getAI().setIntention(AI_INTENTION_ACTIVE);
 		
-		// Adjust position a bit
-		z += 5;
-		
-		// Send teleport packet to player and visible players
-		broadcastPacket(new TeleportToLocation(this, x, y, z, heading, instant));
-		
-		// remove the object from its old location
+		// Remove the object from its old location.
 		decayMe();
 		
-		// Change instance world
+		// Adjust position a bit.
+		z += 5;
+		
+		// Send teleport packet where needed.
+		broadcastPacket(new TeleportToLocation(this, x, y, z, heading));
+		
+		// Change instance world.
 		if (getInstanceWorld() != instance)
 		{
 			setInstance(instance);
 		}
 		
-		// Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion
+		// Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion.
 		setXYZ(x, y, z);
-		
-		// temporary fix for heading on teleport
+		// Also adjust heading.
 		if (heading != 0)
 		{
 			setHeading(heading);
 		}
 		
-		// Send teleport finished packet to player
+		// Send teleport finished packet to player.
 		sendPacket(new ExTeleportToLocationActivate(this));
 		
-		// allow recall of the detached characters
+		// Allow recall of the detached characters.
 		if (!isPlayer() || ((getActingPlayer().getClient() != null) && getActingPlayer().getClient().isDetached()))
 		{
 			onTeleported();
 		}
+		
 		revalidateZone(true);
 	}
 	
 	public void teleToLocation(int x, int y, int z)
 	{
-		teleToLocation(x, y, z, 0, getInstanceWorld(), false);
+		teleToLocation(x, y, z, 0, getInstanceWorld());
 	}
 	
 	public void teleToLocation(int x, int y, int z, Instance instance)
 	{
-		teleToLocation(x, y, z, 0, instance, false);
+		teleToLocation(x, y, z, 0, instance);
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading)
 	{
-		teleToLocation(x, y, z, heading, getInstanceWorld(), false);
+		teleToLocation(x, y, z, heading, getInstanceWorld());
 	}
 	
 	public void teleToLocation(int x, int y, int z, int heading, boolean randomOffset)
@@ -879,7 +878,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			x += Rnd.get(-randomOffset, randomOffset);
 			y += Rnd.get(-randomOffset, randomOffset);
 		}
-		teleToLocation(x, y, z, heading, instance, false);
+		teleToLocation(x, y, z, heading, instance);
 	}
 	
 	public void teleToLocation(ILocational loc)
@@ -889,7 +888,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	public void teleToLocation(ILocational loc, Instance instance)
 	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instance, false);
+		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), loc.getHeading(), instance);
 	}
 	
 	public void teleToLocation(ILocational loc, int randomOffset)
@@ -920,16 +919,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	public void teleToLocation(TeleportWhereType teleportWhere, Instance instance)
 	{
 		teleToLocation(MapRegionManager.getInstance().getTeleToLocation(this, teleportWhere), true, instance);
-	}
-	
-	public void teleToLocationInstant(ILocational loc)
-	{
-		teleToLocation(loc.getX(), loc.getY(), loc.getZ(), getHeading() /* Use the current heading */, getInstanceWorld(), true);
-	}
-	
-	public void teleToLocationInstant(int x, int y, int z)
-	{
-		teleToLocation(x, y, z, getHeading(), getInstanceWorld(), true);
 	}
 	
 	/**

@@ -29,6 +29,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * Teleport player/party to summoned npc effect implementation.
@@ -94,7 +95,9 @@ public class TeleportToNpc extends AbstractEffect
 			effected.broadcastPacket(new FlyToLocation(effected, location, FlyType.DUMMY));
 			effected.abortAttack();
 			effected.abortCast();
-			effected.teleToLocationInstant(location);
+			effected.setXYZ(location);
+			effected.broadcastPacket(new ValidateLocation(effected));
+			effected.revalidateZone(true);
 		}
 		else
 		{

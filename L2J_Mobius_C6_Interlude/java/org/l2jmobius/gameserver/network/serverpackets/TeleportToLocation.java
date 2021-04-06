@@ -25,16 +25,14 @@ public class TeleportToLocation extends GameServerPacket
 	private final int _y;
 	private final int _z;
 	private final int _heading;
-	private final boolean _instant;
 	
-	public TeleportToLocation(WorldObject obj, int x, int y, int z, int heading, boolean instant)
+	public TeleportToLocation(WorldObject obj, int x, int y, int z, int heading)
 	{
 		_targetObjId = obj.getObjectId();
 		_x = x;
 		_y = y;
 		_z = z;
 		_heading = heading;
-		_instant = instant;
 	}
 	
 	@Override
@@ -45,7 +43,7 @@ public class TeleportToLocation extends GameServerPacket
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
-		writeD(_instant ? 0x01 : 0x00);
+		writeD(0x00); // Fade 0, Instant 1.
 		writeD(_heading);
 	}
 }

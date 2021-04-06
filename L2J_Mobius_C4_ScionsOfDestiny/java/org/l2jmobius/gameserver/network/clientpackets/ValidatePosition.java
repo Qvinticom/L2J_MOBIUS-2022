@@ -111,10 +111,6 @@ public class ValidatePosition extends GameClientPacket
 					player.stopMove(null);
 				}
 			}
-			else
-			{
-				player.setXYZ(_x, _y, _z);
-			}
 			player.sendPacket(new ValidateLocation(player));
 		}
 		

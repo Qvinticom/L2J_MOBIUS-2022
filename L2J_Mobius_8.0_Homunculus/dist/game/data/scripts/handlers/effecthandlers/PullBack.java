@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.stats.Formulas;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * An effect that pulls effected target back to the effector.
@@ -75,7 +76,9 @@ public class PullBack extends AbstractEffect
 		if (GeoEngine.getInstance().canMoveToTarget(effected.getX(), effected.getY(), effected.getZ(), effector.getX(), effector.getY(), effector.getZ(), effected.getInstanceWorld()))
 		{
 			effected.broadcastPacket(new FlyToLocation(effected, effector, _type, _speed, _delay, _animationSpeed));
-			effected.teleToLocationInstant(effector.getX(), effector.getY(), GeoEngine.getInstance().getHeight(effector.getX(), effector.getY(), effector.getZ()) + 10);
+			effected.setXYZ(effector.getX(), effector.getY(), GeoEngine.getInstance().getHeight(effector.getX(), effector.getY(), effector.getZ()) + 10);
+			effected.broadcastPacket(new ValidateLocation(effected), false);
+			effected.revalidateZone(true);
 		}
 	}
 }

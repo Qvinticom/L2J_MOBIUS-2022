@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
 /**
  * Enemy Charge effect implementation.
@@ -91,6 +92,7 @@ public class EnemyCharge extends AbstractEffect
 		final int z = info.getEffected().getZ();
 		final Location destination = GeoEngine.getInstance().getValidLocation(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
 		info.getEffector().broadcastPacket(new FlyToLocation(info.getEffector(), destination, FlyType.CHARGE));
-		info.getEffector().teleToLocationInstant(destination);
+		info.getEffector().setXYZ(destination);
+		info.getEffector().broadcastPacket(new ValidateLocation(info.getEffector()));
 	}
 }

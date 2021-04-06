@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
+import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import org.l2jmobius.gameserver.util.Util;
 
 /**
@@ -75,12 +76,14 @@ public class TeleportToTarget extends AbstractEffect
 		final int y = (int) (py + (25 * Math.sin(ph)));
 		final int z = effected.getZ();
 		
-		final Location loc = GeoEngine.getInstance().getValidLocation(effector.getX(), effector.getY(), effector.getZ(), x, y, z, effector.getInstanceWorld());
+		final Location loc = GeoEngine.getInstance().getValidLocation(effector.getX(), effector.getY(), effector.getZ(), x, y, z,effector.getInstanceWorld());
 		
 		effector.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		effector.broadcastPacket(new FlyToLocation(effector, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
 		effector.abortAttack();
 		effector.abortCast();
-		effector.teleToLocationInstant(loc);
+		effector.setXYZ(loc);
+		effector.broadcastPacket(new ValidateLocation(effector));
+		effected.revalidateZone(true);
 	}
 }
