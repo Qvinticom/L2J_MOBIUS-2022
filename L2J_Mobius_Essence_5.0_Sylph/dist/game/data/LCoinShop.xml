@@ -58,7 +58,7 @@
 		<ingredient id="91663" count="20" /> <!-- L-Coin -->
 		<production id="49674" /> <!-- XP Growth Scroll -->
 	</product>
-	<product id="14" category="1">
+	<product id="14" category="1" minLevel="60">
 		<ingredient id="91663" count="6" /> <!-- L-Coin -->
 		<production id="91690" /> <!-- Special HP Recovery Potion -->
 	</product>
@@ -95,7 +95,7 @@
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="91983" accountDailyLimit="1" /> <!-- Primeval Isle's Time Stone -->
 	</product>
-	<product id="22" category="2">
+	<product id="22" category="2" minLevel="60">
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="93704" accountDailyLimit="1" /> <!-- Alligator Island's Time Stone -->
 	</product>
@@ -108,7 +108,7 @@
 		<ingredient id="57" count="30000" /> <!-- Adena -->
 		<production id="91690" accountDailyLimit="100" /> <!-- Special HP Recovery Potion -->
 	</product>
-	<product id="59" category="3">
+	<product id="59" category="3" minLevel="80">
 		<ingredient id="57" count="30000000" /> <!-- Adena -->
 		<production id="94208" accountDailyLimit="1" /> <!-- Scroll of Blessing -->
 	</product>
@@ -137,7 +137,7 @@
 		<production id="94777" accountDailyLimit="6" /> <!-- Berserker's Scroll -->
 	</product>
 	<!-- Cat 4 -->
-	<product id="183" category="4">
+	<product id="183" category="4" minLevel="76">
 		<ingredient id="91663" count="400" /> <!-- L-Coin -->
 		<production id="94778" accountDailyLimit="1" /> <!-- Ticket to Cruma Tower's Central Control Room -->
 	</product>
@@ -153,25 +153,25 @@
 		<ingredient id="91663" count="200" /> <!-- L-Coin -->
 		<production id="93740" /> <!-- Giran Seal Pack -->
 	</product>
-	<product id="160" category="4">
+	<product id="160" category="4" maxLevel="84">
 		<ingredient id="91663" count="4000" /> <!-- L-Coin -->
-		<production id="94735" /> <!-- Starter Kit -->
+		<production id="94735" accountBuyLimit="1" /> <!-- Starter Kit -->
 	</product>
-	<product id="161" category="4">
+	<product id="161" category="4" maxLevel="84">
 		<ingredient id="91663" count="6000" /> <!-- L-Coin -->
-		<production id="94736" accountDailyLimit="1" /> <!-- Settling Kit: Jewel -->
+		<production id="94736" accountBuyLimit="1" /> <!-- Settling Kit: Jewel -->
 	</product>
-	<product id="162" category="4">
+	<product id="162" category="4" maxLevel="84">
 		<ingredient id="91663" count="6000" /> <!-- L-Coin -->
-		<production id="94737" accountDailyLimit="1" /> <!-- Settling Kit: Agathion -->
+		<production id="94737" accountBuyLimit="1" /> <!-- Settling Kit: Agathion -->
 	</product>
-	<product id="163" category="4">
+	<product id="163" category="4" maxLevel="84">
 		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
-		<production id="94738" accountDailyLimit="3" /> <!-- Settling Kit: Upgrading -->
+		<production id="94738" accountBuyLimit="3" /> <!-- Settling Kit: Upgrading -->
 	</product>
-	<product id="164" category="4">
+	<product id="164" category="4" minLevel="60">
 		<ingredient id="91663" count="5000" /> <!-- L-Coin -->
-		<production id="95681" accountDailyLimit="1" /> <!-- Premium Growth Kit -->
+		<production id="95681" accountBuyLimit="1" /> <!-- Premium Growth Kit -->
 	</product>
 	<product id="168" category="4">
 		<ingredient id="57" count="2000000" /> <!-- Adena -->
