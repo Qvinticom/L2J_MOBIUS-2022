@@ -1664,12 +1664,12 @@
 		<icon>icon.bm_ensoul_stone_pvp</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PhysicalDefence">
+			<effect name="PAtk">
 				<amount>
-					<value level="2">5</value>
-					<value level="3">10</value>
-					<value level="4">15</value>
-					<value level="5">20</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
 					<value level="6">50</value>
 					<value level="7">80</value>
 					<value level="8">135</value>
@@ -1679,18 +1679,48 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="MAtk">
 				<amount>
-					<value level="2">5</value>
-					<value level="3">10</value>
-					<value level="4">20</value>
-					<value level="5">30</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
 					<value level="6">100</value>
 					<value level="7">150</value>
 					<value level="8">250</value>
 					<value level="9">360</value>
 					<value level="10">420</value>
 					<value level="11">490</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">30</value>
+					<value level="7">40</value>
+					<value level="8">60</value>
+					<value level="9">80</value>
+					<value level="10">120</value>
+					<value level="11">160</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">20</value>
+					<value level="5">30</value>
+					<value level="6">40</value>
+					<value level="7">60</value>
+					<value level="8">80</value>
+					<value level="9">120</value>
+					<value level="10">160</value>
+					<value level="11">200</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
