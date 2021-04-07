@@ -46,7 +46,7 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		
 		final long currentTime = Chronos.currentTimeMillis();
 		long endTime;
-		packet.writeD(3); // zone count
+		packet.writeD(4); // zone count
 		
 		// Primeval Isle
 		packet.writeD(1); // required item count
@@ -70,25 +70,25 @@ public class TimedHuntingZoneList implements IClientOutgoingPacket
 		packet.writeH(0);
 		
 		// Forgotten Primeval Garden
-		// packet.writeD(1); // required item count
-		// packet.writeD(57); // item id
-		// packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
-		// packet.writeD(1); // reset cycle
-		// packet.writeD(4); // zone id
-		// packet.writeD(76); // min level
-		// packet.writeD(999); // max level
-		// packet.writeD(0); // remain time base?
-		// endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 4, 0);
-		// if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
-		// {
-		// endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
-		// }
-		// packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
-		// packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_GARDEN / 1000));
-		// packet.writeD(18000); // remain refill time
-		// packet.writeD(3600); // refill time max
-		// packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
-		// packet.writeH(0);
+		packet.writeD(1); // required item count
+		packet.writeD(57); // item id
+		packet.writeQ(Config.TIME_LIMITED_ZONE_TELEPORT_FEE); // item count
+		packet.writeD(1); // reset cycle
+		packet.writeD(4); // zone id
+		packet.writeD(76); // min level
+		packet.writeD(999); // max level
+		packet.writeD(0); // remain time base?
+		endTime = _player.getVariables().getLong(PlayerVariables.HUNTING_ZONE_RESET_TIME + 4, 0);
+		if ((endTime + Config.TIME_LIMITED_ZONE_RESET_DELAY) < currentTime)
+		{
+			endTime = currentTime + Config.TIME_LIMITED_ZONE_INITIAL_TIME;
+		}
+		packet.writeD((int) (Math.max(endTime - currentTime, 0)) / 1000); // remain time
+		packet.writeD((int) (Config.TIME_LIMITED_MAX_ADDED_GARDEN / 1000));
+		packet.writeD(18000); // remain refill time
+		packet.writeD(3600); // refill time max
+		packet.writeD(_isInTimedHuntingZone ? 0 : 1); // field activated (272 C to D)
+		packet.writeH(0);
 		
 		// Alligator Island
 		packet.writeD(1); // required item count
