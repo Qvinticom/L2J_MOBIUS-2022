@@ -1353,10 +1353,16 @@
 		<!-- After charging, a number of craft efforts +1. -->
 		<set name="icon" val="icon.etc_chaser_stone" />
 		<set name="material" val="LIQUID" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="40086" level="1" /> <!-- Craft points 1000000 -->
+		</skills>
 	</item>
 	<item id="93081" name="Memorable Achievement Reward for Lv. 90" type="EtcItem">
 		<!-- Obtained after Lv. 90 is achieved. You can get a special reward. -->

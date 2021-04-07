@@ -91,7 +91,7 @@
 			<item id="90768" count="1" /> Hair Accessory Coupon
 		</items>
 	</reward>
-	-->
+	 -->
 	<!-- TODO: spiritevolve handler
 	<reward id="1112" reward_id="508" name="Fire Spirit Lv. 3" requiredCompletion="3">
 		One-time mission. A reward is given when evolving the Fire Spirit up to Lv. 3.
@@ -129,7 +129,7 @@
 			<item id="91185" count="30" /> Mid-grade Spirit's Blessing
 		</items>
 	</reward>
-	-->
+	 -->
 	<!-- TODO: Weekly monster handler
 	<reward id="1116" reward_id="118" name="Attribute monsters hunting" requiredCompletion="1800">
 		A reward is given once a week for elemental monster hunting.
@@ -142,7 +142,7 @@
 			<item id="91030" count="10" /> Blessed Soul
 		</items>
 	</reward>
-	-->
+	 -->
 	<reward id="1126" reward_id="2001" name="Daily Hunting II (Lv. 1-20)" requiredCompletion="50" isOneTime="false">
 		<!-- Daily mission. A reward is given for killing any 50 monsters. Monsters whose level is lower than the character's for more than 10 levels do not count. -->
 		<handler name="monster">
@@ -544,7 +544,7 @@
 			<item id="91186" count="30" />
 		</items>
 	</reward>
-	-->
+	 -->
 	<reward id="4000" reward_id="1077" name="Reach Level 10" requiredCompletion="10">
 		<!-- One-time mission. A reward is given when the character reaches Lv. 10. -->
 		<handler name="level">
@@ -852,6 +852,28 @@
 			<item id="94269" count="180" /> <!-- Scroll: Boost Attack -->
 		</items>
 	</reward>
+	<reward id="1172" reward_id="2040" name="Hunt on Alligator Island I (Lv. 60+)" requiredCompletion="100">
+		<!-- A reward is given for killing 100 Savage monsters on Alligator Island. -->
+		<handler name="monster">
+			<param name="minLevel">60</param>
+			<param name="maxLevel">99</param>
+			<param name="ids">22192,22193,22194,22195,22196,22197,22198,22199</param>
+		</handler>
+		<items>
+			<item id="93080" count="1" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+		</items>
+	</reward>
+	<reward id="1173" reward_id="2041" name="Hunt on Alligator Island II (Lv. 60+)" requiredCompletion="200">
+		<!-- A reward is given for killing 200 Savage monsters on Alligator Island. -->
+		<handler name="monster">
+			<param name="minLevel">60</param>
+			<param name="maxLevel">99</param>
+			<param name="ids">22192,22193,22194,22195,22196,22197,22198,22199</param>
+		</handler>
+		<items>
+			<item id="93080" count="1" /> <!-- Charging Stone of Random Craft - 1 Charge -->
+		</items>
+	</reward>
 	<!-- TODO:
 	<reward id="3007" reward_id="3007" name="Sayha's Blessing" requiredCompletion="10">
 		A reward is given for using Sayha's Blessing that is not limited by level, 10 times.
@@ -935,26 +957,6 @@
 			<item id="49674" count="2" /> XP Growth Scroll
 		</items>
 	</reward>
-	<reward id="1172" reward_id="2040" name="Hunt on Alligator Island I (Lv. 60+)" requiredCompletion="100">
-		A reward is given for killing 100 Savage monsters on Alligator Island.
-		<handler name="monster">
-			<param name="minLevel">60</param>
-			<param name="maxLevel">99</param>
-		</handler>
-		<items>
-			<item id="93080" count="1" /> Charging Stone of Random Craft - 1 Charge
-		</items>
-	</reward>
-	<reward id="1173" reward_id="2041" name="Hunt on Alligator Island II (Lv. 60+)" requiredCompletion="200">
-		A reward is given for killing 200 Savage monsters on Alligator Island.
-		<handler name="monster">
-			<param name="minLevel">60</param>
-			<param name="maxLevel">99</param>
-		</handler>
-		<items>
-			<item id="93080" count="1" /> Charging Stone of Random Craft - 1 Charge
-		</items>
-	</reward>
 	<reward id="3013" reward_id="3013" name="3 vs 3 Olympiad Winner I" requiredCompletion="1">
 		One-time mission. A reward is given for winning a 3 vs 3 Olympiad match. Not available on Sundays.
 		<handler name="olympiad" />
@@ -1028,5 +1030,5 @@
 			<item id="91830" count="5" /> Improved Fire Attack Potion
 		</items>
 	</reward>
-	-->
+	 -->
 </list>
