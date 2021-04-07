@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -52,6 +53,7 @@ public class WorldRegion
 	private final int _regionY;
 	private Boolean _active = Config.GRIDS_ALWAYS_ON;
 	private ScheduledFuture<?> _neighborsTask = null;
+	private final AtomicInteger _activeNeighbors = new AtomicInteger();
 	private ZoneManager _zoneManager;
 	
 	public WorldRegion(int regionX, int regionY)
@@ -207,8 +209,21 @@ public class WorldRegion
 		return _active;
 	}
 	
-	// check if all 9 neighbors (including self) are inactive or active but with no players.
-	// returns true if the above condition is met.
+	public void incrementActiveNeighbors()
+	{
+		_activeNeighbors.incrementAndGet();
+	}
+	
+	public void decrementActiveNeighbors()
+	{
+		_activeNeighbors.decrementAndGet();
+	}
+	
+	public boolean areNeighborsActive()
+	{
+		return Config.GRIDS_ALWAYS_ON || (_activeNeighbors.get() > 0);
+	}
+	
 	public boolean areNeighborsEmpty()
 	{
 		for (int i = 0; i < _surroundingRegions.length; i++)
@@ -242,6 +257,21 @@ public class WorldRegion
 		}
 		
 		_active = value;
+		
+		if (value)
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].incrementActiveNeighbors();
+			}
+		}
+		else
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].decrementActiveNeighbors();
+			}
+		}
 		
 		// Turn the AI on or off to match the region's activation.
 		switchAI(value);
@@ -380,30 +410,6 @@ public class WorldRegion
 		}
 	}
 	
-	public void setSurroundingRegions(WorldRegion[] regions)
-	{
-		_surroundingRegions = regions;
-		
-		// Make sure that this region is always the first region to improve bulk operations when this region should be updated first.
-		for (int i = 0; i < _surroundingRegions.length; i++)
-		{
-			if (_surroundingRegions[i] == this)
-			{
-				final WorldRegion first = _surroundingRegions[0];
-				_surroundingRegions[0] = this;
-				_surroundingRegions[i] = first;
-			}
-		}
-	}
-	
-	/**
-	 * @return the list _surroundingRegions containing all WorldRegion around the current WorldRegion
-	 */
-	public WorldRegion[] getSurroundingRegions()
-	{
-		return _surroundingRegions;
-	}
-	
 	public List<WorldObject> getVisibleObjects()
 	{
 		return _visibleObjects;
@@ -445,9 +451,25 @@ public class WorldRegion
 		return _fences;
 	}
 	
-	public String getName()
+	public void setSurroundingRegions(WorldRegion[] regions)
 	{
-		return "(" + _regionX + ", " + _regionY + ")";
+		_surroundingRegions = regions;
+		
+		// Make sure that this region is always the first region to improve bulk operations when this region should be updated first.
+		for (int i = 0; i < _surroundingRegions.length; i++)
+		{
+			if (_surroundingRegions[i] == this)
+			{
+				final WorldRegion first = _surroundingRegions[0];
+				_surroundingRegions[0] = this;
+				_surroundingRegions[i] = first;
+			}
+		}
+	}
+	
+	public WorldRegion[] getSurroundingRegions()
+	{
+		return _surroundingRegions;
 	}
 	
 	/**
@@ -531,5 +553,10 @@ public class WorldRegion
 			return true;
 		}
 		return true;
+	}
+	
+	public String getName()
+	{
+		return "(" + _regionX + ", " + _regionY + ")";
 	}
 }

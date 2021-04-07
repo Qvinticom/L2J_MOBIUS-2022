@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -43,6 +44,7 @@ public class WorldRegion
 	private final int _regionY;
 	private boolean _active = Config.GRIDS_ALWAYS_ON;
 	private ScheduledFuture<?> _neighborsTask = null;
+	private final AtomicInteger _activeNeighbors = new AtomicInteger();
 	
 	public WorldRegion(int regionX, int regionY)
 	{
@@ -127,6 +129,21 @@ public class WorldRegion
 		return _active;
 	}
 	
+	public void incrementActiveNeighbors()
+	{
+		_activeNeighbors.incrementAndGet();
+	}
+	
+	public void decrementActiveNeighbors()
+	{
+		_activeNeighbors.decrementAndGet();
+	}
+	
+	public boolean areNeighborsActive()
+	{
+		return Config.GRIDS_ALWAYS_ON || (_activeNeighbors.get() > 0);
+	}
+	
 	public boolean areNeighborsEmpty()
 	{
 		for (int i = 0; i < _surroundingRegions.length; i++)
@@ -160,6 +177,21 @@ public class WorldRegion
 		}
 		
 		_active = value;
+		
+		if (value)
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].incrementActiveNeighbors();
+			}
+		}
+		else
+		{
+			for (int i = 0; i < _surroundingRegions.length; i++)
+			{
+				_surroundingRegions[i].decrementActiveNeighbors();
+			}
+		}
 		
 		// Turn the AI on or off to match the region's activation.
 		switchAI(value);

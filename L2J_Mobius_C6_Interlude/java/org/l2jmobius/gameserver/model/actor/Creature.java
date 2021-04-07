@@ -391,19 +391,33 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	
 	public void broadcastMoveToLocation()
 	{
-		final WorldRegion region = getWorldRegion();
-		if ((region != null) && region.isActive())
+		if (isPlayable())
 		{
 			broadcastPacket(new CharMoveToLocation(this));
+		}
+		else
+		{
+			final WorldRegion region = getWorldRegion();
+			if ((region != null) && region.areNeighborsActive())
+			{
+				broadcastPacket(new CharMoveToLocation(this));
+			}
 		}
 	}
 	
 	public void broadcastSocialAction(int id)
 	{
-		final WorldRegion region = getWorldRegion();
-		if ((region != null) && region.isActive())
+		if (isPlayable())
 		{
 			broadcastPacket(new SocialAction(getObjectId(), id));
+		}
+		else
+		{
+			final WorldRegion region = getWorldRegion();
+			if ((region != null) && region.areNeighborsActive())
+			{
+				broadcastPacket(new SocialAction(getObjectId(), id));
+			}
 		}
 	}
 	
