@@ -68,7 +68,9 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 			return;
 		}
 		
+		player.getAutoPlaySettings().setOptions(_options);
 		player.getAutoPlaySettings().setPickup(_pickUp);
+		player.getAutoPlaySettings().setNextTargetMode(_nextTargetMode);
 		player.getAutoPlaySettings().setLongRange(_longRange);
 		player.getAutoPlaySettings().setRespectfulHunting(_respectfulHunting);
 		

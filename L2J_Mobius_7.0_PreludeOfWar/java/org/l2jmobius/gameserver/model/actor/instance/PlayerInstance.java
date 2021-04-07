@@ -350,6 +350,7 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeOtherDone;
 import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
+import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExAutoPlaySettingSend;
 import org.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2jmobius.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBook;
@@ -357,6 +358,8 @@ import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookC
 import org.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookRewardIcon;
 import org.l2jmobius.gameserver.network.serverpackets.sessionzones.TimedHuntingZoneExit;
 import org.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import org.l2jmobius.gameserver.taskmanager.AutoPlayTaskManager;
+import org.l2jmobius.gameserver.taskmanager.AutoUseTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PlayerAutoSaveTaskManager;
 import org.l2jmobius.gameserver.taskmanager.PvpFlagTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
@@ -10366,7 +10369,7 @@ public class PlayerInstance extends Playable
 			setLastServerPosition(getX(), getY(), getZ());
 		}
 		
-		// Force a revalidation
+		// Force a revalidation.
 		revalidateZone(true);
 		
 		checkItemRestriction();
@@ -10376,14 +10379,14 @@ public class PlayerInstance extends Playable
 			setTeleportProtection(true);
 		}
 		
-		// Trained beast is lost after teleport
+		// Trained beast is lost after teleport.
 		for (TamedBeastInstance tamedBeast : _tamedBeast)
 		{
 			tamedBeast.deleteMe();
 		}
 		_tamedBeast.clear();
 		
-		// Modify the position of the pet if necessary
+		// Modify the position of the pet if necessary.
 		if (_pet != null)
 		{
 			_pet.setFollowStatus(false);
@@ -10404,7 +10407,7 @@ public class PlayerInstance extends Playable
 			s.updateAndBroadcastStatus(0);
 		});
 		
-		// Show movie if available
+		// Show movie if available.
 		if (_movieHolder != null)
 		{
 			sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
@@ -10416,7 +10419,12 @@ public class PlayerInstance extends Playable
 			stopTimedHuntingZoneTask();
 		}
 		
-		// send info to nearby players
+		// Stop auto play.
+		AutoPlayTaskManager.getInstance().stopAutoPlay(this);
+		AutoUseTaskManager.getInstance().stopAutoUseTask(this);
+		sendPacket(new ExAutoPlaySettingSend(_autoPlaySettings.getOptions(), false, _autoPlaySettings.doPickup(), _autoPlaySettings.getNextTargetMode(), _autoPlaySettings.isLongRange(), _autoPlaySettings.getAutoPotionPercent(), _autoPlaySettings.isRespectfulHunting()));
+		
+		// Send info to nearby players.
 		broadcastInfo();
 	}
 	

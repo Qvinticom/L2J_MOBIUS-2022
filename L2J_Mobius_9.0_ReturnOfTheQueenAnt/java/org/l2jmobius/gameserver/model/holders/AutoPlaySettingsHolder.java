@@ -24,13 +24,25 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class AutoPlaySettingsHolder
 {
+	private final AtomicInteger _options = new AtomicInteger();
 	private final AtomicBoolean _pickup = new AtomicBoolean();
+	private final AtomicInteger _nextTargetMode = new AtomicInteger();
 	private final AtomicBoolean _longRange = new AtomicBoolean();
 	private final AtomicBoolean _respectfulHunting = new AtomicBoolean();
 	private final AtomicInteger _autoPotionPercent = new AtomicInteger();
 	
 	public AutoPlaySettingsHolder()
 	{
+	}
+	
+	public int getOptions()
+	{
+		return _options.get();
+	}
+	
+	public void setOptions(int options)
+	{
+		_options.set(options);
 	}
 	
 	public boolean doPickup()
@@ -41,6 +53,16 @@ public class AutoPlaySettingsHolder
 	public void setPickup(boolean value)
 	{
 		_pickup.set(value);
+	}
+	
+	public int getNextTargetMode()
+	{
+		return _nextTargetMode.get();
+	}
+	
+	public void setNextTargetMode(int nextTargetMode)
+	{
+		_nextTargetMode.set(nextTargetMode);
 	}
 	
 	public boolean isLongRange()
