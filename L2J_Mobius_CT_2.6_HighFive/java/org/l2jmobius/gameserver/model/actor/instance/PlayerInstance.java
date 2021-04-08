@@ -495,7 +495,7 @@ public class PlayerInstance extends Playable
 	
 	/** Olympiad */
 	private boolean _inOlympiadMode = false;
-	private boolean _OlympiadStart = false;
+	private boolean _olympiadStart = false;
 	private int _olympiadGameId = -1;
 	private int _olympiadSide = -1;
 	/** Olympiad buff count. */
@@ -4045,7 +4045,7 @@ public class PlayerInstance extends Playable
 			party.broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
 		}
 		
-		if (_inOlympiadMode && _OlympiadStart && (needCpUpdate || needHpUpdate))
+		if (_inOlympiadMode && _olympiadStart && (needCpUpdate || needHpUpdate))
 		{
 			final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(getOlympiadGameId());
 			if ((game != null) && game.isBattleStarted())
@@ -8283,7 +8283,7 @@ public class PlayerInstance extends Playable
 		// Check if the attacker is in olympia and olympia start
 		if (attacker.isPlayer() && attacker.getActingPlayer().isInOlympiadMode())
 		{
-			return _inOlympiadMode && _OlympiadStart && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId());
+			return _inOlympiadMode && _olympiadStart && (((PlayerInstance) attacker).getOlympiadGameId() == getOlympiadGameId());
 		}
 		
 		// Check if the attacker is in TvT and TvT is started
@@ -8692,7 +8692,7 @@ public class PlayerInstance extends Playable
 				return false;
 			}
 			
-			if (_inOlympiadMode && !_OlympiadStart)
+			if (_inOlympiadMode && !_olympiadStart)
 			{
 				// if PlayerInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -9638,12 +9638,12 @@ public class PlayerInstance extends Playable
 	
 	public void setOlympiadStart(boolean value)
 	{
-		_OlympiadStart = value;
+		_olympiadStart = value;
 	}
 	
 	public boolean isOlympiadStart()
 	{
-		return _OlympiadStart;
+		return _olympiadStart;
 	}
 	
 	public boolean isHero()
