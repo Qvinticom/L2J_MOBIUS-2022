@@ -129,6 +129,11 @@ public class SkillCaster implements Runnable
 	 */
 	public static SkillCaster castSkill(Creature caster, WorldObject target, Skill skill, ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
 	{
+		// Prevent players from attacking before the Olympiad countdown ends. Olympiad Manager NPC is excluded.
+		if (caster.isPlayer() && caster.getActingPlayer().isInOlympiadMode() && !caster.getActingPlayer().isOlympiadStart() && skill.isBad() && (target != null) && (target.getId() != 36402))
+		{
+			return null;
+		}
 		return castSkill(caster, target, skill, item, castingType, ctrlPressed, shiftPressed, -1);
 	}
 	
