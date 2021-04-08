@@ -958,18 +958,14 @@
 	</item>
 	<item id="94383" name="Scroll: Enchant Rare Accessories" type="EtcItem">
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->
-		<set name="icon" val="icon.etc_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="ENCHT_AM" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_sellable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" /> <!-- ENCHT_AM -->
 		<set name="handler" val="EnchantScrolls" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="40233" level="1" /> <!-- Scroll: Enchant Rare Accessories (Exchangeable) -->
 		</skills>
@@ -978,16 +974,13 @@
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1 -->
 		<set name="icon" val="icon.etc_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="ENCHT_AM" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_AM" /> <!-- ENCHT_AM -->
 		<set name="handler" val="EnchantScrolls" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="40234" level="1" /> <!-- Scroll: Enchant Rare Accessories -->
 		</skills>
@@ -996,18 +989,30 @@
 		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_sellable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" /> <!-- ENCHT_AM -->
 		<set name="handler" val="EnchantScrolls" />
-		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="40235" level="1" /> <!-- Blessed Scroll: Enchant Rare Accessories (Exchangeable) -->
+		</skills>
+	</item>
+	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
+		<!-- <When enchanted from +1 to +3>. Accessories: M. Def. +1. <When enchanted to +4 or higher>. Accessories: M. Def. +3. Safe enchanting to +1. The enchanting is random from +1 to +2. For rare accessories enchanted to +2 or lower. -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_fallen_angel" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" /> <!-- ENCHT_AM -->
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="40236" level="1" /> <!-- Blessed Scroll: Enchant Rare Accessories -->
 		</skills>
 	</item>
 	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" additionalName="Event" type="EtcItem">
