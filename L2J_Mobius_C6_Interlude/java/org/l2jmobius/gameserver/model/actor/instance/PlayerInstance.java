@@ -285,9 +285,9 @@ public class PlayerInstance extends Playable
 	public int _originalKarmaVIP;
 	private PlayerStatsHolder savedStatus = null;
 	private final long _instanceLoginTime;
-	protected long TOGGLE_USE = 0;
+	protected long _toggleUse = 0;
 	public int _activeBoxes = -1;
-	public List<String> _activeBoxeCharacters = new ArrayList<>();
+	public List<String> _activeBoxCharacters = new ArrayList<>();
 	private GameClient _client;
 	private String _accountName;
 	private long _deleteTimer;
@@ -299,8 +299,8 @@ public class PlayerInstance extends Playable
 	protected int _baseClass;
 	protected int _activeClass;
 	protected int _classIndex = 0;
-	private boolean _firstLog;
-	private int pcBangPoint = 0;
+	private boolean _firstLogin;
+	private int _pcBangPoints = 0;
 	private final Map<Integer, SubClass> _subClasses = new ConcurrentHashMap<>();
 	private PlayerAppearance _appearance;
 	private long _expBeforeDeath;
@@ -525,8 +525,6 @@ public class PlayerInstance extends Playable
 	private final Map<Integer, Timestamp> _reuseTimestamps = new ConcurrentHashMap<>();
 	boolean _gmStatus = true; // true by default since this is used by GMs
 	public WorldObject _saymode = null;
-	String Dropzor = "Coin of Luck";
-	private boolean _isInsideTWTown = false;
 	private static final int FALLING_VALIDATION_DELAY = 1000;
 	private long _fallingTimestamp = 0;
 	private volatile int _fallingDamage = 0;
@@ -4846,7 +4844,6 @@ public class PlayerInstance extends Playable
 		
 		if (isInOlympiadMode())
 		{
-			// TODO: implement new OlympiadUserInfo
 			for (PlayerInstance player : getKnownList().getKnownPlayers().values())
 			{
 				if ((player.getOlympiadGameId() == getOlympiadGameId()) && player.isOlympiadStart())
@@ -4866,6 +4863,7 @@ public class PlayerInstance extends Playable
 				}
 			}
 		}
+		
 		if (isInDuel())
 		{
 			DuelManager.getInstance().broadcastToOppositTeam(this, new ExDuelUpdateUserInfo(this));
@@ -7729,10 +7727,10 @@ public class PlayerInstance extends Playable
 	
 	public void setFirstLog(int firstLog)
 	{
-		_firstLog = false;
+		_firstLogin = false;
 		if (firstLog == 1)
 		{
-			_firstLog = true;
+			_firstLogin = true;
 		}
 	}
 	
@@ -7742,7 +7740,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void setFirstLog(boolean firstLog)
 	{
-		_firstLog = firstLog;
+		_firstLogin = firstLog;
 	}
 	
 	/**
@@ -7751,7 +7749,7 @@ public class PlayerInstance extends Playable
 	 */
 	public boolean getFirstLog()
 	{
-		return _firstLog;
+		return _firstLogin;
 	}
 	
 	/**
@@ -8147,7 +8145,7 @@ public class PlayerInstance extends Playable
 				player.setNoble(rset.getInt("nobless") == 1);
 				player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
 				player.setFirstLog(rset.getInt("first_log"));
-				player.pcBangPoint = rset.getInt("pc_point");
+				player._pcBangPoints = rset.getInt("pc_point");
 				if (player.getClanJoinExpiryTime() < Chronos.currentTimeMillis())
 				{
 					player.setClanJoinExpiryTime(0);
@@ -8298,7 +8296,6 @@ public class PlayerInstance extends Playable
 			
 			if (player == null)
 			{
-				// TODO: Log this!
 				return null;
 			}
 			
@@ -9865,14 +9862,14 @@ public class PlayerInstance extends Playable
 			final Effect effect = getFirstEffect(skill);
 			
 			// Like L2OFF toogle skills have little delay
-			if ((TOGGLE_USE != 0) && ((TOGGLE_USE + 400) > Chronos.currentTimeMillis()))
+			if ((_toggleUse != 0) && ((_toggleUse + 400) > Chronos.currentTimeMillis()))
 			{
-				TOGGLE_USE = 0;
+				_toggleUse = 0;
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
-			TOGGLE_USE = Chronos.currentTimeMillis();
+			_toggleUse = Chronos.currentTimeMillis();
 			if (effect != null)
 			{
 				// fake death exception
@@ -10675,7 +10672,7 @@ public class PlayerInstance extends Playable
 				}
 				catch (NullPointerException e)
 				{
-					// FIXME: tried to remove a null key, to be found where this action has been performed (DEGUB)
+					// Tried to remove a null key.
 				}
 			}
 		}
@@ -15131,7 +15128,7 @@ public class PlayerInstance extends Playable
 	 */
 	public int getPcBangScore()
 	{
-		return pcBangPoint;
+		return _pcBangPoints;
 	}
 	
 	/**
@@ -15140,7 +15137,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void reducePcBangScore(int to)
 	{
-		pcBangPoint -= to;
+		_pcBangPoints -= to;
 		updatePcBangWnd(to, false, false);
 	}
 	
@@ -15150,7 +15147,7 @@ public class PlayerInstance extends Playable
 	 */
 	public void addPcBangScore(int to)
 	{
-		pcBangPoint += to;
+		_pcBangPoints += to;
 	}
 	
 	/**
@@ -15248,301 +15245,6 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Show teleport html.
-	 */
-	public void showTeleportHtml()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title></title>");
-		text.append("<center>");
-		text.append("<img src=\"L2UI_CH3.herotower_deco\" width=256 height=32>");
-		text.append("<br><br>");
-		text.append("<table width=\"85%\"><tr><td>Your party leader, " + getParty().getLeader().getName() + ", requested a group teleport to raidboss. You have 30 seconds from this popup to teleport, or the teleport windows will close</td></tr></table><br>");
-		text.append("<a action=\"bypass -h rbAnswear\">Port with my party</a><br>");
-		text.append("<a action=\"bypass -h rbAnswearDenied\">Don't port</a><br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Show raidboss info level40.
-	 */
-	public void showRaidbossInfoLevel40()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title>Raidboss Level (40-45)</title>");
-		text.append("<center>");
-		text.append("<img src=\"L2UI_CH3.herotower_deco\" width=256 height=32>");
-		text.append("</center>");
-		text.append("<br><br>");
-		text.append("<table width=\"85%\"><tr><td>Drop: " + Dropzor + "</td></tr></table>");
-		text.append("Leto Chief Talkin (40)<br1>");
-		text.append("Water Spirit Lian (40) <br1>");
-		text.append("Shaman King Selu (40) <br1>");
-		text.append("Gwindorr (40) <br1>");
-		text.append("Icarus Sample 1 (40) <br1>");
-		text.append("Fafurion's Page Sika (40) <br1>");
-		text.append("Nakondas (40) <br1>");
-		text.append("Road Scavenger Leader (40)<br1>");
-		text.append("Wizard of Storm Teruk (40) <br1>");
-		text.append("Water Couatle Ateka (40)<br1>");
-		text.append("Crazy Mechanic Golem (43) <br1>");
-		text.append("Earth Protector Panathen (43) <br1>");
-		text.append("Thief Kelbar (44) <br1>");
-		text.append("Timak Orc Chief Ranger (44) <br1>");
-		text.append("Rotten Tree Repiro (44) <br1>");
-		text.append("Dread Avenger Kraven (44) <br1>");
-		text.append("Biconne of Blue Sky (45)<br1>");
-		text.append("Evil Spirit Cyrion (45) <br1>");
-		text.append("Iron Giant Totem (45) <br1>");
-		text.append("Timak Orc Gosmos (45) <br1>");
-		text.append("Shacram (45) <br1>");
-		text.append("Fafurion's Henchman Istary (45) <br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Show raidboss info level45.
-	 */
-	public void showRaidbossInfoLevel45()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title>Raidboss Level (45-50)</title>");
-		text.append("<center>");
-		text.append("<img src=\"L2UI_CH3.herotower_deco\" width=256 height=32>");
-		text.append("</center>");
-		text.append("<br><br>");
-		text.append("<table width=\"85%\"><tr><td>Drop: " + Dropzor + "</td></tr></table>");
-		text.append("Necrosentinel Royal Guard (47) <br1>");
-		text.append("Barion (47) <br1>");
-		text.append("Orfen's Handmaiden (48) <br1>");
-		text.append("King Tarlk (48) <br1>");
-		text.append("Katu Van Leader Atui (49) <br1>");
-		text.append("Mirror of Oblivion (49) <br1>");
-		text.append("Karte (49) <br1>");
-		text.append("Ghost of Peasant Leader (50) <br1>");
-		text.append("Cursed Clara (50) <br1>");
-		text.append("Carnage Lord Gato (50) <br1>");
-		text.append("Fafurion's Henchman Istary (45) <br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Show raidboss info level50.
-	 */
-	public void showRaidbossInfoLevel50()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title>Raidboss Level (50-55)</title>");
-		text.append("<center>");
-		text.append("<img src=\"L2UI_CH3.herotower_deco\" width=256 height=32>");
-		text.append("</center>");
-		text.append("<br><br>");
-		text.append("<table width=\"85%\"><tr><td>Drop: " + Dropzor + "</td></tr></table>");
-		text.append("Verfa (51) <br1>");
-		text.append("Deadman Ereve (51) <br1>");
-		text.append("Captain of Red Flag Shaka (52) <br1>");
-		text.append("Grave Robber Kim (52) <br1>");
-		text.append("Paniel the Unicorn (54) <br1>");
-		text.append("Bandit Leader Barda (55) <br1>");
-		text.append("Eva's Spirit Niniel (55) <br1>");
-		text.append("Beleth's Seer Sephia (55) <br1>");
-		text.append("Pagan Watcher Cerberon (55) <br1>");
-		text.append("Shaman King Selu (55) <br1>");
-		text.append("Black Lily (55) <br1>");
-		text.append("Ghost Knight Kabed (55) <br1>");
-		text.append("Sorcerer Isirr (55) <br1>");
-		text.append("Furious Thieles (55) <br1>");
-		text.append("Enchanted Forest Watcher Ruell (55) <br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Show raidboss info level55.
-	 */
-	public void showRaidbossInfoLevel55()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title>Raidboss Level (55-60)</title>");
-		text.append("<center>");
-		text.append("<img src=\"L2UI_CH3.herotower_deco\" width=256 height=32>");
-		text.append("</center>");
-		text.append("<br><br>");
-		text.append("<table width=\"85%\"><tr><td>Drop: " + Dropzor + "</td></tr></table>");
-		text.append("Fairy Queen Timiniel (56) <br1>");
-		text.append("Harit Guardian Garangky (56) <br1>");
-		text.append("Refugee Hopeful Leo (56) <br1>");
-		text.append("Timak Seer Ragoth (57) <br1>");
-		text.append("Soulless Wild Boar (59) <br1>");
-		text.append("Abyss Brukunt (59) <br1>");
-		text.append("Giant Marpanak (60) <br1>");
-		text.append("Ghost of the Well Lidia (60) <br1>");
-		text.append("Guardian of the Statue of Giant Karum (60) <br1>");
-		text.append("The 3rd Underwater Guardian (60) <br1>");
-		text.append("Taik High Prefect Arak (60) <br1>");
-		text.append("Ancient Weird Drake (60) <br1>");
-		text.append("Lord Ishka (60) <br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Show raidboss info level60.
-	 */
-	public void showRaidbossInfoLevel60()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title>Raidboss Level (60-65)</title>");
-		text.append("<center>");
-		text.append("<img src=\"L2UI_CH3.herotower_deco\" width=256 height=32>");
-		text.append("</center>");
-		text.append("<br><br>");
-		text.append("<table width=\"85%\"><tr><td>Drop: " + Dropzor + "</td></tr></table>");
-		text.append("Roaring Lord Kastor (62) <br1>");
-		text.append("Gorgolos (64) <br1>");
-		text.append("Hekaton Prime (65) <br1>");
-		text.append("Gargoyle Lord Tiphon (65) <br1>");
-		text.append("Fierce Tiger King Angel (65) <br1>");
-		text.append("Enmity Ghost Ramdal (65) <br1>");
-		text.append("Rahha (65) <br1>");
-		text.append("Shilen's Priest Hisilrome (65) <br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Show raidboss info level65.
-	 */
-	public void showRaidbossInfoLevel65()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title>Raidboss Level (65-70)</title>");
-		text.append("<br><br>");
-		text.append("<center>");
-		text.append("<table width=\"85%\"><tr><td>Drop: " + Dropzor + "</td></tr></table>");
-		text.append("</center>");
-		text.append("Demon's Agent Falston (66) <br1>");
-		text.append("Last Titan utenus (66) <br1>");
-		text.append("Kernon's Faithful Servant Kelone (67) <br1>");
-		text.append("Spirit of Andras, the Betrayer (69) <br1>");
-		text.append("Bloody Priest Rudelto (69) <br1>");
-		text.append("Shilen's Messenger Cabrio (70) <br1>");
-		text.append("Anakim's Nemesis Zakaron (70) <br1>");
-		text.append("Flame of Splendor Barakiel (70) <br1>");
-		text.append("Roaring Skylancer (70) <br1>");
-		text.append("Beast Lord Behemoth (70) <br1>");
-		text.append("Palibati Queen Themis (70) <br1>");
-		text.append("Fafurion''s Herald Lokness (70) <br1>");
-		text.append("Meanas Anor (70) <br1>");
-		text.append("Korim (70) <br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Show raidboss info level70.
-	 */
-	public void showRaidbossInfoLevel70()
-	{
-		final StringBuilder text = new StringBuilder();
-		text.append("<html>");
-		text.append("<body>");
-		text.append("<title>Raidboss Level (70-75)</title>");
-		text.append("<center>");
-		text.append("<img src=\"L2UI_CH3.herotower_deco\" width=256 height=32>");
-		text.append("</center>");
-		text.append("<br><br>");
-		text.append("<table width=\"85%\"><tr><td>Drop: " + Dropzor + "</td></tr></table>");
-		text.append("Immortal Savior Mardil (71) <br1>");
-		text.append("Vanor Chief Kandra (72) <br1>");
-		text.append("Water Dragon Seer Sheshark (72) <br1>");
-		text.append("Doom Blade Tanatos (72) <br1>");
-		text.append("Death Lord Hallate (73) <br1>");
-		text.append("Plague Golem (73) <br1>");
-		text.append("Icicle Emperor Bumbalump (74) <br1>");
-		text.append("Antharas Priest Cloe (74) <br1>");
-		text.append("Krokian Padisha Sobekk (74) <br1>");
-		text.append("<center><img src=\"L2UI.SquareGray\" width=\"280\" height=\"1\">");
-		text.append("<font color=\"999999\">Gates of Fire</font></center>");
-		text.append("</body>");
-		text.append("</html>");
-		final NpcHtmlMessage html = new NpcHtmlMessage(1);
-		html.setHtml(text.toString());
-		sendPacket(html);
-	}
-	
-	/**
-	 * Checks if is inside TW town.
-	 * @return true, if is inside TW town
-	 */
-	public boolean isInsideTWTown()
-	{
-		return _isInsideTWTown;
-	}
-	
-	/**
-	 * Sets the inside TW town.
-	 * @param value the new inside TW town
-	 */
-	public void setInsideTWTown(boolean value)
-	{
-		_isInsideTWTown = true; // FIXME: TRUE?
-	}
-	
-	/**
 	 * Check if local player can make multibox and also refresh local boxes instances number.
 	 * @return true, if successful
 	 */
@@ -15575,7 +15277,7 @@ public class PlayerInstance extends Playable
 			if (!activeBoxes.contains(getName()))
 			{
 				activeBoxes.add(getName());
-				_activeBoxeCharacters = activeBoxes;
+				_activeBoxCharacters = activeBoxes;
 			}
 			refreshOtherBoxes();
 		}
@@ -15596,7 +15298,7 @@ public class PlayerInstance extends Playable
 				if ((player != null) && (player != this) && player.isOnline() && (player.getClient() != null) && (player.getClient().getConnection() != null) && !player.getClient().getConnection().isClosed() && !player.getName().equals(getName()) && playerIP.equals(player.getClient().getConnection().getInetAddress().getHostAddress()))
 				{
 					player._activeBoxes = _activeBoxes;
-					player._activeBoxeCharacters = _activeBoxeCharacters;
+					player._activeBoxCharacters = _activeBoxCharacters;
 				}
 			}
 		}
@@ -15608,7 +15310,7 @@ public class PlayerInstance extends Playable
 	public void decreaseBoxes()
 	{
 		_activeBoxes = _activeBoxes - 1;
-		_activeBoxeCharacters.remove(getName());
+		_activeBoxCharacters.remove(getName());
 		refreshOtherBoxes();
 	}
 	

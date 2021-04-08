@@ -507,7 +507,7 @@ public class Olympiad
 		// Olympiad dualbox protection
 		if ((noble._activeBoxes > 1) && !Config.ALLOW_DUALBOX_OLY)
 		{
-			final List<String> playerBoxes = noble._activeBoxeCharacters;
+			final List<String> playerBoxes = noble._activeBoxCharacters;
 			if ((playerBoxes != null) && (playerBoxes.size() > 1))
 			{
 				for (String character_name : playerBoxes)

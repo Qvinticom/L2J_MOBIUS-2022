@@ -1446,7 +1446,7 @@ public class CTF implements EventTask
 		
 		if ((eventPlayer._activeBoxes > 1) && !Config.ALLOW_DUALBOX_EVENT)
 		{
-			final List<String> playerBoxes = eventPlayer._activeBoxeCharacters;
+			final List<String> playerBoxes = eventPlayer._activeBoxCharacters;
 			if ((playerBoxes != null) && (playerBoxes.size() > 1))
 			{
 				for (String characterName : playerBoxes)
