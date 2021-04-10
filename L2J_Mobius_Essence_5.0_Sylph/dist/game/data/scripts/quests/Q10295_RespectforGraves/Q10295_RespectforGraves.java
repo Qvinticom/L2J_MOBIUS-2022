@@ -135,12 +135,7 @@ public class Q10295_RespectforGraves extends Quest
 		{
 			if (qs.isCond(1))
 			{
-				final int killCount = qs.getInt(KILL_COUNT_VAR);
-				if ((killCount < 300) && (player.getLevel() < 52))
-				{
-					htmltext = "no_enough.html";
-				}
-				htmltext = "30857-01.htm";
+				htmltext = "no_enough.html";
 			}
 			else if (qs.isCond(2))
 			{
