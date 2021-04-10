@@ -206,7 +206,7 @@ public class AutoUseTaskManager
 							}
 							else if (player.isMageClass())
 							{
-								player.useMagic(skill, null, false, false);
+								player.useMagic(skill, null, true, false);
 							}
 							else
 							{
