@@ -194,6 +194,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50194" level="5" /> <!-- Gem: Amber -->
+		</skills>
 	</item>
 	<item id="94519" name="Opal" additionalName="Lv. 5" type="Armor">
 		<!-- <Properties>. Pull/ Stun Resistance +15%. Fear/ Paralysis/ Silence Resistance +15%. HP/ MP +100. <Active skill>. Debuff immunity +10 sec. Cooldown: 5 min. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -207,6 +210,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50195" level="5" /> <!-- Gem: Coral -->
+		</skills>
 	</item>
 	<item id="94520" name="Coral" additionalName="Lv. 5" type="Armor">
 		<!-- <Properties>. Atk. Spd. +10%. Casting Spd. +10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -220,6 +226,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50197" level="5" /> <!-- Gem: Coral -->
+		</skills>
 	</item>
 	<item id="94521" name="Onyx" additionalName="Lv. 5" type="Armor">
 		<!-- <Properties>. Soulshot/ Spiritshot damage +12%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -233,6 +242,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50204" level="5" /> <!-- Gem: Onyx -->
+		</skills>
 	</item>
 	<item id="94522" name="Spinel" additionalName="Lv. 5" type="Armor">
 		<!-- <Properties>. STR/ INT +1. DEX/ WIT +1. CON/ MEN +1. Received P. Critical Damage -7%. Received M. Skill Critical Damage -7%. P. Def. +150. M. Def. +100. With a certain chance, MP +40 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -246,6 +258,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50206" level="5" /> <!-- Gem: Spinel -->
+		</skills>
 	</item>
 	<item id="94523" name="Zircon" additionalName="Lv. 5" type="Armor">
 		<!-- <Properties>. P. Critical Damage +11%. M. Skill Critical Damage +11%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -259,6 +274,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50207" level="5" />
+		</skills>
 	</item>
 	<item id="94524" name="Moonstone" additionalName="Lv. 5" type="Armor">
 		<!-- <Properties>. While Sayha's Grace is active, Acquired XP/ SP +11%. Sayha's Grace Consumption -20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
@@ -272,6 +290,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
+		<skills>
+			<skill id="50208" level="5" /> <!-- Gem: Moonstone -->
+		</skills>
 	</item>
 	<item id="94525" name="Kit: Reinforced Jewel Boxes" type="EtcItem">
 		<!-- Double-click to obtain the following items. -->
