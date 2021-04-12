@@ -57,27 +57,8 @@ public class GameAssistant extends AbstractNpcAI
 	// Multisells
 	private static final int ATTENDANCE_REWARD_MULTISELL = 3247801;
 	//
-	private static final int SIGEL_SOUL_CRYSTAL = 3247802;
-	private static final int TYRR_SOUL_CRYSTAL = 3247803;
-	private static final int OTHELL_SOUL_CRYSTAL = 3247804;
-	private static final int YUL_SOUL_CRYSTAL = 3247805;
-	private static final int FEOH_SOUL_CRYSTAL = 3247806;
-	private static final int ISS_SOUL_CRYSTAL = 3247807;
-	private static final int WYNN_SOUL_CRYSTAL = 3247808;
-	private static final int AEORE_SOUL_CRYSTAL = 3247809;
-	//
-	private static final int EX_SAYHA_BLESSING_SHOP = 3247810;
-	private static final int EX_GIRAN_SEALS_SHOP = 3247811;
-	private static final int EX_DOLL_7DAYS_SHOP = 3247812;
 	private static final int EX_BOSS_WEAPON_SHOP = 3247813;
-	//
-	private static final int EX_MYSTERIUS_LEVEL2 = 3247814;
-	private static final int EX_MYSTERIUS_LEVEL3 = 3247815;
-	private static final int EX_MYSTERIUS_LEVEL4 = 3247816;
-	private static final int EX_MYSTERIUS_LEVEL5 = 3247817;
-	private static final int EX_MYSTERIUS_LEVEL6 = 3247818;
-	private static final int EX_MYSTERIUS_LEVEL7 = 3247819;
-	private static final int EX_MYSTERIUS_LEVEL8 = 3247820;
+	private static final int EX_LA_VIE_EN_ROSE = 3247841;
 	//
 	private static final int EX_HEAVY_A_GRADE = 3247821;
 	private static final int EX_LIGHT_A_GRADE = 3247822;
@@ -88,16 +69,11 @@ public class GameAssistant extends AbstractNpcAI
 	private static final int EX_LIGHT_B_GRADE = 3247827;
 	private static final int EX_ROBE_B_GRADE = 3247828;
 	private static final int EX_WEAPON_B_GRADE = 3247829;
-	private static final int EX_WEAPON_C_GRADE = 3247830;
-	private static final int EX_SAYHA_CLOAK = 3247831;
-	private static final int EX_SAYAHA_CLOAK_PROTECTION = 3247832;
-	private static final int EX_TALISMAN = 3247833;
-	private static final int EX_AGATHION_BRACELET = 3247834;
+	private static final int EX_WEAPON_7_B_GRADE = 3247840;
+	private static final int EX_ARMOR_C_GRADE = 3247830;
+	private static final int EX_ARMOR_4_C_GRADE = 3247831;
 	private static final int EX_AGATHION_SPIRIT = 3247835;
-	private static final int EX_PENDANT = 3247836;
-	private static final int EX_BUFF_SCROLL = 3247837;
 	private static final int EX_SOULSHOT = 3247838;
-	private static final int EX_ENCHANTS = 3247839;
 	// Others
 	private static final String COMMAND_BYPASS = "Quest GameAssistant ";
 	
@@ -212,59 +188,21 @@ public class GameAssistant extends AbstractNpcAI
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/weapons.html")));
 				break;
 			}
-			case "Chat_Cloaks":
+			case "Chat_Armors":
 			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/cloaks.html")));
+				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/armors.html")));
 				break;
 			}
-			case "Chat_ProtectionCloaks":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/protectioncloaks.html")));
-				break;
-			}
-			case "Chat_ProtectionCloaks_Black":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/blackprotectioncloaks.html")));
-				break;
-			}
-			case "Chat_ProtectionCloaks_White":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/whiteprotectioncloaks.html")));
-				break;
-			}
-			case "Chat_ProtectionCloaks_Red":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/redprotectcloaks.html")));
-				break;
-			}
-			case "Chat_Talismans":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/talismans.html")));
-				break;
-			}
+
 			case "Chat_Agathions":
 			{
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/agathions.html")));
 				break;
 			}
-			case "Chat_Pendants":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/pendants.html")));
-				break;
-			}
-			case "Chat_BuffScrolls":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/buffscrolls.html")));
-				break;
-			}
+
 			case "Chat_Soulshots":
 			{
 				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/soulshots.html")));
-				break;
-			}
-			case "Chat_Enchants":
-			{
-				player.sendPacket(new ExPremiumManagerShowHtml(HtmCache.getInstance().getHtm(player, "data/scripts/ai/others/GameAssistant/enchants.html")));
 				break;
 			}
 			// Actions
@@ -290,100 +228,14 @@ public class GameAssistant extends AbstractNpcAI
 				break;
 			}
 			// Multisell
-			case "SigelSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(SIGEL_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			case "TyrrSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(TYRR_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			case "OthellSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(OTHELL_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			case "YulSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(YUL_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			case "FeohSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(FEOH_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			case "IssSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(ISS_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			case "WynnSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(WYNN_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			case "AeoreSC_Shop":
-			{
-				MultisellData.getInstance().separateAndSend(AEORE_SOUL_CRYSTAL, player, null, false);
-				break;
-			}
-			
-			case "Ex_Sayha_BlessingShop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_SAYHA_BLESSING_SHOP, player, null, false);
-				break;
-			}
-			case "EX_GiranSealsShop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_GIRAN_SEALS_SHOP, player, null, false);
-				break;
-			}
-			case "Ex_Doll7DayShop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_DOLL_7DAYS_SHOP, player, null, false);
-				break;
-			}
 			case "Ex_BossWeapFragShop":
 			{
 				MultisellData.getInstance().separateAndSend(EX_BOSS_WEAPON_SHOP, player, null, false);
 				break;
 			}
-			case "Ex_MysteriousLv2Shop":
+			case "Ex_LaVieEnRoseShop":
 			{
-				MultisellData.getInstance().separateAndSend(EX_MYSTERIUS_LEVEL2, player, null, false);
-				break;
-			}
-			case "Ex_MysteriousLv3Shop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_MYSTERIUS_LEVEL3, player, null, false);
-				break;
-			}
-			case "Ex_MysteriousLv4Shop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_MYSTERIUS_LEVEL4, player, null, false);
-				break;
-			}
-			case "Ex_MysteriousLv5Shop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_MYSTERIUS_LEVEL5, player, null, false);
-				break;
-			}
-			case "Ex_MysteriousLv6Shop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_MYSTERIUS_LEVEL6, player, null, false);
-				break;
-			}
-			case "Ex_MysteriousLv7Shop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_MYSTERIUS_LEVEL7, player, null, false);
-				break;
-			}
-			case "Ex_MysteriousLv8Shop":
-			{
-				MultisellData.getInstance().separateAndSend(EX_MYSTERIUS_LEVEL8, player, null, false);
+				MultisellData.getInstance().separateAndSend(EX_LA_VIE_EN_ROSE, player, null, false);
 				break;
 			}
 			case "Ex_HeavyAGrade":
@@ -431,29 +283,19 @@ public class GameAssistant extends AbstractNpcAI
 				MultisellData.getInstance().separateAndSend(EX_WEAPON_B_GRADE, player, null, false);
 				break;
 			}
-			case "Ex_WeaponCgrade":
+			case "Ex_Weapon7Bgrade":
 			{
-				MultisellData.getInstance().separateAndSend(EX_WEAPON_C_GRADE, player, null, false);
+				MultisellData.getInstance().separateAndSend(EX_WEAPON_7_B_GRADE, player, null, false);
 				break;
 			}
-			case "Ex_SayhaCloak":
+			case "Ex_ArmorCgrade":
 			{
-				MultisellData.getInstance().separateAndSend(EX_SAYHA_CLOAK, player, null, false);
+				MultisellData.getInstance().separateAndSend(EX_ARMOR_C_GRADE, player, null, false);
 				break;
 			}
-			case "Ex_SayhaProtection":
+			case "Ex_Armor4Cgrade":
 			{
-				MultisellData.getInstance().separateAndSend(EX_SAYAHA_CLOAK_PROTECTION, player, null, false);
-				break;
-			}
-			case "Ex_Talisman":
-			{
-				MultisellData.getInstance().separateAndSend(EX_TALISMAN, player, null, false);
-				break;
-			}
-			case "Ex_AgathionBracelet":
-			{
-				MultisellData.getInstance().separateAndSend(EX_AGATHION_BRACELET, player, null, false);
+				MultisellData.getInstance().separateAndSend(EX_ARMOR_4_C_GRADE, player, null, false);
 				break;
 			}
 			case "Ex_AgathionSpirit":
@@ -461,24 +303,9 @@ public class GameAssistant extends AbstractNpcAI
 				MultisellData.getInstance().separateAndSend(EX_AGATHION_SPIRIT, player, null, false);
 				break;
 			}
-			case "Ex_Pendant":
-			{
-				MultisellData.getInstance().separateAndSend(EX_PENDANT, player, null, false);
-				break;
-			}
-			case "Ex_BuffScroll":
-			{
-				MultisellData.getInstance().separateAndSend(EX_BUFF_SCROLL, player, null, false);
-				break;
-			}
 			case "Ex_Soulshot":
 			{
 				MultisellData.getInstance().separateAndSend(EX_SOULSHOT, player, null, false);
-				break;
-			}
-			case "Ex_Enchants":
-			{
-				MultisellData.getInstance().separateAndSend(EX_ENCHANTS, player, null, false);
 				break;
 			}
 			case "exc_black_sayha_cloak":
