@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets.login;
 
-public class KickPlayer extends LoginServerBasePacket
+import org.l2jmobius.commons.network.BaseRecievePacket;
+
+public class KickPlayer extends BaseRecievePacket
 {
 	private final String _account;
 	

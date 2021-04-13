@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class PlayerLogout extends GameServerBasePacket
+public class PlayerLogout extends BaseSendablePacket
 {
 	public PlayerLogout(String player)
 	{
@@ -27,10 +29,6 @@ public class PlayerLogout extends GameServerBasePacket
 		writeS(player);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.gameserverpackets.GameServerBasePacket#getContent()
-	 */
 	@Override
 	public byte[] getContent()
 	{

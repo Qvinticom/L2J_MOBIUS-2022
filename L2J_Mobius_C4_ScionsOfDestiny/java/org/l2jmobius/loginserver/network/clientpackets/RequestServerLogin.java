@@ -19,10 +19,10 @@ package org.l2jmobius.loginserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.loginserver.GameServerTable;
 import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.LoginController;
+import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import org.l2jmobius.loginserver.network.serverpackets.PlayFail;
@@ -31,7 +31,7 @@ import org.l2jmobius.loginserver.network.serverpackets.PlayOk;
 /**
  * Fromat is ddc d: first part of session id d: second part of session id c: server ID (session ID is sent in LoginOk packet and fixed to 0x55555555 0x44444444)
  */
-public class RequestServerLogin extends BaseRecievePacket
+public class RequestServerLogin extends AbstractClientPacket
 {
 	private final static Logger LOGGER = Logger.getLogger(RequestServerLogin.class.getName());
 	

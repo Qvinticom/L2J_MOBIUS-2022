@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.loginserverpackets.login;
+package org.l2jmobius.loginserver.network;
 
 /**
- * @author -Wooden-
+ * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
  */
-public abstract class LoginServerBasePacket
+public abstract class AbstractGameServerPacket
 {
 	private final byte[] _decrypt;
 	private int _off;
 	
-	public LoginServerBasePacket(byte[] decrypt)
+	public AbstractGameServerPacket(byte[] decrypt)
 	{
 		_decrypt = decrypt;
 		_off = 1; // skip packet type id
@@ -58,10 +58,10 @@ public abstract class LoginServerBasePacket
 		result |= (_decrypt[_off++] << 8) & 0xff00;
 		result |= (_decrypt[_off++] << 0x10) & 0xff0000;
 		result |= (_decrypt[_off++] << 0x18) & 0xff000000;
-		result |= (_decrypt[_off++] << 0x20) & 0xff00000000L;
-		result |= (_decrypt[_off++] << 0x28) & 0xff0000000000L;
-		result |= (_decrypt[_off++] << 0x30) & 0xff000000000000L;
-		result |= (_decrypt[_off++] << 0x38) & 0xff00000000000000L;
+		result |= (_decrypt[_off++] << 0x20) & 0xff00000000l;
+		result |= (_decrypt[_off++] << 0x28) & 0xff0000000000l;
+		result |= (_decrypt[_off++] << 0x30) & 0xff000000000000l;
+		result |= (_decrypt[_off++] << 0x38) & 0xff00000000000000l;
 		return Double.longBitsToDouble(result);
 	}
 	
@@ -81,7 +81,7 @@ public abstract class LoginServerBasePacket
 		return result;
 	}
 	
-	public byte[] readB(int length)
+	public final byte[] readB(int length)
 	{
 		final byte[] result = new byte[length];
 		for (int i = 0; i < length; i++)

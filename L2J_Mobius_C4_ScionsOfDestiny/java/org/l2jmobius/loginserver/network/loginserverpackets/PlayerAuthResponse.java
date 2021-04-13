@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.loginserverpackets;
 
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
  * @author -Wooden-
  */
-public class PlayerAuthResponse extends ServerBasePacket
+public class PlayerAuthResponse extends AbstractServerPacket
 {
 	public PlayerAuthResponse(String account, boolean response)
 	{

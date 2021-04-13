@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
-public class AccountKicked extends ServerBasePacket
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
+
+public class AccountKicked extends AbstractServerPacket
 {
 	public static int REASON_ILLEGAL_USE = 0x01;
 	public static int REASON_GENERAL_VIOLATION = 0x08;

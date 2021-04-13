@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class ChangeAccessLevel extends GameServerBasePacket
+public class ChangeAccessLevel extends BaseSendablePacket
 {
 	public ChangeAccessLevel(String player, int access)
 	{
@@ -28,10 +30,6 @@ public class ChangeAccessLevel extends GameServerBasePacket
 		writeS(player);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.gameserverpackets.GameServerBasePacket#getContent()
-	 */
 	@Override
 	public byte[] getContent()
 	{

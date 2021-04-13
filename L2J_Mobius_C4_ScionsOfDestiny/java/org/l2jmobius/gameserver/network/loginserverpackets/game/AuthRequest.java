@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
-public class AuthRequest extends GameServerBasePacket
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
+public class AuthRequest extends BaseSendablePacket
 {
 	/**
 	 * Format: cccSddb c desired ID c accept alternative ID c reserve Host s ExternalHostName s InetranlHostName d max players d hexid size b hexid

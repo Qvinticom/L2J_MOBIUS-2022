@@ -19,12 +19,12 @@ package org.l2jmobius.loginserver.network.gameserverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.l2jmobius.commons.network.BaseSendablePacket;
+import org.l2jmobius.loginserver.network.AbstractGameServerPacket;
 
 /**
  * @author -Wooden-
  */
-public class PlayerInGame extends BaseSendablePacket
+public class PlayerInGame extends AbstractGameServerPacket
 {
 	private final List<String> _accounts;
 	

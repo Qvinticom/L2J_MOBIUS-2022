@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
+
 /**
  * Fromat: d d: the failure reason
  */
-public class LoginFail extends ServerBasePacket
+public class LoginFail extends AbstractServerPacket
 {
 	public static int REASON_SYSTEM_ERROR = 0x01;
 	public static int REASON_PASS_WRONG = 0x02;

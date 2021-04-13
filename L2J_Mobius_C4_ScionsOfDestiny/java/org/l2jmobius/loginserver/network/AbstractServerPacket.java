@@ -14,20 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.loginserverpackets.game;
+package org.l2jmobius.loginserver.network;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @author -Wooden-
+ * This class ...
+ * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
-public abstract class GameServerBasePacket
+public abstract class AbstractServerPacket
 {
-	private final ByteArrayOutputStream _bao;
+	ByteArrayOutputStream _bao;
 	
-	protected GameServerBasePacket()
+	protected AbstractServerPacket()
 	{
 		_bao = new ByteArrayOutputStream();
 	}

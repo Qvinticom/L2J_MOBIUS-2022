@@ -16,79 +16,122 @@
  */
 package org.l2jmobius.commons.network;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.logging.Logger;
+
 /**
- * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:12 $
+ * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
 public abstract class BaseSendablePacket
 {
-	private final byte[] _decrypt;
-	private int _off;
+	private static final Logger LOGGER = Logger.getLogger(BaseSendablePacket.class.getName());
 	
-	public BaseSendablePacket(byte[] decrypt)
+	private final ByteArrayOutputStream _bao;
+	
+	protected BaseSendablePacket()
 	{
-		_decrypt = decrypt;
-		_off = 1; // skip packet type id
+		_bao = new ByteArrayOutputStream();
 	}
 	
-	public int readD()
+	protected void writeD(int value)
 	{
-		int result = _decrypt[_off++] & 0xff;
-		result |= (_decrypt[_off++] << 8) & 0xff00;
-		result |= (_decrypt[_off++] << 0x10) & 0xff0000;
-		result |= (_decrypt[_off++] << 0x18) & 0xff000000;
-		return result;
+		_bao.write(value & 0xff);
+		_bao.write((value >> 8) & 0xff);
+		_bao.write((value >> 16) & 0xff);
+		_bao.write((value >> 24) & 0xff);
 	}
 	
-	public int readC()
+	protected void writeH(int value)
 	{
-		final int result = _decrypt[_off++] & 0xff;
-		return result;
+		_bao.write(value & 0xff);
+		_bao.write((value >> 8) & 0xff);
 	}
 	
-	public int readH()
+	protected void writeC(int value)
 	{
-		int result = _decrypt[_off++] & 0xff;
-		result |= (_decrypt[_off++] << 8) & 0xff00;
-		return result;
+		_bao.write(value & 0xff);
 	}
 	
-	public double readF()
+	protected void writeF(double org)
 	{
-		long result = _decrypt[_off++] & 0xff;
-		result |= (_decrypt[_off++] << 8) & 0xff00;
-		result |= (_decrypt[_off++] << 0x10) & 0xff0000;
-		result |= (_decrypt[_off++] << 0x18) & 0xff000000;
-		result |= (_decrypt[_off++] << 0x20) & 0xff00000000l;
-		result |= (_decrypt[_off++] << 0x28) & 0xff0000000000l;
-		result |= (_decrypt[_off++] << 0x30) & 0xff000000000000l;
-		result |= (_decrypt[_off++] << 0x38) & 0xff00000000000000l;
-		return Double.longBitsToDouble(result);
+		final long value = Double.doubleToRawLongBits(org);
+		_bao.write((int) (value & 0xff));
+		_bao.write((int) ((value >> 8) & 0xff));
+		_bao.write((int) ((value >> 16) & 0xff));
+		_bao.write((int) ((value >> 24) & 0xff));
+		_bao.write((int) ((value >> 32) & 0xff));
+		_bao.write((int) ((value >> 40) & 0xff));
+		_bao.write((int) ((value >> 48) & 0xff));
+		_bao.write((int) ((value >> 56) & 0xff));
 	}
 	
-	public String readS()
+	protected void writeS(String text)
 	{
-		String result = null;
 		try
 		{
-			result = new String(_decrypt, _off, _decrypt.length - _off, "UTF-16LE");
-			result = result.substring(0, result.indexOf(0x00));
-			_off += (result.length() * 2) + 2;
+			if (text != null)
+			{
+				_bao.write(text.getBytes(StandardCharsets.UTF_16LE));
+			}
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		return result;
+		
+		_bao.write(0);
+		_bao.write(0);
 	}
 	
-	public final byte[] readB(int length)
+	protected void writeB(byte[] array)
 	{
-		final byte[] result = new byte[length];
-		for (int i = 0; i < length; i++)
+		try
 		{
-			result[i] = _decrypt[_off + i];
+			_bao.write(array);
 		}
-		_off += length;
-		return result;
+		catch (IOException e)
+		{
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
+		}
 	}
+	
+	protected void writeQ(long value)
+	{
+		_bao.write((int) (value & 0xff));
+		_bao.write((int) ((value >> 8) & 0xff));
+		_bao.write((int) ((value >> 16) & 0xff));
+		_bao.write((int) ((value >> 24) & 0xff));
+		_bao.write((int) ((value >> 32) & 0xff));
+		_bao.write((int) ((value >> 40) & 0xff));
+		_bao.write((int) ((value >> 48) & 0xff));
+		_bao.write((int) ((value >> 56) & 0xff));
+	}
+	
+	public int getLength()
+	{
+		return _bao.size() + 2;
+	}
+	
+	public byte[] getBytes()
+	{
+		// if (this instanceof Init)
+		// writeD(0x00); // reserve for XOR initial key
+		
+		writeD(0x00); // reserve for checksum
+		
+		final int padding = _bao.size() % 8;
+		if (padding != 0)
+		{
+			for (int i = padding; i < 8; i++)
+			{
+				writeC(0x00);
+			}
+		}
+		
+		return _bao.toByteArray();
+	}
+	
+	public abstract byte[] getContent() throws IOException;
 }

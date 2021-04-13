@@ -23,13 +23,13 @@ import java.util.logging.Logger;
 import javax.crypto.Cipher;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.loginserver.GameServerTable;
 import org.l2jmobius.loginserver.GameServerThread;
 import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.LoginClient.LoginClientState;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.LoginServer;
+import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.serverpackets.AccountKicked;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import org.l2jmobius.loginserver.network.serverpackets.LoginOk;
@@ -37,7 +37,7 @@ import org.l2jmobius.loginserver.network.serverpackets.LoginOk;
 /**
  * Format: x 0 (a leading null) x: the rsa encrypted block with the login an password
  */
-public class RequestAuthLogin extends BaseRecievePacket
+public class RequestAuthLogin extends AbstractClientPacket
 {
 	private final static Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
 	

@@ -18,10 +18,12 @@ package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import java.util.List;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class PlayerInGame extends GameServerBasePacket
+public class PlayerInGame extends BaseSendablePacket
 {
 	public PlayerInGame(String player)
 	{
@@ -40,10 +42,6 @@ public class PlayerInGame extends GameServerBasePacket
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.gameserverpackets.GameServerBasePacket#getContent()
-	 */
 	@Override
 	public byte[] getContent()
 	{

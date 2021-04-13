@@ -17,11 +17,12 @@
 package org.l2jmobius.loginserver.network.serverpackets;
 
 import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
  * Format: dddddddd f: the session key d: ? d: ? d: ? d: ? d: ? d: ?
  */
-public class LoginOk extends ServerBasePacket
+public class LoginOk extends AbstractServerPacket
 {
 	public LoginOk(SessionKey sessionKey)
 	{

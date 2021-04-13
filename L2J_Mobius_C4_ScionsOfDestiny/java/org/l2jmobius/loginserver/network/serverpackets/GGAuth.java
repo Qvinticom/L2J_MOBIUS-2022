@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
+
 /**
  * Fromat: d d: response
  */
-public class GGAuth extends ServerBasePacket
+public class GGAuth extends AbstractServerPacket
 {
 	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
 	

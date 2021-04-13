@@ -16,7 +16,9 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets.login;
 
-public class LoginServerFail extends LoginServerBasePacket
+import org.l2jmobius.commons.network.BaseRecievePacket;
+
+public class LoginServerFail extends BaseRecievePacket
 {
 	private static final String[] REASONS =
 	{

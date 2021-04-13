@@ -27,15 +27,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.crypt.NewCrypt;
-import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.commons.util.crypt.NewCrypt;
 import org.l2jmobius.loginserver.LoginController.ScrambledKeyPair;
 import org.l2jmobius.loginserver.network.serverpackets.Init;
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
+import org.l2jmobius.loginserver.network.AbstractClientPacket;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
- * This class ...
  * @version $Revision: 1.15.2.5.2.5 $ $Date: 2005/04/06 16:13:46 $
  */
 public class LoginClient extends Thread
@@ -157,7 +156,7 @@ public class LoginClient extends Thread
 				}
 				
 				// Execute client packet.
-				final BaseRecievePacket packet = LoginPacketHandler.handlePacket(decrypt, this);
+				final AbstractClientPacket packet = LoginPacketHandler.handlePacket(decrypt, this);
 				if (packet != null)
 				{
 					LoginServer.getInstance().execute(packet);
@@ -196,7 +195,7 @@ public class LoginClient extends Thread
 	/**
 	 * @param sl
 	 */
-	public void sendPacket(ServerBasePacket sl)
+	public void sendPacket(AbstractServerPacket sl)
 	{
 		try
 		{

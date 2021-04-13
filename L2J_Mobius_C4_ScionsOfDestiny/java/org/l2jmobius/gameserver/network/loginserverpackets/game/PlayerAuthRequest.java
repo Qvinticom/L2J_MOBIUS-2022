@@ -16,12 +16,13 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 
 /**
  * @author -Wooden-
  */
-public class PlayerAuthRequest extends GameServerBasePacket
+public class PlayerAuthRequest extends BaseSendablePacket
 {
 	public PlayerAuthRequest(String account, SessionKey key)
 	{
@@ -33,10 +34,6 @@ public class PlayerAuthRequest extends GameServerBasePacket
 		writeD(key.loginOkID2);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.gameserverpackets.GameServerBasePacket#getContent()
-	 */
 	@Override
 	public byte[] getContent()
 	{

@@ -19,10 +19,12 @@ package org.l2jmobius.gameserver.network.loginserverpackets.game;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class ServerStatus extends GameServerBasePacket
+public class ServerStatus extends BaseSendablePacket
 {
 	private final List<Attribute> _attributes;
 	
@@ -42,6 +44,7 @@ public class ServerStatus extends GameServerBasePacket
 	public static final int MAX_PLAYERS = 0x04;
 	public static final int TEST_SERVER = 0x05;
 	
+	// Server Status
 	public static final int STATUS_AUTO = 0x00;
 	public static final int STATUS_GOOD = 0x01;
 	public static final int STATUS_NORMAL = 0x02;
@@ -52,7 +55,7 @@ public class ServerStatus extends GameServerBasePacket
 	public static final int ON = 0x01;
 	public static final int OFF = 0x00;
 	
-	class Attribute
+	static class Attribute
 	{
 		public int id;
 		public int value;
@@ -74,18 +77,13 @@ public class ServerStatus extends GameServerBasePacket
 		_attributes.add(new Attribute(id, value));
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see org.l2jmobius.gameserver.gameserverpackets.GameServerBasePacket#getContent()
-	 */
 	@Override
 	public byte[] getContent()
 	{
 		writeC(0x06);
 		writeD(_attributes.size());
-		for (int i = 0; i < _attributes.size(); i++)
+		for (Attribute temp : _attributes)
 		{
-			final Attribute temp = _attributes.get(i);
 			writeD(temp.id);
 			writeD(temp.value);
 		}

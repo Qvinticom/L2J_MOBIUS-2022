@@ -16,10 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.serverpackets;
 
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
+
 /**
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
-public class PlayFail extends ServerBasePacket
+public class PlayFail extends AbstractServerPacket
 {
 	public static int REASON_TOO_MANY_PLAYERS = 0x0f; // too many players on server
 	public static int REASON_SYSTEM_ERROR = 0x01; // system error

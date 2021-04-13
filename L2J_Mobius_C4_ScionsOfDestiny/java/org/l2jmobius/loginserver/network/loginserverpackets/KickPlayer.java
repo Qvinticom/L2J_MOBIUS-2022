@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.loginserverpackets;
 
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
  * @author -Wooden-
  */
-public class KickPlayer extends ServerBasePacket
+public class KickPlayer extends AbstractServerPacket
 {
 	public KickPlayer(String account)
 	{

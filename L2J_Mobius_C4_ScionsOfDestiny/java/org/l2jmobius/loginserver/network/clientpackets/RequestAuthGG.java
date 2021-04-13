@@ -16,13 +16,13 @@
  */
 package org.l2jmobius.loginserver.network.clientpackets;
 
-import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.loginserver.LoginClient;
 import org.l2jmobius.loginserver.LoginClient.LoginClientState;
+import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.serverpackets.GGAuth;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 
-public class RequestAuthGG extends BaseRecievePacket
+public class RequestAuthGG extends AbstractClientPacket
 {
 	private int _sessionId = 0;
 	private final int _data1;

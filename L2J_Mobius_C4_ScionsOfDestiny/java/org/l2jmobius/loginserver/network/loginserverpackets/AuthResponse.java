@@ -17,12 +17,12 @@
 package org.l2jmobius.loginserver.network.loginserverpackets;
 
 import org.l2jmobius.loginserver.GameServerTable;
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
  * @author -Wooden-
  */
-public class AuthResponse extends ServerBasePacket
+public class AuthResponse extends AbstractServerPacket
 {
 	/**
 	 * @param serverId

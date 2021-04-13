@@ -17,6 +17,7 @@
 package org.l2jmobius.loginserver.network.serverpackets;
 
 import org.l2jmobius.loginserver.SessionKey;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
  * <p>
@@ -29,7 +30,7 @@ import org.l2jmobius.loginserver.SessionKey;
  * </ul>
  * </p>
  */
-public class PlayOk extends ServerBasePacket
+public class PlayOk extends AbstractServerPacket
 {
 	public PlayOk(SessionKey sessionKey)
 	{

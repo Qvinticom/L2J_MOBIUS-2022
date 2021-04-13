@@ -16,16 +16,18 @@
  */
 package org.l2jmobius.gameserver.network.loginserverpackets.game;
 
-import java.security.GeneralSecurityException;
 import java.security.interfaces.RSAPublicKey;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
 
+import org.l2jmobius.commons.network.BaseSendablePacket;
+
 /**
  * @author -Wooden-
  */
-public class BlowFishKey extends GameServerBasePacket
+public class BlowFishKey extends BaseSendablePacket
 {
 	private static final Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());
 	
@@ -44,9 +46,9 @@ public class BlowFishKey extends GameServerBasePacket
 			writeD(encrypted.length);
 			writeB(encrypted);
 		}
-		catch (GeneralSecurityException e)
+		catch (Exception e)
 		{
-			LOGGER.warning("Error While encrypting blowfish key for transmision (Crypt error) " + e);
+			LOGGER.log(Level.SEVERE, "Error While encrypting blowfish key for transmision (Crypt error): " + e.getMessage(), e);
 		}
 	}
 	

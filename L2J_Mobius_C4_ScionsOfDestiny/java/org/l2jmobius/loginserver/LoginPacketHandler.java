@@ -18,8 +18,8 @@ package org.l2jmobius.loginserver;
 
 import java.util.logging.Logger;
 
-import org.l2jmobius.commons.network.BaseRecievePacket;
 import org.l2jmobius.loginserver.LoginClient.LoginClientState;
+import org.l2jmobius.loginserver.network.AbstractClientPacket;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthGG;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
 import org.l2jmobius.loginserver.network.clientpackets.RequestServerList;
@@ -33,10 +33,10 @@ public class LoginPacketHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(LoginPacketHandler.class.getName());
 	
-	public static BaseRecievePacket handlePacket(byte[] data, LoginClient client)
+	public static AbstractClientPacket handlePacket(byte[] data, LoginClient client)
 	{
 		final int opcode = data[0] & 0xFF;
-		BaseRecievePacket packet = null;
+		AbstractClientPacket packet = null;
 		final LoginClientState state = client.getClientState();
 		
 		switch (state)

@@ -31,7 +31,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.crypt.NewCrypt;
+import org.l2jmobius.commons.util.crypt.NewCrypt;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 import org.l2jmobius.loginserver.network.gameserverpackets.BlowFishKey;
 import org.l2jmobius.loginserver.network.gameserverpackets.ChangeAccessLevel;
 import org.l2jmobius.loginserver.network.gameserverpackets.GameServerAuth;
@@ -44,7 +45,6 @@ import org.l2jmobius.loginserver.network.loginserverpackets.InitLS;
 import org.l2jmobius.loginserver.network.loginserverpackets.KickPlayer;
 import org.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
 import org.l2jmobius.loginserver.network.loginserverpackets.PlayerAuthResponse;
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
 
 /**
  * @author -Wooden-
@@ -400,7 +400,7 @@ public class GameServerThread extends Thread
 	 * @param sl
 	 * @throws IOException
 	 */
-	private void sendPacket(ServerBasePacket sl) throws IOException
+	private void sendPacket(AbstractServerPacket sl) throws IOException
 	{
 		byte[] data = sl.getContent();
 		NewCrypt.appendChecksum(data);

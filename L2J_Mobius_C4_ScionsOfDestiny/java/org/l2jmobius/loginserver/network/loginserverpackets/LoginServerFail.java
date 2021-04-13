@@ -16,12 +16,12 @@
  */
 package org.l2jmobius.loginserver.network.loginserverpackets;
 
-import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
+import org.l2jmobius.loginserver.network.AbstractServerPacket;
 
 /**
  * @author -Wooden-
  */
-public class LoginServerFail extends ServerBasePacket
+public class LoginServerFail extends AbstractServerPacket
 {
 	public static final int REASON_IP_BANNED = 1;
 	public static final int REASON_IP_RESERVED = 2;
